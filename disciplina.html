@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disciplina — ISS</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="iss-header flex items-center px-4 md:px-6 sticky top-0 z-10">
+    <a href="index.html" class="font-semibold text-zinc-900 hover:text-blue-600 no-underline">ISS</a>
+  </header>
+
+  <main class="flex-1 px-4 md:px-6 py-8 md:py-12 max-w-4xl mx-auto w-full">
+    <nav id="breadcrumb-discipline" class="text-sm mb-4" aria-label="Navegação">
+      <a href="index.html" class="text-zinc-500 hover:text-zinc-900">Home</a>
+      <span class="text-zinc-400 mx-1">/</span>
+      <span>…</span>
+    </nav>
+
+    <h1 id="discipline-title" class="text-2xl md:text-3xl font-bold text-zinc-900 mb-8">…</h1>
+
+    <section aria-label="Aulas">
+      <h2 class="sr-only">Aulas</h2>
+      <div id="lessons-list" class="grid gap-3">
+        <p class="text-zinc-500">A carregar…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-6 px-4 md:px-6 border-t border-zinc-200 text-center text-sm text-zinc-500">
+    Projeto de apoio à revisão — INFET
+  </footer>
+
+  <script src="js/content.js" defer></script>
+  <script src="js/router.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

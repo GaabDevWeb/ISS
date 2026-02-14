@@ -1,0 +1,154 @@
+/* ISS — Design tokens (DESIGN-GUIDELINES.md) */
+:root {
+  --color-background: #ffffff;
+  --color-surface: #fafafa;
+  --color-foreground: #18181b;
+  --color-muted: #71717a;
+  --color-border: #e4e4e7;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+
+  --text-hero: 1.75rem;
+  --text-section: 1.25rem;
+  --text-subsection: 1.1rem;
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+
+  --leading-tight: 1.3;
+  --leading-body: 1.6;
+
+  --radius-card: 8px;
+  --radius-sm: 4px;
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+  --max-w-container: 72rem;
+  --max-w-read: 65ch;
+}
+
+/* Base */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+/* Typography for article/lesson content */
+.iss-prose {
+  max-width: var(--max-w-read);
+}
+.iss-prose h1 {
+  font-size: var(--text-hero);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  margin-bottom: 1rem;
+}
+.iss-prose h2 {
+  font-size: var(--text-section);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.iss-prose h3 {
+  font-size: var(--text-subsection);
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.iss-prose p {
+  margin-bottom: 1rem;
+}
+.iss-prose ul, .iss-prose ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+.iss-prose li {
+  margin-bottom: 0.25rem;
+}
+.iss-prose pre {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+.iss-prose code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+.iss-prose pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Header */
+.iss-header {
+  height: 56px;
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Cards (disciplines, lessons) */
+.iss-card {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.15s, background-color 0.15s;
+}
+.iss-card:hover {
+  background: var(--color-surface);
+  border-color: var(--color-muted);
+}
+
+/* Exercise block */
+.iss-exercise {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--color-surface);
+}
+.iss-exercise__toggle {
+  color: var(--color-accent);
+  cursor: pointer;
+  font-weight: 500;
+  border: none;
+  background: none;
+  padding: 0;
+  text-align: left;
+}
+.iss-exercise__toggle:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* details/summary: remove default marker, style like button */
+.iss-exercise details summary::-webkit-details-marker {
+  display: none;
+}
+.iss-exercise details[open] summary .inline::after {
+  content: " (ocultar)";
+  font-weight: normal;
+}
+.iss-exercise details summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Focus visible for links and interactive elements */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
