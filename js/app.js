@@ -13,7 +13,7 @@ function initHome() {
   fetchDisciplines()
     .then((disciplines) => {
       if (disciplines.length === 0) {
-        container.innerHTML = '<p class="text-zinc-500">Nenhuma disciplina disponível.</p>';
+        container.innerHTML = '<p class="iss-text-muted">Nenhuma disciplina disponível.</p>';
         return;
       }
       container.innerHTML = disciplines
@@ -21,7 +21,7 @@ function initHome() {
           (d) => `
         <a href="disciplina.html?d=${encodeURIComponent(d.slug)}" class="iss-card block no-underline text-inherit">
           <h3 class="font-semibold text-lg m-0">${escapeHtml(d.title)}</h3>
-          ${d.description ? `<p class="text-sm text-zinc-500 mt-1 mb-0">${escapeHtml(d.description)}</p>` : ''}
+          ${d.description ? `<p class="text-sm iss-text-muted mt-1 mb-0">${escapeHtml(d.description)}</p>` : ''}
         </a>
       `
         )
@@ -52,8 +52,8 @@ function initDisciplina() {
 
       if (!discipline) {
         if (titleEl) titleEl.textContent = 'Disciplina não encontrada';
-        if (breadcrumbEl) breadcrumbEl.innerHTML = '<a href="index.html" class="text-zinc-500 hover:text-zinc-900">Home</a>';
-        if (container) container.innerHTML = '<p class="text-zinc-600 mb-4">Esta disciplina não existe.</p><a href="index.html" class="text-blue-600 hover:underline">Voltar à página inicial</a>';
+        if (breadcrumbEl) breadcrumbEl.innerHTML = '<a href="index.html" class="iss-link-muted">Home</a>';
+        if (container) container.innerHTML = '<p class="iss-text-muted mb-4">Esta disciplina não existe.</p><a href="index.html" class="iss-link hover:underline">Voltar à página inicial</a>';
         return;
       }
 
@@ -61,20 +61,20 @@ function initDisciplina() {
         if (titleEl) titleEl.textContent = discipline.title;
         if (breadcrumbEl) {
           breadcrumbEl.innerHTML = `
-            <a href="index.html" class="text-zinc-500 hover:text-zinc-900">Home</a>
-            <span class="text-zinc-400 mx-1">/</span>
+            <a href="index.html" class="iss-link-muted">Home</a>
+            <span class="iss-text-muted mx-1">/</span>
             <span>${escapeHtml(discipline.title)}</span>
           `;
         }
-        if (container) container.innerHTML = '<p class="text-zinc-600 mb-4">Nenhuma aula publicada ainda.</p><a href="index.html" class="text-blue-600 hover:underline">Voltar à página inicial</a>';
+        if (container) container.innerHTML = '<p class="iss-text-muted mb-4">Nenhuma aula publicada ainda.</p><a href="index.html" class="iss-link hover:underline">Voltar à página inicial</a>';
         return;
       }
 
       if (titleEl) titleEl.textContent = discipline.title;
       if (breadcrumbEl) {
         breadcrumbEl.innerHTML = `
-          <a href="index.html" class="text-zinc-500 hover:text-zinc-900">Home</a>
-          <span class="text-zinc-400 mx-1">/</span>
+          <a href="index.html" class="iss-link-muted">Home</a>
+          <span class="iss-text-muted mx-1">/</span>
           <span>${escapeHtml(discipline.title)}</span>
         `;
       }
@@ -107,8 +107,8 @@ function initAula() {
   function showAulaError(msg) {
     document.title = 'Aula não encontrada — ISS';
     if (titleEl) titleEl.textContent = 'Aula não encontrada';
-    if (breadcrumbEl) breadcrumbEl.innerHTML = '<a href="index.html" class="text-zinc-500 hover:text-zinc-900">Home</a>';
-    if (contentEl) contentEl.innerHTML = '<p class="text-zinc-600 mb-4">' + escapeHtml(msg) + '</p><a href="index.html" class="text-blue-600 hover:underline">Voltar à página inicial</a>';
+    if (breadcrumbEl) breadcrumbEl.innerHTML = '<a href="index.html" class="iss-link-muted">Home</a>';
+    if (contentEl) contentEl.innerHTML = '<p class="iss-text-muted mb-4">' + escapeHtml(msg) + '</p><a href="index.html" class="iss-link hover:underline">Voltar à página inicial</a>';
   }
 
   if (!d || !a) {

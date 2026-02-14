@@ -1,12 +1,12 @@
-/* ISS — Design tokens (DESIGN-GUIDELINES.md) */
+/* ISS — Design tokens (DESIGN-GUIDELINES.md) — tema dark */
 :root {
-  --color-background: #ffffff;
-  --color-surface: #fafafa;
-  --color-foreground: #18181b;
-  --color-muted: #71717a;
-  --color-border: #e4e4e7;
-  --color-accent: #2563eb;
-  --color-accent-hover: #1d4ed8;
+  --color-background: #18181b;
+  --color-surface: #27272a;
+  --color-foreground: #fafafa;
+  --color-muted: #a1a1aa;
+  --color-border: #3f3f46;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #60a5fa;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, monospace;
@@ -23,10 +23,37 @@
   --radius-card: 8px;
   --radius-sm: 4px;
 
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.2);
 
   --max-w-container: 72rem;
   --max-w-read: 65ch;
+}
+
+/* Utility classes baseadas nos tokens */
+.iss-text-foreground {
+  color: var(--color-foreground);
+}
+.iss-text-muted {
+  color: var(--color-muted);
+}
+.iss-border {
+  border-color: var(--color-border);
+}
+.iss-link {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.iss-link:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+.iss-link-muted {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+.iss-link-muted:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
 }
 
 /* Base */

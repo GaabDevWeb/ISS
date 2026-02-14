@@ -4,23 +4,23 @@
 
 Manter a interface **limpa, rápida, simples e focada em leitura**, alinhada ao MVP estático (HTML + Tailwind + JavaScript). O uso de bibliotecas de componentes (ex.: shadcn/ui) é **opcional**; a prioridade é implementar com HTML, Tailwind e JS (Alpine.js para interatividade) sem dependências pesadas.
 
-Referências de estilo: **Linear**, **Resend**, **Vercel** — clean, moderno, light mode.
+Referências de estilo: **Linear**, **Resend**, **Vercel** — clean, moderno. Tema padrão: **dark mode**.
 
 ---
 
-## Paleta de cores sugerida
+## Paleta de cores (tema dark)
 
 | Uso | Nome | Hex | Notas |
 |-----|------|-----|--------|
-| Fundo principal | Background | `#ffffff` | Página e cards. |
-| Fundo secundário | Surface | `#fafafa` ou `#f4f4f5` | Seções alternadas, listagens. |
-| Texto principal | Foreground | `#18181b` ou `#09090b` | Títulos e corpo. |
-| Texto secundário | Muted | `#71717a` ou `#52525b` | Legendas, metadados. |
-| Borda / divisores | Border | `#e4e4e7` ou `#d4d4d8` | Linhas, contornos de cards. |
-| Destaque / links | Accent | `#18181b` ou `#2563eb` | Links, botões primários (escolher um e manter consistente). |
-| Hover / interação | Accent hover | Escurecer ou clarear levemente o Accent | Feedback em links e botões. |
+| Fundo principal | Background | `#18181b` | Página e cards. |
+| Fundo secundário | Surface | `#27272a` | Seções alternadas, listagens, blocos de exercício. |
+| Texto principal | Foreground | `#fafafa` | Títulos e corpo. |
+| Texto secundário | Muted | `#a1a1aa` | Legendas, metadados, breadcrumbs. |
+| Borda / divisores | Border | `#3f3f46` | Linhas, contornos de cards. |
+| Destaque / links | Accent | `#3b82f6` | Links, botões primários. |
+| Hover / interação | Accent hover | `#60a5fa` | Feedback em links e botões. |
 
-Sugestão: manter **light mode** no MVP; poucos tons para não distrair da leitura.
+Tokens definidos em `css/styles.css` (`:root`). Usar as classes utilitárias `iss-text-foreground`, `iss-text-muted`, `iss-border`, `iss-link`, `iss-link-muted` em vez de cores fixas do Tailwind.
 
 ---
 
@@ -58,7 +58,7 @@ Sugestão: manter **light mode** no MVP; poucos tons para não distrair da leitu
 
 ## Sombras
 
-- **Leve:** Para cards na home/listagem (ex.: `0 1px 3px rgba(0,0,0,0.06)`).
+- **Leve:** Para cards na home/listagem (ex.: `0 1px 3px rgba(0,0,0,0.2)` no tema dark).
 - Evitar sombras pesadas; priorizar bordas leves se preferir look mais flat.
 
 ---
@@ -67,7 +67,7 @@ Sugestão: manter **light mode** no MVP; poucos tons para não distrair da leitu
 
 ### Navegação
 
-- **Header:** Altura fixa (~48–56px); fundo branco ou surface; borda inferior sutil.
+- **Header:** Altura fixa (~48–56px); fundo background (token); borda inferior sutil.
 - **Links:** Cor de texto ou accent; sublinhado ou destaque no hover.
 
 ### Listagem de disciplinas (home)

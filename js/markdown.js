@@ -99,9 +99,9 @@ function renderExercisesHTML(exercises) {
         <summary class="iss-exercise__toggle cursor-pointer list-none">
           <span class="inline">Ver resposta sugerida</span>
         </summary>
-        <div class="mt-3 pt-3 border-t border-zinc-200">
+        <div class="mt-3 pt-3 border-t iss-border">
           <p class="mb-0">${escapeHtml(ex.answer)}</p>
-          ${ex.hint ? `<p class="text-sm text-zinc-500 mt-2 mb-0"><strong>Dica:</strong> ${escapeHtml(ex.hint)}</p>` : ''}
+          ${ex.hint ? `<p class="text-sm iss-text-muted mt-2 mb-0"><strong>Dica:</strong> ${escapeHtml(ex.hint)}</p>` : ''}
         </div>
       </details>
     </div>
@@ -109,7 +109,7 @@ function renderExercisesHTML(exercises) {
     )
     .join('');
   return `
-  <h2 id="exercicios" class="text-xl font-semibold mt-8 mb-4 pb-1 border-b border-zinc-200">Exercícios</h2>
+  <h2 id="exercicios" class="text-xl font-semibold mt-8 mb-4 pb-1 border-b iss-border">Exercícios</h2>
   <div class="space-y-4">${list}</div>
   `;
 }
@@ -124,10 +124,10 @@ function renderAulaPage({ raw, lesson, discipline }) {
   if (breadcrumbEl) {
     const d = new URLSearchParams(window.location.search).get('d');
     breadcrumbEl.innerHTML = `
-      <a href="index.html" class="text-zinc-500 hover:text-zinc-900">Home</a>
-      <span class="text-zinc-400 mx-1">/</span>
-      <a href="disciplina.html?d=${encodeURIComponent(d)}" class="text-zinc-500 hover:text-zinc-900">${escapeHtml(discipline ? discipline.title : d)}</a>
-      <span class="text-zinc-400 mx-1">/</span>
+      <a href="index.html" class="iss-link-muted">Home</a>
+      <span class="iss-text-muted mx-1">/</span>
+      <a href="disciplina.html?d=${encodeURIComponent(d)}" class="iss-link-muted">${escapeHtml(discipline ? discipline.title : d)}</a>
+      <span class="iss-text-muted mx-1">/</span>
       <span>${escapeHtml(title)}</span>
     `;
   }
@@ -139,7 +139,7 @@ function renderAulaPage({ raw, lesson, discipline }) {
   if (contentEl) {
     const bodyHtml = renderBody(body);
     const exercisesHtml = renderExercisesHTML(frontmatter.exercises || []);
-    contentEl.innerHTML = `<nav class="mb-6 text-sm" aria-label="Nesta página"><a href="#resumo" class="text-zinc-500 hover:text-zinc-900 mr-3">Resumo</a><a href="#explicacoes" class="text-zinc-500 hover:text-zinc-900 mr-3">Explicações</a><a href="#exercicios" class="text-zinc-500 hover:text-zinc-900">Exercícios</a></nav><div class="iss-prose">${bodyHtml}</div>${exercisesHtml}`;
+    contentEl.innerHTML = `<nav class="mb-6 text-sm" aria-label="Nesta página"><a href="#resumo" class="iss-link-muted mr-3">Resumo</a><a href="#explicacoes" class="iss-link-muted mr-3">Explicações</a><a href="#exercicios" class="iss-link-muted">Exercícios</a></nav><div class="iss-prose">${bodyHtml}</div>${exercisesHtml}`;
     highlightCodeBlocks(contentEl);
     ensureSectionIds(contentEl);
   }
