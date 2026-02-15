@@ -2,8 +2,28 @@
  * ISS — Inicialização e orquestração por página
  */
 
+const LAST_VISITED_KEY = 'iss-last-visited';
+
 function getParam(name) {
   return typeof Router !== 'undefined' ? Router.getParam(name) : new URLSearchParams(window.location.search).get(name) || '';
+}
+
+function getLastVisited() {
+  try {
+    const raw = localStorage.getItem(LAST_VISITED_KEY);
+    if (!raw) return null;
+    const obj = JSON.parse(raw);
+    if (obj && typeof obj.discipline === 'string' && typeof obj.lesson === 'string') return obj;
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+function setLastVisited(disciplineSlug, lessonSlug) {
+  try {
+    localStorage.setItem(LAST_VISITED_KEY, JSON.stringify({ discipline: disciplineSlug, lesson: lessonSlug }));
+  } catch (_) {}
 }
 
 function initHome() {
@@ -63,10 +83,27 @@ function initHome() {
 
   Promise.all([fetchDisciplines(), fetchLessons()])
     .then(([disciplines, lessons]) => {
+      const last = getLastVisited();
+      let lesson = null;
+      let discipline = null;
+      if (last) {
+        lesson = getLesson(lessons, last.discipline, last.lesson);
+        discipline = getDiscipline(disciplines, last.discipline);
+      }
+      const continueCardHtml =
+        lesson && discipline
+          ? `
+        <a href="aula.html?d=${encodeURIComponent(last.discipline)}&a=${encodeURIComponent(last.lesson)}" class="iss-card block no-underline text-inherit">
+          <h3 class="font-semibold text-lg m-0">Continuar a ler</h3>
+          <p class="text-sm iss-text-muted mt-1 mb-0">${escapeHtml(discipline.title)} › ${escapeHtml(lesson.title)}</p>
+        </a>
+      `
+          : '';
+
       if (disciplines.length === 0) {
-        container.innerHTML = '<p class="iss-text-muted">Nenhuma disciplina disponível.</p>';
+        container.innerHTML = continueCardHtml || '<p class="iss-text-muted">Nenhuma disciplina disponível.</p>';
       } else {
-        container.innerHTML = disciplines
+        const disciplinesHtml = disciplines
           .map(
             (d) => `
         <a href="disciplina.html?d=${encodeURIComponent(d.slug)}" class="iss-card block no-underline text-inherit">
@@ -76,6 +113,7 @@ function initHome() {
       `
           )
           .join('');
+        container.innerHTML = continueCardHtml + disciplinesHtml;
       }
 
       if (searchInput && searchResultsEl) {
@@ -197,6 +235,7 @@ function initAula() {
         showAulaError('Esta aula não existe.');
         return null;
       }
+      setLastVisited(d, a);
       const disciplineLessons = getLessonsByDiscipline(lessons, d);
       const idx = disciplineLessons.findIndex((l) => l.slug === lesson.slug);
       const prevLesson = idx > 0 ? disciplineLessons[idx - 1] : null;
