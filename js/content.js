@@ -2,7 +2,8 @@
  * ISS — Fetch de conteúdo estático (disciplines.json, lessons.json, .md)
  */
 
-const CONTENT_BASE = 'content';
+/** Base path absoluto desde a raiz do site (compatível com Cloudflare Pages / Vercel). */
+const CONTENT_BASE = '/content';
 
 function escapeHtml(text) {
   const div = document.createElement('div');

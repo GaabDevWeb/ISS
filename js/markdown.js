@@ -138,11 +138,11 @@ function renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson }) {
 
   const breadcrumbEl = document.getElementById('breadcrumb-aula');
   if (breadcrumbEl) {
-    const d = new URLSearchParams(window.location.search).get('d');
+    const disciplineSlug = discipline ? discipline.slug : (new URLSearchParams(window.location.search).get('d') || '');
     breadcrumbEl.innerHTML = `
       <a href="index.html" class="iss-link-muted">Home</a>
       <span class="iss-text-muted mx-1">/</span>
-      <a href="disciplina.html?d=${encodeURIComponent(d)}" class="iss-link-muted">${escapeHtml(discipline ? discipline.title : d)}</a>
+      <a href="disciplina.html?d=${encodeURIComponent(disciplineSlug)}" class="iss-link-muted">${escapeHtml(discipline ? discipline.title : disciplineSlug)}</a>
       <span class="iss-text-muted mx-1">/</span>
       <span>${escapeHtml(title)}</span>
     `;

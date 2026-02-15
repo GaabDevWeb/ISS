@@ -34,7 +34,7 @@ function initHome() {
 }
 
 function initDisciplina() {
-  const d = getParam('d');
+  const d = (getParam('d') || '').trim().toLowerCase();
   const container = document.getElementById('lessons-list');
   const titleEl = document.getElementById('discipline-title');
   const breadcrumbEl = document.getElementById('breadcrumb-discipline');
@@ -98,8 +98,8 @@ function initDisciplina() {
 }
 
 function initAula() {
-  const d = getParam('d');
-  const a = getParam('a');
+  const d = (getParam('d') || '').trim().toLowerCase();
+  const a = (getParam('a') || '').trim().toLowerCase();
   const contentEl = document.getElementById('lesson-content');
   const titleEl = document.getElementById('lesson-title');
   const breadcrumbEl = document.getElementById('breadcrumb-aula');
@@ -148,9 +148,9 @@ function initAula() {
 }
 
 function getPageType() {
-  const path = window.location.pathname;
-  if (path.endsWith('disciplina.html')) return 'disciplina';
-  if (path.endsWith('aula.html')) return 'aula';
+  const path = window.location.pathname || '';
+  if (path.includes('disciplina.html')) return 'disciplina';
+  if (path.includes('aula.html')) return 'aula';
   return 'home';
 }
 
