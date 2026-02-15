@@ -8,24 +8,93 @@ function getParam(name) {
 
 function initHome() {
   const container = document.getElementById('disciplines-list');
+  const searchInput = document.getElementById('iss-search');
+  const searchResultsEl = document.getElementById('search-results');
   if (!container) return;
 
-  fetchDisciplines()
-    .then((disciplines) => {
+  const minChars = 2;
+
+  function getSearchMatches(disciplines, lessons, q) {
+    const qLower = q.trim().toLowerCase();
+    if (qLower.length < minChars) return [];
+    const flat = lessons.map((lesson) => ({
+      lesson,
+      discipline: getDiscipline(disciplines, lesson.discipline),
+    })).filter((item) => item.discipline);
+    return flat.filter(
+      (item) =>
+        item.lesson.title.toLowerCase().includes(qLower) ||
+        (item.discipline && item.discipline.title.toLowerCase().includes(qLower))
+    );
+  }
+
+  function runSearch(disciplines, lessons) {
+    if (!searchInput || !searchResultsEl) return;
+    const q = searchInput.value.trim();
+    const matches = getSearchMatches(disciplines, lessons, q);
+    if (q.length < minChars) {
+      searchResultsEl.classList.add('hidden');
+      searchResultsEl.innerHTML = '';
+      return;
+    }
+    searchResultsEl.classList.remove('hidden');
+    if (matches.length === 0) {
+      searchResultsEl.innerHTML = '<p class="iss-text-muted text-sm">Nenhuma aula encontrada.</p>';
+    } else {
+      searchResultsEl.innerHTML =
+        '<ul class="space-y-2">' +
+        matches
+          .map(
+            (item) =>
+              '<li><a href="aula.html?d=' +
+              encodeURIComponent(item.lesson.discipline) +
+              '&a=' +
+              encodeURIComponent(item.lesson.slug) +
+              '" class="iss-link hover:underline">' +
+              escapeHtml(item.discipline.title) +
+              ' › ' +
+              escapeHtml(item.lesson.title) +
+              '</a></li>'
+          )
+          .join('') +
+        '</ul>';
+    }
+  }
+
+  Promise.all([fetchDisciplines(), fetchLessons()])
+    .then(([disciplines, lessons]) => {
       if (disciplines.length === 0) {
         container.innerHTML = '<p class="iss-text-muted">Nenhuma disciplina disponível.</p>';
-        return;
-      }
-      container.innerHTML = disciplines
-        .map(
-          (d) => `
+      } else {
+        container.innerHTML = disciplines
+          .map(
+            (d) => `
         <a href="disciplina.html?d=${encodeURIComponent(d.slug)}" class="iss-card block no-underline text-inherit">
           <h3 class="font-semibold text-lg m-0">${escapeHtml(d.title)}</h3>
           ${d.description ? `<p class="text-sm iss-text-muted mt-1 mb-0">${escapeHtml(d.description)}</p>` : ''}
         </a>
       `
-        )
-        .join('');
+          )
+          .join('');
+      }
+
+      if (searchInput && searchResultsEl) {
+        searchInput.addEventListener('input', () => runSearch(disciplines, lessons));
+        searchInput.addEventListener('search', () => runSearch(disciplines, lessons));
+        searchInput.addEventListener('keydown', (e) => {
+          if (e.key !== 'Enter') return;
+          e.preventDefault();
+          const q = searchInput.value.trim();
+          const matches = getSearchMatches(disciplines, lessons, q);
+          if (matches.length === 0) return;
+          const first = matches[0];
+          window.location.href =
+            'aula.html?d=' +
+            encodeURIComponent(first.lesson.discipline) +
+            '&a=' +
+            encodeURIComponent(first.lesson.slug);
+        });
+      }
     })
     .catch((err) => {
       container.innerHTML = '<p class="text-red-600">Erro ao carregar disciplinas.</p>';
@@ -82,11 +151,16 @@ function initDisciplina() {
       if (container) {
         container.innerHTML = disciplineLessons
           .map(
-            (l) => `
+            (l) => {
+              const read = typeof isLessonRead !== 'undefined' && isLessonRead(d, l.slug);
+              const readLabel = read ? '<span class="block text-sm iss-text-muted mt-1 iss-lesson-read">Lida</span>' : '';
+              return `
           <a href="aula.html?d=${encodeURIComponent(d)}&a=${encodeURIComponent(l.slug)}" class="iss-card block no-underline text-inherit">
             <span class="font-medium">${escapeHtml(l.title)}</span>
+            ${readLabel}
           </a>
-        `
+        `;
+            }
           )
           .join('');
       }

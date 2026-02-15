@@ -22,6 +22,12 @@
       <p class="iss-text-muted text-lg">Resumos de aulas e exercícios para revisão rápida. Escolha a disciplina abaixo.</p>
     </section>
 
+    <section role="search" class="mb-8" aria-label="Pesquisa">
+      <label for="iss-search" class="sr-only">Pesquisar aulas</label>
+      <input type="search" id="iss-search" class="w-full max-w-md px-4 py-2 rounded border iss-border bg-transparent iss-text-foreground placeholder:iss-text-muted focus:outline-none focus:ring-2 focus:ring-inset" placeholder="Pesquisar aulas…" autocomplete="off" />
+      <div id="search-results" class="mt-3 hidden" aria-live="polite"></div>
+    </section>
+
     <section aria-label="Disciplinas">
       <h2 class="sr-only">Disciplinas disponíveis</h2>
       <div id="disciplines-list" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

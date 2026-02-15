@@ -153,6 +153,12 @@ function renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson }) {
 
   const contentEl = document.getElementById('lesson-content');
   if (contentEl) {
+    const disciplineSlug = discipline ? discipline.slug : '';
+    const lessonSlug = lesson.slug;
+    const read = typeof isLessonRead !== 'undefined' && isLessonRead(disciplineSlug, lessonSlug);
+    const readToggleLabel = read ? 'Desmarcar como lida' : 'Marcar como lida';
+    const readToggleHtml = `<p class="mb-4"><button type="button" id="iss-mark-read-toggle" class="text-sm iss-link border-0 bg-transparent cursor-pointer p-0 underline hover:no-underline">${escapeHtml(readToggleLabel)}</button></p>`;
+
     const words = body.trim().split(/\s+/).filter(Boolean).length;
     const readingMinutes = frontmatter.readingMinutes != null
       ? Math.max(1, parseInt(frontmatter.readingMinutes, 10) || 1)
@@ -160,10 +166,9 @@ function renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson }) {
     const readingTimeHtml = `<p class="iss-reading-time iss-text-muted text-sm mb-4">~${readingMinutes} min de leitura</p>`;
     const bodyHtml = renderBody(body);
     const reviewedIds = typeof getReviewedExerciseIds !== 'undefined' ? getReviewedExerciseIds() : new Set();
-    const disciplineSlug = discipline ? discipline.slug : '';
     const exercisesHtml = renderExercisesHTML(frontmatter.exercises || [], disciplineSlug, lesson.slug, reviewedIds);
     const prevNextHtml = renderPrevNextNav(prevLesson || null, nextLesson || null, disciplineSlug);
-    contentEl.innerHTML = `${readingTimeHtml}<nav class="mb-6 text-sm" aria-label="Nesta página"><a href="#resumo" class="iss-link-muted mr-3">Resumo</a><a href="#explicacoes" class="iss-link-muted mr-3">Explicações</a><a href="#exercicios" class="iss-link-muted">Exercícios</a></nav><div class="iss-prose">${bodyHtml}</div>${exercisesHtml}${prevNextHtml}`;
+    contentEl.innerHTML = `${readingTimeHtml}${readToggleHtml}<nav class="mb-6 text-sm" aria-label="Nesta página"><a href="#resumo" class="iss-link-muted mr-3">Resumo</a><a href="#explicacoes" class="iss-link-muted mr-3">Explicações</a><a href="#exercicios" class="iss-link-muted">Exercícios</a></nav><div class="iss-prose">${bodyHtml}</div>${exercisesHtml}${prevNextHtml}`;
     contentEl.querySelectorAll('img').forEach((img) => img.setAttribute('loading', 'lazy'));
     contentEl.querySelectorAll('iframe').forEach((iframe) => iframe.setAttribute('loading', 'lazy'));
     highlightCodeBlocks(contentEl);
@@ -190,6 +195,20 @@ function renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson }) {
         });
       }
     });
+
+    const readToggleBtn = contentEl.querySelector('#iss-mark-read-toggle');
+    if (readToggleBtn && typeof markLessonAsRead !== 'undefined' && typeof markLessonAsUnread !== 'undefined') {
+      readToggleBtn.addEventListener('click', () => {
+        const nowRead = isLessonRead(disciplineSlug, lessonSlug);
+        if (nowRead) {
+          markLessonAsUnread(disciplineSlug, lessonSlug);
+          readToggleBtn.textContent = 'Marcar como lida';
+        } else {
+          markLessonAsRead(disciplineSlug, lessonSlug);
+          readToggleBtn.textContent = 'Desmarcar como lida';
+        }
+      });
+    }
   }
 
 }
