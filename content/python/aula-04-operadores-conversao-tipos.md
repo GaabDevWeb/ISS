@@ -1,0 +1,149 @@
+---
+title: "Conversão de tipos e operadores aritméticos"
+slug: "operadores-conversao-tipos"
+discipline: "python"
+order: 4
+description: "Funções de conversão int/float/bool/str, tipagem forte, operadores + - * / // % ** e precedência"
+exercises:
+  - question: "O que acontece ao executar float('texto qualquer') em Python e por quê?"
+    answer: "Ocorre ValueError: could not convert string to float. Python tem tipagem forte: só converte string para número quando o conteúdo da string representa um número; texto não numérico não é convertido."
+    hint: "Lembre da diferença entre tipagem dinâmica e tipagem forte."
+  - question: "Qual a diferença entre o operador / e o operador // em Python?"
+    answer: "/ é divisão real: retorna float (em Python 3 mesmo com inteiros). // é divisão inteira (piso): retorna apenas a parte inteira do quociente. Ex.: 17/4 = 4.25, 17//4 = 4."
+  - question: "Ao converter um float para int com int(), o que acontece com a parte decimal?"
+    answer: "É truncada (descartada). int(12.98) resulta em 12; não há arredondamento matemático."
+  - question: "Em qual ordem o Python avalia os operadores aritméticos em uma expressão sem parênteses?"
+    answer: "Maior prioridade: parênteses (). Depois: ** (exponenciação). Em seguida: *, /, //, % (da esquerda para a direita). Menor prioridade: + e - (da esquerda para a direita)."
+  - question: "Para que serve o operador % entre dois números inteiros? Dê um exemplo."
+    answer: "Retorna o resto (módulo) da divisão inteira. Ex.: 17 % 4 = 1, pois 17 = 4*4 + 1. Útil para verificar paridade (n % 2), ciclos, etc."
+  - question: "Uma string que contém apenas dígitos e um ponto decimal pode ser convertida para float? E uma string com letras?"
+    answer: "Sim: float('98874368768') e float('3.14') funcionam. String com letras (não numérica) gera ValueError ao usar float() ou int()."
+---
+## Resumo
+
+- **Conversão de tipos:** funções built-in `int()`, `float()`, `bool()`, `str()` convertem um valor para o tipo indicado. Ex.: `str(12)` → `'12'` (string); `int(12.98)` → `12` (trunca); `float('3.14')` → `3.14`. Qualquer valor pode ser convertido para string; só strings que representam número convertem para int/float.
+- **Tipagem forte:** Python não converte string não numérica para número. `float('se aqui tiver um texto...')` → **ValueError**. O erro ocorre na linha da conversão; as linhas seguintes não são executadas.
+- **Operadores aritméticos:** `+` soma, `-` subtração, `*` multiplicação, `/` divisão (sempre retorna float em Python 3), `//` divisão inteira (piso), `%` resto (módulo), `**` exponenciação. Trabalham com tipos numéricos (int, float).
+- **Precedência (maior → menor):** parênteses `()`; depois `**`; depois `*`, `/`, `//`, `%` (esquerda para direita); por último `+`, `-`.
+- **Resumo em 5 linhas:** (1) Conversão: `int()`, `float()`, `bool()`, `str()`; usar o tipo desejado como função. (2) Tipagem forte: conversão só entre tipos compatíveis; string não numérica → int/float gera ValueError. (3) Operadores: +, -, *, /, //, %, **; / retorna float; // retorna inteiro; % retorna resto. (4) Precedência: () > ** > * / // % > + -. (5) Nomes expressivos, snake_case, ponto para decimal; erro na conversão interrompe o fluxo naquela linha.
+- **Palavras-chave:** conversão de tipos, int float bool str, tipagem forte, tipagem dinâmica, ValueError, operadores aritméticos, divisão inteira, módulo, exponenciação, precedência, piso, literal (nome da variável).
+
+## Explicações
+
+### 1. Tema e escopo
+
+**Tema:** Quarto encontro (final da etapa 2): recapitulação de variáveis e tipos (memória, literal, convenções); funções de conversão de tipos (`int()`, `float()`, `bool()`, `str()`); tipagem forte e erro ao converter string não numérica; operadores aritméticos e precedência; exercícios (Celsius→Fahrenheit, retângulo, três números).
+
+**Problema que resolve:** Permitir transformar valores entre tipos quando necessário e realizar cálculos com operadores aritméticos; evitar ValueError por conversão inválida e entender por que o programa para na linha do erro.
+
+**Inclui:** Recapitulação variáveis/tipos (espaço em memória, tipo = semântica do valor, nome = literal); convenções (snake_case, ponto para decimal); conversão com as quatro funções e exemplos; tipagem forte e ValueError; sete operadores e precedência; exemplos com notas e com valor1/valor2 (//, %, **); exercícios propostos (conversão °C→°F, área/perímetro retângulo, média/média geométrica/desvio padrão/dobro da soma/triplo do produto/raiz da soma dos quadrados de três números).
+
+**Não coberto no material:** Fórmula explícita do desvio padrão e da raiz quadrada na aula (o aluno precisa buscar ou usar `**0.5` / módulo math); detalhe de quando usar cada conversão em projetos reais (apenas mencionado que “vai usar muito”).
+
+### 2. Contexto na disciplina
+
+- Último encontro da segunda etapa; segue às aulas 1–3 (introdução, algoritmo/ambiente, variáveis e tipos).
+- Pré-requisito: variáveis, tipos básicos, `type()`, atribuição.
+- Base para expressões, entrada de dados e aulas seguintes: conversão e operadores são usados em todo o restante do curso.
+
+### 3. Visão conceitual geral
+
+Aula **técnica**: aprofunda variáveis (memória, literal), introduz conversão de tipos e operadores aritméticos. O professor reforça que o tipo define quanto espaço e que semântica o valor tem; que o nome da variável (literal) não ocupa espaço extra; que Python tem tipagem dinâmica (inferência do tipo) mas **tipagem forte** (conversões só entre tipos compatíveis). Operadores permitem construir expressões numéricas; a ordem de avaliação segue a precedência.
+
+### 4. Ideias-chave (máx. 7)
+
+1. **Conversão é explícita com funções do tipo** — `int(x)`, `float(x)`, `bool(x)`, `str(x)`. Não existe conversão implícita de string não numérica para número; isso gera erro.
+2. **Tipagem forte** — Só há conversão entre tipos compatíveis. String com dígitos (e ponto) → número OK; string com texto → número gera **ValueError**. O fluxo para na linha da conversão; o que vem depois não executa.
+3. **Literal = nome da variável** — O nome não ocupa espaço extra na memória; o que ocupa espaço é o valor (e o tipo define o tamanho). Pode ter nome longo ou curto; o importante é ser expressivo (semântica clara).
+4. **Divisão `/` vs divisão inteira `//` e resto `%`** — `/` sempre retorna float (em Python 3). `//` retorna a parte inteira do quociente (piso). `%` retorna o resto da divisão (ex.: 17 % 4 = 1).
+5. **Exponenciação e ponto flutuante** — `**` é o operador de potência (ex.: 17 ** 4 = 83521). Em Python não há “vírgula” para decimal; usa-se ponto. Notação de exibição (ex.: 83.521) é formatação; internamente é float/int.
+6. **Precedência dos operadores** — Parênteses têm maior prioridade; depois `**`; depois `*`, `/`, `//`, `%` (esquerda para direita); por último `+`, `-`. Usar parênteses quando quiser deixar explícito ou mudar a ordem.
+7. **Convenções reforçadas** — Nomes em caixa baixa, snake_case para palavras compostas; ponto para parte decimal (não vírgula); evitar acentuação em código para portabilidade.
+
+### 5. Conceitos essenciais — explicação operacional
+
+#### Recapitulação: variável, tipo, memória
+
+- **Variável:** espaço na memória reservado para um dado; o valor pode mudar durante a execução. O **tipo** é a semântica do valor (int, float, bool, str) e define quanto espaço é reservado.
+- **Nome da variável (literal):** apenas identificador para leitura; não ocupa espaço extra. Pode ser qualquer nome válido (letra ou _ no início; depois letras, números, _).
+- **Tipagem dinâmica:** o interpretador infere o tipo pelo valor atribuído; não é preciso declarar tipo. **Duck typing:** “se parece com pato, nada como pato…”, o Python trata pelo comportamento (valor) e não por declaração.
+
+#### Funções de conversão de tipos
+
+- **Uso:** `novo_valor = tipo(valor_ou_variavel)`. Ex.: `str(12)` → `'12'`; `int(12.987)` → `12` (trunca); `float('98874368768')` → `98874368768.0`; `str(False)` → `'False'`.
+- **Quando usar:** Quando precisar operar ou exibir em outro tipo (ex.: concatenar número com texto usando `str()`; ler entrada como string e calcular com `float()` ou `int()`).
+- **Quando NÃO usar:** Não converter string com texto livre para int/float — gera **ValueError**. Verificar se a string representa número (ou tratar exceção) antes de converter.
+- ❌ **Erro comum:** `float('se aqui tiver um texto, o que acontece?')` → `ValueError: could not convert string to float: 'se aqui tiver um texto...'`. O traceback aponta a linha da conversão; as linhas seguintes não são executadas.
+- 🧪 **Como testar:** Executar `print(type(int(3.9)), int(3.9))` e conferir que é `int` e `3`; depois tentar `float('abc')` e observar o ValueError.
+
+#### Tipagem forte
+
+- **Definição:** Python só realiza conversões entre tipos compatíveis. Qualquer valor pode virar string; nem toda string pode virar número — só as que representam número.
+- **Consequência:** Código que depende de dados externos (entrada do usuário, arquivo) deve validar ou tratar exceção ao converter string → número, senão o programa pode abortar com ValueError.
+
+#### Operadores aritméticos
+
+| Operador | Nome           | Exemplo (notas 6.8 e 8.1)     |
+|----------|----------------|--------------------------------|
+| `+`      | Soma           | 6.8 + 8.1 → 14.9 (float)       |
+| `-`      | Subtração      | 6.8 - 8.1 → -1.3 (float)      |
+| `*`      | Multiplicação  | 6.8 * 8.1 → 55.08             |
+| `/`      | Divisão        | 6.8 / 8.1 → float; 17/4 → 4.25 |
+| `//`     | Divisão inteira (piso) | 17 // 4 → 4          |
+| `%`      | Módulo (resto) | 17 % 4 → 1                     |
+| `**`     | Exponenciação  | 17 ** 4 → 83521               |
+
+- **Precedência (slide):** 1) Parênteses `()` — maior prioridade. 2) Exponenciação `**`. 3) `*`, `/`, `//`, `%` — avaliados da esquerda para a direita. 4) `+`, `-` — menor prioridade.
+- ⚠️ **Pegadinha:** Em Python 3, `17 / 4` é `4.25` (float), não divisão inteira. Quem vem de outras linguagens pode esperar inteiro; aqui `/` sempre retorna float quando há divisão “real”.
+- 🛠️ **Aplicação mínima:** Definir duas variáveis numéricas, calcular soma, subtração, produto, divisão, piso, resto e potência; usar `print()` para exibir cada resultado. Critério de acerto: resultados numéricos corretos e tipos coerentes (float onde for `/`).
+
+#### Exercícios propostos na aula
+
+1. **Conversão °C → °F:** Receber um valor em graus Celsius e converter para Fahrenheit (fórmula: F = C * 9/5 + 32 ou equivalente). Usar variáveis e `print`.
+2. **Área e perímetro do retângulo:** Receber base e altura (duas variáveis); calcular e exibir área e perímetro (2*base + 2*altura).
+3. **Três números:** Declarar três variáveis numéricas; calcular e exibir: média (aritmética), média geométrica, desvio padrão, dobro da soma, triplo do produto, raiz quadrada da soma dos quadrados. *Não coberto na aula:* fórmulas explícitas de desvio padrão e raiz quadrada (aluno pode usar `**0.5` para raiz ou buscar fórmula; para desvio padrão, buscar fórmula ou módulo depois).
+
+### 6. Procedimento / execução
+
+- **Conversão:** (1) Decidir tipo de destino (int, float, bool, str). (2) Chamar a função com o valor ou variável: `resultado = int(var)`. (3) Se for string → número, garantir que a string represente número ou tratar ValueError.
+- **Operações:** (1) Definir variáveis com valores numéricos. (2) Criar variável para o resultado usando o operador desejado (ex.: `soma = a + b`). (3) Usar `print()` para exibir. (4) Respeitar precedência ou usar parênteses para deixar explícito.
+- **Erro típico:** Esquecer que string não numérica não converte — executar `float(texto)` sem validar gera ValueError e interrompe a célula/script naquela linha.
+- **Sinal de execução correta:** Valores impressos corretos; nenhum ValueError; tipo esperado (ex.: `type(soma)` pode ser float quando se usa `/` ou números float).
+
+### 7. Exemplos relevantes
+
+- **Número → string:** `variavel_numerica = 12`; `variavel_numerica_convertida_em_str = str(variavel_numerica)` → tipo `str`, valor `'12'`.
+- **Float → int:** `primeira_variavel = 12.987...`; `variavel_convertida = int(primeira_variavel)` → tipo `int`, valor `12` (parte decimal descartada).
+- **String numérica → float:** `primeira_variavel = '98874368768'`; `variavel_convertida = float(primeira_variavel)` → tipo `float`, valor `98874368768.0`.
+- **Bool → string:** `primeira_variavel = False`; `variavel_convertida = str(primeira_variavel)` → tipo `str`, valor `'False'`.
+- **Soma/subtração/multiplicação/divisão (slides):** `nota_matematica = 6.8`, `nota_programacao = 8.1`; soma, subtração, multiplicação, divisão com `print` mostrando rótulo e valor.
+- **Piso, resto, potência:** `valor1 = 17`, `valor2 = 4`; `piso = valor1 // valor2` → 4; `resto = valor1 % valor2` → 1; `potencia = valor1 ** valor2` → 83521. Divisão normal: `valor1 / valor2` → 4.25.
+
+### 8. Diferenças e confusões comuns
+
+- **Tipagem dinâmica vs forte:** Dinâmica = tipo inferido em tempo de execução, não declarado. Forte = sem conversão implícita entre tipos incompatíveis (ex.: string de texto → número não é feita).
+- **`/` vs `//`:** `/` é divisão real (sempre float em Python 3). `//` é quociente inteiro (piso). Não confundir com “divisão que retorna inteiro” em outras linguagens.
+- **Conversão direta do valor vs variável:** Tanto `str(12)` quanto `str(variavel)` são válidos; a função aceita valor literal ou variável.
+- **Nome da variável vs valor:** O nome (literal) não ocupa espaço; o valor e seu tipo definem o espaço em memória. Trocar o valor (e até o tipo) na mesma variável é permitido (reatribuição).
+
+### 9. Como cai em prova
+
+- Perguntar o resultado de `int(7.9)`, `17 // 4`, `17 % 4`, `2 ** 10`.
+- Dar um trecho com `float('abc')` e perguntar o que acontece (ValueError e em qual linha).
+- Ordem de avaliação em expressão com vários operadores (ex.: `2 + 3 * 4` vs `(2 + 3) * 4`).
+- Verdadeiro ou falso: “Em Python, qualquer string pode ser convertida para float.” (Falso — só as que representam número.)
+
+### 10. Pontos de atenção
+
+- Usar **ponto** para decimal em float (ex.: `13.9`), não vírgula; vírgula pode ser interpretada como tupla ou gerar erro.
+- String em mais de uma linha na definição (quebra de linha dentro das aspas) gera erro de sintaxe; para múltiplas linhas usar docstring ou concatenar.
+- Após um ValueError na conversão, nada abaixo daquela linha na mesma célula/script é executado — o fluxo termina ali.
+- Variável não definida (ex.: usar `piso` antes de calcular em outra célula) gera **NameError**; no notebook, executar as células na ordem.
+
+### 11. Checklist de domínio
+
+- [ ] Sei definir conversão de tipos com `int()`, `float()`, `bool()`, `str()` e quando cada uma é adequada.
+- [ ] Sei explicar por que `float('texto')` gera ValueError e o que é tipagem forte.
+- [ ] Sei reconhecer os sete operadores aritméticos e a precedência (parênteses, **, * / // %, + -).
+- [ ] Sei aplicar: converter variável para outro tipo; calcular soma, diferença, produto, divisão, piso, resto e potência com variáveis.
+- [ ] Sei evitar: converter string não numérica para número sem validar; confundir `/` com `//`; usar vírgula para decimal em float.

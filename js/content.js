@@ -4,6 +4,12 @@
 
 const CONTENT_BASE = 'content';
 
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
 async function fetchJSON(path) {
   const res = await fetch(`${CONTENT_BASE}/${path}`);
   if (!res.ok) throw new Error(`Failed to load ${path}`);

@@ -31,20 +31,26 @@ function parseFrontmatter(raw) {
     }
     if (line.match(/^exercises:\s*$/)) {
       const exercises = [];
+      // Captura string entre aspas permitindo aspas do outro tipo dentro (ex.: "texto com 'aspas'")
+      const quotedValue = (key, line) => {
+        const re = new RegExp(`${key}:\\s*(["'])((?:\\\\.|(?!\\1)[\\s\\S])*)\\1`);
+        const m = line.match(re);
+        return m ? m[2].replace(/\\(.)/g, '$1') : null;
+      };
       i++;
       while (i < lines.length) {
         const ln = lines[i];
         if (ln.match(/^\s+-\s+question:/)) {
           const ex = { question: '', answer: '', hint: '' };
-          const q = ln.match(/question:\s*["']([^"']*)["']/);
-          if (q) ex.question = q[1];
+          const q = quotedValue('question', ln);
+          if (q != null) ex.question = q;
           i++;
           while (i < lines.length && !lines[i].match(/^\s+-\s+question:/)) {
             const rest = lines[i];
-            const an = rest.match(/answer:\s*["']([^"']*)["']/);
-            const hi = rest.match(/hint:\s*["']([^"']*)["']/);
-            if (an) ex.answer = an[1];
-            if (hi) ex.hint = hi[1];
+            const an = quotedValue('answer', rest);
+            const hi = quotedValue('hint', rest);
+            if (an != null) ex.answer = an;
+            if (hi != null) ex.hint = hi;
             i++;
           }
           if (ex.question && ex.answer) exercises.push(ex);
@@ -82,19 +88,18 @@ function ensureSectionIds(container) {
   });
 }
 
-function escapeHtml(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
-}
-
-function renderExercisesHTML(exercises) {
+function renderExercisesHTML(exercises, disciplineSlug, lessonSlug, reviewedIds) {
   if (!Array.isArray(exercises) || exercises.length === 0) return '';
+  const ids = reviewedIds instanceof Set ? reviewedIds : new Set();
   const list = exercises
-    .map(
-      (ex) => `
-    <div class="iss-exercise">
-      <p class="font-medium mb-2">${escapeHtml(ex.question)}</p>
+    .map((ex, i) => {
+      const exerciseId = `${disciplineSlug}_${lessonSlug}_${i}`;
+      const isReviewed = ids.has(exerciseId);
+      const revisadoClass = isReviewed ? ' iss-exercise--revisado' : '';
+      const revisadoLabel = isReviewed ? ' <span class="iss-exercise__revisado-label text-sm iss-text-muted">Revisado</span>' : '';
+      return `
+    <div class="iss-exercise${revisadoClass}" data-exercise-id="${escapeHtml(exerciseId)}">
+      <p class="font-medium mb-2">${escapeHtml(ex.question)}${revisadoLabel}</p>
       <details class="group">
         <summary class="iss-exercise__toggle cursor-pointer list-none">
           <span class="inline">Ver resposta sugerida</span>
@@ -105,8 +110,8 @@ function renderExercisesHTML(exercises) {
         </div>
       </details>
     </div>
-  `
-    )
+  `;
+    })
     .join('');
   return `
   <h2 id="exercicios" class="text-xl font-semibold mt-8 mb-4 pb-1 border-b iss-border">Exercícios</h2>
@@ -114,7 +119,18 @@ function renderExercisesHTML(exercises) {
   `;
 }
 
-function renderAulaPage({ raw, lesson, discipline }) {
+function renderPrevNextNav(prevLesson, nextLesson, disciplineSlug) {
+  if (!prevLesson && !nextLesson) return '';
+  const prevLink = prevLesson
+    ? `<a href="aula.html?d=${encodeURIComponent(disciplineSlug)}&a=${encodeURIComponent(prevLesson.slug)}" class="iss-link">Aula anterior</a>`
+    : '<span class="iss-text-muted">Aula anterior</span>';
+  const nextLink = nextLesson
+    ? `<a href="aula.html?d=${encodeURIComponent(disciplineSlug)}&a=${encodeURIComponent(nextLesson.slug)}" class="iss-link">Próxima aula</a>`
+    : '<span class="iss-text-muted">Próxima aula</span>';
+  return `<nav class="mt-8 pt-6 border-t iss-border flex justify-between text-sm" aria-label="Navegação entre aulas">${prevLink}${nextLink}</nav>`;
+}
+
+function renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson }) {
   const { frontmatter, body } = parseFrontmatter(raw);
   const title = frontmatter.title || lesson.title;
 
@@ -137,11 +153,43 @@ function renderAulaPage({ raw, lesson, discipline }) {
 
   const contentEl = document.getElementById('lesson-content');
   if (contentEl) {
+    const words = body.trim().split(/\s+/).filter(Boolean).length;
+    const readingMinutes = frontmatter.readingMinutes != null
+      ? Math.max(1, parseInt(frontmatter.readingMinutes, 10) || 1)
+      : Math.max(1, Math.ceil(words / 200));
+    const readingTimeHtml = `<p class="iss-reading-time iss-text-muted text-sm mb-4">~${readingMinutes} min de leitura</p>`;
     const bodyHtml = renderBody(body);
-    const exercisesHtml = renderExercisesHTML(frontmatter.exercises || []);
-    contentEl.innerHTML = `<nav class="mb-6 text-sm" aria-label="Nesta página"><a href="#resumo" class="iss-link-muted mr-3">Resumo</a><a href="#explicacoes" class="iss-link-muted mr-3">Explicações</a><a href="#exercicios" class="iss-link-muted">Exercícios</a></nav><div class="iss-prose">${bodyHtml}</div>${exercisesHtml}`;
+    const reviewedIds = typeof getReviewedExerciseIds !== 'undefined' ? getReviewedExerciseIds() : new Set();
+    const disciplineSlug = discipline ? discipline.slug : '';
+    const exercisesHtml = renderExercisesHTML(frontmatter.exercises || [], disciplineSlug, lesson.slug, reviewedIds);
+    const prevNextHtml = renderPrevNextNav(prevLesson || null, nextLesson || null, disciplineSlug);
+    contentEl.innerHTML = `${readingTimeHtml}<nav class="mb-6 text-sm" aria-label="Nesta página"><a href="#resumo" class="iss-link-muted mr-3">Resumo</a><a href="#explicacoes" class="iss-link-muted mr-3">Explicações</a><a href="#exercicios" class="iss-link-muted">Exercícios</a></nav><div class="iss-prose">${bodyHtml}</div>${exercisesHtml}${prevNextHtml}`;
+    contentEl.querySelectorAll('img').forEach((img) => img.setAttribute('loading', 'lazy'));
+    contentEl.querySelectorAll('iframe').forEach((iframe) => iframe.setAttribute('loading', 'lazy'));
     highlightCodeBlocks(contentEl);
     ensureSectionIds(contentEl);
+    contentEl.querySelectorAll('.iss-exercise').forEach((block) => {
+      const details = block.querySelector('details');
+      const id = block.getAttribute('data-exercise-id');
+      if (details && id && typeof markExerciseAsReviewed !== 'undefined') {
+        details.addEventListener('toggle', () => {
+          if (details.open) {
+            markExerciseAsReviewed(id);
+            block.classList.add('iss-exercise--revisado');
+            const label = block.querySelector('.iss-exercise__revisado-label');
+            if (!label) {
+              const p = block.querySelector('p.font-medium');
+              if (p) {
+                const span = document.createElement('span');
+                span.className = 'iss-exercise__revisado-label text-sm iss-text-muted';
+                span.textContent = ' Revisado';
+                p.appendChild(span);
+              }
+            }
+          }
+        });
+      }
+    });
   }
 
 }

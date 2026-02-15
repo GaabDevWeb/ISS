@@ -1,0 +1,14 @@
+{
+  "name": "iss",
+  "private": true,
+  "scripts": {
+    "sync": "node scripts/sync-lessons.js",
+    "build:css": "npx clean-css-cli -o css/styles.min.css css/styles.css",
+    "build:js": "npx terser js/content.js -o js/content.min.js -c -m && npx terser js/router.js -o js/router.min.js -c -m && npx terser js/reviewed.js -o js/reviewed.min.js -c -m && npx terser js/markdown.js -o js/markdown.min.js -c -m && npx terser js/app.js -o js/app.min.js -c -m",
+    "build": "npm run build:css && npm run build:js"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.0",
+    "terser": "^5.36.0"
+  }
+}

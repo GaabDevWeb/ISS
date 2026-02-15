@@ -123,28 +123,28 @@ function initAula() {
         showAulaError('Esta aula não existe.');
         return null;
       }
+      const disciplineLessons = getLessonsByDiscipline(lessons, d);
+      const idx = disciplineLessons.findIndex((l) => l.slug === lesson.slug);
+      const prevLesson = idx > 0 ? disciplineLessons[idx - 1] : null;
+      const nextLesson = idx >= 0 && idx < disciplineLessons.length - 1 ? disciplineLessons[idx + 1] : null;
       return fetchLessonMarkdown(d, lesson.file).then((raw) => ({
         raw,
         lesson,
+        prevLesson,
+        nextLesson,
       }));
     })
     .then((data) => {
       if (!data) return;
-      const { raw, lesson } = data;
+      const { raw, lesson, prevLesson, nextLesson } = data;
       return fetchDisciplines().then((disciplines) => {
         const discipline = getDiscipline(disciplines, d);
-        renderAulaPage({ raw, lesson, discipline });
+        renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson });
       });
     })
     .catch(() => {
       showAulaError('Erro ao carregar o conteúdo da aula.');
     });
-}
-
-function escapeHtml(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
 }
 
 function getPageType() {
@@ -154,9 +154,36 @@ function getPageType() {
   return 'home';
 }
 
+function initBackToTop() {
+  const btn = document.getElementById('iss-back-to-top');
+  if (!btn) return;
+  const scrollThreshold = 300;
+  function updateVisibility() {
+    if (window.scrollY > scrollThreshold) {
+      btn.style.display = '';
+      btn.classList.add('is-visible');
+    } else {
+      btn.classList.remove('is-visible');
+      btn.style.display = 'none';
+    }
+  }
+  window.addEventListener('scroll', updateVisibility, { passive: true });
+  updateVisibility();
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const page = getPageType();
   if (page === 'home') initHome();
-  else if (page === 'disciplina') initDisciplina();
-  else if (page === 'aula') initAula();
+  else if (page === 'disciplina') {
+    initDisciplina();
+    initBackToTop();
+  } else if (page === 'aula') {
+    initAula();
+    initBackToTop();
+  }
 });

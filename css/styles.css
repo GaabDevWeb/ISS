@@ -145,6 +145,13 @@ body {
   padding: 1rem 1.5rem;
   margin-bottom: 1rem;
   background: var(--color-surface);
+  overflow: visible;
+}
+/* Garantir que a pergunta seja exibida por completo (não cortada) */
+.iss-exercise > p.font-medium {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  min-width: 0;
 }
 .iss-exercise__toggle {
   color: var(--color-accent);
@@ -172,10 +179,42 @@ body {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
+.iss-exercise--revisado .iss-exercise__revisado-label {
+  display: block;
+  margin-left: 0;
+  margin-top: 0.25rem;
+  font-weight: normal;
+}
 
 /* Focus visible for links and interactive elements */
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+/* Back to top button */
+.iss-back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 20;
+  padding: 0.5rem 1rem;
+  font-size: var(--text-small);
+  color: var(--color-accent);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.iss-back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+.iss-back-to-top:hover {
+  color: var(--color-accent-hover);
+  border-color: var(--color-muted);
 }
