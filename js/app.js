@@ -115,8 +115,26 @@ function initHome() {
       `
           : '';
 
+      const totalLessons = lessons.length;
+      const readCount = typeof isLessonRead !== 'undefined'
+        ? lessons.filter((l) => isLessonRead(l.discipline, l.slug)).length
+        : 0;
+      const progressPercent = totalLessons > 0 ? Math.round((readCount / totalLessons) * 100) : 0;
+      const studiedMinutes = readCount * DEFAULT_MINUTES_PER_LESSON;
+      const exercisesCompleted = typeof getReviewedExerciseIds !== 'undefined'
+        ? getReviewedExerciseIds().size
+        : 0;
+
+      const dashboardCardHtml =
+        '<div class="iss-card iss-card--static">' +
+          '<h3 class="font-semibold text-lg m-0">Seu progresso</h3>' +
+          '<p class="text-sm iss-text-muted mt-1 mb-0">Progresso geral ' + progressPercent + '%</p>' +
+          '<p class="text-sm iss-text-muted mt-1 mb-0">Tempo estudado ' + formatDurationMinutes(studiedMinutes) + '</p>' +
+          '<p class="text-sm iss-text-muted mt-1 mb-0">' + exercisesCompleted + ' exercícios concluídos</p>' +
+        '</div>';
+
       if (disciplines.length === 0) {
-        container.innerHTML = continueCardHtml || '<p class="iss-text-muted">Nenhuma disciplina disponível.</p>';
+        container.innerHTML = dashboardCardHtml + continueCardHtml || '<p class="iss-text-muted">Nenhuma disciplina disponível.</p>';
       } else {
         const disciplinesHtml = disciplines
           .map(
@@ -128,7 +146,7 @@ function initHome() {
       `
           )
           .join('');
-        container.innerHTML = continueCardHtml + disciplinesHtml;
+        container.innerHTML = dashboardCardHtml + continueCardHtml + disciplinesHtml;
       }
 
       if (searchInput && searchResultsEl) {
