@@ -65,8 +65,11 @@ Aula **técnica**: resolução dos exercícios usando variáveis, operadores e f
 
 #### Exercício 1 — Conversão ºC → ºF
 
-- **Fórmula:** °F = °C × 9/5 + 32. Em Python: `graus_fahrenheit = graus_celsius * 9/5 + 32`.
-- **Passos:** (1) Definir `graus_celsius` (ex.: 0 ou 100). (2) Calcular `graus_fahrenheit`. (3) `print` com rótulos para conferir (ex.: 0 → 32.0; 100 → 212.0).
+- **Fórmula:** °F = °C × 9/5 + 32. Em Python:
+```bash
+graus_fahrenheit = graus_celsius * 9/5 + 32
+```
+- **Passos:** (1) Definir `graus_celsius` (ex.: 0 ou 100). (2) Calcular `graus_fahrenheit`. (3) print com rótulos para conferir (ex.: 0 → 32.0; 100 → 212.0).
 - **Erro típico:** Esquecer parênteses ou ordem de operações; 9/5 e +32 devem aplicar ao valor em Celsius. Usar `* 9/5 + 32` está correto pela precedência.
 
 #### Exercício 2 — Retângulo (perímetro e área)
@@ -94,7 +97,11 @@ Aula **técnica**: resolução dos exercícios usando variáveis, operadores e f
 
 - **Definição:** `aspas_simples = 'string com aspas simples'` e `aspas_duplas = "string com aspas duplas"` produzem tipo `str`. Tanto faz para o tipo; escolha por estilo ou para permitir aspas dentro do texto.
 - **String = cadeia de caracteres:** Pode ser palavra, frase, números, símbolos; em geral associada a texto. Pode conter dígitos e caracteres especiais; o tipo é sempre `str` quando definida entre aspas.
-- **Verificação:** `print(variavel, type(variavel))` mostra o valor e `<class 'str'>`.
+- **Verificação:**
+```bash
+print(variavel, type(variavel))
+```
+mostra o valor e `<class 'str'>`.
 
 #### String em uma linha e multilinha
 
@@ -105,7 +112,15 @@ Aula **técnica**: resolução dos exercícios usando variáveis, operadores e f
 #### Aspas dentro do texto e SyntaxError
 
 - **Problema:** String definida com aspas duplas: `loren = "Lorem Ipsum... "de Finibus, Bonorum et Malorum""`. O interpretador vê a primeira `"` como início e a próxima `"` (antes de “de”) como fim da string; o resto vira código inválido → **SyntaxError: unterminated string literal**. A seta indica o ponto onde o erro foi detectado (ex.: na letra “d” de “de”).
-- **Solução:** Definir a string com aspas simples para que as aspas duplas internas sejam conteúdo: `loren = 'Lorem Ipsum... "de Finibus, Bonorum et Malorum"'`. Ao dar `print(loren)`, o texto é exibido incluindo as aspas duplas.
+- **Solução:** Definir a string com aspas simples para que as aspas duplas internas sejam conteúdo:
+```bash
+loren = 'Lorem Ipsum... "de Finibus, Bonorum et Malorum"'
+```
+Ao dar:
+```bash
+print(loren)
+```
+o texto é exibido incluindo as aspas duplas.
 - **Regra geral:** Se o texto contém aspas duplas, delimitar com aspas simples; se contém aspas simples, delimitar com aspas duplas. Assim não é necessário escape nesta aula.
 - **Observação (slides/transcrição):** Quando a string é definida com aspas duplas e dentro há aspas simples, o print mostra as aspas simples como parte do texto; o contrário também. O que importa é não misturar o mesmo tipo de aspa delimitadora com a aspa que faz parte do conteúdo.
 
@@ -117,7 +132,13 @@ Aula **técnica**: resolução dos exercícios usando variáveis, operadores e f
 
 ### 7. Exemplos relevantes
 
-- **Exercício 1:** `graus_celsius = 0`; `graus_fahrenheit = graus_celsius * 9/5 + 32`; `print("graus_celsius:", graus_celsius, "graus_fahrenheit:", graus_fahrenheit)` → 0, 32.0.
+- **Exercício 1:**
+```bash
+graus_celsius = 0
+graus_fahrenheit = graus_celsius * 9/5 + 32
+print("graus_celsius:", graus_celsius, "graus_fahrenheit:", graus_fahrenheit)
+```
+→ 0, 32.0.
 - **Exercício 2:** `lado_a = lado_b = 10`, `lado_c = lado_d = 50`; `perimetro_retangulo = lado_a + lado_b + lado_c + lado_d`; `area_retangulo = lado_c * lado_a`; prints → Retangulo de lados: 10 10 50 50, Perimetro: 120, Area: 500.
 - **Exercício 3:** `numero_1, numero_2, numero_3 = 3, 5, 7`; média 5.0, média geométrica ~4.72, desvio padrão ~1.63, dobro da soma 30, triplo do produto 315, raiz da soma dos quadrados ~9.11.
 - **Strings:** `aspas_simples = 'string com aspas simples'`, `aspas_duplas = "string com aspas duplas"` → ambas `<class 'str'>`. Poema multilinha com `'''...'''`. `loren = '... "de Finibus..."'` → print exibe o texto com as aspas duplas.

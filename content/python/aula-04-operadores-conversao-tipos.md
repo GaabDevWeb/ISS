@@ -22,7 +22,11 @@ exercises:
 ## Resumo
 
 - **Conversão de tipos:** funções built-in `int()`, `float()`, `bool()`, `str()` convertem um valor para o tipo indicado. Ex.: `str(12)` → `'12'` (string); `int(12.98)` → `12` (trunca); `float('3.14')` → `3.14`. Qualquer valor pode ser convertido para string; só strings que representam número convertem para int/float.
-- **Tipagem forte:** Python não converte string não numérica para número. `float('se aqui tiver um texto...')` → **ValueError**. O erro ocorre na linha da conversão; as linhas seguintes não são executadas.
+- **Tipagem forte:** Python não converte string não numérica para número.
+```bash
+float('se aqui tiver um texto...')
+```
+→ **ValueError**. O erro ocorre na linha da conversão; as linhas seguintes não são executadas.
 - **Operadores aritméticos:** `+` soma, `-` subtração, `*` multiplicação, `/` divisão (sempre retorna float em Python 3), `//` divisão inteira (piso), `%` resto (módulo), `**` exponenciação. Trabalham com tipos numéricos (int, float).
 - **Precedência (maior → menor):** parênteses `()`; depois `**`; depois `*`, `/`, `//`, `%` (esquerda para direita); por último `+`, `-`.
 - **Resumo em 5 linhas:** (1) Conversão: `int()`, `float()`, `bool()`, `str()`; usar o tipo desejado como função. (2) Tipagem forte: conversão só entre tipos compatíveis; string não numérica → int/float gera ValueError. (3) Operadores: +, -, *, /, //, %, **; / retorna float; // retorna inteiro; % retorna resto. (4) Precedência: () > ** > * / // % > + -. (5) Nomes expressivos, snake_case, ponto para decimal; erro na conversão interrompe o fluxo naquela linha.
@@ -70,11 +74,43 @@ Aula **técnica**: aprofunda variáveis (memória, literal), introduz conversão
 
 #### Funções de conversão de tipos
 
-- **Uso:** `novo_valor = tipo(valor_ou_variavel)`. Ex.: `str(12)` → `'12'`; `int(12.987)` → `12` (trunca); `float('98874368768')` → `98874368768.0`; `str(False)` → `'False'`.
-- **Quando usar:** Quando precisar operar ou exibir em outro tipo (ex.: concatenar número com texto usando `str()`; ler entrada como string e calcular com `float()` ou `int()`).
+- **Uso:**
+```bash
+novo_valor = tipo(valor_ou_variavel)
+```
+Ex.:
+```bash
+str(12)
+```
+→ `'12'`;
+```bash
+int(12.987)
+```
+→ `12` (trunca);
+```bash
+float('98874368768')
+```
+→ `98874368768.0`;
+```bash
+str(False)
+```
+→ `'False'`.
+- **Quando usar:** Quando precisar operar ou exibir em outro tipo (ex.: concatenar número com texto usando str(); ler entrada como string e calcular com float() ou int()).
 - **Quando NÃO usar:** Não converter string com texto livre para int/float — gera **ValueError**. Verificar se a string representa número (ou tratar exceção) antes de converter.
-- ❌ **Erro comum:** `float('se aqui tiver um texto, o que acontece?')` → `ValueError: could not convert string to float: 'se aqui tiver um texto...'`. O traceback aponta a linha da conversão; as linhas seguintes não são executadas.
-- 🧪 **Como testar:** Executar `print(type(int(3.9)), int(3.9))` e conferir que é `int` e `3`; depois tentar `float('abc')` e observar o ValueError.
+- ❌ **Erro comum:**
+```bash
+float('se aqui tiver um texto, o que acontece?')
+```
+→ `ValueError: could not convert string to float: 'se aqui tiver um texto...'`. O traceback aponta a linha da conversão; as linhas seguintes não são executadas.
+- 🧪 **Como testar:** Executar:
+```bash
+print(type(int(3.9)), int(3.9))
+```
+e conferir que é `int` e `3`; depois tentar:
+```bash
+float('abc')
+```
+e observar o ValueError.
 
 #### Tipagem forte
 
@@ -95,7 +131,7 @@ Aula **técnica**: aprofunda variáveis (memória, literal), introduz conversão
 
 - **Precedência (slide):** 1) Parênteses `()` — maior prioridade. 2) Exponenciação `**`. 3) `*`, `/`, `//`, `%` — avaliados da esquerda para a direita. 4) `+`, `-` — menor prioridade.
 - ⚠️ **Pegadinha:** Em Python 3, `17 / 4` é `4.25` (float), não divisão inteira. Quem vem de outras linguagens pode esperar inteiro; aqui `/` sempre retorna float quando há divisão “real”.
-- 🛠️ **Aplicação mínima:** Definir duas variáveis numéricas, calcular soma, subtração, produto, divisão, piso, resto e potência; usar `print()` para exibir cada resultado. Critério de acerto: resultados numéricos corretos e tipos coerentes (float onde for `/`).
+- 🛠️ **Aplicação mínima:** Definir duas variáveis numéricas, calcular soma, subtração, produto, divisão, piso, resto e potência; usar print() para exibir cada resultado. Critério de acerto: resultados numéricos corretos e tipos coerentes (float onde for `/`).
 
 #### Exercícios propostos na aula
 
@@ -106,9 +142,21 @@ Aula **técnica**: aprofunda variáveis (memória, literal), introduz conversão
 ### 6. Procedimento / execução
 
 - **Conversão:** (1) Decidir tipo de destino (int, float, bool, str). (2) Chamar a função com o valor ou variável: `resultado = int(var)`. (3) Se for string → número, garantir que a string represente número ou tratar ValueError.
-- **Operações:** (1) Definir variáveis com valores numéricos. (2) Criar variável para o resultado usando o operador desejado (ex.: `soma = a + b`). (3) Usar `print()` para exibir. (4) Respeitar precedência ou usar parênteses para deixar explícito.
-- **Erro típico:** Esquecer que string não numérica não converte — executar `float(texto)` sem validar gera ValueError e interrompe a célula/script naquela linha.
-- **Sinal de execução correta:** Valores impressos corretos; nenhum ValueError; tipo esperado (ex.: `type(soma)` pode ser float quando se usa `/` ou números float).
+- **Operações:** (1) Definir variáveis com valores numéricos. (2) Criar variável para o resultado usando o operador desejado (ex.:
+```bash
+soma = a + b
+```
+). (3) Usar print() para exibir. (4) Respeitar precedência ou usar parênteses para deixar explícito.
+- **Erro típico:** Esquecer que string não numérica não converte — executar:
+```bash
+float(texto)
+```
+sem validar gera ValueError e interrompe a célula/script naquela linha.
+- **Sinal de execução correta:** Valores impressos corretos; nenhum ValueError; tipo esperado (ex.:
+```bash
+type(soma)
+```
+pode ser float quando se usa `/` ou números float).
 
 ### 7. Exemplos relevantes
 
@@ -123,13 +171,31 @@ Aula **técnica**: aprofunda variáveis (memória, literal), introduz conversão
 
 - **Tipagem dinâmica vs forte:** Dinâmica = tipo inferido em tempo de execução, não declarado. Forte = sem conversão implícita entre tipos incompatíveis (ex.: string de texto → número não é feita).
 - **`/` vs `//`:** `/` é divisão real (sempre float em Python 3). `//` é quociente inteiro (piso). Não confundir com “divisão que retorna inteiro” em outras linguagens.
-- **Conversão direta do valor vs variável:** Tanto `str(12)` quanto `str(variavel)` são válidos; a função aceita valor literal ou variável.
+- **Conversão direta do valor vs variável:** Tanto:
+```bash
+str(12)
+```
+quanto:
+```bash
+str(variavel)
+```
+são válidos; a função aceita valor literal ou variável.
 - **Nome da variável vs valor:** O nome (literal) não ocupa espaço; o valor e seu tipo definem o espaço em memória. Trocar o valor (e até o tipo) na mesma variável é permitido (reatribuição).
 
 ### 9. Como cai em prova
 
-- Perguntar o resultado de `int(7.9)`, `17 // 4`, `17 % 4`, `2 ** 10`.
-- Dar um trecho com `float('abc')` e perguntar o que acontece (ValueError e em qual linha).
+- Perguntar o resultado de:
+```bash
+int(7.9)
+17 // 4
+17 % 4
+2 ** 10
+```
+- Dar um trecho com:
+```bash
+float('abc')
+```
+e perguntar o que acontece (ValueError e em qual linha).
 - Ordem de avaliação em expressão com vários operadores (ex.: `2 + 3 * 4` vs `(2 + 3) * 4`).
 - Verdadeiro ou falso: “Em Python, qualquer string pode ser convertida para float.” (Falso — só as que representam número.)
 

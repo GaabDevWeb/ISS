@@ -104,7 +104,11 @@ Aula **híbrida** (metodológica + conceitual): corrige regras de avaliação (T
 #### Exemplo: algoritmo para fazer café
 
 - **Passos (slide/transcrição):** (1) Fervar a água, (2) Colocar o pó no filtro, (3) Despejar a água, (4) Sirva o café.
-- **Representações:** lista numerada; pseudo-código/fluxograma textual (Início → … → Fim); código Python com função `fazer_cafe()` e `print()` para cada passo.
+- **Representações:** lista numerada; pseudo-código/fluxograma textual (Início → … → Fim); código Python com função:
+```bash
+fazer_cafe()
+```
+e print() para cada passo.
 - **Ideia fixada:** O mesmo algoritmo pode ser expresso em vários níveis (alto nível, pseudo-código, linguagem de programação); não existe uma única forma correta.
 
 #### Pensamento algorítmico / computacional
@@ -134,7 +138,11 @@ Aula **híbrida** (metodológica + conceitual): corrige regras de avaliação (T
 ### 7. Exemplos relevantes
 
 - **Receita de bolo, manual de montagem, GPS:** Ilustram algoritmo no dia a dia (início, passos, resultado).
-- **Fazer café:** Lista em 4 passos; pseudo-código Início→Fim; código Python com `def fazer_cafe():` e `print()` — fixa a passagem de algoritmo de alto nível para código.
+- **Fazer café:** Lista em 4 passos; pseudo-código Início→Fim; código Python com:
+```bash
+def fazer_cafe():
+```
+e print() — fixa a passagem de algoritmo de alto nível para código.
 - **Fluxograma do Pedro (lavar louça e levar lixo):** Exemplo de algoritmo com decisão e laço (“enquanto tiver pratos sujos…”); mostra que o mesmo problema admite outra solução e que fluxograma é uma representação possível (não aprofundada na disciplina).
 - **Notebook (slide):** Célula com `fib(x)` e `fib(10)` → `Out[3]: 55`; célula com matplotlib → gráfico; mostra In/Out e saída gráfica.
 - **Datas no slide:** TP1 16/02/2026, TP2 02/03/2026, TP3 16/03/2026, AT 31/03/2026 (datas prováveis).
