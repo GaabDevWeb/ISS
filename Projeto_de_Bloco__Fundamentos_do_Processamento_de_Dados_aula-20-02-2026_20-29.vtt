@@ -1,0 +1,2098 @@
+WEBVTT
+
+1
+00:00:20.000 --> 00:00:20.700
+Ricardo Garcia: E aí?
+
+2
+00:00:50.070 --> 00:00:53.429
+Ricardo Garcia: Oi, pessoal. Boa noite. Boa noite. Boa noite a todos.
+
+3
+00:00:54.560 --> 00:01:02.059
+Ricardo Garcia: Sejam todos bem vindos aí. Boa noite. Uma ótima semana. Finalizando a semana depois de um feriadão. Espero que
+
+4
+00:01:02.420 --> 00:01:10.640
+Ricardo Garcia: todos estejam bem aí. Que todo mundo conseguiu ou descansar ou curtir, mesmo quem tem a oportunidade de curtir também. Isso também é legal, né?
+
+5
+00:01:11.110 --> 00:01:20.670
+Ricardo Garcia: Então é isso aí. Vamos fechar a semana com uma aulinha aí tranquila e tal para a gente bater um papo também. Sobre finalizar, sobre a tecnologia que a gente vai poder ver aí acompanhando.
+
+6
+00:01:21.210 --> 00:01:30.200
+Ricardo Garcia: Então é isso aí, pessoal, sejam todos bem vindos aí. Pra mim, é um prazer enorme estar junto com vocês mais uma vez, batendo um papo aí sobre tecnologia.
+
+7
+00:01:30.430 --> 00:01:47.449
+Ricardo Garcia: Foi uma semana bastante agitada. Por mais que teve feriado e tudo mais. Mas a gente trabalhou bastante. A gente aproveitou muito o feriado também para fazer muita coisa. Nível de banco de dados e tal. Então também já fica a dica para o pessoal é que, muitas vezes, a gente não tem o feriado. Ali.
+
+8
+00:01:47.450 --> 00:01:56.390
+Ricardo Garcia: A gente fica trabalhando porque é um momento que muitas vezes, a gente que trabalha com dados. A gente procura esses momentos para poder trabalhar também
+
+9
+00:01:56.450 --> 00:01:58.830
+Ricardo Garcia: as janelas que a gente tem da manutenção.
+
+10
+00:01:59.210 --> 00:02:08.969
+Ricardo Garcia: Então é isso aí, pessoal. Começando. Iniciando aqui a gente vai começar primeiro com alguns recadinhos aqui, antes da gente iniciar, mesmo
+
+11
+00:02:09.870 --> 00:02:20.349
+Ricardo Garcia: logicamente, que o que chama muito. Sempre. A gente fica sempre muito preocupado com Live Coding. Então o coordenador pôs até escreveu ali no grupo
+
+12
+00:02:20.560 --> 00:02:37.460
+Ricardo Garcia: o nosso grupo de fundamentos e tal, sobre como vai funcionar o Live Code. Então vai ser enviado um e mail para a caixa postal. Nossa. Então, uma semana antes do prazo e o prazo? Eu acho que o pessoal alterou. Era para o dia dois e eu acho que foi para o dia quatro,
+
+13
+00:02:37.460 --> 00:02:44.240
+Ricardo Garcia: mas, de todas as formas, a mensagem do coordenador está no grupo. Dei uma olhadinha ali, que
+
+14
+00:02:44.240 --> 00:02:58.599
+Ricardo Garcia: só para vocês estarem alinhados com a expectativa com relação ao Live Coach também ele vai participar. Ele comentou ali que ia explicar para vocês não sei se ele ia entrar numa aula hoje ou na próxima semana. Alguma aula de vocês ali
+
+15
+00:02:58.600 --> 00:03:07.190
+Ricardo Garcia: para explicar também o funcionamento como que ia funcionar e tal aquela coisa toda ilustrar um pouco como funcionaria
+
+16
+00:03:07.190 --> 00:03:25.610
+Ricardo Garcia: todos tranquilos aí, que a gente vai ter um prazo para realmente fazer o Livecoding. E também é isso. Ele foi alterado. Pelo que eu entendi, para o dia quatro e a gente recebe um e mail uma semana antes, ali, para a gente poder se preparar e fazer o Live Code.
+
+17
+00:03:26.120 --> 00:03:34.689
+Ricardo Garcia: Então isso aí está tranquilo, né? Mais uma vez, reforçando também para quem não pôde participar das aulas anteriores e tal.
+
+18
+00:03:34.730 --> 00:03:59.709
+Ricardo Garcia: Quem se sentir prejudicado, alguma coisa assim, o negócio de passar o horário e tal. Não se preocupe com isso. A faculdade está se organizando ainda nesse sentido, e, tal com relação à presença, ainda não definiu muito bem como vai ser o sistema de presença, aquela coisa toda então está, todo mundo meio que se adaptando a nova legislação, então tenha um pouco de paciência aí. Mas o importante é,
+
+19
+00:03:59.710 --> 00:04:05.230
+Ricardo Garcia: vocês não vão ser prejudicados de nenhuma maneira. Muito pelo contrário. Não tem nada a ver.
+
+20
+00:04:05.480 --> 00:04:19.629
+Ricardo Garcia: Pode envolver todas as matérias, ou só quando eu acho que é só Python mesmo. É só o que vocês estão vendo, né? Vocês estão vendo. Acho que Python e Skell é só isso aí. Mas se não me equivoco, eu acho que essa é até Python, mesmo, né? Alguma coisa assim.
+
+21
+00:04:19.660 --> 00:04:30.060
+Ricardo Garcia: Mas é aquele negócio. Eu também vou tentar entender um pouco como funciona ali. Para tentar ajudar vocês nesse sentido. É o que eu falo. Estou no mesmo barco que vocês. Está todo mundo junto aí
+
+22
+00:04:30.110 --> 00:04:34.349
+Ricardo Garcia: também. Para a gente entender esse desafio aí.
+
+23
+00:04:34.740 --> 00:04:51.939
+Ricardo Garcia: Então, pessoal, vocês vão ver que hoje eu vou acelerar um pouco. Muitas vezes. Eu não tenho como responder. Eu acho que eu fiquei. Até não respondi vocês algumas perguntas que vocês fizeram na passada. Eu peço perdão, porque às vezes a gente entra numa dinâmica aqui, e a gente não consegue. Mas eu vou dar uma olhada ali também. Na.
+
+24
+00:04:52.070 --> 00:05:01.660
+Ricardo Garcia: No que fica gravado ali da aula. Anterior se eu puder responder alguma coisa, eu vou responder vocês. Mas eu vou tentar agilizar um pouco só para a gente
+
+25
+00:05:01.660 --> 00:05:12.609
+Ricardo Garcia: ficar. Todo mundo meio na mesma página e tal. Então eu vou passar algum conteúdo. Mas não é um conteúdo a programação. Vocês já vão ver mesmo na aula,
+
+26
+00:05:12.610 --> 00:05:30.160
+Ricardo Garcia: nas aulas de vocês. É tranquilo. Vou tentar passar algumas ferramentas mais uma vez, formando vocês no dia a dia de trabalho, como se a gente fosse começar a trabalhar junto na segunda feira. Então é esse o objetivo. E o objetivo final já é apresentar código para vocês. Aquela coisa toda beleza
+
+27
+00:05:30.300 --> 00:05:32.530
+Ricardo Garcia: dentro desse dessa,
+
+28
+00:05:32.820 --> 00:05:48.399
+Ricardo Garcia: uma aula vai ser um pouco mais acelerada. A outra vai ser mais tranquila. Aquela coisa toda. O que é importante para a gente entender que está todo mundo no mesmo barco. Às vezes tem coisas que a gente não entende. Poxa, eu não entendo como é que funciona isso? Não entendo. Não se preocupem com isso.
+
+29
+00:05:48.400 --> 00:06:04.850
+Ricardo Garcia: Tudo tem o seu momento. Cada um tem o seu tempo. Cada um tem o seu jeito de estudar o seu jeito de aprender. Cada um tem o seu momento mesmo. E muitas vezes tem coisas, por exemplo, que até hoje eu mesmo não entendo. Ah, por que você faz isso, cara? Eu faço porque funciona. Instala o negócio funciona. Está voando e é isso aí mesmo.
+
+30
+00:06:04.850 --> 00:06:10.989
+Ricardo Garcia: Mas então e aí? Você tem que ter um tempo até mesmo você aprender, entender realmente como é que funcionam as coisas.
+
+31
+00:06:10.990 --> 00:06:25.669
+Ricardo Garcia: É natural que a gente não entenda. Então fiquem tranquilos. Fiquem tranquilos com relação a isso. Que todo mundo tem o seu tempo. Então é bem de boa, bem tranquilo
+
+32
+00:06:26.900 --> 00:06:51.859
+Ricardo Garcia: o que a gente vai ver agora. Então, a ideia que a gente passou. Eu tentei passar também as próximas aulas. Eu vou acelerar um pouco o conteúdo aqui, só para a gente ficar alinhado, mesmo. Mas revisando um pouco do que a gente viu nas duas aulas anteriores e tal. O que a gente tentou entender. Assim puxa se a gente for começar a trabalhar hoje, vocês vão trabalhar com codificação, com dados, mesmo independente do que vocês vão seguir
+
+33
+00:06:51.860 --> 00:07:01.000
+Ricardo Garcia: no caminho de engenheiro. Cientistas, ads, desenvolvimento, enfim, qualquer coisa, né? E você trabalha com dados. Você precisa ter as ferramentas, então as ferramentas são o que
+
+34
+00:07:01.000 --> 00:07:11.180
+Ricardo Garcia: nos digamos assim, nos dar condições de trabalhar dentro do que a gente se propõe a trabalhar. Vou trabalhar com dados. Vou trabalhar com desenvolvimento e tal aquela coisa toda.
+
+35
+00:07:11.180 --> 00:07:26.219
+Ricardo Garcia: Então, fazendo um resumo do que a gente viu nas aulas passadas aqui. Eu vou passar bem rápido para a gente chegar numa parte de código, entender um pouco mais nesse sentido, mas que é fundamental aqui para vocês.
+
+36
+00:07:27.030 --> 00:07:45.119
+Ricardo Garcia: Então, quando a gente trabalha com dados, a gente precisa do quê? Precisa de ferramentas que acessem esses dados. E normalmente, cada banco de dados tem a sua própria ferramenta. Caso contrário, que não tem a ferramenta. Nós temos várias ferramentas pagas e open source que a gente pode acessar esses dados.
+
+37
+00:07:45.230 --> 00:07:57.570
+Ricardo Garcia: Resumindo, a gente tem ferramentas que facilitam a visualização desses dados. Pô a gente tem dados armazenados de várias formas, tanto bancos de dados relacionais não relacionais, e a gente precisa de ferramentas para que a gente
+
+38
+00:07:57.570 --> 00:08:22.080
+Ricardo Garcia: principalmente administre e acessa esses dados. Então cada uma, cada banco de dados praticamente tem a sua. Então, o que a gente fez aqui? Eu mostrei para vocês o que é? Eu mostrei aqui o Skely, que foi o que a gente viu ali. Também. O Exceler é da Oracle. Então, normalmente ele acessa os bancos de dados na hora. Não significa que você não vai poder acessar outro. Sim, você vai ter que configurar aquela coisa toda, né?
+
+39
+00:08:22.140 --> 00:08:36.020
+Ricardo Garcia: Mas a prioridade dele é os bancos de dados da Oracle. Então, se você tem um banco de dados, você pode utilizar o Oracle ali, né? Deixa eu dar um pouquinho mais legais na máquina aqui, porque senão ele vai demorar muito para abrir.
+
+40
+00:08:38.780 --> 00:08:47.759
+Ricardo Garcia: Mas isso. A gente viu na semana passada. A gente vai entender bem aqui como é que funciona. E a gente já vai passar por isso também. Já para entrar na parte de código, mesmo
+
+41
+00:08:50.690 --> 00:08:56.649
+Ricardo Garcia: então, beleza. A gente tem o West Kelly Developper aqui. Então deixa eu trazer só um.
+
+42
+00:08:56.860 --> 00:09:07.819
+Ricardo Garcia: Uma tabelinha. Então tem uma tabela aqui. Exemplos. Só que tem a estrutura da tabela que a gente vai entender também. Mas a gente não vai se preocupar com isso agora. A gente vai tratar das ferramentas que a gente tem.
+
+43
+00:09:07.820 --> 00:09:30.679
+Ricardo Garcia: Quando a gente fala em Oracle. A gente pode utilizar o Slveloper como uma ferramenta gratuita que a Microsoft nos traz aqui e tal, onde a gente pode entender o funcionamento dos nossos dados. E aí, dentro do nosso banco de dados, existe uma infinidade de objetos lá. Afinidade de coisas que fazem o quê? A gestão do nosso armazenamento, a gestão do armazenamento de dados show.
+
+44
+00:09:30.680 --> 00:09:34.009
+Ricardo Garcia: Quando a gente fala em hora com Sqm, então até eu vou colocar aqui, ó
+
+45
+00:09:34.820 --> 00:09:44.259
+Ricardo Garcia: para a gente deixar só um mapinha assim como se fosse um quadro aqui. Então, quando a gente fala em Orople Database
+
+46
+00:09:45.370 --> 00:09:52.950
+Ricardo Garcia: Skely. Existem outras ferramentas, mas esse aqui é da própria hora. Com. Então a gente usa isso aqui show de bola
+
+47
+00:09:53.040 --> 00:10:06.429
+Ricardo Garcia: detalhe. Eu já passei para vocês. Já compartilhei ali no grupo as ferramentas que a gente comenta aqui, que a gente vai ver agora nesse sentido. Então a gente vai dar uma passada nessas ferramentas
+
+48
+00:10:06.430 --> 00:10:17.319
+Ricardo Garcia: para vocês terem ali. O que vocês precisam, principalmente, é o seguinte: a partir de agora, vocês estão iniciando. Estão o ciclo na área de tecnologia. Aquela coisa toda.
+
+49
+00:10:17.680 --> 00:10:37.140
+Ricardo Garcia: O que é legal é vocês montarem o laboratório de vocês. Bom, então agora vocês estão trabalhando. Vão fazer Python Sql, beleza montam no laboratório relacionado a essas duas disciplinas. Código Python Sql. Escolhe um banco de dados lá. Não sei o que o pessoal vai sugerir ali para vocês na disciplina em si. E vocês montam o laboratório.
+
+50
+00:10:37.140 --> 00:10:51.419
+Ricardo Garcia: É obrigatório ter um laboratório, porque o laboratório é onde vocês vão desenvolver a capacidade de vocês, os projetos de vocês poder estudar, poder desenvolver e entender como funciona a tecnologia. Então isso aí é primordial para a gente ter
+
+51
+00:10:51.420 --> 00:11:01.139
+Ricardo Garcia: dentro do nosso profissionalismo, do nosso dia a dia no mercado e tal. A gente tem que ter isso aí. Então aqui vai os passos para vocês montarem justamente o laboratório de vocês.
+
+52
+00:11:01.280 --> 00:11:05.880
+Ricardo Garcia: Então, o que a gente tem ali? Oracle, deixa eu pegar. Aqui
+
+53
+00:11:06.740 --> 00:11:19.569
+Ricardo Garcia: é Scully. Isso aqui é uma ferramenta muito fácil de instalar. Vocês só buscam lá na Internet, Scully, e tal, e instala sem nenhum problema.
+
+54
+00:11:20.080 --> 00:11:30.510
+Ricardo Garcia: Beleza, essa ferramenta foi. Agora a gente vai para outra. Por exemplo, se você tem o Mongodb, beleza também mesma coisa. O Mongodb tem a ferramenta própria do Mongodb, que é o Compass.
+
+55
+00:11:30.550 --> 00:11:50.819
+Ricardo Garcia: Então esse compas dá acesso aos bancos de dados, e a gente consegue desenvolver um banco de dados não relacional. Vocês vão ver isso muito lá para frente também. Mas é legal vocês entenderem que existe quando se falar em banco de dados não relacional beleza. Eu tenho os bancos de dados relacionais. E funcionam da mesma forma.
+
+56
+00:11:50.820 --> 00:12:04.289
+Ricardo Garcia: Todos os bancos de dados precisam do quê? De uma interface que a gente chama de conexão com aquele banco de dados para que você entenda e veja os objetos que tem lá dentro. As tabelas. Enfim, o que está armazenado lá dentro?
+
+57
+00:12:04.290 --> 00:12:07.239
+Ricardo Garcia: E para isso que a gente está vendo essas interfaces aqui.
+
+58
+00:12:08.750 --> 00:12:19.050
+Ricardo Garcia: Isso, na verdade, eu acho que já coloquei lá no grupo. Os links já estão no grupo lá para vocês. Mas qualquer coisa eu coloco de novo. Não tem problema nenhum, mas já foi compartilhado lá.
+
+59
+00:12:19.050 --> 00:12:32.639
+Ricardo Garcia: Só pegar lá. Mas também é aquele negócio. Se vocês forem lá no Google hoje em dia. Skl Development. O Compass. Ele é do Mongodb. Então, beleza, vocês já vão ter mais uma.
+
+60
+00:12:32.840 --> 00:12:41.830
+Ricardo Garcia: Moon. O Db é o Compass. Mais uma ferramenta que vocês têm ali. Deixa eu desabilitar
+
+61
+00:12:42.520 --> 00:12:57.899
+Ricardo Garcia: ortografia, beleza. E eu já vou chegar num ponto bem importante que a gente tem que entender aqui também, para a gente ficar alinhado. Todo mundo na mesma página é aquele negócio. Imaginem que a gente e vocês estão começando a trabalhar comigo agora, segunda feira. Vocês vão trabalhar comigo.
+
+62
+00:12:57.900 --> 00:13:22.430
+Ricardo Garcia: Então o que normalmente a gente faz? Puxa, a gente dá condições. Pelo menos eu sou assim. Se você vai trabalhar com a gente e tal, dá condições de você iniciar o teu trabalho, fazer o teu trabalho. Qual a ferramenta que a gente usa. A gente usa essa essa ferramenta. Mas se você usar outra ferramenta perfeito, não tem problema, mas a gente usa isso aqui no dia a dia e tal. E é esse é o objetivo. O objetivo é dar uma estrutura que vocês, por exemplo, na segunda feira, se você fossem trabalhar comigo,
+
+63
+00:13:22.430 --> 00:13:37.949
+Ricardo Garcia: vocês tinham uma estrutura para montar o equipamento de vocês, não o laboratório, porque daí seria equipamento de trabalho mesmo. Então você instala já as ferramentas para você começar a trabalhar. Então, beleza, se a gente fosse trabalhar com o Mongodb,
+
+64
+00:13:37.950 --> 00:13:45.129
+Ricardo Garcia: compras. E se a gente fosse trabalhar com Oracon Skl. Development? São duas ferramentas gratuitas que vêm junto show de bola. Vamos para a próxima.
+
+65
+00:13:45.200 --> 00:13:57.410
+Ricardo Garcia: Aqui a gente tem o The Beaver. O The Beaver é uma ferramenta muito top. A gente usa bastante porque ela permite que você se conecte a todos esses bancos de dados. Aqui.
+
+66
+00:13:57.410 --> 00:14:21.659
+Ricardo Garcia: Todos os bancos de dados que a gente imagina. Post besoura com Sql. Banco de dados não relacional. Spark Mysql. Enfim, ele se conecta em tudo, hora com a gente. Usa também para o hora com Db2 uma parafernália de bancos de dados. Aí, então esse aqui também é um ideal. Um front end, uma interface que você se conecta nos bancos de dados. Ele mesmo baixa os drivers dele e tal.
+
+67
+00:14:21.660 --> 00:14:34.720
+Ricardo Garcia: E aí você cria a tua conexão, e você pode trabalhar também nos bancos de dados. Aqui, por exemplo, por ilustração, eu tenho conexão com o Mysql porque eu tenho instalado nessa máquina. E aqui eu tenho os bancos de dados
+
+68
+00:14:34.720 --> 00:14:47.470
+Ricardo Garcia: do Sql. É bem tranquilo. E aqui ele já tem uma estrutura. Por exemplo, já me mostra o diagrama de relacionamento já me mostra se ele tem dados aqui dentro ou não. Ele já me mostra os dados que tem.
+
+69
+00:14:47.470 --> 00:15:00.569
+Ricardo Garcia: E aqui ele traz a estrutura da própria tabela, a estrutura como de dados, a estrutura real da tabela de armazenamento, mesmo então, é uma ferramenta muito completa. A gente usa bastante. Também
+
+70
+00:15:00.570 --> 00:15:09.089
+Ricardo Garcia: é o que eu falo para vocês. Eu utilizo várias ferramentas ao mesmo tempo. Não utilizo só uma, dependendo do que acontece. Eu vou para uma ou vou para outra.
+
+71
+00:15:09.090 --> 00:15:26.940
+Ricardo Garcia: Mas é bem legal. E aqui tem várias opções gratuitas que você pode inclusive administrar o banco de dados, gestionar aquela coisa toda independente do que você queira utilizar. Se vocês repararem. Aqui é Mysql. Eu tenho também o Post aqui instalado nessa máquina.
+
+72
+00:15:26.940 --> 00:15:29.810
+Ricardo Garcia: Então eu também tenho um banco de dados postermos aqui.
+
+73
+00:15:30.400 --> 00:15:32.520
+Ricardo Garcia: Deixa eu ver se tem alguma tabela aqui? Já
+
+74
+00:15:32.720 --> 00:15:46.149
+Ricardo Garcia: eu me lembro. Acho que não tem a tabela nenhuma. Mas se eu quisesse ver aqui, por exemplo, as informações do banco de dados. Eu tenho aqui também. E aqui. Eu tenho para vocês terem uma ideia do Sql Server também. Então eu tenho os bancos de dados aqui do Sql Server.
+
+75
+00:15:46.320 --> 00:15:58.200
+Ricardo Garcia: Tem os esquemas aqui, aqui. Eu tenho as tabelas de bio aqui e aqui. Da mesma forma. Eu tenho a tabela. Tem os registros, tem a estrutura dela e tem o diagrama dessa tabela.
+
+76
+00:15:58.200 --> 00:16:11.239
+Ricardo Garcia: O que significa isso aí? Significa que é uma ferramenta que eu tenho de acesso aos dados. Então eu consigo acessar, principalmente dentro dessa ferramenta. Como é uma ferramenta open source tem a versão
+
+77
+00:16:11.240 --> 00:16:30.109
+Ricardo Garcia: paga, Enterprise, mas a gente pode usar a que é gratuita. A gente pode utilizar porque ela dá bastante subsídio de trabalho. Eu não sei nem como. É impressionante o que a gente tem muitas vezes, que não tem custo para nós e realmente puxa ajuda a gente bastante no nosso dia a dia.
+
+78
+00:16:30.190 --> 00:16:43.570
+Ricardo Garcia: Detalhe essa ferramenta, como vocês têm o e mail da faculdade, vocês podem se cadastrar e colocar uma licença de estudante. E vocês têm a versão Enterprise
+
+79
+00:16:43.610 --> 00:16:50.890
+Ricardo Garcia: totalmente grátis durante um ano. Então também é legal que vocês, no seu momento. Se vocês acharem oportuno,
+
+80
+00:16:50.890 --> 00:17:15.800
+Ricardo Garcia: testem também a ferramenta no Enterprise. Na verdade, existe pouca diferença entre uma e outra. A diferença principal é que a Enterprise permite que você se conecte com bancos de dados. Por exemplo, longo, Db: Cassandra e outros, o que esse não permite a versão gratuita não permite. Ela permite que você se conecte em N bancos, mas alguns bancos não. Essa é a diferença principal, mas o resto da ferramenta
+
+81
+00:17:15.800 --> 00:17:29.580
+Ricardo Garcia: funciona sem nenhum problema. Então é uma ferramenta muito legal que vocês têm. Então, aqui, só para vocês terem uma ideia. Colocando aqui no nosso quadro, a gente tem vários bancos aqui. Por exemplo,
+
+82
+00:17:31.280 --> 00:17:34.490
+Ricardo Garcia: vários databases.
+
+83
+00:17:35.650 --> 00:17:39.890
+Ricardo Garcia: A gente tem o The nível,
+
+84
+00:17:40.870 --> 00:17:50.259
+Ricardo Garcia: uma ferramenta que a gente pode acessar. Vários bancos de idade. Show de bola. Vamos para o próximo. É o mais work banking aqui.
+
+85
+00:17:50.260 --> 00:18:08.789
+Ricardo Garcia: Esse aqui. Ele se conecta a qual banco de dados ao Milesql. Então, a gente tem aqui vários bancos de dados. Aqui tem as informações aqui, as tabelas e tal, e a gente pode da mesma forma. Então ele tem a estrutura da tabela. A gente pode entender aqui fazer? Por exemplo,
+
+86
+00:18:08.790 --> 00:18:33.769
+Ricardo Garcia: a edição da tabela. Então você tem os campos. Tem toda a estrutura da tabela. E você também tem os dados ali que você pode consultar. É uma ferramenta muito legal, muito completa também. Ele ajuda muito na administração, e ele tem a parte da administração que a gente pode ver aqui. Essa parte de funcionamento do servidor das configurações do servidor tem uma série de coisas e a gente tem um doshboard aqui
+
+87
+00:18:33.770 --> 00:18:50.439
+Ricardo Garcia: que ajuda bastante a gente olhando assim. E tem algumas métricas básicas a nível de servidor que a gente pode utilizar isso a nível de administração, mesmo de banco de dados do banco de dados mais Qn: então é uma ferramenta muito dez
+
+88
+00:18:50.600 --> 00:18:54.079
+Ricardo Garcia: que a gente pode utilizar também. Então, beleza, essa aqui.
+
+89
+00:18:54.370 --> 00:19:03.010
+Ricardo Garcia: Isso aqui é Mysql e a gente vai utilizar lá o Oi, bem,
+
+90
+00:19:03.030 --> 00:19:14.929
+Ricardo Garcia: ferramenta dele. Show de bola até aqui a gente já viu vários bancos de dados e vimos as ferramentas que tem aí. Próxima ferramenta Pg Adm. O que é o Pg Adm. Ferramenta gratuita também
+
+91
+00:19:14.930 --> 00:19:24.739
+Ricardo Garcia: do próprio Postless. Então, se vocês forem trabalhar com Postles, vocês têm uma ferramenta Gratuita, que é o Pg. Também pode usar o The Biever. A gente usa muito
+
+92
+00:19:24.740 --> 00:19:38.990
+Ricardo Garcia: o Pga de mim junto com o The Biever para fazer a manutenção dos nossos postos. Então também dá para usar da mesma forma. Tem a parte de tabelas aqui não tem nenhuma. Mas ele tem uma área muito legal de administração, onde você pode ver também
+
+93
+00:19:39.320 --> 00:19:42.670
+Ricardo Garcia: várias várias.
+
+94
+00:19:43.310 --> 00:19:48.350
+Ricardo Garcia: É isso, Kpis ou, digamos assim, várias
+
+95
+00:19:48.510 --> 00:20:03.049
+Ricardo Garcia: indicadores do banco de dados e fazer também a administração ver todos os objetos que você tem. Como está funcionando aquela coisa toda é muito legal essa ferramenta. Lógico que ela tem alguns limites. Também não uso em tudo. Mas
+
+96
+00:20:03.050 --> 00:20:22.289
+Ricardo Garcia: aqui tem a parte de desenho também. Que a gente pode desenhar, criar tabelas, criar nossos diagramas também essas ferramentas. A maioria delas permite que a gente crie diagramas também de banco de dados que a gente faça o desenho do banco de dados para depois criar a estrutura física, mesmo de armazenamento.
+
+97
+00:20:22.290 --> 00:20:35.220
+Ricardo Garcia: Então é bem legal. Vale a pena. Sim, vocês instalarem depois e entender como funciona. Então essa aqui é legal para Postles, e é uma ferramenta bem bacana, porque tem uma série de.
+
+98
+00:20:35.390 --> 00:20:51.540
+Ricardo Garcia: Ela tem o viés, tanto administrador de administrador de banco de dados como desenvolvedor. Também. Que a gente pode desenvolver código, consultar objetos e tudo mais. Tem a parte, inclusive de logins aqui, de usuários que a gente tem. É bem, legal.
+
+99
+00:20:51.790 --> 00:20:57.659
+Ricardo Garcia: Então, beleza. Ouça o Spgadman. Então mais uma ferramenta aqui que a gente vai entender. E depois eu já vou
+
+100
+00:20:57.880 --> 00:21:03.679
+Ricardo Garcia: de inglês. Kelly Pg ado
+
+101
+00:21:04.570 --> 00:21:12.860
+Ricardo Garcia: beleza. Então tá aqui. E agora, só para a gente finalizar o Pg. Mas a gente chega no scann server.
+
+102
+00:21:12.920 --> 00:21:32.000
+Ricardo Garcia: O Sq Server, Microsoft, o Enterprise Management, um Management Studio. Então ele tem um Management Studio, que é a ferramenta da Microsoft para você acessar e para você administrar o banco de dados da Microsoft, que é o Sc Allen Server.
+
+103
+00:21:32.000 --> 00:21:44.949
+Ricardo Garcia: Então, aqui a Microsoft. Sim, essa aqui tem ferramenta pra Caramba, tem ferramenta de banco de dados que a gente visualiza os dados aqui e tem ferramentas de administração de Tanning. Tudo isso vem embutido
+
+104
+00:21:44.950 --> 00:21:48.490
+Ricardo Garcia: dentro da própria interface que a gente tem aqui.
+
+105
+00:21:48.490 --> 00:22:08.650
+Ricardo Garcia: Ele mesmo dá as opções aqui. É impressionante essa ferramenta aqui a gente consegue administrar os servidores. A parte de replicação que a gente tem tudo administrado pelo próprio. A gente nem utiliza no scared server. A gente nem utiliza outra ferramenta, porque essa ferramenta aqui é super completa. A gente tem a parte de Tuks aqui
+
+106
+00:22:08.650 --> 00:22:15.589
+Ricardo Garcia: que tem toda uma parte do profiler, onde a gente faz. Tanning, vê o que está executando um servidor monitora é um troço
+
+107
+00:22:15.920 --> 00:22:28.790
+Ricardo Garcia: louco. Assim é bem legal, bem joia. Só que lógico. Isso vem embutido na licença. Na verdade, é uma ferramenta gratuita. Você pode baixar ela, né? Mas você vai utilizar apenas o sn server.
+
+108
+00:22:28.790 --> 00:22:37.380
+Ricardo Garcia: E aí, lógico, ele vem embutido. Todas essas ferramentas vêm embutidas no própria licença, porque a gente paga do scanning server ali também.
+
+109
+00:22:37.820 --> 00:22:48.589
+Ricardo Garcia: Então, aqui só para a gente olhou aqui as ferramentas. A gente olhou ferramentas apenas de banco de dados. Então deixa eu colocar aqui para a gente fechar o ciclo.
+
+110
+00:22:48.740 --> 00:23:04.769
+Ricardo Garcia: Essas são as ferramentas que eu utilizo tanto. Scared server aqui. Ó Manashman studio é West Kelly. Certo,
+
+111
+00:23:06.430 --> 00:23:07.630
+Ricardo Garcia: tá. Então
+
+112
+00:23:07.630 --> 00:23:27.570
+Ricardo Garcia: essas são as ferramentas que eu utilizo no dia a dia. Por que eu utilizo essas ferramentas? Agora eu vou explicar para vocês fazendo um inventário essa semana que a gente teve que fazer o inventário. Eu fiz um inventário dos bancos de dados que eu acesso, que eu faço, checklist diário. Enfim, fiz um inventário para a gente implementar uma outra ferramenta de monitoramento lá somente de banco de dados.
+
+113
+00:23:27.610 --> 00:23:45.980
+Ricardo Garcia: Nós temos mais de cem servidores. Deve ter uns cento e vinte servidores, sei lá, alguma coisa por aí. E nós temos quase quinhentos bancos de dados desde O Oracle, Mongodb, Mysql, Postgrisman. O Sql Server, Db2 também Ah, não coloquei o Db2 aqui também
+
+114
+00:23:45.980 --> 00:23:51.120
+Ricardo Garcia: aqui pelo Db2 onde você pode usar autores
+
+115
+00:23:51.630 --> 00:23:59.730
+Ricardo Garcia: para se conectar também. Mas eu utilizo no Db2 eu utilizo o D. Beaver também para me conectar com ele. Prefiro o D. Beaver.
+
+116
+00:23:59.740 --> 00:24:00.720
+Ricardo Garcia: Então,
+
+117
+00:24:00.720 --> 00:24:24.799
+Ricardo Garcia: a gente tem muitos bancos de dados. E a única forma que eu tenho de me conectar com eles ou de fazer muitas vezes, ou ajudar na administração não é a única, mas a forma que eu utilizo visual para acessar esses bancos são através dessas ferramentas. Então eu faço essa ligação entre um ide, alguma coisa assim. Para ajudar na administração dos bancos. Ah, o pessoal já.
+
+118
+00:24:24.800 --> 00:24:28.010
+Ricardo Garcia: Já está colocando mais ali. Ó,
+
+119
+00:24:28.380 --> 00:24:33.510
+Ricardo Garcia: o Lucas ali já colocou para a gente vários links ali. Também valeu, Brigadão, cara beleza.
+
+120
+00:24:37.310 --> 00:24:40.350
+Ricardo Garcia: Ah, ó beleza, valeu.
+
+121
+00:24:40.520 --> 00:24:42.049
+Ricardo Garcia: Eu coloco lá também.
+
+122
+00:24:42.990 --> 00:24:46.219
+Ricardo Garcia: Mas o Lucas já colocou ali para nós obrigadão, valeu, cara.
+
+123
+00:24:47.150 --> 00:24:57.799
+Ricardo Garcia: Então, agora o que a gente precisa entender? Beleza. Aí você vai falar assim. Pô Ricardo Beleza. Você me mostrou um monte de ferramenta muito bonita e tal. Funciona isso e tal. Mas não entendi nada que está rolando aqui.
+
+124
+00:24:58.080 --> 00:24:59.050
+Ricardo Garcia: Beleza.
+
+125
+00:24:59.540 --> 00:25:00.880
+Ricardo Garcia: Quando a gente vai
+
+126
+00:25:01.490 --> 00:25:09.289
+Ricardo Garcia: utilizar o Slveloper, não adianta você baixar o Slveloper. Se você não tiver o oracle instalado.
+
+127
+00:25:10.130 --> 00:25:24.260
+Ricardo Garcia: O Oracle é o banco de dados, daí você fala assim. Nossa, mas pô banco de dados. Agora, não estou entendendo o que ele faz. O pessoal simplifica a coisa. Tira um pouco daquela complexidade que existe no nosso mundo. E simplifica as coisas.
+
+128
+00:25:24.640 --> 00:25:30.059
+Ricardo Garcia: Quando a gente fala em banco de dados, a gente pensa: Nossa, mas o que é o banco de dados.
+
+129
+00:25:30.060 --> 00:25:46.590
+Ricardo Garcia: O banco de dados é uma série de programas. Programas, mesmo que é desenvolvido, os engenheiros desenvolvem programas que a gente pode fazer programas que você vai fazer em Python e tal. São programas que fazem o quê? A gestão dos nossos dados.
+
+130
+00:25:46.590 --> 00:25:59.019
+Ricardo Garcia: Eles são especialistas em gestionar o armazenamento dos dados e da gente, acessar os dados. Enfim, fazer o que tem que fazer com os dados. Então, quando a gente fala em banco de dados, é um conjunto
+
+131
+00:25:59.020 --> 00:26:13.050
+Ricardo Garcia: de arquivos que se executam ali. Para quê? Para gestionar os nossos dados para que a gente tenha segurança, acesso, enfim, administração de todas as classes dos nossos dados.
+
+132
+00:26:13.050 --> 00:26:17.209
+Ricardo Garcia: Então não adianta você instalar o Skl Development e não instalar o hora.
+
+133
+00:26:17.450 --> 00:26:26.190
+Ricardo Garcia: Não adianta você instalar o compass e não ter o Mongodb. Não adianta você instalar o The Biever e não ter nenhum banco de dados instalado no teu computador.
+
+134
+00:26:26.190 --> 00:26:37.649
+Ricardo Garcia: Então tudo isso é ligado o work banking. Se você não tiver, o Myscal também não serve para nada. O Pg. Adventures. Se você não tiver um posters, também não serve para nada se você o Management Studio
+
+135
+00:26:37.650 --> 00:26:44.429
+Ricardo Garcia: aqui é o contrário. O manejo me no estúdio com relação. Se você não tiver o Sql Server,
+
+136
+00:26:45.710 --> 00:26:46.970
+Ricardo Garcia: também não adianta.
+
+137
+00:26:47.500 --> 00:27:07.679
+Ricardo Garcia: Então o que vocês têm que fazer para montar o laboratório de vocês? Primeira coisa é ver um banco de dados. Não sei se vocês vão ter algum. Agora nas disciplinas. Vai ser Sql Post, Mysql. Qualquer coisa que vocês tiverem aí, por exemplo, vou chutar aqui. Vou chutar. Ah, vamos estar lá. Então nós vamos fazer o nosso trabalho na Sql com Mysql Opa, beleza.
+
+138
+00:27:07.680 --> 00:27:16.920
+Ricardo Garcia: Então você vai instalar o Myscal. O Myscal? A gente fala assim, que é o banco de dados em si? É o motor de banco de dados. Quando a gente fala que é o motor em si
+
+139
+00:27:16.920 --> 00:27:18.420
+Ricardo Garcia: também. Não,
+
+140
+00:27:18.420 --> 00:27:41.550
+Ricardo Garcia: não é. Ai, poxa. Mas o que é isso aí? Na verdade, são n arquivos executáveis que são instalados na tua máquina. E que fazem eles? Funcionam como um serviço, e esse serviço fazem com a administração dos nossos dados. Eles gestionam o armazenamento dos nossos dados dentro de uma máquina. Pode ser a máquina nossa, como a gente tem aqui. E pode ser um servidor
+
+141
+00:27:41.760 --> 00:27:53.669
+Ricardo Garcia: gigante lá com um monte de coisa. Então, só para vocês terem uma ideia, a gente não vai entrar em detalhes, porque vocês vão ver isso mais na frente. Não é o objetivo dessa aula, mas só para vocês entenderem. Então, por exemplo, vamos chutar aqui. Ó,
+
+142
+00:27:54.060 --> 00:27:59.009
+Ricardo Garcia: vamos falar do Sql Serb. Então eu tenho o Sql Server aqui. Beleza,
+
+143
+00:28:00.170 --> 00:28:18.219
+Ricardo Garcia: o Sql Server eu acesso com essa aqui. Bom, beleza, eu tenho os meus pontos de dados aqui. Então, o Skl server, se a gente for ver lá no Windows? Só um pouquinho. Pedro, só para terminar o raciocínio aqui a gente já fala. Ó, se a gente for ver no Windows, eu baixei da página do
+
+144
+00:28:18.490 --> 00:28:36.949
+Ricardo Garcia: da Microsoft e tal. E ele instalou aqui. Microsoft Skl serve. Então essas pastinhas aqui. Se a gente for ver aqui o que tem aqui dentro, ele tem uma série de informações aqui de programas. Está cheio de programas, ideias, aquela coisa toda
+
+145
+00:28:37.050 --> 00:28:52.490
+Ricardo Garcia: e esses programas funcionam. Para quê? Eles funcionam para monitorar, para gestionar os nossos bancos de dados que são criados dentro da Sql Server. Isso aqui dentro do Windows. Esses vários arquivos aqui.
+
+146
+00:28:52.760 --> 00:28:56.630
+Ricardo Garcia: A gente tem aqui, ó serviços,
+
+147
+00:28:59.140 --> 00:29:04.789
+Ricardo Garcia: eles funcionam através de serviços. Ó, ele está aqui. S Qn serve.
+
+148
+00:29:08.110 --> 00:29:12.580
+Ricardo Garcia: Está aqui. Ele está funcionando dentro do meu Windows como serviço.
+
+149
+00:29:12.740 --> 00:29:25.419
+Ricardo Garcia: Então esse serviço aqui, esse que a gente está vendo, que está em azulzinho aqui, ele é um serviço que permite que eu crie N. Bancos de dados dentro do meu sistema. E esse servicinho que a gente está vendo aqui,
+
+150
+00:29:25.420 --> 00:29:37.429
+Ricardo Garcia: que ele está armazenado lá dentro daquela pasta que tem vários arquivos. Ele serve para quê? Para gestionar, para administrar o armazenamento dos meus dados. Ele faz com que isso aqui tudo funcione.
+
+151
+00:29:37.510 --> 00:29:50.470
+Ricardo Garcia: Tudo que a gente está vendo aqui é o serviço do Sql Server que está proporcionando para nós. Então, quando você instalar o Sql Server, ele vai instalar vários arquivos ali dentro e vai criar um serviço,
+
+152
+00:29:50.470 --> 00:30:06.060
+Ricardo Garcia: e esse serviço vai proporcionar que a gente tenha acesso aos dados, como a gente está fazendo aqui. Quando a gente instalar o Mysql, ele vai fazer a mesma coisa. Ele vai instalar um monte de arquivos no nosso computador e vai criar um serviço. Um serviço. Mais Skl, quer ver. Eu vou até mostrar aqui para vocês. Eu tenho tudo instalado na minha máquina.
+
+153
+00:30:06.810 --> 00:30:18.170
+Ricardo Garcia: Mysql. Mysql está aqui. Ó Mysql, é um outro. Serviço. Então eu instalei, baixei ele, instalei. Ele pôs os arquivos lá e criou o serviço. O Paul serviço. É a mesma coisa
+
+154
+00:30:18.230 --> 00:30:30.910
+Ricardo Garcia: postar aqui, ó, o serviço do Post. Aqui. Mesma coisa. Baixei, instalei. Ele pôs um monte de programa lá e ele executa ali em forma de serviço, beleza, o oraco. A mesma coisa. Vou lá no Oracle
+
+155
+00:30:30.990 --> 00:30:33.369
+Ricardo Garcia: daqui. Eu oro por Cadê ele?
+
+156
+00:30:34.470 --> 00:30:45.139
+Ricardo Garcia: Está aqui. O serviço do banco de dados está aqui e o Lister está em execução. Ele está aqui. Hora com cerve, que é o nome do banco de dados.
+
+157
+00:30:45.140 --> 00:31:02.800
+Ricardo Garcia: Então, resumindo, qual foi o objetivo aqui. Agora eu vou fechar isso aqui para a gente não confundir. Não se preocupem. Ah, poxa, não entendi. Vocês vão ver isso durante um bom tempo. Ainda no Insta. Eu só estou dando essa introdução para vocês entenderem que existem várias ferramentas. Um resumo é esse mesmo.
+
+158
+00:31:02.800 --> 00:31:09.970
+Ricardo Garcia: Para vocês utilizarem dentro do dia a dia de vocês. Da mesma forma que existem outras profissões que têm ferramenta,
+
+159
+00:31:09.970 --> 00:31:31.740
+Ricardo Garcia: que cada um tem a sua ali e tal, e vai desenvolvendo a nossa também tem. Então o objetivo dessa demonstração aqui é que vocês entendam isso? O banco de dados tem que estar instalado na máquina. E a partir do momento que ele está instalado, você tem os Ids, as interfaces que você se conecta
+
+160
+00:31:32.000 --> 00:31:47.780
+Ricardo Garcia: nesses bancos de dados. E aí você faz o teu trabalho ali. Faz a tua visualização. Do que você tem que fazer realmente da administração. E aqui você pode, como a gente está vendo aqui, colocar códigos aí você desenvolve.
+
+161
+00:31:47.780 --> 00:31:54.939
+Ricardo Garcia: Desenvolve os teus códigos dentro da interface que você vai fazer mais Q Work Banking. Você desenvolve teus códigos lá.
+
+162
+00:31:54.940 --> 00:32:02.230
+Ricardo Garcia: Scanners server Management Studio utiliza lá, e assim vai para cada uma. Tem a sua ferramenta,
+
+163
+00:32:02.260 --> 00:32:06.390
+Ricardo Garcia: beleza. Deixa eu ver. Ali é o Pedro que queria comentar alguma coisa, Pedro?
+
+164
+00:32:06.840 --> 00:32:07.870
+Ricardo Garcia: Não sei.
+
+165
+00:32:07.870 --> 00:32:09.010
+Pedro Fernandes Fonseca: Professor da noite.
+
+166
+00:32:09.010 --> 00:32:09.540
+Ricardo Garcia: Obrigado.
+
+167
+00:32:10.320 --> 00:32:11.719
+Ricardo Garcia: Ô Pedro! Diga aí, cara.
+
+168
+00:32:11.980 --> 00:32:25.189
+Pedro Fernandes Fonseca: Eu só quero te agradecer porque o que você acabou de falar era uma nebulosa que estava na minha mente. Eu não estava conseguindo compreender. E exatamente o que você acabou de estar explicando. Eu só queria te agradecer mesmo.
+
+169
+00:32:25.190 --> 00:32:29.460
+Ricardo Garcia: Valeu. Valeu, cara brigadão. A gente que agradece. Aí Tamo junto.
+
+170
+00:32:29.950 --> 00:32:32.490
+Ricardo Garcia: Então, pessoal. Ô Rafa, diga aí, cara.
+
+171
+00:32:33.430 --> 00:32:34.580
+raphaph41 Rodrigues: Boa noite para o solo.
+
+172
+00:32:34.740 --> 00:32:35.730
+Ricardo Garcia: Boa noite.
+
+173
+00:32:35.960 --> 00:32:43.210
+raphaph41 Rodrigues: Na verdade, são duas questões. Duas perguntas. Uma é em relação à questão do sistema.
+
+174
+00:32:43.260 --> 00:33:02.889
+raphaph41 Rodrigues: De fato, no dia a dia. Tem que se saber Linux ou o Windows Desembola Legal. E outra coisa é em relação à questão do Pc, porque nessa onda de tentar entender o Linux. Eu baixei aqui o Wsl, né?
+
+175
+00:33:03.190 --> 00:33:04.330
+Ricardo Garcia: Isso. Aham.
+
+176
+00:33:04.330 --> 00:33:18.390
+raphaph41 Rodrigues: E aí comecei a mexer pra aprender. Mas é muito pesado. Na hora que eu jogo a memória aqui. Eu vejo que a memória Ham tá lá, e meu Pc tem dezasseis. Ele fica rodando em doze e treze
+
+177
+00:33:18.700 --> 00:33:20.710
+raphaph41 Rodrigues: só por estar aberto.
+
+178
+00:33:20.710 --> 00:33:21.150
+Ricardo Garcia: Uhum.
+
+179
+00:33:21.150 --> 00:33:28.660
+raphaph41 Rodrigues: Esses dias mesmo. Eu abri muita coisa aqui. O Pc resetou porque ficou muito lento e caiu.
+
+180
+00:33:28.660 --> 00:33:33.920
+Ricardo Garcia: Aí essa questão. Tipo, assim, o mínimo de um Pc para conseguir trabalhar com isso.
+
+181
+00:33:34.210 --> 00:33:45.730
+Ricardo Garcia: Entendi. É aí, Rafa. Só para colocar primeiro isso para todos, já, né, pessoal? Agora a gente está iniciando. Vocês estão iniciando na carreira de vocês também. E tal, né?
+
+182
+00:33:46.210 --> 00:33:46.980
+Ricardo Garcia: E a.
+
+183
+00:33:46.980 --> 00:34:11.670
+Ricardo Garcia: O Linux é fundamental. Tipo assim, não tem como vocês seguirem uma carreira de dados e tal. Se vocês não souberem, a não ser que vocês sejam especialistas especialistas no Sql Server, que é da Microsoft. E aí vocês vão ter só o Windows ali para trabalhar, o que é muito difícil. Eu. Quando eu comecei na carreira de dados, eu comecei através do skl server, daí os servidores eram Microsoft
+
+184
+00:34:11.670 --> 00:34:18.089
+Ricardo Garcia: Windows. Aí, beleza. Aí não precisei do Linux e tal. Mas quando você sai
+
+185
+00:34:18.150 --> 00:34:26.239
+Ricardo Garcia: para outros entornos de banco de dados Postures Mysql Oracle e tal. É praticamente tudo, Linux.
+
+186
+00:34:26.550 --> 00:34:36.979
+Ricardo Garcia: Só que o que eu quero tranquilizar vocês é o seguinte: o Linux, quando a gente começa a usar mesmo, ele fica transparente. Não se preocupem com isso, porque,
+
+187
+00:34:37.389 --> 00:34:47.719
+Ricardo Garcia: digamos assim, duas semanas vocês trabalhando com isso. Por exemplo, se a gente. É o que eu falo. Pô, se a gente fosse trabalhar junto lá na segunda feira. Vocês iam conversar com a gente lá, meu. Não tem problema.
+
+188
+00:34:47.719 --> 00:35:04.759
+Ricardo Garcia: Vocês vão começar em duas semanas. Você já está sabendo do Linux, dos comandos que faz e tal e lógico que existem alguns truques que a gente pode ensinar nesse sentido, também para vocês ajudarem na administração e acelerarem o processo de vocês. Então o Linux é primordial. Não tem a mesma coisa que
+
+189
+00:35:04.900 --> 00:35:19.880
+Ricardo Garcia: não tem como escapar. Por um outro lado, existem muitos cursos gratuitos que vocês podem fazer. E no dia a dia, vocês vão pegar isso assim, super rápido. Duas semanas. Vocês já estão se virando ali sem nenhum problema. Ô Leonardo! Diga aí, cara.
+
+190
+00:35:21.930 --> 00:35:24.069
+leonardo Peres: Bom dia. Boa noite para você.
+
+191
+00:35:24.070 --> 00:35:24.590
+Ricardo Garcia: Boa noite.
+
+192
+00:35:24.590 --> 00:35:36.779
+leonardo Peres: Sobre essa questão do Linux. Tipo o Linux é como se fosse um Windows ou o Linux. É outra máquina. Tipo tem um computador. Eu não entendo isso. Entendeu uma pergunta? Bem, besta.
+
+193
+00:35:36.780 --> 00:35:46.710
+Ricardo Garcia: Não imagina. Não, não. É muito pertinente. A tua pergunta também nesse sentido, é que, na verdade, o Linux é um, digamos assim.
+
+194
+00:35:46.900 --> 00:35:50.070
+Ricardo Garcia: Ele é diferente mesmo. Ele é outra.
+
+195
+00:35:50.070 --> 00:35:50.780
+leonardo Peres: De.
+
+196
+00:35:50.780 --> 00:36:00.450
+Ricardo Garcia: A Microsoft desenvolve Windows. Então toda a Engenharia da Microsoft está baseada. Está inserida dentro do próprio Windows.
+
+197
+00:36:00.910 --> 00:36:16.330
+Ricardo Garcia: O Linux se tornou um desenvolvimento open source, onde esse core do Linux, o desenvolvimento principal que é feito por uma comunidade gigante no mundo inteiro ela é disponibilizada. E daí outras empresas.
+
+198
+00:36:16.390 --> 00:36:33.830
+Ricardo Garcia: Outras empresas utilizam esse core para desenvolver as características dela própria, da mesma forma como a gente tem as coisas gratuitas. E daí? Tem as coisas pagas no sentido. Você tem o The Beaver gratuito e você tem o The Beaver pago
+
+199
+00:36:33.830 --> 00:36:43.149
+Ricardo Garcia: é a mesma coisa com o Linux. O Linux. A gente tem uma versão gratuita, que é o que a gente usa, que é muito potente, porque a comunidade, no mundo inteiro desenvolve características para o Linux,
+
+200
+00:36:43.150 --> 00:36:53.849
+Ricardo Garcia: e tem as versões que são pagas do Linux, mas normalmente, essas versões pagas. Por exemplo, nós, na empresa, a nível de produção de servidores produtivos
+
+201
+00:36:54.030 --> 00:37:12.099
+Ricardo Garcia: são pagas, a gente tem pagas, só que, na verdade, o que a gente paga é o suporte mesmo. Então, a gente paga. Lógico que tem a licença do Linux. A gente trabalha com o Red Hat, que é a mais conhecida que tem, que é certificada pela Oracle. Tem o próprio Linux da Oracle também que a gente pode utilizar.
+
+202
+00:37:12.100 --> 00:37:25.220
+Ricardo Garcia: Mas imagine nesse sentido que o Linux é bem diferente do Windows. O Windows. Ele tem a cara dele por ser da Microsoft. Ele facilita muito para o usuário. Porque tem interface aquela coisa toda que a gente está vendo aqui
+
+203
+00:37:25.220 --> 00:37:27.789
+Ricardo Garcia: nesse sentido aqui. E o Linux?
+
+204
+00:37:28.250 --> 00:37:38.550
+Ricardo Garcia: Ele tem também nas versões desktop de computador nosso e tal. Ele tem também essas características de interface e tal, mas
+
+205
+00:37:38.550 --> 00:37:53.799
+Ricardo Garcia: ela tem um pouco de preconceito muitas vezes, porque há um tempo atrás, era difícil encontrar compatibilidade com determinados programas. Ah, pô, eu tenho para Windows, mas não tenho para o Linux e tal. Hoje em dia é muito difícil. A maioria dos programas que existem tem também para o Linux.
+
+206
+00:37:53.880 --> 00:38:08.320
+Ricardo Garcia: Então, muitas pessoas, inclusive desenvolvedores, utilizam muito mais o Linux, porque o Linux tem uma arquitetura que muitas vezes melhora a performance da máquina pode ser de um déficit de um servidor, alguma coisa assim.
+
+207
+00:38:08.350 --> 00:38:31.820
+Ricardo Garcia: Então tem muita gente, já ou faz bom tempo que utiliza realmente o Linux. Só que lógico. A Microsoft. Ele facilita bastante porque ele tem uma interface mais amigável para você ter em casa, enfim, a família, utilizar aquela coisa. Às vezes é mais fácil você ter um Windows ali mesmo que ele te dá um suporte maior, uma confiabilidade maior. E o Linux, pela falta de conhecimento, muitas vezes que a gente tem,
+
+208
+00:38:31.820 --> 00:38:51.120
+Ricardo Garcia: acha que vai ser complexo aquela coisa toda, mas na verdade não vai. Ele tem a parte de comando que a gente pode dar. Mas ele também tem a parte de interface que a gente pode utilizar igual como se fosse um Windows. Inclusive tem Linux, que tem interfaces muito parecidas com o Windows, para justamente ter essa familiaridade. E é um Linux.
+
+209
+00:38:51.300 --> 00:39:11.090
+Ricardo Garcia: Resumindo, são duas coisas totalmente distintas. Mas o importante é vocês entenderem assim, a nível de servidores. Se o banco de dados não for Microsoft é Linux, a galera vai usar o Linux. E se o banco de dados, obviamente, for Microsoft vai utilizar o Windows. Não sei se foi muito claro nisso aí, mas.
+
+210
+00:39:11.090 --> 00:39:18.670
+leonardo Peres: Deu pra entender. Mas só resumindo, pra ver se entendi. Eu não vou ter que comprar outro computador. Eu vou ter que só comprar. Tipo, se fosse uma licença, né.
+
+211
+00:39:18.670 --> 00:39:28.999
+Ricardo Garcia: Para instalar ou para instalar o link? Não, não, nem isso. Não vai ter que comprar. Não, até vou respondendo. Ali também.
+
+212
+00:39:30.130 --> 00:39:34.300
+Ricardo Garcia: Puxa, eu tinha que responder do.
+
+213
+00:39:34.530 --> 00:39:35.590
+raphaph41 Rodrigues: Rafael e.
+
+214
+00:39:35.700 --> 00:39:43.910
+Ricardo Garcia: O Rafael. Ah, perdão, Rafael. Então, quando a gente fala em máquina para vocês. Não, não,
+
+215
+00:39:45.670 --> 00:39:56.610
+Ricardo Garcia: não, digamos assim. Desconfigurar a máquina de vocês, aquela coisa toda para que às vezes a gente puxa. A gente tem a nossa máquina ali. É ruim a gente ficar também instalando um monte de coisa. Lá porque depois vai ter que desinstalar,
+
+216
+00:39:56.730 --> 00:40:10.569
+Ricardo Garcia: pode usar como o Rafael fez ali também a parte do instalar o próprio Linux do Windows. Mesmo às vezes vai ficar meio pesado. Alguma coisa assim, ou senão a gente pode utilizar uma ferramenta chamada Máquinas Virtuais.
+
+217
+00:40:10.570 --> 00:40:21.009
+Ricardo Garcia: As máquinas virtuais. Elas permitem que a gente instale um outro sistema. Um outro sistema é como se você tivesse uma máquina mesmo.
+
+218
+00:40:21.170 --> 00:40:31.150
+Ricardo Garcia: Só que dentro da tua máquina física. Então a gente tem o nosso computador aqui normal. Deixa eu mostrar aqui para vocês. Eu utilizo esse motor aqui de máquina virtual.
+
+219
+00:40:31.320 --> 00:40:42.439
+Ricardo Garcia: A máquina virtual permite que você crie máquinas virtuais dentro da tua própria máquina. Então você tem a tua máquina física. Essa aqui que a gente está vendo aqui. Agora, essa aqui.
+
+220
+00:40:42.600 --> 00:40:50.670
+Ricardo Garcia: Essa é minha máquina física. É um outro notebook que eu tenho aqui do lado. Então essa é uma máquina física. E aí eu tenho um software que é um
+
+221
+00:40:50.960 --> 00:41:09.129
+Ricardo Garcia: o Vmware aqui, mas tem outros que a gente pode utilizar, que permitem que eu crie máquinas virtuais. Linux aqui, por exemplo, e instale faça uma instalação do Linux e utilize o Linux aqui dentro. Mas ele não afeta o meu entorno por fora. A minha máquina física não é afetada.
+
+222
+00:41:09.130 --> 00:41:11.760
+Ricardo Garcia: Lógico que utiliza os mesmos recursos,
+
+223
+00:41:11.770 --> 00:41:17.999
+Ricardo Garcia: mas você pode utilizar uma máquina virtual onde ela, digamos assim, ela.
+
+224
+00:41:18.420 --> 00:41:22.450
+Ricardo Garcia: Ela. Como é que posso.
+
+225
+00:41:22.450 --> 00:41:22.790
+luis.queiroz: Vamos lá.
+
+226
+00:41:22.790 --> 00:41:23.410
+Ricardo Garcia: Pula, né?
+
+227
+00:41:23.410 --> 00:41:23.809
+luis.queiroz: Isso é.
+
+228
+00:41:23.810 --> 00:41:24.420
+Ricardo Garcia: Oi.
+
+229
+00:41:24.710 --> 00:41:25.810
+luis.queiroz: É um emulador.
+
+230
+00:41:26.280 --> 00:41:40.019
+Ricardo Garcia: É isso? É o emulador. Exatamente. Eu só estou tentando achar uma palavra mais simples assim, né? Tipo assim é como se ela criasse um pacotão. É uma outra máquina dentro da tua máquina física. Sendo bem simples assim, né?
+
+231
+00:41:40.050 --> 00:41:48.740
+Ricardo Garcia: Essas máquinas virtuais têm a capacidade que você pode criar n máquinas dentro da tua máquina física. Lógico, dependendo da capacidade que você tem.
+
+232
+00:41:48.990 --> 00:41:59.950
+Ricardo Garcia: Como que funciona isso? Aí eu tenho aqui um overview Air, por exemplo. Mas existem outras aqui. Vou até colocar no nosso quadro aqui, que é, por exemplo, você tem a Virtualbox.
+
+233
+00:42:01.450 --> 00:42:11.129
+Ricardo Garcia: Você tem o hipervia. Escreve assim da própria Microsoft que vem no sistema Uv M U R
+
+234
+00:42:13.360 --> 00:42:33.120
+Ricardo Garcia: e outras tem outras aqui. Que fazem isso aí também. A virtualização permite que você faça assim. Você tem o teu sistema, o virtualbox. Ela é instalada na tua máquina física no teu notebook. Então, aqui, só para vocês terem uma ideia. Então a gente instala no notebook aqui ou na máquina física que a gente tem
+
+235
+00:42:33.400 --> 00:42:41.299
+Ricardo Garcia: embaixo dela. Você pode criar n máquinas Linux. Ah, quero instalar o ubuntu. Então você cria uma máquina
+
+236
+00:42:41.510 --> 00:42:58.309
+Ricardo Garcia: do ubuntu. E você instala exatamente igual, como se fosse uma máquina física. Só que você vai instalar. Vai criar uma máquina virtual, e essa máquina virtual vai estar dentro da tua máquina, do teu sistema do teu notebook. Esse tipo de coisa. Mas essa máquina aqui, ela é isolada
+
+237
+00:42:58.730 --> 00:43:01.310
+Ricardo Garcia: da tua máquina física.
+
+238
+00:43:01.590 --> 00:43:19.819
+Ricardo Garcia: O que significa? Ah, mas daí? Como é que eu vou ter acesso? Não, calma aí. Ela é isolada em termos de, digamos assim, de software. Então ela é isolada, mas ela utiliza, obviamente que é a memória da tua máquina física e a Cpu da tua máquina física e o armazenamento da tua máquina física.
+
+239
+00:43:19.930 --> 00:43:26.580
+Ricardo Garcia: Então ele simplesmente encapsula. Ele isola aquele sistema operacional ali dentro
+
+240
+00:43:26.580 --> 00:43:41.100
+Ricardo Garcia: como se fosse uma máquina. Só que obviamente que ele utiliza os recursos da tua máquina física. É isso que ele faz. E aí você pode criar, dependendo da capacidade da tua máquina física, você pode criar n máquinas virtuais aqui.
+
+241
+00:43:41.100 --> 00:43:47.580
+Ricardo Garcia: O que for ali que a tua máquina física aguentar, né? E aí você pode conectar detalhe.
+
+242
+00:43:47.590 --> 00:43:54.780
+Ricardo Garcia: Essas máquinas virtuais se conectam com a tua máquina física pela rede.
+
+243
+00:43:55.410 --> 00:44:00.950
+Ricardo Garcia: Então o que acontece. Eu tenho uma placa de rede porque ele cria ele emula. Como
+
+244
+00:44:01.100 --> 00:44:16.789
+Ricardo Garcia: foi o isso que comentou? Ele mula todo um hardware. Ele cria um hardware virtual ali. Então ele tem uma rede que você se conecta na Internet. Enfim, faz tudo o que você quiser. Ele não tem. Ele é uma máquina exatamente igual, física.
+
+245
+00:44:16.910 --> 00:44:27.870
+Ricardo Garcia: E pela rede, você se conecta na Internet e se conecta também ao quê? À tua máquina física também. Então, a tua máquina física e a tua máquina
+
+246
+00:44:28.040 --> 00:44:52.989
+Ricardo Garcia: virtual. Você coloca ela na mesma rede. Então você da tua máquina física. Você pode se conectar pela rede na tua máquina virtual. É isso que a gente faz para que a gente não muitas vezes, porque senão você fica instalando e desinstalando um monte de coisa da máquina. E aí você vai ter que formatar ela, que é o normal que a gente faz. Depois instalar, desinstalar um monte de coisa. A gente formata ela e deixa
+
+247
+00:44:52.990 --> 00:44:54.319
+Ricardo Garcia: zerada de novo, né?
+
+248
+00:44:54.320 --> 00:44:58.240
+Ricardo Garcia: Mas se você quiser evitar isso aí, então você pode buscar
+
+249
+00:44:58.240 --> 00:45:17.610
+Ricardo Garcia: essa aqui. É gratuita. Tudo que a gente está falando aqui é gratuita. O Hyperv também vem junto com o Windows. Também é gratuito over que eu não lembro, mas é gratuito. Também tem a versão gratuita. E tem outras também que a gente pode utilizar. Tem várias. E aí você cria as tuas máquinas, vêm dentro para fazer os teus testes. Eu, por exemplo,
+
+250
+00:45:17.940 --> 00:45:32.049
+Ricardo Garcia: tanto que eu tenho aqui, eu crio normalmente máquina virtual para testar. Ah, eu tenho que testar lá a instalação lá no Post X. Eu crio uma máquina virtual aqui com o Linux. O Linux é gratuito e eu faço a máquina virtual e testa aqui dentro
+
+251
+00:45:32.980 --> 00:45:34.929
+Ricardo Garcia: só para vocês terem uma ideia.
+
+252
+00:45:35.590 --> 00:45:47.279
+Ricardo Garcia: O nosso parque de marketing. Nós temos o nosso próprio data Center dentro da empresa. A gente tem os data centers lá são data centers replicados aqui em Curitiba, aquela coisa toda, né?
+
+253
+00:45:47.280 --> 00:46:04.010
+Ricardo Garcia: Nós temos várias máquinas físicas que são servidores físicos, mesmo o hexadata e outros servidores físicos, digamos assim, com um hardware bastante potente. Mas nós temos o vmware que é uma versão Enterprise.
+
+254
+00:46:04.060 --> 00:46:13.280
+Ricardo Garcia: E nós temos mais de setecentos máquinas virtuais dentro desse overview aqui Enterprise.
+
+255
+00:46:13.280 --> 00:46:34.770
+Ricardo Garcia: Então nós temos um hardware gigante Ali e dentro desse hardware gigante, a gente cria n máquinas virtuais ali dentro. É isso que a gente faz também só para vocês entenderem como é que é feito isso a nível empresarial. Só que obviamente que daí não é o Workstation aqui alguma coisa tem n ferramentas ali muito mais robustas do que a gente tem dentro dessa ferramenta.
+
+256
+00:46:34.770 --> 00:46:40.279
+Ricardo Garcia: Mas a gente tem mais de setecentos máquinas hoje que são máquinas virtuais. O que significa isso?
+
+257
+00:46:40.280 --> 00:46:54.309
+Ricardo Garcia: São servidores. São servidores que funcionam totalmente independentes um do outro, mas que formam um conjunto de servidores com várias soluções ali. Várias aplicações. É assim que funciona. Então é uma
+
+258
+00:46:54.310 --> 00:46:58.710
+Ricardo Garcia: agora máquina Putz. A gente tem que ter
+
+259
+00:46:58.710 --> 00:47:15.059
+Ricardo Garcia: uma máquina mais ou menos. Por exemplo, nessa máquina aqui, que não é muito boa. Mas ela é mais antiga. Mas ela tem aqui uma Cpu. Eu tenho aqui só oito. Não é muito. É um,7 mas também já é mais antiga de memória. Eu tenho trinta e dois giga aqui.
+
+260
+00:47:15.510 --> 00:47:22.449
+Ricardo Garcia: Memória até que tá legal assim, né? E disco aqui eu tenho dois. Também tem um Ssd aqui e tal, né?
+
+261
+00:47:22.630 --> 00:47:34.980
+Ricardo Garcia: Mas o que acontece? Eu tentei no curso no outro curso que eu estava dando do Sq server lá. Eu tentei criar uma máquina virtual e tal com o Windows e o Skely Server não dá mais.
+
+262
+00:47:35.160 --> 00:47:52.760
+Ricardo Garcia: Por que não dá? Porque a Microsoft cria tantos recursos ali dentro que obviamente que ela vai usar mais recursos também da nossa estrutura. Ela vai usar mais memória. Ela vai usar mais Cpu. Ela vai usar mais disso. Vai usar mais tudo. E agora a gente não consegue nem mais criar uma máquina virtual
+
+263
+00:47:52.760 --> 00:48:01.229
+Ricardo Garcia: do Windows. E o scanner poxa, eu criei a máquina, mas travava. É muito ruim. Não funcionou.
+
+264
+00:48:01.230 --> 00:48:17.420
+Ricardo Garcia: Daí eu optei por falar. Sabe quem? Então vou instalar na minha principal. Eu vou criar meu laboratório aqui na máquina física, mesmo principal. E não vou utilizar as máquinas virtuais. As máquinas virtuais que eu crio aqui são somente Linux, porque daí o Linux não dá trabalho nenhum.
+
+265
+00:48:17.420 --> 00:48:23.039
+Ricardo Garcia: Chega lá, cria Linux. Lá toca o barco e não tem problema. E usa muito menos recurso também, né?
+
+266
+00:48:23.140 --> 00:48:24.529
+Ricardo Garcia: Opa. Diga lá, Pedro.
+
+267
+00:48:27.550 --> 00:48:43.119
+Pedro Fernandes Fonseca: Professor, vamos supor aqui que, por exemplo, eu arrumei um serviço. Um bico. Vamos supor de alguma conveniência. Vamos supor que eu tive que fazer todos os dados manualmente. Mesmo fazer as planilhas.
+
+268
+00:48:43.200 --> 00:48:53.679
+Pedro Fernandes Fonseca: Preenchi coluna por coluna. E tal como é que eu faço para estar linkando, por exemplo, as planilhas. Com esses bancos de dados, para eu estar acessando eles. E tendo essas visualizações,
+
+269
+00:48:54.100 --> 00:48:57.490
+Pedro Fernandes Fonseca: não sei. Se é uma pergunta também muito forte. Está falando agora, mas.
+
+270
+00:48:57.490 --> 00:49:12.730
+Ricardo Garcia: Não é fora, ela é uma pergunta mais, digamos assim, avançada. Na verdade, você quer pegar. E isso é o objetivo de todo mundo pensa que no nosso trabalho lá também tem vários projetos
+
+271
+00:49:12.730 --> 00:49:24.270
+Ricardo Garcia: que utilizam planilhas de controle e tal e o objetivo. A maioria da galera é pegar e transformar essas planilhas em bancos de dados. Então a tua pergunta é muito importante.
+
+272
+00:49:24.270 --> 00:49:30.210
+Ricardo Garcia: E realmente, no mercado. A gente encontra muito isso aí, de transformar essas planilhas
+
+273
+00:49:30.210 --> 00:49:37.099
+Ricardo Garcia: para bancos de dados. E obviamente que esses bancos de dados, o que a gente está vendo aqui, por exemplo, de banco de dados. Aqui.
+
+274
+00:49:37.100 --> 00:49:54.579
+Ricardo Garcia: Esses bancos de dados vão se tornar aplicações. Então vai ter lá suas aplicações Rp, Crm e tal, que vão consumir esses dados dentro dos bancos de dados? Então, é uma pergunta bem pertinente, e a gente utiliza, dependendo do projeto, dependendo da necessidade.
+
+275
+00:49:54.580 --> 00:50:01.800
+Ricardo Garcia: A gente pega realmente o Excel, o Csv, alguma coisa, e tem que transportar esses dados para dentro dos nossos bancos de dados.
+
+276
+00:50:01.800 --> 00:50:16.150
+Ricardo Garcia: E para isso, vocês usam processos que fazem isso automaticamente, ou sobre demanda, porque a gente cria lá um código e faz essa movimentação do teu excel do teu Csv para dentro dos bancos de dados
+
+277
+00:50:16.220 --> 00:50:35.979
+Ricardo Garcia: detalhe. O que vocês estão aprendendo nesse semestre. É justamente para servir como ferramenta para fazer isso. Não é, obviamente, apenas para isso que a ferramenta que vocês estão vendo que é o Python e o Excel é robusto para caramba. Dá para fazer muita coisa, mas uma das utilidades que você pode ter do Python
+
+278
+00:50:35.980 --> 00:50:49.969
+Ricardo Garcia: e do Sql. É justamente fazer essa migração dos teus Csvs do teu Excel para dentro dos bancos de dados e daí dentro dos teus bancos de dados. Outras ferramentas vão acessar esses dados aí. Normalmente são aplicações
+
+279
+00:50:49.970 --> 00:51:04.469
+Ricardo Garcia: transacionais com Rp Crm. Alguma coisa assim a gente vai ver um exemplo disso aí também. Daqui a pouquinho. Se der tempo, a gente já vai ver também. Mas é bem isso que a gente faz. Tem várias
+
+280
+00:51:04.510 --> 00:51:18.969
+Ricardo Garcia: várias atividades que a gente tem. A gente tem que fazer isso aí, ou até mesmo o que acontece é o revés também, Pedro. A gente muitas vezes tem que fazer exportar de banco de dados. A gente exporta os dados aqui do banco de dados
+
+281
+00:51:18.970 --> 00:51:29.509
+Ricardo Garcia: para um Excel, para um Csv, para que eles sejam consumidos por outras aplicações e enviados para outros bancos de dados. Isso também acontece.
+
+282
+00:51:29.510 --> 00:51:48.860
+Ricardo Garcia: Então isso aí, na verdade, existe bastante, principalmente integrações entre sistemas. Também é feito dessa maneira. Csv ou Excel, e você faz a importação e a exportação através de um código. Pode ser Python. Pode ser Java, pode ser o que for. E ele faz esse tipo de trabalho.
+
+283
+00:51:49.340 --> 00:51:57.209
+Ricardo Garcia: Beleza. Mas esse é um tema bem avançado. Vocês vão passar por eles também, nos projetos que vocês vão realizar. Aí também.
+
+284
+00:51:57.640 --> 00:52:06.239
+Ricardo Garcia: Então, beleza. Aqui a gente viu a parte de banco de dados. A gente entendeu. Deixa eu só voltar aqui de novo. Entendeu ali também como que a gente
+
+285
+00:52:06.240 --> 00:52:21.509
+Ricardo Garcia: configura o nosso ambiente. Então a gente entendeu até a parte da máquina virtual que a gente não ia comentar, mas foi bem pertinente, porque a gente usa muito. Na verdade, as máquinas virtuais
+
+286
+00:52:21.510 --> 00:52:26.719
+Ricardo Garcia: para separar um pouco os nossos ambientes nesse sentido. Então, beleza,
+
+287
+00:52:26.920 --> 00:52:32.699
+Ricardo Garcia: tudo isso que a gente falou. A gente falou. Relacionado ao quê? Relacionado a dados,
+
+288
+00:52:33.470 --> 00:52:47.049
+Ricardo Garcia: beleza. Estamos aí, os dados. Isso que importa. A gente está querendo entender os dados, os dados. Normalmente existe um processo. Ele entra num processo que a gente chama de
+
+289
+00:52:47.050 --> 00:52:57.950
+Ricardo Garcia: de tratamento de dados que a gente chama de Itl, mas não quero entrar em tantos detalhes nesse sentido. Agora, o que a gente precisa ver nessa camada de dados. Aqui
+
+290
+00:52:58.060 --> 00:53:04.390
+Ricardo Garcia: é a ferramenta que vocês vão estudar. Pô o que vocês vão estudar, Python
+
+291
+00:53:06.280 --> 00:53:23.229
+Ricardo Garcia: e vão estudar o Sql Opa show de bola. Agora já estou entendendo. Aqui, meu ambiente vai ser banco de dados e tal. Tenho a ferramenta ali para administrar meus dados. Beleza, aquela coisa toda. E aí eu vou ter o quê? O Python Sql, que são o quê? Linguagens de programação.
+
+292
+00:53:23.300 --> 00:53:37.630
+Ricardo Garcia: O Python é uma linguagem de programação universal que você pode fazer. Coisa arada com ele pode fazer desde o negócio de dados, e como outras coisas ali, que você pode desenvolver jogos, pode desenvolver aplicativos, pode desenvolver o que você quiser,
+
+293
+00:53:37.690 --> 00:53:47.569
+Ricardo Garcia: beleza e o Sql? Não, o Sql é dados. Ele é feito. O Sql é uma linguagem específica para
+
+294
+00:53:47.570 --> 00:54:03.340
+Ricardo Garcia: manutenção, gestão que você faz e acesso aos dados em si. Então esse Sqn aqui, a gente vai usar em todos esses aqui, todos eles não têm acesso a todos esses bancos de dados. Só que o Python. Ele também tem essa possibilidade.
+
+295
+00:54:03.340 --> 00:54:14.820
+Ricardo Garcia: Você também pode acessar todos esses aqui de uma maneira um pouco diferente e tal. Mas você também vai acessar todos os bancos de dados que você quiser. Para vocês terem uma ideia,
+
+296
+00:54:15.400 --> 00:54:20.390
+Ricardo Garcia: eu fiz um código lá. E tal como a gente, tem todos esses servidores aqui.
+
+297
+00:54:20.940 --> 00:54:26.129
+Ricardo Garcia: Então eu fiz um código em Python que o Python faz assim, ele pega
+
+298
+00:54:27.000 --> 00:54:30.959
+Ricardo Garcia: um banco de dados que eu tenho no Sql Server. Ele lê
+
+299
+00:54:31.240 --> 00:54:47.300
+Ricardo Garcia: os servidores que estão que eu tenho aqui. Então ele faz a leitura dos servidores e ele vai em cada servidor e consulta lá. Tamanho de banco de dados. Enfim, consulta várias informações e grava dentro do meu scanner aqui de novo.
+
+300
+00:54:47.300 --> 00:54:53.999
+Ricardo Garcia: Então aí eu vou lá dentro do Mongodb. Faço várias consultas e gravo aqui dentro. Então eu criei um programinha lá
+
+301
+00:54:54.470 --> 00:55:12.379
+Ricardo Garcia: que ele vai nos bancos de dados. Pega várias informações ali, de tamanho de banco de dados. Aquela coisa toda e grava dentro de um banco de dados centralizado, que é um skl server. É isso que ele faz. Então o Python permite que você trabalhe muito com os dados e não é complexo
+
+302
+00:55:12.380 --> 00:55:22.089
+Ricardo Garcia: lógico. Tem a complexidade. Não vou falar que é uma coisa banal. Ele tem uma complexidade e tal, mas o Python em si é muito flexível.
+
+303
+00:55:22.340 --> 00:55:36.379
+Ricardo Garcia: Quando a gente fala em Java Javascript ou Dotnet, aquela coisa toda. Ele é muito formal. O que significa isso aí? Ele tem uma forma de ser escrita. E você tem que utilizar aquela forma para ser escrita.
+
+304
+00:55:36.390 --> 00:55:48.660
+Ricardo Garcia: Tem que fazer dentro do paradigma do desenvolvimento. Tem que colocar item por item do jeito que é. Se você rodar aquilo lá e não estiver dentro do que a linguagem. Espera, não vai funcionar.
+
+305
+00:55:48.830 --> 00:56:02.979
+Ricardo Garcia: O Python não. O Python é tão legal com a gente que mesmo que a gente, às vezes vou colocar aqui, de qualquer jeito, ele vai lá e funciona. Então por isso que é legal, nós que aí existem duas vertentes.
+
+306
+00:56:03.350 --> 00:56:17.279
+Ricardo Garcia: Se, por exemplo, no meu caso, eu vou para a área de dados. Eu já trabalhei com desenvolvimento, mas não quis mais desenvolver. Falei: Ah, não vou para a área de dados que a minha área minha Vibe é essa, e fui para lá. Então, o que eu sei de código?
+
+307
+00:56:17.850 --> 00:56:29.959
+Ricardo Garcia: Voltado a dados é suficiente para mim. Então eu programo lá, faço minhas coisas lá sem nenhum problema. Mas eu não tenho uma, digamos assim. Eu não tenho uma.
+
+308
+00:56:30.570 --> 00:56:53.059
+Ricardo Garcia: É uma certa didática, eu acho. Não digo didática, não tem uma certa formalidade com relação ao meu código. O meu código é voltado para dados. O que interessa para mim é que o dado. Saia daqui e vai para lá ponto. Não interessa como eu faço o meu código. E também meu código muitas vezes não é um código compartilhado. É um código que muitas vezes eu mesmo vou utilizar. Apenas.
+
+309
+00:56:53.060 --> 00:56:57.429
+Ricardo Garcia: Então eu não tenho muita formalidade em desenvolver.
+
+310
+00:56:57.430 --> 00:57:01.390
+Ricardo Garcia: Mas eu utilizo o Python e isso me funciona super bem.
+
+311
+00:57:01.390 --> 00:57:18.010
+Ricardo Garcia: O que acontece? Eu entrego o que tem que entregar o cliente quer que faça isso. Eu vou lá e entrego ponto. Mas eu não faço um código rebuscado. Aquela coisa toda formal nem nada. O Python não me obriga a fazer isso. Então eu não faço. E beleza
+
+312
+00:57:18.010 --> 00:57:29.410
+Ricardo Garcia: como outras linguagens, como Java Dotnet e tal. Não, ele obriga que você tenha uma certa formalidade em desenvolver. Essa é a grande diferença que chama a atenção no meu caso,
+
+313
+00:57:30.120 --> 00:57:42.049
+Ricardo Garcia: como a gente faz voltado para o dados. Eu, por exemplo, faço. Então eu não me preocupo com formalidade e de desenvolvimento. Agora vocês. Se alguém da área de vocês ali vai.
+
+314
+00:57:42.050 --> 00:58:05.249
+Ricardo Garcia: E para a área de desenvolvimento, que também tem a formação. Aí vocês estão iniciando, e pode seguir vários caminhos. Então é interessante que você entenda ou aplique as formalidades de outras linguagens também no Python. Aí você tem que ser mais, digamos assim, as melhores práticas de mercado. É legal que vocês apliquem nesse sentido.
+
+315
+00:58:05.260 --> 00:58:07.379
+Ricardo Garcia: É o que eu falo. Eu sou mais
+
+316
+00:58:07.990 --> 00:58:28.979
+Ricardo Garcia: tipo assim livre nesse sentido, porque eu não sou desenvolvedor. Eu faço isso para executar a minha atividade do dia a dia. O meu objetivo é que os dados funcionem, então eu não tenho tanta formalidade, mas para quem vai seguir uma carreira de desenvolvimento, é legal que você tenha as melhores práticas do mercado, porque provavelmente o teu código vai ser compartilhado
+
+317
+00:58:28.980 --> 00:58:45.229
+Ricardo Garcia: com muitos desenvolvedores. Então a gente tem que ter uma certa formalidade de você escrever teus dados tem um negócio legal. As melhores práticas do mercado é legal a gente respeitar também. Nesse sentido, né? Opa, diga aí luz.
+
+318
+00:58:45.910 --> 00:58:46.960
+luis.queiroz: É?
+
+319
+00:58:47.280 --> 00:58:54.699
+luis.queiroz: Normalmente, quando a gente fala de banco de dados, o pessoal sempre imagina máquina dedicada, servidor, aplicação grande, etc.
+
+320
+00:58:54.940 --> 00:59:01.680
+luis.queiroz: Mas eu trabalho com ti. Eu trabalhei muito com Pdv. Sistemas que fica instalado o local, e normalmente o
+
+321
+00:59:01.890 --> 00:59:06.410
+luis.queiroz: o Deploy é feito com um Skl ali já embutido. Local.
+
+322
+00:59:06.410 --> 00:59:06.969
+Ricardo Garcia: Não, isso.
+
+323
+00:59:06.970 --> 00:59:08.740
+luis.queiroz: E tudo mais para ser independente.
+
+324
+00:59:08.740 --> 00:59:11.109
+Ricardo Garcia: Aí. A minha dúvida é: existe.
+
+325
+00:59:11.170 --> 00:59:15.199
+luis.queiroz: Muita diferença entre siquele que é usado local.
+
+326
+00:59:15.390 --> 00:59:22.429
+luis.queiroz: E o Sl do servidor? Ou é mais uma questão de escala do servidor. Ele é projetado para ser muito.
+
+327
+00:59:22.910 --> 00:59:29.179
+Ricardo Garcia: Não entendi. Entendi. Não, você pode usar o próprio mais. Quer que a gente usa de servidor
+
+328
+00:59:29.210 --> 00:59:44.560
+Ricardo Garcia: quando a gente usa lá no servidor. Ele tem. Já vou dar um exemplo só do Myscal específico. Então o Myscal, quando você vai instalar ele lá, ele pergunta se vai ser desenvolvimento, se vai ser uma aplicação local, alguma coisa assim,
+
+329
+00:59:44.560 --> 00:59:49.579
+Ricardo Garcia: então, dependendo do que você selecionar, se você selecionar a aplicação local, ele vai se
+
+330
+00:59:49.610 --> 00:59:56.610
+Ricardo Garcia: gerar a configuração dele. Uma configuração muito mais reduzida para aquele local.
+
+331
+00:59:56.650 --> 01:00:21.560
+Ricardo Garcia: Se você selecionar que vai ser um servidor, por exemplo, dedicado. Ele vai pegar aquela configuração e gerar a configuração para um servidor de banco de dados dedicado a isso. Então ele altera a configuração na instalação, mas o software pode ser o mesmo. Não tem problema nenhum. Pode ser feito. Sim, o que acontece. São os ajustes que a gente faz depois. Mas isso tanto no Mysql, no posters, no Sql e tudo
+
+332
+01:00:21.920 --> 01:00:39.589
+Ricardo Garcia: quando a gente instala o que eu faço. Vou falar. O que eu faço aí também não sei. Cada um tem o seu jeito de fazer. Mas quando a gente instala, por exemplo, um post numa máquina. Ele tem um padrão de parâmetros que ele é instalado. Então ele tem lá puf. Ele instala aquele parâmetro padrão.
+
+333
+01:00:39.650 --> 01:00:45.250
+Ricardo Garcia: Aí eu pego a memória do servidor. Pego a
+
+334
+01:00:45.330 --> 01:01:04.810
+Ricardo Garcia: nível de capacidade de armazenamento, velocidade de disco, aquela coisa toda e pego os processadores. Baseado nessas informações, eu já faço uma configuração baseada nisso. Aí, então, memória, processador, armazenamento. Eu faço uma configuração já mais robusta, dependendo do tipo de servidor que vai rodar ali.
+
+335
+01:01:04.810 --> 01:01:06.730
+Ricardo Garcia: Então ele é muito flexível.
+
+336
+01:01:06.730 --> 01:01:21.129
+Ricardo Garcia: Mas se eu fosse fazer, por exemplo, como você comentou numa aplicação local, eu ia pegar aquelas configurações e ia reduzir bastante para aquela configuração local daquela máquina local. Então a gente tem bastante flexibilidade. Agora, o software
+
+337
+01:01:21.130 --> 01:01:31.550
+Ricardo Garcia: pode ser o mesmo. Pode ser o mesmo. Não tem problema nenhum. Eu posso instalar o posto com uma configuração básica ali, só para subir numa máquina local. Ali na minha aplicação basicona ali. Sem problema.
+
+338
+01:01:31.810 --> 01:01:32.450
+Ricardo Garcia: Beleza.
+
+339
+01:01:32.450 --> 01:01:33.029
+luis.queiroz: E de.
+
+340
+01:01:35.040 --> 01:01:53.469
+Ricardo Garcia: Então aqui, pessoal, voltando. A gente está na parte já de código. Agora a gente já está entrando nisso aqui. Por que é legal o Python, né? E o Skl server agora? Da mesma forma que a gente faz isso aí para desenvolver com o Python. O que você precisa fazer? Primeira coisa é baixar o Python.
+
+341
+01:01:53.710 --> 01:02:00.490
+Ricardo Garcia: Você precisa ter o Python instalado na tua máquina. Então, o que você vai fazer? Você vai lá na página Web lá do Python lá, né?
+
+342
+01:02:00.590 --> 01:02:02.440
+Ricardo Garcia: Por exemplo, deixa eu pegar aqui
+
+343
+01:02:03.760 --> 01:02:07.930
+Ricardo Garcia: e você vai lá fazer o Python Opa
+
+344
+01:02:11.550 --> 01:02:25.969
+Ricardo Garcia: downloads. Então você vai fazer o quê? Você vai instalar o Python? Esse python zinho que é bem fácil de instalar. Instala ele e ele já fica instalado na tua máquina ali, sem nenhum problema. Então, quando você vai desenvolver o Python,
+
+345
+01:02:25.970 --> 01:02:36.449
+Ricardo Garcia: você instala o motor do Python da mesma forma que você instala lá um banco de dados, ele cria baixa um monte de arquivo ali e tal. E é esses arquivos que vai permitir você usar a linguagem.
+
+346
+01:02:36.450 --> 01:02:38.929
+Ricardo Garcia: Deixa eu ver se eu tenho aqui já instalado aqui. Ó,
+
+347
+01:02:39.570 --> 01:02:43.499
+Ricardo Garcia: uma instalação simples aqui. Deixa eu ver se eu tenho aqui.
+
+348
+01:02:47.000 --> 01:02:57.990
+Ricardo Garcia: Ó, eu tenho a versão trezentos e treze aqui instalada. Pronto, então o que eu fiz? Simples. Baixei o Python na instalação The Full mesmo. Só coloquei ali que ele
+
+349
+01:02:57.990 --> 01:03:08.180
+Ricardo Garcia: seja instalado e tal. Não tem segredo. Nex nex, nex ali não tem nada, né? E a partir do momento que ele está instalado, você usar o Prompt aqui, ele já está.
+
+350
+01:03:08.180 --> 01:03:16.270
+Ricardo Garcia: Se eu fizer qualquer coisa aqui, por exemplo, a igual a oito a nove, por exemplo, e der um print, por exemplo, aqui
+
+351
+01:03:17.190 --> 01:03:19.120
+Ricardo Garcia: vinte anos.
+
+352
+01:03:20.180 --> 01:03:35.799
+Ricardo Garcia: Ó, ele imprimiu aqui. Então, o que significa isso aqui? Que ele já está funcionando a nível de código. Então, se eu fizer um código aqui, um gigante, aquela coisa toda se conecte lá, faça aquilo e tal. Ele vai funcionar. Por quê? Porque o Python já está instalado,
+
+353
+01:03:36.420 --> 01:03:59.439
+Ricardo Garcia: beleza. Só que o que acontece, nós não vamos desenvolver o nosso software aqui dentro. Porque pô. Fica sem. Imagina se a gente quer desenvolver lá, que vá num banco de dados e vá em outro lugar e pega lá um Csv Sport daqui esporte lá. Não fica prático, né? Porque aqui pô, eu vou ter que escrever tudo. Então a gente utiliza o quê? A gente utiliza Ids interfaces
+
+354
+01:03:59.440 --> 01:04:07.890
+Ricardo Garcia: que fazem essa, digamos assim, conexão com o Python, para que a gente possa utilizar de uma maneira mais amigável.
+
+355
+01:04:08.220 --> 01:04:27.820
+Ricardo Garcia: E aí, quando a gente vai trabalhar com uma Ide também. Da mesma forma que a gente tem os Ids aqui que a gente viu. Que são esses aqui o Scared, o Compass e tal Manejo Studio e tal. Nós temos para o Python, que é muito utilizado. É o vs code da Microsoft. Que é esse cara aqui, né?
+
+356
+01:04:28.530 --> 01:04:30.079
+Ricardo Garcia: Eu tenho aberto aqui, eu acho.
+
+357
+01:04:31.110 --> 01:04:31.900
+Ricardo Garcia: E aí
+
+358
+01:04:33.790 --> 01:04:48.439
+Ricardo Garcia: é o Vs Code. Então esse Vs code aqui. Ele é da Microsoft. É gratuito também. Então esse aqui também é muito tranquilo. É só você instalar. E aí começa a utilizar também. E aí
+
+359
+01:04:48.940 --> 01:04:55.829
+Ricardo Garcia: não tem muito segredo. Só que a gente precisa. Lógico, seria bom entender como é que funciona algumas coisas ali, né?
+
+360
+01:04:55.830 --> 01:05:11.720
+Ricardo Garcia: Porque esse Vs. Code permite que você instale como ele funciona para várias tecnologias. Ele funciona para banco de dados para desenvolvimento em Dotnet em Javascript. Ele funciona para um milhão de linguagens, inclusive o Python.
+
+361
+01:05:11.830 --> 01:05:27.769
+Ricardo Garcia: Então o que acontece se você não configurar ele? Para o Python aí ele também não vai saber que você está em Python. Ele vai falar. Bom, nem sei que linguagem você quer usar aqui então também não vai funcionar muito. Então, o que é importante aqui? Quando você instalar o Vs Code,
+
+362
+01:05:28.010 --> 01:05:31.079
+Ricardo Garcia: ele tem o que a gente chama de extensões.
+
+363
+01:05:31.350 --> 01:05:36.110
+Ricardo Garcia: O que é? Extensões? Poxa, está complicado. Não é tranquilo também.
+
+364
+01:05:36.350 --> 01:05:45.370
+Ricardo Garcia: Quando você instalar o Vs Code, imagina que ele vem neutro. Ele vai falar assim. Ó Ricardo, como eu não sei qual linguagem você vai desenvolver.
+
+365
+01:05:45.480 --> 01:06:08.100
+Ricardo Garcia: Eu não tenho linguagem nenhuma. Você que vai ter que dizer qual linguagem você vai trabalhar. Opa, beleza. E como é que eu faço isso? Aí? Ele vai falar para você. Eu preciso que você instale a extensão. Então eu estendo esse verso code com uma extensão da linguagem que eu vou utilizar. Então, por exemplo, se eu vou utilizar o Python, eu vou buscar uma extensão do Python.
+
+366
+01:06:08.100 --> 01:06:31.929
+Ricardo Garcia: Se eu vou utilizar o Javascript, eu vou buscar uma extensão do Javascript. Se eu vou utilizar o Dotnet, eu vou buscar as extensões do Dotnet e assim vai todas as linguagens, a gente busca o quê? Buscar uma extensão? Então, como eu vou trabalhar com o Python? Eu busco a extensão do Python. E aí o que acontece no Yes Code. Vai falar. Poxa beleza. Você vai trabalhar com o Python Show de bola. Então baixa essa extensão do Python
+
+367
+01:06:31.930 --> 01:06:36.730
+Ricardo Garcia: e a gente começa a trabalhar com ela sem nenhum problema. Você vai começar a desenvolver
+
+368
+01:06:36.730 --> 01:06:50.140
+Ricardo Garcia: com ela. Tem também cursos da Microsoft gratuitos para usar o Vs Code porque ele tem uma complexidade. Aqui a gente só vai passar de uma maneira muito superficial, digamos assim. Então, aqui, por exemplo, se a gente for ver aqui buscar
+
+369
+01:06:51.280 --> 01:07:03.760
+Ricardo Garcia: as extensões do Python, ele tem várias aqui várias extensões, né? Essas extensões aqui preparam o vs Code para você desenvolver em Python. É assim que funciona.
+
+370
+01:07:03.950 --> 01:07:16.619
+Ricardo Garcia: Entender. Eu tenho vs. Code. Se você não instalar as extensões do Python, ele não vai saber que você quer desenvolver em Python. Aí você instala e ele fala Opa, entendi. Você vai desenvolver em Python Show de bola. É assim que funciona.
+
+371
+01:07:16.620 --> 01:07:25.949
+Ricardo Garcia: Então, é uma ferramenta. A gente não vai entrar em tantos detalhes porque a gente não tem tempo, mas é uma das ferramentas que você pode utilizar para desenvolvimento em Python.
+
+372
+01:07:26.060 --> 01:07:39.179
+Ricardo Garcia: Beleza. Então essa aqui é uma. Aconselho vocês. É gratuito. Também pode baixar. Pode instalar ali. E outra. Se vocês envolvem outra linguagem e quiser utilizar show de bola, também dá. Então tem o Vs code.
+
+373
+01:07:39.180 --> 01:07:48.329
+Ricardo Garcia: E eu utilizo aqui também outras ferramentas. Não só o Vs. Code, eu utilizo. E eu também. Se vocês quiserem, eu utilizo o pai charme
+
+374
+01:07:48.350 --> 01:07:50.390
+Ricardo Garcia: para desenvolver
+
+375
+01:07:50.440 --> 01:08:06.719
+Ricardo Garcia: o pai. Charme, inclusive no trabalho. Eu utilizo o pai charme também. O pai charme é uma ferramenta bastante robusta de desenvolvimento de código. E uma delas é o Python também.
+
+376
+01:08:07.100 --> 01:08:13.979
+Ricardo Garcia: Então ela é bastante robusta no desenvolvimento de Python deixa eu pôr para vocês verem aqui.
+
+377
+01:08:15.190 --> 01:08:24.979
+Ricardo Garcia: E eu utilizo essa ferramenta para desenvolver os meus códigos. Existem outras ferramentas. Tem outras ferramentas. Mas por que é legal essa aqui também. Deixa eu pôr aqui.
+
+378
+01:08:25.359 --> 01:08:37.290
+Ricardo Garcia: Só vou colocar aqui o desenvolvimento que eu tenho do teste lá e tal. Então essa interface também de desenvolvimento aqui e tal que a gente pode ter o que é legal? Isso aqui. Isso aqui é legal
+
+379
+01:08:37.450 --> 01:08:43.050
+Ricardo Garcia: porque, deixa eu ver onde está? Aqui meu pai.
+
+380
+01:08:48.580 --> 01:08:54.149
+Ricardo Garcia: O pai charme está aqui. Com a licença no meu nome e tal,
+
+381
+01:08:54.390 --> 01:09:02.179
+Ricardo Garcia: e ela tem a possibilidade de você pelo e mail que a gente tem da faculdade. A gente tem a versão pró
+
+382
+01:09:02.180 --> 01:09:20.469
+Ricardo Garcia: por um ano, também gratuita, meu show de bola, porque vocês podem fazer um monte de coisas. Podem abrir outros arquivos. Podem utilizar outros arquivos que a gente pode fazer. Não só Python. Ele facilita bastante o desenvolvimento, e ele traz outras características que realmente a versão gratuita não traz.
+
+383
+01:09:20.470 --> 01:09:27.340
+Ricardo Garcia: Apesar que no trabalho no trabalho. Não coloquei. Eu não instalei com.
+
+384
+01:09:27.630 --> 01:09:50.739
+Ricardo Garcia: Com o e mail da faculdade, né? Esse é o meu computador pessoal aqui. Então eu coloquei o e mail da faculdade. E aí eu tenho a versão profissional dele, né? Mas no trabalho eu tenho a versão open source, mesmo que é gratuita. Não pus na licença aqui dele, né? E também no trabalho. Eu desenvolvo tudo no trabalho lá. E é tranquilo. Também não tem muita coisa ali, que
+
+385
+01:09:50.740 --> 01:10:11.400
+Ricardo Garcia: às vezes tem alguma coisinha que funciona melhor no profession e tal. Algumas características, mas como no trabalho, eu utilizo Python puro. Eu só uso Python mesmo para mim, funciona sem nenhum problema. Então essa ferramenta também aconselha vocês a baixarem se vocês quiserem ali colocar o e mail de vocês. Opa, travão aqui.
+
+386
+01:10:11.400 --> 01:10:13.049
+Ricardo Garcia: Pessoal, vocês estão me escutando?
+
+387
+01:10:15.640 --> 01:10:18.070
+Ricardo Garcia: Deu uma travadinha que não sei se.
+
+388
+01:10:18.070 --> 01:10:18.840
+Weder Sousa Mendes: Normal.
+
+389
+01:10:19.190 --> 01:10:39.069
+Ricardo Garcia: Valeu, valeu. Então também é uma ferramenta que vocês podem acessar ali também. Instalar a mesma versão da comunidade também é uma ferramenta legal que vocês podem utilizar. Então, beleza, essa daqui também já foi. Então e outra que eu uso bastante também
+
+390
+01:10:39.340 --> 01:10:53.770
+Ricardo Garcia: é o Júpiter. Não sei se vocês já falaram. É um modelo de desenvolvimento. É uma forma de desenvolvimento que é o Júpiter notebook. Existem N. Ferramentas do Júpiter. Notebook é um instalo a mais simples. Eu tenho a mais simples dela
+
+391
+01:10:54.080 --> 01:10:57.100
+Ricardo Garcia: que eu tenho instalado aqui na minha máquina.
+
+392
+01:10:58.050 --> 01:11:01.079
+Ricardo Garcia: Deixa eu fechar isso. Aqui. Que é essa daqui? Ó
+
+393
+01:11:01.810 --> 01:11:07.110
+Ricardo Garcia: que é a original mesmo peraí que eu vou colocar ali para vocês.
+
+394
+01:11:07.280 --> 01:11:11.450
+Ricardo Garcia: É bem basicona aí. Mas eu gosto de usar. E eu uso ela direto.
+
+395
+01:11:13.630 --> 01:11:14.720
+Ricardo Garcia: Pera aí que
+
+396
+01:11:17.530 --> 01:11:33.619
+Ricardo Garcia: esse aqui é o Júpiter notebook aqui. Ele. Na verdade, ele nem instala. Ele executa. Você só baixa o Júpiter lá notebook e você executa lá num betzinho lá que você fala que vai executar no Windows. E ele é um executável tanto que ele executa aqui. Ele é um.
+
+397
+01:11:33.620 --> 01:11:47.309
+Ricardo Garcia: Uma interface aqui na própria web, mesmo, né? E aqui a gente pode criar os nossos programas nesse modelo de desenvolvimento, que é o modelo Júpiter notebook. O que significa isso? Aí ele faz assim.
+
+398
+01:11:47.500 --> 01:12:00.160
+Ricardo Garcia: Ele permite que você vá desenvolvendo o teu código em etapas. Então isso é legal porque a gente vai entendendo como funciona o bloco de código que a gente está executando.
+
+399
+01:12:00.160 --> 01:12:15.869
+Ricardo Garcia: Aí você vai falar nossa, mas você usa tudo para tudo isso agora. Os códigos que muitas vezes eu quero testar os códigos que eu quero executar ele e ver cada coisa com detalhe. O que está executando. Testar esse tipo de coisa. Eu utilizo o notebook.
+
+400
+01:12:15.870 --> 01:12:26.300
+Ricardo Garcia: Por quê? Porque eu utilizo e faço a execução por blocos. Então eu consigo visualizar como está executando cada bloco de código. Então eu utilizo isso aí.
+
+401
+01:12:26.300 --> 01:12:39.010
+Ricardo Garcia: É por isso que eu falo assim. A gente tem que ter flexibilidade. Com as ferramentas que a gente usa. O Júpiter notebook. Você pode utilizar no Vs Code também você tem lá em extensão. Júpiter tanto que a gente viu ali, né? Deixa eu ver. Aqui
+
+402
+01:12:41.100 --> 01:12:44.979
+Ricardo Garcia: tem as extensões. Aqui. Deixa eu pagar aqui,
+
+403
+01:12:45.000 --> 01:13:01.859
+Ricardo Garcia: ó Júpiter, então você instala as extensões. Já está instalado aqui. E aí você pode desenvolver criar um arquivo lá. File, né? Newfile, aquela coisa toda que é o Júpiter notebook. Aqui tem um Python Txt e tal. Ó Júpiter notebook ó beleza! Ó,
+
+404
+01:13:01.860 --> 01:13:11.900
+Ricardo Garcia: então o mesmo que a gente está usando aqui, que funciona igual. Funciona no Vs Code. Eu estou utilizando aqui uma forma simples, também. Mais simples
+
+405
+01:13:11.900 --> 01:13:24.709
+Ricardo Garcia: simplesmente baixei ali. E tal. Por quê? Simplesmente porque eu gosto de utilizar. Mas é uma questão de gosto de cada um. Cada um faz como achar melhor ali. E o motor que ele está utilizando é o Python três,
+
+406
+01:13:24.720 --> 01:13:30.269
+Ricardo Garcia: que é o que eu tenho instalado ali. Então eu tenho um motor aqui.
+
+407
+01:13:30.550 --> 01:13:37.269
+Ricardo Garcia: Outros motores aqui também, mas de outros ambientes. Mas eu uso esse Python três aqui, que é aquele que a gente viu lá.
+
+408
+01:13:37.430 --> 01:13:41.829
+Ricardo Garcia: Então aqui eu posso testar em blocos o meu código.
+
+409
+01:13:42.160 --> 01:13:56.450
+Ricardo Garcia: Então, beleza. Agora a gente está falando de código. A gente falou primeiro das ferramentas que a gente tem a nível de banco de dados, que é uma ponta que a gente tem. E tal aquela coisa toda. E agora a gente está fazendo uma ferramenta de desenvolvimento. Ferramenta de desenvolvimento. A gente tem
+
+410
+01:13:56.450 --> 01:14:19.609
+Ricardo Garcia: a parte do Python onde tem o vs. Code. Onde tem o pair charme? Tem um milhão de ferramentas que você vai encontrar na Internet aí, que é uma interface para o Python. Ferramentas tanto pagas quanto ferramentas gratuitas. E tem o Júpiter Notebook, que é um modelo de código que a gente pode utilizar de execução de código que a gente utiliza por blocos. E a gente vai testando cada bloco ali.
+
+411
+01:14:19.610 --> 01:14:37.219
+Ricardo Garcia: O Júpiter notebook é muito utilizado, esse aqui. Porque justamente a parte de cientistas de dados, aquela coisa toda. Muitas vezes os testes relacionados ao teu modelo, ao teu machine learning que você está fazendo. Você quer executar um bloco específico de código.
+
+412
+01:14:37.220 --> 01:14:51.739
+Ricardo Garcia: Então, para você não ficar debugando ele e tal, é muito mais fácil você fazer um Júpiter notebook aqui, você fazer um notebook mesmo e ir utilizando, executando uma parte específica do bloco que você controla muito mais a tua execução.
+
+413
+01:14:51.990 --> 01:14:56.130
+Ricardo Garcia: Então, show de bola. Questão de gosto. Se vocês
+
+414
+01:14:56.360 --> 01:15:01.620
+Ricardo Garcia: curtem também vocês podem utilizar o Google Collab, que é o Google.
+
+415
+01:15:03.740 --> 01:15:06.910
+Ricardo Garcia: Deixa eu fazer aqui esse aqui.
+
+416
+01:15:08.660 --> 01:15:09.830
+Ricardo Garcia: O que melhor
+
+417
+01:15:15.950 --> 01:15:17.189
+Ricardo Garcia: é isso aqui, ó
+
+418
+01:15:22.320 --> 01:15:23.300
+Ricardo Garcia: quietinho.
+
+419
+01:15:26.700 --> 01:15:31.530
+Ricardo Garcia: Esse aqui é um editor de código também do próprio
+
+420
+01:15:31.730 --> 01:15:42.899
+Ricardo Garcia: do próprio Google. O que a gente pode utilizar? Ele é gratuito, né? E você pode fazer os seus códigos ali também, né? Deixa eu colocar aqui para ele gerar um código aqui. Ele criou um outro de criar um novo
+
+421
+01:15:45.820 --> 01:15:48.169
+Ricardo Garcia: notebook drive. Deixa eu ver aqui?
+
+422
+01:15:49.670 --> 01:15:58.989
+Ricardo Garcia: Criar um arquivo em branco só para a gente ver como é que funciona. Esse aqui funciona na tua conta do Google, mesmo. Então também é. Ó, ele está aqui.
+
+423
+01:15:59.080 --> 01:16:12.660
+Ricardo Garcia: Ele tem aqui a forma. Posso fechar aqui. E da mesma forma que a gente tem o local ali que a gente viu. A gente tem esse aqui. Se você colocar a igual a oito, por exemplo, e executar,
+
+424
+01:16:13.190 --> 01:16:24.840
+Ricardo Garcia: ele está executando. Está montando uma máquina. O Google está montando uma máquina para você. Por isso que ele leva um pouco mais de tempo beleza. E aí eu vou adicionar mais um código aqui. E vou fazer aqui Print.
+
+425
+01:16:26.540 --> 01:16:32.439
+Ricardo Garcia: E aí ele vai trazer lá igual a oito. Então você vai executando o teu código
+
+426
+01:16:32.450 --> 01:16:38.529
+Ricardo Garcia: a nível de bloco de código. Isso quando você for trabalhar. É o que eu falo com cientista, a parte de
+
+427
+01:16:38.530 --> 01:16:53.179
+Ricardo Garcia: muitas vezes, de testes de modelo, testes de dados e tal. O pessoal usa muito. Por quê? Porque você vai utilizando e executando, passo a passo ali para você ver o resultado de cada execução. Então isso é bem legal também.
+
+428
+01:16:53.210 --> 01:17:06.270
+Ricardo Garcia: Então aqui são algumas ferramentas simples. E tem uma ferramenta também, que eu já usei bastante também. Essa é bem simplesona. Mesmo. Mas a nível de aprender o código Python. Não sei se vocês já ouviram falar nela.
+
+429
+01:17:06.390 --> 01:17:09.929
+Ricardo Garcia: É esse aqui é o Mo. Não sei se vocês já ouviram falar.
+
+430
+01:17:10.180 --> 01:17:23.760
+Ricardo Garcia: É uma ferramenta bem simples. O Moon, que é uma ferramenta do Python. Isso aí. Eu vi um dia num curso também de Python e o instrutor colocou essa ferramenta aqui.
+
+431
+01:17:23.760 --> 01:17:40.939
+Ricardo Garcia: E eu achei fantástica para a gente testar o código. Olha, como é limpa a ferramenta não tem nada na ferramenta. Então a gente consegue visualizar o código de uma maneira muito tranquila aqui. Da mesma forma que você colocar lá. Por exemplo,
+
+432
+01:17:41.410 --> 01:17:48.350
+Ricardo Garcia: aqui vou parar o código aqui igual a oito. Olha só como é simples. E fazer um print.
+
+433
+01:17:48.560 --> 01:17:58.760
+Ricardo Garcia: Aqui. Por exemplo, ia executar. Ele executou ali. Trouxe para nós o oito. E aí eu posso fazer o que for ali, né? Põe ali
+
+434
+01:17:59.840 --> 01:18:03.150
+Ricardo Garcia: vinte um exemplo, hein?
+
+435
+01:18:03.730 --> 01:18:07.650
+Ricardo Garcia: E aí, vezes dois.
+
+436
+01:18:11.200 --> 01:18:30.400
+Ricardo Garcia: Vou parar aqui e executar também oito e dezasseis. Então é uma ferramenta muito simples. Quando a gente vai desenvolver alguma coisa que a gente quer visualizar o código e tal. Fazer uma coisinha. A gente pode utilizar, e funciona ali de uma maneira bem legal. Você tem várias
+
+437
+01:18:30.490 --> 01:18:38.409
+Ricardo Garcia: várias funcionalidades aqui, mas é muito simplesão de usar. Então é legal também. E a ferramenta se chama Mur.
+
+438
+01:18:38.410 --> 01:18:55.170
+Ricardo Garcia: Fica aí. A dica também, para quem gostar. Eu tenho coisas assim. Blocos de código que eu utilizo ela também, para desenvolver coisas mais simples principalmente testar alguma coisa a nível de cálculo e tal. Eu utilizo isso daqui. Também eu utilizo essa ferramenta aqui e é bem legal a nível de.
+
+439
+01:18:55.170 --> 01:18:56.340
+Ricardo Garcia: De.
+
+440
+01:18:56.430 --> 01:19:08.450
+Ricardo Garcia: De tratamento de String também, né? Porque muitas vezes a gente tem que buscar um código numa String buscar um código dentro do banco de dados e tal. Então eu também utilizo para fazer os testes por aqui. É bem, Jorge.
+
+441
+01:19:08.790 --> 01:19:09.690
+Ricardo Garcia: Então
+
+442
+01:19:10.180 --> 01:19:20.979
+Ricardo Garcia: essas aqui foram algumas interfaces que a gente viu. Para vocês já terem no laboratório de vocês e entenderem como é que funciona. Então, o Python. Eu tenho.
+
+443
+01:19:21.850 --> 01:19:32.210
+Ricardo Garcia: Está em charme também. Vocês podem ter a versão Uvs Code é universal, é Vars, mas ele depende da
+
+444
+01:19:32.580 --> 01:19:35.939
+Ricardo Garcia: das extensões, né? Não esquecer isso aí.
+
+445
+01:19:38.470 --> 01:19:40.140
+Ricardo Garcia: Deixa eu ver aqui uma coisa.
+
+446
+01:19:42.780 --> 01:19:47.029
+Ricardo Garcia: Ele depende disso. Aqui, a outra
+
+447
+01:19:52.980 --> 01:20:03.010
+Ricardo Garcia: py charme. E aí você tem aqui que você pode utilizar o Collab, que é do Google, que a gente pode utilizar. E também o
+
+448
+01:20:06.140 --> 01:20:12.250
+Ricardo Garcia: deixa eu ver aqui o Júpiter, Né, Júpiter,
+
+449
+01:20:12.440 --> 01:20:24.240
+Ricardo Garcia: notebook e tal, entre outros. Daí tem um Wo também, e aí tem uma infinidade de programas que a gente pode utilizar nesse sentido para o desenvolvimento. E o Skely.
+
+450
+01:20:24.260 --> 01:20:30.360
+Ricardo Garcia: A gente usa realmente as aplicações de cada banco de dados para utilizar o Sqn
+
+451
+01:20:30.370 --> 01:20:41.810
+Ricardo Garcia: então, basicamente, a gente atingiu o objetivo nesse sentido, o que era mostrar as ferramentas de acesso a dados, e como você montar o teu laboratório. Em termos de dados,
+
+452
+01:20:41.810 --> 01:21:06.469
+Ricardo Garcia: a gente estendeu até um pouco, falando de virtualização, que é o que vocês podem fazer dentro da máquina de vocês. Mas obviamente o Linux. Eu acho que funciona sem nenhum problema. Agora, uma máquina Windows é muito difícil. Ele utiliza muito recurso de hardware. Então é complicado, né? E aí, dentro dessa extensão, a gente também conseguiu trazer um pouco do desenvolvimento a nível de
+
+453
+01:21:06.470 --> 01:21:18.840
+Ricardo Garcia: Python do que vocês podem utilizar ali. De Ids de Front End ali. Para vocês desenvolverem, ver se pode paixar no colapso Júpiter. E aí tem uma infinidade. E existem outras que vocês podem buscar nesse sentido, para vocês
+
+454
+01:21:18.840 --> 01:21:32.519
+Ricardo Garcia: iniciarem o trabalho de vocês. Então aqui vocês têm um laboratório ali para vocês começarem para esse semestre. E vários outros, a maioria deles. Você já tem um laboratório ali. Que vocês podem utilizar sem nenhum problema.
+
+455
+01:21:32.560 --> 01:21:36.850
+Ricardo Garcia: Então o objetivo era esse. E agora vamos tentar entrar um pouco no código ali,
+
+456
+01:21:37.260 --> 01:21:48.839
+Ricardo Garcia: para a gente ver como é que funciona? Aqui tem um exemplo. Ele traz um exemplo, até de utilização aqui no Collab. E tal como ele gera gráficos, é bem tranquilo. Aqui tem um exemplo de código também do Python.
+
+457
+01:21:49.130 --> 01:22:01.030
+Ricardo Garcia: Detalhe pessoal. É o que eu comentei com vocês. Às vezes a gente vai olhar alguma coisa que fala? Não estou entendendo o que faz troço também. Não se preocupem muito com isso, entende?
+
+458
+01:22:01.030 --> 01:22:23.400
+Ricardo Garcia: Muitas vezes busque o que realmente importa para você fazer aquela atividade tem coisas até hoje que eu comento. Eu faço porque é um padrão. Está ali. Ele funciona aquela coisa toda. Mas eu nem fui atrás de entender exatamente o que ele está executando. Por quê? Onde ele está indo e tal funciona. Funciona. Então eu pego o Ctrl Ctrl V. Ponho na minha solução e bola para frente. O importante é entregar o que o cliente quer,
+
+459
+01:22:23.400 --> 01:22:45.079
+Ricardo Garcia: então eu vou lá. Ah, puxa, estou com o tempo. Estou tranquilo. Ah, pô. Sabe o que eu vou fazer? Eu vou entender como é que funciona aquele código. Pô daí eu pego o código, olho, entendo o código, coloco, vejo por que ele faz isso? Por que ele faz aquilo? Ou a nível de banco de dados também. E assim a gente vai aperfeiçoando e entendendo como funciona.
+
+460
+01:22:45.080 --> 01:22:46.539
+Ricardo Garcia: Obviamente, que
+
+461
+01:22:46.870 --> 01:22:59.050
+Ricardo Garcia: nível de banco de dados eu, por exemplo, procurei estudar muito mais a fundo os detalhes, mesmo. Como é que armazena, como é que é um bloco de dados? Como é que funciona os segmentos? Então essa parte
+
+462
+01:22:59.480 --> 01:23:23.340
+Ricardo Garcia: de detalhe mesmo eu procurei estudar justamente por isso, porque, é lógico. Daí é o foco que a gente quer seguir. Mas aí vocês aprendem. E daí, quando vocês entenderem de vocês falarem. Poxa, eu vou seguir esse caminho aí, beleza, você começa a detalhar e a entender bem como funciona, porque às vezes pode ser o diferencial tendo uma entrevista. Alguma coisa assim, né? Até outro dia mesmo eu estava falando com outro.
+
+463
+01:23:23.450 --> 01:23:45.320
+Ricardo Garcia: É um cliente também, mas é amigo da gente e tal sobre o Post. E aí a gente comentou algumas coisas, não pô? Dá para fazer isso. Dá para fazer aquilo. Tem Mvc, aquela coisa toda. E daí? O pessoal falou: poxa, Ricardo, você falou coisa aí que a gente não estava nem entendendo o que você estava falando no sentido de. Então, quando você
+
+464
+01:23:45.320 --> 01:24:06.580
+Ricardo Garcia: encontrar o que você gosta, o que você quer fazer aí sim, você tenta dar uma detalhada, entender um pouco mais, porque até numa conversa com um cliente, alguma coisa você consegue dar aquele Plus de conhecimento que o cara fala. Opa, peraí. A gente sabe onde está pisando e tem uma confiança maior nesse sentido. Então é bem legal,
+
+465
+01:24:06.870 --> 01:24:11.739
+Ricardo Garcia: mas tem coisas que é o que eu falo. Passo por cima mesmo e deixa rolar.
+
+466
+01:24:12.050 --> 01:24:30.950
+Ricardo Garcia: Então, beleza, a gente está curto de tempo aqui, mas a gente vai entrar aqui na parte de desenvolvimento um pouco pelo menos, que é a parte de definição de variáveis aqui. Então, o que a gente vai entender pode ser definido como um nome identificador que armazena um valor de memória, um rótulo
+
+467
+01:24:31.120 --> 01:24:49.300
+Ricardo Garcia: antes da gente ficar complicando alguma coisa assim. A gente entendeu um pouco da variável. A variável é declarada, ou você cria uma variável tanto no Python quanto no Skl. Só que ela tem formas diferentes. Olha como o Python. Vou mostrar com um exemplo, porque a gente tem só cinco minutos aqui.
+
+468
+01:24:49.390 --> 01:24:51.710
+Ricardo Garcia: Olha como é fácil fazer isso aí.
+
+469
+01:24:53.210 --> 01:24:59.089
+Ricardo Garcia: E olha a diferença de um e de outro. Vou fechar tudo aqui. Vou deixar do Skl aqui. Ó,
+
+470
+01:25:00.660 --> 01:25:01.859
+Ricardo Garcia: deixar assim. Ó,
+
+471
+01:25:03.860 --> 01:25:13.210
+Ricardo Garcia: agora eu vou declarar uma variável no Python. Então vamos lá, vamos pegar qualquer coisa aqui. Deixa eu pegar o Python da vida aqui
+
+472
+01:25:15.960 --> 01:25:16.790
+Ricardo Garcia: e aí.
+
+473
+01:25:17.310 --> 01:25:29.530
+Ricardo Garcia: Então vou declarar. Olha só, vou declarar uma variável A no Python. Então a e vou atribuir um valor para essa variável igual a oito, que é o que a gente fez ali. E vou executar
+
+474
+01:25:30.370 --> 01:25:48.450
+Ricardo Garcia: quando a gente faz atribuição de uma variável. O que um sistema teu está entendendo, Opa beleza, você está pegando um espaço da memória que é um espaço bem pequenininho assim. E está falando: Opa, peraí. Eu vou colocar um identificador nesse espaço de memória. Beleza, qual que é o identificador que você vai colocar.
+
+475
+01:25:48.630 --> 01:25:53.369
+Ricardo Garcia: Então o teu computador já entendeu, falou? Opa, peraí. Você reservou um espaço de memória.
+
+476
+01:25:53.370 --> 01:26:09.010
+Ricardo Garcia: Esses passos de memória. Você reservou e colocou um nome lá dentro. Que foi o nome A. Então, quando você se referir a esse bloco de memória, eu vou lá e é o A. E eu vou entender o valor que tem lá dentro. Então você já atribuiu o valor para ele, que é o valor oito.
+
+477
+01:26:09.010 --> 01:26:13.300
+Ricardo Garcia: Então, quando você fizer uma referência ao valor. A
+
+478
+01:26:13.620 --> 01:26:24.910
+Ricardo Garcia: que é esse bloco de memória, o teu computador vai falar. Opa, peraí. Ele quer o ar. Que é aquela memória? Aquele bloco de memória. E ele colocou um valor lá dentro que o valor é oito e põe lá e imprime. Simples. Só isso. Aí não tem segredo.
+
+479
+01:26:25.090 --> 01:26:31.499
+Ricardo Garcia: Agora, olha, para declarar uma variável no Sql, serve. Vou colocar lá a
+
+480
+01:26:32.520 --> 01:26:34.820
+Ricardo Garcia: igual a oito. Não vou executar.
+
+481
+01:26:37.680 --> 01:26:43.640
+Ricardo Garcia: Vou fazer até aqui, ó sem. Vou até tirar isso aqui. Ó me Kerry,
+
+482
+01:26:47.850 --> 01:26:50.229
+Ricardo Garcia: eu falo. Opa, peraí. Está errado isso aqui.
+
+483
+01:26:50.380 --> 01:26:56.439
+Ricardo Garcia: Não estou entendendo. O que você está querendo dizer. Não, por quê? Porque ele tem uma formalidade para se fazer.
+
+484
+01:26:56.610 --> 01:27:01.430
+Ricardo Garcia: Então o que você tem que fazer? Você tem que declarar ela. Então ele tem um. Declaro.
+
+485
+01:27:02.560 --> 01:27:09.779
+Ricardo Garcia: Se você colocar ali, por exemplo, ele já colocou ali. Se você colocar, por exemplo, o A em executar
+
+486
+01:27:11.670 --> 01:27:20.289
+Ricardo Garcia: peraí também não está certo. Não porque existe uma formalidade toda variável no Sql Server. Ele vem acompanhado antes de um. Arroba
+
+487
+01:27:21.420 --> 01:27:38.549
+Ricardo Garcia: então é a agora ele, o Sql Server agora está entendendo que isso aqui é uma variável. Antes ele não estava entendendo nada. Ele estava falando. Declare, vou declarar. Vou reservar esse espaço na memória. Mas você não está dizendo que isso aqui é uma variável. Então, beleza. Opa também não deu certo. Mas que coisa que é isso aqui.
+
+488
+01:27:38.550 --> 01:27:43.579
+Ricardo Garcia: Então você vai ter que declarar essa variável. E você vai ter que dizer o tipo dessa variável
+
+489
+01:27:43.780 --> 01:27:45.429
+Ricardo Garcia: que é o tipo Int,
+
+490
+01:27:45.580 --> 01:28:03.319
+Ricardo Garcia: por exemplo, um integr um número é um valor. Agora eu vou executar e vou Opa Beleza agora, ou é isso que ela entendeu? Você declarou uma variável cujo nome é A. Alocando isso aí na memória. E o tipo dessa variável é o Int.
+
+491
+01:28:03.360 --> 01:28:13.160
+Ricardo Garcia: Caramba Bicho olha a diferença. Então no Python, eu falei: Ah, igual a oito. E aqui, para colocar o valor, eu posso colocar daí o valor oito.
+
+492
+01:28:13.160 --> 01:28:23.430
+Ricardo Garcia: E aí executar Oxa. Até que enfim. Agora ele entendeu que essa variável aqui é um índ. E ele é um valor oito. Se eu fizer
+
+493
+01:28:23.430 --> 01:28:35.510
+Ricardo Garcia: um print aqui. Só que eu não tenho print. Eu tenho aqui. Ele já colocou aqui Select a referência, o valor de A beleza. Vou usar esse aqui que o A Ia pôs para nós aqui. Ó,
+
+494
+01:28:35.740 --> 01:28:38.659
+Ricardo Garcia: e agora eu vou fazer aqui executar.
+
+495
+01:28:38.770 --> 01:28:45.020
+Ricardo Garcia: Ele declarou e imprimiu para nós aqui, ó Select, e o valor dela é oito.
+
+496
+01:28:45.230 --> 01:29:03.579
+Ricardo Garcia: Então olhe a diferença de um e de outro para eu colocar essa variável dentro de um Select dentro do Sn. Server. A formalidade é muito maior. Enquanto no Python eu falei: Ah, igual a oito. Pronto, ele vai se entender. Ele vai entender que aqui não integra. Ele vai entender
+
+497
+01:29:03.930 --> 01:29:08.860
+Ricardo Garcia: que é alguma. Ele vai entender e vai utilizar. Só que no Sql, não
+
+498
+01:29:08.890 --> 01:29:15.479
+Ricardo Garcia: todas as variáveis que você tem que declarar. Você tem que definir o tipo dessa variável e o valor. E assim vai.
+
+499
+01:29:15.480 --> 01:29:38.760
+Ricardo Garcia: Esse aqui é só para vocês entenderem a diferença de um e a diferença de outro é muito simples. Não é nada, mas é justamente para vocês entenderem que todas as linguagens têm uma diferença. Têm a sua forma de escrever e tal. E o Python é a linguagem mais sensacional que existe. Por quê? Porque não tem formalidade nenhuma. É isso aqui. Ah, é igual a oito. É então. Beleza, cara. Não precisa falar nada
+
+500
+01:29:38.760 --> 01:29:47.700
+Ricardo Garcia: se você não quiser colocar lá. Que era uma variável integra e tal. Eu entendo que você colocou um oito e show de bola bola para frente, aí que não vai precisar declarar mais nada.
+
+501
+01:29:47.700 --> 01:29:48.370
+Ricardo Garcia: Então
+
+502
+01:29:48.370 --> 01:30:08.439
+Ricardo Garcia: a gente fez uma introdução. Agora você já prepararam as ferramentas de vocês. Você já sabe, tem o ambiente de vocês. E agora, nos próximos capítulos, na próxima semana, a gente já vai entrar um pouco mais em desenvolvimento. Vai entender como é que funcionam essas variáveis. E vai trabalhar um pouco mais nesse sentido. Entrando mais na parte de desenvolvimento.
+
+503
+01:30:08.440 --> 01:30:10.060
+Ricardo Garcia: Beleza. Gabriel, diga aí cá.
+
+504
+01:30:10.650 --> 01:30:23.659
+gabriel.crepaldi: Professor. Então, no Sql, a parte que tipo assim para você definir uma variável seria, eu sempre começaria como aquele. Declare ali, né?
+
+505
+01:30:23.660 --> 01:30:24.570
+Ricardo Garcia: Isso. Aqui.
+
+506
+01:30:24.570 --> 01:30:27.120
+gabriel.crepaldi: O Print seria sempre esse Select na frente, hein?
+
+507
+01:30:27.120 --> 01:30:30.820
+Ricardo Garcia: Isso aí. Exatamente. Isso aí. Beleza.
+
+508
+01:30:30.820 --> 01:30:31.360
+gabriel.crepaldi: Show de.
+
+509
+01:30:32.860 --> 01:30:48.240
+Ricardo Garcia: Pessoal. Então é isso aí. Não vou me estender. Também não vou acabar todos os dias aí tarde, né? Foi legal, a gente conseguiu passar. Contudo, esse era o objetivo, né? Peço perdão se eu não respondi alguma pergunta ali alguma coisa. Depois eu vou dar uma olhada, né? Que fica gravado ali. O.
+
+510
+01:30:48.240 --> 01:30:58.149
+Ricardo Garcia: A parte do chat ali também, né? E daí? Eu vou procurar responder ali. Quem precisar de alguma coisa, até para ter uma na próxima aula, a gente poder tratar desses temas. Aí também.
+
+511
+01:30:58.530 --> 01:30:59.980
+Ricardo Garcia: Beleza, pessoal.
+
+512
+01:31:00.760 --> 01:31:14.340
+Ricardo Garcia: Então fechou. Valeu mais uma vez aí. Obrigado. Obrigado pela participação de todos vocês aí. Hoje a gente vai acabar e tentar acabar no horário, para que vocês descansem também. E a semana que vem, semana que vem é semana cheia.
+
+513
+01:31:14.550 --> 01:31:20.000
+Ricardo Garcia: Então que a gente possa descansar e começar a próxima semana. Bem aí, beleza pessoal.
+
+514
+01:31:20.100 --> 01:31:21.100
+Ricardo Garcia: Valeu.
+
+515
+01:31:21.540 --> 01:31:26.220
+Ricardo Garcia: Valeu a todos. Valeu mais uma vez, muito obrigado aí pela participação.
+
+516
+01:31:26.220 --> 01:31:26.720
+Ramon Telles da Silva: E um.
+
+517
+01:31:27.050 --> 01:31:27.760
+Ricardo Garcia: Tamo, junto.
+
+518
+01:31:27.760 --> 01:31:30.139
+Jonatas Mizael de Mello Rodrigues: Noite e bom final de semana. Obrigado, professor. Valeu.
+
+519
+01:31:30.140 --> 01:31:30.770
+Ricardo Garcia: Valeu!
+
+520
+01:31:30.770 --> 01:31:31.250
+Gabrielle Batista Wagner: Boa noite.
+
+521
+01:31:31.250 --> 01:31:38.589
+Ricardo Garcia: Boa noite. Precisando de alguma coisa aí, pessoal? Só mandar uma mensagem ali. Estamos juntos, beleza.
+
+522
+01:31:39.690 --> 01:31:45.370
+Ricardo Garcia: Valeu, pessoal. Até mais valeu. Boa noite. Bom descanso para todos aí.
+
+523
+01:31:53.210 --> 01:31:56.229
+Ricardo Garcia: Tchau, Tchau, pessoal. Até a próxima. Bom descanso.
+
+524
+01:31:56.560 --> 01:32:01.150
+Ricardo Garcia: Obrigadão, valeu.
+
