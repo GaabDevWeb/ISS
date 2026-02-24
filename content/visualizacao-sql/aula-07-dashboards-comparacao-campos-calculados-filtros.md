@@ -102,7 +102,7 @@ exercises:
 
 #### 5.2 Campos calculados: Transaction Type e ABS Amount
 
-> **Pré-requisito:** Alterar agregação de `Transaction Amount` para **Nenhum** antes de criar os campos.
+> **Pré-requisito:** Alterar agregação de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`Transaction Amount`</mark> para **Nenhum** antes de criar os campos.
 
 Campo **Transaction Type** — classifica cada transação:
 
@@ -121,8 +121,8 @@ ABS(Transaction Amount)
 
 - **Transaction Type:** Use como **dimensão** nos gráficos (pizza, barras) para separar tipos de transação.
 - **ABS Amount:** Use como **métrica** nos gráficos — sem ABS, saques (negativos) cancelam depósitos ou geram barras invertidas.
-- ❌ **Erro:** Usar `Transaction Amount` diretamente nos gráficos do 3.0 → visualização incorreta por valores negativos.
-- ⚠️ **Pegadinha:** Valor `-500`: Transaction Type = `"Withdrawal"` (não é > 0); ABS Amount = `500`.
+- ❌ **Erro:** Usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`Transaction Amount`</mark> diretamente nos gráficos do 3.0 → visualização incorreta por valores negativos.
+- ⚠️ **Pegadinha:** Valor <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`-500`</mark>: Transaction Type = <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`"Withdrawal"`</mark> (não é > 0); ABS Amount = <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`500`</mark>.
 
 #### 5.3 Gráficos como filtros interativos
 
@@ -164,7 +164,7 @@ CASE
 END
 ```
 
-**Resposta:** `"Withdrawal"` (-500 não é > 0)
+**Resposta:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`"Withdrawal"`</mark> (-500 não é > 0)
 
 ---
 
@@ -174,7 +174,7 @@ END
 ABS(Transaction Amount)  -- Transaction Amount = -1200
 ```
 
-**Resposta:** `1200` (valor absoluto, sem sinal)
+**Resposta:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`1200`</mark> (valor absoluto, sem sinal)
 
 ---
 
@@ -184,12 +184,12 @@ ABS(Transaction Amount)  -- Transaction Amount = -1200
 ---
 
 **Qual o passo obrigatório ANTES de criar Transaction Type no 3.0?**  
-**Resposta:** Mudar agregação de `Transaction Amount` para **Nenhum** — sem isso o CASE WHEN não funciona corretamente linha a linha.
+**Resposta:** Mudar agregação de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`Transaction Amount`</mark> para **Nenhum** — sem isso o CASE WHEN não funciona corretamente linha a linha.
 
 ### 7. Erros clássicos de prova
 
 - **Transaction Amount nos gráficos do 3.0:** Valores negativos distorcem. Usar sempre **ABS Amount** como métrica.
-- **Esquecer agregação Nenhum:** Antes dos campos calculados, `Transaction Amount` deve ter agregação **Nenhum**.
+- **Esquecer agregação Nenhum:** Antes dos campos calculados, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`Transaction Amount`</mark> deve ter agregação **Nenhum**.
 - **"Nenhuma" só uma vez:** Para "Ano anterior" é necessário clicar em "Nenhuma" **duas vezes** antes de selecionar o período.
 - **Confundir variação absoluta com percentual:** Absoluta = diferença em R$; percentual = diferença em %. São exibições diferentes da mesma comparação.
 - **Export PDF pelo botão errado:** Não é pelo botão "Compartilhar" diretamente — é pela **seta** ao lado → "Baixar o relatório".
@@ -250,6 +250,6 @@ ABS(Transaction Amount)
 - Para comparação temporal: Filtro período personalizado + Período de comparação → Ativar → Nenhuma (2x) → Ano anterior.
 - "Exibir variação absoluta" mostra diferença em R$; precisão decimal = 0 em métrica e campos de comparação.
 - Antes de campos calculados no 3.0: Transaction Amount → Agregação **Nenhum**.
-- `CASE WHEN Transaction Amount > 0 THEN "Deposit" ELSE "Withdrawal" END` → classifica tipo de transação.
-- `ABS(Transaction Amount)` → elimina sinal negativo; usar como métrica nos gráficos do 3.0.
+- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`CASE WHEN Transaction Amount > 0 THEN "Deposit" ELSE "Withdrawal" END`</mark> → classifica tipo de transação.
+- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`ABS(Transaction Amount)`</mark> → elimina sinal negativo; usar como métrica nos gráficos do 3.0.
 - Export PDF: seta ao lado de Compartilhar → Baixar relatório → marcar "Proteger com senha".

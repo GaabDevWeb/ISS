@@ -48,11 +48,11 @@ exercises:
 - **Máquinas virtuais**: SO isolado dentro da máquina física; usa CPU/RAM/disco do host; conecta ao host pela rede virtual; VirtualBox e Hyper-V gratuitos; VMware Workstation Community gratuito.
 - **Laboratório pessoal**: motor (banco ou Python instalado) + IDE/ferramenta de acesso; sem motor, a ferramenta não executa código.
 - **IDEs Python**: VS Code (universal, extensão Python obrigatória); PyCharm Community (open source) / Pro (grátis 1 ano com e-mail da faculdade); Jupyter Notebook (execução por blocos, usado em ciência de dados); Google Colab (Jupyter na nuvem Google); Mu (leve, ideal para aprender).
-- **Variáveis Python vs SQL Server**: Python `a = 8` (tipagem dinâmica, sem formalidade); SQL Server `DECLARE @a INT; SET @a = 8; SELECT @a` (prefixo `@`, tipo e `DECLARE` obrigatórios; `SELECT` = exibir).
+- **Variáveis Python vs SQL Server**: Python <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a = 8`</mark> (tipagem dinâmica, sem formalidade); SQL Server <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`DECLARE @a INT; SET @a = 8; SELECT @a`</mark> (prefixo <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`@`</mark>, tipo e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`DECLARE`</mark> obrigatórios; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SELECT`</mark> = exibir).
 
-**Resumo em 5 linhas**: Linux é padrão em servidores de dados; aprende-se rapidamente. VMs isolam SOs dentro da máquina física sem formatá-la. Laboratório = motor + IDE. IDEs Python variam de leve (Mu) a completa (PyCharm, VS Code). Variável Python: tipagem dinâmica; SQL Server: DECLARE + tipo + `@` obrigatórios.
+**Resumo em 5 linhas**: Linux é padrão em servidores de dados; aprende-se rapidamente. VMs isolam SOs dentro da máquina física sem formatá-la. Laboratório = motor + IDE. IDEs Python variam de leve (Mu) a completa (PyCharm, VS Code). Variável Python: tipagem dinâmica; SQL Server: DECLARE + tipo + <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`@`</mark> obrigatórios.
 
-**Palavras-chave**: Linux, Red Hat, máquina virtual, VirtualBox, Hyper-V, VMware, laboratório, motor, IDE, VS Code, extensão, PyCharm, Jupyter Notebook, Google Colab, Mu, variável, tipagem dinâmica, DECLARE, `@`, INT, SELECT.
+**Palavras-chave**: Linux, Red Hat, máquina virtual, VirtualBox, Hyper-V, VMware, laboratório, motor, IDE, VS Code, extensão, PyCharm, Jupyter Notebook, Google Colab, Mu, variável, tipagem dinâmica, DECLARE, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`@`</mark>, INT, SELECT.
 
 ---
 
@@ -81,8 +81,8 @@ O laboratório tem dois lados: **banco de dados** (motor + ferramenta, aula 3) e
 3. **Motor antes da IDE** — sem Python instalado, nenhuma IDE Python executa código.
 4. **VS Code é neutro por padrão** — extensão Python é obrigatória para desenvolver em Python.
 5. **Jupyter Notebook = execução por blocos** — controla cada parte do código; padrão em ciência de dados.
-6. **Python: tipagem dinâmica** — `a = 8` infere `int` automaticamente; sem DECLARE, sem tipo explícito.
-7. **SQL Server: tipagem estática** — DECLARE + `@` + tipo são obrigatórios; `SELECT` exibe valor.
+6. **Python: tipagem dinâmica** — <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a = 8`</mark> infere <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int`</mark> automaticamente; sem DECLARE, sem tipo explícito.
+7. **SQL Server: tipagem estática** — DECLARE + <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`@`</mark> + tipo são obrigatórios; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SELECT`</mark> exibe valor.
 
 ### 5. Conceitos essenciais
 
@@ -123,7 +123,7 @@ a = 8
 print(a)
 ```
 
-Saída: `8`. Python infere automaticamente que `a` é `int`. Sem DECLARE, sem tipo explícito, sem prefixo.
+Saída: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`8`</mark>. Python infere automaticamente que <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a`</mark> é <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int`</mark>. Sem DECLARE, sem tipo explícito, sem prefixo.
 
 **SQL Server — tipagem estática:**
 
@@ -133,22 +133,22 @@ SET @a = 8
 SELECT @a
 ```
 
-- `DECLARE`: reserva espaço na memória e nomeia a variável.
-- `@`: prefixo obrigatório para toda variável local em T-SQL.
-- `INT`: tipo obrigatório na declaração.
-- `SELECT`: equivalente ao `print()` para variáveis locais.
+- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`DECLARE`</mark>: reserva espaço na memória e nomeia a variável.
+- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`@`</mark>: prefixo obrigatório para toda variável local em T-SQL.
+- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`INT`</mark>: tipo obrigatório na declaração.
+- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SELECT`</mark>: equivalente ao <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print()`</mark> para variáveis locais.
 
-> **Regra crítica:** Em SQL Server, variável sem `@` não é reconhecida. `DECLARE a INT` gera erro de sintaxe.
+> **Regra crítica:** Em SQL Server, variável sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`@`</mark> não é reconhecida. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`DECLARE a INT`</mark> gera erro de sintaxe.
 
 ### 5b. Modelo mental
 
-**Python** — resolve em uma etapa: recebe `a = 8` → reserva memória → infere tipo `int` → associa nome `a` ao valor `8`.
+**Python** — resolve em uma etapa: recebe <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a = 8`</mark> → reserva memória → infere tipo <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int`</mark> → associa nome <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a`</mark> ao valor <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`8`</mark>.
 
 **SQL Server** — três etapas explícitas e obrigatórias:
 
-1. `DECLARE @a INT` → reserva memória e define tipo
-2. `SET @a = 8` → atribui valor
-3. `SELECT @a` → lê e exibe
+1. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`DECLARE @a INT`</mark> → reserva memória e define tipo
+2. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SET @a = 8`</mark> → atribui valor
+3. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SELECT @a`</mark> → lê e exibe
 
 Se qualquer etapa faltar: SQL Server retorna erro ou simplesmente não exibe nada.
 
@@ -161,7 +161,7 @@ a = 8
 print(a)
 ```
 
-**Resposta:** imprime `8`; Python infere tipo `int` sem declaração.
+**Resposta:** imprime <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`8`</mark>; Python infere tipo <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int`</mark> sem declaração.
 
 ---
 
@@ -172,7 +172,7 @@ DECLARE a INT
 SET a = 8
 ```
 
-**Resposta:** falta `@` em ambas as linhas; `a` não é reconhecido como variável em T-SQL.
+**Resposta:** falta <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`@`</mark> em ambas as linhas; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a`</mark> não é reconhecido como variável em T-SQL.
 
 ---
 
@@ -190,44 +190,44 @@ SET a = 8
 
 - **IDE sem motor** — VS Code ou PyCharm sem Python instalado não executam código; IDE é interface, não motor.
 - **VS Code pronto para Python** — falso; é universal; sem extensão Python não reconhece a linguagem.
-- **`DECLARE a INT` em SQL Server** — erro: falta `@`; toda variável local em T-SQL precisa do prefixo.
+- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`DECLARE a INT`</mark> em SQL Server** — erro: falta <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`@`</mark>; toda variável local em T-SQL precisa do prefixo.
 - **VM não substitui máquina física** — VM usa CPU/RAM/disco do host; hardware fraco = VM lenta ou travando.
-- **`SELECT` = `print()` em todos os contextos** — semelhante para variáveis locais, mas `SELECT` é comando de consulta; `print()` é função de saída.
+- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SELECT`</mark> = <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print()`</mark> em todos os contextos** — semelhante para variáveis locais, mas <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SELECT`</mark> é comando de consulta; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print()`</mark> é função de saída.
 
 ### 8. Exemplos de alta densidade
 
 ```bash
 a = 8
 ```
-Python: variável `a` com valor `8`; tipo inferido: `int`.
+Python: variável <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a`</mark> com valor <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`8`</mark>; tipo inferido: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int`</mark>.
 
 ```bash
 DECLARE @nome VARCHAR(50)
 SET @nome = 'Ricardo'
 SELECT @nome
 ```
-SQL Server: variável string; `VARCHAR(50)` é o tipo obrigatório.
+SQL Server: variável string; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`VARCHAR(50)`</mark> é o tipo obrigatório.
 
 ```bash
 a = 8
 b = 12
 print(a + b)
 ```
-Saída: `20`
+Saída: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`20`</mark>
 
 ```bash
 DECLARE @x INT
 SET @x = 8 * 2
 SELECT @x
 ```
-Saída: `16`
+Saída: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`16`</mark>
 
 ### 9. Procedimento — montar laboratório Python
 
 1. Baixar Python em python.org → instalar (marcar "Add to PATH").
-2. Testar: abrir terminal → digitar `python` → prompt `>>>` deve aparecer.
+2. Testar: abrir terminal → digitar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`python`</mark> → prompt <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`>>>`</mark> deve aparecer.
 3. Escolher IDE: VS Code (instalar extensão Python) ou PyCharm Community.
-4. Para Jupyter Notebook: instalar via `pip install notebook` ou usar extensão Jupyter no VS Code.
+4. Para Jupyter Notebook: instalar via <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`pip install notebook`</mark> ou usar extensão Jupyter no VS Code.
 5. Para Google Colab: acessar colab.research.google.com com conta Google; sem instalação local.
 
 ### 11. Diferenças e confusões comuns
@@ -240,7 +240,7 @@ Saída: `16`
 
 - "Qual SO é padrão em servidores com PostgreSQL ou MySQL?" → Linux.
 - "O que instalar antes de qualquer IDE Python?" → motor Python (interpretador).
-- "Como declarar variável em SQL Server?" → `DECLARE @nome TIPO`.
+- "Como declarar variável em SQL Server?" → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`DECLARE @nome TIPO`</mark>.
 - "Por que Python não precisa de DECLARE?" → tipagem dinâmica; interpretador infere o tipo.
 - "Qual ferramenta executa código por blocos?" → Jupyter Notebook.
 
@@ -250,7 +250,7 @@ Saída: `16`
 - [ ] Sei o que é VM e cito ferramentas gratuitas (VirtualBox, Hyper-V, VMware).
 - [ ] Sei que toda IDE Python requer motor Python instalado.
 - [ ] Sei que VS Code precisa de extensão Python para funcionar com Python.
-- [ ] Sei declarar variável em Python (`a = 8`) e em SQL Server (`DECLARE @a INT; SET @a = 8; SELECT @a`).
+- [ ] Sei declarar variável em Python (<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a = 8`</mark>) e em SQL Server (<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`DECLARE @a INT; SET @a = 8; SELECT @a`</mark>).
 - [ ] Sei o que é Jupyter Notebook e quando usá-lo (execução por blocos, ciência de dados).
 
 ### 15. Síntese operacional
@@ -259,5 +259,5 @@ Saída: `16`
 - VM: SO isolado dentro da máquina física; ferramentas gratuitas: VirtualBox, Hyper-V, VMware Community.
 - Laboratório = motor instalado (Python/banco) + IDE; sem motor, IDE não executa nada.
 - VS Code: neutro por padrão → instalar extensão Python obrigatoriamente; PyCharm: já preparado.
-- Python: `a = 8` (dinâmico, tipo inferido); SQL Server: `DECLARE @a INT; SET @a = 8; SELECT @a` (estático, tipo obrigatório, `@` obrigatório).
+- Python: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a = 8`</mark> (dinâmico, tipo inferido); SQL Server: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`DECLARE @a INT; SET @a = 8; SELECT @a`</mark> (estático, tipo obrigatório, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`@`</mark> obrigatório).
 - Jupyter Notebook: execução por blocos; ideal para testar trechos de código e análise de dados.

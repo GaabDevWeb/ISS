@@ -462,24 +462,30 @@ O <abbr title="Python Enhancement Proposal">PEP</abbr> 8 define convenções de 
 - **mark:** Destaque visual de conceitos críticos
 - **abbr:** Abreviações técnicas que precisam explicação
 
-**Destacar caracteres especiais de escape:**
+**Destacar termos técnicos e caracteres especiais:**
 
-Para destacar caracteres especiais como `\n`, `\t`, `\\`, `\'` quando mencionados no texto explicativo (não dentro de blocos de código), use `<mark>` com a cor de fundo `#242424`, mantendo a cor do texto original:
+Use `<mark>` com fundo `#242424` para qualquer termo técnico mencionado fora de bloco de código: nomes de funções, métodos, operadores, tipos de erro, sequências de escape, operadores de slice, etc.
 
 ```markdown
-O caractere de escape <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> representa quebra de linha, enquanto <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\t`</mark> representa tabulação.
+O operador <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[]`</mark> acessa um caractere; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[::-1]`</mark> inverte a string.
 
-Para exibir uma barra literal, use <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\`</mark> (duas barras).
+O caractere de escape <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> representa quebra de linha.
+
+<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len()`</mark> é builtin — não usar ponto-notação.
 ```
 
-**Quando usar:**
-- Caracteres de escape mencionados no texto (`\n`, `\t`, `\\`, `\'`, `\"`)
-- Sequências especiais que precisam ser destacadas visualmente
-- Termos técnicos que aparecem frequentemente e precisam de destaque
+**Quando usar (OBRIGATÓRIO em todo o documento — ## Resumo e ## Explicações):**
+- Nomes de funções e métodos (`upper()`, `len()`, `replace()`, `split()`, `join()`, `strip()`, …)
+- Operadores e sintaxe (`[]`, `[inicio:fim:passo]`, `[::-1]`, `+`, `*`, …)
+- Tipos de erro (`AttributeError`, `IndexError`, `TypeError`, …)
+- Caracteres de escape (`\n`, `\t`, `\\`, `\'`, `\"`)
+- Qualquer termo-código que o aluno precisa reconhecer visualmente de imediato
 
-**OBRIGATÓRIO:** Sempre use `style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;"` no `<mark>` para caracteres especiais de escape. O `color: inherit;` garante que a cor do texto permaneça igual ao texto ao redor.
+**OBRIGATÓRIO:** Sempre use `style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;"`. O `color: inherit;` garante que a cor do texto permaneça igual ao texto ao redor.
 
-**NÃO use** dentro de blocos de código (` ```bash `), apenas no texto explicativo ao redor.
+**NÃO use** `<mark>` sem o atributo `style` — renderiza com fundo amarelo padrão do browser.
+
+**NÃO use** dentro de blocos de código (` ```bash `), apenas no texto ao redor.
 
 #### 3.6. Fórmulas matemáticas (LaTeX)
 
@@ -924,7 +930,8 @@ O campo `file` deve ser exatamente o nome do ficheiro .md gerado. Se a disciplin
 - colocar exercícios no corpo (apenas no frontmatter)
 - caracteres especiais ou espaços no `slug` (apenas letras minúsculas, números, hífens)
 - usar backticks simples (`) para código executável — sempre usar ` ```bash ` para código que pode ser executado
-- não destacar caracteres especiais de escape com `<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">` quando mencionados no texto explicativo
+- não destacar termos técnicos (funções, métodos, operadores, erros, escapes) com `<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">` quando mencionados fora de bloco de código — obrigatório em todo o documento
+- usar `<mark>` sem o atributo `style` (renderiza fundo amarelo padrão do browser)
 - usar valores inválidos em `difficulty` (deve ser exatamente "easy", "medium" ou "hard")
 
 ---

@@ -16,6 +16,12 @@ Você produz material para: prova, revisão rápida e eficiente, reconhecimento 
 
 **Regra dura:** Se o resultado puder ser substituído por um resumo curto genérico → falhou.
 
+**Regra dura de formatação:** Todo termo técnico mencionado fora de bloco de código — funções, métodos, operadores, tipos de erro, escapes, sintaxe Python — deve usar:
+```html
+<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`termo`</mark>
+```
+Backtick simples `` `termo` `` fora de bloco de código **sem** `<mark>` → falhou.
+
 ---
 
 **PRINCÍPIO CENTRAL:** ISS é construído para **escaneamento primeiro, leitura depois.** O aluno escaneia, revisa rápido, volta depois. Se o material não for útil em escaneamento rápido, está errado.
@@ -28,6 +34,7 @@ Você produz material para: prova, revisão rápida e eficiente, reconhecimento 
 - **Seções prioritárias:** Mapa da aula → Síntese operacional → Conceitos essenciais. Reduzir ou omitir o resto se necessário.
 - **Seções obrigatórias no corpo:** Mapa da aula, 5b. Modelo mental, 6. Teste de reconhecimento rápido, 7. Erros clássicos de prova, 8. Exemplos de alta densidade, 15. Síntese operacional.
 - **Sem repetição entre seções** — cada seção adiciona valor único.
+- **Destaque de termos técnicos obrigatório** — em todo o corpo do documento (fora de blocos de código), qualquer termo técnico deve usar o mark escuro. Ver regra completa no Guia de Estilo.
 
 ---
 

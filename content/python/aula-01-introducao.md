@@ -102,7 +102,7 @@ A aula é introdutória e híbrida (conceitual + metodológica): estabelece *com
 
 #### Exemplo do relógio (tkinter)
 
-- **Função na aula:** Ilustrar que com um programa curto em Python (tkinter + `strftime`) se pode ter uma janela de relógio digital. Código não foi detalhado na aula; fica como motivação. Execução: `python clock.py` (ou nome do arquivo usado).
+- **Função na aula:** Ilustrar que com um programa curto em Python (tkinter + <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strftime`</mark>) se pode ter uma janela de relógio digital. Código não foi detalhado na aula; fica como motivação. Execução: `python clock.py` (ou nome do arquivo usado).
 - **Não coberto no material:** Passo a passo da escrita do código; instalação do Python/IDE (próxima aula).
 
 ### 6. Procedimento / execução

@@ -100,7 +100,7 @@ A aula é introdutória e metodológica: define *como* a disciplina funciona (cr
 
 #### 5.5 CSV e “relatório” no Looker Studio
 
-- **CSV:** Arquivo de texto em que cada linha é um registro e os campos são separados por vírgula ou ponto e vírgula (ex.: `nome,data,valor`). Usado na Etapa 1 como fonte de dados no Looker.
+- **CSV:** Arquivo de texto em que cada linha é um registro e os campos são separados por vírgula ou ponto e vírgula (ex.: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`nome,data,valor`</mark>). Usado na Etapa 1 como fonte de dados no Looker.
 - **Relatório no Looker:** O arquivo que você cria no Looker Studio (aba “Relatório”) é o container onde se colocam gráficos, tabelas e controles; esse conjunto é o dashboard/visualização de dados.
 - **Quando usar:** Etapa 1 = criar um novo relatório, adicionar fonte “Upload de arquivo CSV”, escolher o CSV (ex.: Ch1_ExampleCSV.csv) e montar visualizações.
 - **Erro comum:** Confundir “fonte de dados” (CSV ou Planilhas) com “relatório” (o arquivo do Looker onde se desenha o dashboard).
@@ -114,7 +114,7 @@ Não há procedimento técnico detalhado nesta aula (só visão geral). O proced
 - **Cronograma:** Semana 1 = Etapa 1 (Looker + CSV); semana 5 = Etapa 5 (início SQL); semana 10 = entrega do AT; semana 11 = dúvidas e reentrega.
 - **TP vs AT:** Fazer TP1, TP2 e TP3 e entregar no prazo → habilitado a fazer o AT. Não entregar um TP → não pode fazer o AT.
 - **Entrega TP1:** PDF com título “Meu primeiro relatório” (ou conforme enunciado), link do relatório no Looker e print da tela do dashboard.
-- **CSV:** Exemplo de linha: `Transaction Number,Date,Description,Memo,Category,Transaction Amount,Balance` (cabeçalho); linhas seguintes com valores separados por vírgula.
+- **CSV:** Exemplo de linha: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`Transaction Number,Date,Description,Memo,Category,Transaction Amount,Balance`</mark> (cabeçalho); linhas seguintes com valores separados por vírgula.
 
 ### 8. Diferenças e confusões comuns
 

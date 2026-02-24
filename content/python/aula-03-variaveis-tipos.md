@@ -23,7 +23,7 @@ exercises:
 ## Resumo
 
 - **Variável:** Abstração de local de armazenamento de dados na memória; o valor pode mudar durante a execução. **Tipo de dado:** significado (semântica) do valor; o computador usa para otimizar armazenamento e operações.
-- **Tipos básicos Python:** `int` (inteiro), `float` (ponto flutuante), `bool` (True/False), `str` (cadeia de caracteres; aspas simples ou duplas). Ver tipo:
+- **Tipos básicos Python:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int`</mark> (inteiro), <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`float`</mark> (ponto flutuante), <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`bool`</mark> (True/False), <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str`</mark> (cadeia de caracteres; aspas simples ou duplas). Ver tipo:
 ```bash
 type(valor)
 ```
@@ -31,9 +31,9 @@ ou:
 ```bash
 type(variavel)
 ```
-- **Comentários:** Uma linha: `#` (tudo após na mesma linha é ignorado). Múltiplas linhas: docstring `''' ... '''` ou `""" ... """`. Texto sem `#` em linha de código gera **SyntaxError** (interpretador tenta executar como instrução).
+- **Comentários:** Uma linha: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`#`</mark> (tudo após na mesma linha é ignorado). Múltiplas linhas: docstring <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`''' ... '''`</mark> ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`""" ... """`</mark>. Texto sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`#`</mark> em linha de código gera **SyntaxError** (interpretador tenta executar como instrução).
 - **Nomes de variáveis:** Devem começar com **letra** ou **underscore (_)**; depois podem ter letras, números, underscore. Não podem começar com número (`1var` → SyntaxError: invalid decimal literal). **Palavras reservadas** (keywords: True, False, if, def, class, import, etc.) não podem ser usadas como nome.
-- **Convenções (PEP 8 / Zen):** Nomes em caixa baixa; semântica clara (explícito > implícito); palavras compostas em **snake_case** (ex.: `outra_variavel`). Operador de atribuição: `=`. Python é **case sensitive** (`variavel` ≠ `Variavel`). Mesma variável atribuída de novo: último valor vale.
+- **Convenções (PEP 8 / Zen):** Nomes em caixa baixa; semântica clara (explícito > implícito); palavras compostas em **snake_case** (ex.: `outra_variavel`). Operador de atribuição: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`=`</mark>. Python é **case sensitive** (`variavel` ≠ `Variavel`). Mesma variável atribuída de novo: último valor vale.
 - **Tipagem dinâmica:** O interpretador define o tipo em tempo de execução; não se declara tipo; a mesma variável pode passar a guardar valor de outro tipo. **Tudo em Python é objeto;** classe = estrutura, objeto = instância.
 - **Funções built-in:**
 ```bash
@@ -46,14 +46,14 @@ dir(obj)
 import this
 ```
 (bonito > feio, explícito > implícito, simples > complexo).
-- **Resumo em 5 linhas:** (1) Variável = local de armazenamento na memória; tipo = significado do valor. (2) Tipos básicos: int, float, bool, str; `type()` retorna o tipo. (3) Comentário: `#` ou docstring `'''...'''`; nome de variável começa com letra ou _; não usar keywords. (4) Convenções: snake_case, caixa baixa, semântica clara; Python case sensitive; última atribuição prevalece. (5) Tipagem dinâmica; `help()` e `dir()`; PEP 8 e Zen do Python.
+- **Resumo em 5 linhas:** (1) Variável = local de armazenamento na memória; tipo = significado do valor. (2) Tipos básicos: int, float, bool, str; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`type()`</mark> retorna o tipo. (3) Comentário: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`#`</mark> ou docstring <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`'''...'''`</mark>; nome de variável começa com letra ou _; não usar keywords. (4) Convenções: snake_case, caixa baixa, semântica clara; Python case sensitive; última atribuição prevalece. (5) Tipagem dinâmica; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`help()`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`dir()`</mark>; PEP 8 e Zen do Python.
 - **Palavras-chave:** variável, tipo de dado, int float bool str, type(), comentário, docstring, palavra reservada, snake_case, atribuição, case sensitive, tipagem dinâmica, PEP 8, Zen do Python, help, dir.
 
 ## Explicações
 
 ### 1. Tema e escopo
 
-**Tema:** Terceiro encontro (início da etapa 2): recapitulação do Deepnote e do programa como algoritmo; comentários em Python; variáveis e tipos de dados (conceito, tipos básicos, nomes válidos, convenções); funções `type`, `help`, `dir`; PEP 8 e Zen do Python; tipagem dinâmica e “tudo é objeto”.
+**Tema:** Terceiro encontro (início da etapa 2): recapitulação do Deepnote e do programa como algoritmo; comentários em Python; variáveis e tipos de dados (conceito, tipos básicos, nomes válidos, convenções); funções <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`type`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`help`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`dir`</mark>; PEP 8 e Zen do Python; tipagem dinâmica e “tudo é objeto”.
 
 **Problema que resolve:** Permitir escrever código documentado (comentários), criar e usar variáveis com nomes válidos, identificar tipos e evitar erros de sintaxe por nome inválido ou texto interpretado como código.
 
@@ -68,39 +68,39 @@ import this
 
 ### 3. Visão conceitual geral
 
-Aula **técnica**: primeiro conteúdo de sintaxe e semântica de Python (comentários, variáveis, tipos, nomes, convenções). O professor reforça Zen do Python e PEP 8 para “código pythônico”; variável como abstração de memória e tipo como significado do valor; uso de `type()` para inspecionar tipo e de `help()`/`dir()` para documentação.
+Aula **técnica**: primeiro conteúdo de sintaxe e semântica de Python (comentários, variáveis, tipos, nomes, convenções). O professor reforça Zen do Python e PEP 8 para “código pythônico”; variável como abstração de memória e tipo como significado do valor; uso de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`type()`</mark> para inspecionar tipo e de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`help()`</mark>/<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`dir()`</mark> para documentação.
 
 ### 4. Ideias-chave (máx. 7)
 
 1. **Variável = abstração de armazenamento na memória** — Ao definir uma variável, a linguagem pede ao computador um espaço para guardar o valor; esse valor pode mudar (daí “variável”). Tipo de dado = significado do valor (int, float, bool, str); influencia como o computador armazena e opera.
-2. **Comentário não é executado** — `#` comenta até o fim da linha; docstring com `'''` ou `"""` comenta múltiplas linhas. Se escrever texto sem `#`, o Python tenta interpretar como código e pode gerar SyntaxError.
+2. **Comentário não é executado** — <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`#`</mark> comenta até o fim da linha; docstring com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`'''`</mark> ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`"""`</mark> comenta múltiplas linhas. Se escrever texto sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`#`</mark>, o Python tenta interpretar como código e pode gerar SyntaxError.
 3. **Nome de variável: começa com letra ou _** — Não pode começar com número; `1var` gera SyntaxError (invalid decimal literal). Palavras reservadas (if, def, True, etc.) não podem ser nomes de variáveis.
-4. **Convenções PEP 8 / Zen** — Nomes em minúsculas; palavras compostas em snake_case; nome com semântica clara (explícito > implícito). Operador de atribuição é `=`. Python é case sensitive; reatribuir ao mesmo nome redefine o valor (última atribuição vale).
-5. **Quatro tipos básicos** — int, float, bool, str. String com aspas simples ou duplas; `type(x)` retorna o tipo. Tipagem dinâmica: o interpretador define o tipo em tempo de execução; a mesma variável pode passar a ter outro tipo ao receber novo valor.
-6. **type(), help(), dir()** — Funções built-in: `type(x)` devolve o tipo; `help(obj)` abre a documentação; `dir(obj)` lista atributos e métodos (incluindo dunder methods).
-7. **Tudo em Python é objeto** — Classe é a estrutura (a “planta”); objeto é a instância (a “casa construída”). PEP 8 é o guia de estilo; Zen do Python (`import this`) traz princípios de design (bonito > feio, explícito > implícito, simples > complexo).
+4. **Convenções PEP 8 / Zen** — Nomes em minúsculas; palavras compostas em snake_case; nome com semântica clara (explícito > implícito). Operador de atribuição é <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`=`</mark>. Python é case sensitive; reatribuir ao mesmo nome redefine o valor (última atribuição vale).
+5. **Quatro tipos básicos** — int, float, bool, str. String com aspas simples ou duplas; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`type(x)`</mark> retorna o tipo. Tipagem dinâmica: o interpretador define o tipo em tempo de execução; a mesma variável pode passar a ter outro tipo ao receber novo valor.
+6. **type(), help(), dir()** — Funções built-in: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`type(x)`</mark> devolve o tipo; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`help(obj)`</mark> abre a documentação; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`dir(obj)`</mark> lista atributos e métodos (incluindo dunder methods).
+7. **Tudo em Python é objeto** — Classe é a estrutura (a “planta”); objeto é a instância (a “casa construída”). PEP 8 é o guia de estilo; Zen do Python (<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`import this`</mark>) traz princípios de design (bonito > feio, explícito > implícito, simples > complexo).
 
 ### 5. Conceitos essenciais — explicação operacional
 
 #### Comentários
 
-- **Comentário de linha:** Tudo após `#` na mesma linha é ignorado pelo interpretador. Usado para documentar ou explicar trecho de código.
-- **Docstring (comentário multilinhas):** Três aspas consecutivas no início e no fim — `''' texto '''` ou `""" texto """`. Aspas simples ou duplas funcionam. Nesta aula tratado como comentário de múltiplas linhas; depois serve também para documentação de funções/módulos.
-- **Erro típico:** Escrever texto sem `#` numa linha onde o Python espera código → **SyntaxError** (invalid syntax), pois o interpretador tenta executar o texto como instrução.
+- **Comentário de linha:** Tudo após <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`#`</mark> na mesma linha é ignorado pelo interpretador. Usado para documentar ou explicar trecho de código.
+- **Docstring (comentário multilinhas):** Três aspas consecutivas no início e no fim — <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`''' texto '''`</mark> ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`""" texto """`</mark>. Aspas simples ou duplas funcionam. Nesta aula tratado como comentário de múltiplas linhas; depois serve também para documentação de funções/módulos.
+- **Erro típico:** Escrever texto sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`#`</mark> numa linha onde o Python espera código → **SyntaxError** (invalid syntax), pois o interpretador tenta executar o texto como instrução.
 - **Quando usar:** Sempre que quiser anotar lógica, objetivo de um bloco ou referência sem que isso seja executado.
 
 #### Variável e tipo de dado
 
 - **Variável (transcrição/slide):** “Abstração de locais de armazenamento de dados. Os dados armazenados em uma variável podem mudar ao longo da execução. Daí o nome variável.”
 - **Tipo de dado (transcrição/slide):** “Determina o significado dos valores armazenados na variável.” O computador usa o tipo para otimizar armazenamento e operações (ex.: int vs float são tratados diferente).
-- **Atribuição:** `nome_variavel = valor`. O `=` é o operador de atribuição (atribui o valor à variável). Ex.: `variavel = 12`; `outra_variavel = False`.
+- **Atribuição:** `nome_variavel = valor`. O <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`=`</mark> é o operador de atribuição (atribui o valor à variável). Ex.: `variavel = 12`; `outra_variavel = False`.
 - **print(variavel):** Exibe o valor armazenado na variável. Células/blocos compartilham estado em memória (execução de cima para baixo); ao desligar a máquina do Deepnote, o que só está em memória se perde — o código do notebook deve ser salvo (ex.: Ctrl+S).
 
 #### Tipos básicos (int, float, bool, str)
 
 - **int:** Números inteiros. Ex.: `1`, `12`, `38`.
 - **float:** Números de ponto flutuante (casa decimal). Ex.: `1.3`. Operações e armazenamento diferem de int.
-- **bool:** Valores lógicos `True` e `False` (primeira letra maiúscula).
+- **bool:** Valores lógicos <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark> (primeira letra maiúscula).
 - **str:** Cadeia de caracteres (palavra, frase, texto). Entre aspas simples ou duplas; ex.: `'Introdução à programação com Python'` ou `"Hello World!"`. Não há diferença semântica entre aspas simples e duplas.
 - **Verificação do tipo:**
 ```bash
@@ -162,14 +162,14 @@ type(variavel)
 ```bash
 help(int)
 ```
-mostra descrição da classe int, assinaturas como `int([x])`, `int(x, base=10)`, subclasses como bool, métodos). Útil para entender funções e tipos.
-- **dir(obj):** Lista atributos e métodos do objeto (incluindo nomes que começam e terminam com `__`, os “dunder methods”). Ex.: `dir(variavel_str)` mostra métodos de str.
-- **Uso:** Inspecionar tipo com `type()`; estudar API com `help()`; explorar atributos com `dir()`.
+mostra descrição da classe int, assinaturas como <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int([x])`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int(x, base=10)`</mark>, subclasses como bool, métodos). Útil para entender funções e tipos.
+- **dir(obj):** Lista atributos e métodos do objeto (incluindo nomes que começam e terminam com `__`, os “dunder methods”). Ex.: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`dir(variavel_str)`</mark> mostra métodos de str.
+- **Uso:** Inspecionar tipo com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`type()`</mark>; estudar API com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`help()`</mark>; explorar atributos com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`dir()`</mark>.
 
 #### PEP 8 e Zen do Python
 
 - **PEP 8 (slide/transcrição):** Guia de estilo para código Python; foco em legibilidade e consistência. Define convenções de nomenclatura (ex.: snake_case para variáveis/funções), indentação, tamanho de linha, etc. PEP = Python Enhancement Proposal; PEP 8 é a “PEP 8”.
-- **Zen do Python:** Princípios de design; exibidos com `import this`. Destaques da aula: “Beautiful is better than ugly”, “Explicit is better than implicit”, “Simple is better than complex”. Base para escrever “código pythônico”.
+- **Zen do Python:** Princípios de design; exibidos com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`import this`</mark>. Destaques da aula: “Beautiful is better than ugly”, “Explicit is better than implicit”, “Simple is better than complex”. Base para escrever “código pythônico”.
 
 #### Tudo em Python é objeto
 
@@ -177,8 +177,8 @@ mostra descrição da classe int, assinaturas como `int([x])`, `int(x, base=10)`
 
 ### 6. Procedimento / execução
 
-- **Comentário de linha:** Colocar `#` antes do texto; executar a célula — o comentário não é executado.
-- **Docstring:** Envolver o texto em `'''` ou `"""`; executar — não gera saída (funciona como comentário).
+- **Comentário de linha:** Colocar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`#`</mark> antes do texto; executar a célula — o comentário não é executado.
+- **Docstring:** Envolver o texto em <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`'''`</mark> ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`"""`</mark>; executar — não gera saída (funciona como comentário).
 - **Criar variável:** Escrever:
 ```bash
 nome = valor
@@ -201,7 +201,7 @@ ou apenas:
 type(variavel)
 ```
 na última linha da célula para ver a saída.
-- **Erro típico:** Nome começando com número (`1var = 1`) → SyntaxError: invalid decimal literal. Texto sem `#` em linha de código → SyntaxError: invalid syntax.
+- **Erro típico:** Nome começando com número (`1var = 1`) → SyntaxError: invalid decimal literal. Texto sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`#`</mark> em linha de código → SyntaxError: invalid syntax.
 - **Evidência de acerto:** Célula executa sem erro; type() retorna o tipo esperado;
 ```bash
 print(variavel)
@@ -216,8 +216,8 @@ mostra o valor atribuído; comentários não geram saída nem erro.
 print("Hello World!")
 ```
 — só o print é executado.
-- **Docstring:** `'''Comentario de multiplas linhas\nlinha 1\nlinha 2\nlinha 3'''` — executar não dá erro; usado como comentário multilinhas.
-- **SyntaxError:** Linha com apenas “Comentário aqui” sem `#` → erro de sintaxe. Nome `1var` ou `2var` → invalid decimal literal.
+- **Docstring:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`'''Comentario de multiplas linhas\nlinha 1\nlinha 2\nlinha 3'''`</mark> — executar não dá erro; usado como comentário multilinhas.
+- **SyntaxError:** Linha com apenas “Comentário aqui” sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`#`</mark> → erro de sintaxe. Nome `1var` ou `2var` → invalid decimal literal.
 - **Variáveis válidas:**
 ```bash
 var = 1
@@ -253,9 +253,9 @@ int('0b100', base=0)
 
 ### 8. Diferenças e confusões comuns
 
-- **Comentário vs código:** Comentário não é executado; sem `#` (ou sem ser string/docstring), o texto vira código e pode dar SyntaxError.
-- **Aspas simples vs duplas em str:** Nenhuma diferença para o tipo; ambas definem string. Para docstring, `'''` e `"""` funcionam igual.
-- **Atribuição (=) vs igualdade matemática:** Em Python, `=` é atribuição (“guarde este valor nesta variável”). Igualdade é `==` (visto depois).
+- **Comentário vs código:** Comentário não é executado; sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`#`</mark> (ou sem ser string/docstring), o texto vira código e pode dar SyntaxError.
+- **Aspas simples vs duplas em str:** Nenhuma diferença para o tipo; ambas definem string. Para docstring, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`'''`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`"""`</mark> funcionam igual.
+- **Atribuição (=) vs igualdade matemática:** Em Python, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`=`</mark> é atribuição (“guarde este valor nesta variável”). Igualdade é <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`==`</mark> (visto depois).
 - **Nome da variável vs tipo:** O nome é como o programador se refere à variável no código; o tipo é como o interpretador trata o valor em memória. O nome não “tem” tipo; a variável pode mudar de tipo (tipagem dinâmica).
 - **Reatribuição vs “duas variáveis”:** `variavel = 12` e depois `variavel = 30` é uma única variável com valor atualizado (30). Não são duas variáveis; a última atribuição prevalece (execução de cima para baixo).
 
@@ -271,7 +271,7 @@ int('0b100', base=0)
 - **Palavras reservadas** não podem ser usadas como nome de variável.
 - **Case sensitive:** `variavel` e `Variavel` são diferentes; erro de digitação trocando maiúscula/minúscula gera NameError se só uma foi definida.
 - No **Deepnote**, o que está só em memória (variáveis, resultados de células) se perde ao desligar a máquina ou quando ela é reciclada; **salvar o notebook** (ex.: Ctrl+S) persiste código e texto.
-- **Comentário:** esquecer `#` em texto que não é código gera SyntaxError.
+- **Comentário:** esquecer <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`#`</mark> em texto que não é código gera SyntaxError.
 - **Tipagem dinâmica:** a mesma variável pode mudar de tipo ao receber novo valor; não confundir com “duas variáveis com o mesmo nome”.
 - Execução **de cima para baixo**; em caso de duas atribuições ao mesmo nome, vale a **última**.
 

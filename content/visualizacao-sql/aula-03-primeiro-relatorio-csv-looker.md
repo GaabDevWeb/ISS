@@ -32,7 +32,7 @@ exercises:
 - **Objetivo da aula:** Concluir a Etapa 1: criar o primeiro relatório no Looker Studio usando um arquivo CSV (Ch1_ExampleCSV.csv). Acesso com conta Gmail do aluno Infnet; arquivos da disciplina em Infnet Online > Documentos > pasta da disciplina.
 - **Tela inicial Looker Studio:** https://lookerstudio.google.com/navigation/reporting. Galeria de modelos (templates); organizador de relatórios (nome, proprietário, última abertura); menu à esquerda (recentes, compartilhados, minha propriedade, lixeira, modelos); barra de pesquisa. Dar nome significativo ao relatório.
 - **Criar relatório:** "Relatório em branco" → Looker pede fonte de dados. Para CSV local: conector **Upload de arquivo CSV**. Depois: Adicionar arquivo → selecionar o .csv → Adicionar (ou Adicionar ao relatório) → escolher "Layout de formato livre". A tabela padrão usa dimensão (ex.: Product Name) e **Record Count** (coluna automática do Looker).
-- **Obter o CSV Ch1_ExampleCSV:** Link: https://raw.githubusercontent.com/Apress/google-data-studio-for-beginners/main/Ch1_ExampleCSV.csv. Passos: (1) No Windows: novo documento de texto, renomear para `Ch1_ExampleCSV.csv` (se não vir extensão: Opções do Explorer > Modo de exibição > desmarcar "Ocultar extensões dos tipos de arquivos conhecidos"). (2) Abrir o link no navegador, selecionar todo o conteúdo, copiar. (3) Abrir o .csv com Bloco de Notas, colar, salvar, fechar.
+- **Obter o CSV Ch1_ExampleCSV:** Link: https://raw.githubusercontent.com/Apress/google-data-studio-for-beginners/main/Ch1_ExampleCSV.csv. Passos: (1) No Windows: novo documento de texto, renomear para <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`Ch1_ExampleCSV.csv`</mark> (se não vir extensão: Opções do Explorer > Modo de exibição > desmarcar "Ocultar extensões dos tipos de arquivos conhecidos"). (2) Abrir o link no navegador, selecionar todo o conteúdo, copiar. (3) Abrir o .csv com Bloco de Notas, colar, salvar, fechar.
 - **Estrutura do CSV:** Primeira linha = cabeçalho (Product Name, Description, Flavor, Product Type, Number Sold). Separador: vírgula ou ponto e vírgula. Exemplo: 11 linhas de dados.
 - **Pegadinhas:** Se surgir "Criar um conjunto de dados para adicionar arquivos", informar um nome (ex.: Ch1_ExampleCSV). Looker é ferramenta na nuvem (Google); a interface pode mudar entre versões. Abrir .csv direto no Excel pode colocar tudo em uma coluna — usar "Obter dados" ou Bloco de Notas.
 
@@ -90,7 +90,7 @@ A aula é **técnica**: passo a passo para (1) obter um CSV a partir de um link 
 
 - **Definição:** O CSV está em https://raw.githubusercontent.com/Apress/google-data-studio-for-beginners/main/Ch1_ExampleCSV.csv. Como obter no PC: criar um arquivo com extensão .csv, abrir o link no navegador, copiar todo o conteúdo da página, colar no arquivo .csv (ex.: pelo Bloco de Notas), salvar.
 - **Passo a passo (Windows):**
-  1. No Explorer: Novo > Documento de texto. Renomear para `Ch1_ExampleCSV.csv`. Se a extensão não aparecer: menu ⋮ (ou Ferramentas) > Opções > guia Modo de exibição > desmarcar "Ocultar as extensões dos tipos de arquivos conhecidos" (inglês: "Hide extensions for known file types") > Aplicar > OK.
+  1. No Explorer: Novo > Documento de texto. Renomear para <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`Ch1_ExampleCSV.csv`</mark>. Se a extensão não aparecer: menu ⋮ (ou Ferramentas) > Opções > guia Modo de exibição > desmarcar "Ocultar as extensões dos tipos de arquivos conhecidos" (inglês: "Hide extensions for known file types") > Aplicar > OK.
   2. Abrir o link no Chrome (ou outro navegador). Ctrl+A (selecionar tudo), Ctrl+C (copiar).
   3. Botão direito no arquivo Ch1_ExampleCSV.csv > Abrir com > Bloco de Notas. Ctrl+V (colar). Arquivo > Salvar. Fechar.
 - **Erro comum:** Renomear para Ch1_ExampleCSV mas o Windows manter .txt (arquivo fica Ch1_ExampleCSV.csv.txt); abrir o .csv direto no Excel e tudo ir para uma coluna.
@@ -119,7 +119,7 @@ A aula é **técnica**: passo a passo para (1) obter um CSV a partir de um link 
 
 #### 5.7 Extensão do arquivo no Windows
 
-- **Definição:** A **extensão** (ex.: .csv, .txt) indica o tipo do arquivo. Por padrão o Windows pode ocultar extensões. Para renomear corretamente para .csv, é preciso que a extensão esteja visível ou que o nome completo seja `Ch1_ExampleCSV.csv`.
+- **Definição:** A **extensão** (ex.: .csv, .txt) indica o tipo do arquivo. Por padrão o Windows pode ocultar extensões. Para renomear corretamente para .csv, é preciso que a extensão esteja visível ou que o nome completo seja <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`Ch1_ExampleCSV.csv`</mark>.
 - **Onde configurar:** Explorer > menu ⋮ (ou Ferramentas) > Opções > Modo de exibição > desmarcar "Ocultar as extensões dos tipos de arquivos conhecidos".
 - **Erro comum:** Arquivo fica como "Ch1_ExampleCSV.csv" na interface mas na verdade é .txt (nome completo Ch1_ExampleCSV.csv.txt); o Looker pode não listar ou não reconhecer.
 - **Em inglês:** "Hide extensions for known file types" — deve estar **desmarcado** para mostrar .csv.
@@ -127,7 +127,7 @@ A aula é **técnica**: passo a passo para (1) obter um CSV a partir de um link 
 ### 6. Procedimento / execução
 
 **Passo 1 – Obter Ch1_ExampleCSV.csv**
-1. No Windows Explorer: Novo > Documento de texto. Renomear para `Ch1_ExampleCSV.csv` (se não vir .csv, ativar exibição de extensões em Opções > Modo de exibição).
+1. No Windows Explorer: Novo > Documento de texto. Renomear para <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`Ch1_ExampleCSV.csv`</mark> (se não vir .csv, ativar exibição de extensões em Opções > Modo de exibição).
 2. Abrir no navegador: https://raw.githubusercontent.com/Apress/google-data-studio-for-beginners/main/Ch1_ExampleCSV.csv . Selecionar todo o conteúdo (Ctrl+A), copiar (Ctrl+C).
 3. Botão direito no Ch1_ExampleCSV.csv > Abrir com > Bloco de Notas. Colar (Ctrl+V). Arquivo > Salvar. Fechar.
 
