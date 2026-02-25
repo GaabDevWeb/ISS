@@ -1,12 +1,12 @@
 ---
-title: "Introdução à disciplina, Infinity, estágio e atividades complementares"
-slug: "introducao-infinity-estagio"
+title: "Introdução à disciplina, Infnet, estágio e atividades complementares"
+slug: "introducao-Infnet-estagio"
 discipline: "planejamento-curso-carreira"
 order: 1
-description: "Modelo de ensino, estrutura do Infinity, estágio obrigatório e termo substitutivo, atividades complementares e requerimentos."
+description: "Modelo de ensino, estrutura do Infnet, estágio obrigatório e termo substitutivo, atividades complementares e requerimentos."
 exercises:
-  - question: "Por que a graduação do Infinity não tem TCC?"
-    answer: "O MEC não exige TCC para graduação. A instituição define no plano pedagógico. O Infinity optou por não incluir TCC; a integração de conhecimentos é demonstrada pelo projeto ao final de cada bloco (5 disciplinas em 6 meses)."
+  - question: "Por que a graduação do Infnet não tem TCC?"
+    answer: "O MEC não exige TCC para graduação. A instituição define no plano pedagógico. O Infnet optou por não incluir TCC; a integração de conhecimentos é demonstrada pelo projeto ao final de cada bloco (5 disciplinas em 6 meses)."
   - question: "Qual a diferença entre estágio convencional e termo substitutivo de estágio?"
     answer: "Estágio convencional: contrato empresa–faculdade e empresa–aluno, até 6h/dia. Termo substitutivo: quem já trabalha na área (CLT, PJ ou servidor) comprova com documentação (carteira, carta do chefe/RH, NF etc.) e o coordenador aprova as 400h sem precisar de novo contrato de estágio."
   - question: "Horas de estágio ou atividade complementar feitas antes do início da matrícula valem?"
@@ -21,17 +21,17 @@ exercises:
 
 ## Resumo
 
-- **Tema:** Primeira aula da disciplina de Planejamento de Curso e Carreira: apresentação da instituição Infinity, modelo por competências e projetos, bloco de entrada, estágio obrigatório (400h) e atividades complementares.
+- **Tema:** Primeira aula da disciplina de Planejamento de Curso e Carreira: apresentação da instituição Infnet, modelo por competências e projetos, bloco de entrada, estágio obrigatório (400h) e atividades complementares.
 - **Problema que resolve:** Aluno saber como a graduação funciona (sem prova, sem TCC, por blocos e projetos), onde pedir documentos, como cumprir estágio já trabalhando na área e como contabilizar atividades complementares.
 - **Ideias-chave:** Bloco = 5 disciplinas em 6 meses com projeto no final; avaliação por trabalhos a cada 2 semanas + TP; termo substitutivo de estágio para quem já atua na área; atividades complementares exigem comprovante e têm limite por categoria; requerimento único para solicitações.
-- **Resumo em 5 linhas:** A Infinity usa modelo por competências, sem provas e sem TCC; o bloco de entrada ensina a metodologia e faz nivelamento em TI. Estágio é 400h e pode ser substituído por comprovação de trabalho na área via termo substitutivo. Atividades complementares seguem tabela do manual e exigem comprovante. Declarações, estágio e atividades são solicitados pelo requerimento (requerimento.infinit.edu.br).
-- **Palavras-chave:** bloco, disciplina, Infinity, estágio obrigatório, termo substitutivo, atividades complementares, requerimento, Perle Safari, gerência acadêmica, trabalho por competência, TP.
+- **Resumo em 5 linhas:** A Infnet usa modelo por competências, sem provas e sem TCC; o bloco de entrada ensina a metodologia e faz nivelamento em TI. Estágio é 400h e pode ser substituído por comprovação de trabalho na área via termo substitutivo. Atividades complementares seguem tabela do manual e exigem comprovante. Declarações, estágio e atividades são solicitados pelo requerimento (requerimento.infinit.edu.br).
+- **Palavras-chave:** bloco, disciplina, Infnet, estágio obrigatório, termo substitutivo, atividades complementares, requerimento, Perle Safari, gerência acadêmica, trabalho por competência, TP.
 
 ## Explicações
 
 ### 1. Tema e escopo
 
-- **Tema:** Introdução à disciplina de Planejamento de Curso e Carreira e à estrutura da graduação no Infinity (instituição): modelo de ensino, bloco de entrada, estágio e atividades complementares.
+- **Tema:** Introdução à disciplina de Planejamento de Curso e Carreira e à estrutura da graduação no Infnet (instituição): modelo de ensino, bloco de entrada, estágio e atividades complementares.
 - **Problema que resolve:** Evitar dúvidas sobre onde buscar informações, como ser avaliado, como cumprir estágio estando empregado ou PJ e como validar atividades complementares.
 - **Inclui:** Visão da instituição, bloco/semestre, avaliação (trabalhos, TP), estágio (400h, termo substitutivo), atividades complementares, requerimento e canais de atendimento.
 - **Não inclui (nesta aula):** Conteúdo específico de carreira em TI, currículo e LinkedIn (previstos para aulas seguintes). Slides da apresentação não foram fornecidos — apenas transcrição.
@@ -43,7 +43,7 @@ exercises:
 
 ### 3. Visão conceitual geral
 
-A disciplina mistura apresentação da instituição (Infinity), modelo pedagógico (competências, projetos, sem prova nem TCC) e obrigações formais (estágio 400h, atividades complementares). Nesta aula entram: o que é um bloco, como funciona a avaliação, onde ficam biblioteca e atendimento, como abrir requerimentos e, em detalhe, as regras de estágio e de atividades complementares, incluindo o termo substitutivo para quem já trabalha na área.
+A disciplina mistura apresentação da instituição (Infnet), modelo pedagógico (competências, projetos, sem prova nem TCC) e obrigações formais (estágio 400h, atividades complementares). Nesta aula entram: o que é um bloco, como funciona a avaliação, onde ficam biblioteca e atendimento, como abrir requerimentos e, em detalhe, as regras de estágio e de atividades complementares, incluindo o termo substitutivo para quem já trabalha na área.
 
 ### 4. Ideias-chave (máx. 7)
 
@@ -57,19 +57,19 @@ A disciplina mistura apresentação da instituição (Infinity), modelo pedagóg
 
 ### 5. Conceitos essenciais — explicação operacional
 
-#### Bloco (trimestre/semestre no Infinity)
+#### Bloco (trimestre/semestre no Infnet)
 
 - **Definição:** Conjunto de disciplinas (em geral cinco) que rodam juntas durante cerca de seis meses e são organizadas para, no final, o aluno entregar um projeto integrando os conteúdos.
 - **Quando usar:** Para entender a progressão do curso (não por disciplina isolada, mas por bloco) e o papel do projeto de fim de bloco.
 - **Quando NÃO confundir:** Bloco não é “uma disciplina”; é o pacote de disciplinas do semestre.
 - **Como reconhecer:** “Bloco de entrada”, “primeiro bloco” = início do curso; “projeto no final do bloco” = trabalho integrador, não TCC.
-- **Erro comum:** Achar que haverá TCC no final da graduação. Nenhuma graduação do Infinity tem TCC (conforme plano pedagógico apresentado ao MEC).
+- **Erro comum:** Achar que haverá TCC no final da graduação. Nenhuma graduação do Infnet tem TCC (conforme plano pedagógico apresentado ao MEC).
 
 #### Estágio obrigatório (400h)
 
 - **Definição:** Carga horária mínima de estágio definida pela graduação; faz parte da carga mínima do curso e é condição para conclusão.
 - **Passos para quem já trabalha na área:** (1) Ver no manual da graduação o capítulo de estágio e o “termo substitutivo de estágio”. (2) Reunir comprovação (carteira de trabalho, carta do chefe/RH descrevendo função e carga, ou, se PJ, comprovação da empresa/NF e horas na área). (3) Abrir requerimento e enviar a documentação. (4) Coordenador do curso analisa e pode dar como completas as 400h.
-- **Passos para estágio convencional:** Contrato empresa–faculdade (modelos fornecidos pela instituição) e depois empresa–aluno; máximo 6h/dia; comprovação das horas via processo de estágio (equipe de estágio na gerência acadêmica / Infinity online).
+- **Passos para estágio convencional:** Contrato empresa–faculdade (modelos fornecidos pela instituição) e depois empresa–aluno; máximo 6h/dia; comprovação das horas via processo de estágio (equipe de estágio na gerência acadêmica / Infnet online).
 - **Erro comum:** Achar que horas trabalhadas antes do início da matrícula entram; só contam horas a partir do primeiro dia da graduação.
 - **Sinal de execução correta:** Documentação aceita pelo coordenador e horas lançadas/validadas no sistema.
 
@@ -78,7 +78,7 @@ A disciplina mistura apresentação da instituição (Infinity), modelo pedagóg
 - **Definição:** Mecanismo para quem já atua na área (CLT, PJ, servidor) comprovar a experiência e ter as 400h de estágio consideradas sem novo contrato de estágio.
 - **Quando usar:** Quando o aluno já tem vínculo empregatício ou PJ na área da graduação e pode comprovar função e carga horária.
 - **Quando NÃO usar:** Quando o trabalho não é na área da graduação; aí é preciso estágio ou projetos (ex.: freelance) com comprovante na área.
-- **Como reconhecer:** Manual da graduação, capítulo de estágio; contato com equipe de estágio (Infinity online / gerência acadêmica) para modelos e procedimento.
+- **Como reconhecer:** Manual da graduação, capítulo de estágio; contato com equipe de estágio (Infnet online / gerência acadêmica) para modelos e procedimento.
 
 #### Atividades complementares
 
@@ -113,7 +113,7 @@ A disciplina mistura apresentação da instituição (Infinity), modelo pedagóg
 
 - **Estágio vs. atividade complementar:** Estágio = 400h (pode ser substitutivo); atividades complementares = outra carga (ex.: 300h em alguns cursos), tabela própria e comprovantes por categoria. São exigências distintas.
 - **Bloco vs. disciplina:** Bloco é o conjunto de disciplinas do semestre; disciplina é uma matéria dentro do bloco.
-- **Projeto de fim de bloco vs. TCC:** O primeiro existe em cada bloco; TCC não existe nas graduações do Infinity.
+- **Projeto de fim de bloco vs. TCC:** O primeiro existe em cada bloco; TCC não existe nas graduações do Infnet.
 
 ### 9. Como cai em prova
 
@@ -125,14 +125,14 @@ A disciplina mistura apresentação da instituição (Infinity), modelo pedagóg
 - Plágio e cola não são permitidos; há ferramentas de verificação; trabalho pode ser reprovado e há risco de sanção institucional.
 - Presença: cursos online têm 75% de obrigatoriedade de presença (regra MEC); a presença é registrada automaticamente.
 - Estágio não pode ser cumprido após a conclusão do curso; é requisito para formação.
-- Contato para dúvidas de estágio e procedimentos: gerência acadêmica / equipe de estágio via Infinity online (e, se aplicável, atendimento presencial no 4º andar, conforme orientação da instituição).
+- Contato para dúvidas de estágio e procedimentos: gerência acadêmica / equipe de estágio via Infnet online (e, se aplicável, atendimento presencial no 4º andar, conforme orientação da instituição).
 
 ### 11. Checklist de domínio
 
-- [ ] Sei explicar o que é um bloco e por que não há TCC na graduação do Infinity.
+- [ ] Sei explicar o que é um bloco e por que não há TCC na graduação do Infnet.
 - [ ] Sei onde abrir requerimento (requerimento.infinit.edu.br) e para que serve o número de solicitação.
 - [ ] Sei dizer em que situação existe termo substitutivo de estágio e que documentação é típica (CLT, PJ, servidor).
 - [ ] Sei explicar por que horas de estágio ou atividades complementares anteriores ao início da matrícula não valem.
 - [ ] Sei que atividades complementares exigem comprovante e que há limite por categoria na tabela do manual.
 - [ ] Sei evitar o erro de usar curso pirateado ou sem certificado como atividade complementar.
-- [ ] Sei onde buscar apoio (manual da graduação, equipe de estágio, gerência acadêmica, Infinity online).
+- [ ] Sei onde buscar apoio (manual da graduação, equipe de estágio, gerência acadêmica, Infnet online).

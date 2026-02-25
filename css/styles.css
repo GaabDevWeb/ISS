@@ -31,6 +31,7 @@
 
 /* Scrollbar padrão do projeto */
 html {
+  scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) var(--color-background);
 }
@@ -297,4 +298,134 @@ body.iss-focus-mode .iss-focus-exit {
 body.iss-focus-mode .iss-focus-exit:hover {
   color: var(--color-accent-hover);
   border-color: var(--color-muted);
+}
+
+/* scroll-margin para headings (compensa o header sticky) */
+.iss-prose h2,
+.iss-prose h3,
+#exercicios {
+  scroll-margin-top: 72px;
+}
+
+/* Layout de duas colunas na página de aula */
+.iss-page-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .iss-page-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    align-items: flex-start;
+    justify-content: normal;
+  }
+
+  .iss-page-layout > main {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+/* Outline sidebar */
+.iss-outline {
+  display: none;
+  width: 220px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 72px;
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  font-size: var(--text-small);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+/* Mostrar apenas em telas grandes */
+@media (min-width: 1200px) {
+  .iss-outline:not([hidden]) {
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+.iss-outline__title {
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.iss-outline__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.iss-outline__list a {
+  display: block;
+  padding: 0.2rem 0.5rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  line-height: 1.4;
+  border-left: 2px solid transparent;
+  transition: color 0.3s ease, border-left-color 0.3s ease;
+}
+
+.iss-outline__list a:hover {
+  color: var(--color-foreground);
+}
+
+.iss-outline__item--h3 > a {
+  padding-left: 1.25rem;
+  font-size: 0.8125rem;
+}
+
+.iss-outline__item--active > a {
+  color: var(--color-accent);
+  border-left-color: var(--color-accent);
+}
+
+/* No modo foco, esconder o outline */
+body.iss-focus-mode .iss-outline {
+  display: none !important;
+}
+
+/* Botão de copiar código */
+.iss-prose pre {
+  position: relative;
+}
+
+.iss-copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+  cursor: pointer;
+  opacity: 1;
+  transition: color 0.15s, border-color 0.15s;
+  z-index: 1;
+}
+
+.iss-copy-btn:hover {
+  color: var(--color-foreground);
+  border-color: var(--color-muted);
+}
+
+.iss-copy-btn--copied {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  opacity: 1;
 }

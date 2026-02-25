@@ -79,13 +79,107 @@ function highlightCodeBlocks(container) {
   });
 }
 
+function addCopyButtons(container) {
+  if (!container) return;
+  container.querySelectorAll('pre').forEach((pre) => {
+    const code = pre.querySelector('code');
+    if (!code) return;
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'iss-copy-btn';
+    btn.setAttribute('aria-label', 'Copiar código');
+    btn.textContent = 'Copiar';
+
+    btn.addEventListener('click', () => {
+      const text = code.innerText || code.textContent || '';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          btn.textContent = 'Copiado!';
+          btn.classList.add('iss-copy-btn--copied');
+          setTimeout(() => {
+            btn.textContent = 'Copiar';
+            btn.classList.remove('iss-copy-btn--copied');
+          }, 2000);
+        }).catch(() => {
+          btn.textContent = 'Erro';
+          setTimeout(() => { btn.textContent = 'Copiar'; }, 2000);
+        });
+      }
+    });
+
+    pre.appendChild(btn);
+  });
+}
+
+function slugify(text) {
+  return text
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 function ensureSectionIds(container) {
   if (!container) return;
-  const h2s = container.querySelectorAll('.iss-prose h2');
-  const ids = ['resumo', 'explicacoes'];
-  h2s.forEach((h2, i) => {
-    if (ids[i]) h2.id = ids[i];
+  const headings = container.querySelectorAll('.iss-prose h2, .iss-prose h3');
+  const seen = {};
+  headings.forEach((h) => {
+    let slug = slugify(h.textContent || '');
+    if (!slug) slug = 'heading';
+    if (seen[slug]) {
+      seen[slug]++;
+      slug = slug + '-' + seen[slug];
+    } else {
+      seen[slug] = 1;
+    }
+    h.id = slug;
   });
+  // Manter IDs compatíveis para os dois primeiros H2
+  const h2s = container.querySelectorAll('.iss-prose h2');
+  if (h2s[0]) h2s[0].id = 'resumo';
+  if (h2s[1]) h2s[1].id = 'explicacoes';
+}
+
+function buildOutline(contentEl) {
+  if (!contentEl) return;
+  const headings = Array.from(contentEl.querySelectorAll('.iss-prose h2, .iss-prose h3, #exercicios'));
+  const listEl = document.getElementById('iss-outline-list');
+  const asideEl = document.getElementById('iss-outline');
+  if (!listEl || !asideEl) return;
+  if (headings.length < 2) return;
+
+  listEl.innerHTML = '';
+  headings.forEach((h) => {
+    const li = document.createElement('li');
+    if (h.tagName === 'H3') li.className = 'iss-outline__item--h3';
+    const a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    li.appendChild(a);
+    listEl.appendChild(li);
+  });
+
+  asideEl.removeAttribute('hidden');
+
+  const itemMap = {};
+  headings.forEach((h) => {
+    itemMap[h.id] = listEl.querySelector('a[href="#' + h.id + '"]');
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          listEl.querySelectorAll('li').forEach((li) => li.classList.remove('iss-outline__item--active'));
+          const activeLink = itemMap[entry.target.id];
+          if (activeLink) activeLink.parentElement.classList.add('iss-outline__item--active');
+        }
+      });
+    },
+    { rootMargin: '0px 0px -70% 0px', threshold: 0 }
+  );
+  headings.forEach((h) => observer.observe(h));
 }
 
 function renderExercisesHTML(exercises, disciplineSlug, lessonSlug, reviewedIds) {
@@ -182,7 +276,9 @@ function renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson, lesso
     contentEl.querySelectorAll('img').forEach((img) => img.setAttribute('loading', 'lazy'));
     contentEl.querySelectorAll('iframe').forEach((iframe) => iframe.setAttribute('loading', 'lazy'));
     highlightCodeBlocks(contentEl);
+    addCopyButtons(contentEl);
     ensureSectionIds(contentEl);
+    buildOutline(contentEl);
     const resumoH2 = contentEl.querySelector('#resumo');
     if (resumoH2) {
       const copyBtn = document.createElement('button');

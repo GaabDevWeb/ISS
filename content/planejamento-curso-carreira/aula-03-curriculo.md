@@ -52,7 +52,7 @@ O currículo tem uma única função central no processo seletivo: **chamar a at
 4. **Experiência: não só job description** — Mesmo cargo pode ter escopos muito diferentes; descrever projetos, desafios, ações e resultados (SOAR ou STAR) diferencia e traz mais palavras-chave. “Quem você foi” na organização, não só a função.
 5. **Segurança: o que não colocar** — Evitar endereço completo (engenharia social), CPF, RG, nome dos pais, data de nascimento, foto (ATS e IA). No formulário do site da empresa, com login, a LGPD responsabiliza a empresa em caso de vazamento.
 6. **Currículo e LinkedIn são os dois** — LinkedIn é a principal ferramenta de recrutamento, mas vários lugares ainda pedem currículo; o export do LinkedIn (duas colunas, gráfico) não é lido bem por ATS. Manter currículo próprio, simples, em PDF.
-7. **TP2 = currículo + LinkedIn** — Entregar os dois; prazo (ex.: 2 de março) pode ser confirmado no Infinity online; aula de LinkedIn na semana seguinte ao Carnaval.
+7. **TP2 = currículo + LinkedIn** — Entregar os dois; prazo (ex.: 2 de março) pode ser confirmado no Infnet online; aula de LinkedIn na semana seguinte ao Carnaval.
 
 ### 5. Conceitos essenciais — explicação operacional
 
@@ -145,7 +145,7 @@ O currículo tem uma única função central no processo seletivo: **chamar a at
 - Estágio: lei exige que esteja cursando; termo substitutivo para quem já trabalha na área (comprovar horas); jovem aprendiz administrativo em setor de TI só conta se a função for de TI.
 - Idade e estágio: não é impossível ser contratado como estagiário com mais idade, mas pode ser mais difícil; alternativa é entrar na empresa em outra função e buscar mobilidade interna para TI (quando existir). Considerar queda de renda no estágio.
 - Institutos de estágio: CIEE, Instituto Muds (ou similar); faculdade também divulga vagas na área de estágio.
-- TP2: currículo + LinkedIn; prazo no Infinity online (ex.: 2 de março); aula de LinkedIn na semana seguinte ao Carnaval.
+- TP2: currículo + LinkedIn; prazo no Infnet online (ex.: 2 de março); aula de LinkedIn na semana seguinte ao Carnaval.
 
 ### 11. Checklist de domínio
 
@@ -155,4 +155,4 @@ O currículo tem uma única função central no processo seletivo: **chamar a at
 - [ ] Sei adaptar resumo/objetivo com palavras-chave da vaga sem mentir e escrevendo como no anúncio.
 - [ ] Sei diferenciar “descrever a função” de “enriquecer com SOAR/STAR” (situação, ação, resultado).
 - [ ] Sei que currículo e LinkedIn são os dois necessários e que o export do LinkedIn não substitui currículo para ATS.
-- [ ] Sei que TP2 inclui currículo e LinkedIn e qual o prazo (confirmar no Infinity online).
+- [ ] Sei que TP2 inclui currículo e LinkedIn e qual o prazo (confirmar no Infnet online).
