@@ -1,0 +1,107 @@
+[
+  {
+    "discipline": "python",
+    "slug": "introducao",
+    "excerpt": "Resumo\n\nDisciplina: Introdução à Programação com Python (bloco Fundamentos de Processamento de Dados, Instituto Infnet). Objetivo: apresentar o universo da ciência da computação e dar os primeiros passos com Python (programas simples, strings, decisões, laços, modularização).\nProcesso de aprendizagem: Na EaD o aluno é o ator principal; só se aprende programando (prática, erro, revisão). Pirâmide de Glasser: só assistir retém ~5%; prática e ensinar elevam a retenção (até ~90%). Curva do aprendizado: início lento → aceleração → platô. Curva do esquecimento (Ebbinghaus): retenção cai com o…"
+  },
+  {
+    "discipline": "python",
+    "slug": "algoritmos-ambiente",
+    "excerpt": "Resumo\n\nCorreção (aula 1 → aula 2): Os TPs são obrigatórios (todos os três). Não valem pontos; são pré-requisitos para o AT. Quem não entrega qualquer TP até a segunda-feira da semana 10 está reprovado. TP atrasado: conceito limitado a DL (1 TP) ou D (2+ TPs); perde direito a feedback.\nAT atrasado: Entrega após o prazo mas antes do limite da reentrega = tratada como reentrega: conceito limitado a D, perde segunda tentativa. Reentrega = 1 semana após notificação.\nNíveis de competência (slide): ND (&lt; metade rubrica), D (≥ metade), DL (≥75%), DML (todos). Datas prováveis: TP1 16/02, TP2…"
+  },
+  {
+    "discipline": "python",
+    "slug": "variaveis-tipos",
+    "excerpt": "Resumo\n\nVariável: Abstração de local de armazenamento de dados na memória; o valor pode mudar durante a execução. Tipo de dado: significado (semântica) do valor; o computador usa para otimizar armazenamento e operações.\nTipos básicos Python:  (inteiro),  (ponto flutuante),  (True/False),  (cadeia de caracteres; aspas simples ou duplas). Ver tipo:\n\nou:\n\nComentários: Uma linha:  (tudo após na mesma linha é ignorado). Múltiplas linhas: docstring  ou . Texto sem  em linha de código gera SyntaxError (interpretador tenta executar como instrução).\nNomes de variáveis: Devem começar com letra ou…"
+  },
+  {
+    "discipline": "python",
+    "slug": "operadores-conversao-tipos",
+    "excerpt": "Resumo\n\nConversão de tipos: funções built-in , , ,  convertem um valor para o tipo indicado. Ex.:  →  (string);  →  (trunca);  → . Qualquer valor pode ser convertido para string; só strings que representam número convertem para int/float.\nTipagem forte: Python não converte string não numérica para número.\n\n→ ValueError. O erro ocorre na linha da conversão; as linhas seguintes não são executadas.\nOperadores aritméticos:  soma,  subtração,  multiplicação,  divisão (sempre retorna float em Python 3),  divisão inteira (piso),  resto (módulo),  exponenciação. Trabalham com tipos numéricos (int,…"
+  },
+  {
+    "discipline": "python",
+    "slug": "exercicios-strings",
+    "excerpt": "Resumo\n\nExercício 1 — ºC → ºF: Variável ; fórmula ;  com rótulos. Ex.: 0 ºC → 32.0 ºF; 100 ºC → 212.0 ºF.\nExercício 2 — Retângulo: Quatro variáveis para lados (ladoa = ladob, ladoc = ladod). Perímetro = soma dos quatro lados; área = base × altura (convenção: base = ladoc ou ladod, altura = ladoa ou ladob). Atribuição explícita ou encadeada (); na encadeada a avaliação é da direita para a esquerda.\nExercício 3 — Três números: Média = (n1 + n2 + n3) / 3. Média geométrica = (n1n2n3)(1/3). Desvio padrão = raiz quadrada da média dos desvios quadráticos em relação à média. Dobro da soma = 2(soma);…"
+  },
+  {
+    "discipline": "python",
+    "slug": "strings-escape-concatenacao",
+    "excerpt": "Resumo\n\nMapa da aula\n\nEscape sequences controlam caracteres especiais em strings (, , , )\nRaw string  desativa interpretação de escape — tudo literal\nConcatenação com  só entre strings;  → TypeError\nMultiplicação  repete a string (separadores, molduras)\nErro clássico: confundir  (quebra) com  (literal) ou concatenar int com str sem conversão\n\nResumo consolidado: Escape:  quebra linha,  tabulação,  barra literal,  aspa dentro de string com aspas simples. Raw string : nenhum escape interpretado. Concatenação:  junta strings; converter com  ou  conforme o objetivo. Multiplicação:  repete a…"
+  },
+  {
+    "discipline": "python",
+    "slug": "strings-indices-slice-metodos",
+    "excerpt": "Resumo\n\nMapa da aula\n\nString é cadeia de caracteres; cada posição tem índice (positivo e negativo)\nOperador  acessa um caractere; slice  extrai substring\nno slice é não-inclusivo; passo negativo inverte direção\ninverte a string — padrão idiomático cobrado em prova\né função builtin (não método);  é case-sensitive\n\nResumo consolidado: String = lista de caracteres indexada do 0 ao len-1 (positivos) e do -1 ao -len (negativos).  acessa posição i.  retorna substring: fim não-inclusivo, passo default 1, passo negativo inverte percurso. Métodos encadeados via ponto: , , , , , , , , , , .  é builtin…"
+  },
+  {
+    "discipline": "visualizacao-sql",
+    "slug": "roteiro-introducao",
+    "excerpt": "Resumo\r\n\r\nRoteiro da disciplina: Introdução à Visualização de Dados e SQL (Looker Studio + SQL). Trimestre de 11 semanas: conteúdo nas semanas 1–9, entrega do AT na semana 10, dúvidas/reentrega na semana 11.\r\nAvaliação: 3 TPs (obrigatórios, não valem pontos, pré-requisito para o AT); 1 AT (obrigatório, vale pontos). Entregar os três TPs é condição para poder fazer o AT.\r\nAcesso: Usar obrigatoriamente a conta de aluno do Infnet (Infnet Online). Looker Studio acessado via https://lookerstudio.google.com/ com esse usuário.\r\nMetodologia: Parte conceitual; parte prática (Looker Studio);…"
+  },
+  {
+    "discipline": "visualizacao-sql",
+    "slug": "contextualizacao-visualizacao-dados",
+    "excerpt": "Resumo\r\n\r\nOnde os dados ficam: Arquivo (ex.: CSV), banco de dados ou big data (semi/não estruturado). Dashboard consome dados dessas origens, muitas vezes após transformação (ETL).\r\nDashboard e decisão: Mostra informações para tomada de decisão; usa filtros (região, valor, data, modelo, etc.); associa negócio aos dados; BI (Business Intelligence) apoia gestores.\r\nDado é o início da jornada: 60–70% dos problemas estão nos dados de entrada; é preciso paciência para entender os dados e evitar achismo; documentação e exemplos podem ser confusos.\r\nProfissões: Engenheiro de dados (ambiente, ETL),…"
+  },
+  {
+    "discipline": "visualizacao-sql",
+    "slug": "primeiro-relatorio-csv-looker",
+    "excerpt": "Resumo\r\n\r\nObjetivo da aula: Concluir a Etapa 1: criar o primeiro relatório no Looker Studio usando um arquivo CSV (Ch1_ExampleCSV.csv). Acesso com conta Gmail do aluno Infnet; arquivos da disciplina em Infnet Online > Documentos > pasta da disciplina.\r\nTela inicial Looker Studio: https://lookerstudio.google.com/navigation/reporting. Galeria de modelos (templates); organizador de relatórios (nome, proprietário, última abertura); menu à esquerda (recentes, compartilhados, minha propriedade, lixeira, modelos); barra de pesquisa. Dar nome significativo ao relatório.\r\nCriar relatório: \"Relatório…"
+  },
+  {
+    "discipline": "visualizacao-sql",
+    "slug": "google-planilhas-metricas-dimensoes",
+    "excerpt": "Resumo\r\n\r\nEtapa 2: Visualizar dados de uma planilha Google Sheets no Looker e definir métrica, agregação e dimensões. Fonte: Google Planilhas (não Upload CSV).\r\nConector: Adicionar dados ao relatório → Google Planilhas → autorizar se necessário → TODOS OS ITENS → selecionar a planilha (ex.: DS - Coffee Shop) → Adicionar → ADICIONAR AO RELATÓRIO → Layout de formato livre.\r\nDimensão vs métrica: Dimensão = categorias/itens que segmentam os dados (Product Name, Product Type, UF, data). Métrica = números avaliados, com agregação (Count, Sum, Avg); analisados “em cima” das dimensões; não se agrupa…"
+  },
+  {
+    "discipline": "visualizacao-sql",
+    "slug": "preparar-dados-estruturar-relatorio",
+    "excerpt": "Resumo\r\n\r\nEtapa 3: Preparar dados, escolher/estruturar a fonte e projetar o relatório (aparência e ordem dos elementos). Inclui pesquisa online (empresa de viagens), uso de dados preparados (ex.: SurveyMonkey, planilhas) e noção de BigQuery (data warehouse serverless, ANSI SQL).\r\nPreparação de dados: Limpar dados antes de conectar ao Looker: um valor por célula, cabeçalhos únicos, formatos consistentes. Ferramentas como SurveyMonkey geram dados que precisam de limpeza.\r\nDesign do relatório: Definir cabeçalho (título, logo — ex.: ChrisCooperLogo.png), tema de cores (paleta consistente), rodapé…"
+  },
+  {
+    "discipline": "visualizacao-sql",
+    "slug": "relatorio-account-data-pratica",
+    "excerpt": "Resumo\r\n\r\nEtapa 3 prática: Montar um relatório no Looker usando Google Planilhas com os dados Chapter2-AccountData (conta corrente). Configurar campos (tipo e agregação), layout (largura/altura), tabela (dimensões + métricas) e scorecards (Saldo Médio, Máximo, Mínimo).\r\nFonte: Planilha no Google Planilhas criada a partir do Chapter2-AccountData.csv. No Looker: Adicionar dados → Google Planilhas → selecionar a planilha → Adicionar ao relatório.\r\nCampos (Dados): Em Recursos → Gerenciar dados → fonte → editar campo ou adicionar: Balance → Tipo Moeda (BRL), Agregação padrão Médio; Transaction…"
+  },
+  {
+    "discipline": "visualizacao-sql",
+    "slug": "dashboards-comparacao-campos-calculados-filtros",
+    "excerpt": "Resumo\r\n\r\nMapa da aula\r\n\r\nEtapa 4: dois dashboards criados a partir do 1.0 (cópia)\r\nDashboard 2.0: comparação temporal 2018 vs 2017, export PDF com senha\r\nDashboard 3.0: campos calculados CASE WHEN e ABS, filtros interativos\r\nErro clássico: usar Transaction Amount (valores negativos) em vez de ABS Amount\r\nFiltros interativos no 3.0 afetam todos os gráficos da página simultaneamente\r\n\r\n2.0 (estático): Copiar 1.0 → configurar página para 2018 → scorecards com \"Ano anterior\" + variação absoluta → série temporal comparada → tabela com mapa de calor e barras → export PDF.\r\n3.0 (interativo): Copiar…"
+  },
+  {
+    "discipline": "planejamento-curso-carreira",
+    "slug": "introducao-Infnet-estagio",
+    "excerpt": "Resumo\r\n\r\nTema: Primeira aula da disciplina de Planejamento de Curso e Carreira: apresentação da instituição Infnet, modelo por competências e projetos, bloco de entrada, estágio obrigatório (400h) e atividades complementares.\r\nProblema que resolve: Aluno saber como a graduação funciona (sem prova, sem TCC, por blocos e projetos), onde pedir documentos, como cumprir estágio já trabalhando na área e como contabilizar atividades complementares.\r\nIdeias-chave: Bloco = 5 disciplinas em 6 meses com projeto no final; avaliação por trabalhos a cada 2 semanas + TP; termo substitutivo de estágio para…"
+  },
+  {
+    "discipline": "planejamento-curso-carreira",
+    "slug": "navegacao-carreira-swot",
+    "excerpt": "Resumo\r\n\r\nTema: Segunda aula: esclarecimentos sobre atividades complementares e estágio; depois, navegação de carreira (objetivo, rota, não se perder nas possibilidades) e SWOT pessoal como ferramenta de planejamento; TP1.\r\nProblema que resolve: Evitar dispersão na carreira (curso aqui, curso lá sem rumo); saber onde consultar limites de atividades complementares; tirar dúvidas sobre termo substitutivo quando o cargo não é “de TI” na carteira; saber como fazer e entregar o TP1.\r\nIdeias-chave: Atividades complementares “pertinentes” incluem inglês (formação profissional); tabela/guia no Infnet…"
+  },
+  {
+    "discipline": "planejamento-curso-carreira",
+    "slug": "curriculo",
+    "excerpt": "Resumo\r\n\r\nTema: Currículo no processo seletivo: função (chamar atenção, ser “isca”), estrutura (dados, título, resumo/objetivo, formação, experiência, outros cursos), palavras-chave e ATS, conteúdo rico (SOAR/STAR), formato e boas práticas; dúvidas sobre migração de área, estágio e idade; TP2.\r\nProblema que resolve: Fazer um currículo que passe por ATS/IA e que o recrutador leia rápido; evitar dados desnecessários e inseguros; destacar quem você é além da função; adaptar a cada vaga sem mentir.\r\nIdeias-chave: Currículo = isca para gerar interesse; tem que ser claro, estruturado e compatível…"
+  },
+  {
+    "discipline": "projeto-bloco",
+    "slug": "introducao",
+    "excerpt": "Resumo\r\n\r\nProjeto de Bloco Fundamentos: integra disciplinas do semestre (Python, SQL, visualização); foco em conceito de projeto e em como empresas desenvolvem soluções, não só em tecnologia.\r\nEstrutura: etapas gradativas (não um único projeto de 6 meses); avaliação por Live Coding (plataforma cronometrada e monitorada, semelhante a testes de seleção).\r\nO que é projeto (mapa Metodologias): temporário, único, início/meio/fim, objetivo claro, elaboração progressiva, recursos definidos.\r\nMetodologia tradicional: cascata, requisitos fixos no início, resultados na conclusão. Metodologia ágil:…"
+  },
+  {
+    "discipline": "projeto-bloco",
+    "slug": "metodologias-ferramentas",
+    "excerpt": "Resumo\r\n\r\nMetodologia ágil (visão de mercado): histórias de usuário → requisitos → backlog; equipe em Squad (devs, DBAs, testers, Scrum Master, PO); daily (~15 min): o que fez ontem, impedimentos, o que fará hoje; sprints de 2–4 semanas com entrega ao final; dentro da sprint cabem análise, desenvolvimento, teste e deploy.\r\nScrum Master: remove impedimentos, ajuda a equipe, não é gestor; PO (Product Owner): ligação com mercado/cliente, traz prioridades e pode mudar backlog.\r\nScrum (certificação comum) e Kanban (quadro: backlog, desenvolvimento, teste, deploy); Scrumban = uso combinado (citado…"
+  },
+  {
+    "discipline": "projeto-bloco",
+    "slug": "pipeline-dados-bancos",
+    "excerpt": "Resumo\r\n\r\nPipeline de dados: origem (onde os dados são armazenados — bancos) → processamento (carga, transformação, ETL) → destino (onde são consumidos — dashboards, relatórios). Looker Studio = ferramenta de destino (visualização); projeto de bloco foca na origem (SQL, Python) e no fluxo até o destino.\r\nBancos relacionais (SQL Server, Oracle, MySQL, PostgreSQL): estrutura rígida, relações entre tabelas; linguagem padrão = SQL (ANSI). Bancos não relacionais (ex.: MongoDB): documentos (JSON/BSON), esquema flexível; linguagem própria.\r\nSQL padrão permite desenvolver para todos os relacionais;…"
+  },
+  {
+    "discipline": "projeto-bloco",
+    "slug": "laboratorio-ide-variaveis",
+    "excerpt": "Resumo\n\nMapa da aula\n\nLinux: SO padrão em servidores de dados (não-Microsoft)\nMáquina virtual: SO isolado dentro da máquina física\nLaboratório = motor instalado + IDE; sem motor, IDE não funciona\nIDEs Python: VS Code (extensão), PyCharm, Jupyter, Colab, Mu\nVariável: Python sem tipo; SQL Server com DECLARE, @, tipo obrigatórios\n\nLinux vs Windows: servidores não-Microsoft (Postgres, MySQL, Oracle) → Linux; SQL Server → Windows; Red Hat em produção; aprende em ~2 semanas; Linux consome menos recurso que VM Windows.\nMáquinas virtuais: SO isolado dentro da máquina física; usa CPU/RAM/disco do…"
+  }
+]

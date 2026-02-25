@@ -46,27 +46,48 @@ function initHome() {
 
   const minChars = 2;
 
-  function getSearchMatches(disciplines, lessons, q) {
+  function getExcerptSnippet(excerpt, qLower, maxLen = 100) {
+    if (!excerpt) return '';
+    const idx = excerpt.toLowerCase().indexOf(qLower);
+    if (idx === -1) return '';
+    const start = Math.max(0, idx - 30);
+    const end = Math.min(excerpt.length, idx + qLower.length + 70);
+    const raw = (start > 0 ? '…' : '') + excerpt.slice(start, end) + (end < excerpt.length ? '…' : '');
+    const before = escapeHtml(raw.slice(0, raw.toLowerCase().indexOf(qLower)));
+    const match = escapeHtml(raw.slice(raw.toLowerCase().indexOf(qLower), raw.toLowerCase().indexOf(qLower) + qLower.length));
+    const after = escapeHtml(raw.slice(raw.toLowerCase().indexOf(qLower) + qLower.length));
+    return before + '<strong>' + match + '</strong>' + after;
+  }
+
+  function getSearchMatches(disciplines, lessons, searchIndex, q) {
     const qLower = q.trim().toLowerCase();
     if (qLower.length < minChars) return [];
+    const indexMap = new Map(searchIndex.map((e) => [`${e.discipline}/${e.slug}`, e.excerpt || '']));
     const flat = lessons.map((lesson) => ({
       lesson,
       discipline: getDiscipline(disciplines, lesson.discipline),
     })).filter((item) => item.discipline);
-    return flat.filter(
-      (item) =>
+    return flat.filter((item) => {
+      const key = `${item.lesson.discipline}/${item.lesson.slug}`;
+      const excerpt = indexMap.get(key) || '';
+      return (
         item.lesson.title.toLowerCase().includes(qLower) ||
-        (item.discipline && (
-          item.discipline.title.toLowerCase().includes(qLower) ||
-          (item.discipline.professor && item.discipline.professor.toLowerCase().includes(qLower))
-        ))
-    );
+        (item.discipline.title.toLowerCase().includes(qLower)) ||
+        (item.discipline.professor && item.discipline.professor.toLowerCase().includes(qLower)) ||
+        excerpt.toLowerCase().includes(qLower)
+      );
+    }).map((item) => {
+      const key = `${item.lesson.discipline}/${item.lesson.slug}`;
+      const excerpt = indexMap.get(key) || '';
+      return { ...item, excerpt };
+    });
   }
 
-  function runSearch(disciplines, lessons) {
+  function runSearch(disciplines, lessons, searchIndex) {
     if (!searchInput || !searchResultsEl) return;
     const q = searchInput.value.trim();
-    const matches = getSearchMatches(disciplines, lessons, q);
+    const matches = getSearchMatches(disciplines, lessons, searchIndex, q);
+    const qLower = q.trim().toLowerCase();
     if (q.length < minChars) {
       searchResultsEl.classList.add('hidden');
       searchResultsEl.innerHTML = '';
@@ -79,8 +100,12 @@ function initHome() {
       searchResultsEl.innerHTML =
         '<ul class="iss-search-results-list">' +
         matches
-          .map(
-            (item) =>
+          .map((item) => {
+            const snippet = getExcerptSnippet(item.excerpt, qLower);
+            const snippetHtml = snippet
+              ? '<span class="block text-xs iss-text-muted mt-1" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + snippet + '</span>'
+              : '';
+            return (
               '<li class="iss-search-result-item">' +
               '<a href="aula.html?d=' +
               encodeURIComponent(item.lesson.discipline) +
@@ -89,15 +114,22 @@ function initHome() {
               '" class="iss-search-result-link block no-underline py-2.5 px-2 rounded">' +
               '<span class="block text-xs iss-text-muted mb-0.5">' + escapeHtml(item.discipline.title) + '</span>' +
               '<span class="block text-sm font-medium iss-text-foreground">' + escapeHtml(item.lesson.title) + '</span>' +
+              snippetHtml +
               '</a></li>'
-          )
+            );
+          })
           .join('') +
         '</ul>';
     }
   }
 
-  Promise.all([fetchDisciplines(), fetchLessons()])
-    .then(([disciplines, lessons]) => {
+  Promise.all([fetchDisciplines(), fetchLessons(), fetchSearchIndex()])
+    .then(([disciplines, lessons, searchIndex]) => {
+      const statsEl = document.getElementById('iss-library-stats');
+      if (statsEl) {
+        statsEl.textContent = `${lessons.length} aulas · ${disciplines.length} disciplinas`;
+      }
+
       const last = getLastVisited();
       let lesson = null;
       let discipline = null;
@@ -137,27 +169,30 @@ function initHome() {
         container.innerHTML = dashboardCardHtml + continueCardHtml || '<p class="iss-text-muted">Nenhuma disciplina disponível.</p>';
       } else {
         const disciplinesHtml = disciplines
-          .map(
-            (d) => `
+          .map((d) => {
+            const count = lessons.filter((l) => l.discipline === d.slug).length;
+            const countLabel = count + ' aula' + (count !== 1 ? 's' : '');
+            return `
         <a href="disciplina.html?d=${encodeURIComponent(d.slug)}" class="iss-card block no-underline text-inherit">
           <h3 class="font-semibold text-lg m-0">${escapeHtml(d.title)}</h3>
           ${d.description ? `<p class="text-sm iss-text-muted mt-1 mb-0">${escapeHtml(d.description)}</p>` : ''}
+          <p class="text-xs iss-text-muted mt-2 mb-0">${escapeHtml(countLabel)}</p>
         </a>
-      `
-          )
+      `;
+          })
           .join('');
         container.innerHTML = dashboardCardHtml + continueCardHtml + disciplinesHtml;
       }
 
       if (searchInput && searchResultsEl) {
         const searchWrapper = searchInput.closest('.relative');
-        searchInput.addEventListener('input', () => runSearch(disciplines, lessons));
-        searchInput.addEventListener('search', () => runSearch(disciplines, lessons));
+        searchInput.addEventListener('input', () => runSearch(disciplines, lessons, searchIndex));
+        searchInput.addEventListener('search', () => runSearch(disciplines, lessons, searchIndex));
         searchInput.addEventListener('keydown', (e) => {
           if (e.key !== 'Enter') return;
           e.preventDefault();
           const q = searchInput.value.trim();
-          const matches = getSearchMatches(disciplines, lessons, q);
+          const matches = getSearchMatches(disciplines, lessons, searchIndex, q);
           if (matches.length === 0) return;
           const first = matches[0];
           window.location.href =

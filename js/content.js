@@ -51,3 +51,8 @@ function getDiscipline(disciplines, slug) {
 async function fetchLessonMarkdown(disciplineSlug, filename) {
   return fetchText(`${disciplineSlug}/${filename}`);
 }
+
+async function fetchSearchIndex() {
+  const data = await fetchJSON('search-index.json');
+  return Array.isArray(data) ? data : [];
+}
