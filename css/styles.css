@@ -326,6 +326,10 @@ body.iss-focus-mode .iss-focus-exit:hover {
     grid-column: 2;
     grid-row: 1;
   }
+
+  .iss-back-to-top {
+    right: calc(220px + 1.5rem);
+  }
 }
 
 /* Outline sidebar */
@@ -336,11 +340,9 @@ body.iss-focus-mode .iss-focus-exit:hover {
   position: sticky;
   top: 72px;
   max-height: calc(100vh - 72px);
-  overflow-y: auto;
+  overflow-y: hidden;
   padding: 1.5rem 0 1.5rem 1.5rem;
   font-size: var(--text-small);
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-border) transparent;
 }
 
 /* Mostrar apenas em telas grandes */
