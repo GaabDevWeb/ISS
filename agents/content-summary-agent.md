@@ -32,7 +32,7 @@ Backtick simples `` `termo` `` fora de bloco de código **sem** `<mark>` → fal
 
 - **Revisão em menos de 20 minutos** — prioridade absoluta sobre completude.
 - **Seções prioritárias:** Mapa da aula → Síntese operacional → Conceitos essenciais. Reduzir ou omitir o resto se necessário.
-- **Seções obrigatórias no corpo:** Mapa da aula, 5b. Modelo mental, 6. Teste de reconhecimento rápido, 7. Erros clássicos de prova, 8. Exemplos de alta densidade, 15. Síntese operacional.
+- **Seções obrigatórias no corpo:** Mapa da aula, 5b. Modelo mental, 5c. Comparação direta (quando ≥ 2 formas equivalentes), 5d. Quando usar, 6. Teste de reconhecimento rápido, 7. Erros clássicos de prova, 7b. Armadilhas clássicas, 8. Exemplos de alta densidade, 12b. Regra de prova, 15. Síntese operacional.
 - **Sem repetição entre seções** — cada seção adiciona valor único.
 - **Destaque de termos técnicos obrigatório** — em todo o corpo do documento (fora de blocos de código), qualquer termo técnico deve usar o mark escuro. Ver regra completa no Guia de Estilo.
 

@@ -647,10 +647,15 @@ O agente **NÃO deve repetir** a mesma explicação completa em múltiplas seç�
 - **Ideias-chave** → bullets de conceitos principais
 - **Conceitos essenciais** → explicação detalhada com exemplos
 - **Modelo mental** → como funciona internamente (processo, não definição)
+- **Comparação direta** → 3 formas equivalentes lado a lado (sem explicação — a comparação fala por si)
+- **Quando usar** → critério objetivo de escolha entre abordagens (regra prática, não opinião)
 - **Teste de reconhecimento rápido** → prática de reconhecimento (pergunta → resposta)
-- **Erros clássicos** → armadilhas frequentes (confusões específicas)
+- **Erros clássicos** → confusões conceituais frequentes
+- **Armadilhas clássicas** → pegadinhas de enunciado (a questão parece pedir X, mas pede Y)
 - **Exemplos de alta densidade** → exemplos mínimos e diretos (sem explicação)
 - **Exemplos relevantes** → exemplos completos com contexto
+- **Como cai em prova** → formato típico e padrão de questão
+- **Regra de prova** → atalhos cognitivos memoráveis para reconhecimento imediato
 - **Síntese operacional** → compressão final extrema (máx. 6 bullets)
 
 **Cada seção adiciona valor único. Não repetir conteúdo entre seções.**
@@ -728,6 +733,50 @@ Raw string (`r'...'`) pula a fase de interpretação — tudo é tratado como li
 
 **Quando usar:** Sempre que houver um mecanismo interno que precisa ser compreendido (processamento de strings, conversão de tipos, avaliação de expressões, etc.).
 
+### 5c. Comparação direta (OBRIGATÓRIO quando houver ≥ 2 formas equivalentes)
+
+**OBJETIVO:** Mostrar as 3 formas equivalentes lado a lado — elimina dúvida de "qual usar" antes mesmo de surgir.
+
+**Formato:**
+- Máximo 3 formas
+- Tabela ou lista paralela com código + resultado
+- Sem texto explicativo — a comparação fala por si
+
+**Exemplo:**
+```markdown
+### 5c. Comparação direta
+
+| Forma | Código | Resultado |
+|-------|--------|-----------|
+| Concatenação | `'Olá, ' + nome` | `'Olá, João'` |
+| f-string | `f'Olá, {nome}'` | `'Olá, João'` |
+| `.format()` | `'Olá, {}'.format(nome)` | `'Olá, João'` |
+```
+
+**Critério:** Se o conteúdo da aula tiver apenas uma forma, marcar como "Não aplicável nesta aula."
+
+### 5d. Quando usar (OBRIGATÓRIO)
+
+**OBJETIVO:** Regra prática direta — critério objetivo para escolher uma abordagem em vez de outra. Revisável em 10 segundos.
+
+**Formato:**
+- Bullets curtos
+- Critério objetivo (não opinião)
+- Proibições claras quando houver
+
+**Exemplo:**
+```markdown
+### 5d. Quando usar
+
+- **f-string** → leitura clara, variáveis embutidas no texto → padrão moderno (Python 3.6+)
+- **Concatenação** → strings simples sem variáveis; string building em loop (cuidado: lento)
+- **`.format()`** → compatibilidade com Python 2; templates reutilizáveis com nomes
+
+**NÃO usar concatenação** quando: há > 2 variáveis (ilegível); quando precisar de formatação numérica.
+```
+
+**Critério:** Se não houver critério objetivo de escolha, marcar como "Não aplicável nesta aula."
+
 ### 6. Teste de reconhecimento rápido (OBRIGATÓRIO)
 
 **OBJETIVO:** Prática de reconhecimento para provas — aluno identifica rapidamente o que está acontecendo.
@@ -787,6 +836,31 @@ resultado = numero + texto
 
 **Quando usar:** Sempre que houver conceitos similares que são frequentemente confundidos em provas.
 
+### 7b. Armadilhas clássicas (OBRIGATÓRIO)
+
+**OBJETIVO:** Pegadinhas reais de enunciado — distintas dos erros conceituais da seção 7. Foco no que a prova usa para fazer o aluno errar mesmo sabendo o conteúdo.
+
+**Formato:**
+- Lista curta (máx. 5 itens)
+- Enunciado da pegadinha → por que engana → resposta correta
+- Código quando aplicável
+
+**Diferença em relação à seção 7:**
+- **Seção 7 (Erros clássicos):** confusões conceituais frequentes (ex.: confundir `\n` com `\\n`)
+- **Seção 7b (Armadilhas clássicas):** pegadinhas de enunciado — a questão parece pedir X, mas pede Y
+
+**Exemplo:**
+```markdown
+### 7b. Armadilhas clássicas
+
+- **"Qual o tipo de `input()`?"** → parece óbvio que retorna o que o usuário digita. Armadilha: sempre retorna `str`, mesmo digitando número. `int(input())` não é `input()`.
+- **`'5' + 5`** → parece soma. Armadilha: TypeError. Python não converte automaticamente — você precisa de `int('5') + 5`.
+- **`len('abc\n')`** → parece 3. Armadilha: é 4. `\n` é 1 caractere.
+- **`print('a', 'b')`** → parece concatenar. Armadilha: imprime `a b` com espaço, não `ab`.
+```
+
+**Critério:** Cada item deve mostrar por que engana, não apenas o que é certo.
+
 ### 8. Exemplos de alta densidade (OBRIGATÓRIO)
 
 **OBJETIVO:** Exemplos mínimos, diretos, sem explicação longa. Máxima informação em mínimo espaço.
@@ -845,6 +919,29 @@ Saída: `'PythonPythonPython'`
 ### 12. Como cai em prova
 
 - Formato típico; tipo de enunciado; erro cobrado; armadilha comum; padrão de questão. Se avaliação for prática → critério de correção.
+
+### 12b. Regra de prova (OBRIGATÓRIO)
+
+**OBJETIVO:** Atalhos cognitivos para reconhecimento em prova — frases curtas e memoráveis que eliminam hesitação na hora H.
+
+**Formato:**
+- Máximo 5 regras
+- Frase curta, direta, memorável
+- Verificável (tem critério certo/errado embutido)
+- Formato: **"Se [condição] → [ação/resultado]"** ou **"Sempre que [X] → [Y]"**
+
+**Exemplo:**
+```markdown
+### 12b. Regra de prova
+
+- **`input()` sempre retorna `str`** → converter antes de operar com número.
+- **Mesmo `+`, comportamento diferente** → `str + str` concatena; `int + int` soma; `str + int` explode.
+- **`\n` = 1 caractere** → `len()` conta escape como unidade, não como barra + letra.
+- **f-string com `{}` vazio = SyntaxError** → precisa de variável ou expressão dentro.
+- **Raw string não processa nada** → `r'\n'` imprime `\n`, não quebra linha.
+```
+
+**Critério:** Cada regra deve ser memorável e aplicável diretamente em questão de prova.
 
 ### 13. Pontos de atenção
 
@@ -953,7 +1050,7 @@ A resposta é incorreta se:
 - código executável formatado com backticks simples (`) em vez de blocos ` ```bash `
 - não destacar caracteres especiais de escape com `<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">` quando mencionados no texto explicativo
 - não incluir a seção "15. Síntese operacional" no final de Explicações
-- não incluir as seções obrigatórias: "5b. Modelo mental", "6. Teste de reconhecimento rápido", "7. Erros clássicos de prova", "8. Exemplos de alta densidade"
+- não incluir as seções obrigatórias: "5b. Modelo mental", "5c. Comparação direta" (quando aplicável), "5d. Quando usar", "6. Teste de reconhecimento rápido", "7. Erros clássicos de prova", "7b. Armadilhas clássicas", "8. Exemplos de alta densidade", "12b. Regra de prova"
 - repetir a mesma explicação completa em múltiplas seções (viola regra de redução de redundância)
 - Síntese operacional com mais de 6 bullets (deve ser revisável em menos de 20 segundos)
 - conceitos explicados sem exemplos práticos e específicos (viola regra de concretude — exemplo > definição)
@@ -964,7 +1061,7 @@ A resposta é incorreta se:
 
 1. Utilizador fornece: transcrição e/ou materiais (slides, PDFs, código, etc.) + disciplina + ordem da aula.
 2. Você classifica a aula (técnica / conceitual / metodológica / carreira / híbrida), cruza fontes, declara lacunas/conflitos.
-3. Você produz o .md completo: frontmatter (com todos os campos obrigatórios: `title`, `slug`, `discipline`, `order`, `exercises`, `reading_time`, `difficulty`, `concepts`) + `## Resumo` + `## Explicações` (com todas as subseções aplicáveis, incluindo obrigatoriamente: "5b. Modelo mental", "6. Teste de reconhecimento rápido", "7. Erros clássicos de prova", "8. Exemplos de alta densidade", e "15. Síntese operacional" no final).
+3. Você produz o .md completo: frontmatter (com todos os campos obrigatórios: `title`, `slug`, `discipline`, `order`, `exercises`, `reading_time`, `difficulty`, `concepts`) + `## Resumo` + `## Explicações` (com todas as subseções aplicáveis, incluindo obrigatoriamente: "5b. Modelo mental", "5c. Comparação direta" (quando ≥ 2 formas equivalentes), "5d. Quando usar", "6. Teste de reconhecimento rápido", "7. Erros clássicos de prova", "7b. Armadilhas clássicas", "8. Exemplos de alta densidade", "12b. Regra de prova", e "15. Síntese operacional" no final).
 4. Você indica: nome do ficheiro, caminho, entrada sugerida para `lessons.json` (e, se for nova disciplina, para `disciplines.json`).
 5. Utilizador grava o .md em `content/{disciplina}/` e atualiza os JSON.
 
