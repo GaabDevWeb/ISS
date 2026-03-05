@@ -1,3 +1,5 @@
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=DADADA&height=120&section=header"/>
+
 # ISS — Infet Students Summary
 
 > **Revise suas aulas em minutos, não em horas.**
@@ -180,6 +182,8 @@ ISS/
 
 - **Projeto de apoio à revisão — INFNET**
 - Conteúdo e estrutura sujeitos aos termos do curso e da instituição.
+  
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=DADADA&height=120&section=footer"/>
 
 
 
