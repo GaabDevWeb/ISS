@@ -51,6 +51,52 @@ Layout adaptado para diferentes larguras de tela (desktop e mobile).
 
 ---
 
+## ⚙️ Detalhes técnicos
+
+### Arquitetura
+
+- **Multi-página**: três HTMLs (`index.html`, `disciplina.html`, `aula.html`) com navegação via `location.href`. Sem framework SPA; roteamento por query string.
+- **Conteúdo estático**: aulas em Markdown (`.md`) e metadados em JSON; carregados em runtime com `fetch`. Nenhum build ou bundler — o site pode ser servido como ficheiros estáticos (ex.: GitHub Pages).
+- **Páginas**:
+  - **Home**: carrega `disciplines.json` + `lessons.json` + `search-index.json`; monta cards e liga a pesquisa.
+  - **Disciplina**: recebe `?d=<slug>`; filtra aulas por disciplina e lista com progresso/tempo.
+  - **Aula**: recebe `?d=<slug>&a=<slug>`; faz fetch do `.md` correspondente, converte para HTML (Markdown) e monta o índice lateral a partir dos cabeçalhos.
+
+### Modelo de dados
+
+| Ficheiro | Função |
+|----------|--------|
+| `content/disciplines.json` | Lista de disciplinas: `slug`, `title`, `description`, `professor`, `order`. |
+| `content/lessons.json` | Lista de aulas: `discipline`, `slug`, `title`, `order`, `file` (nome do `.md`). |
+| `content/search-index.json` | Índice de pesquisa: `discipline`, `slug`, `excerpt` (texto para busca). |
+
+Cada aula vive em `content/<disciplina>/<file>`, por exemplo `content/python/aula-01-introducao.md`.
+
+### Roteamento
+
+- **Parâmetros de URL**:
+  - `d` — slug da disciplina (ex.: `python`, `planejamento-curso-carreira`).
+  - `a` — slug da aula (ex.: `variaveis-tipos`); usado apenas em `aula.html`.
+- **Navegação**: `Router.navigateToDisciplina(slug)`, `Router.navigateToAula(disciplineSlug, lessonSlug)`, `Router.navigateHome()`; leitura com `Router.getParam(name)`.
+
+### Pesquisa
+
+- A pesquisa usa `search-index.json`: cada entrada tem `discipline`, `slug` e `excerpt`.
+- Filtro no cliente: compara o termo (mín. 2 caracteres) com `title` da aula, `title`/`professor` da disciplina e `excerpt`; resultados agrupados por disciplina e exibidos em dropdown.
+- Sem servidor de busca: tudo em memória após o carregamento inicial.
+
+### Estado (localStorage)
+
+| Chave | Uso |
+|-------|-----|
+| `iss-last-visited` | Última aula visitada `{ discipline, lesson }` para “Continuar a ler”. |
+| `iss-read-lessons` | Array de IDs `discipline_slug` para marcar aulas como lidas e calcular progresso. |
+| `iss-reviewed-exercises` | Set de IDs de exercícios marcados como revistos. |
+
+O progresso (percentagem, tempo estimado) é derivado das aulas marcadas como lidas e dos metadados em `lessons.json` (e duração padrão quando não definida).
+
+---
+
 ## 🛠 Stack e estrutura
 
 | Área | Tecnologias / convenções |
@@ -135,6 +181,5 @@ ISS/
 - **Projeto de apoio à revisão — INFNET**
 - Conteúdo e estrutura sujeitos aos termos do curso e da instituição.
 
----
 
-*README gerado para o repositório [ISS](https://github.com/GaabDevWeb/ISS).*
+
