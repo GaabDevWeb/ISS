@@ -30,10 +30,21 @@
     global.location.href = 'index.html';
   }
 
+  function navigateToExercises() {
+    global.location.href = 'exercises.html';
+  }
+
+  function navigateToExercise(slug) {
+    if (!slug) return;
+    global.location.href = 'exercise.html?slug=' + encodeURIComponent(slug);
+  }
+
   global.Router = {
     getParam: getParam,
     navigateToDisciplina: navigateToDisciplina,
     navigateToAula: navigateToAula,
     navigateHome: navigateHome,
+    navigateToExercises: navigateToExercises,
+    navigateToExercise: navigateToExercise,
   };
 })(typeof window !== 'undefined' ? window : this);

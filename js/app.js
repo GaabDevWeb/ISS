@@ -38,11 +38,17 @@ function setLastVisited(disciplineSlug, lessonSlug) {
   } catch (_) {}
 }
 
+function normalizeConcepts(concepts) {
+  if (Array.isArray(concepts)) return concepts.map((c) => String(c).trim()).filter(Boolean);
+  if (typeof concepts === 'string') return concepts.split(',').map((s) => s.trim()).filter(Boolean);
+  return [];
+}
+
 function initHome() {
-  const container = document.getElementById('disciplines-list');
+  const grid = document.getElementById('home-cards-grid');
   const searchInput = document.getElementById('iss-search');
   const searchResultsEl = document.getElementById('search-results');
-  if (!container) return;
+  if (!grid) return;
 
   const minChars = 2;
 
@@ -123,8 +129,9 @@ function initHome() {
     }
   }
 
-  Promise.all([fetchDisciplines(), fetchLessons(), fetchSearchIndex()])
-    .then(([disciplines, lessons, searchIndex]) => {
+  Promise.all([fetchDisciplines(), fetchLessons(), fetchSearchIndex(), typeof fetchExercises === 'function' ? fetchExercises() : Promise.resolve([])])
+    .then(([disciplines, lessons, searchIndex, exercises]) => {
+      const exerciseList = Array.isArray(exercises) ? exercises : [];
       const statsEl = document.getElementById('iss-library-stats');
       if (statsEl) {
         statsEl.textContent = `${lessons.length} aulas · ${disciplines.length} disciplinas`;
@@ -153,9 +160,12 @@ function initHome() {
         : 0;
       const progressPercent = totalLessons > 0 ? Math.round((readCount / totalLessons) * 100) : 0;
       const studiedMinutes = readCount * DEFAULT_MINUTES_PER_LESSON;
-      const exercisesCompleted = typeof getReviewedExerciseIds !== 'undefined'
-        ? getReviewedExerciseIds().size
-        : 0;
+      const exercisesCompleted =
+        typeof isExerciseCompleted !== 'undefined' && exerciseList.length > 0
+          ? exerciseList.filter((ex) => isExerciseCompleted(ex.slug)).length
+          : typeof getCompletedExerciseSlugs !== 'undefined'
+            ? getCompletedExerciseSlugs().size
+            : 0;
 
       const dashboardCardHtml =
         '<div class="iss-card iss-card--static">' +
@@ -163,25 +173,72 @@ function initHome() {
           '<p class="text-sm iss-text-muted mt-1 mb-0">Progresso geral ' + progressPercent + '%</p>' +
           '<p class="text-sm iss-text-muted mt-1 mb-0">Tempo estudado ' + formatDurationMinutes(studiedMinutes) + '</p>' +
           '<p class="text-sm iss-text-muted mt-1 mb-0">' + exercisesCompleted + ' exercícios concluídos</p>' +
+          '<a href="stats.html" class="iss-link block mt-3 text-sm hover:underline">Ver Estatísticas Completas</a>' +
         '</div>';
 
-      if (disciplines.length === 0) {
-        container.innerHTML = dashboardCardHtml + continueCardHtml || '<p class="iss-text-muted">Nenhuma disciplina disponível.</p>';
-      } else {
-        const disciplinesHtml = disciplines
-          .map((d) => {
-            const count = lessons.filter((l) => l.discipline === d.slug).length;
-            const countLabel = count + ' aula' + (count !== 1 ? 's' : '');
-            return `
-        <a href="disciplina.html?d=${encodeURIComponent(d.slug)}" class="iss-card block no-underline text-inherit">
-          <h3 class="font-semibold text-lg m-0">${escapeHtml(d.title)}</h3>
-          ${d.description ? `<p class="text-sm iss-text-muted mt-1 mb-0">${escapeHtml(d.description)}</p>` : ''}
-          <p class="text-xs iss-text-muted mt-2 mb-0">${escapeHtml(countLabel)}</p>
-        </a>
-      `;
-          })
-          .join('');
-        container.innerHTML = dashboardCardHtml + continueCardHtml + disciplinesHtml;
+      const continuePlaceholderHtml =
+        '<div class="iss-card iss-card--static">' +
+          '<h3 class="font-semibold text-lg m-0">Continuar a ler</h3>' +
+          '<p class="text-sm iss-text-muted mt-1 mb-0">Abra uma aula para continuar de onde parou.</p>' +
+        '</div>';
+
+      const exercisesCount = exerciseList.length;
+      const exercisesProgressPercent = exercisesCount > 0 ? Math.round((exercisesCompleted / exercisesCount) * 100) : 0;
+      const nextMilestone = exercisesCount > 0 ? Math.min(exercisesCount, Math.ceil((exercisesCompleted + 1) / 10) * 10) : 0;
+      const remainingToMilestone = nextMilestone - exercisesCompleted;
+      const nextGoalText =
+        exercisesCount > 0 && exercisesCompleted >= exercisesCount
+          ? 'Meta atingida! Todos concluídos.'
+          : exercisesCount > 0 && nextMilestone > 0
+            ? (remainingToMilestone === 1 ? 'Falta 1 para ' + nextMilestone + ' concluídos' : 'Faltam ' + remainingToMilestone + ' para ' + nextMilestone + ' concluídos')
+            : '';
+      const exercisesCardHtml =
+        '<a href="exercises.html" class="iss-card block no-underline text-inherit iss-home-cards__exercises-card">' +
+          '<h3 class="font-semibold text-lg m-0">Exercícios</h3>' +
+          '<p class="text-sm iss-text-muted mt-1 mb-0">Pratique conceitos das aulas resolvendo exercícios no seu editor.</p>' +
+          (nextGoalText ? '<p class="text-sm iss-text-foreground mt-2 mb-0">' + nextGoalText + '</p>' : '') +
+          '<div class="mt-auto pt-4">' +
+            '<div role="progressbar" aria-valuenow="' + exercisesProgressPercent + '" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso dos exercícios">' +
+              '<div class="w-full h-2 rounded-full overflow-hidden" style="background: var(--color-border);">' +
+                '<div class="h-full rounded-full transition-[width] duration-300" style="width:' + exercisesProgressPercent + '%; background: var(--color-accent);"></div>' +
+              '</div>' +
+            '</div>' +
+            '<p class="text-sm font-medium iss-text-foreground mt-2 mb-0">' + exercisesCompleted + ' / ' + exercisesCount + ' concluídos</p>' +
+            '<button type="button" id="iss-home-random-exercise-btn" class="iss-home-random-btn mt-3 w-full py-2 px-3 rounded font-medium text-sm border border-[var(--color-accent)] bg-[var(--color-accent)] text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--color-background)] focus:ring-[var(--color-accent)]">Desafio Aleatório</button>' +
+          '</div>' +
+        '</a>';
+
+      function buildDisciplineCard(d) {
+        const count = lessons.filter((l) => l.discipline === d.slug).length;
+        const countLabel = count + ' aula' + (count !== 1 ? 's' : '');
+        return '<a href="disciplina.html?d=' + encodeURIComponent(d.slug) + '" class="iss-card block no-underline text-inherit">' +
+          '<h3 class="font-semibold text-lg m-0">' + escapeHtml(d.title) + '</h3>' +
+          (d.description ? '<p class="text-sm iss-text-muted mt-1 mb-0">' + escapeHtml(d.description) + '</p>' : '') +
+          '<p class="text-xs iss-text-muted mt-2 mb-0">' + escapeHtml(countLabel) + '</p>' +
+        '</a>';
+      }
+
+      const cards = [dashboardCardHtml, continueCardHtml || continuePlaceholderHtml];
+      disciplines.slice(0, 2).forEach((d) => cards.push(buildDisciplineCard(d)));
+      while (cards.length < 4) cards.push(cards.length === 2 ? dashboardCardHtml : continuePlaceholderHtml);
+      disciplines.slice(2, 4).forEach((d) => cards.push(buildDisciplineCard(d)));
+      while (cards.length < 6) cards.push(cards.length === 4 ? dashboardCardHtml : continuePlaceholderHtml);
+      cards.push(exercisesCardHtml);
+
+      grid.innerHTML = cards.join('');
+
+      const randomExerciseBtn = document.getElementById('iss-home-random-exercise-btn');
+      if (randomExerciseBtn && exerciseList.length > 0) {
+        randomExerciseBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const completedSet = typeof getCompletedExerciseSlugs === 'function' ? getCompletedExerciseSlugs() : new Set();
+          const unresolved = exerciseList.filter(function (ex) { return !completedSet.has(ex.slug); });
+          const pool = unresolved.length > 0 ? unresolved : exerciseList;
+          const ex = pool[Math.floor(Math.random() * pool.length)];
+          if (typeof Router !== 'undefined' && Router.navigateToExercise) Router.navigateToExercise(ex.slug);
+          else window.location.href = 'exercise.html?slug=' + encodeURIComponent(ex.slug);
+        });
       }
 
       if (searchInput && searchResultsEl) {
@@ -209,7 +266,7 @@ function initHome() {
       }
     })
     .catch((err) => {
-      container.innerHTML = '<p class="text-red-600">Erro ao carregar disciplinas.</p>';
+      grid.innerHTML = '<p class="text-red-600">Erro ao carregar disciplinas.</p>';
       console.error(err);
     });
 }
@@ -345,9 +402,60 @@ function initAula() {
     .then((data) => {
       if (!data) return;
       const { raw, lesson, prevLesson, nextLesson, lessonIndex, totalLessons } = data;
-      return fetchDisciplines().then((disciplines) => {
+      return Promise.all([
+        typeof fetchDisciplines === 'function' ? fetchDisciplines() : Promise.resolve([]),
+        typeof fetchExercises === 'function' ? fetchExercises() : Promise.resolve([]),
+      ]).then(([disciplines, exercises]) => {
         const discipline = getDiscipline(disciplines, d);
         renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson, lessonIndex, totalLessons });
+
+        const completedRaw = (function () {
+          try {
+            return JSON.parse(localStorage.getItem('iss-exercises-completed') || '[]');
+          } catch {
+            return [];
+          }
+        })();
+        const completedSet = new Set(Array.isArray(completedRaw) ? completedRaw : []);
+        const frontmatter = typeof parseFrontmatter === 'function' ? parseFrontmatter(raw).frontmatter : {};
+        const lessonConcepts = normalizeConcepts(frontmatter.concepts);
+        const exerciseList = Array.isArray(exercises) ? exercises : [];
+        const byDiscipline = exerciseList.filter((e) => e && e.discipline === d);
+        const sorted = byDiscipline.sort((a, b) => {
+          const aDone = completedSet.has(a.slug);
+          const bDone = completedSet.has(b.slug);
+          if (aDone !== bDone) return aDone ? 1 : -1;
+          const aConcepts = normalizeConcepts(a.concepts);
+          const bConcepts = normalizeConcepts(b.concepts);
+          const aScore = aConcepts.filter((c) => lessonConcepts.includes(c)).length;
+          const bScore = bConcepts.filter((c) => lessonConcepts.includes(c)).length;
+          return bScore - aScore;
+        });
+        const suggested = sorted.slice(0, 3);
+
+        const contentElAfter = document.getElementById('lesson-content');
+        const nav = contentElAfter && contentElAfter.querySelector('nav[aria-label="Navegação entre aulas"]');
+        if (suggested.length && nav) {
+          const linksHtml = suggested
+            .map(
+              (ex) =>
+                '<li class="mt-1.5 first:mt-0"><a href="exercise.html?slug=' +
+                encodeURIComponent(ex.slug) +
+                '" class="iss-link hover:underline">' +
+                escapeHtml(ex.title) +
+                '</a></li>'
+            )
+            .join('');
+          const section = document.createElement('section');
+          section.className = 'mt-8 pt-6 border-t iss-border';
+          section.setAttribute('aria-label', 'Exercícios sugeridos');
+          section.innerHTML =
+            '<h2 class="text-lg font-semibold iss-text-foreground mb-3">Chega de teoria. Hora de codar!</h2>' +
+            '<ul class="list-none p-0 m-0">' +
+            linksHtml +
+            '</ul>';
+          contentElAfter.insertBefore(section, nav);
+        }
       });
     })
     .catch(() => {
@@ -359,6 +467,8 @@ function getPageType() {
   const path = window.location.pathname;
   if (path.endsWith('disciplina.html')) return 'disciplina';
   if (path.endsWith('aula.html')) return 'aula';
+  if (path.endsWith('exercises.html')) return 'exercises';
+  if (path.endsWith('exercise.html')) return 'exercise';
   return 'home';
 }
 
@@ -413,5 +523,9 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if (page === 'aula') {
     initAula();
     initBackToTop();
+  } else if (page === 'exercises') {
+    if (typeof initExercises === 'function') initExercises('exercises-list');
+  } else if (page === 'exercise') {
+    if (typeof initExercise === 'function') initExercise();
   }
 });

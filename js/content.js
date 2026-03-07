@@ -56,3 +56,17 @@ async function fetchSearchIndex() {
   const data = await fetchJSON('search-index.json');
   return Array.isArray(data) ? data : [];
 }
+
+async function fetchExercises() {
+  const data = await fetchJSON('exercises/exercises.json');
+  const list = Array.isArray(data) ? data : [];
+  return list.sort((a, b) => (a.order || 0) - (b.order || 0));
+}
+
+function getExercise(exercises, slug) {
+  return exercises.find((e) => e.slug === slug);
+}
+
+async function fetchExerciseMarkdown(filename) {
+  return fetchText(`exercises/${filename}`);
+}

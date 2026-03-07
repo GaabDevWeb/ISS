@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Disciplina — ISS</title>
+  <title>Exercício — ISS</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,23 +22,32 @@
     </a>
   </header>
 
-  <main class="flex-1 px-4 md:px-6 py-8 md:py-12 max-w-4xl mx-auto w-full">
-    <nav id="breadcrumb-discipline" class="text-sm mb-4" aria-label="Navegação">
-      <a href="index.html" class="iss-link-muted">Home</a>
-      <span class="iss-text-muted mx-1">/</span>
-      <span>…</span>
+  <main class="px-4 md:px-6 py-8 md:py-12 max-w-3xl w-full mx-auto">
+    <nav id="breadcrumb-exercise" class="text-sm mb-4" aria-label="Navegação">
+      …
     </nav>
 
-    <h1 id="discipline-title" class="text-2xl md:text-3xl font-bold iss-text-foreground mb-8">…</h1>
+    <article id="exercise-content">
+      <h1 id="exercise-title" class="text-2xl md:text-3xl font-bold iss-text-foreground mb-4">…</h1>
 
-    <p id="discipline-progress" class="text-sm iss-text-muted mb-6"></p>
+      <div id="exercise-meta" class="mb-4"></div>
 
-    <section aria-label="Aulas">
-      <h2 class="sr-only">Aulas</h2>
-      <div id="lessons-list" class="grid gap-3">
+      <div id="exercise-buttons" class="flex flex-wrap gap-3 mb-6"></div>
+
+      <nav id="exercise-nav-prev-next" class="flex flex-wrap justify-between gap-4 mb-6 text-sm" aria-label="Navegação entre exercícios"></nav>
+
+      <section aria-label="Enunciado">
+        <div id="exercise-enunciado" class="mb-8">
+          <p class="iss-text-muted">A carregar…</p>
+        </div>
+      </section>
+
+      <section aria-label="Solução" id="exercise-solution-wrap">
         <p class="iss-text-muted">A carregar…</p>
-      </div>
-    </section>
+      </section>
+
+      <section id="exercise-related-wrap" class="mt-8 pt-6 border-t iss-border" aria-label="Exercícios relacionados"></section>
+    </article>
   </main>
 
   <footer class="py-6 px-4 md:px-6 border-t iss-border text-center text-sm iss-text-muted">
@@ -46,9 +56,12 @@
 
   <a href="#" id="iss-back-to-top" class="iss-back-to-top" aria-label="Voltar ao topo" style="display: none;">Voltar ao topo</a>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script src="js/content.js" defer></script>
-  <script src="js/read-lessons.js" defer></script>
   <script src="js/router.js" defer></script>
+  <script src="js/markdown.js" defer></script>
+  <script src="js/exercises.js" defer></script>
   <script src="js/app.js" defer></script>
 </body>
 </html>
