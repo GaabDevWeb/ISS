@@ -168,6 +168,30 @@ body {
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
+/* Tabelas no conteúdo das aulas: bordas visíveis */
+.iss-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.iss-prose th,
+.iss-prose td {
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.iss-prose th {
+  background: var(--color-surface);
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+.iss-prose tbody tr:nth-child(even) {
+  background: rgba(63, 63, 70, 0.15);
+}
+
 /* Header */
 .iss-header {
   height: 56px;
