@@ -44,6 +44,20 @@ function normalizeConcepts(concepts) {
   return [];
 }
 
+/** Embaralha array de forma determinística dado um seed (ex.: discipline + lesson slug). */
+function shuffleWithSeed(arr, seed) {
+  if (!Array.isArray(arr) || arr.length <= 1) return arr;
+  const out = arr.slice();
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (Math.imul(31, h) + seed.charCodeAt(i)) >>> 0;
+  for (let i = out.length - 1; i > 0; i--) {
+    h = (Math.imul(16807, h) >>> 0) % 2147483647;
+    const j = h % (i + 1);
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
 function initHome() {
   const grid = document.getElementById('home-cards-grid');
   const searchInput = document.getElementById('iss-search');
@@ -420,21 +434,41 @@ function initAula() {
         const frontmatter = typeof parseFrontmatter === 'function' ? parseFrontmatter(raw).frontmatter : {};
         const lessonConcepts = normalizeConcepts(frontmatter.concepts);
         const exerciseList = Array.isArray(exercises) ? exercises : [];
+
+        function scoreConcepts(ex) {
+          const concepts = normalizeConcepts(ex && ex.concepts);
+          return concepts.filter((c) => lessonConcepts.includes(c)).length;
+        }
+        function sortByRelevance(list) {
+          return list.slice().sort((a, b) => {
+            const aDone = completedSet.has(a.slug);
+            const bDone = completedSet.has(b.slug);
+            if (aDone !== bDone) return aDone ? 1 : -1;
+            return scoreConcepts(b) - scoreConcepts(a);
+          });
+        }
+
         const byDiscipline = exerciseList.filter((e) => e && e.discipline === d);
-        const sorted = byDiscipline.sort((a, b) => {
-          const aDone = completedSet.has(a.slug);
-          const bDone = completedSet.has(b.slug);
-          if (aDone !== bDone) return aDone ? 1 : -1;
-          const aConcepts = normalizeConcepts(a.concepts);
-          const bConcepts = normalizeConcepts(b.concepts);
-          const aScore = aConcepts.filter((c) => lessonConcepts.includes(c)).length;
-          const bScore = bConcepts.filter((c) => lessonConcepts.includes(c)).length;
-          return bScore - aScore;
-        });
-        const suggested = sorted.slice(0, 3);
+        const sortedSame = sortByRelevance(byDiscipline);
+        let suggested;
+        if (d === 'python') {
+          const poolSize = 8;
+          let pool = sortedSame.slice(0, poolSize);
+          if (pool.length < 3) {
+            const other = exerciseList.filter((e) => e && e.discipline !== d);
+            const sortedOther = sortByRelevance(other);
+            const needed = Math.max(3, poolSize) - pool.length;
+            const added = sortedOther.slice(0, needed);
+            pool = [...pool, ...added].slice(0, poolSize);
+          }
+          const shuffled = shuffleWithSeed(pool, d + '-' + (lesson.slug || ''));
+          suggested = shuffled.slice(0, 3);
+        } else {
+          suggested = sortedSame.slice(0, 3);
+        }
 
         const contentElAfter = document.getElementById('lesson-content');
-        const nav = contentElAfter && contentElAfter.querySelector('nav[aria-label="Navegação entre aulas"]');
+        const nav = contentElAfter && contentElAfter.querySelector(':scope > nav[aria-label="Navegação entre aulas"]');
         if (suggested.length && nav) {
           const linksHtml = suggested
             .map(
@@ -454,7 +488,7 @@ function initAula() {
             '<ul class="list-none p-0 m-0">' +
             linksHtml +
             '</ul>';
-          contentElAfter.insertBefore(section, nav);
+          nav.parentNode.insertBefore(section, nav);
         }
       });
     })
