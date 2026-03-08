@@ -393,6 +393,59 @@ body.iss-focus-mode .iss-focus-exit:hover {
   border-color: var(--color-muted);
 }
 
+/* Checklist de domínio (clicável, estado persistido) */
+.iss-checklist,
+.iss-prose ul.iss-checklist {
+  list-style: none;
+  padding-left: 0;
+}
+.iss-checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  padding: 0.15rem 0;
+}
+.iss-checklist-item .iss-checklist-box {
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: 3px;
+  margin-top: 0.2rem;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+  position: relative;
+}
+.iss-checklist-item .iss-checklist-box:hover {
+  border-color: var(--color-muted);
+}
+.iss-checklist-item .iss-checklist-box:focus {
+  outline: none;
+}
+.iss-checklist-item--checked .iss-checklist-box {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.iss-checklist-item--checked .iss-checklist-box::after {
+  content: '';
+  position: absolute;
+  left: 0.35rem;
+  top: 0.15rem;
+  width: 0.35rem;
+  height: 0.6rem;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.iss-checklist-item--checked {
+  color: var(--color-muted);
+}
+.iss-checklist-item--checked .iss-checklist-item__text {
+  text-decoration: line-through;
+}
+
 /* scroll-margin para headings (compensa o header sticky) */
 .iss-prose h2,
 .iss-prose h3,

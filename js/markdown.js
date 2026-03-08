@@ -141,6 +141,90 @@ function ensureSectionIds(container) {
   if (h2s[1]) h2s[1].id = 'explicacoes';
 }
 
+const CHECKLIST_STORAGE_KEY = 'iss-checklist';
+
+/** Remove do primeiro nó de texto o prefixo "[ ]", "[x]", "☐", "☑" etc. (marcadores do markdown). */
+function stripChecklistPrefix(container) {
+  if (!container) return;
+  const walk = (node) => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const t = node.textContent || '';
+      const m = t.match(/^\s*(?:\[\s*[x ]?\s*\]|[\u2610\u2611]\s*)\s*/i);
+      if (m) node.textContent = t.slice(m[0].length);
+      return true;
+    }
+    if (node.nodeType === Node.ELEMENT_NODE)
+      for (const child of node.childNodes) if (walk(child)) return true;
+    return false;
+  };
+  for (const child of container.childNodes) if (walk(child)) break;
+}
+
+function getChecklistState(disciplineSlug, lessonSlug) {
+  try {
+    const raw = localStorage.getItem(CHECKLIST_STORAGE_KEY);
+    if (!raw) return {};
+    const data = JSON.parse(raw);
+    const key = disciplineSlug + ':' + lessonSlug;
+    return Array.isArray(data[key]) ? data[key] : [];
+  } catch {
+    return [];
+  }
+}
+
+function setChecklistState(disciplineSlug, lessonSlug, state) {
+  try {
+    const raw = localStorage.getItem(CHECKLIST_STORAGE_KEY) || '{}';
+    const data = JSON.parse(raw);
+    data[disciplineSlug + ':' + lessonSlug] = state;
+    localStorage.setItem(CHECKLIST_STORAGE_KEY, JSON.stringify(data));
+  } catch (_) {}
+}
+
+function initChecklists(contentEl, disciplineSlug, lessonSlug) {
+  if (!contentEl || !disciplineSlug || !lessonSlug) return;
+  const headings = contentEl.querySelectorAll('.iss-prose h3');
+  for (const h3 of headings) {
+    if (!h3.textContent || !h3.textContent.includes('Checklist de domínio')) continue;
+    const ul = h3.nextElementSibling;
+    if (!ul || ul.tagName !== 'UL') continue;
+    ul.classList.add('iss-checklist');
+    const state = getChecklistState(disciplineSlug, lessonSlug);
+    const listItems = ul.querySelectorAll(':scope > li');
+    listItems.forEach((li, index) => {
+      li.querySelectorAll('input[type="checkbox"]').forEach((input) => input.remove());
+      li.classList.add('iss-checklist-item');
+      const checked = state[index] === true;
+      if (checked) li.classList.add('iss-checklist-item--checked');
+      const box = document.createElement('span');
+      box.className = 'iss-checklist-box';
+      box.setAttribute('aria-hidden', 'true');
+      box.setAttribute('role', 'button');
+      box.setAttribute('tabindex', '0');
+      box.setAttribute('aria-pressed', checked ? 'true' : 'false');
+      li.prepend(box);
+      const textWrap = document.createElement('span');
+      textWrap.className = 'iss-checklist-item__text';
+      while (li.childNodes.length > 1) textWrap.appendChild(li.childNodes[1]);
+      li.appendChild(textWrap);
+      stripChecklistPrefix(textWrap);
+      const updateState = () => {
+        const newState = listItems.length ? Array.from(listItems).map((item) => item.classList.contains('iss-checklist-item--checked')) : [];
+        setChecklistState(disciplineSlug, lessonSlug, newState);
+      };
+      const toggle = () => {
+        li.classList.toggle('iss-checklist-item--checked');
+        box.setAttribute('aria-pressed', li.classList.contains('iss-checklist-item--checked') ? 'true' : 'false');
+        updateState();
+      };
+      box.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
+      box.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+      li.addEventListener('click', (e) => { if (e.target !== box && !box.contains(e.target)) toggle(); });
+    });
+    break;
+  }
+}
+
 function buildOutline(contentEl) {
   if (!contentEl) return;
   const headings = Array.from(contentEl.querySelectorAll('.iss-prose h2, .iss-prose h3, #exercicios'));
@@ -279,6 +363,7 @@ function renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson, lesso
     addCopyButtons(contentEl);
     ensureSectionIds(contentEl);
     buildOutline(contentEl);
+    initChecklists(contentEl, disciplineSlug, lesson.slug);
     const resumoH2 = contentEl.querySelector('#resumo');
     if (resumoH2) {
       const copyBtn = document.createElement('button');
