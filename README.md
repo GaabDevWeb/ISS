@@ -57,12 +57,16 @@ Layout adaptado para diferentes larguras de tela (desktop e mobile).
 
 ### Arquitetura
 
-- **Multi-página**: três HTMLs (`index.html`, `disciplina.html`, `aula.html`) com navegação via `location.href`. Sem framework SPA; roteamento por query string.
+- **Multi-página**: HTMLs (`index.html`, `disciplina.html`, `aula.html`, `exercises.html`, `exercise.html`, `stats.html`, `about.html`) com navegação via `location.href`. Sem framework SPA; roteamento por query string.
 - **Conteúdo estático**: aulas em Markdown (`.md`) e metadados em JSON; carregados em runtime com `fetch`. Nenhum build ou bundler — o site pode ser servido como ficheiros estáticos (ex.: GitHub Pages).
 - **Páginas**:
-  - **Home**: carrega `disciplines.json` + `lessons.json` + `search-index.json`; monta cards e liga a pesquisa.
-  - **Disciplina**: recebe `?d=<slug>`; filtra aulas por disciplina e lista com progresso/tempo.
-  - **Aula**: recebe `?d=<slug>&a=<slug>`; faz fetch do `.md` correspondente, converte para HTML (Markdown) e monta o índice lateral a partir dos cabeçalhos.
+  - **Home** (`index.html`): carrega `disciplines.json` + `lessons.json` + `search-index.json`; monta cards (progresso, continuar a ler, disciplinas, exercícios) e liga a pesquisa.
+  - **Disciplina** (`disciplina.html`): recebe `?d=<slug>`; filtra aulas por disciplina e lista com progresso/tempo.
+  - **Aula** (`aula.html`): recebe `?d=<slug>&a=<slug>`; faz fetch do `.md` correspondente, converte para HTML (Markdown), monta o índice lateral e a secção "Chega de teoria. Hora de codar!" com exercícios sugeridos por conceitos.
+  - **Lista de exercícios** (`exercises.html`): lista todos os exercícios com filtros por conceito/dificuldade/resolvido; se acedida com `?d=&a=` exibe no topo "Exercícios sugeridos para a aula atual" e link "Abrir aula".
+  - **Exercício** (`exercise.html`): recebe `?slug=<slug>`; exibe enunciado, solução colapsável e botões copiar/marcar resolvido.
+  - **Estatísticas** (`stats.html`): métricas de impacto (maior lacuna, taxa de abandono, tempo estimado), gráficos (atividade 30 dias, dificuldade, radar por disciplina, funil) e alertas de retenção; cálculos em `js/stats.js`.
+  - **Sobre** (`about.html`): documentação do projeto.
 
 ### Modelo de dados
 
@@ -93,9 +97,15 @@ Cada aula vive em `content/<disciplina>/<file>`, por exemplo `content/python/aul
 |-------|-----|
 | `iss-last-visited` | Última aula visitada `{ discipline, lesson }` para “Continuar a ler”. |
 | `iss-read-lessons` | Array de IDs `discipline_slug` para marcar aulas como lidas e calcular progresso. |
+| `iss-exercises-completed` | Lista de exercícios concluídos (objetos `{ slug, timestamp }` ou strings); usada em estatísticas e filtros. |
+| `iss-checklist` | Estado das checklists por aula (itens marcados na página da aula). |
 | `iss-reviewed-exercises` | Set de IDs de exercícios marcados como revistos. |
 
-O progresso (percentagem, tempo estimado) é derivado das aulas marcadas como lidas e dos metadados em `lessons.json` (e duração padrão quando não definida).
+O progresso (percentagem, tempo estimado) é derivado das aulas marcadas como lidas e dos metadados em `lessons.json` (e duração padrão quando não definida). As estatísticas (maior lacuna, funil, atividade, etc.) são calculadas em `js/stats.js` a partir destas chaves e dos dados em `content/`.
+
+### Fluxo aula → exercícios sugeridos
+
+Na aula, a secção "Chega de teoria. Hora de codar!" usa os `concepts` do frontmatter do `.md` da aula para sugerir exercícios (correspondência com os conceitos em `content/exercises/exercises.json`). Em `exercises.html`, se o utilizador abrir com `?d=<disciplina>&a=<aula>`, é exibida no topo "Exercícios sugeridos para a aula atual" com os mesmos critérios e link "Abrir aula".
 
 ---
 
@@ -115,6 +125,10 @@ ISS/
 ├── index.html          # Home, pesquisa e listagem de disciplinas
 ├── disciplina.html     # Página de uma disciplina (lista de aulas)
 ├── aula.html           # Página de uma aula (conteúdo em Markdown)
+├── exercises.html      # Lista de exercícios (filtros, sugeridos por aula)
+├── exercise.html       # Página de um exercício (enunciado, solução, marcar resolvido)
+├── stats.html          # Estatísticas do estudante (gráficos, maior lacuna, funil)
+├── about.html          # Sobre / documentação
 ├── css/
 │   ├── styles.css      # Estilos customizados (tema, layout)
 │   └── images/         # Screenshots e assets
@@ -123,11 +137,15 @@ ISS/
 │   ├── router.js       # Roteamento (SPA-like)
 │   ├── content.js      # Carregamento de conteúdo
 │   ├── read-lessons.js # Leitura de aulas e disciplinas
-│   └── reviewed.js     # Estado de “revisado” (progresso)
+│   ├── reviewed.js     # Estado de revisado (progresso)
+│   ├── exercises.js    # Lista de exercícios, página de exercício, sugeridos por aula
+│   ├── stats.js        # Cálculo e exibição das estatísticas
+│   └── markdown.js     # Parse de frontmatter e Markdown (aulas/exercícios)
 ├── content/
 │   ├── lessons.json    # Metadados das aulas
 │   ├── disciplines.json# Metadados das disciplinas
 │   ├── search-index.json
+│   ├── exercises/      # exercises.json e .md dos exercícios
 │   ├── python/         # Aulas de Python
 │   ├── visualizacao-sql/
 │   ├── planejamento-curso-carreira/
@@ -175,6 +193,14 @@ ISS/
 
 3. **Ou publicar no GitHub Pages**  
    Branch `main` (ou `gh-pages`) com a raiz do projeto como origem do site, resultando em um endereço como `https://<user>.github.io/ISS/`.
+
+### Como adicionar uma aula
+
+Registre a aula em `content/lessons.json` (campos `discipline`, `slug`, `title`, `order`, `file`) e crie o ficheiro `.md` em `content/<disciplina>/`. Opcional: inclua `concepts` no frontmatter do `.md` para que a secção "Hora de codar!" e a página de exercícios com `?d=&a=` sugiram exercícios por conceito. Atualize `content/search-index.json` (ou use o script da Fase 3) para a pesquisa incluir a nova aula.
+
+### Como adicionar um exercício
+
+Adicione uma entrada em `content/exercises/exercises.json` (`slug`, `title`, `file`, `discipline`, `concepts`, `difficulty`, `order`) e crie o `.md` em `content/exercises/` com frontmatter e secção `## Solução`. O enunciado fica antes da solução; a lista de exercícios e as estatísticas passam a considerar o novo exercício automaticamente.
 
 ---
 

@@ -4,6 +4,7 @@ slug: "introducao"
 discipline: "python"
 order: 1
 description: "Apresentação da disciplina, processo de aprendizagem e visão geral da linguagem Python"
+concepts: "comentário, variáveis, print(), documentação"
 exercises:
   - question: "Segundo a pirâmide de William Glasser, qual o índice de retenção ao apenas assistir uma palestra? O que aumenta a retenção?"
     answer: "Apenas 5%. A retenção aumenta com leitura (10%), áudio-visual (20%), demonstração (30%), discussão em grupo (50%), prática (75%) e ensinar outros (90%). Por isso é essencial praticar e revisar."

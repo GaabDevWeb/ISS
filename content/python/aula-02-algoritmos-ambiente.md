@@ -4,6 +4,7 @@ slug: "algoritmos-ambiente"
 discipline: "python"
 order: 2
 description: "Correção sobre TPs, avaliação por competências, conceito de algoritmo e ferramenta Deepnote"
+concepts: "variáveis, comentário, print(), processamento, IPO"
 exercises:
   - question: "Os TPs são obrigatórios? O que acontece se eu entregar um TP atrasado?"
     answer: "Sim. Todos os TPs são obrigatórios (correção da aula 1). Não valem pontos, mas são pré-requisitos para o AT. Um TP atrasado: conceito limitado a DL (não atinge DML). Dois ou mais TPs atrasados: conceito limitado a D. Quem não entrega qualquer TP até a segunda-feira da semana 10 está reprovado. Quem entrega TP atrasado perde direito a feedback."

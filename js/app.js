@@ -2,40 +2,11 @@
  * ISS — Inicialização e orquestração por página
  */
 
-const LAST_VISITED_KEY = 'iss-last-visited';
-
 /** Minutos por aula quando não definido nos dados (estimativa padrão). */
 const DEFAULT_MINUTES_PER_LESSON = 20;
 
-function formatDurationMinutes(totalMinutes) {
-  if (totalMinutes <= 0) return '~0 min';
-  if (totalMinutes < 60) return `~${totalMinutes} min`;
-  const h = Math.floor(totalMinutes / 60);
-  const m = totalMinutes % 60;
-  if (m === 0) return `~${h}h`;
-  return `~${h}h${m}`;
-}
-
 function getParam(name) {
   return typeof Router !== 'undefined' ? Router.getParam(name) : new URLSearchParams(window.location.search).get(name) || '';
-}
-
-function getLastVisited() {
-  try {
-    const raw = localStorage.getItem(LAST_VISITED_KEY);
-    if (!raw) return null;
-    const obj = JSON.parse(raw);
-    if (obj && typeof obj.discipline === 'string' && typeof obj.lesson === 'string') return obj;
-    return null;
-  } catch {
-    return null;
-  }
-}
-
-function setLastVisited(disciplineSlug, lessonSlug) {
-  try {
-    localStorage.setItem(LAST_VISITED_KEY, JSON.stringify({ discipline: disciplineSlug, lesson: lessonSlug }));
-  } catch (_) {}
 }
 
 function normalizeConcepts(concepts) {
@@ -181,14 +152,26 @@ function initHome() {
             ? getCompletedExerciseSlugs().size
             : 0;
 
+      const streak = typeof getStreak === 'function' ? getStreak() : 0;
+      const goalMet = typeof getTodayGoalMet === 'function' ? getTodayGoalMet() : false;
+      const suggestedRevisions = typeof getSuggestedRevisions === 'function' ? getSuggestedRevisions(lessons, exerciseList) : [];
       const dashboardCardHtml =
         '<div class="iss-card iss-card--static">' +
           '<h3 class="font-semibold text-lg m-0">Seu progresso</h3>' +
           '<p class="text-sm iss-text-muted mt-1 mb-0">Progresso geral ' + progressPercent + '%</p>' +
-          '<p class="text-sm iss-text-muted mt-1 mb-0">Tempo estudado ' + formatDurationMinutes(studiedMinutes) + '</p>' +
+          '<p class="text-sm iss-text-muted mt-1 mb-0">Tempo estudado ' + (typeof formatDurationMinutes === 'function' ? formatDurationMinutes(studiedMinutes) : studiedMinutes + ' min') + '</p>' +
           '<p class="text-sm iss-text-muted mt-1 mb-0">' + exercisesCompleted + ' exercícios concluídos</p>' +
+          (streak > 0 ? '<p class="text-sm iss-text-foreground mt-1 mb-0">Sequência: ' + streak + ' dia' + (streak !== 1 ? 's' : '') + '</p>' : '') +
+          '<p class="text-sm mt-1 mb-0">Meta de hoje: ' + (goalMet ? '<span class="iss-text-foreground">Feito</span>' : '<span class="iss-text-muted">Pendente</span>') + '</p>' +
           '<a href="stats.html" class="iss-link block mt-3 text-sm hover:underline">Ver Estatísticas Completas</a>' +
         '</div>';
+      let revisionsHtml = '';
+      if (suggestedRevisions.length > 0) {
+        revisionsHtml = '<div class="iss-card iss-card--static"><h3 class="font-semibold text-lg m-0">Revisões sugeridas</h3><p class="text-sm iss-text-muted mt-1 mb-2">Itens para revisar (passaram 3+ dias):</p><ul class="list-none p-0 m-0">' +
+          suggestedRevisions.slice(0, 5).map(function (r) {
+            return '<li class="mb-1"><a href="' + r.url + '" class="iss-link text-sm">' + escapeHtml(r.label) + '</a></li>';
+          }).join('') + '</ul></div>';
+      }
 
       const continuePlaceholderHtml =
         '<div class="iss-card iss-card--static">' +
@@ -233,10 +216,8 @@ function initHome() {
       }
 
       const cards = [dashboardCardHtml, continueCardHtml || continuePlaceholderHtml];
-      disciplines.slice(0, 2).forEach((d) => cards.push(buildDisciplineCard(d)));
-      while (cards.length < 4) cards.push(cards.length === 2 ? dashboardCardHtml : continuePlaceholderHtml);
-      disciplines.slice(2, 4).forEach((d) => cards.push(buildDisciplineCard(d)));
-      while (cards.length < 6) cards.push(cards.length === 4 ? dashboardCardHtml : continuePlaceholderHtml);
+      if (revisionsHtml) cards.push(revisionsHtml);
+      disciplines.forEach((d) => cards.push(buildDisciplineCard(d)));
       cards.push(exercisesCardHtml);
 
       grid.innerHTML = cards.join('');
@@ -305,7 +286,7 @@ function initDisciplina() {
 
       if (!discipline) {
         if (titleEl) titleEl.textContent = 'Disciplina não encontrada';
-        if (breadcrumbEl) breadcrumbEl.innerHTML = '<a href="index.html" class="iss-link-muted">Home</a>';
+        if (breadcrumbEl) breadcrumbEl.innerHTML = '<button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button><a href="index.html" class="iss-link-muted">Home</a>';
         if (progressEl) progressEl.textContent = '';
         if (container) container.innerHTML = '<p class="iss-text-muted mb-4">Esta disciplina não existe.</p><a href="index.html" class="iss-link hover:underline">Voltar à página inicial</a>';
         return;
@@ -315,6 +296,7 @@ function initDisciplina() {
         if (titleEl) titleEl.textContent = discipline.title;
         if (breadcrumbEl) {
           breadcrumbEl.innerHTML = `
+            <button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>
             <a href="index.html" class="iss-link-muted">Home</a>
             <span class="iss-text-muted mx-1">/</span>
             <span>${escapeHtml(discipline.title)}</span>
@@ -328,6 +310,7 @@ function initDisciplina() {
       if (titleEl) titleEl.textContent = discipline.title;
       if (breadcrumbEl) {
         breadcrumbEl.innerHTML = `
+          <button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>
           <a href="index.html" class="iss-link-muted">Home</a>
           <span class="iss-text-muted mx-1">/</span>
           <span>${escapeHtml(discipline.title)}</span>
@@ -365,6 +348,28 @@ function initDisciplina() {
             }
           )
           .join('');
+      }
+
+      const studyPathWrap = document.getElementById('study-path-wrap');
+      const studyPathList = document.getElementById('study-path-list');
+      if (studyPathWrap && studyPathList && typeof fetchStudyPath === 'function') {
+        fetchStudyPath(d).then(function (path) {
+          if (!path || path.length === 0) return;
+          studyPathWrap.classList.remove('hidden');
+          studyPathList.innerHTML = path.map(function (step) {
+            if (step.type === 'lesson' && step.slug) {
+              const lesson = disciplineLessons.find(function (l) { return l.slug === step.slug; });
+              if (!lesson) return '<li class="iss-text-muted">Aula: ' + escapeHtml(step.slug) + '</li>';
+              return '<li><a href="aula.html?d=' + encodeURIComponent(d) + '&a=' + encodeURIComponent(lesson.slug) + '" class="iss-link">Aula: ' + escapeHtml(lesson.title) + '</a></li>';
+            }
+            if (step.type === 'exercises' && Array.isArray(step.slugs) && step.slugs.length > 0) {
+              return '<li>Exercícios: ' + step.slugs.map(function (slug) {
+                return '<a href="exercise.html?slug=' + encodeURIComponent(slug) + '" class="iss-link">' + escapeHtml(slug) + '</a>';
+              }).join(', ') + '</li>';
+            }
+            return '';
+          }).filter(Boolean).join('');
+        });
       }
     })
     .catch(() => {
@@ -423,14 +428,7 @@ function initAula() {
         const discipline = getDiscipline(disciplines, d);
         renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson, lessonIndex, totalLessons });
 
-        const completedRaw = (function () {
-          try {
-            return JSON.parse(localStorage.getItem('iss-exercises-completed') || '[]');
-          } catch {
-            return [];
-          }
-        })();
-        const completedSet = new Set(Array.isArray(completedRaw) ? completedRaw : []);
+        const completedSet = typeof getCompletedExerciseSlugs === 'function' ? getCompletedExerciseSlugs() : new Set();
         const frontmatter = typeof parseFrontmatter === 'function' ? parseFrontmatter(raw).frontmatter : {};
         const lessonConcepts = normalizeConcepts(frontmatter.concepts);
         const exerciseList = Array.isArray(exercises) ? exercises : [];
@@ -448,24 +446,36 @@ function initAula() {
           });
         }
 
-        const byDiscipline = exerciseList.filter((e) => e && e.discipline === d);
-        const sortedSame = sortByRelevance(byDiscipline);
+        const linkedSlugs = (function () {
+          const le = frontmatter.linkedExercises;
+          if (Array.isArray(le)) return le.map((s) => String(s).trim()).filter(Boolean);
+          if (typeof le === 'string') return le.split(',').map((s) => s.trim()).filter(Boolean);
+          return [];
+        })();
         let suggested;
-        if (d === 'python') {
-          const poolSize = 8;
-          let pool = sortedSame.slice(0, poolSize);
-          if (pool.length < 3) {
-            const other = exerciseList.filter((e) => e && e.discipline !== d);
-            const sortedOther = sortByRelevance(other);
-            const needed = Math.max(3, poolSize) - pool.length;
-            const added = sortedOther.slice(0, needed);
-            pool = [...pool, ...added].slice(0, poolSize);
-          }
-          const shuffled = shuffleWithSeed(pool, d + '-' + (lesson.slug || ''));
-          suggested = shuffled.slice(0, 3);
+        if (linkedSlugs.length > 0) {
+          const linked = linkedSlugs.map((slug) => exerciseList.find((e) => e && e.slug === slug)).filter(Boolean);
+          suggested = sortByRelevance(linked).slice(0, 8);
         } else {
-          suggested = sortedSame.slice(0, 3);
+          const byDiscipline = exerciseList.filter((e) => e && e.discipline === d);
+          const sortedSame = sortByRelevance(byDiscipline);
+          if (d === 'python') {
+            const poolSize = 8;
+            let pool = sortedSame.slice(0, poolSize);
+            if (pool.length < 3) {
+              const other = exerciseList.filter((e) => e && e.discipline !== d);
+              const sortedOther = sortByRelevance(other);
+              const needed = Math.max(3, poolSize) - pool.length;
+              const added = sortedOther.slice(0, needed);
+              pool = [...pool, ...added].slice(0, poolSize);
+            }
+            const shuffled = shuffleWithSeed(pool, d + '-' + (lesson.slug || ''));
+            suggested = shuffled.slice(0, 3);
+          } else {
+            suggested = sortedSame.slice(0, 3);
+          }
         }
+        if (suggested.length > 3) suggested = suggested.slice(0, 3);
 
         const contentElAfter = document.getElementById('lesson-content');
         const nav = contentElAfter && contentElAfter.querySelector(':scope > nav[aria-label="Navegação entre aulas"]');
@@ -475,6 +485,8 @@ function initAula() {
               (ex) =>
                 '<li class="mt-1.5 first:mt-0"><a href="exercise.html?slug=' +
                 encodeURIComponent(ex.slug) +
+                '&d=' + encodeURIComponent(d) +
+                '&a=' + encodeURIComponent(a) +
                 '" class="iss-link hover:underline">' +
                 escapeHtml(ex.title) +
                 '</a></li>'

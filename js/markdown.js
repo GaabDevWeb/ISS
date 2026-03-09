@@ -141,7 +141,6 @@ function ensureSectionIds(container) {
   if (h2s[1]) h2s[1].id = 'explicacoes';
 }
 
-const CHECKLIST_STORAGE_KEY = 'iss-checklist';
 
 /** Remove do primeiro nó de texto o prefixo "[ ]", "[x]", "☐", "☑" etc. (marcadores do markdown). */
 function stripChecklistPrefix(container) {
@@ -158,27 +157,6 @@ function stripChecklistPrefix(container) {
     return false;
   };
   for (const child of container.childNodes) if (walk(child)) break;
-}
-
-function getChecklistState(disciplineSlug, lessonSlug) {
-  try {
-    const raw = localStorage.getItem(CHECKLIST_STORAGE_KEY);
-    if (!raw) return {};
-    const data = JSON.parse(raw);
-    const key = disciplineSlug + ':' + lessonSlug;
-    return Array.isArray(data[key]) ? data[key] : [];
-  } catch {
-    return [];
-  }
-}
-
-function setChecklistState(disciplineSlug, lessonSlug, state) {
-  try {
-    const raw = localStorage.getItem(CHECKLIST_STORAGE_KEY) || '{}';
-    const data = JSON.parse(raw);
-    data[disciplineSlug + ':' + lessonSlug] = state;
-    localStorage.setItem(CHECKLIST_STORAGE_KEY, JSON.stringify(data));
-  } catch (_) {}
 }
 
 function initChecklists(contentEl, disciplineSlug, lessonSlug) {
@@ -323,6 +301,7 @@ function renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson, lesso
   if (breadcrumbEl) {
     const d = new URLSearchParams(window.location.search).get('d');
     breadcrumbEl.innerHTML = `
+      <button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>
       <a href="index.html" class="iss-link-muted">Home</a>
       <span class="iss-text-muted mx-1">/</span>
       <a href="disciplina.html?d=${encodeURIComponent(d)}" class="iss-link-muted">${escapeHtml(discipline ? discipline.title : d)}</a>

@@ -4,6 +4,7 @@ slug: "par-ou-impar"
 difficulty: "easy"
 concepts: "if/else, operador módulo %, input()"
 discipline: "python"
+hint: "O resto da divisão por 2 é 0 para números pares e 1 para ímpares. Use if numero % 2 == 0:"
 ---
 
 ## Enunciado

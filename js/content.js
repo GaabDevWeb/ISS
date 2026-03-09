@@ -70,3 +70,12 @@ function getExercise(exercises, slug) {
 async function fetchExerciseMarkdown(filename) {
   return fetchText(`exercises/${filename}`);
 }
+
+async function fetchStudyPath(disciplineSlug) {
+  try {
+    const data = await fetchJSON(`${disciplineSlug}/study-path.json`);
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+}

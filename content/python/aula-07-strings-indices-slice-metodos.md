@@ -6,12 +6,7 @@ order: 7
 description: "Operador [], índices positivos/negativos, fatiamento com slice [inicio:fim:passo] e métodos essenciais de string"
 reading_time: 8
 difficulty: "medium"
-concepts:
-  - índices de string
-  - operador []
-  - slice
-  - passo negativo
-  - métodos de string
+concepts: "índices, slice, [::-1], len(), métodos de string, replace(), capitalize(), title(), split(), join()"
 prerequisites: ["aula-06-strings-escape-concatenacao"]
 exercises:
   - question: "hello = 'hello python'. Qual o resultado de hello[2] e hello[-6]?"

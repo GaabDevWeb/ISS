@@ -15,7 +15,8 @@
     "concepts": ["variáveis", "tipo de dado", "type()"],
     "discipline": "python",
     "file": "tipo-de-dado.md",
-    "order": 2
+    "order": 2,
+    "linkedLessons": [{"discipline": "python", "slug": "variaveis-tipos"}]
   },
   {
     "slug": "dobrar-numero",
@@ -24,7 +25,8 @@
     "concepts": ["input()", "conversão de tipos", "int()"],
     "discipline": "python",
     "file": "dobrar-numero.md",
-    "order": 3
+    "order": 3,
+    "linkedLessons": [{"discipline": "python", "slug": "variaveis-tipos"}]
   },
   {
     "slug": "par-ou-impar",
@@ -229,10 +231,12 @@
   {"slug": "celsius-fahrenheit-iet", "title": "Celsius para Fahrenheit e Indicador de Estabilidade Térmica", "difficulty": "medium", "concepts": ["input()", "float()", "fórmulas", "concatenação"], "discipline": "python", "file": "celsius-fahrenheit-iet.md", "order": 52},
   {"slug": "porcentagem-vogais", "title": "Porcentagem de Vogais na Mensagem", "difficulty": "medium", "concepts": ["input()", "lower()", "count()", "len()"], "discipline": "python", "file": "porcentagem-vogais.md", "order": 53},
   {"slug": "log-transacao-financeira", "title": "Mensagem de Log para Auditoria de Transação", "difficulty": "hard", "concepts": ["input()", "concatenação", "formatação de string"], "discipline": "python", "file": "log-transacao-financeira.md", "order": 54},
-  {"slug": "comentario-e-saudacao", "title": "Comentário e Saudação Inicial", "difficulty": "easy", "concepts": ["comentário", "print()", "documentação"], "discipline": "python", "file": "comentario-e-saudacao.md", "order": 55},
+  {"slug": "comentario-e-saudacao", "title": "Comentário e Saudação Inicial", "difficulty": "easy", "concepts": ["comentário", "print()", "documentação"], "discipline": "python", "file": "comentario-e-saudacao.md", "order": 55, "linkedLessons": [{"discipline": "python", "slug": "variaveis-tipos"}]},
   {"slug": "receita-custos-lucro", "title": "Receita, Custos e Lucro", "difficulty": "easy", "concepts": ["variáveis", "subtração", "float"], "discipline": "python", "file": "receita-custos-lucro.md", "order": 56},
   {"slug": "media-duas-notas", "title": "Média de Duas Notas", "difficulty": "easy", "concepts": ["variáveis", "média", "divisão", "float"], "discipline": "python", "file": "media-duas-notas.md", "order": 57},
   {"slug": "docstring-uma-linha", "title": "Docstring de Documentação", "difficulty": "easy", "concepts": ["docstring", "''' ou \"\"\"", "string"], "discipline": "python", "file": "docstring-uma-linha.md", "order": 58},
   {"slug": "capacidade-caminhao-variavel", "title": "Máximo de Unidades por Carga (Caminhão)", "difficulty": "medium", "concepts": ["//", "input()", "int()", "variáveis"], "discipline": "python", "file": "capacidade-caminhao-variavel.md", "order": 59},
-  {"slug": "timestamp-log-simples", "title": "Timestamp e Nível de Log", "difficulty": "easy", "concepts": ["concatenação", "variáveis", "strings"], "discipline": "python", "file": "timestamp-log-simples.md", "order": 60}
+  {"slug": "timestamp-log-simples", "title": "Timestamp e Nível de Log", "difficulty": "easy", "concepts": ["concatenação", "variáveis", "strings"], "discipline": "python", "file": "timestamp-log-simples.md", "order": 60},
+  {"slug": "sql-select-basico", "title": "SELECT básico — listar tabela", "difficulty": "easy", "concepts": ["SELECT", "SQL", "consulta"], "discipline": "visualizacao-sql", "file": "sql-select-basico.md", "order": 61, "language": "sql"},
+  {"slug": "sql-where-filtro", "title": "Filtrar com WHERE", "difficulty": "medium", "concepts": ["SELECT", "WHERE", "SQL", "filtro"], "discipline": "visualizacao-sql", "file": "sql-where-filtro.md", "order": 62, "language": "sql"}
 ]

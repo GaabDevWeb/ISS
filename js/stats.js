@@ -4,9 +4,6 @@
  */
 
 (function () {
-  const READ_LESSONS_KEY = 'iss-read-lessons';
-  const EXERCISES_COMPLETED_KEY = 'iss-exercises-completed';
-  const REVIEWED_STORAGE_KEY = 'iss-reviewed-exercises';
   const MINUTES_PER_EXERCISE = 4;
 
   const CHART_COLORS = {
@@ -18,40 +15,8 @@
   const TEXT_COLOR = '#DADADA';
   const GRID_COLOR = 'rgba(161, 161, 170, 0.2)';
 
-  function getReadLessonIds() {
-    try {
-      const raw = localStorage.getItem(READ_LESSONS_KEY);
-      const arr = raw ? JSON.parse(raw) : [];
-      return Array.isArray(arr) ? new Set(arr) : new Set();
-    } catch {
-      return new Set();
-    }
-  }
-
-  function getCompletedWithTimestamps() {
-    try {
-      const raw = localStorage.getItem(EXERCISES_COMPLETED_KEY);
-      const arr = raw ? JSON.parse(raw) : [];
-      if (!Array.isArray(arr)) return [];
-      return arr.map(function (item) {
-        if (typeof item === 'string') return { slug: item, timestamp: null };
-        return {
-          slug: item && item.slug,
-          timestamp: item && item.timestamp != null ? item.timestamp : null,
-        };
-      }).filter(function (x) { return x.slug; });
-    } catch {
-      return [];
-    }
-  }
-
-  function getCompletedExerciseSlugs() {
-    const list = getCompletedWithTimestamps();
-    return new Set(list.map(function (x) { return x.slug; }));
-  }
-
   function getActivityLast30Days() {
-    const list = getCompletedWithTimestamps();
+    const list = typeof getCompletedWithTimestamps === 'function' ? getCompletedWithTimestamps() : [];
     const now = Date.now();
     const oneDay = 24 * 60 * 60 * 1000;
     const counts = [];
@@ -71,15 +36,6 @@
     return { labels: labels, data: counts };
   }
 
-  function formatDurationMinutes(totalMinutes) {
-    if (totalMinutes <= 0) return '~0 min';
-    if (totalMinutes < 60) return '~' + totalMinutes + ' min';
-    var h = Math.floor(totalMinutes / 60);
-    var m = totalMinutes % 60;
-    if (m === 0) return '~' + h + 'h';
-    return '~' + h + 'h ' + m + 'min';
-  }
-
   function getDefaultChartOptions() {
     return {
       responsive: true,
@@ -95,9 +51,7 @@
   function resetStats() {
     if (!window.confirm('Tem certeza que deseja resetar todas as estatísticas? Aulas lidas e exercícios concluídos serão apagados.')) return;
     try {
-      localStorage.removeItem(READ_LESSONS_KEY);
-      localStorage.removeItem(EXERCISES_COMPLETED_KEY);
-      localStorage.removeItem(REVIEWED_STORAGE_KEY);
+      if (typeof resetAllStats === 'function') resetAllStats();
       window.location.reload();
     } catch (e) {
       console.error(e);
@@ -105,8 +59,8 @@
   }
 
   function init() {
-    const readIds = getReadLessonIds();
-    const completedSlugs = getCompletedExerciseSlugs();
+    const readIds = typeof getReadLessonIds === 'function' ? getReadLessonIds() : new Set();
+    const completedSlugs = typeof getCompletedExerciseSlugs === 'function' ? getCompletedExerciseSlugs() : new Set();
     const activity = getActivityLast30Days();
 
     Promise.all([
@@ -211,12 +165,19 @@
         }
 
         var maiorLacunaEl = document.getElementById('stats-maior-lacuna');
+        var maiorLacunaLabel = '';
         if (maiorLacunaEl) {
           if (maiorLacunaDiscipline != null && maiorLacunaGap > 0) {
-            maiorLacunaEl.textContent = maiorLacunaDiscipline + ' (' + maiorLacunaGap + ' aula' + (maiorLacunaGap !== 1 ? 's' : '') + ' lidas a mais que exercícios feitos)';
+            maiorLacunaLabel = maiorLacunaDiscipline + ' (' + maiorLacunaGap + ' aula' + (maiorLacunaGap !== 1 ? 's' : '') + ' lidas a mais que exercícios feitos)';
+            maiorLacunaEl.textContent = maiorLacunaLabel;
           } else {
             maiorLacunaEl.textContent = 'Nenhuma lacuna identificada.';
           }
+        }
+        var emailSummaryBtn = document.getElementById('stats-email-summary-btn');
+        if (emailSummaryBtn && typeof getWeeklySummaryText === 'function') {
+          var summaryText = getWeeklySummaryText(maiorLacunaLabel || null);
+          emailSummaryBtn.href = 'mailto:?subject=' + encodeURIComponent('Resumo ISS - semana') + '&body=' + encodeURIComponent(summaryText);
         }
 
         var diagnosisEl = document.getElementById('stats-diagnosis');
@@ -238,6 +199,12 @@
 
         var resetBtn = document.getElementById('stats-reset-btn');
         if (resetBtn) resetBtn.addEventListener('click', resetStats);
+
+        if (typeof runAchievementChecks === 'function') runAchievementChecks(exercises, lessons);
+        var achievementsEl = document.getElementById('stats-achievements-grid');
+        if (achievementsEl && typeof renderAchievementsSection === 'function' && typeof getAchievementsUnlocked === 'function') {
+          achievementsEl.innerHTML = renderAchievementsSection(getAchievementsUnlocked());
+        }
 
         var activityCtx = document.getElementById('chart-activity');
         if (activityCtx && typeof Chart !== 'undefined') {

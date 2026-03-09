@@ -1,50 +1,7 @@
 /**
  * ISS — Exercícios práticos de programação: parse, cards, página, solução colapsável, copiar enunciado
+ * Usa MINUTES_PER_EXERCISE de state.js quando disponível.
  */
-
-const EXERCISES_COMPLETED_KEY = 'iss-exercises-completed';
-const MINUTES_PER_EXERCISE = 4;
-
-function getCompletedExerciseSlugs() {
-  try {
-    const raw = localStorage.getItem(EXERCISES_COMPLETED_KEY);
-    const arr = raw ? JSON.parse(raw) : [];
-    if (!Array.isArray(arr)) return new Set();
-    const slugs = arr.map(function (item) {
-      return typeof item === 'string' ? item : (item && item.slug);
-    }).filter(Boolean);
-    return new Set(slugs);
-  } catch {
-    return new Set();
-  }
-}
-
-function getCompletedExercisesRaw() {
-  try {
-    const raw = localStorage.getItem(EXERCISES_COMPLETED_KEY);
-    const arr = raw ? JSON.parse(raw) : [];
-    if (!Array.isArray(arr)) return [];
-    return arr.map(function (item) {
-      if (typeof item === 'string') return { slug: item, timestamp: null };
-      return { slug: item && item.slug, timestamp: item && item.timestamp != null ? item.timestamp : null };
-    }).filter(function (x) { return x.slug; });
-  } catch {
-    return [];
-  }
-}
-
-function markExerciseCompleted(slug) {
-  const list = getCompletedExercisesRaw();
-  if (list.some(function (x) { return x.slug === slug; })) return;
-  list.push({ slug: slug, timestamp: Date.now() });
-  try {
-    localStorage.setItem(EXERCISES_COMPLETED_KEY, JSON.stringify(list));
-  } catch (_) {}
-}
-
-function isExerciseCompleted(slug) {
-  return getCompletedExerciseSlugs().has(slug);
-}
 
 function parseExerciseBody(body) {
   const solucaoMatch = body.match(/\n##\s*Solução\s*\n/i) || body.match(/\nSolução\s*\n/i);
@@ -134,12 +91,12 @@ function getRelatedExercises(allExercises, currentSlug, currentConcepts, limit) 
 }
 
 function renderExercisePage(data) {
-  const { frontmatter, enunciadoHtml, solucaoCode, discipline, currentSlug, allExercises } = data;
+  const { frontmatter, enunciadoHtml, solucaoCode, discipline, currentSlug, allExercises, exerciseOrigin, sessionInfo } = data || {};
   const slug = currentSlug || frontmatter.slug;
   const title = frontmatter.title || 'Exercício';
   const concepts = getConceptsArray(frontmatter.concepts);
   const difficultyLabel = getDifficultyLabel(frontmatter.difficulty);
-  const lang = (frontmatter.discipline || 'python').toLowerCase().includes('python') ? 'python' : 'plaintext';
+  const lang = frontmatter.language || ((frontmatter.discipline || 'python').toLowerCase().includes('python') ? 'python' : 'plaintext');
   const exercises = Array.isArray(allExercises) ? allExercises : [];
 
   document.title = title + ' — ISS';
@@ -147,11 +104,29 @@ function renderExercisePage(data) {
   const breadcrumbEl = document.getElementById('breadcrumb-exercise');
   if (breadcrumbEl) {
     breadcrumbEl.innerHTML =
+      '<button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>' +
       '<a href="index.html" class="iss-link-muted">Home</a>' +
       '<span class="iss-text-muted mx-1">/</span>' +
       '<a href="exercises.html" class="iss-link-muted">Exercícios de Programação</a>' +
       '<span class="iss-text-muted mx-1">/</span>' +
       '<span>' + escapeHtml(title) + '</span>';
+    if (exerciseOrigin && exerciseOrigin.d && exerciseOrigin.a) {
+      const aulaUrl = 'aula.html?d=' + encodeURIComponent(exerciseOrigin.d) + '&a=' + encodeURIComponent(exerciseOrigin.a);
+      const exercisesUrl = 'exercises.html?d=' + encodeURIComponent(exerciseOrigin.d) + '&a=' + encodeURIComponent(exerciseOrigin.a);
+      breadcrumbEl.insertAdjacentHTML('afterend',
+        '<p class="text-sm mt-1 mb-2"><a href="' + aulaUrl + '" class="iss-link">Voltar à aula</a><span class="iss-text-muted mx-1">·</span><a href="' + exercisesUrl + '" class="iss-link">Exercícios desta aula</a></p>'
+      );
+    }
+    if (sessionInfo && sessionInfo.slugs && sessionInfo.slugs.length > 0) {
+      const k = sessionInfo.index + 1;
+      const n = sessionInfo.slugs.length;
+      breadcrumbEl.insertAdjacentHTML('afterend',
+        '<div id="iss-session-bar" class="flex flex-wrap items-center justify-between gap-2 mt-2 mb-2 p-2 rounded border iss-border">' +
+          '<span class="text-sm iss-text-muted">Sessão de treino: ' + k + ' de ' + n + '</span>' +
+          '<button type="button" id="iss-end-session-btn" class="iss-exercise-action-btn text-sm py-1">Encerrar sessão</button>' +
+        '</div>'
+      );
+    }
   }
 
   const titleEl = document.getElementById('exercise-title');
@@ -168,12 +143,57 @@ function renderExercisePage(data) {
       '<div class="iss-card-tags mb-2">' + metaTagsHtml + '</div>';
   }
 
+  const hints = (function () {
+    const h = frontmatter.hint;
+    const hs = frontmatter.hints;
+    if (h) return [typeof h === 'string' ? h : String(h)];
+    if (Array.isArray(hs)) return hs.map(function (x) { return String(x); });
+    if (typeof hs === 'string') return hs.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+    return [];
+  })();
+
   const buttonsEl = document.getElementById('exercise-buttons');
   if (buttonsEl) {
-    buttonsEl.innerHTML =
-      '<button type="button" id="iss-copy-exercise-btn" class="iss-exercise-action-btn">Copiar exercício</button> ' +
+    let buttonsHtml =
+      '<button type="button" id="iss-copy-exercise-btn" class="iss-exercise-action-btn">Copiar exercício</button> ';
+    if (hints.length > 0) {
+      buttonsHtml += '<button type="button" id="iss-show-hint-btn" class="iss-exercise-action-btn">Ver dica</button> ';
+    }
+    buttonsHtml +=
       '<button type="button" id="iss-toggle-solution-btn" class="iss-exercise-action-btn">Mostrar solução</button> ' +
       '<button type="button" id="iss-mark-resolved-btn" class="iss-exercise-action-btn">Marcar como resolvido</button>';
+    buttonsEl.innerHTML = buttonsHtml;
+  }
+  if (hints.length > 0) {
+    const hintWrap = document.createElement('div');
+    hintWrap.id = 'iss-hint-wrap';
+    hintWrap.className = 'hidden mt-3 p-3 rounded border iss-border bg-[var(--color-surface)]';
+    hintWrap.setAttribute('aria-hidden', 'true');
+    hintWrap.innerHTML = '<p id="iss-hint-text" class="m-0 text-sm iss-text-foreground"></p><button type="button" id="iss-next-hint-btn" class="iss-exercise-action-btn text-sm mt-2 hidden">Próxima dica</button>';
+    buttonsEl.parentNode.insertBefore(hintWrap, buttonsEl.nextSibling);
+    let hintIndex = 0;
+    const hintTextEl = document.getElementById('iss-hint-text');
+    const nextHintBtn = document.getElementById('iss-next-hint-btn');
+    document.getElementById('iss-show-hint-btn').addEventListener('click', function () {
+      hintWrap.classList.remove('hidden');
+      hintWrap.setAttribute('aria-hidden', 'false');
+      hintIndex = 0;
+      hintTextEl.textContent = hints[0];
+      nextHintBtn.classList.toggle('hidden', hints.length <= 1);
+      if (hints.length > 1) nextHintBtn.textContent = 'Próxima dica';
+    });
+    if (nextHintBtn) {
+      nextHintBtn.addEventListener('click', function () {
+        hintIndex++;
+        if (hintIndex < hints.length) {
+          hintTextEl.textContent = hints[hintIndex];
+          nextHintBtn.textContent = hintIndex < hints.length - 1 ? 'Próxima dica' : 'Fechar';
+        } else {
+          hintWrap.classList.add('hidden');
+          hintWrap.setAttribute('aria-hidden', 'true');
+        }
+      });
+    }
   }
 
   const enunciadoEl = document.getElementById('exercise-enunciado');
@@ -208,27 +228,33 @@ function renderExercisePage(data) {
     navEl.innerHTML = html;
   }
 
+  const linkedLessons = (function () {
+    const ll = frontmatter.linkedLessons;
+    if (Array.isArray(ll)) return ll.filter(function (x) { return x && x.discipline && x.slug; });
+    return [];
+  })();
+
   const relatedWrap = document.getElementById('exercise-related-wrap');
-  if (relatedWrap && exercises.length > 0 && slug) {
-    const related = getRelatedExercises(exercises, slug, concepts, 5);
-    if (related.length > 0) {
-      relatedWrap.innerHTML =
-        '<h2 class="text-lg font-semibold iss-text-foreground mb-2">Exercícios relacionados</h2>' +
-        '<ul class="list-none p-0 m-0">' +
-        related
-          .map(
-            (ex) =>
-              '<li class="mb-1"><a href="exercise.html?slug=' +
-              encodeURIComponent(ex.slug) +
-              '" class="iss-link">' +
-              escapeHtml(ex.title) +
-              '</a></li>'
-          )
-          .join('') +
-        '</ul>';
-    } else {
-      relatedWrap.innerHTML = '';
+  if (relatedWrap) {
+    let html = '';
+    if (linkedLessons.length > 0) {
+      html += '<h2 class="text-lg font-semibold iss-text-foreground mb-2">Aula relacionada</h2><ul class="list-none p-0 m-0 mb-4">' +
+        linkedLessons.map(function (l) {
+          const url = 'aula.html?d=' + encodeURIComponent(l.discipline) + '&a=' + encodeURIComponent(l.slug);
+          return '<li class="mb-1"><a href="' + url + '" class="iss-link">Ver aula: ' + escapeHtml(l.slug) + '</a></li>';
+        }).join('') + '</ul>';
     }
+    if (exercises.length > 0 && slug) {
+      const related = getRelatedExercises(exercises, slug, concepts, 5);
+      if (related.length > 0) {
+        html += '<h2 class="text-lg font-semibold iss-text-foreground mb-2">Exercícios relacionados</h2>' +
+          '<ul class="list-none p-0 m-0">' +
+          related.map(function (ex) {
+            return '<li class="mb-1"><a href="exercise.html?slug=' + encodeURIComponent(ex.slug) + '" class="iss-link">' + escapeHtml(ex.title) + '</a></li>';
+          }).join('') + '</ul>';
+      }
+    }
+    relatedWrap.innerHTML = html || '';
   }
 
   const enunciadoTextEl = document.createElement('div');
@@ -257,10 +283,36 @@ function renderExercisePage(data) {
 
   const markResolvedBtn = document.getElementById('iss-mark-resolved-btn');
   if (markResolvedBtn && typeof markExerciseCompleted === 'function') {
-    markResolvedBtn.addEventListener('click', () => {
-      markExerciseCompleted(slug);
+    markResolvedBtn.addEventListener('click', function () {
+      markExerciseCompleted(slug, concepts);
       markResolvedBtn.textContent = '✓ Resolvido';
       markResolvedBtn.disabled = true;
+      if (sessionInfo && sessionInfo.slugs && sessionInfo.slugs.length > 0) {
+        const nextIndex = sessionInfo.index + 1;
+        try {
+          sessionStorage.setItem('iss-session-index', String(nextIndex));
+        } catch (_) {}
+        if (nextIndex < sessionInfo.slugs.length) {
+          window.location.href = 'exercise.html?slug=' + encodeURIComponent(sessionInfo.slugs[nextIndex]) + '&session=1';
+        } else {
+          try {
+            sessionStorage.removeItem('iss-session-slugs');
+            sessionStorage.removeItem('iss-session-index');
+          } catch (_) {}
+          window.location.href = 'exercises.html?session_done=1';
+        }
+      }
+    });
+  }
+
+  const endSessionBtn = document.getElementById('iss-end-session-btn');
+  if (endSessionBtn) {
+    endSessionBtn.addEventListener('click', function () {
+      try {
+        sessionStorage.removeItem('iss-session-slugs');
+        sessionStorage.removeItem('iss-session-index');
+      } catch (_) {}
+      window.location.href = 'exercises.html';
     });
   }
 
@@ -270,7 +322,7 @@ function renderExercisePage(data) {
   const confirmWrap = document.getElementById('iss-solution-confirm-wrap');
 
   function showSolution() {
-    if (typeof markExerciseCompleted === 'function' && slug) markExerciseCompleted(slug);
+    if (typeof markExerciseCompleted === 'function' && slug) markExerciseCompleted(slug, concepts);
     if (solutionBlock) {
       solutionBlock.classList.remove('hidden');
       solutionBlock.setAttribute('aria-hidden', 'false');
@@ -367,12 +419,60 @@ function applyExercisesFilters(exercises, state) {
   return list;
 }
 
+/**
+ * Preenche a secção "Exercícios sugeridos para a aula atual" quando ?d=&a= estão na URL.
+ * Usa concepts do frontmatter da aula e getRelatedExercises; fallback por conceitos (Fase 2 linkedExercises depois).
+ */
+function initExercisesForLesson(exercises) {
+  const d = typeof getParam === 'function' ? getParam('d') : (new URLSearchParams(window.location.search).get('d') || '');
+  const a = typeof getParam === 'function' ? getParam('a') : (new URLSearchParams(window.location.search).get('a') || '');
+  if (!d || !a) return;
+
+  const section = document.getElementById('exercises-for-lesson');
+  const contentEl = document.getElementById('exercises-for-lesson-content');
+  if (!section || !contentEl) return;
+
+  if (typeof fetchLessons !== 'function' || typeof getLesson !== 'function' || typeof fetchLessonMarkdown !== 'function') return;
+
+  fetchLessons()
+    .then((lessons) => {
+      const lesson = getLesson(lessons, d, a);
+      if (!lesson) return null;
+      return typeof fetchLessonMarkdown === 'function'
+        ? fetchLessonMarkdown(d, lesson.file).then((raw) => ({ lesson, raw }))
+        : null;
+    })
+    .then((data) => {
+      if (!data || typeof parseFrontmatter !== 'function') return;
+      const frontmatter = parseFrontmatter(data.raw).frontmatter || {};
+      const concepts = getConceptsArray(frontmatter.concepts);
+      if (concepts.length === 0) return;
+      const suggested = getRelatedExercises(exercises, '', concepts, 10);
+      if (suggested.length === 0) return;
+
+      const aulaUrl = 'aula.html?d=' + encodeURIComponent(d) + '&a=' + encodeURIComponent(a);
+      contentEl.innerHTML =
+        '<h2 class="text-lg font-semibold iss-text-foreground mb-2">Exercícios sugeridos para a aula atual</h2>' +
+        '<p class="text-sm iss-text-muted mb-3">' + (typeof escapeHtml === 'function' ? escapeHtml(data.lesson.title) : data.lesson.title) + '</p>' +
+        '<ul class="list-none pl-0 mb-3">' +
+        suggested.map(function (ex) {
+          return '<li class="mb-1"><a href="exercise.html?slug=' + encodeURIComponent(ex.slug) + '&d=' + encodeURIComponent(d) + '&a=' + encodeURIComponent(a) + '" class="iss-link">' + (typeof escapeHtml === 'function' ? escapeHtml(ex.title) : ex.title) + '</a></li>';
+        }).join('') +
+        '</ul>' +
+        '<a href="' + aulaUrl + '" class="iss-link text-sm">Abrir aula</a>';
+      section.classList.remove('hidden');
+    })
+    .catch(function () {});
+}
+
 function initExercises(containerId) {
   const container = document.getElementById(containerId || 'exercises-list');
   if (!container) return;
 
+  const getP = typeof getParam === 'function' ? getParam : function (name) { return new URLSearchParams(window.location.search).get(name) || ''; };
+  const conceptFromUrl = getP('concept');
   const state = {
-    selectedConcepts: new Set(),
+    selectedConcepts: new Set(conceptFromUrl ? [decodeURIComponent(conceptFromUrl)] : []),
     difficultyFilter: '',
     resolveFilter: '',
   };
@@ -462,6 +562,7 @@ function initExercises(containerId) {
       }
 
       updatePracticeStats(exercises.length);
+      initExercisesForLesson(exercises);
 
       if (conceptFiltersEl) {
         const concepts = getAllConcepts(exercises);
@@ -607,7 +708,25 @@ function initExercises(containerId) {
 }
 
 function initExercise() {
-  const slug = typeof getParam === 'function' ? getParam('slug') : (new URLSearchParams(window.location.search).get('slug') || '');
+  const getP = typeof getParam === 'function' ? getParam : function (name) { return new URLSearchParams(window.location.search).get(name) || ''; };
+  const slug = getP('slug');
+  const originD = getP('d');
+  const originA = getP('a');
+  if (originD && originA) {
+    try {
+      sessionStorage.setItem('iss-exercise-origin', JSON.stringify({ from: 'aula', d: originD, a: originA }));
+    } catch (_) {}
+  }
+  let sessionInfo = null;
+  const inSession = getP('session') === '1';
+  if (inSession) {
+    try {
+      const raw = sessionStorage.getItem('iss-session-slugs');
+      const idx = parseInt(sessionStorage.getItem('iss-session-index') || '0', 10);
+      const slugs = raw ? JSON.parse(raw) : [];
+      if (Array.isArray(slugs) && slugs.length > 0) sessionInfo = { slugs: slugs, index: idx };
+    } catch (_) {}
+  }
   const titleEl = document.getElementById('exercise-title');
   const contentEl = document.getElementById('exercise-content');
 
@@ -637,6 +756,8 @@ function initExercise() {
       const { frontmatter, body } = parseFrontmatter(raw);
       const { enunciado, solucaoCode } = parseExerciseBody(body);
       const enunciadoHtml = typeof renderBody === 'function' ? renderBody(enunciado) : escapeHtml(enunciado).replace(/\n/g, '<br>');
+      let exerciseOrigin = null;
+      if (originD && originA) exerciseOrigin = { d: originD, a: originA };
       renderExercisePage({
         frontmatter: { ...exercise, ...frontmatter },
         enunciadoHtml,
@@ -644,6 +765,8 @@ function initExercise() {
         discipline: frontmatter.discipline || exercise.discipline,
         currentSlug: exercise.slug,
         allExercises: exercises || [],
+        exerciseOrigin: exerciseOrigin,
+        sessionInfo: sessionInfo,
       });
     })
     .catch(() => {

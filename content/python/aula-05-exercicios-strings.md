@@ -4,6 +4,7 @@ slug: "exercicios-strings"
 discipline: "python"
 order: 5
 description: "Resolução dos três exercícios (ºC→ºF, retângulo, três números) e conceitos de strings: aspas, multilinha, aspas no texto"
+concepts: "strings, variáveis, input(), float(), operadores aritméticos, f-string, formatação de strings, multiline strings"
 exercises:
   - question: "Por que uma string definida com aspas simples em uma linha não pode conter quebra de linha no meio do texto?"
     answer: "Em Python, string com aspas simples (ou duplas) deve abrir e fechar na mesma linha. A quebra de linha dentro do texto encerra a linha antes do fechamento da aspa, gerando SyntaxError: unterminated string literal. Para múltiplas linhas usa-se docstring (três aspas ''' ou \"\"\")."

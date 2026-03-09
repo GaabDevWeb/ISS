@@ -15,6 +15,7 @@
   <header class="iss-header flex items-center justify-between px-4 md:px-6 sticky top-0 z-10">
     <div class="flex items-center gap-4">
       <a href="index.html" class="font-semibold iss-link no-underline">ISS</a>
+      <a href="stats.html" class="iss-link text-sm">Estatísticas</a>
     </div>
     <a href="https://github.com/GaabDevWeb/ISS" target="_blank" rel="noopener noreferrer" class="iss-link" aria-label="Abrir repositório no GitHub">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -22,7 +23,8 @@
   </header>
 
   <main class="flex-1 px-4 md:px-6 py-8 md:py-12 max-w-3xl mx-auto w-full">
-    <nav class="text-sm mb-6" aria-label="Navegação">
+    <nav class="text-sm mb-6 flex items-center gap-2" aria-label="Navegação">
+      <button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>
       <a href="index.html" class="iss-link-muted">Home</a>
       <span class="iss-text-muted mx-1">/</span>
       <span>Sobre</span>
@@ -35,7 +37,7 @@
       <section aria-labelledby="sec-o-que-e">
         <h2 id="sec-o-que-e" class="!mt-0">O que é o ISS?</h2>
         <p class="iss-text-foreground">
-          O ISS é uma plataforma de estudo focada em <strong>revisão de aulas</strong> e <strong>prática de código</strong>. Foi pensada como apoio a disciplinas (por exemplo na INFNET), mas qualquer pessoa com acesso ao repositório ou ao site pode usá-la para estudar.
+          O ISS é uma plataforma de estudo focada em <strong>revisão de aulas</strong> e <strong>prática de código</strong>. Inclui lista de exercícios com filtros, estatísticas de progresso (maior lacuna, funil, atividade) e sugestões de exercícios por aula. Foi pensada como apoio a disciplinas (por exemplo na INFNET), mas qualquer pessoa com acesso ao repositório ou ao site pode usá-la para estudar.
         </p>
         <p class="iss-text-muted">
           Tecnicamente, é uma <strong>LXP estática</strong> (Learning Experience Platform): um ambiente de aprendizagem que roda inteiramente no browser, sem login nem servidor — as aulas e os exercícios são carregados a partir de ficheiros estáticos. O foco está na experiência de estudo: reler aulas, marcar como lidas e praticar com exercícios que dão feedback direto no navegador.

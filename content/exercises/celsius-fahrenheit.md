@@ -4,6 +4,7 @@ slug: "celsius-fahrenheit"
 difficulty: "medium"
 concepts: "input(), float(), operadores aritméticos, f-string"
 discipline: "python"
+hint: "A fórmula é F = C * 9/5 + 32. Use float(input()) para ler e f-string com :.1f para uma casa decimal."
 ---
 
 ## Enunciado

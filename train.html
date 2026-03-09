@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ISS — Infet Students Summary</title>
+  <title>Treino focado — ISS</title>
   <link rel="icon" href="css/images/icon.svg" type="image/svg+xml">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css">
@@ -23,24 +23,23 @@
   </header>
 
   <main class="flex-1 px-4 md:px-6 py-8 md:py-12 max-w-4xl mx-auto w-full">
-    <section class="mb-12 md:mb-16">
-      <h1 class="text-3xl md:text-4xl font-bold iss-text-foreground mb-2" style="font-size: var(--text-hero);">ISS</h1>
-      <p class="iss-text-muted text-lg">Teoria que vira código. Revisão que vira domínio.</p>
-      <p id="iss-library-stats" class="iss-text-muted text-sm mt-3"></p>
-    </section>
+    <nav class="text-sm mb-4 flex items-center gap-2" aria-label="Navegação">
+      <button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>
+      <a href="index.html" class="iss-link-muted">Home</a>
+      <span class="iss-text-muted mx-1">/</span>
+      <span>Treino focado</span>
+    </nav>
 
-    <section role="search" class="mb-8" aria-label="Pesquisa">
-      <label for="iss-search" class="sr-only">Pesquisar aulas</label>
-      <div class="relative max-w-md">
-        <input type="search" id="iss-search" class="w-full px-4 py-2 rounded border iss-border bg-transparent iss-text-foreground placeholder:iss-text-muted focus:outline-none focus:ring-2 focus:ring-inset" placeholder="Pesquisar aulas…" autocomplete="off" />
-        <div id="search-results" class="hidden absolute left-0 right-0 top-full mt-1 z-20 py-3 px-3 rounded-lg border iss-border max-h-80 overflow-y-auto iss-search-results-dropdown" aria-live="polite"></div>
-      </div>
-    </section>
+    <h1 class="text-2xl md:text-3xl font-bold iss-text-foreground mb-2">Treino por conceitos fracos</h1>
+    <p class="iss-text-muted mb-6">Conceitos em que você tem mais exercícios pendentes. Treine para reforçar.</p>
 
-    <section aria-label="Disciplinas e exercícios" class="iss-home-cards">
-      <h2 class="sr-only">Disciplinas e exercícios</h2>
-      <div id="home-cards-grid" class="iss-home-cards__grid"><p class="iss-text-muted">A carregar…</p></div>
-    </section>
+    <div id="train-concepts-list" class="space-y-4">
+      <p class="iss-text-muted">A carregar…</p>
+    </div>
+
+    <p class="mt-8 text-sm iss-text-muted">
+      <a href="exercises.html" class="iss-link">Ver todos os exercícios</a>
+    </p>
   </main>
 
   <footer class="py-6 px-4 md:px-6 border-t iss-border text-center text-sm iss-text-muted">
@@ -49,10 +48,6 @@
 
   <script src="js/content.js" defer></script>
   <script src="js/state.js" defer></script>
-  <script src="js/read-lessons.js" defer></script>
-  <script src="js/reviewed.js" defer></script>
-  <script src="js/router.js" defer></script>
-  <script src="js/exercises.js" defer></script>
-  <script src="js/app.js" defer></script>
+  <script src="js/train.js" defer></script>
 </body>
 </html>

@@ -4,6 +4,8 @@ slug: "variaveis-tipos"
 discipline: "python"
 order: 3
 description: "Comentários, variáveis, tipos básicos, nomes válidos, convenções PEP 8 e Zen do Python"
+concepts: "variáveis, tipo de dado, type(), int, float, bool"
+linkedExercises: "tipo-de-dado, dobrar-numero, comentario-e-saudacao"
 exercises:
   - question: "O que é uma variável e o que é tipo de dado (conceito da aula)?"
     answer: "Variável: abstração de um local de armazenamento de dados na memória; os dados armazenados podem mudar ao longo da execução (daí o nome variável). Tipo de dado: determina o significado (semântica) do valor armazenado na variável; o computador usa o tipo para otimizar armazenamento e operações."

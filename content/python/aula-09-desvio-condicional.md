@@ -6,15 +6,7 @@ order: 9
 description: "Estruturas if/else e if/elif/else para desvio de fluxo; blocos de código por indentação; testes lógicos e notação de intervalo"
 reading_time: 7
 difficulty: "medium"
-concepts:
-  - desvio condicional
-  - if/else
-  - elif
-  - bloco de código
-  - indentação
-  - operadores relacionais
-  - notação de intervalo
-  - operador módulo
+concepts: "if/else, if/elif/else, operador módulo %, notação de intervalo, comparação"
 prerequisites: ["aula-08-strings-formatacao-input"]
 exercises:
   - question: "Qual a diferença entre else e elif?"

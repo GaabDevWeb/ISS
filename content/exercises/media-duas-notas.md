@@ -4,6 +4,7 @@ slug: "media-duas-notas"
 difficulty: "easy"
 concepts: ["variáveis", "média", "divisão", "float"]
 discipline: "python"
+hint: "Média aritmética = (nota1 + nota2) / 2. Use f-string com :.1f para exibir com uma casa decimal."
 ---
 
 ## Enunciado

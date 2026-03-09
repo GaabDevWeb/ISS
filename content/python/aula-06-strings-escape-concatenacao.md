@@ -6,12 +6,7 @@ order: 6
 description: "Caracteres de escape (\\n, \\t, \\\\), raw string, concatenação com +, multiplicação de strings, conversão para evitar TypeError"
 reading_time: 7
 difficulty: "easy"
-concepts:
-  - escape
-  - raw string
-  - concatenação
-  - multiplicação de strings
-  - tipagem forte
+concepts: "escape \\n e \\t, multiplicação de strings, concatenação, tipagem forte, str()"
 prerequisites: ["aula-05-exercicios-strings", "aula-04-operadores-conversao-tipos"]
 exercises:
   - question: "Por que text = 'aqui está um texto sobre a \\' barra invertida' gera SyntaxError e como corrigir?"

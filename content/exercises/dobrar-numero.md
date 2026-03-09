@@ -4,6 +4,7 @@ slug: "dobrar-numero"
 difficulty: "easy"
 concepts: "input(), conversão de tipos, int()"
 discipline: "python"
+hint: "Use input() para ler uma string e int() para converter em número antes de calcular o dobro."
 ---
 
 ## Enunciado

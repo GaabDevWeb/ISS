@@ -6,18 +6,7 @@ order: 10
 description: "Operadores and, or, not; tabela verdade; if opcional e ifs aninhados; padronização de string; valores truthy/falsy; match/case (Python 3.10+)"
 reading_time: 8
 difficulty: "medium"
-concepts:
-  - operadores lógicos
-  - and
-  - or
-  - not
-  - tabela verdade
-  - if opcional
-  - ifs aninhados
-  - padronização de string
-  - truthy e falsy
-  - match case
-  - pattern matching
+concepts: "match/case, Python 3.10+, input(), strip(), lower(), comparação de strings, if, and"
 prerequisites: ["aula-09-desvio-condicional"]
 exercises:
   - question: "Qual o resultado de (True and False) or (True)?"

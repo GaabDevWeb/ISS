@@ -4,6 +4,7 @@ slug: "positivo-negativo-zero"
 difficulty: "easy"
 concepts: "if/elif/else, comparação, input()"
 discipline: "python"
+hint: "Teste primeiro numero > 0, depois numero < 0; o que sobrar é zero. Use float(input()) para ler."
 ---
 
 ## Enunciado

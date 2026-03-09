@@ -4,6 +4,7 @@ slug: "operadores-conversao-tipos"
 discipline: "python"
 order: 4
 description: "Funções de conversão int/float/bool/str, tipagem forte, operadores + - * / // % ** e precedência"
+concepts: "conversão de tipos, int(), float(), operadores aritméticos, operadores // e %"
 exercises:
   - question: "O que acontece ao executar float('texto qualquer') em Python e por quê?"
     answer: "Ocorre ValueError: could not convert string to float. Python tem tipagem forte: só converte string para número quando o conteúdo da string representa um número; texto não numérico não é convertido."

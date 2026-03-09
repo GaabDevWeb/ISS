@@ -6,13 +6,7 @@ order: 8
 description: "Interpolação de strings com %, .format() e f-strings; entrada do usuário com input() e conversão de tipo"
 reading_time: 7
 difficulty: "medium"
-concepts:
-  - interpolação de strings
-  - estilo %
-  - .format()
-  - f-strings
-  - input()
-  - conversão de tipo com input
+concepts: "interpolação, %s %d %f, .format(), f-string, input(), formatação de strings"
 prerequisites: ["aula-07-strings-indices-slice-metodos"]
 exercises:
   - question: "Qual a diferença entre %s, %d e %f no estilo % de formatação?"
