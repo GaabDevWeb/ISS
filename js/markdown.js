@@ -2,6 +2,95 @@
  * ISS — Parse frontmatter, render Markdown (Marked.js), Highlight.js, injeção de exercícios
  */
 
+function parseSimpleYamlValue(value) {
+  const v = String(value || '').trim();
+  if (!v) return '';
+  if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) {
+    return v.slice(1, -1).replace(/\\"/g, '"').replace(/\\'/g, "'");
+  }
+  if (v === 'true') return true;
+  if (v === 'false') return false;
+  if (v === 'null') return null;
+  if (/^-?\d+$/.test(v)) return parseInt(v, 10);
+  if (/^-?\d+\.\d+$/.test(v)) return parseFloat(v);
+  if ((v.startsWith('[') && v.endsWith(']')) || (v.startsWith('{') && v.endsWith('}'))) {
+    try {
+      return JSON.parse(v);
+    } catch (_) {
+      return v;
+    }
+  }
+  return v;
+}
+
+function getLineIndent(line) {
+  const m = String(line || '').match(/^(\s*)/);
+  return m ? m[1].length : 0;
+}
+
+function parseYamlLiteralBlock(lines, startIndex) {
+  const block = [];
+  let i = startIndex;
+  let baseIndent = null;
+  while (i < lines.length) {
+    const line = lines[i];
+    if (!line.trim()) {
+      block.push('');
+      i++;
+      continue;
+    }
+    const indent = getLineIndent(line);
+    if (baseIndent == null) baseIndent = indent;
+    if (indent < baseIndent) break;
+    // Encerra o bloco ao encontrar nova chave YAML no mesmo nível (ex.: "tests:")
+    if (indent === baseIndent && line.trim().match(/^\w+:\s*$/)) break;
+    block.push(line.slice(baseIndent));
+    i++;
+  }
+  return { value: block.join('\n').replace(/\s+$/, ''), nextIndex: i };
+}
+
+function parseYamlObjectList(lines, startIndex) {
+  const list = [];
+  let i = startIndex;
+  let listIndent = null;
+  let current = null;
+
+  while (i < lines.length) {
+    const line = lines[i];
+    if (!line.trim()) {
+      i++;
+      continue;
+    }
+    const indent = getLineIndent(line);
+    const itemMatch = line.match(/^\s*-\s*(.*)$/);
+    if (itemMatch) {
+      if (listIndent == null) listIndent = indent;
+      if (indent < listIndent) break;
+      if (indent > listIndent && current) {
+        i++;
+        continue;
+      }
+      current = {};
+      const inline = itemMatch[1].trim();
+      if (inline) {
+        const kvInline = inline.match(/^([\w-]+):\s*(.*)$/);
+        if (kvInline) current[kvInline[1]] = parseSimpleYamlValue(kvInline[2]);
+      }
+      list.push(current);
+      i++;
+      continue;
+    }
+
+    if (listIndent == null || indent <= listIndent) break;
+    const kv = line.trim().match(/^([\w-]+):\s*(.*)$/);
+    if (kv && current) current[kv[1]] = parseSimpleYamlValue(kv[2]);
+    i++;
+  }
+
+  return { value: list, nextIndex: i };
+}
+
 function parseFrontmatter(raw) {
   const delim = '---';
   const start = raw.indexOf(delim);
@@ -18,16 +107,24 @@ function parseFrontmatter(raw) {
 
   while (i < lines.length) {
     const line = lines[i];
-    const keyMatch = line.match(/^(\w+):\s*(.*)$/);
+    const keyMatch = line.match(/^\s*(\w+):\s*(.*)$/);
     if (keyMatch) {
       const [, key, rest] = keyMatch;
-      let value = rest.trim();
-      if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
-        value = value.slice(1, -1).replace(/\\"/g, '"');
-      } else if (value === 'true') value = true;
-      else if (value === 'false') value = false;
-      else if (/^\d+$/.test(value)) value = parseInt(value, 10);
-      if (key !== 'exercises') frontmatter[key] = value;
+      const value = rest.trim();
+      if (value === '|') {
+        const parsedBlock = parseYamlLiteralBlock(lines, i + 1);
+        if (key !== 'exercises') frontmatter[key] = parsedBlock.value;
+        i = parsedBlock.nextIndex;
+        continue;
+      }
+      if (key === 'tests' && value === '') {
+        const parsedTests = parseYamlObjectList(lines, i + 1);
+        frontmatter.tests = parsedTests.value;
+        i = parsedTests.nextIndex;
+        continue;
+      }
+      const parsedValue = parseSimpleYamlValue(value);
+      if (key !== 'exercises') frontmatter[key] = parsedValue;
     }
     if (line.match(/^exercises:\s*$/)) {
       const exercises = [];

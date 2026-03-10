@@ -32,6 +32,8 @@ explicações
 
 exemplos
 
+**Integração:** Se o ficheiro contiver um bloco comentado **CONCEPT_EXTRACTION** (gerado pelo agente de produção de material), use-o em vez de re-extrair. O bloco tem o formato: `concepts`, `skills`, `examples`. Só re-extraia do texto quando esse bloco não existir ou estiver incompleto.
+
 Tarefa
 
 Extrair:
@@ -54,6 +56,8 @@ skills:
 - escrever condições
 - criar fluxos de decisão
 
+**Mapeamento de habilidades:** As skills extraídas devem usar **verbos de ação** (ex.: "Validar", "Concatenar", "Tratar erro", "Parsear JSON", "Filtrar logs"). Isso facilita a criação de um currículo de competências no perfil do usuário no futuro.
+
 examples:
 - exemplo de código com if
 - exemplo com if + operador lógico
@@ -66,3 +70,7 @@ Evitar:
 conceitos genéricos
 
 conceitos não presentes no conteúdo.
+
+**Prioridade:** Se existir bloco CONCEPT_EXTRACTION no final do .md, consumir esse bloco e validar/complementar com o conteúdo da aula (não duplicar trabalho do agente de produção).
+
+**Skills com verbos de ação:** Ao listar habilidades, use sempre verbos de ação no infinitivo ou imperativo (Validar, Concatenar, Tratar erro, Parsear, Filtrar, Comparar, etc.). Evite substantivos soltos ou frases passivas — isso permite mapear competências para um currículo do usuário depois.

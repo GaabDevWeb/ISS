@@ -7,7 +7,12 @@
   <link rel="icon" href="css/images/icon.svg" type="image/svg+xml">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/theme/material-darker.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/addon/hint/show-hint.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/editor-panel.css">
+  <link rel="stylesheet" href="css/code-editor.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -23,6 +28,8 @@
     </a>
   </header>
 
+  <div id="app-layout" class="flex-1 flex flex-col min-h-0">
+    <div id="exercise-panel">
   <main class="px-4 md:px-6 py-8 md:py-12 max-w-3xl w-full mx-auto">
     <nav id="breadcrumb-exercise" class="text-sm mb-4 flex items-center gap-2" aria-label="Navegação">
       …
@@ -50,6 +57,9 @@
       <section id="exercise-related-wrap" class="mt-8 pt-6 border-t iss-border" aria-label="Exercícios relacionados"></section>
     </article>
   </main>
+    </div>
+    <div id="editor-panel" aria-label="Editor de código"></div>
+  </div>
 
   <footer class="py-6 px-4 md:px-6 border-t iss-border text-center text-sm iss-text-muted">
     Projeto de apoio à revisão — INFNET · <a href="about.html" class="iss-link-muted">Sobre</a>
@@ -59,11 +69,21 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/mode/python/python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/addon/hint/anyword-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/addon/edit/matchbrackets.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/addon/selection/active-line.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.18/addon/edit/closebrackets.min.js"></script>
   <script src="js/content.js" defer></script>
   <script src="js/state.js" defer></script>
   <script src="js/router.js" defer></script>
   <script src="js/markdown.js" defer></script>
+  <script src="js/code-editor.js" defer></script>
+  <script src="js/code-runner.js" defer></script>
   <script src="js/exercises.js" defer></script>
+  <script src="js/editor-panel.js" defer></script>
   <script src="js/app.js" defer></script>
 </body>
 </html>

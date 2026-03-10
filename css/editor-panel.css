@@ -1,0 +1,93 @@
+/* Editor lateral (split screen) em exercises.html */
+
+#app-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex: 1;
+  min-height: 0;
+}
+
+#app-layout.editor-open {
+  grid-template-columns: 45% 55%;
+}
+
+#exercise-panel {
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.iss-editor-panel-content {
+  display: none;
+  padding: 1rem 1.25rem;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+#exercise-panel.has-editor-content #exercise-list-wrap {
+  display: none;
+}
+
+#exercise-panel.has-editor-content .iss-editor-panel-content {
+  display: block;
+}
+
+#editor-panel {
+  border-left: 1px solid var(--color-border);
+  display: none;
+  overflow-y: auto;
+  min-height: 0;
+  background: var(--color-background);
+}
+
+#app-layout.editor-open #editor-panel {
+  display: block;
+}
+
+/* Conteúdo do exercício no painel esquerdo (quando editor aberto) */
+.iss-editor-panel-content .iss-prose {
+  max-width: none;
+}
+
+/* Cabeçalho e botão Fechar no painel direito */
+.editor-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.editor-panel__body {
+  padding: 1rem;
+}
+
+.iss-close-editor-btn {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.iss-close-editor-btn:hover {
+  color: var(--color-accent-hover, var(--color-accent));
+  border-color: var(--color-muted);
+}
+
+/* Responsivo: em telas pequenas empilhar ou manter uma coluna */
+@media (max-width: 768px) {
+  #app-layout.editor-open {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #editor-panel {
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+  }
+}

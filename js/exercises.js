@@ -33,6 +33,41 @@ function formatEnunciadoForCopy(enunciadoText) {
   return lines.map((line) => (line.trim() ? '# ' + line : '')).join('\n').trim() || '# Exercício';
 }
 
+function getExerciseCodeStorageKey(exerciseId) {
+  return 'exercise_code_' + exerciseId;
+}
+
+function getStdinStorageKey(exerciseId) {
+  return 'exercise_stdin_' + exerciseId;
+}
+
+function formatTestValue(value) {
+  if (typeof value === 'string') return '"' + value + '"';
+  try {
+    return JSON.stringify(value);
+  } catch (_) {
+    return String(value);
+  }
+}
+
+function goToNextSessionExercise(sessionInfo) {
+  if (!sessionInfo || !sessionInfo.slugs || sessionInfo.slugs.length === 0) return false;
+  const nextIndex = sessionInfo.index + 1;
+  try {
+    sessionStorage.setItem('iss-session-index', String(nextIndex));
+  } catch (_) {}
+  if (nextIndex < sessionInfo.slugs.length) {
+    window.location.href = 'exercise.html?slug=' + encodeURIComponent(sessionInfo.slugs[nextIndex]) + '&session=1';
+  } else {
+    try {
+      sessionStorage.removeItem('iss-session-slugs');
+      sessionStorage.removeItem('iss-session-index');
+    } catch (_) {}
+    window.location.href = 'exercises.html?session_done=1';
+  }
+  return true;
+}
+
 function ExerciseCard(exercise, options) {
   const concepts = getConceptsArray(exercise.concepts);
   const difficultyLabel = getDifficultyLabel(exercise.difficulty);
@@ -90,6 +125,177 @@ function getRelatedExercises(allExercises, currentSlug, currentConcepts, limit) 
     .map((x) => x.exercise);
 }
 
+function renderInteractiveExercise(options) {
+  const {
+    frontmatter,
+    slug,
+    concepts,
+    sessionInfo,
+    markResolvedBtn,
+  } = options || {};
+  const root = document.getElementById('exercise-solution-wrap');
+  if (!root) return;
+
+  const starterCode = typeof frontmatter.starter_code === 'string' ? frontmatter.starter_code : '';
+  const tests = Array.isArray(frontmatter.tests) ? frontmatter.tests : [];
+  const hasValidTests = tests.length > 0;
+  const codeStorageKey = getExerciseCodeStorageKey(slug);
+
+  root.innerHTML =
+    '<section id="iss-interactive-wrap" class="iss-interactive-wrap" aria-label="Editor de código">' +
+      '<h2 class="text-lg font-semibold mb-2">Editor de código</h2>' +
+      '<p id="iss-python-loader" class="text-sm iss-text-muted hidden">Carregando ambiente Python...</p>' +
+      '<div id="iss-code-editor-container" class="iss-code-editor-container" aria-label="Editor Python"></div>' +
+      '<div class="stdin-container">' +
+        '<label for="stdin-input">Entrada (stdin)</label>' +
+        '<textarea id="stdin-input" class="iss-stdin-input" placeholder="Um valor por linha ou separados por espaço. Ex.: 5 7 ou 5&#10;7" rows="3"></textarea>' +
+      '</div>' +
+      '<div class="iss-interactive-actions">' +
+        '<button type="button" id="iss-run-code-btn" class="iss-exercise-action-btn">Executar código</button>' +
+        '<button type="button" id="iss-verify-tests-btn" class="iss-exercise-action-btn">Verificar solução</button>' +
+      '</div>' +
+      '<section class="iss-output-section mt-4" aria-live="polite">' +
+        '<h3 class="text-base font-semibold mb-2">Saída</h3>' +
+        '<pre id="iss-python-output" class="iss-python-output">Pronto para executar.</pre>' +
+      '</section>' +
+      '<section class="iss-tests-section mt-4" aria-live="polite">' +
+        '<h3 class="text-base font-semibold mb-2">Resultados dos testes</h3>' +
+        '<div id="iss-tests-results" class="iss-tests-results iss-text-muted">Clique em \"Verificar solução\" para rodar os testes.</div>' +
+      '</section>' +
+      '<div id="iss-session-next-wrap" class="mt-4"></div>' +
+    '</section>';
+
+  if (typeof setCodeEditorStorageKey === 'function') setCodeEditorStorageKey(codeStorageKey);
+  if (typeof initCodeEditor === 'function') {
+    initCodeEditor(document.getElementById('iss-code-editor-container'), starterCode);
+  }
+
+  const stdinInput = document.getElementById('stdin-input');
+  const stdinKey = getStdinStorageKey(slug);
+  if (stdinInput) {
+    try {
+      var saved = localStorage.getItem(stdinKey);
+      if (saved) stdinInput.value = saved;
+    } catch (_) {}
+    var stdinSaveTimer = null;
+    function saveStdin() {
+      try { localStorage.setItem(stdinKey, stdinInput.value); } catch (_) {}
+    }
+    stdinInput.addEventListener('blur', saveStdin);
+    stdinInput.addEventListener('input', function () {
+      if (stdinSaveTimer) clearTimeout(stdinSaveTimer);
+      stdinSaveTimer = setTimeout(saveStdin, 400);
+    });
+  }
+
+  const runBtn = document.getElementById('iss-run-code-btn');
+  const verifyBtn = document.getElementById('iss-verify-tests-btn');
+  const loaderEl = document.getElementById('iss-python-loader');
+  const outputEl = document.getElementById('iss-python-output');
+  const testsEl = document.getElementById('iss-tests-results');
+  const sessionNextWrap = document.getElementById('iss-session-next-wrap');
+
+  if (!hasValidTests && verifyBtn) {
+    verifyBtn.disabled = true;
+    verifyBtn.title = 'Este exercício não possui testes válidos no frontmatter.';
+    if (testsEl) testsEl.textContent = 'Sem testes configurados para este exercício.';
+  }
+
+  if (typeof setPyRunnerStatusCallback === 'function') {
+    setPyRunnerStatusCallback(function (status) {
+      if (!loaderEl) return;
+      if (status) {
+        loaderEl.textContent = status;
+        loaderEl.classList.remove('hidden');
+      } else {
+        loaderEl.classList.add('hidden');
+      }
+    });
+  }
+
+  function setRunningState(isRunning) {
+    if (runBtn) runBtn.disabled = isRunning;
+    if (verifyBtn) verifyBtn.disabled = isRunning || !hasValidTests;
+  }
+
+  function markAsPassed() {
+    if (typeof markExerciseCompleted === 'function' && slug) markExerciseCompleted(slug, concepts);
+    if (markResolvedBtn) {
+      markResolvedBtn.textContent = '✓ Resolvido';
+      markResolvedBtn.disabled = true;
+    }
+    if (sessionInfo && sessionInfo.slugs && sessionInfo.slugs.length > 0 && sessionNextWrap) {
+      sessionNextWrap.innerHTML = '<button type="button" id="iss-session-next-btn" class="iss-exercise-action-btn">Ir para próximo exercício da sessão</button>';
+      const nextBtn = document.getElementById('iss-session-next-btn');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          goToNextSessionExercise(sessionInfo);
+        });
+      }
+    }
+  }
+
+  if (runBtn) {
+    runBtn.addEventListener('click', async function () {
+      if (typeof runPython !== 'function') return;
+      setRunningState(true);
+      if (outputEl) outputEl.textContent = 'Executando...';
+      try {
+        const code = typeof getEditorCode === 'function' ? getEditorCode() : '';
+        const stdinEl = document.getElementById('stdin-input');
+        const stdinRaw = stdinEl ? stdinEl.value : '';
+        const stdinValues = stdinRaw.trim() ? stdinRaw.trim().split(/\s+/).filter(Boolean) : [];
+        const result = await runPython(code, stdinValues);
+        if (outputEl) {
+          if (result.error) {
+            outputEl.textContent = result.error;
+          } else {
+            outputEl.textContent = result.stdout || '(sem saída)';
+          }
+        }
+      } finally {
+        setRunningState(false);
+      }
+    });
+  }
+
+  if (verifyBtn) {
+    verifyBtn.addEventListener('click', async function () {
+      if (typeof runTests !== 'function') return;
+      setRunningState(true);
+      if (testsEl) testsEl.textContent = 'Executando testes...';
+      try {
+        const code = typeof getEditorCode === 'function' ? getEditorCode() : '';
+        const result = await runTests(code, tests);
+        if (result.error) {
+          if (testsEl) {
+            testsEl.innerHTML = '<p class="iss-test-item iss-test-item--failed">✖ Erro ao validar: ' + escapeHtml(String(result.error)) + '</p>';
+          }
+          return;
+        }
+        if (testsEl) {
+          testsEl.innerHTML = (result.results || []).map(function (testItem, idx) {
+            const testNumber = idx + 1;
+            if (testItem.passed) {
+              return '<p class="iss-test-item iss-test-item--passed">✔ Teste ' + testNumber + ' passou</p>';
+            }
+            return (
+              '<div class="iss-test-item iss-test-item--failed">' +
+                '<p class="m-0">✖ Teste ' + testNumber + ' falhou</p>' +
+                '<p class="m-0 text-sm">Esperado: ' + escapeHtml(formatTestValue(testItem.expected)) + '</p>' +
+                '<p class="m-0 text-sm">Recebido: ' + escapeHtml(formatTestValue(testItem.received)) + '</p>' +
+              '</div>'
+            );
+          }).join('');
+        }
+        if (result.allPassed) markAsPassed();
+      } finally {
+        setRunningState(false);
+      }
+    });
+  }
+}
+
 function renderExercisePage(data) {
   const { frontmatter, enunciadoHtml, solucaoCode, discipline, currentSlug, allExercises, exerciseOrigin, sessionInfo } = data || {};
   const slug = currentSlug || frontmatter.slug;
@@ -97,6 +303,10 @@ function renderExercisePage(data) {
   const concepts = getConceptsArray(frontmatter.concepts);
   const difficultyLabel = getDifficultyLabel(frontmatter.difficulty);
   const lang = frontmatter.language || ((frontmatter.discipline || 'python').toLowerCase().includes('python') ? 'python' : 'plaintext');
+  const isInteractive =
+    frontmatter.editor === true ||
+    String(frontmatter.editor || '').toLowerCase() === 'true' ||
+    (Array.isArray(frontmatter.tests) && frontmatter.tests.length > 0 && (typeof frontmatter.starter_code === 'string' || frontmatter.starter_code != null));
   const exercises = Array.isArray(allExercises) ? allExercises : [];
 
   document.title = title + ' — ISS';
@@ -159,9 +369,11 @@ function renderExercisePage(data) {
     if (hints.length > 0) {
       buttonsHtml += '<button type="button" id="iss-show-hint-btn" class="iss-exercise-action-btn">Ver dica</button> ';
     }
-    buttonsHtml +=
-      '<button type="button" id="iss-toggle-solution-btn" class="iss-exercise-action-btn">Mostrar solução</button> ' +
-      '<button type="button" id="iss-mark-resolved-btn" class="iss-exercise-action-btn">Marcar como resolvido</button>';
+    if (!isInteractive) {
+      buttonsHtml +=
+        '<button type="button" id="iss-toggle-solution-btn" class="iss-exercise-action-btn">Mostrar solução</button> ';
+    }
+    buttonsHtml += '<button type="button" id="iss-mark-resolved-btn" class="iss-exercise-action-btn">' + (isInteractive ? 'Resolvido via testes' : 'Marcar como resolvido') + '</button>';
     buttonsEl.innerHTML = buttonsHtml;
   }
   if (hints.length > 0) {
@@ -201,12 +413,16 @@ function renderExercisePage(data) {
 
   const solutionWrap = document.getElementById('exercise-solution-wrap');
   if (solutionWrap) {
-    solutionWrap.innerHTML =
-      '<div id="iss-solution-confirm-wrap" class="iss-solution-confirm hidden" aria-hidden="true"></div>' +
-      '<div id="exercise-solution-block" class="iss-exercise-solution hidden" aria-hidden="true">' +
-      '<pre><code class="language-' + escapeHtml(lang) + '">' + escapeHtml(solucaoCode) + '</code></pre>' +
-      '<button type="button" id="iss-hide-solution-btn" class="iss-exercise-action-btn mt-2">Esconder solução</button>' +
-      '</div>';
+    if (!isInteractive) {
+      solutionWrap.innerHTML =
+        '<div id="iss-solution-confirm-wrap" class="iss-solution-confirm hidden" aria-hidden="true"></div>' +
+        '<div id="exercise-solution-block" class="iss-exercise-solution hidden" aria-hidden="true">' +
+        '<pre><code class="language-' + escapeHtml(lang) + '">' + escapeHtml(solucaoCode) + '</code></pre>' +
+        '<button type="button" id="iss-hide-solution-btn" class="iss-exercise-action-btn mt-2">Esconder solução</button>' +
+        '</div>';
+    } else {
+      solutionWrap.innerHTML = '';
+    }
   }
 
   const navEl = document.getElementById('exercise-nav-prev-next');
@@ -283,25 +499,31 @@ function renderExercisePage(data) {
 
   const markResolvedBtn = document.getElementById('iss-mark-resolved-btn');
   if (markResolvedBtn && typeof markExerciseCompleted === 'function') {
+    if (isInteractive) {
+      markResolvedBtn.disabled = true;
+      markResolvedBtn.title = 'Exercícios interativos são concluídos ao passar nos testes.';
+    }
+    if (typeof isExerciseCompleted === 'function' && isExerciseCompleted(slug)) {
+      markResolvedBtn.textContent = '✓ Resolvido';
+      markResolvedBtn.disabled = true;
+      markResolvedBtn.title = '';
+    }
     markResolvedBtn.addEventListener('click', function () {
+      if (isInteractive) return;
       markExerciseCompleted(slug, concepts);
       markResolvedBtn.textContent = '✓ Resolvido';
       markResolvedBtn.disabled = true;
-      if (sessionInfo && sessionInfo.slugs && sessionInfo.slugs.length > 0) {
-        const nextIndex = sessionInfo.index + 1;
-        try {
-          sessionStorage.setItem('iss-session-index', String(nextIndex));
-        } catch (_) {}
-        if (nextIndex < sessionInfo.slugs.length) {
-          window.location.href = 'exercise.html?slug=' + encodeURIComponent(sessionInfo.slugs[nextIndex]) + '&session=1';
-        } else {
-          try {
-            sessionStorage.removeItem('iss-session-slugs');
-            sessionStorage.removeItem('iss-session-index');
-          } catch (_) {}
-          window.location.href = 'exercises.html?session_done=1';
-        }
-      }
+      goToNextSessionExercise(sessionInfo);
+    });
+  }
+
+  if (isInteractive) {
+    renderInteractiveExercise({
+      frontmatter: frontmatter,
+      slug: slug,
+      concepts: concepts,
+      sessionInfo: sessionInfo,
+      markResolvedBtn: markResolvedBtn,
     });
   }
 
@@ -322,7 +544,7 @@ function renderExercisePage(data) {
   const confirmWrap = document.getElementById('iss-solution-confirm-wrap');
 
   function showSolution() {
-    if (typeof markExerciseCompleted === 'function' && slug) markExerciseCompleted(slug, concepts);
+    if (!isInteractive && typeof markExerciseCompleted === 'function' && slug) markExerciseCompleted(slug, concepts);
     if (solutionBlock) {
       solutionBlock.classList.remove('hidden');
       solutionBlock.setAttribute('aria-hidden', 'false');
@@ -336,7 +558,7 @@ function renderExercisePage(data) {
       confirmWrap.setAttribute('aria-hidden', 'true');
       confirmWrap.innerHTML = '';
     }
-    if (markResolvedBtn) {
+    if (markResolvedBtn && !isInteractive) {
       markResolvedBtn.textContent = '✓ Resolvido';
       markResolvedBtn.disabled = true;
     }
@@ -699,6 +921,9 @@ function initExercises(containerId) {
         });
       }
 
+      window.__issAllExercises = exercises;
+      window.__issRefreshExerciseList = function () { renderList(exercises); };
+
       renderList(exercises);
     })
     .catch((err) => {
@@ -768,6 +993,7 @@ function initExercise() {
         exerciseOrigin: exerciseOrigin,
         sessionInfo: sessionInfo,
       });
+      if (typeof openEditor === 'function') openEditor(exercise.slug);
     })
     .catch(() => {
       showError('Erro ao carregar o exercício.');

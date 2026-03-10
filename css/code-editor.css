@@ -1,0 +1,183 @@
+.iss-interactive-wrap {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.iss-code-editor-container {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+}
+
+.iss-code-editor-fallback {
+  width: 100%;
+  min-height: 280px;
+  resize: vertical;
+  border: 0;
+  padding: 1rem;
+  color: var(--color-foreground);
+  background: var(--color-surface);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.iss-code-editor-container .CodeMirror {
+  min-height: 280px;
+  height: auto;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.iss-error-line {
+  background-color: rgba(239, 68, 68, 0.15);
+}
+
+.iss-error-gutter-marker {
+  color: #ef4444;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.iss-editor-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(15, 23, 42, 0.8);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.iss-editor-toolbar__left,
+.iss-editor-toolbar__right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.iss-editor-toolbar__cursor {
+  font-family: var(--font-mono);
+}
+
+.iss-editor-theme-select {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-foreground);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.4rem;
+}
+
+.iss-code-editor-container .CodeMirror-gutters {
+  border-right: 1px solid var(--color-border);
+}
+
+.stdin-container {
+  margin-top: 0.75rem;
+}
+
+.stdin-container label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-foreground);
+  margin-bottom: 0.35rem;
+}
+
+.iss-stdin-input,
+#stdin-input,
+#iss-panel-stdin-input {
+  width: 100%;
+  min-height: 72px;
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-foreground);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  resize: vertical;
+}
+
+.iss-stdin-input:focus,
+#stdin-input:focus,
+#iss-panel-stdin-input:focus {
+  outline: none;
+  border-color: var(--color-muted);
+}
+
+.iss-interactive-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.iss-python-output {
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-foreground);
+  font-family: var(--font-mono);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  min-height: 72px;
+}
+
+.iss-io-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: stretch;
+}
+
+.iss-io-grid .stdin-container,
+.iss-io-grid section {
+  margin-top: 0;
+}
+
+.iss-io-grid .iss-stdin-input {
+  height: 140px;
+  min-height: 140px;
+  max-height: 140px;
+}
+
+.iss-io-grid .iss-python-output {
+  height: 140px;
+  min-height: 140px;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.iss-tests-results {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.iss-test-item {
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+
+.iss-test-item--passed {
+  color: #7bd88f;
+}
+
+.iss-test-item--failed {
+  color: #ff8b8b;
+}
