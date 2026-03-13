@@ -169,6 +169,34 @@ function renderBody(body) {
   return marked.parse(body);
 }
 
+function renderMermaidDiagrams(container) {
+  if (!container || typeof mermaid === 'undefined') return;
+
+  const codeBlocks = container.querySelectorAll(
+    'pre code.language-mermaid, pre code.lang-mermaid, code.language-mermaid, code.lang-mermaid'
+  );
+
+  codeBlocks.forEach((code) => {
+    const text = code.textContent || '';
+    const pre = code.parentElement && code.parentElement.tagName === 'PRE' ? code.parentElement : null;
+    const host = pre || code;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'mermaid';
+    wrapper.textContent = text.trim();
+    if (host.parentElement) {
+      host.parentElement.replaceChild(wrapper, host);
+    }
+  });
+  
+  try {
+    if (!renderMermaidDiagrams._initialized) {
+      mermaid.initialize({ startOnLoad: false });
+      renderMermaidDiagrams._initialized = true;
+    }
+    mermaid.run({ querySelector: '.mermaid' });
+  } catch (_) {}
+}
+
 function highlightCodeBlocks(container) {
   if (typeof hljs === 'undefined' || !container) return;
   container.querySelectorAll('pre code').forEach((el) => {
@@ -435,6 +463,7 @@ function renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson, lesso
     contentEl.innerHTML = `${readingTimeHtml}<nav class="mb-6 text-sm" aria-label="Nesta página"><a href="#resumo" class="iss-link hover:underline">Resumo</a><span class="iss-text-muted mx-1" aria-hidden="true">·</span><a href="#explicacoes" class="iss-link hover:underline">Explicações</a><span class="iss-text-muted mx-1" aria-hidden="true">·</span><a href="#exercicios" class="iss-link hover:underline">Exercícios</a></nav><div class="iss-prose">${bodyHtml}</div>${exercisesHtml}${closureHtml}${prevNextHtml}`;
     contentEl.querySelectorAll('img').forEach((img) => img.setAttribute('loading', 'lazy'));
     contentEl.querySelectorAll('iframe').forEach((iframe) => iframe.setAttribute('loading', 'lazy'));
+    if (typeof renderMermaidDiagrams === 'function') renderMermaidDiagrams(contentEl);
     highlightCodeBlocks(contentEl);
     addCopyButtons(contentEl);
     ensureSectionIds(contentEl);

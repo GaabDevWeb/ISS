@@ -1,0 +1,165 @@
+3. Realizar queries SELECT em uma bases de dados SQL
+3.5 Recuperar informações usando operadores <, >, ==, !=
+3.6 Recuperar informações usando operadores lógicos AND/OR
+3.7 Recuperar informações usando operadores lógicos IN
+
+Link importante: 
+https://learning.oreilly.com/library/view/getting-started-with/9781491938607/ch04.html --> Chapter 4. SELECT 
+
+(1) Guia
+(1.1) https://sqlitestudio.pl/ --> Baixar o SQLiteStudio (interface gráfica para acessar o SQLlite). 
+	A partir do menu clicar na opção 'Download'.
+	Na página https://github.com/pawelsalawa/sqlitestudio/releases
+		Na coluna Platform: Windows x64
+		Na coluna Package type: Portable
+		Clicar no link do arquivo 'sqlitestudio-3.4.21-windows-x64.zip' e baixar esse arquivo. 
+	Obs.: 	Será baixado o arquivo sqlitestudio-3.4.21-windows-x64.zip. 
+		Colocar na pasta desejada. 
+		Descompactar o arquivo. 
+	Executar o arquivo SQLiteStudio.exe. 
+		Na janela 'Language' em 'Please choose language' selecionar a linguagem desejada (ex.: português). 
+		Em seguida será aberta a janela 'SQLiteStudio (3.4.21)'. 
+	
+(1.2) No SQLiteStudio.exe
+
+	. No menu Database --> Add a database 
+	ou 
+	no menu Banco de Dados --> Adicionar um banco de dados
+
+		Na janela 'Database'
+
+		Obs.: Escolher a pasta na qual estamos guardando os arquivos do SQLite. 
+
+		Colocar o nome do arquivo como Aula6a.db e clicar no botão 'Salvar'
+
+			Clicar no botão 'Test connection'. 
+
+			Clicar no botão 'OK'
+
+CREATE TABLE sportStars (
+   firstName varchar(40), 
+   surname varchar(40),
+   monthBorn varchar(20),
+   yearOfBirth int,
+   sport varchar(30)
+);
+
+INSERT INTO sportStars VALUES ('Usain', 'Bolt', 'August', 1986, 'Track and field');
+
+INSERT INTO sportStars VALUES ('LeBron', 'Jame', 'December', 1984, 'Basketball');
+
+INSERT INTO sportStars VALUES ('Cristiano', 'Ronaldo', 'Feburary', 1985, 'Football');
+
+INSERT INTO sportStars VALUES ('Lionel', 'Messi', 'June', 1987, 'Football');
+
+INSERT INTO sportStars VALUES ('Tiger', 'Woods', 'December', 1975, 'Golf');
+
+INSERT INTO sportStars VALUES ('Serena', 'Williams', 'September', 1981, 'Tennis');
+
+INSERT INTO sportStars VALUES ('Michael', 'Phelps', 'June', 1985, 'Swimming');
+
+INSERT INTO sportStars VALUES ('Simone', 'Biles', 'March', 1997, 'Gymnastics');
+
+INSERT INTO sportStars VALUES ('Laura', 'Muir', 'May', 1993, 'Track and field');
+
+INSERT INTO sportStars VALUES ('Lucy', 'Bronze', 'October', 1991, 'Football');
+
+-- Executar uma consulta que mostre o primeiro nome da tabela sportStars
+SELECT firstName FROM sportStars;
+
+-- Executar uma consulta que mostre o primeiro nome e o sobrenome da tabela sportStars
+SELECT firstName, surname FROM sportStars;
+
+-- Executar uma consulta que mostre o primeiro nome, o sobrenome e o esporte da tabela sportStars
+SELECT firstName, surname, sport FROM sportStars;
+
+-- Executar uma consulta que mostre todas as colunas da tabela sportStars quando o mês do nascimento for dezembro (december)
+SELECT * FROM sportStars WHERE monthBorn = 'December';
+
+-- Executar uma consulta que mostre o primeiro nome e o sobrenome da tabela sportStars quando o mês do nascimento for junho (june)
+SELECT firstName, surname FROM sportStars WHERE monthBorn = 'June';
+
+-- Executar uma consulta que mostre o primeiro nome e o sobrenome da tabela sportStars quando o ano do nascimento for 1993
+SELECT firstName, surname FROM sportStars WHERE yearOfBirth = 1993; 
+
+-- Executar uma consulta que mostre o primeiro nome e o sobrenome da tabela sportStars quando o esporte for futebol (Football)
+SELECT firstName, surname FROM sportStars WHERE sport = 'Football';
+
+(1.3) No SQLiteStudio.exe
+
+	. No menu Database --> Add a database 
+	ou 
+	no menu Banco de Dados --> Adicionar um banco de dados
+
+		Na janela 'Database'
+
+		Obs.: Escolher a pasta na qual estamos guardando os arquivos do SQLite. 
+
+		Colocar o nome do arquivo como Aula6b.db e clicar no botão 'Salvar'
+
+			Clicar no botão 'Test connection'. 
+
+			Clicar no botão 'OK'
+
+CREATE TABLE instagram (
+   firstName varchar(40), 
+   surname varchar(40),
+   career varchar(20),
+   followersMillions int,
+   instagramHandle varchar(30)
+);
+
+INSERT INTO instagram VALUES ('National', 'Geographic', 'Magazine', 145, 'natgeo');
+
+INSERT INTO instagram VALUES ('Neymar', 'da Silva Santos, Jr', 'Footballer', 142, 'neymarjr');
+
+INSERT INTO instagram VALUES ('Leo', 'Messi', 'Footballer', 167, 'leomessi');
+
+INSERT INTO instagram VALUES ('Beyonce', 'Giselle Knowles', 'Singer', 155, 'beyonce');
+
+INSERT INTO instagram VALUES ('Selena', 'Gomez', 'Singer', 194, 'selenagomez');
+
+INSERT INTO instagram VALUES ('Kim', 'Kardashian', 'Media Personality', 189, 'kimkardashian');
+
+INSERT INTO instagram VALUES ('Dwayne', 'Johnson', 'Actor', 200, 'therock');
+
+INSERT INTO instagram VALUES ('Ariana', 'Grande', 'Singer', 203, 'arianagrande');
+
+INSERT INTO instagram VALUES ('Cristiano', 'Ronaldo', 'Footballer', 239, 'cristiano');
+
+INSERT INTO instagram VALUES ('Instagram', '', 'Social media platform', 371, 'instagram');
+
+-- Executar uma consulta que mostre todas as colunas da tabela instagram quando a carreira for diferente de jogador(a) de futebol (Footballer)
+SELECT * FROM instagram WHERE career != 'Footballer'; 
+
+-- Executar uma consulta que mostre todas as colunas da tabela instagram quando os seguidores em milhões for maior que 200 milhões
+SELECT * FROM instagram WHERE followersMillions > 200; 
+
+-- Executar uma consulta que mostre todas as colunas da tabela instagram quando os seguidores em milhões for menor que 155 milhões
+SELECT * FROM instagram WHERE followersMillions < 155; 
+
+-- Executar uma consulta que mostre todas as colunas da tabela instagram quando os seguidores em milhões for maior ou igual a 200 milhões
+SELECT * FROM instagram WHERE followersMillions >= 200; 
+
+-- Executar uma consulta que mostre as colunas primeiro nome, sobrenome, referência no instagram, seguidores em milhões da tabela instagram quando os seguidores em milhões for menor ou igual a 155 milhões
+SELECT firstName, surname, instagramHandle, followersMillions FROM instagram WHERE followersMillions <= 155; 
+
+-- Executar uma consulta que mostre todas as colunas da tabela instagram quando a carreira for cantor(a) (singer) e os seguidores em milhões for maior que 200 milhões
+SELECT * 
+FROM instagram 
+WHERE career = 'Singer' 
+      AND followersMillions > 200; 
+
+-- Executar uma consulta que mostre todas as colunas da tabela instagram quando a carreira for jogador(a) de futebol (Footballer) ou os seguidores em milhões for menor que 150 milhões
+SELECT * 
+FROM instagram 
+WHERE career = 'Footballer' 
+      OR followersMillions < 150; 
+
+(1.4) Link https://learning.oreilly.com/library/view/getting-started-with/9781491938607/ch05.html --> Chapter 5. WHERE
+Comentário: =, !=, AND, OR e IN
+Obs.: Usar em paralelo o SQLiteStudio com o arquivo weather_stations.db. 
+Para baixar o arquivo acessar o link: 
+https://drive.google.com/file/d/1MwCP8AIOgTPy2et22lz_9eldJTd0NRHu/view?usp=sharing
+	Clicar no botão 'Download'.
+	Obs.: Será baixado o arquivo weather_stations.db. 

@@ -409,7 +409,10 @@ function renderExercisePage(data) {
   }
 
   const enunciadoEl = document.getElementById('exercise-enunciado');
-  if (enunciadoEl) enunciadoEl.innerHTML = '<div class="iss-prose">' + enunciadoHtml + '</div>';
+  if (enunciadoEl) {
+    enunciadoEl.innerHTML = '<div class="iss-prose">' + enunciadoHtml + '</div>';
+    if (typeof renderMermaidDiagrams === 'function') renderMermaidDiagrams(enunciadoEl);
+  }
 
   const solutionWrap = document.getElementById('exercise-solution-wrap');
   if (solutionWrap) {

@@ -1,0 +1,3594 @@
+WEBVTT
+
+1
+00:00:08.800 --> 00:00:13.460
+Kadu Gertners: Turma. Excelente noite para vocês.
+
+2
+00:00:13.940 --> 00:00:18.769
+Kadu Gertners: Desculpe me aí o atraso. O pequeno atraso aí na aula, perdoem me.
+
+3
+00:00:19.260 --> 00:00:20.940
+Kadu Gertners: É bom,
+
+4
+00:00:21.200 --> 00:00:38.360
+Kadu Gertners: seguinte turma. Vamos cair para dentro aí. Sejam bem vindos a mais uma aula nossa aí, que juntos estamos aprendendo agora um pouquinho de banco de dados. E aí, turma? Eu vou continuar aí o passo a passo no qual estamos fazendo juntos.
+
+5
+00:00:38.380 --> 00:00:50.170
+Kadu Gertners: Excelente noite, Gabriel Silva. Gabriel Sandré Adailton. Alan Caroline. Excelente noite para vocês, Cleber maravilha, é isso aí. Vamos para dentro. Vamos! Que vamos.
+
+6
+00:00:51.420 --> 00:00:57.269
+Kadu Gertners: Gabriel Crepaldi, Pedro, Jean Maravilha, galera maravilha, Eduardo Ribeiro
+
+7
+00:00:57.890 --> 00:01:07.390
+Kadu Gertners: bom, Gabriel Borgato. Gabriel Sandré Lucas. Gabriel, vamos. Que vamos pra cima, Gabriel, vamos embora. Boa, Lucas! Pra cima,
+
+8
+00:01:08.500 --> 00:01:11.529
+Kadu Gertners: calma, excelente noite. Bom,
+
+9
+00:01:11.840 --> 00:01:31.600
+Kadu Gertners: pessoal. O seguinte caduzão. Como é que será a aula hoje? Excelente noite, Gabriel de Andrade. Excelente noite, Pedro. Maravilha! Como é que será a aula hoje? Nós vamos entrar direto numa outra parte prática da aula, tá? E aí depois eu vou mostrar
+
+10
+00:01:31.790 --> 00:01:49.950
+Kadu Gertners: um link para vocês um pouquinho. Vamos comentar um pouquinho sobre o link, e vamos finalizar a aula na qual eu vou falar para vocês sobre o Tp3 tá legal. Vamos ler o Tp3 juntos aqui e vamos ver como é que está ele direitinho aí para vocês. Turma fechou.
+
+11
+00:01:50.020 --> 00:02:07.150
+Kadu Gertners: Então vamos cair para dentro. Tem muita coisa para fazer se precisarmos, nós passaremos um pouquinho da hora. Aí não tem problema. Vocês já começaram com calma. Me conhecer um pouquinho. Se dá no dia para fazer, nós fazemos
+
+12
+00:02:07.640 --> 00:02:11.110
+Kadu Gertners: três. Já três. Já três já é.
+
+13
+00:02:11.230 --> 00:02:14.360
+Kadu Gertners: Tem já três, já.
+
+14
+00:02:14.630 --> 00:02:17.750
+Kadu Gertners: Bom, Tp. É.
+
+15
+00:02:17.990 --> 00:02:25.779
+Kadu Gertners: É mesmo? É isso mesmo, Lucas Tp3 é verdade. Tp3 eu falei: O quê? Falei dois ou um
+
+16
+00:02:25.940 --> 00:02:33.609
+Kadu Gertners: perdão se eu falei, mas é o Tp3 mesmo. Desculpem me e vocês já me corrigiram. É o Tp3 que nós falaremos sobre ele.
+
+17
+00:02:33.740 --> 00:02:38.430
+Kadu Gertners: Beleza. Bom, vamos cair pra dentro, galera,
+
+18
+00:02:40.490 --> 00:02:46.880
+Kadu Gertners: não, beleza, Calber, obrigado aí pela percepção, amigão. Sem problema.
+
+19
+00:02:47.130 --> 00:02:53.700
+Kadu Gertners: Bom, vamos lá, deixe me em primeiro lugar aqui. Aumentar aqui a fonte para nós aqui,
+
+20
+00:02:54.230 --> 00:02:56.790
+Kadu Gertners: só para vocês verem um pouquinho melhor.
+
+21
+00:02:57.770 --> 00:03:05.310
+Kadu Gertners: Maravilha, deixa eu botar isso aqui. Para cima, beleza.
+
+22
+00:03:05.760 --> 00:03:08.040
+Kadu Gertners: Beleza. Deixa eu ver onde eu parei.
+
+23
+00:03:08.310 --> 00:03:16.279
+Kadu Gertners: Nós falamos, galera. Não estou compartilhando a janela ainda tá beleza. Passa isso aqui.
+
+24
+00:03:17.700 --> 00:03:19.670
+Kadu Gertners: É esse aqui. Maravilha!
+
+25
+00:03:19.810 --> 00:03:23.619
+Kadu Gertners: Vamos lá, caduzão. Como é que vai ser isso aí? Vamos embora.
+
+26
+00:03:24.000 --> 00:03:25.880
+Kadu Gertners: Compartilhar a janela.
+
+27
+00:03:26.680 --> 00:03:32.220
+Kadu Gertners: Já estou compartilhando beleza.
+
+28
+00:03:32.650 --> 00:03:33.570
+Kadu Gertners: Bom,
+
+29
+00:03:33.700 --> 00:03:43.420
+Kadu Gertners: turma, esse material está aí na parte de documentos. Na nossa pasta do Infinity online. Só para lembrar, vocês,
+
+30
+00:03:43.600 --> 00:03:55.409
+Kadu Gertners: é o roteiro que nós estamos usando na nossa matéria. Então, galera, vamos lá, vamos dar uma. Vamos ver o que será hoje aí da aula. Vamos lá
+
+31
+00:03:55.550 --> 00:04:07.140
+Kadu Gertners: então, galera, o roteiro está aqui. Legal, Carloson. Nós vamos então usar esse Sqlade estúdio. Vamos para Cadu.
+
+32
+00:04:07.600 --> 00:04:16.110
+Kadu Gertners: Estou chegando agora. De repente, me atrasei lá para a aula passada eu consegui chegar hoje um pouquinho mais cedo. Aqui
+
+33
+00:04:16.640 --> 00:04:25.760
+Kadu Gertners: machucado. Zon, o que é esse sqlatitude zero, galera, esse Sqlatitude é um programa
+
+34
+00:04:25.760 --> 00:04:37.999
+Kadu Gertners: do Sk light, que ele é uma versão gráfica que facilita para nós executarmos alguns comandos aí para nós criarmos uma base de dados do Sk Light
+
+35
+00:04:38.170 --> 00:04:43.179
+Kadu Gertners: na semana passada. Nós vimos isso por linha de comando.
+
+36
+00:04:43.290 --> 00:04:56.930
+Kadu Gertners: Eu entrei numa janela do dóis numa janela de terminal numa janela de linha de comando. E mostrei isso para vocês ao executar comandos. Mesmo de digitar comandos.
+
+37
+00:04:57.200 --> 00:05:02.980
+Kadu Gertners: Foi isso, caduzão. Foi na semana passada. Agora, essa semana Opa diferente.
+
+38
+00:05:03.100 --> 00:05:13.669
+Kadu Gertners: Nós estamos usando um programinha que tem uma interface gráfica que é muito mais fácil de vocês efetivamente interagirem com a parte aí
+
+39
+00:05:13.780 --> 00:05:15.689
+Kadu Gertners: do Sq Light.
+
+40
+00:05:15.910 --> 00:05:26.949
+Kadu Gertners: Beleza. Então vamos embora. Caldozon, vamos então executar e entrar no Sklatitude ponta zero. Vamos embora. Como é que faço isso, caduzão? Vamos lá.
+
+41
+00:05:27.180 --> 00:05:31.129
+Kadu Gertners: Nós acionamos aqui o Windows Explorer
+
+42
+00:05:31.830 --> 00:05:42.140
+Kadu Gertners: aí aqui para o meu notebook. Aqui, ele está dentro dessa pastinha aqui, ó
+
+43
+00:05:46.020 --> 00:05:54.630
+Kadu Gertners: pera! Não, não é nessa. Não. Perdão, é nessa. Aqui, beleza. Ó,
+
+44
+00:05:54.900 --> 00:05:58.560
+Kadu Gertners: tá dentro dessa pasta aqui para mim tá, pessoal,
+
+45
+00:05:58.880 --> 00:06:05.179
+Kadu Gertners: dentro dessa pasta. E aqui. Ó, eu vou colocar para baixo o Windows Explorer
+
+46
+00:06:05.450 --> 00:06:08.969
+Kadu Gertners: vai lá para baixo, ó, quase no fim.
+
+47
+00:06:09.120 --> 00:06:11.669
+Kadu Gertners: Aqui está em ordem alfabética,
+
+48
+00:06:12.250 --> 00:06:20.260
+Kadu Gertners: em ordem alfabética aqui pela letrinha a Qos, que é a latitude. Vamos abrir, lucaduzão. Vamos embora.
+
+49
+00:06:20.430 --> 00:06:23.060
+Kadu Gertners: Abrir o Sqlatt Studio.
+
+50
+00:06:23.240 --> 00:06:42.319
+Kadu Gertners: Ele vai abri lo aí para nós, galera, vamos começar a entender algumas coisas de curiosidade. Olha só aqui. Nós estamos no Sql Studio, que é como eu falei para vocês. A versão por linha de comando. Perdão, a parte gráfica
+
+51
+00:06:42.470 --> 00:06:51.309
+Kadu Gertners: que você executa os comandos aqui nessa janelinha aqui que nós juntos até lembramos aí. Ou aprendemos
+
+52
+00:06:51.430 --> 00:07:06.150
+Kadu Gertners: que nós temos que a partir de ferramentas, abrir o editor de Skl, que até vocês comentaram conosco aqui, que a tecla de atalho é apertar a teclinha alt no teclado,
+
+53
+00:07:06.170 --> 00:07:12.810
+Kadu Gertners: manter a tecla out apertada e apertar a letra E. Ou a letra e
+
+54
+00:07:13.110 --> 00:07:25.350
+Kadu Gertners: beleza. Aí abre essa janelinha aqui, caduzão. Essa janelinha. O que ela faz é uma janela que nós digitamos. Os comandos de Select, os comandos para o banco de dados.
+
+55
+00:07:25.470 --> 00:07:41.099
+Kadu Gertners: Tá legal, cadu rápida explicação. Na aula passada, nós criamos uma tabela chamada Sport Stars, que são as estrelas do esporte. Aqui fizemos um insight de alguns registros.
+
+56
+00:07:41.170 --> 00:07:47.300
+Kadu Gertners: Está aqui. E logo abaixo, nós executamos alguns comandos Select.
+
+57
+00:07:48.170 --> 00:07:50.440
+Kadu Gertners: Beleza legal.
+
+58
+00:07:50.730 --> 00:07:56.250
+Kadu Gertners: Então, o que acontece? Eu vou botar esses comandos para cima, beleza.
+
+59
+00:07:56.630 --> 00:07:59.309
+Kadu Gertners: E aqui vamos começar na aula de hoje.
+
+60
+00:07:59.480 --> 00:08:05.799
+Kadu Gertners: Atenção, esse item aqui. Ele é um database que ele existe.
+
+61
+00:08:06.330 --> 00:08:07.230
+Kadu Gertners: Tá?
+
+62
+00:08:07.290 --> 00:08:14.390
+Kadu Gertners: Só que normalmente nessas aulas aqui, turma, para não confundir a cabeça de vocês e não ter
+
+63
+00:08:14.410 --> 00:08:28.510
+Kadu Gertners: mais de um banco de dados aqui. Você pode ter vários bancos de dados aqui, mas eu deixo só um banco de dados, que é o banco de dados que nós estamos usando na aula naquele momento.
+
+64
+00:08:28.710 --> 00:08:32.629
+Kadu Gertners: Então, repara, se nós voltarmos aqui para o nosso.
+
+65
+00:08:32.799 --> 00:08:38.830
+Kadu Gertners: Para o nosso roteiro aqui, ele fala para entrar no Sklatt Studio.
+
+66
+00:08:39.039 --> 00:08:47.510
+Kadu Gertners: Acionar o menu lá. Database é de a Database ou banco de dados, e adicionar um banco de dados.
+
+67
+00:08:47.540 --> 00:09:04.079
+Kadu Gertners: E ele vai criar um outro banco de dados, que é esse aqui que eu botei o nome de aula seis, porque é a semana seis de aula e o Banco de dados B tinha criado um A na terça. E agora vamos criar o banco de dados B hoje.
+
+68
+00:09:04.290 --> 00:09:14.940
+Kadu Gertners: Tá legal. Então, caldozão. Vamos lá, então. Como é que nós. Então, caldozão fazemos para tirar esse banco aqui do lado esquerdo. Reparem, turma,
+
+69
+00:09:15.070 --> 00:09:19.880
+Kadu Gertners: nós vamos tirar o banco dessa vir. São
+
+70
+00:09:19.990 --> 00:09:34.929
+Kadu Gertners: do Skflight Studio não significa que o comando que eu usar aqui, ó botão direito. E eu vou clicar nesse cara aqui. Ó remover o banco de dados. Mas ele não apaga
+
+71
+00:09:35.400 --> 00:09:43.220
+Kadu Gertners: esse banco de dados. É de verdade. Mesmo, não do sistema operacional. Ele não apaga o arquivo.
+
+72
+00:09:43.340 --> 00:10:01.270
+Kadu Gertners: Ele só tira quando eu faço isso aqui. Remover o banco de dados. Ele só tira. Eu confirmo. Você quer apagar o banco de dados aqui da lista de banco de dados do Sk Light aí sim, nós falamos. Yes. Sim, eu quero.
+
+73
+00:10:01.270 --> 00:10:11.460
+Kadu Gertners: Então você tirou esse banco de dados daqui. Mas se nós vermos lá na pasta, na parte das pastas do Windows Explorer,
+
+74
+00:10:11.580 --> 00:10:19.929
+Kadu Gertners: o arquivinho que equivale a esse banco de dados que nós usamos na terça feira. Ele continua existindo.
+
+75
+00:10:20.490 --> 00:10:25.640
+Kadu Gertners: É legal eu elucidar isso e falar isso para vocês entenderem.
+
+76
+00:10:25.770 --> 00:10:33.679
+Kadu Gertners: Então vamos embora, Cadu. Vamos criar um novo banco de dados. Adicionar um banco de dados.
+
+77
+00:10:33.880 --> 00:10:37.659
+Kadu Gertners: Está aqui no nosso roteiro.
+
+78
+00:10:38.080 --> 00:10:44.309
+Kadu Gertners: Tá aí na janela do banco de dados. Que é essa aqui
+
+79
+00:10:44.820 --> 00:10:52.220
+Kadu Gertners: nós vamos escolher a pasta na qual vamos guardar o nosso novo Database.
+
+80
+00:10:52.350 --> 00:10:55.370
+Kadu Gertners: Então vamos embora. Clica aqui na pasta.
+
+81
+00:10:55.450 --> 00:11:12.439
+Kadu Gertners: E aí reparem. Ah, caduzão aqui. Ele está vendo o sistema operacional. Se ele estivesse vendo o Windows Explorer. E aí, reparem como eu falei, o arquivinho aula 6a Db: Ele ainda existe.
+
+82
+00:11:12.550 --> 00:11:24.120
+Kadu Gertners: Ah, Cadu. Então eu poderia selecionar esse database da aula de terça e colocá lo aqui e continuar trabalhando com esse database. Sim, você pode fazer isso.
+
+83
+00:11:25.230 --> 00:11:26.320
+Kadu Gertners: Tá legal.
+
+84
+00:11:26.780 --> 00:11:35.589
+Kadu Gertners: Mais para a aula de hoje, mais para a aula de hoje. Eu vou criar um novo database que é esse aqui? Aulasb Db
+
+85
+00:11:35.740 --> 00:11:42.629
+Kadu Gertners: Copio. O nome do banco. Coloco aqui para o campo. Nome e clico aqui em selecionar.
+
+86
+00:11:42.820 --> 00:11:47.299
+Kadu Gertners: Ele joga essas informações aqui na telinha para nós.
+
+87
+00:11:47.490 --> 00:11:51.710
+Kadu Gertners: E aí nós clicamos no botão testar conexão.
+
+88
+00:11:51.930 --> 00:12:10.159
+Kadu Gertners: Esse teste da conexão faz um teste para ver se nós conseguimos acessar esse banco de dados criado ele acessou beleza. E aí clicamos no botão. Ok, reparem que ao clicar no botão, ok, aqui o banco de dados será mostrado aqui, do lado esquerdo.
+
+89
+00:12:10.360 --> 00:12:11.280
+Kadu Gertners: Olha lá,
+
+90
+00:12:11.450 --> 00:12:24.529
+Kadu Gertners: beleza. Aí eu falei um pouquinho para vocês. Vocês vão começar a se acostumar que parece que ele fica aqui desabilitado. Ele fica um pouco escuro aqui. O que nós temos que fazer? Dar dois cliques aqui.
+
+91
+00:12:24.530 --> 00:12:32.609
+Kadu Gertners: Aí ele coloca uma cor um pouquinho mais clara, e ele habilita para nós aqui. Tabelas e visualizações
+
+92
+00:12:33.200 --> 00:12:43.499
+Kadu Gertners: legal. E aí, Caldozon beleza? Nós vamos criar uma tabela agora, hoje chamada Instagram. É o nome da tabela.
+
+93
+00:12:43.700 --> 00:12:51.719
+Kadu Gertners: Aí nós vamos criar a primeira coluna First Name, que é o primeiro nome como Varchar,
+
+94
+00:12:51.900 --> 00:12:56.639
+Kadu Gertners: que são quarenta caracteres no máximo
+
+95
+00:12:57.170 --> 00:13:10.359
+Kadu Gertners: varchar, lembrando que significa variable caracter. Então são caracteres variáveis, no máximo. Essa coluna aceita quarenta caracteres.
+
+96
+00:13:10.810 --> 00:13:20.780
+Kadu Gertners: Legal seu nome, sobrenome varchar de quarenta, então, no máximo quarenta caracteres.
+
+97
+00:13:23.120 --> 00:13:31.600
+Kadu Gertners: Carrinho. Quer carreira vachar de vinte. Então são no máximo vinte caracteres
+
+98
+00:13:33.290 --> 00:13:40.260
+Kadu Gertners: followers, minions. Quer dizer, o número de seguidores. Olha que legal em milhões.
+
+99
+00:13:40.630 --> 00:13:46.039
+Kadu Gertners: Então isso aqui é indicado aqui um valor inteiro.
+
+100
+00:13:46.350 --> 00:13:51.210
+Kadu Gertners: Mas na unidade de milhões, legal.
+
+101
+00:13:51.550 --> 00:14:00.849
+Kadu Gertners: E aqui é o Instagram Handel. Quer dizer, é a forma de você se mencionar no Instagram.
+
+102
+00:14:01.190 --> 00:14:10.160
+Kadu Gertners: Tá legal. É a forma que você busca essa pessoa ou esse produto, ou essa empresa aí no Instagram.
+
+103
+00:14:10.340 --> 00:14:17.840
+Kadu Gertners: Beleza. E esse aqui são varchar de, no máximo, quarenta caracteres. Perdão, trinta caracteres.
+
+104
+00:14:17.840 --> 00:14:18.910
+João Victor Gasparoto: Traduzão.
+
+105
+00:14:19.010 --> 00:14:20.330
+Kadu Gertners: Oi, fala comigo.
+
+106
+00:14:20.330 --> 00:14:33.060
+João Victor Gasparoto: Falar uma coisa. Pode ali pra baixo. Depois o senhor vai ver nos dados que o senhor vai colocar. O senhor repetiu o Instagram duas vezes do Neymar, só isso.
+
+107
+00:14:35.290 --> 00:14:36.060
+João Victor Gasparoto: Você colocou no.
+
+108
+00:14:36.060 --> 00:14:36.849
+Kadu Gertners: Eu tiro.
+
+109
+00:14:37.140 --> 00:14:39.549
+João Victor Gasparoto: O Léo é o terceiro terceiro,
+
+110
+00:14:43.220 --> 00:14:48.309
+João Victor Gasparoto: tá? Neymar Júnior e Neymar Júnior ali. Ó, só isso ficou pra atrapalhar.
+
+111
+00:14:49.250 --> 00:14:51.530
+Kadu Gertners: Ah, sim? Porque aqui é o do.
+
+112
+00:14:54.080 --> 00:14:56.019
+Kadu Gertners: É porque aqui é o do Messi, né?
+
+113
+00:14:58.290 --> 00:15:05.780
+Kadu Gertners: É isso. Aqui está errado mesmo. Eu não sei. De cabeça cruel do Messi. Eu vou botar aqui. Obrigado por alertar.
+
+114
+00:15:06.070 --> 00:15:12.619
+Kadu Gertners: Eu só vou botar assim. Léo Messi, obrigado por falar. Eu não sabia de cabeça. Oi, fala.
+
+115
+00:15:12.620 --> 00:15:15.489
+jean.feitosa: Não é com quem ele vai se relacionar.
+
+116
+00:15:16.180 --> 00:15:19.470
+Kadu Gertners: Não, não é. Não, não tem nada a ver com o Johnny.
+
+117
+00:15:19.720 --> 00:15:20.400
+Kadu Gertners: Esquece.
+
+118
+00:15:20.400 --> 00:15:21.450
+marcos.jose: Uma dúvida.
+
+119
+00:15:21.670 --> 00:15:22.210
+Kadu Gertners: Fala.
+
+120
+00:15:22.210 --> 00:15:27.240
+marcos.jose: Desculpa se o senhor já falou na aula passada e eu não peguei, mas nunca.
+
+121
+00:15:27.240 --> 00:15:28.680
+Kadu Gertners: Não pode falar.
+
+122
+00:15:28.990 --> 00:15:36.849
+marcos.jose: No Cretable. Pelo menos ali no seu arquivo. Está em letra em caixa alta. Ali o Creatable, o Instagram
+
+123
+00:15:37.110 --> 00:15:54.560
+marcos.jose: e a gente tinha ouvido falar. Acho que na outra aula, que, por padrão, os códigos sempre eram feitos em caixa baixa. Isso tem alguma coisa de diferente quando a gente fala de dados? Porque no Python, lá a gente estava até como boa prática. Não era obrigatório, mas fazia em letra minúscula. Evitar assentos
+
+124
+00:15:55.150 --> 00:16:02.439
+marcos.jose: no caso de dadas. Tem diferença? Eu tenho que criar o código como letra maiúscula, como minúscula.
+
+125
+00:16:02.790 --> 00:16:04.779
+Kadu Gertners: Boa pergunta. Ótima pergunta.
+
+126
+00:16:05.580 --> 00:16:12.529
+Kadu Gertners: Repara só. Creative Table. São palavras reservadas da parte de S Qn.
+
+127
+00:16:12.790 --> 00:16:18.110
+Kadu Gertners: O Grant Table, na maioria das vezes, principalmente no ambiente de Windows.
+
+128
+00:16:18.330 --> 00:16:21.400
+Kadu Gertners: Não tem problema estar em caixa baixa ou caixa alto.
+
+129
+00:16:21.510 --> 00:16:24.530
+Kadu Gertners: Ou o primeiro caracter em maiúsculo.
+
+130
+00:16:24.740 --> 00:16:35.449
+Kadu Gertners: Agora pode ter problema. Sim, dependendo do banco de dados, você aqui. Ó, repara isso aqui são palavras reservadas.
+
+131
+00:16:35.980 --> 00:16:46.850
+Kadu Gertners: Ok, isso aqui é o nome da tabela. Você pode botar o nome da tabela da Select com o I maiúsculo ou tudo em maiúsculo. Não tem problema nenhum.
+
+132
+00:16:47.600 --> 00:16:53.970
+Kadu Gertners: Agora, quando você menciona o dado aqui, é a mesma coisa para a tabela, né?
+
+133
+00:16:54.180 --> 00:16:58.759
+Kadu Gertners: Para o nome da tabela, assim como para o nome dos campos.
+
+134
+00:16:59.650 --> 00:17:01.480
+Kadu Gertners: Tá, tanto faz.
+
+135
+00:17:01.640 --> 00:17:03.120
+Kadu Gertners: Não tem problema.
+
+136
+00:17:03.230 --> 00:17:14.969
+Kadu Gertners: Agora, o que pode fazer diferença dependendo do banco de dados, são os dados. São esses caras aqui, que estão entre aspas.
+
+137
+00:17:15.210 --> 00:17:16.609
+Kadu Gertners: Esse aqui,
+
+138
+00:17:17.010 --> 00:17:33.240
+Kadu Gertners: esse aqui, tudo que está entre aspas aqui, ou esse o cento e quarenta e cinco aqui. Quer dizer, cento e quarenta e cinco é um número. Não vai ter problema. É tudo que está entre aspas, mesmo. Está vendo. Então, dependendo do banco de dados,
+
+139
+00:17:33.390 --> 00:17:40.540
+Kadu Gertners: você pode pesquisar na Tigel aqui com N maiúsculo ou tudo maiúsculo.
+
+140
+00:17:41.100 --> 00:17:48.590
+Kadu Gertners: Dá um exemplo caldzão, por exemplo, se nós estivermos usando o padrão do Sql, serve da Microsoft.
+
+141
+00:17:49.170 --> 00:18:01.129
+Kadu Gertners: Tanto faz. Se você botar o Nat gel aqui escrito com a primeira maiúscula, tudo maiúsculo, independente. O Scared server, ele ignora isso.
+
+142
+00:18:02.410 --> 00:18:04.640
+Kadu Gertners: Agora vou dar um outro exemplo
+
+143
+00:18:04.940 --> 00:18:13.649
+Kadu Gertners: se nós estivermos usando O Oracle que é da empresa Oracle Opa. Aí é o padrão do Oracle. Ele é mais rígido.
+
+144
+00:18:13.970 --> 00:18:24.940
+Kadu Gertners: Então, no dado você literalmente. No Oracle, você tem que escrever como está escrito aqui, senão ele não pega. Ele vai falar que ele não encontrou.
+
+145
+00:18:26.280 --> 00:18:29.360
+Kadu Gertners: Está claro. Isso, cara. Sua pergunta foi bem interessante.
+
+146
+00:18:29.690 --> 00:18:30.390
+marcos.jose: Entendi.
+
+147
+00:18:30.390 --> 00:18:30.840
+Kadu Gertners: Para o.
+
+148
+00:18:30.840 --> 00:18:37.089
+marcos.jose: Prática no mercado quando a gente coloca, por exemplo, igual. Tá lá creative table. Tá tudo em caixa alta.
+
+149
+00:18:37.430 --> 00:18:46.190
+marcos.jose: Pela experiência do Senhor no mercado. Já é uma prática colocar tudo em caixa alta, mesmo quando a gente está falando de banco de dados, ou depende.
+
+150
+00:18:46.400 --> 00:18:53.590
+Kadu Gertners: Cara irmão Marcos. Ótima pergunta. Mas assim, amigão, cara varia muito, que ela varia muito. Vai.
+
+151
+00:18:53.590 --> 00:18:56.699
+marcos.jose: Não tem uma regra padrão para você chegar numa empresa.
+
+152
+00:18:56.700 --> 00:18:57.980
+Kadu Gertners: Não tem.
+
+153
+00:18:57.980 --> 00:19:04.049
+Ramon Telles da Silva: Dar um exemplo, professor, eu digito tudo em maiúsculo. Mas aí é toque que eu tenho.
+
+154
+00:19:04.390 --> 00:19:13.120
+Ramon Telles da Silva: Não boto nada minúsculo. Não, mas por boas práticas. O legal é digitar os comandos em maiúsculo para diferenciados
+
+155
+00:19:13.390 --> 00:19:14.399
+Ramon Telles da Silva: do resto, né?
+
+156
+00:19:14.400 --> 00:19:26.810
+Kadu Gertners: Cara. É o que eu estou te falando. É uma coisa, eu acho interessante. Eu acho interessante, porque você consegue. Para mim. Por exemplo, nesse comando aqui, como ele está agora,
+
+157
+00:19:26.860 --> 00:19:37.529
+Kadu Gertners: você consegue distinguir o que são palavras reservadas e na verdade, até o varchar aqui. Ele tinha que estar em caixa alta.
+
+158
+00:19:38.180 --> 00:19:40.200
+Kadu Gertners: Tudo escrito em maiúsculo
+
+159
+00:19:40.420 --> 00:19:54.850
+Kadu Gertners: caixa alta significa tudo maiúsculo para quem não sabe. Sempre bom, falar para quem de repente nunca percebeu isso. Mas assim teria que estar escrito em Varchen maiúsculo, assim como o índice também.
+
+160
+00:19:55.340 --> 00:20:00.169
+Kadu Gertners: Então, assim, cara. Isso é uma coisa muito pessoal na maioria das vezes.
+
+161
+00:20:00.660 --> 00:20:18.180
+Kadu Gertners: E aí você pode, lógico na empresa que você. Tiver, você pode ver se o seu grupo tem uma regra, se a empresa tem uma regra, ou você pode criar. Ah, não. Ninguém falou que tem regra nenhuma. Então você, como o Ramon falou? O Ramon criou uma pequena regrinha para ele.
+
+162
+00:20:18.180 --> 00:20:20.849
+Kadu Gertners: Então, cara, você cria uma pequena regra pra você.
+
+163
+00:20:21.740 --> 00:20:22.760
+Kadu Gertners: Tudo bem.
+
+164
+00:20:23.690 --> 00:20:25.850
+Kadu Gertners: Agora no Python.
+
+165
+00:20:25.970 --> 00:20:34.020
+Kadu Gertners: Em algumas coisas no Python, o Python é considerado uma coisa chamada case Sensitive.
+
+166
+00:20:34.710 --> 00:20:39.530
+Kadu Gertners: O que significa isso? Que se você escrever uma variável assim
+
+167
+00:20:39.840 --> 00:20:45.510
+Kadu Gertners: V A R, tudo minúsculo. Ela é uma variável.
+
+168
+00:20:45.790 --> 00:20:53.170
+Kadu Gertners: Mas se você escrever a primeira letra V maiúscula a ir minúsculos. É uma segunda variável,
+
+169
+00:20:54.240 --> 00:20:59.620
+Kadu Gertners: porque ele é sensível a perceber o tamanho das letras diferentes.
+
+170
+00:21:00.250 --> 00:21:07.630
+Kadu Gertners: Então, se você quiser mencionar a mesma variável. No decorrer de um código todo do Python.
+
+171
+00:21:07.890 --> 00:21:15.610
+Kadu Gertners: Você tem que escrever V A R. Tudo minúsculo. Você sabe, que sempre vai mencionar a mesma variável
+
+172
+00:21:16.540 --> 00:21:27.990
+Kadu Gertners: beleza. Galera, ótima colocação. É legal falar isso para vocês entenderem que em alguns ambientes vai funcionar. O que é chamado de case sensitive,
+
+173
+00:21:28.400 --> 00:21:42.660
+Kadu Gertners: ou melhor dizer, ou melhor dizendo, isso é sinônimo que ele vai diferenciar se a letra é maiúscula ou minúscula, que é inclusive o caso do Oracle. O oracle prudado. Ele é case sensitivo.
+
+174
+00:21:43.940 --> 00:21:48.900
+Kadu Gertners: Se tiver em maiúsculo pesquise em maiúsculo o órgão
+
+175
+00:21:49.010 --> 00:21:54.810
+Kadu Gertners: agora o Sql server é o contrário. O padrão, né? O padrão.
+
+176
+00:21:55.320 --> 00:21:59.029
+Kadu Gertners: Ele é o contrário. Ele é insensitivo,
+
+177
+00:21:59.770 --> 00:22:17.179
+Kadu Gertners: independente. Olha só que legal. Ainda tem um detalhe curioso. Você pode fazer assim. Ah, eu quero pesquisar numa coluna. Eu quero pegar e botar o Cao. Eu quero procurar a String Kaw
+
+178
+00:22:17.350 --> 00:22:20.740
+Kadu Gertners: C A O.
+
+179
+00:22:20.820 --> 00:22:32.180
+Kadu Gertners: Não é a Skely Server. Olha que legal aí. Se por acaso aquele Cal estiver com assento agudo, se ele estiver com um tio, não é Skely Server
+
+180
+00:22:32.180 --> 00:22:41.880
+Kadu Gertners: ou maiúsculo ou minúsculo, ou há um tiro maiúsculo. Há um centro agudo maiúsculo. O Sql Seven pega todas as formas,
+
+181
+00:22:44.430 --> 00:22:51.490
+Kadu Gertners: galera isso, dependendo do ambiente, facilita muito o dia a dia de trabalho.
+
+182
+00:22:52.310 --> 00:23:03.560
+Kadu Gertners: Então é legal vocês perguntarem isso é importante vocês terem uma percepção sobre isso. Que são perguntas importantes. Galera. Tudo bem, vou seguir beleza.
+
+183
+00:23:03.560 --> 00:23:05.219
+marcos.jose: Boa. Obrigado, professor.
+
+184
+00:23:05.640 --> 00:23:06.849
+Kadu Gertners: De nada, irmão.
+
+185
+00:23:08.030 --> 00:23:12.090
+Kadu Gertners: Bom Cadu. Vamos então criar a nossa tabelinha.
+
+186
+00:23:12.290 --> 00:23:17.310
+Kadu Gertners: Vamos embora e vou pegar.
+
+187
+00:23:17.780 --> 00:23:25.080
+Kadu Gertners: Ó repara que aqui nos inserts, meio que eu usei, né? Ó palavra chave. Eu botei em maiúsculo. Tá vendo
+
+188
+00:23:26.380 --> 00:23:33.210
+Kadu Gertners: aí as outras que eu botei? Alternando, dependendo do caso. Enfim, vamos lá
+
+189
+00:23:35.240 --> 00:23:38.240
+Kadu Gertners: criar tabela. Vamos botar para cá.
+
+190
+00:23:38.380 --> 00:23:42.680
+Kadu Gertners: Selecionamos o comando e executa. Comando,
+
+191
+00:23:43.730 --> 00:23:53.339
+Kadu Gertners: beleza. Ó Carlos um, vamos ver se ele criou nossa tabelinha, Instagram. Ó, clica aqui em tabelas. O nome da tabela está aqui.
+
+192
+00:23:53.900 --> 00:23:59.809
+Kadu Gertners: Clica aqui. Colunas. E foram as colunas que nós colocamos aqui.
+
+193
+00:23:59.990 --> 00:24:01.530
+Kadu Gertners: Maravilha.
+
+194
+00:24:03.470 --> 00:24:10.570
+Kadu Gertners: Bom, vamos pegar todos os inserts lembrando
+
+195
+00:24:10.870 --> 00:24:15.339
+Kadu Gertners: caldzão. Como é que o inset funciona? O inset é para inserir,
+
+196
+00:24:15.390 --> 00:24:32.989
+Kadu Gertners: então ele vai inserir para dentro da tabela Instagram. Os seguintes valores: National: vai entrar como primeiro nome. First Name Geography vai entrar em Surname. Que é como se fosse um sobrenome.
+
+197
+00:24:33.330 --> 00:24:36.989
+Kadu Gertners: Kyle Reer. Quer dizer, é uma magazine. É uma revista.
+
+198
+00:24:37.230 --> 00:24:39.889
+Kadu Gertners: Vai entrar aqui. Carrier, carreira
+
+199
+00:24:40.200 --> 00:24:51.209
+Kadu Gertners: cento e quarenta e cinco. É o Followers, Will. Quer dizer opa Caraca. A Nath Gel tem cento e quarenta e cinco milhões de seguidores. Exatamente isso.
+
+200
+00:24:51.720 --> 00:24:52.740
+Kadu Gertners: Ok,
+
+201
+00:24:52.890 --> 00:25:03.730
+Kadu Gertners: e o Nat gel aqui é o Instagram Handel. É a forma na qual nós mencionaríamos National Geographic através do Instagram
+
+202
+00:25:04.250 --> 00:25:11.720
+Kadu Gertners: beleza. Então pegamos esses comandos e, ó selecionamos os mesmos copiamos.
+
+203
+00:25:12.320 --> 00:25:13.979
+Kadu Gertners: Trazemos para cá.
+
+204
+00:25:15.000 --> 00:25:22.839
+Kadu Gertners: Sobe, maravilha abaixo aqui e vamos executá lo.
+
+205
+00:25:23.250 --> 00:25:31.830
+Kadu Gertners: Ó, executamos dez linhas afetadas. Então foram inseridos dez registros.
+
+206
+00:25:32.180 --> 00:25:48.699
+Kadu Gertners: Maravilha, ó, e aí, caduzão? Vamos começar aí. Em primeiro lugar, vamos fazer caduzão um select para pegar todas as colunas só para nós vermos se todas as coluninhas, todos os valores estão aí direitinho, vambora.
+
+207
+00:25:48.770 --> 00:26:03.019
+Kadu Gertners: Então, ó, pegamos aqui o select asterístico para pegar todas as colunas. Froome e o nome da tabela. Selecionamos o comando e aperta aqui na execução.
+
+208
+00:26:03.320 --> 00:26:06.470
+Kadu Gertners: Beleza, ó Oi, fala comigo.
+
+209
+00:26:06.700 --> 00:26:18.949
+gabriel.crepaldi: Eu me perdi aqui. Onde colocaria o código? Mesmo que na hora que eu acessei as tabelas e fui para as colunas ali. Eu entrei em um outro campo. Agora, não conseguindo voltar.
+
+210
+00:26:20.230 --> 00:26:24.120
+Kadu Gertners: Mas onde é que você está? Na tela? Aqui, mostra para mim na tela. Onde é que você está? Aqui?
+
+211
+00:26:24.560 --> 00:26:25.240
+gabriel.crepaldi: E aí?
+
+212
+00:26:25.240 --> 00:26:26.959
+Kadu Gertners: Na minha tela. Onde você está?
+
+213
+00:26:27.570 --> 00:26:30.689
+Kadu Gertners: Você tem essa janelinha do lado direito aberta? Sim ou não?
+
+214
+00:26:31.250 --> 00:26:32.010
+gabriel.crepaldi: Não.
+
+215
+00:26:32.740 --> 00:26:35.760
+Kadu Gertners: Então você tem que abrir. Abrir aqui ferramentas,
+
+216
+00:26:35.920 --> 00:26:42.169
+Kadu Gertners: ferramentas, abrir editor de Skl você tem que ficar com uma janelinha aqui assim que nem essa.
+
+217
+00:26:42.690 --> 00:26:44.469
+gabriel.crepaldi: Ah, tá perfeito. Beleza.
+
+218
+00:26:45.180 --> 00:26:46.570
+Kadu Gertners: Conseguiu fazer.
+
+219
+00:26:46.570 --> 00:26:54.560
+gabriel.crepaldi: É que eu tinha aberto ela antes. Aí eu coloquei o primeiro comando. Aí ativei o primeiro comando aí, depois mostrou a tabela em si.
+
+220
+00:26:54.850 --> 00:26:57.720
+gabriel.crepaldi: E aí depois, para mim, colocar os
+
+221
+00:26:58.240 --> 00:27:02.479
+gabriel.crepaldi: os inserts aí sumiu. Eu não consegui voltar para ela.
+
+222
+00:27:04.190 --> 00:27:06.220
+Kadu Gertners: Mas resolveu. Resolveu.
+
+223
+00:27:06.220 --> 00:27:07.460
+gabriel.crepaldi: Tranquilo.
+
+224
+00:27:07.810 --> 00:27:08.300
+gabriel.crepaldi: Valeu.
+
+225
+00:27:08.300 --> 00:27:08.850
+Kadu Gertners: Mas é um.
+
+226
+00:27:08.850 --> 00:27:09.950
+Renan Pinto de Souza: Professor rapidinho.
+
+227
+00:27:09.950 --> 00:27:11.850
+Kadu Gertners: Fala comigo.
+
+228
+00:27:11.850 --> 00:27:14.779
+Renan Pinto de Souza: Eu copiei todos os insertos aí.
+
+229
+00:27:15.020 --> 00:27:18.429
+Renan Pinto de Souza: E eu colei. Quando eu executei, ele só executa um.
+
+230
+00:27:20.180 --> 00:27:26.889
+Kadu Gertners: Você selecionou todos. Vamos devagarinho com carinho. Vamos lá. Você pegou. Fez isso aqui. Vamos lá.
+
+231
+00:27:27.490 --> 00:27:28.400
+Kadu Gertners: E aí.
+
+232
+00:27:29.190 --> 00:27:30.820
+Renan Pinto de Souza: Sim, coloquei todos aí.
+
+233
+00:27:31.720 --> 00:27:33.609
+Kadu Gertners: Colocou todos aqui.
+
+234
+00:27:33.830 --> 00:27:34.630
+Renan Pinto de Souza: Sim.
+
+235
+00:27:34.630 --> 00:27:37.889
+Kadu Gertners: Aí. Você pegou nesse? Selecionou todos.
+
+236
+00:27:38.530 --> 00:27:39.630
+Renan Pinto de Souza: Ah, tá, tem que ser.
+
+237
+00:27:39.630 --> 00:27:45.260
+Kadu Gertners: Azulzinho, assim, azulzinho assim. E você clicou aqui no botão executar.
+
+238
+00:27:45.370 --> 00:27:46.699
+Renan Pinto de Souza: Era isso. Tá bom.
+
+239
+00:27:47.180 --> 00:27:50.340
+Kadu Gertners: Esse detalhe tranquilo.
+
+240
+00:27:50.340 --> 00:27:51.140
+Renan Pinto de Souza: Tranquilo.
+
+241
+00:27:51.340 --> 00:28:02.009
+Kadu Gertners: Select. Executei o comando. Selecionei a linha do comando e clico no botão executar. Aí ele mostra isso aqui para nós.
+
+242
+00:28:02.350 --> 00:28:06.540
+Kadu Gertners: Ó, estamos dez aqui para nós, bonitinhos.
+
+243
+00:28:07.640 --> 00:28:10.750
+Kadu Gertners: Beleza maravilha.
+
+244
+00:28:12.370 --> 00:28:14.600
+Kadu Gertners: Bom, vamos seguir.
+
+245
+00:28:15.540 --> 00:28:17.980
+Kadu Gertners: Reparem aqui de curiosidade
+
+246
+00:28:19.210 --> 00:28:29.069
+Kadu Gertners: que essa posição do Instagram aqui. Ó o Instagram. Ele não tem um sobrenome. Tá tanto que ele botou aspas e aspas. Aqui não tem nada escrito aqui. Ó
+
+247
+00:28:29.450 --> 00:28:30.560
+Kadu Gertners: tá legal.
+
+248
+00:28:31.290 --> 00:28:35.149
+Kadu Gertners: Não tem nenhum carácter parecendo visível aqui para nós,
+
+249
+00:28:35.500 --> 00:28:40.360
+Kadu Gertners: beleza. Só para constar isso aí, legal, caduzão.
+
+250
+00:28:40.460 --> 00:28:58.539
+Kadu Gertners: Vamos fazer o seguinte. Olha, vamos executar uma consulta. Opa, vamos lá executar uma consulta que mostre todas as colunas da tabela Instagram, Opa Select asterístico. Todas as colunas From, Instagram
+
+251
+00:28:58.600 --> 00:29:03.950
+Kadu Gertners: e quando. Onde é a cláusulaware?
+
+252
+00:29:04.280 --> 00:29:17.739
+Kadu Gertners: Quando a carreira for diferente de jogador de futebol, o que nós temos que fazer? Nós temos que ver na tabela. Qual é a coluna que corresponde à carreira? Então é essa coluna aqui, ó Carrier.
+
+253
+00:29:18.020 --> 00:29:30.330
+Kadu Gertners: Aí o exclamação igual significa diferente. E o futebol aqui de futebol de jogador de futebol é esse aqui futebol. Então nós pegamos esse comando,
+
+254
+00:29:30.800 --> 00:29:35.889
+Kadu Gertners: copiamos, trazemos esse comando para cá.
+
+255
+00:29:36.110 --> 00:29:41.539
+Kadu Gertners: Selecionamos só esse comando e clica no botão executar.
+
+256
+00:29:42.000 --> 00:29:42.859
+Kadu Gertners: Olha lá!
+
+257
+00:29:48.320 --> 00:29:49.240
+Kadu Gertners: Ué!
+
+258
+00:29:49.680 --> 00:29:55.219
+Kadu Gertners: Ah, sim, está pegando. Está mostrando todos os que não são jogadores de futebol. É isso mesmo. Tá certo.
+
+259
+00:29:56.950 --> 00:30:02.219
+Kadu Gertners: Então, ó, nenhum deles aqui é jogador de futebol, tá vendo?
+
+260
+00:30:02.610 --> 00:30:06.079
+Kadu Gertners: E na verdade são sete dos dez que estão aí.
+
+261
+00:30:08.260 --> 00:30:09.939
+Kadu Gertners: Cadê vamos conferir.
+
+262
+00:30:10.550 --> 00:30:17.820
+Kadu Gertners: Quantos são? Jogadores de futebol? Um, dois, três,
+
+263
+00:30:19.070 --> 00:30:23.980
+Kadu Gertners: beleza. Então, de dez. Ele só pegou sete.
+
+264
+00:30:24.770 --> 00:30:26.120
+Kadu Gertners: Maravilha.
+
+265
+00:30:26.250 --> 00:30:44.229
+Kadu Gertners: Próximo comando Caldozon. Vamos executar num comando que mostre todas as colunas da tabela no Instagram. Reparem isso aqui. Inicialmente vai ser igual né? Select asterístico From Instagram quando a cláusula war aqui,
+
+266
+00:30:44.340 --> 00:30:59.520
+Kadu Gertners: quando os seguidores em milhões for maior do que duzentos milhões de seguidores, então nós temos que ver nessa tabela. Qual é a coluna que indica milhões de seguidores?
+
+267
+00:30:59.600 --> 00:31:04.550
+Kadu Gertners: Nesse caso, para nós, é a coluna chamada followers medium s
+
+268
+00:31:04.830 --> 00:31:07.619
+Kadu Gertners: beleza. Nós colocamos lá o R.
+
+269
+00:31:07.720 --> 00:31:10.830
+Kadu Gertners: Followers Medium's maior do que duzentos.
+
+270
+00:31:11.220 --> 00:31:20.829
+Kadu Gertners: Pegamos o comando, colocamos para cá e, ó executa
+
+271
+00:31:21.200 --> 00:31:29.200
+Kadu Gertners: os que estão acima de duzentos milhões. É a Ariana, grande, o cristiano Ronaldo e o Instagram.
+
+272
+00:31:30.920 --> 00:31:33.200
+Kadu Gertners: Com esses dados que estão aí, né, turma,
+
+273
+00:31:33.310 --> 00:31:34.889
+Kadu Gertners: com os dados que estão aí.
+
+274
+00:31:35.590 --> 00:31:37.859
+Kadu Gertners: Legal. No exemplo que eu estou mostrando.
+
+275
+00:31:38.100 --> 00:31:46.179
+Kadu Gertners: Bom, executar caduzão. Uma consulta que mostre todas as colunas da tabela instagram
+
+276
+00:31:46.350 --> 00:31:51.320
+Kadu Gertners: então, mais uma vez, select a estilístico from Instagram.
+
+277
+00:31:51.520 --> 00:31:59.320
+Kadu Gertners: Quando a cláusula uer de novo, quando os seguidores em milhões for menor do que cento e cinquenta e cinco milhões.
+
+278
+00:31:59.550 --> 00:32:10.769
+Kadu Gertners: Então, quem tem menos do que cento e cinquenta e cinco milhões de seguidores nesses dados que estão aí? Vamos lá. Vamos ver quantos são aqui. São três
+
+279
+00:32:11.450 --> 00:32:14.490
+Kadu Gertners: aqui. Ó quantos são?
+
+280
+00:32:15.230 --> 00:32:23.920
+Kadu Gertners: Dois, beleza, Carlos, o que é? Traço, traço, traço traço. É um comentário
+
+281
+00:32:24.290 --> 00:32:31.099
+Kadu Gertners: comentário. É exatamente um código que ele não é submetido para a execução.
+
+282
+00:32:31.540 --> 00:32:36.860
+Kadu Gertners: Tá legal. Um comentário é sobre você comentar o seu código,
+
+283
+00:32:37.500 --> 00:32:44.969
+Kadu Gertners: seja um comentário aqui no caso, traço, traço ou comentário de Skl no Python. Exige o comentário do Python,
+
+284
+00:32:45.300 --> 00:32:51.090
+Kadu Gertners: assim como outras linguagens. Existe a forma de comentar em outras linguagens.
+
+285
+00:32:51.500 --> 00:32:55.830
+Kadu Gertners: Tá legal? E o traço traço. Ele pega linha, a linha,
+
+286
+00:32:56.380 --> 00:33:01.830
+Kadu Gertners: tá legal. É um comentário só vinculado em algum momento daquela linha
+
+287
+00:33:04.550 --> 00:33:07.599
+Kadu Gertners: naquela linha para o lado direito.
+
+288
+00:33:07.960 --> 00:33:12.720
+Kadu Gertners: Aqui é o indicativo do início do comentário legal.
+
+289
+00:33:13.440 --> 00:33:14.540
+Kadu Gertners: Vamos embora.
+
+290
+00:33:15.790 --> 00:33:20.459
+Kadu Gertners: Próximo comando, Cabuzão. Ó, vamos pegar aqui um comando
+
+291
+00:33:21.700 --> 00:33:31.220
+Kadu Gertners: que ele vai mostrar todas as colunas. Beleza da tabela Instagram Select, a estilístico From Instagram.
+
+292
+00:33:31.520 --> 00:33:37.369
+Kadu Gertners: Quando os seguidores em milhões for maior ou igual a duzentos milhões.
+
+293
+00:33:38.140 --> 00:33:45.399
+Kadu Gertners: Então agora não é só maior, é maior é igual beleza. Então pegamos o comando,
+
+294
+00:33:46.180 --> 00:33:50.170
+Kadu Gertners: traz para cá e executamos.
+
+295
+00:33:50.780 --> 00:33:57.250
+Kadu Gertners: Agora são quatro. Por quê? Porque o Donald Johnson tem duzentos milhões de seguidores.
+
+296
+00:33:57.430 --> 00:34:03.639
+Kadu Gertners: Então agora ele mostrou ao colocar o igual. Mais um registro.
+
+297
+00:34:04.580 --> 00:34:07.620
+Kadu Gertners: Beleza, porque duzentos é igual a duzentos.
+
+298
+00:34:08.210 --> 00:34:09.860
+Kadu Gertners: Maravilha,
+
+299
+00:34:11.409 --> 00:34:28.399
+Kadu Gertners: caduzão próximo comando. Eu quero executar agora Cadu uma consulta que vai mostrar as colunas. Primeiro nome que é First Name. Sobrenome Surname referência no Instagram Instagram Handel
+
+300
+00:34:28.710 --> 00:34:40.799
+Kadu Gertners: é seguidores em milhões. Followers, Miriam S a partir da tabela Instagram. Quando os seguidores em milhões for menor ou igual a cento e cinquenta e cinco milhões.
+
+301
+00:34:41.760 --> 00:34:43.110
+Kadu Gertners: Maravilha.
+
+302
+00:34:43.449 --> 00:34:49.880
+Kadu Gertners: Pegamos o comando, colocamos para cá e executamos.
+
+303
+00:34:50.010 --> 00:34:54.769
+Kadu Gertners: Entrou mais um, com a condição de igual
+
+304
+00:34:55.120 --> 00:35:14.640
+Kadu Gertners: quando ele pegou menor do que cento e cinquenta e cinco. Eram dois registros. Ao botarmos menor e igual ou igual. O cento e cinquenta e cinco é igual a cento e cinquenta e cinco. Então ele passa a ser mostrado também. Então aqui aumentou mais um. São três registros mostrados.
+
+305
+00:35:16.460 --> 00:35:19.290
+Kadu Gertners: Maravilha, ó,
+
+306
+00:35:20.070 --> 00:35:28.019
+Kadu Gertners: executar uma consulta agora que mostra todas as colunas de Celeste e asterisco a partir da tabela no Instagram
+
+307
+00:35:28.160 --> 00:35:38.409
+Kadu Gertners: From Instagram quando a carreira for cantor, que em inglês é singer. E o nome da coluna é Carew.
+
+308
+00:35:39.090 --> 00:35:51.399
+Kadu Gertners: E além disso, e os seguidores e milhões. Eles têm que ser maior do que duzentos milhões. Então olha que legal esse comando. Ele pega um critério
+
+309
+00:35:51.690 --> 00:35:55.039
+Kadu Gertners: que é quando carreira for igual a cantor,
+
+310
+00:35:55.160 --> 00:35:58.540
+Kadu Gertners: ou, melhor dizendo, em inglês, carreira igual. Singer.
+
+311
+00:35:58.750 --> 00:36:03.380
+Kadu Gertners: Isso é uma condição. Ela tem que ser verdadeira.
+
+312
+00:36:03.710 --> 00:36:13.420
+Kadu Gertners: E essa outra condição também com o operador lógico End, que é o I. Ele também tem que ser uma condição verdadeira.
+
+313
+00:36:13.570 --> 00:36:18.390
+Kadu Gertners: Então, ó, o Follower, Miriam S tem que ser maior do que duzentos.
+
+314
+00:36:18.530 --> 00:36:21.010
+Kadu Gertners: Então vamos pegar o comando.
+
+315
+00:36:21.740 --> 00:36:26.949
+Kadu Gertners: Copia, traz para cá e executa.
+
+316
+00:36:28.330 --> 00:36:29.220
+Kadu Gertners: Ó,
+
+317
+00:36:29.720 --> 00:36:46.239
+Kadu Gertners: nesse caso, é Ariana. Grande cantor. Como é que nós conferimos isso? Carrier é igual a Singer aqui na coluna Carrier é Singer. Então, Singer é igual a Singer. Isso significa que essa análise é verdadeira.
+
+318
+00:36:47.140 --> 00:36:53.930
+Kadu Gertners: Beleza and wea o Foll War Miriam S. Ele tem que ser maior do que o duzentos
+
+319
+00:36:54.040 --> 00:37:01.219
+Kadu Gertners: duzentos e três é maior do que duzentos. Isso é considerado verdadeiro.
+
+320
+00:37:01.550 --> 00:37:05.689
+Kadu Gertners: Então, por ser considerado verdadeiro, ele vai mostrar
+
+321
+00:37:05.860 --> 00:37:11.949
+Kadu Gertners: essa linha aqui, conforme está na tela. Para vocês as duas condições têm que ser verdadeiras.
+
+322
+00:37:13.870 --> 00:37:17.069
+Kadu Gertners: É assim que funciona o end.
+
+323
+00:37:17.350 --> 00:37:19.720
+Kadu Gertners: Ó, vamos pegar outro Andy.
+
+324
+00:37:19.850 --> 00:37:21.200
+marcos.jose: Doutor, posso tirar uma.
+
+325
+00:37:21.200 --> 00:37:23.130
+Kadu Gertners: Lógico, falso.
+
+326
+00:37:23.130 --> 00:37:39.240
+marcos.jose: Por algo que for tomar muito do tempo para explicar. E deixa a tapa não perder. Mas por que só nesse caso, a função, o Select todo precisou ficar em três linhas: o endentado, por exemplo, sendo que, até agora, a gente estava colocando tudo numa linha só, entendeu?
+
+327
+00:37:39.650 --> 00:37:41.979
+Kadu Gertners: Eu só botei para ficar mais bonitinho.
+
+328
+00:37:42.170 --> 00:37:42.930
+Kadu Gertners: Mas.
+
+329
+00:37:42.930 --> 00:37:44.899
+marcos.jose: Se tudo na mesma linha, não mudaria.
+
+330
+00:37:44.900 --> 00:37:48.300
+Kadu Gertners: Não tem. Mas não tem problema nenhum. Eu vou fazer o que você falou.
+
+331
+00:37:50.670 --> 00:37:52.120
+Kadu Gertners: Vamos fazer o que você falou.
+
+332
+00:37:52.120 --> 00:37:54.730
+marcos.jose: Perguntar qualquer coisa que possa parecer óbvio, mas é só pra saber se tem.
+
+333
+00:37:54.730 --> 00:38:00.800
+Kadu Gertners: Não, não, não, não pergunte, amigo. Pergunte. Não tem problema nenhum.
+
+334
+00:38:02.370 --> 00:38:06.320
+Kadu Gertners: Pergunta não é problema nenhum, ó mesma resposta,
+
+335
+00:38:09.610 --> 00:38:11.010
+Kadu Gertners: beleza pura.
+
+336
+00:38:11.510 --> 00:38:12.420
+marcos.jose: Beleza.
+
+337
+00:38:12.710 --> 00:38:17.600
+Kadu Gertners: Marcos. Entenda o detalhe. Por que não faz diferença?
+
+338
+00:38:18.130 --> 00:38:22.380
+Kadu Gertners: O importante é ele pegar um Select aqui
+
+339
+00:38:22.910 --> 00:38:29.320
+Kadu Gertners: Select aqui e ele perceber o terminador do comando, que é o ponto em vírgula,
+
+340
+00:38:29.910 --> 00:38:34.270
+Kadu Gertners: se cada um desses itens aqui está em uma linha diferente.
+
+341
+00:38:34.430 --> 00:38:38.659
+marcos.jose: Ou está em duas linhas ou uma linha, conforme eu botei aqui.
+
+342
+00:38:38.660 --> 00:38:39.920
+Kadu Gertners: Não interessa.
+
+343
+00:38:40.260 --> 00:38:47.579
+Kadu Gertners: Ele vai analisar o Sky Light. Ele vai analisar assim. Opa, eu comecei do S
+
+344
+00:38:47.830 --> 00:38:50.690
+Kadu Gertners: e vou terminar no ponto em vírgula.
+
+345
+00:38:51.250 --> 00:38:57.489
+Kadu Gertners: Como isso está disposto aqui na nossa visualização de ser humano?
+
+346
+00:38:58.680 --> 00:39:05.180
+Kadu Gertners: Não interessa a execução para a máquina. Para ela, isso não interessa,
+
+347
+00:39:05.680 --> 00:39:12.909
+Kadu Gertners: Cadu. Isso é importante para quem? Isso é importante para o Marcos. Isso é importante para o Cadu
+
+348
+00:39:12.940 --> 00:39:17.090
+Kadu Gertners: que nós de repente percebemos. Eu, Marcos, até
+
+349
+00:39:17.110 --> 00:39:34.739
+Kadu Gertners: particularmente eu prefiro executar o comando assim. Por quê? Porque eu consigo perceber a cláusula select sozinha. Eu consigo perceber a cláusula front sozinha. Eu consigo perceber a cláusula Wer. E se tem mais alguma condição,
+
+350
+00:39:35.280 --> 00:39:38.580
+Kadu Gertners: então, na minha visualização de Cadu
+
+351
+00:39:38.730 --> 00:39:45.009
+Kadu Gertners: na minha análise para eu perceber o comando mais rápido. Eu prefiro o comando assim.
+
+352
+00:39:47.070 --> 00:39:49.979
+Kadu Gertners: Mas isso é uma decisão de cada um. Marcos
+
+353
+00:39:50.590 --> 00:39:55.680
+Kadu Gertners: tá bom amigão, mas não tem interferência nenhuma na execução propriamente dita.
+
+354
+00:39:56.060 --> 00:39:58.670
+marcos.jose: Entendi. Obrigado pela explicação.
+
+355
+00:39:59.150 --> 00:40:05.579
+Kadu Gertners: De nada, cara. Deixa eu ver aqui que Nossa Senhora se botar um montão de coisa aqui. Peraí
+
+356
+00:40:09.310 --> 00:40:16.179
+Kadu Gertners: legal. Ele disponibilizou esse bloco de notas. Não estou achando, Kleber. Eu botei lá na nossa aula.
+
+357
+00:40:16.180 --> 00:40:31.349
+Kadu Gertners: É para o mesmo da última aula. Sim, Cleber é o mesmo da última aula. Conforme o Pedro Fernandes falou, até valeu. Kléber confirmou maravilha. É obrigatório informar a quantidade de caracteres para conseguir criar as tabelas do banco de dados.
+
+358
+00:40:31.370 --> 00:40:34.639
+Kadu Gertners: Cara, ele deve ter um padrão.
+
+359
+00:40:34.750 --> 00:40:50.900
+Kadu Gertners: Se você coloca só varchar e não coloca nada, ele deve ter um padrão de tamanho, mas é uma boa prática. Adailton diria para você que a maioria das pessoas coloca com um determinado tamanho
+
+360
+00:40:51.480 --> 00:40:55.780
+Kadu Gertners: é considerada uma boa prática. Sim, beleza.
+
+361
+00:40:55.980 --> 00:40:56.850
+Kadu Gertners: Bom.
+
+362
+00:41:01.120 --> 00:41:06.180
+Renan Pinto de Souza: Professor. Uma dúvida. Aí, nessas pesquisas da tabela.
+
+363
+00:41:06.600 --> 00:41:14.399
+Kadu Gertners: Por exemplo, num ambiente corporativo. No caso. Aí a gente já sabe o que tem na tabela, que foi a gente que acabou de criar.
+
+364
+00:41:16.350 --> 00:41:17.200
+Renan Pinto de Souza: Aí, no ambiente.
+
+365
+00:41:17.200 --> 00:41:17.520
+Kadu Gertners: Um.
+
+366
+00:41:17.520 --> 00:41:25.479
+Renan Pinto de Souza: Uma tabela muito grande. A gente não sabe as colunas. A gente vai ter que sempre exibir toda a tabela para poder saber o que tem e criar a condição.
+
+367
+00:41:26.160 --> 00:41:26.950
+Kadu Gertners: Sim,
+
+368
+00:41:27.790 --> 00:41:36.230
+Kadu Gertners: você ou tem que ter acesso às colunas da tabela conforme estão escritos aqui do lado esquerdo, Renan, por exemplo,
+
+369
+00:41:36.370 --> 00:41:56.269
+Kadu Gertners: ou você vai ter uma coisa que nós vamos aprender lá no segundo trimestre, que é o modelo do banco de dados, que é chamado Mer. Modelo, entidade de relacionamento. É num papel ou escrito em algum arquivo. Como é que uma tabela se relaciona com a outra,
+
+370
+00:41:57.220 --> 00:42:03.129
+Kadu Gertners: mas sim, você tem que ter acesso às colunas daquela tabela de alguma forma,
+
+371
+00:42:03.340 --> 00:42:18.530
+Kadu Gertners: na pior hipótese, você faz o que você exemplificou para nós aqui você executa um select esterysco from. O nome da tabela. Assim vai mostrar no cabeçalho. Na primeira linha, vai mostrar todas as colunas da tabela.
+
+372
+00:42:18.930 --> 00:42:26.970
+Kadu Gertners: Aí sim. A partir daquele momento, você começa a montar os Selects mais específicos que você vai precisar.
+
+373
+00:42:28.140 --> 00:42:29.289
+Kadu Gertners: Sim, beleza Renan.
+
+374
+00:42:29.290 --> 00:42:30.010
+Renan Pinto de Souza: Beleza.
+
+375
+00:42:30.010 --> 00:42:31.270
+Kadu Gertners: Tranquilo, cara. É isso mesmo.
+
+376
+00:42:31.270 --> 00:42:31.840
+Renan Pinto de Souza: E aí?
+
+377
+00:42:33.970 --> 00:42:34.690
+Kadu Gertners: Bom dia.
+
+378
+00:42:35.520 --> 00:42:41.409
+Kadu Gertners: E pelo que eu estou vendo, todos os comandos estão em maiúsculo. Boas práticas. Vai de cada um. Isso.
+
+379
+00:42:42.170 --> 00:42:47.180
+Kadu Gertners: O Ramon gosta de botar em Upper. Que Upper significa caixa alta beleza.
+
+380
+00:42:47.650 --> 00:43:07.580
+Kadu Gertners: Sim, Sim, ainda mais o Skl que não é tudo colorido, igual aos outros, cara, dependendo da interface. Realmente você tem algumas interfaces que ele colore, coloca uma cor dependendo se você está usando, depende. O Sql server tem vezes que ele faz isso. Eu uso
+
+381
+00:43:07.670 --> 00:43:18.359
+Kadu Gertners: um editor de texto chamado notepad. Mais mais que quando você configura isso ele mostra tudo colorido, cara. Facilita muito. Isso
+
+382
+00:43:18.630 --> 00:43:24.879
+Kadu Gertners: facilita muito a visão. E para você ser mais ágil no dia a dia de trabalho facilita realmente.
+
+383
+00:43:27.250 --> 00:43:33.600
+Kadu Gertners: O Gabriel concordou aí com o Kleber. Maravilha. E com o Ramon maravilha,
+
+384
+00:43:35.250 --> 00:43:38.529
+Kadu Gertners: retornou o meu retorno cinco vezes.
+
+385
+00:43:40.390 --> 00:43:47.850
+Kadu Gertners: Tá se você está retornando em quatro Arianos, cara, vocês devem ter executado o comando insete várias vezes. É por isso
+
+386
+00:43:49.390 --> 00:43:56.649
+Kadu Gertners: você duplicou os dados. Conforme o Pedro Fernandes falou. Você foi executando várias vezes o inset, e ele foi criando várias vezes.
+
+387
+00:43:56.780 --> 00:44:02.400
+Kadu Gertners: É isso? É só isso, tá, não tem problema. Não,
+
+388
+00:44:08.350 --> 00:44:14.549
+Kadu Gertners: você pode apagar os dados. Pode apagar os dados? Sim, não tem problema. Depois você carrega de novo.
+
+389
+00:44:18.050 --> 00:44:18.920
+Kadu Gertners: Tá
+
+390
+00:44:19.390 --> 00:44:34.690
+Kadu Gertners: o comando, Drop é, eu vou ensinar Lucas ao invés do drop amigão. Eu vou ensinar o de elite. Se você quiser apagar o dado, você apaga o dado da tabela assim, ó de elite, From. E o nome da tabela.
+
+391
+00:44:36.520 --> 00:44:41.440
+Kadu Gertners: Beleza. Quando você faz isso, vou fazer aqui para vocês verem.
+
+392
+00:44:41.610 --> 00:44:48.940
+Kadu Gertners: Ó, repara aqui antes do de elite em Instagram.
+
+393
+00:44:49.530 --> 00:44:55.500
+Kadu Gertners: Ó, antes do dirig os dados, estão aqui dez registros.
+
+394
+00:44:56.330 --> 00:45:00.110
+Kadu Gertners: Quando você executa o Delet From. O nome da tabela.
+
+395
+00:45:00.700 --> 00:45:02.410
+Kadu Gertners: Executei o dinheite.
+
+396
+00:45:02.840 --> 00:45:16.489
+Kadu Gertners: Ele afetou. Mencionou dez registros, dez linhas. Quando você executa de novo o Select. Ele apagou os registros da tabela.
+
+397
+00:45:17.870 --> 00:45:24.180
+Kadu Gertners: Tá bom, legal. Vamos servir de novo, cabuzão. Fala comigo.
+
+398
+00:45:24.180 --> 00:45:32.019
+marcos.jose: Uma dúvida rápida. Desculpa. Partindo do princípio que eu apaguei errado, eu consigo trazer de volta. Ou pagou. Já era.
+
+399
+00:45:32.960 --> 00:45:35.989
+Kadu Gertners: Bom, dependendo do banco de dados, já era.
+
+400
+00:45:36.210 --> 00:45:38.669
+Kadu Gertners: Se você fizer isso no Oracle
+
+401
+00:45:38.800 --> 00:45:45.740
+Kadu Gertners: e você estiver numa sessão do Oracle. Você consegue botar um comando chamado Rollback Home
+
+402
+00:45:46.110 --> 00:45:53.570
+Kadu Gertners: Beck. Você consegue desfazer. Mas isso tem que ser ao perceber logo que você errou o comando.
+
+403
+00:45:55.110 --> 00:46:02.550
+Kadu Gertners: Ok, agora, se você faz isso, não é scared Server não tem como voltar atrás.
+
+404
+00:46:03.330 --> 00:46:04.090
+Kadu Gertners: Você vai.
+
+405
+00:46:04.090 --> 00:46:08.880
+marcos.jose: Uma planilha lá de um milhão de linhas. Deletei a coluna errada e me ferrei.
+
+406
+00:46:09.050 --> 00:46:13.450
+Kadu Gertners: Meu irmão se ferrou. E se você não tiver backup, se ferrou mais ainda
+
+407
+00:46:13.730 --> 00:46:16.079
+Kadu Gertners: é simples assim. É papo reto.
+
+408
+00:46:16.210 --> 00:46:16.929
+Kadu Gertners: É isso.
+
+409
+00:46:17.360 --> 00:46:18.039
+marcos.jose: Agora eu fiquei.
+
+410
+00:46:18.040 --> 00:46:37.630
+Kadu Gertners: É o padrão. É. É o padrão. Tem que tomar cuidado. Você pode quebrar isso no skl server. Se você antes do Insert antes do Insert. Deixa eu tentar demonstrar. Eu não vou executar. Eu só vou escrever você antes do Inset. Você põe assim. Biguinho
+
+411
+00:46:38.010 --> 00:46:40.110
+Kadu Gertners: Biguyntran
+
+412
+00:46:40.950 --> 00:46:53.859
+Kadu Gertners: begin Trans Action. Exatamente no Sql. É assim, begin Trans Action que você fala para ele, que você vai executar o que ele chama de transação
+
+413
+00:46:54.240 --> 00:47:10.230
+Kadu Gertners: galera. Não vou entrar em detalhe porque é um assunto muito mais evoluído. Mas eu não vou entrar em detalhe. Eu só vou explicar de uma forma muito direta a transação é como se você estivesse executando vários comandos de uma vez,
+
+414
+00:47:10.360 --> 00:47:23.699
+Kadu Gertners: e aí ao acabar o Begin Trans Action no fim do inset. Você nele faz aqui um procedimento chamado em inglês commited o que é Commited
+
+415
+00:47:23.820 --> 00:47:29.519
+Kadu Gertners: Commits significa validar os comandos que você executou antes.
+
+416
+00:47:30.480 --> 00:47:35.589
+Kadu Gertners: Tá legal. Então repara comite ele valida o que você fez
+
+417
+00:47:35.920 --> 00:47:41.100
+Kadu Gertners: e Roubeck? Ele desfaz o que você fez anteriormente,
+
+418
+00:47:43.770 --> 00:47:50.500
+Kadu Gertners: galera, olha só, existem muitos outros detalhes. Eu só estou falando porque vocês estão perguntando,
+
+419
+00:47:50.970 --> 00:47:54.670
+Kadu Gertners: mas existem muitos outros detalhes por trás disso.
+
+420
+00:47:54.950 --> 00:48:03.509
+Kadu Gertners: Então, inicialmente, não precisa que na nossa aula, no que nós vamos ver? Vocês não precisam se preocupar com isso
+
+421
+00:48:04.170 --> 00:48:08.199
+Kadu Gertners: dê um problema. Faz o que vocês comentaram aqui hoje.
+
+422
+00:48:08.300 --> 00:48:15.030
+Kadu Gertners: Não usa Commited, não usa rollback, não usa o Begin Trans Action,
+
+423
+00:48:16.000 --> 00:48:19.220
+Kadu Gertners: e aí você vai fazer o quê? Você vai deletar a tabela
+
+424
+00:48:20.000 --> 00:48:26.299
+Kadu Gertners: deleta a tabela. Se você inseriu muitos registros e faz o inset de novo.
+
+425
+00:48:27.650 --> 00:48:31.630
+Kadu Gertners: Eu acho que eu não executei o inset. Deixa eu executar o inset.
+
+426
+00:48:33.190 --> 00:48:43.399
+Kadu Gertners: Seleciona um insert e vamos executá lo de novo. Pega todos os inserts. Selecionando com o Shift apertado
+
+427
+00:48:43.680 --> 00:48:50.890
+Kadu Gertners: a tecla shift e executa inserir dez. Vamos lá ver se inserir o mesmo caduzão
+
+428
+00:48:51.780 --> 00:48:56.430
+Kadu Gertners: seleciona todas as colunas para o Instagram. Ó
+
+429
+00:48:56.810 --> 00:48:59.650
+Kadu Gertners: dez a vinte. Eu já dupliquei.
+
+430
+00:48:59.860 --> 00:49:03.440
+Kadu Gertners: Até eu fiz besteira. Também. Não tem problema.
+
+431
+00:49:03.680 --> 00:49:08.720
+Kadu Gertners: Down de Lead apaga e insere mais uma vez.
+
+432
+00:49:10.500 --> 00:49:24.060
+Kadu Gertners: Sem problema. Nenhum ó, inserte todos os insetos. Executa, botou dez aqui inseridos. Então, ó vamos lá de novo.
+
+433
+00:49:25.400 --> 00:49:27.119
+Kadu Gertners: Quantos estão na tabela?
+
+434
+00:49:27.740 --> 00:49:31.570
+Kadu Gertners: Ó dez registros, beleza.
+
+435
+00:49:32.640 --> 00:49:33.950
+marcos.jose: Boa, legal.
+
+436
+00:49:34.710 --> 00:49:36.030
+Kadu Gertners: Maravilha.
+
+437
+00:49:36.550 --> 00:49:42.669
+Kadu Gertners: Último comando, ó caldozão! Vamos executar agora uma consulta
+
+438
+00:49:42.820 --> 00:49:49.440
+Kadu Gertners: que mostra todas as colunas da tabela. Maravilha, select asterístico From Instagram
+
+439
+00:49:49.590 --> 00:49:52.670
+Kadu Gertners: quando a carreira do jogador Carrie
+
+440
+00:49:53.090 --> 00:50:00.450
+Kadu Gertners: for jogador de futebol ou os seguidores e milhões for menor do que cento e cinquenta milhões.
+
+441
+00:50:00.770 --> 00:50:04.199
+Kadu Gertners: Então, galera aqui. Ele está falando. Ou
+
+442
+00:50:04.330 --> 00:50:08.400
+Kadu Gertners: então eu vou mudar aqui. Que está errado aqui é or
+
+443
+00:50:08.940 --> 00:50:21.279
+Kadu Gertners: ou é a hora aqui. Então o que o oro faz cadu o oro é o seguinte. Ele vai pegar a primeira condição e vai analisar a primeira condição,
+
+444
+00:50:21.720 --> 00:50:28.290
+Kadu Gertners: e ele vai analisar a segunda condição. A primeira aqui é da carreira
+
+445
+00:50:28.590 --> 00:50:39.010
+Kadu Gertners: Carrier. E a segunda condição: followers medium s, que é a segunda condição. Ele vai analisar uma das condições.
+
+446
+00:50:39.130 --> 00:50:44.879
+Kadu Gertners: Tem que ser verdadeira pelo menos uma das duas.
+
+447
+00:50:45.980 --> 00:50:52.260
+Kadu Gertners: Então, ó, vamos pegar o comando aqui para vocês entenderem melhor o que eu estou falando? Ó,
+
+448
+00:50:52.630 --> 00:51:01.040
+Kadu Gertners: pegamos o comando, colocamos para cá e vamos executar. Vamos lá, executa
+
+449
+00:51:01.340 --> 00:51:17.380
+Kadu Gertners: caduzon, vamos fazer uma prova real para ver se o que nós executamos. Ele está batendo. Vamos embora. Então vamos lá. Carreira aqui primeiro. Esse carreira aqui é Magazine Magazine. É igual a Footballer.
+
+450
+00:51:17.500 --> 00:51:23.439
+Kadu Gertners: Quer dizer, a revista é igual. Ao jogador de futebol. Isso é falso.
+
+451
+00:51:23.770 --> 00:51:28.389
+Kadu Gertners: Então ele não pegaria o National Geographic
+
+452
+00:51:28.580 --> 00:51:31.780
+Kadu Gertners: por essa condição. Primeiro, aqui é falsa.
+
+453
+00:51:32.650 --> 00:51:41.379
+Kadu Gertners: Só que a segunda condição, que é o followors Minions, que é menor do que cento e cinquenta milhões. Repara,
+
+454
+00:51:41.380 --> 00:51:53.969
+Kadu Gertners: cento e quarenta e cinco. Ele é menor do que cento e cinquenta. Então ele mostrou esse registro por causa da condição verdadeira dessa condição aqui.
+
+455
+00:51:54.620 --> 00:51:57.300
+Kadu Gertners: Então ele mostra esse registro.
+
+456
+00:51:59.960 --> 00:52:02.550
+Kadu Gertners: Vamos analisar os outros Vambora.
+
+457
+00:52:02.910 --> 00:52:14.359
+Kadu Gertners: Segunda linha do Neymar. O Neymar. Ele entra na primeira condição. Opa, a carreira dele é futebol. É futebol. Então isso para o Neymar é verdadeiro.
+
+458
+00:52:14.510 --> 00:52:20.820
+Kadu Gertners: Ok, agora ele tem menos do que cento e cinquenta milhões de seguidores.
+
+459
+00:52:21.160 --> 00:52:29.240
+Kadu Gertners: Tem também. Então, para o Neymar, as duas condições dele foram verdadeiras. Então ele mostra o resultado.
+
+460
+00:52:30.650 --> 00:52:39.650
+Kadu Gertners: Bora para o Messi. Ó, o Messi é jogador de futebol verdadeiro.
+
+461
+00:52:40.260 --> 00:52:56.309
+Kadu Gertners: O Messi tem menos do que cento e cinquenta milhões de seguidores aqui. É falso. Está vendo? O Messi tem cento e sessenta e sete. Então, para o Messi, ele entrou na resposta. Por quê? Porque a primeira opção é verdadeira.
+
+462
+00:52:58.150 --> 00:53:00.610
+Kadu Gertners: Beleza legal.
+
+463
+00:53:01.010 --> 00:53:02.700
+Kadu Gertners: Cristiano Ronaldo
+
+464
+00:53:02.880 --> 00:53:19.559
+Kadu Gertners: o Cristiano Ronaldo. Ele é Carrier. Ele é jogador de futebol. É, então essa condição é verdadeira. Agora, o Cristiano Ronaldo. Ele tem menos do que cento e cinquenta milhões de seguidores. Não, isso é falso.
+
+465
+00:53:19.670 --> 00:53:33.389
+Kadu Gertners: Ele tem duzentos e trinta e nove milhões, que é maior do que cento e cinquenta. Então, para o Cristiano Ronaldo, essa condição aqui também é falsa. Ele entrou porque a condição de futebol dele é verdadeira.
+
+466
+00:53:33.560 --> 00:53:39.660
+Kadu Gertners: Então, resumindo, o Andy, que é o e em português,
+
+467
+00:53:39.810 --> 00:53:43.120
+Kadu Gertners: todas as condições têm que ser verdadeiras.
+
+468
+00:53:43.500 --> 00:53:49.830
+Kadu Gertners: O or que é o ou tem que ter pelo menos uma condição verdadeira.
+
+469
+00:53:51.810 --> 00:53:56.930
+Kadu Gertners: Galera, beleza pura dúvidas até aqui. Tranquilo,
+
+470
+00:54:01.450 --> 00:54:02.810
+Kadu Gertners: maravilha,
+
+471
+00:54:07.530 --> 00:54:16.050
+Kadu Gertners: ponto tablets. Mostra tabela. Maravilha, direct from Instagram, where first name é ariana. Se quiser pagar só ariana
+
+472
+00:54:16.070 --> 00:54:30.350
+Kadu Gertners: pode ser aqui você está como o Luan explicou aqui deu a dica para nós aqui você está filtrando e pegando a coluninha first Name tem que ser igual a String ao nomezinho. Ariana
+
+473
+00:54:30.610 --> 00:54:40.089
+Kadu Gertners: pode executar um trunquete, caso queira limpar todos os dados da tabela. Bom, depende do banco de dados tem banco de dados, Jonathan, que não aceita o trunquete
+
+474
+00:54:40.420 --> 00:54:43.919
+Kadu Gertners: dependendo do banco. E dependendo da versão do banco.
+
+475
+00:54:45.260 --> 00:54:51.220
+Kadu Gertners: Ok, Gabriel deu ok aí, ok, Jonatas Gabriel. Ok,
+
+476
+00:54:51.790 --> 00:55:08.059
+Kadu Gertners: ok, Felipe, que você deletou e inseriu. Maravilha, é isso aí. Ok, Gabriel. Maravilha, é isso aí, galera. Vamos lá. Vamos interagir. Vamos botar pra frente, cabozão! Próximo dever! Aí vamos embora, ó
+
+477
+00:55:08.130 --> 00:55:14.430
+Kadu Gertners: caduzão! Eu vou pegar aqui esse link, esse link aqui.
+
+478
+00:55:14.620 --> 00:55:17.099
+Kadu Gertners: Ó, deixa eu botar aqui para vocês verem.
+
+479
+00:55:18.490 --> 00:55:20.399
+Kadu Gertners: É esse link aqui.
+
+480
+00:55:23.980 --> 00:55:31.660
+Kadu Gertners: Ó, é esse link aqui do nosso livro de referência aí beleza.
+
+481
+00:55:31.770 --> 00:55:35.110
+Kadu Gertners: E ele tem olha, lá.
+
+482
+00:55:35.670 --> 00:55:37.210
+Kadu Gertners: Vários comandos.
+
+483
+00:55:38.040 --> 00:55:50.740
+Kadu Gertners: Vou falar alguns ó select asterisco from station data está pegando todas as colunas da tabela Stone lá legal.
+
+484
+00:55:51.330 --> 00:55:57.780
+Kadu Gertners: Próximo comando. Vamos lá. Akini está botando um select asterístico Froome
+
+485
+00:55:57.920 --> 00:56:09.489
+Kadu Gertners: a partir da tabela Stone, data onde o ano. Que é o Ir for igual a dois mil e dez. Reparem que aqui, todos os anos, dois mil e dez.
+
+486
+00:56:09.950 --> 00:56:11.680
+Kadu Gertners: Maravilha,
+
+487
+00:56:12.400 --> 00:56:32.149
+Kadu Gertners: vai aqui, caldozão. Ele quer mostrar todas as colunas a partir da tabela extension data quando o ano for diferente, que pode ser exclamação igual ou menor maior do que dois mil e dez. Isso aqui significa o diferente.
+
+488
+00:56:32.760 --> 00:56:39.059
+Kadu Gertners: Maravilha, ó caduzão. Eu quero pegar
+
+489
+00:56:39.480 --> 00:56:52.069
+Kadu Gertners: entre faixas de anos. Eu tenho como fazer isso com um comando do Skl? Tenho. Olha que legal. Tem um comando que é o B2 então esse comando vai mostrar todos os registros
+
+490
+00:56:52.930 --> 00:57:00.610
+Kadu Gertners: a partir da tabela Stone, data onde o ano ele tiver bitoin significa, entre
+
+491
+00:57:00.730 --> 00:57:12.630
+Kadu Gertners: entre o ano dois mil e cinco e dois mil e dez. Então ele vai pegar dois mil e cinco, dois mil e seis, dois mil e sete dois mil e oito dois mil e nove dois mil e dez.
+
+492
+00:57:13.620 --> 00:57:17.470
+Kadu Gertners: Ok, legal.
+
+493
+00:57:17.790 --> 00:57:19.720
+Kadu Gertners: Ó aqui
+
+494
+00:57:20.030 --> 00:57:29.239
+Kadu Gertners: nós pegamos todas as colunas da tabela Stone, data onde o ano for maior ou igual a dois mil e cinco,
+
+495
+00:57:29.590 --> 00:57:47.529
+Kadu Gertners: então tem que atender a esse primeiro filtro, e tem que atender o segundo filtro quando o ano for menor ou igual a dois mil e dez. Se nós pegarmos dois mil e seis dois mil e seis, é maior do que dois mil e cinco, verdadeiro
+
+496
+00:57:47.760 --> 00:57:59.230
+Kadu Gertners: dois mil e seis. Ele é menor ou igual a dois mil e dez verdadeiro. Então ele mostra dois mil e seis aqui. Na verdade, esse comando aqui é como se fosse o Betoin.
+
+497
+00:58:00.140 --> 00:58:01.260
+Kadu Gertners: Tá legal.
+
+498
+00:58:01.800 --> 00:58:07.529
+Kadu Gertners: Bom, esse aqui, ele não está falando. Olha lá, esse aqui é maior.
+
+499
+00:58:07.800 --> 00:58:14.759
+Kadu Gertners: Então aqui tem que ser entre dois mil e seis e entre dois mil e nove.
+
+500
+00:58:15.810 --> 00:58:21.170
+Kadu Gertners: Tá legal. Não tem o igual nesse aqui, beleza,
+
+501
+00:58:21.590 --> 00:58:39.180
+Kadu Gertners: vamos para baixo. Aqui caduzon. Podemos botar vários ors aqui, podemos, Ah, eu quero pegar Cadu todas as colunas da tabela Station Data. E eu quero fazer o seguinte: quando um mês mant for igual a três de Março,
+
+502
+00:58:39.480 --> 00:58:53.659
+Kadu Gertners: ou quando o mês manto for igual a seis de Junho, ou quando o mês manto for igual a nove Setembro, ou quando o mês aqui for igual a doze, que é o mês de Dezembro.
+
+503
+00:58:54.500 --> 00:58:59.530
+Kadu Gertners: Beleza é uma forma de você montar o Or.
+
+504
+00:59:00.100 --> 00:59:20.079
+Kadu Gertners: Aí tem um outro comando do Skl. Muito legal. Ao invés de usar vários Ors aqui, você pode usar o comando in que significa dentro. Ah, eu quero pegar os meses. Três ou seis ou nove ou doze.
+
+505
+00:59:21.960 --> 00:59:23.030
+Kadu Gertners: Beleza.
+
+506
+00:59:23.820 --> 00:59:25.630
+Kadu Gertners: Três.seis-nove, doze.
+
+507
+00:59:26.370 --> 00:59:30.129
+Kadu Gertners: Eu posso botar um note
+
+508
+00:59:30.940 --> 00:59:38.190
+Kadu Gertners: note negando o que está dentro. Eu não quero pegar o que está dentro desses valores.
+
+509
+00:59:38.470 --> 00:59:40.970
+Kadu Gertners: Caraca caldozão complicou, né?
+
+510
+00:59:41.080 --> 00:59:44.920
+Kadu Gertners: Então repara você ao invés de pegar os valores que estão ali.
+
+511
+00:59:45.060 --> 00:59:47.959
+Kadu Gertners: Você vai contrariar isso.
+
+512
+00:59:48.170 --> 00:59:55.239
+Kadu Gertners: Então repare, os meses não são numerados de um a um2 então ele não quer mostrar
+
+513
+00:59:55.340 --> 01:00:04.280
+Kadu Gertners: nem o três, nem o seis, nem o nove, nem o um2 então ele pode mostrar. Um, dois
+
+514
+01:00:05.000 --> 01:00:12.459
+Kadu Gertners: é quatro, cinco, sete, oito, dez e onze.
+
+515
+01:00:13.110 --> 01:00:20.670
+Kadu Gertners: É isso que ele quer dizer com o note? Quando ele coloca o note antes, significa que ele está negando,
+
+516
+01:00:21.910 --> 01:00:28.459
+Kadu Gertners: negando esse operador, um que significa os valores que estariam sendo citados ali.
+
+517
+01:00:29.370 --> 01:00:35.749
+Kadu Gertners: Tá legal, galera. Isso aqui são opções até mais avançadas. Só para vocês terem uma ideia.
+
+518
+01:00:35.940 --> 01:00:47.240
+Kadu Gertners: Não, isso aqui não precisa bem mais avançado. Não precisa chegar nesse nível. O Like, o Like é um operadorzinho muito útil,
+
+519
+01:00:47.500 --> 01:00:49.229
+Kadu Gertners: né? Pô,
+
+520
+01:00:49.590 --> 01:00:59.470
+Kadu Gertners: você vai pegar esse operador aqui e você na coluna Report vai fazer o seguinte. O Like pode ser traduzido com a palavra como.
+
+521
+01:00:59.770 --> 01:01:08.140
+Kadu Gertners: Então é o seguinte: eu quero pegar a coluna report code quando iniciar aquela coluna com a letra A,
+
+522
+01:01:08.530 --> 01:01:15.380
+Kadu Gertners: e depois o símbolo de percentual significa que pode ter qualquer caractere. Depois
+
+523
+01:01:15.610 --> 01:01:24.270
+Kadu Gertners: ele só tem que iniciar essa coluna com a letra A. Depois pode ter qualquer caracter pode inclusive ter número.
+
+524
+01:01:24.490 --> 01:01:29.980
+Kadu Gertners: Pode ser um A. Pode ser a Cb. Não tem problema.
+
+525
+01:01:31.070 --> 01:01:32.150
+Kadu Gertners: Tá legal.
+
+526
+01:01:32.850 --> 01:01:39.690
+Kadu Gertners: Maravilha, like maravilha
+
+527
+01:01:43.340 --> 01:01:44.130
+Kadu Gertners: é um.
+
+528
+01:01:44.290 --> 01:01:46.469
+Kadu Gertners: Esses aqui. Eu não vou entrar em detalhe. Não,
+
+529
+01:01:46.880 --> 01:01:49.529
+Kadu Gertners: isso aí. No decorrer das aulas, nós vamos ver.
+
+530
+01:01:50.140 --> 01:01:54.090
+Kadu Gertners: Legal, bom,
+
+531
+01:01:54.600 --> 01:02:06.670
+Kadu Gertners: galera. Alguma colocação aqui sobre o que eu mostrei agora. Pessoal, alguma dúvida? Alguma colocação? Quer acrescentar alguma coisa? Está tudo bem. Fala comigo.
+
+532
+01:02:07.270 --> 01:02:09.579
+Kadu Gertners: Cadê deixa eu ver o que vocês vão botar aqui.
+
+533
+01:02:10.520 --> 01:02:13.699
+Kadu Gertners: Encabularam, não querem mais falar. É isso.
+
+534
+01:02:15.030 --> 01:02:17.129
+Kadu Gertners: Cadê vocês estão me ouvindo? Galera
+
+535
+01:02:28.260 --> 01:02:36.080
+Kadu Gertners: upa, beleza. Gabriel maravilha. Ok, Pablo, maravilha.
+
+536
+01:02:36.690 --> 01:02:44.240
+Kadu Gertners: Bom, vamos lá, caduzão. Vamos falar agora. Uma coisa que interessa aí para todos nós, que é sobre o Tp3.
+
+537
+01:02:44.390 --> 01:02:47.009
+Kadu Gertners: Bora. Vamos ler esse garoto. Vamos lá,
+
+538
+01:02:48.510 --> 01:02:54.929
+Kadu Gertners: vamos nê lo. Vamos nela. Vamos lá, vamos lá. Ok, Lucas Maravilha, vamos a ele.
+
+539
+01:02:55.980 --> 01:03:03.950
+Kadu Gertners: Bom, então vou clicar aqui. Entrega de trabalho. Vou acessar o ambiente do moodle do Infinity.
+
+540
+01:03:05.330 --> 01:03:09.939
+Kadu Gertners: Clica aqui no botão do Google. Aqui nós estamos nos exercícios.
+
+541
+01:03:10.160 --> 01:03:15.420
+Kadu Gertners: Maravilha. Coloca para baixo. Aqui. Teste e performance. Tp3
+
+542
+01:03:15.910 --> 01:03:24.769
+Kadu Gertners: Maravilha. Aí, ó vamos embora. Cadu Tp3 é o terceiro teste. Performance dessa disciplina,
+
+543
+01:03:24.840 --> 01:03:40.729
+Kadu Gertners: ok, nós vamos testar a competência do Select aqui. Se quiser tirar alguma dúvida sobre a parte de competência, rubricas ver no manual do aluno. Está tudo escrito aquilo, cara, eu estou lendo mais rápido, porque isso não interessa
+
+544
+01:03:40.960 --> 01:03:47.270
+Kadu Gertners: nesse momento, e nós já lemos dos outros um pouquinho dos outros Tps legal.
+
+545
+01:03:47.800 --> 01:03:50.129
+Kadu Gertners: Eu quero ir para o que interessa?
+
+546
+01:03:50.260 --> 01:04:00.039
+Kadu Gertners: Leia as instruções com calma e mãos à obra. Galera. Isso aqui. Ele sempre fala para o negócio da Ia e eu vou frisar.
+
+547
+01:04:00.270 --> 01:04:04.690
+Kadu Gertners: Ah, caduzão. Eu posso usar a Ia para estudar. Pode?
+
+548
+01:04:05.170 --> 01:04:11.219
+Kadu Gertners: Eu posso usar a Ia quando eu for fazer o exercício propriamente dito, não deve.
+
+549
+01:04:11.330 --> 01:04:20.379
+Kadu Gertners: E eu não faria isso se fosse você. Porque senão você não vai aprender com o seu esforço. Você vai estar pedindo ajuda para a Ia.
+
+550
+01:04:20.810 --> 01:04:27.320
+Kadu Gertners: Isso não vai ser legal para você, beleza é simples assim.
+
+551
+01:04:27.780 --> 01:04:28.720
+Kadu Gertners: Legal.
+
+552
+01:04:30.160 --> 01:04:35.580
+Kadu Gertners: É teste de performance. Olha, como é que vai ser isso aqui? Vamos lá.
+
+553
+01:04:35.820 --> 01:04:52.520
+Kadu Gertners: Este teste. Ele vai avaliar a sua capacidade de extrair informações do banco de dados relacionais. Usando a linguagem Skl: legal, as questões focam na seleção de dados e na aplicação de filtros lógicos e relacionais.
+
+554
+01:04:53.360 --> 01:04:56.849
+Kadu Gertners: Legal. Aqui nós temos as tabelas de referência.
+
+555
+01:04:57.470 --> 01:05:01.200
+Kadu Gertners: Então repara que aqui ele vai.
+
+556
+01:05:02.100 --> 01:05:13.230
+Kadu Gertners: Ó ele está criando para nós aqui. Quatro tabelas, vendedores, pedidos, clientes e produtos.
+
+557
+01:05:13.250 --> 01:05:27.260
+Kadu Gertners: Só que primeiro ele usa um comando. Conforme nosso amigo falou um pouco antes, aí minutos atrás, que é o comando Drop. Por que o comando Drop? Ele faz caduzão. Ele dropa a tabela.
+
+558
+01:05:27.270 --> 01:05:33.900
+Kadu Gertners: Ele apaga a tabela por completo. Ele não só tira os dados da tabela.
+
+559
+01:05:34.110 --> 01:05:43.240
+Kadu Gertners: Ele apaga toda a tabela em si. Toda a coluna, toda a estruturação de coluna da tabela. Ele apaga a tabela de uma vez.
+
+560
+01:05:44.140 --> 01:05:55.000
+Kadu Gertners: Então repara o Drop Table. Ele vai analisar. Olha, ele vai executar o Drop se If
+
+561
+01:05:55.290 --> 01:05:59.959
+Kadu Gertners: e que existe, se existir a tabela verdadeiros,
+
+562
+01:06:00.190 --> 01:06:09.779
+Kadu Gertners: então Cadu, isso é um condicional, né? É que é o C em Português S e ou que é o If em inglês.
+
+563
+01:06:10.030 --> 01:06:26.289
+Kadu Gertners: Então esse condicional para acontecer, ele tem que ser o que cabuzão verdadeiro. Então, se a tabela existir no ambiente, ele apaga. Ah, mas e se a tabela não existir? Ele não faz nada. Ele não executa o Drop.
+
+564
+01:06:27.300 --> 01:06:31.620
+Kadu Gertners: Beleza, é assim que funciona esse comando legal.
+
+565
+01:06:32.210 --> 01:06:39.409
+Kadu Gertners: Aí nós temos aqui a tabela, produtos, pô, cria tabela, produtos,
+
+566
+01:06:39.540 --> 01:06:49.439
+Kadu Gertners: a coluna Id, que é idêntite é uma identificação
+
+567
+01:06:49.800 --> 01:06:53.329
+Kadu Gertners: inteiro, que é a pra americana, que é a chave primária,
+
+568
+01:06:53.520 --> 01:07:10.319
+Kadu Gertners: nome que é do tipo texto, categoria texto, preço unitário. É um decimal. Quer dizer, um número que tem dez dígitos, sendo que os dois últimos são a casa dos centavos.
+
+569
+01:07:10.810 --> 01:07:13.979
+Kadu Gertners: Ok, estoque é o número inteiro.
+
+570
+01:07:14.230 --> 01:07:19.720
+Kadu Gertners: Então, ó bonitinho. Aqui, ó ó, ele faz o inset
+
+571
+01:07:19.880 --> 01:07:36.680
+Kadu Gertners: do produtos para tabela, produtos na posição, um Id teclado mecânico que é o nome periféricos. A categoria preço unitário duzentos e cinquenta.zero e o estoque um5
+
+572
+01:07:37.720 --> 01:07:46.530
+Kadu Gertners: beleza. É assim que acontece. O inset aqui, para produtos. Eu dei o exemplo do primeiro registro.
+
+573
+01:07:46.650 --> 01:07:54.199
+Kadu Gertners: Assim será feita a analogia até o dois até o 1dois legal. Vamos embora.
+
+574
+01:07:55.240 --> 01:07:56.809
+Kadu Gertners: Cliente caldozão.
+
+575
+01:07:57.020 --> 01:08:14.420
+Kadu Gertners: Cliente Table cliente. Então vai ter a coluna Id do cliente, que é a identificação do cliente do tipo inteiro. É uma chave Primária. Galera chave primária significa que essa coluna aqui ela não pode ter valores repetidos.
+
+576
+01:08:15.320 --> 01:08:26.010
+Kadu Gertners: Então, por exemplo, está vendo que o Id do cliente aqui, que é a primeira informação aqui. Ele não tem valores repetidos. Ó, tem cento e um,
+
+577
+01:08:26.250 --> 01:08:37.510
+Kadu Gertners: cento e dois, cento e três, cento e quatro, cento e cinco, cento e seis, cento e sete, cento e oito, cento e nove, cento e dez, cento e onze, cento e doze
+
+578
+01:08:37.620 --> 01:08:38.830
+Kadu Gertners: não
+
+579
+01:08:38.950 --> 01:08:51.229
+Kadu Gertners: tem valores repetidos a Primerik. Você não pode botar para aquela coluna que você indicou como chave primária. Ela não pode ter valor repetido.
+
+580
+01:08:52.040 --> 01:08:53.140
+Kadu Gertners: Tá legal.
+
+581
+01:08:53.340 --> 01:09:05.989
+Kadu Gertners: Bom, aí. Nome completo: Text cidade Text. Estado, texto, tipo do plano Text legal cabe Zoom, vamos lá.
+
+582
+01:09:06.450 --> 01:09:14.529
+Kadu Gertners: No primeiro exemplo aqui da primeira linha, O Aid, do cliente cento e um nome completo: Ana Silva,
+
+583
+01:09:14.720 --> 01:09:27.739
+Kadu Gertners: Cidade, São Paulo, Estado Sp, tipo do plano Gold. Que significa ouro, beleza e assim por diante.
+
+584
+01:09:30.330 --> 01:09:31.990
+Kadu Gertners: Vamos lá.
+
+585
+01:09:33.740 --> 01:09:35.029
+Kadu Gertners: Pedidos,
+
+586
+01:09:35.439 --> 01:09:49.349
+Kadu Gertners: clientes, tribo, pedidos. O nome da coluna número do pedido é um inteiro. Ele também é chave primária. A cadusão chave primária não pode ter valor repetido.
+
+587
+01:09:49.529 --> 01:09:52.519
+Kadu Gertners: Não pode ter valor repetido.
+
+588
+01:09:52.830 --> 01:10:00.269
+Kadu Gertners: Beleza, data do pedido. A data do pedido é o do tipo Date,
+
+589
+01:10:00.760 --> 01:10:09.409
+Kadu Gertners: que é uma data. Ó, essa coluna aqui é uma data, ano, mês e dia,
+
+590
+01:10:10.120 --> 01:10:15.339
+Kadu Gertners: nesse formato aqui. Nesse caso legal, aí de cliente,
+
+591
+01:10:15.470 --> 01:10:21.779
+Kadu Gertners: o Id do cliente é uma informação que está vindo lá.
+
+592
+01:10:21.970 --> 01:10:26.720
+Kadu Gertners: Que essa coluna aqui, cara. É porque assim. Vamos lá.
+
+593
+01:10:27.780 --> 01:10:32.729
+Kadu Gertners: Essa coluna na verdade, está vindo da tabela de cima,
+
+594
+01:10:32.990 --> 01:10:40.030
+Kadu Gertners: que é a tabela do cliente. Então é dessa coluna aqui, cento e um cento e doze até cento e um2
+
+595
+01:10:40.200 --> 01:10:45.420
+Kadu Gertners: então, na verdade, esse Id do cliente aqui, são esses números aqui,
+
+596
+01:10:45.550 --> 01:10:55.200
+Kadu Gertners: então significa na prática, o seguinte: essa coluna Id do cliente. Ela é chamada uma coluna chave estrangeira
+
+597
+01:10:55.540 --> 01:11:01.630
+Kadu Gertners: em inglês chamado forem In Key é uma chave estrangeira
+
+598
+01:11:01.920 --> 01:11:05.370
+Kadu Gertners: cadu na prática. Significa o quê? Upa.
+
+599
+01:11:05.500 --> 01:11:25.440
+Kadu Gertners: Ao inserirmos um registro na pedidos e ele ler a terceira coluna que no nosso caso, é o adido cliente, por exemplo, o número cento e um. Ele tem que existir aqui, e você vai reparar que ele existe
+
+600
+01:11:25.640 --> 01:11:26.689
+Kadu Gertners: cento e um.
+
+601
+01:11:26.840 --> 01:11:35.329
+Kadu Gertners: É como se na chave estrangeira. Você tem o valor da informação, filha.
+
+602
+01:11:36.180 --> 01:11:50.389
+Kadu Gertners: E aí você tem que sair da informação da coluna, filha. E você tem que ir na coluna mãe, na tabela que tem a informação original e ver se lá na mãe. Tem aquele valor.
+
+603
+01:11:51.090 --> 01:11:52.189
+Kadu Gertners: Tá legal.
+
+604
+01:11:52.340 --> 01:11:58.830
+Kadu Gertners: É isso que tem que ser analisado com um conceito de chave primária e chave estrangeira
+
+605
+01:11:59.130 --> 01:12:07.950
+Kadu Gertners: aqui. A coluna na cliente, o Id do cliente é a chave primária nessa tabela de baixo,
+
+606
+01:12:08.910 --> 01:12:15.520
+Kadu Gertners: nessa tabela de baixa em pedidos. O Id cliente não é a chave primária Cadu. Não?
+
+607
+01:12:15.980 --> 01:12:19.159
+Kadu Gertners: E aí ele é uma chave estrangeira.
+
+608
+01:12:20.680 --> 01:12:21.459
+Kadu Gertners: E aí?
+
+609
+01:12:21.910 --> 01:12:25.970
+Kadu Gertners: Ok, legal, valor total.
+
+610
+01:12:26.170 --> 01:12:27.750
+Kadu Gertners: É um decimal
+
+611
+01:12:28.200 --> 01:12:38.210
+Kadu Gertners: de dez dígitos, sendo que os dois últimos são os centavos e o status. Ele está indicando um texto.
+
+612
+01:12:38.670 --> 01:12:43.230
+Kadu Gertners: Vamos exemplificar Caldozon, o primeiro registro do inset. Vamos lá.
+
+613
+01:12:46.440 --> 01:12:48.769
+Kadu Gertners: Vamos fazer o inset para pedidos.
+
+614
+01:12:49.320 --> 01:12:54.829
+Kadu Gertners: Número do pedido cinco mil e um. Beleza data do pedido
+
+615
+01:12:55.660 --> 01:13:01.989
+Kadu Gertners: cinco de Janeiro de dois mil e vinte e quatro a dia do cliente cento e um.
+
+616
+01:13:02.250 --> 01:13:08.359
+Kadu Gertners: O valor total desse pedido: duzentos e cinquenta reais
+
+617
+01:13:08.470 --> 01:13:13.490
+Kadu Gertners: status. Ele está sendo considerado o que foi entregue.
+
+618
+01:13:14.510 --> 01:13:20.750
+Kadu Gertners: E assim, para os demais registros maravilha,
+
+619
+01:13:23.790 --> 01:13:25.490
+Kadu Gertners: vendedores.
+
+620
+01:13:26.670 --> 01:13:27.440
+Kadu Gertners: E aí,
+
+621
+01:13:28.830 --> 01:13:40.149
+Kadu Gertners: clientes têm ou vendedores. Nós temos o id vendedor que é inteiro, é a chave primária. Repara que não tem valor repetido para ele.
+
+622
+01:13:40.980 --> 01:13:45.640
+Kadu Gertners: Beleza, nome do vendedor é a segunda coluna
+
+623
+01:13:46.330 --> 01:13:53.260
+Kadu Gertners: região. Assim, o nome do vendedor de Text região é Text. Texto,
+
+624
+01:13:54.320 --> 01:13:59.770
+Kadu Gertners: vendas do mês inteiro. Quantas vendas esse vendedor fez
+
+625
+01:13:59.880 --> 01:14:05.580
+Kadu Gertners: e a meta? Se ela foi atingida ou não. É um texto
+
+626
+01:14:05.690 --> 01:14:13.259
+Kadu Gertners: que está escrito aqui. Sim ou não? Se a meta do vendedor for atingida ou não atingida ou não
+
+627
+01:14:13.420 --> 01:14:17.520
+Kadu Gertners: legal caduzão. Vamos exemplificar o primeiro. Vamos embora.
+
+628
+01:14:18.230 --> 01:14:26.880
+Kadu Gertners: Ai de vendedor. Um nome do vendedor Ricardo, região Sudeste.
+
+629
+01:14:27.000 --> 01:14:34.569
+Kadu Gertners: Vendas Por Mês do Ricardo quarenta e cinco e ele atingiu a meta dele na meta atingida. Sim, atingiu.
+
+630
+01:14:36.270 --> 01:14:42.520
+Kadu Gertners: Ok, e aí faz o inset dos demais. Registros.
+
+631
+01:14:43.520 --> 01:14:44.150
+marcos.jose: Turma.
+
+632
+01:14:44.590 --> 01:14:45.730
+Kadu Gertners: Fala comigo.
+
+633
+01:14:45.970 --> 01:14:56.359
+marcos.jose: Só uma dúvida. Eu tenho algumas outras, mas só essa aqui pra gente não perder o tempo aqui da explicação. Nesse caso, Text e varchar. É a mesma coisa, ou eu preciso usar Text.
+
+634
+01:14:56.360 --> 01:15:00.669
+Kadu Gertners: Mesma coisa. Tem que usar Text, porque está aqui? Mas é a mesma coisa.
+
+635
+01:15:01.050 --> 01:15:05.579
+marcos.jose: Se eu colocava achar e definir lá uma caracter pro código, não dá diferença.
+
+636
+01:15:06.080 --> 01:15:11.490
+Kadu Gertners: Não vai dar diferença, mas usa conforme está aqui que é, Text, mas equivale ao achar.
+
+637
+01:15:12.060 --> 01:15:13.100
+Kadu Gertners: Tá bom.
+
+638
+01:15:15.610 --> 01:15:17.380
+Kadu Gertners: Bom, vamos lá,
+
+639
+01:15:17.930 --> 01:15:34.010
+Kadu Gertners: caduzão. Vamos lá, contexto. Olha que legal! O gestor do estoque da empresa Tech Store precisa realizar uma auditoria completa em todo o catálogo de produtos desse cadastro das quatro tabelas
+
+640
+01:15:34.140 --> 01:15:49.490
+Kadu Gertners: legal. Para garantir que nenhum item seja esquecido. No relatório de inventário, ele solicitou a listagem integral da tabela de produtos para conferir manualmente
+
+641
+01:15:49.770 --> 01:15:58.510
+Kadu Gertners: o impacto esperado é a transparência total sobre o que está disponível no banco de Dados maravilha.
+
+642
+01:15:59.810 --> 01:16:00.670
+Kadu Gertners: Bom dia.
+
+643
+01:16:00.920 --> 01:16:11.560
+Kadu Gertners: Dados disponíveis da tabela, produtos. Então, na tabela, produtos tem essas colunas. Adir nome, categoria, preço Unitário e estoque.
+
+644
+01:16:11.710 --> 01:16:22.750
+Kadu Gertners: Qual é a tarefa que você tem que executar. Inscreva uma query que retorne todas as colunas e todas as linhas da tabela de produtos.
+
+645
+01:16:23.840 --> 01:16:24.189
+João Victor Gasparoto: E aí?
+
+646
+01:16:24.190 --> 01:16:38.220
+Kadu Gertners: Pô difícil essa questão, hein? Olha só. Escreva uma consulta. Uma query que retorne todas as colunas. Como é que representa todas as colunas e depois todas as linhas da tabela de produtos,
+
+647
+01:16:38.380 --> 01:16:41.589
+Kadu Gertners: cara muito tranquila. A questão.
+
+648
+01:16:42.090 --> 01:16:42.920
+João Victor Gasparoto: É ele, certo? Aqui.
+
+649
+01:16:42.920 --> 01:16:54.290
+Kadu Gertners: Confirma muito tranquilo a pergunta. A muito tranquila. A pergunta beleza.
+
+650
+01:16:54.580 --> 01:17:00.129
+João Victor Gasparoto: A gente tá com álcool.
+
+651
+01:17:00.130 --> 01:17:00.710
+Kadu Gertners: Eu vou ler.
+
+652
+01:17:00.710 --> 01:17:04.079
+João Victor Gasparoto: Eu vou trabalhar no trecho lá.
+
+653
+01:17:04.080 --> 01:17:05.609
+marcos.jose: Sou o João Vitor.
+
+654
+01:17:06.010 --> 01:17:07.890
+Kadu Gertners: Bom serviço aí. Viu?
+
+655
+01:17:08.250 --> 01:17:09.920
+Kadu Gertners: Aí? Eu.
+
+656
+01:17:09.920 --> 01:17:10.270
+João Victor Gasparoto: Boa merda.
+
+657
+01:17:10.270 --> 01:17:11.270
+Kadu Gertners: Obrigado.
+
+658
+01:17:11.540 --> 01:17:15.950
+Kadu Gertners: Tudo numa boa. Tudo numa boa. Tá desculpado, amigão. Na paz.
+
+659
+01:17:15.950 --> 01:17:17.010
+lucas.histirari: Professor.
+
+660
+01:17:17.530 --> 01:17:18.930
+Kadu Gertners: Fala comigo, garoto.
+
+661
+01:17:18.930 --> 01:17:29.710
+lucas.histirari: A gente falou aí na última aula, mas só para confirmar a execução dessas tabelas e tudo mais, as atividades terão que ser feitas no Deep. Note.
+
+662
+01:17:30.920 --> 01:17:32.090
+Kadu Gertners: No Deep Note.
+
+663
+01:17:32.720 --> 01:17:38.890
+Kadu Gertners: Vamos lá. Ainda não cheguei lá. Vamos lá, caduzão! Peraí. Deixa eu voltar aqui.
+
+664
+01:17:39.330 --> 01:17:40.809
+Kadu Gertners: Deixa eu voltar aqui.
+
+665
+01:17:43.050 --> 01:17:51.530
+Kadu Gertners: Peraí, coloca pra cá, beleza. Sobe pra cá,
+
+666
+01:17:52.790 --> 01:17:59.809
+Kadu Gertners: beleza, Control, f deep note. Ele não está sendo citado aqui.
+
+667
+01:18:00.220 --> 01:18:06.240
+Kadu Gertners: Beleza. Como é que nós fazemos isso, Deep note com
+
+668
+01:18:07.260 --> 01:18:11.459
+Kadu Gertners: então ó o Deep note com, não é?
+
+669
+01:18:12.480 --> 01:18:15.210
+Kadu Gertners: Você vai iniciar isso aí.
+
+670
+01:18:16.840 --> 01:18:19.459
+Kadu Gertners: Ó, eu já acessei.
+
+671
+01:18:19.820 --> 01:18:26.089
+Kadu Gertners: Tá vendo. Já acessei o Deep note. Então, ó, você vai criar um notebook novo
+
+672
+01:18:26.710 --> 01:18:32.400
+Kadu Gertners: beleza, você vai criar um notebook novo, e você vai pegar aqui o código Sql,
+
+673
+01:18:32.510 --> 01:18:42.949
+Kadu Gertners: Skl e S Ql. O que você vai botar Caduzon nesse primeiro bloco. Aqui. Opa, vamos lá ver. Volta lá, caduzão
+
+674
+01:18:43.300 --> 01:18:56.229
+Kadu Gertners: no Tp. Você vai fazer o seguinte. Vai pegar esse código aqui. Copia isso aqui. Seleciona esse código. Copia, volta no Deep note e cola para cá.
+
+675
+01:18:57.590 --> 01:19:00.489
+Kadu Gertners: Beleza, esse é o primeiro código.
+
+676
+01:19:02.790 --> 01:19:09.200
+Kadu Gertners: Aí você pode fazer assim é,
+
+677
+01:19:09.780 --> 01:19:14.759
+Kadu Gertners: acho que é melhor. Pode botar num bloco diferente.
+
+678
+01:19:15.100 --> 01:19:18.889
+Kadu Gertners: Num segundo bloco, você vai abrir um segundo bloco.
+
+679
+01:19:19.020 --> 01:19:27.999
+Kadu Gertners: Skl: E aqui você vai botar o segundo bloco. Está vendo o Dataframe, que é o primeiro bloquinho se chama Df sublinhado um.
+
+680
+01:19:28.230 --> 01:19:34.170
+Kadu Gertners: O segundo Df2 o que nós vamos botar no Df2 caduzão? Vamos embora. Vamos lá ver.
+
+681
+01:19:34.740 --> 01:19:45.039
+Kadu Gertners: Ó esses caras aqui. Ó, vamos pegar tudo aqui do Creatable. Até todos os inserts.
+
+682
+01:19:46.010 --> 01:19:50.470
+Kadu Gertners: Copia, traz para cá e corre para cá,
+
+683
+01:19:52.550 --> 01:20:02.379
+Kadu Gertners: galera. Aí. Vocês podem colocar todos os creates, tables insertos aqui ou criar blocos diferentes.
+
+684
+01:20:03.080 --> 01:20:06.610
+Kadu Gertners: Então tu faz beleza.
+
+685
+01:20:07.310 --> 01:20:09.359
+Kadu Gertners: Vamos botar tudo aqui dessa vez.
+
+686
+01:20:10.250 --> 01:20:15.470
+Kadu Gertners: Tabela de cliente maravilha.
+
+687
+01:20:19.690 --> 01:20:23.709
+Kadu Gertners: Copia para cá, cola pra cá.
+
+688
+01:20:24.990 --> 01:20:26.390
+Kadu Gertners: Vai para frente.
+
+689
+01:20:28.030 --> 01:20:29.619
+Kadu Gertners: O cliente foi.
+
+690
+01:20:30.150 --> 01:20:32.359
+Kadu Gertners: Vamos pegar agora pedidos,
+
+691
+01:20:35.370 --> 01:20:38.109
+Kadu Gertners: copia, coloca para cá.
+
+692
+01:20:38.370 --> 01:20:40.060
+Kadu Gertners: O pedido está aqui.
+
+693
+01:20:40.330 --> 01:20:42.889
+Kadu Gertners: E finalmente, a quarta tabela.
+
+694
+01:20:43.450 --> 01:20:49.769
+Kadu Gertners: Vendedores copia o cliente da tabela e os inserts.
+
+695
+01:20:50.750 --> 01:20:54.830
+Kadu Gertners: Estou fazendo a mesma coisa para todos.
+
+696
+01:20:55.620 --> 01:20:57.289
+Kadu Gertners: Pegou os vendedores.
+
+697
+01:20:57.950 --> 01:21:03.850
+Kadu Gertners: Beleza legal aí, caduzão. Como é que fica beleza?
+
+698
+01:21:04.280 --> 01:21:05.680
+Kadu Gertners: Nós vamos pegar.
+
+699
+01:21:08.370 --> 01:21:12.050
+Kadu Gertners: Vamos colocar esse cara lá para cima.
+
+700
+01:21:12.360 --> 01:21:26.749
+Kadu Gertners: E aí você pode pegar e executar. Lembrem se, esse run aqui, esse run que significa executar. Ele vai pegar todos os blocos que estão aqui. Nesse caso, existem dois blocos.
+
+701
+01:21:27.310 --> 01:21:36.170
+Kadu Gertners: Ele vai executar os dois blocos. Se você escolher o play ou run do, bloco, ele só executa o bloco.
+
+702
+01:21:37.000 --> 01:21:37.990
+Kadu Gertners: Tá bom.
+
+703
+01:21:38.540 --> 01:21:48.160
+Kadu Gertners: Então, ó, executamos esse bloco, beleza. E vou executar esse agora.
+
+704
+01:21:54.130 --> 01:21:55.360
+Kadu Gertners: Beleza.
+
+705
+01:21:55.540 --> 01:22:02.040
+Kadu Gertners: No próximo bloco que vocês vão começar a fazer as tarefas que vocês têm que fazer.
+
+706
+01:22:02.790 --> 01:22:05.009
+Kadu Gertners: Então o que você vai fazer?
+
+707
+01:22:05.280 --> 01:22:09.930
+Kadu Gertners: E aí se vai pegar, ó
+
+708
+01:22:10.280 --> 01:22:28.409
+Kadu Gertners: nessa primeira tarefa. Escreva uma. Aquela que retorne todas as colunas e todas as linhas da tabela, produtos. O que você tem que fazer? Você vai criar um novo bloquinho Sql. Clica no Skl. Clica no Skl. E aqui você vai escrever o seu comando
+
+709
+01:22:29.690 --> 01:22:31.649
+Kadu Gertners: conforme está sendo pedido.
+
+710
+01:22:31.830 --> 01:22:35.039
+Kadu Gertners: E aí. O que você faz? Deixa eu ver o que ele está pedindo aqui.
+
+711
+01:22:36.220 --> 01:22:44.310
+Kadu Gertners: Aqui você vai ter que enviar para nós. Deixa eu dar uma olhadinha. Aí vai lá embaixo.
+
+712
+01:22:46.110 --> 01:22:49.410
+Kadu Gertners: Você vai ter que botar no arquivo Pdf
+
+713
+01:22:49.660 --> 01:23:01.359
+Kadu Gertners: assim que terminar, salve o seu trabalho nomeando o arquivo conforme a regra e poste como resposta a Stp. Como é que você vai fazer isso,
+
+714
+01:23:01.470 --> 01:23:02.820
+Kadu Gertners: cara? Olha só,
+
+715
+01:23:03.370 --> 01:23:19.189
+Kadu Gertners: eu quero que vocês façam o seguinte, por favor. Já que não especificou aí eu quero que você execute. Você vai pegar. Você executou tudo acima. Todas as tabelas estão criadas. E você vai executar na primeira tarefa. Aqui
+
+716
+01:23:19.300 --> 01:23:30.069
+Kadu Gertners: o seu primeiro select. Então você vai colocar o comando aqui e vai clicar no play desse bloco. O que ele vai fazer?
+
+717
+01:23:30.200 --> 01:23:35.019
+Kadu Gertners: Você vai estar com um comando escrito na tela,
+
+718
+01:23:35.770 --> 01:23:40.850
+Kadu Gertners: e você vai fazer um Printscreen nessa tela.
+
+719
+01:23:42.450 --> 01:23:49.440
+Kadu Gertners: Então ó, se nós pegarmos a tabela, vendedores aqui, por exemplo, o caramba,
+
+720
+01:23:53.090 --> 01:23:59.769
+Kadu Gertners: vendedores, ó você vai executar para vendedores.
+
+721
+01:24:00.840 --> 01:24:01.780
+Kadu Gertners: Ó
+
+722
+01:24:02.530 --> 01:24:20.529
+Kadu Gertners: e é isso que você tem que fazer. Você tem que pegar aqui. O comando está aqui e o resultado está aqui. Eu quero ver o comando e o resultado. Então você. Nesse momento, você aperta o teclado aí no teclado. Você aperta a tecla, Princream.
+
+723
+01:24:20.690 --> 01:24:22.900
+Kadu Gertners: Ó Prince ruim.
+
+724
+01:24:23.090 --> 01:24:26.940
+Kadu Gertners: Aí você pega e faz um Print Screen dessa tela aqui.
+
+725
+01:24:28.990 --> 01:24:31.760
+Kadu Gertners: Beleza. É isso que você vai ter que fazer.
+
+726
+01:24:32.320 --> 01:24:49.739
+Kadu Gertners: Você vai pegar isso para cada uma das questões que foram perguntadas. Aí você vai colocar no arquivinho do Word primeiro. De repente, se você não tem um editor de Pdf. Você vai botar no Word e vai botando cada questão ali.
+
+727
+01:24:50.510 --> 01:24:52.999
+Kadu Gertners: No final, quando você finalizar
+
+728
+01:24:53.080 --> 01:25:10.990
+Kadu Gertners: todas as questões, todas as questões. O que você vai fazer lá? No fim, você vai pegar o link do seu Deep note o link do seu Deep note. E você também vai colocar no arquivo o Word que você vai gerar,
+
+729
+01:25:11.690 --> 01:25:13.700
+Kadu Gertners: que você está salvando nele.
+
+730
+01:25:14.400 --> 01:25:27.700
+Kadu Gertners: Quando você acabar de fazer todas as tarefas e de ter colocado o link do Deep Note. Você vai salvar esse formato. Vai salvar esse arquivo num formato do Pdf
+
+731
+01:25:28.650 --> 01:25:38.609
+Kadu Gertners: e aí, ao salvar no formato do Pdf que você vai salvar o arquivo nesse formato. Aqui, ele está falando aqui para nós.
+
+732
+01:25:38.660 --> 01:25:49.460
+Kadu Gertners: Você tem que dar lá o seu primeiro nome. Carlos sobrenome Magalhães. Sublinhado, Dr: um sublinhado Tp3 Pdf.
+
+733
+01:25:49.860 --> 01:25:59.060
+Kadu Gertners: E aí você coloca esse arquivinho aqui no mundo. Para nós, galera tranquilo.
+
+734
+01:25:59.380 --> 01:26:03.419
+Kadu Gertners: Vamos continuar lendo as questões. Não acabei.
+
+735
+01:26:04.200 --> 01:26:06.110
+Kadu Gertners: Vamos lá. São dezasseis.
+
+736
+01:26:09.380 --> 01:26:18.479
+Kadu Gertners: Então, a primeira questão. Eu dei como exemplo, mas não é a questão que foi pedida. Ele está pedindo isso para tabela. Produtos
+
+737
+01:26:19.120 --> 01:26:20.110
+Kadu Gertners: legal.
+
+738
+01:26:20.260 --> 01:26:23.170
+Kadu Gertners: Segunda questão: vamos lá.
+
+739
+01:26:23.790 --> 01:26:32.779
+Kadu Gertners: A equipe de marketing da Tech Store está preparando uma nova newsletter focada na precificação dos itens da loja
+
+740
+01:26:32.920 --> 01:26:42.449
+Kadu Gertners: para estruturar o Layout do e mail o designer precisa apenas dos nomes dos produtos e seus respectivos preços unitários.
+
+741
+01:26:42.730 --> 01:26:50.560
+Kadu Gertners: Como a campanha inicial será direcionada apenas para produtos em alta demanda.
+
+742
+01:26:50.750 --> 01:27:02.489
+Kadu Gertners: É necessário limitar a consulta aos itens de categoria periféricos com mais de cinco unidades em estoque.
+
+743
+01:27:02.700 --> 01:27:10.750
+Kadu Gertners: Essa seleção, esse Select. Ele reduz o volume de dados desnecessários para a tarefa criativa.
+
+744
+01:27:10.970 --> 01:27:27.230
+Kadu Gertners: Então, o que você tem que fazer? Ele vai usar a tabela. Produtos. Aqui estão as colunas sendo citadas, você tem que montar a seguinte consulta. Escreva uma consulta, uma query que vai retornar somente as colunas.
+
+745
+01:27:27.340 --> 01:27:33.310
+Kadu Gertners: Nome e preço unitário, nome pressunitário
+
+746
+01:27:33.480 --> 01:27:43.569
+Kadu Gertners: dos produtos cuja categoria seja igual a periféricos e o estoque seja maior do que cinco.
+
+747
+01:27:44.480 --> 01:27:50.550
+Kadu Gertners: É esse o comando que você tem que montar três.
+
+748
+01:27:54.830 --> 01:27:56.430
+Kadu Gertners: Bom,
+
+749
+01:28:00.570 --> 01:28:08.870
+Kadu Gertners: o coordenador do setor de periféricos notou uma alta rotatividade nos itens de entrada
+
+750
+01:28:09.000 --> 01:28:13.990
+Kadu Gertners: e ele precisa validar especificamente essa categoria.
+
+751
+01:28:14.120 --> 01:28:28.340
+Kadu Gertners: Para organizar a reposição nas prateleiras. Ele solicitou uma lista contendo apenas os produtos que pertencem estritamente à categoria periféricos. O objetivo é isolar esses itens
+
+752
+01:28:28.340 --> 01:28:34.719
+Kadu Gertners: para o planejamento logístico imediato. Isso aqui é uma visão do contexto de negócio.
+
+753
+01:28:35.310 --> 01:28:41.749
+Kadu Gertners: O contexto significa uma visão de negócio. Agora, como é que a consulta que você tem que montar
+
+754
+01:28:41.820 --> 01:28:59.459
+Kadu Gertners: para cima da tabela produtos. As colunas estão aqui. Você vai montar uma consulta para retornar todas as colunas dos produtos cujo valor da coluna categoria seja exatamente periféricos.
+
+755
+01:29:02.040 --> 01:29:03.939
+Kadu Gertners: Como é que você monta esse comando.
+
+756
+01:29:09.300 --> 01:29:19.169
+Kadu Gertners: O diretor financeiro identificou a necessidade de liquidar produtos caros que estão ocupando muito espaço físico e não têm rotatividade
+
+757
+01:29:19.330 --> 01:29:33.359
+Kadu Gertners: para a estratégia de promoção. Ele precisa identificar itens com preços unitários que sejam maior do que quinhentos,zero, e que ainda possuam menos de dez unidades no estoque atual.
+
+758
+01:29:33.360 --> 01:29:44.170
+Kadu Gertners: Além disso, devem ser excluídos os itens da categoria periféricos, pois esses já estão contemplados em outra campanha.
+
+759
+01:29:44.840 --> 01:29:59.470
+Kadu Gertners: O impacto esperado é a liberação de capital de giro e espaço no armazenamento legal. A tabela de novo é produtos. As colunas estão aqui e a consulta. Vamos lá.
+
+760
+01:29:59.580 --> 01:30:08.189
+Kadu Gertners: Escreva uma consulta que vai retornar. Nome, categoria e estoque dos produtos
+
+761
+01:30:08.290 --> 01:30:15.289
+Kadu Gertners: com preço unitário, que ele tem que ser maior do que quinhentos,
+
+762
+01:30:17.010 --> 01:30:26.730
+Kadu Gertners: e o estoque tem que ser menor do que dez. E a categoria tem que ser diferente de periféricos.
+
+763
+01:30:28.140 --> 01:30:34.550
+Kadu Gertners: Porra, beleza. Um exercício tranquilo cinco.
+
+764
+01:30:36.210 --> 01:30:45.930
+Kadu Gertners: O setor de logística da Tech Store está planejando uma rota de entrega otimizada para a região metropolitana de São Paulo
+
+765
+01:30:46.200 --> 01:31:01.310
+Kadu Gertners: para mapear a densidade de consumidores. O analista de dados deve extrair a lista de todos os clientes que residam, que morem no estado de São Paulo. Essa informação é vital para o cálculo de custos de frete regional
+
+766
+01:31:01.520 --> 01:31:02.520
+Kadu Gertners: legal.
+
+767
+01:31:02.880 --> 01:31:15.590
+Kadu Gertners: Vai agora analisar a tabela. Clientes com essas colunas aqui. E devemos escrever uma consulta que vai retornar o nome completo, a
+
+768
+01:31:15.800 --> 01:31:26.250
+Kadu Gertners: cidade que moram no estado, sendo São Paulo estado sendo São Paulo pô muito tranquilo, né?
+
+769
+01:31:28.430 --> 01:31:29.490
+Kadu Gertners: Vamos lá.
+
+770
+01:31:30.230 --> 01:31:39.350
+Kadu Gertners: O gerente religioso, o gerente
+
+771
+01:31:39.510 --> 01:31:51.669
+Kadu Gertners: de expansão da empresa está analisando o potencial de mercado na região sul do Brasil, focando inicialmente nos estados do paraná e Rio Grande do Sul.
+
+772
+01:31:51.830 --> 01:32:03.569
+Kadu Gertners: Para realizar uma pesquisa de satisfação direcionada, ele precisa identificar todos os clientes cadastrados que morem lá em Pr Ors.
+
+773
+01:32:04.390 --> 01:32:17.160
+Kadu Gertners: Além disso, para comparar a experiência do cliente com planos premium, devem ser incluídos também todos os clientes com Plano Gold, independente do Estado.
+
+774
+01:32:17.410 --> 01:32:28.709
+Kadu Gertners: O resultado ajudará na identificação de novas parcerias locais. Então, olha que maneiro. Você vai escrever uma consulta
+
+775
+01:32:28.900 --> 01:32:33.740
+Kadu Gertners: que seleciona todas as colunas do cliente, todas as colunas
+
+776
+01:32:34.220 --> 01:32:39.580
+Kadu Gertners: cujo estado seja pr ou Rs ou
+
+777
+01:32:39.710 --> 01:32:45.340
+Kadu Gertners: o tipo do plano seja Gold beleza.
+
+778
+01:32:45.960 --> 01:32:46.890
+Kadu Gertners: Vamos embora.
+
+779
+01:32:48.550 --> 01:32:49.420
+Kadu Gertners: Ó
+
+780
+01:32:50.000 --> 01:33:04.489
+Kadu Gertners: sete. A equipe de Customer Service quer focar em converter usuários que ainda não experimentaram a experiência completa da plataforma, ou seja, os usuários considerados free,
+
+781
+01:33:04.800 --> 01:33:08.710
+Kadu Gertners: que não estão gastando nada, por enquanto,
+
+782
+01:33:08.950 --> 01:33:17.900
+Kadu Gertners: para uma ação de limpeza da base de dados segmentada. O analista precisa listar todos os clientes que não possuam um plano free
+
+783
+01:33:19.170 --> 01:33:24.779
+Kadu Gertners: e que também não residam no estado de São Paulo.
+
+784
+01:33:25.100 --> 01:33:40.090
+Kadu Gertners: Isso permitirá uma visão clara da base de clientes pagantes que estão ativos em outras regiões legal. Nós vamos usar a tabela cliente e as colunas estão aqui. O que você vai ter que fazer? Vamos lá.
+
+785
+01:33:40.360 --> 01:33:42.480
+Kadu Gertners: Você vai ter que fazer o seguinte. Ó
+
+786
+01:33:44.830 --> 01:34:02.769
+Kadu Gertners: tem que escrever uma consulta que vai retornar o nome, cidade e o estado de todos os clientes que na coluna tipo plano seja diferente de Free e o estado seja diferente de São Paulo.
+
+787
+01:34:02.960 --> 01:34:06.000
+Kadu Gertners: É esse o comando que você tem que executar.
+
+788
+01:34:06.870 --> 01:34:08.690
+Kadu Gertners: Legal oito.
+
+789
+01:34:09.770 --> 01:34:22.450
+Kadu Gertners: A equipe de Customer Success quer focar em converter usuários que ainda não experimentaram a experiência completa da plataforma, ou seja, os usuários Free
+
+790
+01:34:22.560 --> 01:34:31.819
+Kadu Gertners: para uma ação de limpeza de base de dados segmentada. O analista precisa listar todos os clientes que não possuem o plano Free.
+
+791
+01:34:31.850 --> 01:34:42.910
+Kadu Gertners: Isso permitirá uma visão clara da base de clientes pagantes ativos. Então, legal aqui ele vai escrever uma consulta para cima da tabela. Clientes,
+
+792
+01:34:43.110 --> 01:34:48.640
+Kadu Gertners: aqui estão as colunas do cliente, dos clientes da tabela cliente.
+
+793
+01:34:49.110 --> 01:34:55.259
+Kadu Gertners: E ele vai retornar. Agora, só o nome e o estado de todos os clientes
+
+794
+01:34:55.690 --> 01:35:04.830
+Kadu Gertners: onde o tipo do plano tem que ser diferente de Free beleza
+
+795
+01:35:06.290 --> 01:35:20.260
+Kadu Gertners: legal. O departamento financeiro está auditando transações de alto valor para prevenir fraudes. Olha que interessante. E garantir a segurança das operações bancárias da Tech Store.
+
+796
+01:35:20.440 --> 01:35:32.350
+Kadu Gertners: O auditor solicitou uma relação de todos pedidos cujo voto Desculpem me cujo valor total
+
+797
+01:35:32.750 --> 01:35:37.879
+Kadu Gertners: tem ultrapassado a marca de mil reais
+
+798
+01:35:38.690 --> 01:35:46.309
+Kadu Gertners: e cujo status de que o pedido está em processamento ou se ele já foi enviado.
+
+799
+01:35:46.630 --> 01:35:52.230
+Kadu Gertners: O impacto será a geração de um relatório de conformidade para a diretoria.
+
+800
+01:35:52.400 --> 01:35:56.449
+Kadu Gertners: Dessa vez, você vai usar a tabela a pedidos com essas colunas.
+
+801
+01:35:56.560 --> 01:36:11.469
+Kadu Gertners: Então o que nós vamos ter que fazer, caduzão na consulta? Escreva uma consulta que retorne todos os detalhes dos pedidos todas as colunas com um valor total maior do que cem mil do que mil.
+
+802
+01:36:12.520 --> 01:36:15.749
+Kadu Gertners: Desculpa, do que mil. Tá mil aqui, mil
+
+803
+01:36:15.960 --> 01:36:21.620
+Kadu Gertners: e cujo status seja enviado ou processado.
+
+804
+01:36:24.390 --> 01:36:28.320
+Kadu Gertners: Questão dez: o setor de expedição
+
+805
+01:36:28.510 --> 01:36:32.920
+Kadu Gertners: galera. Vocês estão muito quietinhos, hein? Tá tudo bem até aqui.
+
+806
+01:36:36.860 --> 01:36:38.180
+marcos.jose: Assim que o senhor. Estamos pegando.
+
+807
+01:36:38.180 --> 01:36:40.150
+Wanderson Gomes de Paula: Tranquilo. Tranquilo, Professor.
+
+808
+01:36:40.470 --> 01:36:44.930
+Kadu Gertners: Beleza. Obrigado aí pelo retorno. Só para confirmar se vocês estão ouvindo.
+
+809
+01:36:45.400 --> 01:36:48.009
+Kadu Gertners: Maravilha, Diego Maravilha!
+
+810
+01:36:48.620 --> 01:36:55.579
+Kadu Gertners: Ok, Gabriel. Ok, Alan. Maravilha. Ok, Matheus, vamos embora. Vamos seguir. Ó,
+
+811
+01:36:56.910 --> 01:37:01.970
+Kadu Gertners: vamos lá, caduzão. Opa, perdão, não é que não é aqui.
+
+812
+01:37:02.620 --> 01:37:16.820
+Kadu Gertners: Legal, questão dez: o setor de expedição. Ele precisa priorizar o envio de mercadorias que já foram processadas, mas que representam um ticket médio elevado
+
+813
+01:37:16.930 --> 01:37:18.599
+Kadu Gertners: para a empresa,
+
+814
+01:37:18.720 --> 01:37:36.580
+Kadu Gertners: para otimizar o fluxo de saída. O supervisor solicitou a lista de pedidos que estão com status de entregue e que possuem valor superior a R trezentos. Isso ajuda na validação dos processos concluídos com sucesso.
+
+815
+01:37:36.720 --> 01:37:40.309
+Kadu Gertners: Então, de novo, usar a tabela pedidos
+
+816
+01:37:40.500 --> 01:37:52.379
+Kadu Gertners: com essas colunas e como é que é a consulta, caduzão é essa aqui. Vai escrever uma consulta. Vai selecionar o número do pedido e o valor total
+
+817
+01:37:52.510 --> 01:38:04.460
+Kadu Gertners: para registros com status igual a entregue e que o valor total seja maior do que trezentos,
+
+818
+01:38:04.850 --> 01:38:07.130
+Kadu Gertners: cara. Muito tranquilo.
+
+819
+01:38:07.630 --> 01:38:09.730
+Kadu Gertners: Vai onze
+
+820
+01:38:12.200 --> 01:38:26.960
+Kadu Gertners: para o fechamento mensal. A contabilidade. Precisa ignorar os pedidos que não geraram. Receita efetiva para a loja. Não gerou receita para a loja. O analista deve extrair todos os
+
+821
+01:38:27.120 --> 01:38:29.099
+Kadu Gertners: deve extrair aí
+
+822
+01:38:29.560 --> 01:38:43.849
+Kadu Gertners: todos os registros de pedidos do banco de dados, exceto aqueles que foram marcados com status cancelado. Além disso, para focar nas vendas que realmente impactam o faturamento, o faturamento
+
+823
+01:38:44.120 --> 01:38:53.620
+Kadu Gertners: devem ser considerados apenas os pedidos com valor maior valor total, maior ou igual a trezentos.
+
+824
+01:38:54.130 --> 01:39:07.330
+Kadu Gertners: Esse filtro é essencial para que a projeção de faturamento não seja inflada por vendas não concretizadas ou de valor irrisório valor que não interessa para a análise
+
+825
+01:39:07.490 --> 01:39:12.850
+Kadu Gertners: legal aqui na tabela, pedidos. As colunas estão aqui. Ia lá.
+
+826
+01:39:13.450 --> 01:39:21.050
+Kadu Gertners: Qual é a consulta? Escrevo uma consulta. Retorna a todas as colunas da tabela, pedidos
+
+827
+01:39:21.260 --> 01:39:26.659
+Kadu Gertners: onde o status seja diferente, de cancelado
+
+828
+01:39:27.080 --> 01:39:33.240
+Kadu Gertners: e o valor total seja maior ou igual do que trezentos
+
+829
+01:39:35.760 --> 01:39:55.670
+Kadu Gertners: ou a data do pedido seja maior do que dois mil e vinte e quatro duzentos e um galera. Eu não mostrei isso para vocês, mas vou falar aqui agora, caduzão. Eu posso pegar uma coluna que inicialmente tem um perfil de data. E naquela coluna. Vamos lá.
+
+830
+01:39:56.570 --> 01:39:58.159
+Kadu Gertners: Eu posso pegar
+
+831
+01:39:58.370 --> 01:40:13.470
+Kadu Gertners: da tabela? Pedido que é a coluna. Data do pedido. Eu posso botar data sublinhada do pedido maior do que dois mil e vinte e quatro dois traço um pode fazer isso?
+
+832
+01:40:14.990 --> 01:40:16.920
+Kadu Gertners: Pode fazer.
+
+833
+01:40:17.710 --> 01:40:25.000
+Kadu Gertners: Ele considera a data maior. Sim, pode fazer beleza legal
+
+834
+01:40:28.910 --> 01:40:37.609
+Kadu Gertners: questão doze: a equipe de controladoria está analisando
+
+835
+01:40:38.430 --> 01:40:47.270
+Kadu Gertners: pedidos realizados no início de dois mil e vinte e quatro para identificar tendências de compras de baixo valor que podem indicar erros do sistema.
+
+836
+01:40:47.650 --> 01:41:02.169
+Kadu Gertners: O analista precisa encontrar pedidos realizados a partir do dia dois mil e vinte e quatro, cento e vinte, quer dizer vinte de Janeiro de dois mil e vinte e quatro, cujo valor total seja menor inferior do que a duzentos
+
+837
+01:41:02.510 --> 01:41:12.920
+Kadu Gertners: ou que ainda estejam processando para verificar erros. O impacto esperado é a correção de possíveis falhas na precificação de frete.
+
+838
+01:41:13.210 --> 01:41:18.590
+Kadu Gertners: Vai usar a tabela, pedidos e o número de pedidos. E aqui estão as colunas.
+
+839
+01:41:18.720 --> 01:41:24.469
+Kadu Gertners: Vamos embora. Qual é a consulta? Retorna somente os pedidos
+
+840
+01:41:24.680 --> 01:41:32.969
+Kadu Gertners: com a data do pedido maior ou igual a dois mil e vinte e quatro cento e vinte
+
+841
+01:41:33.130 --> 01:41:45.960
+Kadu Gertners: de novo, pode botar maior, pode botar maior igual, pode botar menor, pode botar menor, igual para uma data conforme está nesse formato, não tem problema
+
+842
+01:41:46.430 --> 01:42:03.370
+Kadu Gertners: e valor total menor do que duzentos ou o status, como processando beleza ou status como processando Legal
+
+843
+01:42:03.610 --> 01:42:12.040
+Kadu Gertners: treze, o departamento de Rh está atualizando o organograma da empresa para a reunião trimestral de resultados.
+
+844
+01:42:12.200 --> 01:42:13.900
+Kadu Gertners: Para facilitar
+
+845
+01:42:14.560 --> 01:42:25.640
+Kadu Gertners: a parabenização dos vendedores de bom desempenho. Foi solicitada uma lista simples contendo o nome do vendedor e a região de atuação daqueles que bateram a meta
+
+846
+01:42:25.770 --> 01:42:31.489
+Kadu Gertners: por motivo de agendamento, os vendedores do Sudeste não puderam comparecer.
+
+847
+01:42:31.640 --> 01:42:44.839
+Kadu Gertners: O impacto esperado é uma comunicação interna mais eficiente entre as sedes regionais. Legal é em cima, agora da tabela de vendedores, e nessas colunas. Aqui.
+
+848
+01:42:44.990 --> 01:42:56.080
+Kadu Gertners: Vamos embora. Qual é o Select? Escreva uma consulta que vai selecionar somente as colunas. Nome, vendedor e região
+
+849
+01:42:56.370 --> 01:43:02.140
+Kadu Gertners: da tabela, vendedores que tenham atingido a meta.
+
+850
+01:43:03.550 --> 01:43:13.409
+Kadu Gertners: Então, quem atingiu a meta? Você tem que pegar a coluna meta atingida. Quem atingiu a meta e não sejam da região Sudeste
+
+851
+01:43:14.730 --> 01:43:16.140
+Kadu Gertners: Maravilha.
+
+852
+01:43:17.410 --> 01:43:26.490
+Kadu Gertners: A gerência de vendas deseja premiar os funcionários que demonstraram excelência em uma das áreas mais competitivas da empresa.
+
+853
+01:43:26.490 --> 01:43:39.400
+Kadu Gertners: O objetivo é identificar os vendedores da região sudeste que conseguiram atingir a meta estipulada num mês vigente e que superaram a marca de quarenta vendas no mês.
+
+854
+01:43:39.590 --> 01:43:49.699
+Kadu Gertners: Estes dados servirão de base para o cálculo do bônus de performance que será pago na próxima folha de pagamento desses funcionários
+
+855
+01:43:50.220 --> 01:44:05.150
+Kadu Gertners: na tabela. Vendedores. As colunas estão aqui. Qual é a consulta, caduzão? Retorna a consulta. Vai retornar somente o nome e a quantidade de vendas
+
+856
+01:44:05.280 --> 01:44:09.030
+Kadu Gertners: do mês que é a coluna vendas, mês
+
+857
+01:44:09.130 --> 01:44:24.009
+Kadu Gertners: dos vendedores que pertencem à região Sudeste que tenham atingido a meta meta atingida e que possuam as vendas que sejam maior do que quarenta
+
+858
+01:44:25.590 --> 01:44:26.590
+Kadu Gertners: quinze.
+
+859
+01:44:27.730 --> 01:44:36.190
+Kadu Gertners: O analista de produtividade está classificando os vendedores em faixas de desempenho é
+
+860
+01:44:36.590 --> 01:44:51.720
+Kadu Gertners: intermediário para oferecer treinamentos específicos. Ele precisa extrair a lista de colaboradores que realizaram mais de vinte vendas, mas que não ultrapassaram o limite de quarenta vendas no mês.
+
+861
+01:44:51.760 --> 01:45:00.819
+Kadu Gertners: O impacto esperado é o desenvolvimento de um plano de carreira focado em aumentar a conversão da parte de vendas.
+
+862
+01:45:01.000 --> 01:45:07.419
+Kadu Gertners: Então os dados disponíveis estão na tabela. Vendedores e as colunas estão aqui.
+
+863
+01:45:07.540 --> 01:45:10.880
+Kadu Gertners: Legal, qual é a consulta que nós vamos ter que montar,
+
+864
+01:45:11.520 --> 01:45:23.459
+Kadu Gertners: mostrar uma consulta com todos os dados dos vendedores, todas as colunas que possuam vendas maior do que vinte e vendas do mês menor do que quarenta.
+
+865
+01:45:24.230 --> 01:45:25.840
+Kadu Gertners: Muito tranquilo.
+
+866
+01:45:26.330 --> 01:45:28.069
+Kadu Gertners: E a última questão?
+
+867
+01:45:31.460 --> 01:45:33.409
+Kadu Gertners: O diretor comercial
+
+868
+01:45:36.230 --> 01:45:45.660
+Kadu Gertners: está organizando uma conferência regional e precisa convocar todos os vendedores que atuam nas extremidades do país para um alinhamento estratégico.
+
+869
+01:45:45.750 --> 01:45:55.169
+Kadu Gertners: Beleza. Para simplificar a Query, o analista deve buscar vendedores que estejam no local das regiões sul ou região Norte.
+
+870
+01:45:55.250 --> 01:46:05.860
+Kadu Gertners: Além disso, para reforçar a cultura de alta performance, devem ser incluídos somente aqueles que atingiram a meta do mês meta atingido igual assim,
+
+871
+01:46:06.350 --> 01:46:16.569
+Kadu Gertners: se essa segmentação facilitará a logística de passagens e hospedagens para o evento em cima da tabela, vendedores. As colunas estão aqui.
+
+872
+01:46:16.840 --> 01:46:19.950
+Kadu Gertners: Qual é a consulta? Para finalizar, caduzão,
+
+873
+01:46:20.320 --> 01:46:30.980
+Kadu Gertners: retornar somente em nome do vendedor e a região cuja região seja, não é
+
+874
+01:46:31.260 --> 01:46:37.350
+Kadu Gertners: sul ou norte e que tenham meta atingida igual assim.
+
+875
+01:46:37.920 --> 01:46:38.930
+Kadu Gertners: Cara,
+
+876
+01:46:39.090 --> 01:46:49.310
+Kadu Gertners: não é brincadeira. Não, o trabalho está extremamente tranquilo. Vocês não vão ter dor de cabeça para fazer o exercício.
+
+877
+01:46:49.980 --> 01:47:01.490
+Kadu Gertners: Galera, dúvidas, perguntas. Alguma coisa estranha. Fala contigo com a dor. Fala comigo, beleza pura.
+
+878
+01:47:02.410 --> 01:47:04.720
+Kadu Gertners: Ok, Gabriel de Andrade.
+
+879
+01:47:07.600 --> 01:47:11.730
+Kadu Gertners: Ok, João. Maravilha, maravilha,
+
+880
+01:47:14.220 --> 01:47:25.449
+Kadu Gertners: galera. Então, se não tem dúvidas, ficamos por aqui uma excelente noite para vocês. Galera, vai na minha. Já vai fazendo o nosso trabalho
+
+881
+01:47:25.450 --> 01:47:38.020
+Kadu Gertners: que vocês vão ter. Provavelmente muito mais trabalho com a parte do Python. Então tenta ficar livre logo do Skl. E depois, com calma. Vocês se ajudam a ir
+
+882
+01:47:38.160 --> 01:47:44.430
+Kadu Gertners: se vai ter template templente. Que sentido, Pedro, em qual sentido.
+
+883
+01:47:47.210 --> 01:47:53.400
+Kadu Gertners: Não, não tem template. Não é o que eu falei na hora de hoje. De como vocês terão que mandar.
+
+884
+01:47:54.690 --> 01:47:58.149
+Kadu Gertners: Não tem um template pré estabelecido. Não tem
+
+885
+01:47:58.520 --> 01:48:11.110
+Kadu Gertners: o que eu falei aqui. Fui descrevendo para vocês. Vocês vão criar um dataframe aqui para cada comando que vocês vão montando aqui. E aí monta o comando. Executa Princream
+
+886
+01:48:11.260 --> 01:48:16.850
+Kadu Gertners: cria o próximo bloco. Comando, executa o comando Printscreen.
+
+887
+01:48:17.010 --> 01:48:30.590
+Kadu Gertners: E aí, no fim de tudo no fim dos dezasseis comandos. O que você faz? Você copia também esse link aqui para nós? Porque se um professor ou o monitor tiver em necessidade,
+
+888
+01:48:31.140 --> 01:48:35.540
+Kadu Gertners: ele vai acessar o link para ele verificar o que você fez.
+
+889
+01:48:36.490 --> 01:48:41.060
+Kadu Gertners: Ok, bom,
+
+890
+01:48:47.320 --> 01:48:48.770
+Kadu Gertners: maravilha,
+
+891
+01:48:53.560 --> 01:48:55.160
+Kadu Gertners: cara. Assim
+
+892
+01:48:55.270 --> 01:49:12.819
+Kadu Gertners: se vocês encontrarem algum tempo antes de ajudar vocês. Cara, eu não estou preocupado com isso. Eu estou preocupado, pessoal. Da forma como eu mostrei para vocês o que eu quero, faço questão que vocês façam para mim, por favor. É mostrar o comando que vocês montaram
+
+893
+01:49:12.850 --> 01:49:27.729
+Kadu Gertners: e vocês executarem o mesmo para eu ver o resultado. É isso que eu quero. O comando e a execução mostra o comando e executa. Eu quero ver a montagem do comando de vocês. E o resultado, só isso.
+
+894
+01:49:28.920 --> 01:49:32.370
+Kadu Gertners: Beleza, beleza, João tranquilo.
+
+895
+01:49:32.710 --> 01:49:51.749
+Kadu Gertners: Bom galera. Muito obrigado aqui pela ajuda de vocês mais uma vez na nossa aula. Foi um prazer estar aqui com a turma que sempre me ajuda aqui nas nossas aulas. Uma excelente noite. Excelente fim de semana, galera. Até terça feira que vem um beijo no coração de vocês, turma, valeu.
+
+896
+01:49:51.780 --> 01:49:52.890
+Kadu Gertners: Obrigado.
+
+897
+01:49:53.210 --> 01:49:54.340
+gabriel.diniz: Valeu pessoa.
+
+898
+01:49:56.120 --> 01:49:59.690
+Kadu Gertners: Valeu, Gianni. Valeu, Jean. Valeu, galera. Tchau, Tchau.
+
