@@ -1,263 +1,500 @@
 ---
-title: "Strings: escape, concatenação e multiplicação"
+title: "Strings em Python: escapes, concatenação e repetição"
 slug: "strings-escape-concatenacao"
 discipline: "python"
 order: 6
-description: "Caracteres de escape (\\n, \\t, \\\\), raw string, concatenação com +, multiplicação de strings, conversão para evitar TypeError"
-reading_time: 7
+description: "Como controlar quebras de linha, tabulações, barras invertidas e concatenar ou repetir strings em Python com segurança de tipos."
+reading_time: 45
 difficulty: "easy"
-concepts: "escape \\n e \\t, multiplicação de strings, concatenação, tipagem forte, str()"
-prerequisites: ["aula-05-exercicios-strings", "aula-04-operadores-conversao-tipos"]
+concepts:
+  - strings
+  - caracteres de escape
+  - barra invertida
+  - \n
+  - \t
+  - raw string
+  - concatenação
+  - repetição de strings
+  - tipagem forte
+  - TypeError
+prerequisites:
+  - "por-que-programar-python"
+  - "algoritmos-e-notebooks"
+  - "variaveis-tipos-estilo-python"
+  - "conversao-tipos-operadores-aritmeticos"
+learning_objectives:
+  - "Usar caracteres de escape como \\n e \\t para controlar quebras de linha e tabulações em strings."
+  - "Explicar a diferença entre strings normais e raw strings (prefixo r'...')."
+  - "Concatenar e repetir strings com os operadores + e * respeitando as regras de tipos do Python."
+  - "Identificar e corrigir erros típicos de mistura entre int e str em operações com +."
 exercises:
-  - question: "Por que text = 'aqui está um texto sobre a \\' barra invertida' gera SyntaxError e como corrigir?"
-    answer: "A aspa simples interna não escapada faz o interpretador entender que a string terminou ali (unterminated string literal). Corrigir escapando: text = 'aqui está um texto sobre a \\'barra invertida\\' - \\\\' para mostrar aspas e barra literal."
-    hint: "Aspas que fazem parte do texto precisam ser escapadas quando coincidem com o delimitador."
-  - question: "Qual a saída de print(r'Linha 1\\nLinha 2') e por quê?"
-    answer: "Saída: Linha 1\\nLinha 2 (uma linha, com \\n visível). Raw string (prefixo r) desativa a interpretação de escapes; \\n é tratado como dois caracteres literais."
-  - question: "O que acontece ao executar numero = 123; string = 'abc'; print(numero + string)? Como corrigir para concatenar?"
-    answer: "TypeError: unsupported operand type(s) for +: 'int' and 'str'. Python tem tipagem forte: + entre int e str não é permitido. Para concatenar: print(str(numero) + string) → '123abc'."
-  - question: "O que retorna 5 * 'Python' e para que serve esse padrão em formatação?"
-    answer: "'PythonPythonPythonPythonPython'. Multiplicação string * int repete a string. Usado para separadores: print(30*'-') ou '+' + 30*'-' + '+' para molduras em terminal."
-  - question: "numero = 123; numero_em_string = '123'. Por que numero + numero_em_string dá erro e numero + int(numero_em_string) não?"
-    answer: "O tipo é verificado, não o conteúdo. numero_em_string é str; int + str → TypeError. int(numero_em_string) converte para int; int + int → soma (246). Para concatenar: str(numero) + numero_em_string."
+  - question: "Por que a expressão `123 + 'Aqui eh uma string'` em Python gera um `TypeError`, enquanto `str(123) + 'Aqui eh uma string'` funciona?"
+    answer: "Porque o Python tem tipagem forte e não permite somar diretamente um inteiro (`int`) com uma string (`str`); o operador + não sabe se deve somar números ou concatenar texto. Ao usar `str(123)`, você converte explicitamente o número para string e passa a ter dois operandos do mesmo tipo (`str`), permitindo que + seja interpretado como concatenação."
+    hint: "Lembre da explicação de tipagem dinâmica e forte, e dos exemplos em que o Python reclama de 'unsupported operand type(s) for +: int and str'."
+review_after_days: [1, 3, 7, 30]
 ---
-## Resumo
 
-### Mapa da aula
+## Visão Geral do Conceito
 
-- Escape sequences controlam caracteres especiais em strings (<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\t`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\'`</mark>)
-- Raw string <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`r'...'`</mark> desativa interpretação de escape — tudo literal
-- Concatenação com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark> só entre strings; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int + str`</mark> → TypeError
-- Multiplicação <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str * int`</mark> repete a string (separadores, molduras)
-- Erro clássico: confundir <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> (quebra) com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\n`</mark> (literal) ou concatenar int com str sem conversão
+Depois de aprender a criar strings simples e multilinha, o próximo passo é **controlar como esse texto aparece**: em uma única linha ou em várias, alinhado em colunas, contendo barras invertidas literais, etc.
+Esta lição mostra como o Python usa a barra invertida (`\`) para **caracteres de escape** (como `\n` e `\t`), o que são **raw strings** e como usar os operadores `+` e `*` para concatenar e repetir strings com segurança de tipos.
 
-- **Resumo consolidado:** Escape: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> quebra linha, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\t`</mark> tabulação, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\`</mark> barra literal, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\'`</mark> aspa dentro de string com aspas simples. Raw string <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`r'...'`</mark>: nenhum escape interpretado. Concatenação: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark> junta strings; converter com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str()`</mark> ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int()`</mark> conforme o objetivo. Multiplicação: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string * n`</mark> repete a string n vezes. Tipagem forte: operação só entre tipos compatíveis.
-- **Resumo em 5 linhas:** (1) Escape: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> quebra, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\t`</mark> tab, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\`</mark> barra, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\'`</mark> aspa. (2) Raw string <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`r'...'`</mark> trata tudo como literal. (3) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark> concatena só str com str; int+str → TypeError; usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str()`</mark> ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int()`</mark>. (4) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str * int`</mark> repete a string. (5) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`type()`</mark> confirma tipo; aspas não escapadas → SyntaxError.
-- **Palavras-chave:** escape, raw string, concatenação, multiplicação de strings, tipagem forte, TypeError, SyntaxError, str(), int().
+> **Ideia central:** você precisa dominar a barra invertida e os operadores `+` e `*` para escrever mensagens legíveis, logs formatados e saídas de terminal organizadas sem cair em erros de aspas e tipos.
 
-## Explicações
+## Modelo Mental
 
-### 1. Tema e escopo
+Pense nas strings como **linhas invisíveis em uma tela**.
 
-**Tema:** Sexto encontro: caracteres de escape em strings, raw string, concatenação e multiplicação de strings, conversão de tipos para evitar TypeError.
+- O interpretador lê os caracteres da esquerda para a direita.
+- Quando encontra `\n`, ele entende “**pule para a próxima linha**”.
+- Quando encontra `\t`, ele entende “**avance até a próxima coluna de tabulação**”.
+- Quando encontra `\\`, ele entende “**mostre uma barra invertida normal**”.
 
-**Problema que resolve:** Inserir quebras de linha e tabulação em strings; exibir barra ou aspa literal; juntar textos e números na saída; criar separadores dinâmicos; evitar erro ao misturar int e str com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark>.
+Em strings “normais”, a barra invertida **ativa esses poderes especiais**.
+Em **raw strings** (prefixo `r`), a barra invertida deixa de ser especial e passa a ser apenas **mais um caractere** da string.
 
-**Inclui:** Escape <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\t`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\'`</mark>; raw string <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`r'...'`</mark>; operador <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark> (concatenação) e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`*`</mark> (repetição); <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str()`</mark>/<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int()`</mark> na concatenação ou soma; formatação com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print('Name:\t', name)`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print(30*'-')`</mark>.
+Os operadores:
 
-**Não coberto:** Operador <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`%`</mark> para formatação de string (apenas erro ao usar mal); f-strings e métodos de string (próximas aulas).
+- `+` age como **cola**: junta duas strings em uma só;
+- `*` age como **repetidor**: pega uma string e a repete N vezes.
 
-### 2. Contexto na disciplina
+Mas, por conta da tipagem forte, o Python **só permite** essas operações se os tipos forem compatíveis.
 
-- Segue à aula 5 (strings básicas, aspas, docstring). Usa conversão de tipos da aula 4.
-- Pré-requisito: variáveis, tipos, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`type()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str()`</mark>/<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int()`</mark>.
-- Base para formatação de saída, entrada de usuário e manipulação de texto.
+## Mecânica Central
 
-### 3. Visão conceitual geral
+### Quebras de linha com `\n`
 
-Aula **técnica**: dentro de uma string, a barra invertida inicia sequências especiais (escape). Algumas produzem efeito (quebra, tab); para mostrar a barra ou aspa literal é preciso “escapar” (<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\'`</mark>). Raw string desliga essa interpretação. Com strings, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark> concatena e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`*`</mark> repete; tipagem forte exige conversão ao misturar número e texto.
+No terminal ou no notebook, `\n` significa **nova linha**.
 
-### 4. Ideias-chave (máx. 7)
-
-1. **Escape:** Barra invertida + caractere = sequência especial. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> quebra linha, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\t`</mark> tabulação; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\'`</mark> para exibir barra e aspa. Cobrado em prova: prever saída de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print()`</mark>.
-2. **Raw string:** Prefixo <code>r</code> antes das aspas: nenhum escape é interpretado; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> vira literal. Usar quando o texto contém muitas barras (ex.: caminhos, regex depois).
-3. **Concatenação:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark> junta apenas strings. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`nome + ' ' + sobrenome`</mark> → uma string com espaço. Não confundir com soma numérica.
-4. **Tipagem forte e +:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int + str`</mark> → **TypeError**. Converter: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str(numero) + texto`</mark> para concatenar; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`numero + int(numero_em_string)`</mark> para somar. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`type()`</mark> não inspeciona conteúdo, só tipo.
-5. **Multiplicação de strings:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string * int`</mark> repete a string. Ex.: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`5 * 'Python'`</mark> → <code>'PythonPythonPythonPythonPython'</code>; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`30*'-'`</mark> para separador; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`'+' + 30*'-' + '+'`</mark> para moldura.
-6. **Aspas não escapadas:** String com aspas simples contendo aspa simples sem escape → interpretador “fecha” a string ali → **SyntaxError: unterminated string literal**. Solução: escape <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\'`</mark> ou delimitar com aspas duplas.
-7. **Formatação de saída:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print('Name:\t', name)`</mark> alinha com tab; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print(30*'-')`</mark> padroniza separadores sem “força bruta”.
-
-### 5. Conceitos essenciais — explicação operacional
-
-#### Escape em strings
-
-- **Definição:** Sequência iniciada por <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\`</mark> com significado especial. Principais: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> (nova linha), <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\t`</mark> (tabulação), <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\`</mark> (uma barra literal), <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\'`</mark> (aspa simples literal).
-- **Exemplo quebra de linha:**
-```bash
-loren = 'sed do eiusmod tempor\nincididunt ut labore'
-print(loren)
+```python
+texto = "Contrary to popular belief,\nLorem Ipsum is not simply random text."
+print(texto)
+print(type(texto))
 ```
-Saída: duas linhas. Com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\n`</mark> (barra escapada + n): saída em uma linha com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> visível.
-- **Exemplo barra literal:** Para mostrar “barra invertida” no texto usando aspas simples: <code>text = '... sobre a \\'</code> — primeira <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\`</mark> escapa a segunda, resultando em uma barra na saída.
-- **Quando NÃO usar:** Não usar escape para indentar **código** (if, for); escape é para **conteúdo de string** (texto exibido).
 
-#### Raw string
+Saída:
 
-- **Definição:** Prefixo <code>r</code> antes da string (ex.: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`r'...'`</mark>). Todas as barras são literais; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> não vira quebra.
-- **Exemplo:**
-```bash
-text = r'Lorem ipsum \nconsectetur'
+```text
+Contrary to popular belief,
+Lorem Ipsum is not simply random text.
+<class 'str'>
+```
+
+Note que a string é uma só (`str`), mas visualmente aparece em **duas linhas**.
+
+### Tabulações com `\t`
+
+O caractere de escape `\t` representa uma **tabulação horizontal** — um avanço até a próxima “coluna de tab” na linha.
+
+```python
+print("Lorem Ipsum: 123")
+print("Lorem:\t123")
+print("Lorem Ipsum simply:\t123")
+```
+
+Uso típico em ADS: alinhar colunas simples de texto no terminal (nome, endereço, valor, etc.) antes de partir para bibliotecas mais sofisticadas ou dashboards.
+
+### Escapando a barra invertida `\\`
+
+Se você escrever:
+
+```python
+text = 'aqui está um texto explicativo sobre a "barra invertida" - \'
 print(text)
 ```
-Saída: <code>Lorem ipsum \nconsectetur</code> (uma linha).
-- **Quando usar:** Texto com muitas barras ou quando se quer <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> visível. Quando NÃO usar: quando precisar de quebra real com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark>.
 
-#### Concatenação e conversão
+o Python gera:
 
-- **Regra:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark> entre duas strings = concatenação; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int + str`</mark> → **TypeError**.
-- **Exemplo correto (concatenar número com texto):**
-```bash
+```text
+SyntaxError: unterminated string literal
+```
+
+porque ele entende que a barra invertida está tentando **escapar** o próximo caractere (a aspa), “quebrando” o literal.
+
+Para mostrar **uma** barra invertida na saída, você precisa escapar a própria barra:
+
+```python
+text = 'aqui está um texto explicativo sobre a "barra invertida" - \\'
+print(text)
+```
+
+Saída:
+
+```text
+aqui está um texto explicativo sobre a "barra invertida" - \
+```
+
+### Raw strings (`r"..."`)
+
+Em muitos cenários (caminhos de arquivo no Windows, expressões regulares, textos com muitas barras), é cansativo escapar cada `\`.
+Nesses casos, você pode prefixar a string com `r` para dizer ao Python: **trate todas as barras invertidas como texto bruto**.
+
+```python
+texto = r"Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit,\nsed do eiusmod tempor incididunt ut labore."
+print(texto)
+```
+
+Saída (tudo em uma linha, com `\n` aparecendo literalmente):
+
+```text
+Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit,\nsed do eiusmod tempor incididunt ut labore.
+```
+
+Compare com a versão sem `r`, em que `\n` vira quebra de linha:
+
+```python
+texto = "Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit,\nsed do eiusmod tempor incididunt ut labore."
+print(texto)
+```
+
+### Operador `+` para concatenação
+
+O operador `+` é um **operador coringa**: com números, ele soma; com strings, ele concatena.
+
+```python
+nome = "Python"
+sobrenome = "Programming"
+
+nome_completo = nome + " " + sobrenome
+print(nome_completo)  # Python Programming
+```
+
+Mas misturar `int` e `str` sem conversão gera erro:
+
+```python
 numero = 123
-string = 'Aqui eh uma string'
-concatenar_numero_string = str(numero) + string
+string = "Aqui eh uma string"
+
+concatenar_numero_string = numero + string
 print(concatenar_numero_string)
 ```
-Saída: <code>123Aqui eh uma string</code>. A variável <code>numero</code> continua <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int`</mark>; a conversão é só na expressão.
-- **Soma numérica:** Se <code>numero_em_string = '123'</code> e se quer soma: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`resultado = numero + int(numero_em_string)`</mark> → 246. Tipo da variável importa, não o conteúdo.
 
-#### Multiplicação de strings
+Erro:
 
-- **Regra:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str * int`</mark> repete a string. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int * str`</mark> também (ordem não importa).
-- **Exemplo:**
-```bash
-nome = 'Python'
-print(5 * nome)
+```text
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
-Saída: <code>PythonPythonPythonPythonPython</code>.
-- **Uso em formatação:** Separador padronizado: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print(30*'-')`</mark>; moldura: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print('+' + 30*'-' + '+')`</mark>.
 
-### 5b. Modelo mental
+Para concatenar, você precisa converter explicitamente:
 
-Python processa strings em duas fases: (1) **Interpreta escapes** — <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\t`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\'`</mark> viram caractere de controle ou literal. (2) **Gera a string final** em memória. Raw string (<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`r'...'`</mark>) pula a interpretação de escape — tudo vira caractere literal.
-
-### 6. Teste de reconhecimento rápido
-
-**Qual a saída?**
-```bash
-print('A\nB')
+```python
+concatenar_numero_string = str(numero) + " " + string
+print(concatenar_numero_string)  # 123 Aqui eh uma string
 ```
-**Resposta:** A (quebra de linha) B.
 
-**Qual a saída?**
-```bash
-print(r'A\nB')
+Ou, se quiser somar valores numéricos, converter a string para número:
+
+```python
+numero_em_string = "123"
+resultado = numero + int(numero_em_string)
+print(resultado)  # 246
 ```
-**Resposta:** A\nB (literal, sem quebra).
 
-**O que acontece?**
-```bash
-numero = 5
-texto = 'abc'
-resultado = numero + texto
+### Operador `*` para repetição de strings
+
+O operador `*` com uma string e um inteiro **repete** a string:
+
+```python
+nome = "Python"
+resultado_multiplicacao_string = 5 * nome
+print(resultado_multiplicacao_string)
 ```
-**Resposta:** TypeError (int + str não permitido).
 
-**O que imprime?**
-```bash
-print(3 * '-')
+Saída:
+
+```text
+PythonPythonPythonPythonPython
 ```
-**Resposta:** ---.
 
-**String com aspas: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`t = 'barra invertida - \'`</mark> (só uma barra antes do fim). O que ocorre?** **Resposta:** SyntaxError: unterminated string literal (aspa interna não escapada fecha a string).
+Isso é muito útil para criar divisórias e “molduras” em saídas de terminal:
 
-### 7. Erros clássicos de prova
-
-**Confundir:**
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> (um caractere, quebra linha) com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\n`</mark> (dois caracteres, literal)
-- Raw string <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`r'...'`</mark> com string normal (raw não processa escapes)
-- Concatenação <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str + str`</mark> com soma <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int + int`</mark> (mesmo <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark>, comportamentos diferentes)
-- Concatenar sem converter: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`numero + 'texto'`</mark> → TypeError; usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str(numero) + 'texto'`</mark>
-
-### 8. Exemplos de alta densidade
-
-```bash
-print('\\')
+```python
+linha = "+" + 30 * "-" + "+"
+print(linha)
+print("Name:", "John Doe")
+print("Addr:", "Avenue A")
+print(linha)
 ```
-Saída: <code>\</code>
 
-```bash
-print('a\nb')
+### Diagrama: como o Python interpreta escapes em strings
+
+```mermaid
+flowchart TD
+    A[Digite o literal de string] --> B{Tem prefixo r?}
+    B -- sim --> C[Tratar todas as barras invertidas<br/>como texto normal]
+    B -- não --> D{Encontrei '\\'?}
+    D -- não --> E[Adicionar caractere normal<br/>à string em memória]
+    D -- sim --> F{Sequência especial? \n, \t, \\...}
+    F -- sim --> G[Converter para caractere especial<br/>(nova linha, tab, barra...)]
+    F -- não --> H[Erro de sintaxe ou escape inválido]
 ```
-Saída: a (quebra) b
 
-```bash
-print(r'a\nb')
+Esse fluxo resume o que acontece nos exemplos da aula: sem `r`, `\n` e `\t` são interpretados; com `r`, tudo vira texto literal.
+
+## Uso Prático
+
+### Logs de múltiplas linhas com `\n`
+
+```python
+status = "OK"
+mensagem_log = (
+    "Processo de ingestão finalizado.\n"
+    f"Status: {status}\n"
+    "Origem: arquivo CSV 'clientes.csv'\n"
+)
+
+print(mensagem_log)
 ```
-Saída: a\nb
 
-```bash
-'Python' * 3
+### Tabelas simples com `\t`
+
+```python
+print("Nome\t\tSaldo")
+print("João\t\t1250.50")
+print("Maria\t\t980.00")
+print("Anderson\t300.00")
 ```
-Saída: <code>'PythonPythonPython'</code>
 
-```bash
-5 * 'ab\n'
+### Caminhos de arquivos com raw strings
+
+```python
+caminho = r"C:\Users\aluno\Downloads\dados.csv"
+print("Lendo arquivo em:", caminho)
 ```
-Saída: ab (quebra) ab (quebra) ab (quebra) ab (quebra) ab (quebra)
 
-```bash
-str(123) + 'abc'
+Sem `r`, você teria de escrever `"C:\\Users\\aluno\\Downloads\\dados.csv"` para não quebrar a string.
+
+## Erros Comuns
+
+- **Misturar `int` e `str` em `+`**
+  - Causa: `123 + "abc"`.
+  - Sintoma: `TypeError: unsupported operand type(s) for +: 'int' and 'str'`.
+  - Correção: converter para o tipo adequado (`str()` ou `int()` / `float()`), dependendo se você quer concatenar ou somar.
+
+- **Esquecer de escapar barra invertida**
+  - Causa: caminho de arquivo `"C:\novo\arquivo.txt"` (sem escapar).
+  - Sintoma: `\n` vira quebra de linha, ou `SyntaxError` em alguns casos.
+  - Correção: usar `\\` ou prefixar com `r"..."`.
+
+- **Esperar que raw strings interpretem `\n`**
+  - Causa: usar `r"linha1\nlinha2"` achando que haverá quebra de linha.
+  - Sintoma: `\n` aparece literalmente no output.
+  - Correção: remover `r` quando quiser o efeito de quebra de linha.
+
+## Visão Geral de Debugging
+
+Quando algo estranho acontece com uma string (quebra de linha onde não devia, barra sumindo, erro de `TypeError`), siga estes passos:
+
+1. **Inspecione o valor cru** com `repr()`:
+
+   ```python
+   print(repr(texto))
+   ```
+
+   Assim você enxerga os `\n`, `\t` e `\\` explicitamente.
+
+2. **Cheque o tipo**:
+
+   ```python
+   print(type(texto))
+   ```
+
+   Verifique se o dado está como `str` ou como número.
+
+3. **Simplifique a expressão**: se o erro está em `numero + string`, teste só `numero`, só `string` e depois adicione `str()` ou `int()` aos poucos.
+
+4. **Suspeite da barra invertida** quando uma string “quebra” ou um erro de sintaxe aparece perto de `\`.
+
+## Principais Pontos
+
+- `\n` quebra a linha; `\t` insere uma tabulação; `\\` mostra uma barra invertida.
+- Raw strings (`r"..."`) tratam **todas** as barras invertidas como texto literal, sem interpretar escapes.
+- O operador `+` concatena strings, mas gera `TypeError` quando mistura `int` e `str` sem conversão explícita.
+- O operador `*` permite repetir strings, sendo ótimo para criar separadores e molduras em saídas de terminal.
+
+## Preparação para Prática
+
+Depois desta lição, você deve ser capaz de:
+
+- gerar mensagens de log e relatórios simples com quebras de linha e colunas alinhadas;
+- construir molduras de texto reutilizáveis com `*` e caracteres simples;
+- decidir quando usar raw strings (por exemplo em caminhos de arquivo ou regex);
+- evitar e corrigir erros de concatenação envolvendo strings e números.
+
+No **Laboratório de Prática**, você vai aplicar esses conceitos em contextos de ADS: registro de logs, formatação de uma mini-tabela de clientes e criação de um cabeçalho reutilizável para relatórios de terminal.
+
+## Laboratório de Prática
+
+### Desafio Easy — Log formatado com quebras de linha
+
+Você está construindo um script que lê arquivos CSV de uma pasta e quer registrar um **log legível** toda vez que um arquivo é processado.
+Implemente uma função que receba o nome do arquivo e a quantidade de linhas lidas e retorne uma string de log com múltiplas linhas.
+
+```python
+def montar_log_processamento(nome_arquivo: str, linhas_lidas: int) -> str:
+    """
+    Monta uma mensagem de log em múltiplas linhas, por exemplo:
+
+    Processamento concluído.
+    Arquivo: clientes.csv
+    Linhas lidas: 120
+    """
+    # TODO: usar \n para quebrar linhas e montar a mensagem de forma legível.
+    # Dica: você pode usar concatenação com + ou f-strings, se já se sentir confortável.
+
+    mensagem = ""
+    return mensagem
+
+
+def main() -> None:
+    exemplo = montar_log_processamento("clientes.csv", 120)
+    print(exemplo)
+
+
+if __name__ == "__main__":
+    main()
 ```
-Saída: <code>'123abc'</code>
 
-```bash
-123 + 'abc'
+### Desafio Medium — Mini-tabela de clientes com `\t` e `*`
+
+Você quer imprimir uma **mini-tabela** simples de clientes no terminal, com colunas para nome e endereço.
+Use `\t` para alinhar as colunas e `*` para criar uma linha de separação reutilizável.
+
+```python
+CLIENTES = [
+    ("John Doe", "Avenue A"),
+    ("Mary Jones", "Avenue B"),
+    ("Anderson", "Avenue C"),
+]
+
+
+def imprimir_tabela_clientes(clientes: list[tuple[str, str]]) -> None:
+    """
+    Imprime uma tabela simples no terminal, por exemplo:
+
+    +------------------------------+
+    Nome:   John Doe
+    Ender:  Avenue A
+    +------------------------------+
+    Nome:   Mary Jones
+    Ender:  Avenue B
+    ...
+    """
+    # TODO:
+    #   1. Criar uma linha de separação, por exemplo: "+" + "-" * 30 + "+".
+    #   2. Fazer um loop sobre a lista de clientes.
+    #   3. Para cada cliente, imprimir a linha de separação e depois
+    #      as linhas com Nome e Ender usando \t para alinhar.
+    pass
+
+
+def main() -> None:
+    imprimir_tabela_clientes(CLIENTES)
+
+
+if __name__ == "__main__":
+    main()
 ```
-Erro: TypeError
 
-```bash
-name = 'Jonh Doe'
-address = 'Avenue A'
-print('Name:\t', name)
-print('Addrs:\t', address)
-print(30*'-')
+### Desafio Hard — Normalizar caminhos de arquivo com raw strings
+
+Você está recebendo caminhos de arquivo vindos de um formulário Web e deseja gerar uma versão **“segura” para Python**, pronta para ser usada em scripts no Windows, onde barras invertidas precisam ser escapadas.
+
+Implemente uma função que receba um caminho como string normal (por exemplo, `C:\dados\clientes\2026\jan.csv`) e retorne:
+
+1. uma versão com barras escapadas (`C:\\dados\\clientes\\2026\\jan.csv`);
+2. uma raw string equivalente (`r"C:\dados\clientes\2026\jan.csv"`).
+
+```python
+def normalizar_caminho_windows(caminho: str) -> tuple[str, str]:
+    """
+    Recebe um caminho de arquivo e retorna:
+      - caminho_escapado: com barras invertidas duplicadas
+      - caminho_raw: uma string começando com r"..." que poderia ser usada em código Python
+
+    Exemplo de entrada:
+      "C:\\dados\\clientes\\2026\\jan.csv"
+    """
+    # TODO:
+    #   1. Substituir cada "\" por "\\" na string.
+    #   2. Montar a raw string prefixando com r e envolvendo entre aspas duplas.
+    #      (Dica: use concatenação de strings para montar algo como 'r"' + caminho_original + '"')
+
+    caminho_escapado = ""
+    caminho_raw = ""
+    return caminho_escapado, caminho_raw
+
+
+def main() -> None:
+    exemplos = [
+        r"C:\dados\clientes\2026\jan.csv",
+        r"D:\projetos\ads\pipeline\input\data.csv",
+    ]
+    for caminho in exemplos:
+        escapado, raw = normalizar_caminho_windows(caminho)
+        print("Original: ", caminho)
+        print("Escapado:", escapado)
+        print("Raw:     ", raw)
+        print("-" * 40)
+
+
+if __name__ == "__main__":
+    main()
 ```
-Saída: Name e Addrs com tabulação; depois linha de 30 hífens.
 
-### 9. Procedimento / execução
+<!-- CONCEPT_EXTRACTION
+concepts:
+  - caracteres de escape em strings
+  - quebra de linha com \n
+  - tabulação com \t
+  - raw strings
+  - concatenação de strings
+  - repetição de strings
+  - tipagem forte com int e str
+skills:
+  - Formatar mensagens de log com quebras de linha e tabulações usando \n e \t
+  - Usar raw strings para representar caminhos de arquivo e textos com muitas barras invertidas
+  - Concatenar e repetir strings com os operadores + e *
+  - Corrigir TypeError causados por operações entre int e str com conversão explícita
+  - Construir saídas de terminal mais legíveis com molduras de texto
+examples:
+  - log-processamento-arquivo-csv
+  - tabela-clientes-terminal
+  - normalizar-caminho-windows-raw-string
+-->
 
-- **Quebra de linha no texto:** Inserir <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> onde deve quebrar. Para literal \n: usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\n`</mark> ou raw string.
-- **Barra ou aspa no texto:** Escapar com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\`</mark> ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\'`</mark> conforme o delimitador.
-- **Concatenar número e texto:** Usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str(numero)`</mark> na expressão; não altera o tipo da variável original.
-- **Separador/moldura:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print(n * '-')`</mark> ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print('+' + n*'-' + '+')`</mark>.
+<!-- EXERCISES_JSON
+[
+  {
+    "id": "python-log-processamento-arquivo-csv",
+    "slug": "python-log-processamento-arquivo-csv",
+    "difficulty": "easy",
+    "title": "Gerar log formatado de processamento de arquivo CSV",
+    "discipline": "python",
+    "editorLanguage": "python",
+    "tags": ["python", "strings", "escape", "logs"],
+    "summary": "Monte uma mensagem de log multi-linha usando \\n para registrar o processamento de um arquivo CSV."
+  },
+  {
+    "id": "python-tabela-clientes-terminal",
+    "slug": "python-tabela-clientes-terminal",
+    "difficulty": "medium",
+    "title": "Imprimir tabela de clientes com tabulação e moldura",
+    "discipline": "python",
+    "editorLanguage": "python",
+    "tags": ["python", "strings", "tabulacao", "formatacao"],
+    "summary": "Use \\t, + e * para alinhar colunas de nome e endereço em uma mini-tabela de clientes no terminal."
+  },
+  {
+    "id": "python-normalizar-caminho-windows-raw-string",
+    "slug": "python-normalizar-caminho-windows-raw-string",
+    "difficulty": "hard",
+    "title": "Normalizar caminhos de arquivo do Windows para uso em scripts Python",
+    "discipline": "python",
+    "editorLanguage": "python",
+    "tags": ["python", "strings", "raw-string", "arquivos"],
+    "summary": "Receba caminhos de arquivo digitados pelo usuário e gere versões escapadas e raw strings adequadas para uso em código Python."
+  }
+]
+-->
 
-### 10. Exemplos relevantes
-
-- **Concatenação nome + sobrenome:**
-```bash
-nome = 'Python'
-sobrenome = 'Programming'
-nome_completo = nome + ' ' + sobrenome
-print(nome_completo)
-```
-Saída: Python Programming.
-
-- **Conversão para concatenar vs somar:** <code>numero = 123</code>, <code>numero_em_string = '123'</code>. Concatenar: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str(numero) + numero_em_string`</mark> → <code>'123123'</code>. Somar: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`numero + int(numero_em_string)`</mark> → 246.
-
-- **Listagem formatada (transcrição/slides):** <code>name</code> e <code>address</code> reatribuídos; entre cada bloco <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print(30*'-')`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print('Name:\t', name)`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print('Addrs:\t', address)`</mark> — execução sequencial: cada print usa o valor atual da variável.
-
-Veja também: [[aula-05-exercicios-strings]] (aspas e docstring), [[aula-04-operadores-conversao-tipos]] (conversão e tipagem forte).
-
-### 11. Diferenças e confusões comuns
-
-- **Escape vs literal:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark> em string normal = quebra; em raw string ou como <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\n`</mark> = dois caracteres.
-- **Tipagem dinâmica vs forte:** Tipo inferido pelo valor (dinâmica); operações só entre tipos compatíveis (forte). <code>'123'</code> é str; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark> com int exige conversão explícita.
-
-### 12. Como cai em prova
-
-- Pedir a saída de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print('a\nb')`</mark> ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print(r'a\nb')`</mark>.
-- Dar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int + str`</mark> e perguntar o erro e a correção (str() ou int()).
-- Verdadeiro/falso: “Raw string interpreta \n como quebra de linha.” (Falso.)
-- Código com aspa interna não escapada e perguntar o erro (SyntaxError: unterminated string literal).
-
-### 13. Pontos de atenção
-
-- <mark>Barra no fim da string</mark> sem escape: <code>'texto\'</code> sem segunda aspa → string não terminada. Para terminar com barra: <code>'texto\\\\'</code> (ou usar raw se for só literal).
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`type(numero_em_string)`</mark> é <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str`</mark> mesmo quando o conteúdo é <code>'123'</code>; o Python não converte automaticamente no <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark>.
-
-### 14. Checklist de domínio
-
-- [ ] Sei usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\t`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\'`</mark> e quando usar raw string <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`r'...'`</mark>.
-- [ ] Sei concatenar strings com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark> e evitar TypeError usando <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str()`</mark> ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int()`</mark> conforme o objetivo.
-- [ ] Sei usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string * int`</mark> para repetir e criar separadores.
-- [ ] Sei prever saída de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print()`</mark> com escapes, raw string e multiplicação.
-- [ ] Sei identificar SyntaxError por aspas não escapadas e corrigir.
-
-### 15. Síntese operacional
-
-- Sei usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\n`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\t`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\\`</mark> em strings e quando usar raw string <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`r'...'`</mark>.
-- Sei concatenar com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`+`</mark> e evitar TypeError: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str(numero)`</mark> para texto, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int(numero_em_string)`</mark> para soma.
-- Sei usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string * int`</mark> para repetir e criar separadores (ex.: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`30*'-'`</mark>).
-- Sei prever saída de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print()`</mark> com escapes, raw string e multiplicação.
-- Sei identificar SyntaxError por aspas não escapadas e corrigir com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`\'`</mark> ou delimitador oposto.
-- Sei converter tipos com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`int()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str()`</mark> e quando cada conversão funciona ou gera erro.

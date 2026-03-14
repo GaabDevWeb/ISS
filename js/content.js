@@ -49,7 +49,9 @@ function getDiscipline(disciplines, slug) {
 }
 
 async function fetchLessonMarkdown(disciplineSlug, filename) {
-  return fetchText(`${disciplineSlug}/${filename}`);
+  const prefix = `${disciplineSlug}/`;
+  const path = filename.startsWith(prefix) ? filename : `${prefix}${filename}`;
+  return fetchText(path);
 }
 
 async function fetchSearchIndex() {

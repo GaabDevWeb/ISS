@@ -1,75 +1,73 @@
 ---
-title: "Operadores lógicos e match/case"
+title: "Operadores lógicos, tabela-verdade e match/case em Python"
 slug: "operadores-logicos-match-case"
 discipline: "python"
 order: 10
-description: "Operadores and, or, not; tabela verdade; if opcional e ifs aninhados; padronização de string; valores truthy/falsy; match/case (Python 3.10+)"
-reading_time: 8
-difficulty: "medium"
-concepts: "match/case, Python 3.10+, input(), strip(), lower(), comparação de strings, if, and"
-prerequisites: ["aula-09-desvio-condicional"]
+description: "Como combinar condições com operadores lógicos AND/OR/negação, entender valores verdadeiros/falsos e usar match/case para substituir cadeias longas de if/elif."
+reading_time: 60
+difficulty: "easy"
+concepts:
+  - operadores lógicos
+  - and
+  - or
+  - negação
+  - tabela-verdade
+  - expressão booleana composta
+  - truthy e falsy
+  - match/case
+  - pattern matching estrutural
+prerequisites:
+  - "por-que-programar-python"
+  - "algoritmos-e-notebooks"
+  - "variaveis-tipos-estilo-python"
+  - "conversao-tipos-operadores-aritmeticos"
+  - "strings-literais-multilinhas"
+  - "strings-escape-concatenacao"
+  - "strings-indices-slice-metodos"
+  - "strings-interpolacao-input"
+  - "desvios-condicionais-if-elif-else"
+learning_objectives:
+  - "Interpretar e construir expressões booleanas compostas com os operadores lógicos and, or e not."
+  - "Ler e utilizar tabelas-verdade para prever o resultado de combinações lógicas."
+  - "Aplicar o conceito de valores truthy e falsy em testes condicionais em Python."
+  - "Usar a estrutura match/case (pattern matching) como alternativa legível a cadeias longas de if/elif."
 exercises:
-  - question: "Qual o resultado de (True and False) or (True)?"
-    answer: "True. AND tem precedência: True and False = False. Depois False or True = True."
-  - question: "Por que padronizar string (strip, lower) ao comparar com input do usuário?"
-    answer: "O usuário pode digitar com espaços ou maiúsculas. 'Sim' != 'sim'; ' sim '.strip().lower() == 'sim' evita falha no teste."
-  - question: "Quais valores Python considera falsy em contexto booleano?"
-    answer: "False, None, 0, string vazia ''. Qualquer outro valor (número não zero, string não vazia) é truthy."
-  - question: "A partir de qual versão o match/case existe em Python? O que acontece em versão anterior?"
-    answer: "Python 3.10+. Em versão anterior, match/case gera SyntaxError — usar if/elif/else."
-  - question: "Se numero_1=8 e numero_2=3, entra no bloco: if (numero_1 > 10) and (numero_2 < 5)?"
-    answer: "Não. 8 > 10 é False; com AND, um False torna a expressão toda False. O bloco não executa."
-  - question: "Qual a diferença entre vários if independentes e if/elif/else?"
-    answer: "Vários if: cada condição é testada. if/elif: só o primeiro True executa; os demais são ignorados. Use elif quando os casos forem mutuamente exclusivos."
+  - question: "Qual é a diferença prática entre usar and e or em uma expressão condicional como `(media >= 7 and faltas <= 10)` versus `(media >= 7 or faltas <= 10)` para decidir se um aluno está aprovado?"
+    answer: "Com `and`, as duas condições precisam ser verdadeiras ao mesmo tempo: o aluno só é aprovado se tiver média suficiente e poucas faltas; se qualquer uma falhar, o resultado é falso. Com `or`, basta que uma delas seja verdadeira: o aluno seria aprovado mesmo com muitas faltas se a média for alta, ou mesmo com média baixa se tiver poucas faltas, o que normalmente não representa a regra de negócio desejada."
+    hint: "Pense na linha da tabela-verdade: no `and`, qualquer falso 'contamina' a expressão; no `or`, qualquer verdadeiro 'salva' a expressão."
+review_after_days: [1, 3, 7, 30]
 ---
-## Resumo
 
-### Mapa da aula
+### Visão Geral
 
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark> exige todos os operandos <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark> basta um <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`not`</mark> inverte o valor lógico
-- Tabela verdade define resultado de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`A and B`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`A or B`</mark> para cada combinação de True/False
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> é válido; ifs aninhados permitem encadear testes sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark>
-- Comparação de strings: usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip().lower()`</mark> (ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`upper()`</mark>) para evitar falha por espaço/caixa
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match/case`</mark> (Python 3.10+): correspondência por valor; alternativa ao encadeamento de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/elif`</mark>
-- Erro clássico: confundir <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark> com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark> (um False anula AND; um True basta em OR)
+Nesta aula você aprende a **combinar condições** em Python usando **operadores lógicos** (`and`, `or`, negação) e a enxergar essas combinações por meio de **tabelas-verdade**. Também vê como o Python interpreta certos valores como **truthy/falsy** e conhece a estrutura **`match/case`**, introduzida no Python 3.10, que substitui cadeias grandes de `if/elif` com código mais limpo.
 
-- **Resumo consolidado:** Operadores lógicos <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`not`</mark> combinam expressões booleanas. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> são opcionais; é possível aninhar ifs. Padronizar string com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip().lower()`</mark> em comparações. Valores falsy: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`None`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`0`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`''`</mark>. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match/case`</mark> (3.10+) faz correspondência por valor.
-- **Resumo em 5 linhas:** (1) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark>: só True se todos True. (2) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark>: True se pelo menos um True. (3) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`not`</mark>: inverte booleano. (4) Parênteses em condições com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark>/<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark> garantem precedência e legibilidade. (5) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match expressao: case x:`</mark> executa bloco se valor casar com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`x`</mark>.
-- **Palavras-chave:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`not`</mark>, tabela verdade, if opcional, ifs aninhados, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`lower`</mark>, truthy, falsy, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`case`</mark>, PEP 636, Python 3.10.
+### Modelo Mental
 
-## Explicações
+Imagine uma triagem de regras de negócio como um **painel de interruptores**:
 
-### 1. Tema e escopo
+- Cada condição simples (ex.: `media >= 7`, `faltas <= 10`) é um **interruptor** que pode estar ligado (`True`) ou desligado (`False`).
+- O operador **`and`** é como “ligar duas chaves em série”: se qualquer uma estiver desligada, a energia não passa.
+- O operador **`or`** é como “chaves em paralelo”: se pelo menos uma estiver ligada, a energia passa.
+- A **negação** (`not` na sintaxe do Python) inverte o estado da chave: ligado vira desligado e vice-versa.
+- O **`match/case`** é um painel numerado: você escolhe um valor (ex.: dia da semana) e ele “casa” com um dos casos pré-definidos, executando apenas o bloco correspondente.
 
-**Tema:** Décimo encontro — operadores lógicos (<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`not`</mark>), tabela verdade, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> opcional, ifs aninhados, padronização de string, valores truthy/falsy, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match/case`</mark>.
+A tabela-verdade é, literalmente, uma **tabela de todas as combinações possíveis** de chaves (`True`/`False`) e de qual resultado final elas produzem.
 
-**Inclui:** Tabela verdade para <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark>; operador <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`not`</mark>; uso em testes condicionais com parênteses; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark>; ifs dentro de ifs; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`lower()`</mark>/<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`upper()`</mark> em comparações; valores considerados falsy; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match/case`</mark> (PEP 636, Python 3.10+); teste de mesa.
+### Mecânica Central
 
-**Não coberto:** Tratamento de erros em <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`input`</mark>; padrões avançados de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match`</mark> (listas, tuplas, guards).
+- **Operadores lógicos básicos em Python**:
 
-### 2. Contexto na disciplina
+```python
+a = True
+b = False
 
-- Continuação de [[aula-09-desvio-condicional]]: aprofunda testes condicionais com combinação de condições e nova estrutura.
-- Pré-requisito: desvio condicional, operadores relacionais, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`input()`</mark>, métodos de string ([[aula-08-strings-formatacao-input]], [[aula-07-strings-indices-slice-metodos]]).
-- Base para: laços, funções e qualquer lógica com múltiplas condições.
+print(a and b)  # False  (os dois precisam ser True)
+print(a or b)   # True   (basta um ser True)
+print(not a)    # False  (negação lógica)
+```
 
-### 3. Visão conceitual geral
-
-Aula **técnica**. Operadores lógicos permitem combinar duas ou mais condições em uma única expressão booleana. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> e ifs aninhados ampliam o controle de fluxo. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match/case`</mark> oferece sintaxe clara quando se compara um valor contra vários casos (equivalente conceitual a switch em outras linguagens, com semântica de pattern matching).
-
-### 4. Ideias-chave
-
-1. **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark>:** resultado <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark> só se todos os operandos forem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>; um <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark> torna a expressão <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>.
-2. **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark>:** resultado <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark> se pelo menos um operando for <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>; só é <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark> quando todos forem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>.
-3. **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`not`</mark>:** inverte o valor lógico (True → False, False → True).
-4. **If opcional:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> não são obrigatórios; um <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> sozinho executa o bloco só quando a condição é <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>.
-5. **Padronização de string:** em comparações com entrada do usuário, usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`texto.strip().lower()`</mark> (ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`upper()`</mark>) para ignorar espaços e diferença de caixa.
-6. **Valores falsy:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`None`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`0`</mark>, string vazia <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`''`</mark> são tratados como <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark> em contexto booleano; demais valores são truthy.
-7. **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match/case`</mark>:** compara o valor de uma expressão com cada <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`case`</mark>; executa o bloco do primeiro que “casar”; exige Python 3.10+.
-
-### 5. Conceitos essenciais — explicação operacional
-
-#### Tabela verdade (AND e OR)
+- **Tabelas-verdade de `and` e `or`**:
 
 | A     | B     | A and B | A or B |
 |-------|-------|---------|--------|
@@ -78,188 +76,329 @@ Aula **técnica**. Operadores lógicos permitem combinar duas ou mais condiçõe
 | False | True  | False   | True   |
 | False | False | False   | False  |
 
-**Negação <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`not`</mark>:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`not True`</mark> → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`not False`</mark> → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>.
+- **Negação**:
 
-#### Uso em condição com parênteses
+| A     | not A |
+|-------|-------|
+| True  | False |
+| False | True  |
 
-```bash
-numero_1 = int(input('Digite um numero: '))
-numero_2 = int(input('Digite outro numero: '))
+- **Combinação de comparações**:
 
-if (numero_1 > 10) and (numero_2 < 5):
-    print('Teste realizado')
+```python
+media = 8.0
+faltas = 6
+
+aprovado = (media >= 7.0) and (faltas <= 10)
+print(aprovado)  # True se as duas condições forem satisfeitas
 ```
 
-O bloco só executa quando **as duas** condições são verdadeiras. Parênteses são opcionais mas recomendados para legibilidade e controle de precedência.
+- **Truthy e falsy** em Python (em contexto booleano):
+  - Falsy: `False`, `None`, `0`, `0.0`, `""` (string vazia), estruturas vazias (`[]`, `{}`, `set()`).
+  - Tudo o mais é tratado como **truthy**.
 
-#### If sem else e ifs aninhados
-
-```bash
-nome = input('Digite seu nome: ')
-if nome == 'Gesiel Lopes':
-    print('Python é uma linguagem muito boa.')
-# Se nome for outro, nada é executado — sem erro.
+```python
+texto = ""
+if texto:
+    print("Tem conteúdo")
+else:
+    print("Está vazio")  # executado, porque "" é falsy
 ```
 
-Encaixar ifs: o if interno só é avaliado se o if externo for verdadeiro.
+- **Match/case (pattern matching estrutural)** – Python 3.10+:
 
-```bash
-esta_com_fome = input('Voce esta com fome? Sim ou nao? ').strip().lower()
-if esta_com_fome == 'sim':
-    if preco < 10:
-        print('Posso comprar bastante sushi')
-    elif 10 < preco <= 20:
-        print('Preco razoavel, como menos')
-```
-
-#### Padronização de string
-
-```bash
-resposta = input('Sim ou nao? ').strip().lower()
-if resposta == 'sim':   # aceita 'Sim', 'SIM', ' sim '
-    ...
-```
-
-<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`replace()`</mark> pode remover acentos antes de comparar (ex.: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`'não'.replace('ã','a')`</mark>).
-
-#### Valores falsy
-
-```bash
-if False:   print('a')  # não executa
-if None:    print('b')  # não executa
-if 0:       print('c')  # não executa
-if '':      print('d')  # não executa
-if 1:       print('e')  # executa
-if 'oi':    print('f')  # executa
-```
-
-#### match/case (Python 3.10+)
-
-```bash
-dia = int(input('Digite o dia da semana (1 a 7): '))
+```python
+dia = int(input("Digite o dia da semana (1-7): "))
 
 match dia:
     case 1:
-        print('Domingo')
+        print("Segunda-feira")
     case 2:
-        print('Segunda')
+        print("Terça-feira")
     case 3:
-        print('Terca')
-    # ... case 4, 5, 6, 7
+        print("Quarta-feira")
+    case 4:
+        print("Quinta-feira")
+    case 5:
+        print("Sexta-feira")
+    case 6:
+        print("Sábado")
+    case 7:
+        print("Domingo")
+    case _:
+        print("Dia inválido")
 ```
 
-A expressão após <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match`</mark> é comparada a cada <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`case`</mark>; o primeiro que casar executa e encerra (não há fall-through como em switch de outras linguagens). Em Python &lt; 3.10, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match`</mark> gera <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>.
+### Uso Prático
 
-### 5b. Modelo mental
+Alguns usos diretos em ADS:
 
-- **AND:** pense “todos precisam ser True”. Assim que um operando é <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>, a expressão inteira é <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>.
-- **OR:** pense “basta um True”. Só é <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark> quando todos forem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>.
-- **match/case:** o interpretador compara o valor da expressão com cada <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`case`</mark> na ordem; ao encontrar igualdade, executa esse bloco e sai da estrutura.
+- **Regras de aprovação**: média mínima **e** limite máximo de faltas.
+- **Filtros de clientes**: renda suficiente **e** sem dívidas, ou renda muito alta independentemente das dívidas.
+- **Alertas em dashboards**: indicador muito baixo **ou** variação muito negativa.
 
-### 5c. Comparação direta
+Exemplo de regra de aprovação com presença:
 
-| Abordagem | Quando usar |
-|-----------|-------------|
-| <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if (a) and (b)`</mark> | Duas (ou mais) condições que **todas** precisam ser True |
-| <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if (a) or (b)`</mark> | Pelo menos **uma** das condições True |
-| <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/elif/else`</mark> | Múltiplos valores/casos mutuamente exclusivos (qualquer versão) |
-| <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match/case`</mark> | Comparar **um valor** a vários literais/casos (Python 3.10+); sintaxe mais limpa |
+```python
+media = float(input("Média final: "))
+faltas = int(input("Número de faltas: "))
 
-### 5d. Quando usar
-
-- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark>** quando a ação exige que **todas** as condições sejam verdadeiras.
-- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark>** quando **uma** condição verdadeira já basta.
-- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`not`</mark>** para inverter uma condição (ex.: “se **não** for vazio”).
-- **Parênteses** em condições com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark>/<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark> para deixar a ordem de avaliação clara.
-- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match/case`</mark>** quando a versão for 3.10+ e o problema for “um valor contra vários casos”; caso contrário, usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/elif/else`</mark>.
-
-### 6. Teste de reconhecimento rápido
-
-**O que imprime?**
-```bash
-print((True and False) or True)
-```
-**Resposta:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True and False`</mark> = False; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False or True`</mark> = True.
-
----
-
-**Executa o print?**
-```bash
-if 0:
-    print('ok')
-```
-**Resposta:** Não. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`0`</mark> é falsy.
-
----
-
-**Entra no if?** `n1=12`, `n2=3`
-```bash
-if (n1 > 10) and (n2 < 5):
-    print('entrou')
-```
-**Resposta:** Sim. 12 > 10 e 3 < 5 são ambos True → and é True.
-
----
-
-**match/case em Python 3.9?**
-**Resposta:** Não; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match`</mark> existe a partir de 3.10 → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>.
-
-### 7. Erros clássicos de prova
-
-- **Trocar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark> por <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark>:** “ambas as condições” exige <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark>; “pelo menos uma” exige <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark>.
-- **Comparar string de input sem padronizar:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`'Sim' != 'sim'`</mark>; usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip().lower()`</mark>.
-- **Usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match/case`</mark> em Python &lt; 3.10:** gera <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>.
-- **Achar que <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> é obrigatório:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> sozinho é válido; o bloco só roda quando a condição é True.
-
-### 7b. Armadilhas clássicas
-
-- **“Digite sim ou não”** → usuário digita “SIM ” ou “ sim”; sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip().lower()`</mark> a comparação falha.
-- **Pergunta “qual o resultado de A and B quando A é True e B é False?”** → resposta: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark> (and exige todos True).
-- **Enunciado pede “se **não** for vazio”** → usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if texto:`</mark> (string não vazia é truthy) ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if not texto:`</mark> para vazio.
-
-### 8. Exemplos de alta densidade
-
-```bash
-if (numero_1 > 10) and (numero_2 < 5):
-    print('Teste realizado')
+if media >= 7 and faltas <= 10:
+    print("Aprovado")
+elif media >= 5 and faltas <= 10:
+    print("Recuperação")
 else:
-    print('Teste nao realizado')
+    print("Reprovado")
 ```
 
-```bash
-resposta = input('Sim ou nao? ').strip().lower()
-if resposta == 'sim':
-    print('Ok')
+### Visual: combinação lógica e match/case
+
+```mermaid
+flowchart TD
+    A[Início] --> B[Calcular métricas<br/>ex.: média, faltas, dia_semana]
+    B --> C{Cond1 AND Cond2?<br/>ex.: media >= 7 AND faltas <= 10}
+    C -- True --> D[Bloco Aprovado]
+    C -- False --> E{Cond3 OR Cond4?<br/>ex.: media >= 5 OR trabalho_extra == True}
+    E -- True --> F[Bloco Recuperação]
+    E -- False --> G[Outros casos]
+    B --> H{match dia_semana}
+    H --> I[case 1 → Segunda]
+    H --> J[case 2 → Terça]
+    H --> K[...]
+    H --> L[case _ → Inválido]
+    D --> M[Fim]
+    F --> M
+    G --> M
+    I --> M
+    J --> M
+    K --> M
+    L --> M
 ```
 
-```bash
-if 0: print('a')
-if '': print('b')
-if None: print('c')
-if 1: print('d')   # só este imprime
+O diagrama mostra como expressões com `and`/`or` direcionam o fluxo e como o `match` faz um roteamento limpo por valor.
+
+### Erros Comuns
+
+- **Confundir `and` com `or`**: usar `or` em regras que exigem duas condições ao mesmo tempo gera aprovações indevidas.
+- **Esquecer parênteses em expressões complexas**: confiar apenas na precedência pode deixar o código difícil de ler e interpretar errado.
+- **Confiar demais em truthy/falsy sem clareza**: escrever `if valor:` quando na verdade você quer testar explicitamente `if valor is not None and valor != 0`.
+- **Achar que `match/case` existe em qualquer versão**: usar `match` em Python < 3.10 resulta em `SyntaxError`.
+
+### Visão Geral de Debugging
+
+Para depurar expressões lógicas:
+
+- Imprima as **subexpressões** separadas:
+
+```python
+print(media >= 7, faltas <= 10)
+print((media >= 7) and (faltas <= 10))
 ```
 
-```bash
-# Python 3.10+
-match dia_semana:
-    case 1: print('Domingo')
-    case 2: print('Segunda')
-    case _: print('Outro')   # case _ é “qualquer outro”
+- Monte uma pequena **tabela-verdade de teste**, anotando combinações de entrada e resultado esperado (“teste de mesa”).
+- Simplifique expressões grandes, extraindo pedaços para variáveis com nomes claros (`tem_media_suficiente`, `tem_poucas_faltas`).
+- Ao usar `match/case`, sempre defina um `case _:` para cobrir valores inesperados.
+
+### Principais Pontos
+
+- `and` só resulta em `True` se **todas** as condições forem verdadeiras; `or` resulta em `True` se **pelo menos uma** for verdadeira; `not` inverte o valor lógico.
+- **Tabelas-verdade** ajudam a prever o resultado de combinações de `True`/`False`.
+- Python interpreta alguns valores como **falsy** (`False`, `None`, `0`, `""`, coleções vazias) e todo o resto como truthy.
+- **`match/case`** oferece uma forma mais legível de escrever múltiplos caminhos de fluxo baseados em um único valor.
+
+### Preparação para Prática
+
+Antes do laboratório:
+
+- Reescreva, em português, **três regras de negócio** que você conhece e sublinhe onde entrariam `and`, `or` e `not`.
+- Faça uma tabelinha para duas condições que aparecem no seu dia a dia (ex.: “tem dinheiro” / “tem tempo”) e preencha a tabela-verdade de `and` e `or`.
+- Confirme qual é a versão do Python no ambiente que você usa (para saber se pode usar `match/case`).
+
+### Laboratório de Prática
+
+#### 1. Aprovado com média e frequência (Easy)
+
+Implemente uma função que determina o status de um aluno com base em **média** e **percentual de frequência**.
+
+Regras:
+
+- **Aprovado**: média ≥ 7.0 **e** frequência ≥ 75%.
+- **Reprovado por nota**: média < 7.0 **e** frequência ≥ 75%.
+- **Reprovado por frequência**: frequência < 75% (independentemente da média).
+
+```python
+def avaliar_aluno(media: float, frequencia: float) -> str:
+    """
+    Avalia o status do aluno com base em média e frequência.
+
+    Retorna:
+      - "aprovado"
+      - "reprovado_nota"
+      - "reprovado_frequencia"
+    """
+    status = ""
+
+    # TODO: usar and / or para implementar as regras acima.
+    # Dica: trate primeiro o caso de frequência baixa (regra mais "forte").
+
+    return status
+
+
+if __name__ == "__main__":
+    exemplos = [
+        (8.0, 80.0),
+        (6.5, 80.0),
+        (9.0, 60.0),
+    ]
+    for media, freq in exemplos:
+        print(media, freq, "->", avaliar_aluno(media, freq))
 ```
 
-### 12b. Regra de prova
+#### 2. Filtro de clientes para campanha (Medium)
 
-- **Um <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark> no <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark> → expressão <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>.**
-- **Um <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark> no <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark> → expressão <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>.**
-- **Comparar string com input → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip().lower()`</mark> (ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`upper()`</mark>).**
-- **Falsy:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`None`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`0`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`''`</mark>.**
-- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match/case`</mark> só em Python 3.10+;** senão usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/elif/else`</mark>.
+Você precisa selecionar clientes para uma **campanha de cartão de crédito** usando algumas variáveis:
 
-### 15. Síntese operacional
+- `renda_mensal` (float, em reais).
+- `tem_dividas_em_atraso` (bool).
+- `score_credito` (int, de 0 a 1000).
 
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark>: todos True → True; um False → False. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark>: um True → True; todos False → False. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`not`</mark> inverte.
-- Usar parênteses em condições com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`and`</mark>/<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`or`</mark> para clareza e precedência.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> é válido; ifs aninhados permitem encadear testes.
-- Comparação com input: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`texto.strip().lower() == 'sim'`</mark>.
-- Falsy: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`None`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`0`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`''`</mark>. Resto é truthy.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`match expr: case x:`</mark> executa bloco se valor casar; Python 3.10+.
+Regras:
+
+- Cliente está **aprovado** para a campanha se:
+  - `renda_mensal >= 3000` **e** `score_credito >= 600` **e** **não** tem dívidas em atraso, **ou**
+  - `renda_mensal >= 8000` **e** `score_credito >= 500` (alta renda compensa score médio, desde que `tem_dividas_em_atraso` seja `False`).
+
+```python
+def cliente_aprovado_para_campanha(
+    renda_mensal: float,
+    tem_dividas_em_atraso: bool,
+    score_credito: int,
+) -> bool:
+    """
+    Retorna True se o cliente deve entrar na campanha, False caso contrário.
+    """
+    aprovado = False
+
+    # TODO: implementar a expressão booleana usando and, or e not
+    # de acordo com as regras acima.
+
+    return aprovado
+
+
+if __name__ == "__main__":
+    exemplos = [
+        (2500.0, False, 700),
+        (3500.0, False, 650),
+        (9000.0, False, 520),
+        (9000.0, True, 750),
+    ]
+    for renda, em_atraso, score in exemplos:
+        print(renda, em_atraso, score, "->",
+              cliente_aprovado_para_campanha(renda, em_atraso, score))
+```
+
+#### 3. Descrição de dia da semana com match/case (Hard)
+
+Implemente uma função que recebe um inteiro representando o **dia da semana** e retorna uma descrição mais rica, usando **`match/case`**.
+
+Regras:
+
+- `1` → `"Segunda-feira - início da semana de trabalho"`
+- `2` → `"Terça-feira - dia produtivo"`
+- `3` → `"Quarta-feira - meio da semana"`
+- `4` → `"Quinta-feira - quase lá"`
+- `5` → `"Sexta-feira - dia de breja (ou deploy!)"`
+- `6` → `"Sábado - descanso ou estudos"`
+- `7` → `"Domingo - planejamento da semana"`
+- Qualquer outro valor → `"Dia inválido"`
+
+```python
+def descrever_dia_semana(dia: int) -> str:
+    """
+    Retorna uma descrição amigável para o dia da semana,
+    usando match/case (Python 3.10+).
+    """
+    descricao = ""
+
+    # TODO: implementar usando match dia: case 1: ... case 2: ... case _:
+    # Certifique-se de cobrir o caso padrão com case _.
+
+    return descricao
+
+
+if __name__ == "__main__":
+    for d in range(0, 9):
+        print(d, "->", descrever_dia_semana(d))
+```
+
+<!-- CONCEPT_EXTRACTION
+concepts:
+  - id: operadores-logicos
+    label: "Operadores lógicos and, or e not"
+    description: "Operadores que combinam expressões booleanas em uma única condição composta."
+  - id: tabela-verdade
+    label: "Tabela-verdade"
+    description: "Tabela que mostra o resultado de uma expressão lógica para todas as combinações possíveis de valores booleanos."
+  - id: truthy-falsy
+    label: "Valores truthy e falsy em Python"
+    description: "Convenção da linguagem em que certos valores são tratados como verdadeiros ou falsos em contextos booleanos."
+  - id: match-case
+    label: "Estrutura match/case em Python"
+    description: "Recurso de pattern matching estrutural que permite selecionar blocos de código com base no valor de uma expressão."
+skills:
+  - id: combinar-condicoes
+    label: "Combinar condições com operadores lógicos"
+    verbs: ["combinar", "avaliar", "otimizar"]
+  - id: projetar-regras-booleanas
+    label: "Projetar regras de negócio como expressões booleanas"
+    verbs: ["modelar", "traduzir", "refatorar"]
+  - id: usar-match-case
+    label: "Usar match/case para seleção múltipla"
+    verbs: ["implementar", "simplificar", "manter"]
+examples:
+  - id: exemplo-aprovacao-and-or
+    title: "Regra de aprovação com média e faltas"
+    code: |
+      media = 7.5
+      faltas = 8
+      if media >= 7 and faltas <= 10:
+          print("Aprovado")
+  - id: exemplo-match-case-dia
+    title: "Mapeando dias da semana com match/case"
+    code: |
+      dia = 5
+      match dia:
+          case 1:
+              print("Segunda-feira")
+          case 5:
+              print("Sexta-feira")
+          case _:
+              print("Outro dia")
+-->
+
+<!-- EXERCISES_JSON
+[
+  {
+    "id": "avaliar_aluno_media_frequencia",
+    "title": "Avaliar aluno com média e frequência usando and/or",
+    "difficulty": "easy",
+    "function_name": "avaliar_aluno",
+    "topics": ["operadores lógicos", "and", "or", "booleanos", "regras de negócio"]
+  },
+  {
+    "id": "filtro_clientes_campanha_cartao",
+    "title": "Filtrar clientes para campanha de cartão usando lógica booleana",
+    "difficulty": "medium",
+    "function_name": "cliente_aprovado_para_campanha",
+    "topics": ["operadores lógicos", "and", "or", "not", "tomada de decisão"]
+  },
+  {
+    "id": "descrever_dia_semana_match_case",
+    "title": "Descrever dia da semana com match/case",
+    "difficulty": "hard",
+    "function_name": "descrever_dia_semana",
+    "topics": ["match/case", "pattern matching", "controle de fluxo"]
+  }
+]
+-->
+

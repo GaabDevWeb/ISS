@@ -1,0 +1,337 @@
+# Extração de conceitos — Aulas Python 01 a 12
+# Formato para entrada do Gerador de Exercícios (agents/exercicios-prompt-especificacao.md)
+# Use o bloco da aula desejada como entrada do gerador. concepts_previous_lessons deve ser
+# preenchido à parte (ex.: a partir deste arquivo ou de concepts.md).
+
+---
+# ---- Aula 01: por-que-programar-python ----
+lesson: aula-01-por-que-programar-python
+slug: por-que-programar-python
+concepts:
+  - programação como ferramenta
+  - pensamento computacional
+  - curva de aprendizado
+  - curva do esquecimento
+  - tipagem dinâmica e forte em Python
+  - avaliação por competência
+skills:
+  - Planejar rotina de estudo consistente em programação
+  - Relacionar uso de Python com problemas reais de dados e sistemas
+  - Aplicar revisões espaçadas para reduzir o esquecimento
+  - Interpretar estrutura de disciplina e avaliações para organizar estudos
+examples:
+  - relógio digital tkinter (motivação)
+  - calcular_horas_semanais(aulas_por_semana, horas_livres_por_dia)
+  - gerar_plano_revisao(nome_topico) com REVIEW_OFFSETS_DIAS
+  - registrar_entrada(dia_semana, minutos, descricao) em diario_pratica.txt
+keywords:
+  - Python
+  - curva do aprendizado
+  - curva do esquecimento
+  - prática deliberada
+  - TPs
+  - AT
+
+---
+# ---- Aula 02: algoritmos-e-notebooks ----
+lesson: aula-02-algoritmos-e-notebooks
+slug: algoritmos-e-notebooks
+concepts:
+  - algoritmos
+  - pensamento computacional
+  - linguagem de programação Python
+  - notebooks e IDE
+  - Deepnote
+skills:
+  - Decompor problemas simples em algoritmos claros e finitos
+  - Traduzir algoritmos em pseudocódigo e em código Python
+  - Utilizar notebooks no Deepnote como ambiente de desenvolvimento
+  - Executar e testar pequenos programas Python em blocos de código
+examples:
+  - algoritmo-fazer-cafe com print() por passo
+  - algoritmo-lavar-louca com laço
+  - print("Hello, world!") no Deepnote
+keywords:
+  - algoritmo
+  - clareza
+  - finitude
+  - determinístico
+  - Deepnote
+  - notebook
+
+---
+# ---- Aula 03: variaveis-tipos-e-estilo ----
+lesson: aula-03-variaveis-tipos-e-estilo
+slug: variaveis-tipos-e-estilo
+concepts:
+  - variáveis em Python
+  - tipos básicos int, float, bool, str
+  - atribuição e case sensitive
+  - palavras reservadas (keywords)
+  - comentários e docstrings
+  - funções built-in type, help, dir
+  - PEP 8 e Zen do Python
+skills:
+  - Declarar variáveis com nomes claros e válidos
+  - Escolher tipos adequados para diferentes dados
+  - Usar comentários e docstrings para documentar código
+  - Investigar objetos com type(), help() e dir()
+examples:
+  - idade = 25; type(idade)
+  - variavel_dinamica = 1 depois variavel_dinamica = False
+  - """ docstring """ e # comentário
+keywords:
+  - variável
+  - int
+  - float
+  - bool
+  - str
+  - type()
+  - PEP 8
+  - Zen do Python
+
+---
+# ---- Aula 04: conversao-tipos-operadores-aritmeticos ----
+lesson: aula-04-conversao-tipos-operadores-aritmeticos
+slug: conversao-tipos-operadores-aritmeticos
+concepts:
+  - conversão de tipos
+  - tipagem dinâmica
+  - tipagem forte
+  - int, float, bool, string
+  - operadores aritméticos
+  - precedência de operadores
+  - ValueError
+skills:
+  - Converter textos numéricos para tipos numéricos com int() e float()
+  - Usar str() para formatar resultados numéricos em mensagens legíveis
+  - Aplicar operadores aritméticos respeitando precedência e tipos envolvidos
+  - Tratar ValueError ao validar entradas numéricas vindas de usuários, CSVs ou APIs
+  - Escolher entre divisão normal, divisão inteira, módulo e exponenciação conforme o problema
+examples:
+  - float("12.5"); float("texto") -> ValueError
+  - media = soma_notas / 2; piso = valor1 // valor2; resto = valor1 % valor2
+  - try: temperatura = float(leitura) except ValueError: ...
+keywords:
+  - int()
+  - float()
+  - //
+  - %
+  - **
+  - ValueError
+  - TypeError
+
+---
+# ---- Aula 05: strings-literais-multilinhas ----
+lesson: aula-05-strings-literais-multilinhas
+slug: strings-literais-multilinhas
+concepts:
+  - literais de string
+  - aspas simples e duplas
+  - strings multilinha com três aspas
+  - SyntaxError por string não terminada
+skills:
+  - Escolher entre aspas simples, duplas e três aspas ao declarar strings
+  - Reescrever textos reais (poemas, parágrafos) como literais de string válidos
+  - Diagnosticar e corrigir SyntaxError causados por aspas e quebras de linha
+examples:
+  - poema = '''Que pode uma criatura senão,\nentre criaturas, amar?'''
+  - "texto entre 'aspas'" e 'Lorem "Ipsum"'
+  - montar_fragmento_poema(linha1, linha2, linha3) com '''
+keywords:
+  - string
+  - aspas
+  - multilinha
+  - docstring
+  - SyntaxError
+
+---
+# ---- Aula 06: strings-escape-concatenacao ----
+lesson: aula-06-strings-escape-concatenacao
+slug: strings-escape-concatenacao
+concepts:
+  - caracteres de escape em strings
+  - quebra de linha com \n
+  - tabulação com \t
+  - raw strings
+  - concatenação de strings
+  - repetição de strings
+  - tipagem forte com int e str
+skills:
+  - Formatar mensagens de log com quebras de linha e tabulações usando \n e \t
+  - Usar raw strings para representar caminhos de arquivo e textos com muitas barras invertidas
+  - Concatenar e repetir strings com os operadores + e *
+  - Corrigir TypeError causados por operações entre int e str com conversão explícita
+  - Construir saídas de terminal mais legíveis com molduras de texto
+examples:
+  - "linha1\nlinha2"; r"C:\Users\aluno\dados.csv"
+  - str(numero) + " " + string; 5 * "Python"
+  - "+" + 30 * "-" + "+"
+keywords:
+  - \n
+  - \t
+  - raw string
+  - concatenação
+  - TypeError
+
+---
+# ---- Aula 07: strings-indices-slice-metodos ----
+lesson: aula-07-strings-indices-slice-metodos
+slug: strings-indices-slice-metodos
+concepts:
+  - sequência de caracteres
+  - índice positivo e negativo em strings
+  - operador colchete []
+  - slicing [inicio:fim:passo]
+  - substrings
+  - métodos de string (upper, lower, swapcase, capitalize, title, replace, split, join, strip)
+  - função len para tamanho de strings
+skills:
+  - Acessar caracteres específicos em uma string usando índices positivos e negativos
+  - Criar substrings com slicing, incluindo fatias invertidas com passo negativo
+  - Padronizar e limpar textos com métodos de string em pipelines de dados
+  - Quebrar e remontar textos com split() e join()
+  - Medir o tamanho de strings e usá-lo para validar formatos simples
+examples:
+  - hello[2], hello[-6]; hello[2:7] -> 'llo p'; hello[::-1] -> 'nohtyp olleh'
+  - hello.upper(), nome.title(), texto.split(" "), " - ".join(lista), strip_exemplo.strip()
+  - len(hello)
+keywords:
+  - índice
+  - slice
+  - split
+  - join
+  - strip
+  - len
+
+---
+# ---- Aula 08: strings-interpolacao-input ----
+lesson: aula-08-strings-interpolacao-input
+slug: strings-interpolacao-input
+concepts:
+  - interpolação de strings
+  - operador % para formatação
+  - método format() de str
+  - f-strings
+  - input()
+  - conversão de tipos após input
+  - formatação de casas decimais com :.2f e :.3f
+  - TypeError ao misturar str e int
+skills:
+  - Escolher o estilo adequado de interpolação de strings em Python, preferindo f-strings em código novo
+  - Ler dados do usuário com input() e converter explicitamente para tipos numéricos
+  - Formatar saídas numéricas com número controlado de casas decimais em .format() e f-strings
+  - Diagnosticar e corrigir TypeError causados por operações aritméticas com valores vindos de input()
+examples:
+  - "%.2f" % valor; "{:.3f}".format(valor)
+  - f"The {thing} is in the {place}."; f"{graus_c:.3f}"
+  - graus_f = input("..."); graus_f = int(graus_f); graus_c = (graus_f - 32) * 5/9
+keywords:
+  - f-string
+  - input()
+  - :.2f
+  - :.3f
+  - TypeError
+
+---
+# ---- Aula 09: desvios-condicionais-if-elif-else ----
+lesson: aula-09-desvio-condicional
+slug: desvios-condicionais-if-elif-else
+concepts:
+  - booleanos
+  - operadores relacionais
+  - if/elif/else
+  - blocos identados
+  - fluxo condicional
+  - expressão booleana
+skills:
+  - Construir expressões booleanas com operadores relacionais
+  - Implementar desvios condicionais com if/elif/else
+  - Modelar regras de negócio como cadeias condicionais
+examples:
+  - if media >= 7.0: print("Aluno aprovado!")
+  - if media >= 9.0: ... elif media >= 7.0: ... elif media >= 5.0: ... else: ...
+  - if 18.5 <= imc < 25: categoria = "peso normal"
+keywords:
+  - if
+  - elif
+  - else
+  - operadores relacionais
+  - indentação
+
+---
+# ---- Aula 10: operadores-logicos-match-case ----
+lesson: aula-10-operadores-logicos-match-case
+slug: operadores-logicos-match-case
+concepts:
+  - operadores lógicos and, or, not
+  - tabela-verdade
+  - truthy e falsy em Python
+  - match/case
+  - pattern matching estrutural
+skills:
+  - Combinar condições com operadores lógicos
+  - Projetar regras de negócio como expressões booleanas
+  - Usar match/case para seleção múltipla
+examples:
+  - (media >= 7) and (faltas <= 10); if texto: ... else: ... (falsy "")
+  - match dia: case 1: ... case 5: ... case _: ...
+keywords:
+  - and
+  - or
+  - not
+  - tabela-verdade
+  - match
+  - case
+  - Python 3.10
+
+---
+# ---- Aula 11: loops-for-range-listas ----
+lesson: aula-11-loops-for-range-listas
+slug: loops-for-range-listas
+concepts:
+  - laços for e range em Python
+  - listas e sequências iteráveis
+  - iteração sobre coleções
+  - parada não inclusiva de range()
+  - objeto iterável
+skills:
+  - Evitar código duplicado usando laços for
+  - Gerar sequências numéricas com range
+  - Percorrer listas e strings com for
+examples:
+  - for letra in vogais: print(letra)
+  - for i in range(10): ...; for i in range(2, 21, 2): ...
+  - for i in range(len(notas)): print(f"Prova {i + 1}: {notas[i]}")
+keywords:
+  - for
+  - range
+  - lista
+  - iterável
+
+---
+# ---- Aula 12: range-acumuladores-enumerate ----
+lesson: aula-12-range-acumuladores-enumerate
+slug: range-acumuladores-enumerate
+concepts:
+  - range (stop, start/stop, start/stop/step)
+  - acumuladores
+  - operadores de atribuição composta (+=)
+  - tabuada
+  - enumerate
+  - loops aninhados
+  - matriz 2D (linha e coluna)
+skills:
+  - Implementar acumuladores com atribuição composta
+  - Construir tabuadas e relatórios numéricos com loops
+  - Usar enumerate e loops aninhados para percursos complexos
+examples:
+  - soma = 0; for i in range(5): numero = int(input(...)); soma += numero; media = soma / 5
+  - for i, fruta in enumerate(frutas): print(f"Fruta {i}: {fruta}")
+  - for i in range(3): for j in range(3): print(f"({i},{j})", end=" ")
+keywords:
+  - acumulador
+  - +=
+  - enumerate
+  - loops aninhados
+  - matriz

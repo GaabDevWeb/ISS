@@ -1,392 +1,376 @@
 ---
-title: "Strings: índices, slice e métodos"
+title: "Strings em Python: índices, slices e métodos úteis"
 slug: "strings-indices-slice-metodos"
 discipline: "python"
 order: 7
-description: "Operador [], índices positivos/negativos, fatiamento com slice [inicio:fim:passo] e métodos essenciais de string"
-reading_time: 8
-difficulty: "medium"
-concepts: "índices, slice, [::-1], len(), métodos de string, replace(), capitalize(), title(), split(), join()"
-prerequisites: ["aula-06-strings-escape-concatenacao"]
+description: "Como enxergar strings como sequências indexadas de caracteres, usar o operador [] para indexação e slicing, e aplicar métodos úteis para análise e limpeza de texto."
+reading_time: 50
+difficulty: "easy"
+concepts:
+  - strings
+  - sequência de caracteres
+  - índice positivo
+  - índice negativo
+  - operador colchete []
+  - slicing [inicio:fim:passo]
+  - substrings
+  - métodos de string
+  - len
+  - split
+  - join
+  - strip
+  - upper/lower/title
+prerequisites:
+  - "por-que-programar-python"
+  - "algoritmos-e-notebooks"
+  - "variaveis-tipos-estilo-python"
+  - "conversao-tipos-operadores-aritmeticos"
+  - "strings-literais-multilinhas"
+  - "strings-escape-concatenacao"
+learning_objectives:
+  - "Enxergar strings como sequências indexadas de caracteres, com índices positivos e negativos."
+  - "Usar o operador colchete [] para acessar um único caractere de uma string."
+  - "Aplicar slicing [inicio:fim:passo] para criar substrings e percorrer texto com passos diferentes, incluindo fatias invertidas."
+  - "Utilizar métodos de string (`upper`, `lower`, `title`, `replace`, `split`, `join`, `strip`, entre outros) para análise e limpeza de dados textuais."
 exercises:
-  - question: "hello = 'hello python'. Qual o resultado de hello[2] e hello[-6]?"
-    answer: "hello[2] → 'l' (índice positivo, terceira posição, começa em 0). hello[-6] → 'p' (índice negativo conta do fim: -1 é 'n', ..., -6 é 'p')."
-    hint: "Índice 0 é o primeiro caractere. Índice -1 é o último."
-  - question: "Por que hello[2:7] retorna 5 caracteres e não 6?"
-    answer: "O parâmetro fim no slice é não-inclusivo: retorna do índice 2 até o 6 (7 - 1). Sempre que fim = n, o último índice incluído é n-1."
-    hint: "Regra fundamental do slice: fim não entra na contagem."
-  - question: "Qual slice retorna a string 'hello python' invertida? Dê duas soluções."
-    answer: "hello[::-1] (passo -1, percorre do fim ao início, sem especificar início/fim). Alternativa: hello[-1::-1] ou, para parte específica, hello[-1:-13:-1]."
-  - question: "O que é errado em hello.len() e como corrigir?"
-    answer: "len() é função builtin, não método de string. Chamar hello.len() gera AttributeError: 'str' object has no attribute 'len'. Correto: len(hello)."
-    hint: "Métodos usam ponto-notação: hello.upper(). Funções builtin envolvem o objeto: len(hello)."
-  - question: "hello = 'HELLO PYTHON'. O que retorna hello.replace('A', '4')? E hello.replace('a', '4')?"
-    answer: "hello.replace('A', '4') → 'HELLO PYTHON' (não há 'A' minúsculo — sem alteração). Espera, 'HELLO PYTHON' não tem 'A'. hello.replace('L', '4') → 'HE44O PYTHON'. replace() é case-sensitive: só substitui ocorrências exatas do caractere especificado."
-    hint: "replace() diferencia maiúsculas de minúsculas."
-  - question: "Qual a diferença entre capitalize() e title()?"
-    answer: "capitalize(): primeira letra da string em maiúscula, todas as demais em minúscula. title(): primeira letra de cada palavra em maiúscula. Ex.: 'hello python'.capitalize() → 'Hello python'; 'hello python'.title() → 'Hello Python'."
-  - question: "', '.join(['hello', 'mundo', 'python']) — qual é a saída e o que join() faz?"
-    answer: "Saída: 'hello, mundo, python'. join() concatena os itens de uma lista de strings usando o separador definido antes do ponto (',' + espaço neste caso). É o inverso do split()."
+  - question: "Qual a diferença entre acessar `hello[2]` e `hello[2:7]` em uma string como `hello = 'hello python'`, e por que dizemos que o índice final do slice é 'não inclusivo'?"
+    answer: "`hello[2]` acessa apenas um caractere na posição de índice 2 (no exemplo, o `'l'`), enquanto `hello[2:7]` cria uma nova string contendo todos os caracteres do índice 2 até o índice 6; o índice 7 funciona como 'fronteira de parada', não entra na fatia. Dizemos que o índice final é não inclusivo porque o caractere nessa posição não é incluído na substring: o Python pega de `inicio` até `fim - 1`."
+    hint: "Compare o diagrama de índices na lousa (0..11 e -12..-1) com a saída do exemplo `hello[2:7]` na aula, que resulta em `'llo p'`."
+review_after_days: [1, 3, 7, 30]
 ---
-## Resumo
 
-### Mapa da aula
+## Visão Geral do Conceito
 
-- String é cadeia de caracteres; cada posição tem índice (positivo e negativo)
-- Operador <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[]`</mark> acessa um caractere; slice <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[inicio:fim:passo]`</mark> extrai substring
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`fim`</mark> no slice é **não-inclusivo**; passo negativo inverte direção
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[::-1]`</mark> inverte a string — padrão idiomático cobrado em prova
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len()`</mark> é função builtin (não método); <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`replace()`</mark> é case-sensitive
+Até aqui você aprendeu a **criar** strings (aspas, multilinhas, escapes) e a concatenar ou repetir texto.
+Nesta aula você vai enxergar strings como **sequências indexadas de caracteres** e aprender a:
 
-- **Resumo consolidado:** String = lista de caracteres indexada do 0 ao len-1 (positivos) e do -1 ao -len (negativos). <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[i]`</mark> acessa posição i. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[inicio:fim:passo]`</mark> retorna substring: fim não-inclusivo, passo default 1, passo negativo inverte percurso. Métodos encadeados via ponto: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`upper()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`lower()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`isupper()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`islower()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`swapcase()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`capitalize()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`title()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`replace(old, new)`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split(sep)`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`join(lista)`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip()`</mark>. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len()`</mark> é builtin — não usar ponto-notação.
-- **Resumo em 5 linhas:** (1) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[2]`</mark> = char na posição 2; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[-6]`</mark> = char na 6ª posição a partir do fim. (2) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[2:7]`</mark> = chars das posições 2 a 6 (fim não-inclusivo); <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[::2]`</mark> = um em dois. (3) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[::-1]`</mark> inverte string; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[-1:-7:-1]`</mark> = substring invertida parcial. (4) Métodos de caixa: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`upper`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`lower`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`swapcase`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`capitalize`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`title`</mark>; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`replace`</mark> é case-sensitive. (5) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len(s)`</mark> — builtin; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split`</mark> divide; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`join`</mark> une; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip`</mark> remove espaços das bordas.
-- **Palavras-chave:** índice, índice negativo, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[]`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`slice`</mark>, passo, não-inclusivo, substring, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`upper`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`lower`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`swapcase`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`capitalize`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`title`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`replace`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`join`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`AttributeError`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`IndexError`</mark>, case-sensitive.
+- acessar um caractere específico com o operador colchete `[]`;
+- recortar pedaços (substrings) com **slicing** `[inicio:fim:passo]`;
+- aplicar métodos úteis para **analisar e limpar texto** (como `upper`, `lower`, `replace`, `split`, `join`, `strip`).
 
-## Explicações
+> **Resumo em uma frase:** string em Python é uma sequência indexada; dominar índices, slices e métodos é a base para qualquer tipo de processamento de texto em projetos de dados.
 
-### 1. Tema e escopo
+## Modelo Mental
 
-**Tema:** Sétimo encontro — acesso a caracteres por índice, fatiamento de strings (slice) e métodos essenciais de manipulação.
+Use a metáfora da aula: pense na string como uma **lista unidimensional de caracteres**.
 
-**Problema que resolve:** Extrair partes de uma string sem reescrever; inverter texto; verificar e transformar caixa; dividir e unir strings; limpar espaços extras.
-
-**Inclui:** Operador <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[]`</mark> com índices positivos e negativos; slice <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[inicio:fim:passo]`</mark> com todos os parâmetros; métodos <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`upper`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`lower`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`isupper`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`islower`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`swapcase`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`capitalize`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`title`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`replace`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`join`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip`</mark>; função builtin <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len`</mark>; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`help()`</mark> para consultar documentação.
-
-**Não coberto:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`startswith()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`endswith()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`find()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`count()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`format()`</mark>, f-strings.
-
-### 2. Contexto na disciplina
-
-- Fecha a sequência de strings (aulas 4–7); tudo a partir daqui usa indexação e métodos.
-- Pré-requisito: variáveis, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`print()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`type()`</mark>, operadores, escape e concatenação ([[aula-06-strings-escape-concatenacao]]).
-- Base para: validação de entrada, manipulação de dados textuais, listas (mencionado como spoiler: string é lista unidimensional).
-
-### 3. Visão conceitual geral
-
-Aula **técnica**. Python trata strings como sequências indexadas: cada caractere ocupa uma posição com dois índices (positivo e negativo). O operador <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[]`</mark> acessa posições individuais; o slice recorta intervalos. Métodos são funções acopladas ao objeto string via ponto-notação. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len()`</mark> é exceção — função builtin, não método.
-
-### 4. Ideias-chave (máx. 7)
-
-1. **Índice começa em zero:** posição 0 = primeiro char; posição len-1 = último. Cobrado em prova: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[0]`</mark> ≠ <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[1]`</mark>.
-2. **Índice negativo:** -1 = último, -2 = penúltimo, -len = primeiro. Equivalente simétrico ao positivo; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[2]`</mark> == <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[-10]`</mark> para string de 12 chars.
-3. **Fim não-inclusivo no slice:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[2:7]`</mark> retorna 5 chars (posições 2,3,4,5,6). Pegadinha clássica de prova.
-4. **Passo negativo inverte direção:** com passo -1 Python percorre de trás para frente. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[::-1]`</mark> é o idioma padrão para inverter string — cai em prova.
-5. **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len()`</mark> é builtin, não método:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len(hello)`</mark> ✅ — <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello.len()`</mark> → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`AttributeError`</mark>. Único da lista que não usa ponto-notação.
-6. **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`replace()`</mark> é case-sensitive:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`'HELLO'.replace('h','x')`</mark> não altera nada; diferencia maiúsculas/minúsculas.
-7. **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split`</mark> / <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`join`</mark> são inversos:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split`</mark> decompõe string em lista; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`join`</mark> compõe lista em string com separador.
-
-### 5. Conceitos essenciais — explicação operacional
-
-#### Operador <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[]`</mark> — acesso por índice
-
-- **Definição:** Acessa o caractere na posição i da string. Aceita positivo (0 = início) ou negativo (-1 = fim).
-- **Exemplo:**
-
-```bash
-hello = 'hello python'
-print(hello[2])    # 'l' (posição 2)
-print(hello[5])    # ' ' (espaço também é caractere)
-print(hello[-6])   # 'p' (6ª posição a partir do fim)
-print(hello[-1])   # 'n' (último)
+```python
+hello = "hello python"
 ```
 
-- **Quando usar:** Acessar caractere específico por posição conhecida.
-- **Quando NÃO usar:** Para extrair mais de um caractere — usar slice.
-- ❌ <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[12]`</mark> → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`IndexError: string index out of range`</mark> (índice fora dos limites).
+Visualmente:
 
-#### Slice <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[inicio:fim:passo]`</mark>
+- índice positivo (da esquerda para a direita):  
+  `h   e   l   l   o       p   y   t   h   o   n`  
+  `0   1   2   3   4   5   6   7   8   9   10  11`
+- índice negativo (da direita para a esquerda):  
+  `h   e   l   l   o       p   y   t   h   o   n`  
+  `-12 -11 -10 -9  -8  -7  -6  -5  -4  -3  -2  -1`
 
-- **Definição:** Extrai substring. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`fim`</mark> é não-inclusivo. Parâmetros são opcionais.
-- **Regras de omissão:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`inicio`</mark> omitido = posição 0; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`fim`</mark> omitido = até o fim; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`passo`</mark> omitido = 1.
-- **Exemplo básico:**
+A variável `hello` aponta para essa “lista de 12 chars”.
+O operador `[]` é o **acesso a uma posição** dessa lista; o slicing `[inicio:fim:passo]` é como pedir “um pedaço dessa sequência”.
 
-```bash
-hello = 'hello python'
-print(hello[2:7])    # 'llo p' (posições 2,3,4,5,6)
-print(hello[-8:])    # 'o python' (de -8 até o fim)
-print(hello[:-3])    # 'hello pyt' (do início até -4)
-print(hello[1:10:3]) # 'eoy' (posições 1,4,7)
+## Mecânica Central
+
+### Acessando um caractere com `[]`
+
+Com o operador colchete, você pega **um único caractere** pelo índice:
+
+```python
+hello = "hello python"
+
+print(hello[2])   # índice positivo 2 -> 'l'
+print(hello[5])   # índice 5 -> espaço ' '
+print(hello[-6])  # índice negativo -6 -> 'p'
 ```
 
-- **Passo negativo — inverter:**
+- `hello[2]` lê “caractere armazenado na posição de índice 2”.
+- `hello[-6]` lê “caractere na posição -6 contando da direita para a esquerda”.
 
-```bash
-hello = 'hello python'
-print(hello[::-1])        # 'nohtyp olleh' — string inteira invertida
-print(hello[-1:-7:-1])    # 'nohtyp' — 'python' invertido
+Se você usar essa notação em um notebook (Deepnote, Jupyter) como **última linha da célula**, o ambiente mostra o próprio valor da string, mesmo sem `print()`.
+
+### Slicing: `[inicio:fim:passo]`
+
+O slicing cria **substrings** a partir da string original:
+
+- `[inicio:fim]` → vai do índice `inicio` até `fim - 1` (fim é **não inclusivo**);
+- `[inicio:fim:passo]` → percorre a sequência com o passo informado;
+- qualquer um dos três parâmetros pode ser omitido.
+
+Exemplos equivalentes aos da aula:
+
+```python
+hello = "hello python"
+
+print(hello[2:7])      # 'llo p'
+print(hello[1:10:3])   # 'eoy'
+print(hello[-8:])      # 'o python'
+print(hello[:-3])      # 'hello pyt'
 ```
 
-- **Quando usar passo negativo:** Inverter string ou percorrer do fim para o início.
-- ⚠️ <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[-1:-6:-1]`</mark> retorna apenas 5 chars (fim -6 não-inclusivo), não 6.
+- `hello[2:7]`: pega índices 2,3,4,5,6 → `'llo p'`;
+- `hello[1:10:3]`: começa no índice 1 (`'e'`), vai até 9 pulando de 3 em 3 → `'eoy'`;
+- `hello[-8:]`: de `-8` até o fim (`'o python'`);
+- `hello[:-3]`: do início até o índice `-3` (não incluso) → `'hello pyt'`.
 
-#### Métodos de caixa
+### Slices invertidos com passo negativo
 
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`upper()`</mark> → tudo maiúsculo; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`lower()`</mark> → tudo minúsculo.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`isupper()`</mark> / <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`islower()`</mark> → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>/<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>; úteis em validação.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`swapcase()`</mark> → inverte cada letra (maiúscula vira minúscula e vice-versa).
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`capitalize()`</mark> → primeira letra maiúscula, **restante minúscula** (afeta toda a string).
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`title()`</mark> → primeira letra de **cada palavra** em maiúscula.
+Quando o passo é negativo, o Python percorre a string de **trás para frente**.
+O exemplo da aula para inverter a string inteira:
 
-```bash
-s = 'hello python'
-print(s.upper())       # 'HELLO PYTHON'
-print(s.capitalize())  # 'Hello python'
-print(s.title())       # 'Hello Python'
-print(s.swapcase())    # 'HELLO PYTHON' (já está em minúsculas → vira maiúsculas)
+```python
+hello = "hello python"
+
+invertida = hello[::-1]
+print(invertida)  # 'nohtyp olleh'
 ```
 
-#### <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`replace(old, new)`</mark> — substituição
+E o desafio “como retornar `NOHTYP`?” é uma variação onde você escolhe bem o `inicio`, o `fim` e o `passo` para pegar só a parte `'python'` na ordem inversa.
 
-- **Regra:** Case-sensitive. Retorna nova string; original não é alterada.
+### Métodos úteis de `str`
 
-```bash
-curso = 'INTRODUCAO A PROGRAMACAO COM PYTHON'
-print(curso.replace('A', '4'))  # 'INTRODUC4O 4 PROGR4M4C4O COM PYTHON'
-print(curso.replace('a', '4'))  # sem alteração — 'a' minúsculo não existe
+Alguns dos métodos demonstrados no notebook:
+
+- `upper()` / `lower()` / `swapcase()` / `capitalize()` / `title()`  
+- `replace(antigo, novo)`  
+- função built-in `len(obj)`  
+- `split(separador)`  
+- `join(iterável_de_strings)`  
+- `strip(chars)`  
+- `help(obj.metodo)` para ver a docstring.
+
+Exemplos:
+
+```python
+hello = "hello python"
+nome = "Gesiel Lopes"
+curso = "INTRODUCAO A PROGRAMACAO COM PYTHON"
+
+print(hello.upper())      # 'HELLO PYTHON'
+print(nome.lower())       # 'gesiel lopes'
+print(nome.swapcase())    # 'gESIEL lOPES'
+print(hello.capitalize()) # 'Hello python'
+print(curso.title())      # 'Introducao A Programacao Com Python'
+
+print(hello.replace(" ", "--"))  # 'hello--python'
+print(len(hello))                # 12
 ```
 
-#### <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len()`</mark> — comprimento
+`split` e `join`:
 
-- **Regra:** Função builtin — envolve o objeto, não usa ponto.
+```python
+texto = "hello python"
+print(texto.split(" "))   # ['hello', 'python']
 
-```bash
-hello = 'hello python'
-print(len(hello))   # 12
-# hello.len()       # AttributeError — NÃO existe
+string_list = [hello, nome, curso]
+using_join_in_string_list = " - ".join(string_list)
+print(using_join_in_string_list)
 ```
 
-#### <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split(sep)`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`join(lista)`</mark>
+`strip` (limpeza de espaços e caracteres nas bordas):
 
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split()`</mark> sem argumento divide por espaço em branco; com argumento divide pelo separador.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`join()`</mark> é chamado **na string separador**, recebendo a lista como argumento.
-
-```bash
-hello = 'hello python'
-partes = hello.split()          # ['hello', 'python']
-partes_p = hello.split('p')     # ['hello ', 'ython']
-
-lista = ['hello python', 'Gesiel Lopes', 'Introducao a programacao']
-print(', '.join(lista))         # 'hello python, Gesiel Lopes, Introducao a programacao'
+```python
+strip_exemplo = "   exemplo de strip   "
+print(strip_exemplo.strip())      # 'exemplo de strip'
+print("hello python".strip("hn")) # remove 'h'/'n' no início/fim se existirem
 ```
 
-#### <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip()`</mark> — remoção de bordas
+Você pode usar `help(str.strip)` ou `help(curso.strip)` para ver a documentação completa direto no notebook.
 
-- Remove espaços (ou char especificado) do **início e do fim** da string (não do meio).
+### Diagrama: índices, slices e passo
 
-```bash
-s = '   hello python   '
-print(s.strip())       # 'hello python'
-print(s.strip(' '))    # 'hello python' (mesmo resultado com espaço explícito)
+```mermaid
+flowchart TD
+    A[String original 'hello python'] --> B[Escolher índice ou fatia]
+    B --> C{Acessar um único índice?}
+    C -- sim --> D[Usar hello[indice]<br/>retorna 1 caractere]
+    C -- não --> E[Definir inicio, fim, passo]
+    E --> F[Slice hello[inicio:fim:passo]]
+    F --> G{passo > 0?}
+    G -- sim --> H[Percorrer da esquerda para a direita<br/>de inicio até fim-1]
+    G -- não --> I[Percorrer da direita para a esquerda<br/>de inicio até fim+1]
+    F --> J[Resultado é uma nova string (substring)]
 ```
 
-### 5b. Modelo mental
+## Uso Prático
 
-**Indexação:** Python monta internamente dois "marcadores" para cada posição: o positivo (0 → N-1) e o negativo (-N → -1). <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[i]`</mark> busca diretamente nessa tabela — acesso O(1).
+### Exemplos de ADS onde isso aparece o tempo todo
 
-**Slice:** Python aplica três valores (inicio, fim, passo) e percorre a sequência pulando <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`passo`</mark> posições por vez, coletando cada caractere encontrado antes de atingir <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`fim`</mark> (exclusivo). Com passo negativo, começa do fim e caminha para trás.
+- **Normalizar nomes e títulos**: usar `strip()`, `title()`, `upper()` e `lower()` para padronizar campos como nome de cliente, curso ou produto.
+- **Validar formatos simples**: usar slices para extrair prefixos, sufixos e partes de identificadores (por exemplo, validar se um código começa com `"BR-"` ou se um CNPJ tem o número de dígitos correto).
+- **Parsear arquivos de texto e logs**: usar `split()` para quebrar linhas em campos, `join()` para remontar textos, e slices para pegar “colunas” fixas em formatos legados.
 
-**Métodos vs builtin:** Métodos (<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`upper()`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`replace()`</mark>) pertencem ao objeto <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str`</mark> — chamados com ponto. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len()`</mark> é builtin separado que funciona em qualquer sequência (strings, listas, etc.) — por isso não usa ponto.
+## Erros Comuns
 
-### 6. Teste de reconhecimento rápido
+- **Confundir posição com índice**: lembrar que a “primeira letra” está no índice `0`, não em `1`.
+- **Esquecer que o `fim` do slice é não inclusivo**: `texto[0:3]` pega índices `0,1,2`, não `0,1,2,3`.
+- **Misturar índices positivos e negativos sem pensar na direção do passo**: `texto[2:-1]` é diferente de `texto[-1:2:-1]`.
+- **Achar que `len(texto)` é um método de string** (`texto.len()`); na verdade, é uma função built-in que recebe o objeto como argumento.
 
-**Qual a saída?**
-```bash
-hello = 'hello python'
-print(hello[0])
-```
-**Resposta:** `h`
+## Visão Geral de Debugging
 
-**Qual a saída?**
-```bash
-hello = 'hello python'
-print(hello[2:7])
-```
-**Resposta:** `llo p` (posições 2,3,4,5,6 — fim 7 não-inclusivo)
+Quando algo estranho acontece com um índice ou slice:
 
-**Qual a saída?**
-```bash
-hello = 'hello python'
-print(hello[::-1])
-```
-**Resposta:** `nohtyp olleh`
+1. **Imprima o texto e os índices** que você acha que está usando, desenhando na lousa (ou em comentário) o mapeamento de 0..n-1 e -n..-1.
+2. Teste **passos menores**: primeiro `texto[inicio:fim]`, depois adicione o `passo`.
+3. Use `len(texto)` para checar se seu índice está dentro dos limites (de `-len` até `len-1`).
+4. Para métodos, chame `help(str.metodo)` ou `help(texto.metodo)` e leia a docstring, como na aula com `help(curso.strip)`.
 
-**O que acontece?**
-```bash
-hello = 'hello python'
-print(hello.len())
-```
-**Resposta:** `AttributeError: 'str' object has no attribute 'len'` — usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len(hello)`</mark>.
+## Principais Pontos
 
-**Qual a saída?**
-```bash
-s = 'HELLO'
-print(s.replace('h', 'x'))
-```
-**Resposta:** `HELLO` — <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`replace`</mark> é case-sensitive; `'h'` minúsculo não existe na string toda em maiúscula.
+- Strings são **sequências indexadas** de caracteres com índices positivos e negativos.
+- O operador `[]` acessa um caractere; o slicing `[inicio:fim:passo]` cria novas strings a partir da original.
+- O índice final do slice é **não inclusivo**; o passo pode ser positivo ou negativo.
+- Métodos de string como `upper`, `lower`, `title`, `replace`, `split`, `join` e `strip` são ferramentas fundamentais para limpar e transformar texto em projetos de dados.
 
-**Qual a saída?**
-```bash
-print(', '.join(['a', 'b', 'c']))
-```
-**Resposta:** `'a, b, c'`
+## Preparação para Prática
 
-### 7. Erros clássicos de prova
+Depois desta lição, você deve conseguir:
 
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[7]`</mark> inclui o char 7 — **verdadeiro**. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[2:7]`</mark> inclui o char 7 — **falso** (fim não-inclusivo).
-- Confundir <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello.len()`</mark> (AttributeError) com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len(hello)`</mark> (correto).
-- Achar que <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[::-1]`</mark> exige especificar início e fim — não exige; omitidos, percorre tudo.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`capitalize()`</mark> coloca apenas a **primeira letra** em maiúscula e **força minúsculas nas demais** — diferente de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`title()`</mark> que trata cada palavra.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`replace('a', 'x')`</mark> em string com 'A' → não substitui; case-sensitive.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split()`</mark> sem argumento divide por espaço; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split('p')`</mark> divide pelo caractere `'p'` — resultados diferentes.
+- navegar por uma string usando índices e slices para extrair pedaços específicos;
+- limpar entradas textuais vindas de formulários, CSVs ou APIs usando métodos de `str`;
+- combinar `split` e `join` para reestruturar textos (por exemplo, nomes completos, frases, logs).
 
-### 8. Exemplos de alta densidade
+No **Laboratório de Prática** você vai aplicar esses conceitos em tarefas típicas de ADS: extrair partes de códigos/textos, padronizar nomes e limpar ruído de espaços.
 
-```bash
-hello = 'hello python'
-hello[2]
-```
-Saída: `'l'`
+## Laboratório de Prática
 
-```bash
-hello[-1]
-```
-Saída: `'n'`
+### Desafio Easy — Extrair caracteres por posição
 
-```bash
-hello[2:7]
-```
-Saída: `'llo p'`
+Você está recebendo códigos simples de produtos em um arquivo CSV, e precisa extrair algumas informações de posição fixa.
 
-```bash
-hello[1:10:3]
-```
-Saída: `'eoy'`
+```python
+def extrair_caracteres_codigo(codigo: str) -> tuple[str, str, str]:
+    """
+    Recebe um código de produto como string, por exemplo 'AB1234X',
+    e retorna uma tupla com:
+      - primeira_letra: caractere no índice 0
+      - ultima_letra: caractere no índice -1
+      - miolo: substring do índice 2 até o penúltimo caractere
 
-```bash
-hello[::-1]
-```
-Saída: `'nohtyp olleh'`
-
-```bash
-hello[-1:-7:-1]
-```
-Saída: `'nohtyp'`
-
-```bash
-len('hello python')
-```
-Saída: `12`
-
-```bash
-'hello python'.upper()
-```
-Saída: `'HELLO PYTHON'`
-
-```bash
-'hello python'.capitalize()
-```
-Saída: `'Hello python'`
-
-```bash
-'hello python'.title()
-```
-Saída: `'Hello Python'`
-
-```bash
-'hello python'.split()
-```
-Saída: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`['hello', 'python']`</mark>
-
-```bash
-', '.join(['a', 'b', 'c'])
-```
-Saída: `'a, b, c'`
-
-```bash
-'   hello   '.strip()
-```
-Saída: `'hello'`
-
-### 9. Procedimento / execução
-
-- **Acessar caractere:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string[indice]`</mark> — positivo (0 = início) ou negativo (-1 = fim).
-- **Extrair substring:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string[inicio:fim]`</mark> — inicio inclusivo, fim exclusivo.
-- **Inverter string:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string[::-1]`</mark> — omitir inicio e fim, passo -1.
-- **Verificar/transformar caixa:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`.isupper()`</mark> / <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`.islower()`</mark> para checar; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`.upper()`</mark> / <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`.lower()`</mark> para converter.
-- **Substituir:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`.replace(old, new)`</mark> — atenção ao case; retorna nova string, não altera original.
-- **Dividir:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`.split(sep)`</mark> — sem argumento usa espaço; retorna lista.
-- **Unir:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`sep.join(lista)`</mark> — chamar no separador, passar lista.
-- **Limpar bordas:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`.strip()`</mark> — remove espaços (ou char especificado) início e fim.
-- **Consultar documentação:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`help(str.replace)`</mark> ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`help(str.strip)`</mark> no interpretador.
-
-### 10. Exemplos relevantes
-
-- **Desafio da aula — retornar `'nohtyp'`:**
-
-```bash
-hello = 'hello python'
-print(hello[::-1])         # 'nohtyp olleh' — string inteira invertida
-print(hello[-1:-7:-1])     # 'nohtyp' — apenas 'python' invertido
-print(hello[:-7:-1])       # 'nohtyp' — equivalente (fim -7 não-inclusivo)
+    Exemplos:
+      'AB1234X' -> ('A', 'X', '1234')
+    """
+    # TODO:
+    #   1. Usar indexação simples para pegar primeira e última letra.
+    #   2. Usar slicing para pegar o "miolo" (sem as duas letras externas).
+    primeira_letra = ""
+    ultima_letra = ""
+    miolo = ""
+    return primeira_letra, ultima_letra, miolo
 ```
 
-- **Formatação de listagem com tabulação (reutilizando padrão da aula 6):**
+### Desafio Medium — Normalizar nome completo de cliente
 
-```bash
-ola = 'olá mundo'
-print(ola[2:7])      # 'á mun'
-print(ola[-1:-4:-1]) # 'odn'
-print(ola.upper())   # 'OLÁ MUNDO'
-print(ola.title())   # 'Olá Mundo'
+Em um cadastro de clientes, os nomes chegam com capitalização e espaços inconsistentes.
+Você precisa padronizar esses nomes antes de salvar no banco de dados.
+
+```python
+def normalizar_nome_cliente(nome_bruto: str) -> str:
+    """
+    Recebe um nome de cliente potencialmente "sujo", por exemplo:
+      "   gEsIeL   lOpEs   "
+    e retorna uma versão normalizada:
+      "Gesiel Lopes"
+
+    Regras:
+      - Remover espaços extras no início e no fim.
+      - Substituir múltiplos espaços internos por um único espaço.
+      - Capitalizar cada parte do nome (estilo título).
+    """
+    # TODO:
+    #   1. Usar strip() para remover espaços nas bordas.
+    #   2. Usar split() para quebrar nas partes do nome.
+    #   3. Normalizar cada parte com lower()/title().
+    #   4. Rejuntar com " ".join(...).
+    nome_normalizado = ""
+    return nome_normalizado
 ```
 
-- **split + join — processar CPF com máscara:**
+### Desafio Hard — Fatiar e reformatar identificadores de registro
 
-```bash
-cpf = '123.456.789-00'
-partes = cpf.split('.')   # ['123', '456', '789-00']
-print(partes[0])          # '123'
+Você recebe identificadores de registro no formato `"2026-03-ADS-00123"`, e precisa separar e remontar essas informações em diferentes formatos para relatórios.
+
+```python
+from typing import Dict
+
+def analisar_identificador_registro(identificador: str) -> Dict[str, str]:
+    """
+    Recebe um identificador no formato 'AAAA-MM-CURSO-NNNNN', por exemplo:
+      '2026-03-ADS-00123'
+
+    Deve retornar um dicionário com:
+      - ano: '2026'
+      - mes: '03'
+      - curso: 'ADS'
+      - numero: '00123'
+      - formato_curto: '2026/03-00123'
+      - formato_legivel: 'Curso ADS - março/2026 - registro 00123'
+
+    (Não se preocupe com nomes reais de meses; você pode apenas reutilizar o '03'
+     no formato_legivel, ou fazer um mapeamento simples se quiser.)
+    """
+    # TODO:
+    #   1. Usar split('-') para quebrar o identificador em partes.
+    #   2. Extrair ano, mes, curso e numero.
+    #   3. Montar os formatos adicionais usando f-strings ou concatenação.
+    resultado: Dict[str, str] = {}
+    return resultado
 ```
 
-Veja também: [[aula-06-strings-escape-concatenacao]] (concatenação e multiplicação de strings), [[aula-03-variaveis-tipos]] (tipo <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str`</mark>).
+<!-- CONCEPT_EXTRACTION
+concepts:
+  - sequência de caracteres
+  - índice positivo e negativo em strings
+  - operador colchete []
+  - slicing [inicio:fim:passo]
+  - substrings
+  - métodos de string (upper, lower, swapcase, capitalize, title, replace, split, join, strip)
+  - função len para tamanho de strings
+skills:
+  - Acessar caracteres específicos em uma string usando índices positivos e negativos
+  - Criar substrings com slicing, incluindo fatias invertidas com passo negativo
+  - Padronizar e limpar textos com métodos de string em pipelines de dados
+  - Quebrar e remontar textos com split() e join()
+  - Medir o tamanho de strings e usá-lo para validar formatos simples
+examples:
+  - hello-python-indices-e-slices
+  - normalizar-nome-completo-cliente
+  - analisar-identificador-registro
+-->
 
-### 11. Diferenças e confusões comuns
+<!-- EXERCISES_JSON
+[
+  {
+    "id": "python-extrair-caracteres-codigo-produto",
+    "slug": "python-extrair-caracteres-codigo-produto",
+    "difficulty": "easy",
+    "title": "Extrair caracteres de código de produto por índice",
+    "discipline": "python",
+    "editorLanguage": "python",
+    "tags": ["python", "strings", "indices", "slicing"],
+    "summary": "Use indexação simples e slicing para extrair partes de um código de produto como primeira letra, última letra e miolo numérico."
+  },
+  {
+    "id": "python-normalizar-nome-completo-cliente",
+    "slug": "python-normalizar-nome-completo-cliente",
+    "difficulty": "medium",
+    "title": "Normalizar nome completo de cliente com métodos de string",
+    "discipline": "python",
+    "editorLanguage": "python",
+    "tags": ["python", "strings", "limpeza-dados"],
+    "summary": "Limpe e padronize nomes de clientes removendo espaços extras e aplicando capitalização adequada usando split, join, strip e title."
+  },
+  {
+    "id": "python-analisar-identificador-registro",
+    "slug": "python-analisar-identificador-registro",
+    "difficulty": "hard",
+    "title": "Analisar e reformatar identificadores de registro",
+    "discipline": "python",
+    "editorLanguage": "python",
+    "tags": ["python", "strings", "slicing", "split", "formatacao"],
+    "summary": "Receba identificadores no formato AAAA-MM-CURSO-NNNNN, extraia as partes com split e slicing e gere formatos alternativos para relatórios."
+  }
+]
+-->
 
-- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`capitalize()`</mark> vs <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`title()`</mark>:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`capitalize`</mark> afeta toda a string (resto fica minúsculo); <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`title`</mark> afeta apenas as iniciais de cada palavra, não forçando minúsculas no restante do token.
-- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split()`</mark> vs <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split(' ')`</mark>:** sem argumento divide por qualquer espaço em branco (e ignora múltiplos espaços); com `' '` divide por espaço literal (pode gerar strings vazias).
-- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`join()`</mark> invertido:** a sintaxe <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`sep.join(lista)`</mark> é contraintuitiva. O separador é o objeto, a lista é o argumento.
-- **Índice vs slice:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[5]`</mark> retorna <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str`</mark> de 1 char; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[5:6]`</mark> também, mas como slice retorna <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`str`</mark> (mesma saída, mecanismo diferente).
-
-### 12. Como cai em prova
-
-- Dar uma string e pedir a saída de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string[i]`</mark> com índice positivo ou negativo específico.
-- Dar slice com passo e pedir a saída — testar entendimento de fim não-inclusivo e saltos.
-- Pedir o slice que inverte a string (resposta: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[::-1]`</mark>).
-- Mostrar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string.len()`</mark> e perguntar o que acontece (AttributeError).
-- Dar string com mistura de maiúsculas e pedir resultado de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`capitalize()`</mark> — pegadinha: transforma restante em minúsculo.
-- Perguntar diferença entre <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split('a')`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split()`</mark>.
-
-### 13. Pontos de atenção
-
-- **Índice começa em 0**, não em 1. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[1]`</mark> é o **segundo** caractere.
-- **Fim do slice não é incluído** — <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[2:5]`</mark> retorna chars 2, 3, 4 (não 5).
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len(hello)`</mark> retorna 12; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[12]`</mark> → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`IndexError`</mark> (último válido é <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello[11]`</mark>).
-- Métodos de string **não alteram** a variável original — retornam nova string. Para persistir: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`hello = hello.upper()`</mark>.
-
-### 14. Checklist de domínio
-
-- [ ] Sei acessar caractere por índice positivo e negativo com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[]`</mark>.
-- [ ] Sei usar slice <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[inicio:fim:passo]`</mark> e prever a saída incluindo fim não-inclusivo.
-- [ ] Sei inverter string com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[::-1]`</mark> e explicar por que funciona.
-- [ ] Sei a diferença entre <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`capitalize()`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`title()`</mark>.
-- [ ] Sei que <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len()`</mark> é builtin (não método) e evito <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string.len()`</mark>.
-- [ ] Sei usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split()`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`join()`</mark> e entendo que são operações inversas.
-- [ ] Sei usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`strip()`</mark> para limpar bordas de string.
-
-### 15. Síntese operacional
-
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string[i]`</mark> acessa char; positivo (0=início) ou negativo (-1=fim); <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`IndexError`</mark> se fora do limite.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string[inicio:fim:passo]`</mark> extrai substring; fim não-inclusivo; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`[::-1]`</mark> inverte.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`len(string)`</mark> — builtin, sem ponto; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`string.len()`</mark> → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`AttributeError`</mark>.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`capitalize()`</mark> = 1ª maiúscula + restante minúsculo; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`title()`</mark> = inicial de cada palavra maiúscula.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`replace(old, new)`</mark> é case-sensitive; retorna nova string sem alterar a original.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`split()`</mark> decompõe em lista; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`sep.join(lista)`</mark> recompõe com separador.

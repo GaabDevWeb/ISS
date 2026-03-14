@@ -1,253 +1,381 @@
 ---
-title: "Desvio Condicional"
-slug: "desvio-condicional"
+title: "Desvios condicionais em Python: if, elif e else"
+slug: "desvios-condicionais-if-elif-else"
 discipline: "python"
 order: 9
-description: "Estruturas if/else e if/elif/else para desvio de fluxo; blocos de código por indentação; testes lógicos e notação de intervalo"
-reading_time: 7
-difficulty: "medium"
-concepts: "if/else, if/elif/else, operador módulo %, notação de intervalo, comparação"
-prerequisites: ["aula-08-strings-formatacao-input"]
+description: "Como usar if, elif e else com operadores relacionais e booleanos para tomar decisões em programas Python."
+reading_time: 55
+difficulty: "easy"
+concepts:
+  - booleanos
+  - operadores relacionais
+  - if
+  - elif
+  - else
+  - bloco identado
+  - fluxo condicional
+  - operadores de comparação
+  - expressão booleana
+  - curto-circuito mental (sequência de testes)
+prerequisites:
+  - "por-que-programar-python"
+  - "algoritmos-e-notebooks"
+  - "variaveis-tipos-estilo-python"
+  - "conversao-tipos-operadores-aritmeticos"
+  - "strings-literais-multilinhas"
+  - "strings-escape-concatenacao"
+  - "strings-indices-slice-metodos"
+  - "strings-interpolacao-input"
+learning_objectives:
+  - "Entender o que é uma expressão booleana e como os operadores relacionais produzem valores True/False."
+  - "Usar if, elif e else para criar fluxos de decisão encadeados em programas Python."
+  - "Aplicar condições em problemas práticos como aprovação de alunos, classificação de IMC e faixas de desconto."
+  - "Evitar erros comuns de identação e de comparação ao escrever blocos condicionais."
 exercises:
-  - question: "Qual a diferença entre else e elif?"
-    answer: "else executa quando todas as condições anteriores são falsas — sem teste adicional. elif executa somente se a condição anterior for False E a sua própria condição for True. elif permite múltiplos testes encadeados; else é o caso padrão final."
-  - question: "Por que o bloco de código usa indentação em Python? O que acontece sem ela?"
-    answer: "Em Python, a indentação define o bloco — não há chaves {}. Sem indentação correta (Tab ou 2 espaços), o interpretador não reconhece o bloco e gera IndentationError."
-    hint: "Python usa espaço/tab para delimitar blocos, diferente de C e Java que usam {}."
-  - question: "Como verificar se um número é par usando Python? Escreva o código."
-    answer: "Usar o operador %, que retorna o resto da divisão: if numero % 2 == 0: → par. Se o resto for diferente de zero (numero % 2 != 0), o número é ímpar."
-  - question: "O que é notação de intervalo em Python? Escreva a condição para IMC entre 18.5 e 24.9."
-    answer: "Python permite encadear operadores relacionais como em matemática: 18.5 <= imc <= 24.9. É equivalente a imc >= 18.5 and imc <= 24.9. Testa se imc está dentro do intervalo."
-  - question: "Se media = 6.5, qual bloco executa em: if media >= 7: ... elif media >= 5: ... else: ...?"
-    answer: "O elif (media >= 5). O if falha porque 6.5 < 7. O elif testa 6.5 >= 5 — verdadeiro, executa esse bloco. O else nunca é avaliado."
-    hint: "if/elif são testados em ordem; o primeiro True vence e os demais são ignorados."
-  - question: "Qual erro ocorre ao escrever: if numero = 2: ?"
-    answer: "SyntaxError: invalid syntax. O operador de atribuição = não é válido em condição. A condição exige operador relacional ==: if numero == 2:"
+  - question: "Qual é a diferença entre usar apenas if em sequência e usar if/elif/else para testar faixas mutuamente exclusivas (por exemplo, conceitos A, B, C para uma média)?"
+    answer: "Vários if independentes avaliam todas as condições, mesmo que uma já tenha sido verdadeira, o que pode gerar mais de um bloco verdadeiro ou lógicas inconsistentes; já uma cadeia if/elif/else garante exclusividade: quando uma condição é satisfeita, as demais são ignoradas. Em classificações por faixa (como conceito da média ou categoria de IMC), usamos if/elif/else para garantir que cada valor caia em exatamente um intervalo."
+    hint: "Lembre dos exemplos de média em que o mesmo valor poderia cair em mais de um if, e de como o elif 'trava' a cadeia após o primeiro True."
+review_after_days: [1, 3, 7, 30]
 ---
-## Resumo
 
-### Mapa da aula
+### Visão Geral
 
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/else`</mark> desvia o fluxo de execução com base em teste lógico (True/False)
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> encadeia múltiplos testes — apenas o primeiro verdadeiro executa
-- Bloco de código definido por indentação (Tab ou 2 espaços) — obrigatório em Python
-- Python aceita notação de intervalo matemático: <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`18.5 <= imc <= 24.9`</mark>
-- Erro clássico: usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`=`</mark> em vez de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`==`</mark> na condição → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>
+Nesta aula você aprende a tomar decisões em Python usando **desvios condicionais** com `if`, `elif` e `else`. A partir de **expressões booleanas** (comparações que resultam em `True` ou `False`), seu programa escolhe **um caminho de execução**: aprovar ou reprovar um aluno, classificar um IMC, decidir desconto, entre outros.
 
-- **Resumo consolidado:** Desvio condicional muda o fluxo do algoritmo com base em um teste lógico (booleano). <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> testa uma condição; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> é o caso contrário; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> permite múltiplos testes encadeados. Blocos de código são definidos por indentação. Notação de intervalo (<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a <= x <= b`</mark>) é válida em Python.
-- **Resumo em 5 linhas:** (1) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if condição:`</mark> executa bloco se True. (2) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else:`</mark> executa se False. (3) <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif condição:`</mark> novo teste, só alcançado se o anterior for False. (4) Bloco = indentação obrigatória após <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`:`</mark>. (5) Primeiro <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> verdadeiro executa; restantes ignorados.
-- **Palavras-chave:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark>, teste lógico, bloco de código, indentação, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`==`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`%`</mark>, notação de intervalo, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`IndentationError`</mark>.
+### Modelo Mental
 
-## Explicações
+Pense em um **fluxo de triagem** de pronto-socorro: cada paciente passa por perguntas em ordem, e cada resposta o envia para uma fila diferente (emergência, prioridade, rotina). O `if` em Python faz esse papel:
 
-### 1. Tema e escopo
+- **Porta de entrada**: uma expressão booleana (`media >= 7`, `imc < 18.5`).
+- **Seta de decisão**: se a condição é verdadeira, você entra no **bloco identado** logo abaixo.
+- **Rotas alternativas**: `elif` e `else` representam outros caminhos possíveis quando a primeira condição não é satisfeita.
 
-**Tema:** Nono encontro — desvio condicional com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/else`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/elif/else`</mark>.
+O programa sempre segue **um único ramo** em uma cadeia `if / elif / else`, como um fluxograma de perguntas e respostas.
 
-**Inclui:** Estrutura <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/else`</mark>; ifs encadeados com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark>; indentação como delimitador de bloco; revisão de operadores relacionais (<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`<`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`>`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`==`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`>=`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`<=`</mark>); notação de intervalo; operador <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`%`</mark> para divisibilidade; teste de mesa.
+### Mecânica Central
 
-**Não coberto:** `match/case` (mencionado, postergado para próxima aula); operadores lógicos `and`/`or`/`not`.
+- **Valores booleanos**:
 
-### 2. Contexto na disciplina
-
-- Primeiro mecanismo de controle de fluxo — torna algoritmos dinâmicos e não lineares.
-- Pré-requisito: [[aula-08-strings-formatacao-input]] (`input()`, f-strings, conversão de tipo), [[aula-04-operadores-conversao-tipos]] (operadores relacionais, operador `%`).
-- Base para: laços de repetição, funções condicionais, qualquer algoritmo de decisão.
-
-### 3. Visão conceitual geral
-
-Aula **técnica**. Até aqui algoritmos executavam linha por linha sempre da mesma forma. Desvio condicional muda isso — o código toma um caminho ou outro dependendo de um teste lógico (resultado booleano). <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> é o primeiro mecanismo real de controle de fluxo.
-
-### 4. Ideias-chave
-
-1. **Teste lógico:** toda condição em <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark>/<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> é uma expressão que retorna <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark> ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>.
-2. **Indentação = bloco:** Python não usa `{}`; o espaço/tab define o que pertence ao bloco.
-3. **Ordem importa em elif:** Python testa de cima para baixo; o primeiro <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark> executa; os demais são ignorados.
-4. **else sem condição:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> é o caso padrão — executa somente se todos os testes anteriores forem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>.
-5. **Notação de intervalo:** Python permite <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a <= x <= b`</mark> como na matemática — avaliado da esquerda para a direita.
-6. **Módulo para divisibilidade:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`n % 2 == 0`</mark> → par; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`n % 2 != 0`</mark> → ímpar.
-7. **Teste de mesa:** validar o algoritmo no papel, atribuindo valores e rastreando o fluxo antes de executar.
-
-### 5. Conceitos essenciais — explicação operacional
-
-#### <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/else`</mark>
-
-Dois caminhos mutuamente exclusivos. Bloco do <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> executa se condição for <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>; bloco do <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> se for <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>. Exatamente um dos dois roda.
-
-```bash
-numero = int(input('Digite um numero: '))
-resto = numero % 2
-
-if resto == 0:
-    mensagem = 'PAR'
-else:
-    mensagem = 'IMPAR'
-
-print(f'O numero digitado: {numero} eh {mensagem}')
+```python
+aprovado = True
+reprovado = False
 ```
 
-- ❌ Esquecer <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`:`</mark> após condição → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>.
-- ❌ Esquecer indentação do bloco → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`IndentationError`</mark>.
+- **Operadores relacionais (de comparação)**:
 
-#### <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> — ifs encadeados
+```python
+idade = 20
 
-Mais de dois caminhos. Cada <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> é testado na ordem; o primeiro verdadeiro executa e os restantes são pulados.
+print(idade > 18)   # maior que
+print(idade >= 18)  # maior ou igual
+print(idade == 18)  # igual
+print(idade != 18)  # diferente
+print(idade < 18)   # menor que
+print(idade <= 18)  # menor ou igual
+```
 
-```bash
+- **If simples**:
+
+```python
+media = 8.2
+
+if media >= 7.0:
+    print("Aluno aprovado!")
+```
+
+- **If / else**:
+
+```python
+media = 5.3
+
+if media >= 7.0:
+    print("Aluno aprovado!")
+else:
+    print("Aluno reprovado.")
+```
+
+- **If / elif / else (várias faixas)**:
+
+```python
+media = 6.2
+
+if media >= 9.0:
+    print("Conceito A")
+elif media >= 7.0:
+    print("Conceito B")
+elif media >= 5.0:
+    print("Conceito C")
+else:
+    print("Conceito D")
+```
+
+Note a **identação obrigatória** (geralmente 4 espaços) em cada bloco interno.
+
+### Uso Prático
+
+Alguns cenários comuns em ADS:
+
+- **Aprovação com recuperação**: média final em relação a limiares (≥ 7 aprovado, entre 5 e 7 recuperação, < 5 reprovado).
+- **Classificação de IMC**: faixas de IMC com textos explicativos para relatório de saúde.
+- **Regras de desconto**: aplicar percentuais diferentes dependendo do valor total de compras.
+
+Exemplo de aprovação com recuperação:
+
+```python
+media = float(input("Digite a média final do aluno: "))
+
+if media >= 7.0:
+    status = "aprovado"
+elif media >= 5.0:
+    status = "em recuperação"
+else:
+    status = "reprovado"
+
+print(f"Status do aluno: {status}")
+```
+
+### Visual: Fluxo de decisão com if / elif / else
+
+```mermaid
+flowchart TD
+    A[Início] --> B[Calcular média / métrica]
+    B --> C{Condição 1<br/>media >= 7?}
+    C -- Sim --> D[Bloco if<br/>Aprovado]
+    C -- Não --> E{Condição 2<br/>media >= 5?}
+    E -- Sim --> F[Bloco elif<br/>Recuperação]
+    E -- Não --> G[Bloco else<br/>Reprovado]
+    D --> H[Fim]
+    F --> H
+    G --> H
+```
+
+Esse diagrama representa a cadeia completa de decisões. Cada losango é uma **expressão booleana** avaliada em sequência.
+
+### Erros Comuns
+
+- **Esquecer a identação**:
+
+```python
+if media >= 7.0:
+print("Aprovado")  # Erro: o bloco precisa ser identado
+```
+
+- **Misturar comparação com atribuição**:
+
+```python
+if media = 7:      # Erro de sintaxe, '=' é atribuição
+    ...
+
+if media == 7:     # Comparação correta
+    ...
+```
+
+- **Sobrepor intervalos ao usar apenas if**:
+
+```python
+# Pode imprimir mais de uma mensagem para o mesmo valor
+if media >= 5:
+    print("C")
 if media >= 7:
-    mensagem = 'APROVADO(A) DIRETO'
-elif media >= 5:
-    mensagem = 'RECUPERACAO'
-else:
-    mensagem = 'REPROVADO(A)'
+    print("B")
 ```
 
-> **Regra crítica:** Se `media = 6.5` → falha no `if` (6.5 < 7) → entra no `elif` (6.5 >= 5 = True) → executa `RECUPERACAO`. O `else` nunca é avaliado.
+Aqui, se `media == 7.5`, as duas condições são verdadeiras. Use `if/elif/else` quando quiser **exclusividade**.
 
-#### Notação de intervalo
+### Visão Geral de Debugging
 
-Python permite encadear operadores relacionais como na matemática:
+Quando algo não funciona em um conjunto de condicionais:
 
-```bash
-if 18.5 <= imc <= 24.9:
-    mensagem = 'Peso ideal (Normal)'
+- **Imprima valores intermediários** (média, IMC, total) antes do `if` para conferir se a conta está correta.
+- **Teste limites de faixa**: valores bem na borda (`4.9`, `5.0`, `6.99`, `7.0`) para ver em qual ramo caem.
+- **Verifique a ordem das condições**: intervalos mais restritos (notas altas) costumam vir primeiro.
+- Em caso de **erro de sintaxe**, observe cuidadosamente:
+  - Dois pontos `:` no final da linha do `if/elif/else`.
+  - Identação consistente usando o mesmo número de espaços.
+
+### Principais Pontos
+
+- **Operadores relacionais** produzem `True` ou `False` a partir de comparações.
+- **`if`, `elif`, `else`** definem **ramificações exclusivas** de execução.
+- A **identação** define quais linhas pertencem a cada bloco condicional.
+- Em classificações por faixa (média, IMC, desconto), a **ordem dos testes** e o uso correto de `elif` são cruciais.
+
+### Preparação para Prática
+
+Antes de ir para o laboratório:
+
+- Releia mentalmente o modelo de **triagem**: uma pergunta por vez, em ordem.
+- Tenha em mãos alguns **exemplos concretos** (médias de alunos, valores de IMC, valores de carrinho de compras).
+- Anote, em português, as regras de negócio primeiro; depois, traduza essas regras para `if / elif / else`.
+
+### Laboratório de Prática
+
+#### 1. Classificador simples de aprovação (Easy)
+
+Implemente uma função para classificar o status de um aluno com base em sua média final.
+
+Regras:
+
+- Média **maior ou igual a 7.0** → `"aprovado"`.
+- Média **entre 5.0 (inclusive) e 7.0 (exclusive)** → `"recuperacao"`.
+- Média **menor que 5.0** → `"reprovado"`.
+
+```python
+def classificar_aluno(media: float) -> str:
+    """
+    Classifica o aluno de acordo com a média final.
+
+    Regras:
+    - media >= 7.0  -> "aprovado"
+    - 5.0 <= media < 7.0 -> "recuperacao"
+    - media < 5.0  -> "reprovado"
+    """
+    status = ""
+
+    # TODO: implementar a lógica de classificação usando if/elif/else
+    # Dica: comece testando a condição mais "forte" (aprovado) e vá descendo.
+
+    return status
+
+
+if __name__ == "__main__":
+    exemplos = [4.3, 5.0, 6.9, 7.0, 9.5]
+    for m in exemplos:
+        print(m, "->", classificar_aluno(m))
 ```
 
-Equivalente a `imc >= 18.5 and imc <= 24.9`. Funciona com qualquer combinação de <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`<=`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`<`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`>=`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`>`</mark>.
+#### 2. Analise de IMC com faixas (Medium)
 
-### 5b. Modelo mental
+Você recebeu uma tabela simplificada de classificação de **Índice de Massa Corporal (IMC)**. Implemente uma função que, dado um valor de IMC, retorne uma string com a categoria.
 
-Python avalia condições **em sequência, uma por vez**:
+Use faixas como:
 
-1. Testa o <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> — se <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>, executa o bloco e **pula tudo** abaixo.
-2. Se <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>, testa o primeiro <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> — mesmo processo.
-3. Repete para cada <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> na ordem.
-4. Se nenhum for <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>, executa o <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> (se existir).
+- `imc < 18.5` → `"abaixo do peso"`
+- `18.5 <= imc < 25` → `"peso normal"`
+- `25 <= imc < 30` → `"sobrepeso"`
+- `imc >= 30` → `"obesidade"`
 
-Pense em cascata: a água cai pelo primeiro canal aberto e ignora os demais.
+```python
+def classificar_imc(imc: float) -> str:
+    """
+    Classifica o IMC em faixas de saúde.
+    """
+    categoria = ""
 
-### 5c. Comparação direta
+    # TODO: implementar cadeia if/elif/else para cobrir todas as faixas
+    # Lembre de garantir que cada valor caia em apenas uma categoria.
 
-| Estrutura | Casos | Exemplo de uso |
-|-----------|-------|---------------|
-| <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/else`</mark> | 2 caminhos | par/ímpar, aprovado/reprovado |
-| <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/elif/else`</mark> | 3+ caminhos | notas (direto/recuperação/reprovado), IMC |
-| só <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> | alerta opcional, sem caso contrário | `if erro: print('aviso')` |
+    return categoria
 
-### 5d. Quando usar
 
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/else`</mark> → exatamente 2 resultados possíveis.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/elif/.../else`</mark> → 3+ resultados; ordem dos testes importa — do mais restritivo ao menos.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> em vez de múltiplos <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> independentes → quando os casos são mutuamente exclusivos.
-- **NÃO usar** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark> → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>.
-
-### 6. Teste de reconhecimento rápido
-
-**O que acontece?**
-```bash
-x = 10
-if x > 5:
-    print('maior')
-else:
-    print('menor')
-```
-**Resposta:** `maior` — 10 > 5 é True; bloco do `if` executa.
-
----
-
-**Qual bloco executa? `media = 4.9`**
-```bash
-if media >= 7:
-    mensagem = 'APROVADO DIRETO'
-elif media >= 5:
-    mensagem = 'RECUPERACAO'
-else:
-    mensagem = 'REPROVADO'
-```
-**Resposta:** `REPROVADO` — 4.9 < 7 (if falha) e 4.9 < 5 (elif falha) → else executa.
-
----
-
-**O que retorna?**
-```bash
-10 % 3
-```
-**Resposta:** `1` — resto da divisão de 10 por 3.
-
----
-
-**É válida a expressão abaixo?**
-```bash
-if 25 <= imc <= 29.9:
-```
-**Resposta:** Sim — notação de intervalo válida em Python.
-
-### 7. Erros clássicos de prova
-
-- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`=`</mark> vs <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`==`</mark>:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if x = 5`</mark> → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>. Condição usa <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`==`</mark> (comparação), não <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`=`</mark> (atribuição).
-- **Achar que elif sempre testa:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> só é avaliado se todos os testes anteriores forem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>.
-- **Esquecer dois pontos:** <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if x > 5`</mark> sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`:`</mark> → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>. Obrigatório em <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark>.
-- **Múltiplos `if` independentes vs `elif`:** com `if`s independentes, todos os testes são executados; com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark>, o primeiro verdadeiro para a cadeia.
-
-### 7b. Armadilhas clássicas
-
-- **Ordem errada em elif** → `if media >= 5: elif media >= 7:` — se `media = 8`, entra no `if` (8 >= 5) e o segundo `elif` nunca é testado. Sempre testar do mais restritivo para o menos.
-- **"else com condição"** → parece lógico escrever `else media < 5:`, mas gera <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>. <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> não aceita condição — é incondicional, sempre só <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else:`</mark>.
-- **Mistura de tabs e espaços na indentação** → comportamento imprevisível ou <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`TabError`</mark>. Usar apenas um padrão por arquivo.
-
-### 8. Exemplos de alta densidade
-
-```bash
-# par ou ímpar
-if numero % 2 == 0:
-    print('PAR')
-else:
-    print('IMPAR')
+if __name__ == "__main__":
+    imcs_teste = [17.9, 18.5, 23.7, 25.0, 29.9, 31.2]
+    for valor in imcs_teste:
+        print(valor, "->", classificar_imc(valor))
 ```
 
-```bash
-# maior de dois números
-if a > b:
-    print(f'O numero: {a} eh maior que o {b}')
-elif a < b:
-    print(f'O numero: {b} eh maior que o {a}')
-else:
-    print(f'Os numeros digitados sao iguais, os numeros digitados: {a}')
+#### 3. Regra de desconto progressivo em compras (Hard)
+
+Você está implementando a lógica de descontos de uma loja online. A regra é:
+
+- Total **abaixo de 100.00** → sem desconto (0%).
+- Total **de 100.00 até 499.99** → 5% de desconto.
+- Total **de 500.00 até 999.99** → 10% de desconto.
+- Total **a partir de 1000.00** → 15% de desconto.
+
+Implemente uma função que receba o valor total da compra e retorne **o valor final com desconto aplicado**.
+
+```python
+def aplicar_desconto(total: float) -> float:
+    """
+    Calcula o valor final de uma compra após aplicar
+    o desconto progressivo definido pela loja.
+    """
+    valor_final = total
+
+    # TODO: usar if/elif/else para definir a porcentagem de desconto
+    # e atualizar o valor_final.
+    #
+    # Exemplo:
+    # - Para total = 120.00, deve aplicar 5% e retornar 114.00
+
+    return valor_final
+
+
+if __name__ == "__main__":
+    carrinhos = [50.0, 150.0, 520.0, 1200.0]
+    for total in carrinhos:
+        print(f"Total: R$ {total:.2f} -> Com desconto: R$ {aplicar_desconto(total):.2f}")
 ```
 
-```bash
-# IMC com notação de intervalo e múltiplos elif
-imc = peso / altura ** 2
+<!-- CONCEPT_EXTRACTION
+concepts:
+  - id: booleanos
+    label: "Valores booleanos em Python"
+    description: "Representação de verdadeiro e falso com os literais True e False e seu uso em decisões."
+  - id: operadores-relacionais
+    label: "Operadores relacionais"
+    description: "Operadores de comparação como >, >=, <, <=, == e != que produzem valores booleanos."
+  - id: if-elif-else
+    label: "Estruturas if, elif e else"
+    description: "Blocos condicionais que permitem executar diferentes trechos de código dependendo de expressões booleanas."
+  - id: blocos-identados
+    label: "Blocos identados em Python"
+    description: "Uso da identação para definir o escopo de blocos de código em estruturas condicionais."
+skills:
+  - id: construir-expressoes-booleanas
+    label: "Construir expressões booleanas com operadores relacionais"
+    verbs: ["construir", "avaliar", "combinar"]
+  - id: implementar-desvios-condicionais
+    label: "Implementar desvios condicionais com if/elif/else"
+    verbs: ["implementar", "refatorar", "validar"]
+  - id: modelar-regras-negocio-condicionais
+    label: "Modelar regras de negócio como cadeias condicionais"
+    verbs: ["modelar", "traduzir", "depurar"]
+examples:
+  - id: exemplo-if-simples
+    title: "If simples para aprovação"
+    code: |
+      media = 8.2
+      if media >= 7.0:
+          print("Aluno aprovado!")
+  - id: exemplo-if-elif-else
+    title: "Classificação de conceito com if/elif/else"
+    code: |
+      media = 6.2
+      if media >= 9.0:
+          print("Conceito A")
+      elif media >= 7.0:
+          print("Conceito B")
+      elif media >= 5.0:
+          print("Conceito C")
+      else:
+          print("Conceito D")
+-->
 
-if imc < 18.5:
-    mensagem = 'Abaixo do peso'
-elif 18.5 <= imc <= 24.9:
-    mensagem = 'Peso ideal (Normal)'
-elif 25 <= imc < 29.9:
-    mensagem = 'Sobrepeso'
-elif 30 <= imc <= 34.9:
-    mensagem = 'Obesidade grau I'
-elif 35 <= imc <= 39.9:
-    mensagem = 'Obesidade grau II'
-else:
-    mensagem = 'Obesidade grau III'
+<!-- EXERCISES_JSON
+[
+  {
+    "id": "classificar_aluno_status",
+    "title": "Classificar aluno em aprovado, recuperação ou reprovado",
+    "difficulty": "easy",
+    "function_name": "classificar_aluno",
+    "topics": ["if", "elif", "else", "operadores relacionais", "booleanos"]
+  },
+  {
+    "id": "classificar_imc_faixas",
+    "title": "Classificar valores de IMC em faixas de saúde",
+    "difficulty": "medium",
+    "function_name": "classificar_imc",
+    "topics": ["if", "elif", "else", "faixas de valores", "regras de negócio"]
+  },
+  {
+    "id": "aplicar_desconto_progressivo",
+    "title": "Aplicar desconto progressivo em compras",
+    "difficulty": "hard",
+    "function_name": "aplicar_desconto",
+    "topics": ["if", "elif", "else", "porcentagens", "fluxo condicional"]
+  }
+]
+-->
 
-print(f'O IMC de {nome} eh: {imc:.2f} e estah: {mensagem}')
-```
-
-### 12b. Regra de prova
-
-- **Primeiro <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark> vence** → em cadeia <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if/elif`</mark>, o primeiro verdadeiro executa e os demais são ignorados.
-- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> sem condição, sempre** → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else:`</mark> apenas dois pontos; qualquer condição gera <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>.
-- **<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`n % 2 == 0`</mark> → par** → resto zero = divisível por 2.
-- **Faixa de valores → notação de intervalo** → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a <= x <= b`</mark> é válido em Python.
-- **Sem <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`:`</mark> = <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>** → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if`</mark>, <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif`</mark> e <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else`</mark> sempre terminam com <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`:`</mark>.
-
-### 15. Síntese operacional
-
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`if condição:`</mark> → bloco executa se <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`True`</mark>; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`else:`</mark> → executa se <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>; exatamente um dos dois roda.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`elif condição:`</mark> → só testado se o bloco anterior for <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`False`</mark>; primeiro verdadeiro para a cadeia.
-- Bloco de código = indentação obrigatória (Tab ou 2 espaços); ausência → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`IndentationError`</mark>.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`n % 2 == 0`</mark> → par; <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`a <= x <= b`</mark> → notação de intervalo válida.
-- Ordem dos testes importa: do mais restritivo ao menos restritivo.
-- <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`=`</mark> na condição → <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`SyntaxError`</mark>; usar <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`==`</mark>.
