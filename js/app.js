@@ -154,7 +154,6 @@ function initHome() {
 
       const streak = typeof getStreak === 'function' ? getStreak() : 0;
       const goalMet = typeof getTodayGoalMet === 'function' ? getTodayGoalMet() : false;
-      const suggestedRevisions = typeof getSuggestedRevisions === 'function' ? getSuggestedRevisions(lessons, exerciseList) : [];
       const dashboardCardHtml =
         '<div class="iss-card iss-card--static">' +
           '<h3 class="font-semibold text-lg m-0">Seu progresso</h3>' +
@@ -165,13 +164,6 @@ function initHome() {
           '<p class="text-sm mt-1 mb-0">Meta de hoje: ' + (goalMet ? '<span class="iss-text-foreground">Feito</span>' : '<span class="iss-text-muted">Pendente</span>') + '</p>' +
           '<a href="stats.html" class="iss-link block mt-3 text-sm hover:underline">Ver Estatísticas Completas</a>' +
         '</div>';
-      let revisionsHtml = '';
-      if (suggestedRevisions.length > 0) {
-        revisionsHtml = '<div class="iss-card iss-card--static"><h3 class="font-semibold text-lg m-0">Revisões sugeridas</h3><p class="text-sm iss-text-muted mt-1 mb-2">Itens para revisar (passaram 3+ dias):</p><ul class="list-none p-0 m-0">' +
-          suggestedRevisions.slice(0, 5).map(function (r) {
-            return '<li class="mb-1"><a href="' + r.url + '" class="iss-link text-sm">' + escapeHtml(r.label) + '</a></li>';
-          }).join('') + '</ul></div>';
-      }
 
       const continuePlaceholderHtml =
         '<div class="iss-card iss-card--static">' +
@@ -216,7 +208,6 @@ function initHome() {
       }
 
       const cards = [dashboardCardHtml, continueCardHtml || continuePlaceholderHtml];
-      if (revisionsHtml) cards.push(revisionsHtml);
       disciplines.forEach((d) => cards.push(buildDisciplineCard(d)));
       cards.push(exercisesCardHtml);
 

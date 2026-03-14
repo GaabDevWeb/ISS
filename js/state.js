@@ -211,37 +211,6 @@ function setRevisionConcept(concept, timestamp) {
   } catch (_) {}
 }
 
-function getSuggestedRevisions(lessons, exercises) {
-  const revLessons = getRevisionLessons();
-  const revConcepts = getRevisionConcepts();
-  const now = Date.now();
-  const threeDays = 3 * 24 * 60 * 60 * 1000;
-  const result = [];
-  if (Array.isArray(lessons)) {
-    lessons.forEach(function (l) {
-      const id = l.discipline + '_' + l.slug;
-      const entry = revLessons[id];
-      if (entry && (now - entry.lastSeen) >= threeDays) {
-        result.push({ type: 'lesson', id: id, label: l.title, url: 'aula.html?d=' + encodeURIComponent(l.discipline) + '&a=' + encodeURIComponent(l.slug) });
-      }
-    });
-  }
-  if (exercises && Array.isArray(exercises)) {
-    const conceptsSeen = {};
-    exercises.forEach(function (ex) {
-      const concepts = Array.isArray(ex.concepts) ? ex.concepts : (typeof ex.concepts === 'string' ? ex.concepts.split(',').map(function (s) { return s.trim(); }) : []);
-      concepts.forEach(function (c) {
-        if (!c) return;
-        const last = revConcepts[c];
-        if (last && (now - last) >= threeDays && !result.some(function (r) { return r.type === 'concept' && r.id === c; })) {
-          result.push({ type: 'concept', id: c, label: c, url: 'exercises.html?concept=' + encodeURIComponent(c) });
-        }
-      });
-    });
-  }
-  return result;
-}
-
 function getActivityDates() {
   try {
     const raw = localStorage.getItem(ACTIVITY_DATES_KEY);
