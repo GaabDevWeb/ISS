@@ -213,6 +213,11 @@ function initHome() {
 
       grid.innerHTML = cards.join('');
 
+      // Remove card "Revisões sugeridas" se existir (ex.: cache antigo)
+      grid.querySelectorAll('.iss-card').forEach(function (card) {
+        if (card.textContent.indexOf('Revisões sugeridas') !== -1) card.remove();
+      });
+
       const randomExerciseBtn = document.getElementById('iss-home-random-exercise-btn');
       if (randomExerciseBtn && exerciseList.length > 0) {
         randomExerciseBtn.addEventListener('click', function (e) {
