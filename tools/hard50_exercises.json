@@ -1,0 +1,956 @@
+[
+  {
+    "slug": "py-hard-01-prever-potencia-encadeada",
+    "title": "HARD — Valor de 2**3**2",
+    "concepts": [
+      "precedência de operadores",
+      "operadores aritméticos"
+    ],
+    "learning_goal": "Aplicar associatividade à direita de **.",
+    "exercise_type": "predict_output",
+    "stage": 20,
+    "context": "validação de dados",
+    "expected_output": "512",
+    "body": "Qual número é impresso?\n\n```python\nprint(2 ** 3 ** 2)\n```",
+    "sol": "`**` associa à direita: `3**2=9`, depois `2**9=512`."
+  },
+  {
+    "slug": "py-hard-02-prever-aritmetica-mista",
+    "title": "HARD — Expressão com + * // %",
+    "concepts": [
+      "precedência de operadores",
+      "operadores aritméticos"
+    ],
+    "learning_goal": "Respeitar precedência numa única expressão.",
+    "exercise_type": "predict_output",
+    "stage": 19,
+    "context": "validação de dados",
+    "expected_output": "3",
+    "body": "```python\nprint(2 + 3 * 4 // 2 % 5)\n```",
+    "sol": "`3*4=12`, `12//2=6`, `6%5=1`, `2+1=3`."
+  },
+  {
+    "slug": "py-hard-03-prever-or-and-literais",
+    "title": "HARD — or / and com valores imediatos",
+    "concepts": [
+      "operadores lógicos and, or, not",
+      "truthy e falsy em Python"
+    ],
+    "learning_goal": "Prever resultado sem executar.",
+    "exercise_type": "predict_output",
+    "stage": 19,
+    "context": "processamento de texto",
+    "expected_output": "7",
+    "body": "```python\nprint(0 or 0 or 7)\n```",
+    "sol": "Encadeamento `or`: para no primeiro truthy; os zeros são falsy; `7` é truthy → imprime `7`."
+  },
+  {
+    "slug": "py-hard-04-prever-fatia-passo-negativo",
+    "title": "HARD — String [::-2]",
+    "concepts": [
+      "slicing [inicio:fim:passo]",
+      "sequência de caracteres"
+    ],
+    "learning_goal": "Percorrer de trás com passo 2.",
+    "exercise_type": "predict_output",
+    "stage": 19,
+    "context": "processamento de texto",
+    "expected_output": "fdb",
+    "body": "```python\nprint('abcdef'[::-2])\n```",
+    "sol": "Índices efetivos 5,3,1 → `f`,`d`,`b` → `fdb`."
+  },
+  {
+    "slug": "py-hard-05-prever-for-else-sem-break",
+    "title": "HARD — else do for",
+    "concepts": [
+      "laços for e range em Python",
+      "fluxo condicional"
+    ],
+    "learning_goal": "Saber quando o else do for corre.",
+    "exercise_type": "predict_output",
+    "stage": 20,
+    "context": "validação de dados",
+    "expected_output": "ok",
+    "body": "```python\nfor k in range(3):\n    if k * k > 20:\n        break\nelse:\n    print('ok')\n```",
+    "sol": "Nenhum `k` em 0,1,2 tem quadrado >20; não há `break`; executa o `else` → `ok`."
+  },
+  {
+    "slug": "py-hard-06-implementar-rle",
+    "title": "HARD — Run-length encoding compacto",
+    "concepts": [
+      "laços for e range em Python",
+      "concatenação de strings",
+      "função len para tamanho de strings"
+    ],
+    "learning_goal": "Agrupar caracteres consecutivos iguais.",
+    "exercise_type": "implement_function",
+    "stage": 20,
+    "context": "processamento de texto",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "a3b2\nc4"
+      }
+    ],
+    "body": "Implemente `rle(s)` (s não vazia): retorna string alternando caractere e contagem, ex. `aaabb`→`a3b2`. Imprima `rle('aaabb')` e na linha seguinte `rle('cccc')`.\n\n```python\ndef rle(s):\n    pass\n\nprint(rle('aaabb'))\nprint(rle('cccc'))\n```",
+    "sol": "```python\ndef rle(s):\n    out = ''\n    i = 0\n    while i < len(s):\n        c = s[i]\n        j = i + 1\n        while j < len(s) and s[j] == c:\n            j += 1\n        out += c + str(j - i)\n        i = j\n    return out\n\nprint(rle('aaabb'))\nprint(rle('cccc'))\n```"
+  },
+  {
+    "slug": "py-hard-07-programa-senha-quatro-regras",
+    "title": "HARD — Validador de senha (4 regras)",
+    "concepts": [
+      "operadores lógicos and, or, not",
+      "if/elif/else",
+      "métodos de string"
+    ],
+    "learning_goal": "Combinar tamanho, dígito, minúscula e maiúscula.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "validação de entrada",
+    "test_cases": [
+      {
+        "input": "Abcdefg1",
+        "output": "OK"
+      },
+      {
+        "input": "abcdefgh",
+        "output": "FALTA"
+      }
+    ],
+    "body": "Leia uma senha. Imprima `OK` se len≥8, tem dígito, tem minúscula e tem maiúscula. Caso contrário `FALTA`.",
+    "sol": "```python\nw = input()\nok = len(w) >= 8\nok = ok and any('a' <= c <= 'z' for c in w)\nok = ok and any('A' <= c <= 'Z' for c in w)\nok = ok and any(c.isdigit() for c in w)\nprint('OK' if ok else 'FALTA')\n```"
+  },
+  {
+    "slug": "py-hard-08-implementar-palindromo-normalizado",
+    "title": "HARD — Palíndromo sem espaços",
+    "concepts": [
+      "slicing [inicio:fim:passo]",
+      "métodos de string"
+    ],
+    "learning_goal": "Remover espaços e comparar com reversão.",
+    "exercise_type": "implement_function",
+    "stage": 19,
+    "context": "processamento de texto",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "True\nFalse"
+      }
+    ],
+    "body": "`pal(s)` remove espaços, minúsculas, compara com reversa. Imprima `pal('O lobo ama o bolo')` e `pal('abc')`.\n\n```python\ndef pal(s):\n    pass\n\nprint(pal('O lobo ama o bolo'))\nprint(pal('abc'))\n```",
+    "sol": "```python\ndef pal(s):\n    t = s.replace(' ', '').lower()\n    return t == t[::-1]\n\nprint(pal('O lobo ama o bolo'))\nprint(pal('abc'))\n```"
+  },
+  {
+    "slug": "py-hard-09-programa-match-add-mul",
+    "title": "HARD — Máquina de acumulador com match",
+    "concepts": [
+      "match/case",
+      "acumulador (inicialização e +=)"
+    ],
+    "learning_goal": "Interpretar comandos ADD/MUL com match.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "análise de logs",
+    "test_cases": [
+      {
+        "input": "ADD 4\nMUL 3\nEND",
+        "output": "12"
+      }
+    ],
+    "body": "Acumulador inicia em 1. Leia linhas até `END`. Linhas `ADD n` ou `MUL n` (n inteiro). `ADD` soma; `MUL` multiplica. Imprima acumulador final.",
+    "sol": "```python\na = 1\nwhile True:\n    linha = input()\n    if linha == 'END':\n        break\n    cmd, ns = linha.split()\n    n = int(ns)\n    match cmd:\n        case 'ADD':\n            a += n\n        case 'MUL':\n            a *= n\nprint(a)\n```"
+  },
+  {
+    "slug": "py-hard-10-corrigir-elif-desalinhado",
+    "title": "HARD — Corrigir if/elif/else",
+    "concepts": [
+      "if/elif/else",
+      "blocos identados",
+      "indentação"
+    ],
+    "learning_goal": "Restaurar hierarquia válida.",
+    "exercise_type": "fix_bug",
+    "stage": 18,
+    "context": "validação de dados",
+    "test_cases": [
+      {
+        "input": "6.5",
+        "output": "B"
+      }
+    ],
+    "body": "Corrija para: ≥9→A, ≥7→B, ≥5→C, senão D.\n\n```python\nn = float(input())\nif n >= 9:\n    print('A')\nelif n >= 7:\n    print('B')\n elif n >= 5:\n    print('C')\nelse:\n    print('D')\n```",
+    "sol": "```python\nn = float(input())\nif n >= 9:\n    print('A')\nelif n >= 7:\n    print('B')\nelif n >= 5:\n    print('C')\nelse:\n    print('D')\n```"
+  },
+  {
+    "slug": "py-hard-11-programa-soma-floats-tolerante",
+    "title": "HARD — Somar tokens numéricos (try/except)",
+    "concepts": [
+      "ValueError",
+      "conversão de tipos",
+      "try: temperatura = float(leitura) except ValueError"
+    ],
+    "learning_goal": "Ignorar tokens inválidos com try/except.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "parsing de CSV/arquivos",
+    "test_cases": [
+      {
+        "input": "1 x 2.5 3",
+        "output": "6.5"
+      }
+    ],
+    "body": "Leia linha com tokens separados por espaço. Some os que `float(t)` aceitar; ignore resto. Imprima soma com uma casa (`{s:.1f}`).",
+    "sol": "```python\ns = 0.0\nfor t in input().split():\n    try:\n        s += float(t)\n    except ValueError:\n        pass\nprint(f'{s:.1f}')\n```"
+  },
+  {
+    "slug": "py-hard-12-prever-formato-percent",
+    "title": "HARD — Formatação com %",
+    "concepts": [
+      "operador % para formatação",
+      "interpolação de strings"
+    ],
+    "learning_goal": "Ler `%03d` e `%s`.",
+    "exercise_type": "predict_output",
+    "stage": 19,
+    "context": "processamento de texto",
+    "expected_output": "007:ok",
+    "body": "```python\nprint('%03d:%s' % (7, 'ok'))\n```",
+    "sol": "Inteiro com zeros à esquerda (3) e string → `007:ok`."
+  },
+  {
+    "slug": "py-hard-13-implementar-slugify",
+    "title": "HARD — slug com split e join",
+    "concepts": [
+      "split",
+      "join",
+      "métodos de string",
+      "strip"
+    ],
+    "learning_goal": "Normalizar frase para identificador com hífens.",
+    "exercise_type": "implement_function",
+    "stage": 19,
+    "context": "API",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "ola-mundo-python"
+      }
+    ],
+    "body": "`slugify(t)` strip, lower, palavras separadas por um hífen.\n\n```python\ndef slugify(t):\n    pass\n\nprint(slugify('  Ola   Mundo PYTHON  '))\n```",
+    "sol": "```python\ndef slugify(t):\n    return '-'.join(t.strip().lower().split())\n\nprint(slugify('  Ola   Mundo PYTHON  '))\n```"
+  },
+  {
+    "slug": "py-hard-14-programa-grade-produtos",
+    "title": "HARD — Grade N×M alinhada",
+    "concepts": [
+      "loops aninhados (linha e coluna)",
+      "formatação f-string e .format() na tabuada"
+    ],
+    "learning_goal": "Cabeçalho + células com largura fixa.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "monitoramento",
+    "test_cases": [
+      {
+        "input": "2\n3",
+        "output": "   1  2  3\n1  1  2  3\n2  2  4  6"
+      }
+    ],
+    "body": "Leia N e M (inteiros >0). Primeira linha: espaço inicial + colunas 1..M com largura 3. Linhas i=1..N: i + produtos i*j (j=1..M) largura 3 cada.",
+    "sol": "```python\nn = int(input())\nm = int(input())\nlinha = ' '\nfor j in range(1, m + 1):\n    linha += f'{j:>3}'\nprint(linha)\nfor i in range(1, n + 1):\n    linha = f'{i}'\n    for j in range(1, m + 1):\n        linha += f'{i * j:>3}'\n    print(linha)\n```"
+  },
+  {
+    "slug": "py-hard-15-refatorar-tres-funcoes-log",
+    "title": "HARD — Extrair ler / peso / main",
+    "concepts": [
+      "def e chamada de função",
+      "PEP 8 snake_case e funções coesas",
+      "return explícito e None implícito"
+    ],
+    "learning_goal": "Separar IO, regra e orquestração.",
+    "exercise_type": "refactor",
+    "stage": 20,
+    "context": "análise de logs",
+    "test_cases": [
+      {
+        "input": "WARN",
+        "output": "1"
+      }
+    ],
+    "body": "Refatore sem mudar saída:\n\n```python\nc = input().strip()\nif c == 'ERR':\n    print(2)\nelif c == 'WARN':\n    print(1)\nelse:\n    print(0)\n```\n\nCrie `ler_codigo()`, `pontuacao(c)` e `main()`.",
+    "sol": "```python\ndef ler_codigo():\n    return input().strip()\n\n\ndef pontuacao(c):\n    if c == 'ERR':\n        return 2\n    if c == 'WARN':\n        return 1\n    return 0\n\n\ndef main():\n    print(pontuacao(ler_codigo()))\n\n\nmain()\n```"
+  },
+  {
+    "slug": "py-hard-16-completar-prefixo-enumerate",
+    "title": "HARD — Índices com palavra prefixo",
+    "concepts": [
+      "enumerate e range(len)",
+      "operadores relacionais"
+    ],
+    "learning_goal": "Filtrar com startswith e juntar índices.",
+    "exercise_type": "complete_the_code",
+    "stage": 19,
+    "context": "processamento de texto",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "0,2"
+      }
+    ],
+    "body": "Complete a condição: imprimir índices (0-based) de palavras que começam com `'a'`.\n\n```python\nw = ['ana', 'lu', 'ala']\nr = []\nfor i, p in enumerate(w):\n    if _________________________:\n        r.append(str(i))\nprint(','.join(r))\n```",
+    "sol": "Use `p.startswith('a')`.\n\n```python\nw = ['ana', 'lu', 'ala']\nr = []\nfor i, p in enumerate(w):\n    if p.startswith('a'):\n        r.append(str(i))\nprint(','.join(r))\n```"
+  },
+  {
+    "slug": "py-hard-17-programa-imc-quatro-faixas",
+    "title": "HARD — IMC com elif encadeado",
+    "concepts": [
+      "if/elif/else",
+      "operadores relacionais",
+      "conversão de tipos"
+    ],
+    "learning_goal": "Faixas contíguas sem buracos.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "validação de dados",
+    "test_cases": [
+      {
+        "input": "2\n100",
+        "output": "sobrepeso"
+      },
+      {
+        "input": "2\n40",
+        "output": "baixo"
+      }
+    ],
+    "body": "Leia altura (m) e peso (kg). IMC = peso/altura². `<18.5`→`baixo`; `<25`→`normal`; `<30`→`sobrepeso`; senão→`obeso`.",
+    "sol": "```python\nh = float(input())\np = float(input())\nimc = p / h ** 2\nif imc < 18.5:\n    print('baixo')\nelif imc < 25:\n    print('normal')\nelif imc < 30:\n    print('sobrepeso')\nelse:\n    print('obeso')\n```"
+  },
+  {
+    "slug": "py-hard-18-corrigir-aspas-string",
+    "title": "HARD — Corrigir literal com aspas internas",
+    "concepts": [
+      "literais de string",
+      "aspas simples e duplas",
+      "SyntaxError por string não terminada"
+    ],
+    "learning_goal": "Escapar ou alternar aspas.",
+    "exercise_type": "fix_bug",
+    "stage": 19,
+    "context": "processamento de texto",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "diz \"sim\""
+      }
+    ],
+    "body": "Corrija para imprimir: `diz \"sim\"` (com aspas duplas na palavra sim).\n\n```python\nmsg = \"diz \"sim\"\"\nprint(msg)\n```",
+    "sol": "```python\nmsg = 'diz \"sim\"'\nprint(msg)\n```"
+  },
+  {
+    "slug": "py-hard-19-prever-modulo-negativo",
+    "title": "HARD — Resultado de % com negativo",
+    "concepts": [
+      "operadores aritméticos",
+      "módulo"
+    ],
+    "learning_goal": "Lembrar convenção do % em Python.",
+    "exercise_type": "predict_output",
+    "stage": 20,
+    "context": "validação de dados",
+    "expected_output": "3",
+    "body": "```python\nprint(-7 % 5)\n```",
+    "sol": "Em Python, o resto tem o sinal do divisor: `-7 = (-2)*5 + 3` → `3`."
+  },
+  {
+    "slug": "py-hard-20-prever-not-duplo",
+    "title": "HARD — not aplicado duas vezes",
+    "concepts": [
+      "operadores lógicos and, or, not",
+      "booleanos"
+    ],
+    "learning_goal": "Negar valores booleanos.",
+    "exercise_type": "predict_output",
+    "stage": 18,
+    "context": "processamento de texto",
+    "expected_output": "False",
+    "body": "```python\nprint(not not [])\n```",
+    "sol": "`[]` é falsy → `not []` é `True` → `not True` é `False`."
+  },
+  {
+    "slug": "py-hard-21-implementar-dobrar-caracteres",
+    "title": "HARD — Cada caractere duplicado",
+    "concepts": [
+      "concatenação de strings",
+      "laços for e range em Python"
+    ],
+    "learning_goal": "Construir string com repetição por caractere.",
+    "exercise_type": "implement_function",
+    "stage": 19,
+    "context": "processamento de texto",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "aabbcc"
+      }
+    ],
+    "body": "`dup(s)` retorna string onde cada caractere aparece duas vezes seguidas.\n\n```python\ndef dup(s):\n    pass\n\nprint(dup('abc'))\n```",
+    "sol": "```python\ndef dup(s):\n    t = ''\n    for c in s:\n        t += c * 2\n    return t\n\nprint(dup('abc'))\n```"
+  },
+  {
+    "slug": "py-hard-22-programa-contar-vogais",
+    "title": "HARD — Contar vogais (minúsculas) numa linha",
+    "concepts": [
+      "if/elif/else",
+      "laços for e range em Python",
+      "sequência de caracteres"
+    ],
+    "learning_goal": "Acumulador + condição por caractere.",
+    "exercise_type": "full_program",
+    "stage": 19,
+    "context": "processamento de texto",
+    "test_cases": [
+      {
+        "input": "programacao",
+        "output": "5"
+      }
+    ],
+    "body": "Leia uma linha. Conte quantas vogais minúsculas `aeiou` aparecem. Imprima o inteiro.",
+    "sol": "```python\ns = input()\nv = 'aeiou'\nc = 0\nfor ch in s:\n    if ch in v:\n        c += 1\nprint(c)\n```"
+  },
+  {
+    "slug": "py-hard-23-corrigir-nameerror-ordem",
+    "title": "HARD — Função usada antes da definição",
+    "concepts": [
+      "NameError (definição não executada no notebook)",
+      "def e chamada de função"
+    ],
+    "learning_goal": "Reordenar def antes da chamada.",
+    "exercise_type": "fix_bug",
+    "stage": 19,
+    "context": "automação",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "9"
+      }
+    ],
+    "body": "```python\nprint(inc(8))\n\ndef inc(x):\n    return x + 1\n```",
+    "sol": "```python\ndef inc(x):\n    return x + 1\n\nprint(inc(8))\n```"
+  },
+  {
+    "slug": "py-hard-24-completar-match-wildcard",
+    "title": "HARD — Completar match com case _",
+    "concepts": [
+      "match/case",
+      "pattern matching estrutural"
+    ],
+    "learning_goal": "Usar wildcard no match.",
+    "exercise_type": "complete_the_code",
+    "stage": 20,
+    "context": "validação de dados",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "outro"
+      }
+    ],
+    "body": "Complete o último `case` para capturar qualquer valor não listado.\n\n```python\ndef rotulo(n):\n    match n:\n        case 1:\n            return 'um'\n        case 2:\n            return 'dois'\n        case ____________:\n            return 'outro'\n\nprint(rotulo(99))\n```",
+    "sol": "Use `case _:`.\n\n```python\ndef rotulo(n):\n    match n:\n        case 1:\n            return 'um'\n        case 2:\n            return 'dois'\n        case _:\n            return 'outro'\n\nprint(rotulo(99))\n```"
+  },
+  {
+    "slug": "py-hard-25-programa-par-i-j-produto",
+    "title": "HARD — Primeiro par (i,j) com produto alvo",
+    "concepts": [
+      "loops aninhados (linha e coluna)",
+      "operadores relacionais"
+    ],
+    "learning_goal": "Parar na primeira solução com flag.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "automação",
+    "test_cases": [
+      {
+        "input": "12\n1\n10",
+        "output": "3 4"
+      }
+    ],
+    "body": "Leia alvo T, depois A e B (inteiros). Encontre o primeiro par (i,j) com A≤i,j≤B e i*j==T. Imprima `i` e `j` separados por espaço. Garanta que existe solução.",
+    "sol": "```python\nt = int(input())\na = int(input())\nb = int(input())\nfor i in range(a, b + 1):\n    for j in range(a, b + 1):\n        if i * j == t:\n            print(i, j)\n            raise SystemExit\n```"
+  },
+  {
+    "slug": "py-hard-26-programa-soma-ate-zero",
+    "title": "HARD — Somar positivos até linha 0",
+    "concepts": [
+      "laços for e range em Python",
+      "if/elif/else",
+      "conversão de tipos"
+    ],
+    "learning_goal": "Loop com condição de parada e filtro.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "validação de entrada",
+    "test_cases": [
+      {
+        "input": "5\n-1\n3\n0",
+        "output": "8"
+      }
+    ],
+    "body": "Leia inteiros um por linha até ler `0`. Some apenas os **estritamente positivos**. Imprima a soma.",
+    "sol": "```python\ns = 0\nwhile True:\n    n = int(input())\n    if n == 0:\n        break\n    if n > 0:\n        s += n\nprint(s)\n```"
+  },
+  {
+    "slug": "py-hard-27-refatorar-if-para-match",
+    "title": "HARD — Substituir if/elif por match",
+    "concepts": [
+      "match/case",
+      "if/elif/else"
+    ],
+    "learning_goal": "Traduzir ramos em cases.",
+    "exercise_type": "refactor",
+    "stage": 20,
+    "context": "configuração",
+    "test_cases": [
+      {
+        "input": "b",
+        "output": "2"
+      }
+    ],
+    "body": "Reescreva com `match`/`case`, mesmo comportamento:\n\n```python\nc = input().strip()\nif c == 'a':\n    print(1)\nelif c == 'b':\n    print(2)\nelse:\n    print(0)\n```",
+    "sol": "```python\nc = input().strip()\nmatch c:\n    case 'a':\n        print(1)\n    case 'b':\n        print(2)\n    case _:\n        print(0)\n```"
+  },
+  {
+    "slug": "py-hard-28-prever-format-3f",
+    "title": "HARD — f-string com :.3f",
+    "concepts": [
+      "f-strings",
+      "formatação de casas decimais com :.2f e :.3f"
+    ],
+    "learning_goal": "Arredondamento na exibição.",
+    "exercise_type": "predict_output",
+    "stage": 19,
+    "context": "processamento de texto",
+    "expected_output": "1.000",
+    "body": "```python\nprint(f'{1:.3f}')\n```",
+    "sol": "Três casas decimais: `1.000`."
+  },
+  {
+    "slug": "py-hard-29-programa-linhas-pares-enumerate",
+    "title": "HARD — Imprimir só linhas de índice par",
+    "concepts": [
+      "enumerate e range(len)",
+      "operadores relacionais"
+    ],
+    "learning_goal": "Filtrar por paridade do índice.",
+    "exercise_type": "full_program",
+    "stage": 19,
+    "context": "análise de logs",
+    "test_cases": [
+      {
+        "input": "a\nb\nc\nd",
+        "output": "a\nc"
+      }
+    ],
+    "body": "Leia 4 linhas. Imprima apenas as linhas cujo índice **0-based** é par (0 e 2), cada uma numa linha, na ordem.",
+    "sol": "```python\nlinhas = [input() for _ in range(4)]\nfor i, t in enumerate(linhas):\n    if i % 2 == 0:\n        print(t)\n```"
+  },
+  {
+    "slug": "py-hard-30-programa-produto-digitos",
+    "title": "HARD — Produto dos dígitos de uma string",
+    "concepts": [
+      "laços for e range em Python",
+      "acumulador (inicialização e +=)"
+    ],
+    "learning_goal": "Multiplicar dígitos ignorando não-dígitos.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "validação de dados",
+    "test_cases": [
+      {
+        "input": "a2b3c4",
+        "output": "24"
+      }
+    ],
+    "body": "Leia uma string. Calcule o produto de todos os caracteres que são dígitos (`isdigit()`). Se não houver dígito, imprima `0`.",
+    "sol": "```python\ns = input()\np = 1\nfound = False\nfor c in s:\n    if c.isdigit():\n        found = True\n        p *= int(c)\nprint(p if found else 0)\n```"
+  },
+  {
+    "slug": "py-hard-31-prever-comparacao-encadeada",
+    "title": "HARD — Comparação encadeada",
+    "concepts": [
+      "operadores relacionais",
+      "expressão booleana"
+    ],
+    "learning_goal": "Avaliar `a < b < c`.",
+    "exercise_type": "predict_output",
+    "stage": 19,
+    "context": "validação de dados",
+    "expected_output": "False",
+    "body": "```python\nprint(1 < 3 < 2)\n```",
+    "sol": "Equivale a `1 < 3 and 3 < 2` → `True and False` → `False`."
+  },
+  {
+    "slug": "py-hard-32-implementar-linha-sem-comentario",
+    "title": "HARD — Remover comentário à direita (#)",
+    "concepts": [
+      "slicing [inicio:fim:passo]",
+      "métodos de string"
+    ],
+    "learning_goal": "Cortar antes do primeiro `#` fora de string complexa (assume # não aparece dentro de texto).",
+    "exercise_type": "implement_function",
+    "stage": 20,
+    "context": "arquivos de configuração",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "host=1"
+      }
+    ],
+    "body": "`sem_comentario(linha)` retorna parte antes de `#` (se não houver, retorna linha inteira), sem espaços nas pontas.\n\n```python\ndef sem_comentario(linha):\n    pass\n\nprint(sem_comentario('  host=1  # dev  '))\n```",
+    "sol": "```python\ndef sem_comentario(linha):\n    if '#' in linha:\n        linha = linha[: linha.index('#')]\n    return linha.strip()\n\nprint(sem_comentario('  host=1  # dev  '))\n```"
+  },
+  {
+    "slug": "py-hard-33-programa-soma-campos-k-v",
+    "title": "HARD — Somar inteiros em linhas chave:valor",
+    "concepts": [
+      "split",
+      "conversão de tipos",
+      "acumulador (inicialização e +=)"
+    ],
+    "learning_goal": "Parsing repetido + acumulador.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "pipeline ETL",
+    "test_cases": [
+      {
+        "input": "3\na:2\nb:5\nc:1",
+        "output": "8"
+      }
+    ],
+    "body": "Leia N (inteiro), depois N linhas `chave:inteiro`. Some os inteiros. Imprima a soma.",
+    "sol": "```python\nn = int(input())\ns = 0\nfor _ in range(n):\n    _, v = input().split(':')\n    s += int(v)\nprint(s)\n```"
+  },
+  {
+    "slug": "py-hard-34-prever-all-lista",
+    "title": "HARD — Valor de all([...])",
+    "concepts": [
+      "operadores lógicos and, or, not",
+      "truthy e falsy em Python"
+    ],
+    "learning_goal": "all com pelo menos um False.",
+    "exercise_type": "predict_output",
+    "stage": 18,
+    "context": "validação de dados",
+    "expected_output": "False",
+    "body": "```python\nprint(all([True, 1, 'x', False]))\n```",
+    "sol": "`False` na lista → `all` é `False`."
+  },
+  {
+    "slug": "py-hard-35-programa-traco-matriz-quadrada",
+    "title": "HARD — Soma da diagonal principal",
+    "concepts": [
+      "loops aninhados (linha e coluna)",
+      "acumulador (inicialização e +=)"
+    ],
+    "learning_goal": "Índice linha==coluna em matriz lida da entrada.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "monitoramento",
+    "test_cases": [
+      {
+        "input": "2\n1 2\n3 4",
+        "output": "5"
+      }
+    ],
+    "body": "Leia N, depois N linhas com N inteiros cada (matriz). Imprima soma dos elementos onde índice de linha == índice de coluna.",
+    "sol": "```python\nn = int(input())\ns = 0\nfor i in range(n):\n    linha = input().split()\n    s += int(linha[i])\nprint(s)\n```"
+  },
+  {
+    "slug": "py-hard-36-corrigir-tabuada-incompleta",
+    "title": "HARD — Tabuada 0..10",
+    "concepts": [
+      "tabuada com range(11)"
+    ],
+    "learning_goal": "Corrigir limite superior do range.",
+    "exercise_type": "fix_bug",
+    "stage": 19,
+    "context": "validação de entrada",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "55"
+      }
+    ],
+    "body": "Deve imprimir soma de 0+1+…+10 (use laço `for i in range(???):` sobre a tabuada do 1?). **Correção do enunciado:** some os números 0 a 10 inclusive com um único `for` e acumulador.\n\n```python\ns = 0\nfor i in range(10):\n    s += i\nprint(s)\n```",
+    "sol": "`range(10)` omite 10. Use `range(11)` → soma 0..10 = 55.\n\n```python\ns = 0\nfor i in range(11):\n    s += i\nprint(s)\n```"
+  },
+  {
+    "slug": "py-hard-37-implementar-mdc-subtracoes",
+    "title": "HARD — MDC por subtrações repetidas",
+    "concepts": [
+      "while",
+      "if/elif/else",
+      "operadores relacionais"
+    ],
+    "learning_goal": "Algoritmo de Euclides sem resto de divisão.",
+    "exercise_type": "implement_function",
+    "stage": 20,
+    "context": "automação",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "4"
+      }
+    ],
+    "body": "`mdc(a,b)` para inteiros positivos: enquanto a≠b, subtraia o menor do maior. Retorne a.\n\n```python\ndef mdc(a, b):\n    pass\n\nprint(mdc(12, 8))\n```",
+    "sol": "```python\ndef mdc(a, b):\n    while a != b:\n        if a > b:\n            a -= b\n        else:\n            b -= a\n    return a\n\nprint(mdc(12, 8))\n```"
+  },
+  {
+    "slug": "py-hard-38-prever-comparacao-strings-lex",
+    "title": "HARD — Ordem lexicográfica de strings",
+    "concepts": [
+      "operadores relacionais",
+      "sequência de caracteres"
+    ],
+    "learning_goal": "'10' vs '2' como texto.",
+    "exercise_type": "predict_output",
+    "stage": 19,
+    "context": "processamento de texto",
+    "expected_output": "True",
+    "body": "```python\nprint('10' < '2')\n```",
+    "sol": "Compara caractere a caractere: `'1' < '2'` → `True`; para logo."
+  },
+  {
+    "slug": "py-hard-39-programa-faixas-temperatura",
+    "title": "HARD — Quatro faixas de temperatura",
+    "concepts": [
+      "if/elif/else",
+      "operadores relacionais",
+      "expressão booleana"
+    ],
+    "learning_goal": "Quatro limiares contíguos sem lacunas.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "dados de monitoramento",
+    "test_cases": [
+      {
+        "input": "15",
+        "output": "mild"
+      }
+    ],
+    "body": "Leia temperatura inteira. Com **if/elif** imprima: `<0`→`frio`; `0..15`→`mild`; `16..30`→`quente`; caso contrário→`extremo`.",
+    "sol": "```python\nt = int(input())\nif t < 0:\n    print('frio')\nelif t <= 15:\n    print('mild')\nelif t <= 30:\n    print('quente')\nelse:\n    print('extremo')\n```"
+  },
+  {
+    "slug": "py-hard-40-programa-soma-quadrados",
+    "title": "HARD — Soma dos quadrados de 1 a N",
+    "concepts": [
+      "laços for e range em Python",
+      "acumulador (inicialização e +=)"
+    ],
+    "learning_goal": "range(1, n+1) e potência.",
+    "exercise_type": "full_program",
+    "stage": 19,
+    "context": "validação de dados",
+    "test_cases": [
+      {
+        "input": "3",
+        "output": "14"
+      }
+    ],
+    "body": "Leia N≥1. Imprima 1²+2²+…+N².",
+    "sol": "```python\nn = int(input())\ns = 0\nfor i in range(1, n + 1):\n    s += i ** 2\nprint(s)\n```"
+  },
+  {
+    "slug": "py-hard-41-implementar-rotacao-esquerda",
+    "title": "HARD — Rotação à esquerda k posições",
+    "concepts": [
+      "slicing [inicio:fim:passo]",
+      "operador % em índices"
+    ],
+    "learning_goal": "Fatia + concatenação com k mod len.",
+    "exercise_type": "implement_function",
+    "stage": 20,
+    "context": "processamento de texto",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "cdeab"
+      }
+    ],
+    "body": "`rot_left(s, k)` string não vazia, k≥0: rotação cíclica à esquerda.\n\n```python\ndef rot_left(s, k):\n    pass\n\nprint(rot_left('abcde', 2))\n```",
+    "sol": "```python\ndef rot_left(s, k):\n    k = k % len(s)\n    return s[k:] + s[:k]\n\nprint(rot_left('abcde', 2))\n```"
+  },
+  {
+    "slug": "py-hard-42-programa-rpn-tres-operacoes",
+    "title": "HARD — Notação polonesa inversa (4 tokens)",
+    "concepts": [
+      "listas e sequências iteráveis",
+      "if/elif/else"
+    ],
+    "learning_goal": "Simular pilha com lista append/pop.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "automação",
+    "test_cases": [
+      {
+        "input": "3 4 + 2 *",
+        "output": "14"
+      }
+    ],
+    "body": "Leia uma linha com 5 tokens: três números inteiros e dois operadores `+` ou `*` alternando pós-fixo clássico de 3 operandos: `a b op1 c op2` avalia como `((a op1 b) op2 c)`. Ex.: `3 4 + 2 *` → (3+4)*2=14. Use lista como pilha.",
+    "sol": "```python\ntoks = input().split()\nst = []\nfor t in toks:\n    if t in '+*':\n        b = st.pop()\n        a = st.pop()\n        if t == '+':\n            st.append(a + b)\n        else:\n            st.append(a * b)\n    else:\n        st.append(int(t))\nprint(st[0])\n```"
+  },
+  {
+    "slug": "py-hard-43-programa-soma-lista-aninhada-fixa",
+    "title": "HARD — Soma de matriz em código (lista de listas)",
+    "concepts": [
+      "listas e sequências iteráveis",
+      "loops aninhados (linha e coluna)"
+    ],
+    "learning_goal": "Percorrer lista de listas sem achatar.",
+    "exercise_type": "full_program",
+    "stage": 19,
+    "context": "pipeline ETL",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "21"
+      }
+    ],
+    "body": "Dado `m = [[1,2,3],[4,5,6]]` no código, imprima a soma de todos os números (não leia da entrada).",
+    "sol": "```python\nm = [[1, 2, 3], [4, 5, 6]]\ns = 0\nfor linha in m:\n    for x in linha:\n        s += x\nprint(s)\n```"
+  },
+  {
+    "slug": "py-hard-44-implementar-parse-int-seguro",
+    "title": "HARD — int com try/except",
+    "concepts": [
+      "ValueError",
+      "return explícito e None implícito",
+      "conversão de tipos"
+    ],
+    "learning_goal": "Retornar None se conversão falhar.",
+    "exercise_type": "implement_function",
+    "stage": 20,
+    "context": "validação de entrada",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "7\nNone"
+      }
+    ],
+    "body": "`to_int(t)` retorna int ou None. Imprima `to_int('7')` e `to_int('x')` em duas linhas.\n\n```python\ndef to_int(t):\n    pass\n\nprint(to_int('7'))\nprint(to_int('x'))\n```",
+    "sol": "```python\ndef to_int(t):\n    try:\n        return int(t)\n    except ValueError:\n        return None\n\nprint(to_int('7'))\nprint(to_int('x'))\n```"
+  },
+  {
+    "slug": "py-hard-45-prever-docstring-linhas",
+    "title": "HARD — Primeira linha útil da docstring",
+    "concepts": [
+      "docstrings, __doc__ e help()",
+      "métodos de string"
+    ],
+    "learning_goal": "strip e splitlines.",
+    "exercise_type": "predict_output",
+    "stage": 19,
+    "context": "documentação",
+    "expected_output": "Calcula.",
+    "body": "```python\ndef f():\n    \"\"\"\n    Calcula.\n    Mais texto.\n    \"\"\"\n    return 1\n\nprint(f.__doc__.strip().splitlines()[0])\n```",
+    "sol": "Primeira linha após strip é `Calcula.`."
+  },
+  {
+    "slug": "py-hard-46-programa-imposto-simplificado",
+    "title": "HARD — Imposto em duas faixas",
+    "concepts": [
+      "if/elif/else",
+      "f-strings",
+      "operadores aritméticos"
+    ],
+    "learning_goal": "Cálculo por fatia de renda.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "validação de dados",
+    "test_cases": [
+      {
+        "input": "1200",
+        "output": "20.00"
+      }
+    ],
+    "body": "Leia renda float. Até 1000 taxa 0%. Acima de 1000: 10% apenas sobre o que excede 1000. Imprima imposto com 2 casas.",
+    "sol": "```python\nr = float(input())\nif r <= 1000:\n    imp = 0.0\nelse:\n    imp = (r - 1000) * 0.10\nprint(f'{imp:.2f}')\n```"
+  },
+  {
+    "slug": "py-hard-47-implementar-intercalar-strings",
+    "title": "HARD — Entrelaçar duas strings igual comprimento",
+    "concepts": [
+      "concatenação de strings",
+      "laços for e range em Python"
+    ],
+    "learning_goal": "Índice paralelo.",
+    "exercise_type": "implement_function",
+    "stage": 19,
+    "context": "processamento de texto",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "a1b2c3"
+      }
+    ],
+    "body": "`intercalar(a,b)` com len(a)==len(b). Imprima `intercalar('abc','123')`.\n\n```python\ndef intercalar(a, b):\n    pass\n\nprint(intercalar('abc', '123'))\n```",
+    "sol": "```python\ndef intercalar(a, b):\n    t = ''\n    for i in range(len(a)):\n        t += a[i] + b[i]\n    return t\n\nprint(intercalar('abc', '123'))\n```"
+  },
+  {
+    "slug": "py-hard-48-corrigir-typeerror-fstring",
+    "title": "HARD — TypeError dentro de f-string",
+    "concepts": [
+      "TypeError por ordem ou tipo de argumentos",
+      "f-strings"
+    ],
+    "learning_goal": "Converter antes de interpolar.",
+    "exercise_type": "fix_bug",
+    "stage": 19,
+    "context": "processamento de texto",
+    "test_cases": [
+      {
+        "input": "",
+        "output": "n=5"
+      }
+    ],
+    "body": "Corrija:\n\n```python\nn = 5\nprint(f'n={n + \"\"}')\n```",
+    "sol": "```python\nn = 5\nprint(f'n={n}')\n```"
+  },
+  {
+    "slug": "py-hard-49-programa-pedido-duas-linhas",
+    "title": "HARD — Subtotal e total com funções",
+    "concepts": [
+      "def e chamada de função",
+      "argumentos posicionais e nomeados",
+      "PEP 8 snake_case e funções coesas"
+    ],
+    "learning_goal": "Compor funções pequenas para um mini pedido.",
+    "exercise_type": "full_program",
+    "stage": 20,
+    "context": "automação",
+    "test_cases": [
+      {
+        "input": "2\n3 10.0\n1 5.0",
+        "output": "35.00"
+      }
+    ],
+    "body": "Leia N (número de itens). Para cada item leia `qtd preco` (int, float). Defina `subtotal(q, p)` retorna q*p e `total_pedido(n)` lê n linhas e retorna soma dos subtotais. Imprima total com 2 casas. **Implementação:** leia N no main, use loop chamando subtotal.",
+    "sol": "```python\ndef subtotal(q, p):\n    return q * p\n\n\nn = int(input())\ns = 0.0\nfor _ in range(n):\n    linha = input().split()\n    q = int(linha[0])\n    p = float(linha[1])\n    s += subtotal(q, p)\nprint(f'{s:.2f}')\n```"
+  },
+  {
+    "slug": "py-hard-50-prever-type-name-bool",
+    "title": "HARD — Nome da classe de False",
+    "concepts": [
+      "builtins print, input, int, float, type, len",
+      "tipos básicos int, float, bool, str"
+    ],
+    "learning_goal": "Ligar type(False) ao nome `bool`.",
+    "exercise_type": "predict_output",
+    "stage": 18,
+    "context": "validação de dados",
+    "expected_output": "bool",
+    "body": "```python\nprint(type(False).__name__)\n```",
+    "sol": "`type(False)` é a classe `bool`; `.__name__` retorna a string `bool`."
+  }
+]
