@@ -75,10 +75,16 @@ function ExerciseCard(exercise, options) {
   const completed = typeof isExerciseCompleted === 'function' && isExerciseCompleted(exercise.slug);
   const forListingPage = options && options.forListingPage;
   const selectedConcepts = (options && options.selectedConcepts) || new Set();
+  const highlightQ =
+    options && options.searchHighlightQuery ? String(options.searchHighlightQuery) : '';
+  function fmtLabel(s) {
+    return highlightQ ? highlightSearchMatches(s, highlightQ) : escapeHtml(s);
+  }
   const tagsHtml = concepts.length
     ? concepts
         .map(function (c) {
           const active = forListingPage && selectedConcepts.has(c);
+          const inner = fmtLabel(c);
           if (forListingPage) {
             return (
               '<button type="button" class="iss-tag' +
@@ -86,19 +92,19 @@ function ExerciseCard(exercise, options) {
               '" data-concept="' +
               escapeHtml(c) +
               '">' +
-              escapeHtml(c) +
+              inner +
               '</button>'
             );
           }
-          return '<span class="iss-tag">' + escapeHtml(c) + '</span>';
+          return '<span class="iss-tag">' + inner + '</span>';
         })
         .join('')
     : '<span class="iss-text-muted">—</span>';
   const resolvedHtml = completed ? '<p class="text-sm iss-exercise-resolved mt-1 mb-0">✓ Resolvido</p>' : '';
   return (
     '<a href="exercise.html?slug=' + slug + '" class="iss-card block no-underline text-inherit">' +
-    '<h3 class="font-semibold text-lg m-0">' + escapeHtml(exercise.title) + '</h3>' +
-    '<p class="text-sm iss-text-muted mt-1 mb-0">Dificuldade: ' + escapeHtml(difficultyLabel) + '</p>' +
+    '<h3 class="font-semibold text-lg m-0">' + fmtLabel(exercise.title) + '</h3>' +
+    '<p class="text-sm iss-text-muted mt-1 mb-0">Dificuldade: ' + fmtLabel(difficultyLabel) + '</p>' +
     '<div class="iss-card-tags mt-1">' + tagsHtml + '</div>' +
     resolvedHtml +
     '<p class="text-sm iss-link mt-2 mb-0">Resolver exercício →</p>' +
@@ -644,6 +650,147 @@ function applyExercisesFilters(exercises, state) {
   return list;
 }
 
+function normalizeForSearch(s) {
+  if (s == null || s === '') return '';
+  return String(s)
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '');
+}
+
+function highlightSearchMatches(plainText, rawQuery) {
+  const esc =
+    typeof escapeHtml === 'function'
+      ? escapeHtml
+      : function (t) {
+          return String(t)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+        };
+  const q = normalizeForSearch(rawQuery || '');
+  const text = plainText == null ? '' : String(plainText);
+  if (!q) return esc(text);
+
+  let textNorm = '';
+  const normIndexToOrigStart = [];
+  let utf16 = 0;
+  for (const ch of text) {
+    const piece = normalizeForSearch(ch);
+    for (let j = 0; j < piece.length; j++) {
+      normIndexToOrigStart.push(utf16);
+    }
+    textNorm += piece;
+    utf16 += ch.length;
+  }
+
+  const normIntervals = [];
+  let searchFrom = 0;
+  const qLen = q.length;
+  while (searchFrom <= textNorm.length - qLen) {
+    const hit = textNorm.indexOf(q, searchFrom);
+    if (hit === -1) break;
+    normIntervals.push([hit, hit + qLen]);
+    searchFrom = hit + qLen;
+  }
+
+  function normRangeToOrig(ns, ne) {
+    const origStart = normIndexToOrigStart[ns];
+    const origEnd = ne < normIndexToOrigStart.length ? normIndexToOrigStart[ne] : text.length;
+    return [origStart, origEnd];
+  }
+
+  const origIntervals = normIntervals.map(function (iv) {
+    return normRangeToOrig(iv[0], iv[1]);
+  });
+
+  origIntervals.sort(function (a, b) {
+    return a[0] - b[0];
+  });
+  const merged = [];
+  for (let i = 0; i < origIntervals.length; i++) {
+    const cur = origIntervals[i];
+    if (!merged.length) {
+      merged.push([cur[0], cur[1]]);
+      continue;
+    }
+    const last = merged[merged.length - 1];
+    if (cur[0] <= last[1]) {
+      last[1] = Math.max(last[1], cur[1]);
+    } else {
+      merged.push([cur[0], cur[1]]);
+    }
+  }
+
+  let html = '';
+  let last = 0;
+  for (let m = 0; m < merged.length; m++) {
+    const a = merged[m][0];
+    const b = merged[m][1];
+    if (a > last) html += esc(text.slice(last, a));
+    html += '<mark class="iss-search-highlight">' + esc(text.slice(a, b)) + '</mark>';
+    last = b;
+  }
+  if (last < text.length) html += esc(text.slice(last));
+  return html;
+}
+
+function buildExerciseSearchHaystack(ex, enunciadoNorm) {
+  const parts = [
+    normalizeForSearch(ex.title),
+    normalizeForSearch(ex.slug),
+    normalizeForSearch(ex.difficulty),
+    normalizeForSearch(getDifficultyLabel(ex.difficulty)),
+  ];
+  getConceptsArray(ex.concepts).forEach(function (c) {
+    parts.push(normalizeForSearch(c));
+  });
+  if (enunciadoNorm) parts.push(enunciadoNorm);
+  return parts.join('\n');
+}
+
+function applyExerciseSearchFilter(list, state, enunciadoMap) {
+  const q = normalizeForSearch(state.searchQuery || '');
+  if (!q) return list;
+  return list.filter(function (ex) {
+    const en = enunciadoMap && enunciadoMap.has(ex.slug) ? enunciadoMap.get(ex.slug) : '';
+    return buildExerciseSearchHaystack(ex, en).indexOf(q) !== -1;
+  });
+}
+
+function getFilteredExercisesForListing(allExercises, state, enunciadoMap) {
+  return applyExerciseSearchFilter(applyExercisesFilters(allExercises, state), state, enunciadoMap);
+}
+
+const EXERCISE_ENUNCIADO_SEARCH_BATCH = 20;
+
+function loadExerciseEnunciadosForSearch(exercises, enunciadoMap) {
+  if (typeof fetchExerciseMarkdown !== 'function' || typeof parseFrontmatter !== 'function') {
+    return Promise.resolve();
+  }
+  let i = 0;
+  function nextBatch() {
+    const slice = exercises.slice(i, i + EXERCISE_ENUNCIADO_SEARCH_BATCH);
+    i += EXERCISE_ENUNCIADO_SEARCH_BATCH;
+    return Promise.all(
+      slice.map(function (ex) {
+        return fetchExerciseMarkdown(ex.file)
+          .then(function (raw) {
+            if (!raw) return;
+            const body = parseFrontmatter(raw).body || '';
+            const enunciado = parseExerciseBody(body).enunciado || '';
+            enunciadoMap.set(ex.slug, normalizeForSearch(enunciado));
+          })
+          .catch(function () {});
+      })
+    ).then(function () {
+      if (i < exercises.length) return nextBatch();
+    });
+  }
+  return nextBatch();
+}
+
 /**
  * Preenche a secção "Exercícios sugeridos para a aula atual" quando ?d=&a= estão na URL.
  * Usa concepts do frontmatter da aula e getRelatedExercises; fallback por conceitos (Fase 2 linkedExercises depois).
@@ -696,11 +843,17 @@ function initExercises(containerId) {
 
   const getP = typeof getParam === 'function' ? getParam : function (name) { return new URLSearchParams(window.location.search).get(name) || ''; };
   const conceptFromUrl = getP('concept');
+  const enunciadoSearchMap = new Map();
   const state = {
     selectedConcepts: new Set(conceptFromUrl ? [decodeURIComponent(conceptFromUrl)] : []),
     difficultyFilter: '',
     resolveFilter: '',
+    searchQuery: '',
   };
+
+  const searchInput = document.getElementById('exercises-search');
+  const searchStatusEl = document.getElementById('exercises-search-enunciado-status');
+  let searchDebounceTimer = null;
 
   const progressSection = document.getElementById('exercises-progress-section');
   const progressText = document.getElementById('exercises-progress-text');
@@ -743,13 +896,21 @@ function initExercises(containerId) {
   }
 
   function renderList(allExercises) {
-    const filtered = applyExercisesFilters(allExercises, state);
+    const filtered = getFilteredExercisesForListing(allExercises, state, enunciadoSearchMap);
     updateProgress(allExercises);
     if (filtered.length === 0) {
-      container.innerHTML = '<p class="iss-text-muted">Nenhum exercício corresponde aos filtros.</p>';
+      container.innerHTML = '<p class="iss-text-muted">Nenhum exercício corresponde aos filtros ou à pesquisa.</p>';
       return;
     }
-    container.innerHTML = filtered.map((ex) => ExerciseCard(ex, { forListingPage: true, selectedConcepts: state.selectedConcepts })).join('');
+    container.innerHTML = filtered
+      .map((ex) =>
+        ExerciseCard(ex, {
+          forListingPage: true,
+          selectedConcepts: state.selectedConcepts,
+          searchHighlightQuery: state.searchQuery,
+        })
+      )
+      .join('');
 
     if (conceptFiltersEl) {
       conceptFiltersEl.querySelectorAll('button[data-concept]').forEach((b) => {
@@ -897,6 +1058,8 @@ function initExercises(containerId) {
           state.selectedConcepts.clear();
           state.difficultyFilter = '';
           state.resolveFilter = '';
+          state.searchQuery = '';
+          if (searchInput) searchInput.value = '';
           conceptFiltersEl.querySelectorAll('button[data-concept]').forEach((b) => b.classList.remove('iss-tag--active'));
           if (difficultyFiltersEl) {
             difficultyFiltersEl.querySelectorAll('button').forEach((b) => {
@@ -912,9 +1075,19 @@ function initExercises(containerId) {
         });
       }
 
+      if (searchInput) {
+        searchInput.addEventListener('input', function () {
+          if (searchDebounceTimer) clearTimeout(searchDebounceTimer);
+          searchDebounceTimer = setTimeout(function () {
+            state.searchQuery = searchInput.value;
+            renderList(exercises);
+          }, 180);
+        });
+      }
+
       if (randomBtn) {
         randomBtn.addEventListener('click', () => {
-          const filtered = applyExercisesFilters(exercises, state);
+          const filtered = getFilteredExercisesForListing(exercises, state, enunciadoSearchMap);
           if (filtered.length === 0) return;
           const unresolved = filtered.filter((ex) => !isExerciseCompleted(ex.slug));
           const pool = unresolved.length > 0 ? unresolved : filtered;
@@ -928,6 +1101,18 @@ function initExercises(containerId) {
       window.__issRefreshExerciseList = function () { renderList(exercises); };
 
       renderList(exercises);
+
+      if (searchStatusEl) {
+        searchStatusEl.textContent = 'A incluir enunciados na pesquisa…';
+        searchStatusEl.classList.remove('hidden');
+      }
+      loadExerciseEnunciadosForSearch(exercises, enunciadoSearchMap).then(function () {
+        if (searchStatusEl) {
+          searchStatusEl.classList.add('hidden');
+          searchStatusEl.textContent = '';
+        }
+        renderList(exercises);
+      });
     })
     .catch((err) => {
       if (container) container.innerHTML = '<p class="text-red-600">Erro ao carregar exercícios.</p>';

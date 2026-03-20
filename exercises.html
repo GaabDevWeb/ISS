@@ -70,8 +70,15 @@
     </div>
 
     <section class="mb-4" aria-label="Filtros por conceito e dificuldade">
+      <div class="mb-3">
+        <label for="exercises-search" class="block text-sm font-medium iss-text-foreground mb-1">Pesquisar exercícios</label>
+        <div class="relative max-w-md">
+          <input type="search" id="exercises-search" class="w-full px-4 py-2 rounded border iss-border bg-transparent iss-text-foreground placeholder:iss-text-muted focus:outline-none focus:ring-2 focus:ring-inset" placeholder="Título, enunciado, conceito ou dificuldade…" autocomplete="off" aria-controls="exercises-list" />
+        </div>
+        <p id="exercises-search-enunciado-status" class="text-xs iss-text-muted mt-1 hidden" aria-live="polite"></p>
+      </div>
       <div class="flex flex-wrap items-center gap-2 mb-2">
-        <span class="text-sm iss-text-muted">Conceitos:</span>
+        <span class="text-sm iss-text-muted">Filtrar</span>
         <div id="exercises-concept-filters" class="flex flex-wrap gap-1"></div>
         <button type="button" id="exercises-concept-toggle" class="iss-exercise-action-btn text-sm py-1 hidden" aria-label="Exibir todos os filtros de conceito">Ver todos os conceitos</button>
         <button type="button" id="exercises-clear-filters" class="iss-exercise-action-btn text-sm py-1">Limpar filtros</button>

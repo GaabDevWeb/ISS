@@ -98,6 +98,13 @@ html {
   color: var(--color-accent);
 }
 
+mark.iss-search-highlight {
+  background: color-mix(in srgb, var(--color-accent) 35%, transparent);
+  color: inherit;
+  border-radius: var(--radius-sm);
+  padding: 0 0.12em;
+}
+
 /* Base */
 body {
   font-family: var(--font-sans);
