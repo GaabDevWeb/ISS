@@ -1,0 +1,231 @@
+4. Extrair informações através de agrupamentos e sumarização (GROUP_BY e ORDER_BY)
+4.3 Realizar agregações utilizando o comando GROUP_BY
+
+Link importante: 
+https://learning.oreilly.com/library/view/getting-started-with/9781491938607/ch06.html --> Chapter 6. GROUP BY and ORDER BY
+
+(1) Guia
+(1.1) Acessar o SQLiteStudio.exe
+	. No menu Database --> Add a database 
+	ou 
+    	  No menu Banco de Dados --> Adicionar um banco de dados
+		Na janela 'Database' ou 'Banco de dados'
+		Obs.: Escolher a pasta na qual estamos guardando os arquivos do SQLite. 
+		Colocar o nome do arquivo como Aula8.db e clicar no botão 'Salvar'
+			Clicar no botão 'Test connection'. 
+			Clicar no botão 'OK'
+create table NF_Cliente
+(NF integer, 
+ Produto text(5), 
+ Cliente text(2), 
+ Quantidade integer,
+ Valor integer, 
+ Dia integer);
+
+select * from NF_Cliente; 
+
+insert into NF_Cliente values (1, 'P001', 'C1', 8, 160, 5); 
+insert into NF_Cliente values (1, 'P002', 'C1', 2, 34, 5); 
+insert into NF_Cliente values (1, 'P003', 'C1', 1, 58, 5); 
+insert into NF_Cliente values (2, 'P002', 'C3', 20, 340, 7); 
+insert into NF_Cliente values (3, 'P001', 'C2', 12, 240, 8); 
+insert into NF_Cliente values (3, 'P002', 'C2', 5, 85, 8); 
+insert into NF_Cliente values (4, 'P001', 'C1', 2, 40, 10); 
+insert into NF_Cliente values (5, 'P003', 'C3', 4, 232, 15); 
+
+select * from NF_Cliente; 
+
+select distinct Cliente from NF_Cliente;
+
+select distinct Cliente from NF_Cliente order by Cliente;
+
+select SUM(Valor) from NF_Cliente;
+
+select 160 + 34 + 58 + 340 + 240 + 85 + 40 + 232;
+
+select SUM(Valor) from NF_Cliente where Cliente = 'C1';
+
+select Cliente, SUM(Valor) as Soma, Count(*) as QtdeRegistros from NF_Cliente group by Cliente; 
+
+select Cliente, SUM(Valor) as Soma, Count(*) as QtdeRegistros from NF_Cliente group by Cliente having (SUM (Valor) > 300) and (Count(*) >= 1); 
+
+insert into NF_Cliente values (1, 'P004', 'C1', 7, null, 5); 
+insert into NF_Cliente values (2, 'P005', 'C3', 6, null, 7); 
+insert into NF_Cliente values (3, 'P006', 'C2', 3, null, 8);
+
+select * from NF_Cliente; 
+
+select Valor from NF_Cliente;
+
+select distinct Valor from NF_Cliente;
+
+select Valor from NF_Cliente order by Valor;
+
+select distinct Valor from NF_Cliente order by Valor;
+
+select SUM(Valor) from NF_Cliente;
+
+select SUM(Valor) from NF_Cliente where Cliente = 'C1';
+
+select Cliente, SUM(Valor) as Soma, Count(*) as QtdeRegistros from NF_Cliente group by Cliente; 
+
+select Cliente, SUM(Valor) as Soma, Count(Valor) as QtdeRegistros from NF_Cliente group by Cliente; 
+
+select Cliente, SUM(Valor) as Soma, Count(*) as QtdeRegistros from NF_Cliente group by Cliente having (SUM (Valor) > 300) and (Count(*) >= 1); 
+
+(1.2) Baixar o arquivo vgsales.zip do infnet.online. 
+
+(1.3) Descompactar o arquivo vgsales.zip
+
+(1.4) Abrir o Excel
+
+	Abrir 'Pasta de trabalho em branco'
+
+	A partir do menu Dados
+
+		Clicar em 'Obter Dados' na opção 'De Text/CSV'	
+
+			Ir para a pasta do arquivo vgsales.csv, selecionar o arquivo vgsales.csv e clicar no botão Importar. 
+
+		Na janela 'vgsales.csv'
+
+			Na janela aberta clicar no botão 'Carregar'. 
+
+Explicação sucinta sobre as colunas: 
+
+(Coluna A) Rank - Ranking of overall sales. TRADUÇÃO --> Ranking de vendas gerais
+
+(Coluna B) Name - The games name. TRADUÇÃO --> O nome do jogo
+
+(Coluna C) Platform - Platform of the games release (i.e. PC,PS4, etc.). TRADUÇÃO --> Plataforma do lançamento dos jogos (ou seja, PC, PS4, etc.)
+
+(Coluna D) Year - Year of the game's release. TRADUÇÃO --> Ano de lançamento do jogo
+
+(Coluna E) Genre - Genre of the game. TRADUÇÃO --> Gênero do jogo
+
+(Coluna F) Publisher - Publisher of the game. TRADUÇÃO --> Empresa do jogo
+
+(Coluna G) NA_Sales - Sales in North America (in millions). TRADUÇÃO --> Vendas na América do Norte (em milhões)
+
+(Coluna H) EU_Sales - Sales in Europe (in millions). TRADUÇÃO --> Vendas na Europa (em milhões)
+
+(Coluna I) JP_Sales - Sales in Japan (in millions). TRADUÇÃO --> Vendas no Japão (em milhões)
+
+(Coluna J) Other_Sales - Sales in the rest of the world (in millions). TRADUÇÃO --> Vendas no resto do mundo (em milhões)
+
+(Coluna K) Global_Sales - Total worldwide sales. TRADUÇÃO --> Total de vendas mundiais.	
+
+	Fechar a janela 'Consultas e Conexões'. 
+
+	A partir da célula L2 colocar a fórmula =SOMA(G2:J2)
+
+	Obs.: A ideia é somar os valores das colunas G (NA_Sales), H (EU_Sales), I (JP_Sales) e J (Other_Sales) e bater com a coluna K (Global_Sales).
+
+		Atenção: Têm valores que não batem. 
+
+
+(1.5) Acessar o SQLiteStudio.exe
+
+	. No menu Database --> Add a database 
+                 ou 
+	no menu Banco de dados --> Adicionar um banco de dados
+
+		Na janela 'Database'
+
+		Obs.: Escolher a pasta na qual estamos guardando os arquivos do SQLite. 
+
+		Colocar o nome do arquivo como Aula8b.db e clicar no botão 'Salvar'
+
+			Clicar no botão 'Test connection'. 
+
+			Clicar no botão 'OK'
+
+create table Vendas_Jogos
+(Rank_Jogo integer, 
+ Nome_Jogo text(120), 
+ Plataforma_Jogo text(8), 
+ Ano_Jogo integer,
+ Genero_Jogo text (30), 
+ Empresa_Jogo text (50),
+ Vendas_EUA_Jogo integer, 
+ Vendas_Europa_Jogo integer, 
+ Vendas_Japao_Jogo integer, 
+ Vendas_Outros_Lugares_Jogo integer, 
+ Vendas_Mundial_Jogo integer
+);
+
+select * from Vendas_Jogos;
+
+A partir do menu Tools --> Import (ou Ferramentas --> Importar)
+
+	Em 'Table to import to' (ou Importar tabela para)
+
+		Em 'Database' (ou em 'Banco de dados'): Aula8b
+
+		Em 'Table' (ou em 'Tabela'): Vendas_Jogos
+
+		Clicar no botão 'Next'.
+
+	Em 'Data source to import from' (ou em 'Dados para importar')
+
+		Clicar no ícone que indica uma pasta, selecionar o caminho do arquivo vgsales.csv, selecionar o arquivo vgsales.csv e clicar no botão 'Abrir'.
+
+		Em 'Data source options' marcar a opção 'First line represents CSV column names'
+		ou 
+		em 'Opções de fonte de dados'  marcar a opção 'A primeira linha será os nomes das colunas'
+
+		Em 'Field separator' (ou 'Separador de coluna:) marcar a opção  ', (vírgula)' 
+
+		Clicar no botão 'Finish'. 
+
+select * from Vendas_Jogos;
+
+select count(*) from Vendas_Jogos; 
+
+select distinct Plataforma_Jogo from Vendas_Jogos order by Plataforma_Jogo;
+
+select distinct Ano_Jogo from Vendas_Jogos order by Ano_Jogo;
+
+select distinct Genero_Jogo from Vendas_Jogos order by Genero_Jogo;
+
+select distinct Empresa_Jogo from Vendas_Jogos order by Empresa_Jogo;
+
+select min(Ano_Jogo) Ano_Mais_Antigo, max(Ano_Jogo) Ano_Mais_Novo from Vendas_Jogos;
+
+select min(Ano_Jogo) Ano_Mais_Antigo, max(Ano_Jogo) Ano_Mais_Novo from Vendas_Jogos where Ano_Jogo != 'N/A';
+
+select  Vendas_EUA_Jogo + Vendas_Europa_Jogo + Vendas_Japao_Jogo + Vendas_Outros_Lugares_Jogo as Soma,
+Vendas_Mundial_Jogo 
+from Vendas_Jogos;
+
+select  round(Vendas_EUA_Jogo + Vendas_Europa_Jogo + Vendas_Japao_Jogo + Vendas_Outros_Lugares_Jogo,2) as Soma,
+ Vendas_Mundial_Jogo 
+from Vendas_Jogos;
+
+select  Plataforma_Jogo, 
+  round(SUM(Vendas_EUA_Jogo + Vendas_Europa_Jogo + Vendas_Japao_Jogo + Vendas_Outros_Lugares_Jogo),2) as Soma, 
+  round(SUM(Vendas_Mundial_Jogo),2) as Vendas_Mundial_Jogo
+from Vendas_Jogos
+group by Plataforma_Jogo
+order by Plataforma_Jogo;
+
+select  Ano_Jogo, 
+  round(SUM(Vendas_EUA_Jogo + Vendas_Europa_Jogo + Vendas_Japao_Jogo + Vendas_Outros_Lugares_Jogo),2) as Soma, 
+  round(SUM(Vendas_Mundial_Jogo),2) as Vendas_Mundial_Jogo
+from Vendas_Jogos
+group by Ano_Jogo
+order by Ano_Jogo;
+
+select  Genero_Jogo, 
+  round(SUM(Vendas_EUA_Jogo + Vendas_Europa_Jogo + Vendas_Japao_Jogo + Vendas_Outros_Lugares_Jogo),2) as Soma, 
+  round(SUM(Vendas_Mundial_Jogo),2) as Vendas_Mundial_Jogo
+from Vendas_Jogos
+group by Genero_Jogo
+order by round(SUM(Vendas_EUA_Jogo + Vendas_Europa_Jogo + Vendas_Japao_Jogo + Vendas_Outros_Lugares_Jogo),2) desc;
+
+select  Empresa_Jogo, 
+  round(SUM(Vendas_EUA_Jogo + Vendas_Europa_Jogo + Vendas_Japao_Jogo + Vendas_Outros_Lugares_Jogo),2) as Soma, 
+  round(SUM(Vendas_Mundial_Jogo),2) as Vendas_Mundial_Jogo
+from Vendas_Jogos
+group by Empresa_Jogo
+order by round(SUM(Vendas_EUA_Jogo + Vendas_Europa_Jogo + Vendas_Japao_Jogo + Vendas_Outros_Lugares_Jogo),2) desc;

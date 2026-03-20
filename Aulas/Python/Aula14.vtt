@@ -1,0 +1,2238 @@
+UWEBVTT
+
+1
+00:00:05.870 --> 00:00:13.239
+Gesiel Lopes: Opa, pessoal. Boa noite. Vamos aguardar mais dois minutinhos. Já. Já iniciamos. Tranquilo.
+
+2
+00:00:14.730 --> 00:00:18.620
+Gesiel Lopes: Vamos só terminar de aguardar aí o pessoal chegar, a gente já já inicia
+
+3
+00:04:08.510 --> 00:04:13.660
+Gesiel Lopes: Opa, pessoal, acho que já dá para começar, né? Vamos logo início.
+
+4
+00:04:14.260 --> 00:04:31.350
+Gesiel Lopes: Então, antes de mais nada, muito boa noite. Seja bem vindo a mais um encontro aqui da disciplina de introdução à programação com Python, do módulo de processamento de dados do Instituto Infinity. Aqui quem vos fala é Gesiel Lopes.
+
+5
+00:04:31.440 --> 00:04:47.980
+Gesiel Lopes: Ainda estou me recuperando. A semana está sendo bem, Trash, digamos assim. Não está bem complicada, mas vamos lá. Estamos literalmente chegando nos finalmentes da nossa disciplina. Estamos iniciando nesse exato momento o nosso
+
+6
+00:04:48.220 --> 00:04:53.969
+Gesiel Lopes: 14o encontro. Então faltam mais dois encontros aí pela frente.
+
+7
+00:04:54.740 --> 00:05:09.179
+Gesiel Lopes: Então a gente. Estamos aí na reta final. Você que estiver aqui conosco ao vivo, meu, muito boa noite. Seja muito bem vindo. Muito bem vinda. E você que estiver assistindo a gravação. Bom dia. Boa tarde. Boa noite.
+
+8
+00:05:09.310 --> 00:05:13.980
+Gesiel Lopes: Vamos aí aguentar o gisel mais um pouquinho aí.
+
+9
+00:05:14.220 --> 00:05:21.570
+Gesiel Lopes: A voz do Gisele já não é lá essas coisas. Ainda gripado com né?
+
+10
+00:05:21.670 --> 00:05:25.560
+Gesiel Lopes: Uma crise de rinite, Braba,
+
+11
+00:05:25.850 --> 00:05:39.070
+Gesiel Lopes: mas vamos lá. Tudo tranquilo, pessoal. Espero que vocês estejam todos bem. Espero também que vocês estejam curtindo a disciplina. Estamos já quase na reta final, né?
+
+12
+00:05:39.190 --> 00:05:45.610
+Gesiel Lopes: Então a gente começa a falar já um pouquinho de despedida. Que é isso? Gisela é a gente.
+
+13
+00:05:45.720 --> 00:05:53.820
+Gesiel Lopes: Estamos chegando no final da disciplina. Então a gente já precisa se antecipar. Espero aí
+
+14
+00:05:54.650 --> 00:06:03.960
+Gesiel Lopes: que vocês estejam curtindo a disciplina que ela tenha agregado significativamente na formação de vocês. E que ela
+
+15
+00:06:04.750 --> 00:06:21.250
+Gesiel Lopes: possa ter servido aí para vocês terem esse primeiro contato. Para aqueles que nunca tiveram contato com esse universo da programação. Estejam aí se familiarizando. Estejam aí, começando a ganhar atração. Gostar.
+
+16
+00:06:21.870 --> 00:06:28.700
+Gesiel Lopes: Enfim, então vou compartilhar aqui a minha tela com vocês
+
+17
+00:06:29.680 --> 00:06:37.060
+Gesiel Lopes: aproveitando. Vocês estão me ouvindo bem, estão vendo bem, está tudo tranquilo. Eu não vou. Talvez.
+
+18
+00:06:39.100 --> 00:06:43.549
+Gesiel Lopes: Espero que a cabeça hoje funcione um pouquinho melhor do que da última aula.
+
+19
+00:06:45.620 --> 00:06:52.980
+Gesiel Lopes: Se eu espirrar ou fechar a câmera já, vocês já fiquem de sobreaviso, tá bom?
+
+20
+00:06:53.300 --> 00:06:57.390
+Gesiel Lopes: Acredito que vocês estejam nesse exato momento.
+
+21
+00:06:57.910 --> 00:07:03.219
+Gesiel Lopes: Vendo a minha tela, eu vou compartilhar aqui
+
+22
+00:07:03.710 --> 00:07:10.520
+Gesiel Lopes: o código na formação do notebook Do Deep. Note do nosso encontro de hoje.
+
+23
+00:07:11.960 --> 00:07:16.089
+Gesiel Lopes: E aí eu vou só.
+
+24
+00:07:19.950 --> 00:07:21.690
+Gesiel Lopes: Aumenta aqui um pouquinho.
+
+25
+00:07:22.140 --> 00:07:29.050
+Gesiel Lopes: Acredito que esteja legal, beleza. Então vamos lá
+
+26
+00:07:29.330 --> 00:07:38.560
+Gesiel Lopes: dando uma pequena recapitulada no nosso. Espera aí. Só um minuto. Só um minuto. Só um minuto, pessoal.
+
+27
+00:08:06.780 --> 00:08:11.610
+Gesiel Lopes: Vamos lá. Vamos lá. Desculpe, pessoal.
+
+28
+00:08:13.690 --> 00:08:32.569
+Gesiel Lopes: Beleza, vamos lá. No nosso último encontro no encontro da segunda feira passada, a gente finalizou a parte do tópico de laços de repetição. Então, a gente viu as duas principais estruturas utilizadas
+
+29
+00:08:32.679 --> 00:08:37.080
+Gesiel Lopes: no contexto do mundo Python para a gente realizar.
+
+30
+00:08:37.760 --> 00:08:40.590
+Gesiel Lopes: Ah, é?
+
+31
+00:08:41.090 --> 00:08:46.520
+Gesiel Lopes: A gente poder fazer com que determinado trecho de código
+
+32
+00:08:46.630 --> 00:08:56.670
+Gesiel Lopes: se repita uma quantidade fixa de vezes ou uma quantidade de vezes, até que certa condição seja insatisfeita.
+
+33
+00:08:56.800 --> 00:09:03.820
+Gesiel Lopes: A gente viu como controlar também esses laços de repetição, esses loop.
+
+34
+00:09:04.100 --> 00:09:07.789
+Gesiel Lopes: Então a gente viu as duas estruturas responsáveis
+
+35
+00:09:07.890 --> 00:09:20.480
+Gesiel Lopes: por controlar esse fluxo. Então, dependendo, é claro do problema que a gente estiver resolvendo, a gente pode utilizar uma estrutura para controlar esse fluxo,
+
+36
+00:09:20.610 --> 00:09:39.249
+Gesiel Lopes: para que, dependendo de certa condição, ou o fluxo pare, ou o fluxo parta para a próxima interação, que foi? As instruções continuem e Break, ou continue. Faz com que o laço.
+
+37
+00:09:40.050 --> 00:09:50.740
+Gesiel Lopes: Independentemente do que tem após o continue, ele vá para a próxima interação e o break interrompe a execução do meu loop
+
+38
+00:09:51.950 --> 00:09:56.370
+Gesiel Lopes: e a gente viu também que, em particular, na linguagem de programação Python,
+
+39
+00:09:56.490 --> 00:10:01.870
+Gesiel Lopes: a gente tem uma estrutura que é executada
+
+40
+00:10:02.210 --> 00:10:14.459
+Gesiel Lopes: toda vez que o loop é finalizado, que é a estrutura else. Então a gente consegue fazer com que o nosso código execute
+
+41
+00:10:14.620 --> 00:10:30.989
+Gesiel Lopes: toda vez que um determinado laço de repetição finalizar. Então você consegue. Ah, Gisele. Isso aí é utilizado aonde muitas das vezes você precisa, por exemplo, fazer interações
+
+42
+00:10:31.130 --> 00:10:36.599
+Gesiel Lopes: para fazer inserção, por exemplo, de dados em um banco de dados.
+
+43
+00:10:37.220 --> 00:10:39.210
+Gesiel Lopes: Então a gente fica fazendo
+
+44
+00:10:39.510 --> 00:10:53.819
+Gesiel Lopes: fazendo inserções, mandando instruções para armazenar dados em um determinado banco de dados. E muitas das vezes, essa conexão com o banco de dados precisa ser estabelecida.
+
+45
+00:10:54.290 --> 00:10:57.760
+Gesiel Lopes: Então eu estabeleço essa
+
+46
+00:10:58.610 --> 00:11:09.620
+Gesiel Lopes: essa conexão. E essa conexão só fica ativa enquanto o laço de repetição. Ou então, enquanto eu estiver registrando os meus dados no banco de dados.
+
+47
+00:11:09.830 --> 00:11:21.109
+Gesiel Lopes: Então, por exemplo, finalizei todos os registros. Não faz necessidade, por exemplo, que a minha conexão fique aberta, então eu posso colocar,
+
+48
+00:11:21.190 --> 00:11:31.739
+Gesiel Lopes: após o laço finalizar uma instrução de código, por exemplo, para finalizar a conexão, para eu liberar recursos do meu banco de dados,
+
+49
+00:11:31.740 --> 00:11:45.610
+Gesiel Lopes: então existem vários lugares que você pode estar realizando. Essas estruturas. Por exemplo, inclusive isso. Eu faço bastante.
+
+50
+00:11:45.680 --> 00:11:56.020
+Gesiel Lopes: A gente define pipelines, por exemplo, dentro de uma esteira de tratamento de dados. Vou chamar dessa forma para simplificar.
+
+51
+00:11:56.260 --> 00:12:01.649
+Gesiel Lopes: Então a gente realiza diversas operações e tem algumas operações
+
+52
+00:12:01.710 --> 00:12:20.109
+Gesiel Lopes: que elas ficam reservadas, e elas só são persistidas quando o laço ou o conjunto de instruções são finalizadas. E aí você faz a persistência desses dados. Então é como se eu estivesse estabelecendo uma.
+
+53
+00:12:20.850 --> 00:12:26.809
+Gesiel Lopes: Um ponto de comunicação direta com o banco de dados. Então, hoje só persiste esses dados
+
+54
+00:12:27.000 --> 00:12:37.370
+Gesiel Lopes: quando eles todos forem tratados. Então é uma maneira de você controlar algumas instruções. Claro, vai depender
+
+55
+00:12:37.640 --> 00:12:47.639
+Gesiel Lopes: de cada caso. A ideia foi apresentar para vocês a estrutura tranquilo. E hoje vamos
+
+56
+00:12:47.820 --> 00:12:55.560
+Gesiel Lopes: a trabalhar com um dos últimos pontos aqui da nossa disciplina,
+
+57
+00:12:56.090 --> 00:13:05.669
+Gesiel Lopes: que é um conceito de funções, tá? Funções, pessoal. É um dos pontos centrais. Alguns
+
+58
+00:13:06.190 --> 00:13:14.949
+Gesiel Lopes: em algumas linguagens, vocês vão ver funções também chamadas de métodos. Quando vocês estiverem trabalhando, por exemplo,
+
+59
+00:13:15.160 --> 00:13:26.410
+Gesiel Lopes: com a orientação. Programação orientada, objeto, por exemplo, com Python, vocês vão ver lá que as funções também podem ser chamadas de métodos,
+
+60
+00:13:26.530 --> 00:13:29.179
+Gesiel Lopes: então. Mas aqui a gente vai só chamar de funções
+
+61
+00:13:29.490 --> 00:13:37.380
+Gesiel Lopes: e funções. Nada mais são do que blocos de códigos reutilizáveis,
+
+62
+00:13:38.400 --> 00:13:54.160
+Gesiel Lopes: que realizam uma tarefa bem definida, uma tarefa bem específica. Então elas são fundamentais porque a gente consegue modularizar o nosso código
+
+63
+00:13:54.320 --> 00:13:57.780
+Gesiel Lopes: e dividir responsabilidade
+
+64
+00:13:57.840 --> 00:14:14.519
+Gesiel Lopes: do nosso código em unidades menores, unidades bem controladas. Então a gente evita que o meu código seja replicado em várias partes,
+
+65
+00:14:14.570 --> 00:14:18.670
+Gesiel Lopes: já que eu posso reutilizar esse mesmo código.
+
+66
+00:14:18.800 --> 00:14:35.769
+Gesiel Lopes: E também eu posso acoplar responsabilidades bem definidas de algumas ações dentro das minhas funções. Então posso especificar um bloco que realiza somente uma tarefa. E aí eu coloco
+
+67
+00:14:35.830 --> 00:14:46.020
+Gesiel Lopes: essa tarefa separado dentro de uma função. Então eu crio esse encapsulamento. Tá bom,
+
+68
+00:14:46.070 --> 00:15:00.089
+Gesiel Lopes: então, funções é um ponto central dentro das linguagens de programação. De forma geral, não poderia ser diferente aqui. Com a linguagem Python,
+
+69
+00:15:00.270 --> 00:15:04.230
+Gesiel Lopes: só que nós já estamos utilizando funções.
+
+70
+00:15:04.640 --> 00:15:10.880
+Gesiel Lopes: Praticamente desde o momento que a gente começou a trabalhar com
+
+71
+00:15:11.720 --> 00:15:16.649
+Gesiel Lopes: que a gente começou a trabalhar com o Deep Note.
+
+72
+00:15:17.160 --> 00:15:20.639
+Gesiel Lopes: Deixa eu só fazer isso aqui enquanto eu vou falando.
+
+73
+00:15:20.970 --> 00:15:36.409
+Gesiel Lopes: Então, desde quando a gente começou a trabalhar com o Deep note. A gente vem trabalhando com funções. Então as primeiras funções que nós tivemos contato foram as funções. Deixa eu só ser vestigem. Pessoal, deixa, eu só.
+
+74
+00:15:37.390 --> 00:15:40.570
+Gesiel Lopes: Eu vou até tirar isso aqui. Ó daqui.
+
+75
+00:15:40.760 --> 00:15:43.460
+Gesiel Lopes: Sem vestigem, sem vestígio. Por favor.
+
+76
+00:15:44.450 --> 00:15:51.130
+Gesiel Lopes: O primeiro contato que nós tivemos foi com
+
+77
+00:15:51.170 --> 00:16:06.469
+Gesiel Lopes: com as funções que são chamadas funções Beauty. São funções integradas. São funções que já estão disponibilizadas dentro do contexto de execução do meio ambiente Python:
+
+78
+00:16:06.470 --> 00:16:20.359
+Gesiel Lopes: então ela já está automaticamente definida. Então você não precisa definir. E aqui, nesse link, eu estou disponibilizando aqui, lá da documentação, as funções beauty disponíveis na Linguagem Python
+
+79
+00:16:20.360 --> 00:16:27.079
+Gesiel Lopes: observe que muitas dessas funções, a gente trabalhou a primeira função Beauty, que a gente trabalhou
+
+80
+00:16:27.080 --> 00:16:28.520
+Gesiel Lopes: foi a função print.
+
+81
+00:16:28.820 --> 00:16:31.519
+Gesiel Lopes: Então a função print,
+
+82
+00:16:32.190 --> 00:16:48.859
+Gesiel Lopes: que foi a primeira coisa que fizemos. O famoso olamundo da linguagem foi feito a partir de uma função. A gente ultimamente tem trabalhado muito com a variável,
+
+83
+00:16:49.660 --> 00:17:07.110
+Gesiel Lopes: ou, aliás, com a função input para capturar informações do usuário digite seu nome, tá, é aqui. Eu deixo.
+
+84
+00:17:08.480 --> 00:17:09.440
+Gesiel Lopes: É isso.
+
+85
+00:17:10.160 --> 00:17:12.210
+Gesiel Lopes: Se ele não vai fazer nada, não é o
+
+86
+00:17:13.349 --> 00:17:17.399
+Gesiel Lopes: deixa eu só pegar aqui algumas células.
+
+87
+00:17:17.579 --> 00:17:19.250
+Gesiel Lopes: Vou colocar aqui nome.
+
+88
+00:17:19.890 --> 00:17:22.660
+Gesiel Lopes: Desculpem, pessoal. O nariz está. Está pegando.
+
+89
+00:17:22.950 --> 00:17:24.819
+Gesiel Lopes: Então aqui. Ó Gesiel
+
+90
+00:17:25.760 --> 00:17:37.810
+Gesiel Lopes: Lopes. Então ele vai aparecer no terminal, o Gesiel Lopes. Então a função input é uma função que a gente utiliza bastante. É uma função beauty.
+
+91
+00:17:37.810 --> 00:17:47.089
+Gesiel Lopes: Outra função que a gente trabalhou bastante, foi as funções de conversão.
+
+92
+00:17:47.430 --> 00:18:03.410
+Gesiel Lopes: Tá, conversão de String no México, em valores numéricos numéricos
+
+93
+00:18:03.540 --> 00:18:09.180
+Gesiel Lopes: que a gente viu. Vou só colocar aqui um print, tá?
+
+94
+00:18:11.360 --> 00:18:17.430
+Gesiel Lopes: Que foi? As funções que a gente viu, a Int.
+
+95
+00:18:18.860 --> 00:18:23.040
+Gesiel Lopes: Que ela transforma uma Estringe.
+
+96
+00:18:24.250 --> 00:18:30.200
+Gesiel Lopes: Nesse caso, aqui, dois em um número inteiro.
+
+97
+00:18:33.720 --> 00:18:41.320
+Gesiel Lopes: Então, a gente viu o Int, o Flow at Tchau.
+
+98
+00:18:43.010 --> 00:18:59.609
+Gesiel Lopes: Foram Flowt. Foram funções de conversões. Algumas das funções de conversão que trabalhamos. A gente viu também a função que faz o contrário, que transforma
+
+99
+00:18:59.610 --> 00:19:10.060
+Gesiel Lopes: um determinado objeto, um determinado valor numérico, por exemplo, em uma String.
+
+100
+00:19:10.380 --> 00:19:14.140
+Gesiel Lopes: E também a gente viu a função Taipe.
+
+101
+00:19:14.460 --> 00:19:17.360
+Gesiel Lopes: A função Taipe,
+
+102
+00:19:17.660 --> 00:19:36.150
+Gesiel Lopes: que é uma função que inspeciona ou define ou mostra para a gente. Não define, mas que mostra para a gente qual é o tipo daquele objeto do objeto que está armazenado na minha variável do valor armazenado em uma determinada variável.
+
+103
+00:19:36.280 --> 00:19:41.150
+Gesiel Lopes: Então a gente, por exemplo, podia pegar essas
+
+104
+00:19:41.410 --> 00:19:49.740
+Gesiel Lopes: essas duas conversões, em vez de fazer a
+
+105
+00:19:50.300 --> 00:19:56.930
+Gesiel Lopes: printar o valor. Eu posso verificar qual é o tipo dessa conversão?
+
+106
+00:19:57.280 --> 00:20:06.160
+Gesiel Lopes: Qual é o tipo dessa conversão? Então, em vez de eu simplesmente fazer o Print, o Print? Estou que nem o cebolinha
+
+107
+00:20:09.340 --> 00:20:14.660
+Gesiel Lopes: aqui. Ó, ele verifica qual o tipo da.
+
+108
+00:20:14.790 --> 00:20:16.050
+Gesiel Lopes: Do valor
+
+109
+00:20:16.300 --> 00:20:32.670
+Gesiel Lopes: que eu tenho dentro, no meu ambiente. Então foram essas as primeiras funções que a gente viu dentro da linguagem Python, que a gente vem trabalhando até agora. E aí, só para finalizar,
+
+110
+00:20:32.950 --> 00:20:41.209
+Gesiel Lopes: a função lenta, que é uma função que define, por exemplo, o tamanho
+
+111
+00:20:51.370 --> 00:20:55.570
+Gesiel Lopes: e verifica, por exemplo, a quantidade de caracteres
+
+112
+00:20:55.620 --> 00:21:08.590
+Gesiel Lopes: que existe dentro de uma String na realidade que existe dentro de uma coleção. O Len não é específico para String. Ele é específico para coleções para listas, por exemplo.
+
+113
+00:21:08.590 --> 00:21:17.630
+Gesiel Lopes: E é uma estringe. A gente viu que é uma cadeia de caracteres. É uma coleção de caracteres, ou seja, uma lista de caracteres.
+
+114
+00:21:17.770 --> 00:21:27.250
+Gesiel Lopes: Então a gente pode, por exemplo, verificar aqui quantos nomes ou quantos caracteres existem na String Gesiel Lopes tá
+
+115
+00:21:28.150 --> 00:21:35.230
+Gesiel Lopes: lembrando que o espaço em branco. Ele é um caracter.
+
+116
+00:21:36.060 --> 00:21:54.799
+Gesiel Lopes: Então essas foram uma das funções que mais trabalhamos. Porém, a linguagem de programação Pytho permite que eu crie as minhas funções. Então a sintaxe básica de uma função dentro do
+
+117
+00:21:54.850 --> 00:22:00.500
+Gesiel Lopes: do ecossistema Python. É essa. Primeiro, você
+
+118
+00:22:01.340 --> 00:22:12.290
+Gesiel Lopes: utiliza a variável reservada Def. Então o def é utilizado para definir a minha função.
+
+119
+00:22:13.030 --> 00:22:24.549
+Gesiel Lopes: Define então mais intuitivo, impossível, e aí depois você coloca Opa, o nome da função,
+
+120
+00:22:24.880 --> 00:22:34.670
+Gesiel Lopes: que é como essa função vai ser identificada no seu código, abre e fecha parêntese.
+
+121
+00:22:34.880 --> 00:22:46.839
+Gesiel Lopes: E aqui, dentro desse parêntese, existe o que nós chamamos de parâmetros da minha função, que são valores que eu vou passar
+
+122
+00:22:47.260 --> 00:22:56.780
+Gesiel Lopes: para o bloco de código definido pela função, para realizar alguma operação ou realizar alguma ação.
+
+123
+00:22:56.840 --> 00:23:11.780
+Gesiel Lopes: Então, quando eu defino ou passo alguma coisa entre parênteses de uma função. Eu estou definindo parâmetros. Estou passando valores para a minha função. Então isso são chamados de parâmetros.
+
+124
+00:23:12.110 --> 00:23:30.410
+Gesiel Lopes: Os parâmetros de uma função não são obrigatórios. Eu posso definir uma função que realize uma determinada ação e não recebem nenhum parâmetro, por exemplo, ou pode ser que a função receba ou não uma
+
+125
+00:23:31.160 --> 00:23:43.949
+Gesiel Lopes: um parâmetro. E aqui você faz um deslocamento, uma tabulação ou quatro espaços, e aí você pode utilizar,
+
+126
+00:23:44.140 --> 00:23:49.470
+Gesiel Lopes: caso queira. É uma boa prática sempre fazer isso.
+
+127
+00:23:49.600 --> 00:24:01.930
+Gesiel Lopes: Definir uma doc string, que a gente trabalhou bastante lembra que quando eu quero criar as strings com mais de uma linha sem fazer quebra. Isso é o que nós chamamos de doc string.
+
+128
+00:24:02.060 --> 00:24:22.030
+Gesiel Lopes: Quando eu defino esse tipo de string, esse doc string dentro de uma função. Ele é interpretado pelo Python pelo ambiente Python, como se fosse uma documentação daquela função. É o que ela realiza,
+
+129
+00:24:22.110 --> 00:24:22.980
+Gesiel Lopes: tá?
+
+130
+00:24:24.020 --> 00:24:35.380
+Gesiel Lopes: E aí? Depois você define o corpo da função, que é basicamente o que a função vai realizar. E aí também, e aí, por fim,
+
+131
+00:24:35.550 --> 00:24:48.839
+Gesiel Lopes: uma função pode ou não retornar um determinado valor. Ele pode retornar algo ou o resultado de um processamento
+
+132
+00:24:49.800 --> 00:25:07.480
+Gesiel Lopes: ou não pode, ou caso você queira também ela não pode retornar. Basicamente nada. Então a função só realiza a ação, e ela não retorna a nada. Então essa é a sintaxe padrão da minha função.
+
+133
+00:25:07.650 --> 00:25:16.689
+Gesiel Lopes: E aqui eu coloco algumas boas práticas. Não é obrigatório, mas é sempre bom
+
+134
+00:25:16.970 --> 00:25:29.539
+Gesiel Lopes: que a gente utilize nomes descritivos para as funções. A mesma regra que a gente utilizou quando a gente estava falando de variáveis. Então usem nomes descritivos.
+
+135
+00:25:29.560 --> 00:25:38.509
+Gesiel Lopes: Existe uma convenção de que quando eu for definir uma função, sempre eu utilize verbos. Tá bom.
+
+136
+00:25:38.670 --> 00:25:45.010
+Gesiel Lopes: Porque verbos indicam uma ação. Então a função vai realizar uma determinada ação. Então é sempre
+
+137
+00:25:45.440 --> 00:25:56.030
+Gesiel Lopes: recomendável que você utilize verbos para definir o nome de uma função é: tá?
+
+138
+00:25:56.240 --> 00:26:10.520
+Gesiel Lopes: Outra convenção é que a gente deve utilizar, assim como a gente fez com as variáveis. A convenção snack case para definir o nome das funções. Caso ela tenha palavras compostas,
+
+139
+00:26:10.660 --> 00:26:26.089
+Gesiel Lopes: sempre é recomendável eu incluir no cabeçário da função, ou seja, a primeira coisa que eu faço dentro do corpo da função, um docstring para documentar o propósito daquela função,
+
+140
+00:26:27.030 --> 00:26:37.710
+Gesiel Lopes: e outra prática que é extremamente recomendável é que as funções devem ser construídas para realizar,
+
+141
+00:26:38.100 --> 00:26:41.510
+Gesiel Lopes: para realizarem uma tarefa específica.
+
+142
+00:26:41.680 --> 00:26:43.660
+Gesiel Lopes: Tá bom,
+
+143
+00:26:44.120 --> 00:26:56.590
+Gesiel Lopes: não é recomendado que eu tenha mais de uma responsabilidade dentro de uma função. Ou seja, não é recomendado que eu.
+
+144
+00:26:56.890 --> 00:26:59.720
+Gesiel Lopes: Que eu
+
+145
+00:27:00.920 --> 00:27:16.049
+Gesiel Lopes: não é recomendado que eu coloque várias responsabilidades ou que uma função faça várias ações. Sempre interessante a gente definir uma função bem coesa com a responsabilidade bem definida.
+
+146
+00:27:16.230 --> 00:27:25.790
+Gesiel Lopes: Ah, Gisele, eu posso ter uma função que chama diversas funções. Sim, mesmo que eu vá executar várias outras funções.
+
+147
+00:27:26.160 --> 00:27:37.499
+Gesiel Lopes: Responsabilidade dessa função não é definir essas responsabilidades das outras funções. E sim, chamar essas outras funções, que é algo bem tranquilo
+
+148
+00:27:37.840 --> 00:27:54.859
+Gesiel Lopes: que sempre acontece. Então aqui eu vou colocar o nosso exemplo mais trivial possível, que é uma função de saudação. A gente não fez o nosso Hello Word então a gente vai fazer uma função. A nossa função que imprime uma saudação.
+
+149
+00:27:54.930 --> 00:28:13.340
+Gesiel Lopes: Então, para fazer isso, a primeira coisa que eu tenho que fazer é usar a palavra reservada. Df: definir o nome da minha função. Eu vou chamar aqui de saudação. E aí outro detalhe. Quando a gente estiver construindo variáveis. Usando a língua portuguesa,
+
+150
+00:28:13.510 --> 00:28:32.909
+Gesiel Lopes: recomenda se a gente não utilizar letras acentuadas. Cecília, o A tio, o I, o acetagudo, o Crase não é aconselhado. Tá bom,
+
+151
+00:28:33.650 --> 00:28:38.440
+Gesiel Lopes: essa é a minha função. Ela não vai receber nenhum parâmetro.
+
+152
+00:28:39.790 --> 00:28:51.040
+Gesiel Lopes: Dois pontos para eu dizer: aqui é a definição da minha função. A partir daqui, eu vou definir o bloco de código da minha função.
+
+153
+00:28:51.380 --> 00:28:56.490
+Gesiel Lopes: Então eu vou criar aqui um docstring rapidamente, só para.
+
+154
+00:28:56.780 --> 00:29:03.900
+Gesiel Lopes: Para definir o o Marcos
+
+155
+00:29:06.000 --> 00:29:16.580
+Gesiel Lopes: pode saudar, porque na realidade eu estou fazendo ação, né? Não é que sempre eu vou ter que usar verba. Saudar pode ser saudação.
+
+156
+00:29:16.760 --> 00:29:18.970
+Gesiel Lopes: Não tem problema. Não viu marcos?
+
+157
+00:29:19.680 --> 00:29:25.559
+Gesiel Lopes: Não, é que é obrigatório, é uma boa prática. Mas é que eu estou realizando uma ação.
+
+158
+00:29:25.780 --> 00:29:30.629
+Gesiel Lopes: Então, então essa é minha função. Imprime, imprime
+
+159
+00:29:31.400 --> 00:29:38.900
+Gesiel Lopes: uma saudação simples. E aqui na Doc streaming, caso você queira, você pode.
+
+160
+00:29:39.100 --> 00:29:47.379
+Gesiel Lopes: Saudação simples, saudação simples. E você consegue. Sim, caso queira usar
+
+161
+00:29:47.490 --> 00:29:50.300
+Gesiel Lopes: a pontuação, já que ela vai ser uma documentação.
+
+162
+00:29:50.410 --> 00:29:57.320
+Gesiel Lopes: E aqui o que essa função faz ela simplesmente imprime uma mensagem.
+
+163
+00:29:58.130 --> 00:30:01.950
+Gesiel Lopes: Olá, mundo, tá?
+
+164
+00:30:03.950 --> 00:30:07.030
+Gesiel Lopes: Ayrton é
+
+165
+00:30:10.960 --> 00:30:29.989
+Gesiel Lopes: linguagem maravilhosa. Então, aqui, olha, eu fiz a definição da minha função. Observem que, para que essa função possa ser utilizável, eu preciso, além de definir a função, executar o código dela
+
+166
+00:30:30.230 --> 00:30:31.520
+Gesiel Lopes: para que
+
+167
+00:30:32.070 --> 00:30:44.330
+Gesiel Lopes: ela se torne disponível para o meio ambiente, uma vez que somente funções integradas, que são as funções Beauty,
+
+168
+00:30:44.330 --> 00:30:56.489
+Gesiel Lopes: que estão disponíveis no ambiente. Qualquer outra função. Eu preciso dizer ao Python essa função precisa estar agora no ambiente para que eu possa utilizá la.
+
+169
+00:30:56.720 --> 00:31:06.609
+Gesiel Lopes: Então, para fazer isso, basta eu executar esse trecho de código. Eu vou criar uma nova célula só para mostrar para vocês,
+
+170
+00:31:07.990 --> 00:31:19.480
+Gesiel Lopes: hã o o um exemplo aqui rapidamente. E aqui eu faço a chamada da função.
+
+171
+00:31:20.060 --> 00:31:37.399
+Gesiel Lopes: Então a chamada da função consiste basicamente de definir a função chamar a função é simplesmente chamar literalmente que é só definir o nome da função depois o nome da função parêntese e executar.
+
+172
+00:31:39.060 --> 00:31:47.400
+Gesiel Lopes: E aí a a função é executada. Observem que
+
+173
+00:31:52.330 --> 00:31:54.309
+Gesiel Lopes: observe que, se eu
+
+174
+00:31:58.310 --> 00:31:59.389
+Gesiel Lopes: e aí
+
+175
+00:32:03.270 --> 00:32:17.650
+Gesiel Lopes: observe que, se eu definir uma função, nova, função. Nova função de saudação.
+
+176
+00:32:22.440 --> 00:32:24.570
+Gesiel Lopes: E aqui é o meu docstring,
+
+177
+00:32:30.160 --> 00:32:39.950
+Gesiel Lopes: que é a definição de uma nova função de saudação.
+
+178
+00:32:43.710 --> 00:32:46.920
+Gesiel Lopes: E aí, saudação.
+
+179
+00:32:47.590 --> 00:32:51.510
+Gesiel Lopes: E aqui novamente, só faço um print print.
+
+180
+00:32:53.150 --> 00:32:54.759
+Gesiel Lopes: E aqui eu vou
+
+181
+00:32:54.950 --> 00:33:08.280
+Gesiel Lopes: literalmente copiar a mesma mensagem só para mostrar para vocês. E eu não observe que eu escrevi o código, mas não executei a célula. Se eu chamar essa função, observe que ela vai dar um erro,
+
+182
+00:33:08.910 --> 00:33:09.780
+Gesiel Lopes: tá?
+
+183
+00:33:09.880 --> 00:33:14.750
+Gesiel Lopes: Ela vai dizer que a função não está definindo o nome.
+
+184
+00:33:14.900 --> 00:33:30.030
+Gesiel Lopes: A nova função de saudação não está definida. Por quê? Eu só escrevi o código. Eu não disse para o ambiente, Python, que essa função precisa estar disponível para ser utilizada.
+
+185
+00:33:30.570 --> 00:33:34.400
+Gesiel Lopes: Então, para fazer isso, eu preciso executar
+
+186
+00:33:34.930 --> 00:33:39.089
+Gesiel Lopes: agora. Ela está disponível para o meio ambiente, e aí sim,
+
+187
+00:33:39.410 --> 00:33:42.190
+Gesiel Lopes: se eu chamar a minha função. Olha só.
+
+188
+00:33:42.820 --> 00:33:45.639
+Gesiel Lopes: Ela vai realizar a ação dela. Tá bom.
+
+189
+00:33:45.830 --> 00:33:47.220
+Gesiel Lopes: Simples assim.
+
+190
+00:33:47.580 --> 00:33:52.130
+Gesiel Lopes: Beleza mais simples. Impossível.
+
+191
+00:33:55.350 --> 00:33:57.980
+Gesiel Lopes: Só um minuto, pessoal. Só um minuto
+
+192
+00:34:36.230 --> 00:34:42.650
+Gesiel Lopes: ou pouco pessoal. Nossa, vamos lá, vamos lá. Parece que hoje está mais complicado do que
+
+193
+00:34:43.060 --> 00:34:50.489
+Gesiel Lopes: na segunda feira. Vamos lá continuando.
+
+194
+00:34:51.080 --> 00:34:59.810
+Gesiel Lopes: Bora ver aqui alguns exemplos. Tá de funções com parâmetros.
+
+195
+00:34:59.960 --> 00:35:11.939
+Gesiel Lopes: Deixa eu criar aqui só mais uma célula para a gente criar aqui uma função simples, que é o conceito de funções de parâmetros e argumento.
+
+196
+00:35:12.080 --> 00:35:26.419
+Gesiel Lopes: Então os parâmetros são as variáveis que são listadas na definição da minha função. Então, caso eu precise que a função. Utilize algum valor externo a ela
+
+197
+00:35:26.820 --> 00:35:32.320
+Gesiel Lopes: esses valores, esses valores ou essas variáveis, melhor dizendo,
+
+198
+00:35:32.500 --> 00:35:40.330
+Gesiel Lopes: elas precisam ser definidas no corpo da definição da função como parâmetros.
+
+199
+00:35:40.890 --> 00:35:50.460
+Gesiel Lopes: E aí esses parâmetros, quando você define valorizar eles, esses valores são chamados de argumentos.
+
+200
+00:35:50.460 --> 00:36:03.179
+Gesiel Lopes: O parâmetro é a variável. É a definição da variável, e os argumentos são os valores que são passados para a minha variável. Quando essa variável é chamada,
+
+201
+00:36:04.060 --> 00:36:08.590
+Gesiel Lopes: por exemplo, vou criar aqui uma função.
+
+202
+00:36:08.960 --> 00:36:12.210
+Gesiel Lopes: Ah, é somar
+
+203
+00:36:13.720 --> 00:36:25.630
+Gesiel Lopes: dois números. Eu vou criar aqui uma função como o próprio nome já sugere, ela vai receber dois valores e realizar a soma dela.
+
+204
+00:36:25.760 --> 00:36:33.499
+Gesiel Lopes: Então, nesse caso, aqui. Olha só. Eu vou definir dois parâmetros, que é o parâmetro,
+
+205
+00:36:33.620 --> 00:36:41.740
+Gesiel Lopes: que é o parâmetro X e o parâmetro Y. Toda vez que eu definir mais de um parâmetro,
+
+206
+00:36:42.070 --> 00:36:48.900
+Gesiel Lopes: cada parâmetro subsequente ao primeiro precisa ser separado por vírgula. Tá bom,
+
+207
+00:36:49.140 --> 00:36:54.469
+Gesiel Lopes: então, nesse caso, aqui a minha função. Ela recebe dois parâmetros.
+
+208
+00:36:55.510 --> 00:36:59.580
+Gesiel Lopes: Então tá, é.
+
+209
+00:37:01.740 --> 00:37:04.510
+Gesiel Lopes: E aí já vou mostrar para vocês. Acabei esquecendo.
+
+210
+00:37:04.770 --> 00:37:10.100
+Gesiel Lopes: É antes que eu chame. Não, deixa. Eu vou.
+
+211
+00:37:13.310 --> 00:37:15.280
+marcos.jose: Professor. Só uma dúvida. Aqui.
+
+212
+00:37:15.920 --> 00:37:16.979
+Gesiel Lopes: Pode falar.
+
+213
+00:37:17.220 --> 00:37:26.989
+marcos.jose: Nesse caso, para escrever o texto. Quando você faz uma definição, precisa ter duas vezes a sequência de aspas simples, Ou Aspa dupla? Não só uma,
+
+214
+00:37:30.250 --> 00:37:36.089
+marcos.jose: porque, nesse caso, aqui, onde o senhor escreveu função responsável, tem dois conjuntos de aspas simples.
+
+215
+00:37:37.460 --> 00:37:51.370
+Gesiel Lopes: Não, isso é Doc String Marcos. Eu tenho que definir uma doc string. O que é uma Doc string? Uma Doc String é uma String que é definida, que eu posso colocar mais de uma linha.
+
+216
+00:37:52.480 --> 00:37:53.500
+marcos.jose: Entendi.
+
+217
+00:37:53.720 --> 00:38:02.299
+Gesiel Lopes: E aí o Adockstrin, obrigatoriamente, é definida com um conjunto de três aspas,
+
+218
+00:38:02.330 --> 00:38:16.350
+Gesiel Lopes: três aspas para abrir e três aspas para fechar três aspas definem o início da Doc String e as três aspas. As outras três aspas definem o final da Doc String.
+
+219
+00:38:16.350 --> 00:38:27.290
+Gesiel Lopes: Então tudo que eu digitar entre essas aspas, esse conjunto de aspas, ela vai ser considerada como a Doc Strangering.
+
+220
+00:38:27.770 --> 00:38:28.570
+marcos.jose: Entendi.
+
+221
+00:38:32.070 --> 00:38:32.600
+Gesiel Lopes: E aí?
+
+222
+00:38:33.260 --> 00:38:41.679
+Gesiel Lopes: Porque aqui deu a impressão de que eu coloquei só numa linha, como se fosse um string. E aí já, já.
+
+223
+00:38:44.830 --> 00:38:52.290
+Gesiel Lopes: Ah, pode. O João está colocando. Pode ser aspas simples ou aspas duplas. Um conjunto de três. Aspas simples ou duplas,
+
+224
+00:38:52.400 --> 00:38:55.739
+Gesiel Lopes: inclusive eu. Vou já já mostrar para você o que é isso?
+
+225
+00:38:55.930 --> 00:39:03.610
+Gesiel Lopes: Então aqui, vou definir uma função, fazer a definição da função, um texto que define a minha função,
+
+226
+00:39:03.990 --> 00:39:10.900
+Gesiel Lopes: então a função responsável por realizar a soma
+
+227
+00:39:11.950 --> 00:39:25.320
+Gesiel Lopes: de dois valores tá ponto. E aqui eu coloco argô membros, tá, é X.
+
+228
+00:39:26.700 --> 00:39:41.189
+Gesiel Lopes: E aí eu nem preciso colocar isso. Primeiro, primeiro, o valor tá e Y é o meu
+
+229
+00:39:42.280 --> 00:39:45.999
+Gesiel Lopes: segundo, o valor.
+
+230
+00:39:47.270 --> 00:39:51.800
+Gesiel Lopes: Então aqui, essa função é muito simples. O que ela vai fazer? Ela vai.
+
+231
+00:39:52.100 --> 00:40:10.689
+Gesiel Lopes: Vou definir aqui uma variável soma que vai receber os valores que vão ser passados como argumento para a minha função. Basicamente, elas vão pegar X e Y e fazer a soma de X e Y. Basicamente isso eu faço X, mais Y
+
+232
+00:40:11.030 --> 00:40:15.290
+Gesiel Lopes: e aí aqui, eu só coloco uma mensagem. Dá um Print, tá?
+
+233
+00:40:15.520 --> 00:40:18.740
+Gesiel Lopes: E aqui eu vou usar uma F String. Tá bom.
+
+234
+00:40:21.580 --> 00:40:30.550
+Gesiel Lopes: Ah, a soma dos vá dos valores.
+
+235
+00:40:31.720 --> 00:40:32.920
+Gesiel Lopes: Dois pontos.
+
+236
+00:40:33.870 --> 00:40:47.320
+Gesiel Lopes: Eu coloco aqui. X, y, tá, é dois ponto Soma.
+
+237
+00:40:47.480 --> 00:40:49.890
+Gesiel Lopes: Então essa é a minha função.
+
+238
+00:40:50.420 --> 00:40:58.830
+Gesiel Lopes: E aí vou definir a minha função. E agora eu posso chamá la Tchau.
+
+239
+00:41:01.870 --> 00:41:05.490
+Gesiel Lopes: Eu vou fazer aqui, ó somar
+
+240
+00:41:06.230 --> 00:41:18.829
+Gesiel Lopes: dois números. E aqui eu posso passar dois valores para a minha função um e dois. Então essa função deve mostrar a mensagem, a soma.
+
+241
+00:41:18.940 --> 00:41:20.060
+Gesiel Lopes: E aí
+
+242
+00:41:21.150 --> 00:41:34.839
+Gesiel Lopes: a soma dos valores um,dois é três. E esse docstring serve para quê? Para você? Quando você utilizar o help, por exemplo, somar
+
+243
+00:41:35.760 --> 00:41:55.280
+Gesiel Lopes: dos números. Observe o que ele vai fazer. Ele vai trazer o help daquela função. Se vocês observarem, nada mais é do que a definição da Doc string que eu fiz a definição da minha Docstrin. Se eu não tivesse essa doc String. Eu vou comentar ela aqui rapidamente.
+
+244
+00:41:55.340 --> 00:42:09.080
+Gesiel Lopes: Então, quando eu comento o código, ele não é executado, ele é desprezado. Ele não é interpretado pelo interpretador do pai. Então observe que essa Doc string não existe mais.
+
+245
+00:42:09.110 --> 00:42:28.819
+Gesiel Lopes: Observe que a função continua sendo executada e funcionando como a gente definiu. Porém, quando eu chamo help, se vocês observarem, ela não faz mais a menção do texto explicativo do que significa essa função. Por isso que é sempre uma boa prática
+
+246
+00:42:28.960 --> 00:42:32.570
+Gesiel Lopes: a gente definir a
+
+247
+00:42:33.600 --> 00:42:44.830
+Gesiel Lopes: a doc streaming, fazer a definição formal da minha função para ser utilizada como documentação, como ajuda.
+
+248
+00:42:45.470 --> 00:42:59.630
+Gesiel Lopes: É uma boa prática, não é obrigatório. Toda função precisa ter definição. Não, a gente acabou de ver aí que não precisa ter uma definição. E aí o legal é que existem alguns utilitários da linguagem Python
+
+249
+00:42:59.790 --> 00:43:17.399
+Gesiel Lopes: que podem ser utilizados para gerar uma página Html da minha função. Por exemplo, essa página aqui do Python da linguagem Python. Isso aqui. Se vocês observarem, eu vou pegar a função que a gente tem utilizado bastante,
+
+250
+00:43:17.520 --> 00:43:19.279
+Gesiel Lopes: que é a função printer
+
+251
+00:43:20.500 --> 00:43:29.679
+Gesiel Lopes: essa função print, se vocês observarem, tem aqui Print é um objeto. Dá uma olhada nesse texto.
+
+252
+00:43:29.880 --> 00:43:34.280
+Gesiel Lopes: Olhar desse texto. Esse texto é definido a partir de uma doc streaming.
+
+253
+00:43:34.920 --> 00:43:39.100
+Gesiel Lopes: E se eu utilizar o help,
+
+254
+00:43:39.230 --> 00:43:45.240
+Gesiel Lopes: que é uma outra função. Beauty do Python com a função Printer.
+
+255
+00:43:45.380 --> 00:43:59.870
+Gesiel Lopes: Observe que ele vai trazer a documentação da minha função. Como ela é definida. O que ela significa, o que são cada elemento da minha função.
+
+256
+00:44:00.780 --> 00:44:08.100
+Gesiel Lopes: Beleza. Ah, Gesiel. Não acreditei nisso. Não, beleza.
+
+257
+00:44:09.430 --> 00:44:12.769
+Gesiel Lopes: Tudo bem, como é que a gente faz isso?
+
+258
+00:44:13.020 --> 00:44:15.949
+Gesiel Lopes: Eu vou mostrar aqui, Github.
+
+259
+00:44:16.290 --> 00:44:26.190
+Gesiel Lopes: E aí eu mais uma vez, fugi daqui. Da Python do roteiro aqui.
+
+260
+00:44:27.260 --> 00:44:39.160
+Gesiel Lopes: Esse aqui pessoal é o repositório da linguagem Python. É porque aqui não tem. Deixa eu ver. Aqui. Geralmente sem vestígio pessoal, sem vestígio,
+
+261
+00:44:40.040 --> 00:44:41.950
+Gesiel Lopes: sem vestígio.
+
+262
+00:44:42.560 --> 00:44:44.610
+Gesiel Lopes: Deixa eu ver.
+
+263
+00:44:45.420 --> 00:44:46.680
+Gesiel Lopes: E aí,
+
+264
+00:45:02.560 --> 00:45:08.550
+Gesiel Lopes: Python Books? O Docs é.
+
+265
+00:45:11.370 --> 00:45:17.310
+Gesiel Lopes: Deixa eu ver se tem que o Munich que eu tenho.
+
+266
+00:45:19.410 --> 00:45:21.979
+Gesiel Lopes: Ah, vou procurar direto do Github,
+
+267
+00:45:22.850 --> 00:45:33.929
+Gesiel Lopes: que é o Github da linguagem, que é o código fonte do Python. Mesmo. Então ele deve. Deixa. Eu só ver se eu acho. Aqui o
+
+268
+00:45:36.800 --> 00:45:43.130
+Gesiel Lopes: são noventa e poucos repositórios docs. Deixa eu ver se eu tenho a.
+
+269
+00:45:44.140 --> 00:45:50.299
+Gesiel Lopes: O código fonte mesmo da implementação do Paiton. Cadê meu Deus.
+
+270
+00:45:51.970 --> 00:45:56.310
+Gesiel Lopes: Byington Docks it ficou.
+
+271
+00:46:01.270 --> 00:46:11.290
+Gesiel Lopes: É Repository it Hub, pai também.
+
+272
+00:46:13.300 --> 00:46:14.440
+Gesiel Lopes: Language,
+
+273
+00:46:21.520 --> 00:46:23.430
+Gesiel Lopes: deixa eu ver se eu.
+
+274
+00:46:26.490 --> 00:46:27.730
+Gesiel Lopes: Ó, dá certo.
+
+275
+00:46:31.460 --> 00:46:36.949
+Gesiel Lopes: Ele só traz o sepaiton. Deixa eu ver se tem somente o Python. Mesmo o Python.
+
+276
+00:46:38.060 --> 00:46:42.169
+Gesiel Lopes: Se eu dar um Sash vê se ele vai. Ele vai trazer muita coisa.
+
+277
+00:46:48.980 --> 00:46:52.510
+Gesiel Lopes: As Peps Docs.
+
+278
+00:46:55.830 --> 00:46:58.809
+Gesiel Lopes: A gente vai acabar saindo um pouquinho
+
+279
+00:46:59.400 --> 00:47:02.640
+Gesiel Lopes: do planejado, mas acho que é por um bom motivo,
+
+280
+00:47:10.360 --> 00:47:12.499
+Gesiel Lopes: é, tô aqui. Estou aqui.
+
+281
+00:47:13.080 --> 00:47:15.460
+Gesiel Lopes: Então a sua coisa difícil de encontrar, né?
+
+282
+00:47:17.090 --> 00:47:20.879
+Gesiel Lopes: E nem encontrei. Eu vou pegar o C Python mesmo.
+
+283
+00:47:27.420 --> 00:47:30.799
+Gesiel Lopes: Vou clicar aqui no próprio ser Python.
+
+284
+00:47:31.910 --> 00:47:37.949
+Gesiel Lopes: Esse ser Python é a implementação do Python na linguagem C.
+
+285
+00:47:38.520 --> 00:47:47.979
+Gesiel Lopes: Tá e aqui tem o Python. Ó, foi comitado recentemente.
+
+286
+00:47:48.360 --> 00:47:51.380
+Gesiel Lopes: Seis horas atrás. Alguém fez algum comite?
+
+287
+00:47:51.680 --> 00:47:57.270
+Gesiel Lopes: Tá, é porque aqui tem todo o código
+
+288
+00:47:58.920 --> 00:48:02.059
+Gesiel Lopes: do Python. Não é o que eu preciso.
+
+289
+00:48:10.400 --> 00:48:12.379
+Gesiel Lopes: Deixa eu ver. Aqui o do
+
+290
+00:48:15.820 --> 00:48:18.150
+Gesiel Lopes: do Pepe.
+
+291
+00:48:20.220 --> 00:48:23.850
+Gesiel Lopes: Ele vai trazer o código de todas as
+
+292
+00:48:24.060 --> 00:48:28.159
+Gesiel Lopes: as Peps aqui. Ele não traz. Deixa eu ver. Esse aqui é Api.
+
+293
+00:48:28.260 --> 00:48:30.229
+Gesiel Lopes: Não está disponível. Nossa,
+
+294
+00:48:31.700 --> 00:48:38.850
+Gesiel Lopes: eu quero mostrar um código para vocês. Depois eu procuro com o cabo na hora do intervalo. Antes de sair,
+
+295
+00:48:39.040 --> 00:48:40.519
+Gesiel Lopes: eu. Eu
+
+296
+00:48:41.830 --> 00:48:57.050
+Gesiel Lopes: eu dou uma olhada do código e aí mostro para vocês que o código fonte da linguagem é aberto, tá? E aí eu ia mostrar para vocês, justamente a definição dessa função. O código fonte da definição aonde ela está
+
+297
+00:48:57.160 --> 00:49:03.709
+Gesiel Lopes: e como essa doc streaming é utilizada, era para estar aqui.
+
+298
+00:49:04.830 --> 00:49:07.410
+Gesiel Lopes: Era para estar aqui.
+
+299
+00:49:08.290 --> 00:49:15.740
+Gesiel Lopes: Tinha aqui a opção de código fontes Souls Code. Enfim, não vamos
+
+300
+00:49:16.020 --> 00:49:20.669
+Gesiel Lopes: perder mais tempo com isso. Não, depois eu mostro para vocês.
+
+301
+00:49:21.390 --> 00:49:31.710
+Gesiel Lopes: Então as Doc Strings servem para isso beleza, para definir a função. E aí eu vou falar só alguns outros pontos importantes.
+
+302
+00:49:31.740 --> 00:49:45.119
+Gesiel Lopes: Então, como a gente já está no horário do nosso intervalo. Vamos dar um intervalozinho dos nossos dez minutos. São nove e dezoito. Eu for nove e vinte e oito, nove e vinte e nove e a gente retorna para.
+
+303
+00:49:45.440 --> 00:49:49.000
+Gesiel Lopes: Para dar continuidade no nosso encontro de hoje. Tá bom, pessoal.
+
+304
+00:59:38.430 --> 00:59:40.259
+Gesiel Lopes: Opa, pessoal, vamos lá.
+
+305
+00:59:46.870 --> 00:59:48.330
+Gesiel Lopes: Podemos ir?
+
+306
+00:59:49.900 --> 00:59:53.100
+Gesiel Lopes: Deixa eu compartilhar aqui, minha tela novamente.
+
+307
+00:59:53.830 --> 00:59:56.139
+Gesiel Lopes: Estão me ouvindo? Pessoal, o pessoal está
+
+308
+00:59:56.320 --> 01:00:00.830
+Gesiel Lopes: aqui. Estão ouvindo? Está tudo tranquilo vivos ainda
+
+309
+01:00:04.120 --> 01:00:13.929
+Gesiel Lopes: aqui, pessoal, olha só. Eu estava fixando aqui o código. O repositório que a gente está utilizando da linguagem. Python,
+
+310
+01:00:14.600 --> 01:00:25.959
+Gesiel Lopes: não, Python Python. Br não. Python Org. Se vocês observarem aqui, eu tenho a opção de soul. Se code no site oficial,
+
+311
+01:00:26.430 --> 01:00:39.039
+Gesiel Lopes: então ele traz todas as versões disponibilizadas, as versões estáveis da linguagem Python. E aqui ele traz alguns pré releases, que é o
+
+312
+01:00:39.170 --> 01:00:43.440
+Gesiel Lopes: que são modificações ou testes que são feitos.
+
+313
+01:00:43.800 --> 01:00:55.200
+Gesiel Lopes: E aqui tem todas as versões. Eu vou clicar nessa versão, que é a última versão disponibilizada. A última versão estável disponibilizadas pelo
+
+314
+01:00:55.440 --> 01:01:02.800
+Gesiel Lopes: pelo Python. E aí você pode observar detalhes
+
+315
+01:01:03.100 --> 01:01:07.570
+Gesiel Lopes: do código fonte. O código fonte. Ele fica
+
+316
+01:01:08.060 --> 01:01:13.359
+Gesiel Lopes: o interpretador Python ele é implementado.
+
+317
+01:01:13.610 --> 01:01:26.339
+Gesiel Lopes: Em C. Então, o código oficial do repositório é esse repositório aqui, C. Python, que é a implementação do interpretador do Python.
+
+318
+01:01:26.460 --> 01:01:43.579
+Gesiel Lopes: E aí dentro dessa pasta Python, ele traz justamente o código responsável por realizar a construção do interpretador da linguagem Python. Então, quando você instala o Python, por exemplo, localmente
+
+319
+01:01:43.870 --> 01:01:46.579
+Gesiel Lopes: você instala um interpretador.
+
+320
+01:01:46.760 --> 01:01:54.329
+Gesiel Lopes: Esse código do interpretador é gerado por esse outro código que é feito em cima da linguagem C.
+
+321
+01:01:54.850 --> 01:02:05.530
+Gesiel Lopes: E aí tem vários arquivos em particular. Esse arquivo, Blt e Móduli C.
+
+322
+01:02:06.180 --> 01:02:17.129
+Gesiel Lopes: Ele traz a definição de todas as funções Beauty do Python. Dentre elas a função, a função print.
+
+323
+01:02:17.760 --> 01:02:25.500
+Gesiel Lopes: E aqui ele traz justamente aquela documentação que a gente tinha visto, só que está em código C tá
+
+324
+01:02:25.740 --> 01:02:34.530
+Gesiel Lopes: Iages é o mais código C. Não sei se funciona mesmo. Eu fazendo esse exemplo do docstring, tá?
+
+325
+01:02:36.560 --> 01:02:40.819
+Gesiel Lopes: Não deu muito para convencer.
+
+326
+01:02:41.060 --> 01:02:42.979
+Gesiel Lopes: Vou convencer vocês.
+
+327
+01:02:43.260 --> 01:02:45.150
+Gesiel Lopes: E aí eu vou, tá?
+
+328
+01:02:45.670 --> 01:02:52.579
+Gesiel Lopes: Só mostrar uma coisa bem interessante. É Scal Learning.
+
+329
+01:02:53.400 --> 01:02:59.060
+Gesiel Lopes: Essa é uma biblioteca, outra biblioteca Python.
+
+330
+01:02:59.220 --> 01:03:15.530
+Gesiel Lopes: Quem for adentrar no mundo de Machine Learning, Datasiens, qualquer coisa desse gênero, vocês vão ouvir muito falar dessa biblioteca que é a principal biblioteca desse universo
+
+331
+01:03:15.640 --> 01:03:21.470
+Gesiel Lopes: de Machine Learning. Ela implementa os algoritmos clássicos.
+
+332
+01:03:21.630 --> 01:03:28.919
+Gesiel Lopes: A maioria dos algoritmos clássicos e de machine learning eu não vou falar de Machine Learning. Eu não vou falar de nada disso.
+
+333
+01:03:29.040 --> 01:03:32.290
+Gesiel Lopes: O que eu quero mostrar para vocês.
+
+334
+01:03:33.190 --> 01:03:35.110
+Gesiel Lopes: E aí
+
+335
+01:03:37.020 --> 01:03:48.549
+Gesiel Lopes: é basicamente aqui. Eu vou pegar aqui um. Não vou pegar aqui um cara qualquer. Peguei um cara qualquer da biblioteca
+
+336
+01:03:48.800 --> 01:03:56.349
+Gesiel Lopes: e aí esse cara qualquer, ele tem vários métodos. E aí eu vou pegar em particular. Vou só copiar isso aqui.
+
+337
+01:03:58.920 --> 01:04:02.830
+Gesiel Lopes: Vou copiar isso aqui. Ó, tá?
+
+338
+01:04:03.910 --> 01:04:07.429
+Gesiel Lopes: Peguei aqui a implementação desse método.
+
+339
+01:04:07.960 --> 01:04:10.599
+Gesiel Lopes: Fit Predict? Não faço.
+
+340
+01:04:11.380 --> 01:04:14.400
+Gesiel Lopes: Não faço a menor ideia. Mas observem.
+
+341
+01:04:15.260 --> 01:04:26.230
+Gesiel Lopes: Deixa eu ver se está pequeno, mas observem isso aqui. Ó tá. Observe isso aqui. Ó, deu para vocês
+
+342
+01:04:26.700 --> 01:04:30.560
+Gesiel Lopes: pegarem rapidamente rapidamente.
+
+343
+01:04:31.490 --> 01:04:38.370
+Gesiel Lopes: Tá, isso aqui é a Doc string do método. É a definição desse método tá
+
+344
+01:04:39.620 --> 01:04:56.790
+Gesiel Lopes: aqui. Olha só. Eu vou criar aqui uma célula demonstrando as doc strings dos métodos com o
+
+345
+01:04:57.580 --> 01:05:02.920
+Gesiel Lopes: S. K. Sai kitty learning.
+
+346
+01:05:05.860 --> 01:05:07.720
+Gesiel Lopes: Eu preciso.
+
+347
+01:05:10.470 --> 01:05:22.650
+Gesiel Lopes: E aqui. Esqueçam isso aqui, pessoal. Por enquanto, vamos abstrair. Vocês vão depois usar bastante isso. Essa instrução. Só estou dizendo para o Python,
+
+348
+01:05:23.050 --> 01:05:30.450
+Gesiel Lopes: para o ambiente, para o ambiente, paito para o contexto de execução do paito,
+
+349
+01:05:30.670 --> 01:05:46.519
+Gesiel Lopes: para que ele considere esse cara do site. Kitty lédito. Ele vai lá em algum lugar, que é o repositório oficial. E pegar esse código para a gente, para poder executar. E aqui eu vou chamar o help
+
+350
+01:05:47.480 --> 01:05:52.499
+Gesiel Lopes: desse cluster mixing. Eu não sei o que é.
+
+351
+01:05:53.260 --> 01:05:55.280
+Gesiel Lopes: Tem lá o Fit
+
+352
+01:05:55.770 --> 01:06:06.330
+Gesiel Lopes: Predict que eu também não sei porque faz. E aí, só para mostrar para vocês, eu vou até copiar esse carinho copiar.
+
+353
+01:06:07.940 --> 01:06:10.259
+Gesiel Lopes: Vou colocar aqui numa célula.
+
+354
+01:06:11.030 --> 01:06:14.629
+Gesiel Lopes: Vou apagar. Eu vou colocar aqui no as.
+
+355
+01:06:15.330 --> 01:06:22.489
+Gesiel Lopes: Não vou colocar como comentário só para mostrar para vocês.
+
+356
+01:06:22.830 --> 01:06:24.729
+Gesiel Lopes: Somente a Dog Street
+
+357
+01:06:28.220 --> 01:06:34.270
+Gesiel Lopes: de um código. Python tá aqui. Então está aqui a minha Docstrang
+
+358
+01:06:34.470 --> 01:06:40.359
+Gesiel Lopes: do meu código Python. Dessa função
+
+359
+01:06:40.630 --> 01:06:46.659
+Gesiel Lopes: que está dentro desse cara que é do Saikitlane. E aí, se eu executar esse carinha aí
+
+360
+01:06:46.830 --> 01:06:49.660
+Gesiel Lopes: só falta ou ele não estar instalado, né?
+
+361
+01:06:52.120 --> 01:06:53.480
+Gesiel Lopes: No.
+
+362
+01:06:53.870 --> 01:06:59.279
+Gesiel Lopes: Mas ele tá porque é o data. Size obrigatoriamente. Ele deve estar.
+
+363
+01:07:00.370 --> 01:07:02.139
+Gesiel Lopes: Vamos torcer aí para o
+
+364
+01:07:10.110 --> 01:07:16.580
+Gesiel Lopes: executar. Executou e aí ele coloca ajuda o help da função Fit Predict
+
+365
+01:07:16.690 --> 01:07:22.109
+Gesiel Lopes: lá do Sitkit Learning. Ele traz a definição da função.
+
+366
+01:07:22.790 --> 01:07:25.850
+Gesiel Lopes: Que é essa definição aqui, ó tá.
+
+367
+01:07:26.320 --> 01:07:35.880
+Gesiel Lopes: E observe o que ele traz após literalmente a minha Doc Streak Doc Streaming, oficial do código.
+
+368
+01:07:36.050 --> 01:07:43.050
+Gesiel Lopes: Então, por isso que é uma boa prática a gente sempre definir a minha docstrang é
+
+369
+01:07:47.690 --> 01:07:58.280
+Gesiel Lopes: ahahhota eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee o marcos o que é isso marcos obrigado para isso é só para
+
+370
+01:07:58.500 --> 01:08:15.100
+Gesiel Lopes: não deixar parênteses beleza e aí pessoal quando a gente está utilizando funções com parâmetros, a gente tem duas formas de utilizar os parâmetros da minha função.
+
+371
+01:08:15.270 --> 01:08:26.270
+Gesiel Lopes: São o que a gente chama de parâmetros posicionais. Quando eu utilizo argumentos posicionais
+
+372
+01:08:26.550 --> 01:08:37.679
+Gesiel Lopes: obrigatoriamente, eu preciso seguir a ordem dos argumentos definidos na minha função. Pega aqui o meu roteiro.
+
+373
+01:08:39.229 --> 01:08:42.540
+Gesiel Lopes: Eu tenho uma função.
+
+374
+01:08:43.050 --> 01:08:52.329
+Gesiel Lopes: É, lembrem, vocês estão lembrados que uma das primeiras coisas que a gente fez quando viu os
+
+375
+01:08:52.470 --> 01:09:04.570
+Gesiel Lopes: os testes condicionais, os desvios condicionais, o If lá da vida. Foi como utilizar o cálculo do Icmc,
+
+376
+01:09:04.979 --> 01:09:17.580
+Gesiel Lopes: não do Imc, que é o índice de massa corpórea. Eu vou criar aqui uma função chamada calcular calcular
+
+377
+01:09:18.500 --> 01:09:20.470
+Gesiel Lopes: Imc.
+
+378
+01:09:20.939 --> 01:09:32.460
+Gesiel Lopes: E aqui eu vou definir alguns parâmetros. Primeiro é o nome, tá a idade, altura
+
+379
+01:09:33.000 --> 01:09:37.380
+Gesiel Lopes: e o peso, que são os argumentos que eu preciso
+
+380
+01:09:37.510 --> 01:09:42.849
+Gesiel Lopes: para calcular o Imc de alguém. Tá bom
+
+381
+01:09:43.630 --> 01:09:50.920
+Gesiel Lopes: aqui, eu vou fazer só um print. Tá rapidamente fazer um docstring.
+
+382
+01:09:51.460 --> 01:09:53.810
+Gesiel Lopes: Nome rapidinho.
+
+383
+01:09:54.600 --> 01:09:59.830
+Gesiel Lopes: Nome Print.
+
+384
+01:10:01.150 --> 01:10:03.629
+Gesiel Lopes: É fixing.
+
+385
+01:10:04.720 --> 01:10:06.180
+Gesiel Lopes: Idade,
+
+386
+01:10:09.220 --> 01:10:11.430
+Gesiel Lopes: idade, tá.
+
+387
+01:10:11.730 --> 01:10:18.860
+Gesiel Lopes: E aqui o cálculo do Imc, a gente viu que a fórmula do Imc é A,
+
+388
+01:10:19.510 --> 01:10:25.500
+Gesiel Lopes: o peso da pessoa dividido pela altura,
+
+389
+01:10:25.680 --> 01:10:36.279
+Gesiel Lopes: quadrado, altura ao quadrado, que é igual. Igual. Aliás, tarifa starispo, que é o operador de potenciação, dois
+
+390
+01:10:36.360 --> 01:10:50.069
+Gesiel Lopes: ou a altura ao quadrado poderia, por exemplo, fazer altura, vezes altura. Tal mesmo. Só vou usar o operador de potenciação do Python ao quadrado.
+
+391
+01:10:50.250 --> 01:10:54.890
+Gesiel Lopes: E aqui eu vou só copiar para a gente não fazer os testes rápidos
+
+392
+01:10:55.470 --> 01:11:08.359
+Gesiel Lopes: que são lá os critérios utilizados do Inc. Se ele for menor do que dezassete, muito abaixo do peso. E aqui. Eu vou fazer um Refactory
+
+393
+01:11:12.230 --> 01:11:14.060
+Gesiel Lopes: aqui. Eu vou
+
+394
+01:11:20.300 --> 01:11:33.150
+Gesiel Lopes: deixa eu digitar aqui com vocês ifim for menor do que dezassete, vou dar um Print.
+
+395
+01:11:34.040 --> 01:11:40.700
+Gesiel Lopes: E aí muito abaixo do piso.
+
+396
+01:11:42.430 --> 01:11:50.390
+Gesiel Lopes: Elife, se ele for maior ou igual
+
+397
+01:11:52.240 --> 01:12:06.130
+Gesiel Lopes: a dezassete e menor do que dezoito,cinco, eu vou colocar é essa mensagem?
+
+398
+01:12:06.950 --> 01:12:20.990
+Gesiel Lopes: A pessoa vai estar abaixo do peso normal se for maior ou igual a dezoito.cinco
+
+399
+01:12:22.730 --> 01:12:25.850
+Gesiel Lopes: e menor do que vinte e cinco,
+
+400
+01:12:28.450 --> 01:12:40.190
+Gesiel Lopes: a pessoa vai estar com um piso normal, peso normal se for
+
+401
+01:12:40.730 --> 01:12:52.790
+Gesiel Lopes: maior ou igual a vinte e cinco e menor do que trinta acima do piso normal, acima
+
+402
+01:12:53.350 --> 01:12:55.910
+Gesiel Lopes: do piso normal.
+
+403
+01:12:56.720 --> 01:13:04.840
+Gesiel Lopes: E aí a última opção, se não ou seja, se ele for maior do que trinta,
+
+404
+01:13:04.950 --> 01:13:10.200
+Gesiel Lopes: o Imc for maior do que trinta, eu vou colocar a mensagem
+
+405
+01:13:11.470 --> 01:13:18.199
+Gesiel Lopes: muito. A gente colocou mais opções. Eu só estou simplificando. Muito acima do peso normal,
+
+406
+01:13:18.580 --> 01:13:21.350
+Gesiel Lopes: muito acima do piso normal.
+
+407
+01:13:21.480 --> 01:13:23.859
+Gesiel Lopes: Essa é a minha função
+
+408
+01:13:24.230 --> 01:13:33.640
+Gesiel Lopes: que eu. Observem que eu defini quantos parâmetros? Quatro parâmetros, nome, idade, altura e peso.
+
+409
+01:13:35.400 --> 01:13:42.240
+Gesiel Lopes: Vou criar aqui mais algumas células. Vou executar essa célula para deixar a função disponível.
+
+410
+01:13:43.760 --> 01:13:46.150
+Gesiel Lopes: Ah, é?
+
+411
+01:13:47.960 --> 01:13:52.789
+Gesiel Lopes: Pronto, a função já está disponível. E agora eu posso calcular.
+
+412
+01:13:53.520 --> 01:13:54.630
+Gesiel Lopes: Colar.
+
+413
+01:14:02.680 --> 01:14:04.350
+Gesiel Lopes: Cadê calcular?
+
+414
+01:14:05.590 --> 01:14:11.649
+Gesiel Lopes: Não está parecendo nossa, ele está reestartando a minha máquina. Por quê
+
+415
+01:14:15.660 --> 01:14:17.439
+Gesiel Lopes: calcular e sempre. Sei.
+
+416
+01:14:17.680 --> 01:14:23.020
+Gesiel Lopes: E Mc Restart, a máquina. Por que restar a máquina
+
+417
+01:14:32.990 --> 01:14:34.210
+Gesiel Lopes: fechar esses?
+
+418
+01:14:35.640 --> 01:14:37.570
+Gesiel Lopes: Vou só dar um refresh aqui.
+
+419
+01:14:46.610 --> 01:14:49.230
+Gesiel Lopes: Eu não vou restaurar nada por enquanto.
+
+420
+01:14:50.400 --> 01:14:53.000
+Gesiel Lopes: Eu só vou ligar minha máquina.
+
+421
+01:14:59.400 --> 01:15:06.500
+Gesiel Lopes: É, também acho, Gabriel, também acho muito chato, também acho.
+
+422
+01:15:09.520 --> 01:15:12.709
+Gesiel Lopes: E aí ele vai dar um erro dizendo que
+
+423
+01:15:12.830 --> 01:15:16.840
+Gesiel Lopes: algum erro interno do próprio Deep note.
+
+424
+01:15:17.600 --> 01:15:20.230
+Gesiel Lopes: Ah, velho, eu não acredito nisso.
+
+425
+01:15:22.650 --> 01:15:24.440
+Gesiel Lopes: Logo agora,
+
+426
+01:15:34.400 --> 01:15:36.059
+Gesiel Lopes: o que está acontecendo?
+
+427
+01:15:46.630 --> 01:15:57.489
+Gesiel Lopes: É o Wanderson. Colocou uma ferramenta que eu comentei no início. É a minha ferramenta preferida.
+
+428
+01:15:57.810 --> 01:15:59.160
+Gesiel Lopes: Viu o Anderson?
+
+429
+01:15:59.700 --> 01:16:02.160
+Gesiel Lopes: O Coleb é muito melhor.
+
+430
+01:16:02.940 --> 01:16:04.320
+Gesiel Lopes: Muito melhor.
+
+431
+01:16:09.880 --> 01:16:19.150
+Gesiel Lopes: Eu prefiro mil vezes o Coleb. Vou, que fica gravado, né? Então vamos lá e aí.
+
+432
+01:16:19.950 --> 01:16:30.349
+Gesiel Lopes: Pronto, executou, foi, tá. E aí vou calcular o Inc. Então observem que eu preciso passar esses argumentos.
+
+433
+01:16:30.560 --> 01:16:35.610
+Gesiel Lopes: Primeiro argumento é o nome Gesiel.
+
+434
+01:16:36.950 --> 01:16:43.020
+Gesiel Lopes: O segundo nome é a idade, dezoito anos. Eu fiz semana passada.
+
+435
+01:16:44.030 --> 01:16:51.460
+Gesiel Lopes: Altura: um ponto oitenta e sete, tá,
+
+436
+01:16:53.550 --> 01:16:59.190
+Gesiel Lopes: e o meu peso. E aí eu vou. Eu estou bem acima do peso. Noventa e oito quilos.
+
+437
+01:16:59.900 --> 01:17:18.579
+Gesiel Lopes: Então observem que cada um dos parâmetros. Eu passei na mesma ordem que foi definido o nome, a idade, a altura e o peso. Então vou executar aqui.
+
+438
+01:17:20.010 --> 01:17:26.149
+Gesiel Lopes: E aí ele vai calcular o Imc para mim. Muito provavelmente ele vai dizer que eu estou acima do peso normal.
+
+439
+01:17:26.380 --> 01:17:32.369
+Gesiel Lopes: Exatamente isso. Então, a Gesiel, de dezoito anos,
+
+440
+01:17:34.090 --> 01:17:39.980
+Gesiel Lopes: Opa Gisele Lopes, de dezoito anos, está acima do meu piso normal.
+
+441
+01:17:40.210 --> 01:17:51.510
+Gesiel Lopes: Observem, pessoal, que se eu passar os parâmetros em outra ordem,
+
+442
+01:17:54.550 --> 01:18:01.600
+Gesiel Lopes: pode pode sim. Pode sim. Pode Sim, pode Sim, podemos. Sim,
+
+443
+01:18:02.730 --> 01:18:05.060
+Gesiel Lopes: a gente pode. A gente vai fazer isso,
+
+444
+01:18:05.380 --> 01:18:13.499
+Gesiel Lopes: mas você pode usar um input. Só estou demonstrando. Mas a gente pode fazer isso aqui. Ó que nem o
+
+445
+01:18:14.030 --> 01:18:26.220
+Gesiel Lopes: o posso até fazer aqui. O Johnny está sugerindo. Então, nome? Eu vou pegar como o input input.
+
+446
+01:18:27.990 --> 01:18:31.219
+Gesiel Lopes: Digite o seu nome.
+
+447
+01:18:33.040 --> 01:18:43.819
+Gesiel Lopes: E aí, ó idade, vou considerar a como inteira em Punch.
+
+448
+01:18:46.040 --> 01:18:54.540
+Gesiel Lopes: Digite, digite Opa, digite a sua idade
+
+449
+01:18:57.710 --> 01:18:59.460
+Gesiel Lopes: depois vem o quê?
+
+450
+01:19:00.700 --> 01:19:05.070
+Gesiel Lopes: Altura e piso, altura.
+
+451
+01:19:06.250 --> 01:19:09.220
+Gesiel Lopes: Vou considerar como. Como.
+
+452
+01:19:09.890 --> 01:19:15.610
+Gesiel Lopes: Como flowch, ponto flutuante, input.
+
+453
+01:19:17.550 --> 01:19:22.800
+Gesiel Lopes: Digite o seu piso.
+
+454
+01:19:23.410 --> 01:19:29.470
+Gesiel Lopes: É peso ou é altura, altura, digite a sua.
+
+455
+01:19:34.690 --> 01:19:41.760
+Gesiel Lopes: Digite a sua altura e o peso.
+
+456
+01:19:42.930 --> 01:19:48.750
+Gesiel Lopes: E aí eu vou considerar também como um flowt input.
+
+457
+01:19:50.490 --> 01:19:55.850
+Gesiel Lopes: Digite o seu isso.
+
+458
+01:20:00.690 --> 01:20:08.230
+Gesiel Lopes: E aí eu vou passar para a função calcular Imc, que a gente acabou de definir
+
+459
+01:20:08.350 --> 01:20:11.520
+Gesiel Lopes: esses parâmetros, só que fora da ordem.
+
+460
+01:20:12.090 --> 01:20:22.160
+Gesiel Lopes: Então primeiro eu vou colocar a idade, depois o piso, o nome
+
+461
+01:20:27.200 --> 01:20:28.770
+Gesiel Lopes: e a altura.
+
+462
+01:20:29.200 --> 01:20:34.100
+Gesiel Lopes: Observe que eu tirei a ordem dos parâmetros.
+
+463
+01:20:34.220 --> 01:20:35.080
+Gesiel Lopes: Tá?
+
+464
+01:20:35.520 --> 01:20:39.560
+Gesiel Lopes: Então eu estou passando os argumentos da minha função
+
+465
+01:20:39.830 --> 01:20:46.179
+Gesiel Lopes: fora da ordem da definição dos parâmetros. Então observem. E quando eu faço isso,
+
+466
+01:20:47.630 --> 01:20:57.079
+Gesiel Lopes: ele vai executar. Porém, ele provavelmente vai dar um erro grande depois que eu digitar as informações. O Gesiel Lopes.
+
+467
+01:20:58.190 --> 01:21:07.060
+Gesiel Lopes: Esse cara tem dezoito anos, no século passado. A altura, um,oitenta e sete.
+
+468
+01:21:16.520 --> 01:21:22.180
+Gesiel Lopes: Na realidade, o erro que ele deu foi porque eu apertei o Enter mais de uma vez, quando eu ia digitar a idade.
+
+469
+01:21:22.530 --> 01:21:38.930
+Gesiel Lopes: E aí ele considerou como vazio. Eu vou executar de novo o nome Gesiel Lopes, dezoito anos, um,87m
+
+470
+01:21:40.810 --> 01:21:53.629
+Gesiel Lopes: e com noventa e oito quilos. O erro que ele vai dar é outro. O erro que ele está dando aqui. Aliás, continua sendo o mesmo erro. Mas esse erro aqui. Se a gente mostrar
+
+471
+01:21:53.740 --> 01:22:01.030
+Gesiel Lopes: os detalhes, ele não está conseguindo fazer a conversão da altura,
+
+472
+01:22:02.010 --> 01:22:11.979
+Gesiel Lopes: porque a altura, se vocês observarem, é: e o terceiro parâmetro da minha função,
+
+473
+01:22:13.330 --> 01:22:16.870
+Gesiel Lopes: ele é o terceiro parâmetro da minha função.
+
+474
+01:22:17.550 --> 01:22:26.930
+Gesiel Lopes: E o terceiro parâmetro que eu passo da minha função. É a altura. Aliás, é um nome que é um String.
+
+475
+01:22:27.500 --> 01:22:29.849
+Gesiel Lopes: Então o que eu estou fazendo
+
+476
+01:22:34.630 --> 01:22:39.589
+Gesiel Lopes: se a gente quiser. Aliás, eu estou passando o
+
+477
+01:22:39.760 --> 01:22:57.049
+Gesiel Lopes: o nome como terceiro argumento da minha função. E o terceiro argumento da minha função. Ele não é para ser o nome. É para ser a altura. E aí ele tenta fazer aqui uma operação de elevar o quadrado numa String. E aí ele dá
+
+478
+01:22:57.050 --> 01:23:07.520
+Gesiel Lopes: que a operação de potenciação não é suportada para o objeto do tipo String, hã?
+
+479
+01:23:08.580 --> 01:23:12.910
+Gesiel Lopes: Então eu não consigo fazer isso. Eu não consigo
+
+480
+01:23:13.350 --> 01:23:32.790
+Gesiel Lopes: beleza, inclusive ele. Até digita. Ele até parece o print do nome da idade, mas ele não faz o restante, porque ele dá esse erro? Porque os argumentos são passados fora da ordem. Então, quando eu passo os argumentos
+
+481
+01:23:32.920 --> 01:23:43.730
+Gesiel Lopes: para uma função. Esses argumentos precisam ser passados na mesma ordem da definição dos parâmetros da minha função.
+
+482
+01:23:43.830 --> 01:23:46.290
+Gesiel Lopes: Beleza tranquilo.
+
+483
+01:23:47.630 --> 01:23:51.570
+Gesiel Lopes: Vou copiar isso aqui. Só que aqui tem um pequeno detalhe.
+
+484
+01:23:51.780 --> 01:23:52.550
+Gesiel Lopes: Tá bom.
+
+485
+01:23:54.370 --> 01:24:07.859
+Gesiel Lopes: Eu posso passar os argumentos para a minha função de forma nomeada.
+
+486
+01:24:07.960 --> 01:24:19.150
+Gesiel Lopes: Tá, como assim, gesiel? Observem que eu posso nomear os argumentos da minha função, tá?
+
+487
+01:24:19.660 --> 01:24:24.700
+Gesiel Lopes: É por isso que eu não queria usar aqui o os inputs, tá,
+
+488
+01:24:25.690 --> 01:24:28.950
+Gesiel Lopes: porque senão porque, como os nomes são iguais,
+
+489
+01:24:31.500 --> 01:24:37.310
+Gesiel Lopes: deixa eu só mostrar para vocês continuar o mesmo erro.
+
+490
+01:24:38.860 --> 01:24:43.970
+Gesiel Lopes: Só passar aqui esses parâmetros é
+
+491
+01:24:45.050 --> 01:24:49.250
+Gesiel Lopes: a idade. Foi o primeiro parâmetro que eu passei, que é dezoito.
+
+492
+01:24:49.550 --> 01:24:51.990
+Gesiel Lopes: O meu peso noventa e oito.
+
+493
+01:24:52.730 --> 01:24:56.380
+Gesiel Lopes: O meu nome, que aí é Gesiel Lopes.
+
+494
+01:24:59.170 --> 01:25:07.989
+Gesiel Lopes: E o último parâmetro que eu passei foi a altura aqui. Eu fui um,87
+
+495
+01:25:09.470 --> 01:25:15.559
+Gesiel Lopes: só para mostrar para vocês. Sem ser funções, sem ser pegando por
+
+496
+01:25:16.280 --> 01:25:21.810
+Gesiel Lopes: sem ser por variáveis. Tá bom. Os argumentos da minha função.
+
+497
+01:25:22.140 --> 01:25:37.699
+Gesiel Lopes: Eu vou passar aqui esses argumentos. Observe, ele vai dar o mesmo erro da célula anterior. Ele está tentando converter uma Sting, que é meu nome para uma operação que não é suportada a String.
+
+498
+01:25:38.100 --> 01:25:47.109
+Gesiel Lopes: Porém, eu posso fazer a definição dos argumentos de forma nomeada para a minha função.
+
+499
+01:25:47.490 --> 01:25:48.300
+Gesiel Lopes: Tá?
+
+500
+01:25:52.260 --> 01:25:53.880
+Gesiel Lopes: Como assim, Gisele?
+
+501
+01:25:54.120 --> 01:26:08.620
+Gesiel Lopes: Observem que eu posso nomear os parâmetros, os argumentos da minha função. Nesse caso, aqui, esse parâmetro é o parâmetro relacionado à idade.
+
+502
+01:26:09.010 --> 01:26:12.490
+Gesiel Lopes: Então, se eu fizer idade igual.
+
+503
+01:26:12.630 --> 01:26:25.310
+Gesiel Lopes: Eu estou dizendo para o Python que o argumento dezoito, ele vai ser atribuído ao ao parâmetro idade.
+
+504
+01:26:26.620 --> 01:26:36.939
+Gesiel Lopes: Se eu fizer peso igual a noventa e oito. Eu estou dizendo para o Python que o argumento noventa e oito
+
+505
+01:26:37.130 --> 01:26:43.789
+Gesiel Lopes: precisa ser considerado no parâmetro. Peso
+
+506
+01:26:45.280 --> 01:26:50.980
+Gesiel Lopes: nome igual. Da mesma forma, o argumento
+
+507
+01:26:51.140 --> 01:27:09.020
+Gesiel Lopes: Gesiel Lopes, que é o Einstein precisa ser passada para o parâmetro nome. E aqui é a altura. Se eu fizer isso a altura, esse argumento, ele vai ser
+
+508
+01:27:09.110 --> 01:27:20.750
+Gesiel Lopes: armazenado no parâmetro, altura. E aí, quando eu faço isso, eu estou passando os meus argumentos nomeados da minha função
+
+509
+01:27:21.950 --> 01:27:28.280
+Gesiel Lopes: são os parâmetros nomeados. Tá aqui, aqui, ó
+
+510
+01:27:28.430 --> 01:27:38.200
+Gesiel Lopes: dessa forma. Aqui, ó tá. São os parâmetros. Dessa forma, são os parâmetros posicionais
+
+511
+01:27:38.620 --> 01:27:46.090
+Gesiel Lopes: que eu passo na ordem de definição. E aqui são os parâmetros
+
+512
+01:27:46.330 --> 01:27:54.979
+Gesiel Lopes: nomeados. Eu estou nomeando esses parâmetros, e quando eu utilizo
+
+513
+01:27:55.190 --> 01:28:14.870
+Gesiel Lopes: os parâmetros nomeados. Não importa a ordem, não importa a ordem, porque o Python já consegue inferir. Ele não vai considerar a ordem, porque ele vai considerar o nome mesmo de cada argumento.
+
+514
+01:28:15.060 --> 01:28:21.849
+Gesiel Lopes: Então eu não preciso os argumentos nomeados. Eles não necessariamente precisam estar em ordem.
+
+515
+01:28:23.520 --> 01:28:28.359
+Gesiel Lopes: Eles podem estar em ordem ou não.
+
+516
+01:28:30.280 --> 01:28:41.050
+Gesiel Lopes: Beleza. Basta que eu saiba quais são os parâmetros da minha função. Observem que aqui, ó a minha função eu definir o.
+
+517
+01:28:42.250 --> 01:28:51.030
+Gesiel Lopes: Eu defini a função, mas eu não defini a Doc String. Se eu fizer um help a calcular
+
+518
+01:28:52.120 --> 01:28:57.390
+Gesiel Lopes: e Mco. Ele não vai me fornecer nenhuma ajuda porque está faltando o docstring.
+
+519
+01:28:57.700 --> 01:29:03.760
+Gesiel Lopes: E aí vocês depois podem só complementar. Aí eu posso, por exemplo,
+
+520
+01:29:05.540 --> 01:29:16.980
+Gesiel Lopes: passar essas variáveis que eu estou capturando também como argumentos nomeados da minha função. Então idade recebe idade, tá
+
+521
+01:29:18.120 --> 01:29:25.040
+Gesiel Lopes: peso recebe peso, nome recebe nome
+
+522
+01:29:25.470 --> 01:29:31.790
+Gesiel Lopes: e altura, recebe altura. E aqui, pessoal. Só um pequeno detalhe.
+
+523
+01:29:33.880 --> 01:29:35.589
+Gesiel Lopes: Só um pequeno detalhe.
+
+524
+01:29:36.950 --> 01:29:41.759
+Gesiel Lopes: O que está a esquerda da igualdade é o
+
+525
+01:29:42.200 --> 01:29:50.570
+Gesiel Lopes: parâmetro da minha função. É o nome que eu defino da variável tá
+
+526
+01:29:50.700 --> 01:29:55.099
+Gesiel Lopes: do parâmetro da minha função. Tá, beleza.
+
+527
+01:29:56.520 --> 01:30:01.530
+Gesiel Lopes: E o que está à direita da igualdade aqui. Nesse caso,
+
+528
+01:30:01.630 --> 01:30:18.069
+Gesiel Lopes: é o argumento que eu estou passando para a minha função, que esse argumento é uma variável que foi armazenada a partir do input. Tá bom só para vocês não confundirem, porque aqui. Olha só,
+
+529
+01:30:19.510 --> 01:30:38.980
+Gesiel Lopes: eu passei os nomes, idade, peso. Mas aqui eu não estou definindo os argumentos. Eu não estou nomeando os argumentos. O que eu estou passando é apenas os. Aliás, eu não estou nomeando os parâmetros da função. Estou definindo somente os argumentos.
+
+530
+01:30:39.050 --> 01:30:43.389
+Gesiel Lopes: E quando eu não nomeio os parâmetros
+
+531
+01:30:43.510 --> 01:31:01.020
+Gesiel Lopes: na passagem como argumento para uma função. Ele considera apenas a ordem dos argumentos, então a ordem dos parâmetros. Então ele precisa ser passado nessa ordem, que é na ordem de definição.
+
+532
+01:31:01.250 --> 01:31:07.759
+Gesiel Lopes: Aqui eu estou nomeando como eu estou nomeando, não importa a ordem.
+
+533
+01:31:11.290 --> 01:31:21.969
+Gesiel Lopes: E aí eu posso digitar, vocês observem que o código vai funcionar da mesma maneira. Gesiel Lopes, dezoito anos,
+
+534
+01:31:23.300 --> 01:31:29.529
+Gesiel Lopes: um.oitenta e sete e noventa e oito quilos.
+
+535
+01:31:30.320 --> 01:31:31.050
+Gesiel Lopes: Tá,
+
+536
+01:31:35.570 --> 01:31:45.319
+Gesiel Lopes: então ele vai trazer a mensagem acima do peso normal, porque eu estou passando os argumentos nomeados, os parâmetros nomeados da minha função
+
+537
+01:31:45.830 --> 01:31:47.180
+Gesiel Lopes: altura.
+
+538
+01:31:48.350 --> 01:31:50.960
+Gesiel Lopes: Como assim? A altura está aqui. Ó,
+
+539
+01:31:51.730 --> 01:31:54.259
+Gesiel Lopes: o Gabriel. Não entendi o que você falou.
+
+540
+01:32:00.060 --> 01:32:00.750
+gabriel.crepaldi: Por que.
+
+541
+01:32:00.750 --> 01:32:02.130
+Gesiel Lopes: É. É.
+
+542
+01:32:02.130 --> 01:32:02.920
+gabriel.crepaldi: Altura.
+
+543
+01:32:03.550 --> 01:32:11.360
+Gesiel Lopes: Não, não. Nesse caso, eu não estou fazendo retorno. Nenhum desses exemplos são funções sem retorno. Eu vou falar isso depois,
+
+544
+01:32:11.850 --> 01:32:12.680
+Gesiel Lopes: tá?
+
+545
+01:32:12.820 --> 01:32:20.340
+Gesiel Lopes: E aí o Lucas. A última pergunta do Lucas. E exatamente os argumentos de uma função,
+
+546
+01:32:20.450 --> 01:32:30.340
+Gesiel Lopes: ou, melhor dizendo, os parâmetros de uma função. É justamente variáveis que eu crio
+
+547
+01:32:30.810 --> 01:32:48.390
+Gesiel Lopes: e que estão visíveis dentro da minha função. Observem que essa variável nome, idade, altura e peso, essas variáveis, elas só estão visíveis no corpo da função
+
+548
+01:32:49.740 --> 01:32:51.020
+Gesiel Lopes: beleza.
+
+549
+01:32:51.880 --> 01:32:56.290
+Gesiel Lopes: Os argumentos são os valores que são passados,
+
+550
+01:32:56.970 --> 01:33:15.009
+Gesiel Lopes: que podem estar em outras variáveis. Beleza, só que são variáveis externas à minha função. Tá bom. A gente vai falar isso na semana que vem eu vou falar, que é o que a gente chama de escopo de uma variável,
+
+551
+01:33:15.120 --> 01:33:19.519
+Gesiel Lopes: que é o escopo de uma variável de uma função beleza.
+
+552
+01:33:21.480 --> 01:33:22.730
+Gesiel Lopes: Ok,
+
+553
+01:33:24.760 --> 01:33:37.879
+Gesiel Lopes: tranquilo, pessoal. Então era isso. Eu tinha colocado alguns outros pontos. Mas não tem problema. A gente continua no nosso próximo encontro e aí a gente termina de falar alguns detalhezinhos
+
+554
+01:33:38.140 --> 01:33:44.940
+Gesiel Lopes: sobre funções. Aí a gente começa a fazer algumas brincadeirinhas bem interessantes. Tá bom,
+
+555
+01:33:46.420 --> 01:33:53.330
+Gesiel Lopes: então é isso. Qualquer dúvida, é só entrar em contato lá no infinite online. Vou parar aqui o compartilhamento tá?
+
+556
+01:33:53.840 --> 01:33:58.060
+Gesiel Lopes: E aí pratiquem.
+
+557
+01:33:58.220 --> 01:34:10.139
+Gesiel Lopes: Tentem fazer algumas coisinhas. Peguem o que a gente viu, por exemplo, do Eile do If. Tentem começar a construir as funções coisas básicas que a gente vai
+
+558
+01:34:10.520 --> 01:34:23.770
+Gesiel Lopes: mas brincar um pouquinho. Ter que praticar. A gente só está os nossos encontros. Eu estou mostrando a prática para vocês as ideias. Não dá para a gente pegar caso a caso. E aí vocês precisam depois praticar
+
+559
+01:34:23.940 --> 01:34:33.369
+Gesiel Lopes: beleza. Então é isso, pessoal. Bons estudos. Bom descanso e até a próxima. Fui. Tchau, Tchau.
+

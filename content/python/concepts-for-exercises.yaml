@@ -1,4 +1,4 @@
-# Extração de conceitos — Aulas Python 01 a 12
+# Extração de conceitos — Aulas Python 01 a 14
 # Formato para entrada do Gerador de Exercícios (agents/exercicios-prompt-especificacao.md)
 # Use o bloco da aula desejada como entrada do gerador. concepts_previous_lessons deve ser
 # preenchido à parte (ex.: a partir deste arquivo ou de concepts.md).
@@ -79,7 +79,7 @@ skills:
 examples:
   - idade = 25; type(idade)
   - variavel_dinamica = 1 depois variavel_dinamica = False
-  - """ docstring """ e # comentário
+  - '""" docstring """ e comentário com # na linguagem'
 keywords:
   - variável
   - int
@@ -111,13 +111,13 @@ skills:
 examples:
   - float("12.5"); float("texto") -> ValueError
   - media = soma_notas / 2; piso = valor1 // valor2; resto = valor1 % valor2
-  - try: temperatura = float(leitura) except ValueError: ...
+  - 'try: temperatura = float(leitura) except ValueError: ...'
 keywords:
   - int()
   - float()
   - //
-  - %
-  - **
+  - '%'
+  - '**'
   - ValueError
   - TypeError
 
@@ -135,9 +135,9 @@ skills:
   - Reescrever textos reais (poemas, parágrafos) como literais de string válidos
   - Diagnosticar e corrigir SyntaxError causados por aspas e quebras de linha
 examples:
-  - poema = '''Que pode uma criatura senão,\nentre criaturas, amar?'''
-  - "texto entre 'aspas'" e 'Lorem "Ipsum"'
-  - montar_fragmento_poema(linha1, linha2, linha3) com '''
+  - 'poema = triple-aspas com \\n interno (citação do poema na aula)'
+  - 'literal com aspas aninhadas válidas (texto entre aspas simples dentro de duplas e vice-versa)'
+  - montar_fragmento_poema(linha1, linha2, linha3) com trecho em triple-aspas
 keywords:
   - string
   - aspas
@@ -164,12 +164,12 @@ skills:
   - Corrigir TypeError causados por operações entre int e str com conversão explícita
   - Construir saídas de terminal mais legíveis com molduras de texto
 examples:
-  - "linha1\nlinha2"; r"C:\Users\aluno\dados.csv"
-  - str(numero) + " " + string; 5 * "Python"
-  - "+" + 30 * "-" + "+"
+  - escape \\n e raw string com caminho Windows (linha da aula)
+  - 'str(numero) + " " + string; 5 * "Python"'
+  - '"+" + 30 * "-" + "+"'
 keywords:
-  - \n
-  - \t
+  - '\n'
+  - '\t'
   - raw string
   - concatenação
   - TypeError
@@ -223,14 +223,14 @@ skills:
   - Formatar saídas numéricas com número controlado de casas decimais em .format() e f-strings
   - Diagnosticar e corrigir TypeError causados por operações aritméticas com valores vindos de input()
 examples:
-  - "%.2f" % valor; "{:.3f}".format(valor)
-  - f"The {thing} is in the {place}."; f"{graus_c:.3f}"
-  - graus_f = input("..."); graus_f = int(graus_f); graus_c = (graus_f - 32) * 5/9
+  - '"%.2f" % valor; "{:.3f}".format(valor)'
+  - f-string com placeholders e :.3f em graus_c
+  - graus_f = input("..."); int(graus_f); conversão Fahrenheit para Celsius com fórmula 5/9
 keywords:
   - f-string
   - input()
-  - :.2f
-  - :.3f
+  - ':.2f'
+  - ':.3f'
   - TypeError
 
 ---
@@ -249,9 +249,9 @@ skills:
   - Implementar desvios condicionais com if/elif/else
   - Modelar regras de negócio como cadeias condicionais
 examples:
-  - if media >= 7.0: print("Aluno aprovado!")
-  - if media >= 9.0: ... elif media >= 7.0: ... elif media >= 5.0: ... else: ...
-  - if 18.5 <= imc < 25: categoria = "peso normal"
+  - 'if media >= 7.0: print("Aluno aprovado!")'
+  - cadeia if elif else com limiares 9 / 7 / 5 (padrão da aula)
+  - 'if 18.5 <= imc < 25: categoria = "peso normal"'
 keywords:
   - if
   - elif
@@ -274,8 +274,8 @@ skills:
   - Projetar regras de negócio como expressões booleanas
   - Usar match/case para seleção múltipla
 examples:
-  - (media >= 7) and (faltas <= 10); if texto: ... else: ... (falsy "")
-  - match dia: case 1: ... case 5: ... case _: ...
+  - '(media >= 7) and (faltas <= 10); truthy/falsy com string vazia'
+  - match com case numéricos e case _ (wildcard) — padrão da aula
 keywords:
   - and
   - or
@@ -300,9 +300,9 @@ skills:
   - Gerar sequências numéricas com range
   - Percorrer listas e strings com for
 examples:
-  - for letra in vogais: print(letra)
-  - for i in range(10): ...; for i in range(2, 21, 2): ...
-  - for i in range(len(notas)): print(f"Prova {i + 1}: {notas[i]}")
+  - 'for letra in vogais: print(letra)'
+  - range(10) e range(2, 21, 2) com laços for
+  - 'for i in range(len(notas)): print(f"Prova {i + 1}: {notas[i]}")'
 keywords:
   - for
   - range
@@ -326,12 +326,82 @@ skills:
   - Construir tabuadas e relatórios numéricos com loops
   - Usar enumerate e loops aninhados para percursos complexos
 examples:
-  - soma = 0; for i in range(5): numero = int(input(...)); soma += numero; media = soma / 5
-  - for i, fruta in enumerate(frutas): print(f"Fruta {i}: {fruta}")
-  - for i in range(3): for j in range(3): print(f"({i},{j})", end=" ")
+  - soma = 0; laço for lendo int(input); soma += numero; média = soma / 5
+  - enumerate(frutas) com print de índice e nome da fruta
+  - loops aninhados range(3) imprimindo pares (i,j) com end espaço
 keywords:
   - acumulador
   - +=
   - enumerate
   - loops aninhados
   - matriz
+
+---
+# ---- Aula 13: pratica-teste-mesa-tabuada-enumerate-matriz ----
+lesson: aula-13-pratica-teste-mesa-tabuada-enumerate-matriz
+slug: pratica-teste-mesa-tabuada-enumerate-matriz
+concepts:
+  - teste de mesa
+  - acumulador (inicialização e +=)
+  - tabuada com range(11)
+  - enumerate e range(len)
+  - len() em coleções
+  - loops aninhados (linha e coluna)
+  - print(end=) e concatenação por linha
+  - formatação f-string e .format() na tabuada
+skills:
+  - Fazer teste de mesa para algoritmos com laço e acumulador
+  - Implementar tabuada de 0 a 10 com cabeçalho e alinhamento
+  - Iterar listas com enumerate e com range(len)
+  - Gerar saída de matriz por linha com acumulo de string ou print(end=)
+examples:
+  - soma = 0; for com input; soma += numero; média com f-string .3f (teste de mesa 1..5)
+  - tabuada for i in range(11) com f-string numero x i = produto
+  - tabuada com .format e \\t entre fatores e resultado
+  - for i, fruta in enumerate(frutas) estilo fruta i com f-string
+  - for i in range(len(frutas)) com frutas[i] (alternativa ao enumerate)
+  - matriz por linha result += coordenadas e print(result) após laço interno
+  - matriz com print(coord, end=' ') no interno e print() vazio após interno
+keywords:
+  - teste de mesa
+  - acumulador
+  - range(11)
+  - enumerate
+  - matriz
+  - 'end='
+
+---
+# ---- Aula 14: funcoes-parametros-docstrings-builtins ----
+lesson: aula-14-funcoes-parametros-docstrings-builtins
+slug: funcoes-parametros-docstrings-builtins
+concepts:
+  - def e chamada de função
+  - parâmetros formais vs argumentos
+  - argumentos posicionais e nomeados
+  - return explícito e None implícito
+  - docstrings, __doc__ e help()
+  - builtins print, input, int, float, type, len
+  - NameError (definição não executada no notebook)
+  - TypeError por ordem ou tipo de argumentos
+  - PEP 8 snake_case e funções coesas
+skills:
+  - Definir funções coesas com docstring legível
+  - Chamar funções com argumentos nomeados após input e conversão
+  - Inspecionar funções com help() e documentação de bibliotecas
+  - Separar responsabilidades em funções auxiliares (ex.: total antes do resumo)
+examples:
+  - def com parâmetros, docstring e return (modelo sintático da aula)
+  - def sem parâmetros, print no corpo, chamada saudacao() (ordem no notebook)
+  - somar_dois_valores(1, 2) e help(nome_da_função) para ver docstring
+  - imc_preview com argumentos nomeados nome= idade= altura_m= peso_kg= e round(..., 2)
+  - padrão formatar_linha_log com colchetes, nível, módulo, pipe e mensagem
+  - classificar_faixa_preco com limiares 0.8 e 0.95 do preco_original
+  - total_unidades em payload itens e resumo_pedido(numero, payload)
+keywords:
+  - def
+  - parâmetro
+  - argumento nomeado
+  - docstring
+  - help()
+  - builtin
+  - PEP 8
