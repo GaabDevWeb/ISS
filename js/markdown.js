@@ -169,6 +169,59 @@ function renderBody(body) {
   return marked.parse(body);
 }
 
+/**
+ * Tema Mermaid alinhado a css/styles.css (:root — ISS dark).
+ * theme: 'base' + themeVariables (hex) — necessário para customizar cards e setas.
+ */
+function getIssMermaidConfig() {
+  return {
+    startOnLoad: false,
+    theme: 'base',
+    themeVariables: {
+      darkMode: true,
+      background: '#1E1E1E',
+      mainBkg: '#1E1E1E',
+      secondBkg: '#27272a',
+      fontFamily: '"Inter", ui-sans-serif, system-ui, sans-serif',
+      fontSize: '14px',
+      primaryColor: '#27272a',
+      primaryTextColor: '#DADADA',
+      primaryBorderColor: '#3f3f46',
+      secondaryColor: '#27272a',
+      tertiaryColor: '#3f3f46',
+      lineColor: '#5B88B2',
+      secondaryTextColor: '#a1a1aa',
+      tertiaryTextColor: '#a1a1aa',
+      clusterBkg: '#1E1E1E',
+      clusterBorder: '#3f3f46',
+      titleColor: '#DADADA',
+      edgeLabelBackground: '#27272a',
+      nodeTextColor: '#DADADA',
+      actorBkg: '#27272a',
+      actorBorder: '#3f3f46',
+      actorTextColor: '#DADADA',
+      signalColor: '#5B88B2',
+      labelTextColor: '#DADADA',
+      loopTextColor: '#DADADA',
+      activationBorderColor: '#5B88B2',
+      sequenceNumberColor: '#DADADA',
+      sectionBkgColor: '#27272a',
+      altSectionBkgColor: '#1E1E1E',
+      gridColor: '#3f3f46',
+      classText: '#DADADA',
+    },
+    flowchart: {
+      htmlLabels: true,
+      curve: 'basis',
+      padding: 10,
+    },
+    sequence: {
+      actorFontFamily: '"Inter", ui-sans-serif, system-ui, sans-serif',
+      noteFontFamily: '"Inter", ui-sans-serif, system-ui, sans-serif',
+    },
+  };
+}
+
 function renderMermaidDiagrams(container) {
   if (!container || typeof mermaid === 'undefined') return;
 
@@ -181,7 +234,7 @@ function renderMermaidDiagrams(container) {
     const pre = code.parentElement && code.parentElement.tagName === 'PRE' ? code.parentElement : null;
     const host = pre || code;
     const wrapper = document.createElement('div');
-    wrapper.className = 'mermaid';
+    wrapper.className = 'mermaid iss-mermaid';
     wrapper.textContent = text.trim();
     if (host.parentElement) {
       host.parentElement.replaceChild(wrapper, host);
@@ -190,7 +243,7 @@ function renderMermaidDiagrams(container) {
   
   try {
     if (!renderMermaidDiagrams._initialized) {
-      mermaid.initialize({ startOnLoad: false });
+      mermaid.initialize(getIssMermaidConfig());
       renderMermaidDiagrams._initialized = true;
     }
     mermaid.run({ querySelector: '.mermaid' });

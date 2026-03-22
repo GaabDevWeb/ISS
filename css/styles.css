@@ -6,7 +6,7 @@
   --color-muted: #a1a1aa;
   --color-border: #3f3f46;
   --color-accent: #5B88B2;
-  --color-accent-hover: #82AAE6
+  --color-accent-hover: #82AAE6;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, monospace;
@@ -732,4 +732,16 @@ button.iss-tag:hover {
 }
 .iss-solution-confirm .iss-exercise-action-btn {
   margin-right: 0;
+}
+
+/* Mermaid — alinhado aos tokens ISS (ver getIssMermaidConfig em js/markdown.js) */
+.iss-prose .mermaid.iss-mermaid,
+.mermaid.iss-mermaid {
+  margin: 1.25rem 0;
+  text-align: center;
+}
+.iss-prose .mermaid.iss-mermaid svg,
+.mermaid.iss-mermaid svg {
+  max-width: 100%;
+  height: auto;
 }
