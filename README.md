@@ -4,6 +4,8 @@
 
 # <img src="css/images/icon.svg" width="32" style="vertical-align: middle;"> ISS - Plataforma Interativa de Estudos
 
+**Acesse a versão web do projeto online: [https://gaabdevweb.github.io/ISS/](https://gaabdevweb.github.io/ISS/)**
+
 Bem-vindo ao repositório do projeto ISS. Este é um sistema web desenvolvido com foco puramente acadêmico e de engajamento, permitindo a leitura de aulas em formato Markdown, a exploração de conceitos técnicos e a resolução interativa de exercícios diretamente no navegador.
 
 Nosso principal diferencial é a integração profunda de **materiais de estudo de qualidade** e uma **ampla gama de exercícios práticos**. Todo o conteúdo é facilmente gerenciado e expandido.
@@ -14,18 +16,26 @@ Nosso principal diferencial é a integração profunda de **materiais de estudo 
 
 Todo o ambiente foi projetado para facilitar a busca e assimilação do conhecimento. Logo na página principal, você tem acesso às disciplinas e trilhas de aprendizado, com uma busca eficiente que encontra termos diretamente nos conteúdos.
 
-<p align="center">
-  <img src="css/images/home.png" alt="Tela Inicial" width="80%" />
-</p>
-<p align="center">
-  <img src="css/images/search.png" alt="Sistema de Busca" width="80%" />
-</p>
+<details>
+  <summary><b>Visualizar: Tela Inicial e Busca</b></summary>
+  <br>
+  <p align="center">
+    <img src="css/images/home.png" alt="Tela Inicial" width="80%" />
+  </p>
+  <p align="center">
+    <img src="css/images/search.png" alt="Sistema de Busca" width="80%" />
+  </p>
+</details>
 
 Explorando os diversos tópicos na plataforma, há ênfase completa no detalhamento dos assuntos, suportando formatação rica em código e até diagramas visuais, reforçando o aprendizado de forma prática e interativa.
 
-<p align="center">
-  <img src="css/images/concepts.png" alt="Conceitos" width="80%" />
-</p>
+<details>
+  <summary><b>Visualizar: Renderização de Conceitos</b></summary>
+  <br>
+  <p align="center">
+    <img src="css/images/concepts.png" alt="Conceitos" width="80%" />
+  </p>
+</details>
 
 ---
 
@@ -33,18 +43,26 @@ Explorando os diversos tópicos na plataforma, há ênfase completa no detalhame
 
 A verdadeira potência do sistema reside no ambiente focado para o aluno. O design da aula isola distrações, focando no que realmente importa: **O conteúdo e a prática imediata.**
 
-<p align="center">
-  <img src="css/images/Aula.png" alt="Visualização da Aula" width="80%" />
-</p>
+<details>
+  <summary><b>Visualizar: Ambiente de Aula</b></summary>
+  <br>
+  <p align="center">
+    <img src="css/images/Aula.png" alt="Visualização da Aula" width="80%" />
+  </p>
+</details>
 
 Ao final de cada tópico e material teórico, a plataforma exibe blocos de exercícios para solidificar o entendimento. O aluno pode testar seus conhecimentos e, quando necessário, visualizar a resposta sugerida ou dicas para resolver a questão.
 
-<p align="center">
-  <img src="css/images/exercicios.png" alt="Lista de Exercícios" width="80%" />
-</p>
-<p align="center">
-  <img src="css/images/exercicio.png" alt="Resolução do Exercício" width="80%" />
-</p>
+<details>
+  <summary><b>Visualizar: Interação com Exercícios</b></summary>
+  <br>
+  <p align="center">
+    <img src="css/images/exercicios.png" alt="Lista de Exercícios" width="80%" />
+  </p>
+  <p align="center">
+    <img src="css/images/exercicio.png" alt="Resolução do Exercício" width="80%" />
+  </p>
+</details>
 
 ---
 
@@ -52,9 +70,13 @@ Ao final de cada tópico e material teórico, a plataforma exibe blocos de exerc
 
 O progresso não é esquecido. A plataforma armazena o controle de exercícios revisados e aulas concluídas, permitindo visualizar um acompanhamento através de gráficos na página de estatísticas, engajando e mantendo a motivação em alta.
 
-<p align="center">
-  <img src="css/images/grafico.png" alt="Gráficos de Progresso" width="80%" />
-</p>
+<details>
+  <summary><b>Visualizar: Gráficos de Progresso</b></summary>
+  <br>
+  <p align="center">
+    <img src="css/images/grafico.png" alt="Gráficos de Progresso" width="80%" />
+  </p>
+</details>
 
 ---
 
