@@ -6,15 +6,15 @@
 
 **Acesse a versão web do projeto online: [https://gaabdevweb.github.io/ISS/](https://gaabdevweb.github.io/ISS/)**
 
-Bem-vindo ao repositório do projeto ISS. Este é um sistema web desenvolvido com foco puramente acadêmico e de engajamento, permitindo a leitura de aulas em formato Markdown, a exploração de conceitos técnicos e a resolução interativa de exercícios diretamente no navegador.
+Bem-vindo ao repositório do projeto ISS. Este sistema nasceu da vontade de ajudar estudantes (incluindo a mim mesmo!) a organizarem e consolidarem seus conhecimentos. É um ambiente acadêmico pensado para facilitar a leitura de anotações e aulas em formato Markdown, a revisão de conceitos e a resolução prática de exercícios diretamente no navegador.
 
-Nosso principal diferencial é a integração profunda de **materiais de estudo de qualidade** e uma **ampla gama de exercícios práticos**. Todo o conteúdo é facilmente gerenciado e expandido.
+A intenção aqui é ser um espaço direto ao ponto e focado inteiramente em **estudar, testar e aprender juntos**, sem distrações.
 
 ---
 
-## Funcionalidades e Materiais de Estudo
+## Como o projeto ajuda nos estudos
 
-Todo o ambiente foi projetado para facilitar a busca e assimilação do conhecimento. Logo na página principal, você tem acesso às disciplinas e trilhas de aprendizado, com uma busca eficiente que encontra termos diretamente nos conteúdos.
+A ideia principal é facilitar o acesso aos materiais. A página inicial organiza tudo em disciplinas e trilhas de aprendizado, e conta com uma busca simples para encontrarmos rapidamente o termo ou conceito que precisamos revisar.
 
 <details>
   <summary><b>Visualizar: Tela Inicial e Busca</b></summary>
@@ -27,7 +27,7 @@ Todo o ambiente foi projetado para facilitar a busca e assimilação do conhecim
   </p>
 </details>
 
-Explorando os diversos tópicos na plataforma, há ênfase completa no detalhamento dos assuntos, suportando formatação rica em código e até diagramas visuais, reforçando o aprendizado de forma prática e interativa.
+Dentro das aulas, o foco total é bater o olho e entender a matéria. Por isso, as páginas suportam formatação para blocos de código e diagramas visuais, o que deixa a leitura da teoria bem mais clara e amigável.
 
 <details>
   <summary><b>Visualizar: Renderização de Conceitos</b></summary>
@@ -39,9 +39,9 @@ Explorando os diversos tópicos na plataforma, há ênfase completa no detalhame
 
 ---
 
-## Ênfase em Aulas e Exercícios
+## Praticando com Exercícios
 
-A verdadeira potência do sistema reside no ambiente focado para o aluno. O design da aula isola distrações, focando no que realmente importa: **O conteúdo e a prática imediata.**
+Ler a teoria é importante, mas sem praticar ninguém memoriza nada. O design da interface foi feito para ser limpo e isolar a leitura de telas muito poluídas.
 
 <details>
   <summary><b>Visualizar: Ambiente de Aula</b></summary>
@@ -51,7 +51,7 @@ A verdadeira potência do sistema reside no ambiente focado para o aluno. O desi
   </p>
 </details>
 
-Ao final de cada tópico e material teórico, a plataforma exibe blocos de exercícios para solidificar o entendimento. O aluno pode testar seus conhecimentos e, quando necessário, visualizar a resposta sugerida ou dicas para resolver a questão.
+Para fixar o conteúdo de verdade, a página lista blocos de exercícios interativos na parte inferior dos materiais. Neles você pode pensar sobre o problema e, caso não consiga ou queira conferir, basta expandir a caixa para checar a dica ou a resposta sugerida.
 
 <details>
   <summary><b>Visualizar: Interação com Exercícios</b></summary>
@@ -66,9 +66,9 @@ Ao final de cada tópico e material teórico, a plataforma exibe blocos de exerc
 
 ---
 
-## Acompanhamento e Estatísticas
+## Acompanhando o Progresso
 
-O progresso não é esquecido. A plataforma armazena o controle de exercícios revisados e aulas concluídas, permitindo visualizar um acompanhamento através de gráficos na página de estatísticas, engajando e mantendo a motivação em alta.
+Para dar aquele incentivo na hora de estudar, a plataforma salva o nosso progresso de leitura localmente. É possível marcar as lições concluídas e os exercícios que já foram revisados, visualizando essas métricas em uma página de acompanhamento que ajuda a rastrear onde devemos melhorar.
 
 <details>
   <summary><b>Visualizar: Gráficos de Progresso</b></summary>
