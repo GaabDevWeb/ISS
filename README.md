@@ -62,6 +62,20 @@ O progresso não é esquecido. A plataforma armazena o controle de exercícios r
 
 A seguir, informações detalhadas para desenvolvedores e mantenedores do projeto sobre sua arquitetura e modo de funcionamento.
 
+```mermaid
+graph TD
+    A[Navegador / HTML] -->|Router HTTP| B(js/markdown.js)
+    B -->|Fetch do arquivo| C[Conteúdo .md estático]
+    B -->|Parse customizado| D[Extrai YAML Frontmatter]
+    B -->|Parse markdown| E[Marked.js]
+    D --> F[Metadados e Lista de Exercícios]
+    E --> G[Conteúdo HTML]
+    G --> H[Renderiza na tela]
+    F -->|Injeta blocos| H
+    H -->|Syntax| I[Highlight.js]
+    H -->|Diagramas| J[Mermaid.js]
+```
+
 ### Como Rodar o Projeto Localmente
 
 Por se tratar de um projeto composto majoritariamente de arquivos estáticos (HTML, CSS e JavaScript client-side), não é necessária a instalação de um backend complexo ou banco de dados. Qualquer servidor HTTP estático servirá de ambiente.
@@ -77,6 +91,20 @@ Por se tratar de um projeto composto majoritariamente de arquivos estáticos (HT
 ### Como Adicionar Novas Aulas
 
 As aulas são gerenciadas através de arquivos Markdown e registradas em um arquivo JSON.
+
+```mermaid
+sequenceDiagram
+    participant Dev as Professor / Dev
+    participant MD as content/.../nova-aula.md
+    participant JSON as content/lessons.json
+    participant App as Plataforma ISS
+
+    Dev->>MD: 1. Criação do arquivo Markdown
+    Dev->>MD: 2. Adiciona o YAML Frontmatter
+    Dev->>JSON: 3. Adiciona o registro no lessons.json
+    App->>JSON: 4. Atualiza o menu de disciplinas
+    App->>MD: 5. Renderiza o conteúdo da nova aula
+```
 
 1. Crie seu arquivo Markdown com a aula em `content/<nome-da-disciplina>/nova-aula.md`.
 2. Adicione o cabeçalho (Frontmatter) em YAML no topo do arquivo `.md`. Por exemplo:
