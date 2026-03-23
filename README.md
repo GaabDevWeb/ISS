@@ -84,6 +84,43 @@ Para dar aquele incentivo na hora de estudar, a plataforma salva o nosso progres
 
 A seguir, informações detalhadas para desenvolvedores e mantenedores do projeto sobre sua arquitetura e modo de funcionamento.
 
+### Pipeline Automático de Criação de Conteúdo (Agentes de IA)
+
+O conteúdo da plataforma não brota do nada. Ele é curado e estruturado através de uma esteira de produção refinada, movida por Engenharia de Prompt industrial. Agentes especialistas de Inteligência Artificial processam tudo para garantir alta densidade técnica, fugindo completamente de "resumos básicos" e gerando materiais interativos de verdade.
+
+```mermaid
+flowchart TD
+    A[Aulas ao Vivo / Transcrições] --> B
+    C[Slides / Código Bruto] --> B
+
+    subgraph "Agente: Ensino Técnico Principal"
+        B(Extrai Conceituais e Skills)
+        D(Reconstrói o Modelo Mental)
+        E(Gera Lesson .md c/ Diagramas)
+        F(Emite Metadados CONCEPT_EXTRACTION)
+        B --> D --> E --> F
+    end
+
+    subgraph "Agente: Gerador de Exercícios"
+        G{Planejamento Multi-Estágio}
+        H(Injeta Contextos: API, Logs, etc)
+        I(Monta Exercícios e Test Cases)
+        G --> H --> I
+    end
+
+    F -->|Input Estruturado| G
+    E -->|Salvo em| J[content/disciplinas/nova-aula.md]
+    I -->|Salvo em| K[exercises.json / files .md]
+```
+
+Para chegar neste nível de profundidade pedagógica, o projeto estabelece as regras nos arquivos da pasta `agents/`:
+
+1. **O Instrutor Principal** ([`content-summary-agent.md`](agents/content-summary-agent.md) & [`content-summary-style-guide.md`](agents/content-summary-style-guide.md)):  
+   Esse agente recebe a aula bruta ou transcrição e atua como professor e designer de currículo. Ele é estritamente proibido de dar respostas incompletas ou fazer a lição usando *bullets* vazios. Ao invés disso, o agente absorve a matéria, cria *Modelos Mentais*, desenha diagramas via Mermaid.js ilustrando códigos e fluxos de sistemas, e finalmente insere comentários HTML ocultos na lição contendo a extração técnica.
+
+2. **O Criador da Prática** ([`exercicios-prompt-especificacao.md`](agents/exercicios-prompt-especificacao.md)):  
+   Puxando os conceitos extraídos pelo agente anterior, cria-se a bateria interativa. Ao contrário de uma geração desordenada de código, este agente divide os exercícios em 5 estágios progressivos de dificuldade e os força a rodar em cenários realistas da profissão (*parsing* de JSON, validação customizada, busca em logs, ETL). As tarefas saem da monotonia e ganham estilos criativos, onde os alunos precisarão descobrir *bugs* no código, refatorar a lógica, prever saídas complexas, ou escrever blocos lógicos do zero para passarem nos casos de testes embarcados (`test_cases`).
+
 ```mermaid
 graph TD
     A[Navegador / HTML] -->|Router HTTP| B(js/markdown.js)
@@ -195,4 +232,18 @@ O projeto opta por não ter rotas estáticas pré-compiladas (SSG). Em vez disso
 
 ---
 
-Este projeto é constantemente evoluído. Sinta-se à vontade para navegar pelos códigos e pelos subdiretórios para maiores esclarecimentos sobre a arquitetura.
+## Como Contribuir
+
+Todo material de estudo ganha muito quando construído junto. Qualquer pessoa pode enviar melhorias na interface, correções de ortografia, novos diagramas, lições extras e exercícios criativos via *Pull Requests*. Siga o passo a passo:
+
+1. Faça o Fork deste repositório para a sua conta do GitHub.
+2. Crie a sua *branch* para a modificação (`git checkout -b feature/minha-melhoria-na-aula-x`).
+3. Comite suas alterações com descrições semânticas (`git commit -m 'Novo exercício de fixação no bloco de SQL'`).
+4. Dê o Push para sua conta localmente (`git push origin feature/minha-melhoria-na-aula-x`).
+5. Abra um *Pull Request* detalhando o que foi adicionado.
+
+Este projeto é constantemente evoluído. Sinta-se à vontade para navegar pelos códigos e pelos subdiretórios para maiores esclarecimentos.
+
+---
+
+**Gostou da iniciativa?** Se esse projeto tiver agregado na sua base técnica, ajudado nos estudos do dia a dia ou servido de ferramenta útil para você aprender algo novo, não esqueça de deixar uma estrela (Star) brilhante aqui no canto superior direito do repositório do GitHub! Isso ajuda incrivelmente a espalhar a plataforma para mais estudantes e desenvolvedores interessados em evoluir. Muito obrigado!
