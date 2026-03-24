@@ -405,3 +405,43 @@ keywords:
   - help()
   - builtin
   - PEP 8
+
+---
+# ---- Aula 15: retorno-composicao-funcoes ----
+lesson: aula-15-retorno-composicao-funcoes
+slug: retorno-composicao-funcoes
+concepts:
+  - parâmetros posicionais
+  - parâmetros nomeados (keyword arguments)
+  - parâmetros com valor padrão
+  - return
+  - None
+  - composição de funções
+  - múltiplos retornos
+  - tuple unpacking
+skills:
+  - Definir funções com assinaturas mistas (obrigatório + padrão)
+  - Chamar funções com argumentos posicionais e nomeados na mesma chamada
+  - Usar return para produzir valores reutilizáveis em vez de print
+  - Compor funções passando retorno como argumento sem variável intermediária
+  - Desestruturar múltiplos retornos com tuple unpacking
+  - Identificar e corrigir o bug do parâmetro padrão mutável
+  - Distinguir None de valor útil e evitar NoneType em operações aritméticas
+examples:
+  - 'def somar(x, y): return x + y; somar(18, 98); somar(y=98, x=18)'
+  - 'def saudacao(nome, mensagem="Olá, seja bem-vindo!"): return f"{mensagem} {nome}"'
+  - 'resultado = registrar_evento("conexão"); print(resultado)  # None'
+  - 'if e_par(calcular_quadrado(numero)): print("é par")'
+  - 'def min_max(nums): return min(nums), max(nums); menor, maior = min_max([2,3,4,1])'
+  - 'def adicionar(item, lista=None): lista = lista or []; lista.append(item); return lista'
+  - 'def formatar_status(pid, status, prefixo="PEDIDO"): return f"[{prefixo}#{pid}] {status.upper()}"'
+keywords:
+  - return
+  - None
+  - parâmetro posicional
+  - keyword argument
+  - valor padrão
+  - composição
+  - tuple unpacking
+  - múltiplos retornos
+  - parâmetro mutável
