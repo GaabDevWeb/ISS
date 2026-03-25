@@ -66,12 +66,12 @@ Isso é exatamente o que a Aula 15 demonstra ao: primeiro contar por nome; depoi
 <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`GROUP BY`</mark> + agregações + <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`HAVING`</mark> forma um pipeline lógico:
 
 ```mermaid
-flowchart TD
-    A["Linhas da tabela<br/>Vendas_Jogos"] --> B["Definir dimensões no GROUP BY"]
-    B --> C["Calcular métricas<br/>SUM/COUNT no SELECT"]
-    C --> D["Filtrar grupos com HAVING<br/>ex.: COUNT(*) > 1"]
-    D --> E["Ordenar com ORDER BY<br/>ex.: por métrica DESC"]
-    E --> F["Resultado final<br/>uma linha por grupo"]
+graph TD
+    A[Linhas da tabela Vendas_Jogos] --> B[Definir dimensões no GROUP BY]
+    B --> C[Calcular métricas SUM e COUNT no SELECT]
+    C --> D[Filtrar grupos com HAVING - ex: COUNT maior que 1]
+    D --> E[Ordenar com ORDER BY - ex: por métrica DESC]
+    E --> F[Resultado final: uma linha por grupo]
 ```
 
 ### ORDER BY em cima de métricas agregadas
@@ -155,10 +155,10 @@ Depois, para entender se a duplicidade é “crítica” ou apenas consequência
 Uma duplicidade por nome (<mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`HAVING COUNT(*) > 1`</mark> em <mark style="background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;">`Nome_Jogo`</mark>) pode desaparecer quando você agrupa por combinação completa de dimensões. Isso sugere que as linhas eram “iguais” só no nome, mas diferentes em plataforma/ano/gênero/empresa.
 
 ```mermaid
-flowchart LR
-    A["Grain 1: GROUP BY Nome_Jogo"] --> B["Duplicidade aparece?"]
-    B -->|Sim| C["Grain 2: GROUP BY Nome+Plataforma+Ano+Genero+Empresa"]
-    C --> D["Duplicidade persiste?"]
+graph LR
+    A[Grain 1: GROUP BY Nome_Jogo] --> B[Duplicidade aparece?]
+    B -->|Sim| C[Grain 2: GROUP BY Nome + Plataforma + Ano + Genero + Empresa]
+    C --> D[Duplicidade persiste?]
 ```
 
 ## Uso Prático
