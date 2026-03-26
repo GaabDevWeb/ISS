@@ -445,3 +445,56 @@ keywords:
   - tuple unpacking
   - múltiplos retornos
   - parâmetro mutável
+
+---
+# ---- Aula 16: algoritmos-pratica-composicao-funcoes ----
+lesson: aula-16-algoritmos-pratica-composicao-funcoes
+slug: algoritmos-pratica-composicao-funcoes
+concepts:
+  - bubble sort
+  - algoritmo de ordenação por comparação
+  - referência mutável de lista
+  - list.copy()
+  - módulo random
+  - random.randint(a, b)
+  - while True com break
+  - continue
+  - acumuladores em loop while
+  - retorno múltiplo (tupla)
+  - tuple unpacking de retorno de função
+  - composição de três funções
+  - validação de entrada com float(input())
+  - tabela de descontos progressivos com if/elif/else
+skills:
+  - Implementar Bubble Sort com dois loops for aninhados e variável auxiliar de troca
+  - Usar list.copy() para preservar a lista original ao passar por referência para uma função
+  - Importar o módulo random e gerar inteiros aleatórios no intervalo fechado com randint
+  - Distinguir random.randint (fechado) de random.randrange (semi-aberto)
+  - Construir loop interativo com while True, break e continue para múltiplas condições de saída
+  - Incrementar acumuladores (contador, total, soma condicional) dentro de loop while
+  - Retornar múltiplos valores de uma função e desestruturá-los com tuple unpacking
+  - Decompor um programa em funções com responsabilidade única e compô-las na chamada principal
+  - Validar entrada float de usuário e rejeitar valores negativos e zero
+  - Aplicar tabela de descontos progressivos usando cadeia if/elif/else
+examples:
+  - "for i in range(len(lista)): for j in range(i+1, len(lista)): if lista[i] > lista[j]: aux = lista[i]; lista[i] = lista[j]; lista[j] = aux"
+  - "lista_ord = lista_numerica.copy()  # cópia independente — não muta o original"
+  - "import random; numero = random.randint(1, 20)"
+  - "while meu_palpite != numero: if meu_palpite == 0: print('desistiu'); break; palpites += 1; meu_palpite = int(input(...))"
+  - "while True: valor = float(input(...)); if valor == 0: break; if valor < 0: print('inválido'); continue; qtd += 1; total += valor"
+  - "if total < 100: return 0.0 elif total < 300: return total * 0.05 elif total < 500: return total * 0.10 else: return total * 0.15"
+  - "qtd, total, caros = registrar_compra(); exibir_relatorio(qtd, total, caros)"
+  - "desconto = calcular_desconto(total); valor_final = total - desconto"
+keywords:
+  - bubble sort
+  - list.copy()
+  - referência mutável
+  - random
+  - randint
+  - while True
+  - break
+  - continue
+  - acumulador
+  - tuple unpacking
+  - composição de funções
+  - tabela de descontos
