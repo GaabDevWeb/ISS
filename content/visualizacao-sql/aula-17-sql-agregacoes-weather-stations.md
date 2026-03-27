@@ -405,7 +405,8 @@ HAVING total_precipitation > 30
 ORDER BY total_precipitation DESC;
 ```
 
-> **Fechamento da aula (projeto):** no final, o professor mencionou o projeto da turma e elogiou a iniciativa. Na prática, a mensagem foi “confia no processo e segue o roteiro”: **se o caduzão falou, está falado**.
+  > **Fechamento da aula (projeto):** Fechamento da aula (projeto): no final, o professor comentou sobre o ISS e elogiou a iniciativa, reforçando a importância de seguir o processo da disciplina com consistência.
+No clima da turma, a leitura foi simples: **“se o caduzão falou, está falado.”**
 
 <!-- CONCEPT_EXTRACTION
 concepts:
