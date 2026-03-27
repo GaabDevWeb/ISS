@@ -1,0 +1,93 @@
+4. Extrair informações através de agrupamentos e sumarização (GROUP_BY e ORDER_BY)
+4.4 Realizar agregações usando as diretivas HAVING e DISTINCT
+
+Link importante: 
+https://learning.oreilly.com/library/view/getting-started-with/9781491938607/ch06.html --> Chapter 6. GROUP BY and ORDER BY
+
+(1) Guia
+(1.1) Acessar o SQLiteStudio.exe
+Obs.: Acessar a página https://github.com/thomasnield/oreilly_getting_started_with_sql e baixar pelo menos o database 'weather_stations.db'. 
+	. No menu Database --> Add a database 
+		Na janela 'Database'
+		Obs.: Escolher a pasta na qual estamos guardando os arquivos do SQLite. 
+		Abrir o arquivo weather_stations.db e clicar no botão 'Salvar'
+			Clicar no botão 'Test connection'. 
+			Clicar no botão 'OK'
+
+select * 
+from station_data; 
+
+select min(year), max(year) from station_data;
+
+SELECT DISTINCT station_number 
+FROM station_data;
+
+SELECT DISTINCT station_number, year 
+FROM station_data
+ORDER BY 1,2;
+
+SELECT COUNT(*) AS record_count 
+FROM station_data;
+
+SELECT COUNT(*) AS record_count 
+FROM station_data
+WHERE tornado = 1;
+
+SELECT year, COUNT(*) AS record_count 
+FROM station_data
+WHERE tornado = 1
+GROUP BY year;
+
+SELECT year, month, COUNT(*) AS record_count 
+FROM station_data
+WHERE tornado = 1
+GROUP BY year, month;
+
+SELECT year, month, COUNT(*) AS record_count 
+FROM station_data
+WHERE tornado = 1
+GROUP BY 1, 2;
+
+SELECT year, month, COUNT(*) AS record_count 
+FROM station_data
+WHERE tornado = 1
+GROUP BY year, month
+ORDER BY year, month;
+
+SELECT year, month, COUNT(*) AS record_count 
+FROM station_data
+WHERE tornado = 1
+GROUP BY year, month
+ORDER BY year DESC, month;
+
+SELECT COUNT(snow_depth) as recorded_snow_depth_count
+FROM station_data;
+
+SELECT month, AVG(temperature) as avg_temp
+FROM station_data
+WHERE year >= 2000
+GROUP BY month;
+
+SELECT month, round(AVG(temperature),2) as avg_temp
+FROM station_data
+WHERE year >= 2000
+GROUP BY month;
+
+SELECT year, round(SUM(snow_depth),2) as total_snow
+FROM station_data
+WHERE year >= 2000
+GROUP BY year;
+
+SELECT year,
+round(SUM(snow_depth),2) as total_snow,
+round(SUM(precipitation),2) as total_precipitation,
+round(MAX(precipitation),2) as max_precipitation
+FROM station_data
+WHERE year >= 2000
+GROUP BY year;
+
+SELECT year,
+round(SUM(precipitation),2) as total_precipitation
+FROM station_data
+GROUP BY year
+HAVING total_precipitation > 30;
