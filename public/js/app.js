@@ -5,6 +5,16 @@
 /** Minutos por aula quando não definido nos dados (estimativa padrão). */
 const DEFAULT_MINUTES_PER_LESSON = 20;
 
+function pagePath(fileName) {
+  if (typeof Router !== 'undefined' && typeof Router.pagePath === 'function') return Router.pagePath(fileName);
+  return fileName;
+}
+
+function homePath() {
+  if (typeof Router !== 'undefined' && typeof Router.homePath === 'function') return Router.homePath();
+  return 'index.html';
+}
+
 function getParam(name) {
   return typeof Router !== 'undefined' ? Router.getParam(name) : new URLSearchParams(window.location.search).get(name) || '';
 }
@@ -98,7 +108,7 @@ function initHome() {
               : '';
             return (
               '<li class="iss-search-result-item">' +
-              '<a href="aula.html?d=' +
+              '<a href="' + pagePath('aula.html') + '?d=' +
               encodeURIComponent(item.lesson.discipline) +
               '&a=' +
               encodeURIComponent(item.lesson.slug) +
@@ -132,7 +142,7 @@ function initHome() {
       const continueCardHtml =
         lesson && discipline
           ? `
-        <a href="aula.html?d=${encodeURIComponent(last.discipline)}&a=${encodeURIComponent(last.lesson)}" class="iss-card block no-underline text-inherit">
+        <a href="${pagePath('aula.html')}?d=${encodeURIComponent(last.discipline)}&a=${encodeURIComponent(last.lesson)}" class="iss-card block no-underline text-inherit">
           <h3 class="font-semibold text-lg m-0">Continuar a ler</h3>
           <p class="text-sm iss-text-muted mt-1 mb-0">${escapeHtml(discipline.title)} › ${escapeHtml(lesson.title)}</p>
         </a>
@@ -162,7 +172,7 @@ function initHome() {
           '<p class="text-sm iss-text-muted mt-1 mb-0">' + exercisesCompleted + ' exercícios concluídos</p>' +
           (streak > 0 ? '<p class="text-sm iss-text-foreground mt-1 mb-0">Sequência: ' + streak + ' dia' + (streak !== 1 ? 's' : '') + '</p>' : '') +
           '<p class="text-sm mt-1 mb-0">Meta de hoje: ' + (goalMet ? '<span class="iss-text-foreground">Feito</span>' : '<span class="iss-text-muted">Pendente</span>') + '</p>' +
-          '<a href="stats.html" class="iss-link block mt-3 text-sm hover:underline">Ver Estatísticas Completas</a>' +
+          '<a href="' + pagePath('stats.html') + '" class="iss-link block mt-3 text-sm hover:underline">Ver Estatísticas Completas</a>' +
         '</div>';
 
       const continuePlaceholderHtml =
@@ -182,7 +192,7 @@ function initHome() {
             ? (remainingToMilestone === 1 ? 'Falta 1 para ' + nextMilestone + ' concluídos' : 'Faltam ' + remainingToMilestone + ' para ' + nextMilestone + ' concluídos')
             : '';
       const exercisesCardHtml =
-        '<a href="exercises.html" class="iss-card block no-underline text-inherit iss-home-cards__exercises-card">' +
+        '<a href="' + pagePath('exercises.html') + '" class="iss-card block no-underline text-inherit iss-home-cards__exercises-card">' +
           '<h3 class="font-semibold text-lg m-0">Exercícios</h3>' +
           '<p class="text-sm iss-text-muted mt-1 mb-0">Pratique conceitos das aulas resolvendo exercícios no seu editor.</p>' +
           (nextGoalText ? '<p class="text-sm iss-text-foreground mt-2 mb-0">' + nextGoalText + '</p>' : '') +
@@ -200,7 +210,7 @@ function initHome() {
       function buildDisciplineCard(d) {
         const count = lessons.filter((l) => l.discipline === d.slug).length;
         const countLabel = count + ' aula' + (count !== 1 ? 's' : '');
-        return '<a href="disciplina.html?d=' + encodeURIComponent(d.slug) + '" class="iss-card block no-underline text-inherit">' +
+        return '<a href="' + pagePath('disciplina.html') + '?d=' + encodeURIComponent(d.slug) + '" class="iss-card block no-underline text-inherit">' +
           '<h3 class="font-semibold text-lg m-0">' + escapeHtml(d.title) + '</h3>' +
           (d.description ? '<p class="text-sm iss-text-muted mt-1 mb-0">' + escapeHtml(d.description) + '</p>' : '') +
           '<p class="text-xs iss-text-muted mt-2 mb-0">' + escapeHtml(countLabel) + '</p>' +
@@ -228,7 +238,7 @@ function initHome() {
           const pool = unresolved.length > 0 ? unresolved : exerciseList;
           const ex = pool[Math.floor(Math.random() * pool.length)];
           if (typeof Router !== 'undefined' && Router.navigateToExercise) Router.navigateToExercise(ex.slug);
-          else window.location.href = 'exercise.html?slug=' + encodeURIComponent(ex.slug);
+          else window.location.href = pagePath('exercise.html') + '?slug=' + encodeURIComponent(ex.slug);
         });
       }
 
@@ -244,7 +254,7 @@ function initHome() {
           if (matches.length === 0) return;
           const first = matches[0];
           window.location.href =
-            'aula.html?d=' +
+            pagePath('aula.html') + '?d=' +
             encodeURIComponent(first.lesson.discipline) +
             '&a=' +
             encodeURIComponent(first.lesson.slug);
@@ -271,7 +281,7 @@ function initDisciplina() {
 
   if (!d) {
     if (typeof Router !== 'undefined') Router.navigateHome();
-    else window.location.href = 'index.html';
+    else window.location.href = homePath();
     return;
   }
 
@@ -282,9 +292,9 @@ function initDisciplina() {
 
       if (!discipline) {
         if (titleEl) titleEl.textContent = 'Disciplina não encontrada';
-        if (breadcrumbEl) breadcrumbEl.innerHTML = '<button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button><a href="index.html" class="iss-link-muted">Home</a>';
+        if (breadcrumbEl) breadcrumbEl.innerHTML = '<button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button><a href="' + homePath() + '" class="iss-link-muted">Home</a>';
         if (progressEl) progressEl.textContent = '';
-        if (container) container.innerHTML = '<p class="iss-text-muted mb-4">Esta disciplina não existe.</p><a href="index.html" class="iss-link hover:underline">Voltar à página inicial</a>';
+        if (container) container.innerHTML = '<p class="iss-text-muted mb-4">Esta disciplina não existe.</p><a href="' + homePath() + '" class="iss-link hover:underline">Voltar à página inicial</a>';
         return;
       }
 
@@ -293,13 +303,13 @@ function initDisciplina() {
         if (breadcrumbEl) {
           breadcrumbEl.innerHTML = `
             <button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>
-            <a href="index.html" class="iss-link-muted">Home</a>
+            <a href="${homePath()}" class="iss-link-muted">Home</a>
             <span class="iss-text-muted mx-1">/</span>
             <span>${escapeHtml(discipline.title)}</span>
           `;
         }
         if (progressEl) progressEl.textContent = '';
-        if (container) container.innerHTML = '<p class="iss-text-muted mb-4">Nenhuma aula publicada ainda.</p><a href="index.html" class="iss-link hover:underline">Voltar à página inicial</a>';
+        if (container) container.innerHTML = '<p class="iss-text-muted mb-4">Nenhuma aula publicada ainda.</p><a href="' + homePath() + '" class="iss-link hover:underline">Voltar à página inicial</a>';
         return;
       }
 
@@ -307,7 +317,7 @@ function initDisciplina() {
       if (breadcrumbEl) {
         breadcrumbEl.innerHTML = `
           <button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>
-          <a href="index.html" class="iss-link-muted">Home</a>
+          <a href="${homePath()}" class="iss-link-muted">Home</a>
           <span class="iss-text-muted mx-1">/</span>
           <span>${escapeHtml(discipline.title)}</span>
         `;
@@ -336,7 +346,7 @@ function initDisciplina() {
               const read = typeof isLessonRead !== 'undefined' && isLessonRead(d, l.slug);
               const readLabel = read ? '<span class="block text-sm iss-text-muted mt-1 iss-lesson-read">Lida</span>' : '';
               return `
-          <a href="aula.html?d=${encodeURIComponent(d)}&a=${encodeURIComponent(l.slug)}" class="iss-card block no-underline text-inherit">
+          <a href="${pagePath('aula.html')}?d=${encodeURIComponent(d)}&a=${encodeURIComponent(l.slug)}" class="iss-card block no-underline text-inherit">
             <span class="font-medium">${escapeHtml(l.title)}</span>
             ${readLabel}
           </a>
@@ -356,11 +366,11 @@ function initDisciplina() {
             if (step.type === 'lesson' && step.slug) {
               const lesson = disciplineLessons.find(function (l) { return l.slug === step.slug; });
               if (!lesson) return '<li class="iss-text-muted">Aula: ' + escapeHtml(step.slug) + '</li>';
-              return '<li><a href="aula.html?d=' + encodeURIComponent(d) + '&a=' + encodeURIComponent(lesson.slug) + '" class="iss-link">Aula: ' + escapeHtml(lesson.title) + '</a></li>';
+              return '<li><a href="' + pagePath('aula.html') + '?d=' + encodeURIComponent(d) + '&a=' + encodeURIComponent(lesson.slug) + '" class="iss-link">Aula: ' + escapeHtml(lesson.title) + '</a></li>';
             }
             if (step.type === 'exercises' && Array.isArray(step.slugs) && step.slugs.length > 0) {
               return '<li>Exercícios: ' + step.slugs.map(function (slug) {
-                return '<a href="exercise.html?slug=' + encodeURIComponent(slug) + '" class="iss-link">' + escapeHtml(slug) + '</a>';
+                return '<a href="' + pagePath('exercise.html') + '?slug=' + encodeURIComponent(slug) + '" class="iss-link">' + escapeHtml(slug) + '</a>';
               }).join(', ') + '</li>';
             }
             return '';
@@ -370,7 +380,7 @@ function initDisciplina() {
     })
     .catch(() => {
       if (typeof Router !== 'undefined') Router.navigateHome();
-      else window.location.href = 'index.html';
+      else window.location.href = homePath();
     });
 }
 
@@ -384,8 +394,8 @@ function initAula() {
   function showAulaError(msg) {
     document.title = 'Aula não encontrada — ISS';
     if (titleEl) titleEl.textContent = 'Aula não encontrada';
-    if (breadcrumbEl) breadcrumbEl.innerHTML = '<a href="index.html" class="iss-link-muted">Home</a>';
-    if (contentEl) contentEl.innerHTML = '<p class="iss-text-muted mb-4">' + escapeHtml(msg) + '</p><a href="index.html" class="iss-link hover:underline">Voltar à página inicial</a>';
+    if (breadcrumbEl) breadcrumbEl.innerHTML = '<a href="' + homePath() + '" class="iss-link-muted">Home</a>';
+    if (contentEl) contentEl.innerHTML = '<p class="iss-text-muted mb-4">' + escapeHtml(msg) + '</p><a href="' + homePath() + '" class="iss-link hover:underline">Voltar à página inicial</a>';
   }
 
   if (!d || !a) {
@@ -479,7 +489,7 @@ function initAula() {
           const linksHtml = suggested
             .map(
               (ex) =>
-                '<li class="mt-1.5 first:mt-0"><a href="exercise.html?slug=' +
+                '<li class="mt-1.5 first:mt-0"><a href="' + pagePath('exercise.html') + '?slug=' +
                 encodeURIComponent(ex.slug) +
                 '&d=' + encodeURIComponent(d) +
                 '&a=' + encodeURIComponent(a) +

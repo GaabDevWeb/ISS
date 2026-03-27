@@ -4,6 +4,11 @@
  */
 
 (function () {
+  function pagePath(fileName) {
+    if (typeof Router !== 'undefined' && typeof Router.pagePath === 'function') return Router.pagePath(fileName);
+    return fileName;
+  }
+
   function closeEditor() {
     var layout = document.getElementById('app-layout');
     var exercisePanel = document.getElementById('exercise-panel');
@@ -71,7 +76,7 @@
         var linkedHtml = linkedLessons.length
           ? '<section class="mt-4 pt-4 border-t border-[var(--color-border)]"><h3 class="text-sm font-semibold iss-text-foreground mb-2">Aula relacionada</h3><ul class="list-none p-0 m-0">' +
             linkedLessons.map(function (l) {
-              var url = 'aula.html?d=' + encodeURIComponent(l.discipline) + '&a=' + encodeURIComponent(l.slug);
+              var url = pagePath('aula.html') + '?d=' + encodeURIComponent(l.discipline) + '&a=' + encodeURIComponent(l.slug);
               return '<li class="mb-1"><a href="' + url + '" class="iss-link">' + (typeof escapeHtml === 'function' ? escapeHtml(l.slug) : l.slug) + '</a></li>';
             }).join('') + '</ul></section>'
           : '';

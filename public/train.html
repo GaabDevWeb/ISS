@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Disciplina — ISS</title>
+  <title>Treino focado — ISS</title>
   <link rel="icon" href="css/images/icon.svg" type="image/svg+xml">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css">
@@ -14,7 +14,7 @@
 <body class="min-h-screen flex flex-col">
   <header class="iss-header flex items-center justify-between px-4 md:px-6 sticky top-0 z-10">
     <div class="flex items-center gap-4">
-      <a href="index.html" class="font-semibold iss-link no-underline">ISS</a>
+      <a href="../index.html" class="font-semibold iss-link no-underline">ISS</a>
       <a href="stats.html" class="iss-link text-sm">Estatísticas</a>
     </div>
     <a href="https://github.com/GaabDevWeb/ISS" target="_blank" rel="noopener noreferrer" class="iss-link" aria-label="Repositório no GitHub">
@@ -23,39 +23,31 @@
   </header>
 
   <main class="flex-1 px-4 md:px-6 py-8 md:py-12 max-w-4xl mx-auto w-full">
-    <nav id="breadcrumb-discipline" class="text-sm mb-4 flex items-center gap-2" aria-label="Navegação">
-      <a href="index.html" class="iss-link-muted">Home</a>
+    <nav class="text-sm mb-4 flex items-center gap-2" aria-label="Navegação">
+      <button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>
+      <a href="../index.html" class="iss-link-muted">Home</a>
       <span class="iss-text-muted mx-1">/</span>
-      <span>…</span>
+      <span>Treino focado</span>
     </nav>
 
-    <h1 id="discipline-title" class="text-2xl md:text-3xl font-bold iss-text-foreground mb-8">…</h1>
+    <h1 class="text-2xl md:text-3xl font-bold iss-text-foreground mb-2">Treino por conceitos fracos</h1>
+    <p class="iss-text-muted mb-6">Conceitos em que você tem mais exercícios pendentes. Treine para reforçar.</p>
 
-    <p id="discipline-progress" class="text-sm iss-text-muted mb-6"></p>
+    <div id="train-concepts-list" class="space-y-4">
+      <p class="iss-text-muted">A carregar…</p>
+    </div>
 
-    <section id="study-path-wrap" class="mb-8 hidden" aria-label="Roteiro de estudo">
-      <h2 class="text-lg font-semibold iss-text-foreground mb-3">Roteiro de estudo</h2>
-      <ol id="study-path-list" class="list-decimal list-inside space-y-2 text-sm"></ol>
-    </section>
-
-    <section aria-label="Aulas">
-      <h2 class="sr-only">Aulas</h2>
-      <div id="lessons-list" class="grid gap-3">
-        <p class="iss-text-muted">A carregar…</p>
-      </div>
-    </section>
+    <p class="mt-8 text-sm iss-text-muted">
+      <a href="exercises.html" class="iss-link">Ver todos os exercícios</a>
+    </p>
   </main>
 
   <footer class="py-6 px-4 md:px-6 border-t iss-border text-center text-sm iss-text-muted">
     Projeto de apoio à revisão — INFNET · <a href="about.html" class="iss-link-muted">Sobre</a>
   </footer>
 
-  <a href="#" id="iss-back-to-top" class="iss-back-to-top" aria-label="Voltar ao topo" style="display: none;">Voltar ao topo</a>
-
   <script src="js/content.js" defer></script>
   <script src="js/state.js" defer></script>
-  <script src="js/read-lessons.js" defer></script>
-  <script src="js/router.js" defer></script>
-  <script src="js/app.js" defer></script>
+  <script src="js/train.js" defer></script>
 </body>
 </html>

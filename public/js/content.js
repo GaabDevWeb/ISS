@@ -2,7 +2,7 @@
  * ISS — Fetch de conteúdo estático (disciplines.json, lessons.json, .md)
  */
 
-const CONTENT_BASE = 'content';
+const CONTENT_BASE = window.location.pathname.indexOf('/public/') !== -1 ? '../content' : 'content';
 
 function escapeHtml(text) {
   const div = document.createElement('div');

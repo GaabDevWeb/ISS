@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="css/images/banner.png" alt="Banner do Projeto" width="100%" />
+  <img src="public/css/images/banner.png" alt="Banner do Projeto" width="100%" />
 </p>
 
-# <img src="css/images/icon.svg" width="32" style="vertical-align: middle;"> ISS - Plataforma Interativa de Estudos
+# <img src="public/css/images/icon.svg" width="32" style="vertical-align: middle;"> ISS - Plataforma Interativa de Estudos
 
 **Acesse a versão web do projeto online: [https://gaabdevweb.github.io/ISS/](https://gaabdevweb.github.io/ISS/)**
 
@@ -20,10 +20,10 @@ A ideia principal é facilitar o acesso aos materiais. A página inicial organiz
   <summary><b>Visualizar: Tela Inicial e Busca</b></summary>
   <br>
   <p align="center">
-    <img src="css/images/home.png" alt="Tela Inicial" width="80%" />
+    <img src="public/css/images/home.png" alt="Tela Inicial" width="80%" />
   </p>
   <p align="center">
-    <img src="css/images/search.png" alt="Sistema de Busca" width="80%" />
+    <img src="public/css/images/search.png" alt="Sistema de Busca" width="80%" />
   </p>
 </details>
 
@@ -33,7 +33,7 @@ Dentro das aulas, o foco total é bater o olho e entender a matéria. Por isso, 
   <summary><b>Visualizar: Renderização de Conceitos</b></summary>
   <br>
   <p align="center">
-    <img src="css/images/concepts.png" alt="Conceitos" width="80%" />
+    <img src="public/css/images/concepts.png" alt="Conceitos" width="80%" />
   </p>
 </details>
 
@@ -47,7 +47,7 @@ Ler a teoria é importante, mas sem praticar ninguém memoriza nada. O design da
   <summary><b>Visualizar: Ambiente de Aula</b></summary>
   <br>
   <p align="center">
-    <img src="css/images/Aula.png" alt="Visualização da Aula" width="80%" />
+    <img src="public/css/images/Aula.png" alt="Visualização da Aula" width="80%" />
   </p>
 </details>
 
@@ -57,10 +57,10 @@ Para fixar o conteúdo de verdade, a página lista blocos de exercícios interat
   <summary><b>Visualizar: Interação com Exercícios</b></summary>
   <br>
   <p align="center">
-    <img src="css/images/exercicios.png" alt="Lista de Exercícios" width="80%" />
+    <img src="public/css/images/exercicios.png" alt="Lista de Exercícios" width="80%" />
   </p>
   <p align="center">
-    <img src="css/images/exercicio.png" alt="Resolução do Exercício" width="80%" />
+    <img src="public/css/images/exercicio.png" alt="Resolução do Exercício" width="80%" />
   </p>
 </details>
 
@@ -74,7 +74,7 @@ Para dar aquele incentivo na hora de estudar, a plataforma salva o nosso progres
   <summary><b>Visualizar: Gráficos de Progresso</b></summary>
   <br>
   <p align="center">
-    <img src="css/images/grafico.png" alt="Gráficos de Progresso" width="80%" />
+    <img src="public/css/images/grafico.png" alt="Gráficos de Progresso" width="80%" />
   </p>
 </details>
 
@@ -210,11 +210,12 @@ Se desejar que o exercício seja listado de maneira independente em um banco de 
 
 A organização prioriza a separação das responsabilidades entre estáticos, lógicas e definições de conteúdo.
 
-- `/css/`: Todos os estilos globais e imagens da plataforma (incluindo as capturas de tela desta documentação).
-- `/js/`: Toda a lógica em vanilla JavaScript. Abriga regras de renderização (`markdown.js`), controle de estado, avaliador de código (`code-runner.js`) e lógicas de visualização.
+- `/public/css/`: Todos os estilos globais e imagens da plataforma (incluindo as capturas de tela desta documentação).
+- `/public/js/`: Toda a lógica em vanilla JavaScript. Abriga regras de renderização (`markdown.js`), controle de estado, avaliador de código (`code-runner.js`) e lógicas de visualização.
 - `/content/`: Contém os diretórios das disciplinas com as aulas em `.md` e os arquivos JSON base, como o `lessons.json`, `disciplines.json` e o sumário `search-index.json`.
 - `/Aulas/`: Estrudo histórico ou diretório extra contendo recursos legados ou secundários de estudos adicionais.
-- Arquivos `.html` na raiz: Constituem os pontos de entrada do sistema (`index.html`, `aula.html`, `exercise.html`, `stats.html`, etc).
+- `index.html` na raiz: ponto de entrada principal (Home).
+- Arquivos `.html` em `/public/`: demais pontos de entrada do sistema (`aula.html`, `exercise.html`, `stats.html`, etc).
 
 ### Como é Renderizado o Markdown no Browser
 

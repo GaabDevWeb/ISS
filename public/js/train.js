@@ -8,6 +8,11 @@ function getConceptsArray(concepts) {
   return [];
 }
 
+function pagePath(fileName) {
+  if (typeof Router !== 'undefined' && typeof Router.pagePath === 'function') return Router.pagePath(fileName);
+  return fileName;
+}
+
 function initTrain() {
   const container = document.getElementById('train-concepts-list');
   if (!container) return;
@@ -44,7 +49,7 @@ function initTrain() {
       }
 
       container.innerHTML = weak.map(function (item) {
-        const url = 'exercises.html?concept=' + encodeURIComponent(item.concept);
+        const url = pagePath('exercises.html') + '?concept=' + encodeURIComponent(item.concept);
         return (
           '<a href="' + url + '" class="iss-card block no-underline text-inherit">' +
             '<h3 class="font-semibold text-lg m-0">' + (typeof escapeHtml === 'function' ? escapeHtml(item.concept) : item.concept) + '</h3>' +

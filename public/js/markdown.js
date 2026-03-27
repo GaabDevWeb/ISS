@@ -23,6 +23,16 @@ function parseSimpleYamlValue(value) {
   return v;
 }
 
+function pagePath(fileName) {
+  if (typeof Router !== 'undefined' && typeof Router.pagePath === 'function') return Router.pagePath(fileName);
+  return fileName;
+}
+
+function homePath() {
+  if (typeof Router !== 'undefined' && typeof Router.homePath === 'function') return Router.homePath();
+  return 'index.html';
+}
+
 function getLineIndent(line) {
   const m = String(line || '').match(/^(\s*)/);
   return m ? m[1].length : 0;
@@ -456,10 +466,10 @@ function renderExercisesHTML(exercises, disciplineSlug, lessonSlug, reviewedIds)
 function renderPrevNextNav(prevLesson, nextLesson, disciplineSlug) {
   if (!prevLesson && !nextLesson) return '';
   const prevLink = prevLesson
-    ? `<a href="aula.html?d=${encodeURIComponent(disciplineSlug)}&a=${encodeURIComponent(prevLesson.slug)}" class="iss-link">Aula anterior</a>`
+    ? `<a href="${pagePath('aula.html')}?d=${encodeURIComponent(disciplineSlug)}&a=${encodeURIComponent(prevLesson.slug)}" class="iss-link">Aula anterior</a>`
     : '<span class="iss-text-muted">Aula anterior</span>';
   const nextLink = nextLesson
-    ? `<a href="aula.html?d=${encodeURIComponent(disciplineSlug)}&a=${encodeURIComponent(nextLesson.slug)}" class="iss-link">Próxima aula</a>`
+    ? `<a href="${pagePath('aula.html')}?d=${encodeURIComponent(disciplineSlug)}&a=${encodeURIComponent(nextLesson.slug)}" class="iss-link">Próxima aula</a>`
     : '<span class="iss-text-muted">Próxima aula</span>';
   return `<nav class="mt-8 pt-6 border-t iss-border flex justify-between text-sm" aria-label="Navegação entre aulas">${prevLink}${nextLink}</nav>`;
 }
@@ -480,9 +490,9 @@ function renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson, lesso
     const d = new URLSearchParams(window.location.search).get('d');
     breadcrumbEl.innerHTML = `
       <button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>
-      <a href="index.html" class="iss-link-muted">Home</a>
+      <a href="${homePath()}" class="iss-link-muted">Home</a>
       <span class="iss-text-muted mx-1">/</span>
-      <a href="disciplina.html?d=${encodeURIComponent(d)}" class="iss-link-muted">${escapeHtml(discipline ? discipline.title : d)}</a>
+      <a href="${pagePath('disciplina.html')}?d=${encodeURIComponent(d)}" class="iss-link-muted">${escapeHtml(discipline ? discipline.title : d)}</a>
       <span class="iss-text-muted mx-1">/</span>
       <span>${escapeHtml(title)}</span>
     `;

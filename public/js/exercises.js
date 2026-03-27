@@ -41,6 +41,16 @@ function getStdinStorageKey(exerciseId) {
   return 'exercise_stdin_' + exerciseId;
 }
 
+function pagePath(fileName) {
+  if (typeof Router !== 'undefined' && typeof Router.pagePath === 'function') return Router.pagePath(fileName);
+  return fileName;
+}
+
+function homePath() {
+  if (typeof Router !== 'undefined' && typeof Router.homePath === 'function') return Router.homePath();
+  return 'index.html';
+}
+
 function formatTestValue(value) {
   if (typeof value === 'string') return '"' + value + '"';
   try {
@@ -57,13 +67,13 @@ function goToNextSessionExercise(sessionInfo) {
     sessionStorage.setItem('iss-session-index', String(nextIndex));
   } catch (_) {}
   if (nextIndex < sessionInfo.slugs.length) {
-    window.location.href = 'exercise.html?slug=' + encodeURIComponent(sessionInfo.slugs[nextIndex]) + '&session=1';
+    window.location.href = pagePath('exercise.html') + '?slug=' + encodeURIComponent(sessionInfo.slugs[nextIndex]) + '&session=1';
   } else {
     try {
       sessionStorage.removeItem('iss-session-slugs');
       sessionStorage.removeItem('iss-session-index');
     } catch (_) {}
-    window.location.href = 'exercises.html?session_done=1';
+    window.location.href = pagePath('exercises.html') + '?session_done=1';
   }
   return true;
 }
@@ -102,7 +112,7 @@ function ExerciseCard(exercise, options) {
     : '<span class="iss-text-muted">—</span>';
   const resolvedHtml = completed ? '<p class="text-sm iss-exercise-resolved mt-1 mb-0">✓ Resolvido</p>' : '';
   return (
-    '<a href="exercise.html?slug=' + slug + '" class="iss-card block no-underline text-inherit">' +
+    '<a href="' + pagePath('exercise.html') + '?slug=' + slug + '" class="iss-card block no-underline text-inherit">' +
     '<h3 class="font-semibold text-lg m-0">' + fmtLabel(exercise.title) + '</h3>' +
     '<p class="text-sm iss-text-muted mt-1 mb-0">Dificuldade: ' + fmtLabel(difficultyLabel) + '</p>' +
     '<div class="iss-card-tags mt-1">' + tagsHtml + '</div>' +
@@ -321,14 +331,14 @@ function renderExercisePage(data) {
   if (breadcrumbEl) {
     breadcrumbEl.innerHTML =
       '<button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>' +
-      '<a href="index.html" class="iss-link-muted">Home</a>' +
+      '<a href="' + homePath() + '" class="iss-link-muted">Home</a>' +
       '<span class="iss-text-muted mx-1">/</span>' +
-      '<a href="exercises.html" class="iss-link-muted">Exercícios de Programação</a>' +
+      '<a href="' + pagePath('exercises.html') + '" class="iss-link-muted">Exercícios de Programação</a>' +
       '<span class="iss-text-muted mx-1">/</span>' +
       '<span>' + escapeHtml(title) + '</span>';
     if (exerciseOrigin && exerciseOrigin.d && exerciseOrigin.a) {
-      const aulaUrl = 'aula.html?d=' + encodeURIComponent(exerciseOrigin.d) + '&a=' + encodeURIComponent(exerciseOrigin.a);
-      const exercisesUrl = 'exercises.html?d=' + encodeURIComponent(exerciseOrigin.d) + '&a=' + encodeURIComponent(exerciseOrigin.a);
+      const aulaUrl = pagePath('aula.html') + '?d=' + encodeURIComponent(exerciseOrigin.d) + '&a=' + encodeURIComponent(exerciseOrigin.a);
+      const exercisesUrl = pagePath('exercises.html') + '?d=' + encodeURIComponent(exerciseOrigin.d) + '&a=' + encodeURIComponent(exerciseOrigin.a);
       breadcrumbEl.insertAdjacentHTML('afterend',
         '<p class="text-sm mt-1 mb-2"><a href="' + aulaUrl + '" class="iss-link">Voltar à aula</a><span class="iss-text-muted mx-1">·</span><a href="' + exercisesUrl + '" class="iss-link">Exercícios desta aula</a></p>'
       );
@@ -441,12 +451,12 @@ function renderExercisePage(data) {
     const next = idx >= 0 && idx < exercises.length - 1 ? exercises[idx + 1] : null;
     let html = '';
     if (prev) {
-      html += '<a href="exercise.html?slug=' + encodeURIComponent(prev.slug) + '" class="iss-link">← Exercício anterior</a>';
+      html += '<a href="' + pagePath('exercise.html') + '?slug=' + encodeURIComponent(prev.slug) + '" class="iss-link">← Exercício anterior</a>';
     } else {
       html += '<span class="iss-text-muted">← Exercício anterior</span>';
     }
     if (next) {
-      html += '<a href="exercise.html?slug=' + encodeURIComponent(next.slug) + '" class="iss-link">Próximo exercício →</a>';
+      html += '<a href="' + pagePath('exercise.html') + '?slug=' + encodeURIComponent(next.slug) + '" class="iss-link">Próximo exercício →</a>';
     } else {
       html += '<span class="iss-text-muted">Próximo exercício →</span>';
     }
@@ -465,7 +475,7 @@ function renderExercisePage(data) {
     if (linkedLessons.length > 0) {
       html += '<h2 class="text-lg font-semibold iss-text-foreground mb-2">Aula relacionada</h2><ul class="list-none p-0 m-0 mb-4">' +
         linkedLessons.map(function (l) {
-          const url = 'aula.html?d=' + encodeURIComponent(l.discipline) + '&a=' + encodeURIComponent(l.slug);
+          const url = pagePath('aula.html') + '?d=' + encodeURIComponent(l.discipline) + '&a=' + encodeURIComponent(l.slug);
           return '<li class="mb-1"><a href="' + url + '" class="iss-link">Ver aula: ' + escapeHtml(l.slug) + '</a></li>';
         }).join('') + '</ul>';
     }
@@ -475,7 +485,7 @@ function renderExercisePage(data) {
         html += '<h2 class="text-lg font-semibold iss-text-foreground mb-2">Exercícios relacionados</h2>' +
           '<ul class="list-none p-0 m-0">' +
           related.map(function (ex) {
-            return '<li class="mb-1"><a href="exercise.html?slug=' + encodeURIComponent(ex.slug) + '" class="iss-link">' + escapeHtml(ex.title) + '</a></li>';
+            return '<li class="mb-1"><a href="' + pagePath('exercise.html') + '?slug=' + encodeURIComponent(ex.slug) + '" class="iss-link">' + escapeHtml(ex.title) + '</a></li>';
           }).join('') + '</ul>';
       }
     }
@@ -543,7 +553,7 @@ function renderExercisePage(data) {
         sessionStorage.removeItem('iss-session-slugs');
         sessionStorage.removeItem('iss-session-index');
       } catch (_) {}
-      window.location.href = 'exercises.html';
+      window.location.href = pagePath('exercises.html');
     });
   }
 
@@ -822,13 +832,13 @@ function initExercisesForLesson(exercises) {
       const suggested = getRelatedExercises(exercises, '', concepts, 10);
       if (suggested.length === 0) return;
 
-      const aulaUrl = 'aula.html?d=' + encodeURIComponent(d) + '&a=' + encodeURIComponent(a);
+      const aulaUrl = pagePath('aula.html') + '?d=' + encodeURIComponent(d) + '&a=' + encodeURIComponent(a);
       contentEl.innerHTML =
         '<h2 class="text-lg font-semibold iss-text-foreground mb-2">Exercícios sugeridos para a aula atual</h2>' +
         '<p class="text-sm iss-text-muted mb-3">' + (typeof escapeHtml === 'function' ? escapeHtml(data.lesson.title) : data.lesson.title) + '</p>' +
         '<ul class="list-none pl-0 mb-3">' +
         suggested.map(function (ex) {
-          return '<li class="mb-1"><a href="exercise.html?slug=' + encodeURIComponent(ex.slug) + '&d=' + encodeURIComponent(d) + '&a=' + encodeURIComponent(a) + '" class="iss-link">' + (typeof escapeHtml === 'function' ? escapeHtml(ex.title) : ex.title) + '</a></li>';
+          return '<li class="mb-1"><a href="' + pagePath('exercise.html') + '?slug=' + encodeURIComponent(ex.slug) + '&d=' + encodeURIComponent(d) + '&a=' + encodeURIComponent(a) + '" class="iss-link">' + (typeof escapeHtml === 'function' ? escapeHtml(ex.title) : ex.title) + '</a></li>';
         }).join('') +
         '</ul>' +
         '<a href="' + aulaUrl + '" class="iss-link text-sm">Abrir aula</a>';
@@ -1093,7 +1103,7 @@ function initExercises(containerId) {
           const pool = unresolved.length > 0 ? unresolved : filtered;
           const ex = pool[Math.floor(Math.random() * pool.length)];
           if (typeof Router !== 'undefined' && Router.navigateToExercise) Router.navigateToExercise(ex.slug);
-          else window.location.href = 'exercise.html?slug=' + encodeURIComponent(ex.slug);
+          else window.location.href = pagePath('exercise.html') + '?slug=' + encodeURIComponent(ex.slug);
         });
       }
 
@@ -1146,7 +1156,7 @@ function initExercise() {
   function showError(msg) {
     document.title = 'Exercício não encontrado — ISS';
     if (titleEl) titleEl.textContent = 'Exercício não encontrado';
-    if (contentEl) contentEl.innerHTML = '<p class="iss-text-muted mb-4">' + escapeHtml(msg) + '</p><a href="exercises.html" class="iss-link hover:underline">Voltar aos exercícios</a>';
+    if (contentEl) contentEl.innerHTML = '<p class="iss-text-muted mb-4">' + escapeHtml(msg) + '</p><a href="' + pagePath('exercises.html') + '" class="iss-link hover:underline">Voltar aos exercícios</a>';
   }
 
   if (!slug) {

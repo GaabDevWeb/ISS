@@ -6,6 +6,18 @@
 (function (global) {
   'use strict';
 
+  function isPublicPage() {
+    return global.location.pathname.indexOf('/public/') !== -1;
+  }
+
+  function pagePath(filename) {
+    return isPublicPage() ? filename : 'public/' + filename;
+  }
+
+  function homePath() {
+    return isPublicPage() ? '../index.html' : 'index.html';
+  }
+
   function getParam(name) {
     var params = new URLSearchParams(window.location.search);
     var value = params.get(name);
@@ -14,33 +26,35 @@
 
   function navigateToDisciplina(slug) {
     if (!slug) return;
-    global.location.href = 'disciplina.html?d=' + encodeURIComponent(slug);
+    global.location.href = pagePath('disciplina.html') + '?d=' + encodeURIComponent(slug);
   }
 
   function navigateToAula(disciplinaSlug, aulaSlug) {
     if (!disciplinaSlug || !aulaSlug) return;
     global.location.href =
-      'aula.html?d=' +
+      pagePath('aula.html') + '?d=' +
       encodeURIComponent(disciplinaSlug) +
       '&a=' +
       encodeURIComponent(aulaSlug);
   }
 
   function navigateHome() {
-    global.location.href = 'index.html';
+    global.location.href = homePath();
   }
 
   function navigateToExercises() {
-    global.location.href = 'exercises.html';
+    global.location.href = pagePath('exercises.html');
   }
 
   function navigateToExercise(slug) {
     if (!slug) return;
-    global.location.href = 'exercise.html?slug=' + encodeURIComponent(slug);
+    global.location.href = pagePath('exercise.html') + '?slug=' + encodeURIComponent(slug);
   }
 
   global.Router = {
     getParam: getParam,
+    pagePath: pagePath,
+    homePath: homePath,
     navigateToDisciplina: navigateToDisciplina,
     navigateToAula: navigateToAula,
     navigateHome: navigateHome,
