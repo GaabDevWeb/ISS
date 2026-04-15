@@ -335,7 +335,7 @@ function renderExercisePage(data) {
       '<span class="iss-text-muted mx-1">/</span>' +
       '<a href="' + pagePath('exercises.html') + '" class="iss-link-muted">Exercícios de Programação</a>' +
       '<span class="iss-text-muted mx-1">/</span>' +
-      '<span>' + escapeHtml(title) + '</span>';
+      '<span class="iss-breadcrumb-current" title="' + escapeHtml(title) + '">' + escapeHtml(title) + '</span>';
     if (exerciseOrigin && exerciseOrigin.d && exerciseOrigin.a) {
       const aulaUrl = pagePath('aula.html') + '?d=' + encodeURIComponent(exerciseOrigin.d) + '&a=' + encodeURIComponent(exerciseOrigin.a);
       const exercisesUrl = pagePath('exercises.html') + '?d=' + encodeURIComponent(exerciseOrigin.d) + '&a=' + encodeURIComponent(exerciseOrigin.a);

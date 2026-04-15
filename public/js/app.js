@@ -49,6 +49,58 @@ function initHome() {
   const mainEl = document.querySelector('main');
   if (!grid) return;
 
+  const HOME_NOTICE_STORAGE_KEY = 'iss_home_notice_dismissed';
+  const noticeEl = document.getElementById('iss-home-notice');
+  const noticeCloseBtn = document.getElementById('iss-home-notice-close');
+  const headerGithubLink = document.querySelector('header a[aria-label="Repositório no GitHub"]');
+  if (noticeEl) {
+    const dismissed = (function () {
+      try { return localStorage.getItem(HOME_NOTICE_STORAGE_KEY) === '1'; } catch { return false; }
+    })();
+    function showNotice() {
+      noticeEl.classList.add('is-visible');
+      noticeEl.setAttribute('aria-hidden', 'false');
+    }
+    function hideNotice() {
+      noticeEl.classList.remove('is-visible');
+      noticeEl.setAttribute('aria-hidden', 'true');
+    }
+
+    let hideTimer = null;
+    function scheduleHide() {
+      if (hideTimer) clearTimeout(hideTimer);
+      hideTimer = setTimeout(hideNotice, 180);
+    }
+    function cancelHide() {
+      if (hideTimer) clearTimeout(hideTimer);
+      hideTimer = null;
+    }
+
+    // Regra:
+    // - primeira visita (não fechado): começa visível
+    // - após fechar: não abre sozinho; só por hover/focus no ícone do GitHub
+    if (dismissed) hideNotice();
+    else showNotice();
+
+    if (headerGithubLink) {
+      headerGithubLink.addEventListener('mouseenter', function () { cancelHide(); showNotice(); });
+      headerGithubLink.addEventListener('mouseleave', scheduleHide);
+      headerGithubLink.addEventListener('focus', function () { cancelHide(); showNotice(); });
+      headerGithubLink.addEventListener('blur', scheduleHide);
+    }
+
+    noticeEl.addEventListener('mouseenter', cancelHide);
+    noticeEl.addEventListener('mouseleave', scheduleHide);
+
+    if (noticeCloseBtn) {
+      noticeCloseBtn.addEventListener('click', function () {
+        try { localStorage.setItem(HOME_NOTICE_STORAGE_KEY, '1'); } catch {}
+        cancelHide();
+        hideNotice();
+      });
+    }
+  }
+
   const minChars = 2;
   const TRIMESTER_STORAGE_KEY = 'iss_home_trimester';
   const BOTH_VALUE = 'both';
@@ -462,7 +514,7 @@ function initDisciplina() {
             <button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>
             <a href="${homePath()}" class="iss-link-muted">Home</a>
             <span class="iss-text-muted mx-1">/</span>
-            <span>${escapeHtml(discipline.title)}</span>
+            <span class="iss-breadcrumb-current" title="${escapeHtml(discipline.title)}">${escapeHtml(discipline.title)}</span>
           `;
         }
         if (progressEl) progressEl.textContent = '';
@@ -476,7 +528,7 @@ function initDisciplina() {
           <button type="button" onclick="history.back()" class="iss-link-muted p-1 -ml-1 rounded hover:bg-black/5 dark:hover:bg-white/5 inline-flex items-center" aria-label="Voltar à página anterior" title="Voltar à página anterior">&lt;</button>
           <a href="${homePath()}" class="iss-link-muted">Home</a>
           <span class="iss-text-muted mx-1">/</span>
-          <span>${escapeHtml(discipline.title)}</span>
+          <span class="iss-breadcrumb-current" title="${escapeHtml(discipline.title)}">${escapeHtml(discipline.title)}</span>
         `;
       }
 
