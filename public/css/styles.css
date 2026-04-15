@@ -114,6 +114,127 @@ body {
   background-color: var(--color-background);
 }
 
+/* Home: notificação "dar estrela" (fora do main) */
+.iss-home-notice {
+  display: block;
+  color: inherit;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+  overflow: hidden;
+  pointer-events: none;
+  transition: max-height 220ms ease, opacity 220ms ease, transform 220ms ease;
+}
+.iss-home-notice.is-visible {
+  max-height: 140px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.iss-home-notice:hover {
+  background: rgba(63, 63, 70, 0.6);
+}
+.iss-home-notice__inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.iss-home-notice__content {
+  min-width: 0;
+}
+.iss-home-notice__actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+.iss-home-notice__hint {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+.iss-home-notice__title {
+  margin: 0;
+  font-weight: 600;
+}
+.iss-home-notice__text {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: var(--text-small);
+}
+.iss-home-notice__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: var(--text-small);
+  color: white;
+  background: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  text-decoration: none;
+}
+.iss-home-notice:hover .iss-home-notice__cta {
+  opacity: 0.95;
+}
+.iss-home-notice__close {
+  appearance: none;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-muted);
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.iss-home-notice__close:hover {
+  color: var(--color-foreground);
+  border-color: var(--color-muted);
+}
+@media (min-width: 640px) {
+  .iss-home-notice__inner {
+    padding: 0.75rem 1.5rem;
+    align-items: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .iss-home-notice {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Breadcrumbs: manter sempre em uma linha e truncar o último item */
+[id^="breadcrumb-"] {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+}
+[id^="breadcrumb-"] > * {
+  flex: 0 0 auto;
+}
+[id^="breadcrumb-"] .iss-breadcrumb-current {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* Home: quando filtro "Ambos" está ativo, ampliar container principal */
 main.iss-home-main--both {
   max-width: 96rem !important;
@@ -383,6 +504,7 @@ button:focus-visible {
   .iss-home-cards__grid.iss-home-cards__grid--both .iss-home-card--continue { grid-column: 4; grid-row: 1; }
   .iss-home-cards__grid.iss-home-cards__grid--both .iss-home-cards__exercises-card { grid-column: 5; grid-row: 1 / span 3; }
   .iss-home-cards__grid.iss-home-cards__grid--both .iss-home-card--wide { grid-column: 1 / span 4; }
+  .iss-home-cards__grid.iss-home-cards__grid--both .iss-home-card--github { grid-column: 1 / span 4; grid-row: 3; }
 }
 
 /* Modo foco: esconde header, footer, breadcrumb e back-to-top; só conteúdo */
@@ -513,7 +635,9 @@ body.iss-focus-mode .iss-focus-exit:hover {
   position: sticky;
   top: 72px;
   max-height: calc(100vh - 72px);
-  overflow-y: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
   padding: 1.5rem 0 1.5rem 1.5rem;
   font-size: var(--text-small);
 }

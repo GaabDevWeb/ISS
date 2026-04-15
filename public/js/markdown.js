@@ -494,7 +494,7 @@ function renderAulaPage({ raw, lesson, discipline, prevLesson, nextLesson, lesso
       <span class="iss-text-muted mx-1">/</span>
       <a href="${pagePath('disciplina.html')}?d=${encodeURIComponent(d)}" class="iss-link-muted">${escapeHtml(discipline ? discipline.title : d)}</a>
       <span class="iss-text-muted mx-1">/</span>
-      <span>${escapeHtml(title)}</span>
+      <span class="iss-breadcrumb-current" title="${escapeHtml(title)}">${escapeHtml(title)}</span>
     `;
   }
 
