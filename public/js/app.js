@@ -43,9 +43,66 @@ function initHome() {
   const grid = document.getElementById('home-cards-grid');
   const searchInput = document.getElementById('iss-search');
   const searchResultsEl = document.getElementById('search-results');
+  const trimesterBtn1 = document.getElementById('iss-trimester-1');
+  const trimesterBtn2 = document.getElementById('iss-trimester-2');
+  const trimesterBtnBoth = document.getElementById('iss-trimester-both');
+  const mainEl = document.querySelector('main');
   if (!grid) return;
 
   const minChars = 2;
+  const TRIMESTER_STORAGE_KEY = 'iss_home_trimester';
+  const BOTH_VALUE = 'both';
+
+  function getDisciplineTrimesters(discipline) {
+    const t = discipline && discipline.trimester;
+    if (Array.isArray(t)) {
+      const out = t.map((x) => Number(x)).filter((n) => n === 1 || n === 2);
+      return out.length > 0 ? out : [1];
+    }
+    const n = Number(t);
+    return [n === 2 ? 2 : 1];
+  }
+
+  function readSelectedTrimester() {
+    const raw = (function () {
+      try { return localStorage.getItem(TRIMESTER_STORAGE_KEY) || ''; } catch { return ''; }
+    })();
+    if (raw === BOTH_VALUE) return BOTH_VALUE;
+    const n = Number(raw);
+    return n === 1 ? 1 : 2;
+  }
+
+  function setSelectedTrimester(v) {
+    const next = v === BOTH_VALUE ? BOTH_VALUE : (Number(v) === 2 ? 2 : 1);
+    try { localStorage.setItem(TRIMESTER_STORAGE_KEY, String(next)); } catch {}
+    return next;
+  }
+
+  let selectedTrimester = readSelectedTrimester();
+
+  function updateTrimesterButtons() {
+    if (trimesterBtn1) {
+      const active = selectedTrimester === 1;
+      trimesterBtn1.setAttribute('aria-pressed', active ? 'true' : 'false');
+      trimesterBtn1.classList.toggle('bg-black/5', active);
+      trimesterBtn1.classList.toggle('dark:bg-white/5', active);
+    }
+    if (trimesterBtn2) {
+      const active = selectedTrimester === 2;
+      trimesterBtn2.setAttribute('aria-pressed', active ? 'true' : 'false');
+      trimesterBtn2.classList.toggle('bg-black/5', active);
+      trimesterBtn2.classList.toggle('dark:bg-white/5', active);
+    }
+    if (trimesterBtnBoth) {
+      const active = selectedTrimester === BOTH_VALUE;
+      trimesterBtnBoth.setAttribute('aria-pressed', active ? 'true' : 'false');
+      trimesterBtnBoth.classList.toggle('bg-black/5', active);
+      trimesterBtnBoth.classList.toggle('dark:bg-white/5', active);
+    }
+
+    grid.classList.toggle('iss-home-cards__grid--both', selectedTrimester === BOTH_VALUE);
+    if (mainEl) mainEl.classList.toggle('iss-home-main--both', selectedTrimester === BOTH_VALUE);
+  }
 
   function getExcerptSnippet(excerpt, qLower, maxLen = 100) {
     if (!excerpt) return '';
@@ -58,6 +115,34 @@ function initHome() {
     const match = escapeHtml(raw.slice(raw.toLowerCase().indexOf(qLower), raw.toLowerCase().indexOf(qLower) + qLower.length));
     const after = escapeHtml(raw.slice(raw.toLowerCase().indexOf(qLower) + qLower.length));
     return before + '<strong>' + match + '</strong>' + after;
+  }
+
+  function filterDisciplinesByTrimester(disciplines, trimester) {
+    if (trimester === BOTH_VALUE) return Array.isArray(disciplines) ? disciplines : [];
+    const t = Number(trimester) === 2 ? 2 : 1;
+    return (Array.isArray(disciplines) ? disciplines : []).filter((d) => getDisciplineTrimesters(d).includes(t));
+  }
+
+  function filterLessonsByDisciplines(lessons, disciplines) {
+    const allowed = new Set((Array.isArray(disciplines) ? disciplines : []).map((d) => d && d.slug).filter(Boolean));
+    return (Array.isArray(lessons) ? lessons : []).filter((l) => allowed.has(l.discipline));
+  }
+
+  function applyBothWideLastDisciplineCard() {
+    if (selectedTrimester !== BOTH_VALUE) return;
+    if (!grid) return;
+
+    grid.querySelectorAll('.iss-home-card--wide').forEach(function (el) {
+      el.classList.remove('iss-home-card--wide');
+    });
+
+    const anchors = Array.from(grid.querySelectorAll('a.iss-card[href]'));
+    const disciplineCards = anchors.filter(function (a) {
+      const href = a.getAttribute('href') || '';
+      return href.indexOf('disciplina.html?d=') !== -1;
+    });
+    const last = disciplineCards.length ? disciplineCards[disciplineCards.length - 1] : null;
+    if (last) last.classList.add('iss-home-card--wide');
   }
 
   function getSearchMatches(disciplines, lessons, searchIndex, q) {
@@ -128,9 +213,23 @@ function initHome() {
     .then(([disciplines, lessons, searchIndex, exercises]) => {
       const exerciseList = Array.isArray(exercises) ? exercises : [];
       const statsEl = document.getElementById('iss-library-stats');
-      if (statsEl) {
-        statsEl.textContent = `${lessons.length} aulas · ${disciplines.length} disciplinas`;
+
+      function getFilteredData() {
+        const filteredDisciplines = filterDisciplinesByTrimester(disciplines, selectedTrimester);
+        const filteredLessons = filterLessonsByDisciplines(lessons, filteredDisciplines);
+        return { filteredDisciplines, filteredLessons };
       }
+
+      function updateLibraryStats() {
+        if (!statsEl) return;
+        const { filteredDisciplines, filteredLessons } = getFilteredData();
+        const isBoth = selectedTrimester === BOTH_VALUE;
+        const lessonsCount = isBoth ? lessons.length : filteredLessons.length;
+        const disciplinesCount = isBoth ? disciplines.length : filteredDisciplines.length;
+        statsEl.textContent = `${lessonsCount} aulas · ${disciplinesCount} disciplinas`;
+      }
+
+      updateLibraryStats();
 
       const last = getLastVisited();
       let lesson = null;
@@ -142,7 +241,7 @@ function initHome() {
       const continueCardHtml =
         lesson && discipline
           ? `
-        <a href="${pagePath('aula.html')}?d=${encodeURIComponent(last.discipline)}&a=${encodeURIComponent(last.lesson)}" class="iss-card block no-underline text-inherit">
+        <a href="${pagePath('aula.html')}?d=${encodeURIComponent(last.discipline)}&a=${encodeURIComponent(last.lesson)}" class="iss-card iss-home-card--continue block no-underline text-inherit">
           <h3 class="font-semibold text-lg m-0">Continuar a ler</h3>
           <p class="text-sm iss-text-muted mt-1 mb-0">${escapeHtml(discipline.title)} › ${escapeHtml(lesson.title)}</p>
         </a>
@@ -165,7 +264,7 @@ function initHome() {
       const streak = typeof getStreak === 'function' ? getStreak() : 0;
       const goalMet = typeof getTodayGoalMet === 'function' ? getTodayGoalMet() : false;
       const dashboardCardHtml =
-        '<div class="iss-card iss-card--static">' +
+        '<div class="iss-card iss-card--static iss-home-card--dashboard">' +
           '<h3 class="font-semibold text-lg m-0">Seu progresso</h3>' +
           '<p class="text-sm iss-text-muted mt-1 mb-0">Progresso geral ' + progressPercent + '%</p>' +
           '<p class="text-sm iss-text-muted mt-1 mb-0">Tempo estudado ' + (typeof formatDurationMinutes === 'function' ? formatDurationMinutes(studiedMinutes) : studiedMinutes + ' min') + '</p>' +
@@ -176,7 +275,7 @@ function initHome() {
         '</div>';
 
       const continuePlaceholderHtml =
-        '<div class="iss-card iss-card--static">' +
+        '<div class="iss-card iss-card--static iss-home-card--continue">' +
           '<h3 class="font-semibold text-lg m-0">Continuar a ler</h3>' +
           '<p class="text-sm iss-text-muted mt-1 mb-0">Abra uma aula para continuar de onde parou.</p>' +
         '</div>';
@@ -218,7 +317,8 @@ function initHome() {
       }
 
       const cards = [dashboardCardHtml, continueCardHtml || continuePlaceholderHtml];
-      disciplines.forEach((d) => cards.push(buildDisciplineCard(d)));
+      const filteredDisciplines = getFilteredData().filteredDisciplines;
+      filteredDisciplines.forEach((d) => cards.push(buildDisciplineCard(d)));
       cards.push(exercisesCardHtml);
 
       grid.innerHTML = cards.join('');
@@ -242,15 +342,24 @@ function initHome() {
         });
       }
 
+      applyBothWideLastDisciplineCard();
+
       if (searchInput && searchResultsEl) {
         const searchWrapper = searchInput.closest('.relative');
-        searchInput.addEventListener('input', () => runSearch(disciplines, lessons, searchIndex));
-        searchInput.addEventListener('search', () => runSearch(disciplines, lessons, searchIndex));
+        searchInput.addEventListener('input', () => {
+          const { filteredDisciplines, filteredLessons } = getFilteredData();
+          runSearch(filteredDisciplines, filteredLessons, searchIndex);
+        });
+        searchInput.addEventListener('search', () => {
+          const { filteredDisciplines, filteredLessons } = getFilteredData();
+          runSearch(filteredDisciplines, filteredLessons, searchIndex);
+        });
         searchInput.addEventListener('keydown', (e) => {
           if (e.key !== 'Enter') return;
           e.preventDefault();
           const q = searchInput.value.trim();
-          const matches = getSearchMatches(disciplines, lessons, searchIndex, q);
+          const { filteredDisciplines, filteredLessons } = getFilteredData();
+          const matches = getSearchMatches(filteredDisciplines, filteredLessons, searchIndex, q);
           if (matches.length === 0) return;
           const first = matches[0];
           window.location.href =
@@ -265,6 +374,54 @@ function initHome() {
           searchResultsEl.classList.add('hidden');
         });
       }
+
+      function rerenderHomeCards() {
+        const cardsNow = [dashboardCardHtml, continueCardHtml || continuePlaceholderHtml];
+        const { filteredDisciplines } = getFilteredData();
+        filteredDisciplines.forEach((d) => cardsNow.push(buildDisciplineCard(d)));
+        cardsNow.push(exercisesCardHtml);
+        grid.innerHTML = cardsNow.join('');
+        grid.querySelectorAll('.iss-card').forEach(function (card) {
+          if (card.textContent.indexOf('Revisões sugeridas') !== -1) card.remove();
+        });
+        // Re-anexa o handler do botão de exercício aleatório (o elemento foi recriado)
+        const randomExerciseBtnNow = document.getElementById('iss-home-random-exercise-btn');
+        if (randomExerciseBtnNow && exerciseList.length > 0) {
+          randomExerciseBtnNow.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const completedSet = typeof getCompletedExerciseSlugs === 'function' ? getCompletedExerciseSlugs() : new Set();
+            const unresolved = exerciseList.filter(function (ex) { return !completedSet.has(ex.slug); });
+            const pool = unresolved.length > 0 ? unresolved : exerciseList;
+            const ex = pool[Math.floor(Math.random() * pool.length)];
+            if (typeof Router !== 'undefined' && Router.navigateToExercise) Router.navigateToExercise(ex.slug);
+            else window.location.href = pagePath('exercise.html') + '?slug=' + encodeURIComponent(ex.slug);
+          });
+        }
+
+        applyBothWideLastDisciplineCard();
+      }
+
+      updateTrimesterButtons();
+      function bindTrimester(btn) {
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+          const raw = String(btn.getAttribute('data-trimester') || '');
+          const next = raw === BOTH_VALUE ? BOTH_VALUE : (Number(raw) === 2 ? 2 : 1);
+          if (selectedTrimester === next) return;
+          selectedTrimester = setSelectedTrimester(next);
+          updateTrimesterButtons();
+          updateLibraryStats();
+          rerenderHomeCards();
+          if (searchInput) {
+            const { filteredDisciplines, filteredLessons } = getFilteredData();
+            runSearch(filteredDisciplines, filteredLessons, searchIndex);
+          }
+        });
+      }
+      bindTrimester(trimesterBtn1);
+      bindTrimester(trimesterBtn2);
+      bindTrimester(trimesterBtnBoth);
     })
     .catch((err) => {
       grid.innerHTML = '<p class="text-red-600">Erro ao carregar disciplinas.</p>';
