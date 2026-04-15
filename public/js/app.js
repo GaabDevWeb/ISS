@@ -69,7 +69,7 @@ function initHome() {
     })();
     if (raw === BOTH_VALUE) return BOTH_VALUE;
     const n = Number(raw);
-    return n === 2 ? 2 : 1;
+    return n === 1 ? 1 : 2;
   }
 
   function setSelectedTrimester(v) {
