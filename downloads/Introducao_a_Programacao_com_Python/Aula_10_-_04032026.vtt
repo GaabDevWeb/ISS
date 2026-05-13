@@ -1,0 +1,2810 @@
+WEBVTT
+
+1
+00:00:07.590 --> 00:00:13.200
+Gesiel Lopes: Olá, pessoal. Boa noite. Vamos já já dar início. Só aguardar mais uns minutinhos. Já já iniciamos.
+
+2
+00:02:11.170 --> 00:02:14.300
+Gesiel Lopes: Ok, eu acho que já dá para a gente começar. Pessoal, vamos lá
+
+3
+00:02:15.070 --> 00:02:25.590
+Gesiel Lopes: então. Antes de mais nada, antes de mais nada. Calma, Gisele. Calma. Sem nervosismo nesse momento. Então, antes de mais nada, começando mais uma vez aqui
+
+4
+00:02:25.770 --> 00:02:34.789
+Gesiel Lopes: estamos iniciando nesse exato momento, o nosso décimo encontro aqui da disciplina de introdução à programação com Python
+
+5
+00:02:34.790 --> 00:02:45.779
+Gesiel Lopes: do bloco de fundamentos de processamento de dados aqui do Instituto Infinity. Aqui quem vos fala é Gesiel Lopes, seja muito bem vindo. Muito bem vinda
+
+6
+00:02:45.850 --> 00:02:49.969
+Gesiel Lopes: a mais um encontro aqui da nossa disciplina.
+
+7
+00:02:50.540 --> 00:03:00.479
+Gesiel Lopes: Se você estiver aqui ao vivo conosco, aproveito aí para pedir um feedback. Vocês estão me ouvindo? Bem, está tudo tranquilo. O áudio está legal. Está de boas.
+
+8
+00:03:00.600 --> 00:03:01.860
+Gesiel Lopes: Tudo bem,
+
+9
+00:03:04.420 --> 00:03:14.219
+Gesiel Lopes: ok, beleza. E você que estiver assistindo a gravação. Bom dia. Boa tarde. Boa noite. Seja também muito bem vindo aqui ao nosso encontro.
+
+10
+00:03:14.360 --> 00:03:34.060
+Gesiel Lopes: Você que estiver assistindo no 2x, seja também muito bem vindo. Aproveite ao máximo o nosso encontro de hoje. Beleza, tudo de boas. Então vamos lá, pessoal, hoje vamos dar continuidade. Então, sem mais delongas.
+
+11
+00:03:34.960 --> 00:03:48.650
+Gesiel Lopes: Desculpa, vou compartilhar aqui a minha tela com vocês. Acredito que vocês estejam nesse exato momento,
+
+12
+00:03:50.080 --> 00:03:58.040
+Gesiel Lopes: vendo a minha tela, vou compartilhar aqui com vocês o notebook
+
+13
+00:03:58.590 --> 00:04:04.060
+Gesiel Lopes: do Deep. Note aqui do nosso encontro de hoje.
+
+14
+00:04:04.440 --> 00:04:12.480
+Gesiel Lopes: Ah, é só lembrando. Pessoal, não custa nada lembrá los.
+
+15
+00:04:12.580 --> 00:04:16.139
+Gesiel Lopes: Assim que termina a aula ou no dia seguinte,
+
+16
+00:04:16.260 --> 00:04:20.480
+Gesiel Lopes: no máximo. Eu adiciono lá no bloco
+
+17
+00:04:20.640 --> 00:04:25.679
+Gesiel Lopes: de onde fica? Na aba do grupo de vocês? Na Aba de Documentos
+
+18
+00:04:25.830 --> 00:04:38.360
+Gesiel Lopes: do bloco da disciplina do bloco do grupo do bloco, lá no infinite online. Eu adiciono lá na nossa disciplina de
+
+19
+00:04:38.410 --> 00:04:52.139
+Gesiel Lopes: de programação. Tem uma pasinha lá, onde vocês podem acompanhar todos os materiais que são trabalhados dentro dos nossos encontros. Então, nos nossos
+
+20
+00:04:52.220 --> 00:05:11.080
+Gesiel Lopes: encontro síncronos, sempre eu coloco o material que foi trabalhado, ou seja, slide, ou seja, anotação, ou seja, o próprio notebook. Todos os notebooks que foram desenvolvidos durante o nosso encontro. Eu coloco lá como Pdf,
+
+21
+00:05:11.440 --> 00:05:13.309
+Gesiel Lopes: para que vocês possam
+
+22
+00:05:13.810 --> 00:05:29.889
+Gesiel Lopes: baixar, caso queiram, obviamente, e também dar uma revisada. Se você estiver assistindo ou revendo o nosso encontro, você pode, por exemplo, acompanhar o código,
+
+23
+00:05:30.040 --> 00:05:43.410
+Gesiel Lopes: verificar o código, ou até mesmo sem precisar assistir ou rever o nosso encontro gravado sem rever a gravação. Está lá. Então fiquem à vontade, pessoal para vocês utilizarem.
+
+24
+00:05:43.950 --> 00:05:51.589
+Gesiel Lopes: Ok, então vamos lá dando continuidade,
+
+25
+00:05:57.080 --> 00:06:07.660
+Gesiel Lopes: dando continuidade. Vamos falar aí. No nosso último encontro, a gente começou a falar rapidamente sobre.
+
+26
+00:06:09.310 --> 00:06:09.880
+Ramon Telles da Silva: E enfiar.
+
+27
+00:06:09.880 --> 00:06:10.320
+Gesiel Lopes: É um.
+
+28
+00:06:10.320 --> 00:06:10.850
+Ramon Telles da Silva: Isso é.
+
+29
+00:06:11.470 --> 00:06:12.280
+Gesiel Lopes: Oi.
+
+30
+00:06:12.280 --> 00:06:13.559
+Ramon Telles da Silva: E fiel. Se infiel.
+
+31
+00:06:13.560 --> 00:06:14.170
+Gesiel Lopes: Isso, isso.
+
+32
+00:06:14.170 --> 00:06:16.710
+Ramon Telles da Silva: Passou. O Elife também. Por último.
+
+33
+00:06:16.710 --> 00:06:30.519
+Gesiel Lopes: Isso. Isso. Então vamos só recapitulando aqui rapidamente. Eu estou olhando aqui o meu roteiro. Então, no nosso último encontro, a gente começou a trabalhar com os desvios condicionais. É que são maneiras dentro de um código.
+
+34
+00:06:30.650 --> 00:06:36.430
+Gesiel Lopes: Nesse caso, Python, no nosso caso, Python, realizar o desvio.
+
+35
+00:06:36.570 --> 00:06:37.480
+Gesiel Lopes: Ah, é?
+
+36
+00:06:37.960 --> 00:06:46.689
+Gesiel Lopes: A partir de alguns critérios que nós estabelecemos, por isso, que são chamados de desvios condicionais.
+
+37
+00:06:46.740 --> 00:07:04.540
+Gesiel Lopes: Beleza. Então a gente viu. E aí, para desenvolver os nossos desvios condicionais, nós utilizamos a estrutura si. Se não ou if else do nosso paito. Se a gente fosse fazer uma tradução livre, seria o se não
+
+38
+00:07:04.620 --> 00:07:07.890
+Gesiel Lopes: aonde a sintaxe.
+
+39
+00:07:08.310 --> 00:07:17.750
+Gesiel Lopes: E aí eu coloco aqui é a sintaxe do nosso if else if.
+
+40
+00:07:18.210 --> 00:07:20.440
+Gesiel Lopes: Aqui eu tenho uma condição.
+
+41
+00:07:20.990 --> 00:07:23.049
+Gesiel Lopes: A condição.
+
+42
+00:07:23.480 --> 00:07:44.920
+Gesiel Lopes: A bullying Búlia tá dois pontos. E aqui o bloco, o bloco de código, caso, condição condição bullying seja.
+
+43
+00:07:45.590 --> 00:07:49.799
+Gesiel Lopes: É Drew e Wells.
+
+44
+00:07:50.300 --> 00:07:59.140
+Gesiel Lopes: Dois pontos, caso que é o bloco de código, caso a condição boliana seja falsa.
+
+45
+00:07:59.450 --> 00:08:04.200
+Gesiel Lopes: Então a Sintax tem esse formato.
+
+46
+00:08:04.410 --> 00:08:12.209
+Gesiel Lopes: E também a gente pode continuar fazendo testes que aí seria.
+
+47
+00:08:14.530 --> 00:08:23.849
+Gesiel Lopes: Você pode fazer o encadeamento de testes condicionais. Então eu tenho condição.
+
+48
+00:08:24.370 --> 00:08:29.140
+Gesiel Lopes: Boo bullying, bullying.
+
+49
+00:08:29.250 --> 00:08:31.340
+Gesiel Lopes: Tá, e aí?
+
+50
+00:08:32.919 --> 00:08:38.340
+Gesiel Lopes: E aqui. Eu vou ter o bloco bloco de código,
+
+51
+00:08:41.940 --> 00:08:58.590
+Gesiel Lopes: caso condição boa, bullying um seja true seja verdadeira. E aí eu também posso fazer um demais testes,
+
+52
+00:08:58.700 --> 00:09:05.809
+Gesiel Lopes: colocando, encadeando outras condições, outros testes. E aí, condição
+
+53
+00:09:07.090 --> 00:09:14.469
+Gesiel Lopes: bullying dois. E aqui eu vou ter um bloco de código,
+
+54
+00:09:15.800 --> 00:09:23.379
+Gesiel Lopes: caso a condição boliana dois seja True. E aí eu posso ou continuar
+
+55
+00:09:23.620 --> 00:09:38.500
+Gesiel Lopes: fazendo demais testes ou finalizar com um bloco de código casa. Condição um e condição dois.
+
+56
+00:09:38.820 --> 00:09:39.790
+Gesiel Lopes: Seja
+
+57
+00:09:40.200 --> 00:09:55.519
+Gesiel Lopes: falsa. Então a gente tem essa sintaxe padrão do Python para fazer desvios condicionais. Testes lógicos, beleza. Então, a gente já viu que é um conceito de
+
+58
+00:09:55.760 --> 00:10:03.940
+Gesiel Lopes: de bloco de código, inclusive tá. E aqui, hum, professor, pois não?
+
+59
+00:10:03.940 --> 00:10:05.630
+Altevir dos Anjos Junior: Só uma dúvida rapidinho.
+
+60
+00:10:05.780 --> 00:10:18.239
+Altevir dos Anjos Junior: Quando a gente começa a pesquisar sobre programação, falam que a gente tem que focar em lógica de programação e algoritmo. No início, o If, o Else e o Elf faz parte da lógica de programação.
+
+61
+00:10:19.460 --> 00:10:21.590
+Gesiel Lopes: Não tenha dúvidas disso.
+
+62
+00:10:22.690 --> 00:10:24.339
+Altevir dos Anjos Junior: Mas não é só isso, né.
+
+63
+00:10:25.730 --> 00:10:28.550
+Gesiel Lopes: A lógica.
+
+64
+00:10:28.550 --> 00:10:29.180
+Altevir dos Anjos Junior: Isso é.
+
+65
+00:10:29.940 --> 00:10:37.139
+Gesiel Lopes: Não, a gente ainda está no décimo encontro. A gente ainda tem aí mais três semanas pela frente.
+
+66
+00:10:37.710 --> 00:10:40.900
+Altevir dos Anjos Junior: Ah, tá. Então tem mais coisas que formam a lógica de programação. Além.
+
+67
+00:10:40.900 --> 00:10:45.499
+Gesiel Lopes: Não tenha dúvidas disso. E ainda vou falar mais.
+
+68
+00:10:46.320 --> 00:11:01.850
+Gesiel Lopes: Não se preocupem que eu não vou abordar tudo sobre lógica de programação. A única certeza que vocês precisam ter é essa. E tenho com certeza que eu não vou conseguir abordar tudo.
+
+69
+00:11:02.090 --> 00:11:13.980
+Gesiel Lopes: E também nem o curso de vocês será suficiente para abordar todo o conteúdo atrás de lógica de programação. A lógica de programação é muito mais Mindset
+
+70
+00:11:14.100 --> 00:11:23.970
+Gesiel Lopes: do que técnico. Mas a essência é entender como as coisas funcionam. A lógica de programação é um universo
+
+71
+00:11:24.470 --> 00:11:28.329
+Gesiel Lopes: que há alguns meus mais de vinte anos
+
+72
+00:11:28.790 --> 00:11:40.349
+Gesiel Lopes: de estrada até hoje, inclusive hoje, no trampo, eu aprendi uma coisa que me salvou em um projeto. Então, assim, a lógica é
+
+73
+00:11:40.590 --> 00:11:51.649
+Gesiel Lopes: entender como as coisas funcionam e como resolver problemas, resolver as coisas algoritmicamente.
+
+74
+00:11:51.880 --> 00:12:09.250
+Gesiel Lopes: E aí, uma vez que você domina esses conceitos, ou entende esses conceitos. Você utiliza uma linguagem de programação para sintetizar alguns desses conceitos e resolver problemas onde você vai construir os seus algoritmos naquela linguagem, seguindo,
+
+75
+00:12:09.340 --> 00:12:18.280
+Gesiel Lopes: seguindo esses passos, e seguindo a sintaxe da linguagem, seguindo o padrão da linguagem. Então a gente está fazendo isso com o Paita.
+
+76
+00:12:18.420 --> 00:12:34.779
+Gesiel Lopes: Então a gente traz algumas informações e tenta, ao longo do tempo, encaixar esse Lego para as coisas fazerem mais sentido, mas é algo que eu falei desde o primeiro dia de aula. Aprender a programar só se aprende programando.
+
+77
+00:12:34.950 --> 00:12:43.399
+Gesiel Lopes: Vocês não vão aprender a programar e nem aprender lógica de programação assistindo minhas aulas, ou no curso,
+
+78
+00:12:43.540 --> 00:12:46.160
+Gesiel Lopes: somente assistindo às aulas do curso.
+
+79
+00:12:46.430 --> 00:12:50.009
+Gesiel Lopes: Então aprender a lógica vai muito além disso.
+
+80
+00:12:50.140 --> 00:12:51.330
+Gesiel Lopes: Beleza,
+
+81
+00:12:51.540 --> 00:13:01.620
+Gesiel Lopes: joguei. Você me fez uma pergunta. Eu joguei um balde de água fria, mas com o intuito de fazer motivação.
+
+82
+00:13:01.620 --> 00:13:15.549
+Altevir dos Anjos Junior: Eu acho que deu pra entender. Bem, é que quando você lê, você lê a primeira vez que você tem que focar em lógica de programação e algoritmo. Você não sabe o que é. Você fica pesquisando e você vê muita coisa diferente. Então eu acho que agora fez mais sentido. Eu percebi que é um negócio que
+
+83
+00:13:15.790 --> 00:13:21.290
+Altevir dos Anjos Junior: é estudo contínuo. E provavelmente realmente eu não vou conseguir saber tudo na minha vida.
+
+84
+00:13:21.500 --> 00:13:29.059
+Altevir dos Anjos Junior: Mas é um negócio que ajuda a gente a chegar nas resoluções, né? Eu até imaginei aquele. O operador.
+
+85
+00:13:29.060 --> 00:13:35.410
+Gesiel Lopes: A porcentagem, né? O operador, de resto, lá você tirou a palavra da minha boca. Eu ia falar justamente desse exemplo.
+
+86
+00:13:35.410 --> 00:13:37.060
+Altevir dos Anjos Junior: É um exemplo de lógica.
+
+87
+00:13:37.560 --> 00:13:51.980
+Gesiel Lopes: Sim, sim. É você usar a ferramenta que você tem para resolver. O problema que você precisa resolver. Isso é pensar o goritimicamente. É o pensamento computacional, e que tem a base como lógica de programação.
+
+88
+00:13:51.980 --> 00:14:10.749
+Gesiel Lopes: Então a lógica é você encadear tudo isso. E aí, claro, vocês vão ver. Ainda não se preocupem, principalmente quem está entrando agora. Começando agora vocês ainda verão mais disciplinas. Uma disciplina algo que eu recomendo muito depois é vocês trabalharem a parte de engenharia de software.
+
+89
+00:14:10.750 --> 00:14:20.089
+Gesiel Lopes: Existe um livro muito bom do Uncle Bob, que é um cara fantástico. É um dinossauro, um signatários do movimento ágil
+
+90
+00:14:20.210 --> 00:14:32.590
+Gesiel Lopes: da engenharia de software que ele publicou vários livros e tem um livro dele, que é o meu livro de cabeceira, que até hoje eu uso ele, que é um livro chamado Clean Code
+
+91
+00:14:32.920 --> 00:14:38.780
+Gesiel Lopes: Clean Code, que é esse livro aqui? Existe uma tradução.
+
+92
+00:14:38.970 --> 00:14:39.790
+Gesiel Lopes: Ah, a.
+
+93
+00:14:39.950 --> 00:14:50.929
+Gesiel Lopes: Mas eu não recomendo a tradução da alta Books. A tradução. Ele comete alguns delisios. Pelo menos a versão que eu tive com acesso,
+
+94
+00:14:51.060 --> 00:14:52.630
+Gesiel Lopes: tá?
+
+95
+00:14:52.840 --> 00:14:55.289
+Gesiel Lopes: Tem alguns deslizes, mas
+
+96
+00:14:55.400 --> 00:15:06.370
+Gesiel Lopes: é um livro bom que você pode dar uma lida. E aí ele já está na segunda edição. Eu tenho a primeira edição, tanto físico como digital.
+
+97
+00:15:06.900 --> 00:15:14.540
+Gesiel Lopes: E tem esse outro livro que é o programa do Praga.
+
+98
+00:15:14.890 --> 00:15:21.570
+Gesiel Lopes: Vocês vão ter bastante coisa pela frente aí, beleza. Então são alguns livros que eu recomendo.
+
+99
+00:15:22.110 --> 00:15:22.780
+marcos.jose: Certo.
+
+100
+00:15:23.060 --> 00:15:23.690
+Gesiel Lopes: Pois não?
+
+101
+00:15:23.690 --> 00:15:34.339
+marcos.jose: E que, no começo é difícil, porque está todo mundo aprendendo. Mas acredito que isso deva ser exatamente como até eu falei antes. Esporte ou medicina,
+
+102
+00:15:34.340 --> 00:15:52.080
+marcos.jose: você aprende a medicina geral. Mas depois você vai ter que escolher. Se você quer ser cardiologista, se você quer ser um médico que opera cérebro um médico que opera não tem como você ser, ao mesmo tempo um guga no tênis. O Ronaldinho no futebol, no Michael Phelps. Na natação. À medida que você vai se aprofundando
+
+103
+00:15:52.090 --> 00:16:01.189
+marcos.jose: automaticamente, você acaba indo para uma área onde você tem mais contato? Algumas pessoas aqui vão para engenharia, outras vão para
+
+104
+00:16:01.290 --> 00:16:15.250
+marcos.jose: para estruturas. Enfim, então acho que o erro da maioria das pessoas é tentar abraçar o mundo, tentar saber tudo de tudo, né? Você sempre vai saber um pouco de tudo. E se focar em alguma área que você acha que se identifica mais? Acredito que esse seja um.
+
+105
+00:16:15.250 --> 00:16:16.079
+Gesiel Lopes: Sim, sim.
+
+106
+00:16:16.080 --> 00:16:17.739
+marcos.jose: Ponto de você focar.
+
+107
+00:16:17.740 --> 00:16:34.149
+Gesiel Lopes: Sim, sim, mas a parte que a Uti ao Tv falou assim, inclusive é o que eu mais acho importante, acho melhor focar quem for adentrar em qualquer área da computação.
+
+108
+00:16:34.340 --> 00:16:46.139
+Gesiel Lopes: Saber lógica, ter o conhecimento de lógica é muito mais importante. Essa é a opinião do Gesiel só para a gente fechar esse parâmetro que eu altervi. Pensar computacionalmente,
+
+109
+00:16:46.270 --> 00:17:00.169
+Gesiel Lopes: ter o pensamento computacional e conhecer lógica que é lógica. É como você resolver o problema. É como encaixar as coisas para resolver o problema. Esse pensamento, na minha opinião, em qualquer área
+
+110
+00:17:00.280 --> 00:17:04.460
+Gesiel Lopes: da área da computação. Ela é fundamental.
+
+111
+00:17:05.040 --> 00:17:07.830
+Gesiel Lopes: Por mais que você não vá escrever código,
+
+112
+00:17:08.050 --> 00:17:15.120
+Gesiel Lopes: por mais que você fique na área de pesquisa ou na área gerencial negocial.
+
+113
+00:17:15.290 --> 00:17:24.010
+Gesiel Lopes: Se você tem um conhecimento de lógica, você consegue ter visões sobre o negócio muito mais,
+
+114
+00:17:24.069 --> 00:17:29.950
+Gesiel Lopes: de forma completa. Programar, entender o problema, propor soluções
+
+115
+00:17:30.000 --> 00:17:39.800
+Gesiel Lopes: até muito mais do que dominar uma linguagem de programação. Porque quando você conhece lógica, você aprender uma linguagem de programação é aprender a sintaxe.
+
+116
+00:17:39.800 --> 00:17:53.340
+Gesiel Lopes: É meio forte falar isso. Mas isso aí dá uma discussão boa no bair. E quem depois estiver aí afim convidar. E aí eu faço o spoiler. Quem for do Rio de Janeiro, muito provavelmente eu vou estar aí
+
+117
+00:17:53.580 --> 00:17:56.350
+Gesiel Lopes: participando da Python Sudeste.
+
+118
+00:17:56.650 --> 00:18:04.829
+Gesiel Lopes: Já me fizeram o convite. Quem sabe, né? Eu apareço aí no Rio de Janeiro. Qualquer dia desses. Ou então Na Python Brasil que eu vou estar lá.
+
+119
+00:18:05.040 --> 00:18:08.180
+Gesiel Lopes: E aí a gente pode tomar uma.
+
+120
+00:18:08.410 --> 00:18:13.220
+Gesiel Lopes: Uma cervejinha pra gente poder.
+
+121
+00:18:13.870 --> 00:18:14.719
+Gesiel Lopes: Ah, vai dizer.
+
+122
+00:18:14.720 --> 00:18:16.289
+Ramon Telles da Silva: Na mente. Aí, professor.
+
+123
+00:18:16.510 --> 00:18:19.919
+Ramon Telles da Silva: Oro plenamente. Aí realmente faz muita diferença.
+
+124
+00:18:20.700 --> 00:18:23.510
+Ramon Telles da Silva: Não só a cerveja, mas a lógica também, né?
+
+125
+00:18:23.510 --> 00:18:30.620
+Gesiel Lopes: Sim, sim, tá muito, muito beleza. Então vamos lá, pessoal. Continuando.
+
+126
+00:18:30.760 --> 00:18:35.950
+Gesiel Lopes: E aqui um ponto interessante é que.
+
+127
+00:18:37.040 --> 00:18:50.090
+Gesiel Lopes: Que a gente precisa colocar primeiro que o tá primeiro.
+
+128
+00:18:53.210 --> 00:19:07.090
+Gesiel Lopes: O Elsie primeiro é Life e Else são opcionalis, tá?
+
+129
+00:19:07.840 --> 00:19:10.340
+Gesiel Lopes: Ou seja, ele não é obrigatório.
+
+130
+00:19:13.290 --> 00:19:19.389
+Gesiel Lopes: Como assim, Gisele? Eu posso, por exemplo, fazer uma instrução If
+
+131
+00:19:19.770 --> 00:19:25.869
+Gesiel Lopes: sem precisar obrigatoriamente ter um elcio. Então vamos fazer aqui um input,
+
+132
+00:19:26.070 --> 00:19:32.610
+Gesiel Lopes: por exemplo que eu vou colocar aqui. Uma variável chamada.
+
+133
+00:19:33.870 --> 00:19:35.480
+Gesiel Lopes: É
+
+134
+00:19:43.520 --> 00:19:46.189
+Gesiel Lopes: nome. Vou chamar de nome mesmo.
+
+135
+00:19:46.890 --> 00:19:50.550
+Gesiel Lopes: Eu tinha colocado aqui outro que é partindo do livro,
+
+136
+00:19:50.720 --> 00:19:57.740
+Gesiel Lopes: mas eu vou seguir nome. Então, nome ou digite, digite seu nome
+
+137
+00:19:58.850 --> 00:20:01.860
+Gesiel Lopes: e vou fazer aqui um teste e fim.
+
+138
+00:20:02.390 --> 00:20:09.670
+Gesiel Lopes: Nome for igual a Gesiel Lopes.
+
+139
+00:20:11.130 --> 00:20:19.819
+Gesiel Lopes: Eu digito ou faço. Coloco uma mensagem.
+
+140
+00:20:20.190 --> 00:20:24.470
+Gesiel Lopes: Python é uma linguagem.
+
+141
+00:20:29.180 --> 00:20:37.340
+Gesiel Lopes: Asterisco asterisco, asterisco. Se eu executar esse código, observe, ele não vai dar nenhum erro de Sintax.
+
+142
+00:20:37.940 --> 00:20:40.099
+Gesiel Lopes: Se o Deep note me ajudar.
+
+143
+00:20:46.560 --> 00:20:51.059
+Gesiel Lopes: E aqui eu posso digitar. Vamos supor que eu digite o meu nome,
+
+144
+00:20:51.170 --> 00:21:03.910
+Gesiel Lopes: ele vai aparecer. A mensagem. A linguagem de Python é uma linguagem muito boa. E se eu executar novamente e colocar, por exemplo, qualquer nome. John
+
+145
+00:21:04.820 --> 00:21:07.599
+Gesiel Lopes: John Doo, por exemplo.
+
+146
+00:21:07.800 --> 00:21:12.600
+Gesiel Lopes: Tá, observe que o código simplesmente não faz nada. Por quê
+
+147
+00:21:12.910 --> 00:21:27.600
+Gesiel Lopes: o Print, esse trecho de código bloco só executa se o nome for igual a
+
+148
+00:21:28.210 --> 00:21:41.239
+Gesiel Lopes: Gesiel Lopes. Se o nome digitado não for igual, você não consegue esse bloco. Você não consegue. Mas esse bloco de código, ele não é executado,
+
+149
+00:21:41.500 --> 00:21:42.330
+Gesiel Lopes: tá?
+
+150
+00:21:44.750 --> 00:21:47.740
+Gesiel Lopes: E também, Ah,
+
+151
+00:21:51.920 --> 00:21:57.660
+Gesiel Lopes: e também, segundo, é.
+
+152
+00:22:02.460 --> 00:22:03.630
+Gesiel Lopes: Segundo,
+
+153
+00:22:07.470 --> 00:22:17.820
+Gesiel Lopes: também é possível encadiá em cadear ifes.
+
+154
+00:22:19.760 --> 00:22:22.590
+Gesiel Lopes: Sim, Elifes,
+
+155
+00:22:28.460 --> 00:22:37.489
+Gesiel Lopes: ele não entendi, Gisele. Eu vou pegar aqui um exemplo aqui. Ó preço.
+
+156
+00:22:45.200 --> 00:22:46.530
+Gesiel Lopes: Só um minuto.
+
+157
+00:22:49.860 --> 00:22:55.100
+Gesiel Lopes: Só desabilitar aqui a anotação aqui para outras pessoas, para não atrapalhar.
+
+158
+00:23:04.660 --> 00:23:06.020
+Gesiel Lopes: Ah, é?
+
+159
+00:23:08.740 --> 00:23:12.560
+Gesiel Lopes: Vamos supor aqui.
+
+160
+00:23:22.560 --> 00:23:23.670
+Gesiel Lopes: E putsch.
+
+161
+00:23:24.760 --> 00:23:26.259
+Gesiel Lopes: Eu vou fazer o seguinte.
+
+162
+00:23:26.400 --> 00:23:31.930
+Gesiel Lopes: Um fluat, tá um fluide
+
+163
+00:23:38.160 --> 00:23:39.600
+Gesiel Lopes: em pute.
+
+164
+00:23:41.920 --> 00:23:48.390
+Gesiel Lopes: E aqui. Qual o preço de uma
+
+165
+00:23:55.180 --> 00:23:59.000
+Gesiel Lopes: peça de sushi?
+
+166
+00:24:04.950 --> 00:24:06.210
+Gesiel Lopes: Cem reais,
+
+167
+00:24:11.880 --> 00:24:12.720
+Gesiel Lopes: tá,
+
+168
+00:24:18.590 --> 00:24:29.350
+Gesiel Lopes: vou digitar uma outra opção, está ele está com fome
+
+169
+00:24:34.550 --> 00:24:43.440
+Gesiel Lopes: em pulty. Um input a input.
+
+170
+00:24:45.930 --> 00:24:47.270
+Gesiel Lopes: Você.
+
+171
+00:24:48.800 --> 00:24:53.840
+Gesiel Lopes: Você está com muita fome.
+
+172
+00:24:56.570 --> 00:25:01.359
+Gesiel Lopes: Fome, Sim ou não?
+
+173
+00:25:07.750 --> 00:25:11.320
+Gesiel Lopes: E aqui eu vou colocar aqui. Ó tchau.
+
+174
+00:25:13.090 --> 00:25:18.730
+Gesiel Lopes: Peças de sushi, sushi.
+
+175
+00:25:20.420 --> 00:25:22.330
+Gesiel Lopes: E aí eu vou começar com zero.
+
+176
+00:25:23.980 --> 00:25:28.330
+Gesiel Lopes: E aqui, pessoal, eu vou fazer aqui um teste.
+
+177
+00:25:29.030 --> 00:25:32.919
+Gesiel Lopes: E aqui eu já vou passar uma.
+
+178
+00:25:35.270 --> 00:25:46.240
+Gesiel Lopes: Hummm, uma boa prática nossa. Quase que não sai uma boa prática de programação. Observem
+
+179
+00:25:49.290 --> 00:25:55.510
+Gesiel Lopes: que e aí eu vou só executar o código print teste
+
+180
+00:25:55.630 --> 00:26:01.680
+Gesiel Lopes: só para mostrar para vocês um pequeno detalhe. Vamos supor que é uma peça de sushi peça, né?
+
+181
+00:26:02.150 --> 00:26:13.679
+Gesiel Lopes: Qual o preço de uma peça de xuxa? Vamos supor que seja quinze reais quinze,trinta e nove.
+
+182
+00:26:13.960 --> 00:26:19.589
+Gesiel Lopes: Tá vamos supor se você está com fome, eu vou colocar o S maiúsculo.
+
+183
+00:26:20.550 --> 00:26:26.769
+Gesiel Lopes: Se vocês observarem. Ele não entrou no teste condicional porque ele só testa.
+
+184
+00:26:26.970 --> 00:26:36.019
+Gesiel Lopes: Ele só consegue entrar se essa expressão foi igual a essa. E eu digitei o S em caixa alta,
+
+185
+00:26:36.440 --> 00:26:38.279
+Gesiel Lopes: e não deu.
+
+186
+00:26:38.570 --> 00:26:43.389
+Gesiel Lopes: Então, sempre que eu estiver trabalhando com comparações de String,
+
+187
+00:26:43.830 --> 00:26:51.200
+Gesiel Lopes: sempre é recomendável que eu padronize a minha.
+
+188
+00:26:51.390 --> 00:26:56.110
+Gesiel Lopes: A minha String tá que eu faço uma padronização.
+
+189
+00:26:56.330 --> 00:27:02.440
+Gesiel Lopes: Primeiro, eu tiro espaços em brancos com Streps,
+
+190
+00:27:03.280 --> 00:27:09.919
+Gesiel Lopes: e depois eu coloco todos os caracteres ou em caixa alta ou em caixa baixa.
+
+191
+00:27:10.150 --> 00:27:17.709
+Gesiel Lopes: Eu particularmente gosto de caixa baixa, porque eu sei que a String que eu estou comparando vai estar em caixa baixa,
+
+192
+00:27:17.920 --> 00:27:33.380
+Gesiel Lopes: então assim eu posso digitar o Sim, espaço S maiúsculo, minúsculo. Posso colocar o Sim, de qualquer jeito que o teste entra. Então, se eu executar, vou colocar o S maiúsculo e o espaço.
+
+193
+00:27:36.130 --> 00:27:41.299
+Gesiel Lopes: Ah, ele deu erro porque não foi o o preço ainda, né?
+
+194
+00:27:41.880 --> 00:27:47.320
+Gesiel Lopes: Quinze e trinta e seis e um S.
+
+195
+00:27:48.510 --> 00:27:54.399
+Gesiel Lopes: E aí ele já. Eu botei o S maiúsculo e com espaço. E ele conseguiu executar
+
+196
+00:27:54.540 --> 00:28:09.169
+Gesiel Lopes: a parte de ele converter. Observe ainda. A gente vai trabalhar como fazer. Talvez não dessa disciplina, mas vocês não terão outra disciplina onde a gente aprende ou trabalha, como fazer tratamento de erros.
+
+197
+00:28:09.860 --> 00:28:11.730
+Gesiel Lopes: A gente não vai fazer isso agora.
+
+198
+00:28:11.910 --> 00:28:17.440
+Gesiel Lopes: Tchau, aqui, olha só.
+
+199
+00:28:18.200 --> 00:28:19.380
+Gesiel Lopes: Vamos,
+
+200
+00:28:20.260 --> 00:28:35.320
+Gesiel Lopes: vamos fazer como eu estava falando o segundo, é possível encadejar ifes sem necessariamente eu fazer uso de alifes. Então, primeiro, se está com fome, for igual assim, eu posso fazer aqui um teste,
+
+201
+00:28:35.950 --> 00:28:39.340
+Gesiel Lopes: por exemplo, verificar se o preço.
+
+202
+00:28:39.640 --> 00:28:48.160
+Gesiel Lopes: Se o preço do sushi, por exemplo, for menor do que dez reais.
+
+203
+00:28:48.590 --> 00:28:58.020
+Gesiel Lopes: Tá, eu faço um print aqui. Ó nossa, posso.
+
+204
+00:29:01.080 --> 00:29:02.620
+Gesiel Lopes: Posso comprar?
+
+205
+00:29:04.590 --> 00:29:14.560
+Gesiel Lopes: Posso comprar bastante sushi sul, Xi
+
+206
+00:29:16.920 --> 00:29:23.219
+Gesiel Lopes: e aqui. Peças de shus. Nossa, agora eu vou começar sushi.
+
+207
+00:29:23.470 --> 00:29:34.680
+Gesiel Lopes: Vou colocar aqui como trinta, que é o máximo de peças que eu consigo comer. E aqui. Olha só, eu posso fazer mais um teste. Se.
+
+208
+00:29:34.840 --> 00:29:36.090
+Gesiel Lopes: Se o preço
+
+209
+00:29:36.950 --> 00:29:49.099
+Gesiel Lopes: for maior do que dez, então o preço for maior do que dez. E aí eu vou usar aquela anotação que a gente viu na aula passada de intervalos e menor ou igual
+
+210
+00:29:50.910 --> 00:29:51.910
+Gesiel Lopes: vinte,
+
+211
+00:29:55.780 --> 00:29:56.520
+Gesiel Lopes: hã?
+
+212
+00:29:57.170 --> 00:30:03.079
+Gesiel Lopes: Eu faço um novo print, tá aqui. Eu vou só padronizar.
+
+213
+00:30:08.950 --> 00:30:18.580
+Gesiel Lopes: Preço preço do sushi razoável, tá?
+
+214
+00:30:20.330 --> 00:30:27.889
+Gesiel Lopes: E aqui eu posso comer aqui, já que o preço não está tão mais ou menos que eu posso comprar menos.
+
+215
+00:30:28.110 --> 00:30:31.060
+Gesiel Lopes: E aí eu faço aqui peças
+
+216
+00:30:31.650 --> 00:30:36.650
+Gesiel Lopes: de sushi. Vou comer aí no máximo dez peças,
+
+217
+00:30:36.780 --> 00:30:43.110
+Gesiel Lopes: dependendo do preço, é óbvio. Dez peças. Isso é só um teste que a gente está
+
+218
+00:30:43.300 --> 00:30:51.240
+Gesiel Lopes: tá tentando. Mostrar e aí, se o preço for maior
+
+219
+00:30:51.390 --> 00:31:02.020
+Gesiel Lopes: e aqui. Eu vou colocar dez e vinte. Não vou botar, mesmo se for maior do que vinte.
+
+220
+00:31:03.200 --> 00:31:08.510
+Gesiel Lopes: Isso a peça tá, pessoal, eu faço o Print é
+
+221
+00:31:09.550 --> 00:31:11.950
+Gesiel Lopes: aí. Eu faço a peça, né?
+
+222
+00:31:12.100 --> 00:31:23.260
+Gesiel Lopes: É realmente realmente não. O preço do sushi está.
+
+223
+00:31:26.390 --> 00:31:29.140
+Gesiel Lopes: Está bem salgado.
+
+224
+00:31:30.340 --> 00:31:46.329
+Gesiel Lopes: E aí. Eu vou comprar no máximo uma peça. Então, posto aqui, peça de sushi igual a uma. Não consigo comprar mais do que isso. É só para mostrar para vocês. E aqui. Olha só. E aí eu faço mais um teste. Se
+
+225
+00:31:46.630 --> 00:31:57.300
+Gesiel Lopes: está com fome, Street ponto Lauer for igual.
+
+226
+00:31:57.870 --> 00:32:06.399
+Gesiel Lopes: Não aqui a gente pode até fazer mais um teste. Como eu tenho um assento.
+
+227
+00:32:06.800 --> 00:32:13.190
+Gesiel Lopes: Dá para a gente fazer uma expressão para retirar o assento. Eu não vou fazer isso, tá?
+
+228
+00:32:13.840 --> 00:32:15.320
+Gesiel Lopes: Eu não vou fazer isso.
+
+229
+00:32:15.600 --> 00:32:18.550
+Gesiel Lopes: Mas aí fica a dica aí para quem quiser
+
+230
+00:32:18.780 --> 00:32:22.910
+Gesiel Lopes: fazer? Fica à vontade, porque aí você prepara.
+
+231
+00:32:24.990 --> 00:32:28.149
+Gesiel Lopes: É aqui, ó, e aqui eu faço um print.
+
+232
+00:32:32.840 --> 00:32:40.000
+Gesiel Lopes: Hoje não vou comer Sul sushi
+
+233
+00:32:40.210 --> 00:32:42.429
+Gesiel Lopes: hoje eu não vou comer sushi.
+
+234
+00:32:44.970 --> 00:32:47.120
+Gesiel Lopes: E aqui, ó, faço um teste.
+
+235
+00:32:47.550 --> 00:32:49.790
+Gesiel Lopes: Mais um outro teste com preço.
+
+236
+00:32:50.020 --> 00:33:04.179
+Gesiel Lopes: Aliás, com peças, peças de sushi, as peças de sushi, por exemplo, for maior do que dez.
+
+237
+00:33:05.340 --> 00:33:08.670
+Gesiel Lopes: Tá, então maior do que cinco.
+
+238
+00:33:09.060 --> 00:33:12.460
+Gesiel Lopes: E eu faço só um print aqui, Print.
+
+239
+00:33:16.310 --> 00:33:25.150
+Gesiel Lopes: Hoje. Eu, Mark, a vontade de comer sushi.
+
+240
+00:33:26.010 --> 00:33:28.190
+Gesiel Lopes: Então se eu executar. Olha só o código.
+
+241
+00:33:28.320 --> 00:33:36.789
+Gesiel Lopes: O que eu fiz? Eu fiz vários testes condicionais. If sem usar sequer um Elif
+
+242
+00:33:37.450 --> 00:33:48.590
+Gesiel Lopes: para fazer as minhas validações. Então é possível você fazer. Vamos supor que aqui em São Carlos, a peça está quinze,trinta e seis.
+
+243
+00:33:48.840 --> 00:33:55.049
+Gesiel Lopes: Eu não consigo comer muito sushi. Você está com fome? Sim, eu estou com muita fome.
+
+244
+00:33:56.190 --> 00:34:05.300
+Gesiel Lopes: Então ele digitou alguma coisa errada de Price? Onde tem Price aqui, ó,
+
+245
+00:34:08.800 --> 00:34:17.919
+Gesiel Lopes: por isso, novamente, o preço da R15h36 estou com muita fome.
+
+246
+00:34:19.739 --> 00:34:25.720
+Gesiel Lopes: E aí o preço do sushi está razoável hoje. Eu mato a vontade de comer sushi.
+
+247
+00:34:26.080 --> 00:34:36.219
+Gesiel Lopes: E aí eu poderia melhorar. Colocar quantas peças eu vou comer. Enfim, é só para mostrar que não preciso fazer o encadeamento
+
+248
+00:34:36.560 --> 00:34:43.139
+Gesiel Lopes: de Elifes para fazer o encadeamento de testes condicionais. Alguém levantou a mão.
+
+249
+00:34:43.920 --> 00:34:47.450
+marcos.jose: Isso foi eu. Professor, eu acabei ficando com duas dúvidas.
+
+250
+00:34:47.969 --> 00:34:51.789
+marcos.jose: Se sair muito do tema, a gente deixa pra outro momento, tá
+
+251
+00:34:51.969 --> 00:35:07.649
+marcos.jose: levar muito tempo para a resposta. A primeira, quando o senhor monta essa estruturas dos códigos para o flow, tipo o input para os outros. O senhor precisa colocar informação dentro do parênteses. Porém, para o lar e para o.
+
+252
+00:35:08.220 --> 00:35:20.149
+marcos.jose: Para o strip, por exemplo, o senhor. Coloca ponto e abre e fecha parênteses. Não fica nada dentro do parênteses. Existe alguma situação que a gente precisa colocar algo dentro do parênteses para continuar
+
+253
+00:35:20.280 --> 00:35:22.630
+marcos.jose: algum tipo de tratamento.
+
+254
+00:35:23.200 --> 00:35:38.920
+Gesiel Lopes: A palavra chave. E aí eu não vou perder a piada. Não é nem piada, mas a brincadeira. A gente perde o amigo no caso, perde. Pode até perder o aluno, mas não vai perder a brincadeira. Aí a gente descobre que alguém é senhor.
+
+255
+00:35:39.130 --> 00:35:43.800
+Gesiel Lopes: Quando ele começa a responder? Depende, depende.
+
+256
+00:35:43.910 --> 00:35:52.280
+Gesiel Lopes: Então a resposta já depende. Tá, marcos, mas sem brincadeira. Quando eu passo, quando eu tenho primeiro, quando eu tenho
+
+257
+00:35:52.530 --> 00:36:10.490
+Gesiel Lopes: um literal, o que é um literal? É uma palavra de caracteres que realiza uma determinada ação, seguido de parêntese. Aquilo. A gente chama de função. Então vou só abrir aqui um parêntese. Então, quando eu tenho literal,
+
+258
+00:36:11.110 --> 00:36:12.909
+Gesiel Lopes: abre e fecha parêntese.
+
+259
+00:36:13.140 --> 00:36:16.650
+Gesiel Lopes: Isso aqui a gente chama de função,
+
+260
+00:36:16.980 --> 00:36:20.439
+Gesiel Lopes: ou depois vocês vão ver lá na frente,
+
+261
+00:36:20.600 --> 00:36:26.089
+Gesiel Lopes: quando a gente fala de uma abordagem, um outro modo de programação.
+
+262
+00:36:26.290 --> 00:36:37.239
+Gesiel Lopes: A gente vai chamar isso de método que nada mais é do que a realização de uma ação. Então, uma função ou um método é algo que executa uma determinada ação.
+
+263
+00:36:37.370 --> 00:36:38.170
+Gesiel Lopes: Tá bom.
+
+264
+00:36:40.160 --> 00:36:48.780
+Gesiel Lopes: Quando eu tenho uma função, então quando eu tenho função, valor,
+
+265
+00:36:49.180 --> 00:36:52.780
+Gesiel Lopes: e aí eu posso ter um ou vários valores. Tá?
+
+266
+00:36:53.070 --> 00:36:57.430
+Gesiel Lopes: E aqui eu posso ter. Vou colocar aqui entre três pontos.
+
+267
+00:36:57.820 --> 00:37:07.679
+Gesiel Lopes: Isso aqui a gente diz que a função está recebendo para métodos.
+
+268
+00:37:07.980 --> 00:37:12.340
+Gesiel Lopes: Então, o que eu passo para a função são parâmetros
+
+269
+00:37:12.850 --> 00:37:25.859
+Gesiel Lopes: que serão executados dentro da função. O último conteúdo. O último assunto que nós iremos abordar na disciplina é a construção de funções.
+
+270
+00:37:26.100 --> 00:37:42.420
+Gesiel Lopes: Então, quando a gente estiver falando de construção de funções. Vocês vão entender melhor marcos. Você vai entender melhor o custo. Significa eu passar ou não passar um valor para uma função quando eu abro e fecho o parêntese quando eu passo um parâmetro ou não beleza,
+
+271
+00:37:42.510 --> 00:38:02.000
+Gesiel Lopes: então isso, claro, sempre vai depender da função se a função recebe parâmetro ou não, ou se a função precisa passar parâmetros obrigatórios. Tem parâmetros obrigatórios, que são as duas coisas. Eu posso ter funções que não precisam passar parâmetros.
+
+272
+00:38:02.100 --> 00:38:13.379
+Gesiel Lopes: Eu tenho funções que os parâmetros não são obrigatórios. Então eu posso passar ou não passar. E eu tenho funções que eu.
+
+273
+00:38:13.740 --> 00:38:17.089
+Gesiel Lopes: Eu sou obrigado a passar parâmetros a ela.
+
+274
+00:38:17.210 --> 00:38:20.709
+Gesiel Lopes: Então a gente vai ver isso um pouco mais lá na frente, mas boa pergunta.
+
+275
+00:38:20.990 --> 00:38:23.150
+Gesiel Lopes: Tinha outra? Ou era só essa.
+
+276
+00:38:23.570 --> 00:38:33.650
+marcos.jose: A outra dúvida. Era nessa própria estrutura. Aí que o senhor está mostrando. Agora, a gente vê que tem If que está dentro da indentação. E depois o If está fora da indentação. Ali
+
+277
+00:38:33.770 --> 00:38:37.460
+marcos.jose: tem uma ordem lógica para a gente independente dos casos.
+
+278
+00:38:37.460 --> 00:38:48.480
+Gesiel Lopes: Vai depender do problema novamente. Volto a falar. Vai depender do problema. A ideia que eu quero mostrar para vocês é que eu posso encadear ifes
+
+279
+00:38:48.850 --> 00:38:52.600
+Gesiel Lopes: sem necessariamente fazer uso de alifes.
+
+280
+00:38:52.730 --> 00:38:57.719
+Gesiel Lopes: Nesse caso, aqui. Primeiro eu faço. Ó
+
+281
+00:38:58.400 --> 00:39:10.310
+Gesiel Lopes: o If, o parâmetro l If e Else são opcionais, como eu mostrei aqui. Não é obrigatório aqui. Eu estou definindo ifes
+
+282
+00:39:10.850 --> 00:39:16.920
+Gesiel Lopes: sem else e estou encadeando ifes dentro de ifes.
+
+283
+00:39:17.270 --> 00:39:23.440
+Gesiel Lopes: Então eu posso fazer isso. A lógica vai sempre depender do que eu quero programar.
+
+284
+00:39:23.670 --> 00:39:40.880
+Gesiel Lopes: Nesse exemplo, eu estou só mostrando para vocês. A estrutura que é algo que você pode fazer sem quebrar a sintaxe da linguagem, lembrando que esse bloco de código só é executado.
+
+285
+00:39:41.040 --> 00:39:45.320
+Gesiel Lopes: Se essa condição for verdadeira, tá?
+
+286
+00:39:46.060 --> 00:39:50.659
+Gesiel Lopes: Então se. E aí, aqui, eu vou até abrir aqui um parênteses.
+
+287
+00:39:50.770 --> 00:39:52.339
+Gesiel Lopes: Deixa eu só tirar aqui.
+
+288
+00:40:01.270 --> 00:40:11.160
+Gesiel Lopes: Nesse caso, aqui. Olha só esse bloco aqui. Esse bloco aqui. Ó, ele só é executado
+
+289
+00:40:11.770 --> 00:40:13.750
+Gesiel Lopes: se isso aqui for True.
+
+290
+00:40:15.520 --> 00:40:22.990
+Gesiel Lopes: Se esse teste aqui for falso, nenhum desses ifes serão executados novamente. Esse
+
+291
+00:40:23.290 --> 00:40:38.269
+Gesiel Lopes: aqui. Esse print só vai ser executado se esse teste passar esse código só vai ser executado se esse teste passar e esse código só vai ser executado se esse teste passar,
+
+292
+00:40:38.640 --> 00:40:50.299
+Gesiel Lopes: então eu posso fazer o encadeamento novamente. Esse teste aqui só é executado se esse bloco aqui só executado. Se esse teste for True.
+
+293
+00:40:50.530 --> 00:40:53.869
+Gesiel Lopes: E a mesma coisa acontece aqui.
+
+294
+00:40:54.530 --> 00:41:00.019
+Gesiel Lopes: Esse print só executado se esse teste for True. Quando é que ele.
+
+295
+00:41:00.020 --> 00:41:01.880
+marcos.jose: Se for cinco. Professor.
+
+296
+00:41:02.080 --> 00:41:06.520
+Gesiel Lopes: Não importa. Vai sempre depender do problema. Nesse caso, aqui, ó.
+
+297
+00:41:06.520 --> 00:41:20.049
+marcos.jose: Os dois primeiros casos que o senhor colocou em Dentado. Se o preço for menor que dez. E se o preço for menor que dez e igual ou menor a vinte. Se eu colocar simples, por exemplo, ele atende os dois casos.
+
+298
+00:41:20.420 --> 00:41:22.139
+Gesiel Lopes: Sim, sim. Bora ver.
+
+299
+00:41:22.140 --> 00:41:23.820
+marcos.jose: Vai ser as duas respostas.
+
+300
+00:41:23.820 --> 00:41:26.350
+Gesiel Lopes: Sim, muito provavelmente.
+
+301
+00:41:26.940 --> 00:41:27.539
+marcos.jose: Sim. Muito bem.
+
+302
+00:41:27.540 --> 00:41:29.900
+Gesiel Lopes: Provavelmente eu vou botar cinco.
+
+303
+00:41:30.920 --> 00:41:32.540
+Gesiel Lopes: Muito provavelmente
+
+304
+00:41:36.810 --> 00:41:41.549
+Gesiel Lopes: é. Você está com fome? Sim, não vamos supor. O preço é menor.
+
+305
+00:41:42.500 --> 00:41:47.350
+Gesiel Lopes: É nossa. O preço.
+
+306
+00:41:47.960 --> 00:41:53.100
+marcos.jose: É o que eu pensei. Ele mostra os dois casos porque os dois casos, os cinco atendem, né?
+
+307
+00:41:53.880 --> 00:41:57.710
+Gesiel Lopes: A realidade. Se for cinco, é só pensar.
+
+308
+00:41:58.630 --> 00:42:02.360
+Gesiel Lopes: Deixa eu ver. Aqui. Cinco, cinco. Aqui ele vai entrar nesse if.
+
+309
+00:42:06.180 --> 00:42:20.019
+Gesiel Lopes: Mas olha só a leitura. Você fez errada. Não, porque o preço aqui tem que ser maior do que dez. Ele entra aqui se o preço for maior do que dez, porque dez é menor do que preço.
+
+310
+00:42:20.430 --> 00:42:22.290
+Gesiel Lopes: Então o preço é maior do que dez.
+
+311
+00:42:22.290 --> 00:42:24.289
+marcos.jose: Ah, entendi, entendi.
+
+312
+00:42:24.690 --> 00:42:30.230
+Gesiel Lopes: E menor, igual a vinte. Então se for cinco, ele não vai entrar nesse teste, tá?
+
+313
+00:42:30.770 --> 00:42:37.019
+Gesiel Lopes: E aqui. Olha só. Se eu colocar por mais que eu coloque R um,zero,
+
+314
+00:42:37.260 --> 00:42:42.330
+Gesiel Lopes: o preço do sushi e eu coloque. Não, ele vai
+
+315
+00:42:42.460 --> 00:42:48.130
+Gesiel Lopes: só printar hoje. Eu não vou comer sushi, porque mesmo que
+
+316
+00:42:48.280 --> 00:42:53.890
+Gesiel Lopes: eu tenha condições de executar esses ifes aqui do preço,
+
+317
+00:42:54.190 --> 00:42:59.429
+Gesiel Lopes: eles nunca serão executados. Por quê? Porque eu não estou com fome.
+
+318
+00:42:59.530 --> 00:43:05.829
+Gesiel Lopes: Então ele só entra nesse teste se o If for igual a cinco,
+
+319
+00:43:06.110 --> 00:43:13.019
+Gesiel Lopes: e ainda mais se eu digitar qualquer outra coisa. Vamos rodar mais um real e digitar. Não sei.
+
+320
+00:43:13.210 --> 00:43:23.609
+Gesiel Lopes: Não sei. Observe que ele não vai fazer absolutamente nada. Ele não vai pintar nada por conta dessas condições.
+
+321
+00:43:25.090 --> 00:43:26.240
+Gesiel Lopes: Beleza,
+
+322
+00:43:28.460 --> 00:43:42.130
+Gesiel Lopes: quando é que eu vou aplicar isso? No dia do Tp? No dia do At que o At faz parte da vida de vocês. Então não se preocupe que ou mais cedo ou mais tarde, vocês irão fazer isso.
+
+323
+00:43:42.480 --> 00:43:45.910
+Gesiel Lopes: Beleza, outra coisa.
+
+324
+00:43:46.640 --> 00:43:51.400
+Gesiel Lopes: Deixa eu colocar mais. Mas deu para responder. Acho que a grande pergunta é.
+
+325
+00:43:51.400 --> 00:43:52.550
+marcos.jose: Deu.
+
+326
+00:43:52.850 --> 00:43:59.610
+Gesiel Lopes: Quando é que eu vou fazer isso? Ou quando eu vou fazer aquilo. Isso é uma resposta de um milhão de dólares.
+
+327
+00:43:59.760 --> 00:44:08.789
+Gesiel Lopes: Eu não sei quando é que eu vou usar uma forma ou outra. O que eu preciso nesse primeiro momento, saber é como usar ela.
+
+328
+00:44:09.060 --> 00:44:13.179
+Gesiel Lopes: Aonde eu vou usar. Ela já é outra situação.
+
+329
+00:44:13.670 --> 00:44:15.570
+Ramon Telles da Silva: Memória.
+
+330
+00:44:16.020 --> 00:44:20.660
+Ramon Telles da Silva: Perdão, Professor. Eu só ia só comentar que, na maioria das vezes, a gente sempre vai usar o básico.
+
+331
+00:44:21.140 --> 00:44:21.770
+Gesiel Lopes: Sim.
+
+332
+00:44:21.770 --> 00:44:34.520
+Ramon Telles da Silva: Isso daí. É só quando tem muitas condições. Mesmo quando você diga, vai criar um site, por exemplo, o pessoal coloca muitas condições aí. Sim, se torna um código grande. Mas na maioria das vezes, é bem básico.
+
+333
+00:44:34.810 --> 00:44:43.050
+Gesiel Lopes: É, vai depender tudo. Vai depender da situação do problema que você está querendo resolver. O que eu preciso saber é como resolver o meu problema.
+
+334
+00:44:43.050 --> 00:44:57.429
+Gesiel Lopes: Aí a lógica, a estrutura de código vai depender. E aí isso é a mágica. Eu posso resolver de uma forma, o Ramon pode resolver o mesmo problema de outra maneira, fazer uma outra abordagem. E assim vai.
+
+335
+00:44:57.440 --> 00:45:09.890
+Gesiel Lopes: Não existe uma forma tá cem correta. Beleza é isso.
+
+336
+00:45:10.170 --> 00:45:14.270
+Gesiel Lopes: Existe várias maneiras de você escrever o mesmo código.
+
+337
+00:45:14.830 --> 00:45:19.590
+Gesiel Lopes: Outro ponto para a gente.
+
+338
+00:45:20.390 --> 00:45:23.619
+Gesiel Lopes: Eu vou fazer o seguinte. Se são nove e quinze,
+
+339
+00:45:23.740 --> 00:45:29.870
+Gesiel Lopes: eu vou parar para dar um intervalozinho de dez minutos para a gente que aí eu vou colocar é
+
+340
+00:45:30.050 --> 00:45:40.879
+Gesiel Lopes: mais outros dois pontos. Eu vou fazer isso depois do intervalo e a gente dá um intervalozinho. Bebe aquela água quando for nove e vinte e cinco. A gente retorna. Beleza
+
+341
+00:54:01.220 --> 00:54:09.659
+Gesiel Lopes: nossa, Bora lá voltar. Nossa, deixa. Eu só ver o tempo de pegar água. Vamos lá, pessoal, voltando aqui um pouquinho mais cedo, um minuto mais cedo.
+
+342
+00:54:13.230 --> 00:54:14.710
+Gesiel Lopes: E aí?
+
+343
+00:54:17.540 --> 00:54:21.800
+Gesiel Lopes: Então vamos lá. Deixa eu colocar a chat aqui do lado,
+
+344
+00:54:26.290 --> 00:54:30.130
+Gesiel Lopes: dando continuidade, tá,
+
+345
+00:54:34.280 --> 00:54:47.470
+Gesiel Lopes: é o segundo ou terceiro, segundo, o terceiro ainda continuando todos vivos ainda por enquanto, sim, né?
+
+346
+00:54:47.950 --> 00:54:48.710
+marcos.jose: Bora! Bora.
+
+347
+00:54:48.710 --> 00:54:55.360
+Gesiel Lopes: E aí então. Terceiro ponto. Ainda sobre testes condicionais, tá?
+
+348
+00:54:56.510 --> 00:54:58.639
+Gesiel Lopes: É que é possível
+
+349
+00:55:02.090 --> 00:55:17.859
+Gesiel Lopes: realizar Toptherá sonhos lógicas nos testes condicionais. Gisel, não entendi.
+
+350
+00:55:18.120 --> 00:55:32.090
+Gesiel Lopes: Não entendi. Vamos supor que eu queira receber dois números, tá, número um, tá?
+
+351
+00:55:33.240 --> 00:55:36.739
+Gesiel Lopes: E aí eu vou considerar por simplicidade como inteiro.
+
+352
+00:55:37.080 --> 00:55:39.320
+Gesiel Lopes: Então, inch input.
+
+353
+00:55:42.350 --> 00:55:46.610
+Gesiel Lopes: Ah, deixa eu só fazer um pequeno comentário aqui
+
+354
+00:55:47.380 --> 00:55:55.360
+Gesiel Lopes: que eu vi aqui no chat quando eu voltei, como é que eu faço para tirar o o tio
+
+355
+00:55:55.470 --> 00:55:58.039
+Gesiel Lopes: novamente? A gente vai manipular String.
+
+356
+00:55:58.170 --> 00:56:11.439
+Gesiel Lopes: A gente já viu o Strep e o Lauer. A gente viu uma função chamada Replays, que substitui uma forma de você fazer isso. É como quando chega aqui.
+
+357
+00:56:11.770 --> 00:56:15.889
+Gesiel Lopes: A String já vai estar sem espaço em minúscula.
+
+358
+00:56:16.480 --> 00:56:24.690
+Gesiel Lopes: Eu só faço o seguinte. Se existir o A acentuado, eu vou substituir por A.
+
+359
+00:56:25.560 --> 00:56:28.850
+Gesiel Lopes: E aí eu posso testar aqui. Ó tá.
+
+360
+00:56:29.110 --> 00:56:31.260
+Gesiel Lopes: É um real.
+
+361
+00:56:33.750 --> 00:56:38.210
+Gesiel Lopes: Você está com fome? Aí eu vou digitar o N, o maiúsculo e o não.
+
+362
+00:56:39.370 --> 00:56:43.849
+Gesiel Lopes: E aí ele vai dizer hoje eu não vou comer sushi. É uma forma, tá,
+
+363
+00:56:45.320 --> 00:56:46.730
+Gesiel Lopes: mas não é a única.
+
+364
+00:56:50.690 --> 00:56:54.369
+Gesiel Lopes: Mais uma vez. Pensamento lógico.
+
+365
+00:56:54.540 --> 00:57:01.010
+Gesiel Lopes: Por isso que é interessante a gente, Gisele, vou ter que decorar todas as funções. Não,
+
+366
+00:57:01.710 --> 00:57:08.099
+Gesiel Lopes: ninguém tem um computador na mente, mas é interessante você conhecer pelo menos as mais utilizadas.
+
+367
+00:57:08.400 --> 00:57:17.219
+Gesiel Lopes: A gente não viu todas as funções de Strings. A gente viu as mais utilizadas, então elas. A gente precisa pelo menos conhecer como usá las.
+
+368
+00:57:18.450 --> 00:57:37.520
+Gesiel Lopes: Então vou aqui. Continuando. Terceiro, é possível realizar operações lógicas nos testes condicionais. Não entendi, Gisele. Vamos supor que eu queira digitar dois números. Então um número digite digite o mesmo. Digite um número digite um número,
+
+369
+00:57:38.110 --> 00:57:45.200
+Gesiel Lopes: tá, vou colocar aqui mais uma vez o número dois. Um segundo número,
+
+370
+00:57:45.410 --> 00:57:51.000
+Gesiel Lopes: e aí só vou colocar. Digite um número de gente
+
+371
+00:57:52.040 --> 00:57:54.979
+Gesiel Lopes: só para mostrar uma outra mensagem.
+
+372
+00:57:55.120 --> 00:57:58.910
+Gesiel Lopes: Digite outro número. E aqui. Olha só
+
+373
+00:57:59.650 --> 00:58:09.049
+Gesiel Lopes: quais são os operadores lógicos que a gente tem. A gente tem dois operadores lógicos.
+
+374
+00:58:09.210 --> 00:58:11.099
+Gesiel Lopes: Quais são eles, Gesiel?
+
+375
+00:58:11.740 --> 00:58:28.750
+Gesiel Lopes: A gente tem o Andy tá bá. E o Andy e o um o tá que se em de
+
+376
+00:58:33.730 --> 00:58:39.160
+Gesiel Lopes: Hande. E e aí?
+
+377
+00:58:41.970 --> 00:58:46.969
+Gesiel Lopes: Bom, vou colocar entre parênteses que é o ouro.
+
+378
+00:58:47.890 --> 00:59:02.630
+Gesiel Lopes: Tá como testes condicionais. E aqui. Só fazendo aqui uma pequena revisão. Talvez eu possa até colocar aqui no.
+
+379
+00:59:06.310 --> 00:59:14.140
+Gesiel Lopes: Acho que aqui fica até mais bonitinho. E aqui, só fazendo aqui uma observação, tá, operadores.
+
+380
+00:59:28.100 --> 00:59:33.470
+Gesiel Lopes: Então, para facilitar, eu vou criar algo que a gente chama aqui de
+
+381
+00:59:41.600 --> 00:59:43.110
+Gesiel Lopes: tabela. Verdade?
+
+382
+00:59:49.360 --> 00:59:56.370
+Gesiel Lopes: Verdade, tá, queria aqui um negocinho aqui que eu vou chamar aqui de tabela. Verdade
+
+383
+00:59:56.520 --> 01:00:04.539
+Gesiel Lopes: que é só fazer aqui algumas operações? É uma tabelinha. Então vamos supor que eu tenha aqui um A,
+
+384
+01:00:05.990 --> 01:00:10.310
+Gesiel Lopes: tá um B.
+
+385
+01:00:12.500 --> 01:00:14.119
+Gesiel Lopes: E aqui eu faço.
+
+386
+01:00:17.610 --> 01:00:20.430
+Gesiel Lopes: E aí que eu vou colocar de vermelho.
+
+387
+01:00:21.410 --> 01:00:27.570
+Gesiel Lopes: Andy, que é o meu operador B,
+
+388
+01:00:30.120 --> 01:00:40.250
+Gesiel Lopes: e vou colocar aqui um outro, que é o A mais. O meu operador, o B, tá,
+
+389
+01:00:41.040 --> 01:00:42.740
+Gesiel Lopes: então vou fazer essa
+
+390
+01:00:44.090 --> 01:00:50.559
+Gesiel Lopes: a operação aqui, tá? Então vou colocar aqui, literalmente. Vamos supor que isso aqui seja uma tabela mesmo.
+
+391
+01:00:50.760 --> 01:00:56.549
+Gesiel Lopes: Não está tão bonitinho aqui mas vamos considerar aquilo.
+
+392
+01:00:57.870 --> 01:01:07.040
+Gesiel Lopes: E aqui, ó, eu vou colocar os valores de A como sendo verdadeiro.
+
+393
+01:01:07.530 --> 01:01:10.200
+Gesiel Lopes: E B verdadeiro.
+
+394
+01:01:11.950 --> 01:01:23.050
+Gesiel Lopes: Ah, o A verdadeiro e o B falso. Eu vou fazer a combinação de valores verdadeiro e falso.
+
+395
+01:01:23.680 --> 01:01:26.050
+Gesiel Lopes: E o B falso
+
+396
+01:01:27.730 --> 01:01:34.130
+Gesiel Lopes: e o B, aliás, o A falso e o B verdadeiro e o último aqui, ó
+
+397
+01:01:34.390 --> 01:01:36.729
+Gesiel Lopes: o A falso e o B
+
+398
+01:01:37.030 --> 01:01:42.310
+Gesiel Lopes: falso. Então essas são todas as combinações que eu posso ter
+
+399
+01:01:43.690 --> 01:01:54.929
+Gesiel Lopes: de combinação de valores verdadeiro e falso para a combinação das duas variáveis aqui A e B. E aqui a gente faz a seguinte leitura,
+
+400
+01:01:56.010 --> 01:01:56.890
+Gesiel Lopes: tá?
+
+401
+01:01:57.090 --> 01:01:58.350
+Gesiel Lopes: Eu vou espirrar.
+
+402
+01:02:10.250 --> 01:02:13.199
+Gesiel Lopes: Desculpa, pessoal. Deu tempo. Pelo menos de avisar, né?
+
+403
+01:02:17.140 --> 01:02:19.980
+Gesiel Lopes: Se eu esperar de novo, eu não vou conseguir fazer isso. Não.
+
+404
+01:02:21.940 --> 01:02:25.410
+Gesiel Lopes: Então, Opa, aqui, Gisele,
+
+405
+01:02:34.370 --> 01:02:35.220
+Gesiel Lopes: opa,
+
+406
+01:02:42.170 --> 01:02:46.770
+Gesiel Lopes: beleza. Vamos supor que aqui a minha tabelinha não está a das mais bonitas, mas está valendo.
+
+407
+01:02:47.950 --> 01:02:56.710
+Gesiel Lopes: Esqueci as aulas de caligrafia. Muito de vocês nunca nem ouviram falar desse tipo de aula.
+
+408
+01:02:56.950 --> 01:03:01.529
+Gesiel Lopes: Então vamos. Lá. E aqui a gente faz o seguinte teste, tá?
+
+409
+01:03:02.380 --> 01:03:16.240
+Gesiel Lopes: A gente compara. E exatamente a famosa lado de lógica matemática Tautologia. Então, quando eu faço dois valores verdadeiros obrigatoriamente,
+
+410
+01:03:16.940 --> 01:03:23.559
+Gesiel Lopes: é verdadeiro e verdadeiro vai ser verdadeiro.
+
+411
+01:03:24.480 --> 01:03:32.769
+Gesiel Lopes: E o A ou A, verdadeiro ou B verdadeiro. A gente também vai ter a expressão verdadeira.
+
+412
+01:03:33.170 --> 01:03:39.830
+Gesiel Lopes: Tá, então observe que quando eu uso operador I.
+
+413
+01:03:40.270 --> 01:03:44.489
+Gesiel Lopes: E se os dois operandos forem verdadeiros?
+
+414
+01:03:44.690 --> 01:03:51.079
+Gesiel Lopes: Tá, observem que a expressão vai ser verdadeira.
+
+415
+01:03:52.270 --> 01:03:55.120
+Gesiel Lopes: Ok, tá
+
+416
+01:04:14.380 --> 01:04:16.210
+Gesiel Lopes: beleza. Vamos lá
+
+417
+01:04:25.100 --> 01:04:27.219
+Gesiel Lopes: então. Olha aqui. Continuando.
+
+418
+01:04:27.370 --> 01:04:31.939
+Gesiel Lopes: E quando o A for verdadeiro e o F for falso,
+
+419
+01:04:32.610 --> 01:04:39.290
+Gesiel Lopes: quando eu uso I, ó A é verdadeiro e o B é falso.
+
+420
+01:04:39.660 --> 01:04:46.440
+Gesiel Lopes: Então a expressão o resultado dessa operação vai ser falso.
+
+421
+01:04:46.900 --> 01:04:48.879
+Gesiel Lopes: A por quê?
+
+422
+01:04:49.020 --> 01:04:55.839
+Gesiel Lopes: Quando eu uso o Andy, o operador. Andy, se um dos operandos for falso,
+
+423
+01:04:55.990 --> 01:04:59.620
+Gesiel Lopes: a expressão toda vai ser falsa.
+
+424
+01:04:59.980 --> 01:05:09.050
+Gesiel Lopes: Ah, e como no caso, quando um operando for verdadeiro,
+
+425
+01:05:09.510 --> 01:05:17.740
+Gesiel Lopes: não importa quantos falsos eu tenha, o resultado sempre vai ser verdadeiro.
+
+426
+01:05:19.150 --> 01:05:26.040
+Gesiel Lopes: Tá mesmo aqui. Não importa se nos operandos
+
+427
+01:05:26.560 --> 01:05:33.200
+Gesiel Lopes: com o operador Andy, eu tiver um falso, a expressão vai ser falsa
+
+428
+01:05:34.000 --> 01:05:43.759
+Gesiel Lopes: com o ou é o contrário? Aqui, se eu tiver pelo menos um verdadeiro na expressão. A expressão toda vai ser
+
+429
+01:05:46.090 --> 01:05:49.160
+Gesiel Lopes: mito Gisele, que falso verdadeiro.
+
+430
+01:05:49.430 --> 01:05:52.800
+Gesiel Lopes: Tá verdadeiro.
+
+431
+01:05:53.270 --> 01:05:57.970
+Gesiel Lopes: E quando é falso, pelo menos um é falso. A expressão já vai ser falsa.
+
+432
+01:05:58.170 --> 01:06:01.209
+Gesiel Lopes: Então a falso I e B falso.
+
+433
+01:06:01.390 --> 01:06:05.100
+Gesiel Lopes: O resultado da operação vai ser falso.
+
+434
+01:06:05.380 --> 01:06:07.750
+Gesiel Lopes: E aqui, com o ou
+
+435
+01:06:08.100 --> 01:06:15.689
+Gesiel Lopes: se todos forem falsos, a expressão vai ser falsa, ou seja, quando eu estou operando o I.
+
+436
+01:06:15.950 --> 01:06:34.670
+Gesiel Lopes: Se pelo menos um dos operandos for falso, a expressão é falsa. Não importa quantos operandos eu tenha. Dois, cinco, dois0 mil, não importa se um operando for falso, a expressão é falsa, já que o ou ela só é falsa
+
+437
+01:06:35.080 --> 01:06:38.700
+Gesiel Lopes: se todos os operandos forem falsos.
+
+438
+01:06:38.860 --> 01:06:51.720
+Gesiel Lopes: Se eu tiver pelo menos um operando falso. Aliás, se eu estiver na expressão boliana, pelo menos um operando verdadeiro, a expressão automaticamente vai ser verdadeira.
+
+439
+01:06:51.970 --> 01:06:52.890
+Gesiel Lopes: Tá bom,
+
+440
+01:06:56.000 --> 01:07:01.530
+Gesiel Lopes: então olha só voltando, beleza.
+
+441
+01:07:01.650 --> 01:07:12.910
+Gesiel Lopes: Então são os operadores Io. A gente tem outros operadores também. Eu posso só.
+
+442
+01:07:22.350 --> 01:07:28.130
+Gesiel Lopes: Eu não vou colocar todos. Vou colocar só um, tá?
+
+443
+01:07:28.440 --> 01:07:35.699
+Gesiel Lopes: Que é esse operador aqui? Ó, vou até colocar de vermelho
+
+444
+01:07:42.370 --> 01:07:45.689
+Gesiel Lopes: esse operador aqui. Ele é operador de
+
+445
+01:07:49.200 --> 01:07:51.290
+Gesiel Lopes: de negação, tá?
+
+446
+01:07:52.360 --> 01:07:55.919
+Gesiel Lopes: O que é um operador de genegação. Ele investe o valor lógico.
+
+447
+01:07:56.280 --> 01:08:02.519
+Gesiel Lopes: Então, se a variável, se o valor lógico for verdadeiro,
+
+448
+01:08:04.250 --> 01:08:07.230
+Gesiel Lopes: a negação vai colocar como falso.
+
+449
+01:08:07.720 --> 01:08:16.490
+Gesiel Lopes: Então aqui vai ser falso. E aqui ele vai ser verdadeiro. O operador de negação é esse. Tem outros operadores. Tá pessoal.
+
+450
+01:08:17.600 --> 01:08:19.349
+Altevir dos Anjos Junior: Operador é útil.
+
+451
+01:08:20.390 --> 01:08:22.439
+Gesiel Lopes: Isso é o tio, exatamente.
+
+452
+01:08:23.359 --> 01:08:27.300
+Gesiel Lopes: É o tio. O operador é esse tio, literalmente, esse tio,
+
+453
+01:08:27.960 --> 01:08:30.290
+Gesiel Lopes: que é o operador de negação
+
+454
+01:08:30.490 --> 01:08:35.540
+Gesiel Lopes: que aí aqui eu estou puxando sardinha porque eu estou usando os operadores do Python, tá?
+
+455
+01:08:36.569 --> 01:08:38.790
+Gesiel Lopes: A gente vai usar ele lá na frente.
+
+456
+01:08:39.550 --> 01:08:50.689
+Gesiel Lopes: Então aqui. Olha só. Eu posso fazer operadores lógicos dentro de um teste condicional, por exemplo, se, ah,
+
+457
+01:08:50.960 --> 01:08:55.570
+Gesiel Lopes: e aqui eu abro aqui um pequeno parêntese.
+
+458
+01:08:56.029 --> 01:09:03.979
+Gesiel Lopes: O uso de parênteses dentro de um teste condicional é opcional.
+
+459
+01:09:05.029 --> 01:09:11.150
+Gesiel Lopes: Aí é uma boa prática. Quando a gente utiliza operadores lógicos.
+
+460
+01:09:12.080 --> 01:09:31.580
+Gesiel Lopes: Eu particularmente gosto de usar parênteses, porque fica mais fácil de você identificar. Qual operação está sendo realizada, porque aí você garante a precedência das operações, principalmente quando você estiver realizando mais de uma operação,
+
+461
+01:09:31.740 --> 01:09:32.580
+Gesiel Lopes: tá?
+
+462
+01:09:33.939 --> 01:09:36.299
+Gesiel Lopes: Nesse caso, aqui, olha só.
+
+463
+01:09:36.450 --> 01:10:02.580
+Gesiel Lopes: É se o número um for maior do que dez e número dois, fu menotti do que cinco, tá,
+
+464
+01:10:05.320 --> 01:10:09.940
+Gesiel Lopes: eu posso fazer aqui. Observe que eu estou usando o operador lógico.
+
+465
+01:10:10.200 --> 01:10:13.379
+Gesiel Lopes: Isso aqui é uma operação lógica.
+
+466
+01:10:13.550 --> 01:10:15.700
+Gesiel Lopes: E aqui é outra operação lógica.
+
+467
+01:10:17.510 --> 01:10:21.230
+Gesiel Lopes: Tá bom. Então, aqui, ó, eu tenho uma operação lógica.
+
+468
+01:10:21.410 --> 01:10:24.870
+Gesiel Lopes: E aqui eu tenho outra operação lógica, tá?
+
+469
+01:10:25.410 --> 01:10:27.789
+Gesiel Lopes: Então observem que eu estou usando o I.
+
+470
+01:10:28.360 --> 01:10:31.010
+Gesiel Lopes: Quando é que ele vai entrar nesse teste?
+
+471
+01:10:31.170 --> 01:10:38.470
+Gesiel Lopes: Apenas quando o número um que digitar for maior do que um0 e o número cinco, o número dois for menor do que cinco,
+
+472
+01:10:38.900 --> 01:10:49.340
+Gesiel Lopes: qualquer teste realizado qualquer outro valor diferente dessas expressões, eu não vou conseguir executar.
+
+473
+01:10:49.530 --> 01:10:57.570
+Gesiel Lopes: Então vamos supor. Eu vou digitar oito, porque oito, aliás, oito, não doze, porque doze é maior do que dez.
+
+474
+01:10:57.750 --> 01:11:01.159
+Gesiel Lopes: E aí o outro número? Eu vou digitar um,
+
+475
+01:11:01.460 --> 01:11:07.730
+Gesiel Lopes: porque eu sei que um é menor do que sim. Então teste realizado, tá?
+
+476
+01:11:09.080 --> 01:11:13.589
+Gesiel Lopes: Se eu executar novamente, vamos supor que agora eu digite um
+
+477
+01:11:13.960 --> 01:11:20.879
+Gesiel Lopes: um. Não é maior do que sim. Então, automaticamente, esse teste aqui, ele vai ser falso.
+
+478
+01:11:21.280 --> 01:11:24.809
+Gesiel Lopes: Então não importa o que eu digite aqui,
+
+479
+01:11:25.870 --> 01:11:29.840
+Gesiel Lopes: ele não vai entrar no teste, tá?
+
+480
+01:11:29.960 --> 01:11:33.400
+Gesiel Lopes: Ele não entra no teste, tá
+
+481
+01:11:34.170 --> 01:11:38.850
+Gesiel Lopes: com o ou então eu vou pegar essa mesma Tesh
+
+482
+01:11:45.130 --> 01:11:52.460
+Gesiel Lopes: do operador ente realizado, tá?
+
+483
+01:11:54.980 --> 01:11:58.530
+Gesiel Lopes: Vou usar a mesma expressão aqui, tá?
+
+484
+01:11:59.670 --> 01:12:04.000
+Gesiel Lopes: Só que em vez de usar o End, eu vou usar o. Ou
+
+485
+01:12:06.770 --> 01:12:18.800
+Gesiel Lopes: então observem que para eu executar a expressão ser executada com o observem que basta que uma das
+
+486
+01:12:19.120 --> 01:12:25.950
+Gesiel Lopes: algum dos operadores, algum dos testes lógico seja verdadeiro, tá,
+
+487
+01:12:26.330 --> 01:12:30.100
+Gesiel Lopes: então eu digitei um um é maior do que um0 não
+
+488
+01:12:30.240 --> 01:12:42.129
+Gesiel Lopes: mais um é menor do que cinco. Então ele entra no Print novamente. Vou digitar doze e um.
+
+489
+01:12:42.540 --> 01:12:46.069
+Gesiel Lopes: Ele vai entrar nos dois testes.
+
+490
+01:12:47.440 --> 01:12:49.639
+Gesiel Lopes: Ele deu erro porque eu digitei o ponto.
+
+491
+01:12:51.820 --> 01:12:56.140
+Gesiel Lopes: Então, ó doze e um,
+
+492
+01:12:58.820 --> 01:13:08.729
+Gesiel Lopes: ele entrou num Wende porque as duas expressões foram verdadeiras. E como uma das duas é verdadeira, ele também vai entrar no ou
+
+493
+01:13:09.050 --> 01:13:14.839
+Gesiel Lopes: mas o ou. Olha só, basta que uma seja verdadeira.
+
+494
+01:13:15.000 --> 01:13:20.960
+Gesiel Lopes: E se todas forem falsas um e doze,
+
+495
+01:13:22.140 --> 01:13:25.540
+Gesiel Lopes: ele não executa nenhum dos testes, porque
+
+496
+01:13:25.720 --> 01:13:34.650
+Gesiel Lopes: as duas expressões foram falsas. Então o ou e o Andy não foram executadas. É só lembrar aqui da tabela, verdade.
+
+497
+01:13:34.750 --> 01:13:39.270
+Gesiel Lopes: Se os dois forem falsos, o resultado vai ser falso.
+
+498
+01:13:39.740 --> 01:13:40.640
+Gesiel Lopes: Tá bom?
+
+499
+01:13:41.080 --> 01:13:42.589
+Gesiel Lopes: E aí, pessoal?
+
+500
+01:13:43.100 --> 01:13:45.140
+Gesiel Lopes: O céu é o limite.
+
+501
+01:13:45.340 --> 01:13:58.610
+Gesiel Lopes: Vou colocar aqui, ó, e aí você pode fazer as brincadeiras que você, claro, novamente, sempre vai depender, tá?
+
+502
+01:13:59.240 --> 01:14:06.760
+Gesiel Lopes: Do que você está fazendo? Dos testes que você está fazendo? Vamos supor que aqui
+
+503
+01:14:07.160 --> 01:14:23.600
+Gesiel Lopes: eu vou fazer o seguinte. Ó, se número um for igual a oito, é e número dois
+
+504
+01:14:24.590 --> 01:14:28.710
+Gesiel Lopes: for igual a nove, tá?
+
+505
+01:14:30.110 --> 01:14:31.209
+Gesiel Lopes: Vou fechar aqui. Ó,
+
+506
+01:14:42.620 --> 01:14:48.180
+Gesiel Lopes: esse aqui. Eu nem preciso. Não vou deixar assim para garantir.
+
+507
+01:14:50.720 --> 01:14:58.330
+Gesiel Lopes: Ou, olha só, eu posso encadear ou, né? Ou
+
+508
+01:15:01.660 --> 01:15:06.260
+Gesiel Lopes: não vai ficar muito parêntese. Vocês vão acabar se confundindo.
+
+509
+01:15:06.540 --> 01:15:11.490
+Gesiel Lopes: Deixa eu fechar aqui. Ó, aqui é o operador Wind.
+
+510
+01:15:12.800 --> 01:15:14.960
+Gesiel Lopes: E aqui eu vou usar o operador ou.
+
+511
+01:15:21.650 --> 01:15:28.400
+Gesiel Lopes: E que para fazer mais brincadeiras interessantes, eu tinha colocado
+
+512
+01:15:29.480 --> 01:15:34.289
+Gesiel Lopes: só dois números aqui no meu roteiro, mas eu vou colocar mais dois.
+
+513
+01:15:34.920 --> 01:15:48.150
+Gesiel Lopes: Vai ficar mais fácil, ou, Ah, ou número três for diferente de cinco.
+
+514
+01:15:49.400 --> 01:16:02.110
+Gesiel Lopes: E número quatro, o diferente de dez
+
+515
+01:16:11.220 --> 01:16:16.820
+Gesiel Lopes: teste e amizado.
+
+516
+01:16:17.940 --> 01:16:30.840
+Gesiel Lopes: E aqui eu vou fazer um else The Print teste não realizado.
+
+517
+01:16:31.730 --> 01:16:39.359
+Gesiel Lopes: Tá, então eu posso fazer esse encadeamento. Eu vou digitar um número aqui.
+
+518
+01:16:40.930 --> 01:16:46.390
+Matheus Ramos: Eu só acho que vai dar erro ali, porque o diferente ali no exercício.
+
+519
+01:16:46.390 --> 01:16:47.890
+Gesiel Lopes: Aqui. Exato,
+
+520
+01:16:51.440 --> 01:16:58.549
+Gesiel Lopes: pronto, mas ele está na fila. Ele ainda está executando. Ele ainda nem executou.
+
+521
+01:16:59.810 --> 01:17:11.559
+Gesiel Lopes: Observe que eu já alterei para ser certo, mas mesmo assim ele vai dar erro. Por quê? Porque o que foi executado foi com o erro.
+
+522
+01:17:12.400 --> 01:17:14.040
+Gesiel Lopes: Não, deixa o.
+
+523
+01:17:14.780 --> 01:17:16.759
+Gesiel Lopes: O Deep note ainda
+
+524
+01:17:28.810 --> 01:17:30.200
+Gesiel Lopes: e aí para a gente
+
+525
+01:17:30.370 --> 01:17:37.030
+Gesiel Lopes: ganhar tempo. Como ainda tem duas coisas que eu vou falar, que aí o primeiro que eu estou com o meu roteiro.
+
+526
+01:17:37.690 --> 01:17:40.879
+Gesiel Lopes: Eu vou só colocar o código que eu já tenho aqui.
+
+527
+01:17:56.870 --> 01:18:07.510
+Gesiel Lopes: Ele deu cada sintax lado diferente como foi colocado. Então, novamente, vou executar aqui. Vou digitar um número agora. Sim, vamos supor que eu digite sete
+
+528
+01:18:10.070 --> 01:18:15.380
+Gesiel Lopes: o outro número que eu vou digitar vai ser o nove, tá?
+
+529
+01:18:16.890 --> 01:18:22.669
+Gesiel Lopes: Então, independentemente aqui, esse valor aqui automaticamente. Olha só,
+
+530
+01:18:23.160 --> 01:18:27.010
+Gesiel Lopes: Bora fazer aqui o teste que a gente chama de teste de mesa.
+
+531
+01:18:28.010 --> 01:18:30.500
+Gesiel Lopes: E aqui, só para mostrar para vocês
+
+532
+01:18:30.830 --> 01:18:37.439
+Gesiel Lopes: o teste de mesa que eu falei para vocês. Teste de mesa.
+
+533
+01:18:41.040 --> 01:18:47.150
+Gesiel Lopes: Observe que o n um. Eu vou chamar só de n um que eu digitei foi,
+
+534
+01:18:47.650 --> 01:18:51.710
+Gesiel Lopes: eu nem lembro. Acho que foi um, né que eu digitei.
+
+535
+01:18:53.140 --> 01:18:57.469
+Gesiel Lopes: O n2 foi nove.
+
+536
+01:18:58.160 --> 01:19:05.739
+Gesiel Lopes: Então observem que aqui, no primeiro teste, aqui ele vai ser falso.
+
+537
+01:19:06.930 --> 01:19:09.650
+Gesiel Lopes: E aqui vai ser verdadeiro.
+
+538
+01:19:09.770 --> 01:19:12.549
+Gesiel Lopes: Mas a expressão vai ser:
+
+539
+01:19:14.300 --> 01:19:19.829
+Gesiel Lopes: ela vai ser falsa porque um pelo menos é verdadeiro como eu estou usando o operador, entende?
+
+540
+01:19:20.140 --> 01:19:20.960
+Gesiel Lopes: Tá?
+
+541
+01:19:21.310 --> 01:19:28.030
+Gesiel Lopes: Vou agora digitar aqui o N3 vou mostrar para vocês. Eu vou colocar cinco.
+
+542
+01:19:29.850 --> 01:19:32.329
+Gesiel Lopes: Então eu vou colocar quatro para ser diferente.
+
+543
+01:19:33.320 --> 01:19:36.380
+Gesiel Lopes: E o n4
+
+544
+01:19:36.990 --> 01:19:42.790
+Gesiel Lopes: observe que quando o N for igual a quatro, ele é diferente. Então isso aqui já vai ser verdadeiro.
+
+545
+01:19:43.270 --> 01:19:52.760
+Gesiel Lopes: E o n quatro igual a nove. Isso aqui também vai ser verdadeiro. Então, como eu estou usando o.
+
+546
+01:19:53.100 --> 01:19:58.980
+Gesiel Lopes: O operador, Andy, a operação vai ser verdadeiro
+
+547
+01:19:59.470 --> 01:20:03.229
+Gesiel Lopes: como aqui. Eu estou usando o. O
+
+548
+01:20:03.720 --> 01:20:12.490
+Gesiel Lopes: o resultado, como eu tenho pelo menos um verdadeiro. O resultado vai ser verdadeiro. Então vamos ver se aparece o resultado,
+
+549
+01:20:13.170 --> 01:20:14.760
+Gesiel Lopes: então vou fechar aqui.
+
+550
+01:20:14.910 --> 01:20:16.649
+Gesiel Lopes: Vou deixar a anotação.
+
+551
+01:20:17.880 --> 01:20:26.050
+Gesiel Lopes: Então eu já digitei o número. Vou digitar agora o quatro e o nove.
+
+552
+01:20:29.730 --> 01:20:33.639
+Gesiel Lopes: Então ele vai dizer teste realizado como a gente havia previsto.
+
+553
+01:20:34.010 --> 01:20:46.709
+Gesiel Lopes: E aí só vou colocar aqui. Digite, digite n um em um n2 aí fica mais fácil.
+
+554
+01:20:50.570 --> 01:20:56.290
+Gesiel Lopes: Três e quatro, tá?
+
+555
+01:20:56.700 --> 01:21:00.720
+Gesiel Lopes: Vou fazer aqui um outro teste. Mais um teste, tá,
+
+556
+01:21:01.100 --> 01:21:07.330
+Gesiel Lopes: mais um teste e aí, pessoal, vocês podem fazer os testes aí, que vocês acharem melhor.
+
+557
+01:21:07.590 --> 01:21:11.329
+Gesiel Lopes: Vou fazer mais um teste aqui, porque aqui foi o meu primeiro.
+
+558
+01:21:11.830 --> 01:21:13.170
+Gesiel Lopes: Um segundo.
+
+559
+01:21:16.050 --> 01:21:21.550
+Gesiel Lopes: O n1 vou considerar como sendo é.
+
+560
+01:21:24.850 --> 01:21:27.150
+Gesiel Lopes: Eu vou considerar como sendo
+
+561
+01:21:30.370 --> 01:21:40.070
+Gesiel Lopes: já que foi verdadeiro como sendo três, o n dois igual a um.
+
+562
+01:21:40.550 --> 01:21:43.379
+Gesiel Lopes: Então aqui vai ser falso.
+
+563
+01:21:43.560 --> 01:21:48.370
+Gesiel Lopes: O n três. Vou considerar como cinco
+
+564
+01:21:49.000 --> 01:21:51.859
+Gesiel Lopes: e o n4 vou considerar como dez.
+
+565
+01:21:52.220 --> 01:21:54.650
+Gesiel Lopes: Aqui o resultado também vai ser falso.
+
+566
+01:21:55.000 --> 01:21:59.490
+Gesiel Lopes: E como eu estou usando o, ou os dois são falsos,
+
+567
+01:21:59.620 --> 01:22:03.149
+Gesiel Lopes: o resultado deles dois vai ser falso.
+
+568
+01:22:03.350 --> 01:22:08.310
+Gesiel Lopes: Então a mensagem que vai aparecer é teste não realizado.
+
+569
+01:22:08.480 --> 01:22:10.849
+Gesiel Lopes: Então vamos ver se isso é verdade.
+
+570
+01:22:11.020 --> 01:22:16.150
+Gesiel Lopes: Então vou executar agora o código da célula de novo, tá?
+
+571
+01:22:16.640 --> 01:22:28.360
+Gesiel Lopes: Então vou digitar três um cinco e o dez.
+
+572
+01:22:28.530 --> 01:22:29.800
+Gesiel Lopes: Então observe.
+
+573
+01:22:30.400 --> 01:22:40.979
+Gesiel Lopes: Teste não realizado porque o resultado foi falso. Então isso aqui é o que a gente chama de teste chinesa, porque a gente vai atribuindo valores e vai realizando, passo a passo
+
+574
+01:22:41.120 --> 01:22:46.989
+Gesiel Lopes: do algoritmo. Isso é algo muito interessante de ser utilizado.
+
+575
+01:22:47.140 --> 01:22:53.780
+Gesiel Lopes: Tá quarto ponto, que a gente tem a.
+
+576
+01:22:54.190 --> 01:23:00.809
+Gesiel Lopes: O quarto ponto é que o Python considera certos valores como falso.
+
+577
+01:23:01.240 --> 01:23:05.319
+Gesiel Lopes: E aqui eu coloquei alguns que a gente já está acostumado.
+
+578
+01:23:05.770 --> 01:23:09.180
+Gesiel Lopes: Então o falso. Ele nunca vai ser executado.
+
+579
+01:23:10.210 --> 01:23:22.230
+Gesiel Lopes: O nome para o Python significa vazio. Nada também é. É. É
+
+580
+01:23:22.870 --> 01:23:29.250
+Gesiel Lopes: isso. Aqui. O falso já é falso. O Noni, o pai. Tu considera como falso, tá?
+
+581
+01:23:34.150 --> 01:23:36.200
+Gesiel Lopes: Não vou nem usar o número. Por enquanto.
+
+582
+01:23:36.310 --> 01:23:39.330
+Gesiel Lopes: Ele tem um Nan, o zero.
+
+583
+01:23:39.770 --> 01:23:51.639
+Gesiel Lopes: O Python considera o zero como falso. Então, se eu tiver qualquer operação que retorne zero e eu utilize esse resultado para fazer um teste condicional,
+
+584
+01:23:52.430 --> 01:23:56.400
+Gesiel Lopes: ele vai considerar como sendo zero
+
+585
+01:23:56.900 --> 01:24:01.739
+Gesiel Lopes: e a String vazia. Só uma estringe vazia, né?
+
+586
+01:24:01.900 --> 01:24:04.949
+Gesiel Lopes: Ele também considera como falso.
+
+587
+01:24:05.070 --> 01:24:08.840
+Gesiel Lopes: Ele também considera a String vazia como falso.
+
+588
+01:24:09.190 --> 01:24:17.190
+Gesiel Lopes: Então esses três. Aliás, esses quatro testes, esses prints nunca serão executados,
+
+589
+01:24:18.340 --> 01:24:24.800
+Gesiel Lopes: porque o Python identifica isso como sendo falso, tá?
+
+590
+01:24:25.430 --> 01:24:34.290
+Gesiel Lopes: E qualquer outro valor. O Python considera como True. Então, um, dois, três, quatro, cinco.
+
+591
+01:24:34.430 --> 01:24:37.540
+Gesiel Lopes: O pai, tu considera como True.
+
+592
+01:24:38.100 --> 01:24:41.370
+Gesiel Lopes: Então ele considera isso aqui como True
+
+593
+01:24:41.510 --> 01:24:45.930
+Gesiel Lopes: e uma String não vazia. Ele também considera como um True.
+
+594
+01:24:47.100 --> 01:24:49.289
+Gesiel Lopes: Então, se eu executar. Olha só.
+
+595
+01:24:52.150 --> 01:24:54.279
+Gesiel Lopes: Ele deu erro de Sintax. E aonde?
+
+596
+01:24:57.460 --> 01:24:58.720
+Gesiel Lopes: Linha dois.
+
+597
+01:24:59.850 --> 01:25:00.670
+Gesiel Lopes: Ah, tá.
+
+598
+01:25:02.570 --> 01:25:04.070
+Gesiel Lopes: Que não estava comentado.
+
+599
+01:25:06.900 --> 01:25:14.469
+Gesiel Lopes: Então observe que ele só executou esse If. E esse If, os demais testes, ele não executou
+
+600
+01:25:14.610 --> 01:25:23.030
+Gesiel Lopes: então executado texto só para garantir para vocês o texto executado: um.
+
+601
+01:25:23.530 --> 01:25:29.520
+Gesiel Lopes: E aqui, ó String vazia.
+
+602
+01:25:34.350 --> 01:25:39.290
+Gesiel Lopes: Zero Noni.
+
+603
+01:25:40.160 --> 01:25:43.139
+Gesiel Lopes: E o falso nunca vai hesitar, né? E o falso.
+
+604
+01:25:44.080 --> 01:25:45.600
+Gesiel Lopes: Então observem que
+
+605
+01:25:45.960 --> 01:26:00.770
+Gesiel Lopes: ele nunca vai executar nenhum desses Prints porque ele interpreta como falso o Python. Então você não necessariamente. Precisa usar um valor lógico para poder fazer um teste condicional.
+
+606
+01:26:01.950 --> 01:26:11.299
+Gesiel Lopes: Beleza, e o último aí foi respondendo uma pergunta aí que foi feita no final da aula, tá?
+
+607
+01:26:12.160 --> 01:26:15.040
+Gesiel Lopes: Que é uma expressão que a gente chama de match.
+
+608
+01:26:15.620 --> 01:26:23.340
+Gesiel Lopes: Que é isso tá que é uma maneira de eu criar.
+
+609
+01:26:23.800 --> 01:26:25.479
+Gesiel Lopes: E aí aqui, eu vou pegar
+
+610
+01:26:25.820 --> 01:26:32.810
+Gesiel Lopes: a Pep. Que definiu ele. Então, o Python, ele tem uma
+
+611
+01:26:33.000 --> 01:26:36.849
+Gesiel Lopes: que é uma proposta de melhoramento do Python.
+
+612
+01:26:37.230 --> 01:26:41.499
+Gesiel Lopes: Existe uma Pep que foi a Pep seiscentos e trinta e seis
+
+613
+01:26:41.560 --> 01:26:59.559
+Gesiel Lopes: que introduziu e foi aprovado, o que a gente chama de estrutural patern matching, que é o match case o que a gente chama de Match case. Então ele foi adicionado na linguagem Python, a partir da versão trezentos e dez.
+
+614
+01:26:59.790 --> 01:27:10.060
+Gesiel Lopes: Então, no três dez em diante, tá,
+
+615
+01:27:10.650 --> 01:27:15.089
+Gesiel Lopes: eu vou colocar aqui maior ou igual ao trezentos e dez.
+
+616
+01:27:16.980 --> 01:27:21.100
+Gesiel Lopes: A gente pode aplicar essa operação. Tá bom?
+
+617
+01:27:22.780 --> 01:27:28.400
+Gesiel Lopes: Que o Match case. Basicamente, ele vai ter essa estrutura aqui,
+
+618
+01:27:30.030 --> 01:27:35.489
+Gesiel Lopes: então eu vou copiar isso aqui. Jogar lá para o one note, que fica mais fácil da gente
+
+619
+01:27:38.740 --> 01:27:39.950
+Gesiel Lopes: explicar.
+
+620
+01:27:58.530 --> 01:28:00.860
+Gesiel Lopes: Vou chamar aqui de expressão
+
+621
+01:28:05.360 --> 01:28:06.360
+Gesiel Lopes: X.
+
+622
+01:28:09.320 --> 01:28:15.020
+Gesiel Lopes: E aqui. Eu vou colocar um bloco de bloco de código
+
+623
+01:28:19.510 --> 01:28:20.620
+Gesiel Lopes: Y.
+
+624
+01:28:29.520 --> 01:28:32.230
+Gesiel Lopes: Bloco de código, tá?
+
+625
+01:28:32.530 --> 01:28:37.150
+Gesiel Lopes: Então a estrutura do Yankee
+
+626
+01:28:38.530 --> 01:28:49.910
+Gesiel Lopes: por diante aqui. Eu posso ter quantos cases eu tiver. Então o Match case do Python? Ele faz um teste parecido com o teste
+
+627
+01:28:50.100 --> 01:28:58.630
+Gesiel Lopes: do If, só que nesse caso, aqui ele vai fazer o que a gente chama de Match, tá?
+
+628
+01:28:59.140 --> 01:29:01.569
+Gesiel Lopes: Então aqui vai ser uma expressão
+
+629
+01:29:02.490 --> 01:29:07.289
+Gesiel Lopes: que aí essa expressão aqui, pessoal. Pode ser qualquer valor.
+
+630
+01:29:08.270 --> 01:29:10.760
+Gesiel Lopes: Então aqui eu posso ter um.
+
+631
+01:29:11.420 --> 01:29:13.570
+Gesiel Lopes: É um.
+
+632
+01:29:14.550 --> 01:29:19.020
+Gesiel Lopes: Vou colocar aqui um valor entre aspas, tá
+
+633
+01:29:21.440 --> 01:29:34.020
+Gesiel Lopes: aqui se o valor casar. Por isso que ele chama de case bike. Ó, se o valor
+
+634
+01:29:37.960 --> 01:29:47.360
+Gesiel Lopes: casar entre aspas também nesse caso foi igual ao Case.
+
+635
+01:29:47.750 --> 01:29:51.880
+Gesiel Lopes: Ele vai executar esse bloco de código.
+
+636
+01:29:52.900 --> 01:29:58.010
+Gesiel Lopes: Bloco Eze.
+
+637
+01:29:59.720 --> 01:30:02.180
+Gesiel Lopes: Obrigado, tá?
+
+638
+01:30:03.040 --> 01:30:09.600
+Gesiel Lopes: Se a expressão não casar com X, ele faz um outro teste.
+
+639
+01:30:10.090 --> 01:30:14.829
+Gesiel Lopes: E aí o mesmo raciocínio. Se o valor
+
+640
+01:30:15.140 --> 01:30:25.470
+Gesiel Lopes: casar com Y, ele executa esse bloco de código. Então o Match Case ele
+
+641
+01:30:26.120 --> 01:30:38.329
+Gesiel Lopes: pode ser utilizado. Claro, dependendo da situação como um substituto mais elegante para o encadeamento de ifes,
+
+642
+01:30:39.090 --> 01:30:53.549
+Gesiel Lopes: pode ser utilizado como encadeamento de ifes. E aqui eu vou colocar a forma padrão dele. Vamos supor que eu vou fazer aqui dias da semana só para a gente finalizar semana.
+
+643
+01:30:55.320 --> 01:31:00.450
+Gesiel Lopes: E aqui, ó o int input
+
+644
+01:31:05.810 --> 01:31:10.120
+Gesiel Lopes: digite o dia da semana.
+
+645
+01:31:13.800 --> 01:31:18.410
+Gesiel Lopes: E aqui ó de um a sete.
+
+646
+01:31:21.950 --> 01:31:30.860
+Gesiel Lopes: E aqui. Olha só, eu faço o Match Case. Por que eu posso executar o Match Case aqui no
+
+647
+01:31:31.300 --> 01:31:37.930
+Gesiel Lopes: no Deep Note? Porque a versão do que eu estou utilizando do Deep Note é igual a
+
+648
+01:31:38.060 --> 01:31:39.360
+Gesiel Lopes: o trezentos e onze.
+
+649
+01:31:39.780 --> 01:31:43.159
+Gesiel Lopes: Então essa estrutura Match Case já existe.
+
+650
+01:31:43.610 --> 01:31:59.809
+Gesiel Lopes: Então vocês só precisam ter cuidado. A gente só precisa ter cuidado se eu estou executando na versão três.dez ou superior. Se não estiver executando. Se o meu pai tu não for três.dez ou superior, o Match case não vai funcionar.
+
+651
+01:32:00.130 --> 01:32:06.119
+Gesiel Lopes: Então faço Match a expressão que nesse caso, aqui vai ser dia da semana.
+
+652
+01:32:06.670 --> 01:32:10.479
+Gesiel Lopes: Dois pontos. E aqui eu faço o meu case.
+
+653
+01:32:11.090 --> 01:32:19.590
+Gesiel Lopes: Se for um case um, eu printo.
+
+654
+01:32:21.580 --> 01:32:28.140
+Gesiel Lopes: Hoje é segundo domingo.
+
+655
+01:32:30.610 --> 01:32:36.330
+Gesiel Lopes: Não vou botar a segunda segunda feira.
+
+656
+01:32:36.640 --> 01:32:39.439
+Gesiel Lopes: E aí, só para a gente agilizar,
+
+657
+01:32:39.640 --> 01:32:42.080
+Gesiel Lopes: talvez esse não foi o melhor exemplo.
+
+658
+01:32:42.380 --> 01:32:46.519
+Gesiel Lopes: Tem que digitar bastante, é porque é o que estava no meu roteiro.
+
+659
+01:32:46.990 --> 01:32:57.580
+Gesiel Lopes: Dois, três, quatro, cinco, seis, sete.
+
+660
+01:32:57.800 --> 01:32:59.140
+Gesiel Lopes: Hoje é
+
+661
+01:33:02.560 --> 01:33:04.320
+Gesiel Lopes: domingo.
+
+662
+01:33:06.300 --> 01:33:10.490
+Gesiel Lopes: Hoje é sábado.
+
+663
+01:33:14.850 --> 01:33:17.900
+Gesiel Lopes: Hoje é sexta.
+
+664
+01:33:19.190 --> 01:33:24.159
+Gesiel Lopes: Hoje é dia. Hoje é dia de Breja.
+
+665
+01:33:26.630 --> 01:33:29.290
+Gesiel Lopes: Vai ter pingus. Que vai dizer que é todo dia, né?
+
+666
+01:33:29.970 --> 01:33:32.670
+Gesiel Lopes: Quinta e aí?
+
+667
+01:33:33.410 --> 01:33:38.410
+Gesiel Lopes: Hoje é quarta.
+
+668
+01:33:43.380 --> 01:33:44.809
+Gesiel Lopes: Hoje é disso.
+
+669
+01:33:45.810 --> 01:33:50.020
+Gesiel Lopes: Então, se eu executar esse código aqui. Olha só,
+
+670
+01:33:51.690 --> 01:33:57.929
+Gesiel Lopes: serve que eu não fico precisando dia da semana. If: isso if aquilo ou um monte de alife.
+
+671
+01:33:58.540 --> 01:34:13.159
+Gesiel Lopes: É o Switch Case. Alguém comentou aí? É o Switch case de outras linguagens de programação. É porque ele não existia na linguagem. Pai. É justamente esse comando. Então vamos supor. Digitei
+
+672
+01:34:13.500 --> 01:34:15.370
+Gesiel Lopes: cinco.
+
+673
+01:34:16.400 --> 01:34:22.599
+Gesiel Lopes: Então ele vai digitar. Ele vai aparecer porque o dia da semana casou com cinco.
+
+674
+01:34:22.820 --> 01:34:27.149
+Gesiel Lopes: Então ele digita o dia da semana. Hoje é dia de breja.
+
+675
+01:34:27.370 --> 01:34:34.839
+Gesiel Lopes: Se eu digitar um tá, observe que ele.
+
+676
+01:34:35.010 --> 01:34:37.990
+Gesiel Lopes: Ele executa. Hoje é segunda feira.
+
+677
+01:34:38.320 --> 01:34:52.729
+Gesiel Lopes: A vantagem do E é que só abrindo parênteses, já que comentaram depois vocês podem pesquisar a vantagem do match case é que, diferente do switch case
+
+678
+01:34:52.880 --> 01:35:04.930
+Gesiel Lopes: quando eu executo um case. Por exemplo, usando essa estrutura de linguagem, essa estrutura, em outra linguagem. Eu preciso definir um ponto de parada, senão ele executa todos os demais abaixo.
+
+679
+01:35:05.340 --> 01:35:12.490
+Gesiel Lopes: Por isso que ele chama de patern matching diferente do Switch Case. Mas a ideia é igual,
+
+680
+01:35:12.600 --> 01:35:16.549
+Gesiel Lopes: beleza. E se eu digitar um número diferente?
+
+681
+01:35:16.980 --> 01:35:21.489
+Gesiel Lopes: Por exemplo, dez, ele não casou em nenhum médico.
+
+682
+01:35:21.650 --> 01:35:23.710
+Gesiel Lopes: Então ele não executa.
+
+683
+01:35:24.460 --> 01:35:28.590
+Gesiel Lopes: Então o Match Case é uma forma
+
+684
+01:35:28.850 --> 01:35:47.670
+Gesiel Lopes: de você deixar o código de você fazer vários testes condicionais sem fazer o uso de ifes. Então o código fica bem mais legível. Fica mais limpo, como foi comentado por alguém
+
+685
+01:35:48.200 --> 01:35:49.909
+Gesiel Lopes: no nosso último encontro.
+
+686
+01:35:53.910 --> 01:35:58.350
+Gesiel Lopes: Exatamente? Bem mais simples do que e fiel. Sim, Lucas,
+
+687
+01:35:58.690 --> 01:36:12.400
+Gesiel Lopes: muito mais. Por isso que eu deixei ele no final, e aí a gente no próximo encontro semana que vem. Eu coloco as outras combinações que a gente pode fazer com o Match Case, que é bem legal.
+
+688
+01:36:12.660 --> 01:36:17.970
+Gesiel Lopes: Mas eu recomendo vocês darem uma olhada já de antemão aqui na Pepe,
+
+689
+01:36:18.170 --> 01:36:36.020
+Gesiel Lopes: que traz toda a definição do Match case que aí você pode fazer. Você pode encadear com outras instruções. Observe que aqui eu fiz só um ifzinho bem simples. Mas você pode fazer expressões bem mais complexas,
+
+690
+01:36:36.200 --> 01:36:39.780
+Gesiel Lopes: bem mais sofisticadas. Beleza.
+
+691
+01:36:40.330 --> 01:36:48.249
+Gesiel Lopes: Então é isso, pessoal que eu tinha preparado para hoje. Espero aí que vocês estejam gostando no Fagesiel
+
+692
+01:36:48.390 --> 01:36:57.530
+Gesiel Lopes: é, a gente volta a repetir. A ideia não é esgotar o conteúdo. E a ideia não é fazer com que vocês aprendam tudo
+
+693
+01:36:58.290 --> 01:37:01.839
+Gesiel Lopes: somente com os nossos encontros. Por isso que é importante
+
+694
+01:37:02.050 --> 01:37:04.900
+Gesiel Lopes: rever as aulas, sempre que possível,
+
+695
+01:37:05.890 --> 01:37:09.830
+Gesiel Lopes: estudar, pegar o material disponibilizado na
+
+696
+01:37:09.950 --> 01:37:15.320
+Gesiel Lopes: trilha de estudo de vocês, da trilha de aprendizagem e praticar
+
+697
+01:37:15.820 --> 01:37:24.459
+Gesiel Lopes: às vezes, no nosso encontro, você não dá tempo de você digitar o código e explicar e esperar eu explicar.
+
+698
+01:37:24.860 --> 01:37:43.749
+Gesiel Lopes: Às vezes está esse Delay justamente porque eu preciso passar logo esse conteúdo. Se eu fosse esperar, todos vocês. A gente tem mais de a. Gente. Já teve mais de sessenta alunos aqui online. Então é muita gente. Se eu for esperar. Todo mundo. A gente não termina o conteúdo, por isso que as aulas ficam gravadas. E você pode repetir isso.
+
+699
+01:37:43.880 --> 01:37:57.949
+Gesiel Lopes: Então, em casa, digitem gesiel, digita baixa o Pdf e digita. Isso ajuda vocês a memorizar, a treinar e depois podem praticar fazendo demais exercícios,
+
+700
+01:37:58.100 --> 01:38:16.759
+Gesiel Lopes: beleza, pessoal, então é isso, obrigado. A gente passou hoje do horário. Mais sete minutos. Estamos no lucro. Ainda. Qualquer dúvida. É só chamar lá no Ifnet online, que a gente tenta ajudá los da melhor forma possível. Bom descanso. E até a próxima semana
+
+701
+01:38:17.110 --> 01:38:18.240
+Gesiel Lopes: fui.
+
+702
+01:38:18.240 --> 01:38:19.640
+Ramon Telles da Silva: Professor Tamo, junto.
+

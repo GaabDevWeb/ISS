@@ -1,0 +1,2466 @@
+WEBVTT
+
+1
+00:00:08.100 --> 00:00:14.239
+Gesiel Lopes: Opa, pessoal. Boa noite. Vou só beber aqui uma água e já já eu retorno, beleza.
+
+2
+00:04:24.590 --> 00:04:26.800
+Gesiel Lopes: Então, vamos lá, pessoal. Vamos começar.
+
+3
+00:04:27.560 --> 00:04:38.969
+Gesiel Lopes: Então. Antes de mais nada, muito boa noite. Seja muito bem vindo. Muito bem vindo a mais um encontro aqui da disciplina de Python para processamento de dados aqui do Instituto Ifnet. Aqui quem vos fala? Gisele Lopes.
+
+4
+00:04:39.680 --> 00:04:44.690
+Gesiel Lopes: Se você que estiver ao vivo aí e quiser dar um feedback. Vocês conseguem me ouvir? Bem,
+
+5
+00:04:45.790 --> 00:04:54.310
+Gesiel Lopes: me ver? Bem aí você que estiver assistindo a gravação também. Fique à vontade. Então vamos lá,
+
+6
+00:04:58.850 --> 00:05:00.520
+Gesiel Lopes: beleza.
+
+7
+00:05:00.880 --> 00:05:05.789
+Gesiel Lopes: Então, antes de a gente passar para o notebook, e ele também, a gente também não.
+
+8
+00:05:05.970 --> 00:05:07.640
+Gesiel Lopes: Não expandir muito.
+
+9
+00:05:08.160 --> 00:05:11.179
+Gesiel Lopes: Então, no nosso último encontro.
+
+10
+00:05:13.490 --> 00:05:15.730
+Gesiel Lopes: A gente trabalhou.
+
+11
+00:05:15.970 --> 00:05:34.369
+Gesiel Lopes: A gente vem trabalhando principalmente nessas duas primeiras etapas, alguns conceitos de Strings, recapitulando algumas funções de String, e aí a gente está trabalhando essa recapitulação e um problema bem clássico, em algo que é bastante útil,
+
+12
+00:05:34.450 --> 00:05:41.680
+Gesiel Lopes: que é a parte da ciência da computação que lida com a linguagem natural escrita.
+
+13
+00:05:41.900 --> 00:05:46.920
+Gesiel Lopes: Tá, e aí a gente viu algumas etapas
+
+14
+00:05:47.110 --> 00:05:51.840
+Gesiel Lopes: que quando a gente quer analisar algoritmicamente um texto
+
+15
+00:05:52.690 --> 00:05:58.160
+Gesiel Lopes: para poder converter adequadamente esse nosso texto
+
+16
+00:05:58.390 --> 00:06:02.960
+Gesiel Lopes: em algo que possa ser compreendido por um algoritmo.
+
+17
+00:06:03.300 --> 00:06:12.280
+Gesiel Lopes: A gente precisa realizar etapas de preparação desse meu texto, que são etapas que a gente chama de pré processamento.
+
+18
+00:06:12.400 --> 00:06:20.750
+Gesiel Lopes: E aí, dentro dessa área, ela define algumas etapas, e aí a gente aplicou algumas etapas
+
+19
+00:06:20.750 --> 00:06:36.549
+Gesiel Lopes: de pré processamento que aí, nesse caso, em particular, a gente trabalhou com a normalização retirada de algumas palavras que não têm resultado semântico, que podem não ter resultado semântico
+
+20
+00:06:36.660 --> 00:06:49.879
+Gesiel Lopes: e a separação, a construção de unidades menores desse meu texto, que eu quero analisar. Então a gente vem trabalhando aqui com o texto da ata do Copom.
+
+21
+00:06:50.480 --> 00:06:54.609
+Gesiel Lopes: E aí a gente fez algumas operações,
+
+22
+00:06:55.010 --> 00:07:02.449
+Gesiel Lopes: em particular, a gente declarou uma função que realizasse esse pré processamento.
+
+23
+00:07:03.440 --> 00:07:09.270
+Gesiel Lopes: E no final, a gente viu algumas funções de validação de tipo.
+
+24
+00:07:10.520 --> 00:07:16.450
+Gesiel Lopes: E no final, aqui, deixa eu passar do nosso último encontro,
+
+25
+00:07:17.230 --> 00:07:27.690
+Gesiel Lopes: a gente ficou de criar uma versão melhorada, uma versão melhorada da nossa função de pré processamento,
+
+26
+00:07:28.530 --> 00:07:31.390
+Gesiel Lopes: considerando. E aqui eu vou
+
+27
+00:07:34.970 --> 00:07:40.930
+Gesiel Lopes: só. Está. Deixa eu ver. Restaurar aqui as variáveis, que foi
+
+28
+00:07:41.310 --> 00:07:51.019
+Gesiel Lopes: uma versão dois da nossa função de pré processamento que pudesse, por exemplo, realizar.
+
+29
+00:07:51.200 --> 00:07:58.300
+Gesiel Lopes: Vou fechar isso aqui. Vamos excluir, tá?
+
+30
+00:07:58.670 --> 00:08:04.820
+Gesiel Lopes: Que pudesse, por exemplo, pegar esse texto que a gente foi lá no site do
+
+31
+00:08:05.490 --> 00:08:16.860
+Gesiel Lopes: do Banco Central, que é o texto da Ata dois mil e vinte e cinco, que pudesse atestar esse nosso texto.
+
+32
+00:08:17.160 --> 00:08:23.810
+Gesiel Lopes: Porque se eu executar esse código aqui, e se eu pegar
+
+33
+00:08:24.600 --> 00:08:27.879
+Gesiel Lopes: a função chamar direto a minha função?
+
+34
+00:08:28.120 --> 00:08:30.489
+Gesiel Lopes: Cadê a função. Passei vestígio.
+
+35
+00:08:35.730 --> 00:08:39.780
+Gesiel Lopes: Que foi a primeira função é essa. Aqui.
+
+36
+00:08:43.450 --> 00:08:46.209
+Gesiel Lopes: Deixa eu só copiar rapidamente. Aí eu vou explicar.
+
+37
+00:08:46.970 --> 00:08:49.209
+Gesiel Lopes: A gente acabou. Não finalizando.
+
+38
+00:08:50.150 --> 00:08:52.689
+Gesiel Lopes: Mas se eu quiser fazer essa análise
+
+39
+00:08:53.860 --> 00:09:03.120
+Gesiel Lopes: com a primeira versão aqui, com essa variável, observe, ela vai fazer algo e
+
+40
+00:09:04.130 --> 00:09:16.140
+Gesiel Lopes: ela consegue tokenizar. Mas observem que ela cria alguns tokens bem esquisitos para a gente. E em particular, eu vou imprimir somente a lista de Tokens.
+
+41
+00:09:16.440 --> 00:09:25.409
+Gesiel Lopes: Então observem que a lista de tokens aí eu vou até colocar em um print e colocar como resultado que ele vai colocar um embaixo do outro.
+
+42
+00:09:25.620 --> 00:09:33.610
+Gesiel Lopes: Então observe. Eu tenho aqui alguns tokens meio esquisitos, Div Id.
+
+43
+00:09:34.070 --> 00:09:40.790
+Gesiel Lopes: Olha só alguns ali não conseguiu separar direito ambiente, Claire.
+
+44
+00:09:41.000 --> 00:09:41.710
+Gesiel Lopes: Tá bom.
+
+45
+00:09:42.090 --> 00:09:44.920
+Gesiel Lopes: Então como é que a gente consegue resolver esse problema?
+
+46
+00:09:45.160 --> 00:09:49.090
+Gesiel Lopes: Uma das maneiras é tratando isso, cada caso.
+
+47
+00:09:49.630 --> 00:10:02.160
+Gesiel Lopes: E aí o que eu fiz foi literalmente melhorar essa versão criando a versão V2 tá?
+
+48
+00:10:03.180 --> 00:10:10.180
+Gesiel Lopes: E aí, às vezes aqui. Ó, eu vou comentar, tá?
+
+49
+00:10:10.300 --> 00:10:15.279
+Gesiel Lopes: O que eu fiz foi adicionar na minha lista
+
+50
+00:10:15.590 --> 00:10:22.329
+Gesiel Lopes: de validações algumas outras validações. Eu vou até colocar essas.
+
+51
+00:10:28.260 --> 00:10:31.240
+Gesiel Lopes: Eu vou deixar, Excelência, tá?
+
+52
+00:10:31.560 --> 00:10:40.100
+Gesiel Lopes: Observe que quando eu comentei essas instruções, o V2 vai literalmente produzir o mesmo resultado.
+
+53
+00:10:40.350 --> 00:10:43.320
+Gesiel Lopes: Tá, ó Dive e Dive.
+
+54
+00:10:43.590 --> 00:10:52.720
+Gesiel Lopes: E aí só para a gente. Também não vou pedir para ele mostrar só os dez primeiros caracteres tá
+
+55
+00:10:52.880 --> 00:10:54.479
+Gesiel Lopes: fazendo aqui os slides?
+
+56
+00:10:54.790 --> 00:11:04.629
+Gesiel Lopes: Só os dez primeiros caracteres, ó div cupom. Então, para a gente poder facilitar o pré processamento. Então a primeira coisa que eu faço,
+
+57
+00:11:05.020 --> 00:11:05.840
+Gesiel Lopes: tá?
+
+58
+00:11:06.770 --> 00:11:12.460
+Gesiel Lopes: A primeira coisa que eu faço aqui é substituir aonde tem vírgula
+
+59
+00:11:12.640 --> 00:11:31.550
+Gesiel Lopes: por espaço vazio. Eu faço a normalização e a tokenização. E aí, para cada token, eu substituo o espaço, aliás, a vírgula por nada e o ponto por nada. E o ponto e vírgula também, por nada. Para cada Token,
+
+60
+00:11:31.890 --> 00:11:50.630
+Gesiel Lopes: só para que eu tenha, vai ter alguns toques que vai ter, tipo cenário, ponto ou cenário, vírgula ou cenário. Alguma ponto, vírgula ou ponto e vírgula, eu quero tirar isso do final. Então inclusive daqui. Esse ponto aqui deve sumir.
+
+61
+00:11:50.720 --> 00:11:55.160
+Gesiel Lopes: Então, quando eu faço essa primeira manipulação,
+
+62
+00:11:55.390 --> 00:12:03.169
+Gesiel Lopes: eu resolvo o problema da pontuação de não ter pontos Opa, de não ter pontos na minha String.
+
+63
+00:12:07.360 --> 00:12:08.820
+Gesiel Lopes: Ele fez. Mais
+
+64
+00:12:13.330 --> 00:12:15.839
+Gesiel Lopes: e como é que eu faço isso.
+
+65
+00:12:16.150 --> 00:12:26.569
+Gesiel Lopes: Eu simplesmente verifico se o Token finaliza com vírgula, com ponto ou com ponto e vírgula. Então eu retiro a pontuação,
+
+66
+00:12:26.750 --> 00:12:27.570
+Gesiel Lopes: tá
+
+67
+00:12:34.890 --> 00:12:40.699
+Gesiel Lopes: feito isso. A segunda operação que eu faço. Então ele já tirou os pontos.
+
+68
+00:12:41.060 --> 00:12:45.670
+Gesiel Lopes: A segunda operação que eu faço é.
+
+69
+00:12:46.650 --> 00:12:54.790
+Gesiel Lopes: É tirar todo e qualquer característica que foi inclusive essa validação que a gente fez, tá, que começa com:
+
+70
+00:12:55.020 --> 00:13:02.569
+Gesiel Lopes: e aí, aqui, no nosso encontro, eu coloquei ou. E aí por isso que ele estava trazendo o resultado não esperado.
+
+71
+00:13:02.920 --> 00:13:10.610
+Gesiel Lopes: Então o que eu vou fazer? Eu vou tirar todas as strings, todos os toques que começam com o menor
+
+72
+00:13:10.850 --> 00:13:16.049
+Gesiel Lopes: e terminem com maior. Porque, para mim, nas minhas análises,
+
+73
+00:13:16.140 --> 00:13:29.609
+Gesiel Lopes: isso aqui consiste em uma Tag html. Eu retiro possa ser que nem toda Tag Html possa ser que eu tenha token que não necessariamente. É uma tag Html, que começa com maior,
+
+74
+00:13:29.660 --> 00:13:38.460
+Gesiel Lopes: com menor e maior. Mas para facilitar a gente faz esse tratamento. Então, quando eu faço isso, tá?
+
+75
+00:13:39.120 --> 00:13:40.500
+Gesiel Lopes: E aplicam.
+
+76
+00:13:41.530 --> 00:13:48.019
+Gesiel Lopes: Então eu já começo a tirar tudo que tem. Que começa e termina com maior e menor.
+
+77
+00:13:55.130 --> 00:13:56.550
+Gesiel Lopes: Nosso Deep Dutch,
+
+78
+00:14:00.610 --> 00:14:15.039
+Gesiel Lopes: a segunda validação aqui. Deixa, eu vou já des comentar todas. Eu vou vendo com vocês. Analisando com vocês a segunda análise ou retirada de caracteres ou tratamento de caracteres que eu faço.
+
+79
+00:14:15.200 --> 00:14:20.530
+Gesiel Lopes: É onde tem. Ó essa stringa cléz igual a alguma coisa.
+
+80
+00:14:21.220 --> 00:14:26.840
+Gesiel Lopes: Isso aparece várias vezes. Clés igual a alguma coisa. Clés igual a alguma coisa.
+
+81
+00:14:28.130 --> 00:14:29.260
+Gesiel Lopes: O que eu faço?
+
+82
+00:14:29.930 --> 00:14:37.749
+Gesiel Lopes: Eu retiro, eu não considero. E como é que eu faço isso? Basicamente, eu uso a função Find
+
+83
+00:14:38.650 --> 00:14:48.940
+Gesiel Lopes: e busque qualquer String que comece com classe igual ou que tenha classe igual. E eu quero retirar.
+
+84
+00:14:49.080 --> 00:14:52.060
+Gesiel Lopes: E eu só vou considerar aqueles que ele não encontrar.
+
+85
+00:14:52.300 --> 00:15:08.999
+Gesiel Lopes: E quando é que ele não encontra? Quando o retorno do Find for menos um, então, toda vez qualquer Token cujo o Find retorne menos um, ou seja, não tenha class igual. Eu vou considerar como token válido
+
+86
+00:15:10.300 --> 00:15:27.899
+Gesiel Lopes: segunda validação que eu faço beleza. Observe, eu tirei ponto. Tirei tag string maluca. O segundo validação que eu faço aqui. Eu retiro todo e qualquer string numérica.
+
+87
+00:15:28.060 --> 00:15:31.870
+Gesiel Lopes: Tchau qualquer string numérica,
+
+88
+00:15:33.810 --> 00:15:44.619
+Gesiel Lopes: porque um número para eu transformar em uma análise. Eu tenho que levar em consideração um contexto um pouco maior
+
+89
+00:15:44.790 --> 00:15:51.289
+Gesiel Lopes: esse número, esse token numérico, não gerar uma confusão
+
+90
+00:15:52.070 --> 00:15:57.859
+Gesiel Lopes: em uma possível conversão e um dado numérico. Eu vou simplesmente desconsiderar.
+
+91
+00:15:57.970 --> 00:16:09.010
+Gesiel Lopes: Então você citou quem for numérico, eu guardo. Aliás, se ele for numérico, eu não guardo. Eu só guardo quando ele não for numérico,
+
+92
+00:16:09.250 --> 00:16:12.970
+Gesiel Lopes: e aí, depois que eu faço essa validação,
+
+93
+00:16:13.810 --> 00:16:26.269
+Gesiel Lopes: a última validação que eu faço aqui sobrou. Já tirei tudo. Que número. Mas possa ser que eu tenha, por exemplo, tokens com o número e porcentagem
+
+94
+00:16:26.660 --> 00:16:34.830
+Gesiel Lopes: número, por exemplo, dez. Então eu vou ter astring dez dez.
+
+95
+00:16:35.090 --> 00:16:40.550
+Gesiel Lopes: Não é uma String com com uma palavra.
+
+96
+00:16:41.160 --> 00:16:44.899
+Gesiel Lopes: São caracteres não alfabéticos.
+
+97
+00:16:44.990 --> 00:16:49.450
+Gesiel Lopes: Então, no tratamento que eu faço, eu só vou considerar
+
+98
+00:16:49.480 --> 00:17:05.929
+Gesiel Lopes: agora, depois que eu tiro o número Tagl. Eu só considero tokens que tenham caracteres alfabéticos. Tudo que não é alfabético. Eu vou retirar. E aí, para fazer essa validação. A gente usa a função is auf
+
+99
+00:17:05.970 --> 00:17:07.939
+Gesiel Lopes: que a gente viu no último encontro.
+
+100
+00:17:08.390 --> 00:17:12.649
+Gesiel Lopes: Depois disso, eu retiro as minhas Stopwords
+
+101
+00:17:13.300 --> 00:17:15.510
+Gesiel Lopes: e aqui. É só para retirar.
+
+102
+00:17:16.150 --> 00:17:29.059
+Gesiel Lopes: Considerar somente tokens que tenham mais do que três caracteres. Tipo, pode ser que eu tenha um caracteres chamado Aa, o que é a O te
+
+103
+00:17:29.290 --> 00:17:34.430
+Gesiel Lopes: ou qualquer combinação de letras
+
+104
+00:17:35.030 --> 00:17:45.730
+Gesiel Lopes: que com dois caracteres não fazem muito sentido. Um ou mais de um que eu não consegui validar nessas
+
+105
+00:17:45.870 --> 00:17:50.339
+Gesiel Lopes: desses tratamentos. Então aqui eu só considero que tem mais de dois.
+
+106
+00:17:50.440 --> 00:18:00.259
+Gesiel Lopes: Quando eu faço isso, eu considero um processamento bem mais significativo dentro da minha
+
+107
+00:18:01.010 --> 00:18:03.910
+Gesiel Lopes: da minha função de pré processamento.
+
+108
+00:18:04.000 --> 00:18:23.900
+Gesiel Lopes: Então observe. Ela já fez um tratamento bem mais robusto tirotega, Html. Tudo que não é alfabético. Então ele já fez um tratamento bem mais robusto, digamos assim.
+
+109
+00:18:23.920 --> 00:18:25.320
+Gesiel Lopes: É claro que
+
+110
+00:18:25.510 --> 00:18:36.529
+Gesiel Lopes: a quantidade ou as validações que podem ser feitas sempre vai depender do contexto do texto que você está analisando.
+
+111
+00:18:36.640 --> 00:18:43.430
+Gesiel Lopes: Então aqui foi só como eu posso ter um texto dessa característica. A gente só aproveitou
+
+112
+00:18:43.450 --> 00:18:58.039
+Gesiel Lopes: e complementou a nossa função de pré processamento e adicionando as funções que a gente trabalhou nos dois últimos módulos. Aliás, nos dois últimos encontros, as duas últimas etapas.
+
+113
+00:18:58.400 --> 00:19:04.279
+Gesiel Lopes: Opa, Vitor, pode falar. Vou pegar aqui minha água. Estou escutando.
+
+114
+00:19:04.280 --> 00:19:15.869
+João Victor Gasparoto: Boa noite, Mestre. Na questão do Klez ali, o ponto Find. Só para mim. Ter uma noção o Menos um é porque ele vai procurar. E como o Kleaz.
+
+115
+00:19:16.230 --> 00:19:21.629
+João Victor Gasparoto: Ele vai achar. E o Cleve vai dar como um. Ele retira porque você quer. Como se fosse menos um.
+
+116
+00:19:22.500 --> 00:19:25.029
+Gesiel Lopes: Eu quero que ele não encontre.
+
+117
+00:19:27.280 --> 00:19:34.210
+Gesiel Lopes: Na realidade, eu só vou considerar quando o Fayn não encontrar naquele.
+
+118
+00:19:34.210 --> 00:19:34.880
+João Victor Gasparoto: Ele tem.
+
+119
+00:19:36.590 --> 00:19:54.119
+Gesiel Lopes: E aí, quando ele não encontra, ele retorna a menos um, lembrando que o Find retorna um valor maior, igual a zero. E esse valor corresponde ao índice do primeiro caracter da String que eu estou buscando dentro da string de busca quando ele encontra.
+
+120
+00:19:54.120 --> 00:19:56.690
+Gesiel Lopes: E aí pode ser zero ou maior do que zero.
+
+121
+00:19:57.400 --> 00:20:00.550
+Gesiel Lopes: E aí, quando ele não encontra, ele retorna menos um.
+
+122
+00:20:01.540 --> 00:20:10.959
+Gesiel Lopes: Eu poderia usar o. E aí, aproveitando essa dúvida aí do João. E se eu usasse em vez do find você usasse o Index,
+
+123
+00:20:11.380 --> 00:20:19.060
+Gesiel Lopes: já que o Find e o Index têm faz a mesma coisa. Eu poderia usar o Index aqui
+
+124
+00:20:19.700 --> 00:20:20.990
+Gesiel Lopes: Sim ou não?
+
+125
+00:20:25.860 --> 00:20:27.030
+Gesiel Lopes: Alguém.
+
+126
+00:20:27.470 --> 00:20:28.980
+Gesiel Lopes: O que vocês acham.
+
+127
+00:20:36.600 --> 00:20:40.150
+Wanderson Gomes de Paula: Eu poderia dizer se numero chute.
+
+128
+00:20:41.320 --> 00:20:53.330
+Gesiel Lopes: Isso. Não, não, beleza. E aí o Alan, a Allan, Jéssica e o Nelson? Eles complementaram? Não,
+
+129
+00:20:53.440 --> 00:20:56.009
+Gesiel Lopes: porque no caso o findo,
+
+130
+00:20:56.260 --> 00:21:07.669
+Gesiel Lopes: ele retorna um valor quando ele não encontra diferentemente do Index. Quando eu utilizo o Index, quando ele não encontra a String que eu estou buscando. Ele dá um erro,
+
+131
+00:21:07.840 --> 00:21:08.700
+Gesiel Lopes: tá?
+
+132
+00:21:09.130 --> 00:21:21.589
+Gesiel Lopes: Poderia até usar o index. Desde que eu fizesse o tratamento adequado. Sabe, aqui, ó que ele deu um erro aqui, justamente aqui. Ó desse index.
+
+133
+00:21:22.240 --> 00:21:23.510
+Gesiel Lopes: Se eu
+
+134
+00:21:24.110 --> 00:21:41.129
+Gesiel Lopes: soubesse como tratar o erro, poderia até usar o Index. Mas até agora. Eu não sei como corrigir isso programaticamente. Como tratar um erro em tempo de execução. Então, para evitar esse erro, eu uso o Find mais fácil.
+
+135
+00:21:41.500 --> 00:21:50.490
+Gesiel Lopes: Justamente, ele quebra o código tranquilo. E aí o Leonardo pode falar. Leonardo.
+
+136
+00:21:50.490 --> 00:21:51.750
+leonardo Peres: Boa noite, Professor. Doem.
+
+137
+00:21:54.620 --> 00:21:55.630
+Gesiel Lopes: Tranquilo.
+
+138
+00:21:55.830 --> 00:22:00.940
+leonardo Peres: Naquela parte ali. Se eu colocasse um If Note e no lugar do menos um, colocasse um, daria certo.
+
+139
+00:22:04.130 --> 00:22:05.609
+Gesiel Lopes: Aqui um.
+
+140
+00:22:06.040 --> 00:22:07.659
+Gesiel Lopes: O que vocês acham?
+
+141
+00:22:11.570 --> 00:22:12.330
+leonardo Peres: Eu acho que.
+
+142
+00:22:12.330 --> 00:22:15.829
+marcos.jose: Não daria certo. Porque se você colocar o If note,
+
+143
+00:22:15.930 --> 00:22:22.480
+marcos.jose: não necessariamente. Ele vai te retornar um ou menos um. Isso é uma coisa da função Find.
+
+144
+00:22:22.520 --> 00:22:39.220
+marcos.jose: Você pode até usar uma estrutura de finote, mas você teria que mudar a sua lógica, porque no caso do um ou menos um. É para a lógica de Find. Porque aí, quando ele não encontra, ele traz menos um. O ifinote não vai trazer menos um. Então também ia quebrar a sua lógica.
+
+145
+00:22:41.230 --> 00:22:42.580
+leonardo Peres: Bem, vem isso.
+
+146
+00:22:43.010 --> 00:22:54.519
+Gesiel Lopes: Bem respondido aí pelo Marcos. Poderia até usar o um. Mas desde que eu fizesse a lógica correta, porque quando eu faço da forma que você colocou o if not
+
+147
+00:22:54.570 --> 00:23:05.920
+Gesiel Lopes: igual a menos um. Mas quando o Ifnet, quando o Find class retornar zero ou qualquer valor maior do que um.
+
+148
+00:23:06.230 --> 00:23:11.310
+Gesiel Lopes: Ele encontrou. Só que eu não quero que ele encontre, tá?
+
+149
+00:23:11.580 --> 00:23:20.379
+Gesiel Lopes: Então ele entraria nessa condição. Ele não encontrou um índice. É igual a um. É diferente de um,
+
+150
+00:23:20.390 --> 00:23:36.530
+Gesiel Lopes: mas pode ser como o Marcos falou. Pode ser menos um beleza que é o caso que eu quero, mas pode ser zero. Pode ser dois. Pode ser um0 pode ser dois0 porque o Find retorna o índice do primeiro caracter que eu estou querendo buscar.
+
+151
+00:23:36.910 --> 00:23:39.930
+Gesiel Lopes: Se essa String existir.
+
+152
+00:23:40.240 --> 00:23:45.339
+Gesiel Lopes: Só que eu quero garantir que ela não exista. Por isso que eu faço.
+
+153
+00:23:45.550 --> 00:23:47.309
+Gesiel Lopes: E o Ifi?
+
+154
+00:23:48.120 --> 00:23:52.210
+Gesiel Lopes: Igual a menos um entendido.
+
+155
+00:23:52.370 --> 00:23:52.790
+leonardo Peres: Entendi.
+
+156
+00:23:52.790 --> 00:23:59.920
+Gesiel Lopes: Que fazer uma lógica maior para poder conseguir contemplar todos os casos.
+
+157
+00:24:01.360 --> 00:24:02.869
+leonardo Peres: Aí é mais trampo também, né.
+
+158
+00:24:03.420 --> 00:24:10.790
+Gesiel Lopes: Sim, e aí seria porque aí eu tinha que cobrir todos os casos possíveis, tá?
+
+159
+00:24:10.950 --> 00:24:15.159
+Gesiel Lopes: E aí só tinha que aí. É mais um problema de lógica do que de programação.
+
+160
+00:24:15.390 --> 00:24:15.930
+Gesiel Lopes: Tá bom.
+
+161
+00:24:15.930 --> 00:24:27.689
+marcos.jose: E meio que entra nessa questão de existem vários caminhos, mas alguns são mais eficientes do que outros, né? Todos dão certo, mas alguns. Você pega marginal. Alguns você pega farol pelo caminho. Aí.
+
+162
+00:24:28.590 --> 00:24:30.750
+Gesiel Lopes: Perfeito.
+
+163
+00:24:31.230 --> 00:24:34.369
+Gesiel Lopes: Sem palavras. Muito obrigado, marcos.
+
+164
+00:24:34.370 --> 00:24:36.509
+leonardo Peres: Duas palavras. Apenas marcos para bem.
+
+165
+00:24:36.510 --> 00:24:37.070
+Gesiel Lopes: E aí.
+
+166
+00:24:37.200 --> 00:24:38.650
+Gesiel Lopes: E aí
+
+167
+00:24:38.890 --> 00:24:53.309
+Gesiel Lopes: fechou, pessoal. Então aí depois eu não compartilhei ainda esse o Pdf do notebook. Mas eu terminando aqui o nosso encontro. Eu já subo. Ele que aí eu ia fazer para a gente também não estender muito
+
+168
+00:24:53.610 --> 00:24:54.780
+Gesiel Lopes: beleza,
+
+169
+00:24:54.890 --> 00:25:05.650
+Gesiel Lopes: qualquer dúvida pessoal. É só também durante os encontros. Se vocês tiverem qualquer dúvida, só trazer, ou então, lá no Ifnet Online, que a gente tenta ajudá los da melhor forma possível.
+
+170
+00:25:05.860 --> 00:25:08.809
+Gesiel Lopes: Então, dando continuidade, vamos agora.
+
+171
+00:25:08.960 --> 00:25:12.610
+Gesiel Lopes: A gente trabalhou bastante com String,
+
+172
+00:25:12.790 --> 00:25:20.430
+Gesiel Lopes: e aqui, só para a gente não perder de vista aqui,
+
+173
+00:25:20.600 --> 00:25:30.499
+Gesiel Lopes: só fazer aqui alguns pequenos comentários que a gente tem também sobre a formatação de String.
+
+174
+00:25:35.750 --> 00:25:44.340
+Gesiel Lopes: Então o Python disponibiliza três formas de fazermos
+
+175
+00:25:47.690 --> 00:26:00.950
+Gesiel Lopes: formatar a String. Nesse caso, aqui é fazer o que a gente chama de composição de strings é compor uma String em tempo de execução.
+
+176
+00:26:01.920 --> 00:26:07.919
+Gesiel Lopes: E aí o Python hoje, principalmente a partir da versão sete, a versão seis sete. Se não me engano,
+
+177
+00:26:08.060 --> 00:26:26.870
+Gesiel Lopes: ele disponibiliza três formas: a forma clássica de composição tá, que é utilizando uma string tá, por exemplo, Byington
+
+178
+00:26:33.610 --> 00:26:34.550
+Gesiel Lopes: é.
+
+179
+00:26:37.540 --> 00:26:52.880
+Gesiel Lopes: É uma lin linguagem com e aqui, anos de vida.
+
+180
+00:26:53.410 --> 00:26:57.369
+Gesiel Lopes: Então observe que aqui eu queira adicionar
+
+181
+00:26:57.660 --> 00:27:08.180
+Gesiel Lopes: um valor em tempo de execução. Nesse caso, aqui eu queira considerar a variável anos, Python.
+
+182
+00:27:08.830 --> 00:27:13.709
+Gesiel Lopes: Ou então ficar mais expressiva idade.
+
+183
+00:27:14.720 --> 00:27:24.730
+Gesiel Lopes: Python, então como é que eu faço para colocar dentro aqui? Ó dentro substituiu X
+
+184
+00:27:25.710 --> 00:27:33.159
+Gesiel Lopes: com o valor da variável idade Python, que aí eu vou colocar dez só para a gente fazer esse teste.
+
+185
+00:27:33.570 --> 00:27:41.050
+Gesiel Lopes: Então, quando a gente faz a formatação clássica, que é através de composição, a gente vai usar um operador
+
+186
+00:27:43.440 --> 00:27:45.569
+Gesiel Lopes: que é o operador possente.
+
+187
+00:27:46.070 --> 00:27:54.370
+Gesiel Lopes: E aí esse operador. Ele considera três opções, que é o de quando eu quero compor
+
+188
+00:27:54.520 --> 00:28:06.250
+Gesiel Lopes: valores numéricos. Então, aqui. Ó eu tenho possén te dê é para números inteiros.
+
+189
+00:28:12.040 --> 00:28:34.980
+Gesiel Lopes: Possente F para números desse mais dólar, né? Dólar, prepossente F e o possense para strings.
+
+190
+00:28:35.340 --> 00:28:41.840
+Gesiel Lopes: Tá, então nesse caso, aqui. Eu vou usar o D porque o
+
+191
+00:28:42.460 --> 00:28:49.470
+Gesiel Lopes: eu quero adicionar o valor inteiro na minha String, tá?
+
+192
+00:28:52.060 --> 00:28:55.960
+Gesiel Lopes: Então, nesse caso, aqui, vou usar o operador possente.
+
+193
+00:28:56.570 --> 00:29:07.340
+Gesiel Lopes: E aqui, entre parêntese, eu passo ali a variável. A lista de variáveis que eu quero compor a minha String. Nesse caso é idade
+
+194
+00:29:09.040 --> 00:29:09.940
+Gesiel Lopes: pai do.
+
+195
+00:29:10.060 --> 00:29:18.140
+Gesiel Lopes: E aí eu posso colocar aqui mensagem. Recebe essa composição. Eu dou um print
+
+196
+00:29:18.360 --> 00:29:21.660
+Gesiel Lopes: mensagem. Então, se eu não tiver feito nada errado,
+
+197
+00:29:21.790 --> 00:29:33.980
+Gesiel Lopes: ele vai fazer a composição. E aí eu posso compor a String com ou uma variável inteira decimal ou com outras strings.
+
+198
+00:29:34.110 --> 00:29:44.640
+Gesiel Lopes: No caso de variáveis decimal, eu posso complementar e fazer arredondamento.
+
+199
+00:29:45.850 --> 00:29:54.729
+Gesiel Lopes: O outro método, outra maneira que a gente tem de fazer composição é através do método format.
+
+200
+00:29:54.920 --> 00:29:55.680
+Gesiel Lopes: Tá.
+
+201
+00:29:55.910 --> 00:30:04.070
+Gesiel Lopes: E aí o método format segue a mesma ideia da composição.
+
+202
+00:30:04.250 --> 00:30:09.180
+Gesiel Lopes: Só que, em vez de usar o operador possente.
+
+203
+00:30:09.320 --> 00:30:17.820
+Gesiel Lopes: Eu vou chamar a função Format do Python. Tá, então formate.
+
+204
+00:30:19.770 --> 00:30:31.490
+Gesiel Lopes: E aqui eu passo o karité que eu quero fazer a composição que aqui no caso, é idade, pai.
+
+205
+00:30:35.830 --> 00:30:38.880
+Gesiel Lopes: E é que eu preciso fazer só um pequeno ajuste.
+
+206
+00:30:39.020 --> 00:30:43.460
+Gesiel Lopes: Não é mais dólar P: e aí? Nesse caso, tá.
+
+207
+00:30:45.320 --> 00:30:49.950
+Gesiel Lopes: Eu vou passar a String que eu quero compor
+
+208
+00:30:50.310 --> 00:31:03.200
+Gesiel Lopes: entre colchetes. E aí aqui eu passo o índice, ou seja o índice indicativo de qual é a sequência de strings
+
+209
+00:31:03.410 --> 00:31:07.150
+Gesiel Lopes: ou de valores que eu quero considerar na função format.
+
+210
+00:31:07.400 --> 00:31:10.240
+Gesiel Lopes: Então quando eu faço isso, tá?
+
+211
+00:31:10.400 --> 00:31:14.830
+Gesiel Lopes: Ele considera a ordem dos
+
+212
+00:31:15.050 --> 00:31:25.539
+Gesiel Lopes: parâmetros que eu passo no format. Então, se tiver mais de um só seguir. Primeiro é zero. O segundo é um, e assim sucessivamente,
+
+213
+00:31:25.730 --> 00:31:34.350
+Gesiel Lopes: ou a forma mais atual, mais fácil de se trabalhar, que é com o
+
+214
+00:31:34.580 --> 00:31:44.639
+Gesiel Lopes: com o F string, que o F String é uma espécie de contração do método format.
+
+215
+00:31:44.750 --> 00:31:53.379
+Gesiel Lopes: Tá, só que em vez de eu chamar o format e passar o índice da posição.
+
+216
+00:31:53.580 --> 00:32:03.409
+Gesiel Lopes: Eu literalmente posso passar entre colchete a variável propriamente dito. Nesse caso, aqui a idade
+
+217
+00:32:04.710 --> 00:32:09.650
+Gesiel Lopes: idade paita, que é a forma mais é
+
+218
+00:32:09.940 --> 00:32:17.130
+Gesiel Lopes: mais utilizada. Mas, porém, a gente precisa recapitular as outras maneiras.
+
+219
+00:32:18.650 --> 00:32:32.239
+Gesiel Lopes: Essa, aqui, de longe, é a mais utilizada, até porque é muito mais fácil de você. Uma vez que entende a estrutura do pai, tu conhece como minimamente a sintax do pai,
+
+220
+00:32:32.360 --> 00:32:39.220
+Gesiel Lopes: você consegue identificar que isso aqui é uma concatenação de Strings? Eu estou formatando uma String.
+
+221
+00:32:39.500 --> 00:32:40.710
+Gesiel Lopes: E aí?
+
+222
+00:32:40.830 --> 00:32:48.230
+Gesiel Lopes: E essa String vai ser formatada em tempo de execução, adicionando
+
+223
+00:32:48.850 --> 00:32:58.010
+Gesiel Lopes: o valor da variável. Quando essa String for executada pelo meu código Pike, beleza.
+
+224
+00:32:58.370 --> 00:33:09.469
+Gesiel Lopes: Então, inclusive isso aqui, não é nem tanto novidade que a gente trabalhou bastante na nossa primeira disciplina, nos nossos primeiros encontros
+
+225
+00:33:09.720 --> 00:33:12.150
+Gesiel Lopes: da disciplina do trimestre passado.
+
+226
+00:33:12.330 --> 00:33:21.830
+Gesiel Lopes: E agora vamos lá. Aí a gente vai mesclando conteúdo novo com recapitulação. Novo com recapitulação, até para não perder de vista.
+
+227
+00:33:22.120 --> 00:33:23.000
+Gesiel Lopes: Certo?
+
+228
+00:33:23.140 --> 00:33:28.330
+Gesiel Lopes: E os as peculiaridades da linguagem.
+
+229
+00:33:30.640 --> 00:33:35.270
+Altevir dos Anjos Junior: Professor. Uma dúvida. Você comentou que o F. String foi o
+
+230
+00:33:35.480 --> 00:33:37.290
+Altevir dos Anjos Junior: o último que surgiu no Python, né?
+
+231
+00:33:37.430 --> 00:33:48.759
+Altevir dos Anjos Junior: Tem alguma chance de, por exemplo, o primeiro método lá, que é o clássico, ele cair em desuso e ser eliminado do Python. Tipo, não vai dar mais para fazer isso. Dentro do Python, por exemplo.
+
+232
+00:33:50.310 --> 00:33:57.450
+Gesiel Lopes: Boa pergunta. Você perguntou se existe a possibilidade. Sim, existe a possibilidade.
+
+233
+00:33:57.650 --> 00:34:00.190
+Gesiel Lopes: Isso vai acontecer? Eu não sei.
+
+234
+00:34:00.190 --> 00:34:01.800
+Altevir dos Anjos Junior: É não. Aham!
+
+235
+00:34:01.800 --> 00:34:16.269
+Gesiel Lopes: Mas sim, existe sim. Eu acho um pouco provável. Altervi dando agora opinião minha. Mas existe inclusive isso. Esse problema é um problema clássico das linguagens de programação
+
+236
+00:34:16.420 --> 00:34:22.960
+Gesiel Lopes: que é conhecido na engenharia de software como retrocompatibilidade, é garantir
+
+237
+00:34:23.070 --> 00:34:31.990
+Gesiel Lopes: que em versões novas da linguagem. Cópicos legados. Continuem a funcionar nessas versões novas.
+
+238
+00:34:32.110 --> 00:34:43.670
+Gesiel Lopes: O Python, algumas linguagens de programação, por exemplo, eles têm essa garantia. Algumas linguagens garantem
+
+239
+00:34:44.060 --> 00:34:52.119
+Gesiel Lopes: todo o código legado continua a funcionar em versões mais atuais,
+
+240
+00:34:52.989 --> 00:35:00.480
+Gesiel Lopes: e eu não posso adicionar nenhuma funcionalidade nova
+
+241
+00:35:00.760 --> 00:35:07.639
+Gesiel Lopes: que quebre alguma funcionalidade já existente. É o que a gente chama de retrocompatibilidade como
+
+242
+00:35:08.000 --> 00:35:14.299
+Gesiel Lopes: retrocompatibilidade em videogames é mais ou menos a mesma ideia, mas é da estrutura.
+
+243
+00:35:14.820 --> 00:35:18.709
+Gesiel Lopes: Algumas linguagens garantem a retrocompatibilidade.
+
+244
+00:35:19.220 --> 00:35:36.799
+Gesiel Lopes: Porém, o Python, por ser uma linguagem, principalmente uma linguagem que é mantida. Eu não tenho um grande vendor não tenho nenhum vendor, ou seja, nenhuma empresa por detrás do Python. Porque, por essência, o Python é uma linguagem livre
+
+245
+00:35:37.230 --> 00:35:40.969
+Gesiel Lopes: e as evoluções
+
+246
+00:35:41.340 --> 00:35:51.879
+Gesiel Lopes: da linguagem surgem por iniciativas da própria Comunidade e é óbvio, pelo comitê que mantém a linguagem, que é um comitê aberto,
+
+247
+00:35:52.860 --> 00:36:01.449
+Gesiel Lopes: é é a garantia de que o código legado continue sempre a funcionar. Ela não é dada
+
+248
+00:36:02.310 --> 00:36:14.160
+Gesiel Lopes: o Python. Infelizmente, esse é um dos grandes desafios da linguagem Python, é que o Python não garante que código legado continue funcionando a Dieterno.
+
+249
+00:36:14.450 --> 00:36:15.400
+Gesiel Lopes: Então a
+
+250
+00:36:15.860 --> 00:36:26.219
+Gesiel Lopes: então eu fiz esse. Arrumei todo para responder a pergunta do Altervi. Pode ser que alguma dessas funcionasse. E pode ser até que o Python em versões futuras.
+
+251
+00:36:26.220 --> 00:36:41.610
+Gesiel Lopes: Eu acho pouco provável de acontecer, mas inclusive existe a possibilidade de inserir uma funcionalidade de composição de String diferente dessas três já conhecidas
+
+252
+00:36:41.720 --> 00:36:46.329
+Gesiel Lopes: e que as três passem a não funcionar mais em versões futuras do Python.
+
+253
+00:36:46.640 --> 00:36:49.820
+Altevir dos Anjos Junior: Sim, não, perfeito. Muito obrigado. Viu.
+
+254
+00:36:50.210 --> 00:37:01.360
+marcos.jose: Ô Professor. Uma dúvida, até pela sua experiência indianos, não sei se isso já aconteceu. Ou talvez os colegas aqui também saibam. Não sei se isso já aconteceu antes. Com base de dados e tudo mais,
+
+255
+00:37:01.440 --> 00:37:12.489
+marcos.jose: mas tem algum risco, porque se ele vai só agregando e não vai eliminando. A gente. Concorda que o programa vai ficar cada vez maior. Vai ficar cada vez mais pesado, porque ele vai ter uma biblioteca cada vez maior.
+
+256
+00:37:12.580 --> 00:37:20.910
+marcos.jose: Aí chega uma hora que ele acaba não sendo então funcional para utilizar, porque ele vai estar muito pesado com um milhão de recursos dentro dele,
+
+257
+00:37:21.510 --> 00:37:26.290
+marcos.jose: porque você só vai agregando, agregando, agregando, agregando e não tira nada.
+
+258
+00:37:26.400 --> 00:37:30.290
+marcos.jose: Ele não chega a ficar muito pesado para se trabalhar com ele.
+
+259
+00:37:31.920 --> 00:37:42.059
+Gesiel Lopes: É uma discussão bem interessante. Marcos, tá? O próprio comitê, o Python. Se vocês observarem, deixa eu entrar aqui só para
+
+260
+00:37:42.880 --> 00:37:48.260
+Gesiel Lopes: no site oficial da linguagem.
+
+261
+00:37:50.410 --> 00:37:59.550
+Gesiel Lopes: A própria linguagem. Deixa eu ver se eu acho aqui o deixa eu colocar o.
+
+262
+00:38:00.840 --> 00:38:06.190
+Gesiel Lopes: O que é o mesmo. Aí fica mais fácil, tá?
+
+263
+00:38:06.480 --> 00:38:08.600
+Gesiel Lopes: Toda toda
+
+264
+00:38:11.840 --> 00:38:18.450
+Gesiel Lopes: toda a nova funcionalidade da linguagem. Python, tá?
+
+265
+00:38:19.640 --> 00:38:27.990
+Gesiel Lopes: Elas são discutidas no fórum, no comitê que é o comitê que mantém
+
+266
+00:38:28.540 --> 00:38:40.860
+Gesiel Lopes: o código fonte da linguagem Python. Esse comitê é o que a gente chama de Pep, que é o python ansettment proposal ou proposto de aprimoramento do Python.
+
+267
+00:38:41.020 --> 00:38:49.649
+Gesiel Lopes: Então todos os pontos que são adicionados, novas funcionalidades que são adicionadas dentro do Python
+
+268
+00:38:49.800 --> 00:39:03.859
+Gesiel Lopes: antes de serem adicionadas. Eles são discutidos dentro desse comitê inclusive você consegue observar aqui. Deixa eu ver se eu
+
+269
+00:39:05.340 --> 00:39:12.130
+Gesiel Lopes: aqui você, inclusive você consegue encontrar as Peps,
+
+270
+00:39:12.570 --> 00:39:24.620
+Gesiel Lopes: e você consegue, melhor dizendo, identificar pontos que estão ainda para serem implementadas. Então isso aqui é literalmente a discussão que é feita
+
+271
+00:39:24.620 --> 00:39:42.570
+Gesiel Lopes: sobre o futuro da linguagem Python. Dentre eles, esses aspectos que você comentou marcos? Será que isso vai tornar a linguagem mais pesada, menos pesada, sempre todas as atualizações e propostas, como o próprio nome já sugere,
+
+272
+00:39:42.660 --> 00:39:47.060
+Gesiel Lopes: são melhorias, então dificilmente eu vou adicionar algo
+
+273
+00:39:47.160 --> 00:39:58.860
+Gesiel Lopes: que torne a função ou que torne a linguagem difícil de ser utilizada, até porque aí ela vai fugir do propósito dela.
+
+274
+00:39:59.890 --> 00:40:02.030
+Gesiel Lopes: Deu para entender.
+
+275
+00:40:02.030 --> 00:40:04.430
+marcos.jose: É que o medo é da gente, tipo
+
+276
+00:40:04.610 --> 00:40:10.700
+marcos.jose: correr para se aprimorar numa tecnologia. Aí eles criam novas versões
+
+277
+00:40:11.250 --> 00:40:26.970
+marcos.jose: que acaba tornando, ou ela obsoleta ou muito pesada para se trabalhar. Você se mata para aprender a arrumar um vídeo cassete. Quando você aprende, eles inventam o Dvd. Aí você se mata para aprender a arrumar o Dvd. Quando você aprende, eles inventam o Cd player.
+
+278
+00:40:27.200 --> 00:40:31.569
+Gesiel Lopes: Mas bem vindo à programação. Marcos, bem vindo a.
+
+279
+00:40:31.570 --> 00:40:32.000
+marcos.jose: Aí? Você está.
+
+280
+00:40:32.000 --> 00:40:33.969
+Gesiel Lopes: Bem vindo à programação.
+
+281
+00:40:33.970 --> 00:40:34.690
+marcos.jose: Agora domina.
+
+282
+00:40:34.690 --> 00:40:35.070
+Gesiel Lopes: E aí?
+
+283
+00:40:35.070 --> 00:40:36.989
+marcos.jose: Tecnologia. Ela já ficou para trás.
+
+284
+00:40:37.440 --> 00:40:38.469
+Gesiel Lopes: Não é bem vinda.
+
+285
+00:40:38.470 --> 00:40:41.549
+marcos.jose: Agora. Eu dominei essa tecnologia. Ela já ficou pra trás de novo.
+
+286
+00:40:41.750 --> 00:41:00.439
+Gesiel Lopes: Bem vinda à programação cara. Programar é isso. Muda o de tecnologia. É esse aí. É outra discussão interessante, mas sempre vai estar surgindo. Só abrindo um parêntese e fechando logo em seguida. Essa discussão, Python não é uma linguagem, ou como qualquer nenhuma outra linguagem de programação. Ela é bala de prata.
+
+287
+00:41:00.460 --> 00:41:17.429
+Gesiel Lopes: O Python é uma linguagem que hoje é uma linguagem popular muito utilizada, e ela ganhou muitos usuários. Ela ganhou muita notoriedade nos últimos dias, principalmente por conta da sua facilidade de aprender. E pelo uso
+
+288
+00:41:17.570 --> 00:41:21.910
+Gesiel Lopes: que a gente tem hoje massivo na área de dados,
+
+289
+00:41:22.150 --> 00:41:34.259
+Gesiel Lopes: mas o Python não resolve todos os problemas, seja da área de dados, seja da área de Machine Land seja da área de computação. De forma geral, ele não resolve.
+
+290
+00:41:34.290 --> 00:41:45.059
+Gesiel Lopes: Vai ter coisas que ele resolve bem, mas vai ter coisas que ele não vai conseguir resolver. E aí por isso que eu preciso saber também outras tecnologias
+
+291
+00:41:45.310 --> 00:41:51.040
+Gesiel Lopes: tem um vídeo que eu gosto. Tem um cara que ele virou. Ele hoje
+
+292
+00:41:52.150 --> 00:41:57.870
+Gesiel Lopes: virou um famosão. É o Fábio Aquita. Ele gosta muito de falar isso, né?
+
+293
+00:41:58.030 --> 00:42:17.729
+Gesiel Lopes: Que quando ele fala de tecnologia. O Akita foi muito conhecido por popular. Uma tecnologia no início da década dos anos dois mil até dois mil e dez, que é o Rails, inclusive o blog dele é Aquithon Rails. Então ele foi um cara que evangelizou muito a essa tecnologia.
+
+294
+00:42:17.840 --> 00:42:25.920
+Gesiel Lopes: E aí hoje. Ele fala que ele não quer mais evangelizar isso. O Rubem Reyes que o Gabriel falou.
+
+295
+00:42:26.480 --> 00:42:32.380
+Gesiel Lopes: Porque, em termos de tecnologia, hoje ele quer ser o mais promíscuo possível.
+
+296
+00:42:32.580 --> 00:42:38.599
+Gesiel Lopes: Então é esse pensamento que a gente precisa ter. O que a gente precisa ter é o domínio de fundamentos.
+
+297
+00:42:39.010 --> 00:42:42.840
+Gesiel Lopes: Fundamentos são importantíssimos
+
+298
+00:42:42.940 --> 00:43:00.740
+Gesiel Lopes: porque tecnologia, por exemplo, programar, você vai aprender a Sintax, principalmente, por exemplo, agora é uma discussão que eu estava até com um colega do Linkedin. Hoje, por exemplo, modelos de apoio ao desenvolvimento, como
+
+299
+00:43:00.890 --> 00:43:15.839
+Gesiel Lopes: o Opus, lá do Cloud do Cloud o Códex lá do Gpt. Dentre outros, o Lama tem um monte aí de modelos que são modelos de.
+
+300
+00:43:16.050 --> 00:43:21.940
+Gesiel Lopes: De código. E aí tem aquela discussão. Ah, mas eu. Junho.
+
+301
+00:43:22.750 --> 00:43:29.240
+Gesiel Lopes: Como é que fica? Eu, que estou aprendendo a programar, já que o próprio modelo vai gerar código para mim,
+
+302
+00:43:29.450 --> 00:43:36.279
+Gesiel Lopes: aí, a discussão que foi fomentada foi justamente essa, hoje. Na minha opinião, isso foi claro, uma opinião.
+
+303
+00:43:36.500 --> 00:43:42.249
+Gesiel Lopes: Esses modelos são fundamentais porque eles potencializam o seu desenvolvimento,
+
+304
+00:43:42.530 --> 00:43:51.430
+Gesiel Lopes: mas nunca se tornou tão necessário o aprendizado de fundamentos para trabalhar com modelos como hoje,
+
+305
+00:43:51.730 --> 00:43:58.109
+Gesiel Lopes: porque, querendo ou não, todo e qualquer modelo não é determinístico. Todo o modelo de A.
+
+306
+00:43:58.750 --> 00:44:07.290
+Gesiel Lopes: Ele não é determinístico. Isso quer dizer o quê? Que o resultado que ele vai dar é um resultado probabilístico,
+
+307
+00:44:08.280 --> 00:44:08.990
+Gesiel Lopes: tá?
+
+308
+00:44:09.620 --> 00:44:19.789
+Gesiel Lopes: É um resultado provável ou mais provável de ser a verdade. Mas isso não quer dizer que aquilo seja de fato verdade.
+
+309
+00:44:19.980 --> 00:44:23.729
+Gesiel Lopes: E quando a gente fala de improbabilidade, a gente só tem duas certezas,
+
+310
+00:44:24.530 --> 00:44:28.739
+Gesiel Lopes: que é quando a probabilidade é zero do evento não ocorrer,
+
+311
+00:44:29.500 --> 00:44:32.009
+Gesiel Lopes: e a probabilidade um, que é a
+
+312
+00:44:32.320 --> 00:44:44.119
+Gesiel Lopes: a probabilidade do evento ocorrer. Tirando esses dois casos, quando a gente fala de probabilidade, nada é certeza. Por mais que eu tenha uma probabilidade alta, ou por mais que eu tenha uma probabilidade baixa.
+
+313
+00:44:44.540 --> 00:44:59.339
+Gesiel Lopes: A maior prova disso é: vocês já viram a probabilidade própabilidade
+
+314
+00:45:03.200 --> 00:45:10.379
+Gesiel Lopes: de ganhar na Mega Sena com seis números, jogando apenas um único jogo.
+
+315
+00:45:10.870 --> 00:45:21.119
+Gesiel Lopes: A probabilidade de ganhar é de um entre cinquenta milhões de chances.
+
+316
+00:45:23.000 --> 00:45:29.930
+Gesiel Lopes: Tá só que aqui, ó essa notícia aqui
+
+317
+00:45:30.760 --> 00:45:36.949
+Gesiel Lopes: é de um cara que ganhou na Mega Sena, jogando apenas um único jogo.
+
+318
+00:45:38.280 --> 00:45:45.170
+Gesiel Lopes: A chance dele ganhar era a menor possível. Mas ele ganhou.
+
+319
+00:45:47.760 --> 00:46:03.129
+Gesiel Lopes: E isso tem a ver o quê? Com o modelo? Porque é probabilidade. Então você precisa entender se aquele resultado, o desenvolvedor vai atuar como o desenvolvedor vai atuar mais como supervisor
+
+320
+00:46:03.130 --> 00:46:15.789
+Gesiel Lopes: do que programador propriamente dito. Mas se ele não souber programar, se ele não souber fundamentos, como é que ele vai dizer se aquele resultado que a Ia está gerando de fato? É verdade. É bom ou não?
+
+321
+00:46:16.100 --> 00:46:24.499
+Gesiel Lopes: Então não faz sentido eu ser programador. Então, o que vai mudar é a forma que o programador vai atuar no mercado, mas que
+
+322
+00:46:25.290 --> 00:46:32.610
+Gesiel Lopes: o uso ou o aprendizado de fundamentos é fundamental, como o próprio Glauco já disse, e hoje
+
+323
+00:46:32.760 --> 00:46:35.389
+Gesiel Lopes: ficou mais do que provado
+
+324
+00:46:35.920 --> 00:46:54.690
+Gesiel Lopes: que é estritamente necessário, inclusive quem não tiver domínio de fundamentos, quem tiver domínio de tecnologia vai estar fadado a perder espaço no mercado de tecnologia. Por isso que você precisa focar em fundamentos do que somente em tecnologia,
+
+325
+00:46:54.890 --> 00:46:59.400
+Gesiel Lopes: então é se aprofundar em uma única tecnologia,
+
+326
+00:46:59.880 --> 00:47:05.399
+Gesiel Lopes: tentar se especializar nos fundamentos daquela tecnologia.
+
+327
+00:47:05.570 --> 00:47:12.340
+Gesiel Lopes: Porque se você sabe os fundamentos, você só muda a tecnologia, tá?
+
+328
+00:47:12.640 --> 00:47:16.240
+Gesiel Lopes: É só isso. É uma discussão legal, mas gostei.
+
+329
+00:47:16.470 --> 00:47:21.070
+Gesiel Lopes: Vamos dar um intervalozinho de cinco minutos dessa vez, só para a gente beber água.
+
+330
+00:47:21.070 --> 00:47:22.910
+marcos.jose: Vou acabar criando gado.
+
+331
+00:47:23.740 --> 00:47:27.560
+Gesiel Lopes: E aí comprar um sitiozinho.
+
+332
+00:47:27.560 --> 00:47:30.409
+marcos.jose: Pra fazer. Eu vou criar a vaca. Viu?
+
+333
+00:47:30.410 --> 00:47:36.339
+Gesiel Lopes: E olha aqui, aqui. Não sei se vocês conseguem ver.
+
+334
+00:47:36.340 --> 00:47:39.250
+marcos.jose: Rico com isso. Eu só tô ganhando ruga.
+
+335
+00:47:39.580 --> 00:47:43.309
+Gesiel Lopes: E eu que já estou com um monte de cabelo branco aqui. Ó.
+
+336
+00:47:43.660 --> 00:47:44.340
+marcos.jose: Ninguém.
+
+337
+00:47:44.340 --> 00:47:45.309
+Gesiel Lopes: Acumular mais.
+
+338
+00:47:45.310 --> 00:47:46.619
+marcos.jose: Fábrica não dá, né.
+
+339
+00:47:46.620 --> 00:47:54.030
+Gesiel Lopes: Acumular mais cabelo branco. Então a gente vai 9h27 a gente retorna. Tá bom, pessoal.
+
+340
+00:47:54.500 --> 00:47:56.830
+marcos.jose: Fechou ou não, né.
+
+341
+00:47:56.830 --> 00:47:57.950
+Gesiel Lopes: Haha.
+
+342
+00:53:00.570 --> 00:53:12.389
+Gesiel Lopes: Vamos lá, pessoal. Então vamos. Como o Marcos deixar essa preocupação? Vou usar aqui uma metonímia para
+
+343
+00:53:12.470 --> 00:53:23.439
+Gesiel Lopes: sintetizar essa discussão. A gente precisa ter a ideia de resolvedor de problemas. Então, na hora que eu me tornar um resolvedor de problemas,
+
+344
+00:53:23.670 --> 00:53:26.980
+Gesiel Lopes: aí eu só vou mudar a ferramenta
+
+345
+00:53:27.310 --> 00:53:34.750
+Gesiel Lopes: ou prego. Se for prego, vou pegar um martelo. Um bate estaca, beleza.
+
+346
+00:53:35.020 --> 00:53:39.710
+Gesiel Lopes: Então, não se preocupe, pessoal, acho que é uma discussão boa, mas
+
+347
+00:53:40.140 --> 00:53:50.370
+Gesiel Lopes: é uma discussão regada. Eu particularmente gostaria de pegar uma discussão dessa aí numa bela mesa de bar, tá
+
+348
+00:53:51.430 --> 00:53:57.899
+Gesiel Lopes: com alguns colegas. E aí, afinal a gente nem lembrou mais. O que foi? O que discutiu?
+
+349
+00:53:58.350 --> 00:54:03.649
+Gesiel Lopes: E aí vivos, estão me ouvindo? Vocês estão vendo minha tela?
+
+350
+00:54:04.010 --> 00:54:08.249
+Gesiel Lopes: É? Senão vai a terapia. Aí vai correr solta,
+
+351
+00:54:08.550 --> 00:54:14.120
+Gesiel Lopes: beleza. Então vamos dar continuidade aí, pessoal. Agora, aprofundar um pouquinho mais a linguagem. Python,
+
+352
+00:54:14.280 --> 00:54:19.679
+Gesiel Lopes: a gente vai começar a trabalhar um pouquinho com um conceito bem interessante,
+
+353
+00:54:20.770 --> 00:54:28.689
+Gesiel Lopes: em particular da linguagem Python. Mas quando a gente vê linguagens de programação, que é um conceito de estrutura de dados,
+
+354
+00:54:29.130 --> 00:54:35.539
+Gesiel Lopes: porque como é que eu posso organizar os meus dados para a linguagem.
+
+355
+00:54:36.150 --> 00:54:44.750
+Gesiel Lopes: Um tipo de estrutura de dado bem interessante para se trabalhar na linguagem Python são as coleções.
+
+356
+00:54:45.090 --> 00:54:56.069
+Gesiel Lopes: Então, as coleções dentro do Python. São estruturas de dados muito úteis. Quando a gente quer guardar
+
+357
+00:54:56.250 --> 00:55:03.920
+Gesiel Lopes: algumas informações em memória, para realizar uma determinada tarefa
+
+358
+00:55:04.070 --> 00:55:19.540
+Gesiel Lopes: e essas informações ficarem armazenadas em uma única variável. E aí a gente conseguir manipular essa variável. Como se ela tivesse esse superpoder de ter mais de uma variável.
+
+359
+00:55:19.540 --> 00:55:25.320
+Gesiel Lopes: Então a gente começa a fazer algumas operações, inclusive a gente já vem trabalhando
+
+360
+00:55:25.320 --> 00:55:28.910
+Gesiel Lopes: com coleções desde o nosso primeiro encontro.
+
+361
+00:55:29.190 --> 00:55:38.240
+Gesiel Lopes: Então, quando você declara uma String, por exemplo, uma String? É uma coleção de quê? De caracteres,
+
+362
+00:55:38.560 --> 00:55:55.050
+Gesiel Lopes: o retorno de uma função, um retorno múltiplo de uma função. Lembre, quando a gente declarou uma função, a gente viu que a função pode não retornar nada. Ela pode retornar ao valor, ou pode retornar vários valores.
+
+363
+00:55:55.460 --> 00:56:04.179
+Gesiel Lopes: Então, quando a função retorna vários valores, ela retorna. Um tipo de estrutura de dado chamado de duplas.
+
+364
+00:56:04.780 --> 00:56:18.459
+Gesiel Lopes: Então, a gente já trabalhou com Strings, que são coleções. São listas de caracteres e duplas. Porém, o Python fornece outros dois tipos de estrutura de dados bem úteis para a gente,
+
+365
+00:56:18.700 --> 00:56:22.230
+Gesiel Lopes: que são o dicionário e os conjuntos.
+
+366
+00:56:22.350 --> 00:56:33.519
+Gesiel Lopes: Então as listas são coleções de dados ordenadas e mutáveis, podendo conter apenas um único tipo ou vários tipos.
+
+367
+00:56:33.830 --> 00:56:41.210
+Gesiel Lopes: As duplas são coleções ordenadas e imutáveis.
+
+368
+00:56:41.340 --> 00:56:44.200
+Gesiel Lopes: Isso quer dizer o quê? Que, uma vez que eu
+
+369
+00:56:45.080 --> 00:56:52.869
+Gesiel Lopes: declaro uma dupla, os valores daquela dupla, eu não posso substituir em tempo de execução.
+
+370
+00:56:53.040 --> 00:57:07.819
+Gesiel Lopes: O que eu posso é criar uma nova dupla, mas nunca alterar os valores de uma dupla. Diferentemente das listas, as listas, eu posso manipular e adicionar e remover elementos, porque ela é mutável.
+
+371
+00:57:08.600 --> 00:57:15.010
+Altevir dos Anjos Junior: Professor ordenada, ordenada se dá pelo porque é separado.
+
+372
+00:57:16.240 --> 00:57:18.199
+Gesiel Lopes: Na realidade, não
+
+373
+00:57:18.850 --> 00:57:33.610
+Gesiel Lopes: é porque o próprio Python por debaixo dos panos. Vamos simplificar dessa forma. Ele já faz o ordenamento de todos os elementos da minha lista e da minha dupla.
+
+374
+00:57:33.780 --> 00:57:51.969
+Gesiel Lopes: Então os mecanismos de buscas já são devidamente implementados. Não é que isso não quer dizer que os dados vão ser ordenados à medida que eu vou adicionando ele. E aí vamos supor, vou adicionar
+
+375
+00:57:52.040 --> 00:57:53.939
+Gesiel Lopes: C A,
+
+376
+00:57:54.070 --> 00:58:13.289
+Gesiel Lopes: D. B. E aí, quando eu mostrar essa lista, ela já vai estar de forma ordenada. A, B, C, D não é em tempo de execução na manipulação dela. Então o Python, quando ele carrega esses dados em memória, antes de ele colocar em memória, ele faz o devido ordenamento.
+
+377
+00:58:13.360 --> 00:58:21.200
+Gesiel Lopes: Então ele coloca os elementos em uma determinada ordem, para que, quando eu for realizar qualquer ação,
+
+378
+00:58:21.340 --> 00:58:24.779
+Gesiel Lopes: essa ação seja o mais otimizado possível.
+
+379
+00:58:24.980 --> 00:58:26.670
+Gesiel Lopes: Isso é algo que não.
+
+380
+00:58:27.090 --> 00:58:30.189
+Gesiel Lopes: Algumas linguagens não implementam. Isso.
+
+381
+00:58:30.510 --> 00:58:35.020
+Gesiel Lopes: Por exemplo, o mecanismo de ordenação. Você precisa implementar tá.
+
+382
+00:58:35.020 --> 00:58:40.039
+Altevir dos Anjos Junior: Não perfeito. Isso quer dizer que se eu usar algum método de ordenação
+
+383
+00:58:40.190 --> 00:58:47.860
+Altevir dos Anjos Junior: tipo crescente, por exemplo, independente do tamanho da lista. Vai ser uma resposta rápida ou não.
+
+384
+00:58:47.860 --> 00:58:50.040
+Gesiel Lopes: Não vou dizer rápida,
+
+385
+00:58:50.210 --> 00:58:59.750
+Gesiel Lopes: porque rápida é uma palavra muito forte, né? E aí eu vou fugir pela tangente. Falando de otimizada. Ela é o mais otimizada possível.
+
+386
+00:58:59.750 --> 00:59:00.770
+Altevir dos Anjos Junior: Tá bom.
+
+387
+00:59:00.770 --> 00:59:18.610
+Gesiel Lopes: Porque o rápido, porque você atrela muito ao tempo. E aí o rápido vai depender do tamanho de vários fatores. E aí o que eu garanto é que ela é mais otimizada para aquela situação. Então eu só tiro rápido para otimizado. Aí fica até mais elegante.
+
+388
+00:59:18.840 --> 00:59:21.110
+Altevir dos Anjos Junior: Fica, né? Fica melhor. Obrigado.
+
+389
+00:59:21.620 --> 00:59:23.330
+Gesiel Lopes: E fala. Marcos. Pode falar.
+
+390
+00:59:23.520 --> 00:59:29.880
+marcos.jose: Uma dúvida se o senhor for explicar isso pra frente. Mas, como já foi uma matéria que o senhor já explicou no passado, só pra eu aprofundar aqui tá
+
+391
+00:59:29.970 --> 00:59:46.800
+marcos.jose: sobre dupla ilícita dupla. Não é mutável. Então, por exemplo, se eu criar uma dupla de três elementos. O que eu estou entendendo é que essa dupla vai ter que ter três elementos até o fim da vida, ou eu criar outra dupla com dois elementos.
+
+392
+00:59:46.870 --> 00:59:54.689
+marcos.jose: Vice versa a lista. Eu posso criar uma lista com um elemento. Depois eu crio outros elementos e o código? Entende que eu estou aumentando essa lista.
+
+393
+00:59:55.940 --> 00:59:59.110
+Gesiel Lopes: Inclusive eu posso criar uma lista vazia.
+
+394
+01:00:01.210 --> 01:00:02.479
+Gesiel Lopes: Eu posso criar uma lista.
+
+395
+01:00:02.480 --> 01:00:03.780
+marcos.jose: Dia de.
+
+396
+01:00:03.780 --> 01:00:06.219
+Gesiel Lopes: Funcionar elementos nessa lista.
+
+397
+01:00:06.660 --> 01:00:21.579
+marcos.jose: Se for fácil, se for rápido, por que eu preciso da dupla? Porque se for desse jeito, não seria mais prático. Eu sempre usar a lista, já que eu posso crescer ou não. Porque se eu usar uma dupla e depois eu precisar aumentar alguma coisa, eu teria que criar uma nova dupla.
+
+398
+01:00:21.970 --> 01:00:27.909
+marcos.jose: Já no caso da lista. Não, eu tenho ela meio que dinâmica. Se eu precisar estender ela no futuro.
+
+399
+01:00:28.150 --> 01:00:30.420
+marcos.jose: Então, qual é a mensagem de usar a dupla.
+
+400
+01:00:30.890 --> 01:00:49.959
+Gesiel Lopes: Claro, tem vários usos. O principal deles. E aí a gente entra num aspecto que a gente chama de programação mais funcional quando eu preciso de estruturas imutáveis. O maior exemplo que a gente pode ter dessa situação. Marcos são o retorno de uma função.
+
+401
+01:00:50.060 --> 01:00:56.060
+Gesiel Lopes: Imaginem que eu tenho uma função. O resultado dela tem que ser determinístico.
+
+402
+01:00:56.370 --> 01:01:02.289
+Gesiel Lopes: Isso quer dizer o quê? Que toda vez que eu passar os parâmetros, o mesmo conjunto de parâmetros.
+
+403
+01:01:02.440 --> 01:01:05.300
+Gesiel Lopes: A função precisa ter o mesmo retorno.
+
+404
+01:01:05.670 --> 01:01:09.990
+Gesiel Lopes: Imaginem só se eu tenho uma função
+
+405
+01:01:10.290 --> 01:01:19.889
+Gesiel Lopes: que eu consiga manipular o retorno dela de forma dinâmica. Essa função passa a não ter um comportamento determinístico.
+
+406
+01:01:20.750 --> 01:01:26.869
+Gesiel Lopes: Ela passa a ter um comportamento totalmente imprevisível,
+
+407
+01:01:27.390 --> 01:01:31.500
+Gesiel Lopes: então eu não perco a principal característica do retorno de uma função.
+
+408
+01:01:31.630 --> 01:01:43.859
+Gesiel Lopes: Então uma das aplicações é essa, e outra tem várias outras formas. Por exemplo, quando eu quero, até trabalhar com ordenamento de objetos,
+
+409
+01:01:44.540 --> 01:01:51.889
+Gesiel Lopes: então eu quero realizar algumas operações. Então eu quero garantir que aquele objeto não mude
+
+410
+01:01:52.180 --> 01:02:02.399
+Gesiel Lopes: para ter um ganho de performance. Um exemplo clássico em termos de performance, são a própria String.
+
+411
+01:02:02.670 --> 01:02:13.090
+Gesiel Lopes: Quando eu crio uma String no Python. Na realidade, a String por si só, ela é um objeto imutável. O que você vai fazer é sempre estar criando cópias dessa String?
+
+412
+01:02:13.410 --> 01:02:26.379
+Gesiel Lopes: Porque ela é um objeto imutável. Porque imaginem só, se eu declarar dez strings Python todas com caixa baixa, eu vou ter dez espaços de memória para guardar o mesmo dado
+
+413
+01:02:26.650 --> 01:02:31.559
+Gesiel Lopes: então, uma estringe por debaixo dos panos é um objeto imutável.
+
+414
+01:02:31.720 --> 01:02:41.130
+Gesiel Lopes: Quando eu manipulo ela. Na realidade, eu estou manipulando cópias dela. Mas uma vez definida, ela vai morrer. Com aquela definição,
+
+415
+01:02:41.490 --> 01:02:47.870
+Gesiel Lopes: sempre vai depender do tipo beleza. Deu para esclarecer.
+
+416
+01:02:47.870 --> 01:02:49.660
+marcos.jose: Deu. Sim, mas a gente.
+
+417
+01:02:49.660 --> 01:02:50.219
+Gesiel Lopes: A gente vai ver.
+
+418
+01:02:50.220 --> 01:02:53.639
+marcos.jose: Praticar bastante para aprofundar. Mas entendi o conceito.
+
+419
+01:02:54.040 --> 01:03:01.859
+Gesiel Lopes: A gente vai ver alguns exemplos, principalmente um mecanismo que a gente vai ver na disciplina e de funcional que é de match case,
+
+420
+01:03:03.300 --> 01:03:04.430
+Gesiel Lopes: beleza.
+
+421
+01:03:04.540 --> 01:03:12.930
+Gesiel Lopes: Então, continuando além das lixas e duplas, como já foi mencionado, a gente tem um dicionário. O dicionário é uma estrutura de dado
+
+422
+01:03:13.070 --> 01:03:23.410
+Gesiel Lopes: que vai ter uma estrutura de dado com a característica de eu ter sempre uma chave e um valor. Observem que nas listas e nas duplas.
+
+423
+01:03:23.750 --> 01:03:27.740
+Gesiel Lopes: O identificador da.
+
+424
+01:03:28.150 --> 01:03:40.479
+Gesiel Lopes: O identificador da posição da lista e na dupla, é um índice numérico zero um, dois, três por padrão por defogo.
+
+425
+01:03:40.890 --> 01:03:58.369
+Gesiel Lopes: Porém, eu posso criar umas estruturas que não necessariamente eu consiga identificar os elementos na minha estrutura a partir de índices numéricos, eu posso, usar, por exemplo, uma chave, qualquer um nome,
+
+426
+01:03:58.570 --> 01:04:18.049
+Gesiel Lopes: uma String ou um número, ou qualquer outra estrutura. Então a maneira de eu criar essa estrutura de dado com chave e valor é o dicionário, onde a chave vai ser usada para identificar o valor que você quer recuperar dentro da sua estrutura.
+
+427
+01:04:18.390 --> 01:04:25.530
+Gesiel Lopes: E aí os conjuntos só abrindo um pequeno parêntese.
+
+428
+01:04:25.780 --> 01:04:33.890
+Gesiel Lopes: Quando eu defino um dicionário, as chaves precisam ser únicas, tá?
+
+429
+01:04:34.730 --> 01:04:43.569
+Gesiel Lopes: Já os valores podem ser repetidos ou posso estar armazenando mesmo um valor para diversas chaves, mas a chave é única.
+
+430
+01:04:43.700 --> 01:04:56.690
+Gesiel Lopes: E aí a chave é um outro tipo de estrutura. De dado que a gente vai ver aqui em seguida, que são os conjuntos. Os conjuntos são estrutura de dados. São uma espécie de lista. Vou chamar assim:
+
+431
+01:04:56.980 --> 01:05:03.710
+Gesiel Lopes: onde os elementos não são ordenados, então o paiton não faz nenhuma otimização,
+
+432
+01:05:04.050 --> 01:05:09.840
+Gesiel Lopes: porém, são únicos. Eu não posso ter um conjunto com elementos repetidos.
+
+433
+01:05:10.060 --> 01:05:12.440
+Gesiel Lopes: Tá beleza?
+
+434
+01:05:13.240 --> 01:05:30.790
+Gesiel Lopes: Então essas são as estruturas de dados mais comuns. As principais coleções da linguagem Python tem outras combinações que, inclusive, podem ser feitas, mas essas são as principais e aí as listas são coleções ordenadas imutáveis,
+
+435
+01:05:31.050 --> 01:05:35.030
+Gesiel Lopes: onde ela permite que eu tenha itens
+
+436
+01:05:35.270 --> 01:05:41.520
+Gesiel Lopes: duplicados, repetidos. E aqui eu trago uma. Eu gosto muito dessa imagem,
+
+437
+01:05:41.710 --> 01:05:54.620
+Gesiel Lopes: onde eu reúno aqui as principais funcionalidades, as principais funções, os principais métodos que a gente pode ter com as listas.
+
+438
+01:05:54.710 --> 01:06:08.560
+Gesiel Lopes: Então vamos supor que eu tenho essa lista aqui básica. Aí, com três elementos. A gente viu que cada elemento da minha lista é identificado pelo índice Numérico,
+
+439
+01:06:08.700 --> 01:06:20.500
+Gesiel Lopes: começando sempre com zero. E vai até o tamanho da lista. Menos um. Então, se eu tenho três elementos, o primeiro índice vai ser zero. E o último vai ser dois.
+
+440
+01:06:21.640 --> 01:06:26.569
+Gesiel Lopes: E aqui eu posso ter elementos repetidos ou. E diferentes.
+
+441
+01:06:27.460 --> 01:06:32.150
+Gesiel Lopes: E aí, aqui a gente tem, inclusive a gente já trabalhou com alguns desses métodos, tá,
+
+442
+01:06:32.300 --> 01:06:38.000
+Gesiel Lopes: então o primeiro método é o método, appende ele.
+
+443
+01:06:41.180 --> 01:06:45.030
+Gesiel Lopes: Nossa, levemos tanto. O que foi de pneude. Ficou maluco.
+
+444
+01:06:45.900 --> 01:06:55.010
+Gesiel Lopes: O aprende como o appende, como a gente já inclusive tinha visto anteriormente. Ele sempre vai adicionar
+
+445
+01:06:55.280 --> 01:06:59.700
+Gesiel Lopes: um elemento no final da minha lista.
+
+446
+01:06:59.810 --> 01:07:11.259
+Gesiel Lopes: Então aprende. Ele adiciona no final da lista. Ele vai adicionando elementos sempre no final, sempre no final,
+
+447
+01:07:12.580 --> 01:07:19.219
+Gesiel Lopes: o counting é um método que retorna a quantidade de ocorrência
+
+448
+01:07:19.380 --> 01:07:22.119
+Gesiel Lopes: daquele elemento dentro da sua lista.
+
+449
+01:07:23.810 --> 01:07:30.819
+Gesiel Lopes: O Cop gera uma cópia da lista. Ele duplica a sua lista.
+
+450
+01:07:31.470 --> 01:07:36.619
+Gesiel Lopes: Porque por mais que você crie listas, por exemplo, iguais,
+
+451
+01:07:36.630 --> 01:07:52.840
+Gesiel Lopes: o paitu sempre vai estar referenciando a mesma posição para você garantir que eu tenha duas listas literalmente iguais e não a mesma lista. Eu posso criar uma cópia aí o pai, tu, força, eu separar os dados em uma outra área de memória.
+
+452
+01:07:52.840 --> 01:07:57.119
+Gesiel Lopes: Para mim, poder fazer as manipulações que eu achar conveniente.
+
+453
+01:07:57.420 --> 01:08:02.710
+Gesiel Lopes: Tem o Index que ele retorna, eu passo um valor.
+
+454
+01:08:02.860 --> 01:08:11.450
+Gesiel Lopes: E aí ele vai ter o mesmo funcionamento lá das Strings que a gente viu. Ele retorna. Um índice daquele elemento,
+
+455
+01:08:11.730 --> 01:08:20.590
+Gesiel Lopes: o Revese. Ele faz. Ele investe a ordem dos elementos da minha lista. O remove.
+
+456
+01:08:20.779 --> 01:08:25.200
+Gesiel Lopes: Ele remove um elemento da minha lista.
+
+457
+01:08:26.260 --> 01:08:31.289
+Gesiel Lopes: Um inset. Ele insere elementos na minha lista.
+
+458
+01:08:31.950 --> 01:08:41.930
+Gesiel Lopes: Ah, na posição que eu indico. Diferentemente do apêndio, o apende sempre vai colocar no final da lista.
+
+459
+01:08:42.580 --> 01:08:47.120
+Gesiel Lopes: O Insert vai inserir naquela posição específica.
+
+460
+01:08:47.460 --> 01:08:50.020
+Gesiel Lopes: Então aqui observe que eu estou fazendo um insert
+
+461
+01:08:50.229 --> 01:09:00.779
+Gesiel Lopes: no índice um. Então, o que ele vai fazer? Ele vai adicionar o elemento no índice um e os demais. Ele vai colocar para depois desse índice.
+
+462
+01:09:01.319 --> 01:09:09.989
+lucas.histirari: Professor. Nesse caso, aí do Insert, ele não sobrescreve o que está na posição. Ele joga para frente e entra ali.
+
+463
+01:09:11.090 --> 01:09:17.250
+Gesiel Lopes: Guarda essa mensagem. Boa, Lucas. Vamos programar
+
+464
+01:09:18.210 --> 01:09:21.919
+Gesiel Lopes: antes de dar a resposta. Vamos programar.
+
+465
+01:09:22.140 --> 01:09:23.020
+lucas.histirari: Beleza.
+
+466
+01:09:24.220 --> 01:09:36.640
+Gesiel Lopes: O Pop é uma função que é utilizada para remover elementos de uma lista. Então ele vai mandar para ti. Ele vai te retornar uma cópia daquela lista.
+
+467
+01:09:38.700 --> 01:09:55.590
+Gesiel Lopes: Quando eu passo o índice, por exemplo, para o Pop, quando eu não passo nenhum elemento, nenhum índice para o Pop. Ele sempre vai excluir o último elemento da minha
+
+468
+01:09:55.880 --> 01:09:57.940
+Gesiel Lopes: da minha lista.
+
+469
+01:09:58.120 --> 01:10:10.439
+Gesiel Lopes: Então esses são os métodos mais comuns, como é fácil para criar uma lista. A gente já fez isso várias vezes. Diversas vezes. Então, para criar uma lista, números,
+
+470
+01:10:11.970 --> 01:10:22.540
+Gesiel Lopes: uma forma é através. Se eu quiser criar listas já preenchidas. É com colchetes com operador colchates onde eu passo
+
+471
+01:10:23.830 --> 01:10:31.800
+Gesiel Lopes: os valores separados por vírgula um, dois, três, quatro, cinco.
+
+472
+01:10:32.780 --> 01:10:44.310
+Gesiel Lopes: Tá, então eu posso ter uma lista de números. Eu posso ter uma lista de strings, por exemplo, maçã,
+
+473
+01:10:47.010 --> 01:10:48.020
+Gesiel Lopes: uva
+
+474
+01:10:51.100 --> 01:10:53.650
+Gesiel Lopes: e laranja.
+
+475
+01:10:54.260 --> 01:11:01.290
+Gesiel Lopes: Ou posso ter uma lista mista
+
+476
+01:11:07.610 --> 01:11:23.980
+Gesiel Lopes: aonde eu posso ter strings, Python, valores bolanos, true ou valores numéricos inteiros ou ponto flutuante tá?
+
+477
+01:11:24.250 --> 01:11:27.139
+Gesiel Lopes: E posso ter uma lista vazia.
+
+478
+01:11:29.530 --> 01:11:36.119
+Gesiel Lopes: E aí, para criar uma lista vazia, a gente pode criar de duas maneiras.
+
+479
+01:11:36.430 --> 01:11:40.620
+Gesiel Lopes: A primeira é com o operador. Conchete
+
+480
+01:11:45.890 --> 01:11:59.410
+Gesiel Lopes: tá, coloca aqui formas de criar listas, fazia se.
+
+481
+01:12:01.520 --> 01:12:07.700
+Gesiel Lopes: Então eu posso ter lista vazia. Um.
+
+482
+01:12:08.030 --> 01:12:13.030
+Gesiel Lopes: Então é só instanciá la com o operador. Colchete vazio.
+
+483
+01:12:13.270 --> 01:12:16.969
+Gesiel Lopes: Ou você pode chamar a função Beauty
+
+484
+01:12:20.130 --> 01:12:21.170
+Gesiel Lopes: dois.
+
+485
+01:12:21.630 --> 01:12:25.780
+Gesiel Lopes: Ou você pode chamar a função Beauty lista
+
+486
+01:12:27.890 --> 01:12:32.409
+Gesiel Lopes: são duas maneiras de você criar listas vazias.
+
+487
+01:12:33.470 --> 01:12:35.470
+Gesiel Lopes: Então observe aqui Print
+
+488
+01:12:40.590 --> 01:12:41.959
+Gesiel Lopes: por números,
+
+489
+01:12:47.240 --> 01:12:48.410
+Gesiel Lopes: frutas
+
+490
+01:12:54.460 --> 01:12:55.820
+Gesiel Lopes: variada.
+
+491
+01:12:58.020 --> 01:13:01.639
+Gesiel Lopes: Eu criei aqui Printlan.
+
+492
+01:13:04.720 --> 01:13:10.870
+Gesiel Lopes: Lista vazia um e lê
+
+493
+01:13:12.560 --> 01:13:23.630
+Gesiel Lopes: lista vazia. Dois lembrando que a função Biotchn Len, ela retorna o tamanho de uma coleção dada no caso de uma lista. E aí vocês podem observar que eu criei uma lista vazia
+
+494
+01:13:23.920 --> 01:13:34.050
+Gesiel Lopes: de duas maneiras distintas. Tá aí, questão de estilo. Eu gosto muito de criar por ser mais expressivo
+
+495
+01:13:34.400 --> 01:13:41.670
+Gesiel Lopes: quando eu bato de olho no córtico. Eu já sei que aquilo ali significa uma lista.
+
+496
+01:13:41.770 --> 01:13:53.520
+Gesiel Lopes: Então, por conta de ser mais claro, sempre que eu preciso criar listas dentro dos meus códigos vazias, eu gosto sempre de trabalhar com essa estrutura aqui,
+
+497
+01:13:53.820 --> 01:14:01.950
+Gesiel Lopes: porque fica mais evidente. Não que ela esteja certa ou errada. Não quer dizer que ela seja mais performática ou não.
+
+498
+01:14:02.170 --> 01:14:06.480
+Gesiel Lopes: Fica só mais fácil de ler o código, tá?
+
+499
+01:14:07.890 --> 01:14:15.209
+Gesiel Lopes: Mas você pode criar listas vazias da forma que você achar mais conveniente.
+
+500
+01:14:16.040 --> 01:14:22.569
+Gesiel Lopes: Você acessa os elementos da lista. A gente já trabalhou. Isso também.
+
+501
+01:14:23.820 --> 01:14:27.950
+Gesiel Lopes: Primeira fruta, tá,
+
+502
+01:14:28.260 --> 01:14:46.360
+Gesiel Lopes: você consegue acessar os elementos da minha lista com o operador com o sheik passando um índice dela. Então, nesse caso, quando eu passo o índice zero, eu estou pegando o primeiro elemento, lembrando que a lista, a indexação da lista.
+
+503
+01:14:46.500 --> 01:14:51.550
+Gesiel Lopes: Ela pode ser vista da esquerda para a direita.
+
+504
+01:14:51.810 --> 01:14:55.959
+Gesiel Lopes: Quando eu analiso da esquerda para a direita, o primeiro índice é zero
+
+505
+01:14:56.270 --> 01:15:00.169
+Gesiel Lopes: e o último índice vai ser a quantidade de elementos menos um.
+
+506
+01:15:00.450 --> 01:15:11.190
+Gesiel Lopes: E quando eu analiso os índices da direita para a esquerda, eles passam a ter identificadores negativos, começando com menos um.
+
+507
+01:15:12.980 --> 01:15:24.970
+Gesiel Lopes: Então o zero significa o primeiro elemento da minha lista. O último, o último, última fruta.
+
+508
+01:15:25.080 --> 01:15:27.870
+Gesiel Lopes: O último elemento da minha lista.
+
+509
+01:15:29.200 --> 01:15:30.160
+Gesiel Lopes: Frutas
+
+510
+01:15:30.650 --> 01:15:40.709
+Gesiel Lopes: é o primeiro elemento da direita para a esquerda. Então posso acessar ele com menos um. São maneiras de eu conseguir trabalhar com o primeiro e o último elemento.
+
+511
+01:15:42.080 --> 01:15:45.010
+Gesiel Lopes: Então eu posso imprimir aqui.
+
+512
+01:15:45.210 --> 01:15:50.660
+Gesiel Lopes: Primeira primeira fruta,
+
+513
+01:15:57.630 --> 01:15:58.660
+Gesiel Lopes: última
+
+514
+01:16:02.240 --> 01:16:03.740
+Gesiel Lopes: última fruta.
+
+515
+01:16:10.080 --> 01:16:10.770
+marcos.jose: Sim,
+
+516
+01:16:11.000 --> 01:16:25.559
+marcos.jose: tem alguma função, Beauty? Alguma função direta que já imprima direto a última, se eu tiver, por exemplo, com uma lista dinâmica que vai crescendo em algum momento. Eu quero que ela sempre mostre qual é o último valor que foi inserido,
+
+517
+01:16:26.040 --> 01:16:31.149
+marcos.jose: porque senão nesse método, eu teria que estar toda hora indo manualmente e dizer qual é a posição que eu quero.
+
+518
+01:16:31.290 --> 01:16:41.990
+marcos.jose: Mas às vezes, se eu quiser saber quantas pessoas já colocaram o nome lá. Eu tenho Len para contar lá. Mas e se eu quiser saber qual é o último nome que foi colocado.
+
+519
+01:16:42.440 --> 01:16:47.820
+Gesiel Lopes: Se for uma lista com menos um, o menos um, sempre vai ser o último elemento.
+
+520
+01:16:47.820 --> 01:16:48.389
+marcos.jose: Ah, legal.
+
+521
+01:16:48.390 --> 01:16:48.790
+Gesiel Lopes: Com a.
+
+522
+01:16:48.790 --> 01:16:50.579
+marcos.jose: De trás pra frente, né? Isso.
+
+523
+01:16:50.580 --> 01:17:03.220
+Gesiel Lopes: Sempre vai ser daquele momento, quando eu acesso ele. Naquele momento que eu estou acessando o índice menos um, ele sempre vai ser o primeiro elemento da direita para a esquerda. Que quer dizer? O último elemento
+
+524
+01:17:03.330 --> 01:17:04.480
+Gesiel Lopes: sempre.
+
+525
+01:17:04.690 --> 01:17:05.410
+marcos.jose: Boa.
+
+526
+01:17:05.790 --> 01:17:06.680
+marcos.jose: Obrigado.
+
+527
+01:17:08.390 --> 01:17:16.370
+Gesiel Lopes: Boa, boa. Você consegue também dentro das listas. Algo que inclusive a gente trabalhou bastante
+
+528
+01:17:16.880 --> 01:17:34.960
+Gesiel Lopes: quando a gente estava trabalhando com o String. Foi o conceito de Slice. Lembram quando a gente queria criar strings específicas? Você consegue aplicar o mesmo conceito com
+
+529
+01:17:35.900 --> 01:17:38.850
+Gesiel Lopes: de Slice com listas, até porque
+
+530
+01:17:39.110 --> 01:17:52.360
+Gesiel Lopes: o fatiamento. O Slice é uma característica de listas, não especificamente de strings. Então, por exemplo, eu queira, Ah,
+
+531
+01:17:52.920 --> 01:17:57.810
+Gesiel Lopes: vamos supor que eu queira as frutas.
+
+532
+01:17:59.220 --> 01:18:00.390
+Gesiel Lopes: Frutas
+
+533
+01:18:05.050 --> 01:18:06.540
+Gesiel Lopes: é
+
+534
+01:18:13.000 --> 01:18:16.780
+Gesiel Lopes: frutas da terceira
+
+535
+01:18:21.170 --> 01:18:27.129
+Gesiel Lopes: posição a partir. Eu acho que fica melhor assim, né?
+
+536
+01:18:28.430 --> 01:18:38.729
+Gesiel Lopes: Partir da terceira posição, por exemplo, como é que eu faço isso? Eu posso pagar frutas.
+
+537
+01:18:40.310 --> 01:18:50.070
+Gesiel Lopes: Observem, a partir. Então, três a partir do índice três a partir da terceira é não da terceira,
+
+538
+01:18:51.410 --> 01:18:54.439
+Gesiel Lopes: que a terceira vai ser a primeira vai ser zero.
+
+539
+01:18:54.680 --> 01:19:08.889
+Gesiel Lopes: A segunda vai ser dois e a terceira vai ser a primeira posição. Vai ser zero. A segunda vai ser um e a terceira vai ser dois. Então, se eu fizer dois
+
+540
+01:19:09.140 --> 01:19:11.530
+Gesiel Lopes: e não especificar o final.
+
+541
+01:19:11.650 --> 01:19:17.670
+Gesiel Lopes: Se a minha lista tiver mais de três elementos, ela vai me retornar aos elementos a partir da terceira,
+
+542
+01:19:18.110 --> 01:19:18.870
+Gesiel Lopes: tá?
+
+543
+01:19:19.120 --> 01:19:20.780
+Gesiel Lopes: Eu posso imprimir.
+
+544
+01:19:28.270 --> 01:19:29.010
+Gesiel Lopes: Ah, é?
+
+545
+01:19:29.250 --> 01:19:33.500
+Gesiel Lopes: Então, no caso, ele só vai retornar a laranja porque eu só tenho a laranja,
+
+546
+01:19:33.980 --> 01:19:39.020
+Gesiel Lopes: e aí eu posso brincar com Slice. Tá?
+
+547
+01:19:39.400 --> 01:19:52.450
+Gesiel Lopes: As duas primeiras frutas.
+
+548
+01:19:52.660 --> 01:19:59.389
+Gesiel Lopes: Posso fazer frutas, não especificar o início e colocar o três,
+
+549
+01:20:00.200 --> 01:20:09.739
+Gesiel Lopes: lembrando que o último elemento do Slice não é inclusivo. Então estou pegando todo mundo até o índice três menos dois, ou seja,
+
+550
+01:20:10.020 --> 01:20:11.950
+Gesiel Lopes: na realidade até o dois, né?
+
+551
+01:20:12.080 --> 01:20:17.750
+Gesiel Lopes: Que eu quero que ele pegue as duas primeiras. Então eu quero que ele pegue o índice zero e o índice um.
+
+552
+01:20:18.470 --> 01:20:25.570
+Gesiel Lopes: Tá, então print as duas primeiras frutas.
+
+553
+01:20:25.740 --> 01:20:32.010
+Gesiel Lopes: Se eu tivesse mais de dez frutas, e aí eu poderia brincar com Slays.
+
+554
+01:20:33.430 --> 01:20:36.049
+Gesiel Lopes: E aí eu consigo.
+
+555
+01:20:38.110 --> 01:20:56.169
+Gesiel Lopes: E aí, respondendo o que o Lucas perguntou? Que é modificando monte, ficando listas, tá a primeira forma,
+
+556
+01:20:57.520 --> 01:21:06.030
+Gesiel Lopes: a primeira forma de eu modificar uma lista é a partir do operador colchete.
+
+557
+01:21:06.240 --> 01:21:11.930
+Gesiel Lopes: Então vamos supor que eu tenha a minha lista de frutas, tá?
+
+558
+01:21:12.870 --> 01:21:18.540
+Gesiel Lopes: Utiliza o operador colchate e aí eu colcheio. Eu passo um índice um
+
+559
+01:21:19.570 --> 01:21:23.729
+Gesiel Lopes: e coloque, por exemplo, no índice um.
+
+560
+01:21:25.860 --> 01:21:28.119
+Gesiel Lopes: Um outro valor.
+
+561
+01:21:28.380 --> 01:21:29.960
+Gesiel Lopes: Aqui, olha só
+
+562
+01:21:37.620 --> 01:21:39.099
+Gesiel Lopes: e aí, só para.
+
+563
+01:21:41.450 --> 01:21:48.019
+Gesiel Lopes: Para a gente guardar o original. E aí, olha só. Vou fazer aqui algo para ver se vocês conseguem entender.
+
+564
+01:22:02.230 --> 01:22:08.990
+Gesiel Lopes: Vou criar a cópia da lista. Só que eu vou criar a partir da minha lista de frutas, tá?
+
+565
+01:22:09.830 --> 01:22:14.670
+Gesiel Lopes: E aí eu vou copiar e vou modificar na cópia, tá?
+
+566
+01:22:14.770 --> 01:22:21.030
+Gesiel Lopes: E aí vou fazer um print da lista original
+
+567
+01:22:25.710 --> 01:22:32.820
+Gesiel Lopes: e um print. Ó, dá cópia da lista.
+
+568
+01:22:33.810 --> 01:22:36.040
+Gesiel Lopes: O que vai ser frutas
+
+569
+01:22:39.520 --> 01:22:40.880
+Gesiel Lopes: e cópia.
+
+570
+01:22:46.070 --> 01:22:54.830
+Gesiel Lopes: Deu para perceber o que aconteceu. Mesmo eu trabalhando com outra referência com outra variável, ele alterou a variável original,
+
+571
+01:22:55.610 --> 01:23:07.469
+Gesiel Lopes: porque essas duas variáveis na realidade, são a mesma. Para que eu não altere a variável original. Nesse caso, e queira de fato trabalhar com a cópia. Eu uso o método Copy
+
+572
+01:23:07.780 --> 01:23:15.180
+Gesiel Lopes: agora. Sim, e aí ele garante que eu esteja trabalhando com a cópia da lista.
+
+573
+01:23:15.370 --> 01:23:29.679
+Gesiel Lopes: Então a primeira maneira de eu adicionar elementos da minha lista é através do operador colchete passando um índice e adicionando o valor que eu quero inserir dentro da minha lista,
+
+574
+01:23:29.940 --> 01:23:38.249
+Gesiel Lopes: tá, por exemplo. E aí só um pequeno cuidado. Vamos supor que eu queira adicionar na minha cópia,
+
+575
+01:23:39.210 --> 01:23:44.430
+Gesiel Lopes: por exemplo, é três
+
+576
+01:23:48.180 --> 01:23:49.210
+Gesiel Lopes: feira.
+
+577
+01:23:50.960 --> 01:23:53.220
+Gesiel Lopes: E aí novamente, eu faço o print,
+
+578
+01:23:56.450 --> 01:23:57.320
+Gesiel Lopes: tá?
+
+579
+01:23:58.520 --> 01:24:04.300
+Gesiel Lopes: E observem que eu estou adicionando um valor aqui no último. E se eu adicionar um valor?
+
+580
+01:24:04.620 --> 01:24:05.950
+Gesiel Lopes: É,
+
+581
+01:24:14.390 --> 01:24:19.309
+Gesiel Lopes: eu passei Opa, eu comentei. Agora vai.
+
+582
+01:24:21.300 --> 01:24:23.370
+Gesiel Lopes: Era isso que eu queria mostrar.
+
+583
+01:24:24.180 --> 01:24:38.100
+Gesiel Lopes: Observem o seguinte, tá se observar Print Len, cópia.
+
+584
+01:24:38.330 --> 01:24:40.010
+Gesiel Lopes: Estou finalizando pessoal.
+
+585
+01:24:40.150 --> 01:24:41.370
+Gesiel Lopes: Cópia da lista.
+
+586
+01:24:59.790 --> 01:25:03.620
+Gesiel Lopes: Observe que a minha lista tem tamanho três.
+
+587
+01:25:04.490 --> 01:25:12.050
+Gesiel Lopes: Só que eu estou tentando inserir ó através do operador colchate.
+
+588
+01:25:12.890 --> 01:25:19.889
+Gesiel Lopes: É como se eu quisesse adicionar no final da minha lista, um elemento.
+
+589
+01:25:21.280 --> 01:25:24.449
+Gesiel Lopes: Então quero que ele adicione no índice três.
+
+590
+01:25:25.080 --> 01:25:29.409
+Gesiel Lopes: Mas se vocês observarem, eu compro o próprio. O erro já acontece.
+
+591
+01:25:29.520 --> 01:25:33.020
+Gesiel Lopes: Ele está dizendo o quê? Que eu estou querendo inserir
+
+592
+01:25:33.490 --> 01:25:44.550
+Gesiel Lopes: um elemento na minha lista fora da quantidade de índices que eu tenho. Então, quando eu utilizo o coachei,
+
+593
+01:25:44.730 --> 01:25:45.460
+Gesiel Lopes: tá?
+
+594
+01:25:45.650 --> 01:25:48.500
+Gesiel Lopes: Quando eu utilizo o operador com sheik.
+
+595
+01:25:48.860 --> 01:26:06.750
+Gesiel Lopes: A manipulação da lista fica condicionada ao range de índices disponíveis que eu tenho. E qual é esse Range. É o tamanho. É de zero até o tamanho da lista. Menos um.
+
+596
+01:26:06.870 --> 01:26:13.840
+Gesiel Lopes: Eu não consigo acessar um elemento que ele não esteja presente na lista.
+
+597
+01:26:14.140 --> 01:26:16.570
+Gesiel Lopes: Por isso que eu faço o quê?
+
+598
+01:26:16.840 --> 01:26:21.830
+Gesiel Lopes: Por isso que para inserir no último elemento, tá
+
+599
+01:26:31.440 --> 01:26:43.310
+Gesiel Lopes: adicionando mais elementos, elementos, eu tenho que usar primeiro o
+
+600
+01:26:44.350 --> 01:26:49.620
+Gesiel Lopes: o Appende. Eu posso usar o. Aprende cópia, lista
+
+601
+01:26:50.820 --> 01:26:56.720
+Gesiel Lopes: o appende. E aí eu vou adicionar a pera
+
+602
+01:26:59.690 --> 01:27:11.920
+Gesiel Lopes: e vou na cópia da lista e fazer um inset no índice um de uma outra fruta,
+
+603
+01:27:12.110 --> 01:27:20.800
+Gesiel Lopes: que é a fruta que eu gosto bastante morango, que foi o que o Lucas havia perguntado. O que acontece com o inset?
+
+604
+01:27:21.000 --> 01:27:21.810
+Gesiel Lopes: Tá,
+
+605
+01:27:23.340 --> 01:27:34.890
+Gesiel Lopes: então observe que eu pego a minha lista original. Substituí o segundo elemento aqui, que foi a cópia que eu fiz, que é o índice um com banana
+
+606
+01:27:39.450 --> 01:27:40.210
+Gesiel Lopes: tá?
+
+607
+01:27:42.340 --> 01:27:45.349
+Gesiel Lopes: Adicionei, ó no último elemento.
+
+608
+01:27:45.910 --> 01:27:50.120
+Gesiel Lopes: O apêndice sempre vai adicionar o elemento no final.
+
+609
+01:27:50.480 --> 01:27:56.129
+Gesiel Lopes: E o inset. Lucas, ele não substitui o elemento.
+
+610
+01:27:56.320 --> 01:27:59.979
+Gesiel Lopes: Na realidade, ele insere naquela posição
+
+611
+01:28:00.190 --> 01:28:13.150
+Gesiel Lopes: e aí, por debaixo dos panos que o Python faz. É como eu estou inserindo um novo elemento. Ele reposiciona todos os elementos a partir do local de inserção.
+
+612
+01:28:13.420 --> 01:28:21.229
+Gesiel Lopes: Se a lista não fosse ordenada, o Python conseguiria fazer essa reordenação com o inset,
+
+613
+01:28:21.350 --> 01:28:30.810
+Gesiel Lopes: então ele não substitui. Caso eu queira substituir um elemento dentro da lista, eu uso operador, colchate, tá
+
+614
+01:28:34.600 --> 01:28:38.010
+Gesiel Lopes: e aí, tranquilo.
+
+615
+01:28:38.350 --> 01:28:42.340
+Gesiel Lopes: Então é isso, pessoal, o que eu tinha preparado para hoje, tá?
+
+616
+01:28:44.440 --> 01:29:03.569
+Gesiel Lopes: A gente continua no nosso próximo encontro, manipulando um pouquinho mais, tá? Questões sobre listas. E aí, depois que a gente finalizar, a gente faz algumas aplicações interessantes. Beleza. Então é isso, pessoal. Muito obrigado. Bons estudos e encontro vocês na próxima, fui.
+

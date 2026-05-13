@@ -1,0 +1,2670 @@
+WEBVTT
+
+1
+00:00:13.540 --> 00:00:17.950
+Gesiel Lopes: Vamos lá, pessoal. Só pegar aqui um pouco. D, água. Já já iniciamos.
+
+2
+00:00:37.130 --> 00:00:43.459
+Gesiel Lopes: Então, vamos lá, pessoal. Então, antes de mais nada. Muito. Boa noite. Seja bem vindo a mais um encontro aqui
+
+3
+00:00:43.590 --> 00:00:45.940
+Gesiel Lopes: da disciplina.
+
+4
+00:00:47.290 --> 00:00:52.860
+Gesiel Lopes: D, programação.
+
+5
+00:00:59.230 --> 00:01:02.930
+Gesiel Lopes: Tem que pegar o nome da disciplina direitinho, né?
+
+6
+00:01:03.170 --> 00:01:12.239
+Gesiel Lopes: Então, mais uma vez, Bora lá, deixa eu entrar aqui no link. Certo, então. Bora lá. Recomeçando
+
+7
+00:01:13.250 --> 00:01:21.780
+Gesiel Lopes: mais uma vez. Muito boa noite. Seja bem vindo. Muito bem vinda a mais um encontro aqui da disciplina de Python para processamento de dados
+
+8
+00:01:21.940 --> 00:01:30.249
+Gesiel Lopes: do bloco de fundamentos de processamento de dados aqui do Instituto Infinity. Aqui quem vos fala é o Gisele Lopes.
+
+9
+00:01:30.370 --> 00:01:35.259
+Gesiel Lopes: Vamos dar início a mais um encontro aqui da nossa disciplina.
+
+10
+00:01:36.960 --> 00:01:46.150
+Gesiel Lopes: Aproveito para pedir um feedback da galera que está aqui ao vivo. Vocês estão me ouvindo? Bem, conseguem me ver? Bem, está tudo tranquilo.
+
+11
+00:01:47.720 --> 00:01:49.250
+Gesiel Lopes: Valeu, Kléber.
+
+12
+00:01:52.900 --> 00:01:54.200
+Gesiel Lopes: Então, vamos lá.
+
+13
+00:01:54.390 --> 00:01:55.580
+Gesiel Lopes: É
+
+14
+00:01:59.710 --> 00:02:00.600
+Gesiel Lopes: Opa.
+
+15
+00:02:04.950 --> 00:02:09.070
+Gesiel Lopes: Então deixa eu compartilhar aqui a minha tela com vocês.
+
+16
+00:02:27.050 --> 00:02:30.990
+Gesiel Lopes: Acredito que vocês estejam vendo nesse exato momento,
+
+17
+00:02:31.970 --> 00:02:34.519
+Gesiel Lopes: a minha tela. Acho que esse também está legal.
+
+18
+00:02:40.880 --> 00:02:43.200
+Gesiel Lopes: Então vamos lá.
+
+19
+00:02:44.360 --> 00:02:48.300
+Gesiel Lopes: Antes de continuar, pessoal, eu postei lá no grupo. Já
+
+20
+00:02:48.540 --> 00:02:54.809
+Gesiel Lopes: o código, o notebook. É assim que a Lady Murphy, assim que finalizei na hora que fechei a
+
+21
+00:02:55.840 --> 00:02:59.129
+Gesiel Lopes: o Zoom, eu já tinha resolvido o problema
+
+22
+00:02:59.340 --> 00:03:04.659
+Gesiel Lopes: que a gente tentou resolver no nosso último encontro,
+
+23
+00:03:04.840 --> 00:03:09.520
+Gesiel Lopes: que era fazer o contador que a gente fez usando dicionários.
+
+24
+00:03:09.640 --> 00:03:17.920
+Gesiel Lopes: Uma contagem dos Tokins do problema que a gente resolveu quando eu estava trabalhando com strings de um texto,
+
+25
+00:03:18.770 --> 00:03:23.200
+Gesiel Lopes: e aí o que eu fiz.
+
+26
+00:03:27.970 --> 00:03:42.619
+Gesiel Lopes: A gente fez um contador de Tolkins. E aí, o último desafio que eu tentei fazer com vocês foi como obter o Tolkien com maior ocorrência. Então, uma forma de você fazer isso é com
+
+27
+00:03:42.920 --> 00:04:01.669
+Gesiel Lopes: com condicionários. Eu fiz um algoritmo. Não necessariamente. É o melhor. É a única forma. Vocês podem, caso queiram definir outra maneira. Um outro loop, enfim, é uma forma somente de resolver. Então, basicamente, o que eu faço. É
+
+28
+00:04:02.720 --> 00:04:08.100
+Gesiel Lopes: o que eu faço. Basicamente aqui é criar um dicionário vazio.
+
+29
+00:04:08.520 --> 00:04:15.800
+Gesiel Lopes: Então cria um dicionário vazio e cria uma variável para controlar
+
+30
+00:04:15.940 --> 00:04:26.340
+Gesiel Lopes: e fazer a substituição da maior ocorrência para aquele token. Aí eu começo com zero beleza.
+
+31
+00:04:26.380 --> 00:04:45.499
+Gesiel Lopes: E aí eu faço uma validação. E aí observe que essa minha contagem de Tolkens vai ter o Token e a quantidade de vezes que ele se repete. Então, quando eu faço itens. A gente espera sobre chave e valor. Então eu vou. A chave é o meu Token, e o valor é a ocorrência.
+
+32
+00:04:45.650 --> 00:04:50.380
+Gesiel Lopes: Então pega o meu token e pega a ocorrência, tá?
+
+33
+00:04:51.390 --> 00:04:59.150
+Gesiel Lopes: Se essa ocorrência for maior do que a variável de controle que eu estou utilizando,
+
+34
+00:04:59.540 --> 00:05:01.489
+Gesiel Lopes: eu os faço a troca.
+
+35
+00:05:01.780 --> 00:05:06.810
+Gesiel Lopes: Então a ocorrência do Tolkien recebe a ocorrência, que seria o maior valor.
+
+36
+00:05:07.360 --> 00:05:22.910
+Gesiel Lopes: E aí eu faço o próximo loop. Só que aí eu faço uma pequena validação para fazer esse controle do token dentro do dicionário. Porque esse token só pode ter um. Esse dicionário, melhor dizendo, só pode ter uma chave e um valor.
+
+37
+00:05:23.250 --> 00:05:31.920
+Gesiel Lopes: Tá, então o que eu faço é, eu verifico se esse dicionário
+
+38
+00:05:32.250 --> 00:05:37.670
+Gesiel Lopes: está vazio ou não? Se ele estiver vazio,
+
+39
+00:05:38.990 --> 00:05:43.399
+Gesiel Lopes: eu não faço nada. Eu adiciono, eu faço a troca
+
+40
+00:05:44.010 --> 00:05:49.490
+Gesiel Lopes: e adiciona o Token ao meu dicionário, o Token, à ocorrência.
+
+41
+00:05:50.930 --> 00:06:00.750
+Gesiel Lopes: Se esse dicionário não for vazio, ou seja, se ele já foi preenchido alguma vez, ele só vai ser preenchido uma única vez, diga se de passagem,
+
+42
+00:06:01.090 --> 00:06:01.950
+Gesiel Lopes: tá?
+
+43
+00:06:02.090 --> 00:06:03.910
+Gesiel Lopes: Eu. Eu.
+
+44
+00:06:05.790 --> 00:06:13.310
+Gesiel Lopes: Eu pego a primeira chave e aí tem várias maneiras de você fazer isso.
+
+45
+00:06:13.850 --> 00:06:21.930
+Gesiel Lopes: E aí o que eu queria mostrar é que esse Token Keys é um objeto não interável. Aliás, ele é um objeto interável. Não é uma lista,
+
+46
+00:06:22.620 --> 00:06:28.369
+Gesiel Lopes: porque eu preciso pegar a primeira chave sempre. Eu quero a primeira chave.
+
+47
+00:06:28.860 --> 00:06:36.179
+Gesiel Lopes: Então eu preciso converter esse cara para uma lista. Então converto, pego a primeira chave, tá bom?
+
+48
+00:06:36.730 --> 00:06:42.750
+Gesiel Lopes: E aí eu chamo de Token Menor. E aqui eu faço um pop, que é para
+
+49
+00:06:43.010 --> 00:06:49.999
+Gesiel Lopes: tirar esse Token. Essa chave da minha lista.
+
+50
+00:06:50.240 --> 00:06:51.070
+Gesiel Lopes: Tá?
+
+51
+00:06:52.410 --> 00:07:00.230
+Gesiel Lopes: Então, sempre que tiver alguém, eu vou tirar e for menor, eu tiro ele
+
+52
+00:07:00.390 --> 00:07:08.309
+Gesiel Lopes: para que eu possa sempre adicionar um elemento no dicionário vazio num dicionário que não tem nada.
+
+53
+00:07:08.450 --> 00:07:23.770
+Gesiel Lopes: Então foi essa a lógica. Só que eu fiz, que eu tinha que só fazer esse controle para fazer um incremento. E aí dar a resposta correta, que aí. No caso, o token do nosso texto, que mais se repete é quarenta e cinco,
+
+54
+00:07:23.980 --> 00:07:24.760
+Gesiel Lopes: tá?
+
+55
+00:07:25.500 --> 00:07:28.700
+Gesiel Lopes: Só isso, beleza.
+
+56
+00:07:30.750 --> 00:07:31.700
+Gesiel Lopes: E aí,
+
+57
+00:07:33.210 --> 00:07:39.510
+Gesiel Lopes: lembrando, tem várias maneiras de você fazer isso. Essa é a melhor maneira. A maneira mais elegante. Não
+
+58
+00:07:39.660 --> 00:07:44.830
+Gesiel Lopes: se você quiser proponha, faça alguma coisa diferente.
+
+59
+00:07:46.330 --> 00:07:52.360
+Gesiel Lopes: É apenas uma das formas de você fazer ou de resolver esse problema.
+
+60
+00:07:54.760 --> 00:08:00.790
+Gesiel Lopes: Estão dando continuidade ainda sobre as coleções.
+
+61
+00:08:00.820 --> 00:08:16.120
+Gesiel Lopes: A próxima coleção que a gente vai trabalhar. É uma coleção chamada de conjuntos ou sets. A gente inclusive, já trabalhou com coleções com sets meio que implicitamente
+
+62
+00:08:16.460 --> 00:08:26.150
+Gesiel Lopes: tá é que as chaves não é o
+
+63
+00:08:26.720 --> 00:08:36.600
+Gesiel Lopes: dos dicionários. Eles têm um comportamento de conjuntos. E qual é a principal característica?
+
+64
+00:08:36.760 --> 00:08:46.390
+Gesiel Lopes: A gente viu que a diferença de listas e dicionários é que as listas são.
+
+65
+00:08:47.460 --> 00:08:53.099
+Gesiel Lopes: São definidas por índices numéricos, começando de zero até o tamanho, da lista. Menos um
+
+66
+00:08:53.830 --> 00:09:04.580
+Gesiel Lopes: e os dicionários uma principal característica e diferença é que os índices são definidos pelo
+
+67
+00:09:04.580 --> 00:09:14.820
+Gesiel Lopes: pelo programador. São definidos pelo usuário e podem ser tanto números como não números. Ou seja, pode ser qualquer objeto do Python,
+
+68
+00:09:15.590 --> 00:09:25.720
+Gesiel Lopes: só que os índices, ou seja, as chaves dos dicionários devem ser únicas,
+
+69
+00:09:25.760 --> 00:09:41.769
+Gesiel Lopes: caso você adicione ou queira adicionar ou repetir uma chave, o Python entende que, na realidade, você está querendo trocar o valor daquela chave e não adicionar a mesma chave no dicionário,
+
+70
+00:09:41.770 --> 00:09:50.649
+Gesiel Lopes: porque as chaves dentro do dicionário são únicas, e esse comportamento de se ter uma coleção
+
+71
+00:09:50.740 --> 00:10:08.320
+Gesiel Lopes: com elementos únicos é justamente a definição ou a principal característica dos conjuntos dentro da linguagem. Pai, então os conjuntos são coleções não ordenadas, mutáveis e sem
+
+72
+00:10:08.490 --> 00:10:13.709
+Gesiel Lopes: itens repetidos, ou seja, sem itens duplicados.
+
+73
+00:10:14.530 --> 00:10:20.290
+Gesiel Lopes: E como é que eu crio um conjunto, é.
+
+74
+00:10:20.670 --> 00:10:26.470
+Gesiel Lopes: Existem diversas formas que você pode utilizar para criar conjuntos.
+
+75
+00:10:27.630 --> 00:10:44.910
+Gesiel Lopes: Uma forma que é a forma mais usual é utilizando o operador. Colchates, colchetes, é não, chaves. É chaves
+
+76
+00:10:45.100 --> 00:10:47.500
+Gesiel Lopes: com o Chaves, tá?
+
+77
+00:10:48.040 --> 00:10:53.660
+Gesiel Lopes: Então vamos supor que aqui eu tenha frutas a chaves,
+
+78
+00:10:54.240 --> 00:11:01.309
+Gesiel Lopes: e aí eu coloco maçã. E aí, a principal diferença do uso de chaves, né?
+
+79
+00:11:02.530 --> 00:11:05.380
+Gesiel Lopes: De conjuntos para o dicionário
+
+80
+00:11:05.840 --> 00:11:15.170
+Gesiel Lopes: é que no dicionário, sempre eu vou ter a definição do pá chave e valor chave. Dois pontos, valor. O próximo elemento vai ser chave.
+
+81
+00:11:16.150 --> 00:11:20.729
+Gesiel Lopes: Dois pontos, valor e assim sucessivamente, nos sets.
+
+82
+00:11:20.880 --> 00:11:36.230
+Gesiel Lopes: As chaves são utilizadas. Porém eu vou declarar como se fosse uma lista. Então vamos supor maçã, banana, caju,
+
+83
+00:11:41.920 --> 00:11:48.750
+Gesiel Lopes: manga e aí jabuti.
+
+84
+00:11:49.350 --> 00:11:50.050
+Gesiel Lopes: Tá bom.
+
+85
+00:11:51.260 --> 00:11:54.350
+Gesiel Lopes: E aí, só para mostrar para vocês, tá?
+
+86
+00:11:56.100 --> 00:11:59.150
+Gesiel Lopes: Eu vou colocar jabuticaba duas vezes.
+
+87
+00:11:59.560 --> 00:12:03.370
+Gesiel Lopes: E se eu fizer um print de frutas, o que acontece.
+
+88
+00:12:14.300 --> 00:12:16.009
+Gesiel Lopes: O Deep Note está subindo,
+
+89
+00:12:22.050 --> 00:12:22.840
+Gesiel Lopes: tá?
+
+90
+00:12:24.810 --> 00:12:32.429
+Gesiel Lopes: Então, se vocês observarem o mesmo que eu adiciono o mesmo elemento
+
+91
+00:12:32.750 --> 00:12:38.139
+Gesiel Lopes: dentro de um conjunto. Ele só considera um único elemento.
+
+92
+00:12:39.720 --> 00:12:44.929
+Gesiel Lopes: E aí vocês podem observar que toda vez que eu executar,
+
+93
+00:12:45.200 --> 00:12:50.579
+Gesiel Lopes: e aí eu posso até mostrar para vocês, tá um fó
+
+94
+00:12:53.160 --> 00:12:57.620
+Gesiel Lopes: no range executar cinco vezes, tá esse print
+
+95
+00:12:58.840 --> 00:13:04.350
+Gesiel Lopes: a cada execução ele deve mostrar uma ordem diferente.
+
+96
+00:13:06.070 --> 00:13:10.380
+Gesiel Lopes: É, e aí, tá?
+
+97
+00:13:11.800 --> 00:13:13.020
+Gesiel Lopes: E aí que ele deu?
+
+98
+00:13:16.480 --> 00:13:17.870
+Gesiel Lopes: Porque ele está?
+
+99
+00:13:21.390 --> 00:13:23.000
+Gesiel Lopes: Não executou
+
+100
+00:13:27.870 --> 00:13:29.450
+Gesiel Lopes: o Python.
+
+101
+00:13:29.750 --> 00:13:32.139
+Gesiel Lopes: E aí eu vou abrir um parêntese.
+
+102
+00:13:35.230 --> 00:13:42.740
+Gesiel Lopes: O Python tem um mecanismo que a gente chama de hot chikung.
+
+103
+00:13:44.580 --> 00:13:46.060
+Gesiel Lopes: Agora nem lembro
+
+104
+00:13:50.000 --> 00:14:04.740
+Gesiel Lopes: que é uma otimização que ele faz no Rotting Code Python interpretador Hot.
+
+105
+00:14:18.010 --> 00:14:23.689
+Gesiel Lopes: Ele tem o Hot Encodcode. É uma técnica de
+
+106
+00:14:25.570 --> 00:14:31.430
+Gesiel Lopes: Onu Hot Encode. É uma técnica de damização? Mas não, é essa
+
+107
+00:14:31.820 --> 00:14:36.419
+Gesiel Lopes: otimização. Eu vou lembrar até o final do encontro. E prometo,
+
+108
+00:14:45.400 --> 00:14:47.260
+Gesiel Lopes: em Uté
+
+109
+00:14:58.130 --> 00:15:01.010
+Gesiel Lopes: que isso, na realidade, não é nem um do.
+
+110
+00:15:04.640 --> 00:15:08.539
+Gesiel Lopes: Isso é comum das linguagens de programação
+
+111
+00:15:11.260 --> 00:15:22.570
+Gesiel Lopes: tem no Java, no C. Isso é um conceito do do interpretador do
+
+112
+00:15:23.570 --> 00:15:30.730
+Gesiel Lopes: do C, que é o Python por debaixo dos panos. Ele transpila código C, tá.
+
+113
+00:15:31.030 --> 00:15:37.730
+Gesiel Lopes: Que é o que a gente chama de Diu. Eu vou procurar depois. Eu lembro. Se eu não lembrar hoje. Eu falo amanhã
+
+114
+00:15:38.370 --> 00:15:41.310
+Gesiel Lopes: no próximo encontro, tá?
+
+115
+00:15:43.690 --> 00:15:46.360
+Gesiel Lopes: Que ele faz uma otimização do código.
+
+116
+00:15:46.930 --> 00:15:54.739
+Gesiel Lopes: Deixa eu só colocar aqui mais um elemento maçã. Ele já.
+
+117
+00:15:56.880 --> 00:16:04.760
+Gesiel Lopes: Ele já identificou uma sequência, e ele vai sempre colocar essa sequência. Então esqueçam, por enquanto,
+
+118
+00:16:05.630 --> 00:16:11.170
+Gesiel Lopes: que eu queria mostrar. É que o conjunto, de fato,
+
+119
+00:16:12.650 --> 00:16:19.600
+Gesiel Lopes: é porque o conjunto é uma coleção não ordenada.
+
+120
+00:16:19.980 --> 00:16:29.350
+Gesiel Lopes: E aí a gente pode pensar que a ordem que eu defino os elementos. É a ordem que de fato vai sempre aparecer. E não necessariamente.
+
+121
+00:16:29.560 --> 00:16:36.549
+Gesiel Lopes: Tá bom, que é, mas deixa depois eu.
+
+122
+00:16:37.350 --> 00:16:41.469
+Gesiel Lopes: Nesse caso, aqui o Python já fez um,
+
+123
+00:16:42.190 --> 00:16:48.830
+Gesiel Lopes: que é o que a gente chama de inicialização rápida. Então o Python entendeu que esse código sempre vai se repetir.
+
+124
+00:16:49.250 --> 00:16:54.399
+Gesiel Lopes: E aí, como é um código que sempre se repete? Ele coloca na área
+
+125
+00:16:54.570 --> 00:17:07.620
+Gesiel Lopes: e ele define como se fosse a forma padrão. Mas, na realidade, o que ele está fazendo é só não definindo a forma padrão, porque esse código, como eu executei mais de uma vez. Ele se repete,
+
+126
+00:17:08.130 --> 00:17:16.830
+Gesiel Lopes: mas não necessariamente. Sempre. É a mesma ordem, porque todo conjunto é uma coleção não ordenada
+
+127
+00:17:27.490 --> 00:17:29.290
+Gesiel Lopes: é beleza.
+
+128
+00:17:29.520 --> 00:17:42.380
+Gesiel Lopes: Então observe que, como eu estava falando, mesmo eu adicionando um elemento repetido, ele ele não deixa adicionar.
+
+129
+00:17:44.070 --> 00:17:48.370
+Gesiel Lopes: Deixa eu fazer um outro teste aqui com letras.
+
+130
+00:17:51.570 --> 00:17:52.479
+Gesiel Lopes: Deixa eu ver.
+
+131
+00:17:57.190 --> 00:18:01.040
+Gesiel Lopes: Deixa eu só ver se eu consigo simular esse comportamento.
+
+132
+00:18:01.760 --> 00:18:04.350
+Gesiel Lopes: Vamos supor que eu tenho aqui um outro.
+
+133
+00:18:05.890 --> 00:18:23.269
+Gesiel Lopes: Talvez ela não seja um melhor exemplo. Abc, descer, ó A e a B de é e o A.
+
+134
+00:18:24.000 --> 00:18:28.800
+Gesiel Lopes: Então observe que, nesse meu conjunto, aí eu tenho mais de um elemento.
+
+135
+00:18:29.830 --> 00:18:43.210
+Gesiel Lopes: Porém, os elementos repetidos não aparecem mais de uma vez. Por quê? Porque essa é a principal característica dos conjuntos
+
+136
+00:18:43.330 --> 00:18:46.070
+Gesiel Lopes: de que e aí, se vocês observarem,
+
+137
+00:18:46.240 --> 00:18:52.330
+Gesiel Lopes: não necessariamente a ordem que aparece é a ordem que eu declarei, hã?
+
+138
+00:18:55.060 --> 00:19:01.919
+Gesiel Lopes: O Pedro está dizendo: se resetar muito provavelmente deve funcionar. Tá, Pedro, mas a gente pula essa parte,
+
+139
+00:19:02.270 --> 00:19:06.260
+Gesiel Lopes: tá bom, hã?
+
+140
+00:19:06.500 --> 00:19:25.130
+Gesiel Lopes: Então, quando a gente declara um conjunto com elementos repetidos, ele exclui automaticamente, tá, então elementos repetidos são
+
+141
+00:19:25.930 --> 00:19:32.530
+Gesiel Lopes: ao ou dramaticamente removidos,
+
+142
+00:19:36.100 --> 00:19:40.280
+Gesiel Lopes: você consegue também criar um conjunto vazio.
+
+143
+00:19:40.860 --> 00:19:42.200
+Gesiel Lopes: E aqui
+
+144
+00:19:47.750 --> 00:19:50.769
+Gesiel Lopes: o conjunto vazio. E aí eu vou colocar aqui. Ó
+
+145
+00:19:53.780 --> 00:20:06.579
+Gesiel Lopes: cuidado, tá conjunto vazio, porque como a gente está usando as chaves aqui
+
+146
+00:20:06.610 --> 00:20:22.490
+Gesiel Lopes: para definir. E aí a gente pode imaginar que utilizando chave vazias, eu crio um conjunto vazio, que é o mesmo raciocínio. Você pode pensar o mesmo raciocínio de lista. A lista não é colchete.
+
+147
+00:20:22.600 --> 00:20:25.509
+Gesiel Lopes: Então o colchete vazio cria uma lista vazia.
+
+148
+00:20:25.890 --> 00:20:36.310
+Gesiel Lopes: Conjuntos como são chaves, então, chave vazia criam um conjunto vazio. E aí um pouco de cuidado. Por quê
+
+149
+00:20:37.940 --> 00:20:39.570
+Gesiel Lopes: tá Taipe?
+
+150
+00:20:40.950 --> 00:20:50.309
+Gesiel Lopes: Conjunto vazio quando eu uso as chaves vazias. Na realidade, eu não estou colocando.
+
+151
+00:20:51.070 --> 00:20:59.900
+Gesiel Lopes: Eu não estou criando um conjunto vazio, e sim um dicionário vazio.
+
+152
+00:21:01.230 --> 00:21:10.269
+Gesiel Lopes: Então, para que eu crie um conjunto vazio, eu tenho que chamar a função Beauty do Python sete.
+
+153
+00:21:16.340 --> 00:21:26.799
+Gesiel Lopes: Então só colocar aqui a observação. Não se pode usar as chaves
+
+154
+00:21:30.450 --> 00:21:37.800
+Gesiel Lopes: e um longe conjunto vazio.
+
+155
+00:21:38.600 --> 00:21:39.380
+Gesiel Lopes: Tá?
+
+156
+00:21:40.350 --> 00:21:53.190
+Gesiel Lopes: Então muito cuidado. Tem um conjunto para que eu possa criar agora um conjunto vazio. Eu tenho que usar obrigatoriamente a função beauty set do Python. Tá bom,
+
+157
+00:21:54.000 --> 00:22:02.840
+Gesiel Lopes: deixa eu ver aqui o Gabriel, a gente vai ver isso já, já, tá, Gabriel. Mas basicamente é programando, tá?
+
+158
+00:22:03.130 --> 00:22:09.270
+Gesiel Lopes: Então você precisa programar a definição do conjunto,
+
+159
+00:22:09.800 --> 00:22:13.640
+Gesiel Lopes: ok? Ou da ordem que você quer fazer.
+
+160
+00:22:17.400 --> 00:22:21.080
+Gesiel Lopes: O Python não faz isso para a gente.
+
+161
+00:22:21.740 --> 00:22:26.420
+Gesiel Lopes: Como acontece, por exemplo, nos nas demais
+
+162
+00:22:26.560 --> 00:22:34.100
+Gesiel Lopes: coleções que a gente já trabalhou até agora, é, tá,
+
+163
+00:22:34.280 --> 00:22:44.889
+Gesiel Lopes: então a gente também pode criar conjuntos a partir de outras coleções.
+
+164
+00:22:48.570 --> 00:22:53.779
+Gesiel Lopes: Tá, então posso, por exemplo, criar
+
+165
+00:22:56.840 --> 00:23:15.420
+Gesiel Lopes: um conjunto, e aí, para criar um conjunto a partir de uma coleção, eu vou usar a função sete, função Biotin sete. E aqui eu passo a minha coleção. Vamos supor que eu tenha as vogais a e I o U.
+
+166
+00:23:15.570 --> 00:23:28.810
+Gesiel Lopes: Simples assim. Então, quando eu passo dentro de uma String. A gente já viu que nada mais é do que uma cadeia, ou seja, uma coleção de caracteres. Então, quando eu passo a String como um conjunto,
+
+167
+00:23:29.010 --> 00:23:29.740
+Gesiel Lopes: tá?
+
+168
+00:23:34.020 --> 00:23:41.520
+Gesiel Lopes: Ele vai definir. Mesmo que eu tenha mais de uma vogal,
+
+169
+00:23:42.030 --> 00:23:48.379
+Gesiel Lopes: as vogais, os valores repetidos, ele vai literalmente remover.
+
+170
+00:23:48.550 --> 00:23:54.039
+Gesiel Lopes: Então eu posso criar, a partir de qualquer coleção.
+
+171
+00:23:55.420 --> 00:24:01.250
+Gesiel Lopes: Eu posso, caso eu queira, por exemplo, definir valores únicos
+
+172
+00:24:01.400 --> 00:24:11.510
+Gesiel Lopes: de uma lista numérica. Um, dois, três, por exemplo.
+
+173
+00:24:22.360 --> 00:24:31.949
+Gesiel Lopes: Então, se eu quisesse saber quais são os números únicos dessa minha coleção, dessa minha lista de números, por exemplo,
+
+174
+00:24:41.280 --> 00:24:50.699
+Gesiel Lopes: uma forma de você obter é através da função sete. Então, se vocês observarem nessa lista de números,
+
+175
+00:24:51.200 --> 00:25:03.300
+Gesiel Lopes: os números únicos são um, dois, quatro, seis e sete. Imaginem se eu tivesse uma lista de um milhão de números. Quais são os números únicos dessa lista?
+
+176
+00:25:03.480 --> 00:25:21.999
+Gesiel Lopes: Uma forma bem rápida de você fazer essa definição é através do set, criando um conjunto que é o Python já está totalmente otimizado para ele encontrar os valores únicos de uma lista.
+
+177
+00:25:24.890 --> 00:25:25.980
+Gesiel Lopes: Ok,
+
+178
+00:25:33.240 --> 00:25:42.570
+Gesiel Lopes: você consegue também realizar algumas operações, assim como todas as coleções que a gente tem trabalhado até agora.
+
+179
+00:25:42.770 --> 00:26:01.920
+Gesiel Lopes: Os conjuntos também possuem alguns métodos que podem ser utilizados para poder manipular e trabalhar com conjuntos. Então eu vou criar aqui essa minha mesma coleção. Eu vou deixar sem elemento repetido dessa vez.
+
+180
+00:26:02.010 --> 00:26:05.239
+Gesiel Lopes: Esse meu conjunto de frutas.
+
+181
+00:26:11.430 --> 00:26:13.989
+Gesiel Lopes: Ok, Gabriel, sem problema.
+
+182
+00:26:15.880 --> 00:26:17.970
+Gesiel Lopes: Eu posso.
+
+183
+00:26:22.070 --> 00:26:28.209
+Gesiel Lopes: Eu posso adicionar elementos ao meu conjunto. Então, como é que eu faço?
+
+184
+00:26:28.320 --> 00:26:31.920
+Gesiel Lopes: Eu uso a função, Edge. Então a função Edge,
+
+185
+00:26:32.100 --> 00:26:44.880
+Gesiel Lopes: ele adiciona um elemento à minha coleção, por exemplo, uva. E ele vai adicionar o elemento uva no meu conjunto.
+
+186
+00:26:45.380 --> 00:26:51.860
+Gesiel Lopes: Então, se eu executar, ele vai adicionar a uva dentro do meu conjunto.
+
+187
+00:26:52.060 --> 00:27:04.230
+Gesiel Lopes: Não necessariamente na última posição, porque, como a gente já viu, o conjunto, não é ordenado. Sempre é interessante a gente fazer aí essa
+
+188
+00:27:05.290 --> 00:27:13.350
+Gesiel Lopes: essa essa definição, tá, é possível também.
+
+189
+00:27:17.460 --> 00:27:19.790
+Gesiel Lopes: Adicionando, adicionar.
+
+190
+00:27:22.050 --> 00:27:23.380
+Gesiel Lopes: É
+
+191
+00:27:27.240 --> 00:27:34.379
+Gesiel Lopes: múltiplos elementos, e aí para adicionar e aí você colocar isso aqui fruta,
+
+192
+00:27:39.150 --> 00:27:44.070
+Gesiel Lopes: fazer assim o Print quarenta e cinco vezes
+
+193
+00:27:54.500 --> 00:28:01.530
+Gesiel Lopes: eu posso adicionar múltiplos elementos ao meu conjunto, chamando a função Up Date.
+
+194
+00:28:02.030 --> 00:28:09.939
+Gesiel Lopes: E aí, na função apidente, eu passo como uma lista dos elementos que eu quero adicionar. Por exemplo, pera
+
+195
+00:28:10.590 --> 00:28:16.360
+Gesiel Lopes: tá aí abacaxi, tá?
+
+196
+00:28:16.810 --> 00:28:26.279
+Gesiel Lopes: Então quando eu executo, observem que ele adicionou os dois elementos.
+
+197
+00:28:26.710 --> 00:28:33.080
+Gesiel Lopes: Não é que eu passei dentro do Update que foi pera
+
+198
+00:28:33.840 --> 00:28:40.299
+Gesiel Lopes: e abacaxi. E aí ele adicionou pera e abacaxi.
+
+199
+00:28:41.030 --> 00:28:41.900
+Gesiel Lopes: Tá,
+
+200
+00:28:48.660 --> 00:28:51.650
+Gesiel Lopes: e aí você também pode, tá?
+
+201
+00:29:04.110 --> 00:29:08.939
+Gesiel Lopes: Você também pode remover os elementos dentro de um conjunto,
+
+202
+00:29:09.090 --> 00:29:18.489
+Gesiel Lopes: e aí dentro, para remover, existem três maneiras de você fazer a remoção de elementos de um conjunto.
+
+203
+00:29:18.610 --> 00:29:25.430
+Gesiel Lopes: Então a primeira forma, é você chamar o seu conjunto
+
+204
+00:29:25.840 --> 00:29:36.049
+Gesiel Lopes: e passar o método. A função remove. E aí você passa o elemento que você quer
+
+205
+00:29:36.970 --> 00:29:40.650
+Gesiel Lopes: remover. Então remove, tá?
+
+206
+00:29:41.220 --> 00:29:54.780
+Gesiel Lopes: E aí a outra forma é você chamar o diz tarde e descartar.
+
+207
+00:29:55.440 --> 00:30:01.240
+Gesiel Lopes: E aí, por exemplo, manga, tá,
+
+208
+00:30:02.340 --> 00:30:08.210
+Gesiel Lopes: e a outra forma de você remover, tá?
+
+209
+00:30:12.160 --> 00:30:15.570
+Gesiel Lopes: É através do método pop.
+
+210
+00:30:16.150 --> 00:30:17.000
+Gesiel Lopes: Tá?
+
+211
+00:30:17.790 --> 00:30:22.040
+Gesiel Lopes: E aí o Pop vai remover um.
+
+212
+00:30:22.410 --> 00:30:29.380
+Gesiel Lopes: Um elemento arbitrário para você. Tá? E aí eu vou colocar aqui como um elemento.
+
+213
+00:30:30.900 --> 00:30:32.519
+Gesiel Lopes: E aí é que eu posso estar.
+
+214
+00:30:33.230 --> 00:30:48.990
+Gesiel Lopes: Coloca aqui um App String que eu coloco aqui é elemento. Fruta, fruta, rede irada, retirada da do
+
+215
+00:30:49.880 --> 00:30:53.960
+Gesiel Lopes: conjunto de frutas, por exemplo.
+
+216
+00:31:01.790 --> 00:31:03.590
+Gesiel Lopes: Então, aqui. Olha só.
+
+217
+00:31:07.590 --> 00:31:09.220
+Gesiel Lopes: Elemento,
+
+218
+00:31:12.730 --> 00:31:13.620
+Gesiel Lopes: tá,
+
+219
+00:31:18.650 --> 00:31:20.620
+Gesiel Lopes: vou colocar oitenta que achei.
+
+220
+00:31:21.870 --> 00:31:23.749
+Gesiel Lopes: Pronto, acho que fica melhor.
+
+221
+00:31:29.040 --> 00:31:38.690
+Gesiel Lopes: Observe esse print aqui. Frutas, fruta retirada do conjunto de frutas. Maçã. Eu vou executar novamente, porque eu coloquei mais.
+
+222
+00:31:38.890 --> 00:31:42.389
+Gesiel Lopes: Amamentar esse cara aqui. Ó ah, ele continua removendo maçã.
+
+223
+00:31:46.160 --> 00:31:46.950
+Gesiel Lopes: E aí
+
+224
+00:31:50.220 --> 00:31:59.639
+Gesiel Lopes: ele vai sempre remover maçã, beleza. Então, qual é a diferença do remove para o discern
+
+225
+00:32:00.650 --> 00:32:10.799
+Gesiel Lopes: que vocês poderiam estar se fazendo agora, nesse momento, o remove. Ele gera um erro,
+
+226
+00:32:11.380 --> 00:32:14.329
+Gesiel Lopes: gera um erro se o elemento
+
+227
+00:32:17.680 --> 00:32:21.390
+Gesiel Lopes: não existir. Tá?
+
+228
+00:32:22.070 --> 00:32:31.270
+Gesiel Lopes: E esse método discard, ele não gera erro.
+
+229
+00:32:32.510 --> 00:32:41.840
+Gesiel Lopes: Se o elemento se erro, se o elemento
+
+230
+00:32:47.940 --> 00:32:50.190
+Gesiel Lopes: não existir.
+
+231
+00:32:51.850 --> 00:32:57.210
+Gesiel Lopes: Então, só para mostrar aqui um exemplo,
+
+232
+00:33:01.480 --> 00:33:10.630
+Gesiel Lopes: removendo um elemento, e
+
+233
+00:33:14.740 --> 00:33:17.210
+Gesiel Lopes: com o remove, tá?
+
+234
+00:33:23.020 --> 00:33:31.720
+Gesiel Lopes: Então eu vou pegar as minhas frutas e vou fazer o remove de
+
+235
+00:33:35.450 --> 00:33:37.820
+Gesiel Lopes: uma fruta chamada Ata.
+
+236
+00:33:40.720 --> 00:33:48.109
+Gesiel Lopes: Então se eu executar. Olha só, ele vai dar um erro dizendo ele para a execução do código.
+
+237
+00:33:48.970 --> 00:33:51.920
+Gesiel Lopes: E aí eu posso até mostrar aqui. Agora sim,
+
+238
+00:33:53.250 --> 00:34:01.869
+Gesiel Lopes: observe que a linha cinco e seis nunca vai ser executada, porque o código lança um erro aqui. Então o fluxo para de executar.
+
+239
+00:34:02.100 --> 00:34:07.770
+Gesiel Lopes: Então ele diz que o erro que a chave ata não existe
+
+240
+00:34:09.570 --> 00:34:14.980
+Gesiel Lopes: o mesmo código. Porém, com o
+
+241
+00:34:15.770 --> 00:34:18.590
+Gesiel Lopes: um elemento com a função discard.
+
+242
+00:34:19.070 --> 00:34:25.420
+Gesiel Lopes: Então, se eu fizer isso, Card tá.
+
+243
+00:34:26.110 --> 00:34:28.200
+Gesiel Lopes: Observei que o código
+
+244
+00:34:28.650 --> 00:34:36.250
+Gesiel Lopes: não lanço erro. Ele não encontra um elemento. Não faz absolutamente nada. E o fluxo continua sem problema nenhum,
+
+245
+00:34:36.389 --> 00:34:37.210
+Gesiel Lopes: tá?
+
+246
+00:34:39.460 --> 00:34:46.149
+Gesiel Lopes: E aqui a última operação. Caso você queira,
+
+247
+00:34:48.810 --> 00:34:51.870
+Gesiel Lopes: você pode excluir todos os elementos.
+
+248
+00:34:52.690 --> 00:34:59.380
+Gesiel Lopes: É do seu conjunto. E aí baixa que você chame.
+
+249
+00:35:03.890 --> 00:35:07.910
+Gesiel Lopes: Basta que você chame, no seu conjunto, a função Clear.
+
+250
+00:35:08.750 --> 00:35:18.850
+Gesiel Lopes: Então a função Clear é a função que limpa, que ele retorna um conjunto vazio, tá?
+
+251
+00:35:19.530 --> 00:35:22.700
+Gesiel Lopes: Então ele limpa o meu.
+
+252
+00:35:23.330 --> 00:35:25.430
+Gesiel Lopes: O meu conjunto, tá?
+
+253
+00:35:26.560 --> 00:35:32.910
+Gesiel Lopes: Ele não tem mais nem ele. Limpa todos os elementos do meu conjunto, tá?
+
+254
+00:35:33.660 --> 00:35:37.060
+Gesiel Lopes: É porque eu crio. Eu estou limpando um elemento nulo.
+
+255
+00:35:38.420 --> 00:35:40.810
+Gesiel Lopes: Um remove.
+
+256
+00:35:43.390 --> 00:35:48.829
+Gesiel Lopes: Então aqui ele limpa o meu conjunto.
+
+257
+00:35:49.130 --> 00:35:53.520
+Gesiel Lopes: Então observe que frutas agora é um conjunto vazio, tá?
+
+258
+00:35:56.540 --> 00:35:59.660
+Gesiel Lopes: Só para garantir. Olha só. Vou fazer um print.
+
+259
+00:35:59.930 --> 00:36:04.830
+Gesiel Lopes: É tamanho tamanho
+
+260
+00:36:11.830 --> 00:36:24.980
+Gesiel Lopes: do conjunto de frutas. Eu congelamento, frutas, o Len frutas.
+
+261
+00:36:31.230 --> 00:36:45.520
+Gesiel Lopes: E aqui eu vou dar um tamanho de frutas antes do Clear. E depois, só que eu preciso reiniciar o meu conjunto. Então eu vou executar essa célula, executar essa célula, executar essa célula e executar.
+
+262
+00:36:46.780 --> 00:36:58.909
+Gesiel Lopes: Então, no primeiro momento, o meu conjunto de frutas tinha cinco frutas uva, abacaxi e jabuti. E aí, para mostrar, ainda posso
+
+263
+00:37:00.160 --> 00:37:03.040
+Gesiel Lopes: colocá las embaixo, né?
+
+264
+00:37:06.710 --> 00:37:09.170
+Gesiel Lopes: Novamente, eu preciso reiniciar tudo.
+
+265
+00:37:14.400 --> 00:37:23.030
+Gesiel Lopes: Então, no primeiro momento, eu tinha cinco frutas. Uva, abacaxi, jaboticaba pera e Caju Aplico Clear.
+
+266
+00:37:23.610 --> 00:37:36.460
+Gesiel Lopes: E aí eu passo no meu conjunto, passo a ter nenhuma fruta zero frutas, tá? E ele vai ser justamente um conjunto vazio, porque o Cli. Ele serve para a gente limpar.
+
+267
+00:37:40.570 --> 00:37:50.840
+Gesiel Lopes: O Lucas está colocando aí a resposta clássica vai depender Lucas do problema que você está resolvendo.
+
+268
+00:37:51.540 --> 00:37:58.009
+Gesiel Lopes: E o que você precisa saber é as características de cada uma dessas coleções, que é o que eu tenho falado,
+
+269
+00:37:58.220 --> 00:38:16.380
+Gesiel Lopes: porque eu poderia simplesmente colocar uma situação, mas somente essa situação é válida. Não hoje, pelo menos essa é a minha visão muito mais importante do que aplicar a técnica e saber por que você está aplicando aquela técnica
+
+270
+00:38:16.380 --> 00:38:19.870
+Gesiel Lopes: ou aquela instrução.
+
+271
+00:38:20.110 --> 00:38:26.599
+Gesiel Lopes: A melhor maneira de usar cada uma delas vai depender do que da situação que eu quero resolver.
+
+272
+00:38:26.820 --> 00:38:43.359
+Gesiel Lopes: E o que eu preciso saber para resolver a situação. Com alguma dessas três coleções. A primeira é a característica de cada uma delas, que é o que a gente está fazendo. Qual é a primeira característica de uma lista? É de eu ter elementos ordenados,
+
+273
+00:38:43.480 --> 00:38:53.389
+Gesiel Lopes: repetidos ou não do mesmo tipo ou não. Então, toda vez que eu tiver uma situação que eu preciso armazenar objetos,
+
+274
+00:38:53.600 --> 00:38:56.750
+Gesiel Lopes: sejam do mesmo tipo ou não,
+
+275
+00:38:56.890 --> 00:39:05.400
+Gesiel Lopes: ou de tipos distintos repetidos ou não, eu vou usar listas.
+
+276
+00:39:05.910 --> 00:39:06.770
+Gesiel Lopes: Tá bom?
+
+277
+00:39:07.080 --> 00:39:09.850
+Gesiel Lopes: Lembrando que nas listas
+
+278
+00:39:10.360 --> 00:39:24.380
+Gesiel Lopes: eu vou estar armazenando dois elementos, e a minha coleção vai identificar cada elemento com índice numérico de zero até a quantidade de elementos, menos um. Essa é a principal característica ponto
+
+279
+00:39:24.550 --> 00:39:28.719
+Gesiel Lopes: aonde isso existe em várias aplicações.
+
+280
+00:39:28.820 --> 00:39:39.840
+Gesiel Lopes: Eu poderia ficar só dessa situação até o final do curso de vocês. Falando exemplos, e ainda assim eu não ia conseguir terminar.
+
+281
+00:39:40.020 --> 00:39:44.400
+Gesiel Lopes: Talvez nem em um ponto.
+
+282
+00:39:44.700 --> 00:39:52.159
+Gesiel Lopes: Essa é a principal. A minha visão. Você precisa saber primeiro, que faz sentido exatamente para o seu problema,
+
+283
+00:39:52.330 --> 00:39:57.849
+Gesiel Lopes: tá? Então, se eu precisar armazenar elementos
+
+284
+00:39:58.020 --> 00:40:10.770
+Gesiel Lopes: do mesmo tipo, ou de tipos distintos sendo repetidos ou não, e que são identificados com o ou tchau
+
+285
+00:40:15.840 --> 00:40:17.450
+Gesiel Lopes: o Leonardo.
+
+286
+00:40:18.160 --> 00:40:25.379
+Gesiel Lopes: Obrigado, Leonardo, mas não é isso que eu estou explicando. Pelo menos não foi isso que eu entendi a pergunta
+
+287
+00:40:25.670 --> 00:40:31.500
+Gesiel Lopes: do Lucas. O que eu entendi não foi usar nenhum dos métodos, tá?
+
+288
+00:40:31.740 --> 00:40:36.000
+Gesiel Lopes: E sim, a diferença das tá.
+
+289
+00:40:38.140 --> 00:40:43.380
+Gesiel Lopes: Exemplos de tipos de e não dos métodos.
+
+290
+00:40:44.140 --> 00:40:52.279
+Gesiel Lopes: Tá sem criar mais um Flame. Tá pessoal? É isso, Lucas, que você perguntou
+
+291
+00:40:54.730 --> 00:41:00.909
+Gesiel Lopes: se é a diferença dos métodos ou a diferença das coleções. Só para esclarecer
+
+292
+00:41:02.260 --> 00:41:13.530
+Gesiel Lopes: o que eu estou falando são diferenças das coleções. Quando usar lista, quando usar a dupla quando usar o dicionário. E quando usar conjuntos. E eu estava explicando justamente isso.
+
+293
+00:41:14.040 --> 00:41:23.049
+Gesiel Lopes: Então, se eu tiver um problema aqui, armazenar elementos repetidos do mesmo tipo ou não, e que sejam identificados através de um índice numérico. Eu uso listas
+
+294
+00:41:23.760 --> 00:41:27.240
+Gesiel Lopes: e que podem ser alterados ou não,
+
+295
+00:41:27.660 --> 00:41:31.849
+Gesiel Lopes: se eu precisar de uma estrutura
+
+296
+00:41:32.360 --> 00:41:48.569
+Gesiel Lopes: que eu posso adicionar elementos do mesmo tipo ou não. Porém, de forma imutável, e que seja identificado através de índices numéricos. Isso é uma dupla.
+
+297
+00:41:49.360 --> 00:41:56.380
+Gesiel Lopes: Se eu quiser uma estrutura de dados onde eu defina um índice,
+
+298
+00:41:56.550 --> 00:42:04.110
+Gesiel Lopes: não um numérico e que pode ter ou não elementos repetidos. Aí eu vou usar um dicionário.
+
+299
+00:42:04.620 --> 00:42:13.909
+Gesiel Lopes: Se eu precisar ter uma coleção, uma estrutura de dados que não permita elementos repetidos. Eu uso conjunto.
+
+300
+00:42:14.210 --> 00:42:21.890
+Gesiel Lopes: Então é essa a principal diferença entre as quatro coleções que a gente está trabalhando até agora.
+
+301
+00:42:22.140 --> 00:42:28.340
+Gesiel Lopes: Aonde você vai aplicar? Existem várias situações, tá?
+
+302
+00:42:33.690 --> 00:42:34.800
+Gesiel Lopes: Beleza
+
+303
+00:42:45.900 --> 00:42:57.740
+Gesiel Lopes: tranquilo. Então, continuando com conjuntos também. E a gente pode realizar algumas operações matemáticas através de conjuntos.
+
+304
+00:42:58.270 --> 00:43:10.190
+Gesiel Lopes: Então vamos supor que eu tenho um conjunto A aqui com os elementos. Um, dois, três, quatro e cinco
+
+305
+00:43:11.170 --> 00:43:21.620
+Gesiel Lopes: e um conjunto B com os elementos, por exemplo, quatro, cinco, seis, sete e oito.
+
+306
+00:43:21.750 --> 00:43:31.339
+Gesiel Lopes: Tá lembrando aqui as operações de conjuntos quando a gente está operando sobre conjuntos.
+
+307
+00:43:32.570 --> 00:43:44.040
+Gesiel Lopes: Normalmente, a gente vai ter três operações. Que operações são essas? A união, a interseção e a diferença.
+
+308
+00:43:44.300 --> 00:43:49.550
+Gesiel Lopes: Então, na União. Eu vou juntar, como o próprio nome já diz.
+
+309
+00:43:49.780 --> 00:43:56.719
+Gesiel Lopes: Então, a União junta todos os elementos de ambos os conjuntos.
+
+310
+00:43:57.440 --> 00:44:05.560
+Gesiel Lopes: Então a União, a gente utiliza o operador barra
+
+311
+00:44:06.320 --> 00:44:09.870
+Gesiel Lopes: para definir a União. Então, quando eu faço a
+
+312
+00:44:10.360 --> 00:44:15.220
+Gesiel Lopes: Pipe B, eu estou realizando a união dos
+
+313
+00:44:17.850 --> 00:44:26.869
+Gesiel Lopes: dos conjuntos A e B, ou seja, ele vai adicionar os elementos comuns a ambos os conjuntos.
+
+314
+00:44:28.190 --> 00:44:38.140
+Gesiel Lopes: Se tiver elementos removidos como a gente, é duplicados elementos iguais, como a gente já tinha visto, ele remove esses elementos duplicados.
+
+315
+00:44:38.880 --> 00:44:45.640
+Gesiel Lopes: Tá criar mesmo a palavra união, tá?
+
+316
+00:44:47.350 --> 00:44:48.710
+Gesiel Lopes: É?
+
+317
+00:44:49.060 --> 00:44:54.329
+Gesiel Lopes: E aqui. Nesse caso, ele deve mostrar o conjunto.
+
+318
+00:44:54.460 --> 00:45:01.030
+Gesiel Lopes: É um, dois, três, quatro, cinco,
+
+319
+00:45:01.860 --> 00:45:06.520
+Gesiel Lopes: seis, sete e oito. Mesmo que o quatro,
+
+320
+00:45:07.190 --> 00:45:13.700
+Gesiel Lopes: o cinco se repita em A e em B. Ele não vai duplicar esses dois elementos.
+
+321
+00:45:14.630 --> 00:45:29.300
+Gesiel Lopes: A gente tem é a interseção tá entre os conjuntos. Está em sessão
+
+322
+00:45:30.180 --> 00:45:37.849
+Gesiel Lopes: entre os conjuntos A e B. A Intercessão. A gente vai usar o operador I comercial B,
+
+323
+00:45:39.790 --> 00:45:47.440
+Gesiel Lopes: que aqui ele vai trazer apenas os elementos à intercessão. Ele só vai trazer os elementos que são comuns,
+
+324
+00:45:47.590 --> 00:45:48.390
+Gesiel Lopes: tá?
+
+325
+00:45:49.270 --> 00:45:57.470
+Gesiel Lopes: Nesse caso, aqui, o que é comum A, A e a B, apenas os elementos quatro e cinco,
+
+326
+00:45:57.610 --> 00:45:59.770
+Gesiel Lopes: que é o que é comum.
+
+327
+00:46:01.800 --> 00:46:07.859
+Gesiel Lopes: E eu tenho também a diferença diferença.
+
+328
+00:46:09.000 --> 00:46:12.560
+Gesiel Lopes: E aí a diferença são os elementos
+
+329
+00:46:21.200 --> 00:46:22.900
+Gesiel Lopes: pertencem.
+
+330
+00:46:28.230 --> 00:46:34.870
+Gesiel Lopes: Pertencem somente a um determinado conjunto.
+
+331
+00:46:35.260 --> 00:46:40.159
+Gesiel Lopes: Tá que aí, nesse caso, aqui diferença.
+
+332
+00:46:40.580 --> 00:46:41.370
+Gesiel Lopes: Tchau.
+
+333
+00:46:42.190 --> 00:46:47.690
+Gesiel Lopes: Então, se eu fizer no caso A. E aí a diferença? A gente vai usar operador, menos
+
+334
+00:46:47.860 --> 00:46:53.989
+Gesiel Lopes: então a diferença. B: a gente lê dessa forma, não é A menos B, mas a diferença B:
+
+335
+00:46:54.150 --> 00:47:06.579
+Gesiel Lopes: ele vai trazer somente os elementos que pertencem a A e não pertencem a B nesse caso aqui, ou seja, só os elementos que pertencem somente a a
+
+336
+00:47:07.280 --> 00:47:14.420
+Gesiel Lopes: que aí, nesse caso, é o conjunto um, dois e três, tá?
+
+337
+00:47:14.710 --> 00:47:22.660
+Gesiel Lopes: E aí, se eu fizer um print print de diferença,
+
+338
+00:47:23.210 --> 00:47:27.319
+Gesiel Lopes: ele deve mostrar esse elemento. E aqui um print
+
+339
+00:47:28.080 --> 00:47:32.370
+Gesiel Lopes: em intercessão. Então, se eu executar.
+
+340
+00:47:32.530 --> 00:47:35.870
+Gesiel Lopes: Ele vai trazer esses resultados. Oi, Marcos. Pode falar.
+
+341
+00:47:37.950 --> 00:47:41.360
+marcos.jose: Oi, Professor. Uma dúvida. Nesse caso,
+
+342
+00:47:41.690 --> 00:47:53.399
+marcos.jose: o senhor está mostrando diferenças ou igualdades entre os conjuntos. Mas se eu tiver números repetidos dentro do próprio conjunto. Ele também vai excluir.
+
+343
+00:47:54.330 --> 00:47:55.050
+Gesiel Lopes: Um.
+
+344
+00:47:55.050 --> 00:47:58.120
+marcos.jose: Não. Ele vai considerar. Não existe.
+
+345
+00:47:58.710 --> 00:47:59.510
+Gesiel Lopes: Pode falar.
+
+346
+00:47:59.970 --> 00:48:06.999
+marcos.jose: Por exemplo, no caso da interseção o quatro e o cinco são números que se repetem tanto no A quanto no B.
+
+347
+00:48:07.310 --> 00:48:09.809
+marcos.jose: Mas se eu tivesse, no conjunto B
+
+348
+00:48:10.040 --> 00:48:18.340
+marcos.jose: dois números oito, por exemplo, ele também consideraria, já que ele está pegando números repetidos, ou ele só usa entre os dois conjuntos.
+
+349
+00:48:18.710 --> 00:48:22.079
+Gesiel Lopes: Não. Nesse caso, essa situação nunca vai existir.
+
+350
+00:48:22.450 --> 00:48:30.200
+Gesiel Lopes: Por quê? Porque o conjunto, a principal característica é de não ter elementos repetidos.
+
+351
+00:48:30.870 --> 00:48:38.799
+Gesiel Lopes: Então Marcos não vai ter essa possibilidade. E aí, o que você precisa? Vamos ver se facilita mais.
+
+352
+00:48:38.940 --> 00:48:41.990
+Gesiel Lopes: Vamos lembrar aqui, lá das aulas do ensino médio,
+
+353
+00:48:42.380 --> 00:48:51.709
+Gesiel Lopes: com o que a gente chama de diagrama de Vem. Vamos supor aqui que eu tenha o conjunto aqui,
+
+354
+00:48:52.640 --> 00:48:53.530
+Gesiel Lopes: tá?
+
+355
+00:48:54.070 --> 00:49:02.050
+Gesiel Lopes: Então aqui eu tenho o conjunto A e aqui o conjunto b beleza.
+
+356
+00:49:02.680 --> 00:49:06.430
+Gesiel Lopes: E aí eu tenho três situações. Uma, tá,
+
+357
+00:49:07.830 --> 00:49:14.750
+Gesiel Lopes: e eu posso até colocar assim. Ó, pronto, acho que fica até mais fácil a B.
+
+358
+00:49:15.250 --> 00:49:25.490
+Gesiel Lopes: Então, aqui. Olha só, eu vou ter dentro desse caso aqui dentro desse esquema, eu posso ter uma possibilidade, tá?
+
+359
+00:49:27.580 --> 00:49:30.770
+Gesiel Lopes: E vamos imaginar que é o mesmo conjunto. Tá
+
+360
+00:49:35.070 --> 00:49:40.390
+Gesiel Lopes: aqui a B, a segunda
+
+361
+00:49:47.860 --> 00:49:49.120
+Gesiel Lopes: e a terceira
+
+362
+00:49:53.710 --> 00:49:55.620
+Gesiel Lopes: tá a B.
+
+363
+00:49:58.780 --> 00:50:05.759
+Gesiel Lopes: Ah, no primeiro exemplo aqui, Marcos.
+
+364
+00:50:06.220 --> 00:50:11.530
+Gesiel Lopes: Qual é a operação que eu estou fazendo? É a operação de União.
+
+365
+00:50:12.470 --> 00:50:18.939
+Gesiel Lopes: Então, o que ele vai fazer? Ele vai unir. Ou seja, ele vai considerar todos os elementos,
+
+366
+00:50:19.350 --> 00:50:25.580
+Gesiel Lopes: tanto do conjunto A como o conjunto B, lembrando
+
+367
+00:50:25.830 --> 00:50:37.030
+Gesiel Lopes: que um conjunto não permite elementos repetidos. Então ele vai pegar todos os elementos de A, todos os elementos de B. Vai formar um novo conjunto,
+
+368
+00:50:37.470 --> 00:50:44.040
+Gesiel Lopes: cujos elementos são os elementos não repetidos do conjunto A e do conjunto B.
+
+369
+00:50:45.670 --> 00:50:50.030
+Gesiel Lopes: Ok, a segunda operação que a gente está fazendo aqui
+
+370
+00:50:50.150 --> 00:50:57.560
+Gesiel Lopes: é a operação de interseção. O que é intercessão é o que é comum
+
+371
+00:50:57.960 --> 00:51:07.019
+Gesiel Lopes: ao conjunto A e ao conjunto B, ou seja, A e B são dois conjuntos que têm elementos:
+
+372
+00:51:07.450 --> 00:51:17.879
+Gesiel Lopes: a intercessão busca os elementos que são comuns, tanto ao conjunto, A ao conjunto B é o equivalente a essa área aqui. Marcos,
+
+373
+00:51:18.060 --> 00:51:18.840
+Gesiel Lopes: tá,
+
+374
+00:51:20.030 --> 00:51:28.510
+Gesiel Lopes: então, se existir elemento comum, a interseção vai te dar esses elementos. Então ele vai formar um novo conjunto,
+
+375
+00:51:28.670 --> 00:51:37.450
+Gesiel Lopes: cujos elementos desse conjunto são os elementos que são comuns. Ambos os conjuntos que você está operando beleza.
+
+376
+00:51:38.560 --> 00:51:47.470
+Gesiel Lopes: E a terceira situação, essa terceira situação é a diferença, tá,
+
+377
+00:51:48.490 --> 00:51:58.720
+Gesiel Lopes: então, comparando aqui a terceira situação, nesse caso, o que eu estou fazendo. Eu estou fazendo a diferença do conjunto A com o conjunto B.
+
+378
+00:51:59.160 --> 00:52:09.119
+Gesiel Lopes: Observe que cada uma dessas operações formam um novo conjunto, tá? Ele não altera os conjuntos que eu estou operando. Ele vai sempre retornar um novo conjunto.
+
+379
+00:52:09.340 --> 00:52:15.569
+Gesiel Lopes: Nesse caso, aqui, a diferença a B, diferença de A com B é o quê?
+
+380
+00:52:15.770 --> 00:52:29.100
+Gesiel Lopes: Somente os elementos que pertencem a A e não pertencem a B, ou seja, só o que pertence a a é o equivalente a essa área aqui do diagrama Marcos.
+
+381
+00:52:29.760 --> 00:52:36.689
+Gesiel Lopes: Somente essa área aqui, somente essa área,
+
+382
+00:52:36.900 --> 00:52:42.759
+Gesiel Lopes: o que é comum e o que não é comum. Ele desconsidera,
+
+383
+00:52:43.390 --> 00:52:47.169
+Gesiel Lopes: então cada operação, dessa forma, um novo conjunto
+
+384
+00:52:47.360 --> 00:52:52.680
+Gesiel Lopes: com os elementos com essas características.
+
+385
+00:52:53.030 --> 00:52:56.340
+Gesiel Lopes: Certo, entendido. Marcos.
+
+386
+00:52:57.450 --> 00:53:06.720
+marcos.jose: Ah, entendi. O principal ponto era esse do fato do conjunto não ter itens repetidos. Então eu não vou ter dois números, um dentro do próprio conjunto a, por exemplo.
+
+387
+00:53:07.120 --> 00:53:18.430
+Gesiel Lopes: Exatamente e outra. Isso são operações. Essas aqui são operações sobre conjuntos, não sobre listas. Não confundir as coleções.
+
+388
+00:53:20.250 --> 00:53:21.100
+Gesiel Lopes: Ah.
+
+389
+00:53:22.170 --> 00:53:23.639
+marcos.jose: Fechou. Obrigado, professor.
+
+390
+00:53:25.860 --> 00:53:32.740
+marcos.jose: Mas então, nesse caso, eu tenho diferença entre fazer a menos B e fazer B menos A: porque ele vai buscar só o do primeiro.
+
+391
+00:53:32.740 --> 00:53:33.460
+Gesiel Lopes: E.
+
+392
+00:53:33.460 --> 00:53:35.209
+marcos.jose: E não repete no segundo.
+
+393
+00:53:35.210 --> 00:53:36.000
+Gesiel Lopes: Isso.
+
+394
+00:53:36.000 --> 00:53:40.389
+marcos.jose: Se eu quisesse o seis, sete, oito, por exemplo, eu teria que fazer B menos a.
+
+395
+00:53:40.610 --> 00:53:44.449
+Gesiel Lopes: Exatamente a diferença.
+
+396
+00:53:45.300 --> 00:53:51.040
+Gesiel Lopes: Eu posso até colocar aqui, diferenciar a B.
+
+397
+00:54:00.260 --> 00:54:02.650
+Gesiel Lopes: E aqui diferencia B a.
+
+398
+00:54:04.200 --> 00:54:21.190
+marcos.jose: Entendi. Curiosidade, professor. Só curiosidade. Mesmo se eu quisesse os dois, eu poderia fazer um terceiro conjunto juntando, por exemplo, diferença. Ab: Junta com diferença, B a pra eu poder ter um, dois, três, seis, sete, oito, por exemplo, formar um conjunto assim.
+
+399
+00:54:22.110 --> 00:54:28.129
+Gesiel Lopes: Porque se você fizer isso, você vai estar fazendo a união.
+
+400
+00:54:28.710 --> 00:54:32.589
+marcos.jose: Ah, mas aí eu estaria excluindo o que repete, por exemplo, nesse caso, eu não vou. Eu vou fazer um.
+
+401
+00:54:32.590 --> 00:54:33.480
+Gesiel Lopes: Mas a União.
+
+402
+00:54:33.480 --> 00:54:43.340
+marcos.jose: Pegar um, um, dois, três. E o seiscentos e setenta e oito? Porque se eu fizer a B, ele vai pegar. Um, dois, três. Se eu fizer B menos a ele, vai pegar só seiscentos e setenta e oito.
+
+403
+00:54:44.590 --> 00:54:50.719
+Gesiel Lopes: Não, mas a união marcos. Ele já faz isso. Que você está falando, porque a união
+
+404
+00:54:50.840 --> 00:55:01.230
+Gesiel Lopes: se ele está unindo dois conjuntos. Lembra a característica dos conjuntos não ter elementos repetidos. Se ele tiver elemento repetido automaticamente, ele exclui.
+
+405
+00:55:01.520 --> 00:55:05.880
+marcos.jose: Entendi. Quando eu faço a união, ele já pega. Um, dois, três, seis, sete, oito, por exemplo.
+
+406
+00:55:06.050 --> 00:55:08.730
+Gesiel Lopes: Exatamente o que eu estou fazendo aqui. Ó,
+
+407
+00:55:09.160 --> 00:55:28.979
+Gesiel Lopes: então eu posso fazer isso. Que você está falando? Posso fazer um conjunto A menos B, depois um conjunto B menos A e o A União B. E aí vai gerar esse conjunto com os elementos únicos. Mas você pode fazer essa mesma operação só fazendo a união.
+
+408
+00:55:29.110 --> 00:55:33.589
+Gesiel Lopes: Porque por debaixo dos panos, o Python já vai fazer isso para você.
+
+409
+00:55:34.430 --> 00:55:35.380
+marcos.jose: Entendi.
+
+410
+00:55:36.360 --> 00:55:37.230
+Gesiel Lopes: Entendeu?
+
+411
+00:55:37.590 --> 00:55:38.919
+marcos.jose: Fechou. Obrigado, Professor.
+
+412
+00:55:41.230 --> 00:55:43.770
+Gesiel Lopes: Tranquilo,
+
+413
+00:55:56.220 --> 00:56:01.990
+Gesiel Lopes: tá? É dando continuidade.
+
+414
+00:56:04.940 --> 00:56:05.990
+Gesiel Lopes: Bora lá
+
+415
+00:56:21.710 --> 00:56:27.529
+Gesiel Lopes: então. Operações matemáticas, operações com conjunto. Só um minuto, pessoal. Deixa eu só ver aqui.
+
+416
+00:56:39.930 --> 00:56:45.630
+Gesiel Lopes: Vocês não estão ouvindo o barulho, mas o cachorro do vizinho aqui está me incomodando.
+
+417
+00:56:47.350 --> 00:56:51.550
+Gesiel Lopes: Eu estou fechando mais uma janela aqui. A última.
+
+418
+00:56:52.560 --> 00:56:55.829
+Gesiel Lopes: Quando eu fecho essa última janela, fica muito abafado.
+
+419
+00:56:59.920 --> 00:57:01.090
+Gesiel Lopes: Vamos lá.
+
+420
+00:57:03.100 --> 00:57:04.450
+Gesiel Lopes: Deixa eu só pegar aqui.
+
+421
+00:57:23.020 --> 00:57:26.229
+Gesiel Lopes: A gente já usou bastante listas
+
+422
+00:57:31.480 --> 00:57:32.780
+Gesiel Lopes: duplas.
+
+423
+00:57:39.420 --> 00:57:40.170
+Gesiel Lopes: Tchau.
+
+424
+00:57:42.280 --> 00:57:43.880
+Gesiel Lopes: Ok, ok,
+
+425
+00:57:49.790 --> 00:57:50.590
+Gesiel Lopes: tchau.
+
+426
+00:57:55.190 --> 00:57:59.510
+Gesiel Lopes: E aí é.
+
+427
+00:58:01.640 --> 00:58:08.769
+Gesiel Lopes: Então vamos fazer aqui as outras operações. Vou colocar aqui um conjunto A.
+
+428
+00:58:15.560 --> 00:58:26.150
+Gesiel Lopes: Vou definir um conjunto é com um lixo Comprehension, que é um fól.
+
+429
+00:58:28.370 --> 00:58:37.310
+Gesiel Lopes: Colocar um I é o fó. E em Range dez,
+
+430
+00:58:42.130 --> 00:58:54.160
+Gesiel Lopes: vou fazer um conjunto B também com o Range, variando, começando de dois até vinte e um.
+
+431
+00:58:56.540 --> 00:59:01.990
+Gesiel Lopes: Porém incrementando de três em três.
+
+432
+00:59:03.380 --> 00:59:09.140
+Gesiel Lopes: E aqui eu vou fazer um conjunto C com elementos I.
+
+433
+00:59:09.310 --> 00:59:17.910
+Gesiel Lopes: Sendo esse Ivariano de dois até
+
+434
+00:59:22.630 --> 00:59:29.630
+Gesiel Lopes: até quinze de dois em dois.
+
+435
+00:59:37.920 --> 00:59:39.060
+Gesiel Lopes: Ok,
+
+436
+00:59:48.220 --> 00:59:52.859
+Gesiel Lopes: isso, como definir esses dois conjuntos.
+
+437
+00:59:53.170 --> 00:59:54.480
+Gesiel Lopes: É
+
+438
+00:59:58.770 --> 01:00:03.630
+Gesiel Lopes: então só para mostrar aqui os conjuntos, vou colocar aqui um print
+
+439
+01:00:10.080 --> 01:00:12.149
+Gesiel Lopes: conjunto A,
+
+440
+01:00:21.210 --> 01:00:22.380
+Gesiel Lopes: B.
+
+441
+01:00:25.030 --> 01:00:27.450
+Gesiel Lopes: E se tá
+
+442
+01:00:39.760 --> 01:00:43.250
+Gesiel Lopes: isso aqui, eu vou diminuir. Acho que fica melhor. Deixa eu ver
+
+443
+01:01:02.820 --> 01:01:04.210
+Gesiel Lopes: isso. Pronto,
+
+444
+01:01:10.510 --> 01:01:11.540
+Gesiel Lopes: é.
+
+445
+01:01:17.440 --> 01:01:26.679
+Gesiel Lopes: Então, a gente tem algumas operações que a gente pode realizar sobre conjuntos. A primeira delas.
+
+446
+01:01:29.070 --> 01:01:32.750
+Gesiel Lopes: Vou colocar aqui. Não necessariamente nessa hora,
+
+447
+01:01:32.890 --> 01:01:41.270
+Gesiel Lopes: mas a primeira que eu vou colocar aqui é verificar se
+
+448
+01:01:45.070 --> 01:01:56.920
+Gesiel Lopes: se um conjunto contém um outro conjunto.
+
+449
+01:01:57.070 --> 01:02:05.800
+Gesiel Lopes: Tá um outro conjunto ponto: não a executar, Jesabel.
+
+450
+01:02:06.630 --> 01:02:09.620
+Gesiel Lopes: E é que só abriram parêntese
+
+451
+01:02:10.120 --> 01:02:19.529
+Gesiel Lopes: quando eu quero fazer essa verificação, verificar se um conjunto contém ou está contido,
+
+452
+01:02:20.350 --> 01:02:35.760
+Gesiel Lopes: por exemplo, aqui, o que eu quero verificar na realidade, se há ponto em B, tá é verificar
+
+453
+01:02:41.580 --> 01:03:07.610
+Gesiel Lopes: verificar se todos os elementos, se todos os elementos do conjunto do conjunto B também são elementos do conjunto,
+
+454
+01:03:10.410 --> 01:03:18.889
+Gesiel Lopes: então, quando a gente faz essa verificação aqui a contém e eu estou verificando
+
+455
+01:03:19.290 --> 01:03:22.729
+Gesiel Lopes: se todos os elementos do conjunto B
+
+456
+01:03:23.070 --> 01:03:27.520
+Gesiel Lopes: também são elementos do conjunto. A, tá?
+
+457
+01:03:30.410 --> 01:03:34.200
+Gesiel Lopes: E aí? Como é que eu faço essa verificação?
+
+458
+01:03:34.460 --> 01:03:37.830
+Gesiel Lopes: Então, essa verificação
+
+459
+01:03:41.280 --> 01:03:48.210
+Gesiel Lopes: vou colocar aqui. Contém B, tá?
+
+460
+01:03:48.790 --> 01:03:53.790
+Gesiel Lopes: Essa operação é feita com um operador maior,
+
+461
+01:03:54.580 --> 01:04:13.800
+Gesiel Lopes: operadora relacional, B: então, quando eu faço essa operação, a maior B, na realidade, o que eu estou fazendo? A operação de contém. Eu estou fazendo o quê? O conjunto A contém o conjunto B, ou seja,
+
+462
+01:04:13.970 --> 01:04:24.859
+Gesiel Lopes: todos os elementos do conjunto B também são elementos do conjunto A, ou seja, todos os elementos do conjunto B
+
+463
+01:04:25.080 --> 01:04:30.620
+Gesiel Lopes: estão em a essa verificação que o
+
+464
+01:04:31.650 --> 01:04:34.909
+Gesiel Lopes: esse operador, ele vai realizar, tá?
+
+465
+01:04:39.060 --> 01:04:49.620
+Gesiel Lopes: E essa é a pergunta que ele faz. A contém B: e aí você coloca aqui o resultado
+
+466
+01:04:50.780 --> 01:04:58.469
+Gesiel Lopes: a contender. Na realidade, não então está fácil. A contém B. É isso mesmo. A: contém B
+
+467
+01:05:02.220 --> 01:05:03.699
+Gesiel Lopes: B com tem A
+
+468
+01:05:13.600 --> 01:05:15.690
+Gesiel Lopes: e aqui B contém A.
+
+469
+01:05:15.900 --> 01:05:18.580
+Gesiel Lopes: Então, se vocês observarem.
+
+470
+01:05:21.350 --> 01:05:27.420
+Gesiel Lopes: Na realidade, eu troquei aqui. A variável é ser
+
+471
+01:05:27.950 --> 01:05:33.450
+Gesiel Lopes: porque essa relação nunca vai existir se
+
+472
+01:05:38.360 --> 01:05:43.750
+Gesiel Lopes: do que é. Sei, enquece. Agora Sim,
+
+473
+01:05:44.100 --> 01:05:54.300
+Gesiel Lopes: se vocês observarem. Quem são os elementos do conjunto? A dois, quatro, seis e oito, tá?
+
+474
+01:05:54.480 --> 01:06:02.649
+Gesiel Lopes: Esses elementos pertencem ao conjuntual. O dois está aqui o quarto tá, tá,
+
+475
+01:06:02.840 --> 01:06:14.399
+Gesiel Lopes: o seis. Ou seja, todos os elementos do conjunto C também são elementos do conjunto A.
+
+476
+01:06:15.140 --> 01:06:17.790
+Gesiel Lopes: Então o A contém se
+
+477
+01:06:18.010 --> 01:06:33.909
+Gesiel Lopes: e o C contém A, ou seja, todos os elementos do conjunto A são também elementos do conjunto B, não, ele já quebra aqui no zero e no um. Então o zero e o um não são elementos
+
+478
+01:06:34.090 --> 01:06:39.580
+Gesiel Lopes: comum, assim como o três, o quatro.
+
+479
+01:06:40.340 --> 01:06:49.200
+Gesiel Lopes: Então a primeira relação vai ser True. Então é que ele vai retornar, True.
+
+480
+01:06:52.520 --> 01:06:59.479
+Gesiel Lopes: E aqui ele vai retornar falsa. Não sei te executar
+
+481
+01:07:01.280 --> 01:07:04.519
+Gesiel Lopes: agora. Sim, ele vai fazer a comparação, tá?
+
+482
+01:07:04.900 --> 01:07:09.979
+Gesiel Lopes: Então A contém C e o B contêm A? Não,
+
+483
+01:07:12.140 --> 01:07:16.900
+Gesiel Lopes: e inclusive eu posso fazer aqui, dentro dessa mesma expressão.
+
+484
+01:07:32.010 --> 01:07:38.949
+Gesiel Lopes: Eu vou fazer aqui um Opa, ficar bonitinho.
+
+485
+01:07:42.520 --> 01:07:44.270
+Gesiel Lopes: Um um.
+
+486
+01:07:44.820 --> 01:07:47.269
+Gesiel Lopes: Quem lembra o nome dessa estrutura aqui
+
+487
+01:07:51.110 --> 01:07:53.020
+Gesiel Lopes: é um operador ternário.
+
+488
+01:07:57.530 --> 01:08:05.090
+Gesiel Lopes: Então, dentro da mesma estrutura. Aí eu posso brincar, aplicar. Enfim, tá
+
+489
+01:08:09.540 --> 01:08:14.900
+Gesiel Lopes: if you true aqui sempre vai ser true, né? E aqui não é isso aqui.
+
+490
+01:08:16.189 --> 01:08:19.420
+Gesiel Lopes: E esse aqui. Pronto, tá.
+
+491
+01:08:19.640 --> 01:08:32.609
+Gesiel Lopes: Então, se o A contém, C vai aparecer. Sim, senão ele vai aparecer. Não, C contém A. Se tiver, ele vai aparecer. Sim, caso contrário, ele coloca. Não. Então, como
+
+492
+01:08:33.910 --> 01:08:43.599
+Gesiel Lopes: aqui faltou, só trocar o C. Então o A contém C: Sim,
+
+493
+01:08:43.750 --> 01:08:47.469
+Gesiel Lopes: o C contém A. Não, não são.
+
+494
+01:08:47.590 --> 01:08:56.959
+Gesiel Lopes: Não são elementos compatíveis. Eles não contêm um elemento em conjunto, não contém o outro
+
+495
+01:08:58.210 --> 01:09:08.450
+Gesiel Lopes: é o operador ternário, o Johnny que ele colocou é o operador ternário aqui também a gente pode.
+
+496
+01:09:10.779 --> 01:09:19.150
+Gesiel Lopes: Ah, a primeira operação é essa de verificar se um conjunto contém.
+
+497
+01:09:34.160 --> 01:09:36.760
+Gesiel Lopes: Eu vou fazer aqui uma variável chamada.
+
+498
+01:09:43.790 --> 01:09:51.750
+Gesiel Lopes: É a outra operação. Coloca aqui a segunda. A outra operação é,
+
+499
+01:10:03.400 --> 01:10:04.310
+Gesiel Lopes: tá
+
+500
+01:10:12.980 --> 01:10:23.140
+Gesiel Lopes: a próxima operação que a gente tem é a igualdade. Deixa eu colocar aqui igualdade.
+
+501
+01:10:33.610 --> 01:10:39.380
+Gesiel Lopes: Tchau, igualdade entre conjuntos.
+
+502
+01:10:39.560 --> 01:10:43.089
+Gesiel Lopes: Então, para fazer essa verificação. Eu vou primeiro fazer.
+
+503
+01:10:43.260 --> 01:10:59.300
+Gesiel Lopes: E aí, intercessão C, que é um novo conjunto. Então, como é que eu faço a intercessão A e
+
+504
+01:10:59.450 --> 01:11:02.099
+Gesiel Lopes: C que há a Intercessão C.
+
+505
+01:11:02.420 --> 01:11:10.049
+Gesiel Lopes: Eu vou formar um novo. Conjunto. A intercessão vai retornar. O quê? Os elementos que pertencem tanto a
+
+506
+01:11:10.330 --> 01:11:19.139
+Gesiel Lopes: quanto a C, são os elementos que são comuns a ambos os conjuntos. É óbvio que aqui é um novo elemento. É um novo conjunto.
+
+507
+01:11:19.290 --> 01:11:32.340
+Gesiel Lopes: E aí, se a gente comparar esses dois conjuntos, é o conjunto.
+
+508
+01:11:35.790 --> 01:11:53.080
+Gesiel Lopes: A diferença C é igual ao conjunto C para fazer essa validação é a gente vai resultado
+
+509
+01:11:53.630 --> 01:12:04.800
+Gesiel Lopes: criar um novo, uma comparação como operador. Nesse caso, aqui de igualdade. Então, quando eu uso a igualdade,
+
+510
+01:12:06.320 --> 01:12:10.900
+Gesiel Lopes: que é o mesmo operador relacional que a gente tem trabalhado.
+
+511
+01:12:11.120 --> 01:12:23.730
+Gesiel Lopes: Ele vai verificar se esses dois conjuntos são iguais. Ele vai retornar, True, caso eles sejam iguais, tá?
+
+512
+01:12:25.330 --> 01:12:34.710
+Gesiel Lopes: E falso, caso eles sejam diferentes ou não, sejam, ou possuem elementos não comuns,
+
+513
+01:12:43.480 --> 01:12:47.070
+Gesiel Lopes: não, não são. Como assim? Deixa eu ver que a.
+
+514
+01:12:53.170 --> 01:12:56.679
+marcos.jose: Tá certo, senhor. Porque aí seria o C é igual a a. Não é
+
+515
+01:12:57.170 --> 01:13:00.510
+marcos.jose: o A igual a C. Não tem o zero lá de cara. E aí já dá a diferença.
+
+516
+01:13:00.510 --> 01:13:04.230
+Gesiel Lopes: Isso. Isso. Obrigado, obrigado, Marco. Exatamente
+
+517
+01:13:04.480 --> 01:13:13.820
+Gesiel Lopes: na realidade, a igualdade que eu quero fazer é o seguinte: é essa, aqui, né?
+
+518
+01:13:16.530 --> 01:13:23.999
+Gesiel Lopes: Conjunto. A intercessão C é igual ao conjunto C.
+
+519
+01:13:24.660 --> 01:13:29.800
+Gesiel Lopes: Agora sim, ele vai retornar. True agora. Sim,
+
+520
+01:13:31.120 --> 01:13:33.560
+Gesiel Lopes: eu estava fazendo a comparação errada.
+
+521
+01:13:33.950 --> 01:13:37.520
+Gesiel Lopes: É, e aqui eu posso também verificar.
+
+522
+01:13:37.650 --> 01:13:40.830
+Gesiel Lopes: Nesse caso, aqui conjunto,
+
+523
+01:13:44.740 --> 01:13:52.990
+Gesiel Lopes: ou o conjunto B é igual ao conjunto,
+
+524
+01:13:56.460 --> 01:13:59.659
+Gesiel Lopes: e aí que eu vou botar só o resultado. Logo
+
+525
+01:14:01.400 --> 01:14:12.580
+Gesiel Lopes: como F. String. Aí eu faço B é igual a ele. Vai retornar pause.
+
+526
+01:14:15.750 --> 01:14:16.810
+Gesiel Lopes: Ok,
+
+527
+01:14:21.570 --> 01:14:22.700
+Gesiel Lopes: é isso.
+
+528
+01:14:32.810 --> 01:14:38.369
+Gesiel Lopes: O conjunto também tem três operações, na realidade,
+
+529
+01:14:38.930 --> 01:14:55.840
+Gesiel Lopes: duas operações bem interessantes que a gente pode está aplicando além dessas operações de igualdade e de
+
+530
+01:14:55.990 --> 01:15:02.730
+Gesiel Lopes: se os elementos contêm ou não está contido ou não,
+
+531
+01:15:02.960 --> 01:15:11.209
+Gesiel Lopes: a gente também pode realizar três operações, três métodos que são bastante úteis para manipulação de conjuntos,
+
+532
+01:15:11.380 --> 01:15:16.909
+Gesiel Lopes: a primeira delas bem parecida com o que a gente já fez. Só que, através de.
+
+533
+01:15:17.570 --> 01:15:26.770
+Gesiel Lopes: Só que através de métodos dos conjuntos, alguns métodos ou funções específicas de conjuntos.
+
+534
+01:15:26.980 --> 01:15:34.260
+Gesiel Lopes: Primeiro, é verificando se um conjunto, um conjunto,
+
+535
+01:15:37.400 --> 01:15:46.580
+Gesiel Lopes: tá, é sub conjunto de outro
+
+536
+01:15:47.670 --> 01:15:52.700
+Gesiel Lopes: outra maneira de você fazer isso. Nesse caso, aqui é
+
+537
+01:15:54.190 --> 01:15:58.780
+Gesiel Lopes: que aqui a gente estava verificando se
+
+538
+01:15:59.460 --> 01:16:05.610
+Gesiel Lopes: o conjunto, essa operação aqui a contém B, ou seja, todos os elementos
+
+539
+01:16:05.710 --> 01:16:10.119
+Gesiel Lopes: de ser estão contidos ou pertencem ao conjunto a
+
+540
+01:16:10.360 --> 01:16:14.669
+Gesiel Lopes: esse é o significado, a semântica dessa operação,
+
+541
+01:16:14.890 --> 01:16:21.479
+Gesiel Lopes: uma outra semântica que a gente também pode dar essa mesma operação é verificar ou dizer
+
+542
+01:16:21.690 --> 01:16:31.880
+Gesiel Lopes: ou perguntar se o conjunto C é um subconjunto do conjunto a lembrando lá das operações entre conjuntos da matemática.
+
+543
+01:16:32.400 --> 01:16:38.819
+Gesiel Lopes: Então uma maneira de você verificar se um elemento está contido ou
+
+544
+01:16:38.980 --> 01:16:47.040
+Gesiel Lopes: se um conjunto está contido ou não em outro conjunto, é verificar se ele é um subconjunto do conjunto dado.
+
+545
+01:16:47.360 --> 01:16:58.030
+Gesiel Lopes: E é uma forma de você fazer isso com Python é através da operação ou a Da.
+
+546
+01:17:01.980 --> 01:17:11.740
+Gesiel Lopes: O conjunto B é um subir conjunto de ar,
+
+547
+01:17:14.400 --> 01:17:20.090
+Gesiel Lopes: uma forma de você fazer isso é através do método
+
+548
+01:17:23.130 --> 01:17:30.890
+Gesiel Lopes: subsete em is subset, tchau.
+
+549
+01:17:34.860 --> 01:17:40.519
+Gesiel Lopes: Nesse caso, aqui, B, não C e subsett de a.
+
+550
+01:17:40.650 --> 01:17:41.600
+Gesiel Lopes: Tá
+
+551
+01:17:42.950 --> 01:17:55.090
+Gesiel Lopes: que aí você está verificando C é um subconjunto subsequente C é um subconjunto de A, ou seja, todos os elementos.
+
+552
+01:17:55.590 --> 01:17:58.189
+Gesiel Lopes: E aqui não é B, que é C.
+
+553
+01:17:58.530 --> 01:18:05.459
+Gesiel Lopes: Todos os elementos de C são elementos de A. Então, uma forma de você, além de fazer
+
+554
+01:18:05.760 --> 01:18:09.879
+Gesiel Lopes: a verificação como símbolo de maior,
+
+555
+01:18:10.050 --> 01:18:20.850
+Gesiel Lopes: que é o símbolo de content. Você também pode fazer essa operação de Intercept. Então observem que ela vai trazer o mesmo resultado
+
+556
+01:18:21.080 --> 01:18:23.799
+Gesiel Lopes: dessa operação aqui. Ó, tá.
+
+557
+01:18:24.680 --> 01:18:27.840
+Gesiel Lopes: O mesmo resultado, tá?
+
+558
+01:18:30.360 --> 01:18:32.090
+Gesiel Lopes: Contém ser.
+
+559
+01:18:33.150 --> 01:18:36.170
+Gesiel Lopes: E aí eu vou só pegar esse.
+
+560
+01:18:48.330 --> 01:18:53.160
+Gesiel Lopes: Isso aqui vai ficar mais fácil para poder reutilizar é ser.
+
+561
+01:18:53.860 --> 01:18:58.790
+Gesiel Lopes: É subir conjunto
+
+562
+01:19:03.560 --> 01:19:04.650
+Gesiel Lopes: de A.
+
+563
+01:19:08.270 --> 01:19:11.570
+Gesiel Lopes: Eu vou ter uma variável e não preciso repetir a operação.
+
+564
+01:19:16.450 --> 01:19:20.789
+Gesiel Lopes: Então, os dois, como a gente viu. Ele vai trazer o mesmo resultado,
+
+565
+01:19:20.900 --> 01:19:26.740
+Gesiel Lopes: que é simplesmente a forma de leitura de que você faz a interpretação.
+
+566
+01:19:26.870 --> 01:19:31.390
+Gesiel Lopes: Então verificar a contém B ou a
+
+567
+01:19:31.570 --> 01:19:39.809
+Gesiel Lopes: contencer. Significa dizer que todos os elementos do conjunto que você está operando da direita também são elementos do conjunto da esquerda.
+
+568
+01:19:39.980 --> 01:19:53.110
+Gesiel Lopes: Ou então você pode trocar a pergunta. O conjunto da esquerda é subconjunto do conjunto da direita, e aí uma forma de você fazer isso dentro do Python é chamar no Método
+
+569
+01:19:53.260 --> 01:19:59.120
+Gesiel Lopes: is Subset, que é um método específico dos conjuntos.
+
+570
+01:19:59.370 --> 01:20:00.220
+Gesiel Lopes: Tá bom,
+
+571
+01:20:06.090 --> 01:20:12.540
+Gesiel Lopes: a outra forma. Outra operação que a gente pode verificar.
+
+572
+01:20:12.800 --> 01:20:22.729
+Gesiel Lopes: Outro método que a gente tem é verificar se um conjunto. Ele é, em vez de ser subconjunto.
+
+573
+01:20:23.090 --> 01:20:32.900
+Gesiel Lopes: Ele é um super conjunto de outro.
+
+574
+01:20:37.570 --> 01:20:46.420
+Gesiel Lopes: Nesse caso, aqui vamos fazer a seguinte pergunta:
+
+575
+01:20:55.760 --> 01:21:20.350
+Gesiel Lopes: Ah, A e um super conjunto de B, aliás, de C, ou seja, estou o o A
+
+576
+01:21:20.510 --> 01:21:29.519
+Gesiel Lopes: abrange o conjunto C, ou seja, os elementos de C estão unicamente no conjunto a.
+
+577
+01:21:29.630 --> 01:21:40.650
+Gesiel Lopes: É essa a pergunta que a gente está fazendo. E essa é a interpretação que a gente tem que dar. Então, nesse caso aqui. Eu faço a pergunta se
+
+578
+01:21:43.500 --> 01:21:45.820
+Gesiel Lopes: ou A E. I S.
+
+579
+01:21:46.060 --> 01:21:49.159
+Gesiel Lopes: Aí eu vou chamar o método Super sete.
+
+580
+01:21:49.330 --> 01:21:58.120
+Gesiel Lopes: O conjunto A é um super conjunto do conjunto C, que é o conjunto que eu estou operando, tá?
+
+581
+01:21:58.640 --> 01:22:01.250
+Gesiel Lopes: E aqui ele vai trazer aqui o resultado.
+
+582
+01:22:03.270 --> 01:22:04.120
+Gesiel Lopes: Tá?
+
+583
+01:22:09.510 --> 01:22:11.480
+Gesiel Lopes: E aqui eu só faço a pergunta.
+
+584
+01:22:19.870 --> 01:22:31.450
+Gesiel Lopes: O conjunto A é um super conjunto de ser.
+
+585
+01:22:34.390 --> 01:22:48.150
+Gesiel Lopes: Sim, isso quer dizer o quê? Que o A está totalmente contido no conjunto, A, aliás, o C está totalmente contido no conjunto A,
+
+586
+01:22:48.750 --> 01:22:51.240
+Gesiel Lopes: então A é um super conjunto
+
+587
+01:22:55.830 --> 01:23:00.340
+Gesiel Lopes: ok, e a última operação.
+
+588
+01:23:04.640 --> 01:23:10.439
+Gesiel Lopes: O que eu quero fazer é o seguinte: eu vou pegar.
+
+589
+01:23:11.450 --> 01:23:13.939
+Gesiel Lopes: Vou formar mais dois conjuntos
+
+590
+01:23:18.300 --> 01:23:26.580
+Gesiel Lopes: que aí vai de um a dez. E esse vai. Não aqui. Eu vou colocar
+
+591
+01:23:31.180 --> 01:23:32.639
+Gesiel Lopes: de três
+
+592
+01:23:39.080 --> 01:23:46.169
+Gesiel Lopes: e de um até vinte e um, de dois em dois
+
+593
+01:23:46.930 --> 01:23:51.870
+Gesiel Lopes: e aqui de um até vinte e um, de três em três.
+
+594
+01:23:53.650 --> 01:23:57.350
+Gesiel Lopes: Pleitear replante B.
+
+595
+01:24:09.500 --> 01:24:13.560
+Gesiel Lopes: Começar com dois. Acho que é melhor isso.
+
+596
+01:24:14.200 --> 01:24:16.780
+Gesiel Lopes: Não, não, não, Gisele.
+
+597
+01:24:17.390 --> 01:24:20.389
+Gesiel Lopes: Vamos ver. Aqui. Deixa eu ver se tem um ou três.
+
+598
+01:24:33.520 --> 01:24:34.350
+Gesiel Lopes: Pronto,
+
+599
+01:24:37.570 --> 01:24:41.540
+Gesiel Lopes: ainda não tem o conjunto que eu quero botar. Só até dez.
+
+600
+01:24:44.020 --> 01:24:46.450
+Gesiel Lopes: Tucatu anão até dez.
+
+601
+01:24:55.460 --> 01:25:00.519
+Gesiel Lopes: Isso, pronto, então eu tenho o conjunto A e o conjunto B aqui
+
+602
+01:25:05.100 --> 01:25:06.900
+Gesiel Lopes: conjunto A.
+
+603
+01:25:27.880 --> 01:25:28.630
+Gesiel Lopes: Pronto,
+
+604
+01:25:32.710 --> 01:25:33.560
+Gesiel Lopes: tá.
+
+605
+01:25:33.680 --> 01:25:45.750
+Gesiel Lopes: Outra operação que a gente tem a o cível é verificar se dois conjuntos são.
+
+606
+01:25:46.140 --> 01:25:49.199
+Gesiel Lopes: Diz juntos, tá?
+
+607
+01:25:50.050 --> 01:25:56.660
+Gesiel Lopes: Quando é que a gente diz que um conjunto, ou que, se dois conjuntos são adjuntos,
+
+608
+01:25:57.110 --> 01:26:12.060
+Gesiel Lopes: quando isso somente acontece se somente se os conjuntos não possuírem elementos comuns, ou seja, eles não têm elementos em
+
+609
+01:26:13.730 --> 01:26:16.080
+Gesiel Lopes: comum, tá?
+
+610
+01:26:17.050 --> 01:26:23.160
+Gesiel Lopes: E como é que eu faço isso dentro do Python? Uma forma de você fazer isso
+
+611
+01:26:26.780 --> 01:26:29.370
+Gesiel Lopes: é através de.
+
+612
+01:26:29.920 --> 01:26:32.409
+Gesiel Lopes: E aí a pergunta que eu vou fazer aqui é:
+
+613
+01:26:37.800 --> 01:26:52.170
+Gesiel Lopes: Ah, é a I B. Acho que fica melhor assim. São de juntos, tá?
+
+614
+01:26:53.050 --> 01:27:03.220
+Gesiel Lopes: E aí que eu posso fazer? A criação da variável. A B são diz juntos.
+
+615
+01:27:03.330 --> 01:27:08.339
+Gesiel Lopes: E aí, como é que eu faço essa verificação. Então eu chamo o conjunto
+
+616
+01:27:08.770 --> 01:27:14.630
+Gesiel Lopes: e vou chamar a função is de Joinville.
+
+617
+01:27:15.540 --> 01:27:17.320
+Gesiel Lopes: Tá, B.
+
+618
+01:27:23.390 --> 01:27:30.890
+Gesiel Lopes: Eu vou só colocar aqui o print hoje conjuntos.
+
+619
+01:27:31.340 --> 01:27:38.060
+Gesiel Lopes: Ah, I B são. Diz juntos.
+
+620
+01:27:45.350 --> 01:27:57.469
+Gesiel Lopes: Coloca aqui o resultado da operação e faça aqui um if ternário só para deixar humanizado a mensagem. Se eles forem de juntos, vai ser sim. Caso contrário, eles vão dizer não,
+
+621
+01:27:57.680 --> 01:27:58.570
+Gesiel Lopes: tá?
+
+622
+01:28:06.440 --> 01:28:08.480
+Gesiel Lopes: A e B são de juntos.
+
+623
+01:28:10.190 --> 01:28:14.029
+Gesiel Lopes: É o sete. Isso tem o sete. Exatamente.
+
+624
+01:28:14.680 --> 01:28:23.689
+Gesiel Lopes: É agora, se eu começar com oito, até porque um é em dois em dois.
+
+625
+01:28:28.420 --> 01:28:33.160
+Gesiel Lopes: Deixa eu ver se ele vai aparecer o onze, né? O onze
+
+626
+01:28:37.570 --> 01:28:43.260
+Gesiel Lopes: que o a um. Eu estou começando G1 e incrementando.
+
+627
+01:28:45.390 --> 01:28:47.679
+Gesiel Lopes: Deixa eu ver só os números pares
+
+628
+01:28:49.650 --> 01:28:52.660
+Gesiel Lopes: que eu vou ter. Só o número, pá. Em cima
+
+629
+01:28:53.440 --> 01:28:59.399
+Gesiel Lopes: e embaixo. Pronto, fazer mais fácil. Eu vou garantir só os números ímpares. Pronto,
+
+630
+01:29:01.460 --> 01:29:04.699
+Gesiel Lopes: de três em três? Não, porque o seis agora aparece
+
+631
+01:29:12.830 --> 01:29:16.250
+Gesiel Lopes: Toffoli e Fi.
+
+632
+01:29:18.450 --> 01:29:29.970
+Gesiel Lopes: E aí vou fazer aqui, ó e módulo dois for diferente
+
+633
+01:29:30.540 --> 01:29:34.440
+Gesiel Lopes: de dois agora, Sim, eu só vou garantir os números ímpares.
+
+634
+01:29:39.980 --> 01:29:43.450
+Gesiel Lopes: Dois ó e
+
+635
+01:29:47.360 --> 01:29:48.660
+Gesiel Lopes: módulo
+
+636
+01:29:52.960 --> 01:29:54.100
+Gesiel Lopes: três.
+
+637
+01:30:01.350 --> 01:30:04.019
+Gesiel Lopes: Lady Murphy bateu o horário.
+
+638
+01:30:06.120 --> 01:30:12.190
+Gesiel Lopes: Mas ó, se eu começar, eu vou comentar isso aqui, e depois eu verifico
+
+639
+01:30:17.410 --> 01:30:21.070
+Gesiel Lopes: fazer que nem o Alan está colocando aí.
+
+640
+01:30:22.120 --> 01:30:27.039
+Gesiel Lopes: Deixa eu ver, Alan. Agora Sim, né? Vai ter três, cinco. Isso são números.
+
+641
+01:30:28.420 --> 01:30:31.659
+Gesiel Lopes: E eles não vão ter elementos comuns. Agora Sim,
+
+642
+01:30:31.860 --> 01:30:34.879
+Gesiel Lopes: dá para fazer isso depois eu vejo com calma.
+
+643
+01:30:35.120 --> 01:30:40.760
+Gesiel Lopes: Então aqui eu tenho elementos pares aqui. Eu tenho elementos ímpares, tá?
+
+644
+01:30:42.510 --> 01:30:51.489
+Gesiel Lopes: E aí aqui a gente pode observar que esses dois conjuntos não possuem elementos em comum. Então, como eles não têm elementos em comum,
+
+645
+01:30:51.630 --> 01:30:52.530
+Gesiel Lopes: tá?
+
+646
+01:30:53.310 --> 01:31:02.310
+Gesiel Lopes: Eles são dois conjuntos de juntos. E aí a forma de a gente fazer essa comparação é através do método de juntos,
+
+647
+01:31:02.980 --> 01:31:13.260
+Gesiel Lopes: beleza. E aí, só para finalizar, de fato, só a algumas observações, tá? Observações.
+
+648
+01:31:14.450 --> 01:31:18.309
+Gesiel Lopes: A gente não repetir tá
+
+649
+01:31:21.310 --> 01:31:35.480
+Gesiel Lopes: conjunto. Os conjuntos é apenas elementos imutáveis.
+
+650
+01:31:36.250 --> 01:31:43.460
+Gesiel Lopes: Podem ser elementos de conjuntos, tá?
+
+651
+01:31:43.720 --> 01:31:45.440
+Gesiel Lopes: Isso quer dizer o quê?
+
+652
+01:31:45.580 --> 01:31:50.000
+Gesiel Lopes: Eu não posso usar uma lista
+
+653
+01:31:50.140 --> 01:31:54.339
+Gesiel Lopes: ou um dicionário como elemento de um conjunto,
+
+654
+01:31:54.770 --> 01:32:02.190
+Gesiel Lopes: porque o conjunto só aceita como elementos imutáveis, como duplas,
+
+655
+01:32:02.290 --> 01:32:21.779
+Gesiel Lopes: ou como números ou como strings, ou seja, listas dicionários e outros conjuntos não podem ser elementos
+
+656
+01:32:22.050 --> 01:32:26.300
+Gesiel Lopes: de conjuntos. Tá ok.
+
+657
+01:32:28.290 --> 01:32:37.040
+Gesiel Lopes: A última observação é que conjuntos não possuem.
+
+658
+01:32:37.560 --> 01:32:40.530
+Gesiel Lopes: É isso índices.
+
+659
+01:32:40.930 --> 01:32:51.199
+Gesiel Lopes: Ou seja, eu não posso acessar um elemento de um conjunto a partir de um índice. Ou seja, portanto,
+
+660
+01:32:53.330 --> 01:33:05.730
+Gesiel Lopes: você não pode acessar elementos. O posição em um conjunto, tá?
+
+661
+01:33:06.150 --> 01:33:13.619
+Gesiel Lopes: Então são essas observações que a gente precisa ter quando estivermos trabalhando com conjuntos.
+
+662
+01:33:14.020 --> 01:33:15.090
+Gesiel Lopes: Tranquilo.
+
+663
+01:33:16.450 --> 01:33:20.729
+Gesiel Lopes: Deixa eu colocar isso como comentário para não dar erro de execução.
+
+664
+01:33:20.870 --> 01:33:23.840
+Gesiel Lopes: Então era isso pessoal que eu tinha preparado para hoje.
+
+665
+01:33:25.570 --> 01:33:26.360
+Gesiel Lopes: Tá
+
+666
+01:33:27.390 --> 01:33:40.569
+Gesiel Lopes: qualquer dúvida que persistir é só mandar mensagem lá no infinite online, ou que a gente tenta ajudá los da melhor forma possível. Beleza. Então é isso. Muito obrigado. Bom descanso. E até o nosso próximo encontro,
+
+667
+01:33:41.140 --> 01:33:42.090
+Gesiel Lopes: fui.
+

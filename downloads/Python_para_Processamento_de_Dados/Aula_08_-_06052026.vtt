@@ -1,0 +1,2982 @@
+WEBVTT
+
+1
+00:00:13.310 --> 00:00:21.809
+Gesiel Lopes: Opa, pessoal, salve, salve! Muito boa. Noite. Vamos dar início a mais um encontro aqui da nossa disciplina
+
+2
+00:00:22.160 --> 00:00:28.430
+Gesiel Lopes: de programação com Python do bloco de fundamentos.
+
+3
+00:00:29.000 --> 00:00:31.589
+Gesiel Lopes: Na realidade, a disciplina é sempre com fundo, né?
+
+4
+00:00:32.030 --> 00:00:33.460
+Gesiel Lopes: É
+
+5
+00:00:34.570 --> 00:00:43.359
+Gesiel Lopes: Python para processamento de dados aqui do bloco de fundamentos de processamento de dados. Estamos iniciando mais um encontro
+
+6
+00:00:43.680 --> 00:00:48.060
+Gesiel Lopes: que quem vos fala é o Gisele Lopes. Muito boa noite. Seja muito bem, vindo.
+
+7
+00:00:48.340 --> 00:00:54.900
+Gesiel Lopes: Vamos é começar mais um encontro aqui.
+
+8
+00:00:57.500 --> 00:01:02.250
+Gesiel Lopes: Sem mais delongas. Deixa eu compartilhar aqui a minha tela com vocês.
+
+9
+00:01:10.720 --> 00:01:20.910
+Gesiel Lopes: Acredito que vocês estejam vendo a minha tela nesse exato momento.
+
+10
+00:01:21.760 --> 00:01:32.940
+Gesiel Lopes: E vou é disponibilizar aqui meu notebook,
+
+11
+00:01:43.310 --> 00:01:45.190
+Gesiel Lopes: meu notebook
+
+12
+00:01:53.460 --> 00:01:54.890
+Gesiel Lopes: para vocês.
+
+13
+00:02:00.680 --> 00:02:03.709
+Gesiel Lopes: Tá bom, esse tamanho tá, legal?
+
+14
+00:02:10.320 --> 00:02:14.600
+Gesiel Lopes: Acredito que sim, beleza.
+
+15
+00:02:16.250 --> 00:02:17.589
+Gesiel Lopes: Então vamos lá.
+
+16
+00:02:18.840 --> 00:02:20.200
+Gesiel Lopes: É
+
+17
+00:02:30.340 --> 00:02:32.400
+Gesiel Lopes: o senhor me organizar aqui,
+
+18
+00:02:48.770 --> 00:02:50.330
+Gesiel Lopes: beleza.
+
+19
+00:03:02.720 --> 00:03:12.509
+Gesiel Lopes: Ok, tá, então vamos. Lá estão dando continuidade, pessoal, as estruturas de dados.
+
+20
+00:03:12.760 --> 00:03:29.169
+Gesiel Lopes: Então, a gente já trabalhou? A gente já viu listas, apesar de a gente estar trabalhando, com lista já há algum certo tempo. Então a gente fez a definição mais formal e alguns métodos de como trabalhar, manipular listas.
+
+21
+00:03:29.380 --> 00:03:30.200
+Gesiel Lopes: Tá bom,
+
+22
+00:03:30.760 --> 00:03:45.920
+Gesiel Lopes: a gente viu como criar listas de uma forma bem mais elegante. Uma sintaxe bem mais clean através dos lices Comprehension através das Comprehensions que a gente chama no Python.
+
+23
+00:03:46.010 --> 00:03:57.889
+Gesiel Lopes: E no nosso último encontro, a gente manipulou um pouquinho o conceito de duplas. Então a outra estrutura de dados que a gente tem disponível na linguagem.
+
+24
+00:03:58.080 --> 00:04:06.729
+Gesiel Lopes: Python é a estrutura chamada de dicionários. Então o dicionário é uma estrutura de dado
+
+25
+00:04:06.980 --> 00:04:15.390
+Gesiel Lopes: que funciona, observe que tanto as listas quanto as duplas. Quando a gente estava trabalhando com elas, os valores
+
+26
+00:04:15.530 --> 00:04:22.700
+Gesiel Lopes: dessas coleções eram associados a índices numéricos, a
+
+27
+00:04:22.950 --> 00:04:29.640
+Gesiel Lopes: sendo que o primeiro índice, o primeiro elemento. E aí, quando eu falo do primeiro elemento sendo da esquerda para a direita,
+
+28
+00:04:29.890 --> 00:04:33.779
+Gesiel Lopes: o primeiro elemento vai começar com índice zero.
+
+29
+00:04:33.890 --> 00:04:40.520
+Gesiel Lopes: E o último índice vai ser a quantidade de elementos que eu tenho. Menos um, tá,
+
+30
+00:04:40.880 --> 00:04:48.809
+Gesiel Lopes: então essa é a condição de como identificar um elemento dentro das listas ou duplas.
+
+31
+00:04:50.310 --> 00:04:52.429
+Gesiel Lopes: Porém, muitas das vezes,
+
+32
+00:04:57.160 --> 00:05:04.490
+Gesiel Lopes: o Altervi não deve igualmente não.
+
+33
+00:05:05.620 --> 00:05:08.590
+Gesiel Lopes: A resposta de imediato é não,
+
+34
+00:05:09.710 --> 00:05:14.780
+Gesiel Lopes: e o que depende depende do tamanho da lista
+
+35
+00:05:15.580 --> 00:05:22.220
+Gesiel Lopes: e dos valores que são atribuídos a essa coleção.
+
+36
+00:05:22.440 --> 00:05:29.820
+Gesiel Lopes: Então, cada tipo de coleção vai ter uma quantidade a armazenar em memória.
+
+37
+00:05:30.030 --> 00:05:38.780
+Gesiel Lopes: E dependendo da quantidade dela e do tipo de dado que está inserido nela. Isso também tem uma influência.
+
+38
+00:05:38.950 --> 00:05:42.469
+Gesiel Lopes: Uma coisa é eu guardar em memória uma lista de dez,
+
+39
+00:05:42.730 --> 00:05:47.740
+Gesiel Lopes: uma lista de dez posições com dez números inteiros.
+
+40
+00:05:48.500 --> 00:05:49.620
+Gesiel Lopes: Beleza,
+
+41
+00:05:49.760 --> 00:06:06.779
+Gesiel Lopes: outra coisa. Eu armazenar uma lista com um bilhão de valores inteiros. Então aí a gente tem uma diferença significativa. Por mais que sejam inteiros como eu tenho mais números. Eu preciso de mais armazenamento e memória.
+
+42
+00:06:07.350 --> 00:06:08.620
+Gesiel Lopes: E aí?
+
+43
+00:06:08.860 --> 00:06:12.910
+Gesiel Lopes: Então tem sempre esse contexto, beleza.
+
+44
+00:06:13.150 --> 00:06:17.560
+Gesiel Lopes: E não pense em vocês hoje em dia. Até um tempo atrás,
+
+45
+00:06:17.840 --> 00:06:26.130
+Gesiel Lopes: a gente não se preocupava muito com memória, porque as estruturas de dados diante dos problemas que tínhamos,
+
+46
+00:06:26.840 --> 00:06:31.550
+Gesiel Lopes: a quantidade de memória que a gente tinha disponível era mais do que suficiente,
+
+47
+00:06:31.970 --> 00:06:42.430
+Gesiel Lopes: porque a cada tipo de dado. Eu não vou lembrar aqui de cabeça, mas cada tipo de dado ocupa uma fração mínima
+
+48
+00:06:42.630 --> 00:06:54.649
+Gesiel Lopes: zero,um0 aliás, zero,zero um,dois. Não sei. É kabites de memória. Então, se eu tenho, por exemplo, um6 Gb, um Kab byte não vai fazer diferença
+
+49
+00:06:55.050 --> 00:07:02.599
+Gesiel Lopes: se eu tenho trinta e dois giga. Pior ainda, se eu tenho sessenta e quatro. Pior ainda,
+
+50
+00:07:02.840 --> 00:07:10.239
+Gesiel Lopes: então, hoje, só que hoje a gente tem algumas, principalmente o modelo de linguagem. Quando a gente fala de modelo de linguagem,
+
+51
+00:07:10.540 --> 00:07:22.490
+Gesiel Lopes: a gente tem a algumas estruturas de dados que envolvem algumas centenas de bilhões de dados numéricos.
+
+52
+00:07:22.920 --> 00:07:23.780
+Gesiel Lopes: Tá?
+
+53
+00:07:24.000 --> 00:07:30.630
+Gesiel Lopes: Então observe, se eu tiver duas variáveis, onde cada uma das variáveis tem uma quantidade
+
+54
+00:07:31.490 --> 00:07:41.510
+Gesiel Lopes: de algumas centenas de bilhões de dados seja inteira ou ponto flutuante, ainda ocupa mais espaço.
+
+55
+00:07:42.510 --> 00:07:46.529
+Gesiel Lopes: Eu vou chegar ao limite da minha memória rapidinho.
+
+56
+00:07:47.050 --> 00:07:56.400
+Gesiel Lopes: Por isso que hoje. Memória Ham é extrema. Virou um item de coleção, né?
+
+57
+00:07:56.700 --> 00:08:02.420
+Gesiel Lopes: Então não é só mais processamento e nem processamento paralelo.
+
+58
+00:08:02.810 --> 00:08:05.560
+Gesiel Lopes: Memória também se tornou um item raro.
+
+59
+00:08:05.690 --> 00:08:10.499
+Gesiel Lopes: E como a demanda é maior, a procura é maior. O preço.
+
+60
+00:08:10.730 --> 00:08:14.070
+Gesiel Lopes: A lei do mercado vai aumentar na mesma proporção
+
+61
+00:08:14.370 --> 00:08:18.099
+Gesiel Lopes: tá bom. Por conta disso, seria muito bom. Maravilhoso
+
+62
+00:08:18.340 --> 00:08:22.140
+Gesiel Lopes: se eu armazenasse uma lista de dez valores
+
+63
+00:08:22.310 --> 00:08:30.590
+Gesiel Lopes: em uma lista de centenas de bilhões de valores ocupados. A mesma quantidade de espaço. Era maravilhoso.
+
+64
+00:08:30.870 --> 00:08:34.429
+Gesiel Lopes: Dundá respondido, Walter.
+
+65
+00:08:34.950 --> 00:08:38.510
+Gesiel Lopes: Até mais, né, beleza.
+
+66
+00:08:39.780 --> 00:08:49.369
+Gesiel Lopes: Sim, sim. A gente hoje, dependendo do problema que a gente quer resolver. Dependendo da quantidade de operações que são feitas dentro
+
+67
+00:08:49.680 --> 00:09:00.520
+Gesiel Lopes: do problema, eu chego rapidinho a algumas centenas de bilhões de dados. E colocar todo esse memória
+
+68
+00:09:00.790 --> 00:09:10.259
+Gesiel Lopes: só abrindo um parêntese. Quem só gosta muito que é literalmente a gente vive numa era que a gente chama de big Data. Só que o termo big data já virou até The Foo.
+
+69
+00:09:10.570 --> 00:09:14.600
+Gesiel Lopes: A gente nem fala mais de Big Data, porque é impossível não trabalhar com big data.
+
+70
+00:09:15.390 --> 00:09:20.439
+Gesiel Lopes: Então eu manipulo diariamente tabelas de dados
+
+71
+00:09:21.210 --> 00:09:25.800
+Gesiel Lopes: onde cada uma das tabelas tem apenas algumas.
+
+72
+00:09:26.110 --> 00:09:27.670
+Gesiel Lopes: Algumas
+
+73
+00:09:28.670 --> 00:09:35.870
+Gesiel Lopes: alguns teras ou alguns pequenos teras de dados. Então, às vezes, hoje mesmo, o projeto que eu estou atuando,
+
+74
+00:09:36.150 --> 00:09:41.300
+Gesiel Lopes: a gente está manipulando em um processo que a gente está mapeando.
+
+75
+00:09:41.720 --> 00:09:44.060
+Gesiel Lopes: Vinte e um tabelas.
+
+76
+00:09:44.910 --> 00:09:54.669
+Gesiel Lopes: E a menor tabela ocupa quatro teras na memória
+
+77
+00:09:55.330 --> 00:10:07.919
+Gesiel Lopes: e ela tem algumas centenas, algumas bilhões de bilhões de registros. É coisa que não acaba mais. E a gente está processando isso, que são séries históricas.
+
+78
+00:10:08.050 --> 00:10:22.869
+Gesiel Lopes: É colocar isso tudo em memória, além de não ter memória suficiente, a gente tem que utilizar outros mecanismos para otimizar e utilizar a memória que a gente tem disponível. Aí. A gente usa o conceito que a gente chama de processamento paralelo,
+
+79
+00:10:23.160 --> 00:10:26.340
+Gesiel Lopes: e aí tem as ferramentas específicas para fazer isso.
+
+80
+00:10:26.680 --> 00:10:27.950
+Gesiel Lopes: Então não é.
+
+81
+00:10:28.200 --> 00:10:38.239
+Gesiel Lopes: Não é só modelo de linguagem que se vive o mundo de grande escala de dados, não
+
+82
+00:10:39.640 --> 00:10:43.299
+Gesiel Lopes: fechando esse parêntese. Vamos lá dando continuidade.
+
+83
+00:10:43.690 --> 00:10:52.760
+Gesiel Lopes: É como eu estava falando de dicionários.
+
+84
+00:10:55.150 --> 00:10:58.419
+Gesiel Lopes: Oooh, o deixa eu ver. Assim lembrei
+
+85
+00:10:59.580 --> 00:11:08.740
+Gesiel Lopes: as listas e as duplas identificam seus elementos através de índices numéricos só que e aí,
+
+86
+00:11:08.880 --> 00:11:17.810
+Gesiel Lopes: dependendo da situação, é claro, eu quero identificar os meus elementos, não mais por um índice numérico.
+
+87
+00:11:18.030 --> 00:11:21.769
+Gesiel Lopes: Mas eu quero ter uma estrutura de dados
+
+88
+00:11:22.050 --> 00:11:34.040
+Gesiel Lopes: onde eu possa dar uma semântica melhor, dar uma semântica mais apropriada para o dado que eu quero armazenar.
+
+89
+00:11:34.340 --> 00:11:45.660
+Gesiel Lopes: Então, em vez de ser um valor numérico, um índice que, dependendo do contexto não me dá nenhum resultado significativo. Ou me dá nenhum.
+
+90
+00:11:45.660 --> 00:11:54.650
+Gesiel Lopes: Não traz nenhuma expressão válida para o que eu estou fazendo. Eu posso criar estruturas de dados que armazenam os dados
+
+91
+00:11:55.120 --> 00:11:58.910
+Gesiel Lopes: com índices que têm alguma semântica
+
+92
+00:11:59.160 --> 00:12:16.200
+Gesiel Lopes: para o problema que eu estou considerando. Então essas estruturas de dados. Elas são justamente os dicionários. Por quê? Quando eu crio um dicionário, ele é uma estrutura de dados que envolve o conceito de chave. Valor
+
+93
+00:12:16.350 --> 00:12:25.379
+Gesiel Lopes: isso quer dizer que, para que eu tenha essa coleção obrigatoriamente, eu preciso definir o
+
+94
+00:12:25.480 --> 00:12:32.239
+Gesiel Lopes: índices ou os indicadores dos elementos da minha coleção
+
+95
+00:12:32.620 --> 00:12:39.320
+Gesiel Lopes: e a esses indicadores podem tanto ser índices numéricos sem problema nenhum,
+
+96
+00:12:39.620 --> 00:12:42.909
+Gesiel Lopes: seguindo a mesma lógica das coleções,
+
+97
+00:12:43.120 --> 00:12:51.729
+Gesiel Lopes: listas e duplas, seguindo a mesma lógica das listas e duplas, que é atribuindo zero para o primeiro elemento
+
+98
+00:12:52.150 --> 00:12:56.219
+Gesiel Lopes: e n menos um, o tamanho, menos um
+
+99
+00:12:56.320 --> 00:13:02.039
+Gesiel Lopes: para o último elemento. Ou posso adicionar algum outro elemento
+
+100
+00:13:02.280 --> 00:13:08.320
+Gesiel Lopes: que traga no índice que traga um significado melhor
+
+101
+00:13:08.670 --> 00:13:14.539
+Gesiel Lopes: para o que eu estou armazenando naquela estrutura.
+
+102
+00:13:15.070 --> 00:13:18.920
+Gesiel Lopes: Então isso é o que a gente chama de dicionários.
+
+103
+00:13:20.640 --> 00:13:24.320
+Gesiel Lopes: E aí, como é que eu crio um dicionário muito simples.
+
+104
+00:13:25.410 --> 00:13:35.169
+Gesiel Lopes: Então o dicionário vai ter a a seguinte sintaxe, tá?
+
+105
+00:13:36.200 --> 00:13:38.840
+Gesiel Lopes: Então eu vou ter a.
+
+106
+00:13:39.630 --> 00:13:46.670
+Gesiel Lopes: A gente vai usar os colchates como os operadores,
+
+107
+00:13:46.980 --> 00:13:49.880
+Gesiel Lopes: os operadores de definição de dicionários.
+
+108
+00:13:50.530 --> 00:13:52.850
+Gesiel Lopes: Tá, é?
+
+109
+00:13:56.560 --> 00:14:04.269
+Gesiel Lopes: E aí eu vou ter sempre uma estrutura chamada da seguinte maneira: eu sempre vou ter a chave
+
+110
+00:14:04.980 --> 00:14:15.560
+Gesiel Lopes: que vai identificar o elemento dentro da minha coleção e o valor que é aquilo que eu quero armazenar
+
+111
+00:14:15.720 --> 00:14:17.389
+Gesiel Lopes: e aí seguido,
+
+112
+00:14:17.730 --> 00:14:35.560
+Gesiel Lopes: de quantas chaves valores eu queira definir na minha estrutura. E aí um pequeno detalhe é que as chaves, uma vez definidas, essas chaves precisam ser únicas.
+
+113
+00:14:35.640 --> 00:14:48.359
+Gesiel Lopes: Eu não posso ter chave repetida dentro do meu dicionário, justamente porque a chave é usada para indexar o elemento. Então, se eu tenho mais de um índice,
+
+114
+00:14:48.360 --> 00:14:57.489
+Gesiel Lopes: o pai não consegue identificar ou saber qual elemento? Em qual posição você quer recuperar?
+
+115
+00:14:57.950 --> 00:15:02.399
+Gesiel Lopes: Então as chaves são únicas. Já os valores. Não,
+
+116
+00:15:02.770 --> 00:15:05.289
+Gesiel Lopes: deixa eu só pegar aqui, sair aqui do enquadro.
+
+117
+00:15:06.450 --> 00:15:08.910
+Gesiel Lopes: Pega aqui minha água um pouquinho de água.
+
+118
+00:15:10.730 --> 00:15:18.399
+Gesiel Lopes: Ok, então as chaves precisam ser únicas. Já os valores podem ser os
+
+119
+00:15:18.510 --> 00:15:24.919
+Gesiel Lopes: repetidos, os mais variados possíveis. Beleza é tranquilo.
+
+120
+00:15:27.220 --> 00:15:38.459
+Gesiel Lopes: E aí tanto as chaves, como os valores podem ser qualquer objeto. Eu posso inclusive para valor, usar outras estruturas de dados.
+
+121
+00:15:38.570 --> 00:15:39.510
+Gesiel Lopes: Tá bom,
+
+122
+00:15:40.670 --> 00:15:49.730
+Gesiel Lopes: mas para as chaves. Eu preciso usar os meus tipos de dados básicos do Python. Então eu só posso usar os tipos básicos.
+
+123
+00:15:50.110 --> 00:15:52.529
+Gesiel Lopes: Beleza. Dito isso,
+
+124
+00:15:54.220 --> 00:16:01.720
+Gesiel Lopes: como é que eu crio um dicionário. Basicamente, vamos supor que eu tenha um dicionário chamado Pessoas.
+
+125
+00:16:04.970 --> 00:16:06.170
+Gesiel Lopes: Pessoas.
+
+126
+00:16:06.990 --> 00:16:17.360
+Gesiel Lopes: É, e aí eu abro chaves. Chaves, chaves, não é? Chaves, né?
+
+127
+00:16:17.490 --> 00:16:18.750
+Gesiel Lopes: Chaves.
+
+128
+00:16:19.320 --> 00:16:21.600
+Gesiel Lopes: E aí eu coloco a chave.
+
+129
+00:16:21.850 --> 00:16:23.960
+Gesiel Lopes: Por exemplo, o nome.
+
+130
+00:16:27.780 --> 00:16:34.419
+Gesiel Lopes: Dois pontos, o valor. Então aqui eu vou chamar de Gesiel Lopes.
+
+131
+00:16:35.610 --> 00:16:36.410
+Gesiel Lopes: Tchau.
+
+132
+00:16:37.260 --> 00:16:42.590
+Gesiel Lopes: Posso colocar mais uma outra variável,
+
+133
+00:16:42.870 --> 00:16:52.170
+Gesiel Lopes: por exemplo, o nome, não que aí nome. Eu já tenho, por exemplo, profissão,
+
+134
+00:17:00.710 --> 00:17:01.850
+Gesiel Lopes: professor.
+
+135
+00:17:02.340 --> 00:17:06.529
+Gesiel Lopes: E mais uma chave que eu vou chamar aqui de idade.
+
+136
+00:17:08.980 --> 00:17:12.950
+Gesiel Lopes: E aí eu coloco aqui. É minha idade, quarenta e seis, tá?
+
+137
+00:17:15.119 --> 00:17:19.009
+Gesiel Lopes: Então eu posso usar strings. Nesse caso, como chaves.
+
+138
+00:17:20.200 --> 00:17:26.690
+Gesiel Lopes: Então é uma forma. Eu posso é
+
+139
+00:17:34.940 --> 00:17:43.360
+Gesiel Lopes: definir também um dicionário da seguinte maneira. Por exemplo, conceitos.
+
+140
+00:17:43.530 --> 00:17:54.930
+Gesiel Lopes: E aí eu vou colocar aqui com valores numéricos. O primeiro vai ser o Dml, o dois
+
+141
+00:18:01.300 --> 00:18:08.400
+Gesiel Lopes: de L, o três é o de.
+
+142
+00:18:09.660 --> 00:18:13.920
+Gesiel Lopes: E o quarto é, por exemplo, N. D.
+
+143
+00:18:14.330 --> 00:18:16.820
+Gesiel Lopes: Então eu tenho quatro conceitos.
+
+144
+00:18:18.110 --> 00:18:20.590
+Gesiel Lopes: Tá, é.
+
+145
+00:18:22.350 --> 00:18:28.960
+Gesiel Lopes: E aqui eu posso ter também um dicionário variado, tá?
+
+146
+00:18:30.970 --> 00:18:36.859
+Gesiel Lopes: Como assim, Gisele? Vamos supor que eu tenha um dicionário
+
+147
+00:18:39.840 --> 00:18:43.549
+Gesiel Lopes: cuja uma das chaves é uma estringe.
+
+148
+00:18:44.800 --> 00:18:49.289
+Gesiel Lopes: E aí, nesse caso, ele pode receber um valor qualquer. Vamos botar aí
+
+149
+00:18:49.680 --> 00:18:52.310
+Gesiel Lopes: cento e vinte e três,vinte e seis.
+
+150
+00:18:52.540 --> 00:18:59.750
+Gesiel Lopes: Eu posso ter uma chave também como sendo um valor numérico.
+
+151
+00:19:00.260 --> 00:19:04.560
+Gesiel Lopes: E aí eu armazeno um valor qualquer, tá?
+
+152
+00:19:05.320 --> 00:19:14.220
+Gesiel Lopes: E posso também tá ter como valor uma lista de valores.
+
+153
+00:19:14.560 --> 00:19:16.139
+Gesiel Lopes: Tá, não.
+
+154
+00:19:16.260 --> 00:19:18.360
+Gesiel Lopes: Dois e três.
+
+155
+00:19:18.480 --> 00:19:23.420
+Gesiel Lopes: Tá, um, dois e três.
+
+156
+00:19:25.820 --> 00:19:28.209
+Gesiel Lopes: Então é que eu posso imprimir
+
+157
+00:19:28.370 --> 00:19:32.660
+Gesiel Lopes: pessoa. E também posso criar um dicionário vazio.
+
+158
+00:19:33.470 --> 00:19:42.410
+Gesiel Lopes: Tá bom vazio. É um dicionário vazio. Baixa criar com as chaves vazias,
+
+159
+00:19:45.590 --> 00:19:46.790
+Gesiel Lopes: ou.
+
+160
+00:19:48.360 --> 00:20:07.610
+Gesiel Lopes: Ou aí é que eu vou colocar como um comentário ou através da função é beauty ditch dessa forma,
+
+161
+00:20:08.380 --> 00:20:09.250
+Gesiel Lopes: tá,
+
+162
+00:20:10.020 --> 00:20:20.470
+Gesiel Lopes: então eu posso criar um dicionário vazio dessas duas maneiras. Então aqui eu posso imprimir o valor do dicionário de pessoas
+
+163
+00:20:21.920 --> 00:20:24.010
+Gesiel Lopes: conceitos.
+
+164
+00:20:29.050 --> 00:20:38.950
+Gesiel Lopes: Vá variado e aí vazio.
+
+165
+00:20:45.070 --> 00:20:46.990
+Gesiel Lopes: O Deep Note está acordando.
+
+166
+00:20:54.670 --> 00:20:56.350
+Gesiel Lopes: Ah, tá aqui.
+
+167
+00:20:56.880 --> 00:20:58.610
+Gesiel Lopes: Agora, o que eu estou vendo
+
+168
+00:21:08.290 --> 00:21:11.440
+Gesiel Lopes: agora foi o Gabriel. Obrigado.
+
+169
+00:21:12.910 --> 00:21:14.229
+Gesiel Lopes: Deixa eu ver aqui
+
+170
+00:21:19.280 --> 00:21:25.439
+Gesiel Lopes: o Lucas. Ele está colocando como a tabela. Skely.
+
+171
+00:21:30.010 --> 00:21:37.120
+Gesiel Lopes: Estou pensando aqui, Lucas Tchau, é
+
+172
+00:21:40.670 --> 00:21:44.910
+Gesiel Lopes: na realidade vai depender.
+
+173
+00:21:45.500 --> 00:21:49.349
+Gesiel Lopes: E aí, mais uma vez, o depende. Aí, né?
+
+174
+00:21:49.740 --> 00:22:01.510
+Gesiel Lopes: Ele não deixa de acontecer na computação. Ele pode, Sim, ele não quer dizer que todo dicionário
+
+175
+00:22:01.680 --> 00:22:06.280
+Gesiel Lopes: ele se assemelha a uma tabela de Skl,
+
+176
+00:22:06.390 --> 00:22:11.670
+Gesiel Lopes: mas eu posso simular o comportamento
+
+177
+00:22:11.940 --> 00:22:22.320
+Gesiel Lopes: de uma tabela Skl através de um dicionário como Gisele, eu posso definir as chaves
+
+178
+00:22:23.000 --> 00:22:29.940
+Gesiel Lopes: como as colunas do meu dicionário e os valores
+
+179
+00:22:30.860 --> 00:22:39.840
+Gesiel Lopes: das chaves que seriam os valores das colunas que seriam as linhas do dicionário. Eu definiria como sendo uma lista.
+
+180
+00:22:40.050 --> 00:22:52.460
+Gesiel Lopes: Então, dessa forma, eu posso ter um comportamento bem parecido com a estrutura de uma tabela Sql de um banco de dados estruturado.
+
+181
+00:22:53.030 --> 00:23:01.029
+Gesiel Lopes: E aí o Altervi colocou um comentário aí. Deixa eu ver. Csmaya é um arquivo de Aizon. A gente vai falar isso
+
+182
+00:23:01.280 --> 00:23:04.120
+Gesiel Lopes: na realidade, um arquivo G1 é um padrão
+
+183
+00:23:04.280 --> 00:23:20.209
+Gesiel Lopes: de escrita de Strings que navegam na Web e que ela tem essa estrutura chave e valor, que é nada mais. Esse J Zon, nada mais é do que um dicionário. É só uma forma que a gente chama de
+
+184
+00:23:20.600 --> 00:23:29.499
+Gesiel Lopes: de unificar para não chamar de dicionário. Mas todo o Jason. Independentemente da estrutura dele, ele é uma estrutura de dicionário.
+
+185
+00:23:29.840 --> 00:23:33.070
+Gesiel Lopes: Tá tranquilo.
+
+186
+00:23:39.410 --> 00:23:40.600
+Gesiel Lopes: Vamos lá.
+
+187
+00:23:42.420 --> 00:23:47.299
+Gesiel Lopes: Ah, tá. Deu o erro aqui. Vamos ver aqui. O que está acontecendo? Eu fui ver os.
+
+188
+00:23:48.300 --> 00:23:55.509
+Gesiel Lopes: O erro é o 3d aqui porque eu botei uma vírgula. Na realidade, esse deveria ser dois pontos. É só isso.
+
+189
+00:23:56.220 --> 00:23:57.650
+Gesiel Lopes: Vamos executar.
+
+190
+00:23:58.900 --> 00:24:03.790
+Gesiel Lopes: Então observem que eu posso criar um dicionário com strings tá
+
+191
+00:24:06.200 --> 00:24:13.500
+Gesiel Lopes: dicionários com chaves string e valores strings e numéricas.
+
+192
+00:24:13.700 --> 00:24:20.130
+Gesiel Lopes: Posso criar um dicionário com chaves numéricas Tchau.
+
+193
+00:24:21.270 --> 00:24:33.739
+Gesiel Lopes: Nesse caso, e também posso criar dicionários com chaves mistas onde aqui eu tenho a chave nesse dicionário. Uma chave
+
+194
+00:24:34.320 --> 00:24:40.959
+Gesiel Lopes: String, outra chave numérica e outra chave, String,
+
+195
+00:24:41.130 --> 00:24:45.820
+Gesiel Lopes: sendo que o valor da primeira chave do
+
+196
+00:24:46.060 --> 00:24:48.700
+Gesiel Lopes: do dicionário é um ponto flutuante.
+
+197
+00:24:49.820 --> 00:24:55.800
+Gesiel Lopes: O segundo valor do dicionário é uma estringe.
+
+198
+00:24:56.110 --> 00:25:01.789
+Gesiel Lopes: E o terceiro valor armazenado no meu dicionário é uma lista.
+
+199
+00:25:01.940 --> 00:25:04.950
+Gesiel Lopes: Então eu posso ter um dicionário com.
+
+200
+00:25:05.910 --> 00:25:09.910
+Gesiel Lopes: Com diversas formas estruturas.
+
+201
+00:25:10.590 --> 00:25:14.640
+Gesiel Lopes: Deixa eu abrir mais um e também criar aqui um dicionário vazio.
+
+202
+00:25:15.100 --> 00:25:20.239
+Gesiel Lopes: É possível também criar um dicionário?
+
+203
+00:25:25.460 --> 00:25:27.060
+Gesiel Lopes: Qual a função
+
+204
+00:25:33.050 --> 00:25:34.890
+Gesiel Lopes: Beauty em
+
+205
+00:25:37.980 --> 00:25:38.970
+Gesiel Lopes: Dict?
+
+206
+00:25:39.220 --> 00:25:49.359
+Gesiel Lopes: Tá, eu consigo também. Criar como vamos supor aqui que eu tenha pessoa. Dois pessoas,
+
+207
+00:25:50.030 --> 00:25:58.350
+Gesiel Lopes: dois. É um outro dicionário que esse dicionário eu quero criar com a função Beauty
+
+208
+00:25:58.510 --> 00:26:05.270
+Gesiel Lopes: do Python Dict. E como é que eu faço. Então a função Dict tá,
+
+209
+00:26:05.470 --> 00:26:15.919
+Gesiel Lopes: ele tem a seguinte sintaxe. Ele vai receber argumentos e valores onde cada argumento
+
+210
+00:26:16.210 --> 00:26:21.739
+Gesiel Lopes: vai ser interpretado como a chave
+
+211
+00:26:22.800 --> 00:26:38.189
+Gesiel Lopes: e os parâmetros dos argumentos vão ser identificados como os valores reatribuídos a esses parâmetros.
+
+212
+00:26:39.640 --> 00:26:40.720
+Gesiel Lopes: Ok,
+
+213
+00:26:41.030 --> 00:26:52.909
+Gesiel Lopes: como assim, Gezel, vamos supor que eu queira criar o mesmo dicionário aqui. Pessoas com chaves. Então, nesse caso, observe que ele vai ter uma chave,
+
+214
+00:26:53.740 --> 00:26:58.410
+Gesiel Lopes: nome, uma chave e profissão e uma chalidade.
+
+215
+00:26:58.660 --> 00:27:03.010
+Gesiel Lopes: Então as chaves serão os atributos do meu dicionário.
+
+216
+00:27:03.290 --> 00:27:07.620
+Gesiel Lopes: Então ele vai ter uma chave chamada nome
+
+217
+00:27:08.070 --> 00:27:13.830
+Gesiel Lopes: igual, porque eu vou ter que atribuir um valor a essa chave a esse parâmetro, tá?
+
+218
+00:27:14.430 --> 00:27:20.330
+Gesiel Lopes: Ele vai ter um parâmetro chamado profissão,
+
+219
+00:27:25.060 --> 00:27:31.870
+Gesiel Lopes: que vai receber um valor, um argumento,
+
+220
+00:27:33.380 --> 00:27:40.759
+Gesiel Lopes: e vai ter outra chave. E, no caso, outro parâmetro chamado de idade.
+
+221
+00:27:41.420 --> 00:27:47.549
+Gesiel Lopes: Então, nesse caso, aqui, cada parâmetro do dicionário.
+
+222
+00:27:47.700 --> 00:27:54.019
+Gesiel Lopes: Então, cada parâmetro aqui nomeado do dicionário, ele vai ser identificado como a chave.
+
+223
+00:27:54.290 --> 00:28:05.649
+Gesiel Lopes: E os argumentos que eu vou passar para cada um desses atributos serão os valores. Então, se eu digitar aqui. Gesiel Lopes,
+
+224
+00:28:06.690 --> 00:28:20.620
+Gesiel Lopes: profissão, professor e idade: quarenta e seis, eu vou ter um dicionário
+
+225
+00:28:21.470 --> 00:28:26.209
+Gesiel Lopes: com a mesma estrutura do dicionário que eu tinha criado logo acima.
+
+226
+00:28:26.360 --> 00:28:38.760
+Gesiel Lopes: Tá, então cada parâmetro vai ser identificado como uma String. Só esse cuidado que a gente precisa ter é,
+
+227
+00:28:40.350 --> 00:28:46.209
+Gesiel Lopes: deixa eu ver aqui a Jéssica. É possível.
+
+228
+00:28:58.200 --> 00:29:05.720
+Gesiel Lopes: Eu não entendi muito bem, Jéssica, essa tua dúvida. Não entendi, tá?
+
+229
+00:29:06.530 --> 00:29:17.180
+Gesiel Lopes: O Gabriel. Tá, eles. O Gabriel. Pergunta interessante. Não, os dicionários são mutáveis, tá, Gabriel,
+
+230
+00:29:17.480 --> 00:29:23.589
+Gesiel Lopes: eles são estruturas voláteis. Então eu posso alterar os seus valores
+
+231
+00:29:23.750 --> 00:29:40.870
+Gesiel Lopes: em tempo de execução. Diferentemente das duplas, as duplas, que são a estrutura de dados que tem a característica de não ser mudado os seus valores em tempo de execução enquanto elas estiverem disponíveis
+
+232
+00:29:41.000 --> 00:29:43.039
+Gesiel Lopes: dentro do contexto do pai.
+
+233
+00:29:43.150 --> 00:29:48.969
+Gesiel Lopes: Agora, Jéssica, não entendi. Como assim? Eu não entendi. Jéssica, se você puder abrir o microfone e perguntar
+
+234
+00:29:49.500 --> 00:29:53.250
+Gesiel Lopes: para ver se eu consigo entender. Eu posso tentar ajudar
+
+235
+00:29:53.730 --> 00:29:56.190
+Gesiel Lopes: o Leonardo. Fala Leonardo. Pode falar.
+
+236
+00:29:56.190 --> 00:29:59.939
+leonardo Peres: Boa noite, Professor. Bem, a minha dúvida é a seguinte.
+
+237
+00:29:59.940 --> 00:30:00.800
+Gesiel Lopes: Minuto. Só minuto.
+
+238
+00:30:01.350 --> 00:30:02.009
+leonardo Peres: E aí?
+
+239
+00:30:10.490 --> 00:30:12.370
+Gesiel Lopes: Eu não estava escutando vocês.
+
+240
+00:30:13.570 --> 00:30:14.820
+leonardo Peres: Ok, senhor.
+
+241
+00:30:15.150 --> 00:30:16.799
+Gesiel Lopes: Agora Sim, pode falar.
+
+242
+00:30:16.800 --> 00:30:25.689
+leonardo Peres: Ok, tem. Como por exemplo, fazer, tipo, Ah, eu creio. O nome, a produção e a idade. Só que eu pedi para o usuário digitar isso em vez de eu mesmo colocar.
+
+243
+00:30:32.290 --> 00:30:36.220
+Gesiel Lopes: Variáveis. Vamos testar. Não sei. Vamos testar.
+
+244
+00:30:36.450 --> 00:30:37.100
+leonardo Peres: Fechou.
+
+245
+00:30:37.720 --> 00:30:38.820
+Gesiel Lopes: Pessoa.
+
+246
+00:30:39.930 --> 00:30:45.650
+Gesiel Lopes: Pessoa. Pessoas três: você fala é.
+
+247
+00:30:46.630 --> 00:30:58.070
+Gesiel Lopes: É tipo assim. Ó o nome através de um input, digite seu nome.
+
+248
+00:30:58.810 --> 00:31:01.179
+Gesiel Lopes: É isso, Leonardo.
+
+249
+00:31:01.880 --> 00:31:03.440
+Gesiel Lopes: E, por exemplo.
+
+250
+00:31:03.440 --> 00:31:06.390
+leonardo Peres: É tipo um jeito que eu criasse a
+
+251
+00:31:06.750 --> 00:31:12.779
+leonardo Peres: o dicionário. Só que eu pudesse disponibilizar o dicionário só para o usuário ir preenchendo, sabe,
+
+252
+00:31:12.970 --> 00:31:18.649
+leonardo Peres: tipo, assim aparece pra ele. Certinho, nome, profissão, idade. Aí pra digitar. Tem como fazer algo relacionado.
+
+253
+00:31:22.020 --> 00:31:29.359
+Gesiel Lopes: Se for dessa forma aqui, eu acho que eu entendi. De tua maneira, a gente vai ver. Só
+
+254
+00:31:29.730 --> 00:31:32.689
+Gesiel Lopes: a gente pode fazer isso. A profissão,
+
+255
+00:31:33.380 --> 00:31:37.460
+Gesiel Lopes: se for da primeira forma que eu havia entendido.
+
+256
+00:31:37.830 --> 00:31:47.679
+Gesiel Lopes: Digite sua profissão. Se for assim, e aí você fala com.
+
+257
+00:31:48.450 --> 00:31:49.800
+Gesiel Lopes: Oh.
+
+258
+00:31:50.910 --> 00:31:55.180
+leonardo Peres: Ó, o amigo deu uma ideia no chat. Aí tem como eu colocar input dentro do dicionário.
+
+259
+00:31:55.530 --> 00:31:59.179
+Gesiel Lopes: Não, nesse caso, não, não diretamente.
+
+260
+00:31:59.180 --> 00:32:00.590
+leonardo Peres: Entendi diretamente.
+
+261
+00:32:00.590 --> 00:32:00.910
+Gesiel Lopes: Por isso.
+
+262
+00:32:00.910 --> 00:32:01.470
+leonardo Peres: É que.
+
+263
+00:32:01.600 --> 00:32:05.689
+Gesiel Lopes: É? Não, você precisa criar uma lógica.
+
+264
+00:32:06.070 --> 00:32:06.740
+Gesiel Lopes: Ah, é possível.
+
+265
+00:32:06.740 --> 00:32:13.010
+leonardo Peres: Por exemplo, eu posso criar o nome fora do dicionário com uma variável. Aí eu jogo o nome pra dentro. Tipo isso.
+
+266
+00:32:13.610 --> 00:32:20.549
+Gesiel Lopes: Isso, o que você pode fazer é atribuir tanto as chaves quanto os valores
+
+267
+00:32:20.650 --> 00:32:30.340
+Gesiel Lopes: do seu dicionário a variáveis e utilizar as variáveis para poder trabalhar e fazer as definições em tempo de execução.
+
+268
+00:32:30.590 --> 00:32:32.500
+Gesiel Lopes: O que você pode fazer?
+
+269
+00:32:32.940 --> 00:32:36.949
+Gesiel Lopes: Porque da forma que eu havia entendido primeiramente que era assim.
+
+270
+00:32:37.260 --> 00:32:40.829
+Gesiel Lopes: Dicte, isso não é possível. Nome,
+
+271
+00:32:41.440 --> 00:32:50.800
+Gesiel Lopes: por exemplo, e profissão. Vamos fazer esse exemplo aqui é, vamos ver. Pronto.
+
+272
+00:32:52.190 --> 00:32:56.659
+Gesiel Lopes: Profissão como variáveis. Deixa eu dar um print aqui.
+
+273
+00:32:57.500 --> 00:33:06.310
+Gesiel Lopes: Pessoa três, digite seu nome, qualquer coisa.
+
+274
+00:33:08.380 --> 00:33:11.410
+Gesiel Lopes: Não sei qual é.
+
+275
+00:33:13.550 --> 00:33:18.530
+Gesiel Lopes: Então, dessa forma, aqui que foi a forma que eu havia entendido inicialmente.
+
+276
+00:33:18.810 --> 00:33:23.080
+Gesiel Lopes: Observem que ela vai dar. Eu de sintaxe, tá?
+
+277
+00:33:23.200 --> 00:33:29.320
+Gesiel Lopes: Você não consegue, é beleza.
+
+278
+00:33:29.950 --> 00:33:34.790
+leonardo Peres: Beleza. Então acho que eu falei. Não tem como, porque não tem como falar em Buti dentro também, né?
+
+279
+00:33:36.540 --> 00:33:38.890
+Gesiel Lopes: E aí, o que você pode fazer?
+
+280
+00:33:39.260 --> 00:33:43.190
+Gesiel Lopes: E aí, o que você pode fazer?
+
+281
+00:33:45.770 --> 00:33:47.049
+Gesiel Lopes: Deixa eu ver. Aqui
+
+282
+00:33:47.530 --> 00:33:55.769
+Gesiel Lopes: é porque a gente vai fazer isso. A gente pode. Acho que na etapa de acessando e modificando, deve aparecer a forma que você.
+
+283
+00:33:55.770 --> 00:34:06.210
+leonardo Peres: Professor precisa esquentar a cabeça com isso daí. Não viu a minha dúvida? Praticamente era o de fora igual. O senhor fez aí o input dentro, mas os dois não dá. Então, já matou a dúvida? Já valeu.
+
+284
+00:34:07.690 --> 00:34:18.709
+Gesiel Lopes: Beleza. Então vamos lá. Dá para criar uma estrutura dinâmica. E aí a gente precisa verificar só como é que eu faço para acessar e alterar um dicionário.
+
+285
+00:34:19.230 --> 00:34:26.399
+Gesiel Lopes: Eu vou fazer isso em tempo de execução. Já. Já com a brincadeirinha. Você pode fazer
+
+286
+00:34:27.040 --> 00:34:32.109
+Gesiel Lopes: é o seguinte. Então vamos lá dando continuidade aí já retornamos para essa,
+
+287
+00:34:41.850 --> 00:34:50.760
+Gesiel Lopes: para esse ponto, tá novamente aqui, olha só vou pegar aqui o dicionário de pessoas.
+
+288
+00:34:50.980 --> 00:34:53.369
+Gesiel Lopes: Eu vou copiar e colar aqui embaixo
+
+289
+00:34:54.389 --> 00:34:58.290
+Gesiel Lopes: para a gente ver como que a gente faz para acessar
+
+290
+00:34:59.000 --> 00:35:09.250
+Gesiel Lopes: e modificar o valor de um dicionário é então,
+
+291
+00:35:13.370 --> 00:35:21.360
+Gesiel Lopes: para eu acessar os valores de um dicionário dicionário, basta eu especificar a chave.
+
+292
+00:35:21.600 --> 00:35:24.840
+Gesiel Lopes: Por exemplo, se eu quiser pegar o nome
+
+293
+00:35:25.140 --> 00:35:33.320
+Gesiel Lopes: e a chave em nome e atribuir o valor da chave. Nome do meu dicionário a uma variável que eu estou chamando aqui de nome.
+
+294
+00:35:33.530 --> 00:35:40.420
+Gesiel Lopes: Basta eu pegar o meu dicionário, usar aqui o operador Colchete
+
+295
+00:35:40.770 --> 00:35:45.170
+Gesiel Lopes: e passar a chave que eu quero recuperar. Nesse caso, é nome.
+
+296
+00:35:45.460 --> 00:35:50.000
+Gesiel Lopes: Então, o que vai acontecer? O pai vai pegar essa chave,
+
+297
+00:35:51.340 --> 00:35:58.699
+Gesiel Lopes: identificar na memória e retornar o valor que foi atribuído àquela chave.
+
+298
+00:35:58.840 --> 00:36:04.309
+Gesiel Lopes: Então, nesse caso, aqui, ó o nome que eu estou querendo pegar
+
+299
+00:36:05.120 --> 00:36:07.739
+Gesiel Lopes: vai ser o nome da chave. Nome,
+
+300
+00:36:08.170 --> 00:36:13.840
+Gesiel Lopes: beleza que no meu caso, aqui é Gisele Lopes, tá
+
+301
+00:36:26.220 --> 00:36:32.600
+Gesiel Lopes: o Gabriel. Mas aí, no caso, o Gabriel, você está colocando a chave, né?
+
+302
+00:36:33.400 --> 00:36:35.309
+Gesiel Lopes: Dá para fazer algo mais dinâmico.
+
+303
+00:36:38.510 --> 00:36:47.449
+Gesiel Lopes: Vamos lá, deixa eu abrir mais um parênteses. Mais uma célula.
+
+304
+00:36:48.510 --> 00:36:56.920
+Gesiel Lopes: E se a chave não existir no dicionário?
+
+305
+00:36:57.410 --> 00:36:58.180
+Gesiel Lopes: Tá?
+
+306
+00:36:58.590 --> 00:37:03.250
+Gesiel Lopes: Então vamos supor que eu queira
+
+307
+00:37:08.420 --> 00:37:12.690
+Gesiel Lopes: queira criar aqui uma variável chamado de passatempo,
+
+308
+00:37:13.370 --> 00:37:25.059
+Gesiel Lopes: onde eu pego o meu dicionário pessoas e passo a chave passa tempo e dou um print. Aqui
+
+309
+00:37:25.840 --> 00:37:27.130
+Gesiel Lopes: passa tempo.
+
+310
+00:37:28.600 --> 00:37:36.929
+Gesiel Lopes: Então, ao executar essa estrutura, a gente observa que eu não tenho a chave passa tempo
+
+311
+00:37:37.890 --> 00:37:41.780
+Gesiel Lopes: nesse momento, aqui no meu dicionário.
+
+312
+00:37:42.480 --> 00:37:46.520
+Gesiel Lopes: Então ele gera o que a gente chama de exceção.
+
+313
+00:37:46.720 --> 00:37:49.770
+Gesiel Lopes: E a exceção que ele gera. É uma exceção.
+
+314
+00:37:49.880 --> 00:37:57.160
+Gesiel Lopes: Que erro? Não existe? A chave é o equivalente a não existir a chave no meu dicionário.
+
+315
+00:37:58.530 --> 00:38:11.420
+Gesiel Lopes: E é possível também, agora que talvez isso vai responder aqui o o que eu, o Leonardo estava imaginando
+
+316
+00:38:12.360 --> 00:38:17.040
+Gesiel Lopes: é possível também modificar
+
+317
+00:38:21.470 --> 00:38:25.620
+Gesiel Lopes: um valor em um dicionário.
+
+318
+00:38:26.210 --> 00:38:28.169
+Gesiel Lopes: Como por exemplo?
+
+319
+00:38:29.620 --> 00:38:46.350
+Gesiel Lopes: Vamos supor que eu queira pegar o meu dicionário pessoas e na chave nome: eu colocar John John Duo.
+
+320
+00:38:48.080 --> 00:38:50.870
+Gesiel Lopes: E se eu imprimir aqui o meu dicionário?
+
+321
+00:38:51.050 --> 00:39:02.969
+Gesiel Lopes: Pessoas, tá, observe que ele alterou o nome para John Doo. Então, antes era Gesiel agora John Doo.
+
+322
+00:39:03.470 --> 00:39:14.000
+Gesiel Lopes: É possível. Acho que aqui. Deve entrar aí. O que o Leonardo gostaria. Você também. É possível acrescentar, sentar
+
+323
+00:39:15.370 --> 00:39:28.660
+Gesiel Lopes: outras chaves e valores audicionário já criado.
+
+324
+00:39:28.820 --> 00:39:29.590
+Gesiel Lopes: Tá.
+
+325
+00:39:31.630 --> 00:39:37.920
+Gesiel Lopes: Observem que o meu dicionário, pessoas criado anteriormente,
+
+326
+00:39:39.080 --> 00:39:47.000
+Gesiel Lopes: ele não tem a chave passatempo correto, mas eu posso criá la.
+
+327
+00:39:47.240 --> 00:39:52.670
+Gesiel Lopes: Como é que eu faço para criar uma chave? Eu uso operador, colchate
+
+328
+00:39:52.840 --> 00:39:58.700
+Gesiel Lopes: e atribuo a nova chave que eu quero no caso. Passa tempo
+
+329
+00:40:01.780 --> 00:40:10.820
+Gesiel Lopes: e o valor que eu vou atribuir a essa chave é justamente, e aí
+
+330
+00:40:21.080 --> 00:40:22.470
+Gesiel Lopes: jogar
+
+331
+00:40:29.400 --> 00:40:32.010
+Gesiel Lopes: com o Petro Games.
+
+332
+00:40:32.360 --> 00:40:44.010
+Gesiel Lopes: Jogos antigos de videogame. E aí observe se. Eu imprimi, Ah, pessoa pessoas,
+
+333
+00:40:44.250 --> 00:40:50.200
+Gesiel Lopes: e fizer depois essa mesma estrutura que antes estava dando erro.
+
+334
+00:40:52.120 --> 00:40:54.269
+Gesiel Lopes: Observe que ele vai imprimir
+
+335
+00:41:00.800 --> 00:41:02.370
+Gesiel Lopes: deu erro. Por quê?
+
+336
+00:41:04.760 --> 00:41:08.420
+Gesiel Lopes: Pessoas, paz.
+
+337
+00:41:08.420 --> 00:41:10.580
+Jayy Ferreira: O nome da passatampo.
+
+338
+00:41:15.010 --> 00:41:16.670
+Gesiel Lopes: Não está certo. Não está. Não.
+
+339
+00:41:19.930 --> 00:41:20.400
+Jayy Ferreira: E aí?
+
+340
+00:41:20.400 --> 00:41:22.180
+leonardo Peres: O senhor tá como um passatampo.
+
+341
+00:41:22.180 --> 00:41:23.190
+Jone Peterson: Agora dá.
+
+342
+00:41:23.190 --> 00:41:29.980
+Gesiel Lopes: Ah, tá. Agora eu consertei. Obrigado. Me deu até um frio na barriga, né? Vou criar de novo aqui, ó
+
+343
+00:41:30.180 --> 00:41:37.969
+Gesiel Lopes: o dicionário para mostrar que esse dicionário não tem. Só para garantir que ele não tem a chave. Tá
+
+344
+00:41:38.480 --> 00:41:45.149
+Gesiel Lopes: no primeiro Print, ele vai aparecer o dicionário. O nome John Doo. Profissão, professor e idade.
+
+345
+00:41:45.600 --> 00:41:47.350
+Gesiel Lopes: Sem o passatempo.
+
+346
+00:41:48.300 --> 00:41:52.909
+Gesiel Lopes: Depois eu adicionei o passatempo. Ele vai. E deve mostrar nome,
+
+347
+00:41:53.600 --> 00:41:57.209
+Gesiel Lopes: nome: John Duo. Profissão, professor, idade,
+
+348
+00:41:57.810 --> 00:42:01.589
+Gesiel Lopes: passa tempo e dá mensagem com passatempo.
+
+349
+00:42:02.220 --> 00:42:11.080
+Gesiel Lopes: O seu executar agora sim, tem um comportamento que eu queria então antes. Ele não tinha a chave e agora
+
+350
+00:42:11.800 --> 00:42:14.329
+Gesiel Lopes: passatampo, né? Passa tempo.
+
+351
+00:42:14.910 --> 00:42:29.490
+Gesiel Lopes: Mas agora que eu estou vendo tempo passa tempo, passa a tempo tem, não tá certo.
+
+352
+00:42:40.140 --> 00:42:45.069
+Gesiel Lopes: Pronto, ó, passa tempo, beleza. Agora foi.
+
+353
+00:42:47.260 --> 00:42:57.939
+Gesiel Lopes: É o meu passatempo. É o passatempo. E aí com isso, o Leonardo. Não sei se isso ajuda, mas o que você pode fazer é, de fato, criar um dicionário
+
+354
+00:42:58.770 --> 00:43:09.760
+Gesiel Lopes: e atribuir chaves e valores a esse dicionário a partir dos inputs do usuário. E aí você captura o,
+
+355
+00:43:10.080 --> 00:43:15.710
+Gesiel Lopes: pô armazena por variável, por exemplo, da seguinte forma:
+
+356
+00:43:15.870 --> 00:43:19.110
+Gesiel Lopes: então posso criar aqui um dicionário. Vamos supor.
+
+357
+00:43:19.590 --> 00:43:24.970
+Gesiel Lopes: Eu vou colocar aqui um fó sem variáveis.
+
+358
+00:43:26.550 --> 00:43:31.359
+Gesiel Lopes: O range três só para eu pegar três valores, por exemplo.
+
+359
+00:43:31.590 --> 00:43:35.710
+Gesiel Lopes: E aí o que eu posso fazer é o seguinte: é criar
+
+360
+00:43:36.010 --> 00:43:47.429
+Gesiel Lopes: um dicionário vazio. Por exemplo, teste diz Teste com dicionário, por exemplo.
+
+361
+00:43:47.630 --> 00:43:52.709
+Gesiel Lopes: E aí eu criei um dicionário vazio. Vou usar agora com a função Beauty indicty.
+
+362
+00:43:54.790 --> 00:43:59.780
+Gesiel Lopes: E aqui eu vou criar duas variáveis. Uma variável que eu vou chamar de chave,
+
+363
+00:44:00.090 --> 00:44:02.300
+Gesiel Lopes: que eu recebo como input.
+
+364
+00:44:03.610 --> 00:44:12.140
+Gesiel Lopes: E aí eu coloco. Digite uma chave e um valor
+
+365
+00:44:13.030 --> 00:44:15.970
+Gesiel Lopes: que aí eu vou considerar como o valor inteiro.
+
+366
+00:44:16.200 --> 00:44:19.270
+Gesiel Lopes: Por exemplo, input.
+
+367
+00:44:21.880 --> 00:44:29.860
+Gesiel Lopes: Digite um número, e aí o que eu posso fazer é utilizando
+
+368
+00:44:30.020 --> 00:44:37.710
+Gesiel Lopes: o operador colchete para atribuir chaves. Eu posso fazer o seguinte. Teste
+
+369
+00:44:37.910 --> 00:44:43.840
+Gesiel Lopes: condicionário. A chave vai ser a variável chave que eu recebo do usuário
+
+370
+00:44:44.170 --> 00:44:50.419
+Gesiel Lopes: e o valor vai ser o valor que eu recebo do usuário convertido em inteiro.
+
+371
+00:44:50.660 --> 00:44:51.320
+Gesiel Lopes: Tá?
+
+372
+00:44:51.620 --> 00:44:58.220
+Gesiel Lopes: E aí, no final, vou só imprimir aqui o print test dicionário.
+
+373
+00:44:58.400 --> 00:45:09.220
+Gesiel Lopes: E aí, o que você pode fazer é algo parecido com isso. Não sei se era isso que você estava imaginando. Mas vamos supor. Chave.
+
+374
+00:45:10.640 --> 00:45:32.770
+Gesiel Lopes: Chave chave um, o valor dois dois1 é chave dois, valor vinte e dois, chave três
+
+375
+00:45:34.170 --> 00:45:35.620
+Gesiel Lopes: e trinta e três.
+
+376
+00:45:38.510 --> 00:45:39.090
+leonardo Peres: Eu acertei.
+
+377
+00:45:39.090 --> 00:45:39.440
+Gesiel Lopes: Tudo bem.
+
+378
+00:45:39.440 --> 00:45:40.400
+leonardo Peres: Mesmo. Professor.
+
+379
+00:45:40.780 --> 00:45:43.709
+Gesiel Lopes: Dessa forma, você cria um dicionário com.
+
+380
+00:45:43.710 --> 00:45:48.270
+leonardo Peres: Mas tem como no lugar dessa chave eu colocar uma lista pré criada.
+
+381
+00:45:49.710 --> 00:45:52.599
+Gesiel Lopes: Não dá chave.
+
+382
+00:45:53.500 --> 00:45:57.709
+Gesiel Lopes: A chave. Ela tem que ser um tipo de dado válido.
+
+383
+00:45:58.370 --> 00:46:05.779
+leonardo Peres: Colocar um for dentro de um for algo do tipo assim. Sabe, essa chave. Em vez de eu colocar pro usuário digitar. Ela já tá feita,
+
+384
+00:46:06.100 --> 00:46:06.980
+leonardo Peres: entendeu?
+
+385
+00:46:08.140 --> 00:46:09.919
+leonardo Peres: Pode fazer aquele negócio lá. Tipo.
+
+386
+00:46:09.920 --> 00:46:14.439
+Gesiel Lopes: Mas ela não pode ser uma lista no caso. Ela não pode ser uma coleção. Ela tem que ser um tipo básico.
+
+387
+00:46:14.800 --> 00:46:17.560
+leonardo Peres: Ah, então só tirou dúvida, né? Isso daí mesmo.
+
+388
+00:46:18.570 --> 00:46:19.370
+Gesiel Lopes: Tá bom,
+
+389
+00:46:24.810 --> 00:46:27.090
+Gesiel Lopes: beleza. Então, vamos lá.
+
+390
+00:46:27.940 --> 00:46:31.650
+Gesiel Lopes: O que mais? Aqui? Alguém falou? Mais alguma coisa,
+
+391
+00:46:39.190 --> 00:46:41.850
+Gesiel Lopes: beleza? Então vamos lá.
+
+392
+00:46:47.270 --> 00:47:03.360
+Gesiel Lopes: Dicionário também, assim como a maioria das coleções, ela possui alguns métodos chaves que podem ser utilizados para a gente manipular melhor o dicionário. Então, novamente. Eu vou pegar esse meu dicionário pessoa aqui.
+
+393
+00:47:03.760 --> 00:47:06.710
+Gesiel Lopes: Sempre vou usar ele como referência.
+
+394
+00:47:07.070 --> 00:47:15.520
+Gesiel Lopes: Ele tem alguns métodos de dicionários, né? Úteis. Vou colocar aqui como úteis, tá?
+
+395
+00:47:15.970 --> 00:47:22.130
+Gesiel Lopes: Então, o primeiro método que a gente pode ter dentro do dicionário é
+
+396
+00:47:22.390 --> 00:47:26.400
+Gesiel Lopes: recuperar todas as chaves do meu dicionário.
+
+397
+00:47:26.800 --> 00:47:35.500
+Gesiel Lopes: Nesse caso, aqui peço que pessoa? Só. Não pessoas. Tá bom, eu tenho três chaves, tá? Então que é
+
+398
+00:47:38.550 --> 00:47:47.240
+Gesiel Lopes: obter todas as chaves de um dicionário.
+
+399
+00:47:47.430 --> 00:47:51.199
+Gesiel Lopes: Então, como é que eu faço para recuperar todas as chaves do missionário?
+
+400
+00:47:51.670 --> 00:47:56.789
+Gesiel Lopes: Para recuperar as chaves de todos os dicionários.
+
+401
+00:47:56.940 --> 00:47:59.450
+Gesiel Lopes: Eu chamo a função.
+
+402
+00:47:59.560 --> 00:48:01.020
+Gesiel Lopes: É case.
+
+403
+00:48:01.310 --> 00:48:04.110
+Gesiel Lopes: Então a função case o método case.
+
+404
+00:48:04.260 --> 00:48:07.109
+Gesiel Lopes: Ele é uma função que retorna
+
+405
+00:48:07.280 --> 00:48:11.090
+Gesiel Lopes: todos os chaves do meu dicionário.
+
+406
+00:48:11.320 --> 00:48:15.010
+Gesiel Lopes: Tá, então só colocando aqui, ó
+
+407
+00:48:18.200 --> 00:48:19.280
+Gesiel Lopes: chaves?
+
+408
+00:48:19.390 --> 00:48:22.510
+Gesiel Lopes: Então aqui eu vou ter todas as chaves do meu dicionário,
+
+409
+00:48:22.730 --> 00:48:26.940
+Gesiel Lopes: que é o nome, profissão e idade.
+
+410
+00:48:27.760 --> 00:48:30.530
+Gesiel Lopes: E aqui eu abro um pequeno parêntese.
+
+411
+00:48:32.510 --> 00:48:33.430
+Gesiel Lopes: Tá?
+
+412
+00:48:34.800 --> 00:48:38.939
+Gesiel Lopes: Chaves e taipe chaves.
+
+413
+00:48:39.220 --> 00:48:43.240
+Gesiel Lopes: Tá bom, é.
+
+414
+00:48:43.610 --> 00:48:46.740
+Gesiel Lopes: Observem que aqui é o valor das chaves.
+
+415
+00:48:48.230 --> 00:48:52.269
+Gesiel Lopes: Porém, o tipo retornado por Case.
+
+416
+00:48:52.730 --> 00:48:58.520
+Gesiel Lopes: Ele não é uma lista. Só abrindo aqui um pequeno parêntese.
+
+417
+00:48:58.920 --> 00:49:02.900
+Gesiel Lopes: Ele é o que a gente chama de objeto iterável,
+
+418
+00:49:03.370 --> 00:49:07.090
+Gesiel Lopes: como a lista também é um objeto interável.
+
+419
+00:49:07.530 --> 00:49:14.749
+Gesiel Lopes: Porém, ali as chaves do dicionário não é uma lista.
+
+420
+00:49:14.860 --> 00:49:27.040
+Gesiel Lopes: Então, para que eu manipule as chaves como uma lista. Eu preciso converter aqui. Eu preciso fazer a.
+
+421
+00:49:27.760 --> 00:49:29.350
+Gesiel Lopes: A conversão
+
+422
+00:49:33.080 --> 00:49:40.090
+Gesiel Lopes: da minha chave. Chaves recebe liste chave.
+
+423
+00:49:40.290 --> 00:49:42.760
+Gesiel Lopes: Nesse caso, aqui eu estou.
+
+424
+00:49:46.820 --> 00:49:47.990
+Gesiel Lopes: Chaves.
+
+425
+00:49:49.080 --> 00:49:50.760
+Gesiel Lopes: Declarei a variável errada.
+
+426
+00:49:51.080 --> 00:49:57.050
+Gesiel Lopes: Chaves agora. Sim, e aí? Nesse caso, para que eu possa considerar
+
+427
+00:49:57.170 --> 00:50:01.149
+Gesiel Lopes: o retorno do método case como uma lista.
+
+428
+00:50:01.350 --> 00:50:05.210
+Gesiel Lopes: Daí eu preciso converter ele numa lista. Tá
+
+429
+00:50:05.380 --> 00:50:16.989
+Gesiel Lopes: lembrando a hierarquia novamente. Abrindo um Disclaimer, tanto as listas quanto os tickets, que é o objeto que o método case retorna
+
+430
+00:50:16.990 --> 00:50:29.109
+Gesiel Lopes: dos dicionários. Os dois são elementos interáveis e o que é um elemento iterável. É um elemento, por exemplo, que eu consigo usar normalmente dentro de um laço de repetição.
+
+431
+00:50:29.200 --> 00:50:33.650
+Gesiel Lopes: Tá, porém, não são os mesmos objetos.
+
+432
+00:50:33.800 --> 00:50:36.440
+Gesiel Lopes: Tranquilo, tá?
+
+433
+00:50:40.180 --> 00:50:48.730
+Gesiel Lopes: Você consegue também obter todos os valores de um dicionário.
+
+434
+00:50:49.450 --> 00:50:54.850
+Gesiel Lopes: Então eu posso chamar para pegar os valores de um dicionário.
+
+435
+00:50:54.960 --> 00:50:57.610
+Gesiel Lopes: Eu chamo o Método Vélez.
+
+436
+00:50:57.910 --> 00:51:05.480
+Gesiel Lopes: Então, método velhos, assim como as chaves, tá?
+
+437
+00:51:17.570 --> 00:51:25.029
+Gesiel Lopes: Eles são objetos iteráveis, tá, mas não listas.
+
+438
+00:51:25.750 --> 00:51:27.950
+Gesiel Lopes: Então, se vocês observarem.
+
+439
+00:51:29.510 --> 00:51:35.720
+Gesiel Lopes: Deixa eu aqui estar esse obtendo valores. Deixa eu só dar um print.
+
+440
+00:51:41.680 --> 00:51:43.400
+Gesiel Lopes: Estou para fazer uma diferença.
+
+441
+00:51:47.620 --> 00:51:49.679
+Gesiel Lopes: Pronto, aí já foi demais.
+
+442
+00:51:59.240 --> 00:52:09.689
+Gesiel Lopes: Então, se vocês observarem os valores de um dicionário, eu utilizo o método veloz. Ele retorna todos os valores presentes no dicionário,
+
+443
+00:52:10.470 --> 00:52:12.789
+Gesiel Lopes: assim como as chaves.
+
+444
+00:52:12.990 --> 00:52:32.460
+Gesiel Lopes: O objeto retornado pelo método. Ele não é uma lista e sim um Dicivelus que é um objeto interável, porém chamado de Dicivelus, caso eu queira manipular os valores
+
+445
+00:52:32.790 --> 00:52:42.020
+Gesiel Lopes: de um dicionário retornado por Véus através do método. Velhos como uma lista, é necessário que eu faça? A conversão desse método,
+
+446
+00:52:42.310 --> 00:52:49.050
+Gesiel Lopes: desse retorno. Dessa variável beleza.
+
+447
+00:52:54.520 --> 00:52:57.160
+Gesiel Lopes: Os dicionários também.
+
+448
+00:52:59.430 --> 00:53:01.310
+Gesiel Lopes: E eu também consigo
+
+449
+00:53:04.370 --> 00:53:09.280
+Gesiel Lopes: é obter.
+
+450
+00:53:14.410 --> 00:53:20.870
+Gesiel Lopes: É todos os pares chave.
+
+451
+00:53:21.230 --> 00:53:23.400
+Gesiel Lopes: O valor tá?
+
+452
+00:53:24.640 --> 00:53:36.699
+Gesiel Lopes: Então eu consigo recuperar todos os pares chave e valor do meu dicionário. O que eu vou chamar de itens. Então eu vou pegar pessoas.
+
+453
+00:53:37.820 --> 00:53:40.680
+Gesiel Lopes: E aí, para pegar todos os pares
+
+454
+00:53:41.040 --> 00:53:46.810
+Gesiel Lopes: chave. Valor de um dicionário. Eu vou chamar a função itens, tá?
+
+455
+00:53:47.030 --> 00:53:49.800
+Gesiel Lopes: Então a função itens tá?
+
+456
+00:53:56.880 --> 00:54:04.629
+Gesiel Lopes: Ela me retorna uma coleção, um objeto iterável,
+
+457
+00:54:05.080 --> 00:54:09.530
+Gesiel Lopes: com todos os pares chave e valor do meu dicionário.
+
+458
+00:54:11.810 --> 00:54:16.100
+Gesiel Lopes: E aí vale ressaltar que cada
+
+459
+00:54:17.380 --> 00:54:27.409
+Gesiel Lopes: ele vai ser um objeto interável no caso. Ele vai ser. E aí eu posso. Deixa eu só fazer aqui a mesma conversão.
+
+460
+00:54:31.200 --> 00:54:32.440
+Gesiel Lopes: Itens,
+
+461
+00:54:35.920 --> 00:54:40.010
+Gesiel Lopes: itens, itens, itens, itens?
+
+462
+00:54:45.580 --> 00:54:46.330
+Gesiel Lopes: Tá,
+
+463
+00:54:56.180 --> 00:54:59.170
+Gesiel Lopes: eu acho que o que deve estar confundindo.
+
+464
+00:55:00.790 --> 00:55:06.690
+Gesiel Lopes: Eu estou dando um print a mais aqui em algum lugar. Deixa eu ver se chaves. Case,
+
+465
+00:55:11.330 --> 00:55:12.650
+Gesiel Lopes: acho que é esse aqui.
+
+466
+00:55:18.480 --> 00:55:21.589
+Gesiel Lopes: É por causa do tape que eu estou dando um time.
+
+467
+00:55:25.600 --> 00:55:31.320
+Gesiel Lopes: Deixa eu apagar esse primeiro print. Ah, não. Aqui eu estou dando é esse print aqui.
+
+468
+00:55:32.680 --> 00:55:33.990
+Gesiel Lopes: Esse aqui.
+
+469
+00:55:36.690 --> 00:55:39.920
+Gesiel Lopes: Acho que esse aqui. Acho que só um print é mais do que suficiente.
+
+470
+00:55:41.430 --> 00:55:48.169
+Gesiel Lopes: Esse item de plano. Preciso esse de chável que eu também não preciso.
+
+471
+00:55:49.140 --> 00:55:51.140
+Gesiel Lopes: Isso aí já fica mais fácil.
+
+472
+00:55:51.440 --> 00:55:53.459
+Gesiel Lopes: Então aqui eu tenho o objeto
+
+473
+00:55:54.010 --> 00:56:04.349
+Gesiel Lopes: retornado. E o tipo do objeto retornado pelo método case Velux e itens, tá?
+
+474
+00:56:04.730 --> 00:56:18.539
+Gesiel Lopes: Observem que todos os três objetos são objetos interáveis. Na realidade, são objetos muito parecidos com listas, mas não, são listas. Então, para que eu possa trabalhar como lista. Eu preciso converter,
+
+475
+00:56:18.870 --> 00:56:36.629
+Gesiel Lopes: e aí, no caso dos itens, os valores presentes, os valores, o chave e valor presentes no dicionário, que são retornados pelo método. Itens. Eles são retornados como sendo uma dupla,
+
+476
+00:56:37.010 --> 00:56:37.770
+Gesiel Lopes: tá?
+
+477
+00:56:39.300 --> 00:56:42.800
+Gesiel Lopes: Eles são retornados como uma dupla. Por isso que a gente,
+
+478
+00:56:42.990 --> 00:56:53.360
+Gesiel Lopes: antes de aplicar qualquer exemplo de dupla, a gente precisava entender o que é uma dupla. Observe que aqui, no caso, o dicionário que altere o valor,
+
+479
+00:56:53.900 --> 00:56:57.640
+Gesiel Lopes: e aí por isso que a gente tem essa estrutura de dados.
+
+480
+00:56:58.030 --> 00:57:11.110
+Gesiel Lopes: Tá, é colocar aqui mais uma, mais uma célula.
+
+481
+00:57:13.170 --> 00:57:16.780
+Gesiel Lopes: É possível também atualizar
+
+482
+00:57:32.460 --> 00:57:34.170
+Gesiel Lopes: dicionário,
+
+483
+00:57:37.540 --> 00:57:42.530
+Gesiel Lopes: por exemplo, com vamos supor aqui pessoa pessoas,
+
+484
+00:57:43.230 --> 00:57:50.820
+Gesiel Lopes: a gente pode também atualizar um dicionário com a função app date.
+
+485
+00:57:52.310 --> 00:57:58.210
+Gesiel Lopes: E aí dentro do update, por exemplo, eu posso passar um outro dicionário,
+
+486
+00:58:01.070 --> 00:58:08.349
+Gesiel Lopes: por exemplo, um dicionário que eu vou colocar aqui como e mail um outro dicionário.
+
+487
+00:58:09.190 --> 00:58:14.139
+Gesiel Lopes: E a esse dicionário, o e mail recebe um e mail qualquer.
+
+488
+00:58:14.270 --> 00:58:18.950
+Gesiel Lopes: Gisele Lopes, Prof. Infinity.
+
+489
+00:58:19.310 --> 00:58:25.739
+Gesiel Lopes: Edu. Br: por exemplo, é uma chave.
+
+490
+00:58:27.150 --> 00:58:28.640
+Gesiel Lopes: Por exemplo,
+
+491
+00:58:34.900 --> 00:58:37.600
+Gesiel Lopes: em meio a
+
+492
+00:58:42.520 --> 00:58:44.610
+Gesiel Lopes: Lin Kejin,
+
+493
+00:58:47.720 --> 00:58:50.849
+Gesiel Lopes: e aí eu coloco arroba Gisele.
+
+494
+00:58:51.850 --> 00:58:52.740
+Gesiel Lopes: Tá?
+
+495
+00:58:59.140 --> 00:59:01.360
+Gesiel Lopes: Não pessoas novamente.
+
+496
+00:59:03.710 --> 00:59:10.359
+Gesiel Lopes: Então observem que eu atualizei o meu dicionário com outro dicionário, com outro
+
+497
+00:59:11.560 --> 00:59:16.260
+Gesiel Lopes: de dicionário. E aí o que eu fiz foi acrescentar
+
+498
+00:59:16.840 --> 00:59:22.509
+Gesiel Lopes: as chaves não existentes no meu dicionário.
+
+499
+00:59:22.990 --> 00:59:31.710
+Gesiel Lopes: Caso seja, vamos supor aqui novamente, eu ter que inicializar sempre pessoas, deixou
+
+500
+00:59:31.890 --> 00:59:36.259
+Gesiel Lopes: copiar novamente o meu dicionário. Pessoas aqui em cima.
+
+501
+00:59:43.600 --> 00:59:44.410
+Gesiel Lopes: Tchau,
+
+502
+00:59:57.460 --> 01:00:04.150
+Gesiel Lopes: vou fazer agora o seguinte. Ó, eu vou além
+
+503
+01:00:06.360 --> 01:00:14.540
+Gesiel Lopes: de adicionar e mail, eu vou colocar aqui o nome John Doe.
+
+504
+01:00:20.550 --> 01:00:25.970
+Gesiel Lopes: E aqui passa tempo
+
+505
+01:00:30.330 --> 01:00:31.440
+Gesiel Lopes: xadrez.
+
+506
+01:00:37.070 --> 01:00:49.379
+Gesiel Lopes: Então observe que no primeiro, como eu estava adicionando novas chaves, ou seja, chaves não existentes. O que eu fiz foi atualizar o dicionário
+
+507
+01:00:49.860 --> 01:00:56.210
+Gesiel Lopes: no segundo Up Date aqui. Como eu peguei uma chave que já existia.
+
+508
+01:00:56.470 --> 01:01:04.359
+Gesiel Lopes: O Python, ele atualizou o valor dessa chave com o novo valor que eu passo
+
+509
+01:01:04.520 --> 01:01:13.630
+Gesiel Lopes: através do método Up Date, e acrescentou a chave que não existia antes, que é passatempo,
+
+510
+01:01:14.350 --> 01:01:24.369
+Gesiel Lopes: mas demais. Ele não alterou. Então você consegue adicionar, atualizar o dicionário com outros dicionários. Aí claro, vai depender
+
+511
+01:01:25.720 --> 01:01:29.579
+Gesiel Lopes: de como você quer estruturar.
+
+512
+01:01:29.950 --> 01:01:30.840
+Gesiel Lopes: Tá?
+
+513
+01:01:33.160 --> 01:01:38.760
+Gesiel Lopes: Também é possível. Tá,
+
+514
+01:01:42.750 --> 01:01:43.580
+Gesiel Lopes: tá.
+
+515
+01:01:43.770 --> 01:02:00.590
+Gesiel Lopes: É possível também a gente obter e remover um item com o valor padrão.
+
+516
+01:02:01.270 --> 01:02:07.730
+Gesiel Lopes: Se a chave não existir, tá como
+
+517
+01:02:11.530 --> 01:02:16.600
+Gesiel Lopes: então vamos botar aqui, por exemplo, hobby,
+
+518
+01:02:20.890 --> 01:02:22.130
+Gesiel Lopes: pessoas,
+
+519
+01:02:22.410 --> 01:02:34.180
+Gesiel Lopes: ponto. E aí, para eu remover um elemento dentro do dicionário. Eu vou chamar a função Pop. Então, Pop, ele retira o elemento da lista
+
+520
+01:02:34.450 --> 01:02:39.710
+Gesiel Lopes: e aí passando a chave, ó
+
+521
+01:02:43.410 --> 01:02:49.909
+Gesiel Lopes: hobby e um valor alternativo. Se a chave não existir,
+
+522
+01:02:50.010 --> 01:02:55.390
+Gesiel Lopes: por exemplo, eu coloco a mensagem aqui não informado, por exemplo.
+
+523
+01:02:55.990 --> 01:03:00.900
+Gesiel Lopes: Então, se eu fizer um print hobby.
+
+524
+01:03:04.140 --> 01:03:12.330
+Gesiel Lopes: Deixa eu. Até ele vai aparecer, não informado. E aqui eu posso colocar o meu dicionário. Pessoas tá,
+
+525
+01:03:15.180 --> 01:03:25.120
+Gesiel Lopes: eu consigo também. Em vez de ser hobbies, eu vou colocar aqui e mail, e mail
+
+526
+01:03:25.360 --> 01:03:28.870
+Gesiel Lopes: e no Pop, eu vou passar aqui o e mail
+
+527
+01:03:34.620 --> 01:03:36.310
+Gesiel Lopes: e mail
+
+528
+01:03:42.200 --> 01:03:46.700
+Gesiel Lopes: é porque ele já tinha removido anteriormente. Deixa eu inicializar aqui.
+
+529
+01:03:46.910 --> 01:03:52.260
+Gesiel Lopes: Atualizei agora. Foi.
+
+530
+01:03:53.720 --> 01:04:00.730
+Gesiel Lopes: Então observe que quando eu passo no Pop, uma chave que não existe.
+
+531
+01:04:01.150 --> 01:04:07.150
+Gesiel Lopes: E um valor padrão. Esse valor padrão é atribuído quando a chave não existir.
+
+532
+01:04:07.810 --> 01:04:11.410
+Gesiel Lopes: Então aqui é o não informado ou chave inexistente.
+
+533
+01:04:11.800 --> 01:04:14.809
+Gesiel Lopes: Quando eu passo uma chave válida para o Pop,
+
+534
+01:04:15.110 --> 01:04:22.559
+Gesiel Lopes: ele retorna. Esse elemento para o valor que está atribuído a essa chave
+
+535
+01:04:22.780 --> 01:04:26.060
+Gesiel Lopes: para mim é a variável. Nesse caso, e mail
+
+536
+01:04:26.810 --> 01:04:36.510
+Gesiel Lopes: e ele remove do dicionário essa chave, a chave e o valor
+
+537
+01:04:39.470 --> 01:04:42.340
+Gesiel Lopes: então é uma maneira de você
+
+538
+01:04:47.890 --> 01:04:54.640
+Gesiel Lopes: recuperar, alterar, modificar um dicionário com o Python.
+
+539
+01:04:55.630 --> 01:04:56.860
+Gesiel Lopes: Outro.
+
+540
+01:05:00.560 --> 01:05:03.920
+Gesiel Lopes: Mais uma vez, vou pegar aqui o meu dicionário de pessoas.
+
+541
+01:05:07.830 --> 01:05:16.309
+Gesiel Lopes: Outra forma. Outra coisa que você pode fazer com um dicionário é interar
+
+542
+01:05:16.640 --> 01:05:35.979
+Gesiel Lopes: sobre os elementos do meu dicionário. E aí, no caso, existem três formas. Observem que a gente tem três maneiras de recuperar os dados do meu dicionário. Eu posso recuperar as chaves, os valores ou para chave e valor.
+
+543
+01:05:36.280 --> 01:05:54.090
+Gesiel Lopes: Então eu posso interar um dicionário utilizando essas três possibilidades de recuperação de itens de recuperação de informações dentro do dicionário. Então, primeiro, eu faço uma interação
+
+544
+01:05:57.430 --> 01:06:12.950
+Gesiel Lopes: iterando sobre as chaves, e aqui vale ressaltar que é o compor tá mentindo padrão, tá,
+
+545
+01:06:23.250 --> 01:06:29.479
+Gesiel Lopes: eu vou olhar aqui. Um print é cinquenta asterisco
+
+546
+01:06:31.450 --> 01:06:34.829
+Gesiel Lopes: só para ver que o antes e o depois
+
+547
+01:06:35.400 --> 01:06:41.400
+Gesiel Lopes: eu vou fazer o seguinte. Ó é chave.
+
+548
+01:06:41.820 --> 01:06:42.810
+Gesiel Lopes: Quem?
+
+549
+01:06:43.250 --> 01:06:44.850
+Gesiel Lopes: Pessoas?
+
+550
+01:06:45.690 --> 01:06:55.560
+Gesiel Lopes: Ponto, case dos pontos, print chave,
+
+551
+01:06:58.750 --> 01:07:03.200
+Gesiel Lopes: pessoas chave.
+
+552
+01:07:03.880 --> 01:07:09.380
+Gesiel Lopes: Então aqui ele vai aparecer. A chave dos dicionários. No caso, no primeiro laço.
+
+553
+01:07:09.610 --> 01:07:12.729
+Gesiel Lopes: Ele vai pegar o nome
+
+554
+01:07:13.240 --> 01:07:21.430
+Gesiel Lopes: e o valor associado a ele. A profissão e o valor associado e a idade e o valor associado.
+
+555
+01:07:26.610 --> 01:07:30.170
+Gesiel Lopes: Observem que aí eu tenho essa estrutura.
+
+556
+01:07:30.620 --> 01:07:32.329
+Gesiel Lopes: Deixa eu colocar aqui, em cima e baixo.
+
+557
+01:07:33.800 --> 01:07:40.060
+Gesiel Lopes: Só que se eu interar, e aí
+
+558
+01:07:40.400 --> 01:07:45.339
+Gesiel Lopes: chave, sem especificar somente no dicionário.
+
+559
+01:07:46.070 --> 01:07:46.860
+Gesiel Lopes: Tá
+
+560
+01:07:50.680 --> 01:07:56.530
+Gesiel Lopes: sem especificar a utilização do método case.
+
+561
+01:07:56.810 --> 01:08:01.089
+Gesiel Lopes: Observem que quando eu intero sobre o dicionário,
+
+562
+01:08:01.470 --> 01:08:09.469
+Gesiel Lopes: a forma padrão dele é interar sobre as chaves. Então, mesmo eu chamando, case ou não chamando Case.
+
+563
+01:08:10.000 --> 01:08:27.150
+Gesiel Lopes: Quando eu intero o dicionário, ele vai ter o mesmo comportamento. Então, muito cuidado quando a gente vai interando sobre o dicionário sem especificar em qual elemento eu quero itar sobre o dicionário,
+
+564
+01:08:27.439 --> 01:08:34.129
+Gesiel Lopes: o valor padrão por default quando eu não especifico qual elemento eu quero? Terá
+
+565
+01:08:34.240 --> 01:08:38.909
+Gesiel Lopes: o dicionário. Sempre vai, terá sobre as chaves,
+
+566
+01:08:39.729 --> 01:08:42.470
+Gesiel Lopes: mas ele também pode ter a
+
+567
+01:08:46.920 --> 01:08:48.660
+Gesiel Lopes: sobre os valores.
+
+568
+01:08:49.310 --> 01:09:01.540
+Gesiel Lopes: Então posso fazer xofó valor em pessoas. Vélez tá, por exemplo.
+
+569
+01:09:02.020 --> 01:09:04.050
+Gesiel Lopes: E aqui eu só dar um print
+
+570
+01:09:08.330 --> 01:09:09.399
+Gesiel Lopes: o valor.
+
+571
+01:09:15.050 --> 01:09:17.510
+Gesiel Lopes: E você também pode iterar.
+
+572
+01:09:20.819 --> 01:09:22.189
+Gesiel Lopes: E aí
+
+573
+01:09:30.510 --> 01:09:41.790
+Gesiel Lopes: em cima do par chave e valor, pares chave, o valor.
+
+574
+01:09:42.140 --> 01:09:49.340
+Gesiel Lopes: E aí, nesse caso. Olha só, eu vou usar o fórum.
+
+575
+01:09:51.460 --> 01:10:02.810
+Gesiel Lopes: E aí observe que eu vou interar sobre ou pessoas, ponto itens
+
+576
+01:10:02.980 --> 01:10:06.939
+Gesiel Lopes: que é o método que retorna o passo chave e valor.
+
+577
+01:10:07.210 --> 01:10:09.509
+Gesiel Lopes: Então observem, tá?
+
+578
+01:10:10.310 --> 01:10:12.970
+Gesiel Lopes: Vou colocar aqui por enquanto. Só retorno
+
+579
+01:10:21.930 --> 01:10:23.080
+Gesiel Lopes: retorno.
+
+580
+01:10:24.390 --> 01:10:35.480
+Gesiel Lopes: Quando eu faço isso, observe que essa variável retorno, ela recebe a dupla chave e valor. Então isso aqui é uma dupla.
+
+581
+01:10:38.290 --> 01:10:42.120
+Gesiel Lopes: O taipe retorno.
+
+582
+01:10:43.220 --> 01:10:49.650
+Gesiel Lopes: Ele vai dar uma dupla, porém, você consegue também.
+
+583
+01:10:50.070 --> 01:11:00.440
+Gesiel Lopes: Caso óbvio que você queira fazer o que a gente chama de desmembramento
+
+584
+01:11:00.830 --> 01:11:09.250
+Gesiel Lopes: do retorno. Então, como ele é uma dupla, e eu sei que tem dois elementos. E o primeiro elemento é a chave,
+
+585
+01:11:09.380 --> 01:11:27.150
+Gesiel Lopes: e o segundo elemento é o valor. Eu posso fazer o desmembramento dessa dupla e atribuir a duas variáveis duas variáveis distintas: os valores retornados pela dupla. No caso, o primeiro,
+
+586
+01:11:27.250 --> 01:11:37.790
+Gesiel Lopes: o valor da dupla vai ser atribuído à chave, já que eu sei que o primeiro elemento da dupla retornado do método itens é a chave
+
+587
+01:11:38.500 --> 01:11:43.939
+Gesiel Lopes: e o valor vai ser o segundo elemento retornado na dupla
+
+588
+01:11:44.120 --> 01:11:49.229
+Gesiel Lopes: do método itens. E aí, nesse caso, eu posso
+
+589
+01:11:49.480 --> 01:11:55.760
+Gesiel Lopes: fazer aí a manipulação da chave do valor do meu dicionário, por exemplo.
+
+590
+01:12:02.750 --> 01:12:03.950
+Gesiel Lopes: Tranquilo.
+
+591
+01:12:10.370 --> 01:12:13.050
+Gesiel Lopes: Eu não consigo fazer essas.
+
+592
+01:12:13.280 --> 01:12:15.439
+Gesiel Lopes: E é que eu posso até.
+
+593
+01:12:17.140 --> 01:12:18.769
+Gesiel Lopes: Mas aqui é um F string.
+
+594
+01:12:35.710 --> 01:12:39.149
+Gesiel Lopes: Ó, digitei alguma coisa errada.
+
+595
+01:12:40.250 --> 01:12:43.640
+Gesiel Lopes: Ah, faltou. Fechar aqui a String.
+
+596
+01:12:48.100 --> 01:12:52.809
+Gesiel Lopes: Então você consegue fazer essa manipulação?
+
+597
+01:12:59.000 --> 01:13:01.699
+Gesiel Lopes: Bom, um exercício legal que pode ser feito.
+
+598
+01:13:02.410 --> 01:13:03.980
+Gesiel Lopes: Acho que foi no.
+
+599
+01:13:06.120 --> 01:13:08.220
+Gesiel Lopes: Não, acho que foi na aula
+
+600
+01:13:12.880 --> 01:13:14.880
+Gesiel Lopes: quando a gente estava falando de String,
+
+601
+01:13:21.960 --> 01:13:24.750
+Gesiel Lopes: uma aplicação legal aqui que pode ser feita.
+
+602
+01:13:34.850 --> 01:13:36.809
+Gesiel Lopes: Então daí eu vou fazer o seguinte.
+
+603
+01:13:51.000 --> 01:13:59.080
+Gesiel Lopes: É, tem esse método aqui. Ó, deixa eu criar aqui.
+
+604
+01:14:11.110 --> 01:14:16.280
+Gesiel Lopes: Deixa eu só ver aqui um negócio. Aqui. Deixa eu ver, tá?
+
+605
+01:14:22.060 --> 01:14:24.530
+Gesiel Lopes: Que é fazendo o.
+
+606
+01:14:29.420 --> 01:14:40.780
+Gesiel Lopes: A contagem dos tokens presentes é
+
+607
+01:14:48.270 --> 01:14:59.080
+Gesiel Lopes: no pro cessamento do texto, por exemplo, então, lembrado desse método que a gente criou.
+
+608
+01:14:59.700 --> 01:15:03.760
+Gesiel Lopes: E aqui eu preciso só dos stopwards para não dar erro
+
+609
+01:15:04.980 --> 01:15:10.440
+Gesiel Lopes: os stopwards eu criei aqui em cima, sem vestigem, tá?
+
+610
+01:15:10.700 --> 01:15:14.849
+Gesiel Lopes: Observe que quando a gente estava falando desse exemplo,
+
+611
+01:15:15.250 --> 01:15:18.750
+Gesiel Lopes: teve um momento que eu fiz uma contagem.
+
+612
+01:15:19.950 --> 01:15:24.239
+Gesiel Lopes: Eu fiz uma contagem que acho que foi na aula três.
+
+613
+01:15:25.360 --> 01:15:32.559
+Gesiel Lopes: Eu fiz uma contagem da ocorrência de algumas palavras, mas se vocês observarem
+
+614
+01:15:32.710 --> 01:15:37.379
+Gesiel Lopes: para cada palavra. Eu tinha que fazer um teste condicional e fazer um incremento.
+
+615
+01:15:37.870 --> 01:15:41.319
+Gesiel Lopes: Tive que fazer um teste condicional e um incremento.
+
+616
+01:15:41.520 --> 01:15:49.649
+Gesiel Lopes: Como é que eu faço a contagem de todos os Tolkens presentes no meu texto pré processado.
+
+617
+01:15:52.290 --> 01:15:54.669
+Gesiel Lopes: Uma forma de você fazer isso.
+
+618
+01:15:55.130 --> 01:15:56.030
+Gesiel Lopes: Opa
+
+619
+01:15:57.370 --> 01:16:04.819
+Gesiel Lopes: é através de dicionários. E aí você observe que eu não sei quais são os tokens. Eu não sei
+
+620
+01:16:06.330 --> 01:16:07.830
+Gesiel Lopes: quais são.
+
+621
+01:16:12.110 --> 01:16:18.749
+Gesiel Lopes: Eu não sei qual os Tolkins nem a quantidade de Tolkens únicos que retornam.
+
+622
+01:16:18.910 --> 01:16:23.210
+Gesiel Lopes: Então observe que aqui a ideia é tentar pegar
+
+623
+01:16:23.630 --> 01:16:28.980
+Gesiel Lopes: da lista de tokens pré processados. E aqui eu chamei o método errado.
+
+624
+01:16:30.040 --> 01:16:34.449
+Gesiel Lopes: E aí eu preciso executar essa célula. E essa célula.
+
+625
+01:16:34.750 --> 01:16:42.810
+Gesiel Lopes: A ideia é pegar para cá aqui. Eu observo aqui. Eu só estou pegando os dez primeiros Tolkens retornados.
+
+626
+01:16:43.060 --> 01:16:51.990
+Gesiel Lopes: Mas se eu quisesse saber quantos adversos existem, quanto monitoramento existem quanto a
+
+627
+01:16:52.550 --> 01:17:01.740
+Gesiel Lopes: quantos Tolkins? A quantidade de cada Tolkien presente nesse meu texto processado. Como é que eu resolvo isso?
+
+628
+01:17:01.980 --> 01:17:07.870
+Gesiel Lopes: Tá, então uma forma de você fazer isso é da seguinte forma.
+
+629
+01:17:08.540 --> 01:17:13.549
+Gesiel Lopes: Uma maneira, né? Então eu vou criar aqui uma variável que eu vou chamar de contagem Tolkens.
+
+630
+01:17:16.440 --> 01:17:24.380
+Gesiel Lopes: Essa variável vai ser um dicionário vazio, tá?
+
+631
+01:17:25.700 --> 01:17:40.070
+Gesiel Lopes: E agora eu vou interar sobre a minha lista de tokens pré processados. Então for token em lista.
+
+632
+01:17:40.750 --> 01:17:43.070
+Gesiel Lopes: Tolkins pré processados.
+
+633
+01:17:43.660 --> 01:17:46.790
+Gesiel Lopes: E aqui é que está a mágica.
+
+634
+01:17:47.730 --> 01:17:53.640
+Gesiel Lopes: Observe que eu quero fazer a contagem dos tokens únicos.
+
+635
+01:17:53.820 --> 01:18:03.380
+Gesiel Lopes: Eu não quero fazer contagens de Tokens repetir. Eu não quero repetir. Os Token são tokens únicos. Então cada Token como
+
+636
+01:18:03.540 --> 01:18:16.310
+Gesiel Lopes: eu quero fazer a contagem dos Tolkens únicos. Observe que os Tolkens. Nesse contexto, eles parecem o quê? Como elementos não repetidos de um dicionário.
+
+637
+01:18:16.680 --> 01:18:21.650
+Gesiel Lopes: E aonde é que eu posso colocar o elemento não repetido de um dicionário na chave.
+
+638
+01:18:21.880 --> 01:18:24.229
+Gesiel Lopes: Então os Tolkens serão as chaves
+
+639
+01:18:24.350 --> 01:18:34.159
+Gesiel Lopes: e a contagem dos Tokins vai ser os valores. E aí? Como é que eu faço a lógica? A primeira coisa que eu vou fazer
+
+640
+01:18:34.390 --> 01:18:39.779
+Gesiel Lopes: primeiro teste que eu faço. Observe que o meu dicionário é vazio. Eu não sei
+
+641
+01:18:40.740 --> 01:18:45.429
+Gesiel Lopes: quem são os tolkens. Observe que eu quero construir de forma dinâmica.
+
+642
+01:18:45.680 --> 01:18:49.959
+Gesiel Lopes: Então a primeira coisa que eu faço é verificar se esse Token.
+
+643
+01:18:53.450 --> 01:18:55.010
+Gesiel Lopes: Ele já
+
+644
+01:18:55.180 --> 01:19:02.389
+Gesiel Lopes: foi pré processado em um laço. E como é que eu sei. Eu verifico se esse Token, por exemplo.
+
+645
+01:19:02.550 --> 01:19:10.460
+Gesiel Lopes: Ele é um dicionário. Ele é contagem de Tolkins. Ele é uma chave do meu dicionário.
+
+646
+01:19:10.950 --> 01:19:14.120
+Gesiel Lopes: Então, se ele for uma chave, ele vai estar presente na Kiss.
+
+647
+01:19:14.450 --> 01:19:15.210
+Gesiel Lopes: Tá?
+
+648
+01:19:17.470 --> 01:19:21.450
+Gesiel Lopes: E aí? Se ele estiver presente, olha só a mágica.
+
+649
+01:19:21.920 --> 01:19:24.090
+Gesiel Lopes: Eu vou atualizar o seu valor.
+
+650
+01:19:24.670 --> 01:19:29.820
+Gesiel Lopes: Então Tolkens Token?
+
+651
+01:19:36.420 --> 01:19:41.640
+Gesiel Lopes: É, mas igual um. Eu vou só incrementar.
+
+652
+01:19:42.550 --> 01:19:44.349
+Gesiel Lopes: Então eu vou somar um.
+
+653
+01:19:45.550 --> 01:19:50.109
+Gesiel Lopes: E se ele não estiver presente, ele vai cair nesse Elcio.
+
+654
+01:19:50.350 --> 01:19:57.370
+Gesiel Lopes: Isso quer dizer o quê? Que o Tolkien ainda não foi inicializado. Então, se ele ainda não foi inicializado por padrão.
+
+655
+01:19:57.560 --> 01:20:03.220
+Gesiel Lopes: Eu vou atribuir o valor um a esse Token. E aí ele passa a existir. Porque é a primeira vez que ele aparecer,
+
+656
+01:20:03.600 --> 01:20:05.300
+Gesiel Lopes: eu conto um.
+
+657
+01:20:05.560 --> 01:20:10.700
+Gesiel Lopes: E das próximas vezes eu vou simplesmente incrementar
+
+658
+01:20:10.900 --> 01:20:14.879
+Gesiel Lopes: fazendo isso. Olha só, eu consigo pegar a contagem
+
+659
+01:20:15.050 --> 01:20:21.509
+Gesiel Lopes: de todos os tokens únicos seria uma possível aplicação. Contagem de tokens.
+
+660
+01:20:23.120 --> 01:20:36.760
+Gesiel Lopes: Então, aqui observe que a palavra adverso recebe um momento, um mas entretanto, quatro metas em outros. E aqui, com essa,
+
+661
+01:20:37.690 --> 01:20:42.639
+Gesiel Lopes: com esse dicionário que possui a contagem de tokens, por exemplo,
+
+662
+01:20:43.250 --> 01:20:52.860
+Gesiel Lopes: contagem de Tokins, eu posso, por exemplo, verificar quantas vezes a palavra copom apareceu.
+
+663
+01:20:58.790 --> 01:21:00.280
+Gesiel Lopes: Não tem copom.
+
+664
+01:21:02.890 --> 01:21:04.660
+Gesiel Lopes: Eu usei Copom como um
+
+665
+01:21:08.200 --> 01:21:09.880
+Gesiel Lopes: palavra reservada.
+
+666
+01:21:12.760 --> 01:21:15.340
+Gesiel Lopes: O componente existe. Sério?
+
+667
+01:21:29.010 --> 01:21:30.870
+Gesiel Lopes: Acho que desse cara não tem, né?
+
+668
+01:21:33.720 --> 01:21:40.550
+Gesiel Lopes: Metas, metas. Qual foi a outra palavra? Eu não me lembro. Eu vou colocar aqui Metas
+
+669
+01:21:40.990 --> 01:21:42.640
+Gesiel Lopes: tinha que testar, né?
+
+670
+01:21:43.720 --> 01:21:51.569
+Gesiel Lopes: Metas. Aparece duas vezes. Acho que é muito por conta do método. Foi a aula quatro que a gente pegou?
+
+671
+01:21:52.880 --> 01:21:55.340
+Gesiel Lopes: Não, o quarto foi A.
+
+672
+01:21:56.140 --> 01:21:59.340
+Gesiel Lopes: O que eu fiz. A contagem foi no três. Deixa eu ver aqui.
+
+673
+01:22:00.790 --> 01:22:02.620
+Gesiel Lopes: Acho que foi no três mesmo.
+
+674
+01:22:03.590 --> 01:22:04.410
+Gesiel Lopes: Isso.
+
+675
+01:22:06.860 --> 01:22:12.059
+Gesiel Lopes: Então eu vou usar essa função
+
+676
+01:22:14.730 --> 01:22:17.170
+Gesiel Lopes: em vez de ser aquela função melhorada,
+
+677
+01:22:19.460 --> 01:22:25.150
+Gesiel Lopes: que foi a última função que a gente implementou agora. Certo, então executado
+
+678
+01:22:29.520 --> 01:22:33.860
+Gesiel Lopes: em tese. Mas aí o texto não pode ser esse também, né?
+
+679
+01:22:36.710 --> 01:22:42.440
+Gesiel Lopes: O texto tem que ser o texto que eu passei inicialmente que é esse texto aqui
+
+680
+01:22:46.630 --> 01:22:48.060
+Gesiel Lopes: para poder dar certo.
+
+681
+01:22:49.100 --> 01:22:51.810
+Gesiel Lopes: Agora sim. Então eu tenho um texto
+
+682
+01:22:53.130 --> 01:22:59.350
+Gesiel Lopes: e faça agora a contagem de tokens e chamo o copom.
+
+683
+01:23:02.670 --> 01:23:08.549
+Gesiel Lopes: Então aqui observem que o Copom agora apareceu a quantidade correta que foi a quantidade
+
+684
+01:23:08.660 --> 01:23:16.519
+Gesiel Lopes: de vezes que ele apareceu na nossa primeira na primeira versão.
+
+685
+01:23:16.700 --> 01:23:21.330
+Gesiel Lopes: Observe que aqui eu fiz a contagem usando testes.
+
+686
+01:23:22.660 --> 01:23:33.799
+Gesiel Lopes: E aí aqui, eu simplesmente fiz a contagem de todos os tokens únicos. Então o Copom aparece doze vezes e assim sucessivamente. Cada token,
+
+687
+01:23:34.470 --> 01:23:42.810
+Gesiel Lopes: ele vai ser contado a a partir do momento que ele aparece inflação ó quarenta e cinco vezes.
+
+688
+01:23:44.670 --> 01:23:45.730
+Gesiel Lopes: Enfim,
+
+689
+01:23:49.120 --> 01:23:54.260
+Gesiel Lopes: deixa eu ver quem tem mais a parte.
+
+690
+01:23:56.890 --> 01:24:02.760
+Gesiel Lopes: E aí? Olha só aí. O céu é um limite, por exemplo, ou.
+
+691
+01:24:04.160 --> 01:24:19.290
+Gesiel Lopes: E aí a pergunta: como obter o o Token com maior ocorrência?
+
+692
+01:24:20.500 --> 01:24:27.529
+Gesiel Lopes: Como é que eu faço para obter o Token com a maior ocorrência. Uma forma de você fazer isso
+
+693
+01:24:27.940 --> 01:24:31.039
+Gesiel Lopes: é, por exemplo, definir
+
+694
+01:24:37.000 --> 01:24:38.320
+Gesiel Lopes: um.
+
+695
+01:24:39.470 --> 01:24:41.829
+Gesiel Lopes: Uma variável que eu vou chamar aqui.
+
+696
+01:24:51.330 --> 01:24:52.960
+Gesiel Lopes: Eu vou chamar aqui de
+
+697
+01:24:55.970 --> 01:24:59.070
+Gesiel Lopes: ou com hença.
+
+698
+01:25:01.400 --> 01:25:02.510
+Gesiel Lopes: Estou ok.
+
+699
+01:25:06.550 --> 01:25:12.959
+Gesiel Lopes: Vou inicializar como sendo zero que aí eu não sei quantos token o zero.
+
+700
+01:25:15.100 --> 01:25:19.170
+Gesiel Lopes: E vou criar uma variável chamada de.
+
+701
+01:25:21.760 --> 01:25:22.730
+Gesiel Lopes: É
+
+702
+01:25:27.940 --> 01:25:42.760
+Gesiel Lopes: Token, ó corrência e a esse token ocorrência vai ser um dicionário vazio, Dicte.
+
+703
+01:25:44.930 --> 01:25:46.559
+Gesiel Lopes: E aí, o que eu vou fazer?
+
+704
+01:25:46.850 --> 01:25:55.349
+Gesiel Lopes: Percorrer no meu dicionário, pegando o token e a quantidade que vai ser a chave e o valor.
+
+705
+01:25:55.860 --> 01:26:01.920
+Gesiel Lopes: E aí, com Targyn Tokins.
+
+706
+01:26:02.480 --> 01:26:07.660
+Gesiel Lopes: E aqui eu vou fazer o um teste.
+
+707
+01:26:11.030 --> 01:26:19.440
+Gesiel Lopes: Se a ocorrência Token for menor do que
+
+708
+01:26:19.800 --> 01:26:24.209
+Gesiel Lopes: o valor retornado que esse valor aqui vai ser justamente
+
+709
+01:26:24.370 --> 01:26:28.240
+Gesiel Lopes: a quantidade de vezes que esse Token apareceu.
+
+710
+01:26:28.600 --> 01:26:31.879
+Gesiel Lopes: Eu posso até colocar de forma expressiva token.
+
+711
+01:26:32.480 --> 01:26:36.350
+Gesiel Lopes: E aqui ocorrência vai ficar mais semântico.
+
+712
+01:26:36.630 --> 01:26:47.330
+Gesiel Lopes: Então, se a ocorrência de Tolkien for menor do que a ocorrência, isso significa dizer que essa
+
+713
+01:26:47.440 --> 01:26:53.680
+Gesiel Lopes: a quantidade de vezes. É maior do que a última quantidade de vezes registrada
+
+714
+01:26:53.940 --> 01:27:03.010
+Gesiel Lopes: inicialmente é zero. Então ele vai já entrar aqui no primeiro na primeira posição, tá?
+
+715
+01:27:03.600 --> 01:27:11.490
+Gesiel Lopes: Isso quer dizer que se o primeiro elemento for o maior de todos, eu vou aparecer ele como sendo o maior de todos.
+
+716
+01:27:11.850 --> 01:27:12.620
+Gesiel Lopes: Tá aí.
+
+717
+01:27:12.740 --> 01:27:21.470
+Gesiel Lopes: E aí, se for maior, o que eu vou fazer? Eu vou atualizar aqui o meu dicionário, tá
+
+718
+01:27:22.260 --> 01:27:28.400
+Gesiel Lopes: que é o meu dicionário token ocorrência.
+
+719
+01:27:30.680 --> 01:27:37.739
+Gesiel Lopes: Vai receber o Token e a ocorrência.
+
+720
+01:27:41.100 --> 01:27:52.599
+Gesiel Lopes: Eu só atualizo se a ocorrência do Token que eu estou buscando. De fato, é a maior ocorrência que eu já registrei.
+
+721
+01:27:52.820 --> 01:27:53.610
+Gesiel Lopes: Tá?
+
+722
+01:27:54.250 --> 01:28:10.279
+Gesiel Lopes: Eu garanto que ela registre pelo menos a primeira ocorrência. Então que é a inflação? Se eu não tiver nenhum Tolkien maior do que duas vezes, o que vai aparecer é a atualização aqui
+
+723
+01:28:10.510 --> 01:28:21.860
+Gesiel Lopes: e aqui eu só faço um print para parecer a Tolkien Token ocorrência.
+
+724
+01:28:24.730 --> 01:28:29.549
+Gesiel Lopes: O que foi que aconteceu? Toquei em ocorrência.
+
+725
+01:28:39.290 --> 01:28:44.280
+Gesiel Lopes: Ah, tá aí, observe, ó, esqueci
+
+726
+01:28:44.670 --> 01:28:48.439
+Gesiel Lopes: de usar o case o itens.
+
+727
+01:28:48.550 --> 01:28:59.690
+Gesiel Lopes: Então eu enterei sobre o dicionário. Aliás, sobre o dicionário. Então o povo padrão. Ele me retornou a chave, não dois valores. Por isso que ele deu erro. Nesse caso, eu tenho que tirar sobre o itens
+
+728
+01:29:01.820 --> 01:29:06.000
+Gesiel Lopes: feito isso. Ó, ele vai me trazer.
+
+729
+01:29:11.870 --> 01:29:16.700
+Gesiel Lopes: Na realidade, ele não fez o que eu queria. Deixa eu pensar. Aqui
+
+730
+01:29:22.630 --> 01:29:24.739
+Gesiel Lopes: ele vai só adicionando, né,
+
+731
+01:29:34.360 --> 01:29:38.689
+Gesiel Lopes: beleza. Eu vou parar aqui, pessoal, na próxima aula, a gente retorna.
+
+732
+01:29:38.800 --> 01:29:43.279
+Gesiel Lopes: E aí eu vejo a lógica aqui é só no caso.
+
+733
+01:29:44.000 --> 01:29:49.849
+Gesiel Lopes: É sempre retirar o último token. Tirar o Token que é realmente do jeito que eu estou fazendo.
+
+734
+01:29:49.990 --> 01:29:53.390
+Gesiel Lopes: Ele está adicionando mais Tolkins
+
+735
+01:29:53.500 --> 01:29:58.990
+Gesiel Lopes: ele está validando. Mas ele está adicionando mais Tolkins. E não é isso que eu quero.
+
+736
+01:30:00.620 --> 01:30:03.869
+Gesiel Lopes: Ele está praticamente repetindo a mesma coleção.
+
+737
+01:30:04.070 --> 01:30:07.810
+Gesiel Lopes: Mas o que eu queria mostrar era mais essa forma de fazer essa contagem.
+
+738
+01:30:08.110 --> 01:30:20.439
+Gesiel Lopes: Como eu tinha cinco minutinhos. Eu pensei que dava para fazer essa verificação aqui, mas é só mais uma validação para retirar o Token já existente.
+
+739
+01:30:20.620 --> 01:30:26.210
+Gesiel Lopes: Tá bom, então é isso, pessoal que eu tinha preparado para hoje.
+
+740
+01:30:28.050 --> 01:30:33.179
+Gesiel Lopes: O próximo encontro. A gente continua. Deixa eu ver. Aqui o Gabriel.
+
+741
+01:30:37.760 --> 01:30:50.950
+Gesiel Lopes: Sempre estrutura de dados dentro de estrutura de dados, vai ser sempre mais pesada do que uma estrutura de dado vazia ou uma estrutura de dados simples. Está dicionário, tá, Gabriel? Não só dicionário. Dentro de dicionários.
+
+742
+01:30:51.120 --> 01:30:57.309
+Gesiel Lopes: Claro, isso vai depender de qual contexto e qual o tamanho dessas estruturas?
+
+743
+01:30:57.460 --> 01:31:16.459
+Gesiel Lopes: Beleza isso vai depender mas sempre que eu tenho estruturas aninhadas, sejam listas dentro de listas ou dicionário, dentro de dicionários ou dicionário de listas ou listas de dicionários, essas combinações sempre serão muito mais onerosas
+
+744
+01:31:16.580 --> 01:31:22.559
+Gesiel Lopes: na memória do que objetos de coleções simples. Tá bom?
+
+745
+01:31:22.690 --> 01:31:30.660
+Gesiel Lopes: Sempre beleza. Então é isso, pessoal? Valeu. Muito obrigado. Até o nosso próximo encontro fui.
+

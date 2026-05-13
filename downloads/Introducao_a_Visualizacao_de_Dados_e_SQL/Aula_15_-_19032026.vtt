@@ -1,0 +1,2946 @@
+WEBVTT
+
+1
+00:00:14.430 --> 00:00:20.719
+Kadu Gertners: Pessoal. Excelente noite para vocês. Desculpem me aí um pequeno atraso. Perdão,
+
+2
+00:00:21.220 --> 00:00:30.039
+Kadu Gertners: pessoal. Vamos lá. Vamos cair para dentro. Aí tiveram dúvidas na terça feira.
+
+3
+00:00:30.100 --> 00:00:43.100
+Kadu Gertners: Já com essa parte aí do Group by, que vocês fizeram perguntas muito boas para nos ajudar aí a aprendermos um pouquinho sobre o Sql.
+
+4
+00:00:43.100 --> 00:00:53.119
+Kadu Gertners: Pessoal, vamos cair para dentro. Eu vou trazer hoje mais exemplos para nós analisarmos algumas coisas, beleza, e vamos falar sobre isso,
+
+5
+00:00:53.280 --> 00:00:58.919
+Kadu Gertners: pessoal. Gostaria de dar o seguinte recado agora no início da aula, que é o seguinte:
+
+6
+00:00:59.510 --> 00:01:03.810
+Kadu Gertners: o At deve ser disponibilizado amanhã.
+
+7
+00:01:04.099 --> 00:01:06.410
+Kadu Gertners: Tá legal, sexta feira.
+
+8
+00:01:06.540 --> 00:01:11.299
+Kadu Gertners: Então, assim a nossa próxima aula só será terça.
+
+9
+00:01:11.640 --> 00:01:27.819
+Kadu Gertners: Eu sugeriria para vocês, se vocês concordarem de vocês já tentarem ler alguma coisa do At quando ele for liberado para vocês fazerem, tá? E se vocês até lerem por antecipação,
+
+10
+00:01:28.020 --> 00:01:39.699
+Kadu Gertners: será melhor ainda quando eu, na terça feira, falar sobre o Tp, e aí eu posso fazer até o seguinte: para nós realmente termos mais certeza e mais tranquilidade.
+
+11
+00:01:39.790 --> 00:01:45.089
+Kadu Gertners: Eu vou começar a próxima aula da terça feira. Falando sobre o Tp,
+
+12
+00:01:45.120 --> 00:02:03.829
+Kadu Gertners: ao invés de passar a matéria até para vocês terem o Tp. Já falado para vocês. Para quando acabar a aula, vocês já poderem. Se quiserem lerem alguma coisa a mais, botarem o Tp, o Tp não. Perdão. O At, que é o acesso? A gente quer a prova
+
+13
+00:02:03.830 --> 00:02:11.590
+Kadu Gertners: de vocês já poderem botar o At para frente e fazê los quando vocês quiserem. E galera, lembrem se, o prazo será curto.
+
+14
+00:02:11.930 --> 00:02:19.189
+Kadu Gertners: O prazo será curto. Então vocês vão ter para fazer isso aí. Mais ou menos uma semana para fazer o trabalho.
+
+15
+00:02:19.560 --> 00:02:24.359
+Kadu Gertners: Tá bom, então vamos lá. Mãos à obra.
+
+16
+00:02:24.610 --> 00:02:41.109
+Kadu Gertners: Vocês já falaram comigo aqui. Maravilha, deixa eu falar com vocês aqui. Excelente noite. Gabriel Sandré, Rafael, Gabriel Diniz Adailton, Fran Nobre Felipe Magalhães Allan Kleber João Victor. Excelente noite, galera. Vamos, que vamos para cima do aprendizado. Vamos lá.
+
+17
+00:02:41.330 --> 00:02:49.370
+Kadu Gertners: Bom, eu vou pegar e já vou compartilhar a nossa janelinha aqui, não é? Ó bora,
+
+18
+00:02:50.830 --> 00:02:55.219
+Kadu Gertners: galera, por favor. Qualquer pergunta, como sempre fazemos
+
+19
+00:02:55.510 --> 00:03:14.260
+Kadu Gertners: dúvidas, curiosidades. Quer trazer algum ponto para a aula aqui é só falar ou dar um toque aqui, levantar a mão, falar um pouquinho ou escrever aqui no chat. Enfim, o que importa é que vocês também interajam aí para a aula cada vez mais interessante para todos nós, beleza.
+
+20
+00:03:14.770 --> 00:03:16.109
+Kadu Gertners: Bom, vamos lá.
+
+21
+00:03:16.920 --> 00:03:29.090
+Kadu Gertners: O que vai acontecer? Eu estou aqui com onde eu parei na aula passada, parei nesse comando. E hoje eu vou começar daqui.
+
+22
+00:03:29.290 --> 00:03:39.239
+Kadu Gertners: Bom caduzão na aula. Aí eu disponibilizei para vocês no infinite online. Eu disponibilizei esse arquivo chamado Vgcs Zip
+
+23
+00:03:39.590 --> 00:03:49.250
+Kadu Gertners: então aí eu falo para vocês. Descompactar o arquivo Vgc e os pontos. Zip, caldozão. Onde é que está esse arquivo? Bom, vamos lá.
+
+24
+00:03:49.650 --> 00:03:51.610
+Kadu Gertners: No infinite online.
+
+25
+00:03:52.360 --> 00:03:55.299
+Kadu Gertners: Ó vem comigo. Infinity online.
+
+26
+00:03:59.340 --> 00:04:08.179
+Kadu Gertners: Aí eu estou aqui. No infinite online. Documentos aqui na guia, documentos, colocamos um pouquinho para baixo
+
+27
+00:04:08.290 --> 00:04:11.890
+Kadu Gertners: e clicamos aqui na nossa pasta da nossa disciplina,
+
+28
+00:04:12.740 --> 00:04:32.499
+Kadu Gertners: beleza. E aí, aqui aparecerá o nosso arquivinho. Então, olha só. Aqui. É esse arquivo dessa semana do roteiro aí do passo a passo dessa semana. Está aqui, que é o da etapa oito. E o nosso arquivo está aqui. O zip
+
+29
+00:04:32.960 --> 00:04:34.130
+Kadu Gertners: tá legal.
+
+30
+00:04:34.420 --> 00:04:36.350
+Kadu Gertners: Bom caldozão.
+
+31
+00:04:36.870 --> 00:04:53.870
+Kadu Gertners: O que tem dentro desse arquivo, Zip. Então vocês baixem aí. Baixem o arquivinho e descompacta o arquivo. E o que tem dentro dele. Então, olha só, eu deixei a pasta aberta aqui para vocês verem.
+
+32
+00:04:54.280 --> 00:04:57.899
+Kadu Gertners: Ó aqui nós temos o arquivo
+
+33
+00:04:58.170 --> 00:05:07.730
+Kadu Gertners: compactado. Tá vendo? Vgc e os pontos Ip. Qual é o arquivo que tem dentro dele é esse aqui. Ó Vgc, Csv.
+
+34
+00:05:08.120 --> 00:05:20.660
+Kadu Gertners: Tá legal. É um arquivinho Csv. Então, voltando aqui para o nosso roteiro caduzão. O que nós vamos fazer? Eu vou abrir o arquivo pelo excel
+
+35
+00:05:21.370 --> 00:05:29.480
+Kadu Gertners: beleza para nós darmos uma olhada um pouquinho nesses dados. Vamos lá juntos.
+
+36
+00:05:29.610 --> 00:05:30.730
+Kadu Gertners: Olha só.
+
+37
+00:05:30.950 --> 00:05:34.000
+Kadu Gertners: Vamos chamar o Excel aqui no pesquisar
+
+38
+00:05:35.160 --> 00:05:37.890
+Kadu Gertners: aqui na minha máquina. Eu tenho um Excel.
+
+39
+00:05:38.030 --> 00:05:39.000
+Kadu Gertners: Tá
+
+40
+00:05:39.590 --> 00:05:48.820
+Kadu Gertners: aí, aqui no roteiro. Aí entramos no Excel. Abrir pasta de trabalho em branco, pasta de trabalho em branco,
+
+41
+00:05:49.640 --> 00:05:58.150
+Kadu Gertners: beleza aí a partir do menu. Nós vamos lá em dados aqui, ó dados.
+
+42
+00:05:58.330 --> 00:06:09.319
+Kadu Gertners: E aqui ele fala assim. Ó clicar em obter dados na opção de Text Csv. Então aqui, ó
+
+43
+00:06:10.420 --> 00:06:25.409
+Kadu Gertners: dados. Obter dados não é obter dados de arquivo e de Text Csv.
+
+44
+00:06:26.690 --> 00:06:30.799
+Kadu Gertners: Ele vai abrir para nós uma janela,
+
+45
+00:06:31.500 --> 00:06:37.189
+Kadu Gertners: ó, vai abrir a janela. O que você vai fazer, camisomem? Eu vou pegar aqui
+
+46
+00:06:37.400 --> 00:06:41.820
+Kadu Gertners: o caminho no qual está esse arquivo aqui para mim.
+
+47
+00:06:41.990 --> 00:06:47.719
+Kadu Gertners: Eu copio o arquivo o caminho. Onde está o arquivo?
+
+48
+00:06:47.990 --> 00:06:59.209
+Kadu Gertners: Dentro de qual pasta ou de quais pastas? Se vocês quiserem colocar assim, aí, aqui, onde estão os caminhos também. Eu coloco o caminho
+
+49
+00:06:59.480 --> 00:07:06.840
+Kadu Gertners: a tecla enter, né? E aí ele mostra para nós aqui, ó os arquivos.
+
+50
+00:07:06.970 --> 00:07:16.689
+Kadu Gertners: Eu ordeno por nome pelo nome do arquivo. Vou aqui embaixo e vejo o Vgcs com Csv.
+
+51
+00:07:17.200 --> 00:07:19.000
+Kadu Gertners: Ó beleza,
+
+52
+00:07:20.110 --> 00:07:27.769
+Kadu Gertners: vamos ver como é que está lá no roteiro caldozão ir para a pasta do arquivo Vgc, Csv,
+
+53
+00:07:28.020 --> 00:07:33.239
+Kadu Gertners: selecionar o arquivo Bgc, Csv e clicar no botão, importar.
+
+54
+00:07:33.670 --> 00:07:38.330
+Kadu Gertners: Então vamos embora. Selecionei o arquivo importância.
+
+55
+00:07:40.120 --> 00:07:42.300
+Kadu Gertners: Olha, ele está conectando.
+
+56
+00:07:44.790 --> 00:07:53.910
+Kadu Gertners: Está pegando os dados. Mostra para nós um pouquinho aqui. Como é que os dados vão ficar nas colunas aí.
+
+57
+00:07:54.530 --> 00:08:04.170
+Kadu Gertners: Beleza aí na janela. Fgc, Csv. Que é essa janela? Aqui, na qual estamos
+
+58
+00:08:05.110 --> 00:08:10.200
+Kadu Gertners: clicar na janela aberta, clicar no botão. Carregar ó
+
+59
+00:08:10.390 --> 00:08:13.660
+Kadu Gertners: nessa janelinha. Clica no botão. Carregar.
+
+60
+00:08:13.840 --> 00:08:17.550
+Kadu Gertners: Aí. Ele fará isso para nós. Olha que legal.
+
+61
+00:08:17.770 --> 00:08:27.539
+Kadu Gertners: Ele carregou os dados para as colunas. Ele aqui mostrou o total de linhas. Foram dezasseis.quinhentos e noventa e oito linhas carregadas,
+
+62
+00:08:27.710 --> 00:08:28.690
+Kadu Gertners: não é?
+
+63
+00:08:29.000 --> 00:08:42.989
+Kadu Gertners: E aí, como ele já mostrou isso aqui. Nós podemos fechar essa janelinha aqui do lado direito. Então fecha aqui no X e ele mostra todos os dados. Eu vou diminuir um pouquinho os dados
+
+64
+00:08:43.309 --> 00:09:01.959
+Kadu Gertners: para nós vermos todas as colunas. E aí, para quem gosta de coisas de videogame? É uma curiosidade. Eu arrumei isso aí na Internet. E aí? Explicação sucinta sobre as colunas. Legal. A coluna
+
+65
+00:09:02.040 --> 00:09:05.960
+Kadu Gertners: é essa coluna aqui, ó ranking,
+
+66
+00:09:06.310 --> 00:09:18.450
+Kadu Gertners: olha, ele significa é o ranking das vendas gerais. Isso aqui é a parte que ele fala
+
+67
+00:09:18.780 --> 00:09:24.209
+Kadu Gertners: do ranqueamento do jogo. Qual é o número do que mais vendeu
+
+68
+00:09:24.740 --> 00:09:27.979
+Kadu Gertners: beleza. Então esse aqui é o primeiro. Um
+
+69
+00:09:28.850 --> 00:09:39.589
+Kadu Gertners: legal aí. Aqui tem o name. O name é o nome do jogo. Qual é o jogo. Então, quais foram os jogos que mais venderam esse aqui? Foi o primeiro. Foi o que mais vendeu.
+
+70
+00:09:39.910 --> 00:09:46.800
+Kadu Gertners: Tá legal. Ele está mostrando primeiro e vai decrescendo até o último legal
+
+71
+00:09:46.890 --> 00:09:49.400
+Kadu Gertners: galera. Só aí já tem vários anos, tá?
+
+72
+00:09:49.460 --> 00:10:08.549
+Kadu Gertners: Não sei se também eram dados realistas. Não sei. Eu peguei na Internet como exemplo. É só para exemplificar para vocês e para nós podermos fazer aqui a nossa aula, para vocês entenderem algumas coisas curiosas. Então vamos embora.
+
+73
+00:10:08.950 --> 00:10:18.810
+Kadu Gertners: Legal, aí. Cadu, de qual plataforma que é o jogo? É a terceira coluna do I do Nes do Gb aqui.
+
+74
+00:10:18.810 --> 00:10:29.540
+Kadu Gertners: Vocês sabem melhor do que eu o Gb aqui do Xbox trezentos e sessenta do Ps3 Ps2 e vai embora.
+
+75
+00:10:30.300 --> 00:10:31.260
+Kadu Gertners: Legal.
+
+76
+00:10:31.660 --> 00:10:40.460
+Kadu Gertners: Aí tem outra coluna que é o Ear. Quer dizer, qual foi o ano de lançamento do jogo, tá?
+
+77
+00:10:40.620 --> 00:10:48.960
+Kadu Gertners: A próxima coluna é o Genry, que é o gênero. Qual é o considerado o gênero do jogo
+
+78
+00:10:49.070 --> 00:10:54.950
+Kadu Gertners: esporte, plataforma, Racing corrida, esporte, Roleplay, plane né?
+
+79
+00:10:55.150 --> 00:11:05.060
+Kadu Gertners: É puzzle como se fosse um quebra cabeça. Uma micelânea, jogo de tiro de simulação, jogo de plataforma. E por aí vai
+
+80
+00:11:05.650 --> 00:11:15.380
+Kadu Gertners: beleza legal pode chegar. Qual foi a empresa que inicialmente criou o jogo beleza
+
+81
+00:11:15.850 --> 00:11:24.190
+Kadu Gertners: aí? Aqui, começa a entrar aqui. Ele está dando como se fossem características ou dicas do jogo
+
+82
+00:11:24.820 --> 00:11:33.330
+Kadu Gertners: como se fossem exatamente como se fossem dimensões do jogo.
+
+83
+00:11:33.860 --> 00:11:49.840
+Kadu Gertners: Quais são as dimensões, quais são as visões que nós podemos ter do jogo. E aí, aqui ele começa a mostrar na próxima coluna. Cara, olha só. Que curioso aqui para vocês terem uma ideia. Essa coluna aqui
+
+84
+00:11:50.430 --> 00:11:53.329
+Kadu Gertners: é a coluna de vendas na América do Norte,
+
+85
+00:11:53.520 --> 00:12:02.129
+Kadu Gertners: principalmente nos Estados Unidos. Galera sem brincadeira. Olha, a diferença de venda dos Estados Unidos para os outros lugares.
+
+86
+00:12:05.270 --> 00:12:10.190
+Kadu Gertners: De forma geral, pelo menos pelos dados que estão aqui.
+
+87
+00:12:11.490 --> 00:12:12.300
+Kadu Gertners: É, ó,
+
+88
+00:12:13.180 --> 00:12:19.670
+Kadu Gertners: tem alguns que nem tanto, mas assim tem vezes que ele é um número bem significativo de diferença.
+
+89
+00:12:19.960 --> 00:12:28.719
+Kadu Gertners: Então por isso que o mercado aí comentam aí que o mercado norte americano é muito importante para a venda de jogos.
+
+90
+00:12:29.260 --> 00:12:30.890
+Kadu Gertners: Então, ó, vamos lá
+
+91
+00:12:31.100 --> 00:12:46.589
+Kadu Gertners: aí. A próxima coluna. Ah, isso. A venda está em milhões, tá aqui são a venda em milhões. Legal. A próxima coluna é a venda. Que aconteceu na Europa, então essa coluna aqui são as vendas que aconteceram na Europa.
+
+92
+00:12:47.060 --> 00:12:52.950
+Kadu Gertners: Essa outra coluna aqui, são as vendas que aconteceram a próxima coluna. Aí,
+
+93
+00:12:53.250 --> 00:13:03.389
+Kadu Gertners: as vendas que aconteceram no Japão. E finalmente, as vendas que aconteceram em outros lugares do mundo. Olha que legal!
+
+94
+00:13:03.710 --> 00:13:04.700
+Kadu Gertners: Aí.
+
+95
+00:13:04.840 --> 00:13:07.999
+Kadu Gertners: Aqui tem uma coluna.
+
+96
+00:13:08.550 --> 00:13:15.820
+Kadu Gertners: Tem uma coluna chamada é Global Sales, que significa o total de vendas mundiais.
+
+97
+00:13:16.360 --> 00:13:22.560
+Kadu Gertners: Tá legal. Quer dizer, o somatório inicialmente desse aqui deveria dar isso aqui.
+
+98
+00:13:22.970 --> 00:13:38.110
+Kadu Gertners: Beleza legal. Então nós fechamos já aquela janela. Consultas e conexões que estava sendo mostrada do lado direito aqui. Quando nós acabamos de carregar esse arquivo.
+
+99
+00:13:39.340 --> 00:13:47.050
+Kadu Gertners: E a partir da célula n2 nós vamos colocar a fórmula assim
+
+100
+00:13:47.550 --> 00:13:54.160
+Kadu Gertners: no L2 onde é que é o L2 Cadu N2 é a célula.
+
+101
+00:13:54.440 --> 00:14:09.470
+Kadu Gertners: É a junção da coluna com a linha. Então L2 é aqui, nessa posição, o L, que é da coluna, e o dois da linha. Então o L2 nós vamos botar essa fórmula aqui,
+
+102
+00:14:10.890 --> 00:14:20.649
+Kadu Gertners: ó igual soma G2 dois pontos J dois entre parênteses. Então nós vamos somar
+
+103
+00:14:20.960 --> 00:14:25.829
+Kadu Gertners: o que está entre o G e o J. Olha só. Que legal.
+
+104
+00:14:26.110 --> 00:14:31.790
+Kadu Gertners: Botamos aqui e repara que nessa formatação aqui.
+
+105
+00:14:32.300 --> 00:14:36.830
+Kadu Gertners: Ele já faz isso automaticamente e ele soma todos os outros valores.
+
+106
+00:14:36.930 --> 00:14:52.249
+Kadu Gertners: E aí vocês vão reparar que tem valores que batem ou estão muito próximos e tem valores que estão totalmente estranhos. Olha esse aqui. Por exemplo, ele falou que o total aqui tem trinta e três.
+
+107
+00:14:52.340 --> 00:15:03.399
+Kadu Gertners: Só que ao somarmos essas colunas aqui, as células G cinco h.
+
+108
+00:15:03.690 --> 00:15:05.980
+Kadu Gertners: E aí cinco
+
+109
+00:15:06.250 --> 00:15:19.419
+Kadu Gertners: e o J cinco? Ele mostra o total aqui embaixo. Soma três.trezentos, que é exatamente o valor que está mostrando aqui. Então esse valor. Aqui ele está o que errado?
+
+110
+00:15:20.420 --> 00:15:21.550
+Kadu Gertners: Tá legal.
+
+111
+00:15:22.080 --> 00:15:31.319
+Kadu Gertners: Então galera de novo. Vocês estão vendo que vira e mexe. No decorrer aí do nosso conteúdo,
+
+112
+00:15:31.450 --> 00:15:48.490
+Kadu Gertners: eu vim e mexo e aponto para vocês essas coisas. E falo para vocês porque galera de novo? Nós entendemos os dados e termos uma ideia. Se o dado está correto, ou se tem algum problema, isso é imprescindível
+
+113
+00:15:49.130 --> 00:16:03.930
+Kadu Gertners: por que caldozão? Para que nós não façamos leituras ou disponibilizemos algum, dado que esteja realmente errado ou de repente. Tudo bem. A única exceção é se de repente, a área que está pedindo para nós
+
+114
+00:16:03.930 --> 00:16:09.440
+Kadu Gertners: para fazer essa tarefa, essa análise dos dados. Se eles pedirem para deixar dessa forma,
+
+115
+00:16:09.930 --> 00:16:17.180
+Kadu Gertners: então de novo lógico que vai depender do contexto e vai depender da necessidade tá legal.
+
+116
+00:16:17.530 --> 00:16:20.210
+Kadu Gertners: Bom, então fechamos isso aí.
+
+117
+00:16:20.970 --> 00:16:25.390
+Kadu Gertners: E aí eu coloquei aqui a atenção, né? Tem valores que não batem.
+
+118
+00:16:26.050 --> 00:16:33.720
+Kadu Gertners: Tem vários valores que não estão batendo ao comparar essas duas últimas colunas. Aqui
+
+119
+00:16:33.970 --> 00:16:36.780
+Kadu Gertners: tem muitos valores. Ó, esse bateu
+
+120
+00:16:37.980 --> 00:16:42.870
+Kadu Gertners: tudo bem. Mas, ó, tem muitos valores que não batem.
+
+121
+00:16:43.470 --> 00:16:50.950
+Kadu Gertners: Tá vendo? Então, canduzão. Se eu tivesse que por acaso corrigir esses dados, eu teria que rever isso. Sim,
+
+122
+00:16:51.400 --> 00:17:03.079
+Kadu Gertners: mas aí você teria que rever isso. E a pessoa que te cedeu o dado. Ela teria que saber sobre isso. E se você poderia realmente mudar o dado.
+
+123
+00:17:03.160 --> 00:17:14.310
+Kadu Gertners: Se a própria pessoa ou o grupo ou o setor que pediu, ou a empresa que pediu isso para você. Se eles confirmarem que eles vão fazer o trabalho aí. Tudo bem.
+
+124
+00:17:14.470 --> 00:17:22.669
+Kadu Gertners: Eles fazem o trabalho, acertam os dados e você pede novamente para eles enviarem o dado depois de estar certo eles estarem certos.
+
+125
+00:17:23.420 --> 00:17:33.560
+Kadu Gertners: Tá legal? Então, pessoal, é importante essas colocações, pessoal, vai na minha. Isso acontece todos os dias nas empresas,
+
+126
+00:17:33.810 --> 00:17:48.810
+Kadu Gertners: a maioria das vezes, muitas vezes, os dados não estão tão organizados como nós gostaríamos que eles estivessem, e isso tem muito a ver com o pessoal de quem tem a ver com o pessoal da área de desenvolvimento.
+
+127
+00:17:48.880 --> 00:18:00.510
+Kadu Gertners: Quem se tornar analista de sistemas. Quem se tornar programador, engenheiro de desenvolvimento. Enfim, quem for programar usando uma linguagem de programação
+
+128
+00:18:00.510 --> 00:18:13.130
+Kadu Gertners: cara assim, eu acho que é uma incumbência importante e é lógico que vai depender do grupo que você esteja. Mas assim você fazer determinadas críticas, dependendo de determinados dados. Isso seria importante
+
+129
+00:18:13.130 --> 00:18:15.980
+Kadu Gertners: e lógico se você puder fazer isso,
+
+130
+00:18:16.260 --> 00:18:24.880
+Kadu Gertners: talvez o seu prazo seja muito apertado e você talvez não possa fazer algumas coisas nesse sentido. Galera, é só um comentário.
+
+131
+00:18:25.090 --> 00:18:30.039
+Kadu Gertners: É porque eu já vivenciei isso. Já vi isso várias vezes acontecendo.
+
+132
+00:18:30.380 --> 00:18:33.250
+Kadu Gertners: Beleza legal. Vamos lá,
+
+133
+00:18:33.430 --> 00:18:40.729
+Kadu Gertners: aí, caduzão. Nós vamos fazer o quê? Olha só nós agora, para analisarmos os dados melhor.
+
+134
+00:18:41.800 --> 00:18:46.100
+Kadu Gertners: Nós vamos pedir ajuda mais uma vez para Sql Studio
+
+135
+00:18:46.730 --> 00:18:48.340
+Kadu Gertners: Wright, que é lá de estúdio,
+
+136
+00:18:48.470 --> 00:18:58.919
+Kadu Gertners: beleza. E aí nós vamos analisar o dado com calma, e nós vamos fazer o passo a passo aí sobre isso. Vamos lá
+
+137
+00:18:59.600 --> 00:19:05.190
+Kadu Gertners: acessar o Sql Studio Light, o Sqlade. Estúdio
+
+138
+00:19:05.680 --> 00:19:13.530
+Kadu Gertners: Sklar de estúdio. Então vamos para lá, beleza.
+
+139
+00:19:15.690 --> 00:19:17.710
+Kadu Gertners: Vamos botar.
+
+140
+00:19:22.100 --> 00:19:24.030
+Kadu Gertners: Estamos botando aqui.
+
+141
+00:19:28.910 --> 00:19:32.840
+Kadu Gertners: Estamos botando no outro. Aqui vamos botar aqui mesmo.
+
+142
+00:19:33.000 --> 00:19:34.210
+Kadu Gertners: Não tem problema. Não?
+
+143
+00:19:35.330 --> 00:19:36.410
+Kadu Gertners: Então,
+
+144
+00:19:40.760 --> 00:19:45.590
+Kadu Gertners: caramba, nem abriu o ainda. O Sq Light, né?
+
+145
+00:19:46.980 --> 00:19:49.319
+Kadu Gertners: Vamos abrir primeiro o Sq Light,
+
+146
+00:19:53.590 --> 00:19:54.960
+Kadu Gertners: beleza.
+
+147
+00:19:59.970 --> 00:20:02.260
+Kadu Gertners: Abrimos o Sklatt Studio.
+
+148
+00:20:02.520 --> 00:20:06.540
+Kadu Gertners: Pessoal eu vou fechar esse arquivo da aula passada, tá
+
+149
+00:20:06.970 --> 00:20:09.570
+Kadu Gertners: então, de novo, conforme temos feito,
+
+150
+00:20:09.780 --> 00:20:14.330
+Kadu Gertners: eu vou botar isso aqui para cima, beleza.
+
+151
+00:20:14.790 --> 00:20:17.180
+Kadu Gertners: Vou apagar essas linhas aqui.
+
+152
+00:20:22.970 --> 00:20:26.699
+Kadu Gertners: Vou deixar só algumas linhas aqui. Maravilha, pronto,
+
+153
+00:20:27.400 --> 00:20:29.499
+Kadu Gertners: e aí? Eu vou tirar isso aqui.
+
+154
+00:20:29.750 --> 00:20:34.289
+Kadu Gertners: Botão direito, remover o banco e as.
+
+155
+00:20:35.080 --> 00:20:41.970
+Kadu Gertners: Bom, como é que nós vamos fazer? Caldzon. Vamos lá, ó banco de dados,
+
+156
+00:20:42.120 --> 00:20:53.889
+Kadu Gertners: adicionar um banco de dados. Vamos colocar aqui na nossa pasta e ele já está na pasta. Onde ficam os Databases? Pô, maravilha.
+
+157
+00:20:54.050 --> 00:20:57.020
+Kadu Gertners: Nós vamos pegar o nome do arquivinho
+
+158
+00:20:57.180 --> 00:21:05.270
+Kadu Gertners: que ele vai se chamar que eu dei o nome para ele de aula. 8b, Db, Copio.
+
+159
+00:21:05.520 --> 00:21:09.179
+Kadu Gertners: Coloco para cá e seleciono.
+
+160
+00:21:09.540 --> 00:21:18.089
+Kadu Gertners: Ele jogou o nome do arquivo para cá no caminho, no caminho, na pasta. Aonde ficará esse arquivo?
+
+161
+00:21:18.240 --> 00:21:24.820
+Kadu Gertners: Mostra o nome sugerido do banco de dados. E aqui vamos testar a conexão.
+
+162
+00:21:25.200 --> 00:21:28.839
+Kadu Gertners: Está tudo direitinho. Vamos clicar no botão, ok.
+
+163
+00:21:29.300 --> 00:21:30.460
+leonardo Peres: O professor.
+
+164
+00:21:30.690 --> 00:21:32.290
+Kadu Gertners: Oi, fala comigo.
+
+165
+00:21:32.640 --> 00:21:40.090
+leonardo Peres: Pergunta. O arquivo tem que dar uma pasta específica ou estando no computador. Já vale.
+
+166
+00:21:41.210 --> 00:21:45.370
+Kadu Gertners: Não pode botar em qualquer pasta. Tem que estar em alguma pasta. Mas você pode botar em qualquer pasta.
+
+167
+00:21:45.660 --> 00:21:48.349
+leonardo Peres: Então, em qualquer lugar que tivesse eu fosse abrir, era para ir, né?
+
+168
+00:21:50.150 --> 00:22:04.829
+Kadu Gertners: É só se você ao carregar aqui ao adicionar um banco de dados e você abrir essa pasta aqui, se você por acaso, da última vez que você acessou, você mudou a pasta que você estava acessando aqui.
+
+169
+00:22:05.450 --> 00:22:10.569
+Kadu Gertners: Se você mudar a pasta que você está acessando aqui. Ele vai mostrar outra pasta.
+
+170
+00:22:11.910 --> 00:22:13.109
+Kadu Gertners: Entendeu? Esse cara.
+
+171
+00:22:13.110 --> 00:22:13.470
+leonardo Peres: Uhum.
+
+172
+00:22:13.470 --> 00:22:24.560
+Kadu Gertners: É o caminho que eu estou agora. Mas se eu mudar o caminho, ele muda e não serão mostrados mais esses arquivos? Porque eu teria mudado de caminho.
+
+173
+00:22:24.750 --> 00:22:28.079
+leonardo Peres: Não? Sim, sim. Mas se o arquivo apareceu, é pra ir, né?
+
+174
+00:22:28.520 --> 00:22:37.670
+Kadu Gertners: Ah, sim. Não aí. Se você estiver na pasta na qual tiver um arquivinho de banco de dados, ele vai mostrar embaixo aqui os arquivos Db.
+
+175
+00:22:38.330 --> 00:22:40.190
+leonardo Peres: Fechou aí. Então valeu.
+
+176
+00:22:41.130 --> 00:22:46.410
+Kadu Gertners: Tá bom, beleza.
+
+177
+00:22:47.400 --> 00:23:01.250
+Kadu Gertners: Bom, aí, aqui, do lado esquerdo. Eu vou dar dois cliques aqui no nome do banco de dados como eu falo para vocês. Tem que fazer isso para que mostre aqui tabelas e visualizações legal. Aí
+
+178
+00:23:01.310 --> 00:23:09.429
+Kadu Gertners: vamos lá, Cadu, o que nós vamos fazer. Vamos criar uma tabela chamada Vendas jogos, vendas sublinhados jogos.
+
+179
+00:23:09.510 --> 00:23:17.149
+Kadu Gertners: E aí vamos botar a coluna. Ranking do jogo Íntegger.
+
+180
+00:23:17.550 --> 00:23:21.409
+Kadu Gertners: Nome, do jogo texto de cento e vinte caracteres.
+
+181
+00:23:21.670 --> 00:23:29.600
+Kadu Gertners: Plataforma do jogo, texto de oito caracteres, ano do jogo inteiro. Ínteger
+
+182
+00:23:31.030 --> 00:23:36.800
+Kadu Gertners: gênero do jogo, texto de trinta posições, posições, trinta caracteres,
+
+183
+00:23:38.670 --> 00:23:42.430
+Kadu Gertners: empresa do jogo, texto de cinquenta caracteres.
+
+184
+00:23:42.910 --> 00:23:48.049
+Kadu Gertners: Venda nos Estados Unidos do jogo, um piano Ínteger,
+
+185
+00:23:48.330 --> 00:23:56.089
+Kadu Gertners: vendas na Europa do jogo inteiro. Íntegger vendas Japão do jogo, integer
+
+186
+00:23:56.540 --> 00:24:06.960
+Kadu Gertners: vendas de outros lugares do jogo no mundo integer inteiro. E, finalmente, as vendas mundiais,
+
+187
+00:24:07.480 --> 00:24:17.910
+Kadu Gertners: também definido como inteiro ínteger legal. Peguei o comando para criar a tabela. Coloquei para cá,
+
+188
+00:24:18.860 --> 00:24:23.040
+Kadu Gertners: seleciona o comando. Clicamos no play aqui no executar.
+
+189
+00:24:23.170 --> 00:24:32.980
+Kadu Gertners: Ó a tabela foi criada com as colunas, beleza.
+
+190
+00:24:33.430 --> 00:24:34.310
+Kadu Gertners: Bom dia.
+
+191
+00:24:34.820 --> 00:24:45.360
+Kadu Gertners: Podemos fazer o que nós normalmente fazemos. Dar um select aí asterístico para pegar todas as colunas a partir da tabela. Venda jogos.
+
+192
+00:24:45.980 --> 00:24:53.320
+Kadu Gertners: Colocamos para cá, selecionamos, ó, não tem ainda nenhum registro.
+
+193
+00:24:53.800 --> 00:24:58.140
+Kadu Gertners: Então, o que nós vamos fazer a partir do menu?
+
+194
+00:24:58.720 --> 00:25:03.829
+Kadu Gertners: Vamos clicar lá em ferramentas e importar Opa. Vamos lá.
+
+195
+00:25:04.230 --> 00:25:07.520
+Kadu Gertners: Ferramentas importar.
+
+196
+00:25:09.130 --> 00:25:10.310
+Kadu Gertners: Então, ó
+
+197
+00:25:13.500 --> 00:25:25.199
+Kadu Gertners: em Table quer dizer, qual a tabela importar tabela para Opa? Nós vamos fazer o seguinte. Vai selecionar o banco de dados aula. 8b:
+
+198
+00:25:25.310 --> 00:25:35.800
+Kadu Gertners: está aqui e vamos selecionar a única tabela. Nesse caso chamado venda jogos que já está aqui também, beleza.
+
+199
+00:25:36.600 --> 00:25:39.400
+Kadu Gertners: Colocamos para baixo.
+
+200
+00:25:39.830 --> 00:25:45.750
+Kadu Gertners: E aí, ó clicar no botão Next Next.
+
+201
+00:25:45.960 --> 00:25:54.440
+Kadu Gertners: Beleza legal aí na janela. Dados para importar dados para importar.
+
+202
+00:25:54.850 --> 00:25:58.049
+Kadu Gertners: Foi identificado que é um arquivinho Csv.
+
+203
+00:25:58.430 --> 00:26:05.529
+Kadu Gertners: Quer dizer, ele está indicando o Csv. Ele pode pegar uma inspeção regular também.
+
+204
+00:26:05.650 --> 00:26:08.929
+Kadu Gertners: Isso é uma outra coisa. Não vamos entrar nesse mérito.
+
+205
+00:26:09.480 --> 00:26:13.589
+Kadu Gertners: Então está um Csv aqui. Ok?
+
+206
+00:26:13.800 --> 00:26:19.020
+Kadu Gertners: E aí nós vamos clicar no ícone que indica uma pasta.
+
+207
+00:26:19.450 --> 00:26:30.400
+Kadu Gertners: Ó, esse ícone aqui, aí vamos selecionar o caminho do arquivo Vigc6 beleza.
+
+208
+00:26:30.670 --> 00:26:33.210
+Kadu Gertners: Então vamos lá. Vamos pegar aqui.
+
+209
+00:26:35.390 --> 00:26:36.200
+Kadu Gertners: Opa,
+
+210
+00:26:49.630 --> 00:26:53.850
+Kadu Gertners: é, parece. Deu um bug aqui.
+
+211
+00:26:55.370 --> 00:27:02.119
+Kadu Gertners: Enfim, vamos lá, vamos ver se eu consigo sair daí.
+
+212
+00:27:02.120 --> 00:27:04.080
+gabriel.crepaldi: Professor.
+
+213
+00:27:05.230 --> 00:27:11.990
+Kadu Gertners: Tinha que extrair. O quê? O arquivo. Ele já está aqui para mim. Eu já tinha extraído,
+
+214
+00:27:14.580 --> 00:27:24.299
+Kadu Gertners: entendeu? Vou mostrar para você, ó, ó aqui embaixo, ó aqui! Ó, tá vendo? Está descompactado? Já.
+
+215
+00:27:24.920 --> 00:27:25.949
+gabriel.crepaldi: Entendi. Beleza.
+
+216
+00:27:27.910 --> 00:27:31.009
+Kadu Gertners: Aí. Ó, copiei o Caminho do Arquivo
+
+217
+00:27:31.500 --> 00:27:36.860
+Kadu Gertners: Maravilha. E aí, ó, vou mudar o caminho do Arquivo.
+
+218
+00:27:38.180 --> 00:27:48.330
+Kadu Gertners: Então, ó, vou colocar. Ele identifica os arquivos Csv com extensão Csv.
+
+219
+00:27:49.170 --> 00:27:57.610
+Kadu Gertners: Aí seleciona o que nós usaremos hoje. Vgc, Csv, abrir beleza.
+
+220
+00:27:57.730 --> 00:28:05.620
+Kadu Gertners: Isso está aqui no roteiro e clicar no botão abrir legal em
+
+221
+00:28:05.730 --> 00:28:13.880
+Kadu Gertners: opções de fontes de dados, marcar a opção. A primeira linha será os nomes das colunas.
+
+222
+00:28:13.950 --> 00:28:27.000
+Kadu Gertners: Então, onde é que está? Isso causa rola para baixo um pouquinho e já está marcado para nós. Aqui está marcado. A primeira linha será o nome das colunas.
+
+223
+00:28:27.400 --> 00:28:30.109
+Kadu Gertners: Beleza. Vamos deixar isso marcado,
+
+224
+00:28:30.480 --> 00:28:48.779
+Kadu Gertners: beleza. E aqui em separador de colunas, nós não queremos ponto e vírgula, porque os dados não estão com ponto em vírgula, os dados. Na verdade, eles só estão com o separador de coluna. Ele é só a vírgula.
+
+225
+00:28:49.070 --> 00:28:54.919
+Kadu Gertners: Tá legal. Só a vírgula que separa uma coluna da outra.
+
+226
+00:28:55.490 --> 00:29:02.320
+Kadu Gertners: Então botamos vírgula aqui e vamos clicar no botão Finish.
+
+227
+00:29:02.530 --> 00:29:06.870
+Kadu Gertners: Ó Finnish ele fez a carga dos dados
+
+228
+00:29:07.570 --> 00:29:21.110
+Kadu Gertners: e reparem que ele carregou dezasseis.quinhentos e noventa e oito registros. Caldzão. Podemos bater isso aí com o número de registros do Excel. Vamos lá para ver se está batendo bonitinho.
+
+229
+00:29:21.250 --> 00:29:22.100
+Kadu Gertners: Ó,
+
+230
+00:29:23.130 --> 00:29:40.019
+Kadu Gertners: aqui são um6.quinhentos e noventa e oito. Tem um a menos. Mas por quê? Porque isso aqui são dados. Se você lembrar, a primeira coluna aqui é o cabeçalho, que é o nome das colunas.
+
+231
+00:29:40.500 --> 00:29:41.620
+Kadu Gertners: Tá legal.
+
+232
+00:29:41.740 --> 00:30:00.310
+Kadu Gertners: Então por isso que ele tirou, subtraiu um aqui em relação ao Excel de novo no Excel. Ele está mostrando dezasseis.quinhentos e noventa e nove linhas. Tiramos a primeira linha. Ficou dezasseis.quinhentos e noventa e oito.
+
+233
+00:30:00.880 --> 00:30:06.389
+Kadu Gertners: Então está bonitinho. A carga de dados foi feita corretamente.
+
+234
+00:30:07.790 --> 00:30:17.190
+Gianni Silva Santos: Mais próximo o cabeçalho. Ele tira sozinho a gente tem que colocar alguma configuração na hora de importar.
+
+235
+00:30:17.900 --> 00:30:23.309
+Kadu Gertners: É só você marcar aquela opção que eu falei quando estava importando. Essa é essa opção aqui.
+
+236
+00:30:24.090 --> 00:30:25.580
+Kadu Gertners: Essa opção aqui,
+
+237
+00:30:26.920 --> 00:30:35.269
+Kadu Gertners: marcar a opção. A primeira linha será o nome das colunas. Tem que marcar essa opção. Conforme eu mostrei.
+
+238
+00:30:35.270 --> 00:30:37.900
+Gianni Silva Santos: Ah, sim. Aí ele ignora ela, né.
+
+239
+00:30:38.440 --> 00:30:47.150
+Kadu Gertners: Exatamente exatamente isso aí ele faz o automático beleza, exatamente isso que você falou.
+
+240
+00:30:49.320 --> 00:30:57.819
+Kadu Gertners: Bom caduzão. Podemos dar uma olhada nos dados. Olha só. Que maneiro! Select, Astrink From venda jogos.
+
+241
+00:30:58.240 --> 00:30:59.370
+Kadu Gertners: Então, ó,
+
+242
+00:30:59.480 --> 00:31:10.400
+Kadu Gertners: está aqui o nosso comando. Vamos executar. Ó aí, aqui ele começa a mostrar os dados efetivamente para nós. Olha que legal
+
+243
+00:31:11.540 --> 00:31:19.170
+Kadu Gertners: beleza. E aí? Repare, ele está mostrando o total do número de registros dezasseis.quinhentos e noventa e oito.
+
+244
+00:31:19.290 --> 00:31:21.220
+Kadu Gertners: Podemos escrever aquilo?
+
+245
+00:31:21.560 --> 00:31:25.950
+Kadu Gertners: Novecentos Opa dezasseis.quinhentos e noventa e oito.
+
+246
+00:31:27.270 --> 00:31:28.510
+Kadu Gertners: Beleza.
+
+247
+00:31:28.930 --> 00:31:30.670
+Kadu Gertners: Bom aí.
+
+248
+00:31:33.010 --> 00:31:34.580
+Kadu Gertners: Próximo passo.
+
+249
+00:31:35.280 --> 00:31:41.309
+Kadu Gertners: Bom, vamos dar um select count. Mesmo caduzão entre parênteses, asterístico
+
+250
+00:31:41.410 --> 00:31:49.390
+Kadu Gertners: a partir da tabela. Venda jogos para ele também mostrar isso para nós. Assim vamos lá, ó,
+
+251
+00:31:49.600 --> 00:31:58.929
+Kadu Gertners: peguei o comando e executei. Ó, realmente dezasseis mil quinhentos e noventa e oito.
+
+252
+00:32:00.760 --> 00:32:01.990
+Kadu Gertners: Beleza.
+
+253
+00:32:02.280 --> 00:32:07.459
+Kadu Gertners: Vamos seguir aí, Caldozon. Vamos começar
+
+254
+00:32:07.670 --> 00:32:11.699
+Kadu Gertners: ao olhar e ler umas colunas aí.
+
+255
+00:32:11.810 --> 00:32:18.639
+Kadu Gertners: Algumas colunas de característica, como se fossem algumas dimensões para nós analisarmos. Olha só,
+
+256
+00:32:19.020 --> 00:32:24.190
+Kadu Gertners: nós vamos pegar aqui em relação à plataforma do jogo.
+
+257
+00:32:24.540 --> 00:32:27.950
+Kadu Gertners: Nós vamos fazer o seguinte. Vamos fazer um Select
+
+258
+00:32:28.580 --> 00:32:37.160
+Kadu Gertners: distintos para pegar valores diferentes, para ver quais são as plataformas que estão sendo mostradas aí
+
+259
+00:32:37.300 --> 00:32:45.690
+Kadu Gertners: a partir da tabela, vendas, jogos e ordenar pela coluna plataforma, sublinhar do jogo.
+
+260
+00:32:45.880 --> 00:32:50.250
+Kadu Gertners: Então ó pegamos a o comando.
+
+261
+00:32:51.570 --> 00:32:53.460
+Kadu Gertners: Colocamos para cá.
+
+262
+00:32:53.660 --> 00:32:58.399
+Kadu Gertners: E aqui ele está mostrando que tem
+
+263
+00:32:58.720 --> 00:33:02.369
+Kadu Gertners: trinta e um plataformas diferentes de jogos.
+
+264
+00:33:02.710 --> 00:33:07.680
+Kadu Gertners: Ó, todos aí devidamente ordenados.
+
+265
+00:33:09.510 --> 00:33:10.570
+Kadu Gertners: Está vendo,
+
+266
+00:33:11.060 --> 00:33:21.400
+Kadu Gertners: tem Ps3 Ps4 Psp, Psc. Tem alguns que com certeza eu não conheço. Tenho certeza que vocês conhecem mais do que eu.
+
+267
+00:33:22.500 --> 00:33:29.139
+Kadu Gertners: Olha lá. Pcf, X Pc: sons de computador. Ng: Nes
+
+268
+00:33:29.250 --> 00:33:35.360
+Kadu Gertners: Então, podemos fazer várias análises aí. Várias análises.
+
+269
+00:33:35.880 --> 00:33:38.080
+Kadu Gertners: Não é legal?
+
+270
+00:33:38.960 --> 00:33:47.280
+Kadu Gertners: Bom, aí, aqui nós temos o podemos pegar. Botamos aqui trinta e um, beleza.
+
+271
+00:33:47.900 --> 00:34:00.130
+Kadu Gertners: Bom, caduzon essa base de dados aí, essa pesquisa, essa análise que foi feita, quantos anos diferentes tem que foram pegos? Isso.
+
+272
+00:34:00.480 --> 00:34:16.389
+Kadu Gertners: Então, como é que nós descobrimos isso de novo, Select, distinto de valores diferentes em relação ao ano. Jogo a partir da tabela, venda jogos e ordenar pelo ano jogo,
+
+273
+00:34:17.350 --> 00:34:24.219
+Kadu Gertners: copiamos, colocamos para cá, selecionamos e executamos.
+
+274
+00:34:24.429 --> 00:34:29.889
+Kadu Gertners: Ó, aqui tem jogos de quarenta anos.
+
+275
+00:34:30.070 --> 00:34:36.969
+Kadu Gertners: Começou a fazer essa análise no primeiro ano que foi em mil novecentos e oitenta e ó,
+
+276
+00:34:37.120 --> 00:34:41.050
+Kadu Gertners: ele foi lá até dois mil e vinte.
+
+277
+00:34:44.440 --> 00:34:45.590
+Kadu Gertners: Beleza.
+
+278
+00:34:46.420 --> 00:34:54.439
+Kadu Gertners: Então foi dia mil novecentos e oitenta até dois mil e vinte.
+
+279
+00:34:57.670 --> 00:34:59.150
+Kadu Gertners: Beleza,
+
+280
+00:34:59.290 --> 00:35:19.260
+Kadu Gertners: caduzão. Quais são os gêneros de jogos que foram identificados aí. Então, de novo, Select, vamos pegar distint a partir da coluna. Gênero sublinhado, jogo a partir da tabela vendas sublinhados jogos,
+
+281
+00:35:19.440 --> 00:35:23.869
+Kadu Gertners: ordenado pela coluna, gênero sublinhado jogo.
+
+282
+00:35:24.520 --> 00:35:32.120
+Kadu Gertners: Pega o comando, coloca para cá e executa. Ó, então
+
+283
+00:35:32.570 --> 00:35:46.009
+Kadu Gertners: aqui, pelo que foi citado, são considerados doze gêneros de jogos Action Adventory Fighting Minsk, plataforma Puzzle Racing Né
+
+284
+00:35:46.160 --> 00:35:54.480
+Kadu Gertners: Roleplay Plane Show The Simulations Sports United Beleza esses doze. Aí.
+
+285
+00:35:55.150 --> 00:36:04.320
+Kadu Gertners: Legal aí aqui, ó, nós podemos ver também de curiosidade,
+
+286
+00:36:04.670 --> 00:36:17.659
+Kadu Gertners: quais foram as empresas diferentes que criaram os jogos. Então, como é que nós executamos esse comando. Select distint
+
+287
+00:36:17.660 --> 00:36:32.049
+Kadu Gertners: coluna, empresa sublinhada jogo a partir da tabela. Venda sublinhada dos jogos e vai ordenar por quem? Pela própria coluna. Empresa sublinhada do jogo
+
+288
+00:36:32.770 --> 00:36:34.390
+Kadu Gertners: maravilha.
+
+289
+00:36:35.550 --> 00:36:38.650
+Kadu Gertners: Executamos o comando. Ó
+
+290
+00:36:39.010 --> 00:36:53.120
+Kadu Gertners: quinhentos e setenta e nove empresas criaram jogos para todas essas plataformas, lembrando que o número total de jogos são dezasseis.quinhentos e noventa e oito
+
+291
+00:36:53.620 --> 00:36:54.760
+Kadu Gertners: tá legal.
+
+292
+00:36:55.710 --> 00:37:05.020
+Kadu Gertners: É só uma curiosidade. Só para vocês começarem a ter números na cabeça de vocês. Um pouquinho das análises que nós estamos fazendo.
+
+293
+00:37:05.690 --> 00:37:07.930
+Kadu Gertners: Beleza, caduzão.
+
+294
+00:37:08.230 --> 00:37:12.180
+Kadu Gertners: Nós podemos fazer o seguinte.
+
+295
+00:37:12.810 --> 00:37:29.660
+Kadu Gertners: Eu quero pegar o mínimo. Qual o valor mínimo? E aí nós vamos pegar a coluna. Ano sublinhado jogo. Nós vamos colocar um apelido nessa coluna chamada ano sublinhado, mais sublinhado, antigo.
+
+296
+00:37:30.050 --> 00:37:30.970
+Kadu Gertners: E o
+
+297
+00:37:31.270 --> 00:37:45.139
+Kadu Gertners: o Maxi também vai pegar a coluna. Ano sublinhado jogo. Só que esse aqui vai ter o apelido de ano sublinhado, mais sublinhado novo.
+
+298
+00:37:45.570 --> 00:37:56.169
+Kadu Gertners: Então é a data do ano mais antigo e a data do ano mais novo, a data mais antiga e a data mais nova,
+
+299
+00:37:56.370 --> 00:37:59.779
+Kadu Gertners: o ano, o ano mais antigo e o ano mais novo.
+
+300
+00:38:00.430 --> 00:38:10.800
+Kadu Gertners: A partir da tabela, a venda, sublinhar os jogos, colocamos para cá e executamos
+
+301
+00:38:11.230 --> 00:38:17.589
+Kadu Gertners: aí. Vocês vão reparar uma coisa curiosa: Ué Caduzão. Mas ali
+
+302
+00:38:17.690 --> 00:38:36.419
+Kadu Gertners: ele está escrito no ano mais novo. Está escrito Nbarra a o N Ba Ra pode normalmente ser traduzido como not answer. Quer dizer sem resposta. Quer dizer que quem foi perguntado sobre isso. Não respondeu o ano de lançamento de um determinado jogo
+
+303
+00:38:36.900 --> 00:38:48.300
+Kadu Gertners: ou de alguns jogos. Eu não sei quantos registros estão sendo iguais a N Barra a então legal.
+
+304
+00:38:48.470 --> 00:38:56.450
+Kadu Gertners: Aí, o que nós vamos fazer para melhorar e mostrar um número de fato, nós vamos fazer o seguinte:
+
+305
+00:38:56.650 --> 00:39:01.639
+Kadu Gertners: selecionar o mínimo lá da coluna ano, jogo
+
+306
+00:39:01.860 --> 00:39:15.800
+Kadu Gertners: o máximo da coluna ano jogo também com esses apelidos nos quais já falamos a partir da tabela. Venda sublinhada dos jogos onde o ano sublinhado do jogo é diferente
+
+307
+00:39:16.080 --> 00:39:18.969
+Kadu Gertners: desse notebook.
+
+308
+00:39:19.200 --> 00:39:25.209
+Kadu Gertners: Então, quando ele faz isso, vamos ver o que ele mostrará para nós.
+
+309
+00:39:25.450 --> 00:39:26.280
+Kadu Gertners: Ó
+
+310
+00:39:29.400 --> 00:39:41.569
+Kadu Gertners: aí! Mostra os anos, bonitinho. Iniciando o mais antigo. Em mil novecentos e oitenta, o mais recente destes dados, dois mil e vinte:
+
+311
+00:39:42.660 --> 00:39:43.840
+Kadu Gertners: beleza.
+
+312
+00:39:45.270 --> 00:39:50.789
+Kadu Gertners: Então, mil novecentos e oitenta, dois mil e vinte,
+
+313
+00:39:53.740 --> 00:39:58.469
+Kadu Gertners: bom caldozão. Nós podemos usar uma expressão,
+
+314
+00:39:58.690 --> 00:40:08.009
+Kadu Gertners: rapaz expressão. E o que é expressão mesmo cadu, é o seguinte. Repare esse comando. Ele vai dar um select
+
+315
+00:40:08.290 --> 00:40:17.889
+Kadu Gertners: de apenas uma. Tem aqui, na verdade, duas colunas. Então repara, ele vai somar a coluna.
+
+316
+00:40:18.770 --> 00:40:30.139
+Kadu Gertners: Vendas sublinhado. Eu e Ua. Sublinhado jogo, mas vendas, sublinhada à Europa sublinhado jogo, mas
+
+317
+00:40:30.140 --> 00:40:42.970
+Kadu Gertners: vendas sublinhadas. Japão sublinhado jogo, mas vendas sublinhado outros sublinhado lugares sublinhado jogo. Reparem esses valores somados aqui
+
+318
+00:40:43.060 --> 00:40:51.619
+Kadu Gertners: eles vão entrar somados em uma única coluna. Que terá o apelido de Soma.
+
+319
+00:40:51.980 --> 00:41:02.909
+Kadu Gertners: Então esse item inteiro que eu estou selecionando, ele será considerado uma linha de retorno de resposta na saída, que eu já vou mostrar para vocês.
+
+320
+00:41:03.200 --> 00:41:11.449
+Kadu Gertners: E a outra coluna é aquela coluna chamada vendas mundial, jogo que indica qual foi o número da venda mundial
+
+321
+00:41:11.960 --> 00:41:15.520
+Kadu Gertners: a partir da tabela? Venda de sublinhados jogos.
+
+322
+00:41:15.660 --> 00:41:18.919
+Kadu Gertners: Então, ó, pegamos o comando,
+
+323
+00:41:22.070 --> 00:41:27.489
+Kadu Gertners: colocamos para cá e executamos o comando.
+
+324
+00:41:27.780 --> 00:41:30.980
+Kadu Gertners: Ó beleza,
+
+325
+00:41:36.880 --> 00:41:38.410
+Kadu Gertners: beleza.
+
+326
+00:41:39.800 --> 00:41:46.119
+Kadu Gertners: Bom, aí no comando de baixo
+
+327
+00:41:46.730 --> 00:41:53.490
+Kadu Gertners: é o comando igualzinho ao de cima. Só que aqui. Ele usa uma função chamada round
+
+328
+00:41:53.720 --> 00:41:57.550
+Kadu Gertners: round. É arredondar. Então, o que ele fará?
+
+329
+00:41:58.140 --> 00:42:04.370
+Kadu Gertners: Ele vai somar as quatro colunas das vendas dos Estados Unidos,
+
+330
+00:42:04.810 --> 00:42:10.649
+Kadu Gertners: as vendas da Europa, as vendas do Japão e as vendas de outros lugares do mundo.
+
+331
+00:42:11.260 --> 00:42:20.860
+Kadu Gertners: Só que ele vai somar e ele vai fazer o seguinte: ele vai usar a função de arredondamento e vai arredondar para duas casas decimais.
+
+332
+00:42:20.940 --> 00:42:33.719
+Kadu Gertners: Aí ele vai dar o apelido dessa coluna também. Como soma. Se vocês repararem aqui, a primeira coluna soma aqui. Ele botou Soma também.
+
+333
+00:42:33.910 --> 00:42:43.200
+Kadu Gertners: Tá vendo? Aqui nós não botamos apelido. Então ele repete o que está escrito ali. Venda sublinhado mundial sublinhado jogo.
+
+334
+00:42:43.550 --> 00:42:48.059
+Kadu Gertners: Tá vendo? Nós poderíamos ter colocado um apelido aqui também não tem problema nenhum,
+
+335
+00:42:50.810 --> 00:42:57.290
+Kadu Gertners: beleza. Então, quando nós arredondamos, Cadu, vamos dar uma olhada para ver como é que ficará o resultado.
+
+336
+00:42:58.120 --> 00:43:00.960
+Kadu Gertners: Bora ó,
+
+337
+00:43:06.100 --> 00:43:08.450
+Kadu Gertners: e executam. Ó
+
+338
+00:43:12.100 --> 00:43:21.689
+Kadu Gertners: ilha Redonda, está muito parecido com o que estava anteriormente. É exatamente isso aí.
+
+339
+00:43:23.220 --> 00:43:24.290
+Kadu Gertners: Vamos embora.
+
+340
+00:43:26.960 --> 00:43:27.830
+Kadu Gertners: Bom,
+
+341
+00:43:28.080 --> 00:43:41.469
+Kadu Gertners: o que ele vai fazer ele aqui? Ele decidiu pegar a coluna. Opa cadu. Estou vendo um grupo Ibay aí. Olha que legal. Nós vamos pegar a plataforma do jogo.
+
+342
+00:43:41.850 --> 00:43:44.060
+Kadu Gertners: Lembra que a plataforma do jogo
+
+343
+00:43:44.270 --> 00:43:54.960
+Kadu Gertners: tinham quantos diferentes causam aqui? Ó a plataforma Diogo tem trinta e um trinta e um plataformas diferentes. Ó ó,
+
+344
+00:43:55.020 --> 00:44:04.940
+Kadu Gertners: tem várias plataformas. Então, o que ele fará? Ele quer juntar a plataforma do jogo. Ele vai pegar essa coluna como referência.
+
+345
+00:44:05.010 --> 00:44:17.630
+Kadu Gertners: E ele vai grupar todas as plataformas. O jogo de todas as plataformas que tem o mesmo nome de plataforma. Ele vai juntar todo mundo
+
+346
+00:44:18.100 --> 00:44:24.089
+Kadu Gertners: tá legal. E ele vai juntar como né? Aqui, ó, ele vai
+
+347
+00:44:24.360 --> 00:44:28.990
+Kadu Gertners: somar os valores, renda dos Estados Unidos, do jogo
+
+348
+00:44:29.430 --> 00:44:35.979
+Kadu Gertners: renda da Europa do jogo. Reparem que quando ele faz esse primeiro aqui,
+
+349
+00:44:36.790 --> 00:44:53.530
+Kadu Gertners: conforme aqui em cima, ele está somando dentro ainda do próprio registro. Ele está pegando a coluna no mesmo registro dos Estados Unidos da Europa, do Japão e do resto do mundo. Ele está somando isso
+
+350
+00:44:54.500 --> 00:45:03.800
+Kadu Gertners: e aí. Depois ele faz um Sam aqui. Esse san aqui. Ele tem a ver com o group by.
+
+351
+00:45:04.290 --> 00:45:06.880
+Kadu Gertners: Então ele vai pegar, por exemplo,
+
+352
+00:45:07.020 --> 00:45:14.340
+Kadu Gertners: todos os jogos da plataforma dois,seiscentos. E ele vai somar todo mundo
+
+353
+00:45:15.340 --> 00:45:22.610
+Kadu Gertners: vai pegar todos os jogos da plataforma 3do e vai somar o valor de todos.
+
+354
+00:45:22.820 --> 00:45:24.360
+Kadu Gertners: É isso que ele fará.
+
+355
+00:45:24.980 --> 00:45:32.980
+Kadu Gertners: Tá legal? E aí ele também usa a função round para arredondar em duas casas decimais.
+
+356
+00:45:33.260 --> 00:45:48.189
+Kadu Gertners: Além disso, ele vai também pegar a coluna. Vendas mundial, jogo. Ele vai somar também todos os valores. Baseado no grupamento
+
+357
+00:45:48.480 --> 00:46:07.459
+Kadu Gertners: de novo quando ele pegar o grupamento. Agora o grupamento Dc, ele vai pegar todas as plataformas Dc e vai analisar na coluna vendas mundial. Jogo e vai somar todas elas. E vai colocar nessa coluna que ele deu o apelido de vendas mundial do jogo.
+
+358
+00:46:08.100 --> 00:46:14.919
+Kadu Gertners: Isso será feito a partir da tabela, venda e sublinhar dos jogos. E vamos ordenar
+
+359
+00:46:15.120 --> 00:46:23.219
+Kadu Gertners: pela ordem alfabética da plataforma sublinhada. Jogo que é o nome da plataforma em ordem alfabética.
+
+360
+00:46:23.860 --> 00:46:27.090
+Kadu Gertners: Então, ó, vamos pegar o comando.
+
+361
+00:46:28.180 --> 00:46:30.239
+Kadu Gertners: Vamos trazer para cá,
+
+362
+00:46:34.870 --> 00:46:36.980
+Kadu Gertners: e vamos executar o comando.
+
+363
+00:46:37.200 --> 00:46:38.099
+Kadu Gertners: Olha lá.
+
+364
+00:46:38.460 --> 00:46:57.890
+Kadu Gertners: Então a plataforma de jogo dois.seiscentos no somatório que nós somamos de cada coluna em separada. E depois as juntamos. Ele deu noventa e seis,noventa e oito lá na coluna mundial. Jogo ao somar somente uma coluna
+
+365
+00:46:58.000 --> 00:47:04.150
+Kadu Gertners: para a plataforma dois.seiscentos ele contabilizou noventa e sete,oito.
+
+366
+00:47:05.440 --> 00:47:06.400
+Kadu Gertners: Tá bom,
+
+367
+00:47:09.430 --> 00:47:19.630
+Kadu Gertners: então está sendo mostrada aí para vocês entenderem, tá? Vamos dar uma pausa aqui. Pessoal. Tudo bem até aqui.
+
+368
+00:47:20.070 --> 00:47:26.939
+Kadu Gertners: Deixa eu ver aqui se vocês já botaram alguma coisa escrita aí no chat. Opa, vocês já botaram algumas coisas assim? Peraí.
+
+369
+00:47:33.840 --> 00:47:38.240
+Kadu Gertners: É verdade, Lucas,
+
+370
+00:47:38.480 --> 00:47:47.950
+Kadu Gertners: estirare Lucas estirare. É verdade. Se você não botar a extensão do arquivo. Db: Ele não aparece. O tipo do arquivo. É verdade.
+
+371
+00:47:53.550 --> 00:47:56.389
+Kadu Gertners: Pior que está salvo e está aparecendo.
+
+372
+00:47:57.520 --> 00:48:00.699
+Kadu Gertners: Mas está aparecendo. O que? Léo Pérez?
+
+373
+00:48:01.640 --> 00:48:11.900
+Kadu Gertners: O que ele está aparecendo aqui que você botou aqui? Desculpa, você está falando do ponto. Db: é isso aí. Quer dizer, você botou uma outra extensão e ele está aparecendo.
+
+374
+00:48:12.080 --> 00:48:24.819
+Kadu Gertners: Então, se for isso aí, tem que olhar ali, quando vai carregar o arquivo do Database. Se está indicando alguma extensão do arquivo ali,
+
+375
+00:48:26.330 --> 00:48:30.789
+Kadu Gertners: então, por exemplo, deixa eu mostrar uma coisa para vocês.
+
+376
+00:48:30.980 --> 00:48:36.600
+Kadu Gertners: Se você carregar um novo arquivo, adicionar um banco de dados,
+
+377
+00:48:37.460 --> 00:48:43.779
+Kadu Gertners: clicar aqui. Repara aqui. Ele mostra quais são as extensões que ele lê.
+
+378
+00:48:44.380 --> 00:48:54.430
+Kadu Gertners: Tá vendo, ó aqui, ó, então se você clicar aqui, você pode escolher algumas extensões de arquivos,
+
+379
+00:48:54.540 --> 00:49:01.070
+Kadu Gertners: está vendo? Ou se você deixar marcado com todos os arquivos. Ele vai pegar qualquer arquivo. Ele vai listar aí
+
+380
+00:49:02.010 --> 00:49:13.740
+Kadu Gertners: agora. Mas por que de repente, caldozão não é legal botar todos os arquivos. Porque isso vai confundir você com o nome do arquivo do seu banco de dados.
+
+381
+00:49:13.940 --> 00:49:22.420
+Kadu Gertners: Nós estamos criando uma pequena convenção que o nome dos nossos arquivos de banco de dados tem extensão. Db:
+
+382
+00:49:22.530 --> 00:49:37.119
+Kadu Gertners: Então você tem que filtrar aqui o primeiro é asterístico, que significa qualquer nome. Db: Significa que a extensão do arquivo é ponto. Db: E pode ser qualquer nome de arquivo,
+
+383
+00:49:38.150 --> 00:49:39.160
+Kadu Gertners: beleza.
+
+384
+00:49:39.900 --> 00:49:40.770
+Kadu Gertners: Bom dia.
+
+385
+00:49:43.500 --> 00:49:46.160
+Kadu Gertners: Excelente noite, Pablo. Maravilha,
+
+386
+00:49:50.180 --> 00:50:03.099
+Kadu Gertners: não, Lucas, Gabriel, isso aí é um apelido temporário. É um apelido. Só na execução da consulta. É só um alias. É um apelido só na execução da consulta.
+
+387
+00:50:03.320 --> 00:50:04.609
+Kadu Gertners: Tá bom, amigo.
+
+388
+00:50:05.650 --> 00:50:08.829
+Kadu Gertners: Beleza, Lucas. Ok, amigão. Vício. Ok,
+
+389
+00:50:14.120 --> 00:50:17.490
+Kadu Gertners: tá bom, beleza. Lucas, Gabriel, entendeu? Maravilha,
+
+390
+00:50:18.550 --> 00:50:25.210
+Kadu Gertners: esse último comando deu erro no meu. Qual o último comando. O último comando que eu executei.
+
+391
+00:50:25.570 --> 00:50:31.120
+Kadu Gertners: Deixa eu ver. Esse aqui deu erro esse comando aqui.
+
+392
+00:50:32.890 --> 00:50:33.750
+Kadu Gertners: Ó,
+
+393
+00:50:33.870 --> 00:50:46.750
+Kadu Gertners: eu peguei o comando que está aqui na nossa lista de no nosso passo a passo. Você pegou esse comando aqui. E ele deu erro. Aí você copiou para cá e ele deu erro
+
+394
+00:50:47.580 --> 00:50:52.650
+Kadu Gertners: e só deu erro nesse comando. Foi isso, Vitor.
+
+395
+00:50:58.310 --> 00:51:00.830
+Kadu Gertners: Ah, você botou aqui o comando.
+
+396
+00:51:03.450 --> 00:51:06.370
+Kadu Gertners: É por isso que tem que copiar o comando.
+
+397
+00:51:07.160 --> 00:51:10.880
+Kadu Gertners: Entendeu aí? Ó, como o Alan comentou,
+
+398
+00:51:11.320 --> 00:51:23.390
+Kadu Gertners: deve ter faltado. Se você não casar, abre parênteses e fechar todos os abre e fecha parênteses, ele não vai funcionar realmente corretamente.
+
+399
+00:51:23.750 --> 00:51:37.299
+Kadu Gertners: Ó, é isso mesmo. Foi o que o Alan falou. Se você reparar. Aqui tem, ó um abre parênteses
+
+400
+00:51:37.470 --> 00:51:44.099
+Kadu Gertners: e abre parênteses. E aqui você só fechou o parênteses uma vez. Ó, está vendo?
+
+401
+00:51:45.140 --> 00:51:47.050
+Kadu Gertners: Tem que fechar duas vezes.
+
+402
+00:51:48.710 --> 00:52:01.619
+Kadu Gertners: Essas coisas são chatas. Mas assim é bom que vocês começam a se habituar, turma, para vocês começarem a aprender isso aí. Isso é do dia a dia sem querer, nós podemos esquecer. Faz parte.
+
+403
+00:52:01.790 --> 00:52:05.100
+Kadu Gertners: Faz parte. Temos que ficar atentos.
+
+404
+00:52:06.060 --> 00:52:13.469
+Kadu Gertners: E aí é legal falar sobre isso. Que tem algumas interfaces, como vocês também trouxeram isso para nós. Aí
+
+405
+00:52:14.020 --> 00:52:25.480
+Kadu Gertners: existem determinadas interfaces que eles colocam cores e algumas outras interfaces. Se tem alguma coisa de sintaxe errada
+
+406
+00:52:26.140 --> 00:52:35.890
+Kadu Gertners: ou algum, uma palavra reservada errada ou alguma coisa de escrita errada. Ele coloca sublinhado um sublinhado vermelho indicando algum problema.
+
+407
+00:52:36.060 --> 00:52:41.919
+Kadu Gertners: Cara, isso é muito legal nessas interfaces. Aí da parte de banco.
+
+408
+00:52:43.430 --> 00:52:51.630
+Kadu Gertners: Entendi, Vitor. Você tá ditando na mão, cara. Tudo bem, mas é só lembrar disso. Então tá bom, Victor. Tranquilo, amigão. Sem problema.
+
+409
+00:52:51.810 --> 00:52:53.060
+Kadu Gertners: Sem problema.
+
+410
+00:52:54.400 --> 00:52:58.089
+Kadu Gertners: Bom, vamos lá Opa, fala comigo, amigo.
+
+411
+00:52:58.710 --> 00:53:00.869
+Matheus Ramos: Só uma dúvida.
+
+412
+00:53:01.640 --> 00:53:08.600
+Matheus Ramos: Como o senhor criou o banco de dados para porque eu tentei fazer. A
+
+413
+00:53:08.770 --> 00:53:15.219
+Matheus Ramos: criar o banco de dados aqui. Copiei e colei o nome do arquivo Db, mas ele abriu.
+
+414
+00:53:15.470 --> 00:53:18.649
+Matheus Ramos: Até abriu o banco de dados, mas abriu vazio sem nenhum dado.
+
+415
+00:53:19.930 --> 00:53:22.649
+Kadu Gertners: Eu fiz o importe. Você fez o importe do dado.
+
+416
+00:53:25.430 --> 00:53:28.940
+Matheus Ramos: O importe. Foi feito pelo arquivo que a gente baixou ou não.
+
+417
+00:53:29.310 --> 00:53:32.649
+Kadu Gertners: Foi feito pelo arquivo que nós baixamos. Csv. Sim.
+
+418
+00:53:33.440 --> 00:53:34.899
+Matheus Ramos: Ah, fazendo. Por isso.
+
+419
+00:53:35.620 --> 00:53:43.059
+Kadu Gertners: Ele está no roteiro. Aí está. No roteirinho aí que na aula durante a aula eu falei um pouquinho sobre isso, mas está no roteiro aí, amigão.
+
+420
+00:53:43.060 --> 00:53:59.709
+Kadu Gertners: Tá bom. Nós carregamos. Vamos responder você. Como é que carregamos os dados através Mateus, de importar o dado exatamente como você percebeu do arquivo Csv. Que quer dizer? Nós baixamos o arquivo Zip primeiro.
+
+421
+00:53:59.820 --> 00:54:15.550
+Kadu Gertners: Depois descompactaríamos. Descompactamos o arquivo que no meu caso, o meu arquivo já estava descompactado. E aí com o arquivo Csv. Matheus, eu importei esse dado. E o que é importar.
+
+422
+00:54:15.670 --> 00:54:22.779
+Kadu Gertners: Importar significa o seguinte. Eu estou dentro de um lugar. Eu vou importar. Então eu vou trazer alguma coisa de fora
+
+423
+00:54:22.930 --> 00:54:24.690
+Kadu Gertners: para dentro do banco.
+
+424
+00:54:24.970 --> 00:54:34.240
+Kadu Gertners: Então eu vou pegar um arquivo lá no sistema operacional e vou jogar para dentro do banco para dentro do banco. Isso se chama importar.
+
+425
+00:54:34.880 --> 00:54:36.120
+Kadu Gertners: Tá bom. Mateus.
+
+426
+00:54:37.550 --> 00:54:38.390
+Matheus Ramos: Beleza.
+
+427
+00:54:38.710 --> 00:54:39.540
+Matheus Ramos: Obrigado.
+
+428
+00:54:40.080 --> 00:54:41.349
+Kadu Gertners: De nada, irmão.
+
+429
+00:54:45.920 --> 00:54:47.080
+Victor BITTENCOURT: Oi, professor.
+
+430
+00:54:47.340 --> 00:54:48.869
+Kadu Gertners: É uma promoção.
+
+431
+00:54:48.870 --> 00:54:54.600
+Victor BITTENCOURT: Porque quando a gente cria a tabela, a gente limita o número de caracteres no texto.
+
+432
+00:54:58.400 --> 00:55:06.989
+Kadu Gertners: Cara. Isso é uma cara. É considerado uma prática normal para a gente evitar de bom.
+
+433
+00:55:07.320 --> 00:55:12.269
+Kadu Gertners: É uma prática que nós fazemos normalmente que já se faz há muito tempo.
+
+434
+00:55:12.640 --> 00:55:14.210
+Kadu Gertners: Victor, olha só.
+
+435
+00:55:14.440 --> 00:55:15.649
+Kadu Gertners: É mais uma boa.
+
+436
+00:55:15.650 --> 00:55:16.430
+Victor BITTENCOURT: A de.
+
+437
+00:55:17.040 --> 00:55:22.130
+Kadu Gertners: Cara é uma boa prática. E existe assim. Antigamente, Vitor,
+
+438
+00:55:22.920 --> 00:55:29.490
+Kadu Gertners: o tamanho de memória ocupado de memória rã. Ele era muito pequeno.
+
+439
+00:55:30.350 --> 00:55:36.199
+Kadu Gertners: Então assim nós tínhamos que restringir o máximo o que nós poderíamos carregar.
+
+440
+00:55:36.560 --> 00:55:46.459
+Kadu Gertners: E isso é um indicativo de quanto você está usando é para realmente ter uma quantificação do que você precisa. E você não exceder a isso,
+
+441
+00:55:46.820 --> 00:55:52.509
+Kadu Gertners: entendeu? Até porque, Victor, isso é uma coisa, cara, você fez uma pergunta muito interessante. Olha só,
+
+442
+00:55:52.670 --> 00:56:00.820
+Kadu Gertners: cara. Nós não sabemos como o usuário vai se comportar ao preencher. Vitor: o dado.
+
+443
+00:56:01.460 --> 00:56:07.110
+Kadu Gertners: Então, se nós demos uma margem de determinados campos, eles forem muito grandes,
+
+444
+00:56:07.230 --> 00:56:23.799
+Kadu Gertners: o usuário, sem querer, Vitor, ele pode apertar várias teclas. De controle pode apertar Ctrl com A com B, Control, Q Control C. Ele pode apertar várias coisas. E sem querer isso ficar nessa coluna.
+
+445
+00:56:25.080 --> 00:56:32.339
+Kadu Gertners: Então, se nós fizermos algumas restrições nesse sentido, isso é realmente uma boa prática, cara.
+
+446
+00:56:33.230 --> 00:56:35.330
+Kadu Gertners: E é aconselhável fazer.
+
+447
+00:56:35.330 --> 00:56:42.699
+Victor BITTENCOURT: É uma boa prática, até para porque se a gente não limitar, por exemplo, pode vir algum cara querendo derrubar o servidor e lotar aquela característica.
+
+448
+00:56:42.700 --> 00:56:53.409
+Kadu Gertners: Exatamente isso também, cara. E sim, sim, exatamente. Porque não tem limitação, cara. E você imagina isso pra todas as colunas, né? Victor Ferrou,
+
+449
+00:56:54.200 --> 00:57:09.569
+Kadu Gertners: entendeu? Eu vou te dar um exemplo também curioso, cara. Existe o banco de dados amigão chamado Sl Serve da Microsoft. Ele tem uma forma de criar uma variável. Um tipo de dado.
+
+450
+00:57:09.570 --> 00:57:21.149
+Kadu Gertners: Uma variável, não é? Dependendo do contexto, pode ser uma variável, mas ele pode criar uma coluna com o seguinte tipo: olha que coisa louca, Vitor. Assim, ó varchar
+
+451
+00:57:21.430 --> 00:57:27.440
+Kadu Gertners: e entre parênteses, Max, indicando o valor máximo do varchar.
+
+452
+00:57:28.100 --> 00:57:35.549
+Kadu Gertners: Cara, isso pode ser. É benéfico em alguns casos, quando você detecta que você precisa daquilo
+
+453
+00:57:35.660 --> 00:57:40.460
+Kadu Gertners: de uma coluna que é muito grande e você não sabe a limitação daquilo.
+
+454
+00:57:40.610 --> 00:57:49.650
+Kadu Gertners: Mas se você fizer como nós estamos comentando. Mas se nós fizermos isso com todas as colunas, cara. Isso vai provavelmente dar dor de cabeça.
+
+455
+00:57:50.320 --> 00:57:51.490
+Kadu Gertners: Tá bom, amigo?
+
+456
+00:57:55.090 --> 00:57:56.499
+Kadu Gertners: Bom, vamos lá.
+
+457
+00:57:58.150 --> 00:58:02.389
+Kadu Gertners: Isso aí, galera, pergunta muito bom. Vamos lá, ó.
+
+458
+00:58:02.690 --> 00:58:04.160
+Jone Peterson: Camilo, rapidinho.
+
+459
+00:58:04.160 --> 00:58:06.579
+Kadu Gertners: Oi, fala comigo. Lógico. Fala comigo.
+
+460
+00:58:06.580 --> 00:58:09.159
+Jone Peterson: Eu fiz uma pergunta ali no chat, mas acho que tu.
+
+461
+00:58:09.160 --> 00:58:10.709
+Kadu Gertners: Fez perdão? Não vi.
+
+462
+00:58:10.710 --> 00:58:13.760
+Jone Peterson: Batido. Tu consegue me explicar?
+
+463
+00:58:14.470 --> 00:58:15.300
+Jone Peterson: E aí?
+
+464
+00:58:15.300 --> 00:58:17.480
+Kadu Gertners: Isso, rapazi batido do grupo.
+
+465
+00:58:17.480 --> 00:58:19.040
+Jone Peterson: Vai ali, rapidinho.
+
+466
+00:58:19.180 --> 00:58:22.019
+Kadu Gertners: Como funciona o grupo? Ebay? Não entendi muito bem.
+
+467
+00:58:22.420 --> 00:58:30.420
+Kadu Gertners: Tá bom, Johnny, nós falamos um pouquinho sobre isso na aula passada.
+
+468
+00:58:30.600 --> 00:58:36.429
+Kadu Gertners: Mas qual é a ideia disso aí, Johnny? O Group by? Ele vai fazer o seguinte, Johnny,
+
+469
+00:58:36.820 --> 00:58:41.269
+Kadu Gertners: vamos tentar pegar um exemplo, Johnny, para tentar ficar mais fácil.
+
+470
+00:58:41.470 --> 00:58:42.640
+Kadu Gertners: Olha só.
+
+471
+00:58:44.080 --> 00:58:47.740
+Kadu Gertners: Se você reparar aqui, deixa eu executar um comando
+
+472
+00:58:48.260 --> 00:58:50.630
+Kadu Gertners: para você entender. Melhor. Espera aí.
+
+473
+00:58:51.100 --> 00:58:52.660
+Kadu Gertners: Vamos botar aqui.
+
+474
+00:58:53.440 --> 00:58:55.020
+Kadu Gertners: Sobe aqui.
+
+475
+00:58:56.310 --> 00:59:01.480
+Kadu Gertners: E aí vamos pegar esse comando aqui.
+
+476
+00:59:03.240 --> 00:59:05.110
+Kadu Gertners: Ah, sim, da plataforma.
+
+477
+00:59:05.750 --> 00:59:09.830
+Kadu Gertners: Ó, eu vou pegar esse comando aqui, Johnny,
+
+478
+00:59:10.130 --> 00:59:23.130
+Kadu Gertners: vou botá lo aqui, e o comando vai fazer o seguinte. Nós vamos mostrar todas as colunas, tá, Johnny? Todas as colunas, todas as colunas. Não, eu vou pegar a plataforma do jogo
+
+479
+00:59:27.590 --> 00:59:41.260
+Kadu Gertners: e vou pegar as colunas que são as colunas que indicam tamanho através do integer.
+
+480
+00:59:43.640 --> 00:59:45.030
+Kadu Gertners: Beleza
+
+481
+00:59:45.860 --> 00:59:54.830
+Kadu Gertners: Cadê vamos tirar aqui o integer. Isso aqui foi a definição. Não, eu não estou definindo. Eu só estou colocando o nome da coluna.
+
+482
+00:59:55.040 --> 01:00:05.790
+Kadu Gertners: Que é que serão as colunas que serão projetadas aqui quando nós executarmos o Select. Então repara, Johnny. Ó,
+
+483
+01:00:06.070 --> 01:00:12.240
+Kadu Gertners: o que acontece aqui, ó, eu posso, né?
+
+484
+01:00:12.350 --> 01:00:22.540
+Kadu Gertners: Ordenar pelo pela plataforma do jogo. Então repara, se eu fizer isso aqui, ó, ele vai fazer assim.
+
+485
+01:00:23.220 --> 01:00:34.310
+Kadu Gertners: Olha só. Está vendo o jogo dois.seiscentos aqui, a plataforma dois.seiscentos. Então eu ordenei por essa coluna. Plataforma do jogo,
+
+486
+01:00:34.490 --> 01:00:36.940
+Kadu Gertners: ó plataforma do jogo.
+
+487
+01:00:37.420 --> 01:00:41.860
+Kadu Gertners: E aí ele ordenou tá legal.
+
+488
+01:00:42.030 --> 01:00:48.400
+Kadu Gertners: Então o que eu vou fazer agora, Johnny? Eu quero saber. Eu vou fazer o seguinte.
+
+489
+01:00:48.690 --> 01:00:59.330
+Kadu Gertners: Só que quando nós executamos esse comando aqui, Johnny. Nós fazemos uma leitura. Linha a linha do banco de dados,
+
+490
+01:01:00.130 --> 01:01:01.840
+Kadu Gertners: linha a linha.
+
+491
+01:01:02.040 --> 01:01:04.030
+Kadu Gertners: Quando eu passo
+
+492
+01:01:04.360 --> 01:01:21.940
+Kadu Gertners: a colocar na sintaxe de cima no comando de cima. Quando eu começo a grupar por plataforma do jogo, significa que eu vou fazer o seguinte: todos os caras que têm dois.seiscentos. Eu vou analisá los todos de uma só vez.
+
+493
+01:01:22.330 --> 01:01:25.460
+Kadu Gertners: Ó, eu vou pegar todos eles.
+
+494
+01:01:27.550 --> 01:01:30.300
+Kadu Gertners: Caramba, tem coisa pra caramba, né?
+
+495
+01:01:30.650 --> 01:01:31.330
+Kadu Gertners: Acabou.
+
+496
+01:01:31.330 --> 01:01:32.969
+Jone Peterson: Entendi. Ele fica tipo.
+
+497
+01:01:32.970 --> 01:01:49.679
+Kadu Gertners: Entendeu? Ele vai pegar todo mundo. Por quê Carlos Zon? Porque você grupou pela plataforma do jogo e a plataforma do jogo do dois.seiscentos aqui, ó, só dele tem cento e trinta e três registros.
+
+498
+01:01:49.790 --> 01:01:53.550
+Kadu Gertners: Então vamos voltar ao ponto aí para você, Johnny, vamos lá.
+
+499
+01:01:54.070 --> 01:02:02.630
+Kadu Gertners: Quando nós executamos o comando. Até semana passada, quando nós executávamos Johnny, nós viemos. Registro linha a linha
+
+500
+01:02:03.510 --> 01:02:15.580
+Kadu Gertners: quando nós estamos aprendendo um pouquinho juntos essa semana. O Group by. Você vai passar a ver não, só um registro.
+
+501
+01:02:15.860 --> 01:02:21.270
+Kadu Gertners: Você vai passar a ver vários registros juntos de uma só vez.
+
+502
+01:02:22.090 --> 01:02:24.279
+Kadu Gertners: Então, um grupo Bi faz isso.
+
+503
+01:02:25.810 --> 01:02:27.879
+Jone Peterson: Consegui entender. Consegui entender.
+
+504
+01:02:28.000 --> 01:02:28.780
+Jone Peterson: Tudo bem, meu.
+
+505
+01:02:28.780 --> 01:02:29.440
+Kadu Gertners: Bom dia.
+
+506
+01:02:29.580 --> 01:02:31.819
+Kadu Gertners: De nada, irmão. Sem problema.
+
+507
+01:02:33.960 --> 01:02:34.880
+Kadu Gertners: Bom,
+
+508
+01:02:34.990 --> 01:02:46.030
+Kadu Gertners: o próximo comando, caldzão. Ó, vamos fazer um Select. Repara, o primeiro foi plataforma do jogo. Agora eu vou fazer o seguinte, ó Select ano do jogo,
+
+509
+01:02:46.520 --> 01:02:47.750
+Kadu Gertners: beleza.
+
+510
+01:02:48.360 --> 01:02:52.099
+Kadu Gertners: Eu vou somar de novo a coluna dos Estados Unidos
+
+511
+01:02:52.240 --> 01:02:56.710
+Kadu Gertners: da Europa, do Japão e de outros lugares no mundo.
+
+512
+01:02:56.850 --> 01:03:07.200
+Kadu Gertners: Vou somar primeiro dentro do próprio registro e depois eu vou somar com todos os registros daquele grupamento daquele grupo de registros.
+
+513
+01:03:08.230 --> 01:03:18.309
+Kadu Gertners: Aí eu vou pegar. E aí, nesse ponto, eu vou somar. Vou colocar aqui que o nome da saída da coluna é soma.
+
+514
+01:03:18.880 --> 01:03:25.390
+Kadu Gertners: E aí, na outra coluna, nós vamos somar somente a coluna. Vendas mundial, jogo
+
+515
+01:03:25.640 --> 01:03:33.449
+Kadu Gertners: beleza. E aí sim, eu estou usando o round, que é arredondar para duas casas decimais.
+
+516
+01:03:33.640 --> 01:03:52.000
+Kadu Gertners: E nós vamos botar o apelido. Nessa terceira coluna de vendas mundial. Jogo vendas sublinhado mundial sublinhado, jogo a partir da tabela. Venda sublinhado jogos e grupar pela coluna. Agora ano jogo
+
+517
+01:03:52.110 --> 01:04:04.820
+Kadu Gertners: lembrando como nós falamos um pouquinho quando nós colocamos uma coluna de grupamento caldozão aqui, como se fosse indicando a dimensão. Essa dimensão tem que ser indicada aqui também
+
+518
+01:04:06.030 --> 01:04:07.160
+Kadu Gertners: beleza.
+
+519
+01:04:07.480 --> 01:04:10.880
+Kadu Gertners: E aqui o número é como se fosse uma métrica,
+
+520
+01:04:11.310 --> 01:04:22.270
+Kadu Gertners: entendeu? Você pode fazer essa analogia. Essa métrica aqui é como se fosse essa parte de cálculo aqui. Como se fossem as métricas. As métricas que estamos analisando.
+
+521
+01:04:22.500 --> 01:04:26.910
+Kadu Gertners: Tá legal legal e ordenar pelo ano do jogo.
+
+522
+01:04:27.220 --> 01:04:30.410
+Kadu Gertners: Pegamos o comando e aí?
+
+523
+01:04:31.290 --> 01:04:32.969
+Kadu Gertners: E vamos trazer para cá.
+
+524
+01:04:34.700 --> 01:04:39.870
+Kadu Gertners: Ó, selecionamos, executamos.
+
+525
+01:04:40.820 --> 01:04:57.359
+Kadu Gertners: E aí, beleza legal. Ó, deu resultado por ano. Quer dizer, ele parou de ver a perspectiva da plataforma.
+
+526
+01:04:57.630 --> 01:05:11.930
+Kadu Gertners: Ele passou a ver. Naquele ano, em mil novecentos e oitenta, vendeu onze,trinta e oito milhões de dólares em relação a jogos em mil novecentos e oitenta.
+
+527
+01:05:13.320 --> 01:05:23.760
+Kadu Gertners: Beleza. E essa outra coluna aqui, como eu mostrei para vocês no início da aula, foi a coluna que ele já trazia o valor total da venda dos jogos,
+
+528
+01:05:24.190 --> 01:05:29.569
+Kadu Gertners: até para fazermos uma conferência da segunda coluna para a terceira coluna.
+
+529
+01:05:30.110 --> 01:05:39.590
+Kadu Gertners: E aí, legal, podemos fazer o mesmo. Cardson, qual é o gênero de jogo, não é,
+
+530
+01:05:40.180 --> 01:05:46.660
+Kadu Gertners: galera. Se vocês quiserem saber e tiverem uma curiosidade maior,
+
+531
+01:05:46.940 --> 01:06:06.069
+Kadu Gertners: nós podemos fazer um pouco diferente. Então, por exemplo, eu aqui ordenei pela plataforma do jogo em ordem alfabética. Mas de repente, aqui isso não é tão interessante. A plataforma do jogo, o que de repente pode ser mais interessante. Olha só. Que legal.
+
+532
+01:06:06.900 --> 01:06:13.170
+Kadu Gertners: Vamos pegar o comando aqui, ó,
+
+533
+01:06:14.640 --> 01:06:23.300
+Kadu Gertners: e aí eu vou ordenar agora por essa coluna aqui, pela coluna do arredondamento.
+
+534
+01:06:23.800 --> 01:06:37.670
+Kadu Gertners: Então eu vou ordenar. E de forma inclusive descendente. Para quê? Para nós sabermos qual foi a plataforma de jogo que mais vendeu o jogo, Caraca. Quem foi? Bora
+
+535
+01:06:37.710 --> 01:06:44.229
+Kadu Gertners: executa. Ó, o Ps2 foi o que mais vendeu os jogos
+
+536
+01:06:44.420 --> 01:06:48.589
+Kadu Gertners: nessa história. Aí desses dados que nós temos. Olha que legal.
+
+537
+01:06:50.000 --> 01:06:53.050
+Kadu Gertners: Aí. O segundo foi o Xbox trezentos e sessenta.
+
+538
+01:06:53.780 --> 01:07:01.980
+Kadu Gertners: Depois o Ps3 o I Ds, e assim diminuindo cada vez mais
+
+539
+01:07:02.170 --> 01:07:18.450
+Kadu Gertners: beleza. Olha como é que ajuda. Como é que nos ajuda a entendermos os dados melhor. Olha como é que o grupamento entende o que foi vendido em determinadas plataformas,
+
+540
+01:07:19.510 --> 01:07:20.580
+Kadu Gertners: entendeu?
+
+541
+01:07:20.820 --> 01:07:26.729
+Kadu Gertners: Dá para nós analisarmos e vermos o que nós podemos fazer em relação a isso.
+
+542
+01:07:27.180 --> 01:07:30.660
+Kadu Gertners: Vamos lá. Mais do que ó ó
+
+543
+01:07:31.490 --> 01:07:34.720
+Kadu Gertners: vamos aqui, caldozão. No ano do jogo. Aqui, ó
+
+544
+01:07:35.240 --> 01:07:41.510
+Kadu Gertners: do ano do jogo! Vamos botar a mesma coisa. Vamos mudar a ordenação. Vamos embora.
+
+545
+01:07:41.780 --> 01:07:48.810
+Kadu Gertners: Vamos pegar aqui e ordenar por ano, caldozão. Qual foi o ano, né?
+
+546
+01:07:49.250 --> 01:07:51.109
+Kadu Gertners: Que mais vendeu
+
+547
+01:07:51.740 --> 01:08:04.900
+Kadu Gertners: jogos? Qual foi o ano que mais bombou aí de vender jogos? Vamos descobrir. Foi o ano de dois mil e oito que foram vendidos seiscentos e setenta e oito milhões de dólares.
+
+548
+01:08:07.130 --> 01:08:18.150
+Kadu Gertners: Na cola dele está dois mil e dezanove. Perdão, dois mil e nove seiscentos e sessenta e sete milhões. E assim, nos outros anos, foi diminuindo
+
+549
+01:08:19.160 --> 01:08:20.439
+Kadu Gertners: beleza.
+
+550
+01:08:20.800 --> 01:08:21.649
+Kadu Gertners: Bom dia.
+
+551
+01:08:22.260 --> 01:08:26.930
+Kadu Gertners: Vamos pegar agora, caduzão. Qual é o gênero do jogo né?
+
+552
+01:08:27.050 --> 01:08:33.730
+Kadu Gertners: É que inicialmente aqui. Nesse caso, eu já coloquei o gênero do jogo.
+
+553
+01:08:34.050 --> 01:08:49.370
+Kadu Gertners: O gênero do jogo, aquele cálculo que nós fazemos nas quatro colunas da tabela. E aquele cálculo de uma coluna da tabela. Beleza. Só que agora, caldozão, você ordenou mesmo
+
+554
+01:08:50.170 --> 01:08:55.360
+Kadu Gertners: de forma descendente para ver qual é o gênero de jogo que mais vendeu?
+
+555
+01:08:55.569 --> 01:09:01.160
+Kadu Gertners: Ó, então qual é o gênero de jogo Caldozon? Que mais vende?
+
+556
+01:09:01.529 --> 01:09:07.779
+Kadu Gertners: Aí você pega, executa esse comando. O gênero que mais vende é a ação.
+
+557
+01:09:07.930 --> 01:09:12.020
+Kadu Gertners: Olha lá, vendeu
+
+558
+01:09:13.970 --> 01:09:25.860
+Kadu Gertners: se. São um.setecentos e cinquenta milhões. É um bilhão, setecentos e cinquenta milhões de dólares que foram vendidos de jogos de ação
+
+559
+01:09:26.260 --> 01:09:28.270
+Kadu Gertners: esporte. Depois, ó
+
+560
+01:09:28.830 --> 01:09:36.269
+Kadu Gertners: um bilhão e trezentos e trinta milhões, jogo de tiro um bilhão e trinta e seis milhões e assim por diante.
+
+561
+01:09:39.810 --> 01:09:42.140
+Kadu Gertners: Beleza, ó,
+
+562
+01:09:42.279 --> 01:09:51.950
+Kadu Gertners: aqui a empresa. Qual foi a empresa que mais vendeu o jogo. Então vamos pegar agora a colonia empresa, jogo,
+
+563
+01:09:52.050 --> 01:09:55.769
+Kadu Gertners: vamos ordenar pela empresa. Jogo
+
+564
+01:09:55.920 --> 01:10:07.339
+Kadu Gertners: vamos calcular as quatro colunas. Vamos calcular uma coluna tomando as quatro colunas. E depois somando uma coluna só.
+
+565
+01:10:08.180 --> 01:10:16.109
+Kadu Gertners: E vamos ordenar isso novamente pelas vendas que tiveram em ordem descendente. Vamos embora.
+
+566
+01:10:16.290 --> 01:10:23.120
+Kadu Gertners: Pega aqui o comando coloca para cá e seleciona o comando e executa.
+
+567
+01:10:23.410 --> 01:10:30.540
+Kadu Gertners: Ó olha lá, qual foi a empresa que mais vendeu o jogo foi a Nintendo.
+
+568
+01:10:31.030 --> 01:10:33.530
+Kadu Gertners: Olha lá, coisa pra caramba! Ó
+
+569
+01:10:33.640 --> 01:10:37.419
+Kadu Gertners: um bilhão setecentos e oitenta e seis milhões de dólares.
+
+570
+01:10:38.220 --> 01:10:44.120
+Kadu Gertners: Foi o que mais entrou de dinheiro em relação à empresa.
+
+571
+01:10:45.750 --> 01:10:49.089
+Kadu Gertners: A empresa que mais entrou. Dinheiro para ela.
+
+572
+01:10:50.640 --> 01:10:51.800
+Kadu Gertners: Tá legal.
+
+573
+01:10:52.810 --> 01:11:02.500
+Kadu Gertners: Bom, galera tranquilo. Agora, vocês poderiam perguntar assim, caduzão. Não esquecemos. É, eu também não esqueci.
+
+574
+01:11:02.850 --> 01:11:12.170
+Kadu Gertners: Cadu. Explica uma coisa aqui. Como é que nós podemos saber que aí não tem um jogo que está repetido.
+
+575
+01:11:12.920 --> 01:11:14.700
+Kadu Gertners: Como é que nós fazemos isso?
+
+576
+01:11:15.110 --> 01:11:24.750
+Kadu Gertners: De repente? Um jogo que ele foi mostrado mais de uma vez. Então, se você quiser saber o nome do jogo,
+
+577
+01:11:24.930 --> 01:11:25.820
+Kadu Gertners: não é?
+
+578
+01:11:26.080 --> 01:11:27.260
+Kadu Gertners: Então vamos lá.
+
+579
+01:11:28.000 --> 01:11:34.339
+Kadu Gertners: Vamos lá em cima. Vamos lá em cima, lá na criação da tabela.
+
+580
+01:11:34.680 --> 01:11:36.639
+Kadu Gertners: Ó o nome do jogo
+
+581
+01:11:40.040 --> 01:11:44.860
+Kadu Gertners: cadu. Eu quero saber o nome do jogo, tá?
+
+582
+01:11:45.150 --> 01:11:51.489
+Kadu Gertners: O nome do jogo e eu quero saber se tem repetição do nome do jogo.
+
+583
+01:11:51.840 --> 01:11:54.150
+Kadu Gertners: Então como é que nós fazemos isso?
+
+584
+01:11:54.270 --> 01:11:57.689
+Kadu Gertners: Damos um Select no nome do jogo,
+
+585
+01:11:58.220 --> 01:12:12.569
+Kadu Gertners: fazemos um count para contabilizar o número de jogos a partir da tabela. Venda de sublinhadas jogos. Ok, vamos Grupar pela coluna, nome do jogo
+
+586
+01:12:15.930 --> 01:12:21.490
+Kadu Gertners: e vamos ordenar pela pelo nome do jogo.
+
+587
+01:12:22.490 --> 01:12:29.790
+Kadu Gertners: Bora ó, seleciona e executa.
+
+588
+01:12:29.970 --> 01:12:40.390
+Kadu Gertners: Ó o noventa e oito. Cushing apareceu uma vez aqui ele está parecendo um. Repara,
+
+589
+01:12:41.620 --> 01:12:56.589
+Kadu Gertners: repara uma coisa que eu vou falar para vocês. Lembra qual era o total do número de registros? Olha como é que a gente começa a entender a análise dessas coisas. Ó, eu vou pegar aqui e vou puxar aqui o count que nós demos
+
+590
+01:12:56.770 --> 01:12:59.330
+Kadu Gertners: para o total de registros dessa tabela.
+
+591
+01:12:59.430 --> 01:13:05.420
+Kadu Gertners: Olha só, ó essa tabela.
+
+592
+01:13:05.740 --> 01:13:09.059
+Kadu Gertners: Ela tem dezasseis.quinhentos e noventa e oito registros.
+
+593
+01:13:10.140 --> 01:13:18.109
+Kadu Gertners: Beleza aí. Repara, quando nós demos um group by.
+
+594
+01:13:18.370 --> 01:13:22.159
+Kadu Gertners: É pelo nome do jogo,
+
+595
+01:13:22.330 --> 01:13:33.119
+Kadu Gertners: cara. Tem alguma coisa estranha. Por quê? Tem dezasseis.quinhentos e noventa e oito registros na tabela. E ele falou que de nomes diferentes
+
+596
+01:13:33.450 --> 01:13:39.709
+Kadu Gertners: só existem onze mil quatrocentos e noventa e três
+
+597
+01:13:40.860 --> 01:13:52.490
+Kadu Gertners: caraca caduzão. Mas não entendi ainda o que significa isso? Essa diferença aqui significa de nomes de jogos que estão duplicados
+
+598
+01:13:54.050 --> 01:13:56.279
+Kadu Gertners: aqui nesses dados.
+
+599
+01:13:56.950 --> 01:14:01.899
+Kadu Gertners: Caraca cadu. E aqui, inicialmente, ele tá mostrando um, né? É
+
+600
+01:14:02.000 --> 01:14:07.000
+Kadu Gertners: ó se a gente botar ó, apareceu aqui um número diferente. Ó,
+
+601
+01:14:07.390 --> 01:14:10.870
+Kadu Gertners: olha aqui esse jogo aqui. Ó
+
+602
+01:14:11.030 --> 01:14:18.589
+Kadu Gertners: adventory time export the dungeon because I don t know. Ele apareceu escrito quatro vezes.
+
+603
+01:14:20.140 --> 01:14:21.210
+Kadu Gertners: Está vendo?
+
+604
+01:14:22.200 --> 01:14:26.669
+Kadu Gertners: Vocês estão vendo que aparecem. O um ele aparece muitas vezes.
+
+605
+01:14:27.810 --> 01:14:35.269
+Kadu Gertners: Não aparece muitas vezes. Então, o que a gente pode fazer, cara, olha só. Eu não quero que seja mostrado um.
+
+606
+01:14:35.840 --> 01:14:46.289
+Kadu Gertners: Então, como ele é um grupamento. Eu vou fazer um filtro para o grupamento. Olha que maneiro aí eu vou usar quem, o Heavy.
+
+607
+01:14:46.640 --> 01:14:51.640
+Kadu Gertners: Ó, vamos pegar o Heavy agora, Heavy,
+
+608
+01:14:52.520 --> 01:15:02.949
+Kadu Gertners: eu vou fazer o seguinte. Eu só quero pegar aqueles nomes de jogos quando a contabilização deles for maior do que um
+
+609
+01:15:04.440 --> 01:15:06.969
+Kadu Gertners: Opa. Está errado aqui a posição, né?
+
+610
+01:15:08.040 --> 01:15:18.870
+Kadu Gertners: É depois do grupo ebay, beleza. E aí sim, vamos também fazer um Count botar aqui no ordenação Country
+
+611
+01:15:18.980 --> 01:15:23.499
+Kadu Gertners: de forma descendente. Olha o que ele vai mostrar. Vamos ver.
+
+612
+01:15:23.800 --> 01:15:32.210
+Kadu Gertners: Ó, olha lá, o Need for Speed Most Wanted foi escrito na base de dados doze vezes.
+
+613
+01:15:33.200 --> 01:15:35.830
+Kadu Gertners: Porra, será que tem alguma coisa estranha com isso?
+
+614
+01:15:35.940 --> 01:15:44.899
+Kadu Gertners: Nós podemos fazer essa análise selectaster o nome da tabela.
+
+615
+01:15:45.140 --> 01:15:51.110
+Kadu Gertners: Ó vendas jogos u air.
+
+616
+01:15:51.910 --> 01:16:01.160
+Kadu Gertners: Quando o nome sublinhado jogo ele for igual a isso. Aqui, ó mid for Speed.
+
+617
+01:16:02.920 --> 01:16:13.749
+Kadu Gertners: Vamos ver o que está acontecendo aí. Se os registros são iguais, diferentes, qual é a coluna que se tem coluna diferente. Vamos tentar entender o que está acontecendo aí.
+
+618
+01:16:14.110 --> 01:16:15.210
+Kadu Gertners: Vamos ver.
+
+619
+01:16:15.790 --> 01:16:22.299
+Kadu Gertners: Selecionei o comando e executei. Ó ah, ó,
+
+620
+01:16:22.640 --> 01:16:26.800
+Kadu Gertners: aqui já tem uma coisa curiosa
+
+621
+01:16:26.920 --> 01:16:32.870
+Kadu Gertners: que aí nós começamos a entender o porquê de ter a duplicação.
+
+622
+01:16:33.010 --> 01:16:44.539
+Kadu Gertners: Esse jogo que tem o nome Mid Fall Speed. Ele foi criado para a plataforma. Ps2 Ps3 para o Xbox trezentos e sessenta.
+
+623
+01:16:44.910 --> 01:16:50.019
+Kadu Gertners: É aí aparece o Xbox trezentos e sessenta. Ó, duas vezes
+
+624
+01:16:50.570 --> 01:17:06.720
+Kadu Gertners: aí eu não sei de cabeça. O ano do jogo aqui. Não sei se é verdade isso. Eu estou lendo o. Dado que está aqui, ele parece que ele teria sido criado o jogo em dois mil e doze e em dois mil e cinco e dois mil e doze.
+
+625
+01:17:06.830 --> 01:17:08.739
+Kadu Gertners: Isso é verdade? Não sei.
+
+626
+01:17:08.850 --> 01:17:25.810
+Kadu Gertners: Não sei. De cabeça. Nós teríamos que pesquisar para ver se o Need for Speed para plataformas X trezentos e sessenta, o Xbox trezentos e sessenta. Se ele teve ano de lançamento para dois mil e cinco e dois mil e doze, olha que interessante
+
+627
+01:17:27.080 --> 01:17:39.670
+Kadu Gertners: beleza como a plataforma nos ajudou aqui, nós podemos fazer o seguinte. Vamos melhorar isso. Eu quero caduzão ordenar
+
+628
+01:17:39.910 --> 01:17:52.270
+Kadu Gertners: pela coluna Order By, a plataforma do jogo. E se tiver empate, eu quero também ordenar pelo ano, jogo
+
+629
+01:17:52.820 --> 01:17:56.380
+Kadu Gertners: tudo de forma crescente, ascendente.
+
+630
+01:17:56.580 --> 01:17:58.980
+Kadu Gertners: Ó, olha lá,
+
+631
+01:17:59.290 --> 01:18:07.109
+Kadu Gertners: o Pc também. Ó, curiosamente, o Pc também apareceu em dois mil e cinco e dois mil e doze também.
+
+632
+01:18:08.660 --> 01:18:09.950
+Kadu Gertners: Ó, tá vendo?
+
+633
+01:18:10.500 --> 01:18:17.500
+Kadu Gertners: A maioria dos lançamentos foram em dois mil e cinco e tiveram lançamentos em dois mil e doze, pelo que eu estou vendo aqui,
+
+634
+01:18:18.080 --> 01:18:22.469
+Kadu Gertners: Ah, e teve o lançamento no Ui U em dois mil e treze.
+
+635
+01:18:23.130 --> 01:18:28.999
+Kadu Gertners: Tá vendo assim, galera? Nós começamos a entender os dados,
+
+636
+01:18:32.930 --> 01:18:37.260
+Kadu Gertners: entenderam como é que é a análise aí?
+
+637
+01:18:37.410 --> 01:18:44.279
+Kadu Gertners: Ó, para nós sabermos se tem alguma duplicação mais crítica.
+
+638
+01:18:44.540 --> 01:18:49.769
+Kadu Gertners: Nós podemos pegar algumas colunas aí.
+
+639
+01:18:50.860 --> 01:19:02.589
+Kadu Gertners: Deixa eu ver exatamente, beleza. Nós vamos fazer assim. Ó Select, vamos repetir esse comando.
+
+640
+01:19:08.340 --> 01:19:13.939
+Kadu Gertners: E aí eu quero saber para o nome do jogo.
+
+641
+01:19:14.670 --> 01:19:26.439
+Kadu Gertners: A plataforma do jogo, o ano do jogo, o gênero do jogo e a empresa do jogo.
+
+642
+01:19:26.650 --> 01:19:30.819
+Kadu Gertners: Se ao analisarmos essas cinco colunas,
+
+643
+01:19:31.080 --> 01:19:34.849
+Kadu Gertners: se ele tem duplicidade nesse nível.
+
+644
+01:19:35.230 --> 01:19:40.959
+Kadu Gertners: Então, ó traduzão, aqui você falou
+
+645
+01:19:44.230 --> 01:19:53.320
+Kadu Gertners: que esses itens aqui são como se fossem a dimensão. Não é isso. Isso aqui é a métrica que é o count.
+
+646
+01:19:53.360 --> 01:20:07.429
+Kadu Gertners: Então repara, eu não estou usando dimensão aqui. Eu tenho que repetir as dimensões aonde no Group by. Então eu coloco aqui que o Group by também serão por essas colunas.
+
+647
+01:20:08.000 --> 01:20:16.470
+Kadu Gertners: E aí eu falo Opa, esse count para grupar todas essas colunas. Nós queremos ver se tem algum que é maior
+
+648
+01:20:16.690 --> 01:20:19.610
+Kadu Gertners: que a contagem dele. É maior do que um.
+
+649
+01:20:19.800 --> 01:20:26.170
+Kadu Gertners: Vamos embora. Vamos ver se tem algum. Nesse caso, aqui, ó,
+
+650
+01:20:26.370 --> 01:20:30.819
+Kadu Gertners: e executa. É, nesse caso, não tem ninguém.
+
+651
+01:20:31.100 --> 01:20:35.230
+Kadu Gertners: Então, nesse nível, não existe duplicidade.
+
+652
+01:20:38.920 --> 01:20:42.230
+Kadu Gertners: Beleza nesse nível. Não existe.
+
+653
+01:20:42.230 --> 01:20:43.400
+Victor BITTENCOURT: Professor.
+
+654
+01:20:44.190 --> 01:20:45.010
+Kadu Gertners: Fala.
+
+655
+01:20:45.240 --> 01:20:47.549
+Victor BITTENCOURT: Faltou o ou ali gênero era o jogo.
+
+656
+01:20:50.390 --> 01:21:00.180
+Kadu Gertners: Gênero jogo não foi encontrada. Coluna malcriado, hein? É verdade.
+
+657
+01:21:00.440 --> 01:21:03.289
+Kadu Gertners: A U. O. Obrigado, cara.
+
+658
+01:21:03.580 --> 01:21:11.639
+Kadu Gertners: Desculpa, galera. Desculpa aí. Esqueci de botar aqui o amigo que lembrou. Perdão, eu não estava nem vindo essa mensagem aqui. Perdão,
+
+659
+01:21:12.170 --> 01:21:16.609
+Kadu Gertners: desculpa. Estava até empolgado de explicar para vocês. Mas vamos lá.
+
+660
+01:21:16.940 --> 01:21:22.809
+Kadu Gertners: É é verdade. Ó mentira, existem duplicações.
+
+661
+01:21:23.370 --> 01:21:31.940
+Kadu Gertners: Ó esse item aqui. Ele foi mostrado duas vezes. Maiden Nfl treze
+
+662
+01:21:33.100 --> 01:21:49.299
+Kadu Gertners: do Ps3 no ano de dois mil e doze, no gênero Exports, na empresa Electronics Arts. E ao juntar essas cinco colunas, ele. Mostra isso aqui por duas vezes.
+
+663
+01:21:50.200 --> 01:22:01.889
+Kadu Gertners: Ah, caduzão. E aí nós teríamos que analisar cada registro. Nós teríamos que executar o select asterístico pronto, o nome da tabela
+
+664
+01:22:03.200 --> 01:22:04.410
+Kadu Gertners: o R.
+
+665
+01:22:04.540 --> 01:22:13.850
+Kadu Gertners: Quando o nome do jogo por igual a esse nome do jogo.
+
+666
+01:22:14.960 --> 01:22:24.430
+Kadu Gertners: Aí pergunta: acabaram as condições? Não, nós vamos colocar end and end plataforma
+
+667
+01:22:24.590 --> 01:22:32.850
+Kadu Gertners: do jogo for igual a ps3 andy, ano
+
+668
+01:22:33.000 --> 01:22:49.360
+Kadu Gertners: jogo for igual a dois mil e doze end gênero jogo for igual a esportes. E finalmente, Andy, empresa Jogo
+
+669
+01:22:50.210 --> 01:22:58.630
+Kadu Gertners: for igual a Electronic Arts beleza.
+
+670
+01:22:58.810 --> 01:23:01.189
+Kadu Gertners: Vamos ver o que ele mostrará para nós.
+
+671
+01:23:02.480 --> 01:23:06.039
+Kadu Gertners: Ó, escrevi a rádio de novo.
+
+672
+01:23:06.360 --> 01:23:10.570
+Kadu Gertners: Plataforma. Jogo, beleza.
+
+673
+01:23:10.940 --> 01:23:12.570
+Kadu Gertners: Vamos tentar de novo.
+
+674
+01:23:13.490 --> 01:23:15.390
+Kadu Gertners: Executa a.
+
+675
+01:23:16.850 --> 01:23:20.810
+Kadu Gertners: Ó engraçado,
+
+676
+01:23:20.920 --> 01:23:36.580
+Kadu Gertners: eles devem ter. Sei lá. Pelo meu entendimento colocado isso aqui sem querer a mais. E não viram que já tinha isso na base e já tinham sido, inclusive passados valores. Não sei se foi isso. Eu estou olhando pelos dados aqui,
+
+677
+01:23:36.910 --> 01:23:54.620
+Kadu Gertners: mas você repara que realmente essas colunas aqui, elas são iguais. O ranqueamento evidentemente está diferente. A posição no ranking e os valores aqui, o que seriam as métricas aqui elas têm valores,
+
+678
+01:23:54.630 --> 01:24:02.059
+Kadu Gertners: que podem ser usadas as colunas que podem ser usadas como métricas. Elas têm valores diferentes,
+
+679
+01:24:02.630 --> 01:24:04.690
+Kadu Gertners: caldzão. Como é que descobre isso?
+
+680
+01:24:04.800 --> 01:24:14.069
+Kadu Gertners: Para quem criou a fonte do dado nós teríamos que contatar essa pessoa para verificar o que aconteceu de errado,
+
+681
+01:24:16.900 --> 01:24:21.390
+Kadu Gertners: turma, dúvidas, perguntas.
+
+682
+01:24:21.670 --> 01:24:29.029
+Kadu Gertners: E aí, como é que está isso aí? Tudo tranquilo. Deixa eu ver se vocês botaram aqui alguma coisa aqui, vamos lá.
+
+683
+01:24:29.810 --> 01:24:31.440
+Kadu Gertners: Ok, Lucas.
+
+684
+01:24:32.930 --> 01:24:34.619
+Kadu Gertners: Ok, Gabriel.
+
+685
+01:24:38.080 --> 01:24:40.419
+Kadu Gertners: Maravilha. Boa. Ok,
+
+686
+01:24:42.240 --> 01:24:59.850
+Kadu Gertners: Lucas. Ok, Ps dois ganha disparado fora os piratas. É verdade, Pedro Fernandes, cara, acho que foi uma das épocas que mais venderam jogos de videogame. Foi no Ps2 mesmo cara. Eu tenho essa impressão. Também é. Fora os piratas, Pedro, fora os piratas. É verdade,
+
+687
+01:25:03.180 --> 01:25:19.530
+Kadu Gertners: Lucas. Essa finalização de fecha parênteses, vírgula dois. É para ele bater com as funções. Luca, Gabriel, deixa eu falar para vocês. Isso aí. Isso é importante, amigão. Olha só.
+
+688
+01:25:20.420 --> 01:25:21.449
+Kadu Gertners: Vamos lá.
+
+689
+01:25:22.570 --> 01:25:28.179
+Kadu Gertners: Esse cara aqui, vamos olhar numa outra perspectiva. Olha só
+
+690
+01:25:28.410 --> 01:25:36.540
+Kadu Gertners: esse cara aqui. Ó, vamos tentar isolar esse cara aqui, ó, esse comando aqui. Tá esse comando
+
+691
+01:25:36.990 --> 01:25:42.690
+Kadu Gertners: aí nós vamos analisar só essa linha de comando aqui. Repara,
+
+692
+01:25:43.100 --> 01:26:03.070
+Kadu Gertners: ele faz a soma. É uma expressão que ele está somando. Ele está pegando várias colunas e está juntando isso aqui vai dar um valor. Por exemplo, dez mil, só que ele pega o valor dez mil. E quando tem abre parênteses, ele soma o valor
+
+693
+01:26:03.240 --> 01:26:05.949
+Kadu Gertners: dentro do parênteses aqui
+
+694
+01:26:06.200 --> 01:26:15.509
+Kadu Gertners: e aí tem uma vírgula para indicar dois que do valor dez mil aqui, ele vai ter que considerar duas casas decimais.
+
+695
+01:26:16.680 --> 01:26:22.240
+Kadu Gertners: Beleza. Então, na verdade, esses dois aqui, ele tem vínculo com o Sam.
+
+696
+01:26:23.860 --> 01:26:28.100
+Kadu Gertners: Não, não, não. Mentira.
+
+697
+01:26:28.980 --> 01:26:31.800
+Kadu Gertners: É mentira. Desculpe,
+
+698
+01:26:32.010 --> 01:26:49.840
+Kadu Gertners: aqui tem. Um fecha parênteses. Está vendo, ó fecha parênteses e abre parênteses. Então é sempre assim. Ó, eu tenho um abre parênteses. Você tem que procurar na mesma linha o fecha parênteses. Então esse item aqui. Agora. Sim,
+
+699
+01:26:49.920 --> 01:26:53.229
+Kadu Gertners: esse item aqui. Ele soma os valores.
+
+700
+01:26:53.510 --> 01:26:59.460
+Kadu Gertners: Quando ele der o dez mil, não é junto da função.
+
+701
+01:26:59.650 --> 01:27:19.440
+Kadu Gertners: Ele vai ter dois parâmetros. Está vendo que ele tem aqui o round, ele abre um parênteses, que é o dez mil e vírgula o dois que aí fecha o parênteses. Aí sim, esse dez mil. Ele vai arredondar vírgula para duas casas decimais.
+
+702
+01:27:20.580 --> 01:27:32.379
+Kadu Gertners: Então esse negócio do fecha parênteses, vírgula dois. Você sempre tem que analisar as funções que estão sendo usadas aqui. Na verdade,
+
+703
+01:27:32.910 --> 01:27:39.780
+Kadu Gertners: ele está usando a função da soma aqui como selecionado.
+
+704
+01:27:40.640 --> 01:27:49.130
+Kadu Gertners: Tá legal. Isso aqui é uma função. Só que no Sql nós podemos botar a função dentro de função.
+
+705
+01:27:50.460 --> 01:28:00.809
+Kadu Gertners: Então isso aqui o Sam é uma função, só que, por fora dessa função, foi colocada outra função, que é o round,
+
+706
+01:28:01.010 --> 01:28:05.800
+Kadu Gertners: o round com o primeiro parâmetro da função.
+
+707
+01:28:06.040 --> 01:28:12.949
+Kadu Gertners: Que é isso aqui? Vírgula, e o segundo parâmetro, que é o valor dois aqui de duas casas decimagens.
+
+708
+01:28:14.940 --> 01:28:19.000
+Kadu Gertners: E aí, Lucas. Gabriel. Beleza, amigão.
+
+709
+01:28:21.140 --> 01:28:27.629
+Kadu Gertners: O Alexandre falou que é o arredondamento para arredondar em duas casas decimais. O Altemir falou: Obrigado a isso. Aí,
+
+710
+01:28:27.910 --> 01:28:29.800
+Kadu Gertners: ok, Lucas, Gabriel,
+
+711
+01:28:33.030 --> 01:28:39.909
+Kadu Gertners: Diegão. Vamos ver se funciona com Soma. Vamos ordenar por soma. Vamos fazer um teste.
+
+712
+01:28:40.210 --> 01:28:41.580
+Kadu Gertners: Vamos lá.
+
+713
+01:28:42.350 --> 01:28:52.470
+Kadu Gertners: E aí vamos pegar um de cima aqui da empresa. Jogo, por exemplo.
+
+714
+01:28:55.950 --> 01:29:01.070
+Kadu Gertners: Vamos botar aqui embaixo e vamos ordenar pelo Soma
+
+715
+01:29:05.310 --> 01:29:07.080
+Kadu Gertners: no Sky Light.
+
+716
+01:29:08.330 --> 01:29:10.050
+Kadu Gertners: Ó, ele funciona.
+
+717
+01:29:10.750 --> 01:29:21.820
+Kadu Gertners: Então, no Sk. Light, nós podemos usar o apelido usado nesse Comando Select para fazer o grupamento.
+
+718
+01:29:23.740 --> 01:29:30.240
+Kadu Gertners: Beleza, beleza. Diego pode usar. Tá bom amigo
+
+719
+01:29:30.730 --> 01:29:33.740
+Kadu Gertners: poderia sim. Gabriel de Andrade, respondeu:
+
+720
+01:29:35.390 --> 01:29:38.699
+Kadu Gertners: É order by Diego cogiu tranquilo
+
+721
+01:29:43.420 --> 01:29:53.389
+Kadu Gertners: logo mostrando esse aí é Top Gabriel. Acho que você gostou do jogo, né, cara? Que a gente leu em algum momento ali Most Wanted, né?
+
+722
+01:29:53.820 --> 01:29:58.559
+Kadu Gertners: É vitor, obrigado. Que eu errei o nome da coluna. Vocês me ajudaram a corrigir.
+
+723
+01:29:59.160 --> 01:30:07.020
+Kadu Gertners: Tem sim, Professor. O gênero ali está escrito errado. Obrigado, Lucas, pela ajuda também. Galera, beleza pura.
+
+724
+01:30:07.240 --> 01:30:13.320
+Kadu Gertners: Então galera de novo. O que eu falei no início da aula amanhã
+
+725
+01:30:13.980 --> 01:30:28.329
+Kadu Gertners: será disponibilizado o At. De vocês. O At é a prova que vocês têm que fazer. Que vocês terão que entregar. Que eu vou corrigir. Que vai contar ponto para vocês passarem de trimestre.
+
+726
+01:30:28.580 --> 01:30:36.019
+Kadu Gertners: Então reparem, o At em grupo não é individual, individual, não é em grupo.
+
+727
+01:30:36.260 --> 01:30:52.980
+Kadu Gertners: É individual. Então repara, galera, vocês têm que ler o ater com atenção com carinho. Eu acho que era bom vocês darem uma olhada. Quem quiser começar fazendo dar uma olhada e aí sem falta,
+
+728
+01:30:53.220 --> 01:31:02.469
+Kadu Gertners: ao começar a aula da terça feira. O primeiro tema da aula será o At. Porque eu estou preocupado com o prazo que vocês têm que entregar.
+
+729
+01:31:03.050 --> 01:31:10.400
+Kadu Gertners: Sim, ele inicialmente ao Tevir. Ele é o estilo do Tp. É bem parecido com o Tp.
+
+730
+01:31:10.580 --> 01:31:21.670
+Kadu Gertners: Beleza cara. Se será em Live code ou não? Cara, eu não tenho certeza se será em Live Coding ou se será usado o próprio Deep Note.
+
+731
+01:31:21.750 --> 01:31:31.180
+Kadu Gertners: Vamos ver. Amanhã vocês vão ver. Eu também. E aí nós vamos comentar com mais carinho aí na próxima terça feira. Galera de novo.
+
+732
+01:31:31.370 --> 01:31:47.250
+Kadu Gertners: Nós paramos a aula aqui. Voltamos na próxima terça. Mas se vocês tiverem dúvidas, pode mandar mensagem no infinite online. Assim que der, eu respondo por e mail ou pelo Whatsapp.
+
+733
+01:31:47.840 --> 01:32:00.079
+Kadu Gertners: Tá bom, pessoal, pessoal, mais uma vez, obrigado pelo carinho. Pela ajuda aí de vocês. Mais uma vez na aula de hoje. Tá bom. Um beijo no coração de vocês, galera. Estudem.
+
+734
+01:32:00.100 --> 01:32:13.870
+Kadu Gertners: Semana que vem acaba a matéria. Vocês vão ter que cair para dentro dos ate s, né? E de fazer alguma coisa da parte de projeto também. Tá bom, galera. Obrigado, excelente noite, campo final.
+
+735
+01:32:21.190 --> 01:32:22.260
+gabriel.diniz: Valeu, Professor.
+
+736
+01:32:22.780 --> 01:32:24.380
+Kadu Gertners: Valeu, galera! Valeu.
+

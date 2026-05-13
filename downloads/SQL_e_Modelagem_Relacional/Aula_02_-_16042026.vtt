@@ -1,0 +1,2946 @@
+WEBVTT
+
+1
+00:00:32.820 --> 00:00:33.900
+Kadu Gertners: Turma.
+
+2
+00:00:34.210 --> 00:00:41.370
+Kadu Gertners: Excelente noite para vocês, beleza, estão ouvindo aí? Pessoal, confirma, por favor. Se vocês estão me ouvindo.
+
+3
+00:00:42.780 --> 00:00:47.890
+Kadu Gertners: Excelente noite, Gabriel. Excelente noite, Renato Ramon. Gabriel Diniz
+
+4
+00:00:48.270 --> 00:00:53.099
+Kadu Gertners: Ramon. Excelente noite. Vamos. Que vamos, galera Gabriel Borgato excelente, noite,
+
+5
+00:00:53.950 --> 00:00:57.140
+Kadu Gertners: Alan. Excelente noite, Eduardo. Excelente, noite,
+
+6
+00:01:01.050 --> 00:01:02.850
+Kadu Gertners: pessoal. Tudo na paz.
+
+7
+00:01:03.110 --> 00:01:03.930
+Kadu Gertners: Bom,
+
+8
+00:01:04.300 --> 00:01:15.640
+Kadu Gertners: hoje. Então, pessoal, o que nós veremos aí? Nós estamos na primeira etapa, que é essa semana da nossa disciplina de
+
+9
+00:01:16.080 --> 00:01:19.960
+Kadu Gertners: Skl. Modelagem relacional.
+
+10
+00:01:20.250 --> 00:01:27.539
+Kadu Gertners: Então nós vamos ver hoje vamos continuar o que nós estávamos vendo aí na aula de terça,
+
+11
+00:01:27.730 --> 00:01:35.469
+Kadu Gertners: e provavelmente eu vou tentar avançar, e eu vou já tentar entrar na parte da etapa dois,
+
+12
+00:01:35.510 --> 00:01:49.320
+Kadu Gertners: porque, lembrando no início da aula que na terça feira que vem. E quinta feira que vem aqui no Rio de Janeiro. Os dois dias que serão feriados.
+
+13
+00:01:49.700 --> 00:01:50.730
+Kadu Gertners: Tá legal.
+
+14
+00:01:51.050 --> 00:01:56.069
+Kadu Gertners: Então vamos nessa. Excelente noite, Gabriel Crepaldi. Maravilha.
+
+15
+00:01:56.690 --> 00:01:58.979
+Kadu Gertners: Vamos para cima, galera. Vamos lá.
+
+16
+00:02:00.140 --> 00:02:03.710
+Kadu Gertners: Bom, o que acontece?
+
+17
+00:02:05.750 --> 00:02:16.260
+Kadu Gertners: Bom, deixa eu compartilhar logo a janela e vamos lá legal na etapa um
+
+18
+00:02:16.600 --> 00:02:31.020
+Kadu Gertners: que nós já começamos a ver. A parte de teoria legal. Eu parei exatamente nessa página aqui, beleza,
+
+19
+00:02:31.100 --> 00:02:41.099
+Kadu Gertners: os benefícios do bom design. Nós estávamos falando. Que pessoal é importante nós fazermos um design do banco,
+
+20
+00:02:41.100 --> 00:02:58.249
+Kadu Gertners: uma arquitetura do banco, uma ideia do funcionamento de algumas coisas. É como se fossem. Vamos colocar assim pré requisitos para que o modelo do banco de dados fique devidamente criado para nos atender
+
+21
+00:02:58.390 --> 00:03:18.159
+Kadu Gertners: e para que tenhamos que fazer o menor número de manutenções possíveis. E quando tivermos que fazê las, fazemos com tranquilidade, com simplicidade. Alguma coisa nesse sentido. Eu já comecei a falar vários pontos para vocês. Que nós estamos trazendo aqui,
+
+22
+00:03:18.160 --> 00:03:34.610
+Kadu Gertners: colocando na aula aqui para vocês ouvirem um pouquinho e lógico, sempre que for necessário vocês perguntarem ou me ajudarem também em comentar alguma coisa importante que tenha a ver com isso. Para dar uma ênfase aí até para os amigos aí também entenderem. Tá legal.
+
+23
+00:03:34.890 --> 00:03:42.709
+Kadu Gertners: Bom, a partir dessa página pessoal. Parei. Então, no slide quinze, legal aí aqui,
+
+24
+00:03:43.110 --> 00:04:00.369
+Kadu Gertners: entender as vantagens de projetar um banco de dados usando boas práticas. Pessoal, isso aqui é exatamente o que vocês terão que fazer. É muito parecido.
+
+25
+00:04:00.370 --> 00:04:03.740
+Ramon Telles da Silva: Desculpa interromper. É que o senhor não está compartilhando a tela.
+
+26
+00:04:04.000 --> 00:04:05.049
+Kadu Gertners: Isso é verdade.
+
+27
+00:04:05.050 --> 00:04:05.670
+Ramon Telles da Silva: Tchau.
+
+28
+00:04:06.430 --> 00:04:08.480
+Kadu Gertners: É verdade. Ramon, desculpe me.
+
+29
+00:04:08.480 --> 00:04:09.440
+Ramon Telles da Silva: Verdade.
+
+30
+00:04:12.970 --> 00:04:20.260
+Kadu Gertners: Vamos lá, pessoal. Desculpem aí. Eu realmente não estava compartilhando a tela. Foi mal.
+
+31
+00:04:24.790 --> 00:04:40.760
+Kadu Gertners: Estou compartilhando agora, tá? O Éder Gabriel Diniz. Eu estou devendo para você. E para mais alguns que me passaram mensagem, eu ainda não tive tempo com calma para dar uma olhada nas mensagens de vocês.
+
+32
+00:04:40.760 --> 00:04:59.090
+Kadu Gertners: Mas Gabriel Diniz, vocês não ficarão na mão assim que der, eu verificarei isso. E eu vou responder para cada um de vocês, amigo. Tá bom. Eu peço desculpa aí para vocês pela demora. É porque realmente eu estou um pouco acelerado, um pouco enrolado com outros. Desafazeres meus.
+
+33
+00:04:59.260 --> 00:05:04.120
+Kadu Gertners: Tá bom, Gabriel, mas você não será esquecido e nem os demais. Tá, meu amigo.
+
+34
+00:05:04.120 --> 00:05:05.800
+gabriel.diniz: Tá bom. Valeu, pessoa tranquilo.
+
+35
+00:05:05.800 --> 00:05:06.850
+Kadu Gertners: Oi, fala.
+
+36
+00:05:07.530 --> 00:05:09.020
+gabriel.diniz: Não valeu mesmo. É isso aí. Valeu.
+
+37
+00:05:09.020 --> 00:05:12.850
+Kadu Gertners: E aí, beleza, Gabriel. Sem problema, amigo.
+
+38
+00:05:13.510 --> 00:05:15.380
+Kadu Gertners: É legal.
+
+39
+00:05:15.640 --> 00:05:18.640
+Kadu Gertners: Eduardo ia falar isso também. Beleza,
+
+40
+00:05:19.170 --> 00:05:26.649
+Kadu Gertners: Pedro, pingueiro. Sem problema. O importante é você estar aqui conosco. Excelente noite, Lucas. Bom, então
+
+41
+00:05:27.500 --> 00:05:36.359
+Kadu Gertners: o que nós vamos fazer então eu vou pegar e vou seguir o slide. Eu estava falando aqui que vocês me interromperam.
+
+42
+00:05:36.670 --> 00:05:51.470
+Kadu Gertners: Excelente noite, Johnny. Que vocês realmente me interromperam de forma correta. Que eu não estava compartilhando a janela. A telinha aqui e agora, à toa. Eu parei nesse slide número quinze.
+
+43
+00:05:51.600 --> 00:06:01.839
+Kadu Gertners: Falando de algumas partes aí, dos benefícios do bom design da parte do banco de dados, da criação da modelagem do banco.
+
+44
+00:06:02.850 --> 00:06:22.040
+Kadu Gertners: Bom, e aí aqui esse slide turma é uma das formas possíveis de vocês criarem o trabalho que vocês vão ter que fazer no Tp1 e provavelmente vocês terão que fazer uma tarefa dessa também. Quando vocês fizerem o At.
+
+45
+00:06:22.510 --> 00:06:29.720
+Kadu Gertners: E aí vocês verão algumas ferramentas que ajudam vocês a criar isso.
+
+46
+00:06:29.890 --> 00:06:37.889
+Kadu Gertners: Nem sempre as ferramentas têm essa nomenclatura ou a forma que está descrita aqui.
+
+47
+00:06:37.970 --> 00:06:45.259
+Kadu Gertners: Mas com calma, nós vamos comentar. E vocês vão aprender algumas outras formas.
+
+48
+00:06:45.260 --> 00:06:59.099
+Kadu Gertners: É lógico que, se for o caso, vocês podem trazer para nós aqui. Ou podem procurar pela Internet por Ia, para vocês verem como é que é, porque podem ter algumas notações um pouquinho diferentes.
+
+49
+00:06:59.300 --> 00:07:16.079
+Kadu Gertners: Mas de qualquer forma, a ideia caduzon. Qual é a ideia macro disso aí? Qual é a ideia geral disso, né? Cadu, a ideia geral é nós vincularmos essa entidade
+
+50
+00:07:16.280 --> 00:07:21.249
+Kadu Gertners: com essa entidade. E com essa entidade.
+
+51
+00:07:21.940 --> 00:07:36.119
+Kadu Gertners: Tá bom, é o primeiro passo. Segunda colocação, caldozão. Quem é o Peter Shane? Peter Shane é o considerado o criador dessa metodologia que está aqui no slide
+
+52
+00:07:36.270 --> 00:07:46.060
+Kadu Gertners: e pessoal, se vocês falarem assim, caldozão. Mas qual desses designs aí? Desses métodos aí que você prefere para explicar
+
+53
+00:07:46.060 --> 00:07:57.070
+Kadu Gertners: para você entender quando você estiver usando na sua empresa ou em qualquer outro lugar. Qual que você prefere? Eu prefiro essa metodologia que eu estou mostrando para vocês aqui,
+
+54
+00:07:57.760 --> 00:08:07.590
+Kadu Gertners: beleza. E aí vamos tentar entender como é que funciona. Lógico que isso aqui é como se nós já tivéssemos passado
+
+55
+00:08:08.030 --> 00:08:18.470
+Kadu Gertners: por uma etapa que vocês vão aprender juntos. Veremos algumas coisas sobre isso. Uma etapa que pode ser chamada como levantamento de requisitos
+
+56
+00:08:18.770 --> 00:08:35.560
+Kadu Gertners: pré requisitos, que é exatamente o quê? Que são as ideias iniciais? São as perguntas que são feitas para as pessoas envolvidas. Com a base de dados com o negócio em si,
+
+57
+00:08:35.559 --> 00:08:50.959
+Kadu Gertners: que nós vamos fazer diversas perguntas para essas pessoas da área de negócio, para eles nos responderem. Então, nesse exemplo do slide aqui, é como se nós tivéssemos num curso.
+
+58
+00:08:51.510 --> 00:09:03.679
+Kadu Gertners: E aí nós fizemos várias pessoas para o pessoal que conhece o curso, que são os donos do curso ou pessoas que trabalham lá, que conhecem muito o funcionamento de cursos
+
+59
+00:09:03.820 --> 00:09:17.769
+Kadu Gertners: que tem os instrutores e que tem os alunos. Então, depois de analisarmos informações nas quais eles nos teriam passado, foi criado esse modelo aqui.
+
+60
+00:09:18.400 --> 00:09:24.150
+Kadu Gertners: Tá legal? E aí, caldozão. Qual é a ideia desse modelo? Então olha só.
+
+61
+00:09:24.290 --> 00:09:25.530
+Kadu Gertners: Começa assim.
+
+62
+00:09:25.730 --> 00:09:29.890
+Kadu Gertners: Primeiro lugar caduzão. O que são os retângulos? São as entidades.
+
+63
+00:09:30.660 --> 00:09:39.819
+Kadu Gertners: Tá legal. Então existe uma entidade chamada Instrutor, uma entidade chamada curso e uma entidade chamada aluno
+
+64
+00:09:41.120 --> 00:09:49.060
+Kadu Gertners: foi detectado na análise feita com o levantamento dos requisitos que o instrutor.
+
+65
+00:09:49.650 --> 00:09:51.869
+Kadu Gertners: Ele está vinculado a curso.
+
+66
+00:09:52.740 --> 00:09:57.450
+Kadu Gertners: Então, para facilitar a leitura disso,
+
+67
+00:09:58.130 --> 00:10:14.550
+Kadu Gertners: nós podemos usar um verbo para ajudar a representar a forma que uma entidade está relacionada com a outra entidade. Então, caduzão, como é que nós podemos ler isso? Então olha que legal. O instrutor.
+
+68
+00:10:14.760 --> 00:10:20.520
+Kadu Gertners: Ele pode lecionar em nenhum curso
+
+69
+00:10:20.530 --> 00:10:32.929
+Kadu Gertners: porque de repente, o instrutor acabou de entrar nesse local aí de ensino. Nesse curso. Ele acabou de ser contratado, por exemplo. Então, ele ainda não entrou em nenhum curso,
+
+70
+00:10:32.930 --> 00:10:43.389
+Kadu Gertners: ou ele pode até mesmo já é uma pessoa que já está na casa trabalhando nesse curso há um tempo, e ele já leciona para vários cursos diferentes.
+
+71
+00:10:43.550 --> 00:10:51.890
+Kadu Gertners: Então o número ou a letra do lado esquerdo indica o valor mínimo
+
+72
+00:10:52.290 --> 00:10:58.119
+Kadu Gertners: e a letra ou o número do lado direito indica o valor máximo.
+
+73
+00:10:58.350 --> 00:11:08.020
+Kadu Gertners: Então, a leitura que nós fazemos. É assim. O instrutor leciona no mínimo para zero e, no máximo, para n cursos.
+
+74
+00:11:08.410 --> 00:11:13.869
+Kadu Gertners: O curso é lecionado. Ele está vinculado,
+
+75
+00:11:14.120 --> 00:11:20.079
+Kadu Gertners: no mínimo, a nenhum instrutor. Foi um curso que acabou de ser criado.
+
+76
+00:11:20.320 --> 00:11:21.150
+Kadu Gertners: Não é?
+
+77
+00:11:21.400 --> 00:11:34.150
+Kadu Gertners: O curso está vinculado a N. Instrutores porque n instrutores ministram lá, lecionam várias matérias naquele curso.
+
+78
+00:11:34.910 --> 00:11:42.819
+Kadu Gertners: Então isso aqui é a forma de analisarmos a ligação de uma entidade com a outra
+
+79
+00:11:43.060 --> 00:11:51.340
+Kadu Gertners: importante, como é que é o nome caldozão do que está entre parênteses? Aí significa cardinalidade.
+
+80
+00:11:51.950 --> 00:12:03.179
+Kadu Gertners: A cardinalidade entre as tabelas, ou melhor dizendo, como é o relacionamento entre essas duas entidades?
+
+81
+00:12:03.720 --> 00:12:04.810
+Kadu Gertners: Tá legal.
+
+82
+00:12:05.020 --> 00:12:05.870
+Kadu Gertners: Bom,
+
+83
+00:12:06.640 --> 00:12:18.239
+Kadu Gertners: aqui o curso possui, no mínimo, zero alunos, e, no máximo, n alunos. O aluno pode estar vinculado a
+
+84
+00:12:18.320 --> 00:12:33.730
+Kadu Gertners: nenhum curso, ou ele pode estar vinculado a n cursos diferentes. Ele quis fazer vários cursos aí nesse local que ele passou a gostar daí. E ele quer fazer vários cursos, que ele acha interessante para a vida dele
+
+85
+00:12:34.060 --> 00:12:37.740
+Kadu Gertners: ou dela, né? Logicamente, tá bom,
+
+86
+00:12:37.910 --> 00:12:51.169
+Kadu Gertners: então assim. Mas caduzão, beleza. Então as entidades estão aqui. E o que são, caduzão? Essas bolinhas aqui do lado de cada um deles. Legal. Então isso aqui o instrutor é a entidade
+
+87
+00:12:51.370 --> 00:12:56.090
+Kadu Gertners: que posteriormente tem grande chance de virar uma tabela.
+
+88
+00:12:56.740 --> 00:13:00.480
+Kadu Gertners: E esses itens aqui são os atributos,
+
+89
+00:13:00.880 --> 00:13:06.119
+Kadu Gertners: ou também potencialmente poderão ser as colunas.
+
+90
+00:13:06.340 --> 00:13:16.779
+Kadu Gertners: Então, repara. O instrutor tem o código do instrutor e por que está a Cadu em azul aqui? Porque isso quer dizer uma chave primária.
+
+91
+00:13:17.000 --> 00:13:23.670
+Kadu Gertners: Então, na entidade Instrutor, temos uma chave primária chamada Cod instrutor.
+
+92
+00:13:24.000 --> 00:13:32.790
+Kadu Gertners: Temos um outro atributo comum chamado nome instrutor e um outro atributo comum chamado Fone Instrutor
+
+93
+00:13:33.970 --> 00:13:45.759
+Kadu Gertners: na entidade curso. Nós temos o atributo codcurso, que ele também é uma chave primária. É uma chave primária para a entidade curso.
+
+94
+00:13:46.940 --> 00:13:53.499
+Kadu Gertners: Tem os outros atributos que é o Ds. Curso. Descrição do curso e o preço do curso.
+
+95
+00:13:54.200 --> 00:14:04.119
+Kadu Gertners: E finalmente, o aluno está vinculado ao atributo chave codaluno,
+
+96
+00:14:04.220 --> 00:14:05.819
+Kadu Gertners: que é o código do aluno
+
+97
+00:14:06.240 --> 00:14:11.539
+Kadu Gertners: tem um atributo comum, nome, aluno e outro atributo comum. Fone do aluno.
+
+98
+00:14:12.300 --> 00:14:17.649
+Kadu Gertners: Tá legal. Então, pessoal, o que eu vou tentar mostrar para vocês
+
+99
+00:14:18.090 --> 00:14:26.790
+Kadu Gertners: nessa semana, na qual estamos. E nas próximas semanas que estão por vir. É exatamente vocês começarem a montar isso aqui,
+
+100
+00:14:27.080 --> 00:14:44.629
+Kadu Gertners: galera, vocês não têm ideia de quando. Por exemplo, você está montando os comandos Select, que tem Join para duas, três, quatro tabelas. Você tem um modelo desse aqui impresso ou na tela do computador para te ajudar.
+
+101
+00:14:44.630 --> 00:14:49.249
+Kadu Gertners: Isso ajuda muito você a entender
+
+102
+00:14:49.360 --> 00:14:52.259
+Kadu Gertners: como é que uma tabela conversa com a outra.
+
+103
+00:14:52.970 --> 00:15:00.220
+Kadu Gertners: Tá legal. Então essas são algumas das ideias que estão vinculadas à parte dessa metodologia.
+
+104
+00:15:00.760 --> 00:15:01.820
+Kadu Gertners: Beleza
+
+105
+00:15:01.930 --> 00:15:10.989
+Kadu Gertners: legal, galera, por favor. Se tiverem perguntas aí, podem ir fazendo. Deixa eu ver se alguém botou alguma coisa lá.
+
+106
+00:15:11.570 --> 00:15:25.389
+Kadu Gertners: Pera aí, maravilha. Cadê não é isso. Não é esse aqui, meu
+
+107
+00:15:30.370 --> 00:15:34.080
+Kadu Gertners: legal. Vamos lá. Nossa, vocês já escreveram algumas coisas aí? Vamos lá.
+
+108
+00:15:34.320 --> 00:15:38.279
+Kadu Gertners: Isso seria um der ótima pergunta, Alexandre.
+
+109
+00:15:38.610 --> 00:15:44.379
+Kadu Gertners: Num primeiro momento, Alexandre, nós consideramos mais um mer
+
+110
+00:15:44.890 --> 00:15:57.410
+Kadu Gertners: Meer, que é um modelo, entidade e relacionamento. O Deer é um diagrama, entidade e relacionamento. Tem pessoas que consideram Alexandre isso sinônimo.
+
+111
+00:15:57.850 --> 00:16:03.660
+Kadu Gertners: E tem pessoas que consideram que o modelo é como se fosse uma etapa anterior,
+
+112
+00:16:03.740 --> 00:16:21.170
+Kadu Gertners: uma abstração, uma ideia mais genérica, e o der é uma coisa um pouquinho mais concretizada. É mais concreta, um pouco mais concreta é uma coisa mais significativa que você já estabelece com uma decisão um pouco maior.
+
+113
+00:16:21.220 --> 00:16:24.339
+Kadu Gertners: Praticamente as tabelas que vão pertencer ao modelo.
+
+114
+00:16:24.660 --> 00:16:25.740
+Kadu Gertners: Beleza.
+
+115
+00:16:25.930 --> 00:16:42.919
+Kadu Gertners: Bom, excelente noite, Kleber. Excelente noite. O Anderson Ramon Pk. Sim, Pk é pra americana. Um relacionamento pode ter atributo o éder? Excelente pergunta.
+
+116
+00:16:43.420 --> 00:16:50.270
+Kadu Gertners: Sim, um relacionamento pode ter atributo. Sim,
+
+117
+00:16:50.690 --> 00:16:58.430
+Kadu Gertners: beleza. Depois nós vamos provavelmente entender e ver isso melhor. Como é que isso éder? Poderia acontecer.
+
+118
+00:16:58.540 --> 00:16:59.870
+Kadu Gertners: Está legal, amigo.
+
+119
+00:17:00.960 --> 00:17:01.800
+Kadu Gertners: Bom dia.
+
+120
+00:17:02.930 --> 00:17:13.160
+Kadu Gertners: Altevir se. Nós vamos aprofundar na parte de cardinalidade. De alguma forma, altevir é sim.
+
+121
+00:17:13.420 --> 00:17:20.800
+Kadu Gertners: Vamos aprofundar de alguma forma. Sim, porque isso é uma das coisas que fazem parte até das formas normais.
+
+122
+00:17:20.900 --> 00:17:31.920
+Kadu Gertners: Então assim é uma análise extremamente importante ao Tv de ser vista, e nós falaremos em outros pontos da matéria sobre isso. Sim, está legal, amigo.
+
+123
+00:17:32.050 --> 00:17:44.410
+Kadu Gertners: Do mesmo jeito, se de repente você tiver alguma pergunta mais específica ou alguma colocação a mais lá quando chegar lá o momento. Enfim, é só você perguntar. Tá bom. O Tv
+
+124
+00:17:44.850 --> 00:17:52.890
+Kadu Gertners: Beleza ao Tv. Vi sua resposta. Alexandre Reis. Ok, de nada. É o Éder. Maravilha, irmão. Vamos lá,
+
+125
+00:17:53.330 --> 00:17:59.259
+Kadu Gertners: vamos seguir bom Caldzon. E aí, ó legal,
+
+126
+00:17:59.850 --> 00:18:13.369
+Kadu Gertners: nós vamos agora começar a explicar um pouquinho a terminologia usada em projetos de banco de dados. Então por que essa terminologia é importante?
+
+127
+00:18:14.120 --> 00:18:15.190
+Kadu Gertners: Vamos lá.
+
+128
+00:18:15.370 --> 00:18:17.819
+Kadu Gertners: O primeiro ponto. Ela é usada
+
+129
+00:18:17.960 --> 00:18:32.979
+Kadu Gertners: para expressar e definir ideias e conceitos do modelo do banco de dados. Quando nós, colocamos uma coisa num papel, numa forma de um modelo, numa forma de um design. Nós podemos
+
+130
+00:18:34.700 --> 00:18:44.719
+Kadu Gertners: mostrar para todos que estão vinculados a nós para que todos passem a entender aquilo de uma forma como se fosse um tipo de um desenho.
+
+131
+00:18:45.220 --> 00:18:57.079
+Kadu Gertners: Então nosso cérebro, em muitos momentos, ele tem uma forma mais rápida. Lógico que em determinados momentos, você tem que treinar isso.
+
+132
+00:18:57.080 --> 00:19:09.410
+Kadu Gertners: Mas assim é considerado que ao você visualizar essas coisas, você já passaria a entender determinados pontos de uma forma praticamente automática.
+
+133
+00:19:09.940 --> 00:19:22.129
+Kadu Gertners: É lógico que vão ter casos e casos, né? Pessoal, se a pessoa nunca viu isso, não tem a menor ideia do que seja isso, provavelmente a pessoa não vai ter realmente nem por onde começar.
+
+134
+00:19:22.130 --> 00:19:37.069
+Kadu Gertners: Mas quando a pessoa começar a ter as menores ideias e ela, a partir daquele momento, ela ver um modelo desse ou um design desse, a pessoa automaticamente já vai começar a abstrair e entender a ideia do que significa aquilo
+
+135
+00:19:37.540 --> 00:19:54.810
+Kadu Gertners: legal. Segundo ponto: ela é usada para expressar e definir o próprio processo de design do banco de dados. Exatamente ao conceituarmos isso, e com as ideias, e ao começarmos a construir o design
+
+136
+00:19:55.000 --> 00:19:58.459
+Kadu Gertners: automaticamente, já estamos construindo o design do banco
+
+137
+00:19:59.420 --> 00:20:12.159
+Kadu Gertners: usada. Terceiro ponto, usada em qualquer local que menciona os bancos de dados relacionais ou os Sgbds R.
+
+138
+00:20:12.270 --> 00:20:15.350
+Kadu Gertners: O que significa isso mesmo? Caduzão. Sistema
+
+139
+00:20:15.700 --> 00:20:21.480
+Kadu Gertners: gerenciador de banco de dados relacional maravilha.
+
+140
+00:20:23.720 --> 00:20:24.500
+Kadu Gertners: Bom dia.
+
+141
+00:20:25.500 --> 00:20:28.540
+Kadu Gertners: Termos relacionados ao valor.
+
+142
+00:20:28.700 --> 00:20:34.860
+Kadu Gertners: Então, quando é o valor? Significa qual é o valor que aquela coluna recebeu?
+
+143
+00:20:35.480 --> 00:20:44.099
+Kadu Gertners: Então vamos dar um exemplo. Em cima da tabela, a tabela funcionário. Ela tem a primeira coluna, matrícula,
+
+144
+00:20:44.210 --> 00:20:46.509
+Kadu Gertners: e aí tem lá o valor.
+
+145
+00:20:46.810 --> 00:20:49.109
+Kadu Gertners: Então o um é o valor.
+
+146
+00:20:49.490 --> 00:20:53.619
+Kadu Gertners: Aí tem um outro atributo. Uma outra coluna, por exemplo. Nome.
+
+147
+00:20:53.960 --> 00:21:01.049
+Kadu Gertners: E aí embaixo está aquele valor. Maria, essa Maria, nesse caso, ele é um valor.
+
+148
+00:21:01.780 --> 00:21:07.749
+Kadu Gertners: Então, nesse ponto, o valor e o dado são sinônimos.
+
+149
+00:21:08.320 --> 00:21:15.459
+Kadu Gertners: Tá legal. O um da matrícula e a Maria do Nome. Eles são dados em si,
+
+150
+00:21:16.140 --> 00:21:23.179
+Kadu Gertners: e eles são armazenados. Eles são guardados dentro do banco de dados
+
+151
+00:21:23.330 --> 00:21:27.710
+Kadu Gertners: legal. Aí, com aqueles dados dentro do banco de dados
+
+152
+00:21:27.710 --> 00:21:47.190
+Kadu Gertners: quando as pessoas começarem a montar os Selects, as consultas ou em inglês. A query ou as queries, ele vai começar a mostrar informações para quem perguntou ao executar aquela consulta? Aquela query ou aquelas consultas ou aquelas queries?
+
+153
+00:21:47.410 --> 00:21:49.319
+Kadu Gertners: Tá legal. Bom.
+
+154
+00:21:50.230 --> 00:21:59.179
+Kadu Gertners: É uma determinada coluna dentro da tabela funcionário. Vamos supor que tem outra coluna chamada telefone fixo.
+
+155
+00:21:59.890 --> 00:22:18.779
+Kadu Gertners: Tá legal, telefone fixo. Eu estou subentendendo nessa colocação. Que o telefone fixo. É aquele telefone que você teria na sua casa. O telefone físico na sua casa, por exemplo. Então a maioria das pessoas tem muitas pessoas hoje que não têm mais telefone fixo em casa.
+
+156
+00:22:19.240 --> 00:22:33.600
+Kadu Gertners: Então, nessa coluna, por exemplo, para Maria, a Maria, que tem a matrícula um. A Maria. Ela não tem telefone em casa. Então a coluna dela telefone fixo. Aquela coluna dela está com nu.
+
+157
+00:22:33.870 --> 00:22:44.810
+Kadu Gertners: O Nu. Por definição, ele pode ser falado, que ele é um valor ausente ou é um valor desconhecido?
+
+158
+00:22:46.420 --> 00:22:52.209
+Kadu Gertners: Beleza são algumas colocações que nós podemos falar sobre o nulo
+
+159
+00:22:53.200 --> 00:22:58.769
+Kadu Gertners: problema do nulo. O problema, podem existir problemas
+
+160
+00:22:58.930 --> 00:23:05.170
+Kadu Gertners: na parte de alguma expressão matemática que ele pode não referenciar o nulo
+
+161
+00:23:05.450 --> 00:23:16.369
+Kadu Gertners: e pode ter o mesmo problema em relação à agregação. A agregação. Em vários casos, ela não menciona
+
+162
+00:23:16.490 --> 00:23:18.630
+Kadu Gertners: uma coluna que tenha nu
+
+163
+00:23:19.190 --> 00:23:27.170
+Kadu Gertners: ou, melhor dizendo, se tem nu, significa que aquela coluna para aquele registro não tem um valor.
+
+164
+00:23:27.320 --> 00:23:32.030
+Kadu Gertners: Existe. Existe uma ausência de valor.
+
+165
+00:23:32.640 --> 00:23:41.819
+Kadu Gertners: Tá legal bom legal termos relacionados à estrutura.
+
+166
+00:23:42.120 --> 00:23:53.919
+Kadu Gertners: Então, quando você cria uma tabela, e você cria as colunas da tabela, quando você está fazendo isso na visão do banco de dados, você está criando a estrutura do banco de dados.
+
+167
+00:23:54.200 --> 00:23:59.319
+Kadu Gertners: Então, com esse conceito, você tem o conceito de tabela,
+
+168
+00:23:59.490 --> 00:24:10.920
+Kadu Gertners: registros e os campos ou as colunas. Então cadu. Nesse exemplo, aqui nós temos a tabela, clientes
+
+169
+00:24:11.310 --> 00:24:16.310
+Kadu Gertners: é o nome da tabela como um todo. É o conjunto inteiro.
+
+170
+00:24:16.840 --> 00:24:22.789
+Kadu Gertners: Nós temos aqui os campos ou as colunas. Que é o Id cliente,
+
+171
+00:24:23.010 --> 00:24:30.539
+Kadu Gertners: o primeiro nome, cliente, último nome, cliente e cidade cliente.
+
+172
+00:24:31.560 --> 00:24:35.549
+Kadu Gertners: Tá legal. Então isso aqui são os campos
+
+173
+00:24:35.790 --> 00:24:39.129
+Kadu Gertners: ou as colunas? No caso quatro.
+
+174
+00:24:39.590 --> 00:24:47.299
+Kadu Gertners: Legal. Aí, aqui, cada linha dessa aqui é um registro.
+
+175
+00:24:47.590 --> 00:24:55.669
+Kadu Gertners: Então, esses aqui são os registros. Esse aqui. Temos seis registros aqui e quatro colunas.
+
+176
+00:24:56.200 --> 00:24:57.320
+Kadu Gertners: Tá legal.
+
+177
+00:24:57.660 --> 00:25:07.049
+Kadu Gertners: Bom, vamos lá, caduzão termos relacionados à estrutura. Continuando, esse tópico caduzão
+
+178
+00:25:07.220 --> 00:25:17.709
+Kadu Gertners: tem um tema nas tabelas que ele chama. Olha, que interessante. Um campo calculado foi um campo
+
+179
+00:25:17.850 --> 00:25:23.340
+Kadu Gertners: que ele fez algum procedimento, algum processamento.
+
+180
+00:25:23.520 --> 00:25:30.810
+Kadu Gertners: E ele gerou aquele campo. Então, olha, que interessante. Aqui nós temos o primeiro nome do cliente,
+
+181
+00:25:30.910 --> 00:25:35.680
+Kadu Gertners: o último nome do cliente. E com o Stewart mais o Jameson,
+
+182
+00:25:35.810 --> 00:25:53.000
+Kadu Gertners: ele formou o Stuart Jameson. Então ele é um campo considerado calculado porque ele pegou a informação de uma outra coluna com uma outra coluna e juntou os valores e colocou numa nova coluna.
+
+183
+00:25:53.640 --> 00:25:54.720
+Kadu Gertners: Tá legal.
+
+184
+00:25:55.330 --> 00:26:00.749
+Kadu Gertners: Bom, o que é um campo caduzão multiparte
+
+185
+00:26:01.810 --> 00:26:06.089
+Kadu Gertners: uma coisa que é multi. Ela significa que são vários.
+
+186
+00:26:06.200 --> 00:26:12.819
+Kadu Gertners: Então o campo tem várias partes. Então, por exemplo, o campo multipart aqui, ó,
+
+187
+00:26:12.870 --> 00:26:27.359
+Kadu Gertners: reparem aqui de uma forma mais didática, foi colocado de uma forma mais visível. Exatamente o que o nome da coluna é. Sidcli, vírgula, estado, vírgula, sep
+
+188
+00:26:28.040 --> 00:26:32.090
+Kadu Gertners: caduzão. O nome dessa coluna está. Bom, está péssimo.
+
+189
+00:26:32.350 --> 00:26:33.640
+Kadu Gertners: Está muito ruim.
+
+190
+00:26:34.430 --> 00:26:42.860
+Kadu Gertners: Isso aqui é o que eu estou falando. É para dar um exemplo didático de aula. Você não deve fazer isso aqui.
+
+191
+00:26:43.710 --> 00:26:57.030
+Kadu Gertners: Beleza, então, legal. Mas o que ele está querendo dizer com isso? Ele é um campo multiparte porque existem dados dele que têm a ver com coisas totalmente diferentes.
+
+192
+00:26:57.060 --> 00:27:03.969
+Kadu Gertners: Então, por exemplo, a cidade do cliente é Seattle. Isso é uma informação. É um dado
+
+193
+00:27:04.060 --> 00:27:14.149
+Kadu Gertners: agora. O estado Wha é um segundo dado. E o Cep noventa e oito.cento e vinte e cinco é um terceiro dado.
+
+194
+00:27:14.150 --> 00:27:27.500
+Kadu Gertners: Aí você poderia perguntar, mas caduzão, mas isso não poderia estar em colunas separadas. Galera, isso aí começa a ter. Aí vocês começariam a ter uma ideia
+
+195
+00:27:27.540 --> 00:27:45.240
+Kadu Gertners: da onde entra a parte da normalização de dados, a normalização de dados, as formas normais. Elas tentarão analisar isto e resolver esse problema. Olha que interessante.
+
+196
+00:27:45.520 --> 00:27:54.789
+Kadu Gertners: Então, ó, vamos lá. E o que é traduzão? O campo multivalorado. Olha, é um campo que tem vários valores iguais.
+
+197
+00:27:54.900 --> 00:28:05.810
+Kadu Gertners: Então, por exemplo, o campo multivalorado é o representante da conta. Então, como representante da conta do Stewart Jameson, são dois.
+
+198
+00:28:05.940 --> 00:28:11.510
+Kadu Gertners: Foi colocado aqui com uma vírgula, a separação do primeiro e do segundo.
+
+199
+00:28:11.670 --> 00:28:14.089
+Kadu Gertners: Isso está bom. Também não está?
+
+200
+00:28:14.990 --> 00:28:26.150
+Kadu Gertners: Isso aí. Você vai infringir as formas normais quando nós as aprendermos. Então, assim não está legal,
+
+201
+00:28:27.270 --> 00:28:31.390
+Kadu Gertners: mas é um conceito que, de repente, em sistemas
+
+202
+00:28:31.740 --> 00:28:38.330
+Kadu Gertners: mais antigos, vocês poderão ver isso aqui dentro de uma coluna.
+
+203
+00:28:38.750 --> 00:28:45.760
+Kadu Gertners: Valores que seriam equivalentes, separados com uma vírgula ou com um ponto e vírgula.
+
+204
+00:28:46.330 --> 00:28:52.200
+Kadu Gertners: Caramba, caduzão galera! Isso acontecia muito há décadas atrás.
+
+205
+00:28:53.390 --> 00:29:00.729
+Kadu Gertners: Beleza, eu estou falando isso porque vocês de repente podem se dar e ver isso em algum caso.
+
+206
+00:29:00.770 --> 00:29:07.760
+Kadu Gertners: E isso pode ser um problema, dependendo de como você irá analisá lo.
+
+207
+00:29:07.760 --> 00:29:22.699
+Kadu Gertners: Se aquela coluna que você está lendo, aquela coluna de fato, poderia aceitar uma vírgula ou um ponto. Por exemplo, se você colocasse uma coluna ali de observação,
+
+208
+00:29:22.770 --> 00:29:32.629
+Kadu Gertners: que você abriu uma coluna, observação que você pode escrever, qualquer coisa ali dentro. E você poderia colocar uma vírgula ali, um ponto e vírgula um dois pontos.
+
+209
+00:29:32.760 --> 00:29:38.720
+Kadu Gertners: Então pode ser que, dependendo do caso, você tenha que analisar isso para aquela coluna.
+
+210
+00:29:39.340 --> 00:29:40.180
+Kadu Gertners: Tá bom.
+
+211
+00:29:40.620 --> 00:29:47.559
+Kadu Gertners: Mas se não for considerado multivalor, não é uma coisa multivalorada. Você pode até deixar,
+
+212
+00:29:47.760 --> 00:29:55.680
+Kadu Gertners: porque aquilo faz parte de um texto que você botou de uma observação legal.
+
+213
+00:29:58.450 --> 00:29:59.400
+Kadu Gertners: Opa.
+
+214
+00:30:01.300 --> 00:30:11.350
+Kadu Gertners: Bom, aqui, nesse caso, inclusive o campo multifalorado é o John e o Sandy, só para ficar aí falado aqui na aula, né? Legal.
+
+215
+00:30:11.410 --> 00:30:22.559
+Kadu Gertners: Bom, temos ainda relacionados à estrutura. Nós temos o registro, que é a linha. E eu falei para vocês na terça, que ele é sinônimo também de dupla
+
+216
+00:30:23.170 --> 00:30:24.270
+Kadu Gertners: beleza.
+
+217
+00:30:24.700 --> 00:30:29.290
+Kadu Gertners: Bom, temos aí um conceito que é muito importante,
+
+218
+00:30:34.030 --> 00:30:37.800
+Kadu Gertners: chamado view ou visão.
+
+219
+00:30:38.160 --> 00:30:40.560
+Kadu Gertners: O que é, ouviu ou a visão,
+
+220
+00:30:40.970 --> 00:30:45.350
+Kadu Gertners: a ideia de um view ou uma visão é você acessar
+
+221
+00:30:45.490 --> 00:30:52.740
+Kadu Gertners: uma tabela ou mais uma tabela. Você pode criar uma view, uma visão
+
+222
+00:30:52.960 --> 00:31:03.110
+Kadu Gertners: de uma tabela, ou você pode criar uma visão, uma view da junção de algumas tabelas, e mostrar isso através de uma view.
+
+223
+00:31:03.880 --> 00:31:04.970
+Kadu Gertners: Tá legal.
+
+224
+00:31:05.400 --> 00:31:18.119
+Kadu Gertners: Uma das ideias para View é você exatamente? Enxergar determinados campos ou colunas, que você, o seu privilégio ou a função que você tenha,
+
+225
+00:31:18.430 --> 00:31:26.150
+Kadu Gertners: aonde você estiver, você só possa enxergar aquelas colunas ou aqueles campos.
+
+226
+00:31:27.600 --> 00:31:32.430
+Kadu Gertners: Tá legal. É uma forma também de isolar
+
+227
+00:31:32.940 --> 00:31:37.489
+Kadu Gertners: colunas que não possam ser vistas por determinadas pessoas.
+
+228
+00:31:37.930 --> 00:31:50.270
+Kadu Gertners: Aí você não libera o acesso da tabela inteira para a pessoa. Você acessa uma view que essa View, por exemplo, ela acessaria só algumas colunas de uma tabela
+
+229
+00:31:54.940 --> 00:31:58.939
+Kadu Gertners: legal. Aí nós temos, né?
+
+230
+00:31:59.540 --> 00:32:12.529
+Kadu Gertners: É conceituações também da chave primária e chave estrangeira legal. Caduzon. Vamos entender isso de uma forma um pouco mais, até através de um exemplo com mais calma. Olha só.
+
+231
+00:32:12.780 --> 00:32:26.490
+Kadu Gertners: Na primeira tabela são duas tabelas ou duas entidades: departamentos e funcionários legal. Nessa primeira aqui, departamentos, nós temos a chave primária
+
+232
+00:32:26.710 --> 00:32:31.090
+Kadu Gertners: chamada Codepto, o código do departamento,
+
+233
+00:32:31.320 --> 00:32:41.270
+Kadu Gertners: o código do Departamento aaa informática Bbb, produção e zzz comercial.
+
+234
+00:32:42.090 --> 00:32:57.880
+Kadu Gertners: Tá legal. Então isso aqui, essa primeira coluna é a chave primária. Caduzon, qual é a ideia mesmo da chave primária. A chave primária indica que nós não podemos ter valores repetidos
+
+235
+00:32:57.970 --> 00:33:09.300
+Kadu Gertners: para uma chave primária, sendo ela composta de uma coluna. Só a maioria dos casos ou uma chave primária que tem várias colunas.
+
+236
+00:33:10.330 --> 00:33:15.430
+Kadu Gertners: Beleza, você não pode ter uma repetição
+
+237
+00:33:15.750 --> 00:33:19.790
+Kadu Gertners: do valor dessa chave primária na mesma tabela.
+
+238
+00:33:20.220 --> 00:33:24.520
+Kadu Gertners: Beleza, caduzão. O que você está querendo dizer na prática? Por exemplo,
+
+239
+00:33:24.680 --> 00:33:31.499
+Kadu Gertners: se eu botar aqui. Bbb Vendas, ele não vai aceitar inserir esse registro.
+
+240
+00:33:32.020 --> 00:33:33.790
+Kadu Gertners: Não pode acontecer isso,
+
+241
+00:33:34.910 --> 00:33:44.200
+Kadu Gertners: beleza. Então, como é que eu insiro vendas aí, por exemplo, eu posso pegar e escrever lá, Vv. Ver vendas.
+
+242
+00:33:44.320 --> 00:33:50.909
+Kadu Gertners: Aí ele vai aceitar. Por quê? Porque o Vvv ainda não existe aqui na tabela.
+
+243
+00:33:52.240 --> 00:33:58.519
+Kadu Gertners: Ó outra chave primária. Outro exemplo. Funcionários estão aqui.
+
+244
+00:33:58.840 --> 00:34:06.860
+Kadu Gertners: Então, na tabela, funcionários. A chave primária é a coluna código do funcionário. É essa coluna aqui.
+
+245
+00:34:07.220 --> 00:34:15.140
+Kadu Gertners: Então, repara, a chave primária não pode ter valores repetidos aqui. Ó um.duzentos e trinta e um
+
+246
+00:34:15.460 --> 00:34:17.770
+Kadu Gertners: três.duzentos e trinta e três
+
+247
+00:34:18.159 --> 00:34:32.760
+Kadu Gertners: dois.trezentos e vinte e três e quatro.trezentos e quarenta e três valores diferentes. Se você tentar inserir de novo o valor quatro.trezentos e quarenta e três Opa, o banco vai chiar. Não, não pode.
+
+248
+00:34:32.850 --> 00:34:42.430
+Kadu Gertners: Esse valor já existe. Ele vai dar um erro. Ele vai falar que esse valor para essa chave primária já existe para a tabela. Funcionários.
+
+249
+00:34:43.570 --> 00:34:51.780
+Kadu Gertners: Tá legal, pessoal, essa é a conceituação da chave primária. Uma forma de explicar.
+
+250
+00:34:52.370 --> 00:34:54.679
+Kadu Gertners: Tá bom, legal. Aí
+
+251
+00:34:54.989 --> 00:35:03.350
+Kadu Gertners: dentro da tabela. Ainda funcionários. Nós temos a coluna código do funcionário, que é a chave primária
+
+252
+00:35:03.400 --> 00:35:15.260
+Kadu Gertners: e a coluna. Nome e a coluna Codep, que é o código do departamento. Aí você vai olhar já uma coisa curiosa. Ué, peraí. Aqui tem Cod Dep. E aqui também.
+
+253
+00:35:15.890 --> 00:35:33.690
+Kadu Gertners: Ah, Cadu. Então, espera aí. Então quer dizer que a ligação das tabelas, quando botarmos para conversar, a tabela, departamentos com a tabela funcionários. Essa união, a conversa das tabelas ocorrerá através da coluna codep,
+
+254
+00:35:34.490 --> 00:35:39.800
+Kadu Gertners: beleza. Então, para isso, dá se o nome de chave estrangeira.
+
+255
+00:35:40.150 --> 00:35:45.869
+Kadu Gertners: É uma coluna que está na tabela, filha.
+
+256
+00:35:46.130 --> 00:35:56.110
+Kadu Gertners: Ela é considerada uma coluna que menciona o valor lá da coluna na tabela. Mãe.
+
+257
+00:35:56.730 --> 00:36:01.939
+Kadu Gertners: Então, o que você quer dizer com isso? Eu quero dizer o seguinte. Se aqui tem a.
+
+258
+00:36:02.480 --> 00:36:05.850
+Kadu Gertners: Ah, ele tem que existir aqui. Ok,
+
+259
+00:36:06.290 --> 00:36:14.260
+Kadu Gertners: Z, Z, ó de novo Z Z. Ele tem que existir aqui. Opa existe. Ok,
+
+260
+00:36:14.510 --> 00:36:32.979
+Kadu Gertners: ó Bbb Opa existe aqui também. Ah, se eu botasse aqui um Ff. Se você tentar inserir o Ff e você tiver criado a chave estrangeira, ele vai dar erro. Ele vai indicar que não existe o valor para a chave estrangeira.
+
+261
+00:36:34.930 --> 00:36:41.289
+Kadu Gertners: Está legal. Esse é um possível conceito de chave estrangeira.
+
+262
+00:36:42.210 --> 00:37:00.400
+Kadu Gertners: Tá legal, galera. Só guardar o que acontece na chave estrangeira Opa é um valor que existe na chave estrangeira que, de forma obrigatória, tem que existir na coluna correspondente, provavelmente uma chave primária de uma outra tabela.
+
+263
+00:37:02.250 --> 00:37:04.940
+Kadu Gertners: É isso, beleza.
+
+264
+00:37:05.360 --> 00:37:06.200
+Kadu Gertners: Bom dia.
+
+265
+00:37:06.590 --> 00:37:07.410
+Altevir dos Anjos Junior: Pronto, senhor.
+
+266
+00:37:07.930 --> 00:37:09.380
+Kadu Gertners: Opa, fala comigo.
+
+267
+00:37:09.570 --> 00:37:15.910
+Altevir dos Anjos Junior: Uma chave estrangeira. Sempre precisa ser uma chave primária de outra tabela ou não.
+
+268
+00:37:15.910 --> 00:37:16.790
+Kadu Gertners: O senhor.
+
+269
+00:37:16.790 --> 00:37:19.070
+Altevir dos Anjos Junior: Tá, tá beleza? Não necessariamente.
+
+270
+00:37:19.370 --> 00:37:20.560
+Kadu Gertners: Não necessariamente.
+
+271
+00:37:20.910 --> 00:37:30.630
+Kadu Gertners: Se ela for o mais importante, as colunas têm que ser para não dar dor de cabeça. As colunas têm que ser do mesmo tipo de dado.
+
+272
+00:37:30.850 --> 00:37:43.870
+Kadu Gertners: Então, se na tabela mãe foi definida, por exemplo, como varchar de vinte, então, na tabela, filha. É indicado que ela também tenha sido definida como varchar de vinte.
+
+273
+00:37:44.730 --> 00:37:48.080
+Kadu Gertners: Beleza, irmão. É essa a dica aí mais importante.
+
+274
+00:37:48.910 --> 00:37:49.979
+Altevir dos Anjos Junior: Perfeito. Obrigado.
+
+275
+00:37:50.650 --> 00:37:51.670
+Kadu Gertners: De nada.
+
+276
+00:37:52.680 --> 00:37:53.980
+Kadu Gertners: Bom, vamos lá.
+
+277
+00:37:53.980 --> 00:37:55.090
+gabriel.diniz: Professor.
+
+278
+00:37:55.290 --> 00:37:57.099
+Kadu Gertners: Opa, fala comigo, amigo.
+
+279
+00:37:57.510 --> 00:37:58.590
+gabriel.diniz: Opa, então.
+
+280
+00:37:58.590 --> 00:37:58.920
+Kadu Gertners: Avenida.
+
+281
+00:37:58.920 --> 00:38:03.100
+gabriel.diniz: Mas a greve teria que ser única, não para ser a chave estrangeira.
+
+282
+00:38:05.060 --> 00:38:13.209
+Kadu Gertners: Não necessariamente. Não. Como assim? Única única. Em que lado? Na tabela, filha ou na tabela mãe.
+
+283
+00:38:13.490 --> 00:38:14.639
+gabriel.diniz: Não na tabela. Mãe.
+
+284
+00:38:17.530 --> 00:38:22.669
+Kadu Gertners: Cara. Não necessariamente. Não necessariamente.
+
+285
+00:38:24.180 --> 00:38:27.600
+Kadu Gertners: Tem casos que isso não poderão ter. Outros valores.
+
+286
+00:38:29.860 --> 00:38:30.260
+gabriel.diniz: A depender.
+
+287
+00:38:30.260 --> 00:38:30.880
+Kadu Gertners: Bom dia.
+
+288
+00:38:31.310 --> 00:38:39.250
+gabriel.diniz: Assim dúvida. Mesmo se, por exemplo, tiver na tabela mãe e tiver dois registros com o campo, com o mesmo, falou,
+
+289
+00:38:39.390 --> 00:38:45.090
+gabriel.diniz: e eu fiz a machave estrangeira. E pegar esse valor. Vai pegar dos dois registros.
+
+290
+00:38:45.690 --> 00:38:46.350
+Kadu Gertners: Vai.
+
+291
+00:38:46.500 --> 00:38:47.290
+Kadu Gertners: Sim.
+
+292
+00:38:48.210 --> 00:38:49.379
+gabriel.diniz: Aí não dá erro. Não.
+
+293
+00:38:49.820 --> 00:38:56.460
+Kadu Gertners: Não o problema, cara, você fez uma ótima pergunta. Você fez uma ótima pergunta.
+
+294
+00:38:56.460 --> 00:38:57.260
+Weder Sousa Mendes: Muito mais rápido.
+
+295
+00:38:57.260 --> 00:38:58.830
+Kadu Gertners: Pode. Oi.
+
+296
+00:38:59.160 --> 00:39:03.589
+Weder Sousa Mendes: A chave na chave primária. O campo do registro tem que ser único.
+
+297
+00:39:04.320 --> 00:39:05.020
+Kadu Gertners: Não.
+
+298
+00:39:05.800 --> 00:39:06.580
+Weder Sousa Mendes: Piauí.
+
+299
+00:39:06.580 --> 00:39:19.050
+Kadu Gertners: O problema com isso, galera? Vocês estão fazendo uma pergunta muito legal. Olha só. Qual é o problema que pode acontecer nessa história. O problema é que na tabela, mãe,
+
+300
+00:39:20.630 --> 00:39:26.920
+Kadu Gertners: peraí que o amigo botou aqui. Peraí é
+
+301
+00:39:28.960 --> 00:39:34.600
+Kadu Gertners: a chave estrangeira. Pode ter valor nulo, né? Sim, Weber. A chave estrangeira pode ter valor nulo.
+
+302
+00:39:34.940 --> 00:39:48.280
+Kadu Gertners: Não dá erro, mas o certo é ordenar para pegar o registro que você quer? É mais fácil de você ver. É uma outra análise, né, Nelson? Para te facilitar a análise. Sim,
+
+303
+00:39:48.490 --> 00:39:52.899
+Kadu Gertners: você pode usar esse recurso não tem problema. Mas assim vamos lá.
+
+304
+00:39:53.040 --> 00:40:08.750
+Kadu Gertners: O ponto que vocês estão comentando? Ok, Nelson, o ponto que vocês estão comentando é o seguinte: se na primeira tabela existe um valor, por exemplo, eu estou fazendo a chave estrangeira
+
+305
+00:40:09.530 --> 00:40:14.630
+Kadu Gertners: e para uma coluna que não é a chave primária da tabela, por exemplo.
+
+306
+00:40:15.000 --> 00:40:22.820
+Kadu Gertners: Aí, lá naquela coluna, foram colocados duas vezes o mesmo Cep em dois registros diferentes. O mesmo Sep
+
+307
+00:40:23.180 --> 00:40:31.110
+Kadu Gertners: na primeira tabela que vamos supor que é a tabela mãe. Dois valores, o mil na tabela mãe
+
+308
+00:40:31.350 --> 00:40:37.809
+Kadu Gertners: e na tabela considerada filha. Vamos supor que existam vinte registros.
+
+309
+00:40:37.970 --> 00:40:40.420
+Kadu Gertners: Qual é o problema? Que vai acontecer aí?
+
+310
+00:40:40.620 --> 00:40:58.090
+Kadu Gertners: Foi exatamente o que você comentou. Se você está batendo o mesmo valor do Cep mil também na tabela, filha com a tabela mãe, ele fará uma coisa muito simples. Ele fará todas as combinações possíveis.
+
+311
+00:40:58.450 --> 00:41:15.629
+Kadu Gertners: Então, no retorno da execução da consulta para essa consulta, vamos supor que você esteja fazendo um filtro na junção das duas tabelas exatamente pelo valor da coluna do Sep. Igual a mil.
+
+312
+00:41:15.780 --> 00:41:26.379
+Kadu Gertners: O que ele fará, caduzão? Ele vai pegar os dois valores da tabela mãe e vai vincular com os vinte valores da tabela filha.
+
+313
+00:41:26.690 --> 00:41:28.170
+Kadu Gertners: Na prática,
+
+314
+00:41:28.340 --> 00:41:39.300
+Kadu Gertners: dois valores, vezes vinte. Ele faz todas as combinações possíveis. Dois vezes vinte vão dar quarenta registros de resultado esse que pode ser o problema.
+
+315
+00:41:40.780 --> 00:41:45.460
+Kadu Gertners: Beleza e lógico. Isso pode estar demonstrando para nós que é um erro.
+
+316
+00:41:45.830 --> 00:41:50.079
+Kadu Gertners: E aí sim, vamos ter que investigar. Por que está acontecendo isso?
+
+317
+00:41:51.210 --> 00:41:53.130
+Kadu Gertners: Tudo bem, galera tranquilo.
+
+318
+00:41:55.570 --> 00:41:56.790
+Kadu Gertners: Bom, vamos lá.
+
+319
+00:41:56.790 --> 00:42:01.689
+gabriel.diniz: Então não é um erro em si, mas é uma boa prática fazer isso.
+
+320
+00:42:02.280 --> 00:42:21.649
+Kadu Gertners: Não, não é considerada uma boa assim de novo. Eu estou atento à pergunta que você falou, entendeu, Gabriel? Você falou se isso poderia acontecer. E se tem casos que acontecem? Sim, podem acontecer. E muitas vezes sabe por que Gabriel acontece isso? Por erro na modelagem.
+
+321
+00:42:22.450 --> 00:42:24.220
+Kadu Gertners: Erro na modelagem.
+
+322
+00:42:24.850 --> 00:42:35.050
+Kadu Gertners: Eles põem, por exemplo, numa relação, num relacionamento máximo. Tem casos e casos também, né, Johnny pode ter. E assim,
+
+323
+00:42:35.590 --> 00:42:43.330
+Kadu Gertners: um dos casos que são mais representativos é exatamente em um dos nossos slides lá de hoje.
+
+324
+00:42:43.550 --> 00:42:45.480
+Kadu Gertners: Porra, Cadu, não sacaneia.
+
+325
+00:42:45.710 --> 00:42:48.169
+Kadu Gertners: Vou mostrar para vocês. Vamos lá.
+
+326
+00:42:48.580 --> 00:42:53.379
+Kadu Gertners: Olha aqui. Vamos voltar aos slides aqui. Ó, vamos lá.
+
+327
+00:42:54.970 --> 00:43:00.369
+Kadu Gertners: Exatamente nesse cara aqui. Você está vendo que aqui entre o instrutor
+
+328
+00:43:00.570 --> 00:43:09.329
+Kadu Gertners: e o curso. Aqui tem um relacionamento, no máximo. N para n cara. Então, o que significa?
+
+329
+00:43:09.530 --> 00:43:13.850
+Kadu Gertners: E o código do instrutor é,
+
+330
+00:43:14.000 --> 00:43:26.709
+Kadu Gertners: ele tem o código de estrutura aqui. O código do curso. E como é um relacionamento de N para N. Você poderia ter o código do curso representado várias vezes aqui.
+
+331
+00:43:26.860 --> 00:43:46.310
+Kadu Gertners: E o código do instrutor é também várias vezes aqui. Então repara, se você começa a botar um relacionamento N para N diretamente entre duas tabelas. Você pode gerar possibilidades que você pode não controlar algumas coisas.
+
+332
+00:43:46.680 --> 00:43:52.929
+Kadu Gertners: Então, o que é o indicado. Nesse caso, galera, eu só estou explicando
+
+333
+00:43:53.100 --> 00:43:58.940
+Kadu Gertners: o que vocês perguntaram agora, tá legal. Nós vamos ver isso mais para frente.
+
+334
+00:43:59.570 --> 00:44:04.969
+Kadu Gertners: Mas como vocês perguntaram, eu acho que é ótimo responder para vocês entenderem
+
+335
+00:44:05.740 --> 00:44:12.209
+Kadu Gertners: o correto em relação a isso. Para não dar dor de cabeça de modelagem é fazer o quê?
+
+336
+00:44:12.510 --> 00:44:20.820
+Kadu Gertners: Normalmente, num relacionamento máximo N para N. Você cria uma tabela no meio,
+
+337
+00:44:21.410 --> 00:44:27.179
+Kadu Gertners: uma tabela no meio chamada. É instrutor sublinhado curso
+
+338
+00:44:27.330 --> 00:44:37.690
+Kadu Gertners: que você recebe a chave primária da primeira tabela no caso Cod Instrutor.
+
+339
+00:44:37.950 --> 00:44:52.679
+Kadu Gertners: E você também recebe a chave primária da outra tabela que pertence ao relacionamento n. Para N, que, nesse caso, é o código curso. Então gera uma tabela nova aqui no meio.
+
+340
+00:44:52.900 --> 00:45:07.870
+Kadu Gertners: E aí o que vocês comentaram. Mas caduzon, isso aqui não seria o relacionamento. É exatamente o momento que o relacionamento é transformado numa entidade também.
+
+341
+00:45:08.430 --> 00:45:20.390
+Kadu Gertners: E aí, nesse momento, você pode colocar outros atributos aqui, no que se tornará uma entidade nova.
+
+342
+00:45:21.740 --> 00:45:24.000
+Kadu Gertners: Galera, beleza pura.
+
+343
+00:45:24.530 --> 00:45:32.370
+Kadu Gertners: Eu detalhei isso porque vocês perguntaram, e a pergunta foi muito legal. Por isso que eu estou falando beleza.
+
+344
+00:45:32.370 --> 00:45:33.170
+gabriel.diniz: Peguei.
+
+345
+00:45:34.020 --> 00:45:35.180
+Kadu Gertners: Maravilha.
+
+346
+00:45:38.250 --> 00:45:39.410
+Kadu Gertners: Vamos lá,
+
+347
+00:45:40.530 --> 00:45:58.429
+Kadu Gertners: caduzão. Termos relacionados ao relacionamento caduzão. O que então é o relacionamento? O relacionamento é esse objetinho aqui, no caso, o losango, que fica entre duas entidades
+
+348
+00:45:59.420 --> 00:46:03.060
+Kadu Gertners: é o que permite que haja relacionamento
+
+349
+00:46:03.250 --> 00:46:06.610
+Kadu Gertners: de uma entidade com a outra entidade.
+
+350
+00:46:07.590 --> 00:46:12.950
+Kadu Gertners: Então, nesse caso, aqui existem alguns tipos de relacionamento.
+
+351
+00:46:13.170 --> 00:46:15.280
+Kadu Gertners: Então, galera, olha só
+
+352
+00:46:15.390 --> 00:46:23.490
+Kadu Gertners: nós. Na verdade, eu falei da cardinalidade mínima e máxima, mas só que no dia a dia,
+
+353
+00:46:23.800 --> 00:46:26.860
+Kadu Gertners: nós sempre prevemos o pior caso.
+
+354
+00:46:27.330 --> 00:46:31.140
+Kadu Gertners: Você na verdade vai sempre analisar
+
+355
+00:46:31.960 --> 00:46:34.900
+Kadu Gertners: o valor máximo com o valor máximo.
+
+356
+00:46:35.290 --> 00:46:41.110
+Kadu Gertners: Então, nesse primeiro caso, aqui, pessoa, ele tira
+
+357
+00:46:41.390 --> 00:46:48.670
+Kadu Gertners: no mínimo zero. E no máximo, uma Cnh, a carteira nacional de habilitação
+
+358
+00:46:48.870 --> 00:46:55.749
+Kadu Gertners: e a Cnh pode ser tirada, no mínimo, por uma e no máximo, por uma pessoa.
+
+359
+00:46:56.450 --> 00:47:00.839
+Kadu Gertners: Não é verdade? Porque aquela Cnh só pertence àquela pessoa.
+
+360
+00:47:01.210 --> 00:47:13.299
+Kadu Gertners: Então reparem. Então, caduzão. Aqui nós só pegamos os valores máximos. O um e o um aqui é exatamente esse. Um para um aqui,
+
+361
+00:47:14.450 --> 00:47:19.030
+Kadu Gertners: beleza da entidade, pessoa com a entidade Cnh.
+
+362
+00:47:19.500 --> 00:47:28.439
+Kadu Gertners: E aí de novo, nós temos os atributos. Opa pessoa tem o Cpf como chave, primária nome e idade,
+
+363
+00:47:28.930 --> 00:47:30.529
+Kadu Gertners: temos o Cnh.
+
+364
+00:47:36.420 --> 00:47:38.120
+Altevir dos Anjos Junior: Ficou mudo. Professor.
+
+365
+00:47:38.120 --> 00:47:39.160
+Weder Sousa Mendes: Cortou, hein?
+
+366
+00:47:43.360 --> 00:47:45.460
+Kadu Gertners: Fala testando. Estão ouvindo?
+
+367
+00:47:46.680 --> 00:47:47.650
+gabriel.diniz: Voltou! Voltou!
+
+368
+00:47:47.890 --> 00:47:48.640
+Eduardo Ribeiro: Agora. Saiu.
+
+369
+00:47:48.640 --> 00:47:49.260
+Kadu Gertners: Bom dia.
+
+370
+00:47:52.910 --> 00:47:54.950
+Kadu Gertners: Então eu vou repetir. Não tem problema.
+
+371
+00:47:55.550 --> 00:48:08.589
+Kadu Gertners: Então aqui, pessoal, eu estava falando dos atributos. A pessoa tem um atributo Cpf, que é chave primária. O atributo comum, o nome e o atributo comum. Idade:
+
+372
+00:48:09.180 --> 00:48:12.250
+Kadu Gertners: a Cnh tem a chave primária
+
+373
+00:48:12.390 --> 00:48:15.670
+Kadu Gertners: número e tem um atributo comum Estado.
+
+374
+00:48:16.080 --> 00:48:30.350
+Kadu Gertners: Nesse segundo exemplo, nós temos um relacionamento pessoa está vinculado, no máximo, a nenhum veículo zero ou, no máximo a n automóveis ou veículos.
+
+375
+00:48:30.450 --> 00:48:39.460
+Kadu Gertners: E aí o automóvel está vinculado, no mínimo, a uma pessoa e, no máximo, a uma pessoa.
+
+376
+00:48:39.650 --> 00:48:53.840
+Kadu Gertners: Ah, caduzão. Então já estou começando a entender um pouquinho. Então tem que pegar o máximo, né? É então esse um para n aqui significa isso aqui, ó um para muitos ou a mesma coisa. Um para n
+
+377
+00:48:54.530 --> 00:48:55.680
+Kadu Gertners: beleza.
+
+378
+00:48:55.780 --> 00:49:04.400
+Kadu Gertners: Bom, aí, aqui temos na pessoa a chave primária Id e os atributos comuns. Nome Cpf.
+
+379
+00:49:05.460 --> 00:49:09.229
+Kadu Gertners: O automóvel tem a chave primária Id
+
+380
+00:49:09.340 --> 00:49:15.680
+Kadu Gertners: e tem os atributos comuns. Marca e placa beleza legal.
+
+381
+00:49:16.030 --> 00:49:35.690
+Kadu Gertners: Nós temos o terceiro caso, que é o mais extremo. Nós temos a venda, que, no mínimo, a venda vende uma venda. Está vinculada, no mínimo, a um e, no máximo, a n produtos.
+
+382
+00:49:35.890 --> 00:49:43.449
+Kadu Gertners: Por sua vez, o produto também está vinculado, no mínimo, a nenhuma venda, né? Se o
+
+383
+00:49:45.590 --> 00:49:49.189
+Kadu Gertners: é até, no máximo, a N vendas.
+
+384
+00:49:49.430 --> 00:50:02.730
+Kadu Gertners: Então, ao analisar a parte máxima, a cardinalidade máxima, ele pega o N para N, que aqui está colocado, como muitos para muitos, é a mesma coisa.
+
+385
+00:50:03.700 --> 00:50:07.640
+Kadu Gertners: Ok, n, para N é a mesma coisa que muitos para muitos.
+
+386
+00:50:08.490 --> 00:50:17.050
+Kadu Gertners: Beleza aqui na entidade venda, temos como chave primária, código, venda
+
+387
+00:50:17.190 --> 00:50:20.199
+Kadu Gertners: e atributos comuns, valor e data.
+
+388
+00:50:20.880 --> 00:50:25.249
+Kadu Gertners: O produto tem como chave primária Codeprod
+
+389
+00:50:25.600 --> 00:50:34.750
+Kadu Gertners: e tem como atributos comuns, descrição, quantidade e preço, beleza.
+
+390
+00:50:36.570 --> 00:50:37.550
+Altevir dos Anjos Junior: Professor.
+
+391
+00:50:37.970 --> 00:50:38.670
+Kadu Gertners: Oi.
+
+392
+00:50:38.870 --> 00:50:56.260
+Altevir dos Anjos Junior: Pode voltar ali de novo, por favor? Aqui, no segundo relacionamento ali, que é de um para muitos que é pessoa automóvel. Nesse caso em específico, digamos que a gente cria uma tabela disso. Não vai existir uma pessoa que não tenha um automóvel. É isso? Não tem um relacionamento com um automóvel.
+
+393
+00:50:57.520 --> 00:50:58.770
+Kadu Gertners: É exatamente.
+
+394
+00:50:59.060 --> 00:51:02.179
+Altevir dos Anjos Junior: Mas vai existir automóveis que não têm donos.
+
+395
+00:51:02.300 --> 00:51:03.120
+Altevir dos Anjos Junior: É isso.
+
+396
+00:51:05.740 --> 00:51:08.530
+Kadu Gertners: Não, não, não estou falando besteira.
+
+397
+00:51:09.260 --> 00:51:15.910
+Kadu Gertners: A pessoa cara vai. Bom, vamos supor o seguinte, cara. Num cadastro de um prédio, por exemplo,
+
+398
+00:51:16.830 --> 00:51:19.249
+Kadu Gertners: você mora em prédio ou você mora numa casa.
+
+399
+00:51:19.250 --> 00:51:20.340
+Altevir dos Anjos Junior: Eu moro em casa.
+
+400
+00:51:20.830 --> 00:51:22.170
+Kadu Gertners: Numa casa, né?
+
+401
+00:51:22.400 --> 00:51:26.420
+Kadu Gertners: Mas é uma vila ou é uma casa realmente na rua isolada?
+
+402
+00:51:26.740 --> 00:51:27.940
+Altevir dos Anjos Junior: É uma casa na rua.
+
+403
+00:51:28.970 --> 00:51:32.110
+Kadu Gertners: Mas vamos supor. Você conhece alguém que mora em um edifício.
+
+404
+00:51:32.110 --> 00:51:33.310
+Altevir dos Anjos Junior: Conhece? Conhece.
+
+405
+00:51:33.660 --> 00:51:39.700
+Kadu Gertners: Então, por exemplo, vamos supor que todo mundo seja todas as pessoas sejam cadastradas no edifício.
+
+406
+00:51:40.480 --> 00:51:43.779
+Kadu Gertners: Tá legal. Num banco de dados do edifício.
+
+407
+00:51:43.950 --> 00:51:47.120
+Kadu Gertners: Você concorda que nem todas as pessoas vão ter carro,
+
+408
+00:51:47.310 --> 00:51:49.620
+Kadu Gertners: mas o cadastro da pessoa existe.
+
+409
+00:51:51.190 --> 00:52:09.450
+Kadu Gertners: Então, nesse caso, a leitura lá. A Maria Da Silva. Ela não tem carro. Então o cadastro da Maria Da Silva está aqui. Ela tem o Id cem. Nome Maria Da Silva. O Cpf dela é nove mil e ela não tem zero. Nenhum automóvel.
+
+410
+00:52:10.280 --> 00:52:16.680
+Altevir dos Anjos Junior: Ah, tá, o um e um ali da pessoa. É que todas as pessoas vão estar registradas.
+
+411
+00:52:17.050 --> 00:52:34.329
+Kadu Gertners: Exatamente aí. É a leitura do automóvel. Ele está analisando que o automóvel, na verdade, ele está vinculado, no mínimo, aquele automóvel que foi cadastrado. Ele está vinculado, no mínimo, a uma pessoa
+
+412
+00:52:34.530 --> 00:52:36.970
+Kadu Gertners: e, no máximo, a uma pessoa.
+
+413
+00:52:37.540 --> 00:52:38.090
+Altevir dos Anjos Junior: Tá?
+
+414
+00:52:38.680 --> 00:52:41.589
+Altevir dos Anjos Junior: Então a gente tem que ler o relacionamento.
+
+415
+00:52:42.110 --> 00:52:48.349
+Altevir dos Anjos Junior: É tipo, eu tenho uma certa dificuldade com isso. Assim.
+
+416
+00:52:48.350 --> 00:52:48.890
+Kadu Gertners: É a.
+
+417
+00:52:48.890 --> 00:53:01.420
+Weder Sousa Mendes: Eu acho que a dúvida do colega é o modelo de apresentação do diagrama. É uma característica desse modelo específico. Se tu for pegar, por exemplo, outro tipo de anotação, pé de galinha vai ser diferente.
+
+418
+00:53:01.670 --> 00:53:10.069
+Kadu Gertners: Sim, sim, é. Mas assim, cara, tem que ver o modelo para realmente entender, cara,
+
+419
+00:53:10.210 --> 00:53:18.390
+Kadu Gertners: porque realmente isso pode confundir. E a galera tem pessoas que trocam a posição das cardinalidades.
+
+420
+00:53:19.030 --> 00:53:21.520
+Kadu Gertners: Então, quando você lê pessoa,
+
+421
+00:53:21.890 --> 00:53:33.079
+Kadu Gertners: tenta guardar um pouco assim, nesse modelo que eu estou mostrando a cardinalidade da pessoa com o automóvel. Mas você tendo a entidade pessoa
+
+422
+00:53:33.240 --> 00:53:39.159
+Kadu Gertners: como principal e mencionando o automóvel, eu leio do lado oposto.
+
+423
+00:53:39.530 --> 00:53:40.349
+Altevir dos Anjos Junior: Ah, é isso.
+
+424
+00:53:40.350 --> 00:53:47.040
+Kadu Gertners: A pessoa está vinculada, no máximo, a zero automóvel.
+
+425
+00:53:47.390 --> 00:53:57.909
+Kadu Gertners: Perdão, há no mínimo zero automóvel e, no máximo, an automóveis. Então você lê a cardinalidade no lado oposto.
+
+426
+00:53:59.050 --> 00:54:01.899
+Kadu Gertners: É por isso que confunde realmente.
+
+427
+00:54:01.970 --> 00:54:11.690
+Altevir dos Anjos Junior: Não boa. Acho que agora ficou. Eu estava lendo a cardinalidade dela mesmo da própria entidade ali que está do ladinho. Então, acho que agora ficou claro. Sim. Obrigado, professor.
+
+428
+00:54:12.070 --> 00:54:14.870
+Kadu Gertners: De nada. Sem problema, cara, mas galera
+
+429
+00:54:15.020 --> 00:54:18.890
+Kadu Gertners: muito importante. A colocação de vocês,
+
+430
+00:54:20.900 --> 00:54:29.509
+Kadu Gertners: o nosso amigo, comentar aqui o pé de galinha, que é outro modelo que é muito utilizado em muitos modelos.
+
+431
+00:54:30.580 --> 00:54:31.690
+Kadu Gertners: Tá legal.
+
+432
+00:54:31.990 --> 00:54:41.860
+Kadu Gertners: Então, assim é legal a gente trazer essas dúvidas e colocar aqui para vocês verem que existem outros casos. Ótimo vocês trazerem isso aí. Isso aí, galera,
+
+433
+00:54:42.170 --> 00:54:46.219
+Kadu Gertners: tá na dúvida a pergunta. Isso aí. Isso aí.
+
+434
+00:54:46.530 --> 00:54:50.890
+Kadu Gertners: Local de aprender. Aqui, nós juntos aqui Vambora.
+
+435
+00:54:51.330 --> 00:55:01.119
+Kadu Gertners: Bom termos relacionados à integridade. São eles a especificação do campo.
+
+436
+00:55:01.280 --> 00:55:07.390
+Kadu Gertners: Então, quando nós definimos para aquele campo, para aquela coluna. Um tipo de dado.
+
+437
+00:55:07.750 --> 00:55:18.940
+Kadu Gertners: Isso é a mesma coisa do que você definir um domínio para aquele campo para aquela coluna. Você está definindo um campo ou coluna para coluna.
+
+438
+00:55:19.760 --> 00:55:28.290
+Kadu Gertners: Tá legal. Isso é também chamado de domínio. O tipo do dado. Ah, para o nome. Vou botar varchar de cem.
+
+439
+00:55:28.890 --> 00:55:32.119
+Kadu Gertners: Ah, pra data de nascimento. Vou botar date.
+
+440
+00:55:32.840 --> 00:55:44.580
+Kadu Gertners: Ah, para o salário. Eu vou botar um Number, que é um número de dez posições de dez dígitos Vírg para indicar que os dois últimos números são decimais.
+
+441
+00:55:44.700 --> 00:55:49.259
+Kadu Gertners: Isso é domínio. Isso é um tipo de dado
+
+442
+00:55:50.240 --> 00:56:04.559
+Kadu Gertners: legal. Integridade do dado. A integridade do dado, como nós vimos um pouquinho na terça feira. A integridade do dado pode estar vinculada à tabela como um todo
+
+443
+00:56:04.930 --> 00:56:07.700
+Kadu Gertners: numa visão de chave primária
+
+444
+00:56:08.900 --> 00:56:14.500
+Kadu Gertners: pode estar vinculado a um campo através do tipo de domínio do tipo de dado
+
+445
+00:56:14.760 --> 00:56:24.459
+Kadu Gertners: pode estar vinculado ao relacionamento de uma tabela com a outra através das colunas de cada uma dessas tabelas,
+
+446
+00:56:25.010 --> 00:56:29.440
+Kadu Gertners: ou ainda pode estar vinculado ao negócio.
+
+447
+00:56:29.900 --> 00:56:40.849
+Kadu Gertners: Pode estar vinculado a alguma regra que alguém passou para nós no levantamento de requisitos que nós vamos ter que representar isso no banco de dados
+
+448
+00:56:42.370 --> 00:56:43.370
+Kadu Gertners: galera.
+
+449
+00:56:43.870 --> 00:56:44.920
+Kadu Gertners: Tudo bem.
+
+450
+00:56:45.400 --> 00:56:48.910
+Kadu Gertners: Alguma pergunta também nesse slide? Aqui?
+
+451
+00:56:49.190 --> 00:56:57.520
+Kadu Gertners: Não, senão eu vou continuar e vou partir para o segundo arquivo da etapa dois.
+
+452
+00:56:58.210 --> 00:57:02.070
+Kadu Gertners: Tudo bem. Bom, deixa eu ver se vocês botaram alguma coisa aqui.
+
+453
+00:57:02.940 --> 00:57:05.169
+Kadu Gertners: Caramba, tá difícil, hein, amigo?
+
+454
+00:57:06.380 --> 00:57:08.020
+leonardo Peres: Parou com o arquivo, hein? Professor.
+
+455
+00:57:09.310 --> 00:57:12.240
+Kadu Gertners: Parei com o arquivinho. Não vai ter outro arquivinho.
+
+456
+00:57:12.240 --> 00:57:14.460
+leonardo Peres: Não, porque o senhor falou arquivo. Eu achei estranho.
+
+457
+00:57:17.040 --> 00:57:19.630
+Kadu Gertners: Ao invés de arquivinho, né?
+
+458
+00:57:19.970 --> 00:57:20.810
+leonardo Peres: Aí tem a mercadoria.
+
+459
+00:57:20.810 --> 00:57:21.269
+Kadu Gertners: E a Terra.
+
+460
+00:57:21.270 --> 00:57:21.900
+leonardo Peres: É o.
+
+461
+00:57:22.590 --> 00:57:24.690
+Kadu Gertners: É verdade. É verdade.
+
+462
+00:57:25.600 --> 00:57:35.830
+Kadu Gertners: Ok, Weber. Ok, são entidades independentes. Pode ter ou não isso aí, ó cadu do arquivinho
+
+463
+00:57:36.120 --> 00:57:38.739
+Kadu Gertners: Caraca. Já fui até apelidado disso.
+
+464
+00:57:38.890 --> 00:57:46.300
+Kadu Gertners: Tá certo. Tudo bem. Está fazendo parte. Está fazendo parte. Eu aceito. Eu aceito. Tudo bem.
+
+465
+00:57:46.800 --> 00:57:50.749
+Kadu Gertners: Bom, vamos lá, caduzão. Segundo arquivo
+
+466
+00:57:51.620 --> 00:57:54.789
+Kadu Gertners: legal, o nosso segundo arquivinho aqui,
+
+467
+00:57:55.140 --> 00:58:03.429
+Kadu Gertners: para agradar gregos e troianos está aqui. Legal, caduzon. Essa etapa dois é o que nós veríamos na semana,
+
+468
+00:58:03.560 --> 00:58:05.279
+Kadu Gertners: na próxima semana.
+
+469
+00:58:05.390 --> 00:58:12.959
+Kadu Gertners: Só que no meio da aula, lembrando semana que vem terão dois feriados no Rio de Janeiro,
+
+470
+00:58:13.160 --> 00:58:16.329
+Kadu Gertners: exatamente nos dias das nossas aulas,
+
+471
+00:58:16.480 --> 00:58:18.520
+Kadu Gertners: terça e quinta da semana que vem,
+
+472
+00:58:18.650 --> 00:58:24.269
+Kadu Gertners: respectivamente, vinte e um de Abril e vinte e três de abril de dois mil e vinte e seis.
+
+473
+00:58:24.540 --> 00:58:26.900
+Kadu Gertners: Então nós não teremos aula.
+
+474
+00:58:27.410 --> 00:58:38.800
+Kadu Gertners: Então, o que eu vou fazer? Eu estou adiantando um pouco da etapa dois. Agora, na primeira semana. E provavelmente eu vou finalizar isso na terceira semana
+
+475
+00:58:39.550 --> 00:58:43.689
+Kadu Gertners: de aula, que será já a terceira etapa da aula.
+
+476
+00:58:44.580 --> 00:58:46.850
+Kadu Gertners: A terceira etapa do trimestre.
+
+477
+00:58:47.260 --> 00:58:48.290
+Kadu Gertners: Tá legal.
+
+478
+00:58:48.680 --> 00:58:50.180
+Kadu Gertners: Bom, caduzum
+
+479
+00:58:50.430 --> 00:59:01.289
+Kadu Gertners: nesse ponto. Aí nós vamos ver o que um pouquinho. Vamos lá. Olha só. A ideia aqui é projetar modelos relacionais de base de dados com restrições.
+
+480
+00:59:01.910 --> 00:59:09.569
+Kadu Gertners: Nós vamos então determinar a relação entre as tabelas e regras de negócio.
+
+481
+00:59:10.040 --> 00:59:19.739
+Kadu Gertners: Nós vamos planejar a modelagem de um banco de dados a partir de uma lista de tabelas e de campos de colunas.
+
+482
+00:59:20.090 --> 00:59:23.970
+Kadu Gertners: E nós vamos usar a restrição.
+
+483
+00:59:24.130 --> 00:59:28.900
+Kadu Gertners: Seja uma restrição única.
+
+484
+00:59:30.830 --> 00:59:35.150
+Kadu Gertners: Desculpe me. Em inglês chamada Unic.
+
+485
+00:59:35.660 --> 00:59:39.690
+Kadu Gertners: E também poderemos usar a restrição.
+
+486
+00:59:41.130 --> 00:59:43.349
+Kadu Gertners: Desculpem, peraí. Só um minuto. Peraí
+
+487
+00:59:48.150 --> 00:59:54.360
+Kadu Gertners: ou poderemos usar também a restrição chamada Note Nu, que é não nulo.
+
+488
+00:59:54.880 --> 00:59:58.670
+Kadu Gertners: Enquérigia Skl, legal vamos começar.
+
+489
+00:59:59.070 --> 01:00:18.240
+Kadu Gertners: Olha, vamos lá determinar a relação entre as tabelas e as regras do negócio. Então nós vamos começar a esmiuçar alguns pontos. Aí, legal, a importância de concluir o processo do design do modelo do banco de dados
+
+490
+01:00:18.450 --> 01:00:27.750
+Kadu Gertners: do Mer. E, como eu falei para vocês, sendo igual ou sendo um avanço, depois transformar no der.
+
+491
+01:00:27.750 --> 01:00:42.839
+Kadu Gertners: Como o nosso amigo falou, trazendo a sigla der, que significa diagrama, entidade e relacionamento, ou numa fase anterior, que é o Mer, que significa modelo, entidade e relacionamento
+
+492
+01:00:42.890 --> 01:00:43.820
+Kadu Gertners: legal.
+
+493
+01:00:44.380 --> 01:00:56.700
+Kadu Gertners: Nós vamos gastar um tempo na parte do design do banco de dados. Nós vamos ter que entrevistar, fazer perguntas para o pessoal da área de negócio.
+
+494
+01:00:57.120 --> 01:01:04.970
+Kadu Gertners: Eles vão explicar para nós várias coisas. Nós vamos anotar tudo. E depois vamos transformar aquilo num modelo.
+
+495
+01:01:05.350 --> 01:01:20.310
+Kadu Gertners: Esse modelo, esse design. Nós vamos mostrá lo para o pessoal que nós entrevistamos, que nós fizemos as perguntas, e nós vamos validar com eles. Se esse modelo tem sentido ou não para eles.
+
+496
+01:01:21.180 --> 01:01:28.520
+Kadu Gertners: Partindo dessa premissa, nós poderemos então, caduzão, ter ajustes nesse modelo lógico que sim.
+
+497
+01:01:28.960 --> 01:01:35.310
+Kadu Gertners: Esse modelo é tão vivo como o próprio funcionamento do banco de dados.
+
+498
+01:01:35.890 --> 01:01:38.930
+Kadu Gertners: Quando o mesmo for criado posteriormente.
+
+499
+01:01:39.440 --> 01:01:40.440
+Kadu Gertners: Legal
+
+500
+01:01:41.580 --> 01:01:52.099
+Kadu Gertners: a ideia de criar um design bem feito é para exatamente diminuir, minimizar os problemas futuros no banco de dados.
+
+501
+01:01:52.240 --> 01:02:04.599
+Kadu Gertners: Então, por exemplo, dados inconsistentes e informações imprecisas são dois problemas normalmente associado,
+
+502
+01:02:04.760 --> 01:02:10.819
+Kadu Gertners: associados a bancos de dados mal projetados. Olha que legal.
+
+503
+01:02:11.050 --> 01:02:23.679
+Kadu Gertners: Então, inconsistência de dados e informações, dados imprecisos. Ele pode ter a ver com a modelagem mal feita do banco. Exatamente isso que ele quer dizer?
+
+504
+01:02:24.950 --> 01:02:31.790
+Kadu Gertners: Declaração de missão para atender. A qual é o propósito?
+
+505
+01:02:31.900 --> 01:02:34.960
+Kadu Gertners: Qual é o problema de negócio?
+
+506
+01:02:35.170 --> 01:02:52.450
+Kadu Gertners: Qual é a gestão? A gerência de transações que será feita, e etc. Nós podemos dar um propósito da criação da modelagem, dessa modelagem, desse design, do banco de dados
+
+507
+01:02:53.160 --> 01:03:00.700
+Kadu Gertners: bom, objetivos da missão, tarefas vinculadas ao banco de dados
+
+508
+01:03:00.840 --> 01:03:06.760
+Kadu Gertners: em relação aos dados no banco de dados. Qual é a missão que nós teremos com isso?
+
+509
+01:03:08.370 --> 01:03:09.210
+Kadu Gertners: Bom,
+
+510
+01:03:09.400 --> 01:03:22.379
+Kadu Gertners: envolvidos com o banco de dados. Então, caduzão? Quais são as pessoas que estão envolvidas com o banco de dados é o pessoal da área de negócio. São os programadores.
+
+511
+01:03:22.380 --> 01:03:36.040
+Kadu Gertners: São os gerentes da área ou o diretor da área. Todas as pessoas que trabalham no dia a dia. Tecnicamente, naquela área, todas essas pessoas fazem parte da área de negócios.
+
+512
+01:03:36.470 --> 01:03:41.030
+Kadu Gertners: Também vão estar vinculados a isso. O administrador do banco de dados
+
+513
+01:03:41.230 --> 01:03:58.659
+Kadu Gertners: pode ter um administrador de dados. Podem ter pessoas da área de dados. Cientista de dados, arquiteto de dados, engenheiro de dados e analista de dados também. Todos esses podem estar envolvidos no projeto
+
+514
+01:03:59.500 --> 01:04:01.070
+Kadu Gertners: sem problema nenhum.
+
+515
+01:04:02.130 --> 01:04:11.540
+Kadu Gertners: Ok, bom, analisando o banco de dados legal. O banco de dados anterior.
+
+516
+01:04:11.870 --> 01:04:23.120
+Kadu Gertners: Será que, ao criarmos esse banco de dados que provavelmente esse banco de dados, onde ficarão os dados. Terá provavelmente
+
+517
+01:04:23.500 --> 01:04:24.300
+Kadu Gertners: um.
+
+518
+01:04:25.000 --> 01:04:33.310
+Kadu Gertners: Se está uma aplicação para conversar com esse banco de dados, então, pergunta inicial.
+
+519
+01:04:33.500 --> 01:04:42.270
+Kadu Gertners: Banco de dados anterior. Existe. Existe algum banco de dados anterior que já funcione?
+
+520
+01:04:42.590 --> 01:04:50.330
+Kadu Gertners: Ou já funcionou algum dia. Então nós temos que analisar como os dados foram ou como é que eles são obtidos,
+
+521
+01:04:50.670 --> 01:05:09.609
+Kadu Gertners: porque nós vamos ter que fazer provavelmente galera. Uma das perguntas mais importantes e mais interessantes do mundo do banco de dados migrar dados, você pegar dados de um banco de dados antigo
+
+522
+01:05:09.700 --> 01:05:20.690
+Kadu Gertners: de uma base antiga de dados e colocar num novo banco de dados. Se você remodelar o banco de dados,
+
+523
+01:05:21.280 --> 01:05:29.480
+Kadu Gertners: você pode de repente usar o mesmo modelo que ele já estava muito bom. E você tirar, por exemplo,
+
+524
+01:05:30.000 --> 01:05:33.719
+Kadu Gertners: do Mysql e botá lo no Oracle.
+
+525
+01:05:33.880 --> 01:05:43.779
+Kadu Gertners: Se você vai fazer um procedimento e não vai mudar nada da modelagem dele. Você pode dar um jeito de migrar
+
+526
+01:05:43.820 --> 01:06:01.560
+Kadu Gertners: todas as tabelas e as colunas que estão numa Isql, por exemplo, origem. E você jogar isso para todas as respectivas tabelas e colunas equivalentes que também serão criadas lá no Oracle.
+
+527
+01:06:02.110 --> 01:06:09.710
+Kadu Gertners: O que você precisa fazer? Nesse caso, cadu. Você terá que mapear cada coluna.
+
+528
+01:06:09.980 --> 01:06:12.980
+Kadu Gertners: Qual é a coluna do Mysql para
+
+529
+01:06:13.340 --> 01:06:24.129
+Kadu Gertners: coluna de cada tabela que será equivalente lá no lado do Oracle. Para cada coluna de cada tabela no destino.
+
+530
+01:06:25.150 --> 01:06:36.509
+Kadu Gertners: Beleza legal. Então, voltando, fechando o parênteses, voltando para cá, o banco de dados anterior. Se ele existia, nós devemos analisar os dados que estão nele.
+
+531
+01:06:37.170 --> 01:06:48.229
+Kadu Gertners: Legal. Outro ponto: nós precisaremos fazer entrevistas com os usuários, com os gestores que estarão envolvidos com esse banco de dados,
+
+532
+01:06:48.610 --> 01:06:56.720
+Kadu Gertners: e nós podemos ter perguntas e respostas que nos ajudarão a construir esse banco de dados,
+
+533
+01:06:56.940 --> 01:07:11.140
+Kadu Gertners: podendo ter dicas, até mesmo de criarmos novas entidades no nosso modelo, ou criarmos novos atributos, novas colunas.
+
+534
+01:07:11.470 --> 01:07:19.720
+Kadu Gertners: Então essas conversas, essas entrevistas, esses questionários, eles nos ajudarão com isso.
+
+535
+01:07:24.240 --> 01:07:42.300
+Kadu Gertners: Pensando na estrutura do banco de dados legal, temos então as entidades, as entidades. Foi aquele lance que eu falei para vocês. São as entidades que posteriormente têm chance de se transformarem numa tabela.
+
+536
+01:07:43.060 --> 01:07:46.270
+Kadu Gertners: Bom, atributos.
+
+537
+01:07:46.380 --> 01:07:51.489
+Kadu Gertners: Os atributos são como se fossem os campos ou as colunas.
+
+538
+01:07:52.150 --> 01:08:03.539
+Kadu Gertners: Cada entidade é indicado que se for uma entidade, uma possível tabela na visão de negócio
+
+539
+01:08:03.710 --> 01:08:10.069
+Kadu Gertners: é interessante que essa entidade, essa tabela, tenha uma chave primária,
+
+540
+01:08:10.570 --> 01:08:18.939
+Kadu Gertners: vírgula, essa chave primária pode ter uma coluna ou várias colunas.
+
+541
+01:08:21.120 --> 01:08:25.529
+Kadu Gertners: Nós temos que ter a característica de cada tributo,
+
+542
+01:08:25.830 --> 01:08:32.569
+Kadu Gertners: definir um domínio, um tipo de dado para cada atributo. Para cada coluna.
+
+543
+01:08:33.850 --> 01:08:40.500
+Kadu Gertners: Teremos que identificar relacionamentos entre as entidades,
+
+544
+01:08:41.300 --> 01:08:56.080
+Kadu Gertners: teremos que identificar chave primária, chaves estrangeiras e perceber qual é o tipo de cardinalidade das entidades entre elas. Se é um relacionamento
+
+545
+01:08:56.340 --> 01:09:04.539
+Kadu Gertners: para um, no máximo, um relacionamento, no máximo um para N, ou se é um relacionamento, no máximo, n. Para n
+
+546
+01:09:05.819 --> 01:09:12.960
+Kadu Gertners: beleza legal analisar regras de negócio.
+
+547
+01:09:13.060 --> 01:09:18.669
+Kadu Gertners: Teremos que fazer análises de regra de negócio. Teremos que fazer isso.
+
+548
+01:09:18.800 --> 01:09:21.829
+Kadu Gertners: Teremos que analisar como é que será isso.
+
+549
+01:09:22.310 --> 01:09:31.359
+Kadu Gertners: Como é que será essa regra de negócio? O que vai implicar? E nós podemos pegar essa regra de negócio e colocar dentro do banco de dados.
+
+550
+01:09:32.290 --> 01:09:34.349
+Kadu Gertners: Vamos ter que analisar isso também.
+
+551
+01:09:37.160 --> 01:09:42.080
+Kadu Gertners: Definir as views, as visualizações
+
+552
+01:09:42.210 --> 01:09:55.220
+Kadu Gertners: é que os usuários terão do banco de dados, dependendo de cada usuário ou de cada área que acessará o dado galera. Isso é questão de segurança.
+
+553
+01:09:55.330 --> 01:09:57.079
+Kadu Gertners: Lgpd está aí,
+
+554
+01:09:57.440 --> 01:10:08.129
+Kadu Gertners: então nós não podemos considerar passar, conceder um acesso para uma pessoa que não tenha privilégio para isso.
+
+555
+01:10:09.550 --> 01:10:12.640
+Kadu Gertners: Galera, deixa eu falar uma coisa para vocês. De curiosidade
+
+556
+01:10:17.850 --> 01:10:22.500
+Kadu Gertners: numa empresa que ela é uma empresa, por exemplo, particular,
+
+557
+01:10:23.150 --> 01:10:39.250
+Kadu Gertners: diferente do que tem acontecido aí. Até no Brasil, em relação à transparência de dados no Brasil, que nós podemos praticamente ver, de várias pessoas vinculadas ao governo, salário delas
+
+558
+01:10:39.460 --> 01:10:41.360
+Kadu Gertners: numa empresa.
+
+559
+01:10:41.960 --> 01:10:45.739
+Kadu Gertners: Muitas vezes, ninguém sabe do salário do outro
+
+560
+01:10:45.940 --> 01:10:48.869
+Kadu Gertners: só se uma pessoa falar para o outro. Quanto ganha
+
+561
+01:10:49.040 --> 01:10:53.380
+Kadu Gertners: se não for isso, galera, pelo amor de Deus, toma cuidado.
+
+562
+01:10:53.670 --> 01:10:54.969
+Kadu Gertners: Toma cuidado.
+
+563
+01:10:55.350 --> 01:10:58.750
+Kadu Gertners: Eu vou dar o meu exemplo. Eu cadu.
+
+564
+01:10:58.880 --> 01:11:09.389
+Kadu Gertners: Eu tenho acesso lá. Eu tenho acesso mesmo de montar uma consulta para ver, mas eu não faço isso.
+
+565
+01:11:09.710 --> 01:11:13.720
+Kadu Gertners: Eu poderia ver o salário de qualquer pessoa da minha empresa
+
+566
+01:11:14.800 --> 01:11:20.400
+Kadu Gertners: galera. Ouçam o que eu vou falar para vocês se pegarem você
+
+567
+01:11:20.500 --> 01:11:32.620
+Kadu Gertners: fazendo essa análise de um salário, e você não tiver realmente o direito de ver isso. Se, por exemplo, você não for do setor de recursos humanos,
+
+568
+01:11:32.770 --> 01:11:35.490
+Kadu Gertners: você pode ser mandado embora por justa causa.
+
+569
+01:11:35.880 --> 01:11:36.950
+Kadu Gertners: E se lei
+
+570
+01:11:37.730 --> 01:11:46.719
+Kadu Gertners: então assim eu estou dando um toque. Estou falando sério com vocês, porque dependendo do dado pessoal, isso pode ser um problema sério na empresa.
+
+571
+01:11:47.560 --> 01:12:01.899
+Kadu Gertners: Por isso que essa parte de View aqui. Ela entra exatamente nesse ponto. Ah, eu quero que a área de vendas enxergue algumas colunas lá dos funcionários da empresa
+
+572
+01:12:02.770 --> 01:12:15.620
+Kadu Gertners: beleza. Mas a área de vendas não poderá acessar o salário do funcionário. A coluna, salário, beleza legal,
+
+573
+01:12:16.420 --> 01:12:23.380
+Kadu Gertners: documentar galera. Documentar é um exercício que dá trabalho.
+
+574
+01:12:24.710 --> 01:12:29.430
+Kadu Gertners: Dá muito trabalho. Existem ferramentas.
+
+575
+01:12:29.770 --> 01:12:40.629
+Kadu Gertners: Desculpa, existem várias ferramentas que se você vincular o seu ambiente de trabalho do banco de dados. Você pode criar várias aí
+
+576
+01:12:41.440 --> 01:12:47.440
+Kadu Gertners: várias formas de manter a sua documentação atualizada.
+
+577
+01:12:47.590 --> 01:12:55.250
+Kadu Gertners: Você tem ferramentas que ajudam a fazer isso. E galera vai na minha a.
+
+578
+01:13:00.810 --> 01:13:02.260
+Eduardo Ribeiro: Tá mudo, professor.
+
+579
+01:13:11.150 --> 01:13:12.929
+Eduardo Ribeiro: Ainda está mudo, Professor?
+
+580
+01:13:17.890 --> 01:13:19.790
+Jayy Ferreira: Não voltou ainda.
+
+581
+01:13:21.090 --> 01:13:21.860
+Eduardo Ribeiro: Nada.
+
+582
+01:13:26.280 --> 01:13:29.220
+Kadu Gertners: Testando. Um, dois, três.
+
+583
+01:13:29.220 --> 01:13:29.880
+Eduardo Ribeiro: Pronto. Agora.
+
+584
+01:13:29.880 --> 01:13:31.320
+Jayy Ferreira: Agora voltou.
+
+585
+01:13:31.420 --> 01:13:33.330
+Kadu Gertners: Agora. Sim,
+
+586
+01:13:33.930 --> 01:13:47.170
+Kadu Gertners: então. Mas pessoal, vocês ouviram o finalzinho que eu falei aí do lance da parte do salário. Vocês ouviram que eu coloquei isso? Que o salário. O exemplo final que eu dei foi esse.
+
+587
+01:13:47.350 --> 01:13:49.600
+Eduardo Ribeiro: Não deu probleminha. Desculpa.
+
+588
+01:13:50.310 --> 01:13:51.640
+Kadu Gertners: Oi, fala.
+
+589
+01:13:51.830 --> 01:13:55.740
+Eduardo Ribeiro: Não deu pra ouvir essa parte. Acho que foi essa que acabou ficando muda.
+
+590
+01:13:56.130 --> 01:13:59.009
+Kadu Gertners: Tá bom. Não, não vou repetir. Não tem problema. Vou repetir.
+
+591
+01:13:59.210 --> 01:14:02.540
+Kadu Gertners: Olha só. Vamos supor o seguinte.
+
+592
+01:14:02.830 --> 01:14:11.680
+Kadu Gertners: A área de venda foi autorizada a ela ver determinadas colunas dos funcionários da empresa.
+
+593
+01:14:11.890 --> 01:14:14.440
+Kadu Gertners: Mas o que não pode acontecer,
+
+594
+01:14:14.650 --> 01:14:24.999
+Kadu Gertners: ninguém pode conceder numa view que será usada pelo setor de venda. Não poderá ter a coluna salário.
+
+595
+01:14:25.340 --> 01:14:30.339
+Kadu Gertners: Então esse é um exemplo perfeito do uso de uma view
+
+596
+01:14:31.590 --> 01:14:37.209
+Kadu Gertners: beleza. Então, galera. Esse é um assunto muito sério. E tem que tomar cuidado com isso.
+
+597
+01:14:37.570 --> 01:14:42.790
+Kadu Gertners: Então, olha só aí. Eu também falei da parte da documentação
+
+598
+01:14:42.850 --> 01:14:50.499
+Kadu Gertners: galera. Infelizmente, tem muitas empresas, ainda que não fazem uma documentação robusta
+
+599
+01:14:50.520 --> 01:15:08.910
+Kadu Gertners: de você estar escrito em algum lugar. Qual é o nome da tabela. Qual é o objetivo daquela tabela? Qual é o nome da coluna? A descrição da coluna. O tipo da coluna. Qual é a chave primária daquelas tabelas
+
+600
+01:15:08.910 --> 01:15:22.320
+Kadu Gertners: das tabelas. Quais são as chaves estrangeiras das tabelas? Caraca caduzão. Tudo isso que você está falando, por exemplo, você poderia colocar tudo isso numa documentação do banco de dados? Sim,
+
+601
+01:15:23.760 --> 01:15:26.160
+Kadu Gertners: beleza legal.
+
+602
+01:15:26.400 --> 01:15:30.519
+Kadu Gertners: Outro ponto: revisar a integridade dos dados.
+
+603
+01:15:30.710 --> 01:15:36.719
+Kadu Gertners: Então nós teremos que de alguma forma, comprovar ou perceber
+
+604
+01:15:37.730 --> 01:15:44.869
+Kadu Gertners: que a integridade dos dados está Ok no nível da tabela.
+
+605
+01:15:45.110 --> 01:15:47.469
+Kadu Gertners: Normalmente é uma chave primária.
+
+606
+01:15:47.930 --> 01:15:54.109
+Kadu Gertners: É coluna está vinculada ao domínio ao tipo de dado de uma coluna.
+
+607
+01:15:54.260 --> 01:16:02.510
+Kadu Gertners: Relacionamento. A forma de uma chave estrangeira, conversar com a chave primária de uma outra tabela,
+
+608
+01:16:03.050 --> 01:16:12.580
+Kadu Gertners: ou ainda em cima, de regras de negócio que o pessoal da área de negócio falou, que nós, temos que criar dentro do banco de dados
+
+609
+01:16:13.470 --> 01:16:15.120
+Kadu Gertners: legal, vamos seguir
+
+610
+01:16:17.780 --> 01:16:35.940
+Kadu Gertners: conduzindo entrevistas Opa importante, conversarmos e fazermos entrevistas com os envolvidos, com o banco de dados, que são eles que vão no dia a dia mexer naqueles dados através dos Select
+
+611
+01:16:36.520 --> 01:16:44.319
+Kadu Gertners: do Skl do Comando Select. Bom, nós podemos fazer perguntas abertas,
+
+612
+01:16:44.920 --> 01:16:56.619
+Kadu Gertners: mas vem cá. Qual é a descrição que você daria para essa coluna? Chamada valor do produto? Qual é a descrição que você dá sobre isso,
+
+613
+01:16:56.890 --> 01:16:59.620
+Kadu Gertners: ou você pode fazer uma pergunta fechada:
+
+614
+01:17:00.630 --> 01:17:05.600
+Kadu Gertners: quais são os valores possíveis para a coluna? Sexo.
+
+615
+01:17:06.850 --> 01:17:12.830
+Kadu Gertners: Então a pessoa pode responder lá. É Fm de feminino, masculino?
+
+616
+01:17:12.970 --> 01:17:14.690
+Kadu Gertners: É uma pergunta fechada.
+
+617
+01:17:16.000 --> 01:17:17.080
+Kadu Gertners: Tá legal.
+
+618
+01:17:17.240 --> 01:17:21.519
+Kadu Gertners: Diretrizes dos participantes. Olha só que interessante.
+
+619
+01:17:21.750 --> 01:17:34.659
+Kadu Gertners: Conscientize os participantes. Qual a sua intenção nesses encontros nessas entrevistas? Para que todos saibam o que você está fazendo ali.
+
+620
+01:17:35.180 --> 01:17:44.410
+Kadu Gertners: Segundo ponto: deixe os participantes saberem que você também gosta da participação de todos na entrevista.
+
+621
+01:17:44.480 --> 01:17:59.020
+Kadu Gertners: E que sua resposta às perguntas da entrevista são valiosas para o projeto geral do design. Então todas as pessoas que estão na reunião ou que estão na entrevista podem participar e devem participar,
+
+622
+01:18:00.230 --> 01:18:09.090
+Kadu Gertners: certifique se, terceiro, de que todos entendam que você é o árbitro dessa entrevista,
+
+623
+01:18:09.610 --> 01:18:14.779
+Kadu Gertners: porque eles estão fazendo uma ajuda para você.
+
+624
+01:18:15.230 --> 01:18:27.419
+Kadu Gertners: E no fundo, no fundo, você estará os ajudando a criar um modelo, uma modelagem melhor, para que aquele aplicativo, aquele sistema, funcionem melhor.
+
+625
+01:18:28.260 --> 01:18:41.369
+Kadu Gertners: Beleza, e você é considerado um árbitro. Se surgirem algumas disputas entre as pessoas que estiverem na entrevista.
+
+626
+01:18:42.570 --> 01:18:44.520
+Kadu Gertners: Algum problema, né?
+
+627
+01:18:44.830 --> 01:18:50.660
+Kadu Gertners: Alguém falando mais alto? Enfim, você ser um mediador daquilo ali.
+
+628
+01:18:52.210 --> 01:18:53.160
+Kadu Gertners: Legal.
+
+629
+01:18:53.270 --> 01:19:11.869
+Kadu Gertners: Diretrizes do entrevistador: Você que está na sua empresa. E você, que vai conduzir a entrevista com todos legal, conduza a entrevista em um local propício numa sala de reunião. Que todos estejam bem acomodados. Por exemplo,
+
+630
+01:19:12.310 --> 01:19:16.170
+Kadu Gertners: defina um limite de pessoas para cada reunião.
+
+631
+01:19:16.650 --> 01:19:24.759
+Kadu Gertners: Você vai ter que ter a percepção. Ah, mas caduzão. Como é que eu sei isso, cara? Desculpe, isso não é uma resposta fechada.
+
+632
+01:19:24.810 --> 01:19:43.019
+Kadu Gertners: Você vai ter que analisar as pessoas que ao entrevistar, ao começar a conversar com as pessoas, você talvez comece a perceber quem poderia estar ou não na reunião. E você pode perguntar para outras pessoas se mais alguém poderia entrar na reunião.
+
+633
+01:19:43.020 --> 01:19:53.110
+Kadu Gertners: Então, com o dia a dia que você vai perceber nas reuniões posteriores nas entrevistas posteriores, quem você chamará ou não na reunião,
+
+634
+01:19:55.700 --> 01:20:00.399
+Kadu Gertners: conduz a entrevista separada para usuários de gerência.
+
+635
+01:20:01.740 --> 01:20:07.420
+Kadu Gertners: Isso é um ponto que ele pode ser questionável.
+
+636
+01:20:07.550 --> 01:20:24.970
+Kadu Gertners: Dependendo do caso, você poderia juntar o usuário, alguns usuários, e alguns gerentes. Então acho que aí, nesse ponto, aqui, eu não concordo totalmente. Não acho que isso aí uma pergunta aberta vai depender do caso
+
+637
+01:20:25.680 --> 01:20:31.329
+Kadu Gertners: legal. Prepare suas perguntas antes da entrevista. Cara, isso aqui é fundamental.
+
+638
+01:20:31.440 --> 01:20:38.860
+Kadu Gertners: Eu vou para uma reunião com um roteiro. Todas as perguntas foram anotadas. O que eu quero saber,
+
+639
+01:20:39.090 --> 01:20:41.130
+Kadu Gertners: porque eu que tenho dúvida.
+
+640
+01:20:41.470 --> 01:20:51.339
+Kadu Gertners: Então eu vou colocar todo mundo na entrevista ou na reunião para todo mundo responder as minhas dúvidas ou a reunião do meu grupo ou as dúvidas do meu grupo de trabalho,
+
+641
+01:20:53.560 --> 01:21:02.029
+Kadu Gertners: se possível, grave a entrevista ou faça as devidas anotações da entrevista. Você pode fazer o que você achar melhor.
+
+642
+01:21:03.150 --> 01:21:04.419
+Kadu Gertners: E aí, lógico,
+
+643
+01:21:05.080 --> 01:21:14.260
+Kadu Gertners: dependendo das pessoas envolvidas, você pede autorização. Ou você fala que essa reunião ou a entrevista será gravada.
+
+644
+01:21:14.800 --> 01:21:18.910
+Kadu Gertners: Dê a todos a sua atenção igual e total.
+
+645
+01:21:19.380 --> 01:21:28.050
+Kadu Gertners: Todos que estão na reunião. Assim, vamos abrir um parênteses, como na vida, todos somos iguais, não é?
+
+646
+01:21:28.170 --> 01:21:39.890
+Kadu Gertners: Todo mundo deve ser tratado da mesma forma, com educação e com carinho. Então, se você colocou todos na mesma reunião, você tem que tratar todos de forma igual
+
+647
+01:21:40.420 --> 01:21:44.650
+Kadu Gertners: legal, você terá que controlar a reunião
+
+648
+01:21:48.120 --> 01:21:53.640
+Kadu Gertners: legal. Caduzon, vamos começar a falar. Olha que legal. Agora vai começar a ficar bom.
+
+649
+01:21:54.090 --> 01:21:59.220
+Kadu Gertners: Um estudo de caso que são as bicicletas do Mike.
+
+650
+01:21:59.400 --> 01:22:00.390
+Kadu Gertners: Vamos lá.
+
+651
+01:22:00.550 --> 01:22:15.399
+Kadu Gertners: Ao aprender a aplicar um conceito ou técnica específica de forma genérica, será possível aplicá lo a qualquer outro banco de dados que você esteja projetando.
+
+652
+01:22:15.510 --> 01:22:26.469
+Kadu Gertners: Então vocês poderiam perguntar assim, mas cadu você no decorrer da sua carreira profissional, poxa, você já viu alguns modelos de banco de dados, né? É, sim.
+
+653
+01:22:26.550 --> 01:22:36.250
+Kadu Gertners: Mas caduzon. Se você entrar numa empresa específica, você de repente pode ver um modelo completamente diferente. Sim,
+
+654
+01:22:36.900 --> 01:22:38.929
+Kadu Gertners: Ah, é sim, lógico,
+
+655
+01:22:39.130 --> 01:22:44.259
+Kadu Gertners: mas cadu peraí. Mas você vai ter que entender isso com o pessoal da área de negócios. Sim,
+
+656
+01:22:44.420 --> 01:23:04.000
+Kadu Gertners: eu vou ter que passar a saber com quem entende muito mais que eu. Não entendo nada. Eu vou ter que passar a entender, para eu criar o modelo. E a partir do momento que eu começo a criar o modelo, começo a interagir com toda a área de negócio. Eu passo a entender um pouquinho sobre aquilo,
+
+657
+01:23:04.320 --> 01:23:08.229
+Kadu Gertners: e eu começo a responder e até a falar sobre aquilo,
+
+658
+01:23:08.820 --> 01:23:21.670
+Kadu Gertners: é assim que vai se construindo o conhecimento e lógico que em cima, mesmo que desse modelo específico, eu já tenho um pouquinho minha experiência de outros casos que eu já vivenciei.
+
+659
+01:23:21.850 --> 01:23:31.249
+Kadu Gertners: Então algumas boas práticas, alguns pontos importantes que eu já vi, que eu já aprendi um pouquinho. Eu vou trazer para esse projeto também.
+
+660
+01:23:32.460 --> 01:23:33.540
+Kadu Gertners: Beleza.
+
+661
+01:23:34.070 --> 01:23:34.880
+Kadu Gertners: Bom dia.
+
+662
+01:23:37.350 --> 01:23:49.989
+Kadu Gertners: O Mike olha que interessante. O Mike usa uma planilha eletrônica para cadastrar determinados dados da loja de bicicletas dele.
+
+663
+01:23:50.590 --> 01:23:54.770
+Kadu Gertners: Então, qual é a declaração de missão da empresa?
+
+664
+01:23:54.890 --> 01:24:01.749
+Kadu Gertners: Qual é a ideia? Da criação de missão da empresa que vai ter vínculo com o banco de dados.
+
+665
+01:24:02.480 --> 01:24:05.759
+Kadu Gertners: O objetivo do banco de dados nesse caso,
+
+666
+01:24:06.010 --> 01:24:08.759
+Kadu Gertners: das bicicletas do Mike é o quê?
+
+667
+01:24:08.990 --> 01:24:18.330
+Kadu Gertners: Manter os dados de que precisamos para dar o devido suporte ao nosso negócio de vendas no varejo
+
+668
+01:24:18.440 --> 01:24:25.340
+Kadu Gertners: e as nossas operações de atendimento ao cliente. Então essa é a missão
+
+669
+01:24:25.840 --> 01:24:31.439
+Kadu Gertners: do banco de dados da loja do Mike de Bicicletas
+
+670
+01:24:35.310 --> 01:24:43.200
+Kadu Gertners: legal, objetivos da Missão, Bicicletas do Mike legal. Nós temos alguns objetivos.
+
+671
+01:24:43.890 --> 01:24:48.740
+Kadu Gertners: Manter as informações de inventário sempre completas.
+
+672
+01:24:48.910 --> 01:24:52.169
+Kadu Gertners: Se alguém vendeu alguma peça da bicicleta,
+
+673
+01:24:52.290 --> 01:24:56.180
+Kadu Gertners: tem que ser dado baixa no banco de dados na aplicação.
+
+674
+01:24:57.760 --> 01:25:08.340
+Kadu Gertners: Tá legal. Então a aplicação você lá na janela de cadastro do sistema, você vai entrar na aplicação. Vai fazer um login para a aplicação.
+
+675
+01:25:08.360 --> 01:25:24.119
+Kadu Gertners: Vai, e você irá no devido local dentro da aplicação. E você numa determinada janela telinha lá da aplicação. Você vai dar baixa naquele material que você vendeu.
+
+676
+01:25:25.230 --> 01:25:43.360
+Kadu Gertners: Tá legal, legal. E aí, quando você dá baixa, na tela, que é o Front End que você está vendo está na sua frente. Você vai mexer no chamado Backend. E o que é o backend caduzão é o banco de dados. É o que você não está vendo diretamente,
+
+677
+01:25:44.440 --> 01:25:45.520
+Kadu Gertners: beleza.
+
+678
+01:25:45.710 --> 01:25:51.740
+Kadu Gertners: Bom, segundo ponto, manter informações completas do cliente.
+
+679
+01:25:51.890 --> 01:26:01.020
+Kadu Gertners: Qual é o cadastro mais recente do cliente? O telefone mais recente, o endereço mais recente do cliente.
+
+680
+01:26:02.220 --> 01:26:08.729
+Kadu Gertners: Terceiro ponto: acompanhar todas as vendas que estão sendo feitas do cliente.
+
+681
+01:26:09.300 --> 01:26:14.599
+Kadu Gertners: O que ele comprou há meses atrás. O que ele comprou há dias atrás?
+
+682
+01:26:16.740 --> 01:26:32.310
+Kadu Gertners: Manter informações completas do fornecedor. Quem é que nos fornece lá as peças da bicicleta? Quem é que nos fornece o pneu da bicicleta? A parte da marcha quem é que fornece o Guidom?
+
+683
+01:26:32.310 --> 01:26:48.560
+Kadu Gertners: Quem é que fornece o banco e o nosso estoque vinculado a isso ao fornecedor? Tem que estar em dia. Nós temos que ter as informações de cadastro do fornecedor com os telefones atuais, com o endereço atual do fornecedor,
+
+684
+01:26:49.470 --> 01:27:01.880
+Kadu Gertners: devemos também manter as informações completas dos funcionários da empresa do Mike, da loja de bicicletas do Mike legal,
+
+685
+01:27:04.090 --> 01:27:13.239
+Kadu Gertners: definindo a lista de tabelas preliminares. Então aí vai começar a acontecer o seguinte:
+
+686
+01:27:13.590 --> 01:27:17.480
+Kadu Gertners: as listas preliminares de campo de colunas.
+
+687
+01:27:17.670 --> 01:27:29.850
+Kadu Gertners: Nós vamos começar a identificar tabelas. Então, a partir de uma lista de campos de atributos que poderemos analisar.
+
+688
+01:27:30.000 --> 01:27:37.190
+Kadu Gertners: Nós vamos começar a perceber se aquilo é um campo ou se aquilo é uma tabela.
+
+689
+01:27:37.430 --> 01:27:43.270
+Kadu Gertners: Se aquilo é um atributo ou se aquilo é uma entidade,
+
+690
+01:27:44.160 --> 01:27:57.869
+Kadu Gertners: nós vamos ter a lista de assuntos e desses assuntos, nós também vamos poder identificar ali tabelas, poderemos identificar as entidades,
+
+691
+01:27:58.880 --> 01:28:00.040
+Kadu Gertners: beleza.
+
+692
+01:28:00.210 --> 01:28:01.040
+Kadu Gertners: Bom dia.
+
+693
+01:28:01.420 --> 01:28:11.210
+Kadu Gertners: Verificar se existe duplicação dessas duas listas. A lista preliminar dos campos e a lista de assuntos,
+
+694
+01:28:11.710 --> 01:28:25.359
+Kadu Gertners: verificar se existe duplicação dessas tabelas a serem usadas e criar uma lista mais recente com somente uma dessas indicações sem ter repetição.
+
+695
+01:28:26.350 --> 01:28:30.160
+Kadu Gertners: Um valor único para ser o nome único de uma tabela.
+
+696
+01:28:30.870 --> 01:28:43.040
+Kadu Gertners: Tá legal. Você na mesma base de dados. Você não vai identificar duas tabelas. Funcionário? Não, se já tem duas tabelas. Foi identificado na análise que fizemos.
+
+697
+01:28:43.910 --> 01:28:44.700
+Kadu Gertners: É a
+
+698
+01:28:45.170 --> 01:28:57.210
+Kadu Gertners: numa lista. Teve a indicação de funcionário. E na outra lista, teve também a indicação de funcionário. Ao revisar isso, eu vou botar só uma tabela. Funcionário acabou.
+
+699
+01:29:03.540 --> 01:29:11.250
+Kadu Gertners: Devemos, depois de ler essas listas e ver as tabelas, verificar os objetivos da missão.
+
+700
+01:29:12.290 --> 01:29:17.310
+Kadu Gertners: Quais são os objetivos da missão, se estão sendo cumpridos com essas tabelas,
+
+701
+01:29:17.470 --> 01:29:24.669
+Kadu Gertners: e devemos também listar quais as tabelas que serão efetivamente criadas no nosso modelo.
+
+702
+01:29:25.400 --> 01:29:30.659
+Kadu Gertners: Beleza pessoal. Eu vou terminar por aqui hoje.
+
+703
+01:29:31.590 --> 01:29:38.880
+Kadu Gertners: Ficou alguma dúvida? Vocês querem perguntar alguma coisa? Tirar alguma dúvida aí, pessoal?
+
+704
+01:29:39.200 --> 01:29:41.069
+Kadu Gertners: Caramba, tá difícil, hein?
+
+705
+01:29:42.320 --> 01:29:43.620
+Kadu Gertners: É esse aqui
+
+706
+01:29:53.190 --> 01:30:01.519
+Kadu Gertners: é Eduardo, agora que eu vi sua resposta, irmão. Desculpe que violaram o quê? O exemplo do Okweather.
+
+707
+01:30:02.420 --> 01:30:12.960
+Kadu Gertners: Ok, Johnny, já acertamos isso. Eduardo Ribeiro a colocação que você falou aqui foi do negócio de funcionários. É isso de ver o negócio de salário?
+
+708
+01:30:13.150 --> 01:30:18.150
+Kadu Gertners: Foi isso, amigão? Refresca minha mente aí se você estiver ouvindo, Eduardo.
+
+709
+01:30:18.330 --> 01:30:25.199
+Kadu Gertners: Ah, sim, é cara. É complicado, né? Eduardo? Deve ter sido uma circunstância realmente muito.
+
+710
+01:30:27.520 --> 01:30:28.830
+Kadu Gertners: Então, assim
+
+711
+01:30:33.340 --> 01:30:36.850
+Kadu Gertners: é bem complicado, né, Eduardo? É complicado mesmo isso,
+
+712
+01:30:38.640 --> 01:30:45.909
+Kadu Gertners: pessoal. Então é o seguinte. Olha só, galera. Vocês estão me ouvindo, testando estão me ouvindo?
+
+713
+01:30:45.910 --> 01:30:46.680
+Gianni Silva Santos: Tá ouvindo?
+
+714
+01:30:46.680 --> 01:30:47.010
+Weder Sousa Mendes: Em um.
+
+715
+01:30:47.010 --> 01:30:50.820
+Gianni Silva Santos: Falhou áudio uma vez. Só voltou rápido.
+
+716
+01:30:50.820 --> 01:30:52.559
+Kadu Gertners: Tudo bem, obrigado.
+
+717
+01:30:52.750 --> 01:31:06.200
+Kadu Gertners: Valeu, Lucas, também, pessoal. Então, o seguinte. Vamos recapitular aí. Caduzon, você adiantou um pouquinho da etapa dois. Por quê? Porque na semana que vem terá feriado
+
+718
+01:31:06.490 --> 01:31:09.289
+Kadu Gertners: terça e feriado quinta.
+
+719
+01:31:09.540 --> 01:31:12.730
+Kadu Gertners: Então nós não nos veremos na próxima semana.
+
+720
+01:31:12.990 --> 01:31:18.210
+Kadu Gertners: Só nos veremos daqui a duas terças feiras. Aí eu voltarei.
+
+721
+01:31:18.470 --> 01:31:20.959
+Kadu Gertners: Próximo slide dessa etapa dois.
+
+722
+01:31:21.390 --> 01:31:30.120
+Kadu Gertners: Beleza, turma. Pessoal, por favor. Ok, Gabriel, andrade. Pessoal, ouçam o que eu vou falar.
+
+723
+01:31:30.200 --> 01:31:43.410
+Kadu Gertners: Deem uma estudada na nossa matéria nas outras matérias, para vocês já irem estudando se ambientando galera. E não esqueçam de uma vírgula importante que eu vou falar agora.
+
+724
+01:31:45.170 --> 01:31:47.729
+Kadu Gertners: Nós estamos no segundo trimestre.
+
+725
+01:31:48.720 --> 01:31:53.889
+Kadu Gertners: Não subestimem. O nosso tempo passará rápido.
+
+726
+01:31:53.980 --> 01:32:04.910
+Kadu Gertners: Então já vai estudando e já vai olhando algumas coisas para você começar a fazer os seus trabalhos galera. Quando chegar no fim desse trimestre,
+
+727
+01:32:04.960 --> 01:32:18.129
+Kadu Gertners: eu não vou poder flexibilizar algumas coisas tanto como eu gostaria. Não vou poder, porque eu vou ter um prazo mais rígido para entregar as coisas que eu preciso entregar para a coordenação.
+
+728
+01:32:18.430 --> 01:32:27.270
+Kadu Gertners: Então vão estudando. Vão aprendendo qualquer coisa. Mandem mensagem para mim no
+
+729
+01:32:27.980 --> 01:32:47.519
+Kadu Gertners: no infinite online, por e mail ou no Whatsapp. Nós vamos nos falando. E galera, sem esquecer também. Eu sei que vocês me mandaram mensagens, inclusive no Whatsapp, e eu vou responder assim que possível para todos vocês,
+
+730
+01:32:47.900 --> 01:32:54.219
+Kadu Gertners: ok? Não esqueci. E eu não vou deixar de responder. Ok, Jean. Valeu, irmão
+
+731
+01:32:54.790 --> 01:33:09.070
+Kadu Gertners: galera. Muito obrigado por mais essa aula por essa ajuda aqui na aula de vocês. Um beijo no coração de vocês. Até a próxima terça. Excelente fim de semanas e feriados. Galera, beijo no coração.
+
+732
+01:33:09.200 --> 01:33:10.929
+gabriel.diniz: Valeu, pessoal. Bom feriado para o senhor.
+
+733
+01:33:12.080 --> 01:33:21.430
+Kadu Gertners: Ok, Wanderson, vamos falar sobre isso pessoalmente. Diretamente no infinite online ou por e mail. Ok, Wanderson.
+
+734
+01:33:24.430 --> 01:33:25.779
+Kadu Gertners: Beleza, cara.
+
+735
+01:33:26.490 --> 01:33:37.230
+Kadu Gertners: Beleza, irmão. Isso aí é assunto particular. Vamos falar diretamente. Mas eu dou um jeito lá de abrir para você. Rápido. Isso que eu preciso entregar notas. Beleza, cara. Valeu,
+
+736
+01:33:37.390 --> 01:33:39.759
+Kadu Gertners: galera. Obrigado, excelente noite.
+

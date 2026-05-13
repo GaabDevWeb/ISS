@@ -1,0 +1,2518 @@
+WEBVTT
+
+1
+00:00:34.390 --> 00:00:39.070
+Gesiel Lopes: Boa, pessoal. Boa noite. Vamos só esperar dois minutinhos. Já. Já iniciamos.
+
+2
+00:03:50.630 --> 00:03:53.240
+Gesiel Lopes: Vamos lá, pessoal. Acho que já dá para a gente começar.
+
+3
+00:03:53.450 --> 00:03:54.679
+Gesiel Lopes: Então, vamos lá
+
+4
+00:03:59.740 --> 00:04:06.880
+Gesiel Lopes: então. Antes de mais nada, muito boa noite. Seja bem vindo ao nosso
+
+5
+00:04:06.920 --> 00:04:26.110
+Gesiel Lopes: sexto encontro aqui da disciplina de introdução à programação com Python, do bloco de fundamentos de processamento de dados aqui do Instituto Ifnet. Aqui quem vos fala? Eu, Giseu Lopes. Estamos aí iniciando mais. Na realidade, estamos chegando na metade
+
+6
+00:04:26.300 --> 00:04:30.669
+Gesiel Lopes: da nossa disciplina. Literalmente, estamos iniciando aqui
+
+7
+00:04:30.840 --> 00:04:37.699
+Gesiel Lopes: a quarta etapa, a metade aí da nossa disciplina. Nosso tempo tem voado, hein? E aí
+
+8
+00:04:37.700 --> 00:04:52.069
+Gesiel Lopes: tudo tranquilo deu para descansar. Tivemos uma semana aí de descanso. Espero que vocês tenham aproveitado ao máximo esse tempo, seja para descansar, seja para botar os estudos em dias, enfim,
+
+9
+00:04:52.070 --> 00:05:08.160
+Gesiel Lopes: seja para brincar, enfim, da melhor forma possível. Diante claro, da realidade de vocês. E você que estiver assistindo a gravação. Bom dia. Boa tarde. Boa noite. Enfim, o horário que você estiver assistindo o nosso encontro,
+
+10
+00:05:08.270 --> 00:05:11.519
+Gesiel Lopes: sinta se também em casa, sinta se à vontade.
+
+11
+00:05:12.150 --> 00:05:15.449
+Gesiel Lopes: Então, vamos lá, pessoal. Hoje eu estou um pouquinho rouco.
+
+12
+00:05:16.060 --> 00:05:21.220
+Gesiel Lopes: Tive um compromisso antes de iniciar a nossa aula aqui, por isso que eu estou meio rouco.
+
+13
+00:05:21.450 --> 00:05:27.790
+Gesiel Lopes: Então vamos lá. Você que estiver ao vivo aqui. Vocês conseguem me ver bem, está tudo tranquilo. O áudio está legal.
+
+14
+00:05:31.030 --> 00:05:32.510
+Gesiel Lopes: Beleza,
+
+15
+00:05:33.740 --> 00:05:46.589
+Gesiel Lopes: beleza. O Jefe deu um feedback. Galera, beleza, valeu, galera. Então, sem mais delongas. Agora sim, vou compartilhar aqui a minha tela com vocês.
+
+16
+00:05:47.640 --> 00:05:52.020
+Gesiel Lopes: Acredito que nesse exato momento, vocês estejam vendo
+
+17
+00:05:52.210 --> 00:05:58.280
+Gesiel Lopes: a minha tela. Vou só me organizar aqui o chat
+
+18
+00:05:58.840 --> 00:06:03.459
+Gesiel Lopes: para que eu possa acompanhá los.
+
+19
+00:06:03.760 --> 00:06:15.329
+Gesiel Lopes: E também pessoal, tendo qualquer dúvida, é só abrir o microfone, que a gente vai se entendendo. Tranquilo. Vou colocar aqui
+
+20
+00:06:16.130 --> 00:06:22.769
+Gesiel Lopes: o notebook que eu preparei aqui para a gente falar nosso encontro de hoje,
+
+21
+00:06:23.280 --> 00:06:26.580
+Gesiel Lopes: tal o tamanho está legal. Vocês conseguem ver bem.
+
+22
+00:06:30.730 --> 00:06:31.860
+Gesiel Lopes: Ok,
+
+23
+00:06:33.680 --> 00:06:44.259
+Gesiel Lopes: beleza. Então vamos lá. Então a gente tem falado aí, pessoal, esses últimos encontros, mas particularmente dos últimos três encontros.
+
+24
+00:06:44.450 --> 00:07:02.409
+Gesiel Lopes: A gente está falando sobre a manipulação de Strings. Então a gente já viu bastante coisa. Declarações de Strings simples, String. Com múltiplas linhas. A gente já viu um conceito extremamente importante
+
+25
+00:07:02.450 --> 00:07:10.899
+Gesiel Lopes: na manipulação de String, que é o conceito de concatendação, que é quando você junta
+
+26
+00:07:10.900 --> 00:07:28.449
+Gesiel Lopes: Strings, mais de um String. A gente viu algumas operações também e aí o último. A gente trabalhou com operador de multiplicação, o que pode ser usado aqui com o Python para a gente fazer a multiplicação
+
+27
+00:07:28.510 --> 00:07:39.310
+Gesiel Lopes: da declaração de Strings, beleza. E aí? Agora a gente vai continuar falando um pouquinho. Agora sobre esse operador.
+
+28
+00:07:39.710 --> 00:07:47.389
+Gesiel Lopes: É um operador bem interessante aqui do mundo, Python para manipular Strings, que é um operador colchete,
+
+29
+00:07:47.540 --> 00:07:55.179
+Gesiel Lopes: onde a gente vai estar trabalhando com um conceito aqui de Slice ou fatiamento.
+
+30
+00:07:55.400 --> 00:08:02.610
+Gesiel Lopes: Então, antes da gente botar a mão na massa. Eu separei aqui também um trecho aqui
+
+31
+00:08:02.810 --> 00:08:08.609
+Gesiel Lopes: só para a gente entender aqui pessoal rapidamente alguns conceitos.
+
+32
+00:08:09.080 --> 00:08:14.120
+Gesiel Lopes: Então, o primeiro ponto a ser observado
+
+33
+00:08:14.940 --> 00:08:20.770
+Gesiel Lopes: quando a gente está falando de String no mundo, Python, tá, é
+
+34
+00:08:20.970 --> 00:08:25.159
+Gesiel Lopes: então aqui o primeiro ponto que a gente precisa considerar.
+
+35
+00:08:25.430 --> 00:08:27.860
+Gesiel Lopes: Só um minutinho.
+
+36
+00:08:28.900 --> 00:08:33.890
+Gesiel Lopes: Só vou fazer aqui um ajuste beleza.
+
+37
+00:08:34.900 --> 00:08:45.969
+Gesiel Lopes: Então vamos lá então. O primeiro ponto que a gente precisa levar em consideração. Quando a gente está trabalhando com Python, com strings em Python é entender.
+
+38
+00:08:48.420 --> 00:08:49.720
+Gesiel Lopes: Ah,
+
+39
+00:08:53.700 --> 00:09:03.199
+Gesiel Lopes: entender o conceito tá distingue na linguagem.
+
+40
+00:09:04.730 --> 00:09:06.080
+Gesiel Lopes: Como assim, Gisele?
+
+41
+00:09:12.270 --> 00:09:18.739
+Gesiel Lopes: Então a primeira coisa que a gente precisa entender é que quando a gente está trabalhando com Python,
+
+42
+00:09:19.520 --> 00:09:25.520
+Gesiel Lopes: uma String é entendida como uma cadeia
+
+43
+00:09:33.620 --> 00:09:35.540
+Gesiel Lopes: de caracteres,
+
+44
+00:09:40.180 --> 00:09:46.369
+Gesiel Lopes: tá, isso quer dizer o quê,
+
+45
+00:09:46.510 --> 00:09:48.929
+Gesiel Lopes: voltando? Isso quer dizer o quê?
+
+46
+00:09:49.140 --> 00:09:54.879
+Gesiel Lopes: Tá, então vamos supor que aqui a gente tenha a nossa. String aqui.
+
+47
+00:09:55.210 --> 00:09:58.960
+Gesiel Lopes: Clássica. Hello World.
+
+48
+00:09:59.310 --> 00:10:02.539
+Gesiel Lopes: Então essa é a nossa String.
+
+49
+00:10:02.930 --> 00:10:12.609
+Gesiel Lopes: Essa é a nossa String. Só que quando a gente está trabalhando com a String no mundo pide, ela é entendida como caracteres,
+
+50
+00:10:12.720 --> 00:10:22.190
+Gesiel Lopes: como um conjunto de caracteres então aqui. Eu vou ter um caracté. Então a cada.
+
+51
+00:10:24.220 --> 00:10:31.800
+Gesiel Lopes: Aqui a gente tem um. Eu vou chamar somente de chá para facilitar. Então isso aqui é um chá.
+
+52
+00:10:32.010 --> 00:10:45.439
+Gesiel Lopes: Esse aqui é outro chá que é um caracté. Esse é outro caracter. Sim, ele é um caracté. Ele é entendido como um caracté.
+
+53
+00:10:45.610 --> 00:10:51.859
+Gesiel Lopes: Então, nesse exemplo, aqui a gente só tem letras, letras e um espaço em branco.
+
+54
+00:10:52.010 --> 00:10:54.470
+Gesiel Lopes: Então cada letra dessa
+
+55
+00:10:54.570 --> 00:11:10.410
+Gesiel Lopes: ela é entendida quando eu declaro. Então, quando eu pego a minha variável, vamos supor. Quando eu faço aqui a declaração da minha variável em Python. Quando eu faço, vamos supor que eu criei uma variável chamada Hello.
+
+56
+00:11:10.950 --> 00:11:15.340
+Gesiel Lopes: Quando eu faço isso aqui no mundo, Python,
+
+57
+00:11:20.520 --> 00:11:26.909
+Gesiel Lopes: a gente já já vai fazer isso quando eu faço isso aqui
+
+58
+00:11:27.270 --> 00:11:37.100
+Gesiel Lopes: o Python vai identificar a Mi String como se fosse um conjunto de caracteres.
+
+59
+00:11:37.220 --> 00:11:41.850
+Gesiel Lopes: Tá, então aqui eu tenho um conjunto de caracteres.
+
+60
+00:11:44.450 --> 00:11:53.479
+Gesiel Lopes: Então, quantos caracteres a String Hello Python possuem? Se vocês observarem, eu tenho um,
+
+61
+00:11:53.760 --> 00:12:06.810
+Gesiel Lopes: dois, três, quatro, cinco, seis, sete, oito, nove, dez, onze, doze. Então essa estringe é entendida como doze caracteres,
+
+62
+00:12:07.840 --> 00:12:11.550
+Gesiel Lopes: tá, doze shah, O que é o
+
+63
+00:12:12.070 --> 00:12:15.770
+Gesiel Lopes: um acrônimo aqui. De caracteres, caracter.
+
+64
+00:12:26.540 --> 00:12:31.349
+Gesiel Lopes: Então são doze caracteres. Então isso é
+
+65
+00:12:31.680 --> 00:12:38.059
+Gesiel Lopes: a forma que o Python vai compreender essa mainstring,
+
+66
+00:12:38.830 --> 00:12:44.880
+Gesiel Lopes: e aí ele vai começar a trabalhar com essa String dessa forma, tá?
+
+67
+00:12:45.590 --> 00:12:55.989
+Gesiel Lopes: E a gente vai entender um pouquinho mais lá na frente. O nome comumente chamado. Isso aqui é de uma lista
+
+68
+00:12:56.460 --> 00:13:09.549
+Gesiel Lopes: unidimensional. Depois a gente vai dar muito spoiler. A gente vai falar um pouquinho mais lá na frente. É uma lista. Vamos entender ela como uma lista de caracteres.
+
+69
+00:13:10.220 --> 00:13:15.159
+Gesiel Lopes: E aqui olha só essa lista é nomeada,
+
+70
+00:13:16.140 --> 00:13:32.930
+Gesiel Lopes: ou melhor dizendo, ela é identificada. Como é que o Python identifica cada caracter dessa minha lista de caracteres? Então vou chamar aqui, inclusive eu vou colocar entre aspas
+
+71
+00:13:33.360 --> 00:13:35.970
+Gesiel Lopes: não é uma lista.
+
+72
+00:13:41.520 --> 00:13:44.470
+Gesiel Lopes: E essa lista? Eu vou colocar aqui entre aspas.
+
+73
+00:13:45.080 --> 00:13:48.800
+Gesiel Lopes: Então, uma lista de doze chá, doze caracteres.
+
+74
+00:13:48.920 --> 00:13:55.889
+Gesiel Lopes: E aí. Como é que o Python identifica cada caracter desse?
+
+75
+00:13:56.240 --> 00:14:11.580
+Gesiel Lopes: Então ele normalmente nomeia cada posição dessa minha lista por meio de um índice numérico que normalmente inicia com zero,
+
+76
+00:14:11.840 --> 00:14:12.720
+Gesiel Lopes: tá?
+
+77
+00:14:12.860 --> 00:14:20.619
+Gesiel Lopes: Vai até zero até o tamanho de caracteres. Menos um.
+
+78
+00:14:20.940 --> 00:14:35.220
+Gesiel Lopes: Então, nesse caso, aqui, eu vou ter o tamanho dessa mainstring. Como eu tenho doze caracteres, ela vai do índice zero até o índice onze. Eu não preciso nem contar
+
+79
+00:14:35.250 --> 00:14:41.709
+Gesiel Lopes: que sempre vai ser o tamanho. A última posição vai ser o tamanho menos um.
+
+80
+00:14:41.890 --> 00:14:49.540
+Gesiel Lopes: Então, aqui o Python vai enumerar zero. Ele vai definir zero como primeiro índice.
+
+81
+00:14:50.210 --> 00:15:06.060
+Gesiel Lopes: Um, dois, três, quatro, cinco, seis, sete, oito, nove, dez. Então,
+
+82
+00:15:06.210 --> 00:15:08.950
+Gesiel Lopes: nesse caso, aqui, deixa eu só
+
+83
+00:15:09.340 --> 00:15:13.140
+Gesiel Lopes: fazer aqui um corte que eu tenho que colocar um pouco mais para baixo.
+
+84
+00:15:24.610 --> 00:15:26.889
+Gesiel Lopes: Mais fácil isso tá.
+
+85
+00:15:27.820 --> 00:15:33.060
+Gesiel Lopes: Então, nesse caso, aqui o Python vai ter um índice
+
+86
+00:15:42.180 --> 00:15:45.209
+Gesiel Lopes: que a gente chama aqui de índice positivo.
+
+87
+00:15:45.530 --> 00:15:49.820
+Gesiel Lopes: Tá ou Opa.
+
+88
+00:15:53.220 --> 00:16:09.490
+Gesiel Lopes: Então ele vai ter aqui o índice positivo, ou o positive index alguns autores em inglês. Vocês vão encontrar dessa forma. Porém, o Python também. Ele faz uma nomeação de índices negativos.
+
+89
+00:16:09.620 --> 00:16:14.839
+Gesiel Lopes: Então, nesse caso, aqui o último índice, ele vai considerar como sendo menos um.
+
+90
+00:16:15.730 --> 00:16:35.180
+Gesiel Lopes: Então menos um, menos dois, menos três, menos quatro, menos cinco, menos seis menos sete menos oito, menos nove,
+
+91
+00:16:35.570 --> 00:16:47.740
+Gesiel Lopes: dez, onze e doze. Então, o Python também. Ele faz essa. Ele também faz essa definição
+
+92
+00:16:49.030 --> 00:16:54.630
+Gesiel Lopes: de forma automática. Vamos dizer, assim que é o índice,
+
+93
+00:17:00.750 --> 00:17:02.230
+Gesiel Lopes: que é o índice
+
+94
+00:17:07.720 --> 00:17:09.699
+Gesiel Lopes: que são os índices negativos.
+
+95
+00:17:09.880 --> 00:17:26.410
+Gesiel Lopes: Isso quer dizer o que Gisele beleza. O que isso quer dizer? Por exemplo, o índice com o índice na minha String acessar o,
+
+96
+00:17:26.520 --> 00:17:31.630
+Gesiel Lopes: por exemplo, o índice índice.
+
+97
+00:17:35.650 --> 00:17:38.629
+Gesiel Lopes: Se eu tiver o índice dois, por exemplo.
+
+98
+00:17:39.580 --> 00:17:45.870
+Gesiel Lopes: Isso quer dizer o quê? O índice dois. Qual é o índice dois? O índice dois é esse índice.
+
+99
+00:17:46.320 --> 00:18:05.279
+Gesiel Lopes: Quando eu coloco índice dois, ele vai acessar o caracter que está armazenado na posição do índice dois. Então, nesse caso, aqui, quando eu coloco acesso, índice dois. Ele me retorna à letra L.
+
+100
+00:18:06.190 --> 00:18:11.040
+Gesiel Lopes: Tá, ou o Karate L tá.
+
+101
+00:18:11.150 --> 00:18:18.570
+Gesiel Lopes: Quando eu coloco, índice, por exemplo, menos
+
+102
+00:18:19.920 --> 00:18:22.900
+Gesiel Lopes: seis. O que o Python entende.
+
+103
+00:18:23.060 --> 00:18:30.810
+Gesiel Lopes: Ele entende que você está querendo acessar o caracter que está
+
+104
+00:18:30.990 --> 00:18:46.109
+Gesiel Lopes: armazenado na posição menos seis da minha cadeia de caracteres. E quem é o índice menos seis? O índice menos seis é justamente
+
+105
+00:18:46.780 --> 00:18:54.680
+Gesiel Lopes: o P. O dois é o L e o três. O menos seis é o P, tá?
+
+106
+00:18:55.710 --> 00:18:58.849
+Gesiel Lopes: Então ele retorna para você.
+
+107
+00:18:59.660 --> 00:19:06.220
+Gesiel Lopes: O L, e ele retorna quando eu acesso a String
+
+108
+00:19:06.660 --> 00:19:10.539
+Gesiel Lopes: pelos índices. Então ele retorna isso.
+
+109
+00:19:10.860 --> 00:19:24.869
+Gesiel Lopes: E aí, como é que eu faço para acessar? Então, justamente que entra o operador colchete. Então, para eu poder acessar. Eu preciso utilizar o operador. Colchete,
+
+110
+00:19:25.040 --> 00:19:30.690
+Gesiel Lopes: tá, o operador colchate.
+
+111
+00:19:31.100 --> 00:19:42.349
+Gesiel Lopes: Então, o operador colchate que é o responsável por buscar um carácter específico específico
+
+112
+00:19:42.640 --> 00:20:02.519
+Gesiel Lopes: da minha cadeia de caracteres ou da minha String. Então, nesse caso, aqui. Olha só. Então, nesse caso, aqui, para eu poder fazer o acesso ao Índice dois. O que eu tenho que fazer? Eu tenho que pegar a minha String, que eu declarei que é Hello World, que é Hello, melhor dizendo.
+
+113
+00:20:02.690 --> 00:20:07.590
+Gesiel Lopes: Hello, Colchete dois.
+
+114
+00:20:07.950 --> 00:20:11.320
+Gesiel Lopes: Então quando eu faço isso? Olha só, tá?
+
+115
+00:20:11.490 --> 00:20:19.740
+Gesiel Lopes: O que eu estou fazendo? Eu estou acessando a posição
+
+116
+00:20:20.020 --> 00:20:32.590
+Gesiel Lopes: de índice dois, que nesse nosso exemplo está a letra L, então eu acesso o que tem armazenado nessa posição?
+
+117
+00:20:32.910 --> 00:20:36.920
+Gesiel Lopes: Quando eu faço Hello
+
+118
+00:20:40.530 --> 00:20:41.970
+Gesiel Lopes: menos seis
+
+119
+00:20:45.110 --> 00:20:48.320
+Gesiel Lopes: novamente. Eu estou acessando
+
+120
+00:20:49.180 --> 00:21:07.610
+Gesiel Lopes: da minha String, que é uma cadeia de caracteres. O caracter que está armazenado na posição de índice menos seis, que nesse caso, aqui é a letra P. Então, o operador gochete
+
+121
+00:21:07.810 --> 00:21:11.260
+Gesiel Lopes: para String. Ele serve para fazer isso.
+
+122
+00:21:16.670 --> 00:21:18.100
+Gesiel Lopes: Só um minuto, pessoal.
+
+123
+00:21:18.500 --> 00:21:27.210
+Gesiel Lopes: Não deu tempo. Desculpe, desculpem. Meu nariz também não tá perdão.
+
+124
+00:21:27.680 --> 00:21:31.250
+Gesiel Lopes: Tá ok,
+
+125
+00:21:32.490 --> 00:21:50.219
+Gesiel Lopes: minha tela não deu tempo de. Só desliguei a câmera. Então vamos lá então. Isso é o que a gente faz com o operador colchate. Então vamos lá então, voltando aqui. Eu vou
+
+126
+00:21:51.330 --> 00:21:55.810
+Gesiel Lopes: criar aqui umas células de código, primeiro.
+
+127
+00:21:55.910 --> 00:22:04.330
+Gesiel Lopes: Tá e vou declarar aqui a minha variável da forma que eu defini lá
+
+128
+00:22:05.530 --> 00:22:08.070
+Gesiel Lopes: no one note. Então, Hello Paiton.
+
+129
+00:22:08.800 --> 00:22:13.229
+Gesiel Lopes: Então vou aqui fazer um print hello
+
+130
+00:22:14.030 --> 00:22:27.849
+Gesiel Lopes: só para vocês observarem que eu estou declarando a minha variável. Então aqui estanciei aqui uma máquina. Ele dá o one note. O Deep Note está provisionando uma máquina.
+
+131
+00:22:28.090 --> 00:22:29.260
+Gesiel Lopes: Tá?
+
+132
+00:22:29.830 --> 00:22:38.390
+Gesiel Lopes: Então está aqui. Declarei a minha variável, a minha cadeia de caracteres. Se a gente utilizar.
+
+133
+00:22:39.350 --> 00:22:50.319
+Gesiel Lopes: Tchau o taipe. A gente pode observar e a minha variável Hello. E aqui. Eu vou concatenar com
+
+134
+00:22:50.620 --> 00:23:03.490
+Gesiel Lopes: a variável. Então vou printar o tipo e o valor. Então a gente vê que a variável, de fato ela é do tipo String. É um dos tipos básicos do Python
+
+135
+00:23:03.620 --> 00:23:09.359
+Gesiel Lopes: e existe armazenado na minha variável, a cadeia
+
+136
+00:23:09.480 --> 00:23:18.770
+Gesiel Lopes: Hello Python ou a String, Hello Python, que é entendida como a cadeia de caracteres. Então, quando eu faço,
+
+137
+00:23:18.880 --> 00:23:23.189
+Gesiel Lopes: quando eu vou fazer um print. Aqui,
+
+138
+00:23:23.630 --> 00:23:27.520
+Gesiel Lopes: e aí, pessoal, só abrindo um parêntese que eu acabei não falando.
+
+139
+00:23:27.880 --> 00:23:35.310
+Gesiel Lopes: Quando a gente está trabalhando em um ambiente de computação literária, sempre
+
+140
+00:23:35.600 --> 00:23:44.429
+Gesiel Lopes: o último código executado. Quando a gente não coloca um print, ele vai executar como se estivesse chamando um print.
+
+141
+00:23:44.710 --> 00:23:48.540
+Gesiel Lopes: Então se eu fizer Hello, tá?
+
+142
+00:23:48.840 --> 00:23:58.049
+Gesiel Lopes: Ele vai trazer o valor da variável que seria equivalente a eu fazer o Print aqui. Print Hello, ele executa
+
+143
+00:23:58.600 --> 00:24:00.750
+Gesiel Lopes: o último.
+
+144
+00:24:01.740 --> 00:24:17.980
+Gesiel Lopes: Ele chama o método. A gente vai depois vai lá na frente. Ele chama como se estivesse printando a String, que é o resultado. Então, precisa sempre que eu tiver alguma variável que retorna ou que tem algo a ser retornado. Não preciso ficar chamando o Print toda hora.
+
+145
+00:24:18.100 --> 00:24:25.719
+Gesiel Lopes: Então, se eu fizer um Hello como eu coloquei, qual foi o valor que eu coloquei? Dois? Então se eu fizer Hello dois
+
+146
+00:24:25.860 --> 00:24:43.009
+Gesiel Lopes: e executar essa célula, ele vai retornar um caracter que está na posição de índice dois. Não é o segundo caracter é o caracter que está na posição de índice dois,
+
+147
+00:24:43.110 --> 00:25:03.099
+Gesiel Lopes: lembrando que no Python, normalmente, os índices de cadeias de caracteres começam com zero e vai até o tamanho de caracteres. Menos um. Então, nesse caso, aqui a gente viu que o Índice dois está a letra
+
+148
+00:25:03.820 --> 00:25:07.620
+Gesiel Lopes: L. E se eu fizer o Hello,
+
+149
+00:25:08.230 --> 00:25:11.180
+Gesiel Lopes: índice cinco. O que ele vai retornar
+
+150
+00:25:12.420 --> 00:25:29.750
+Gesiel Lopes: retornou. Nada retornou. Sim, ele retornou. O caracter em branco. Ele retornou um espaço justamente para mostrar para vocês que esse caracter existe. Ele é identificado como Karacter, que é o espaço.
+
+151
+00:25:29.950 --> 00:25:34.600
+Gesiel Lopes: Tá, e aí novamente, quando eu faço Hello,
+
+152
+00:25:35.280 --> 00:25:43.540
+Gesiel Lopes: eu posso usar índices negativos, que é o índice que eu coloquei como exemplo, o índice menos seis. Quando eu faço menos seis,
+
+153
+00:25:43.610 --> 00:26:00.189
+Gesiel Lopes: ele retorna o caracter da posição menos seis que no nosso exemplo está a letra P, o caracter P. Se tivesse um outro caracter, iria armazenar esse caracter,
+
+154
+00:26:00.950 --> 00:26:15.490
+Gesiel Lopes: então é interessante a gente, por exemplo, fazer a verificação de qual caracter que está em determinada posição. Isso é muito útil quando a gente está também manipulando Strings.
+
+155
+00:26:15.510 --> 00:26:27.359
+Gesiel Lopes: E o que é mais legal ainda, o que é mais legal ainda é que você consegue fazer algo que é muito útil,
+
+156
+00:26:27.360 --> 00:26:41.200
+Gesiel Lopes: que é fazer uma operação que a gente chama de Slice ou fatiamento. Se fosse fazer uma tradução literal seria uma espécie de fatiamento. Slice fatiador.
+
+157
+00:26:42.240 --> 00:26:44.689
+Gesiel Lopes: Posso ajeitar aqui minha câmera tá,
+
+158
+00:26:45.250 --> 00:26:56.470
+Gesiel Lopes: e aí o legal. É que você consegue fazer isso. E o que é o fatiamento? Tá? O fatiamento. O slic. Aí eu vou chamar aqui somente de Slice.
+
+159
+00:27:01.420 --> 00:27:06.489
+Gesiel Lopes: O Slice é uma maneira de você fazer cortes
+
+160
+00:27:07.300 --> 00:27:21.530
+Gesiel Lopes: dentro da sua cadeia de caracteres. Então o slice tá. Você pode utilizar o operador colchete também é
+
+161
+00:27:21.690 --> 00:27:28.399
+Gesiel Lopes: com o operador cochete e ele, por padrão, ele recebe a
+
+162
+00:27:29.850 --> 00:27:40.900
+Gesiel Lopes: três parâmetros. Ele pode receber três parâmetros. Qual é o parâmetro? O primeiro, parâmetro é o início
+
+163
+00:27:43.800 --> 00:28:02.009
+Gesiel Lopes: que a partir de qual caracter você quer fazer o fatiamento que é? Você quer dividir a sua String ou a gente vai ver lá na frente. É uma maneira de você estar criando Sub Strings. São substrings.
+
+164
+00:28:02.290 --> 00:28:08.299
+Gesiel Lopes: Então, no Slice, ele recebe três parâmetros. O primeiro é o índice de início
+
+165
+00:28:08.630 --> 00:28:13.680
+Gesiel Lopes: a partir de qual índice você quer começar a fazer o fatiamento?
+
+166
+00:28:13.950 --> 00:28:27.750
+Gesiel Lopes: Tá, e cada parâmetro é separado por dois pontos por esse caracterist. Então o primeiro é o início.
+
+167
+00:28:28.450 --> 00:28:34.310
+Gesiel Lopes: O segundo é o fim, o caracter final.
+
+168
+00:28:36.530 --> 00:28:50.450
+Gesiel Lopes: E aqui eu abro um pequeno parêntese nesse nosso caso, aqui, esse parâmetro final, tá,
+
+169
+00:28:50.810 --> 00:28:54.449
+Gesiel Lopes: esse parâmetro final. Ele é não
+
+170
+00:29:00.640 --> 00:29:01.950
+Gesiel Lopes: inclusivo.
+
+171
+00:29:02.730 --> 00:29:03.650
+Gesiel Lopes: Tá certo.
+
+172
+00:29:03.980 --> 00:29:15.509
+Gesiel Lopes: A gente já vai entender lá um pouco lá na frente, tá? Isso não quer dizer que ele não entra na contagem. É até um valor antes desse índice que ele considera.
+
+173
+00:29:15.750 --> 00:29:29.280
+Gesiel Lopes: Isso se preocupa que a gente vai entender. E aí, o terceiro parâmetro, que pode ser adicionado dentro do Slice. É o passo que a gente chama. Que é o Step,
+
+174
+00:29:31.300 --> 00:29:40.339
+Gesiel Lopes: tá, que é? De quanto? Em quanto você quer percorrer o seu caracteriz
+
+175
+00:29:41.380 --> 00:29:46.710
+Gesiel Lopes: os seus caracteres. Então, nesse caso, aqui, ainda
+
+176
+00:29:46.930 --> 00:29:49.679
+Gesiel Lopes: se eu pegar a minha variável hello,
+
+177
+00:29:54.380 --> 00:29:55.220
+Gesiel Lopes: tá
+
+178
+00:29:55.410 --> 00:30:12.410
+Gesiel Lopes: lembrando que os slides, os parâmetros não são obrigatórios, uma vez que isso quer dizer que eles não necessariamente precisam ser definidos. Então, quando você faz, por exemplo,
+
+179
+00:30:12.620 --> 00:30:18.559
+Gesiel Lopes: Hello, que é o nome da nossa variável quando eu faço Hello
+
+180
+00:30:22.490 --> 00:30:33.410
+Gesiel Lopes: e aqui eu vou colocar até em vermelho para deixar bem destacado. Quando eu faço Hello dois seis
+
+181
+00:30:33.530 --> 00:30:35.240
+Gesiel Lopes: ou votar dois e sete.
+
+182
+00:30:36.080 --> 00:30:38.539
+Gesiel Lopes: O que eu estou fazendo?
+
+183
+00:30:38.860 --> 00:30:41.070
+Gesiel Lopes: O que eu estou fazendo?
+
+184
+00:30:41.760 --> 00:30:44.789
+Gesiel Lopes: Eu estou pedindo para o paitó Python
+
+185
+00:30:45.260 --> 00:30:54.919
+Gesiel Lopes: pega a minha variável, que é a minha cadeia de caracteres. E retorna para mim. Os caracteres de dois
+
+186
+00:30:55.990 --> 00:31:00.470
+Gesiel Lopes: até sete, só que não, incluindo sete.
+
+187
+00:31:00.930 --> 00:31:05.170
+Gesiel Lopes: Então, o que ele vai fazer? Ele vai retornar. O quê?
+
+188
+00:31:05.950 --> 00:31:08.320
+Gesiel Lopes: Então ele vai retornar.
+
+189
+00:31:11.970 --> 00:31:14.310
+Gesiel Lopes: Ele vai retornar. O quê?
+
+190
+00:31:14.660 --> 00:31:27.580
+Gesiel Lopes: De dois. Quem é o caracter dois L três L zero. Aliás, o né?
+
+191
+00:31:28.230 --> 00:31:42.639
+Gesiel Lopes: Espaço P e o Y. Ele retorna. Não, porque ele não é inclusivo. Então é até
+
+192
+00:31:43.110 --> 00:31:49.829
+Gesiel Lopes: antes do sete antes do sete. Gesiel. Mas você não considerou passo.
+
+193
+00:31:50.340 --> 00:32:03.610
+Gesiel Lopes: Quando a gente não define um passo aqui por padrão por Defun. Ele considera o passo igual a um. Então ele vai pegar de um em um caracter.
+
+194
+00:32:08.190 --> 00:32:11.780
+Gesiel Lopes: Se eu fizer agora, Hello,
+
+195
+00:32:17.190 --> 00:32:18.360
+Gesiel Lopes: Hello
+
+196
+00:32:22.160 --> 00:32:32.629
+Gesiel Lopes: de um até o caracter cinco. Vou colocar o caracter dez, pegar mais.
+
+197
+00:32:34.020 --> 00:32:37.380
+Gesiel Lopes: E agora eu vou pegar de três.
+
+198
+00:32:38.580 --> 00:32:46.789
+Gesiel Lopes: Isso que ele vai? Quer dizer que ele vai pular de três em três caracteres. Então, nesse caso, aqui
+
+199
+00:32:47.050 --> 00:32:56.870
+Gesiel Lopes: vamos ver se a gente consegue acertar, ele vai pegar a String que inicia no Índice um.
+
+200
+00:32:57.170 --> 00:33:01.319
+Gesiel Lopes: Quem está no Índice um é a letra. E
+
+201
+00:33:04.810 --> 00:33:12.380
+Gesiel Lopes: e aí ele vai pular três até o índice dez até o índice nove, que é o que o nove é, inclusive.
+
+202
+00:33:12.490 --> 00:33:29.169
+Gesiel Lopes: Então ele vai pular três passos. Então ele vai trazer o. E aí ele vai pular. Um, dois, três. Ele vai retornar. Eu vou colocar aqui uma barra só para a gente saber que é um espaço em branco.
+
+203
+00:33:29.690 --> 00:33:32.570
+Gesiel Lopes: Então ele vai retornar o e
+
+204
+00:33:32.720 --> 00:33:40.420
+Gesiel Lopes: e aí? Depois ele pula mais três. Ó um, ó um, dois, três. Aí retorna o h
+
+205
+00:33:44.090 --> 00:33:47.789
+Gesiel Lopes: e ele: Para Por quê? Porque eu vou só até o índice dez
+
+206
+00:33:47.910 --> 00:34:04.379
+Gesiel Lopes: e o índice dez é não inclusivo. Então ele deve retornar Bora, ver se isso acontece. Então vamos voltar aqui, que é o que a gente vai fazer Slice, que é o nosso conceito de Slice. A primeira coisa que eu vou fazer é o meu hello.
+
+207
+00:34:05.970 --> 00:34:10.230
+Gesiel Lopes: Eu vou fazer o fatiamento de dois até sete.
+
+208
+00:34:10.360 --> 00:34:14.749
+Gesiel Lopes: Vamos ver se eu acertei L o P.
+
+209
+00:34:15.679 --> 00:34:22.049
+Gesiel Lopes: Então, se eu executar, ele vai trazer L L O P.
+
+210
+00:34:22.310 --> 00:34:24.790
+Gesiel Lopes: E se eu fizer o hello?
+
+211
+00:34:26.690 --> 00:34:38.260
+Gesiel Lopes: O slice de um, dois.dez, dois.três. O que vai acontecer não é,
+
+212
+00:34:52.650 --> 00:34:59.109
+Gesiel Lopes: ó dez um dez três. Ele retornou o e
+
+213
+00:35:02.480 --> 00:35:11.709
+Gesiel Lopes: eu errei. Só que a contagem. Então é de três em três. Então foi. Ó, um, um, dois, três.
+
+214
+00:35:12.950 --> 00:35:19.500
+Gesiel Lopes: Ele retornou o zero. Então não será que eu contei? Fui eu que contei errado, né?
+
+215
+00:35:20.080 --> 00:35:22.899
+Gesiel Lopes: Então, um, dois, três.
+
+216
+00:35:24.300 --> 00:35:27.020
+Gesiel Lopes: Exato. Fui eu que contei errado, pessoal.
+
+217
+00:35:28.470 --> 00:35:30.470
+Gesiel Lopes: Fui eu que contei herado.
+
+218
+00:35:31.490 --> 00:35:36.640
+Gesiel Lopes: Então vamos corrigir. Então o primeiro. Eu acertei. Que a letra é.
+
+219
+00:35:36.860 --> 00:35:42.339
+Gesiel Lopes: Então ele retornou. Um, dois, três, que é o índice quatro. Então é o Wall.
+
+220
+00:35:43.260 --> 00:35:47.510
+Gesiel Lopes: E aí depois ele conta. Mais três. Um, dois, três.
+
+221
+00:35:48.040 --> 00:35:49.400
+Gesiel Lopes: É o sete.
+
+222
+00:35:50.040 --> 00:36:05.229
+Gesiel Lopes: É o Y exatamente zero o e o Y. Então ele conta. A partir desse índio, ele conta três caracteres, e aí pega o terceiro, conta três e pega o terceiro.
+
+223
+00:36:05.560 --> 00:36:09.999
+Gesiel Lopes: O taco, que é o passo que a gente considerou aqui.
+
+224
+00:36:10.610 --> 00:36:11.730
+Gesiel Lopes: Beleza.
+
+225
+00:36:12.120 --> 00:36:21.100
+Gesiel Lopes: E aqui, olha só, eu estou fazendo. Com índices positivos. Mas eu também posso considerar, hã?
+
+226
+00:36:22.270 --> 00:36:25.710
+Gesiel Lopes: Também considerar índices negativos.
+
+227
+00:36:26.170 --> 00:36:29.960
+Gesiel Lopes: Vamos supor que se eu fizer Hello
+
+228
+00:36:33.730 --> 00:36:40.340
+Gesiel Lopes: é Hello menos oito.
+
+229
+00:36:42.060 --> 00:36:48.940
+Gesiel Lopes: Eu estou botando de vermelho. Vou seguir o mesmo padrão menos oito.
+
+230
+00:36:52.110 --> 00:36:58.959
+Gesiel Lopes: E aqui. Olha só, eu não vou definir o final.
+
+231
+00:36:59.240 --> 00:37:01.730
+Gesiel Lopes: O que vocês acham que ele vai fazer?
+
+232
+00:37:03.240 --> 00:37:05.639
+Gesiel Lopes: Qual seria o resultado?
+
+233
+00:37:05.790 --> 00:37:07.890
+Gesiel Lopes: Nesse caso,
+
+234
+00:37:09.540 --> 00:37:27.249
+Gesiel Lopes: nesse caso, aqui, o que ele vai considerar? Ele vai considerar a cadeia de caracteres de índice menos dois em diante. Já que eu não estabeleci o final, então ele vai trazer de menos oito até o último caracter
+
+235
+00:37:27.380 --> 00:37:35.919
+Gesiel Lopes: quem está na posição menos oito é o zero. Então a String ou a substring que ele deve retornar vai ser, ó
+
+236
+00:37:36.080 --> 00:37:40.430
+Gesiel Lopes: ó espaço em branco, Python,
+
+237
+00:37:45.680 --> 00:37:46.520
+Gesiel Lopes: tá.
+
+238
+00:37:47.950 --> 00:37:50.069
+Gesiel Lopes: E se eu fizer agora?
+
+239
+00:37:54.660 --> 00:37:56.490
+Gesiel Lopes: E se eu fizer agora?
+
+240
+00:37:59.020 --> 00:38:01.279
+Gesiel Lopes: E se eu fizer agora Hello
+
+241
+00:38:09.910 --> 00:38:11.710
+Gesiel Lopes: dois pontos.
+
+242
+00:38:14.850 --> 00:38:16.540
+Gesiel Lopes: Menos três.
+
+243
+00:38:23.410 --> 00:38:26.360
+Gesiel Lopes: Vamos fazer junto a esse. Aqui no código.
+
+244
+00:38:27.820 --> 00:38:29.500
+Gesiel Lopes: Vai retornar. O quê?
+
+245
+00:38:29.890 --> 00:38:36.349
+Gesiel Lopes: Tá, então vamos ver se o primeiro a gente consegue. Se a gente aceitou, então, se eu fizer o
+
+246
+00:38:36.500 --> 00:38:45.930
+Gesiel Lopes: hello especifico, o menos oito e não especifico o índice final.
+
+247
+00:38:46.550 --> 00:38:49.639
+Gesiel Lopes: Então vamos ver se retornou o Python,
+
+248
+00:38:49.840 --> 00:38:54.000
+Gesiel Lopes: então retornou o Paita. E se eu fizer o Hello,
+
+249
+00:38:54.740 --> 00:39:03.090
+Gesiel Lopes: vou dar um tempinho aí do pessoal do Shad. O Anderson colocou Hello P Yt.
+
+250
+00:39:03.970 --> 00:39:05.519
+Gesiel Lopes: Será que é isso?
+
+251
+00:39:06.170 --> 00:39:12.800
+Gesiel Lopes: Até o índice menos três menos.
+
+252
+00:39:14.860 --> 00:39:18.440
+Gesiel Lopes: E aí o menos três vai até. Ok,
+
+253
+00:39:18.940 --> 00:39:23.130
+Gesiel Lopes: se vocês observarem ao menos três. E aqui tá
+
+254
+00:39:24.360 --> 00:39:31.910
+Gesiel Lopes: como eu não estou especificando o início. Estou dizendo para o pai que pegue todo mundo,
+
+255
+00:39:32.060 --> 00:39:35.490
+Gesiel Lopes: mas do primeiro índice disponível,
+
+256
+00:39:35.690 --> 00:39:43.450
+Gesiel Lopes: até o índice que eu estou decidindo, ou estou definindo como final, que é o menos três
+
+257
+00:39:43.870 --> 00:39:52.080
+Gesiel Lopes: e como menos três como índice final. Ele é não inclusivo, não inclusivo.
+
+258
+00:39:52.340 --> 00:40:02.950
+Gesiel Lopes: Ele não considera o caracter armazenado nessa posição. Então ele vai pegar de menos doze até quatro.
+
+259
+00:40:03.220 --> 00:40:10.009
+Gesiel Lopes: Tá beleza que aí ele retorna. Hello P y tá
+
+260
+00:40:11.170 --> 00:40:16.060
+Gesiel Lopes: como o Anderson havia colocado aqui, tá?
+
+261
+00:40:16.230 --> 00:40:17.879
+Gesiel Lopes: Então ele vai retornar.
+
+262
+00:40:23.150 --> 00:40:24.040
+Altevir dos Anjos Junior: Professor.
+
+263
+00:40:25.680 --> 00:40:26.560
+Gesiel Lopes: Pois não?
+
+264
+00:40:26.660 --> 00:40:31.919
+Altevir dos Anjos Junior: Você pode só explicar de novo? Teve uma pergunta no chat ali do porquê que você não está usando o Print.
+
+265
+00:40:32.700 --> 00:40:44.460
+Gesiel Lopes: É porque quando a gente está em um ambiente de programação literária, a última
+
+266
+00:40:44.850 --> 00:40:58.450
+Gesiel Lopes: linha, ela sempre é executada e aí é considerado o retorno do objeto que a gente está considerando. Nesse caso, aqui,
+
+267
+00:40:58.650 --> 00:41:03.269
+Gesiel Lopes: a variável hello retorna a uma estringe
+
+268
+00:41:03.490 --> 00:41:17.110
+Gesiel Lopes: e aí pôr o padrão a String. Quando a gente utiliza, ela. Ela vai chamar um método para mostrar a String que é a mesma forma. É a mesma coisa de eu estar fazendo um print.
+
+269
+00:41:17.110 --> 00:41:27.300
+Gesiel Lopes: Então esse aqui ele vai retornar uma variável. Se eu fizer o Taipe Hello só para vocês terem ideia. Ele vai retornar uma String.
+
+270
+00:41:27.650 --> 00:41:38.199
+Gesiel Lopes: E aí ele chama a execução dessa String. E aí, quando eu executo uma Sting. O retorno de uma estringe é o conteúdo que está armazenado nela.
+
+271
+00:41:38.200 --> 00:41:39.610
+gabriel.crepaldi: Professor.
+
+272
+00:41:40.080 --> 00:41:51.659
+gabriel.crepaldi: Então, um exemplo, você definiu uma variável. E aí depois você printou aquela variável. E aí, tipo assim, nas próximas. Eu não precisaria printar mais. Eu poderia só colocar.
+
+273
+00:41:51.660 --> 00:41:55.820
+Gesiel Lopes: Não, não é isso que eu estou falando. É a última instrução.
+
+274
+00:41:56.450 --> 00:42:04.699
+Gesiel Lopes: Como nessa célula só tem uma instrução. E a instrução que eu estou executando é uma String.
+
+275
+00:42:05.320 --> 00:42:17.800
+Gesiel Lopes: Não é que eu não precise. Não estou dizendo isso. Ela é a única coisa. Então, se tivesse um conjunto de vamos supor. Se eu tivesse, eu posso até fazer.
+
+276
+00:42:18.390 --> 00:42:23.770
+Gesiel Lopes: Posso até colocar aqui só para mostrar. Eu não confundi vocês.
+
+277
+00:42:24.020 --> 00:42:24.760
+Gesiel Lopes: É.
+
+278
+00:42:25.310 --> 00:42:27.049
+Gesiel Lopes: É o equivalente.
+
+279
+00:42:28.270 --> 00:42:41.299
+Gesiel Lopes: Observe que eu estou fazendo três instruções. Cada operador desse aqui, cada função, cada manipulação dessa com o operador String
+
+280
+00:42:41.390 --> 00:42:52.810
+Gesiel Lopes: com o operador colchete, melhor dizendo, nessa variável que é um String. Ela retorna uma String, que é uma sub String que a gente chamou. Então, nesse caso, aqui. Olha só.
+
+281
+00:42:53.480 --> 00:42:55.299
+Gesiel Lopes: Ele vai executar.
+
+282
+00:42:55.610 --> 00:43:12.410
+Gesiel Lopes: Porém ele só vai retornar. O que vai aparecer é a execução do último código que está na célula, que é uma String. Que String é essa? É essa? String, aqui Hello, Hello P Yt.
+
+283
+00:43:12.560 --> 00:43:15.150
+Gesiel Lopes: Então ela vai retornar. Só isso.
+
+284
+00:43:16.600 --> 00:43:19.230
+Gesiel Lopes: É só por simplicidade.
+
+285
+00:43:19.380 --> 00:43:36.140
+Gesiel Lopes: É o equivalente a eu fazer. O Print vai trazer o mesmo resultado. Então, como é West String. Eu não preciso executar o Print só para facilitar. E se eu quisesse verificar os outros
+
+286
+00:43:36.420 --> 00:43:41.790
+Gesiel Lopes: antes, eu teria que usar o Print para. Poder.
+
+287
+00:43:42.250 --> 00:43:47.930
+Gesiel Lopes: E isso acontece no ambiente de programação literária. Tá bom.
+
+288
+00:43:48.500 --> 00:43:58.939
+Gesiel Lopes: Se você estivesse num terminal, isso não vai acontecer a não ser que você estivesse dentro de um ambiente de programação literária fechou.
+
+289
+00:44:00.690 --> 00:44:01.830
+Gesiel Lopes: Ok.
+
+290
+00:44:05.100 --> 00:44:06.730
+marcos.jose: Isso é uma dúvida.
+
+291
+00:44:06.730 --> 00:44:07.910
+Gesiel Lopes: Pois não?
+
+292
+00:44:07.910 --> 00:44:12.570
+marcos.jose: Caso o senhor for explicar isso mais pra frente. Aí só me fala, tá
+
+293
+00:44:12.740 --> 00:44:29.130
+marcos.jose: independente de eu colocar a sequência de menos um ou de um. Ele sempre vai procurar da esquerda para a direita. Se eu colocar, por exemplo, menos três para ele trazer o caracter. Ele não vai buscar do menos um, menos dois, menos três. Ele vai buscar lá do menos um2 até o menos três.
+
+294
+00:44:29.800 --> 00:44:31.540
+Gesiel Lopes: Não entendi.
+
+295
+00:44:32.430 --> 00:44:36.800
+marcos.jose: No caso, volta no outro. Onde o senhor colocou o bloco de notas?
+
+296
+00:44:37.980 --> 00:44:41.850
+marcos.jose: Isso tá vendo que tem os índices, o positivo e o negativo.
+
+297
+00:44:42.100 --> 00:44:42.960
+Gesiel Lopes: Sim.
+
+298
+00:44:42.960 --> 00:44:59.309
+marcos.jose: Quando o senhor colocou para ele buscar do três em diante, ele vai três, quatro, cinco, seis até o onze. Só que quando você colocou O negativo, ele não buscou da direita para a esquerda. Ele não buscou menos um menos dois, menos três até o menos oito. Ele foi do menos um2 por menos oito.
+
+299
+00:44:59.310 --> 00:45:01.480
+Gesiel Lopes: Ah, ixi.
+
+300
+00:45:01.480 --> 00:45:02.920
+marcos.jose: Esquerda para a direita.
+
+301
+00:45:02.920 --> 00:45:05.940
+Gesiel Lopes: Isso, isso.
+
+302
+00:45:06.160 --> 00:45:07.360
+marcos.jose: Ah, entendi.
+
+303
+00:45:09.240 --> 00:45:12.620
+Gesiel Lopes: Nesse caso, se você quiser que ele faça.
+
+304
+00:45:12.820 --> 00:45:22.990
+Gesiel Lopes: E aí? Olha só isso é até um ponto. E se eu quisesse fazer uma String investida.
+
+305
+00:45:23.260 --> 00:45:29.980
+Gesiel Lopes: E aí? Olha só. O Marcos deu até um ponto aí legal é?
+
+306
+00:45:30.440 --> 00:45:36.610
+Gesiel Lopes: Qual é o Slice e aqui, ó, eu vou parar aqui. Como
+
+307
+00:45:38.000 --> 00:45:45.270
+Gesiel Lopes: vou colocar aqui em vermelho? Como retornar?
+
+308
+00:46:00.220 --> 00:46:12.040
+Gesiel Lopes: Então, como retornar, por exemplo, a String com Slice N O H, T.
+
+309
+00:46:12.510 --> 00:46:20.240
+Gesiel Lopes: Yp: E aí, Marcos?
+
+310
+00:46:22.060 --> 00:46:24.310
+Gesiel Lopes: Será que eu consigo fazer isso?
+
+311
+00:46:24.310 --> 00:46:29.640
+marcos.jose: Sou daqueles que levanta a dúvida e deixa pra outros responderem. Sabe, joga a granada e sai correndo.
+
+312
+00:46:29.640 --> 00:46:42.690
+Gesiel Lopes: Então vamos dar um intervalozinho de dez minutos. Quando for nove, vinte e cinco, a gente retorna. E aí a gente verifica como
+
+313
+00:46:43.080 --> 00:46:45.139
+Gesiel Lopes: encontra esse resultado.
+
+314
+00:46:47.300 --> 00:46:52.549
+Gesiel Lopes: Eu vou deixar a gravação. Eu só vou fechar a minha câmera e o meu microfone fechou.
+
+315
+00:55:12.480 --> 00:55:16.500
+Gesiel Lopes: Opa, pessoal, voltamos. Foi rápido. Só deu tempo aí de ir.
+
+316
+00:55:16.980 --> 00:55:20.510
+Gesiel Lopes: Abasteceu água, não é? Deu nem tempo de beber, né?
+
+317
+00:55:24.200 --> 00:55:29.949
+Gesiel Lopes: Vamos lá, deixa eu compartilhar aqui novamente. Aqui a minha tela.
+
+318
+00:55:31.560 --> 00:55:37.079
+Gesiel Lopes: Vocês devem estar vendo minha tela. Só colocar aqui o chat. E aí?
+
+319
+00:55:37.330 --> 00:55:45.469
+Gesiel Lopes: E aí a galera colocaram aí as respostas, tá?
+
+320
+00:55:46.440 --> 00:55:49.520
+Gesiel Lopes: Como é que eu faço?
+
+321
+00:55:51.680 --> 00:56:00.339
+Gesiel Lopes: E aí vamos ver aqui quais foram as respostas. Primeiro, foi o Anderson. A ideia era retornar isso aqui.
+
+322
+00:56:00.930 --> 00:56:05.170
+Gesiel Lopes: Então o Anderson botou a primeira resposta.
+
+323
+00:56:06.020 --> 00:56:10.860
+Gesiel Lopes: Vamos voltar aqui para o deixa eu colocar aqui rapidamente. Mas
+
+324
+00:56:12.180 --> 00:56:21.689
+Gesiel Lopes: então o Anderson aqui o Wanderson. Aliás, o Wanderson Wanderson. A primeira resposta que ele colocou foi o
+
+325
+00:56:23.660 --> 00:56:25.430
+Gesiel Lopes: Eu vou dar aqui um print.
+
+326
+00:56:26.850 --> 00:56:29.930
+Gesiel Lopes: Vou fazer dessa forma. O Wanderson.
+
+327
+00:56:30.380 --> 00:56:40.560
+Gesiel Lopes: Ele colocou Hello dois pontos. Nem colocou nem o início e nem o fim colocou o passo menos um.
+
+328
+00:56:41.640 --> 00:56:45.380
+Gesiel Lopes: Depois veio quem? O Alexandre.
+
+329
+00:56:46.320 --> 00:56:49.700
+Gesiel Lopes: E aí o Alexandre. Ah, Alexandre.
+
+330
+00:56:52.620 --> 00:57:03.940
+Gesiel Lopes: Ele colocou Hello menos um até o menos seis menos seis.
+
+331
+00:57:04.950 --> 00:57:08.930
+Gesiel Lopes: É, e aí.
+
+332
+00:57:09.340 --> 00:57:18.849
+Gesiel Lopes: Depois ele corrigiu, né? Vou considerar a primeira resposta, Alexandre, pois ele fez uma correção.
+
+333
+00:57:20.170 --> 00:57:27.920
+Gesiel Lopes: Eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee e aí depois o Matheus Colocou Mas aí. O Matheus já pegou do Alexandre, não foi? Não, Matheus.
+
+334
+00:57:28.410 --> 00:57:30.750
+Gesiel Lopes: E aí eu vou colocar aqui o Print.
+
+335
+00:57:32.580 --> 00:57:40.740
+Gesiel Lopes: Eu vou colocar Alexandre, Alexandre, já que ele fez o retorno logo em seguida.
+
+336
+00:57:41.220 --> 00:57:45.570
+Gesiel Lopes: E eu vou colocar aqui o Matheus, tá?
+
+337
+00:57:46.280 --> 00:57:47.649
+Gesiel Lopes: Então o Hello.
+
+338
+00:57:50.380 --> 00:57:53.919
+Gesiel Lopes: E aí, já que o.
+
+339
+00:57:56.170 --> 00:58:02.360
+Gesiel Lopes: Já que o eu vou colocar. A primeira resposta aí que foi de menos um,
+
+340
+00:58:02.740 --> 00:58:05.910
+Gesiel Lopes: até menos sete em dois.
+
+341
+00:58:06.170 --> 00:58:09.280
+Gesiel Lopes: menos um. Então vamos ver aqui.
+
+342
+00:58:11.560 --> 00:58:16.660
+Gesiel Lopes: Então. Olha só a resposta do Anderson,
+
+343
+00:58:16.760 --> 00:58:24.519
+Gesiel Lopes: do Wanderson. O que ele está fazendo? Eu não estou especificando nem o início e nem o fim.
+
+344
+00:58:25.010 --> 00:58:30.090
+Gesiel Lopes: Então ele vai considerar todos os caracteres. Só que eu estou considerando o passo
+
+345
+00:58:30.610 --> 00:58:46.349
+Gesiel Lopes: de menos um e menos um. Na realidade, quando eu coloco o passo de menos um, ele vai começar da direita para a esquerda de um em um caractere. Nesse caso aqui. O que ele vai fazer é inverter
+
+346
+00:58:48.010 --> 00:58:51.990
+Gesiel Lopes: a String, tá quase, né?
+
+347
+00:58:53.030 --> 00:58:57.629
+Gesiel Lopes: E aqui já dava até para matar. Bastava a gente parar bem aqui.
+
+348
+00:58:58.160 --> 00:59:07.539
+Gesiel Lopes: E aí outro Anderson. É como se não tivesse aparecido nada aqui. Mas apareceu. Apareceu espaço em branco porque ele está considerando de menos um
+
+349
+00:59:09.380 --> 00:59:11.090
+Gesiel Lopes: até menos seis.
+
+350
+00:59:11.940 --> 00:59:16.429
+Gesiel Lopes: Só que quando você faz o inverso aqui,
+
+351
+00:59:17.140 --> 00:59:25.070
+Gesiel Lopes: ele sempre vai começar do menor para o maior. Então menos um
+
+352
+00:59:25.190 --> 00:59:39.370
+Gesiel Lopes: menor para o maior, menor, sempre vai ser menos seis. E o maior vai ser o índice menos um, que é o final. Então, nesse caso, aqui, é como se, ele tivesse considerado até aqui
+
+353
+00:59:39.610 --> 00:59:42.350
+Gesiel Lopes: até o menos seis. Como ele é não inclusivo.
+
+354
+00:59:42.710 --> 00:59:46.640
+Gesiel Lopes: Ele pega o espaço vazio, que é o índice sete.
+
+355
+00:59:46.940 --> 00:59:54.140
+Gesiel Lopes: E aí o Alexandre e o Matheus? Ele colocou. Eu vou pegar do menos um até o índice menos sete.
+
+356
+00:59:54.600 --> 00:59:55.360
+Gesiel Lopes: Tá bom
+
+357
+00:59:56.490 --> 01:00:15.340
+Gesiel Lopes: que aí ele começa a fazer o inverso. Só que de menos um e menos um de um passo. Só que de forma investido. É o mesmo resultado. Tá bom? Se você só tivesse colocado como o próprio Alexandre havia colocado. Se tivesse colocado o Hello,
+
+358
+01:00:15.480 --> 01:00:20.420
+Gesiel Lopes: que foi a segunda resposta. Não vou definir o início.
+
+359
+01:00:20.700 --> 01:00:24.220
+Gesiel Lopes: Não vou definir o início, tá?
+
+360
+01:00:24.530 --> 01:00:28.270
+Gesiel Lopes: Eu quero que ele termine no.
+
+361
+01:00:28.710 --> 01:00:30.310
+Gesiel Lopes: No caracter.
+
+362
+01:00:31.230 --> 01:00:37.899
+Gesiel Lopes: Tá de índice menos sete de índice menos sete.
+
+363
+01:00:40.490 --> 01:00:43.210
+Gesiel Lopes: Só que de menos um e menos um.
+
+364
+01:00:43.350 --> 01:00:47.140
+Gesiel Lopes: Então ele vai considerar todos os caracteres,
+
+365
+01:00:50.450 --> 01:00:56.130
+Gesiel Lopes: todos os caracteres. Só que ele vai até o índice menos sete.
+
+366
+01:00:57.090 --> 01:01:07.210
+Gesiel Lopes: Como eu estou fazendo. Passo de menos um e menos um, ou seja, de forma contrária inversa. Ele vai começar aqui.
+
+367
+01:01:07.700 --> 01:01:17.859
+Gesiel Lopes: Menos um menos dois, menos três, menos quatro, menos seis. Ele vai parar no menos sete. O menos sete não vai inclusivo. Ele retorna
+
+368
+01:01:18.710 --> 01:01:22.989
+Gesiel Lopes: as strings. Algum caso Python de forma investido?
+
+369
+01:01:24.980 --> 01:01:30.800
+Gesiel Lopes: Se eu não tivesse definido o passo.
+
+370
+01:01:31.110 --> 01:01:40.220
+Gesiel Lopes: Hello, olha só, menos sete. Se eu não tivesse definido o passo,
+
+371
+01:01:40.560 --> 01:01:45.030
+Gesiel Lopes: então ele ia começar a dar primeiro cartel
+
+372
+01:01:45.960 --> 01:01:51.160
+Gesiel Lopes: até o menos sete, só que não inclusivo. Então ele ia retornar. Hello,
+
+373
+01:01:51.770 --> 01:01:55.310
+Gesiel Lopes: vamos ver se acontece. Então aqui ele vai retornar.
+
+374
+01:01:56.570 --> 01:02:05.220
+Gesiel Lopes: Python contrário, que é N O H T, Y, P tá,
+
+375
+01:02:07.450 --> 01:02:10.170
+Gesiel Lopes: que é o conceito de Slice
+
+376
+01:02:11.250 --> 01:02:14.229
+Gesiel Lopes: fechou, pessoal. E aí, pessoal? O céu é o limite.
+
+377
+01:02:14.400 --> 01:02:22.139
+Gesiel Lopes: Vocês não têm ideia como isso aqui é útil para a gente construir ou validar Strings.
+
+378
+01:02:22.270 --> 01:02:29.890
+Gesiel Lopes: Um exemplo clássico aí é você fazer. Por exemplo, a validação de
+
+379
+01:02:30.850 --> 01:02:43.230
+Gesiel Lopes: de Cpf, Cnpj, manipulação. Bem trivial. A gente precisa às vezes considerar de três em três caracteres. Fazer a validação.
+
+380
+01:02:43.730 --> 01:02:49.350
+Gesiel Lopes: Se é um Cpf, se é um Cnpj, e aí vai.
+
+381
+01:02:51.850 --> 01:02:54.780
+Gesiel Lopes: Ok, beleza.
+
+382
+01:02:55.080 --> 01:03:09.689
+Gesiel Lopes: E aí outro ponto legal que a gente pode trazer é que o pai fornece algumas operações.
+
+383
+01:03:10.260 --> 01:03:22.740
+Gesiel Lopes: Algumas funções úteis para a gente manipular Strings. Eu listei algumas delas aqui. Somente algumas não todas. Não tem como a gente esgotar.
+
+384
+01:03:22.970 --> 01:03:37.970
+Gesiel Lopes: Mas olha só. São funções que pertencem a Strings. Então observe que, como a minha variável como a minha variável Hello.
+
+385
+01:03:38.420 --> 01:03:41.289
+Gesiel Lopes: Ela é uma estringe.
+
+386
+01:03:41.430 --> 01:03:46.710
+Gesiel Lopes: Eu posso executar esses métodos.
+
+387
+01:03:47.200 --> 01:03:52.260
+Gesiel Lopes: Por exemplo, se eu fizer hello ponto Ape.
+
+388
+01:03:55.320 --> 01:03:58.919
+Gesiel Lopes: E aí, nesse caso aqui. Eu vou colocar no Print, tá? Fica mais fácil.
+
+389
+01:03:59.080 --> 01:04:05.110
+Gesiel Lopes: Hello app. Quando eu faço isso aqui. Ó, observem o que vai acontecer.
+
+390
+01:04:09.380 --> 01:04:10.609
+Gesiel Lopes: É o App.
+
+391
+01:04:13.360 --> 01:04:17.299
+Gesiel Lopes: O que ele fez? Ele pegou a minha String
+
+392
+01:04:17.560 --> 01:04:31.500
+Gesiel Lopes: e colocou todos os caracteres. O que a gente chama de caixa alta como se fosse maiúsculo. Normalmente a gente chama de caixa alta. Então a gente deixou eles em letras maiúsculas,
+
+393
+01:04:32.540 --> 01:04:34.019
+Gesiel Lopes: Um Lauer.
+
+394
+01:04:38.280 --> 01:04:44.360
+Gesiel Lopes: E aqui. Olha só, eu vou fazer aqui. Eu vou ter o hello, tá?
+
+395
+01:04:44.740 --> 01:04:46.090
+Gesiel Lopes: É?
+
+396
+01:04:48.720 --> 01:04:58.260
+Gesiel Lopes: Vou colocar aqui uma variável nome. Eu vou chamar aqui de Gesiel Lopes, tá?
+
+397
+01:04:58.780 --> 01:05:05.679
+Gesiel Lopes: Se a gente observar o nome é do tipo String.
+
+398
+01:05:06.030 --> 01:05:09.500
+Gesiel Lopes: Então, se é um tipo String, eu posso também
+
+399
+01:05:09.690 --> 01:05:16.399
+Gesiel Lopes: chamar as funções, essas funções úteis. Então quer o Lauer?
+
+400
+01:05:17.560 --> 01:05:23.240
+Gesiel Lopes: Então, se eu fizer nome, ponto, Lauer,
+
+401
+01:05:25.500 --> 01:05:37.559
+Gesiel Lopes: o que ele vai fazer? Ele vai pegar e colocar todos os caracteres de caixa baixa, deixa a
+
+402
+01:05:38.300 --> 01:05:44.070
+Gesiel Lopes: em minúsculo caixa baixa e os Isapper.
+
+403
+01:05:44.300 --> 01:05:51.850
+Gesiel Lopes: Então, se eu fizer print isso rapper,
+
+404
+01:05:55.880 --> 01:05:59.790
+Gesiel Lopes: vou colocar aqui em Hello, ponto.
+
+405
+01:06:00.210 --> 01:06:01.140
+Gesiel Lopes: Isso.
+
+406
+01:06:05.880 --> 01:06:10.099
+Gesiel Lopes: Vamos ver o que ele vai retornar.
+
+407
+01:06:11.400 --> 01:06:27.750
+Gesiel Lopes: O Isape e o Islower. Eles são métodos que retornam o valor boliano. Ele verifica se essa String no caso Hello. Ela está em
+
+408
+01:06:27.750 --> 01:06:32.860
+Gesiel Lopes: caixa baixa se todos os caracteres estão em caixa baixa, tá?
+
+409
+01:06:35.360 --> 01:06:43.760
+Gesiel Lopes: Se eu fizer. O Slauwer é nome.
+
+410
+01:06:44.060 --> 01:06:50.370
+Gesiel Lopes: Eu vou criar aqui mais uma variada só para mostrar isso aqui. Nome, curso,
+
+411
+01:06:54.470 --> 01:07:04.280
+Gesiel Lopes: programação: Python. Programação com Python ou introdução
+
+412
+01:07:05.680 --> 01:07:13.580
+Gesiel Lopes: em introdução à programação compacto. Novamente, definir aqui uma string.
+
+413
+01:07:14.230 --> 01:07:20.390
+Gesiel Lopes: Se eu chamar o método Taipe função Beauty Taipe
+
+414
+01:07:20.720 --> 01:07:26.529
+Gesiel Lopes: ele vai retornar uma String. Então a variável curso é uma String.
+
+415
+01:07:26.640 --> 01:07:39.200
+Gesiel Lopes: Então, se eu fizer curso, curso is Lauer ou Is Aper. Perdão, o que ele vai fazer.
+
+416
+01:07:41.940 --> 01:07:54.640
+Gesiel Lopes: E se aperto isso, Upper, ele vai retornar. True, porque todos os caracteres da minha String curso
+
+417
+01:07:54.750 --> 01:08:00.520
+Gesiel Lopes: estão todos em caixa baixa, alta. Perdão, e se eu fizer agora o Print,
+
+418
+01:08:05.730 --> 01:08:09.160
+Gesiel Lopes: agora é o Is Lawrence.
+
+419
+01:08:11.040 --> 01:08:17.260
+Gesiel Lopes: Então, se eu fizer o Islauwer, por exemplo, em Hello, ponto. Isso.
+
+420
+01:08:17.790 --> 01:08:27.639
+Gesiel Lopes: E aí, Lauer vai verificar se todos os caracteres estão em caixa baixa.
+
+421
+01:08:29.020 --> 01:08:32.499
+Gesiel Lopes: E aí que eu vou fazer novamente a hora do curso.
+
+422
+01:08:33.080 --> 01:08:38.429
+Gesiel Lopes: Então, na minha String Hello, todos os caracteres estão em caixa baixa
+
+423
+01:08:39.260 --> 01:08:48.449
+Gesiel Lopes: e na variável curso na String curso. Todos os critérios estão em caixa baixa? Não. Então ele retorna. O True
+
+424
+01:08:48.569 --> 01:08:49.300
+Gesiel Lopes: tá?
+
+425
+01:08:51.640 --> 01:08:59.460
+Gesiel Lopes: E o swap case, por exemplo. Bora ver aqui o que Tchau
+
+426
+01:09:02.859 --> 01:09:03.850
+Gesiel Lopes: que isso.
+
+427
+01:09:22.550 --> 01:09:24.340
+Gesiel Lopes: Então o swap case
+
+428
+01:09:28.450 --> 01:09:30.090
+Gesiel Lopes: hello e Gus
+
+429
+01:09:36.069 --> 01:09:37.189
+Gesiel Lopes: em nome.
+
+430
+01:09:38.689 --> 01:09:45.769
+Gesiel Lopes: O Swap Case faz. Deu para perceber o que o Swap Case faz,
+
+431
+01:09:46.490 --> 01:10:03.660
+Gesiel Lopes: ele troca os caracteres que estão em caixa baixa. Ele coloca caixa alta e os caracteres de caixa alta? Ele coloca como caixa baixa que for maiúsculo, ele coloca minúsculo que for minúsculo. Ele coloca maiúsculo. Então ele inverte
+
+432
+01:10:03.740 --> 01:10:18.120
+Gesiel Lopes: os caracteres Print e o capitalíssica capitalize
+
+433
+01:10:22.030 --> 01:10:25.140
+Gesiel Lopes: capitalize o que o capitalize faz.
+
+434
+01:10:26.000 --> 01:10:32.330
+Gesiel Lopes: Então, se eu fizer Hello k capitalais.
+
+435
+01:10:33.120 --> 01:10:38.260
+Gesiel Lopes: O que ele vai fazer? Então capitalize ele torna
+
+436
+01:10:38.540 --> 01:10:46.010
+Gesiel Lopes: é o que a gente chama de capitulação. Ele torna o primeiro caracter em caixa alta.
+
+437
+01:10:48.050 --> 01:10:57.739
+Gesiel Lopes: E se eu tiver já numa variável String, o primeiro cacté como maiúsculo o que ele vai fazer?
+
+438
+01:10:58.780 --> 01:11:09.390
+Gesiel Lopes: E os demais, se tiver, né? Então ele sempre vai considerar o primeiro caracter como maiúsculos e os demais caracteres como minúsculo
+
+439
+01:11:10.270 --> 01:11:18.000
+Gesiel Lopes: mesma coisa. Vamos fazer concurso com a variável custo. Será que o que acontece?
+
+440
+01:11:19.020 --> 01:11:24.520
+Gesiel Lopes: Tá, então ele tornou observe que o curso, a variável curso
+
+441
+01:11:25.430 --> 01:11:29.029
+Gesiel Lopes: a curso. Ó, ela é a App.
+
+442
+01:11:29.250 --> 01:11:31.620
+Gesiel Lopes: O curso ó, é Ap.
+
+443
+01:11:32.200 --> 01:11:38.580
+Gesiel Lopes: Então todos estão em maiúsculo. Todos estão em caixa alto. Mas quando eu estou em capitalize,
+
+444
+01:11:38.750 --> 01:11:47.980
+Gesiel Lopes: ele coloca somente o primeiro em caixa alta. Os demais caracteres. Ele coloca em caixa abaixo, tá
+
+445
+01:11:48.860 --> 01:11:53.759
+Gesiel Lopes: Print. E aí eu posso até pegar aqui os três.
+
+446
+01:11:54.340 --> 01:11:55.820
+Gesiel Lopes: É mais fácil, né?
+
+447
+01:11:56.850 --> 01:12:01.800
+Gesiel Lopes: Sem vestigem. O Titan e o Titan. O que o Titan faz.
+
+448
+01:12:05.810 --> 01:12:08.250
+Gesiel Lopes: Então o Titan tá?
+
+449
+01:12:11.370 --> 01:12:15.089
+Gesiel Lopes: E aí deu para perceber o que o Titan faz.
+
+450
+01:12:15.360 --> 01:12:32.500
+Gesiel Lopes: Então, toda vez que ele tiver um espaço em branco ou um caracté, ele deixa exatamente a Jay falou. Ela sempre deixa todos os caracteres de uma cadeia,
+
+451
+01:12:32.500 --> 01:12:41.809
+Gesiel Lopes: como a primeira letra em maiúsculo. As iniciais, todas as iniciais em maiúsculo. É como se eu estivesse definindo um título mesmo.
+
+452
+01:12:41.960 --> 01:12:42.770
+Gesiel Lopes: Tá,
+
+453
+01:12:43.110 --> 01:12:50.760
+Gesiel Lopes: então o Python que todos são caixa baixo, o Hello e o pai e o h do Hello e o P do Python.
+
+454
+01:12:51.100 --> 01:12:57.819
+Gesiel Lopes: Ele coloca como caixa alta como a palavra a stringnomi.
+
+455
+01:12:58.840 --> 01:13:02.459
+Gesiel Lopes: Os caracteres já estavam em maiúsculo. Ele não alterou.
+
+456
+01:13:02.800 --> 01:13:14.470
+Gesiel Lopes: E na variável curso que todos os caracteres estão em caixa alta. Ele só colocou cada palavra, cada caracter com a caixa alta,
+
+457
+01:13:15.910 --> 01:13:18.110
+Gesiel Lopes: o replace.
+
+458
+01:13:19.230 --> 01:13:23.270
+Gesiel Lopes: Ritchie Replays,
+
+459
+01:13:34.210 --> 01:13:45.489
+Gesiel Lopes: o replace pessoal, o replace é um método que ele recebe dois parâmetros.
+
+460
+01:13:45.560 --> 01:14:01.069
+Gesiel Lopes: Ele faz a substituição de um caracté ou de um conjunto de caracteres na minha String e retorna uma nova String com esses caracteres
+
+461
+01:14:01.810 --> 01:14:03.430
+Gesiel Lopes: substituídos.
+
+462
+01:14:03.670 --> 01:14:05.250
+Gesiel Lopes: Como assim, Gisele?
+
+463
+01:14:05.420 --> 01:14:16.010
+Gesiel Lopes: Vamos pegar a a minha variável. É o Hello, Ponto replay.
+
+464
+01:14:18.020 --> 01:14:32.629
+Gesiel Lopes: E aí. Ele sempre vai receber dois parâmetros. O primeiro parâmetro. Qual é o caracter que eu quero substituir? Então, nesse caso, aqui, eu vou substituir o espaço. Então vou dar um espaço.
+
+465
+01:14:32.740 --> 01:14:45.020
+Gesiel Lopes: E aí o próximo parâmetro é: qual é o caracter que eu vou colocar no lugar do espaço. Então, no lugar do espaço, eu vou colocar dois traços,
+
+466
+01:14:45.400 --> 01:14:46.200
+Gesiel Lopes: tá?
+
+467
+01:14:46.640 --> 01:14:57.120
+Gesiel Lopes: Quando eu faço isso no Hello, o que ele vai fazer? Aonde tem esse espaço em branco aqui
+
+468
+01:14:57.240 --> 01:15:00.870
+Gesiel Lopes: ele vai colocar traço traço.
+
+469
+01:15:01.150 --> 01:15:03.049
+Gesiel Lopes: Vamos ver se é isso mesmo.
+
+470
+01:15:04.290 --> 01:15:07.609
+Gesiel Lopes: Quando eu executei, ele substituiu.
+
+471
+01:15:08.470 --> 01:15:09.280
+Gesiel Lopes: Tá?
+
+472
+01:15:10.780 --> 01:15:15.510
+Gesiel Lopes: E aí eu posso usar o replay, inclusive curso.
+
+473
+01:15:17.650 --> 01:15:18.370
+Gesiel Lopes: Tá bom,
+
+474
+01:15:23.980 --> 01:15:33.070
+Gesiel Lopes: é, eu vou substituir a palavra onde tem o caracter, por exemplo, por quatro
+
+475
+01:15:34.790 --> 01:15:38.070
+Gesiel Lopes: quando eu faço isso, onde tem A?
+
+476
+01:15:43.370 --> 01:15:46.250
+Gesiel Lopes: Olha só, não retornou nada.
+
+477
+01:15:46.360 --> 01:15:56.080
+Gesiel Lopes: Não fez nada. Por quê? Porque a palavra a String, tudo está em caixa alta. E como ele não encontrou o a
+
+478
+01:15:56.460 --> 01:16:05.280
+Gesiel Lopes: que ser o A maiúsculo. Então, quando eu faço o a maiúsculo. Então, onde tinha o A. Ele substituiu o por quatro.
+
+479
+01:16:05.440 --> 01:16:06.200
+Gesiel Lopes: Tá?
+
+480
+01:16:07.050 --> 01:16:10.719
+Gesiel Lopes: Então aonde tinha o a ele substituiu por quatro.
+
+481
+01:16:11.350 --> 01:16:12.490
+Gesiel Lopes: Beleza.
+
+482
+01:16:14.260 --> 01:16:20.820
+Gesiel Lopes: Ulene, o leme, o método. Leme.
+
+483
+01:16:21.610 --> 01:16:29.389
+Gesiel Lopes: Ele retorna à quantidade de caracteres que existe na minha String.
+
+484
+01:16:29.480 --> 01:16:43.199
+Gesiel Lopes: Então a gente viu inicialmente que a minha string Hello Python ele tem quantos caracteres? Doze? Será que ele tem doze caracteres? Então, se eu fizer o leme,
+
+485
+01:16:44.450 --> 01:16:48.360
+Gesiel Lopes: deve retornar doze nesse print. Será.
+
+486
+01:16:49.770 --> 01:16:51.780
+Gesiel Lopes: Vou ver se a gente mentiu.
+
+487
+01:17:02.150 --> 01:17:03.210
+Gesiel Lopes: Len.
+
+488
+01:17:03.780 --> 01:17:10.610
+Gesiel Lopes: É uma função. Beauty Len. Len, anda
+
+489
+01:17:11.840 --> 01:17:19.940
+Gesiel Lopes: agora. Sim, o Lena. Vocês observaram que ele deu um erro aqui leme.
+
+490
+01:17:20.660 --> 01:17:23.299
+Gesiel Lopes: Qual foi o erro que ele deu?
+
+491
+01:17:23.830 --> 01:17:29.430
+Gesiel Lopes: Ele está dizendo que esse Stringer
+
+492
+01:17:29.730 --> 01:17:33.319
+Gesiel Lopes: não tem o objeto ou o atributo Led,
+
+493
+01:17:34.560 --> 01:17:41.810
+Gesiel Lopes: porque esse método é uma função Beauty, tá hello.
+
+494
+01:17:44.830 --> 01:17:47.109
+Gesiel Lopes: Então é o tamanho.
+
+495
+01:17:47.930 --> 01:17:53.770
+Gesiel Lopes: E aí, na realidade, é muito utilizado para fazer a contagem
+
+496
+01:17:53.910 --> 01:17:59.570
+Gesiel Lopes: de posições dentro de uma lista unidimensional.
+
+497
+01:18:03.130 --> 01:18:06.220
+Gesiel Lopes: Vamos lá. Continuando, Lenn.
+
+498
+01:18:07.020 --> 01:18:17.280
+Gesiel Lopes: Mesma coisa. Se eu fizer o Print Len é de quem?
+
+499
+01:18:17.440 --> 01:18:19.080
+Gesiel Lopes: Da variável curso,
+
+500
+01:18:19.320 --> 01:18:25.820
+Gesiel Lopes: ela vai retornar. Quantidade de caracteres. Então a palavra curso ou a String ou a variável curso
+
+501
+01:18:25.980 --> 01:18:33.010
+Gesiel Lopes: possui trinta e cinco caracteres tá e o split tá?
+
+502
+01:18:33.560 --> 01:18:38.610
+Gesiel Lopes: O que o split faz? O split pessoal.
+
+503
+01:18:40.150 --> 01:18:43.610
+Gesiel Lopes: Assim como o replace, ele também recebe
+
+504
+01:18:44.750 --> 01:18:49.919
+Gesiel Lopes: um parâmetro aqui no replay. Ele recebe dois
+
+505
+01:18:50.030 --> 01:18:53.710
+Gesiel Lopes: no caso. Aqui o Split recebe um parâmetro.
+
+506
+01:18:54.110 --> 01:19:01.380
+Gesiel Lopes: Então foi se eu fizer aqui o meu hello quando eu faço o split,
+
+507
+01:19:01.730 --> 01:19:16.320
+Gesiel Lopes: o que o Split faz. O Split. Ele quebra a minha String no caracter que eu estou definindo. Como a Jay falou, ele divide
+
+508
+01:19:16.440 --> 01:19:26.169
+Gesiel Lopes: nesse caso, aqui. Ó, ele vai criar duas Strings. Duas cadeias de Strings. Vamos ver.
+
+509
+01:19:26.440 --> 01:19:27.380
+Gesiel Lopes: Tchau.
+
+510
+01:19:28.040 --> 01:19:34.049
+Gesiel Lopes: Então ele criou uma lista e duas Strings,
+
+511
+01:19:34.230 --> 01:19:52.469
+Gesiel Lopes: a gente vai ver lá na frente. Isso aqui é uma lista. É uma lista de Strings. Então são duas Strings que eu defini a String Hello e a String Python. Por quê? Porque eu fiz o Split.
+
+512
+01:19:52.540 --> 01:20:03.939
+Gesiel Lopes: Considerando o um espaço tá outro aqui. Ó Print
+
+513
+01:20:07.770 --> 01:20:09.560
+Gesiel Lopes: Split,
+
+514
+01:20:17.410 --> 01:20:23.029
+Gesiel Lopes: nome, o meu variável nome. E aí eu vou fazer um Split.
+
+515
+01:20:23.690 --> 01:20:24.490
+Gesiel Lopes: Tá
+
+516
+01:20:24.810 --> 01:20:40.040
+Gesiel Lopes: considerando a letra P. Então o que ele vai fazer? Quem é o nome. Então é. O meu nome. É o Gisele Lopes. Então, o que ele vai fazer? Ele vai retornar. Ele vai quebrar a minha estringa. Bem no P,
+
+517
+01:20:40.270 --> 01:20:41.110
+Gesiel Lopes: tá?
+
+518
+01:20:41.410 --> 01:20:43.289
+Gesiel Lopes: Não se eu fizer o P aqui, ó,
+
+519
+01:20:44.610 --> 01:20:47.979
+Gesiel Lopes: ele vai retornar o Gesiel Ló
+
+520
+01:20:48.390 --> 01:21:00.350
+Gesiel Lopes: e o Es, que são duas. Se ele tivesse mais um P, ele retornaria outras Strings, vamos supor agora o curso.
+
+521
+01:21:00.500 --> 01:21:03.950
+Gesiel Lopes: Vou fazer o split pela letra a.
+
+522
+01:21:05.310 --> 01:21:09.729
+Gesiel Lopes: Então, se eu fizer isso, aonde tem um A, ele vai quebrar.
+
+523
+01:21:10.410 --> 01:21:16.930
+Gesiel Lopes: Então entrou, quebrou o ó e ó o espaço
+
+524
+01:21:17.460 --> 01:21:30.930
+Gesiel Lopes: ele quebra até porque ele vai retornando o Am. Aonde tem o a ele vai subdividindo aonde tem o a ele vai quebrando. Então é muito bom,
+
+525
+01:21:31.210 --> 01:21:40.499
+Gesiel Lopes: o split, por exemplo, novamente, está fazendo a validação de Cpf. Se você estiver fazendo a validação de Cpf
+
+526
+01:21:41.080 --> 01:21:48.809
+Gesiel Lopes: se você fizer com máscara. Você pode definir a máscara, por exemplo, o ponto e quebrar.
+
+527
+01:21:49.060 --> 01:21:57.830
+Gesiel Lopes: Então ele deve retornar os primeiros três caracteres ou os três, as três primeiras
+
+528
+01:21:58.260 --> 01:22:05.270
+Gesiel Lopes: strings, elas obrigatoriamente, para ser um Cpf, precisa ter três
+
+529
+01:22:05.380 --> 01:22:12.849
+Gesiel Lopes: três caracteres. Se não for, não é um Cpf. Não dá para fazer essas validações.
+
+530
+01:22:14.230 --> 01:22:15.620
+Gesiel Lopes: Uchói,
+
+531
+01:22:22.100 --> 01:22:22.920
+Gesiel Lopes: Opa,
+
+532
+01:22:39.270 --> 01:22:42.150
+Gesiel Lopes: o Joy. O que o Joy faz?
+
+533
+01:22:54.360 --> 01:22:56.700
+Gesiel Lopes: O método, Join, tá?
+
+534
+01:22:58.330 --> 01:23:00.730
+Gesiel Lopes: Ele é.
+
+535
+01:23:01.650 --> 01:23:12.999
+Gesiel Lopes: Como é que eu posso tentar aqui explicar. Ele vai a concatenar uma determinada String numa
+
+536
+01:23:13.270 --> 01:23:16.439
+Gesiel Lopes: numa lista de strings.
+
+537
+01:23:16.780 --> 01:23:23.180
+Gesiel Lopes: Como assim, Gisele? Vamos supor que aqui eu tenho a minha lista.
+
+538
+01:23:24.440 --> 01:23:28.020
+Gesiel Lopes: Eu vou chamar mesmo de Inglês. String List.
+
+539
+01:23:28.330 --> 01:23:32.609
+Gesiel Lopes: Vamos supor que eu tenho a minha lista de Strings.
+
+540
+01:23:32.840 --> 01:23:39.470
+Gesiel Lopes: Então se preocupe, a gente vai ainda trabalhar um pouco desses conceitos lá na frente, tá?
+
+541
+01:23:42.280 --> 01:23:46.689
+Gesiel Lopes: Vamos supor que a minha lista de Strings aqui,
+
+542
+01:23:47.230 --> 01:23:49.090
+Gesiel Lopes: e aí eu vou até colocar.
+
+543
+01:23:51.230 --> 01:23:54.299
+Gesiel Lopes: Então. Acho que dá para colocar aqui. Ela vai ter.
+
+544
+01:23:55.230 --> 01:24:02.270
+Gesiel Lopes: E aí o Hello, o nome e o curso.
+
+545
+01:24:02.470 --> 01:24:07.170
+Gesiel Lopes: Então, se eu fizer um Print String List,
+
+546
+01:24:07.960 --> 01:24:13.400
+Gesiel Lopes: ele vai retornar. Colchate Hello Python.
+
+547
+01:24:13.760 --> 01:24:18.000
+Gesiel Lopes: A Gesiel Lopes e introdução à programação.
+
+548
+01:24:18.260 --> 01:24:26.890
+Gesiel Lopes: Tá, então se eu fizer, olha só, é.
+
+549
+01:24:30.510 --> 01:24:41.050
+Gesiel Lopes: E usem Joy e String List
+
+550
+01:24:41.340 --> 01:24:48.969
+Gesiel Lopes: está usando um Joy numa lista de Strings que aí eu vou criar uma variável,
+
+551
+01:24:49.650 --> 01:25:01.740
+Gesiel Lopes: e aí eu vou fazer o quê? Eu vou criar aqui, ó um só e uma string tá, é
+
+552
+01:25:03.980 --> 01:25:06.500
+Gesiel Lopes: vírgula, e vou dar um espaço.
+
+553
+01:25:06.730 --> 01:25:17.720
+Gesiel Lopes: Tá, ponto, Join, tá ponto, Joy. E aí eu coloco string lixo.
+
+554
+01:25:18.140 --> 01:25:20.140
+Gesiel Lopes: E aí eu vou dar um print.
+
+555
+01:25:21.040 --> 01:25:25.210
+Gesiel Lopes: Use Joy em string List.
+
+556
+01:25:25.510 --> 01:25:35.379
+Gesiel Lopes: Então o que ele vai fazer? Ele vai retornar. Ele vai pegar. Ele vai quebrar essa minha. Extingue aqui. Essa minha lista aqui,
+
+557
+01:25:36.350 --> 01:25:38.429
+Gesiel Lopes: deixa eu só colocar aqui. Ó,
+
+558
+01:25:49.370 --> 01:25:54.230
+Gesiel Lopes: o que ele vai fazer? Ele vai pegar essa minha lista aqui tá?
+
+559
+01:25:54.870 --> 01:26:02.760
+Gesiel Lopes: Vai juntar e vai separar cada string por vírgula.
+
+560
+01:26:03.180 --> 01:26:11.709
+Gesiel Lopes: Então deve aparecer. Hello Python, vírgula gesiel, Lopes, vírgula, introdução à programação com Python vamos ver se é isso mesmo
+
+561
+01:26:12.790 --> 01:26:14.409
+Gesiel Lopes: é o seu executar.
+
+562
+01:26:15.720 --> 01:26:26.990
+Gesiel Lopes: Então apareceu Hello Python, vírgula Giseu Lopes, vírgula, introdução à programação. Então, ele concatena as
+
+563
+01:26:27.260 --> 01:26:35.100
+Gesiel Lopes: strings pertencentes na lista a partir desse carácter que você definiu.
+
+564
+01:26:35.710 --> 01:26:40.029
+Gesiel Lopes: Ah, e o Street?
+
+565
+01:26:40.320 --> 01:26:43.780
+Gesiel Lopes: O que esse método Street faz?
+
+566
+01:26:45.360 --> 01:26:47.700
+Gesiel Lopes: E o último aqui é o Street,
+
+567
+01:26:55.750 --> 01:26:57.000
+Gesiel Lopes: o strip.
+
+568
+01:27:04.850 --> 01:27:11.670
+Gesiel Lopes: Então, se eu fizer a Hello Strip, o que vai acontecer?
+
+569
+01:27:16.820 --> 01:27:26.580
+Gesiel Lopes: Ah, Gisele, eu estou com dúvida. Não sei o que funciona esse método. Eu executei ele aqui. Ó tá
+
+570
+01:27:27.980 --> 01:27:38.660
+Gesiel Lopes: nas minhas variáveis. Mas ele. Não aconteceu nada para curso nas três. Ó,
+
+571
+01:27:39.050 --> 01:27:43.880
+Gesiel Lopes: aconteceu nada. Como é que eu faço, então? Uma maneira.
+
+572
+01:27:44.010 --> 01:27:47.140
+Gesiel Lopes: A gente inclusive já viu isso. Tá
+
+573
+01:27:48.020 --> 01:27:55.870
+Gesiel Lopes: de obter ajuda do Python é chamar a função Beauty Help.
+
+574
+01:27:56.560 --> 01:28:05.830
+Gesiel Lopes: Então a função beauty do Python retorna a Doc String daquela função.
+
+575
+01:28:17.030 --> 01:28:19.050
+Gesiel Lopes: Está executando sobre o que eu falei, que
+
+576
+01:28:28.400 --> 01:28:30.189
+Gesiel Lopes: só porque eu disse que era,
+
+577
+01:28:39.070 --> 01:28:40.360
+Gesiel Lopes: não vai executar.
+
+578
+01:29:33.050 --> 01:29:36.590
+Gesiel Lopes: Eu chamei o Strep. Eu estava chamando a função
+
+579
+01:29:36.730 --> 01:29:50.740
+Gesiel Lopes: e a função retorna um String. Aí ele está dizendo que o Help String retorna somente ao valor da String. Então eu tenho que chamar o Street aqui, que é a função
+
+580
+01:29:50.900 --> 01:29:55.659
+Gesiel Lopes: para ele retornar. Então essa função é uma função Biotin.
+
+581
+01:29:55.930 --> 01:30:08.809
+Gesiel Lopes: Que ela remove um determinado caracter da minha String. Como eu não especifiquei qual é o caracter. Ele não fez absolutamente nada. Mas se eu pegar aqui
+
+582
+01:30:10.370 --> 01:30:15.159
+Gesiel Lopes: nos três exemplos, eu vou colocar aqui o espaço em branco.
+
+583
+01:30:15.360 --> 01:30:21.630
+Gesiel Lopes: Então, se eu colocar strep e espaço em branco. O que o.
+
+584
+01:30:22.210 --> 01:30:27.520
+Gesiel Lopes: Essa função vai fazê la era pra tirar, né?
+
+585
+01:30:31.180 --> 01:30:33.360
+Gesiel Lopes: Strip, curso strip curso.
+
+586
+01:30:40.380 --> 01:30:47.709
+Gesiel Lopes: Ele é o equivalente ao método trim tá do do Java.
+
+587
+01:30:59.660 --> 01:31:01.829
+Gesiel Lopes: Então ele está dizendo que ele remove. Ó
+
+588
+01:31:03.850 --> 01:31:08.309
+Gesiel Lopes: ah, peraí. Ele retorna uma cópia do String
+
+589
+01:31:08.420 --> 01:31:13.080
+Gesiel Lopes: com o espaço em branco removido. Se eu fizer o A,
+
+590
+01:31:13.840 --> 01:31:25.130
+Gesiel Lopes: a Hello, aliás, o e a Ue, o L e aqui o a
+
+591
+01:31:32.380 --> 01:31:37.020
+Gesiel Lopes: remove no final. Deixa eu ver. Aqui n.
+
+592
+01:31:38.800 --> 01:31:41.899
+Gesiel Lopes: Ah, ele, remove no final, como a Jay falou,
+
+593
+01:31:42.950 --> 01:31:45.960
+Gesiel Lopes: indicados no início e no final
+
+594
+01:31:49.640 --> 01:31:59.090
+Gesiel Lopes: é no início. E no final, beleza se tiver, né?
+
+595
+01:31:59.480 --> 01:32:01.399
+Gesiel Lopes: Então é o S.
+
+596
+01:32:01.910 --> 01:32:04.110
+Gesiel Lopes: Vai retornar no final.
+
+597
+01:32:06.000 --> 01:32:08.689
+Gesiel Lopes: Ok, beleza, então é isso.
+
+598
+01:32:18.230 --> 01:32:21.829
+Gesiel Lopes: Eu uso muito ele deixa. Eu só
+
+599
+01:32:23.250 --> 01:32:37.870
+Gesiel Lopes: quando eu faço isso aqui. Acho que é por isso mesmo. Uso é Strippy Strip. E e aí,
+
+600
+01:32:38.140 --> 01:32:43.330
+Gesiel Lopes: Street. Exemplos tchau
+
+601
+01:32:51.750 --> 01:32:53.029
+Gesiel Lopes: no Street.
+
+602
+01:32:53.180 --> 01:33:01.090
+Gesiel Lopes: O Street é muito usado para resolver o seguinte problema:
+
+603
+01:33:07.730 --> 01:33:14.190
+Gesiel Lopes: se vocês observarem aqui, que ele tira espaço em branco.
+
+604
+01:33:14.990 --> 01:33:20.219
+Gesiel Lopes: Se vocês observarem aqui o Strepel aqui, ele tem caracteres em branco.
+
+605
+01:33:22.000 --> 01:33:29.279
+Gesiel Lopes: E se eu fizer agora o Print Ponto Street,
+
+606
+01:33:32.590 --> 01:33:39.240
+Gesiel Lopes: ele vai retirar esses espaços do começo. Esses quatro espaços do começo
+
+607
+01:33:39.520 --> 01:33:42.189
+Gesiel Lopes: e no fim, é os espaços em branco,
+
+608
+01:33:42.580 --> 01:33:57.279
+Gesiel Lopes: como o pessoal havia comentado aí. Então é muito utilizado. Por exemplo, para quando você estiver manipulando strings, você limpar, deixar somente os caracteres do início e no fim.
+
+609
+01:33:57.440 --> 01:33:58.390
+Gesiel Lopes: Tá bom.
+
+610
+01:33:59.240 --> 01:34:16.869
+Gesiel Lopes: Ele é o equivalente a. Eu não vou saber, Marcos. Mas seria o equivalente ao arrumado excel não sei. Eu não sei. Eu não conheço muito bem o Excel. Quem é do Java? Aí? É o equivalente ao método Dream do Java,
+
+611
+01:34:17.650 --> 01:34:20.429
+Gesiel Lopes: mas eu não sei se é o arrumar.
+
+612
+01:34:23.550 --> 01:34:24.530
+Gesiel Lopes: Tá bom.
+
+613
+01:34:26.080 --> 01:34:29.400
+Gesiel Lopes: Deixa eu ver o Webssel aqui
+
+614
+01:34:32.920 --> 01:34:34.769
+Gesiel Lopes: só para tirar essa dúvida.
+
+615
+01:34:38.830 --> 01:34:39.990
+Gesiel Lopes: Arrumar
+
+616
+01:34:51.450 --> 01:34:52.850
+Gesiel Lopes: a arrumar.
+
+617
+01:34:56.210 --> 01:34:59.430
+Gesiel Lopes: Eu estou com o Excel aqui aberto só para
+
+618
+01:35:04.570 --> 01:35:05.950
+Gesiel Lopes: arrumar.
+
+619
+01:35:24.840 --> 01:35:31.950
+Gesiel Lopes: Provavelmente marcos. Provavelmente muito provavelmente
+
+620
+01:35:36.690 --> 01:35:37.790
+Gesiel Lopes: beleza.
+
+621
+01:35:42.650 --> 01:35:46.910
+Gesiel Lopes: Então é isso, pessoal. O que eu tinha preparado para hoje,
+
+622
+01:35:48.170 --> 01:35:59.099
+Gesiel Lopes: e aí nas próximas aulas, a gente, já começamos a fazer um monte de coisa interessante. E aí, nas próximas aulas, a gente já vai começar a colocar tudo isso
+
+623
+01:35:59.370 --> 01:36:11.350
+Gesiel Lopes: e começar a desenvolver agora os nossos algoritmos mais interessantes. Por enquanto. A gente está com aquele gostinho de quero mais,
+
+624
+01:36:11.580 --> 01:36:12.550
+Gesiel Lopes: hã?
+
+625
+01:36:15.170 --> 01:36:27.950
+Gesiel Lopes: O Marcos está falando. Eu não sei, marcos, posso depois dar uma olhada. O que o arrumar faz? Eu não sou muito fã do Excel. Eu não sou muito bom do Excel. Uso o Excel muito pouco.
+
+626
+01:36:30.960 --> 01:36:33.939
+Gesiel Lopes: Então é isso, pessoal. Mais uma vez aí,
+
+627
+01:36:35.430 --> 01:36:52.350
+Gesiel Lopes: vou parar aqui. O meu compartilhamento tá? Espero que vocês estejam curtindo qualquer dúvida. Estou à disposição. Só procurar lá no nosso infinit online que estamos aí para ajudá los da melhor forma possível. E encontro vocês no nosso
+
+628
+01:36:52.420 --> 01:37:01.060
+Gesiel Lopes: próximo encontro. Não é meio redundante falar, mas enfim, é isso? Espero vocês no nosso próximo encontro. É isso. Fui tchau.
+
+629
+01:37:02.430 --> 01:37:03.320
+gabriel.diniz: Valeu!
+
