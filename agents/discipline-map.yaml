@@ -1,0 +1,41 @@
+# Mapeamento downloads → disciplina ISS (slugs em content/disciplines.json).
+# SSOT de convenções de conteúdo: documentation.md na raiz.
+version: 1
+updated: "2026-05-14"
+
+slug_rule: |
+  Cada ficheiro `Aula_NN_-_DDMMAAAA.vtt` na pasta de download mapeada corresponde à aula
+  com `order: NN` dessa disciplina em content/lessons.json (quando existir).
+  O slug estável e o nome do ficheiro .md em content/<disciplina>/ seguem o padrão do
+  repositório: prefixo `aula-NN-` + descritor em kebab-case; o slug no JSON/frontmatter
+  é o sufixo sem o prefixo numérico duplicado (ex.: ficheiro `aula-09-conjuntos-sets.md`,
+  slug `conjuntos-sets-operacoes-colecoes`).
+  Sem entrada em lessons.json para o par (discipline_slug, order) → tratar como backlog
+  de publicação após redação e validação.
+
+mappings:
+  - download_folder: Planejamento_de_Curso_e_Carreira
+    discipline_slug: planejamento-curso-carreira
+  - download_folder: Fluencia_em_IA
+    discipline_slug: fluencia-ia
+  - download_folder: Introducao_a_Visualizacao_de_Dados_e_SQL
+    discipline_slug: visualizacao-sql
+  - download_folder: Introducao_a_Programacao_com_Python
+    discipline_slug: python
+  - download_folder: Projeto_de_Bloco_Fundamentos_do_Processamento_de_Dados
+    discipline_slug: projeto-bloco
+  - download_folder: Python_para_Processamento_de_Dados
+    discipline_slug: python-processamento-dados
+  - download_folder: SQL_e_Modelagem_Relacional
+    discipline_slug: sql-modelagem-relacional
+
+# Contexto auxiliar por disciplina (subpastas em downloads/documents/)
+documents_hints:
+  - discipline_slug: visualizacao-sql
+    path_prefix: "downloads/documents/Introducao_a_Visualizacao_de_Dados_e_SQL"
+  - discipline_slug: sql-modelagem-relacional
+    path_prefix: "downloads/documents/SQL_e_Modelagem_Relacional"
+  - discipline_slug: python-processamento-dados
+    path_prefix: "downloads/documents/Python_para_Processamento_de_Dados_[26E2_4]"
+  - discipline_slug: python
+    path_prefix: "downloads/documents/Introducao_a_Programacao_com_Python"
