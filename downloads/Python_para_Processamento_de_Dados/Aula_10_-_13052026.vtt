@@ -1,0 +1,2386 @@
+WEBVTT
+
+1
+00:00:08.460 --> 00:00:12.699
+Gesiel Lopes: Opa, pessoal. Boa noite. Só beber aqui um pouco D, água. Já já iniciamos.
+
+2
+00:01:04.510 --> 00:01:06.240
+Gesiel Lopes: Então vamos lá.
+
+3
+00:01:21.000 --> 00:01:22.350
+Gesiel Lopes: Isso está aqui.
+
+4
+00:01:30.920 --> 00:01:41.309
+Gesiel Lopes: Ok, então, antes de mais nada, muito boa noite. Seja bem vindo a mais um encontro aqui da disciplina de Python para processamento de dados
+
+5
+00:01:42.340 --> 00:01:47.830
+Gesiel Lopes: do bloco de fundamentos de processamento de dados do Instituto Infinity.
+
+6
+00:01:48.530 --> 00:01:55.549
+Gesiel Lopes: Aqui quem nos fala é o Gisele Lopes. Seja mais uma vez muito bem vindo a mais um encontro. Muito bem vinda.
+
+7
+00:01:55.680 --> 00:02:00.170
+Gesiel Lopes: Aproveito para pedir um feedback para quem está aqui ao vivo conosco.
+
+8
+00:02:01.190 --> 00:02:06.070
+Gesiel Lopes: Vocês estão me vendo bem, estão me ouvindo bem, está tudo tranquilo.
+
+9
+00:02:06.930 --> 00:02:08.060
+Gesiel Lopes: Podemos.
+
+10
+00:02:13.810 --> 00:02:15.469
+Gesiel Lopes: Vou assumir que sim.
+
+11
+00:02:17.700 --> 00:02:23.269
+Gesiel Lopes: Então vamos lá então. Sem mais delongas, vou compartilhar aqui, minha tela com vocês.
+
+12
+00:02:44.790 --> 00:02:47.419
+Gesiel Lopes: Vou colocar aqui o chat de lado.
+
+13
+00:03:00.410 --> 00:03:06.020
+Gesiel Lopes: Então vamos lá então, antes de a gente dar continuidade aqui,
+
+14
+00:03:06.130 --> 00:03:09.679
+Gesiel Lopes: eu trouxe um probleminha aqui bem simples, tá
+
+15
+00:03:14.430 --> 00:03:20.700
+Gesiel Lopes: envolvendo os conceitos que a gente já trabalhou até agora, que é criar um algoritmo que compara duas listas
+
+16
+00:03:20.930 --> 00:03:30.380
+Gesiel Lopes: digitadas pelo usuário e determine dessas listas
+
+17
+00:03:30.640 --> 00:03:34.070
+Gesiel Lopes: os valores que são comuns a elas.
+
+18
+00:03:34.470 --> 00:03:41.879
+Gesiel Lopes: Os valores que só existem na primeira lista os valores que existem apenas na segunda lista.
+
+19
+00:03:42.000 --> 00:03:49.979
+Gesiel Lopes: E uma lista com os elementos não repetidos das duas listas. Então uma forma de você fazer isso.
+
+20
+00:03:50.140 --> 00:04:02.140
+Gesiel Lopes: Você poderia pensar é de resolver esse problema. Fórmula um, tá, primeira coisa era
+
+21
+00:04:04.920 --> 00:04:08.449
+Gesiel Lopes: a primeira coisa que eu vou fazer. É criar aqui um laço.
+
+22
+00:04:10.060 --> 00:04:12.060
+Gesiel Lopes: Eu vou criar aqui um.
+
+23
+00:04:17.540 --> 00:04:21.810
+Gesiel Lopes: Uma variável tamanho para o usuário, informar
+
+24
+00:04:22.010 --> 00:04:32.470
+Gesiel Lopes: o tamanho de cada uma das listas, o tamanho deixar ele bem dinâmico, tamanho lista. Um
+
+25
+00:04:34.970 --> 00:04:36.810
+Gesiel Lopes: vai ser um valor inteiro
+
+26
+00:04:42.320 --> 00:04:43.370
+Gesiel Lopes: e putsch.
+
+27
+00:04:45.350 --> 00:04:55.400
+Gesiel Lopes: Digite o tamanho da primeira lista.
+
+28
+00:05:01.830 --> 00:05:09.229
+Gesiel Lopes: Vou pegar a mesma coisa para a lista. Dois, tamanho da.
+
+29
+00:05:14.320 --> 00:05:20.609
+Gesiel Lopes: E aí, pessoal? É bom, né? A gente dá boa noite a galera responder. Bom que vocês estão gostando muito, né?
+
+30
+00:05:21.540 --> 00:05:24.069
+Gesiel Lopes: Legal, bom saber disso.
+
+31
+00:05:28.090 --> 00:05:35.070
+Gesiel Lopes: E o pior é que eu peço um feedback que ninguém dá e reclamar, vocês sabem, né? Mas beleza, pessoal, vou multar a continuidade.
+
+32
+00:05:35.520 --> 00:05:38.299
+Gesiel Lopes: A motivação tem que ser ambas. Viu?
+
+33
+00:05:39.560 --> 00:05:44.689
+Gesiel Lopes: Então eu peguei aqui o tamanho das duas listas.
+
+34
+00:05:47.780 --> 00:05:54.210
+Gesiel Lopes: Peguei o tamanho das duas listas. E aí agora eu posso simplesmente.
+
+35
+00:05:54.490 --> 00:05:56.760
+Gesiel Lopes: Eu posso simplesmente.
+
+36
+00:05:57.490 --> 00:06:03.840
+Gesiel Lopes: E terá que pedir para o usuário e digite as informações relacionados à primeira lista.
+
+37
+00:06:04.530 --> 00:06:14.180
+Gesiel Lopes: Então aqui. Ó, eu vou usar. Aqui um fó, mesmo com um ranging
+
+38
+00:06:19.160 --> 00:06:21.720
+Gesiel Lopes: tamanho um
+
+39
+00:06:24.920 --> 00:06:31.230
+Gesiel Lopes: tamanho lista um vai até o tamanho da lista um.
+
+40
+00:06:34.400 --> 00:06:35.960
+Gesiel Lopes: E aqui eu vou só.
+
+41
+00:06:37.690 --> 00:06:41.080
+Gesiel Lopes: Na verdade, eu posso controlar aqui esse. Eu vou pegar esse aí.
+
+42
+00:06:41.720 --> 00:06:52.910
+Gesiel Lopes: Eu vou só digitar uma mensagem. Digite os valores da primeira lista.
+
+43
+00:06:55.530 --> 00:06:57.790
+Gesiel Lopes: E aí eu vou colocar aqui um.
+
+44
+00:06:59.160 --> 00:07:01.040
+Gesiel Lopes: Pronto aí, beleza.
+
+45
+00:07:03.210 --> 00:07:12.189
+Gesiel Lopes: Eu tenho os tamanhos. Preciso inicializar as minhas listas primeiro. Então eu vou criar duas listas sendo elas vazias.
+
+46
+00:07:12.300 --> 00:07:17.750
+Gesiel Lopes: Então, o List um e lista dois.
+
+47
+00:07:19.050 --> 00:07:29.700
+Gesiel Lopes: Então liste então aqui, ó criando as listas vazias apresentar.
+
+48
+00:07:31.060 --> 00:07:34.709
+Gesiel Lopes: E aí eu vou pegar o incrementar
+
+49
+00:07:35.030 --> 00:07:40.560
+Gesiel Lopes: ou adicionar na lista os números que o
+
+50
+00:07:41.830 --> 00:07:51.000
+Gesiel Lopes: usuário informar. Então aqui eu vou criar aqui uma variável que eu vou chamar de número. Vou considerar ela por simplicidade
+
+51
+00:07:51.290 --> 00:07:53.610
+Gesiel Lopes: como inteira.
+
+52
+00:07:54.700 --> 00:07:57.580
+Gesiel Lopes: E aí eu vou fazer aqui só
+
+53
+00:07:58.400 --> 00:08:04.599
+Gesiel Lopes: um controle. De quantos números a pessoa vai digitar?
+
+54
+00:08:05.310 --> 00:08:06.270
+Gesiel Lopes: Ah, é?
+
+55
+00:08:14.410 --> 00:08:21.810
+Gesiel Lopes: E aqui eu vou colocar para a pessoa saber quantos ele vai digitar, digite os.
+
+56
+00:08:22.870 --> 00:08:24.760
+Gesiel Lopes: E aqui vai aparecer o número
+
+57
+00:08:26.340 --> 00:08:39.740
+Gesiel Lopes: valores da primeira lista. E aí vou pedir aqui uma informação digite que é o ir mais um zero
+
+58
+00:08:40.270 --> 00:08:46.310
+Gesiel Lopes: que vai ser. Digite o primeiro, o segundo e assim sucessivamente. Primeiro, o valor.
+
+59
+00:08:47.170 --> 00:08:50.810
+Gesiel Lopes: Valor I mais um, como ele vai começar de zero.
+
+60
+00:08:51.000 --> 00:08:59.769
+Gesiel Lopes: E aí o primeiro vai ser zero. Mais um aí, que é o primeiro, segundo, até a quantidade de elementos que o usuário informar.
+
+61
+00:09:01.350 --> 00:09:13.620
+Gesiel Lopes: Vou fazer a mesma coisa. Para a lista dois digite os valores, dá segunda lista.
+
+62
+00:09:14.340 --> 00:09:16.369
+Gesiel Lopes: E aqui. Lista dois.
+
+63
+00:09:16.690 --> 00:09:26.740
+Gesiel Lopes: Ah, faltou um detalhe. Então, o que eu preciso fazer? Adicionar o número desse primeiro foco na lista um.
+
+64
+00:09:26.910 --> 00:09:33.810
+Gesiel Lopes: Então lista um, apende. Número
+
+65
+00:09:39.380 --> 00:09:41.370
+Gesiel Lopes: lista dois.
+
+66
+00:09:41.770 --> 00:09:46.200
+Gesiel Lopes: Aprende, número.
+
+67
+00:09:47.330 --> 00:09:55.749
+Gesiel Lopes: Tá feito. Isso aqui. Eu peguei já os dois valores das duas listas.
+
+68
+00:09:55.880 --> 00:09:58.900
+Gesiel Lopes: Então eu preciso agora comparar e trazer.
+
+69
+00:09:59.120 --> 00:09:59.920
+Gesiel Lopes: Tá,
+
+70
+00:10:13.770 --> 00:10:15.009
+Gesiel Lopes: tirar isso aqui?
+
+71
+00:10:15.130 --> 00:10:19.240
+Gesiel Lopes: E aí alguém poderia falar assim, beleza? Então, como que a gente faz isso?
+
+72
+00:10:19.690 --> 00:10:23.720
+Gesiel Lopes: Para pegar os valores comuns da lista.
+
+73
+00:10:24.200 --> 00:10:24.899
+Gesiel Lopes: Tá bom.
+
+74
+00:10:25.840 --> 00:10:29.980
+Gesiel Lopes: Uma forma de você fazer isso, tá
+
+75
+00:10:31.240 --> 00:10:33.480
+Gesiel Lopes: uma forma de você fazer isso,
+
+76
+00:10:33.990 --> 00:10:41.880
+Gesiel Lopes: e terá sobre as listas e verificar se um determinado valor pertence ou não à determinada lista.
+
+77
+00:10:42.060 --> 00:10:49.320
+Gesiel Lopes: Então aqui eu vou criar uma nova lista chamada de números comuns.
+
+78
+00:10:51.150 --> 00:10:53.149
+Gesiel Lopes: Vai ser uma lista vazia.
+
+79
+00:10:54.540 --> 00:10:55.220
+Gesiel Lopes: Tá?
+
+80
+00:10:56.860 --> 00:11:05.800
+Gesiel Lopes: E aqui eu vou percorrer dentro da primeira lista. Então, fó é número
+
+81
+00:11:12.660 --> 00:11:22.050
+Gesiel Lopes: ou colocar aqui. Valor lista está mais expressivo. Valor lista um e um lista um.
+
+82
+00:11:23.190 --> 00:11:25.509
+Gesiel Lopes: Então percorro para cada.
+
+83
+00:11:26.360 --> 00:11:33.370
+Gesiel Lopes: Para cada valor dentro da lista um, eu verifico se esse valor
+
+84
+00:11:37.750 --> 00:11:41.390
+Gesiel Lopes: está na lista dois.
+
+85
+00:11:45.960 --> 00:11:50.460
+Gesiel Lopes: Se ele tiver, significa dizer que a
+
+86
+00:11:52.510 --> 00:11:58.100
+Gesiel Lopes: significa dizer que esse número é um número comum as duas listas, tá?
+
+87
+00:11:58.830 --> 00:12:13.320
+Gesiel Lopes: E aí eu simplesmente pego a lista. Números comuns e acrescento o valor da lista um, o valor
+
+88
+00:12:13.780 --> 00:12:15.020
+Gesiel Lopes: lista um.
+
+89
+00:12:16.720 --> 00:12:20.440
+Gesiel Lopes: Então percorri todos os elementos.
+
+90
+00:12:26.740 --> 00:12:34.660
+Gesiel Lopes: Percorri todos os elementos da lista. Um. E aqui. Olha só, eu só faço uma validação.
+
+91
+00:12:35.150 --> 00:12:41.740
+Gesiel Lopes: Se Len números comuns foo
+
+92
+00:12:46.360 --> 00:12:58.929
+Gesiel Lopes: maior do que zero. Significa dizer que existe número comum entre as duas listas. E aí eu coloco
+
+93
+00:12:59.080 --> 00:13:13.710
+Gesiel Lopes: a mensagem: os números comuns, as listas de higiene dadas dois pontos.
+
+94
+00:13:14.050 --> 00:13:24.550
+Gesiel Lopes: E aí é que eu só coloco a lista de números comuns, números comuns, beleza.
+
+95
+00:13:24.550 --> 00:13:25.240
+leonardo Peres: Sirvo.
+
+96
+00:13:26.330 --> 00:13:27.240
+Gesiel Lopes: Opa.
+
+97
+00:13:27.240 --> 00:13:34.349
+leonardo Peres: Desculpa interromper. Ali no segundo for, o colega mandou no chat. Tá tamanho lista um. Também tem que mudar um para o dois. Acho que vai dar um.
+
+98
+00:13:34.350 --> 00:13:37.169
+Gesiel Lopes: Beleza valeu já já corrente.
+
+99
+00:13:37.530 --> 00:13:38.610
+Gesiel Lopes: Obrigado.
+
+100
+00:13:38.740 --> 00:13:55.350
+Gesiel Lopes: E aqui eu coloco. Não uma mensagem de erro. Não existe número comuns às listas digitadas. Pronto,
+
+101
+00:13:55.510 --> 00:14:03.169
+Gesiel Lopes: aqui. Deixa eu ver aqui. Ah, beleza corrigido, obrigado. Então executa aqui o código.
+
+102
+00:14:04.200 --> 00:14:06.580
+Gesiel Lopes: O Deep note vai iniciar,
+
+103
+00:14:18.510 --> 00:14:24.399
+Gesiel Lopes: e aí eu vou digitar uma lista pequena só de três elementos para cada uma delas.
+
+104
+00:14:25.210 --> 00:14:26.730
+Gesiel Lopes: Três e três.
+
+105
+00:14:27.250 --> 00:14:36.220
+Gesiel Lopes: A lista um vai ter o número um, dois, três.
+
+106
+00:14:39.820 --> 00:14:43.660
+Gesiel Lopes: É a segunda lista.
+
+107
+00:14:43.940 --> 00:14:45.670
+Gesiel Lopes: Vai ser.
+
+108
+00:14:46.220 --> 00:14:49.459
+Gesiel Lopes: Eu digitei. Um, dois, três e vou colocar valores diferentes
+
+109
+00:14:49.630 --> 00:15:03.430
+Gesiel Lopes: para dar a mensagem de números. Não existe números comuns. Então, quatro, cinco, seis.
+
+110
+00:15:04.960 --> 00:15:11.110
+Gesiel Lopes: Então a lógica pelo menos. Funciona. E aqui, ó, depois que eu
+
+111
+00:15:12.420 --> 00:15:18.160
+Gesiel Lopes: colocar as listas, eu vou só colocar aqui um print das listas digitadas.
+
+112
+00:15:19.250 --> 00:15:28.339
+Gesiel Lopes: Primeira lista, lista e um.
+
+113
+00:15:30.950 --> 00:15:32.219
+Gesiel Lopes: E aqui, ó
+
+114
+00:15:38.640 --> 00:15:52.770
+Gesiel Lopes: segunda lista dois. Pronto, novamente, só ver se digita o tamanho da lista. Dois três três.
+
+115
+00:15:54.730 --> 00:16:02.110
+Gesiel Lopes: Digite os três valores da primeira lista. Então, um, dois
+
+116
+00:16:03.350 --> 00:16:06.809
+Gesiel Lopes: e três. Então ele vai me mostrar a lista. Um, dois, três.
+
+117
+00:16:07.410 --> 00:16:11.390
+Gesiel Lopes: Digite os três valores da segunda lista.
+
+118
+00:16:11.550 --> 00:16:19.770
+Gesiel Lopes: Vou colocar dois, quatro e seis.
+
+119
+00:16:21.280 --> 00:16:27.270
+Gesiel Lopes: Então existe o número comum. E aí o número comum é justamente o dois.
+
+120
+00:16:27.980 --> 00:16:28.760
+Gesiel Lopes: Tá,
+
+121
+00:16:29.850 --> 00:16:41.539
+Gesiel Lopes: eu consigo resolver o meu problema fazendo a interação em cima, iterando em cima dessas coleções, dessas listas que foram digitadas.
+
+122
+00:16:41.690 --> 00:16:49.760
+Gesiel Lopes: No entanto, se vocês observarem o problema, tem uma característica bem interessante
+
+123
+00:16:50.820 --> 00:16:56.240
+Gesiel Lopes: e bem peculiar a um tipo de estrutura de dado do Python
+
+124
+00:16:56.780 --> 00:17:03.560
+Gesiel Lopes: que a gente já tinha até trabalhado. Observem que, como é que eu faço para encontrar qual a estrutura de dado
+
+125
+00:17:03.710 --> 00:17:08.119
+Gesiel Lopes: que me retorna, dar valores comuns a ela.
+
+126
+00:17:08.339 --> 00:17:18.549
+Gesiel Lopes: Qual é a estrutura de dado que retorna apenas à diferença de uma ou de outra, ou que não tem elementos repetidos,
+
+127
+00:17:21.240 --> 00:17:29.730
+Gesiel Lopes: então uma forma da gente resolver esse problema é justamente através de conjuntos
+
+128
+00:17:35.430 --> 00:17:41.749
+Gesiel Lopes: através de conjuntos como eu vou colocar aqui uma forma.
+
+129
+00:17:42.500 --> 00:17:46.590
+Gesiel Lopes: Forma dois tá?
+
+130
+00:17:49.780 --> 00:17:59.530
+Gesiel Lopes: E aí Fórmula um, liberando, inteirando, inteirando nas listas.
+
+131
+00:18:00.500 --> 00:18:11.240
+Gesiel Lopes: E a segunda é utilizando com juntos, utilizando conjuntos.
+
+132
+00:18:13.000 --> 00:18:16.209
+Gesiel Lopes: Então a primeira coisa que eu vou fazer
+
+133
+00:18:16.360 --> 00:18:31.599
+Gesiel Lopes: é converter as listas um e as listas, dois em dois conjuntos. Então vou colocar aqui uma variável que eu vou chamar de conjunto lista um
+
+134
+00:18:32.280 --> 00:18:34.259
+Gesiel Lopes: que aí eu vou transformar
+
+135
+00:18:34.460 --> 00:18:41.650
+Gesiel Lopes: a minha lista. Um em um conjunto. Então chama a função Beauty sete e passo a minha lista. Um
+
+136
+00:18:42.380 --> 00:18:48.390
+Gesiel Lopes: tá conjunto lista dois. Eu faço a mesma coisa.
+
+137
+00:18:49.160 --> 00:19:06.280
+Gesiel Lopes: Sete, lista dois: a de posse dos dois conjuntos, ou seja, dos conjuntos relacionados aos
+
+138
+00:19:06.680 --> 00:19:21.120
+Gesiel Lopes: as listas, um ou dois. Eu quero pegar os valores comuns, independentemente se eles possuem valores repetidos ou não. Eu quero somente o que é comum. E aqui, eu vou criar uma nova variável que eu vou chamar números comuns
+
+139
+00:19:22.020 --> 00:19:26.739
+Gesiel Lopes: conjuntos para mostrar que são duas variáveis distintas.
+
+140
+00:19:26.970 --> 00:19:34.689
+Gesiel Lopes: E aqui eu faço a operação. Qual é a operação que eu utilizo para pegar o que é comum a dois conjuntos.
+
+141
+00:19:34.820 --> 00:19:41.579
+Gesiel Lopes: Então, o que é comum entre dois conjuntos é justamente a operação de interseção.
+
+142
+00:19:41.870 --> 00:19:44.300
+Gesiel Lopes: Então eu faço conjunto,
+
+143
+00:19:45.150 --> 00:19:55.099
+Gesiel Lopes: lista um: qual operador de intercessão? O operador de intercessão entre conjuntos é o operador I comercial. Então, conjunto um
+
+144
+00:19:57.270 --> 00:20:03.650
+Gesiel Lopes: conjunto dois, tá conjunto dois.
+
+145
+00:20:04.210 --> 00:20:08.010
+Gesiel Lopes: E aí é
+
+146
+00:20:11.360 --> 00:20:19.860
+Gesiel Lopes: conjunto dois. E aqui eu tenho os conjuntos que são comuns. E aí, basicamente, o que eu faço é a mesma validação,
+
+147
+00:20:20.730 --> 00:20:21.540
+Gesiel Lopes: tá?
+
+148
+00:20:24.320 --> 00:20:35.439
+Gesiel Lopes: Se o tamanho desse conjunto for maior do que zero, significa dizer que eu tenho números comuns. Caso contrário, eu não tenho nenhum número comum.
+
+149
+00:20:36.040 --> 00:20:46.569
+Gesiel Lopes: Tá, é então um Opa. Eu digitei um tamanho da lista.
+
+150
+00:20:47.170 --> 00:20:51.180
+Gesiel Lopes: Então vou colocar aqui um e dois.
+
+151
+00:20:53.000 --> 00:21:01.010
+Gesiel Lopes: Ele deve dar das duas mensagens. Não existe números comuns nas listas digitadas.
+
+152
+00:21:01.970 --> 00:21:07.160
+Gesiel Lopes: Vou digitar aqui o mesmo exemplo que a gente estava usando. Três e três.
+
+153
+00:21:08.410 --> 00:21:09.850
+Gesiel Lopes: Então, um,
+
+154
+00:21:13.540 --> 00:21:14.920
+Gesiel Lopes: dois.
+
+155
+00:21:16.300 --> 00:21:22.310
+Gesiel Lopes: E aqui é bom, porque quando a gente faz interação, a gente vê um detalhezinho interessante, não é?
+
+156
+00:21:23.410 --> 00:21:26.739
+Gesiel Lopes: A lista vai ser dois,
+
+157
+00:21:32.200 --> 00:21:36.640
+Gesiel Lopes: três e quatro.
+
+158
+00:21:41.190 --> 00:21:48.449
+Gesiel Lopes: Se vocês observarem, inclusive nessa segunda forma. Aqui o número dois. Ele aparece duas vezes.
+
+159
+00:21:49.090 --> 00:21:58.960
+Gesiel Lopes: Então a gente inclusive, pode consertar isso aqui. E com o conjunto, ele aparece o dois somente uma única vez que são os números comuns,
+
+160
+00:21:59.130 --> 00:22:14.750
+Gesiel Lopes: inclusive aqui a gente poderia. Só antes de fazer o aprende, verificar se o valor lista um. Ele está
+
+161
+00:22:15.560 --> 00:22:26.329
+Gesiel Lopes: ou não note in nos números comuns. Se ele não tiver, eu faço o. Aprende se não,
+
+162
+00:22:26.830 --> 00:22:35.590
+Gesiel Lopes: se ele tiver. Eu não preciso fazer o apêndio só para eu não ter valores repetidos. Três, três.
+
+163
+00:22:37.030 --> 00:22:44.409
+Gesiel Lopes: E aí, um, dois e dois.
+
+164
+00:22:46.150 --> 00:22:59.390
+Gesiel Lopes: Segunda lista. Vou colocar dois, quatro, e três, quatro e seis.
+
+165
+00:23:00.960 --> 00:23:07.430
+Gesiel Lopes: Então o único número comum é o dois. Então aqui a gente consegue resolver esse problema.
+
+166
+00:23:08.060 --> 00:23:11.720
+Gesiel Lopes: Então e aí,
+
+167
+00:23:13.460 --> 00:23:26.500
+Gesiel Lopes: na realidade, eu nem preciso criar essas duas variáveis. Eu posso literalmente fazer essa operação sem criar essas variáveis, já que esses dois conjuntos. Eu não vou mais utilizá los em lugar nenhum.
+
+168
+00:23:26.630 --> 00:23:33.109
+Gesiel Lopes: Então eu posso resolver esse problema dessa forma, sem variáveis de controle.
+
+169
+00:23:33.970 --> 00:23:38.770
+Gesiel Lopes: Então observem que é bem mais simples de resolver o problema.
+
+170
+00:23:39.310 --> 00:23:45.550
+Gesiel Lopes: Quando eu utilizo o conjunto, claro, dependendo da natureza do do problema.
+
+171
+00:23:46.540 --> 00:24:00.900
+Gesiel Lopes: Então, um, dois e dois, dois, quatro e seis.
+
+172
+00:24:02.860 --> 00:24:05.110
+Gesiel Lopes: Então, dois é o valor comum.
+
+173
+00:24:05.410 --> 00:24:07.060
+Gesiel Lopes: Tranquilo, pessoal.
+
+174
+00:24:10.590 --> 00:24:11.740
+Gesiel Lopes: Ok,
+
+175
+00:24:23.850 --> 00:24:33.760
+Gesiel Lopes: e aí eu deixo aí para vocês agora resolver os demais problemas, tá?
+
+176
+00:24:34.310 --> 00:24:40.320
+Gesiel Lopes: Observe que aí fica até mais comum de resolver todos os demais problemas com conjuntos.
+
+177
+00:24:40.560 --> 00:24:47.429
+Gesiel Lopes: Então aqui. Ó, eu posso até colocar aqui um print, né?
+
+178
+00:24:49.960 --> 00:24:58.910
+Gesiel Lopes: Em vez de ser um comentário, tá verificando valores dos valores
+
+179
+00:25:00.440 --> 00:25:05.370
+Gesiel Lopes: comuns às duas listas, por exemplo, tá?
+
+180
+00:25:09.370 --> 00:25:11.760
+Gesiel Lopes: O segundo problema seria:
+
+181
+00:25:15.570 --> 00:25:21.840
+Gesiel Lopes: deixa eu colocar isso aqui, inclusive já que eu tenho as listas para toda hora. Não ficar iniciando.
+
+182
+00:25:22.270 --> 00:25:24.509
+Gesiel Lopes: Eu vou criar aqui mais uma célula,
+
+183
+00:25:25.090 --> 00:25:27.839
+Gesiel Lopes: cada célula. Eu vou colocar um problema.
+
+184
+00:25:28.220 --> 00:25:35.180
+Gesiel Lopes: Então, verificando os valores que existem somente na primeira lista,
+
+185
+00:25:55.560 --> 00:26:03.710
+Gesiel Lopes: verificando agora os valores que estão somente na segunda lista
+
+186
+00:26:08.370 --> 00:26:14.799
+Gesiel Lopes: e uma lista com os elementos não repetidos das duas listas
+
+187
+00:26:23.610 --> 00:26:24.460
+Gesiel Lopes: é
+
+188
+00:26:31.910 --> 00:26:38.000
+Gesiel Lopes: verificando os elementos não repetidos das duas listas.
+
+189
+00:26:42.980 --> 00:26:45.629
+Gesiel Lopes: E aqui a gente pode usar conjuntos, tá?
+
+190
+00:26:45.900 --> 00:26:47.839
+Gesiel Lopes: Então aqui, olha só.
+
+191
+00:26:49.030 --> 00:26:55.180
+Gesiel Lopes: Vou criar aqui uma nova variável que eu vou chamar de valores.
+
+192
+00:26:55.710 --> 00:27:05.820
+Gesiel Lopes: Valores. Primeira lista, já que eu tenho a lista em memória, tchau.
+
+193
+00:27:06.900 --> 00:27:07.960
+Gesiel Lopes: E aí
+
+194
+00:27:08.360 --> 00:27:24.189
+Gesiel Lopes: eu posso tanto interar novamente pela lista. Mas a gente já viu que isso aí é um problema clássico de conjuntos como eu quero pegar somente os elementos que estão na primeira lista. Eu vou fazer uma diferença de conjuntos.
+
+195
+00:27:24.410 --> 00:27:29.600
+Gesiel Lopes: Então aqui. Olha só, eu pego. Transformo as listas em conjunto.
+
+196
+00:27:29.970 --> 00:27:36.780
+Gesiel Lopes: Então, lista um e sete.
+
+197
+00:27:37.280 --> 00:27:39.760
+Gesiel Lopes: Lista dois.
+
+198
+00:27:40.150 --> 00:27:45.209
+Gesiel Lopes: E aí eu faço a operação de diferença. Só quero os elementos que estão no primeiro conjunto.
+
+199
+00:27:45.430 --> 00:27:49.239
+Gesiel Lopes: Eu uso o operador de diferença entre conjuntos.
+
+200
+00:27:49.410 --> 00:27:56.000
+Gesiel Lopes: Então, nesse caso, ele só vai pegar todos os elementos que estão contidos na primeira lista.
+
+201
+00:27:58.800 --> 00:28:02.970
+Gesiel Lopes: E aqui eu só faço um print, tá?
+
+202
+00:28:03.730 --> 00:28:06.000
+Gesiel Lopes: Valores,
+
+203
+00:28:12.440 --> 00:28:17.249
+Gesiel Lopes: valores que só existem na primeira lista.
+
+204
+00:28:19.130 --> 00:28:21.029
+Gesiel Lopes: Valores. Primeira lista.
+
+205
+00:28:30.720 --> 00:28:38.570
+Gesiel Lopes: Dá para até copiar valores. Agora, segunda,
+
+206
+00:28:40.400 --> 00:28:46.230
+Gesiel Lopes: segundo a lista, eu só inverto aqui a construção dos dois conjuntos
+
+207
+00:28:47.120 --> 00:28:55.560
+Gesiel Lopes: com valores pertencentes à segunda lista, e aqui os elementos,
+
+208
+00:28:57.310 --> 00:29:02.420
+Gesiel Lopes: os elementos que são comuns, os valores que não se repetem.
+
+209
+00:29:03.450 --> 00:29:10.750
+Gesiel Lopes: O que eu vou criar aqui é valores, lista
+
+210
+00:29:12.140 --> 00:29:15.689
+Gesiel Lopes: que são os valores pertencentes a todas as listas.
+
+211
+00:29:16.770 --> 00:29:24.250
+Gesiel Lopes: Eu vou criar aqui um e dois. E qual operação? Como eu quero pegar todos os elementos, tanto da primeira lista
+
+212
+00:29:24.370 --> 00:29:39.470
+Gesiel Lopes: como o da segunda lista e elementos únicos. Eu vou justamente unir todos os elementos pertencentes às duas listas, e eu vou pegar justamente elementos não repetidos.
+
+213
+00:29:39.540 --> 00:29:45.959
+Gesiel Lopes: E aí, para fazer isso, eu vou usar o operador de união que, como a gente viu no nosso último encontro,
+
+214
+00:29:46.060 --> 00:29:49.569
+Gesiel Lopes: o operador de união, o operador Pipe.
+
+215
+00:29:50.070 --> 00:29:53.269
+Gesiel Lopes: E aí, nesse caso, tá, eu faço.
+
+216
+00:29:53.480 --> 00:30:01.250
+Gesiel Lopes: Eu dou a mensagem que são os os elementos não repetidos
+
+217
+00:30:01.470 --> 00:30:05.980
+Gesiel Lopes: das duas listas. Eu coloco logo a mensagem. Aqui tá.
+
+218
+00:30:06.280 --> 00:30:13.160
+Gesiel Lopes: Os elementos repetidos é
+
+219
+00:30:15.470 --> 00:30:25.800
+Gesiel Lopes: os valores, os elementos, os valores não repetidos das duas listas, que é justamente essa variável aqui que armazena
+
+220
+00:30:25.930 --> 00:30:30.740
+Gesiel Lopes: a união entre os conjuntos formados pelas duas listas.
+
+221
+00:30:31.280 --> 00:30:32.030
+Gesiel Lopes: Ah, é?
+
+222
+00:30:32.220 --> 00:30:35.400
+Gesiel Lopes: Então deixa eu só executar aqui o primeiro.
+
+223
+00:30:37.990 --> 00:30:47.270
+Gesiel Lopes: Então a diferença. Então as listas que a gente está considerando são essas aqui. Um, dois, dois, quatro
+
+224
+00:30:48.470 --> 00:30:49.700
+Gesiel Lopes: e seis.
+
+225
+00:30:49.810 --> 00:30:53.240
+Gesiel Lopes: Então, um elemento que pertence apenas à lista.
+
+226
+00:30:53.940 --> 00:30:58.480
+Gesiel Lopes: Um é o número um, então está correto
+
+227
+00:31:00.030 --> 00:31:07.759
+Gesiel Lopes: e o Da pertence à lista dois vai ser o quatro e o seis quatro e o seis
+
+228
+00:31:09.970 --> 00:31:17.089
+Gesiel Lopes: e os elementos que são comuns. As duas listas são justamente não repetidos: um, dois, quatro e o seis
+
+229
+00:31:17.470 --> 00:31:23.460
+Gesiel Lopes: aqui nas mensagens, eu posso, caso eu queira validar.
+
+230
+00:31:24.480 --> 00:31:30.660
+Gesiel Lopes: Se se eu não tiver elementos comuns, por exemplo,
+
+231
+00:31:31.460 --> 00:31:37.950
+Gesiel Lopes: ou se tiver sempre elementos comuns. Vamos supor que eu tenho uma lista com três elementos, tá?
+
+232
+00:31:38.370 --> 00:31:50.830
+Gesiel Lopes: Que todos eles sejam dois formado com dois, dois são duas lixas iguais.
+
+233
+00:31:53.040 --> 00:31:55.110
+Gesiel Lopes: Dois, tchau.
+
+234
+00:31:56.690 --> 00:32:01.719
+Gesiel Lopes: O único elemento comum. As duas listas é o valor dois beleza.
+
+235
+00:32:02.810 --> 00:32:10.150
+Gesiel Lopes: A diferença vai ser um conjunto vazio. Então aqui eu poderia fazer uma validação
+
+236
+00:32:10.300 --> 00:32:13.459
+Gesiel Lopes: só para não mostrar essa mensagem.
+
+237
+00:32:13.680 --> 00:32:17.749
+Gesiel Lopes: Mas é isso aí. Não é o foco do problema. Observe
+
+238
+00:32:17.910 --> 00:32:28.079
+Gesiel Lopes: que não existe elementos que pertencem somente a um dos dois conjuntos. Então eu poderia validar essas duas verificações.
+
+239
+00:32:28.680 --> 00:32:30.650
+Gesiel Lopes: Ele fica aí como exercício.
+
+240
+00:32:32.280 --> 00:32:39.099
+Gesiel Lopes: E aí, no final, os elementos não repetidos das duas listas é apenas o valor dois. O número dois.
+
+241
+00:32:39.470 --> 00:32:45.090
+Gesiel Lopes: Tá bom, então é uma forma de a gente resolver esse problema com conjuntos.
+
+242
+00:32:56.320 --> 00:32:58.190
+Gesiel Lopes: Só pegando aqui um copo d'água.
+
+243
+00:33:00.410 --> 00:33:02.380
+Gesiel Lopes: Beleza. Tranquilo.
+
+244
+00:33:06.060 --> 00:33:07.550
+Gesiel Lopes: Então vamos lá.
+
+245
+00:33:25.230 --> 00:33:26.260
+Gesiel Lopes: Ok,
+
+246
+00:33:53.680 --> 00:33:55.519
+Gesiel Lopes: pessoal, só um minuto. Aqui.
+
+247
+00:40:52.940 --> 00:40:58.810
+Gesiel Lopes: Vamos lá, pessoal. Continuar aqui, pelo menos terminar é
+
+248
+00:41:38.730 --> 00:41:48.030
+Gesiel Lopes: então dando continuidade aqui, pessoal, o que eu tinha preparado para falar hoje também era fazer uma pequena introdução sobre
+
+249
+00:41:51.140 --> 00:41:57.420
+Gesiel Lopes: algo extremamente importante dentro da da linguagem Python,
+
+250
+00:41:57.750 --> 00:42:07.880
+Gesiel Lopes: que é o conceito de módulos utilização de módulos, inclusive vocês já vêm trabalhando
+
+251
+00:42:08.400 --> 00:42:24.130
+Gesiel Lopes: com a utilização de módulos ao longo da disciplina. A gente inclusive, já tinha feito algo, utilizando alguns módulos específicos da linguagem,
+
+252
+00:42:25.610 --> 00:42:32.040
+Gesiel Lopes: para resolver determinadas que são módulos da biblioteca padrão do paiton
+
+253
+00:42:32.170 --> 00:42:45.960
+Gesiel Lopes: para resolver situações em particulares. Porém, o Python possibilita a utilização de módulos
+
+254
+00:42:46.380 --> 00:42:52.159
+Gesiel Lopes: pertencentes não somente à biblioteca padrão, mas desenvolvidos
+
+255
+00:42:52.210 --> 00:43:02.570
+Gesiel Lopes: por terceiros por outros desenvolvedores, sejam para resolver problemas específicos
+
+256
+00:43:02.570 --> 00:43:15.219
+Gesiel Lopes: seja para compartilhar soluções de um determinado problema ou de bibliotecas que implementam algoritmos clássicos,
+
+257
+00:43:15.850 --> 00:43:26.320
+Gesiel Lopes: seja, algoritmos clássicos relacionados a uma área específica ou seja código
+
+258
+00:43:27.430 --> 00:43:35.990
+Gesiel Lopes: para a gente desenvolver ou estender determinadas funcionalidades,
+
+259
+00:43:36.960 --> 00:43:47.810
+Gesiel Lopes: então isso é possível realizar através do uso de módulos, que é informar para o contexto de execução do Python,
+
+260
+00:43:47.950 --> 00:44:05.939
+Gesiel Lopes: que determinados códigos serão utilizados durante a execução dos meus algoritmos, literalmente informar o Python dizer para o Python para ele ter consciência da
+
+261
+00:44:06.240 --> 00:44:14.609
+Gesiel Lopes: desses códigos. Tá, então módulos nada mais são do que arquivos
+
+262
+00:44:14.610 --> 00:44:20.540
+Gesiel Lopes: da linguagem Python, que reúne códigos reutilizáveis.
+
+263
+00:44:20.540 --> 00:44:37.890
+Gesiel Lopes: E aí esses códigos podem ser funções. Podem ser classes. Podem ser variáveis. Podem ser qualquer tipo de estrutura que você queira que não está disponível no contexto do Python,
+
+264
+00:44:38.070 --> 00:44:45.239
+Gesiel Lopes: mas que você quer utilizar dentro do contexto para realizar uma determinada tarefa.
+
+265
+00:44:45.840 --> 00:45:01.720
+Gesiel Lopes: Então esses códigos, o que a gente faz. É o que a gente chama de importe. Então a gente importa esse código de terceiro ou da biblioteca padrão do Python, que não está disponível
+
+266
+00:45:02.520 --> 00:45:07.090
+Gesiel Lopes: para que a gente consiga trabalhar com esse código.
+
+267
+00:45:07.660 --> 00:45:12.099
+Gesiel Lopes: A ideia aqui também não é
+
+268
+00:45:13.070 --> 00:45:23.050
+Gesiel Lopes: a gente só vai basicamente utilizar, trabalhar, ver como trabalhar com módulos, como trabalhar com módulos
+
+269
+00:45:23.130 --> 00:45:41.560
+Gesiel Lopes: e como instalar módulos ou bibliotecas de terceiros. A gente não vai, nesse primeiro momento, trabalhar com um conceito de construção de criar módulos para que eles possam ser disponibilizados.
+
+270
+00:45:41.660 --> 00:45:44.229
+Gesiel Lopes: Não é?
+
+271
+00:45:46.580 --> 00:45:48.500
+Gesiel Lopes: Não é essa a ideia.
+
+272
+00:45:48.880 --> 00:45:49.600
+Gesiel Lopes: Tá
+
+273
+00:45:53.890 --> 00:45:57.150
+Gesiel Lopes: ok, então,
+
+274
+00:46:04.700 --> 00:46:11.760
+Gesiel Lopes: lembrando que os módulos precisam ser um arquivo. Ponto
+
+275
+00:46:11.890 --> 00:46:17.129
+Gesiel Lopes: P Y. É um arquivo Python, deixa eu só
+
+276
+00:46:21.890 --> 00:46:23.779
+Gesiel Lopes: pegar aqui um detalhe.
+
+277
+00:46:54.110 --> 00:46:55.010
+Gesiel Lopes: O quê?
+
+278
+00:46:55.680 --> 00:46:57.960
+Gesiel Lopes: Então,
+
+279
+00:47:00.700 --> 00:47:12.409
+Gesiel Lopes: então o que a gente vai fazer é simplesmente nesse primeiro momento, verificar como a gente importa. Módulos para o nosso contexto, Python,
+
+280
+00:47:12.720 --> 00:47:14.160
+Gesiel Lopes: é:
+
+281
+00:47:24.070 --> 00:47:29.070
+Gesiel Lopes: observem que aqui a gente vai trabalhar com as bibliotecas, padrões.
+
+282
+00:47:41.050 --> 00:47:44.710
+Gesiel Lopes: Então fazer o importe.
+
+283
+00:47:47.360 --> 00:48:01.110
+Gesiel Lopes: Então utilizar módulos para utilizar módulos. A gente precisa fazer o o imposto. Então o importando módulos, módulos
+
+284
+00:48:18.070 --> 00:48:19.420
+Gesiel Lopes: é
+
+285
+00:48:23.420 --> 00:48:26.449
+Gesiel Lopes: o primeiro módulo que a gente vai trabalhar.
+
+286
+00:48:27.130 --> 00:48:36.810
+Gesiel Lopes: É que eu tinha colocado aqui. É justamente como realizar
+
+287
+00:48:40.370 --> 00:48:49.580
+Gesiel Lopes: requisições Web. Tá, é, hein?
+
+288
+00:48:51.110 --> 00:48:52.279
+Gesiel Lopes: Com o pai.
+
+289
+00:48:56.590 --> 00:49:04.530
+Gesiel Lopes: Então observe que eu estou tendo a necessidade de trabalhar com uma, com.
+
+290
+00:49:04.550 --> 00:49:23.329
+Gesiel Lopes: Com uma funcionalidade que não é uma funcionalidade comum dentro do contexto do Python. Será que é possível fazer requisições com o Python. Ou seja, será que eu consigo utilizar o Python como um browser para acessar
+
+291
+00:49:23.450 --> 00:49:26.600
+Gesiel Lopes: um determinado site na. Internet?
+
+292
+00:49:26.860 --> 00:49:27.680
+Gesiel Lopes: Tá bom?
+
+293
+00:49:29.060 --> 00:49:40.809
+Gesiel Lopes: Sim, é possível. Então, para que a gente consiga realizar essa operação, é necessário.
+
+294
+00:49:42.580 --> 00:49:48.599
+Gesiel Lopes: E aí obter um código.
+
+295
+00:49:50.120 --> 00:50:09.580
+Gesiel Lopes: Um código, um código disponível na bibli, biblioteca Python, que realize, realize.
+
+296
+00:50:09.850 --> 00:50:15.320
+Gesiel Lopes: Realize essa a atividade, tá?
+
+297
+00:50:16.380 --> 00:50:27.730
+Gesiel Lopes: Já que eu não consigo fazer o Python. Não, me dá nenhuma possibilidade de fazer isso de forma nativa. Então eu não tenho essa possibilidade.
+
+298
+00:50:28.050 --> 00:50:32.929
+Gesiel Lopes: Então, de duas formas. De duas, umas ou eu implemento
+
+299
+00:50:33.130 --> 00:50:37.999
+Gesiel Lopes: um código que faça essa operação.
+
+300
+00:50:38.300 --> 00:50:39.060
+Gesiel Lopes: Ah, A,
+
+301
+00:50:39.280 --> 00:50:50.360
+Gesiel Lopes: ou eu realizo ou eu utilizo melhor dizendo, um código que alguém desenvolveu, que faça essa tarefa que eu preciso,
+
+302
+00:50:50.800 --> 00:50:51.540
+Gesiel Lopes: tá?
+
+303
+00:50:54.350 --> 00:51:00.220
+Gesiel Lopes: Na realidade, Lucas, não como se fosse um Api, porque uma Api. Você provê recursos.
+
+304
+00:51:00.380 --> 00:51:04.700
+Gesiel Lopes: Na realidade é para eu consumir um recurso, tá?
+
+305
+00:51:04.880 --> 00:51:20.229
+Gesiel Lopes: Quando eu falo de fazer requisições, eu quero pegar as informações da web de forma bem resumida. A web. A gente vai falar isso um pouquinho lá na frente,
+
+306
+00:51:20.550 --> 00:51:21.370
+Gesiel Lopes: tá?
+
+307
+00:51:21.950 --> 00:51:31.310
+Gesiel Lopes: E aí só fazer um disclaimer rapidamente no mundo. Web tá
+
+308
+00:51:32.780 --> 00:51:41.330
+Gesiel Lopes: no mundo. Web, deixa eu só colocar aqui minha luva, porque senão fica dando interferência na mesa, tá
+
+309
+00:51:42.660 --> 00:51:48.090
+Gesiel Lopes: a web. De forma geral, a web, que é o.
+
+310
+00:51:49.460 --> 00:51:56.049
+Gesiel Lopes: É a parte mais fácil de a gente entender esses conceitos. Mas a realidade é a própria internet,
+
+311
+00:51:56.170 --> 00:52:03.429
+Gesiel Lopes: a Internet, como um todo. Funciona com um padrão que a gente chama de
+
+312
+00:52:06.780 --> 00:52:11.690
+Gesiel Lopes: que a gente trabalha com um padrão que a gente chama de cliente servidor.
+
+313
+00:52:11.980 --> 00:52:14.270
+Gesiel Lopes: Então, cliente
+
+314
+00:52:19.690 --> 00:52:22.429
+Gesiel Lopes: servidor. Isso quer dizer o quê?
+
+315
+00:52:22.560 --> 00:52:32.899
+Gesiel Lopes: Que quando eu vou fazer buscar, quando eu vou buscar qualquer recurso na web, e aí. Eu vou colocar aqui entre parêntese,
+
+316
+00:52:33.620 --> 00:52:34.480
+Gesiel Lopes: tá?
+
+317
+00:52:34.600 --> 00:52:43.429
+Gesiel Lopes: Eu sempre vou estar fazendo solicitações desses recursos em algum lugar nela.
+
+318
+00:52:44.930 --> 00:52:50.880
+Gesiel Lopes: Então eu sempre vou ter um cliente, tá?
+
+319
+00:52:51.420 --> 00:52:56.560
+Gesiel Lopes: Que faz solicitações. Então aqui eu vou ter sempre um cliente
+
+320
+00:53:05.960 --> 00:53:10.410
+Gesiel Lopes: que faz solicitações e sempre vou ter um servidor
+
+321
+00:53:18.470 --> 00:53:34.730
+Gesiel Lopes: que ele te dá esses recursos entendam esse padrão cliente, servidor, como se fosse, por exemplo, o funcionamento de um restaurante. Inclusive. Esse é o exemplo mais clássico que a gente tem. Quando você chega no restaurante,
+
+322
+00:53:34.850 --> 00:53:46.439
+Gesiel Lopes: você é atendido pelo garçom. Você solicita o prato para o garçom. O garçom leva o pedido à cozinha. O chefe
+
+323
+00:53:46.770 --> 00:53:59.040
+Gesiel Lopes: da cozinha prepara o alimento. Uma vez o alimento preparado, ele traz esse alimento, e te entrega. Então você fez aí um procedimento
+
+324
+00:53:59.190 --> 00:54:00.950
+Gesiel Lopes: de solicitação
+
+325
+00:54:00.960 --> 00:54:19.200
+Gesiel Lopes: e a sua solicitação foi atendida. Vale ressaltar que a solicitação atendida não necessariamente. Quer dizer que você vai sempre receber aquilo que você quer. Você pode pedir um prato, e esse prato não existir, e o garçom vai dizer: esse prato não está disponível no cardápio.
+
+326
+00:54:19.260 --> 00:54:22.209
+Gesiel Lopes: A mesma coisa acontece na Web, tá?
+
+327
+00:54:22.970 --> 00:54:32.320
+Gesiel Lopes: E também tem outros problemas. Outros detalhes que a gente pode falar em outro momento, mas o padrão é o seguinte. Então, para toda
+
+328
+00:54:32.540 --> 00:54:37.700
+Gesiel Lopes: solicitação, eu vou colocar aqui de veja,
+
+329
+00:54:38.690 --> 00:54:47.830
+Gesiel Lopes: para cada solicitação que eu faço para o servidor, o servidor. Ele me responde.
+
+330
+00:54:49.780 --> 00:54:51.449
+Gesiel Lopes: Ele me responde.
+
+331
+00:54:54.100 --> 00:54:56.780
+Gesiel Lopes: Ele me dá uma resposta,
+
+332
+00:55:00.050 --> 00:55:05.840
+Gesiel Lopes: tá esse procedimento de solicitar, tá?
+
+333
+00:55:06.330 --> 00:55:11.839
+Gesiel Lopes: E receber algum resultado. É o que a gente chama de requis,
+
+334
+00:55:16.250 --> 00:55:25.920
+Gesiel Lopes: que são as minhas em Quest, então eu solicito. E a informação? E aí ele me responde com uma response. Então eu faço um Request
+
+335
+00:55:26.170 --> 00:55:32.090
+Gesiel Lopes: e o servidor me manda uma resposta, que é uma response, tá,
+
+336
+00:55:37.200 --> 00:55:55.899
+Gesiel Lopes: então, na web, funciona mais ou menos dessa forma. E, é claro, eu não vou entrar no detalhe, porque tem muita coisa por detrás disso. De requisições. Tem protocolos aí? Na realidade, você quer a base sobre conceitos de redes de computadores.
+
+337
+00:55:56.030 --> 00:56:13.660
+Gesiel Lopes: Então tem todo o conceito de rede. Localização de como o dado é trafegado. As camadas que isso acontece. Como eu localizo um servidor de onde vai? De onde trafega a informação.
+
+338
+00:56:13.770 --> 00:56:21.299
+Gesiel Lopes: É as informações que eu passo para cada requisição,
+
+339
+00:56:21.650 --> 00:56:29.120
+Gesiel Lopes: beleza, o protocolo que eu vou usar para fazer requisições. Então, no mundo web, ele é regido
+
+340
+00:56:31.390 --> 00:56:42.620
+Gesiel Lopes: por um protocolo. Acho que é o protocolo Http. Então a Web é regido pelo protocolo Http e o protocolo Rfc
+
+341
+00:56:43.320 --> 00:56:50.670
+Gesiel Lopes: e o protocolo Http é definido dentro de um documento
+
+342
+00:56:51.040 --> 00:56:57.850
+Gesiel Lopes: mantido por algumas organizações que padroniza a Internet
+
+343
+00:56:58.250 --> 00:57:01.890
+Gesiel Lopes: chamadas de Rfc, Qrq West for Comit.
+
+344
+00:57:02.280 --> 00:57:07.790
+Gesiel Lopes: E aí ele detalha todo o funcionamento das requisições dentro do mundo web.
+
+345
+00:57:07.890 --> 00:57:26.579
+Gesiel Lopes: Então esse é o documento que explica e detalha como é que funcionam as requisições do mundo web, o protocolo onde ele trabalha, como ele faz, quais são os tipos de requisições que eu posso fazer, mas é algo que a gente vai fazer um pouco mais lá na frente.
+
+346
+00:57:27.000 --> 00:57:27.870
+Gesiel Lopes: Ah, é?
+
+347
+00:57:28.040 --> 00:57:31.240
+Gesiel Lopes: Eu só estou antecipando o problema. Por quê?
+
+348
+00:57:31.400 --> 00:57:41.919
+Gesiel Lopes: Realizar requisições no mundo Web, requisições Web com Python não é uma funcionalidade nativa. O Python não foi pensado
+
+349
+00:57:42.140 --> 00:57:57.440
+Gesiel Lopes: inicialmente para fazer requisições web. Então, quando ele foi idealizado, ele não foi idealizado para essa funcionalidade. Então, como é algo que extrapola o comportamento padrão do pai
+
+350
+00:57:57.610 --> 00:58:05.660
+Gesiel Lopes: para que eu tenha essa possibilidade, como eu falei, ou eu implemento essa minha funcionalidade,
+
+351
+00:58:05.770 --> 00:58:22.600
+Gesiel Lopes: ou eu utilizo uma implementação já realizada por alguma outra pessoa, qualquer outra instituição, ou seja, um código que já esteja disponível dentro da biblioteca padrão do pait dentro da comunidade Pyth.
+
+352
+00:58:22.850 --> 00:58:39.079
+Gesiel Lopes: Então, como é que eu faço? Como eu não quero fazer essa implementação? Eu posso buscar então uma. Forma, literalmente. Ah, eu não sei. Pesquisa na Internet. Então, se eu fizer requessed,
+
+353
+00:58:40.340 --> 00:58:44.550
+Gesiel Lopes: por exemplo, requessed with Python tá.
+
+354
+00:58:46.610 --> 00:58:56.980
+Gesiel Lopes: Observem que o Python ele disponibiliza a primeira mensagem. Vou colocar esse carinho aqui. Depois eu vou falar ele dele.
+
+355
+00:58:57.100 --> 00:59:02.450
+Gesiel Lopes: Observe que esse cara faz justamente o que eu quero.
+
+356
+00:59:02.780 --> 00:59:12.170
+Gesiel Lopes: Então é um módulo Python que tem a finalidade de realizar requisições.
+
+357
+00:59:12.330 --> 00:59:21.080
+Gesiel Lopes: Então, é um código que foi desenvolvido por outra pessoa ou por outra instituição ou por outra instituição.
+
+358
+00:59:21.400 --> 00:59:34.769
+Gesiel Lopes: Então ele expande. Ele estende o comportamento padrão do pai para que eu possa realizar a utilização. Desse modo eu preciso importar para o pai.
+
+359
+00:59:35.060 --> 00:59:43.090
+Gesiel Lopes: Então eu faço. E como é que eu faço essa importação? Eu uso a palavra reservada, importe, tá? E.
+
+360
+00:59:44.650 --> 00:59:56.220
+Gesiel Lopes: E faço a chamada do módulo que eu quero importar. Nesse caso, aqui é o módulo requis simples assim. Então, a partir do momento que eu faço isso,
+
+361
+00:59:56.630 --> 00:59:57.420
+Gesiel Lopes: tá?
+
+362
+00:59:57.770 --> 01:00:02.650
+Gesiel Lopes: Eu torno esse módulo. Ou seja, todo o código
+
+363
+01:00:02.840 --> 01:00:07.619
+Gesiel Lopes: pertencente a esse módulo disponível no meu contexto.
+
+364
+01:00:08.030 --> 01:00:15.089
+Gesiel Lopes: Então, assim. Olha só, eu agora consigo fazer algumas requisições. E aí, seguindo a documentação,
+
+365
+01:00:15.200 --> 01:00:34.129
+Gesiel Lopes: por exemplo, para fazer uma requisição, existem vários tipos de requisição. Uma requisição bem padrão é uma requisição que a gente chama do tipo Get, que é, por exemplo, a mesma maneira de acessar um servidor na Webcom. O Browse nada mais é de um cliente. Então, quando eu digito, por exemplo,
+
+366
+01:00:34.220 --> 01:00:38.420
+Gesiel Lopes: o endereço Ifnet Edu.
+
+367
+01:00:38.530 --> 01:00:49.749
+Gesiel Lopes: Eu estou fazendo o que a gente chama de Get. Eu estou acessando a página do infinite que está localizado em algum servidor.
+
+368
+01:00:50.160 --> 01:00:53.069
+Gesiel Lopes: Então eu quero fazer a mesma coisa aqui
+
+369
+01:00:53.280 --> 01:01:08.609
+Gesiel Lopes: com esse módulo, que é uma funcionalidade que não existia. Então, para fazer a requisição, eu faço Request, que é o meu módulo que eu importei. O método que eu vou usar é o método Get.
+
+370
+01:01:09.170 --> 01:01:12.840
+Gesiel Lopes: E aí no método Guache, eu passo como parâmetro
+
+371
+01:01:12.860 --> 01:01:32.339
+Gesiel Lopes: a Url. Na realidade, já a Uri, que é a localização de onde está aquilo que eu quero acessar, que no caso, é a página do Infinity, que é http S dois ponto, barra barra www, infinete Edu. Br:
+
+372
+01:01:32.660 --> 01:01:35.040
+Gesiel Lopes: Então, eu fiz uma chamada.
+
+373
+01:01:35.180 --> 01:01:42.799
+Gesiel Lopes: Então, quando eu faço uma requisição automaticamente, eu vou receber uma resposta do servidor.
+
+374
+01:01:43.020 --> 01:01:51.100
+Gesiel Lopes: Então eu vou a colocar aqui. Vou criar uma variável chamada de response tá
+
+375
+01:01:52.660 --> 01:01:56.689
+Gesiel Lopes: que recebe o resultado dessa chamada get.
+
+376
+01:01:56.890 --> 01:02:00.610
+Gesiel Lopes: Então aqui eu posso fazer um tape response
+
+377
+01:02:02.830 --> 01:02:22.029
+Gesiel Lopes: e ele vai me dizer que é um objeto do tipo Http. É da requessed models, response. Então ele respondeu a minha requisição. Então esse objeto de resposta tem várias funcionalidades. Uma funcionalidade que eu tenho, por exemplo,
+
+378
+01:02:22.240 --> 01:02:30.270
+Gesiel Lopes: dentro desse objeto responsável, é um atributo chamado status code,
+
+379
+01:02:30.410 --> 01:02:33.649
+Gesiel Lopes: que é o código da requisição.
+
+380
+01:02:33.790 --> 01:02:36.779
+Gesiel Lopes: Então existe toda a requisição.
+
+381
+01:02:36.920 --> 01:02:41.300
+Gesiel Lopes: Ele recebe para toda a requisição. Eu tenho uma resposta.
+
+382
+01:02:41.540 --> 01:02:52.199
+Gesiel Lopes: E para cada resposta, tem um código específico. São famílias de código que indicam a interação. Se ela foi atendida,
+
+383
+01:02:52.320 --> 01:02:55.480
+Gesiel Lopes: se ela for atendida, ela vai me retornar ao código duzentos.
+
+384
+01:02:55.500 --> 01:03:12.929
+Gesiel Lopes: Se teve algum erro, por exemplo, do lado do servidor, ele vai mandar um código quinhentos ou alguma coisa da família quinhentos. Se for um código, por exemplo, de requisição. Ele vai mandar um código específico,
+
+385
+01:03:12.960 --> 01:03:23.940
+Gesiel Lopes: um recurso não encontrado. Ele vai mandar um código da família quatrocentos. Muito provavelmente você já deve ter quando acessar a Internet. Aparecida em algum momento. Por exemplo, quatrocentos e quatro.
+
+386
+01:03:24.770 --> 01:03:30.929
+Gesiel Lopes: Esse é o código padrão para recurso não encontrado. Então você solicitou algo
+
+387
+01:03:31.060 --> 01:03:33.789
+Gesiel Lopes: para um servidor que não existe.
+
+388
+01:03:33.930 --> 01:03:40.069
+Gesiel Lopes: É um recurso para um servidor, e esse recurso não existe, não está disponível.
+
+389
+01:03:40.180 --> 01:03:53.569
+Gesiel Lopes: Então observe que eu estendi uma funcionalidade a mais da linguagem Pyth fazendo adição, fazendo adição dessa funcionalidade.
+
+390
+01:03:54.480 --> 01:04:00.440
+Gesiel Lopes: Eu consigo também dentro do
+
+391
+01:04:17.640 --> 01:04:23.740
+Gesiel Lopes: eu consigo também. Dentro do dessa
+
+392
+01:04:28.590 --> 01:04:35.340
+Gesiel Lopes: dessa utilização, fazer importes que a gente chama de import
+
+393
+01:04:35.480 --> 01:04:52.679
+Gesiel Lopes: apelidos, que são em portes nomeados uma outra biblioteca muito utilizada. Vocês já devem ter ouvido falar dela. E muito provavelmente vocês irão utilizar bastante. Ela
+
+394
+01:04:52.890 --> 01:04:59.419
+Gesiel Lopes: tá principalmente quem for trabalhar na área de dados,
+
+395
+01:04:59.710 --> 01:05:11.990
+Gesiel Lopes: que é uma estrutura um pouco mais robusta. Observe que as únicas estruturas que nós trabalhamos até agora foram com as estruturas de dados,
+
+396
+01:05:12.230 --> 01:05:28.790
+Gesiel Lopes: padrões da linguagem, pai, que foram os estruturas de dados básicas listas, as coleções, as listas, os conjuntos dicionários
+
+397
+01:05:29.250 --> 01:05:31.310
+Gesiel Lopes: duplas.
+
+398
+01:05:31.820 --> 01:05:46.990
+Gesiel Lopes: Porém, elas não existem. Somente essas estruturas de dados. Existe estrutura de dados bem mais robustas da linguagem Python, justamente, para resolver problemas específicos.
+
+399
+01:05:47.240 --> 01:05:56.670
+Gesiel Lopes: Então, existe uma Biblioteca que é uma Biblioteca Biblioteca para a Biblioteca.
+
+400
+01:05:57.320 --> 01:06:15.709
+Gesiel Lopes: É de para tipo de Biblioteca para estrutura pronto estrutura
+
+401
+01:06:16.170 --> 01:06:26.159
+Gesiel Lopes: e estrutura de dados que a gente chama tabular, tabular a estrutura de dados tabular,
+
+402
+01:06:26.740 --> 01:06:36.900
+Gesiel Lopes: ou se a gente for pegar um termo estatístico, a gente chama de estrutura de dado retângulo, goulart
+
+403
+01:06:37.210 --> 01:06:41.880
+Gesiel Lopes: a estrutura de dados retangular,
+
+404
+01:06:42.750 --> 01:06:55.149
+Gesiel Lopes: que é nada mais do que uma estrutura de dados que trabalha na forma de linhas e colunas, colunas e linhas. Por exemplo, algo parecido com o Sl.
+
+405
+01:06:55.490 --> 01:07:01.259
+Gesiel Lopes: Teve alguém? Não me lembro que chegou a perguntar se, por exemplo, dicionários,
+
+406
+01:07:01.420 --> 01:07:15.370
+Gesiel Lopes: poderia ser entendido ou eu poderia trabalhar um dicionário como uma tabela lá do banco de dados. Uma tabela Skely, não sei se quem me fez essa pergunta está aqui.
+
+407
+01:07:15.810 --> 01:07:34.920
+Gesiel Lopes: A gente pode, sim, fazer trabalhar com o dicionário. Porém, o Pait disponibiliza dentro da biblioteca do Pyth. Existem estruturas de dados específicas para se trabalhar com estruturas na forma de tabelas
+
+408
+01:07:36.100 --> 01:07:50.170
+Gesiel Lopes: e a biblioteca mais conhecida para trabalhar com dados tabulares ou dados retangulares. É uma biblioteca chamada Pandas.
+
+409
+01:07:50.710 --> 01:07:57.090
+Gesiel Lopes: Tá, então bandas só abrindo aqui mais um disclaimer
+
+410
+01:07:57.940 --> 01:08:02.620
+Gesiel Lopes: ele é uma biblioteca padrão do ecossistema Pyth,
+
+411
+01:08:03.100 --> 01:08:16.099
+Gesiel Lopes: para trabalhar com dados tabulares. É a principal biblioteca utilizada dentro da área do mundo. De dados, dados
+
+412
+01:08:16.819 --> 01:08:26.779
+Gesiel Lopes: sem ser dados de larga escala. E aí tem uma diferença. Então, dados que não são volumosos, dados que não são tão significativos.
+
+413
+01:08:27.180 --> 01:08:35.439
+Gesiel Lopes: Então o Pandas é uma biblioteca padrão para quem trabalha, quem vai trabalhar com análise de dados e o pandas?
+
+414
+01:08:35.580 --> 01:08:41.779
+Gesiel Lopes: Geralmente ele é importado como sendo importe pandas.
+
+415
+01:08:42.520 --> 01:08:54.509
+Gesiel Lopes: A gente geralmente utiliza um que a gente chama de alias, que é um apelido. Então, em vez de eu chamar pandas, eu posso criar um alias chamado ex
+
+416
+01:08:54.649 --> 01:08:56.510
+Gesiel Lopes: As, como
+
+417
+01:08:56.700 --> 01:09:08.310
+Gesiel Lopes: Pd, que é o importe padrão do pandas. A forma padrão de eu trabalhar. Então, a partir desse importe, eu consigo trabalhar com pandas.
+
+418
+01:09:08.870 --> 01:09:17.820
+Gesiel Lopes: E aqui. Olha só, só mostrar e a estrutura tabular ou retangular que o pandas tem. A gente chama de dataframe.
+
+419
+01:09:18.050 --> 01:09:21.210
+Gesiel Lopes: Vou criar aqui uma variável chamada Dataframe.
+
+420
+01:09:22.060 --> 01:09:26.039
+Gesiel Lopes: E aí eu vou construir um dataframe. Pandas, data
+
+421
+01:09:26.250 --> 01:09:35.469
+Gesiel Lopes: frame. Eu não vou entrar no mérito das funcionalidades. A ideia é mostrar para vocês que eu estou fazendo importes, tá?
+
+422
+01:09:35.899 --> 01:09:40.980
+Gesiel Lopes: E eu posso fazer tanto o imposto da funcionalidade. Posso nomear o importe
+
+423
+01:09:41.189 --> 01:09:45.240
+Gesiel Lopes: e posso fazer outras coisas. Tá?
+
+424
+01:09:48.050 --> 01:09:50.440
+Gesiel Lopes: Deixa eu pegar aqui um dataframe.
+
+425
+01:09:53.390 --> 01:10:00.070
+Gesiel Lopes: Eu vou criar aqui uma lista. E aí eu vou criar um dicionário, uma lista de dicionários rapidinho.
+
+426
+01:10:00.230 --> 01:10:08.130
+Gesiel Lopes: Só com algumas informações de nome Gesiel Lopes.
+
+427
+01:10:12.720 --> 01:10:16.400
+Gesiel Lopes: E é um outro dicionário também. E aí eu posso.
+
+428
+01:10:16.900 --> 01:10:20.240
+Gesiel Lopes: É idade.
+
+429
+01:10:22.900 --> 01:10:24.230
+Gesiel Lopes: Idade.
+
+430
+01:10:28.140 --> 01:10:35.939
+Gesiel Lopes: Eu vou criar aqui, aí para ser mais rápido. Vou copiar e colar esse dicionário
+
+431
+01:10:38.340 --> 01:10:40.700
+Gesiel Lopes: três vezes. Acho que tá bom.
+
+432
+01:10:41.120 --> 01:10:42.300
+Gesiel Lopes: Então,
+
+433
+01:10:45.300 --> 01:10:50.009
+Gesiel Lopes: John Doo quarenta e dois.
+
+434
+01:10:50.370 --> 01:11:04.030
+Gesiel Lopes: E aí é Marie por mim, cinquenta e dois.
+
+435
+01:11:05.410 --> 01:11:16.430
+Gesiel Lopes: Então aqui é uma forma de eu trabalhar com a biblioteca, por exemplo, pandas criando o dataframe. Então ele criou aqui um dataframe para mim,
+
+436
+01:11:16.910 --> 01:11:26.989
+Gesiel Lopes: que é um dataframe com duas colunas e três linhas. Uma estrutura tabular, como se eu tivesse uma tabela lá do meu banco de dados
+
+437
+01:11:27.270 --> 01:11:39.180
+Gesiel Lopes: com duas colunas e três registros que seriam esses três registros. Então você pode nomear os importes.
+
+438
+01:11:39.630 --> 01:11:56.040
+Gesiel Lopes: Você pode também, caso você queira realizar em portes de módulos específicos ou submódulos
+
+439
+01:11:56.150 --> 01:12:01.829
+Gesiel Lopes: da função de uma biblioteca Python. Qualquer.
+
+440
+01:12:06.530 --> 01:12:14.929
+Gesiel Lopes: O Gabriel colocou. Sim, Gabriel. Eu vou falar disso. Seria essa parte aqui.
+
+441
+01:12:17.540 --> 01:12:23.590
+Gesiel Lopes: Elas estão funcionando porque elas já estão disponíveis dentro do Deep Note.
+
+442
+01:12:23.900 --> 01:12:36.379
+Gesiel Lopes: Tá então aqui no Deep note nessa versão aqui do Python, tá, ele já traz embutido
+
+443
+01:12:36.670 --> 01:12:48.490
+Gesiel Lopes: há um conjunto de bibliotecas previamente instaladas tá previamente instaladas,
+
+444
+01:12:49.540 --> 01:12:56.650
+Gesiel Lopes: mas aí seria um ponto que eu ia comentar. Está até aqui, já no roteiro.
+
+445
+01:12:57.010 --> 01:13:04.330
+Gesiel Lopes: Além das bibliotecas, que é instalando e gerenciando pacotes, tá tem
+
+446
+01:13:04.710 --> 01:13:12.240
+Gesiel Lopes: é algo que eu ainda vou iria comentar, iria, não irei comentar, tá?
+
+447
+01:13:12.880 --> 01:13:19.050
+Gesiel Lopes: É beleza.
+
+448
+01:13:20.240 --> 01:13:21.280
+Gesiel Lopes: Vamos lá.
+
+449
+01:13:21.860 --> 01:13:31.520
+Gesiel Lopes: Como eu estava falando, você pode caso você queira fazer. Por exemplo, importes específicos.
+
+450
+01:13:31.630 --> 01:13:32.460
+Gesiel Lopes: Tá?
+
+451
+01:13:32.780 --> 01:13:51.670
+Gesiel Lopes: É. É de submódulos de uma biblioteca, por exemplo. Então eles podem existir bibliotecas tá que implementam várias funcionalidades.
+
+452
+01:13:51.840 --> 01:13:59.029
+Gesiel Lopes: Porém, eu não quero utilizar todas as funcionalidades presentes nessa biblioteca.
+
+453
+01:13:59.250 --> 01:14:05.639
+Gesiel Lopes: Eu quero usar apenas algo específico da biblioteca,
+
+454
+01:14:05.760 --> 01:14:08.539
+Gesiel Lopes: que é algo que eu quero de forma específica.
+
+455
+01:14:08.730 --> 01:14:21.259
+Gesiel Lopes: Então você consegue também importar submódulos de uma biblioteca Python, também como
+
+456
+01:14:21.420 --> 01:14:24.850
+Gesiel Lopes: para a gente resolver esse problema.
+
+457
+01:14:25.010 --> 01:14:51.260
+Gesiel Lopes: É como utilizar o utilizar como utilizar a implement estação de um algoritmo de
+
+458
+01:14:51.880 --> 01:14:56.989
+Gesiel Lopes: machine learning, por exemplo, vou pegar aqui, puxar a sardinha para o meu mundo.
+
+459
+01:14:57.170 --> 01:15:12.910
+Gesiel Lopes: Vamos supor que eu queira utilizar um algoritmo de machine learning para é realizar agrupamento tá
+
+460
+01:15:13.580 --> 01:15:32.749
+Gesiel Lopes: como utilizar ou como utilizar a implementação de um algoritmo de machine learning para realizar agrupamento. Para fazer o que a gente chama de clusterização. Quero agrupar dados seguindo uma determinada característica presente no próprio dado. Como é que eu faço
+
+461
+01:15:32.970 --> 01:15:44.950
+Gesiel Lopes: novamente? Ou eu implemento esse algoritmo ou utilizo uma implementação disponível no ecossistema Python.
+
+462
+01:15:45.360 --> 01:16:00.920
+Gesiel Lopes: E isso não precisa. A gente não precisa reinventar a roda se você quiser. Beleza, pode implementar. Mas o Python tem uma biblioteca que é o principal cinto de utilidade
+
+463
+01:16:01.050 --> 01:16:08.680
+Gesiel Lopes: para quem vai adentrar num mundo de ciência de dados, que é uma biblioteca chamada sk
+
+464
+01:16:09.210 --> 01:16:27.580
+Gesiel Lopes: ska learning ou scikit learning, como o próprio nome já diz, ele nada mais é do que um kit de aprendizado. Então essa biblioteca padrão do Python, uma biblioteca conhecidíssima do Python ela implementa
+
+465
+01:16:27.740 --> 01:16:40.290
+Gesiel Lopes: os principais algoritmos de Machine learning disponíveis na literatura então os principais algoritmos de aprendizado de máquina.
+
+466
+01:16:40.290 --> 01:16:56.280
+Gesiel Lopes: E aí eu falo de aprendizado de máquina clássica. Eles já foram devidamente implementados e disponibilizados na biblioteca. Então você pode utilizar alguma implementação disponibilizada por ela.
+
+467
+01:16:56.280 --> 01:17:03.600
+Gesiel Lopes: Então ele tem um módulo aqui que trabalha com clusterização, e aí ele fala o que é uma clusterização.
+
+468
+01:17:03.750 --> 01:17:13.540
+Gesiel Lopes: E aqui tem o algoritmo clássico de clasterização, que é o algoritmo chamado de camédias ou camis.
+
+469
+01:17:14.390 --> 01:17:24.059
+Gesiel Lopes: Então o caminho, esse algoritmo ele está presente no módulo de clusterização do site learning.
+
+470
+01:17:24.450 --> 01:17:29.909
+Gesiel Lopes: Então, como é que eu faço para importar somente um módulo caminhos?
+
+471
+01:17:30.280 --> 01:17:33.590
+Gesiel Lopes: Como é que eu faço isso dentro do Deep Note.
+
+472
+01:17:33.780 --> 01:17:40.419
+Gesiel Lopes: Você vai fazer a importação de apenas um módulo de uma biblioteca
+
+473
+01:17:40.910 --> 01:17:45.779
+Gesiel Lopes: e não da biblioteca completa. Então uma forma de você fazer isso é
+
+474
+01:17:45.900 --> 01:17:56.100
+Gesiel Lopes: from dizer ó a partir de quem? De sk learning, ponto cluster.
+
+475
+01:17:57.210 --> 01:18:10.110
+Gesiel Lopes: Então da biblioteca Science Learning do módulo Cluster importe U s o Caminhos.
+
+476
+01:18:10.480 --> 01:18:15.860
+Gesiel Lopes: Tá, então aqui o Caminhos. A partir de agora, o Caminhos,
+
+477
+01:18:16.000 --> 01:18:28.979
+Gesiel Lopes: a implementação do caminho do módulo de clusters dessa biblioteca já está disponível para que eu possa realizar uma determinada ação. Deixa eu pegar aqui o próprio.
+
+478
+01:18:30.020 --> 01:18:31.450
+Gesiel Lopes: O próprio.
+
+479
+01:18:35.460 --> 01:18:39.310
+Gesiel Lopes: Esse exemplo aqui do próprio site, Learner, tá?
+
+480
+01:18:39.590 --> 01:18:45.159
+Gesiel Lopes: E aí ele aproveita. E aí eu falo tal. E aí ele já traz um exemplo. Aqui, ó
+
+481
+01:18:45.620 --> 01:18:55.650
+Gesiel Lopes: ele importa uma outra biblioteca do mundo Python, chamada de num pai que é uma biblioteca fantástica
+
+482
+01:18:55.930 --> 01:19:02.269
+Gesiel Lopes: de alto nível que manipula estrutura de dados.
+
+483
+01:19:02.580 --> 01:19:13.679
+Gesiel Lopes: É uma forma de você trabalhar. A forma mais elegante, digamos assim, de você trabalhar listas, listas e matrizes, que é o que a gente chama de arreis.
+
+484
+01:19:14.230 --> 01:19:16.789
+Gesiel Lopes: Então, aqui, basicamente, o que o.
+
+485
+01:19:16.980 --> 01:19:26.450
+Gesiel Lopes: O caminho que eu estou fazendo. A gente não precisa se atentar
+
+486
+01:19:27.170 --> 01:19:30.420
+Gesiel Lopes: ao resultado propriamente dito. Tá, pessoal,
+
+487
+01:19:34.550 --> 01:19:36.730
+Gesiel Lopes: tá? Não, não.
+
+488
+01:19:47.820 --> 01:19:59.139
+Gesiel Lopes: Que é o que eu estou fazendo? Eu estou importando uma outra biblioteca. Deixa eu colocar a tela aqui na frente, que é uma biblioteca para trabalhar com a reis de forma mais elegante que é o Numpai,
+
+489
+01:19:59.840 --> 01:20:07.610
+Gesiel Lopes: o site Learning, o caminho do site learning. E aqui eu estou literalmente criando uma rei, uma lista
+
+490
+01:20:07.820 --> 01:20:12.179
+Gesiel Lopes: que eu estou atribuindo a variável X. E é uma lista do no pain
+
+491
+01:20:12.290 --> 01:20:17.289
+Gesiel Lopes: instâncio, o caminhos, o algoritmo, caminhos,
+
+492
+01:20:17.500 --> 01:20:25.110
+Gesiel Lopes: uma das características do caminho, como eu quero agrupar. Eu preciso dizer para o algoritmo. Quantos grupos eu vou formar,
+
+493
+01:20:25.220 --> 01:20:29.780
+Gesiel Lopes: então eu vou formar dois grupos. Tá esse cara aqui, eu vou tirar.
+
+494
+01:20:30.150 --> 01:20:31.870
+Gesiel Lopes: Eu vou só deixar isso aqui. Ó,
+
+495
+01:20:32.670 --> 01:20:41.280
+Gesiel Lopes: eu quero que ele crie dois grupos de quem? Dos meus dados que estão na variável X. Então ele criou,
+
+496
+01:20:41.380 --> 01:20:42.160
+Gesiel Lopes: não é?
+
+497
+01:20:43.070 --> 01:20:55.800
+Gesiel Lopes: Ele vai fazer o agrupamento. O resultado do agrupamento vai adicionar a variável que eu estou chamando de caminhos e no caminhos do objeto caminhos. Eu estou chamando aqui
+
+498
+01:20:56.040 --> 01:20:58.990
+Gesiel Lopes: um atributo do Kamins,
+
+499
+01:20:59.610 --> 01:21:14.149
+Gesiel Lopes: que é um atributo que diz qual cluster cada elemento pertence. Observe que aqui eu tenho um elemento. Dois elementos, três elementos, quatro elementos, cinco elementos, seis elementos
+
+500
+01:21:14.390 --> 01:21:16.189
+Gesiel Lopes: são seis elementos.
+
+501
+01:21:16.430 --> 01:21:23.709
+Gesiel Lopes: E aí o que o caminho está me dizendo? Que o primeiro elemento que é esse elemento,
+
+502
+01:21:23.850 --> 01:21:41.330
+Gesiel Lopes: o primeiro, o segundo e o terceiro estão no cluster que ele chamou de zero. E os demais vão estar no Cluster um. É isso que o algoritmo está fazendo. Eu não vou entrar em detalhe do funcionamento, mas é a maneira que você pode importar.
+
+503
+01:21:41.650 --> 01:21:53.700
+Gesiel Lopes: Existe também a possibilidade de importar, importar todos, Ah,
+
+504
+01:21:58.230 --> 01:22:16.170
+Gesiel Lopes: todos os módulos e subir módulos de um módulo específico.
+
+505
+01:22:16.710 --> 01:22:19.919
+Gesiel Lopes: Observem que, continuando aqui no site Learning,
+
+506
+01:22:20.130 --> 01:22:25.699
+Gesiel Lopes: o site Kit Landry, como a gente viu aqui ele tem um monte de ó o cluster.
+
+507
+01:22:25.920 --> 01:22:32.269
+Gesiel Lopes: Ele tem um monte de implementações, de formas de fazer agrupamento.
+
+508
+01:22:32.780 --> 01:22:49.270
+Gesiel Lopes: Vamos supor que eu queira colocar de forma disponível todas essas funcionalidades, todas essas implementações. Uma forma de você fazer isso é importar todo o módulo.
+
+509
+01:22:49.370 --> 01:22:58.089
+Gesiel Lopes: Tudo que está presente num módulo, incluindo seus submódulos e classes, por exemplo. Então, por exemplo, eu quero fazer from s k
+
+510
+01:22:58.210 --> 01:23:08.059
+Gesiel Lopes: learning ponto cluster importe. E aqui. Eu faço o asterisco quando eu faço o asterisco.
+
+511
+01:23:08.430 --> 01:23:11.600
+Gesiel Lopes: Eu estou importando todas as classes
+
+512
+01:23:11.710 --> 01:23:18.850
+Gesiel Lopes: do módulo cluster do site learning, tudo que tem dentro do módulo. Tá bom.
+
+513
+01:23:19.910 --> 01:23:22.810
+Gesiel Lopes: Então você consegue fazer esses tipos de importe.
+
+514
+01:23:23.280 --> 01:23:30.849
+Gesiel Lopes: E aqui, pessoal, tem os módulos padrões da biblioteca Python que são módulos que já estão disponíveis
+
+515
+01:23:31.050 --> 01:23:40.580
+Gesiel Lopes: dentro do próprio ambiente, que é a Biblioteca Mephie.
+
+516
+01:23:44.280 --> 01:23:53.840
+Gesiel Lopes: Tá, então que inclusive a gente já trabalhou com ela em algum momento, por exemplo, eu faço importe Meph.
+
+517
+01:23:53.980 --> 01:24:01.620
+Gesiel Lopes: Então o Mef tem algumas funcionalidades. Algumas funções matemáticas constantes, matemáticas.
+
+518
+01:24:01.850 --> 01:24:04.290
+Gesiel Lopes: Por exemplo, tem a função Pi
+
+519
+01:24:04.620 --> 01:24:07.420
+Gesiel Lopes: até a constante. Acho que é pi minúsculo.
+
+520
+01:24:08.030 --> 01:24:12.829
+Gesiel Lopes: Tá que retorna um número. Pi um número clássico.
+
+521
+01:24:13.040 --> 01:24:23.120
+Gesiel Lopes: Eu tenho a função. Randall, deixa eu importar aqui o Random que ele tem a algumas funcionalidades
+
+522
+01:24:23.240 --> 01:24:30.369
+Gesiel Lopes: para a gente. Por exemplo, o Random é uma biblioteca que gera números aleatórios.
+
+523
+01:24:30.470 --> 01:24:34.280
+Gesiel Lopes: Então, do Random, por exemplo, eu posso chamar o método Random,
+
+524
+01:24:34.630 --> 01:24:38.140
+Gesiel Lopes: que retorna números aleatórios de zero a um.
+
+525
+01:24:38.280 --> 01:24:46.829
+Gesiel Lopes: Tá aqui. Toda vez que eu executar, ele vai me trazer um número totalmente aleatório entre zero e um.
+
+526
+01:24:47.350 --> 01:24:52.510
+Gesiel Lopes: Eu tenho a biblioteca Date Time, por exemplo, importe
+
+527
+01:24:53.070 --> 01:25:02.059
+Gesiel Lopes: date time. E aí o date Time, por exemplo, tem uma funcionalidade.
+
+528
+01:25:02.320 --> 01:25:05.100
+Gesiel Lopes: Tá do
+
+529
+01:25:06.460 --> 01:25:15.620
+Gesiel Lopes: dentro do date time. Ele tem uma funcionalidade, por exemplo, para verificar o dia atual de execução, o dia do dia
+
+530
+01:25:15.860 --> 01:25:23.399
+Gesiel Lopes: do ambiente que está executando o meu código Pyth. Então, por exemplo, já fiz o imposto.
+
+531
+01:25:23.530 --> 01:25:27.050
+Gesiel Lopes: Aí eu faço Date Time Date,
+
+532
+01:25:27.310 --> 01:25:31.770
+Gesiel Lopes: que é um módulo date time deite
+
+533
+01:25:31.980 --> 01:25:34.729
+Gesiel Lopes: e ele tem a função chamada Today.
+
+534
+01:25:35.340 --> 01:25:42.340
+Gesiel Lopes: Aliás, não é nem no date time Date Today,
+
+535
+01:25:43.440 --> 01:25:48.100
+Gesiel Lopes: por exemplo, ele tem esse módulo date.
+
+536
+01:25:48.380 --> 01:25:56.719
+Gesiel Lopes: Ele implementa as funcionalidades relacionadas ao dia. E o método Q Uday retorna o dia atual
+
+537
+01:25:57.150 --> 01:26:05.960
+Gesiel Lopes: do ambiente que está executando o nosso código tem o Sisu, o F
+
+538
+01:26:06.110 --> 01:26:11.420
+Gesiel Lopes: importe of e o importe. Sis
+
+539
+01:26:13.390 --> 01:26:20.780
+Gesiel Lopes: o importe oas a biblioteca os. É uma biblioteca de manipulação do
+
+540
+01:26:21.020 --> 01:26:35.750
+Gesiel Lopes: de arquivos de output input, e input então eu utilizo, por exemplo, o Os para pegar algumas informações do próprio sistema. Então, se eu fizer aqui um print
+
+541
+01:26:36.410 --> 01:26:43.180
+Gesiel Lopes: os, ele tem um atributo chamado em Virum tá
+
+542
+01:26:43.360 --> 01:26:48.709
+Gesiel Lopes: que esse cara aqui, esse atributo, são todas as variáveis
+
+543
+01:26:48.860 --> 01:26:55.460
+Gesiel Lopes: de ambiente do contexto do Python, que está executando esse nosso notebook,
+
+544
+01:26:55.880 --> 01:26:58.560
+Gesiel Lopes: o os, por exemplo, o Sis.
+
+545
+01:26:58.790 --> 01:27:01.279
+Gesiel Lopes: Ele traz informações de sistema.
+
+546
+01:27:01.470 --> 01:27:08.309
+Gesiel Lopes: Por exemplo, eu tenho um atributo chamado plataforma que ele me diz qual é a plataforma
+
+547
+01:27:08.580 --> 01:27:12.260
+Gesiel Lopes: que está executando esse meio ambiente. E também tem, ó
+
+548
+01:27:12.420 --> 01:27:19.709
+Gesiel Lopes: um atributo chamado versium, que ele mostra a versão do Python que está executando no nosso ambiente.
+
+549
+01:27:20.170 --> 01:27:27.449
+Gesiel Lopes: Então aqui, essas são todas as variáveis de ambiente que eu tenho disponíveis dentro do meu contexto.
+
+550
+01:27:28.000 --> 01:27:33.280
+Gesiel Lopes: A plataforma que roda o notebook é um Linux,
+
+551
+01:27:33.730 --> 01:27:38.679
+Gesiel Lopes: e a versão que eu estou utilizando é a versão trezentos e onze.
+
+552
+01:27:40.540 --> 01:27:48.070
+Gesiel Lopes: E aí existem outras bibliotecas que a gente vai trabalhar mais lá na frente, que é para manipular arquivos
+
+553
+01:27:48.270 --> 01:27:52.499
+Gesiel Lopes: específicos. Eu vou até tirar elas. Que a gente vai trabalhar com elas lá na frente.
+
+554
+01:27:52.790 --> 01:27:56.360
+Gesiel Lopes: E aí, para finalizar, pessoal, vale ressaltar
+
+555
+01:27:57.260 --> 01:28:05.580
+Gesiel Lopes: que existem as bibliotecas padrões do Python que a gente importa.
+
+556
+01:28:05.780 --> 01:28:23.589
+Gesiel Lopes: Porém, a maioria das bibliotecas existentes no Python. É necessário que eu instale essas bibliotecas e aonde é que eu encontro as bibliotecas disponíveis no ambiente Python.
+
+557
+01:28:23.670 --> 01:28:36.089
+Gesiel Lopes: Então essas bibliotecas do contexto Python, são agrupadas dentro do gerenciador de pacotes Python que é organizado pela própria
+
+558
+01:28:36.210 --> 01:28:37.940
+Gesiel Lopes: Python Org.
+
+559
+01:28:38.060 --> 01:28:54.789
+Gesiel Lopes: Pelo próprio Python com quem mantém o Python, que é o pipi, que é o gerenciador de pacotes, ou o gerenciador de módulos do ecossistema Python.
+
+560
+01:28:55.540 --> 01:29:13.110
+Gesiel Lopes: Todas as bibliotecas padrões da biblioteca Python do Python. Elas podem ser disponibilizadas. Dentro do paipia isso não quer dizer que eu não consiga disponibilizar módulos sem ser pelo paipia. Ele é um gerenciador de pacotes.
+
+561
+01:29:13.210 --> 01:29:18.800
+Gesiel Lopes: É onde reúne as bibliotecas, padrões do ecossistema. Python, tá.
+
+562
+01:29:18.950 --> 01:29:25.569
+Gesiel Lopes: E aí para você instalar, vamos supor que eu tenha. Eu quero utilizar um módulo.
+
+563
+01:29:26.070 --> 01:29:35.640
+Gesiel Lopes: É uma biblioteca só para finalizar a biblioteca. Python.
+
+564
+01:29:37.200 --> 01:29:39.030
+Gesiel Lopes: Python, para.
+
+565
+01:29:39.350 --> 01:29:41.260
+Gesiel Lopes: É pro.
+
+566
+01:29:42.880 --> 01:29:43.980
+Gesiel Lopes: Para.
+
+567
+01:29:44.530 --> 01:29:48.299
+Gesiel Lopes: Deixa eu colocar aqui otimização, tá?
+
+568
+01:29:48.550 --> 01:29:56.470
+Gesiel Lopes: Deixa eu ver. Na otimização não, pesquisa pesquisa operacional.
+
+569
+01:29:57.330 --> 01:30:01.139
+Gesiel Lopes: Eu tenho uma biblioteca chamada essa aqui Pulp,
+
+570
+01:30:01.650 --> 01:30:18.129
+Gesiel Lopes: que é uma biblioteca que implementa alguns algoritmos dessa área de pesquisa matemática chamada de pesquisa operacional que lida com problemas de otimização. Então, pulpe aqui. Olha só,
+
+571
+01:30:18.350 --> 01:30:31.629
+Gesiel Lopes: ela é uma biblioteca externa. Não está disponível dentro do ecossistema Python. E aí eu preciso utilizá la. Então, para você utilizar s ou para instalar essa biblioteca dentro do seu ambiente,
+
+572
+01:30:31.810 --> 01:30:39.039
+Gesiel Lopes: você vai usar o gerenciador de pacotes padrão do Python, que é o Pip passando o nome da biblioteca
+
+573
+01:30:39.220 --> 01:30:47.690
+Gesiel Lopes: para você executar ele dentro de um notebook. E aqui, no caso dentro do Deep note antes do Pip, você coloca uma exclamação
+
+574
+01:30:47.840 --> 01:30:54.659
+Gesiel Lopes: para que ele possa entender que eu estou instalando uma biblioteca
+
+575
+01:30:54.750 --> 01:31:08.870
+Gesiel Lopes: para o meu ambiente. Então observe aqui. Ele instalou. E aí agora eu posso usar o Pulp na própria biblioteca. Ele mostra como eu faço para resolver um problema. Por exemplo, deixa eu pegar aqui
+
+576
+01:31:10.840 --> 01:31:12.660
+Gesiel Lopes: um exemplo clássico.
+
+577
+01:31:13.770 --> 01:31:16.230
+Gesiel Lopes: Deixa eu pegar aqui um
+
+578
+01:31:21.700 --> 01:31:24.810
+Gesiel Lopes: aqui. Só eu vou colocar isso aqui
+
+579
+01:31:27.010 --> 01:31:33.429
+Gesiel Lopes: só para a gente finalizar aqui. Eu estou pegando um problema de otimização.
+
+580
+01:31:35.230 --> 01:31:38.670
+Gesiel Lopes: Quem tem as características do problema?
+
+581
+01:31:39.890 --> 01:31:41.850
+Gesiel Lopes: Eu não vou entrar no mérito,
+
+582
+01:31:42.090 --> 01:31:45.320
+Gesiel Lopes: mas é um problema de otimização matemática.
+
+583
+01:31:45.650 --> 01:31:49.229
+Gesiel Lopes: Tá do próprio pulp.
+
+584
+01:31:51.890 --> 01:31:56.720
+Gesiel Lopes: E aí eu estou pedindo para que ele resolva esse problema de otimização.
+
+585
+01:31:57.230 --> 01:31:59.750
+Gesiel Lopes: E aí eu tenho o status.
+
+586
+01:32:08.260 --> 01:32:12.410
+Gesiel Lopes: Eu vou colocar só o status. Eu não me lembro qual é o parâmetro.
+
+587
+01:32:13.400 --> 01:32:19.509
+Gesiel Lopes: Mas aqui ele retorna. Ele resolveu esse problema de otimização.
+
+588
+01:32:21.260 --> 01:32:22.340
+Gesiel Lopes: Beleza.
+
+589
+01:32:22.580 --> 01:32:30.269
+Gesiel Lopes: Então é algo que a gente pode fazer dentro de módulos do contexto, Python.
+
+590
+01:32:31.140 --> 01:32:38.280
+Gesiel Lopes: Então é isso, pessoal que eu tinha preparado para hoje. Foi um grande prazer trabalhar com vocês contra vocês qualquer coisa.
+
+591
+01:32:38.610 --> 01:32:42.750
+Gesiel Lopes: Quem precisar, pode me encontrar no Linkedin. Tá bom.
+
+592
+01:32:43.370 --> 01:32:45.559
+Gesiel Lopes: E estou aqui para ajudar a
+
+593
+01:32:45.710 --> 01:32:54.999
+Gesiel Lopes: cada um de vocês que assim o precisarem que quiserem, beleza. Então, foi um grande prazer, pessoal trabalhar com vocês. E a gente se encontra aí por aí,
+
+594
+01:32:55.380 --> 01:32:56.130
+Gesiel Lopes: tá?
+
+595
+01:32:56.350 --> 01:32:57.460
+Gesiel Lopes: Tchau, tchau.
+
+596
+01:33:00.360 --> 01:33:02.000
+Gesiel Lopes: Ou até breve.
+
