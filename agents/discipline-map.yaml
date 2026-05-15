@@ -1,0 +1,32 @@
+# Mapeamento downloads/ → disciplinas ISS (slugs em content/disciplines.json)
+# Regra: sem entrada aqui → o orquestrador não publica conteúdo a partir dessa pasta.
+version: 1
+
+slug_from_filename:
+  description: >
+    Ficheiros `Aula_NN_-_DDMMYYYY.vtt`: o número NN é o índice ordinal da aula
+    na disciplina e deve alinhar com `order` em content/lessons.json após
+    reconciliação; o slug semântico da aula não é derivado automaticamente do .vtt
+    — define-se no PR/integração após verificar colisões em lessons.json.
+
+mappings:
+  - download_folder: Planejamento_de_Curso_e_Carreira
+    discipline: planejamento-curso-carreira
+  - download_folder: Introducao_a_Programacao_com_Python
+    discipline: python
+  - download_folder: Introducao_a_Visualizacao_de_Dados_e_SQL
+    discipline: visualizacao-sql
+  - download_folder: Fluencia_em_IA
+    discipline: fluencia-ia
+  - download_folder: Projeto_de_Bloco_Fundamentos_do_Processamento_de_Dados
+    discipline: projeto-bloco
+  - download_folder: Python_para_Processamento_de_Dados
+    discipline: python-processamento-dados
+  - download_folder: SQL_e_Modelagem_Relacional
+    discipline: sql-modelagem-relacional
+
+documents_root:
+  path: downloads/documents
+  note: >
+    PDFs/CSV/etc. são contexto auxiliar; podem organizar-se por subpastas de
+    disciplina/professor (ver manifest em downloads/manifest.json).
