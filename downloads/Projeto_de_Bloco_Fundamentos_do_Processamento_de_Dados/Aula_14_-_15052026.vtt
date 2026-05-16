@@ -1,0 +1,2074 @@
+WEBVTT
+
+1
+00:00:46.880 --> 00:00:49.510
+Ricardo Garcia: Opa. Boa noite, pessoal. Boa noite.
+
+2
+00:00:49.620 --> 00:00:54.789
+Ricardo Garcia: Boa noite a todos aí tudo bem, tudo joia tranquilo, sexta feira.
+
+3
+00:00:55.250 --> 00:00:57.809
+Ricardo Garcia: Todo mundo animado.
+
+4
+00:00:57.950 --> 00:01:01.219
+Ricardo Garcia: É beleza. Boa noite, pessoal.
+
+5
+00:01:01.890 --> 00:01:20.249
+Ricardo Garcia: Brincadeiras à parte. Sejam todos bem vindos, né? Boa noite, sexta feira, né? Eu sei que é complicado, mesmo. A gente tem que ter força de vontade, mesmo para estar por aqui, né, beleza? Mas é isso aí. Eu acho que depois vai valer a pena. Ou a gente tenta pelo menos fazer com que vale a pena para vocês aí também, né?
+
+6
+00:01:20.510 --> 00:01:29.099
+Ricardo Garcia: Então é isso, pessoal. Sejam todos bem vindos aí a mais uma aula. Mais um bate papo sobre Python, comentar um pouco também
+
+7
+00:01:29.710 --> 00:01:45.829
+Ricardo Garcia: de como foi a semana, também a nível de aprendizagem de todos, até da faculdade. A gente vê que realmente a gente tem um pouco de dificuldade, muitas vezes em assimilar ou até mesmo fazer a parte prática do Python. Mas não tem problema.
+
+8
+00:01:45.950 --> 00:01:52.379
+Ricardo Garcia: A gente vai tentando se ajudar aí todo mundo e a gente vai fechando nossos objetivos aí.
+
+9
+00:01:52.650 --> 00:02:06.640
+Ricardo Garcia: Então é isso. Pessoal, sejam bem vindos. A gente já está na reta final. Mesmo a gente já está. No dia quinze de Maio. As aulas vão até início de Junho. Então faltam poucas aulas aí. Agora. Sei lá. Acho que umas quatro aulas, alguma coisa assim.
+
+10
+00:02:06.950 --> 00:02:17.790
+Ricardo Garcia: E já respirar fundo para bater as nossas metas, os nossos objetivos e aguentar, porque agora falta pouco.
+
+11
+00:02:18.200 --> 00:02:29.849
+Ricardo Garcia: Então é isso aí. E eu acho que também às vezes a gente tem alguma dificuldade com relação ao parto e tal, mas vocês vão ver quando vocês chegarem no final de semestre,
+
+12
+00:02:30.000 --> 00:02:42.699
+Ricardo Garcia: que vocês vão ver que vocês viram bastante, coisa que conseguiram aprender bastante coisa. Isso que é importante, né? Quando a gente chega no final de uma etapa, a gente fala, pô beleza, né? Acho que deu pra aproveitar bastante coisa. E acho que é por aí, né?
+
+13
+00:02:43.020 --> 00:02:48.129
+Ricardo Garcia: Então é isso aí, pessoal, sejam bem vindos aqui só para.
+
+14
+00:02:48.340 --> 00:02:51.669
+Ricardo Garcia: Como sempre, no dia vinte e cinco. Tem mais uma entrega aqui do
+
+15
+00:02:51.860 --> 00:02:59.200
+Ricardo Garcia: Leve Coding aqui do quatro, né? Por isso que eu já falo também que a gente já está na reta final. Foto cinco ali. Depois, só a apresentação
+
+16
+00:02:59.410 --> 00:03:11.229
+Ricardo Garcia: final, mesmo então, bem tranquilo, entre aspas, dentro da dificuldade de cada um também. E também comentar
+
+17
+00:03:11.480 --> 00:03:27.399
+Ricardo Garcia: hoje sobre isso a gente. Comentei com vocês também, na aula passada, na sexta feira passada, que a gente teve um. Vai ter uma mudança um pouco, principalmente nessa parte de projetos, para tratar um pouco mais de página e tal que eu acho que é
+
+18
+00:03:27.400 --> 00:03:46.899
+Ricardo Garcia: a galera aí precisa um pouco mais. Nesse sentido, a gente vai tentar focar um pouquinho mais no Python também. Mas a gente não vai deixar de lado a parte de projeto em si também. A gente também não pode focar só em Python e esquecer o resto. Então, acho que a gente pode tentar, logicamente, equilibrar um pouco, deixando mais a
+
+19
+00:03:47.240 --> 00:04:08.800
+Ricardo Garcia: boa noite. Boa noite. Deixando mais ali o foco para a parta e tal, mas não deixar de lado projeto, porque isso aí é mercado. E isso aí é o que vocês vão encontrar. O pessoal que está começando, que está entrando no mercado, ou que, independente do que for, precisa pelo menos ter uma ideia de projeto ali para pegar um trabalho novo. Sei lá, um estágio, alguma coisa ter uma noção ali
+
+20
+00:04:08.800 --> 00:04:12.869
+Ricardo Garcia: a nível de projeto também não pode entrar totalmente no escuro nesse sentido,
+
+21
+00:04:12.950 --> 00:04:32.140
+Ricardo Garcia: então. Mas esse até o pessoal também está desenvolvendo. Eu sei que tem bastante gente que está desenvolvendo projeto próprio. Que isso é bacana pra caramba também, né? Nem todo mundo aí precisa trabalhar alguma empresa, alguma coisa assim. Então o pessoal tem muito empreendedor aí no nosso grupo. Isso é importante também.
+
+22
+00:04:32.250 --> 00:04:35.729
+Ricardo Garcia: Então, a gente vai ver um pouquinho de tudo ali para.
+
+23
+00:04:36.260 --> 00:04:51.109
+Ricardo Garcia: Para a gente tentar bater um papo geral. Assim também, porque você já tem a disciplina de vocês ali, que corresponde também à parte, corresponde a banco de dados. Aquela coisa toda, né? E de projeto. A gente só tem uma hora, uma hora e meia, no máximo
+
+24
+00:04:51.410 --> 00:05:00.730
+Ricardo Garcia: por semana. Então é bem tranquilo, né? Então é isso aí, pessoal. Só reforçando dia vinte e cinco. Tem a entrega ali também. O esquema sempre é o mesmo ali. E tal, né,
+
+25
+00:05:01.060 --> 00:05:15.910
+Ricardo Garcia: beleza. E aí, o que a gente vai falar aqui? Um pouco dentro do que a gente. Vai fazer um review do que a gente viu até agora. Já para uma parte introdutória também do que a gente vai ver hoje. E durante as próximas semanas.
+
+26
+00:05:16.240 --> 00:05:28.679
+Ricardo Garcia: Ontem eu fui em um evento da hora com várias características do Mysql e alguns outros componentes também relacionados ao Mysql e outras tecnologias, também
+
+27
+00:05:28.680 --> 00:05:36.510
+Ricardo Garcia: de cash de banco de dados e tal. Um evento super bacana. O pessoal é fera, fera. Mesmo
+
+28
+00:05:36.510 --> 00:05:54.399
+Ricardo Garcia: um conhecimento gigante, inclusive um dos engenheiros que estavam apresentando é engenheiro que desenvolve, desenvolveu vários filmes, várias características do próprio Myers Kelly Myscaly que a gente usa open source Enterprise também da própria oracle
+
+29
+00:05:54.440 --> 00:06:11.879
+Ricardo Garcia: o engenheiro estava lá, e ele comentou várias características, e até dessa outra solução de casting ali, que eles estão desenvolvendo aí você fala pô beleza, né? Mas tá, e daí o que isso tem a ver com a gente, né? Na verdade, eu pensei bastante na gente nessa turma que a gente está fazendo agora,
+
+30
+00:06:11.890 --> 00:06:18.009
+Ricardo Garcia: porque muitas vezes a gente tem dificuldade mesmo na tecnologia, ou a Skl ou o Python e tal.
+
+31
+00:06:18.040 --> 00:06:24.319
+Ricardo Garcia: Então, para vocês entenderem essa galera que está ali primeiro que os caras são, né?
+
+32
+00:06:24.320 --> 00:06:44.029
+Ricardo Garcia: Os caras conhecem muito de estrutura de engenharia, mesmo de banco de dados. Mas o que a gente tem que levar em conta é que várias tecnologias que estão desenvolvidas ali e tal. Primeiro, são desenvolvidas muitas coisas por uma comunidade gigantesca de engenheiros. Então isso já é um ponto importante que a gente tem que pensar.
+
+33
+00:06:44.290 --> 00:07:02.099
+Ricardo Garcia: Várias tecnologias, eles já estão desenvolvendo, e fazendo isso há dez anos, já ou mais de dez anos. Então, quando a gente acha que alguém pô aquele negócio, o cara manja e tal. Não o cara manja, mas beleza. O cara está nessa. Daí a pessoa, o que for, ele está ali há bastante tempo já.
+
+34
+00:07:02.100 --> 00:07:10.759
+Ricardo Garcia: Então, acho que a ideia é trazer para vocês justamente isso aí que às vezes a gente tem uma dificuldade. Pô isso aqui. Não estou entendendo muito bem aquela coisa toda.
+
+35
+00:07:10.900 --> 00:07:25.110
+Ricardo Garcia: Mas isso aí faz parte do nosso desenvolvimento de todo mundo. E cada um tem o seu tempo. E muitas vezes, logicamente, a gente quer aprender ou desenvolver os negócios muito rápido, mas a gente vai batendo a cabeça
+
+36
+00:07:25.110 --> 00:07:31.339
+Ricardo Garcia: e a gente vai tentando encontrar as nossas técnicas, os nossos mecanismos ali para aprender o mais rápido possível.
+
+37
+00:07:31.340 --> 00:07:38.889
+Ricardo Garcia: Mas é óbvio que tem muitas coisas que você vai aprender no decorrer do tempo, e fazendo prática prática prática. E assim vai.
+
+38
+00:07:39.100 --> 00:07:43.139
+Ricardo Garcia: Eu queria trazer essa experiência para vocês aí também.
+
+39
+00:07:43.200 --> 00:07:56.620
+Ricardo Garcia: Porque realmente cada um tem o seu tempo aí. Muitas vezes a gente acha bacana e tal. Pessoal ali, pô que manja pra caramba. Mas os caras estão trabalhando ali já nesse produto, nessa tecnologia há muitos anos.
+
+40
+00:07:56.620 --> 00:08:11.140
+Ricardo Garcia: E a gente chega ali também. E a gente chega ali muitas coisas. A gente não entende. O pessoal está falando e tal e puxa, fala realmente da parte de engenharia. Ali a gente conhece. Obviamente, há um outro nível
+
+41
+00:08:11.550 --> 00:08:23.500
+Ricardo Garcia: nesse sentido de usabilidade de vários produtos de tecnologia, mas tem coisas que a gente fica. Pô peraí. Eu também não entendi. Muito bem, então é natural isso aí, né? Então fiquem tranquilos aí que
+
+42
+00:08:23.500 --> 00:08:39.510
+Ricardo Garcia: quem, digamos assim, tem o seu mérito. E a gente que está aqui junto, por exemplo, agora, e tal pessoal que está, digamos assim, se entregando para esse objetivo, fazendo focado com as entregas e tal. Isso é bem legal.
+
+43
+00:08:39.510 --> 00:08:55.429
+Ricardo Garcia: Muitas vezes a gente pensa até em desistir. Fala, pô desistir disso aqui e tal. Não é para mim alguma coisa assim. Mas não é que leva tempo. Mesmo leva tempo. E outra que a tecnologia não é só Python. Tem um milhão de oportunidades de coisas que a gente tem que visualizar.
+
+44
+00:08:55.430 --> 00:09:08.269
+Ricardo Garcia: Para entender o caminho que nós vamos seguir da tecnologia. Pode ser que Python, você não vai utilizar ou vai utilizar. Sim, mas vai utilizar menos do que você imagina e tal, né? Então, ou outra tecnologia, até mesmo a Skely, o que for.
+
+45
+00:09:08.280 --> 00:09:14.510
+Ricardo Garcia: Então acho que é bem tranquilo. Nesse sentido, queria trazer essa experiência que eu tive ontem foi bem bacana
+
+46
+00:09:14.540 --> 00:09:32.790
+Ricardo Garcia: e que vale a pena mesmo. Vale a pena a gente insistir na aprendizagem nesse sentido, porque acho que toda galera que está aí ontem também. Todo mundo está querendo aprender, e sempre aprendendo mais e mais e mais e mais. Então faz parte do pacote da tecnologia para todo mundo.
+
+47
+00:09:33.330 --> 00:09:36.110
+Ricardo Garcia: Então, pessoal, o que a gente vai
+
+48
+00:09:36.390 --> 00:09:39.689
+Ricardo Garcia: tratar hoje? Um pouco aqui também,
+
+49
+00:09:39.890 --> 00:09:46.740
+Ricardo Garcia: de fazer um pouco de um review aqui do que a gente já viu aqui. A nível de
+
+50
+00:09:46.920 --> 00:10:03.480
+Ricardo Garcia: de projeto de tecnologia, mesmo beleza. A gente falou em Projeto Show de Bola. Ali a gente não entendeu. Mais ou menos. E as Tecnologias de projeto que a gente falou foi do Python e o Sl
+
+51
+00:10:05.990 --> 00:10:17.929
+Ricardo Garcia: que a gente está falando ali. E agora tem um detalhe importante que a gente começou na última aula. E principalmente, esse foi o foco. O pessoal. Até o coordenador conversou com a gente e tal para mudar e tal aquela coisa toda.
+
+52
+00:10:17.930 --> 00:10:27.389
+Ricardo Garcia: Porque o Python. Vocês tiveram disciplina. O Sql também. Daí agora vocês entraram já naquela parte de até visualização de visualização.
+
+53
+00:10:27.760 --> 00:10:32.980
+Ricardo Garcia: Então deixa ferramentas de visualização, não é?
+
+54
+00:10:33.240 --> 00:10:43.020
+Ricardo Garcia: E agora a gente tem que falar um pouquinho de um tema muito importante, inclusive ontem, também nesse encontro que a gente teve nesse evento da Oracle.
+
+55
+00:10:43.160 --> 00:10:59.790
+Ricardo Garcia: Se a gente for ver tudo que foi apresentado a nível de tecnologia e como foi desenvolvido, e a explicação do funcionamento daquelas futures daquelas características para a implementação, tanto com hora, com isql posters. E tal tudo é baseado no quê?
+
+56
+00:11:02.000 --> 00:11:03.949
+Ricardo Garcia: Lógica, tudo é lógica.
+
+57
+00:11:03.950 --> 00:11:16.149
+Ricardo Garcia: Então, foi apresentado lá vários slides também do funcionamento. Como funciona o Cash? Explicação técnica do funcionamento dessa tecnologia e de outras, por exemplo,
+
+58
+00:11:16.150 --> 00:11:24.669
+Ricardo Garcia: explicar a nível de integração do mais Qn com base transacional, junto com analíticas,
+
+59
+00:11:24.670 --> 00:11:38.030
+Ricardo Garcia: então ele mesmo a parte de Machine Learning lá vai entender quais são as petições ou as transações que estão buscando, entrando no banco de dados
+
+60
+00:11:38.030 --> 00:11:45.249
+Ricardo Garcia: e o próprio banco de dados vai entender para onde direcionar isso. Aí. Se é analítico ou se é transacional,
+
+61
+00:11:45.270 --> 00:11:52.330
+Ricardo Garcia: fantástico, tudo isso é baseado em lógica. Então toda explicação que foi feita foi feita diagramas de explicação.
+
+62
+00:11:52.330 --> 00:11:57.900
+Ricardo Garcia: E aí, até mesmo eu olhando e falei pô realmente até pensei: Vou comentar com o pessoal,
+
+63
+00:11:57.900 --> 00:12:15.700
+Ricardo Garcia: porque é tudo lógica. Então, existe uma lógica de funcionamento. Existe uma lógica de entrada e às vezes a gente fala assim. Pô, mas será que é assim mesmo? É tão simples. E é exatamente isso. Aquela receitinha de bolo onde a lógica representa exatamente o trajeto que faz o dado.
+
+64
+00:12:15.800 --> 00:12:34.859
+Ricardo Garcia: Então vai fazer isso? Então ele busca isso aqui, vai fazer isso. Vai para cá e assim vai. Então, na forma de diagrama, você visualiza assim, pô, é fácil. Dá para entender o processo em si. Dos dados, de como ele está trabalhando. Então eu acho que isso é uma coisa importante
+
+65
+00:12:35.230 --> 00:12:50.829
+Ricardo Garcia: da gente entender um pouco da lógica dentro dos exercícios que a gente vai fazer também, batendo um papo e focando nessa parte de lógica, para a gente tentar ajudar no desenvolver de uma solução, no desenvolver de uma solução
+
+66
+00:12:50.830 --> 00:12:56.239
+Ricardo Garcia: e reforçando. Eu já repeti para vocês. Já falei isso. Acho que toda aula, eu repito, fica meio
+
+67
+00:12:56.240 --> 00:13:15.319
+Ricardo Garcia: repetitivo e de saco cheio. Mas é verdade. Vocês são solucionadores de problemas. Vocês não têm que ser. Ah, pô, eu conheço a tecnologia. O Python Sql, visualização e tal. Isso aí. Milhões de profissionais vão saber e vão conhecer no decorrer de uma hora. Duas horas, ali, enfim,
+
+68
+00:13:15.320 --> 00:13:37.559
+Ricardo Garcia: mas o solucionador de problemas, esse aí, muitas vezes é difícil. E principalmente, dependendo por onde você se movimenta ou quer buscar nível de área de desenvolvimento, essas coisas. Então é bem bacana. A lógica ajuda a gente e a lógica pessoal. Não precisa ir naquelas coisas complexas. Lógico. Tem uma complexidade com relação a isso.
+
+69
+00:13:37.670 --> 00:13:46.170
+Ricardo Garcia: Mas a lógica é aquilo para iniciar a receita de bolo, né? Receita de bolo. O que tem a receita de bolo. E o que tem, digamos assim,
+
+70
+00:13:46.170 --> 00:13:59.590
+Ricardo Garcia: fazer uma relação entre uma receita de bolo e a tecnologia. Receita de bolo tem o quê? Tem lá os ingredientes que você vai colocar. O que é isso? São os componentes da tecnologia que você vai usar. Então tem os componentes da tecnologia. Show do bola beleza.
+
+71
+00:13:59.590 --> 00:14:14.869
+Ricardo Garcia: E aí tem o passo a passo para fazer um bolo. Você faz lá o bolinho e tal aquela mistura toda lá isso é o processo. Então você vai utilizar determinadas ferramentas e vai fazer o quê? Vai utilizar isso em determinados processos. Então, para processar
+
+72
+00:14:15.100 --> 00:14:26.169
+Ricardo Garcia: que for ali e entregar um resultado específico. Show de bola? Isso aí é lógico, existe uma complexidade, existe, mas dentro da complexidade, a gente já teve
+
+73
+00:14:26.170 --> 00:14:35.609
+Ricardo Garcia: obviamente alguns projetos complexos, mesmo. Mas a lógica, você consegue visualizar o importante é esse é visualizar o problema.
+
+74
+00:14:35.610 --> 00:14:38.570
+Ricardo Garcia: Visualizou. Pô, entendi o problema, entendi.
+
+75
+00:14:38.610 --> 00:14:58.449
+Ricardo Garcia: Esse é o x da questão Ali. A partir do momento que você entender. O problema já é meio caminho andado. Ah, com o que você vai solucionar. Aí você vai ter que ver se tem algum requisito ou não. Senão você vai solucionar com uma tecnologia que está mais próxima do teu conhecimento. Aí manda ver. Mas o importante é entender o problema.
+
+76
+00:14:58.610 --> 00:15:01.630
+Ricardo Garcia: Outra coisa dentro da lógica.
+
+77
+00:15:02.520 --> 00:15:05.200
+Ricardo Garcia: A premissa que a gente tem assim é
+
+78
+00:15:05.360 --> 00:15:20.299
+Ricardo Garcia: lógica. Input, pros. Isso mesmo. Entrada, processamento e saída. Isso é o mais básico que existe. Mas tudo funciona assim. Tudo funciona assim. Ontem mesmo, o pessoal falando lá das tecnologias lá oro? Não sei.
+
+79
+00:15:20.300 --> 00:15:38.089
+Ricardo Garcia: Tudo tem entrada, processamento, e saída, entrada, processamento e saída. Aí existem várias ferramentas que fazem isso agora. O pessoal aí traz inteligência artificial. Aquela coisa toda que analisa que tipo de dado que é. E aí segue um fluxo, ou se não segue outro fluxo e faz um processamento. Um troço
+
+80
+00:15:38.280 --> 00:15:49.199
+Ricardo Garcia: show de bola, um troço muito louco. Mas o básico de tudo é exatamente isso. Entrada, input, process e output. É isso aí. A lógica é a mesma coisa.
+
+81
+00:15:49.200 --> 00:16:00.159
+Ricardo Garcia: Quando você entende o problema, você fala, cara, entendi o que o cara quer. Entendi aí o negócio, o que for a solução do problema. Eu entendi. A solução. Beleza às vezes é um problema muito grande.
+
+82
+00:16:00.210 --> 00:16:12.289
+Ricardo Garcia: Então você fala, pô, como é que eu vou? Eu preciso botar isso aí no papel. Botar no papel é o modo de falar hoje. Você usa ferramentas ali, mas o papel ajuda para caramba também. Nesse sentido, eu não falo
+
+83
+00:16:12.290 --> 00:16:21.789
+Ricardo Garcia: aquele bloquinho que a gente usa o papel. Ali tem uma galera ainda que usa. E às vezes eu uso também para escrever. Para entender mesmo o funcionamento
+
+84
+00:16:21.860 --> 00:16:24.349
+Ricardo Garcia: do diagrama. O fluxograma ali, né?
+
+85
+00:16:24.990 --> 00:16:34.099
+Ricardo Garcia: Aí você entendeu o problema. Beleza é um problema muito complexo. E aí você começa a pegar esse problema que é grande.
+
+86
+00:16:34.100 --> 00:16:47.400
+Ricardo Garcia: Transformar em partes menores. Então eu pego e resolvo isso aqui, beleza. Resolvi isso aqui vamos para o próximo passo. Qual que é o próximo passo? Ah, esse aqui. Então você vai lá e resolve esse. E normalmente é aquele lá, né?
+
+87
+00:16:48.060 --> 00:16:58.409
+Ricardo Garcia: O passo isso aqui. Eu estou comentando até com o pessoal da aula do Aws, porque a gente está falando sobre
+
+88
+00:16:58.830 --> 00:17:14.760
+Ricardo Garcia: devops data ops. Na verdade que é o processo de dados da esteira de processamento de dados de pipeline de dados, então, normalmente você tem um passo, que é o passo um, por exemplo, isso aqui é um exemplo.
+
+89
+00:17:14.940 --> 00:17:20.849
+Ricardo Garcia: Passo dois, faço três e assim vai, né? Você pode ter
+
+90
+00:17:25.000 --> 00:17:26.569
+Ricardo Garcia: vários passos aqui
+
+91
+00:17:26.900 --> 00:17:38.500
+Ricardo Garcia: quando você busca isso, e você traz a lógica junto com você. O que você vai fazer? O Passo um vai ter uma entrada e vai ter uma saída. Normalmente, a saída do passo um vai ser a entrada do passo dois
+
+92
+00:17:38.540 --> 00:17:54.069
+Ricardo Garcia: e a saída do passo dois vai ser a entrada do passo três e assim vai. Então você vai. O quê? Você vai, digamos assim, fragmentando um problema que é gigante, muito grande. E você vai criando pequenos blocos e resolvendo cada bloco.
+
+93
+00:17:54.160 --> 00:18:02.680
+Ricardo Garcia: Se vocês forem ver, por exemplo, como que funciona uma Avs da vida a nível de pipelines, de desenvolvimento de dados. Aquela coisa toda, ele funciona assim.
+
+94
+00:18:02.990 --> 00:18:12.190
+Ricardo Garcia: Então a gente procura copiar os que, em teoria, têm uma tecnologia nesse sentido, mas o processo de funcionamento
+
+95
+00:18:12.190 --> 00:18:27.709
+Ricardo Garcia: do Data Ops. Mesmo com várias tecnologias dentro da Ws, ele funciona assim pô resolveu um beleza. Ele gera dentro da Ws. Ele chama isso de artefato. Então ele gera um artefato que esse artefato vai ser consumido por outro processo. E assim vai.
+
+96
+00:18:27.710 --> 00:18:46.569
+Ricardo Garcia: Então, na lógica. É isso. Eu tenho um problema ou uma situação que é muitas vezes complexa. E eu vou separar em blocos. E vou resolvendo esses blocos. E aí resolvendo esses blocos muitas vezes vai chegar à solução final, porque um é a entrada do outro e a saída vai processando.
+
+97
+00:18:46.930 --> 00:18:57.959
+Ricardo Garcia: Então é isso que eu queria comentar com vocês. Até em função do que eu vi ontem. E a gente, sendo bem sincero com vocês, lógico,
+
+98
+00:18:57.960 --> 00:19:08.329
+Ricardo Garcia: eu, pelo menos, falando da minha parte, eu me preocupo e vejo as coisas. E tento trazer ali para vocês participarem do dia a dia nosso ali, nesse sentido,
+
+99
+00:19:08.620 --> 00:19:12.910
+Ricardo Garcia: e eu achei bacana isso aí, porque tem muita gente iniciando. Também
+
+100
+00:19:12.910 --> 00:19:34.079
+Ricardo Garcia: tem muita gente que tem dificuldade logicamente, nesse sentido. Então, para trazer isso aí, meu, é natural a gente ter dificuldade. É natural, né? Tudo. A gente precisa. Tudo que a gente está vendo aqui. Isso aqui. Python Sql, visualização lógica e papapá e tal. Isso é exercício. A gente precisa exercitar isso aí.
+
+101
+00:19:34.080 --> 00:19:50.770
+Ricardo Garcia: A gente não vai aquele negócio pô. Eu trabalho com banco de dados todos os dias. Já faz anos, mas um monte de coisa. Não sei. Vem um monte de coisa chamada ela fala. Meu Deus, o que é esse troço aqui? Daí eu vou ver. E aí eu vou. Logicamente. Tenho uma flexibilidade em resolver,
+
+102
+00:19:50.770 --> 00:20:01.379
+Ricardo Garcia: mas é tudo aprendizagem. Então a gente aprende todos os dias. Então esse é um detalhe também, que eu queria falar com vocês nesse sentido, e como que a gente vai trazer isso para o nosso dia a dia. Então, beleza,
+
+103
+00:20:01.640 --> 00:20:13.500
+Ricardo Garcia: voltando aqui um pouco, a gente agora vai falar um pouco de projeto que a gente está terminando ali, para não abandonar também. Mas eu procurei fazer aqui,
+
+104
+00:20:13.930 --> 00:20:33.279
+Ricardo Garcia: deixar já preparar isso aqui. Depois eu já vou entregar ali. Pronto para vocês. Já vai ter o banco de dados. Vai ter todas as tabelas criadas ali e tal as Views, aquela coisa toda. Quando a gente está falando do projeto em si, nosso aqui deixa eu puxar para cá isso aqui
+
+105
+00:20:33.390 --> 00:20:39.140
+Ricardo Garcia: só para não trazer mais informação assim
+
+106
+00:20:43.050 --> 00:20:53.990
+Ricardo Garcia: eu fiz aqui só uns tópicos aqui. Para a gente ter outra câncer.
+
+107
+00:21:00.380 --> 00:21:07.100
+Ricardo Garcia: Beleza. Já pus aqui para a gente ir desenvolvendo o nosso projeto aqui.
+
+108
+00:21:07.150 --> 00:21:14.220
+Ricardo Garcia: Então, como eu comentei na aula passada, a ideia é montar uma estrutura de dados,
+
+109
+00:21:14.220 --> 00:21:28.929
+Ricardo Garcia: para que depois a gente desenvolva um código em Python, mesmo só para a gente entender esse modelo que a gente fez, a gente está fazendo do e commerce, de uma estrutura básica também do e commerce. Aqui a gente pode colocar muitas outras coisas.
+
+110
+00:21:28.930 --> 00:21:40.180
+Ricardo Garcia: Isso aqui é só uma estrutura inicial. Mas o objetivo aqui é vocês entenderem algumas características a nível de projeto e a nível de dados, e a nível de desenvolvimento.
+
+111
+00:21:40.180 --> 00:21:55.820
+Ricardo Garcia: Então a intenção aqui era fechar. Até eu ia fechar todas as tabelas hoje, mas não consegui. Faltou algumas. Algumas Views aqui para finalizar, mas na próxima semana já vai estar finalizado. Já vou revisar e tudo mais.
+
+112
+00:21:55.820 --> 00:22:02.109
+Ricardo Garcia: E daí? A gente já começa a desenvolvimento no Python relacionado a essa estrutura aqui.
+
+113
+00:22:02.360 --> 00:22:05.060
+Ricardo Garcia: Então tem projetos que funcionam assim.
+
+114
+00:22:05.200 --> 00:22:11.730
+Ricardo Garcia: Tem projetos que são diferentes, mas tem projetos que funcionam assim. Então, digamos assim tanto a parte de
+
+115
+00:22:11.730 --> 00:22:26.070
+Ricardo Garcia: isso aqui, digamos assim, é arquitetura. Então a gente fez lá, como a gente colocou. Deixa eu até colocar aqui de novo só para a gente. Fez essa parte da parte conceitual que a gente bateu um papo que é mais próxima do negócio.
+
+116
+00:22:26.220 --> 00:22:44.230
+Ricardo Garcia: Um diagrama de modelagem lógica, que é a estrutura inicial e a modelagem física, que é o armazenamento, que é o que a gente está fazendo aqui agora. Então a gente já está definindo como vai ser armazenado o tamanho de cada objeto e tal como vai ser utilizado e beleza dentro dessa estrutura aqui?
+
+117
+00:22:44.680 --> 00:22:50.910
+Ricardo Garcia: Eu coloquei aqui algumas características importantes que a gente não vai tratar, mas que são importantes dentro de
+
+118
+00:22:50.910 --> 00:23:07.959
+Ricardo Garcia: de todos nós que nós estamos aqui. Vamos fazer parte do projeto de desenvolvimento de entender. Hoje em dia, principalmente, é escalabilidade. Se vai ter particionamento ou não, qual o volume de dados que vai ter e qual o número de transações entre N características que a gente tem que definir
+
+119
+00:23:07.960 --> 00:23:14.589
+Ricardo Garcia: muitas vezes antes do projeto, ou no decorrer da modelagem da arquitetura de projeto.
+
+120
+00:23:14.690 --> 00:23:27.760
+Ricardo Garcia: Então, beleza. A gente parou nisso. Aqui a gente criou uma estrutura de armazenamento, e a gente também criou essa camada de visualização. Que é essa daqui? Então aqui nós temos,
+
+121
+00:23:27.850 --> 00:23:40.840
+Ricardo Garcia: com nossa camada de armazenamento, onde a gente já definiu a estrutura de armazenamento e o relacionamento entre esses objetos que a gente já definiu. Aqui a gente já tem um relacionamento. Aqui.
+
+122
+00:23:40.950 --> 00:23:44.309
+Ricardo Garcia: Aqui estão as tabelas. Aqui estão as Views, né?
+
+123
+00:23:44.500 --> 00:23:47.969
+Ricardo Garcia: E aqui a gente vai visualizar a nível de diagrama.
+
+124
+00:23:48.790 --> 00:23:59.260
+Ricardo Garcia: Então, está aqui a gente montou um diagrama. Então aqui a gente já tem a estrutura de armazenamento montada da nossa solução do E. Commerce. Então, a gente já fez isso aí.
+
+125
+00:23:59.320 --> 00:24:14.019
+Ricardo Garcia: Essa estrutura de armazenamento que a gente já fez. Ela tem os relacionamentos, que é o que a gente falou. Relacionamento é normalização. Quando você normaliza os teus dados, lembre se, normalização. Vou até escrever aqui.
+
+126
+00:24:15.790 --> 00:24:21.980
+Ricardo Garcia: Disse que não, que é uma das disciplinas que vocês estão tendo ali também.
+
+127
+00:24:22.520 --> 00:24:32.179
+Ricardo Garcia: Vocês estão tendo modelagem, né? Modelagem, eu acho, dos danos aqui, a normalização. Então é uma normalização normalização
+
+128
+00:24:34.190 --> 00:24:44.870
+Ricardo Garcia: transacional, que é essa que a gente tem. E a norma realização a analítica.
+
+129
+00:24:45.070 --> 00:24:46.809
+Ricardo Garcia: Então são essas
+
+130
+00:24:46.810 --> 00:25:06.010
+Ricardo Garcia: duas normalizações que são principais? A gente tem algumas outras que a gente pode visualizar. E tal. É muito amplo a parte de tecnologia. Mas o importante é essa aqui, a transacional e analítica puxa essa que o próprio nome a gente já está dizendo transacional. É onde eu realizo as transações no meu e commerce
+
+131
+00:25:06.010 --> 00:25:30.970
+Ricardo Garcia: estão. Venda produtos pedidos. Então isso aí é transnacional porque tem transações. Eu fecho um pedido, fecho uma venda. Eu dou entrada em produto. Então, todas as transações do meu e commerce é uma modelagem transnacional, a analítica. O que é analítica? A analítica é informações. Eu quero informações. De como estão meus clientes? Como estão minhas vendas? Como estão meus produtos. Como estão
+
+132
+00:25:30.970 --> 00:25:44.179
+Ricardo Garcia: meus pedidos? Entrega de pedido, fabricante. Enfim, eu tenho uma análise que eu estou fazendo do meu ambiente de e Commerce. É isso aí. Então, o que acontece? A gente tratou essa daqui, né?
+
+133
+00:25:44.180 --> 00:25:56.670
+Ricardo Garcia: E a analítica? A gente não definiu ainda, mas a gente deu o primeiro passo. O que é o primeiro passo. Na analítica, a transnacional. Nós vimos aqui. Nós já temos a transnacional. A transacional é essa daqui, né?
+
+134
+00:25:56.670 --> 00:26:07.320
+Ricardo Garcia: Então a gente tem o estoque. A gente tem produto produto categoria, aquela coisa toda. Então a gente viu que as maneiras que nós temos de normalizar os dados.
+
+135
+00:26:10.530 --> 00:26:13.170
+Ricardo Garcia: A normalização é aquela, né? É um
+
+136
+00:26:14.290 --> 00:26:26.650
+Ricardo Garcia: para um onde eu tenho um relacionamento para um numa tabela, por exemplo. Pode ser cliente e endereço de cliente, mas o endereço de cliente. Eu vou ter um só beleza. Então é um para um que eu faço. Assim. Um para N.
+
+137
+00:26:27.200 --> 00:26:45.729
+Ricardo Garcia: Então um para N. Eu posso ter pedido. Eu tenho um pedido onde ele tem n itens do pedido? Porque eu vendo um pedido. Eu tenho vários produtos que eu vendo no pedido. Então é um para N. Relacionamento de pedido para itens de pedido. É um para N. E eu tenho aqui um relacionamento n
+
+138
+00:26:46.440 --> 00:26:47.440
+Ricardo Garcia: para ele.
+
+139
+00:26:47.700 --> 00:27:00.589
+Ricardo Garcia: O que é o relacionamento N para N. É quando eu relaciono. Eu posso relacionar tanto para um lado quanto para o outro, como um exemplo bem simples para vocês não esquecerem mais. Como é que faz um exemplo bem simples? É um produto
+
+140
+00:27:01.680 --> 00:27:07.560
+Ricardo Garcia: e o fornecedor olha só um produto, um produto
+
+141
+00:27:07.820 --> 00:27:14.280
+Ricardo Garcia: ou um produto. Ele pode ter n fornecedores. Certo, então um produto.
+
+142
+00:27:14.900 --> 00:27:17.440
+Ricardo Garcia: Eu posso ter n fornecedores.
+
+143
+00:27:17.790 --> 00:27:20.570
+Ricardo Garcia: Por um outro lado, eu posso.
+
+144
+00:27:20.730 --> 00:27:31.510
+Ricardo Garcia: Um fornecedor pode fornecer mais de um produto. Então eu tenho N produtos aqui e aqui. N. Fornecedores também. O que significa isso aí
+
+145
+00:27:31.700 --> 00:27:50.300
+Ricardo Garcia: eu posso fazer relacionamento N para N. Então eu tenho um produto que pode ser entregue por mais de um fornecedor, e eu tenho um fornecedor que pode fornecer um n. Produtos ali dentro também então eu tenho relacionamento nas duas direções. Eu não tenho só um para N um para um. Eu tenho N para N.
+
+146
+00:27:50.300 --> 00:27:57.419
+Ricardo Garcia: Um fornecedor pode entregar vários produtos, pode fornecer vários produtos e um produto pode ser fornecido por N fornecedores.
+
+147
+00:27:57.420 --> 00:28:02.300
+Ricardo Garcia: É assim que funciona. São essas três normalizações que existem aqui.
+
+148
+00:28:02.360 --> 00:28:09.540
+Ricardo Garcia: Quando você fala em normalizar, esse aqui só tem um segredinho. Um truquinho para não se confundir,
+
+149
+00:28:10.000 --> 00:28:14.210
+Ricardo Garcia: para não se confundir. O que é isso aqui? Se eu tenho produto
+
+150
+00:28:15.210 --> 00:28:17.359
+Ricardo Garcia: e eu tenho lá o Id do produto.
+
+151
+00:28:17.820 --> 00:28:20.939
+Ricardo Garcia: Eu não posso colocar aqui o Id do fornecedor,
+
+152
+00:28:22.300 --> 00:28:36.969
+Ricardo Garcia: porque senão eu vou ter que repetir o cadastro do produto aqui. Isso não é o que eu quero. Então, nesse caso, aqui. Que fornecedor? A mesma coisa. Só que fornecedor. Eu tenho um cara aqui. E aí o fornecedor.
+
+153
+00:28:38.230 --> 00:28:57.690
+Ricardo Garcia: Então o que eu vou fazer aqui? Se eu posso um produto, eu tenho um produto aqui. Ele pode ser fornecido por mais de um fornecedor. Eu não posso relacionar os dois objetos direto. O produto com o fornecedor. Eu tenho que ter uma tabela aqui. Eu tenho que ter um outro objeto. Eu tenho que tirar o Id do fornecedor daqui. Não vai ser relacionado por aqui.
+
+154
+00:28:57.800 --> 00:29:03.600
+Ricardo Garcia: Eu tenho que ter uma tabela que a gente chama uma tabela de ligação. É uma tabela de ligação.
+
+155
+00:29:03.600 --> 00:29:19.089
+Ricardo Garcia: Por quê? Porque ele vai pegar a nível de produto e ele vai pegar n. Fornecedores daquele produto sem nenhum problema. Então o que eu vou fazer aqui? Eu vou criar uma tabela intermediária que vai ser o meu N para N. O que eu tenho que ter nessa tabela vai ser produto
+
+156
+00:29:20.490 --> 00:29:21.690
+Ricardo Garcia: fornecedor.
+
+157
+00:29:22.570 --> 00:29:26.459
+Ricardo Garcia: O que eu vou ter nessa tabela? Eu vou ter o Id do produto
+
+158
+00:29:26.870 --> 00:29:45.190
+Ricardo Garcia: e o Edi no fornecedor. Pronto, eu fazendo isso daí eu posso ter n fornecedores para n produtos e posso fazer aqui o que for, e isso normalmente ocorre em várias outras. Esse aqui é um exemplo bem simples, né? Mas que é para a gente visualizar isso aí. Mas isso pode ocorrer em N.
+
+159
+00:29:45.990 --> 00:30:04.530
+Ricardo Garcia: Essas seriam as chaves primárias de cada tabela. E isso exatamente. O Matheus comentou ali. Pode ser? É isso. Aí eu tenho o Id do produto e o Id do fornecedor, que são o quê? As chaves primárias do produto e do fornecedor show de bola. É isso aí. Daí aqui eu posso fazer. Até ó
+
+160
+00:30:04.840 --> 00:30:09.100
+Ricardo Garcia: uma é ficar uma foringe que com a tabela de produto
+
+161
+00:30:10.240 --> 00:30:12.789
+Ricardo Garcia: e uma foringe, que com a
+
+162
+00:30:13.070 --> 00:30:16.660
+Ricardo Garcia: tabela de fornecedor aí não tem erro, né?
+
+163
+00:30:16.660 --> 00:30:35.449
+Ricardo Garcia: Se eu colocar aqui o produto, vai ter que existir na tabela de produto. E se eu colocar o fornecedor aqui? Ufk, ele vai ter que existir como fornecedor também. Esse é o segredo. Quando você, fala em N para N. Quando falar em N. Para N, que tem vários relacionamentos tanto de um lado quanto do outro. Você já sabe que você vai ter que fazer uma tabela de ligação.
+
+164
+00:30:35.780 --> 00:30:49.799
+Ricardo Garcia: E aí, a partir desse momento que você já sabe aí, beleza, aí já foi. Já entendeu o problema. Você entendeu a lógica de funcionamento. E aí, show de bola, põe uma tabela de ligação ali e o resto deixa rolar. Não vai ter problema nenhum.
+
+165
+00:30:49.840 --> 00:31:02.310
+Ricardo Garcia: Então é bem tranquilo. A gente não tinha explicado o N para n aqui, mas é um exemplo bem simples aqui, aqui. Nesse caso, aqui nosso, a gente utiliza aqui na produto, categoria
+
+166
+00:31:02.880 --> 00:31:19.489
+Ricardo Garcia: aqui no produto, categoria um produto pode participar em várias categorias e a mesma coisa: o produto, o produto pode estar envolvido em várias categorias. Eu tenho várias categorias que envolvem o produto. Então o que eu fiz aqui é produto categoria
+
+167
+00:31:19.490 --> 00:31:35.849
+Ricardo Garcia: Id do produto, e o Id da categoria. E tem uma Forrest para o produto e para a categoria pronto. E aí o que eu estou falando? Eu estou falando que um produto pode pertencer a n categorias. E uma categoria pode ter mais de um produto também. É isso aí, tá.
+
+168
+00:31:36.350 --> 00:31:40.879
+Ricardo Garcia: Então é só um exemplo dos modos que nós temos
+
+169
+00:31:40.900 --> 00:31:58.479
+Ricardo Garcia: de normalização. Quando a gente fala em normalização transacional, nós temos transações. A analítica é outra visão que a gente tem que ter. Mas só esse aqui. O objetivo era esse. Então, beleza, isso aqui a gente já definiu. Reparem que aqui, ó, eu
+
+170
+00:31:58.480 --> 00:32:13.389
+Ricardo Garcia: criei várias Views, que são objetos também de banco de dados. Todos os bancos de dados relacionais e até bancos de dados não relacionais, têm objeto, que é uma View? O que é essa View? Deixa eu só colocar aqui rapidinho
+
+171
+00:32:14.260 --> 00:32:33.570
+Ricardo Garcia: aqui. Eu tenho várias Views aqui que eu criei. O que é essa View aqui? Nesse nosso exemplo específico, ela é a camada. Aqui nós temos a camada de armazenamento que é esse daqui. Então acho que a gente tem as nossas tabelas. E aqui nós temos uma camada de visualização,
+
+172
+00:32:33.730 --> 00:32:52.889
+Ricardo Garcia: o que significa visualização. Essa visualização, digamos assim, é uma camada introdutória de análise do nosso banco de dados. Do que a gente tem no banco de dados. É alguma coisa que nós vamos entregar como nossa solução para o nosso cliente, para o nosso usuário, para quem for. O que significa isso aí?
+
+173
+00:32:52.920 --> 00:33:00.269
+Ricardo Garcia: Ele é um objeto que não é materializado no banco. Ele é simplesmente essa definição. Aqui,
+
+174
+00:33:01.860 --> 00:33:05.049
+Ricardo Garcia: deixa eu pôr aqui. Acho que é melhor visualizar por aqui.
+
+175
+00:33:07.490 --> 00:33:18.259
+Ricardo Garcia: Aqui eu tenho as Views. Reparem que a tabela em si é materializada no banco. Você armazena isso aí fisicamente no banco,
+
+176
+00:33:18.420 --> 00:33:37.159
+Ricardo Garcia: a View. Os dados não são armazenados. Por quê? A View é simplesmente uma estrutura que a gente criou. Mas essa estrutura. Vai buscar os dados aonde? Nas tabelas. É isso que ele faz. Então a gente define uma estrutura que se chama Views ou vista
+
+177
+00:33:37.160 --> 00:33:38.650
+Ricardo Garcia: e essas Views.
+
+178
+00:33:38.650 --> 00:33:48.170
+Ricardo Garcia: Ele tem uma estrutura onde ele só armazena essa estrutura de definição da consulta. Mas o que ele faz, ele busca os dados
+
+179
+00:33:48.170 --> 00:34:04.570
+Ricardo Garcia: nas tabelas onde os dados estão armazenados. É isso que ele faz. Então, a View é utilizada muitas vezes para visualizar ou trazer um filtro de dados com relação ao que o usuário ou o cliente vai querer visualizar os nossos dados.
+
+180
+00:34:04.810 --> 00:34:05.810
+Ricardo Garcia: Exemplo,
+
+181
+00:34:05.990 --> 00:34:14.400
+Ricardo Garcia: olha só como é tranquilo. Eu criei uma view aqui que é categoria faturamento. Então deixa eu dar uma olhada nela aqui.
+
+182
+00:34:16.030 --> 00:34:24.419
+Ricardo Garcia: Eu vim aqui. Ó categoria faturamento. Ó, eu defini ela aqui. A definição dela está aqui.
+
+183
+00:34:25.210 --> 00:34:30.589
+Ricardo Garcia: É um Select que eu faço aqui. E o faturamento? Eu faço
+
+184
+00:34:30.590 --> 00:34:41.819
+Ricardo Garcia: juntando várias tabelas. Eu tenho item, pedido, produto, categoria categoria aqui e tal. Então eu faço. E tudo que está um status pago e enviado, né?
+
+185
+00:34:41.820 --> 00:34:52.270
+Ricardo Garcia: Então eu faço uma consulta, que é uma estrutura de código, mas isso aqui na verdade, é só essa estrutura aqui.
+
+186
+00:34:52.270 --> 00:35:12.190
+Ricardo Garcia: O que ele faz. Ele vai buscar os dados realmente aonde estão armazenados, que é dentro das tabelas. Então, quando eu coloco a minha solução, a minha aplicação para trazer essa informação. A minha solução não vai bater lá diretamente lá na tabela. Pedido e tal. O que ele vai fazer? Ele vai.
+
+187
+00:35:12.190 --> 00:35:25.040
+Ricardo Garcia: Navio categoria faturamento e vai buscar os dados que eu tenho lá dentro. Então eu fiz lá por acessórios, pelas categorias smartphones, notebooks e tal. E eu tenho os valores de faturamento
+
+188
+00:35:25.250 --> 00:35:40.060
+Ricardo Garcia: de cada categoria. É isso que significa essa instrução aqui que eu passei para ele. Então essa instrução que eu criei. Ele vai buscar essas informações na tabela e já me traz aqui os dados calculados. Aí, tudo certinho
+
+189
+00:35:40.060 --> 00:36:00.100
+Ricardo Garcia: essas Views aqui. Por isso que elas são Views. Elas é uma camada de visualização onde permite a gente criar uma estrutura que já traga os dados ali estruturados, já que ele vai buscar lá dentro nas tabelas. E isso facilita bastante. Por quê? Porque a gente vai colocar na nossa aplicação. E aí ele vai ter todas essas informações aí dentro.
+
+190
+00:36:00.110 --> 00:36:08.820
+Ricardo Garcia: Então, na aplicação, o correto seria as Views e não o Select. Isso, ó, o Gabriel comentou ali. Então, na aplicação, o correto seria usar views e não o Select?
+
+191
+00:36:09.320 --> 00:36:14.320
+Ricardo Garcia: Essa é uma pergunta não é simples de responder, mas a gente vai responder. Ela
+
+192
+00:36:14.830 --> 00:36:20.940
+Ricardo Garcia: como que a gente vai responder isso aqui a gente vai responder assim, dentro do nosso exemplo,
+
+193
+00:36:20.970 --> 00:36:40.399
+Ricardo Garcia: como eu queria mostrar aqui a camada de armazenamento e a camada de visualização, que é a camada de visualização, entrega e responde. Perguntas do nosso usuário, do nosso negócio do que for. Então a gente modelou dessa forma no próprio banco de dados.
+
+194
+00:36:40.400 --> 00:36:50.250
+Ricardo Garcia: Tanto o armazenamento como a camada de visualização. Nós optamos nesse projeto específico, fazer isso pela camada de banco de dados.
+
+195
+00:36:50.250 --> 00:37:08.490
+Ricardo Garcia: Agora, respondendo a pergunta do Gabriel ali tem projetos que o arquiteto fala assim? Não no banco de dados. Nós só vamos armazenar a estrutura de armazenamento. Essas consultas vão ser feitas a nível de aplicação. E aí você não tem essas views aqui,
+
+196
+00:37:08.490 --> 00:37:09.630
+Ricardo Garcia: beleza, Gabriel,
+
+197
+00:37:10.320 --> 00:37:29.149
+Ricardo Garcia: só para a gente deixar claro que existem várias formas do arquiteto definir como vai ser feita essas consultas. Então ele pode definir que seja no nível de banco de dados através das Views, mesmo, ou se não, ele puxa essa visualização
+
+198
+00:37:29.150 --> 00:37:36.270
+Ricardo Garcia: para a camada de aplicação. Daí ele faz isso a nível de código, mesmo daí com a linguagem que for utilizada ali
+
+199
+00:37:36.270 --> 00:37:37.170
+Ricardo Garcia: beleza.
+
+200
+00:37:37.890 --> 00:37:39.680
+Ricardo Garcia: Mas no nosso exemplo.
+
+201
+00:37:42.790 --> 00:37:49.990
+Ricardo Garcia: Ah, beleza. Na verdade, o propósito em si das Views. É exatamente isso. É você
+
+202
+00:37:49.990 --> 00:38:08.320
+Ricardo Garcia: ter, digamos assim, trazer os dados específicos onde o usuário, ele vai simplesmente, digamos assim, acessar aquela informação que a Vil está filtrando já. Então ele não precisa acessar toda a tabela. Não precisa acessar todas as,
+
+203
+00:38:08.530 --> 00:38:32.279
+Ricardo Garcia: digamos assim. Toda a estrutura da tabela para ele buscar os dados dele. Então a View já faz essa ligação, digamos assim, montando essa estrutura, deixando pronta para que a aplicação consulte pela View. E isso também é uma forma de segurança. E uma forma de otimizar por quê? Porque pela View. Você só vai buscar realmente os dados que são realmente necessários
+
+204
+00:38:32.330 --> 00:38:39.929
+Ricardo Garcia: para aquela chamada que está fazendo a aplicação, então depende muito da escolha do próprio arquiteto.
+
+205
+00:38:39.930 --> 00:38:51.940
+Ricardo Garcia: Se você for fazer isso a nível de aplicação, beleza também. Só que ele vai ter que criar vários microserviços que fazem essa chamada específica dentro da estrutura de armazenamento.
+
+206
+00:38:51.940 --> 00:39:01.800
+Ricardo Garcia: Se, digamos assim, ele vai trabalhar com uma arquitetura que não vai ter tantos microserviços, alguma coisa assim. Aí ele define isso a nível de banco de dados e beleza.
+
+207
+00:39:01.810 --> 00:39:18.489
+Ricardo Garcia: O que é importante aqui a gente entender é que, quando eu faço o armazenamento aqui e coloco as Views, que a aplicação vai através da View. Eu estou jogando a responsabilidade de buscar os dados, o esforço de buscar os dados no servidor de banco de dados.
+
+208
+00:39:18.590 --> 00:39:27.970
+Ricardo Garcia: Quando eu faço isso a nível de aplicação, eu compartilho esse esforço com a própria aplicação, então isso também é importante a gente entender
+
+209
+00:39:27.970 --> 00:39:52.680
+Ricardo Garcia: quando a gente define todos os objetos no banco de dados. A gente está atribuindo essa característica. O esforço que ele tem de trazer os dados ou de processar esses dados totalmente no servidor de banco de dados. A aplicação vai ficar simplesmente esperando o resultado. E quando a gente faz isso, a nível de aplicação, existe uma forma diferente, um cash e tal, que isso é compartilhado também com a aplicação.
+
+210
+00:39:52.680 --> 00:39:57.480
+Ricardo Garcia: E isso retira um pouco o peso de um servidor de um servidor de banco de dados
+
+211
+00:39:57.570 --> 00:40:16.380
+Ricardo Garcia: beleza. Então, por isso que não é simples de responder, justamente por isso, porque tem n características envolvidas. E aí depende muito, realmente da arquitetura que os arquitetos ou o negócio vai querer definir com relação a isso, mas, basicamente é isso. Beleza.
+
+212
+00:40:17.530 --> 00:40:21.920
+Ricardo Garcia: A gente, na verdade, quando a gente trabalha assim,
+
+213
+00:40:21.920 --> 00:40:38.100
+Ricardo Garcia: as arquiteturas hoje em dia têm uma flexibilidade muito grande em função da própria tecnologia de desenvolvimento. Então as arquiteturas, dependendo que você for utilizar. Vou utilizar Python ou C Sharp golem. Enfim,
+
+214
+00:40:38.100 --> 00:40:59.349
+Ricardo Garcia: então cada estrutura, cada linguagem de programação, você pode utilizar vários recursos nesse sentido. Até a nível de banco de dados, utiliza um redis ali e tal que é um banco de dados em memória. Enfim, então a arquitetura vai definir muitas coisas com relação à utilização do banco de dados.
+
+215
+00:40:59.370 --> 00:41:01.470
+Ricardo Garcia: Nós temos projetos ali
+
+216
+00:41:01.470 --> 00:41:25.110
+Ricardo Garcia: que realmente só tem o armazenamento. Essa parte de visualização aqui é toda feita pela aplicação. A gente não faz nada. A gente só administra realmente os servidores onde tem o armazenamento, mas visualização é por conta da aplicação. Nesse nosso caso, é só para a gente entender o funcionamento. E como que ele pode trazer os dados já processados aqui para nós.
+
+217
+00:41:25.110 --> 00:41:34.129
+Ricardo Garcia: E o que estão dentro dessa tabela. Na verdade, a nossa camada de visualização. Ele responde perguntas do negócio, por exemplo,
+
+218
+00:41:34.260 --> 00:41:38.749
+Ricardo Garcia: aqui. Nesse caso, deixa eu fazer até por aqui para. Fica mais fácil para vocês verem.
+
+219
+00:41:41.770 --> 00:41:58.269
+Ricardo Garcia: Eu tenho a categoria beleza. Eu tenho aqui as informações que eu já fiz. A carga. Eu vou passar para vocês a carga também das tabelas, para vocês testarem. Então a categoria faturamento. Então ele responde: Aqui qual é o faturamento por categoria.
+
+220
+00:41:58.270 --> 00:42:17.779
+Ricardo Garcia: Aqui, por exemplo, categoria e participação. Então eu tenho o valor faturado por categoria. E tenho. Qual é a participação dele a nível de faturamento. Então é uma outra pergunta que é feita pelo negócio. E a gente está respondendo dessa forma. Nesse sentido, o que a gente está fazendo. A gente está usando uma lógica
+
+221
+00:42:17.780 --> 00:42:35.240
+Ricardo Garcia: para responder às perguntas. Então aqui a gente tem que responder o valor das categorias com relação ao faturamento aqui a categoria valor faturado. Mas a participação que eu tenho de cada categoria com relação ao faturamento.
+
+222
+00:42:35.240 --> 00:42:54.190
+Ricardo Garcia: Aqui, por exemplo, eu tenho clientes ativos. Então eu estou respondendo a pergunta aqui justamente poxa. Mas quais são os clientes que eu tenho ativos hoje, né? E a data de cadastro. Então eu tenho essas informações. E para cada view que eu estou visualizando aqui, eu estou respondendo a uma pergunta do negócio. É isso aí, tá.
+
+223
+00:42:54.190 --> 00:43:13.850
+Ricardo Garcia: Então depois eu vou finalizar as outras Views ali também. Mas o objetivo do exercício é justamente esse. E cada view dessa daqui, que é a visualização que responde uma pergunta de negócio dentro da lógica que a gente precisa da entrega da solução.
+
+224
+00:43:14.540 --> 00:43:24.519
+Ricardo Garcia: Eu posso fazer n perguntas. Daí uma pergunta X, Y, entender tal coisa. Estatísticas e tal, posso montar. E essa estrutura aqui montada
+
+225
+00:43:24.520 --> 00:43:36.730
+Ricardo Garcia: aí. Aqui, por exemplo, pedidos e produtos que eu tenho aqui. Quantidade de pedidos, valor unitário, valor total. Quantos pedidos foram feitos aqui e entregues a nível de produto.
+
+226
+00:43:36.730 --> 00:43:39.780
+Ricardo Garcia: Então eu respondo as perguntas
+
+227
+00:43:39.810 --> 00:43:51.369
+Ricardo Garcia: que eu necessito responder para o meu negócio, para o meu usuário entender como é que está funcionando a plataforma de produtos vendidos. Enfim, tenho toda essa infra nesse sentido
+
+228
+00:43:51.370 --> 00:44:05.310
+Ricardo Garcia: agora aqui. Ó, então, é armazenamento. Só com esse armazenamento, com essas tabelas aqui, com essa estrutura simplificada que a gente fez. Olha quantas perguntas a gente pode responder para o negócio.
+
+229
+00:44:05.310 --> 00:44:08.660
+Ricardo Garcia: Então, dentro da lógica,
+
+230
+00:44:08.660 --> 00:44:32.039
+Ricardo Garcia: quando a gente faz isso aqui, a gente não está trabalhando. A gente não está falando em desenvolvimento. A gente está falando em lógica. A gente está falando em negócio. A gente quer responder determinadas perguntas para o nosso negócio para o nosso cliente, para o nosso usuário. Então é isso que eu faço. Eu preparei essa estrutura para responder essas perguntas dentro do que dentro de uma estrutura de armazenamento que a gente tem lá.
+
+231
+00:44:32.040 --> 00:44:33.599
+Ricardo Garcia: É isso aí, tá.
+
+232
+00:44:34.010 --> 00:44:53.420
+Ricardo Garcia: Então, aqui a gente fecha essa parte de armazenamento. A gente entendeu também como fazer a parte relacional do um para um um para n n para n também a nível de armazenamento e as views, que é a camada de visualização que a gente tem ali. E agora essas Views. Aqui
+
+233
+00:44:53.420 --> 00:45:08.180
+Ricardo Garcia: a gente pode simplesmente pela aplicação chamar diretamente a View. Não precisa fazer mais o Cerc nem nada. Você chama a View lá ou através do teu framer de desenvolvimento. Você já chama a View e ele entrega os dados prontos ali, sem nenhum problema. É assim que funciona. Beleza.
+
+234
+00:45:08.780 --> 00:45:15.520
+Ricardo Garcia: Uma diferença que o Séric é meio informal, pois é um comando que fica lá à deriva no banco de dados e tem que selecionar
+
+235
+00:45:16.050 --> 00:45:19.989
+Ricardo Garcia: minha. Viu? Já é meio que uma tabelinha que já fica lá para,
+
+236
+00:45:21.500 --> 00:45:27.100
+Ricardo Garcia: hum, cara, eu não sei. Assim, Pedro, deixa eu tentar aqui.
+
+237
+00:45:27.700 --> 00:45:33.679
+Ricardo Garcia: Explicar aqui, cara. É uma diferença que o Select é meio informal. Na verdade,
+
+238
+00:45:35.110 --> 00:45:42.699
+Ricardo Garcia: pegar uma outra aqui. Na verdade, esse Select aqui é a definição da View, a definição da View.
+
+239
+00:45:43.060 --> 00:46:01.229
+Ricardo Garcia: Se eu tenho uma View nesse caso, aqui, categoria faturamento. Ele já responde uma pergunta da minha aplicação, que é o faturamento por categoria show de bola. Então, ao invés da aplicação, fazer essa select para entregar esses dados, a aplicação vai chamar diretamente a View
+
+240
+00:46:01.250 --> 00:46:09.910
+Ricardo Garcia: com isso. Ele já chama. E o banco de dados vai processar e entregar esses dados aí, sem problema nenhum com isso, também a gente consegue filtrar
+
+241
+00:46:09.910 --> 00:46:25.770
+Ricardo Garcia: o acesso a essas tabelas, de pedir um item e tal aquela coisa toda a estrutura já está pronta nesse sentido. Então o esforço que tem relacionado à aplicação é bem menor. Você só direciona aqui a View e deixa o banco de dados tratar os dados ali. Ele vai trazer.
+
+242
+00:46:26.060 --> 00:46:41.079
+Ricardo Garcia: E deixa eu ver ali. Por questões de segurança, as Views são mais isso exato. Exatamente. As views são a nível. Nós estamos falando só no tema de segurança. Se a gente falar no tema de segurança. Uma View é mais segura. Por quê?
+
+243
+00:46:41.080 --> 00:47:05.099
+Ricardo Garcia: Porque nessa tabela aqui pedido item. Eu não vou acessar praticamente nada. Eu vou acessar simplesmente uma coluna chamada valor total. O resto eu não vou acessar o pedido. Também não o produto categoria também não. Então eu bloqueio o acesso a uma série de informações que existem naquelas tabelas. Eu simplesmente entrego o que é possível visualizar
+
+244
+00:47:05.100 --> 00:47:20.410
+Ricardo Garcia: isso. O que acontece dá um ganho maior, porque eu só vou buscar aquelas informações realmente necessárias. E o usuário em si só vai ter acesso àquelas informações que foram filtradas. Então, a nível de segurança e a nível de performance, também podem ajudar nesse sentido.
+
+245
+00:47:20.600 --> 00:47:22.030
+Ricardo Garcia: É isso aí.
+
+246
+00:47:23.180 --> 00:47:30.659
+Ricardo Garcia: Deixa eu ver. Ali peraí determinadas tabelas quando comparado ao acesso direto ao banco de dados. Isso aí é. O Alexandre colocou. É isso aí.
+
+247
+00:47:31.090 --> 00:47:46.849
+Ricardo Garcia: Deixa eu ver. Ali já é meio que uma tabelinha. Isso e a viu, na verdade, só lembrando pessoal que a viu. Não é uma estrutura armazenada. Eu tenho características, dependendo do banco de dados
+
+248
+00:47:46.850 --> 00:48:00.290
+Ricardo Garcia: de Views materializados. Mas isso é uma outra história. Não precisamos falar nisso aqui, mas essas Views aqui. É simplesmente essa estrutura. Os dados realmente estão nas tabelas aqui que a gente definiu
+
+249
+00:48:01.750 --> 00:48:06.630
+Ricardo Garcia: a View. É só como a gente chama hoje em dia? Muito é o
+
+250
+00:48:07.570 --> 00:48:11.760
+Ricardo Garcia: agora. Não me lembro. Não recordo o tema que a gente usa e a gente usa bastante.
+
+251
+00:48:12.000 --> 00:48:13.460
+Ricardo Garcia: Aham.
+
+252
+00:48:15.170 --> 00:48:31.399
+Ricardo Garcia: Enfim, esqueci. Não faz mal, mas é só estrutura. Lembrem, isso viu? É só estrutura e na verdade, o armazenamento está nas tabelas. Ali é o Metadata. O metadata da consulta em si, tem redução do consumo de construção indireta. Navio,
+
+253
+00:48:31.580 --> 00:48:35.299
+Ricardo Garcia: pode ser limitado e decolar no banco
+
+254
+00:48:38.330 --> 00:48:42.100
+Ricardo Garcia: pode ser evitado decolar o banco.
+
+255
+00:48:42.680 --> 00:48:53.850
+Ricardo Garcia: Então, na verdade, a View tem que ter uma boa performance, porque ela só vai buscar realmente os dados que são realmente necessários. Muitas vezes,
+
+256
+00:48:53.850 --> 00:49:00.750
+Ricardo Garcia: quando você vai buscar diretamente numa tabela, pode ser que às vezes ele traga outros dados
+
+257
+00:49:00.750 --> 00:49:16.930
+Ricardo Garcia: que não são necessárias, ou alguma informação de outra coluna e tal. Alguma coisa assim. A view a nível de performance é muito similar com você realmente buscar os dados nas próprias tabelas? Porque, na verdade, os planos de execução vão ser muito parecidos.
+
+258
+00:49:16.940 --> 00:49:34.939
+Ricardo Garcia: Eu acho que o que envolve aqui a View. É justamente essa facilidade de você já ter isso aqui montado. Ele já pode deixar essa View também na memória. Ele pode fazer um trabalho melhor na memória, otimizando nesse sentido, a nível de plano de execução
+
+259
+00:49:34.940 --> 00:49:43.509
+Ricardo Garcia: e a nível de segurança, realmente de trazer os dados que somente aqueles dados podem ser acessados através da aplicação através da View.
+
+260
+00:49:43.510 --> 00:49:54.370
+Ricardo Garcia: Então tem características que podem melhorar o desempenho podem melhorar, porque ele vai trazer simplesmente os dados relacionados àquela consulta específica.
+
+261
+00:49:54.370 --> 00:50:13.940
+Ricardo Garcia: Pode subir isso a nível de plano de execução e deixar num Cast. Já também pode ter lá num plano de execução. E deixar essa informação lá pode ajudar na performance. Tudo depende realmente da utilização que a gente vai fazer, mas sim que é possível. Então, só para responder. Tem redução de consumo de processamento.
+
+262
+00:50:13.940 --> 00:50:31.729
+Ricardo Garcia: Pode ajudar no consumo, também, né? Com isso pode evitar que o banco colhe exatamente. Pode evitar uma sobrecarga no banco também. Mas isso também. Renato é muito relativo, tá? Isso tem que ser testado, né? Porque você tem uma série de recursos de processamento que você precisa muitas vezes
+
+263
+00:50:32.080 --> 00:50:34.059
+Ricardo Garcia: você tem. Por exemplo,
+
+264
+00:50:34.060 --> 00:50:58.110
+Ricardo Garcia: a gente não entrou aqui em nível de performance e tal. Não é esse o tema. Agora é simplesmente mostrar essa estrutura. Mas a gente teria que fazer um levantamento de performance, criação de índices, ver se você precisa particionar essas tabelas, porque às vezes a View aqui é simplesmente um metadata, uma estrutura. Mas essas tabelas aqui podem ser gigantes. Elas estão particionadas. E daí, quando você faz essa consulta pela View.
+
+265
+00:50:58.110 --> 00:51:21.449
+Ricardo Garcia: Isso é transparente para a aplicação. A aplicação não vê como está armazenado? Não vê nada, mas nós por trás a nível de banco de dados. Já estruturamos toda a estrutura de tabelas ali de índices a nível de atingir a melhor performance possível também nesse sentido, a gente não entrou nesse mérito, porque acho que não vem ao caso aqui agora, mas realmente
+
+266
+00:51:21.450 --> 00:51:37.550
+Ricardo Garcia: pode ter uma redução também a nível de performance e, principalmente, que a View aqui, ele deixa toda essa parte de trás de armazenamento de estrutura que nós definimos como transparente para a aplicação, então ajuda bastante também nesse sentido.
+
+267
+00:51:38.190 --> 00:51:56.299
+Ricardo Garcia: Beleza pessoal. Não sei se eu consegui responder tudo, porque as perguntas. Assim, elas muitas vezes não têm uma resposta. São complexas. Tudo isso tem outras características também. Que a gente tem que avaliar também, né? Beleza valeu. Valeu, Alexandre.
+
+268
+00:51:56.300 --> 00:52:13.950
+Ricardo Garcia: Então aqui é simplesmente uma introdução à estrutura de modelagem do banco de dados. A gente tem o armazenamento e tem as views ali, que é a nossa camada de visualização. Depois, por trás disso, a nível de performance e tal Putz dá para definir uma série de coisas aí.
+
+269
+00:52:14.280 --> 00:52:29.619
+Ricardo Garcia: Mas eu acho que isso aí vocês também. Com o tempo, vão vendo esses fatores que vão trazendo a parte de performance, criação de índices. Como funciona os índices, e aí a gente vai descrevendo um pouco mais o funcionamento a nível de banco de dados.
+
+270
+00:52:30.020 --> 00:52:34.709
+Ricardo Garcia: Mas é isso. Então, essa estrutura legal. Então faltam só algumas Views aqui
+
+271
+00:52:34.710 --> 00:52:59.650
+Ricardo Garcia: para finalizar. E daí a gente já na próxima aula, a gente já pode começar a desenvolver o projeto em Python. Mesmo um detalhe importante é que é bacana também, que, quando a gente começa a fazer essas perguntas aqui, há clientes valiosos e tal. Quais os produtos que estão com estoque baixo, a movimentação de estoque, saldo de estoque.
+
+272
+00:52:59.650 --> 00:53:16.339
+Ricardo Garcia: A gente começa a entender como está armazenada o nosso armazenamento. Como é que a gente criou aquela estrutura de armazenamento, e a gente vai ajustando também. Isso é uma das coisas que eu ia comentar com vocês. Ainda bem lembrado nesse sentido
+
+273
+00:53:16.340 --> 00:53:40.230
+Ricardo Garcia: muitas vezes a gente não vai acertar na primeira o negócio. Ah, pô isso aqui. Já fiz a modelagem. Deu tudo certo. Não aí. Quando você começa a desenvolver o que o negócio pede. Eles pediram lá pedidos por produtos, aquela coisa toda. E aí você vai vendo e fala. Puxa, mas espera aí. Isso aqui. A gente precisa melhorar aqui. Preciso criar uma outra tabela. Enfim, você começa a ajustar o teu desenho. A tua
+
+274
+00:53:40.230 --> 00:53:59.460
+Ricardo Garcia: parte de código ali também. Então é natural que a gente vá ajustando isso à medida que vai desenvolvendo o projeto em si. Muitas vezes, não é? Na primeira que a gente vai acertar, a gente tem que ir ajustando e vendo, e aí desenvolvendo a gente lança uma primeira versão. E depois dessa versão, você vai construindo
+
+275
+00:53:59.460 --> 00:54:01.500
+Ricardo Garcia: toda uma solução em cima, né?
+
+276
+00:54:01.780 --> 00:54:26.509
+Ricardo Garcia: Então, beleza pessoal, a gente parou aqui. Criação da estrutura de armazenamento. Ah, perdão. Essa aqui, né? Criação da camada de visualização. Então pensem que todas essas etapas. A gente já fez o projeto. A gente já definiu uma série de coisas: requisitos. A gente já desenhou. Falamos da estrutura de negócio agora do armazenamento e tudo. E aí a gente já fez a carga inicial de dados. Eu já deixei pronto aqui para vocês também.
+
+277
+00:54:26.670 --> 00:54:34.030
+Ricardo Garcia: E a gente está nessa parte aqui. Então isso aqui a gente já fez. E eu vou mostrar para vocês o que eu vou passar para vocês depois
+
+278
+00:54:34.150 --> 00:54:44.820
+Ricardo Garcia: o que eu vou passar para vocês depois aqui, eu vou passar justamente esse banco de dados que já está aqui. Então deixa eu fechar ele aqui. Eu vou passar o banco de dados.
+
+279
+00:54:44.950 --> 00:54:45.780
+Ricardo Garcia: Falei,
+
+280
+00:54:47.790 --> 00:54:55.760
+Ricardo Garcia: o banco de dados está aqui, e daí? Eu já. E mesmo. Assim eu vou passar os scripts aqui. Já deixei pronto aqui para vocês.
+
+281
+00:54:55.890 --> 00:55:14.300
+Ricardo Garcia: E é o jeito que mais ou menos eu faço. Já fiz em vários projetos aqui. Então eu tenho o zero aqui, que é a estrutura de tabelas. Esse aqui é o script que é a hora que vocês executarem. É só colocar lá dentro do e executa. E ele executa lá e cria toda a estrutura. Eu já tenho as estruturas criadas aqui
+
+282
+00:55:14.440 --> 00:55:17.280
+Ricardo Garcia: só para vocês verem aqui. Eu vou mostrar aqui para vocês.
+
+283
+00:55:21.870 --> 00:55:30.660
+Ricardo Garcia: Já criei aqui para vocês. Então vocês vão ter as tabelas ali e já vão ter a estrutura montada aqui também. Beleza.
+
+284
+00:55:30.780 --> 00:55:50.179
+Ricardo Garcia: Aí tem. Aqui a carga de dados inicial. Então eu já montei ali para vocês a carga de dados para vocês já terem as informações para vocês testarem já olharem e tal, e já entenderem como é que funciona. Já para ter alguns dados, para visualizar.
+
+285
+00:55:50.180 --> 00:56:12.260
+Ricardo Garcia: Normalmente, quando a gente faz um projeto, alguma coisa. Então a gente faz isso. Monta uma estrutura, já desenvolve uma carga de dados inicial para fazer essa carga. O pessoal começar a trabalhar já, né? E aí eu fiz uma carga de dados complementar e fiz aqui a camada de visualização e visualização complementar, ó que também já está pronta aqui. Então tem todas as views aqui. Essas views
+
+286
+00:56:12.260 --> 00:56:14.240
+Ricardo Garcia: são as que estão lá, né?
+
+287
+00:56:14.240 --> 00:56:18.710
+Ricardo Garcia: Para a gente para aqui. Está dentro do cadê.
+
+288
+00:56:20.660 --> 00:56:22.720
+Ricardo Garcia: Que são essas views que estão aqui, né?
+
+289
+00:56:25.100 --> 00:56:39.220
+Ricardo Garcia: Então toda essa estrutura aqui já está montada. E também está em scripts ali que eu vou passar para vocês. Para vocês terem o laboratório de vocês irem montando ali. É bem bacana para vocês já terem essa estrutura aqui. Ó,
+
+290
+00:56:40.220 --> 00:56:58.939
+Ricardo Garcia: dá para visualizar todas elas aqui. E já testei também pedidos e quantidades e tal. Aquela coisa toda tem aqui as informações, pedir os produtos. Então ele já traz essas informações. Enfim, vocês já vão poder visualizar ali. E vai ter um ambiente ali para vocês desenvolverem beleza.
+
+291
+00:57:00.010 --> 00:57:01.210
+Ricardo Garcia: Show de bola.
+
+292
+00:57:02.330 --> 00:57:15.330
+Ricardo Garcia: Então é isso, pessoal. Só nessa passagem de banco de dados é coisa pra caramba. A gente sabe que putz para a gente estruturar isso aí, entender e tal, meu é bastante coisa,
+
+293
+00:57:15.330 --> 00:57:23.309
+Ricardo Garcia: mas é legal, porque você já vai dar uma flexibilidade para vocês criarem o projeto de vocês. Depois, vocês vão ter esse aqui como exemplo.
+
+294
+00:57:23.310 --> 00:57:26.039
+Ricardo Garcia: De entre aspas de um e commerce e tal.
+
+295
+00:57:26.340 --> 00:57:49.849
+Ricardo Garcia: E aí vocês vão poder desenvolver em cima deles, porque isso aqui pode ser uma primeira versão, e depois você vai encaixando outras coisas aqui. Fornecedores. Daí faz o negócio de fornecedores. E aí, aqui, por exemplo, pode ser um Rp. Você faz um e commerce com Rp lá, por exemplo. E aí você já monta aqui. A gente colocou uma tabela de pagamento, né? Mas pode colocar lá um contas a pagar um contas, a receber enfim,
+
+296
+00:57:49.850 --> 00:57:53.820
+Ricardo Garcia: montar uma estrutura bacana aí para fazer um Rp ou alguma coisa assim.
+
+297
+00:57:53.820 --> 00:57:56.179
+Ricardo Garcia: Beleza. Então é isso aí.
+
+298
+00:57:57.050 --> 00:58:01.990
+Ricardo Garcia: Falamos bastante de banco aqui e agora. Vamos lá. No Python, né? Poxa vida. Vamos lá,
+
+299
+00:58:03.210 --> 00:58:08.530
+Ricardo Garcia: pai. Vamos começar com um exercício tranquilo aí também. Agora,
+
+300
+00:58:12.150 --> 00:58:19.000
+Ricardo Garcia: deixa eu ver. Aqui está abrindo aqui. Já coloco ali para vocês,
+
+301
+00:58:20.140 --> 00:58:35.790
+Ricardo Garcia: beleza. Eu faço normalmente aqui no Google, mesmo porque ele é simples. A gente consegue visualizar bem, e a gente sabe que eu na verdade utilizo realmente só para coisas mais básicas aqui, mas eu utilizo. Ah,
+
+302
+00:58:36.390 --> 00:58:45.160
+Ricardo Garcia: até aproveitando, pessoal, já tinha esquecido. Eu utilizo muito o pai charme. Eu comentei com vocês do pai charme. Comentei com vocês do
+
+303
+00:58:45.360 --> 00:58:46.590
+Ricardo Garcia: Da.
+
+304
+00:58:47.700 --> 00:58:53.740
+Ricardo Garcia: O pai charme é da puta. Como é que é, né? Deixa eu ver. Aqui, pai, charme e aí
+
+305
+00:58:56.600 --> 00:58:57.580
+Ricardo Garcia: vai chegar
+
+306
+00:58:58.650 --> 00:59:15.970
+Ricardo Garcia: Jet Brians aqui, né? Então, eu acho que já comentei com vocês, mas vou reforçar isso aí até a semana passada. Eu acho que não sei se eu comentei com vocês, mas o pessoal renovou por mais um ano os acessos, né? Porque normalmente é um ano que eles dão, né? Quando a gente está
+
+307
+00:59:16.020 --> 00:59:26.480
+Ricardo Garcia: quando é aluno, professor e tal. Eles dão acesso por um ano a todas as ferramentas deles aqui. E eu recebi um e mail a semana passada. Acho que foi
+
+308
+00:59:26.480 --> 00:59:45.469
+Ricardo Garcia: renovando por mais um ano os acessos às ferramentas deles aqui também. Então, meu, aqui tem umas ferramentas muito bacanas, que vale a pena a gente nem que seja para instalar assim para testar. Tem algumas que são mais complexas e tal, mas é legal. E o e mail da faculdade? Ele dá direito
+
+309
+00:59:45.470 --> 01:00:02.820
+Ricardo Garcia: a gente baixar e utilizar a versão profissional de todos os componentes que ele tem aqui. Então todos os produtos que ele tem, todos esses produtos aqui com o e mail da faculdade, a gente pode utilizar durante um ano a versão Pro e meu, tem coisa muito bacana.
+
+310
+01:00:02.820 --> 01:00:08.580
+Ricardo Garcia: Não só eles aqui, como também acho que eu comentei com vocês
+
+311
+01:00:10.700 --> 01:00:23.449
+Ricardo Garcia: o The Beaver, com o e mail que a gente tem também da faculdade. Ele tem também a versão pró que a gente pode baixar. Então a gente pode utilizar a versão pro aqui tem umas características, inclusive ele,
+
+312
+01:00:23.450 --> 01:00:38.999
+Ricardo Garcia: acesso a bancos de dados não relacionais também. E tal. É bem bacana. Então fica aí a dica. Só que esse aqui não, ele dá acesso por um ano mesmo. E depois ele bloqueia o acesso. Daí você pode usar só a versão continente mesmo normal.
+
+313
+01:00:39.450 --> 01:00:41.580
+Ricardo Garcia: Então fica aí. A dica também, né?
+
+314
+01:00:42.200 --> 01:00:47.220
+Ricardo Garcia: Aproveitei aqui que eu lembrei. Mas vamos lá no nosso exercício. Eu já preparei vários aqui também, né?
+
+315
+01:00:48.230 --> 01:01:06.370
+Ricardo Garcia: A gente falou de um exercício lá da clínica da vida de saúde lá e tal da aula passada foi um dos exercícios que a gente. Ah, não peraí. A gente fez um um, né? A gente fez aquele do mercafácil lá, né? Foi isso, né? Agora a gente vai para o dois lá, né? Duvida? Saúde lá, né?
+
+316
+01:01:06.710 --> 01:01:08.530
+Ricardo Garcia: Isso, beleza. Então vamos lá.
+
+317
+01:01:09.480 --> 01:01:12.879
+Ricardo Garcia: Aqui vamos falar também em lógica.
+
+318
+01:01:13.430 --> 01:01:17.580
+Ricardo Garcia: O que tem lá, né? Tem entrada aqui. Ó, deixa eu colocar aqui, né?
+
+319
+01:01:21.950 --> 01:01:25.960
+Ricardo Garcia: Vou colocar aqui. Vou colocar meio diretão só para a gente. Não perder muito tempo, né?
+
+320
+01:01:29.900 --> 01:01:35.820
+Ricardo Garcia: Coloquei aqui desenvolve um programa que ensina a fila de atendimento a partir de comandos, livros de entrada padrão
+
+321
+01:01:35.980 --> 01:01:42.669
+Ricardo Garcia: obrigatoriamente, utilizando métodos Append insert ext aqui e pop, que é eliminar
+
+322
+01:01:42.790 --> 01:02:02.499
+Ricardo Garcia: então beleza pedindo só que aqui ele já deu uma indiretaça que ele já quer esses comandos aqui. Então a gente sabe que é uma fila. Então esses comandos aqui, a gente sabe que é uma lista, porque é uma lista para onde a gente vai ter que fazer uma inserção, fazer um append ali, o append. O que ele faz ele insere em uma.
+
+323
+01:02:02.660 --> 01:02:05.380
+Ricardo Garcia: Ah, é?
+
+324
+01:02:05.940 --> 01:02:24.240
+Ricardo Garcia: Eles insere os dados. Tanto o App inseram os dados numa lista. Só que você define onde você vai querer inserir a posição que você vai inserir. O ex. E o Pop também quer eliminar esses dados. Ali também? O programa deve exibir o estado atual da fila aqui. Dá uma complicada, né?
+
+325
+01:02:24.240 --> 01:02:32.730
+Ricardo Garcia: Número total de pacientes atendidos durante a sessão. Aí, os comandos possíveis são adicionar que adiciona ao final da fila
+
+326
+01:02:32.920 --> 01:02:43.720
+Ricardo Garcia: prioridade que insere na posição zero. Então ele pega na lista e insere na lista ali grupo onde ele adiciona no final, impõe múltiplos nomes no final da fila
+
+327
+01:02:43.720 --> 01:02:57.650
+Ricardo Garcia: e o chamar que remove aqui a fila. E aí a gente? Mais ou menos. Tem que vincular um comando. Ah, pô o chamar aqui que é remover beleza. Ele dá um pop ali e tal, né? Enfim, isso que a gente vai ver agora,
+
+328
+01:02:57.910 --> 01:03:12.640
+Ricardo Garcia: na primeira linha, contém os nomes dos pacientes. E aí o outro ali, separados por vivo. As linhas seguintes contêm os comandos até que seja digitado o fim, beleza. Então ele pega uma lista, o início vai ser
+
+329
+01:03:12.640 --> 01:03:28.080
+Ricardo Garcia: criar uma lista com esses nomes aqui. E depois a gente vai enviar prioridade, Beatriz. E ele vai ter que colocar a Beatriz em primeiro aqui e tal. O grupo vai ter que adicionar a Fátima e o Rodrigo no final da lista, o chamar vai fazer um
+
+330
+01:03:28.450 --> 01:03:34.940
+Ricardo Garcia: um pop aqui, eliminando da lista quem a gente chamar e adicionar o Pedro lá e tal e o fim fora. Beleza
+
+331
+01:03:35.300 --> 01:03:44.699
+Ricardo Garcia: aí, para cada comando recebido. O programa deve exibir o estado atualizado da fila. Quando o comando for chamar beleza, deve identificar o nome do paciente chamado.
+
+332
+01:03:44.840 --> 01:03:54.000
+Ricardo Garcia: E o formato de exibição fica a critério do aluno. Desde que seja. Tá, beleza ao longo de toda a execução. Tá bom, então vamos começar pelo começo.
+
+333
+01:03:55.790 --> 01:03:59.539
+Ricardo Garcia: Primeiro, eu vou salvar esse cara aqui. Esse aqui é o.
+
+334
+01:04:03.860 --> 01:04:14.650
+Ricardo Garcia: Deixa eu ver aqui salvar aqui. Já fiz vários exemplos aqui também. Esse aqui é do Fila
+
+335
+01:04:17.590 --> 01:04:20.930
+Ricardo Garcia: e Lance de. Aprendi muito.
+
+336
+01:04:21.910 --> 01:04:23.869
+Ricardo Garcia: Pronto, tá aqui.
+
+337
+01:04:25.470 --> 01:04:31.090
+Ricardo Garcia: O que a gente tem que fazer? Primeira coisa aqui. Também já deixei tudo engatilhado aqui.
+
+338
+01:04:31.720 --> 01:04:36.989
+Ricardo Garcia: Depois até posso passar para vocês também, pessoal. Daí eu fiz os comentários ali e tal, né? Aqui, ó,
+
+339
+01:04:38.140 --> 01:04:48.960
+Ricardo Garcia: primeira coisa que a gente faz. Entrada inicial que a gente faz um input. O que é um input? Os três ali. Carlos Maria e João. Então, a gente coloca ali.
+
+340
+01:04:49.070 --> 01:05:00.230
+Ricardo Garcia: Aí a gente tem um split, lembre se, o split não é usado só no Python. Aqui o split. A gente tem outras linguagens que ele gera. Deixa eu fazer aqui um print dessa
+
+341
+01:05:02.690 --> 01:05:03.420
+Ricardo Garcia: Tchau
+
+342
+01:05:07.680 --> 01:05:10.950
+Ricardo Garcia: frente aquilo.
+
+343
+01:05:12.670 --> 01:05:20.080
+Ricardo Garcia: E aí aqui, ó, se a gente executar aqui a gente entra com
+
+344
+01:05:23.290 --> 01:05:25.060
+Ricardo Garcia: Carlos Marine Von.
+
+345
+01:05:27.980 --> 01:05:29.360
+Ricardo Garcia: Vamos lá.
+
+346
+01:05:29.640 --> 01:05:46.329
+Ricardo Garcia: Então, o que ele faz aqui? O split. Na verdade, ele pega como a gente pôs Carlos, Maria e João. Ele cria uma lista, cria uma lista separada por vírgula, cada um separado por vírgula. Vai ser um elemento da lista. É isso que ele fez. Daí. A gente fez um print dessa lista.
+
+347
+01:05:46.330 --> 01:05:53.519
+Ricardo Garcia: Beleza aqui atendidos. Obviamente, é zero. Por enquanto, a gente não fez nada. Então, bem básico aqui.
+
+348
+01:05:53.540 --> 01:06:02.099
+Ricardo Garcia: Mas esse aqui é o inicial para a gente dar entrada e iniciar a nossa aplicação. Mesmo então, beleza, o que a gente tem que pensar primeiro lá,
+
+349
+01:06:02.600 --> 01:06:10.009
+Ricardo Garcia: o programa roda até o usuário digitar. Fim, beleza, roda. Então significa que quando a gente tem,
+
+350
+01:06:10.950 --> 01:06:19.010
+Ricardo Garcia: vai fazer, digamos assim, visualizar alguns registros, alguma coisa que a gente sabe o final dele. A gente utiliza um for
+
+351
+01:06:19.230 --> 01:06:32.210
+Ricardo Garcia: como a gente. Vai ficar rodando. Vai ficar executando até a gente digitar, fim. Então a gente não vai utilizar o Forge. Vai utilizar o Wile. Então ele vai executar enquanto
+
+352
+01:06:34.450 --> 01:06:36.740
+Ricardo Garcia: boa, isso aqui. Ó,
+
+353
+01:06:39.960 --> 01:06:41.600
+Ricardo Garcia: então é isso que ele está dizendo.
+
+354
+01:06:41.830 --> 01:06:44.250
+Ricardo Garcia: Ele vai pegar aqui,
+
+355
+01:06:44.700 --> 01:06:53.940
+Ricardo Garcia: executar. Vai fazer online sempre verdadeiro aqui. Por quê? Porque eu vou testar o comando que eu vou entrar aqui. O comando completo que eu vou dar entrada aqui.
+
+356
+01:06:53.950 --> 01:07:13.639
+Ricardo Garcia: E aí. Se eu digitar firme, ele sai e dá um break. O Break sai do online e aí finaliza o comando, senão o comando que eu vou entrar aqui. O que é a lista. Eu já tenho. Então é os comandos de prioridade. Aquela coisa toda. De acordo com o que está ali na nossa entrada
+
+357
+01:07:13.720 --> 01:07:18.779
+Ricardo Garcia: para fazer a nossa lista com os pacientes e tal.
+
+358
+01:07:18.800 --> 01:07:37.469
+Ricardo Garcia: Então, beleza aqui? Já fiz ali. Dá um input também com o comando que a gente tem de entrada. Se for o comando for fio, ele dá um break fora por que o break? Porque o Wiener vai ficar executando aqui sem parar, né? Até o momento que a gente der um break beleza. Então a gente já fez. Agora, o que a gente já fez. Agora a gente vai ter que começar a testar
+
+359
+01:07:37.670 --> 01:07:42.069
+Ricardo Garcia: essas opções.
+
+360
+01:07:43.280 --> 01:07:45.660
+Ricardo Garcia: Então, beleza, o que a gente vai vir aqui?
+
+361
+01:07:46.360 --> 01:07:51.240
+Ricardo Garcia: Beleza, o que a gente vai fazer
+
+362
+01:07:51.370 --> 01:07:59.029
+Ricardo Garcia: a gente dentro desse comando completo. Aqui a gente tem um comando que é assim, né? A gente tem o comando. Que é esse aqui? Pegar um aqui.
+
+363
+01:08:02.730 --> 01:08:08.999
+Ricardo Garcia: Prioridade. Esse é o comando que a gente tem que dar dentro desse comando aqui. Prioridade Beatriz, o que ele vai fazer?
+
+364
+01:08:09.060 --> 01:08:27.639
+Ricardo Garcia: O comando completo aqui? Ele vai fazer a primeira parte. Ele vai separar esse que é o comando e o nome. Então ele faz por onde ele separa por causa do espaço. Então ele está separando o espaço aqui, e aí ele pega o primeiro objeto, que é o um. Aqui, por exemplo, ele pega aqui.
+
+365
+01:08:28.810 --> 01:08:30.730
+Ricardo Garcia: Aqui ele está pegando lá.
+
+366
+01:08:31.760 --> 01:08:34.059
+Ricardo Garcia: Deixa eu ver aqui uma coisa.
+
+367
+01:08:37.770 --> 01:08:43.809
+Ricardo Garcia: Aham, ele está pegando aqui. Ó quando eu falo aqui é zero.
+
+368
+01:08:43.890 --> 01:08:59.720
+Ricardo Garcia: E aqui é um. Ele está pegando um nome nessas partes. E a ação é o zero aqui embaixo. Por isso que ele está pegando a prioridade. E fazendo um upper aqui, que é uma função para transformar em maiúsculo, caso eu entre com essa prioridade em minúsculo.
+
+369
+01:08:59.720 --> 01:09:04.020
+Ricardo Garcia: Então, beleza, a gente tem um exemplo aqui. É isso que a gente vai fazer.
+
+370
+01:09:04.290 --> 01:09:07.350
+Ricardo Garcia: Separei aqui o comando ali para ele.
+
+371
+01:09:09.930 --> 01:09:11.849
+Ricardo Garcia: Beleza, vamos para o próximo lá
+
+372
+01:09:12.470 --> 01:09:28.069
+Ricardo Garcia: agora que eu tenho já o comando que foi dado tem o nome da pessoa e tudo mais. Agora eu tenho que testar esse comando que foi enviado. Então, beleza. O que a gente vai fazer? Pegar e testar cada um dos comandos. Adicionar prioridade, grupo ou chamar
+
+373
+01:09:33.960 --> 01:09:36.470
+Ricardo Garcia: aqui. Ó, já tenho. Pronto, aqui também.
+
+374
+01:09:38.090 --> 01:09:39.509
+Ricardo Garcia: Então, ó, tá aqui. Ó,
+
+375
+01:09:40.649 --> 01:09:59.160
+Ricardo Garcia: deixa eu ver partes. Então ele pega partes, ele pega a ação e as partes partes. É o nome e a ação. É o que ele vai ter que executar aqui dentro do quió. Então a ação, por exemplo, no primeiro que ele pediu ali. Prioridade. Então, beleza, o que ele vai fazer? A ação vai buscar prioridade.
+
+376
+01:09:59.160 --> 01:10:13.409
+Ricardo Garcia: Nome que é as partes aqui. Então ele pega o nome que é Beatriz e ele faz o incerte aonde incerte no primeiro da fila, porque é prioridade. Então, ele pegou aquela lista e inseriu aonde? Na posição zero, que é o primeiro.
+
+377
+01:10:13.410 --> 01:10:22.309
+Ricardo Garcia: E aí ele insere o nome que ele tirou aqui. O nome das partes aqui que ele colocou dentro da
+
+378
+01:10:22.460 --> 01:10:36.469
+Ricardo Garcia: da prioridade. Beatriz, que a gente colocou beleza. Então faz isso aí. Sem nenhum problema aqui, quando é a ação. Adicionar o que ele faz, ele faz um up. Por quê? Porque ele coloca um nome no final da lista, mesmo
+
+379
+01:10:36.550 --> 01:10:44.570
+Ricardo Garcia: aqui quando a gente dá. Deixa eu ver. Aqui o Insert, ele coloca, porque eu posso determinar
+
+380
+01:10:44.570 --> 01:11:00.960
+Ricardo Garcia: no inser qual posição da lista que eu posso inserir aquele objeto que eu estou inserindo naquela lista. Então o Appen ele insere no final da lista. O inset insere na posição que eu determinar
+
+381
+01:11:01.090 --> 01:11:18.059
+Ricardo Garcia: esse grupo aqui, ele dá um extended. Por que ele estende a lista? Porque eu vou colocar dois objetos. Eu vou colocar dois. Na verdade na lista que é o Fátima e o Rodrigo. Então eu vou estender a lista com aquelas duas opções. Então ele faz o extended aqui
+
+382
+01:11:18.060 --> 01:11:32.319
+Ricardo Garcia: e o chamar. Ele dá um Pop aqui que é. Remove da lista e ele dá soma mais uma aqui em atendidos para ele falar lá no final. Opa, foram x pessoas que foram atendidas. Então, na verdade,
+
+383
+01:11:32.520 --> 01:11:34.940
+Ricardo Garcia: ele é bem simples aqui, né?
+
+384
+01:11:35.000 --> 01:11:42.630
+Ricardo Garcia: Só que. Onde está a lógica mesmo a lógica está na entrada dos dados.
+
+385
+01:11:42.680 --> 01:11:58.050
+Ricardo Garcia: Eu tenho que separar esses dados para entender o que cada um aonde que eu vou colocar, cada um deles. Coloquei aqui um break aqui para finalizar o Wile, né? E aí eu testei cada uma das ações que é adicionar prioridade, grupo e chamar.
+
+386
+01:11:58.050 --> 01:12:16.109
+Ricardo Garcia: E para cada um deles, como eu tenho um comando específico na lista. Então eu sei que se eu quiser adicionar um elemento no final, é o Append. Eu vou querer adicionar a prioridade. Então vai ter que ser na frente da fila da lista. Vai ser o inset na posição zero.
+
+387
+01:12:16.150 --> 01:12:37.509
+Ricardo Garcia: Aí, aqui o grupo são mais de um elemento. São dois elementos que eu vou ter que inserir. Eu simplesmente dou um extend na lista, e ele coloca esses dois elementos lá no final e o chamar, nada mais é do que eu eliminar o primeiro que está na lista e adicionar numa variável que eu preciso lá para somar que essa pessoa já foi atendida,
+
+388
+01:12:37.510 --> 01:12:39.539
+Ricardo Garcia: beleza. Então fiz aqui.
+
+389
+01:12:41.930 --> 01:12:46.909
+Ricardo Garcia: Vamos para o próximo. Lá para finalizar aqui eu tenho que exibir. O quê? A fila.
+
+390
+01:12:53.900 --> 01:13:00.300
+Ricardo Garcia: E aqui no final, eu dou a sessão encerrada aqui com o número de atendidos.
+
+391
+01:13:02.770 --> 01:13:04.090
+Ricardo Garcia: Beleza, tá aqui, ó,
+
+392
+01:13:07.000 --> 01:13:14.700
+Ricardo Garcia: finalizamos aqui beleza. Agora vamos ver se funciona. Roda. Também não funciona. Deixa eu parar aqui. Aquele que estava executando
+
+393
+01:13:14.880 --> 01:13:17.740
+Ricardo Garcia: hesitar. E vamos colocar lá a lista primeiro.
+
+394
+01:13:18.440 --> 01:13:19.520
+Ricardo Garcia: Então, vamos lá.
+
+395
+01:13:20.410 --> 01:13:23.669
+Ricardo Garcia: A lista inicial é o Carlos Rommani,
+
+396
+01:13:24.020 --> 01:13:38.609
+Ricardo Garcia: Maria e João. Beleza. Aí, o que a gente fez. Fez um print aqui, beleza. Então, só para a gente entender que essa é a primeira lista que a gente tem. Show de bola. Agora a gente vai colocar a prioridade que é a Beatriz. Então vamos lá,
+
+397
+01:13:41.000 --> 01:13:44.230
+Ricardo Garcia: prioridade e quebrei aqui.
+
+398
+01:13:51.630 --> 01:13:53.830
+Ricardo Garcia: Parei tirar esse prêmio.
+
+399
+01:14:00.780 --> 01:14:02.440
+Ricardo Garcia: Não vai visitar
+
+400
+01:14:07.480 --> 01:14:08.570
+Ricardo Garcia: o piano,
+
+401
+01:14:17.050 --> 01:14:18.800
+Ricardo Garcia: verdade? Deixa eu pegar um pouquinho.
+
+402
+01:14:27.020 --> 01:14:32.019
+Ricardo Garcia: Beleza pôs a Beatriz. Lá, deixa eu parar aqui de novo.
+
+403
+01:14:35.430 --> 01:14:38.080
+Ricardo Garcia: Anos por aqui. Quente da silva,
+
+404
+01:14:41.790 --> 01:14:42.570
+Ricardo Garcia: entendeu?
+
+405
+01:14:43.720 --> 01:14:55.100
+Ricardo Garcia: Salvar em executar beleza. Deixa eu colocar aqui. Guardar. Passe
+
+406
+01:14:55.410 --> 01:15:00.669
+Ricardo Garcia: beleza. Pareceu lá. Agora eu vou colocar outra prioridade. Beatriz,
+
+407
+01:15:06.480 --> 01:15:10.589
+Ricardo Garcia: prioridade Beatriz. Então, beleza não entre ali.
+
+408
+01:15:10.800 --> 01:15:20.489
+Ricardo Garcia: Colocou o que ele fez aqui. Pegou a prioridade. Nome, partes. Somou deu um incerto e onde? No zero. Aqui Beatriz Carlos Marinha e João. Opa, desculpa aí.
+
+409
+01:15:23.120 --> 01:15:28.450
+Ricardo Garcia: Ô peraí se descreveram ontem, não vi ali. Desculpa. Aí peraí Ah, não, beleza. Pode ser
+
+410
+01:15:28.450 --> 01:15:43.160
+Ricardo Garcia: que o Alexandre está comentando ali, que fez diferente e tal, né? Ó pessoal, isso aqui é só uma forma de fazer. Mas existem um milhão de formas de fazer. Pode fazer do jeito que acharem melhor. Aí, né? O objetivo assim é mais entender o exercício mesmo, né?
+
+411
+01:15:43.160 --> 01:15:48.499
+Ricardo Garcia: Mas existem outras formas de se fazer, tá bem tranquilo. Nesse sentido,
+
+412
+01:15:48.500 --> 01:15:58.530
+Ricardo Garcia: podem ficar à vontade aí, que não tem uma forma, logicamente, que, digamos assim, desenvolvimento mais complexos.
+
+413
+01:15:58.600 --> 01:16:10.840
+Ricardo Garcia: A gente tem que respeitar as melhores práticas e tal. O negócio da empresa, aquela coisa toda, né? Mas nesse caso, aqui não. Se vocês encontrarem uma maneira mais tranquila de fazer ali, não tem problema.
+
+414
+01:16:11.180 --> 01:16:13.670
+Ricardo Garcia: Estiver vazio, né? Vai contar zero.
+
+415
+01:16:13.800 --> 01:16:18.329
+Ricardo Garcia: Então fala. Essa fila vazia é? Não, sem problema.
+
+416
+01:16:19.790 --> 01:16:22.139
+Ricardo Garcia: Ah, não dá. Eu acho que não dá.
+
+417
+01:16:22.500 --> 01:16:27.970
+Ricardo Garcia: Não dá. Não é? Sem problema também. Mas tem outras formas de fazer assim. É tranquilo.
+
+418
+01:16:28.780 --> 01:16:36.110
+Ricardo Garcia: Então, aqui a gente já pôs ali. Agora a gente vai adicionar o grupo. O grupo é o extende, né? Então, beleza. Põe ali grupo.
+
+419
+01:16:37.100 --> 01:16:55.719
+Ricardo Garcia: Olha aí que aqui está ruim. Grupo Fátima, Rodrigo, pá. Então a Beatriz continua em primeiro. Aqui, né? Está como prioridade. Mas a gente adicionou a Fátima Rodrigo ali, que a gente fez essa parte do código aqui, né? Beleza, sem problema nenhum. E agora a gente vai dar um, chamar, né?
+
+420
+01:16:56.580 --> 01:16:57.740
+Ricardo Garcia: Chamar.
+
+421
+01:16:59.230 --> 01:17:14.020
+Ricardo Garcia: Então, o que vai acontecer? A Beatriz saiu dali e aí ficou o Carlos aqui. E a Beatriz foi eliminada. O que é o chamar o chamar? É assim. Se a fila for maior que zero, ele dá um pop. Na verdade, que ele retira da fila e a gente passa o índice
+
+422
+01:17:14.020 --> 01:17:27.010
+Ricardo Garcia: que ele está retirando, que é o índice zero. Então o primeiro elemento elimina na fila e soma um aqui, nos atendidos show de bola. Então chamar. E aí o último é fim.
+
+423
+01:17:30.670 --> 01:17:37.330
+Ricardo Garcia: Eu tinha que beleza. Deu o fim aqui. E aí apareceu ali, né?
+
+424
+01:17:37.460 --> 01:17:41.939
+Ricardo Garcia: Fila encerrada e total de pacientes atendidos. Um.
+
+425
+01:17:42.040 --> 01:17:47.099
+Ricardo Garcia: Então, nesse caso, aqui a gente fez a entrada. A gente deu a entrada
+
+426
+01:17:47.290 --> 01:18:00.090
+Ricardo Garcia: conforme estava aqui no exercício. Que é esse daqui? Esses daqui foram as entradas e os passos que a gente deu. E aí a gente fez e finalizou o exercício ali. Da mesma forma, sem nenhum problema.
+
+427
+01:18:00.150 --> 01:18:15.640
+Ricardo Garcia: O que é aqui é input. A gente tem que olhar o que o exercício está pedindo de entrada e de saída. Tentar visualizar os dois. Entrada. Normalmente vai ser uma lista que é a lista que ele passou. A gente vai ter que separar os elementos,
+
+428
+01:18:15.640 --> 01:18:28.809
+Ricardo Garcia: normalmente utilizando split. E entendendo aqui qual caracter que o Alexandre conseguiu aqui. Ó Ah, também, cara.
+
+429
+01:18:29.150 --> 01:18:30.100
+Ricardo Garcia: Aham,
+
+430
+01:18:33.170 --> 01:18:34.440
+Ricardo Garcia: não! Show de bola.
+
+431
+01:18:37.310 --> 01:18:46.969
+Ricardo Garcia: É isso aí. Então tem várias formas de fazer aqui. Na verdade, qual que é a ideia desse exercício dessa forma que
+
+432
+01:18:47.200 --> 01:18:57.749
+Ricardo Garcia: que eu fiz aqui, é justamente para ver cada ação separado ali, também. Para que a gente veja ali, bem certinho. Seja mais fácil de visualizar,
+
+433
+01:18:57.750 --> 01:19:07.600
+Ricardo Garcia: de explicar. Assim, de trazer o funcionamento do que o pessoal pediu. A ideia foi mais ou menos essa daí.
+
+434
+01:19:07.600 --> 01:19:31.930
+Ricardo Garcia: Então é bem simplesão põe aqui, faz o ar. Ele faz um break ali. E para cada ação que ele faz aqui. Ele faz um teste separado. E aí a gente já sabe que para cada item da lista, ele tem um comando específico que ele faz como ele colocou no enunciado. Ele colocou lá na enunciada que tinha lá os itens da lista e tal, utilizando aqueles lá, e ele fez. E realmente o legal desse exercício. Assim
+
+435
+01:19:32.030 --> 01:19:47.029
+Ricardo Garcia: que ele é simples, e a gente acaba gravando essas informações. Bom, beleza. Agora a gente já sabe que uma lista. A gente tem uma lista. A gente utiliza o split para separar essa lista. Para criar esses elementos da lista. Se a gente passa uma lista ali para ele de valores de itens, né?
+
+436
+01:19:47.030 --> 01:20:03.269
+Ricardo Garcia: E aí, para uma lista, a gente pode controlar totalmente o funcionamento dessa lista, porque a gente pode inserir. A gente pode eliminar, fazer um Pop. Pode colocar em um lugar específico dentro de um índice que o índice começa sempre no zero. E aí vai a gente faz isso aí.
+
+437
+01:20:05.470 --> 01:20:10.340
+Ricardo Garcia: Ah, ah, ah, beleza, beleza, é
+
+438
+01:20:11.010 --> 01:20:18.990
+Ricardo Garcia: então é isso, né? Tá, pessoal? É só esse. Assim que eu queria comentar ali com vocês ali, né?
+
+439
+01:20:19.220 --> 01:20:21.840
+Ricardo Garcia: Então, beleza, isso aqui. A gente já viu.
+
+440
+01:20:22.450 --> 01:20:24.479
+Ricardo Garcia: É isso aí.
+
+441
+01:20:25.310 --> 01:20:32.750
+Ricardo Garcia: Deixa eu simples ficar sabendo disso, né? E agora vou colocar em outros exercícios aqui. Um pouco simples também, né?
+
+442
+01:20:33.060 --> 01:20:41.940
+Ricardo Garcia: Que é um exercício bem de praxe. Vou colocar até aqui mesmo. Não vou nem mexer com isso aqui.
+
+443
+01:20:42.050 --> 01:20:50.720
+Ricardo Garcia: Qual o elemento maior de uma lista. Então, qual é o elemento maior que a gente pode tirar ali de uma lista também é bem isso aí, meu Lucas.
+
+444
+01:20:52.100 --> 01:20:56.430
+Ricardo Garcia: Então, a gente tem uma entrada específica. Então, por exemplo, o enunciado aqui,
+
+445
+01:20:57.300 --> 01:21:03.419
+Ricardo Garcia: criar um programa que recebe uma lista de números aqui, conceito. Vou colocar aqui só para a gente ver aqui
+
+446
+01:21:10.190 --> 01:21:30.080
+Ricardo Garcia: isso aqui, né? Percorrer uma lista e encontrar um maior valor, comparando elemento por elemento. Então o enunciado cria um programa que recebe uma lista de números separado por espaço e descobre qual é o maior número da lista sem usar a função, Max, porque o Max, ele dá esse maior da lista e a entrada da lista. É essa lista que a gente vai passar lá.
+
+447
+01:21:30.130 --> 01:21:34.739
+Ricardo Garcia: Então, beleza, como é que a gente faz isso aí? Primeiro o de sempre. Entrar.
+
+448
+01:21:36.700 --> 01:21:41.980
+Ricardo Garcia: Vamos entrar lá com a lista beleza. Quando a gente der entrada na lista, vamos fazer um print dessa entrada.
+
+449
+01:21:42.610 --> 01:21:47.130
+Ricardo Garcia: Porém, só para a gente ver como é que ele converte entrada,
+
+450
+01:21:48.280 --> 01:21:55.060
+Ricardo Garcia: beleza. E agora, o que a gente vai fazer? O sprint, o split dessa lista
+
+451
+01:21:55.900 --> 01:22:01.269
+Ricardo Garcia: para a gente separar esses números. Cada um vai ficar um elemento separado ali, fazer o split da lista
+
+452
+01:22:01.420 --> 01:22:05.840
+Ricardo Garcia: e vai fazer um print desses números que estão lá números,
+
+453
+01:22:06.700 --> 01:22:15.930
+Ricardo Garcia: beleza, salvar, executar. E aí a gente põe lá essa entrada lá essa e instalem beleza
+
+454
+01:22:16.190 --> 01:22:32.670
+Ricardo Garcia: e dá um enter aqui. Então ele apareceu, fez o print de entrada, separou toda a lista, deu um split para cada um. Ele criou os elementos que são os números. Então cada um se tornou um elemento de uma lista show de bola. É isso que a gente precisa
+
+455
+01:22:32.730 --> 01:22:49.020
+Ricardo Garcia: agora. Esses elementos. A gente vai ver qual é o maior. Como que a gente vai fazer isso? Como a gente tem um número fixo? Porque é uma lista fixa. É uma lista que já está pronta aqui. Então, o que a gente vai utilizar? A gente vai utilizar um for beleza, então, o que a gente vai fazer?
+
+456
+01:22:55.050 --> 01:22:58.790
+Ricardo Garcia: Faz um fora. Aqui, onde eu tenho um range do um.
+
+457
+01:22:58.910 --> 01:23:10.749
+Ricardo Garcia: A Len é o número de elementos. Então ele pega lá. Um, dois, três, quatro, cinco, seis, sete. Tem sete elementos. Então ele faz um for jogando o índice desse for
+
+458
+01:23:10.750 --> 01:23:21.680
+Ricardo Garcia: nesse rende do um ao número de elementos que eu tenho. E aí ele vai percorrer todos os elementos que eu tenho dentro do número da minha lista. Beleza. É isso que eu quero.
+
+459
+01:23:22.010 --> 01:23:24.220
+Ricardo Garcia: E agora, para cada elemento,
+
+460
+01:23:30.670 --> 01:23:31.440
+Ricardo Garcia: por quê?
+
+461
+01:23:36.630 --> 01:23:40.390
+Ricardo Garcia: Esqueci de um aqui. Peraí tem que determinar o número maior aqui,
+
+462
+01:23:44.200 --> 01:23:48.190
+Ricardo Garcia: aqui, ó especie da variável maior aqui, né?
+
+463
+01:23:48.820 --> 01:23:53.509
+Ricardo Garcia: O que é a variava maior? Ele pega o primeiro. O primeiro
+
+464
+01:23:53.870 --> 01:24:13.560
+Ricardo Garcia: item da linha, que é o oito. Então ele pegou o primeiro aqui o valor oito, porque é o índice zero. Ele pega já o primeiro para ir vendo. Ele já pega o primeiro e vai comparar com os demais para ver se é maior ou não beleza. E agora Sim, depois que eu tenho o maior elemento que nesse caso, ele começa com oito.
+
+465
+01:24:13.560 --> 01:24:15.449
+Ricardo Garcia: Eu vou testar ele aqui dentro.
+
+466
+01:24:15.550 --> 01:24:28.850
+Ricardo Garcia: Número dentro. Esse aqui ele faz. É o meu índice que eu estou naquele momento. Ele vai ver o número que eu estou passando é maior que oito. Se for maior que oito, ele vai somar na minha lista. Aqui.
+
+467
+01:24:30.520 --> 01:24:35.650
+Ricardo Garcia: Somar não, né? Ele vai colocar na minha lista maior que oito, beleza
+
+468
+01:24:37.000 --> 01:24:46.250
+Ricardo Garcia: e dá um print de um número maior no final. É só isso. Aqui, ó, terminou o form,
+
+469
+01:24:46.710 --> 01:24:48.610
+Ricardo Garcia: ele vai imprimir o maior.
+
+470
+01:24:48.620 --> 01:25:06.210
+Ricardo Garcia: O que eu faço aqui. Então, no início, eu pego a entrada, dou um split para transformar isso aqui na lista. Eu pego já de cara o número oito, que é o inicial. E já vou testando um oito para ver se é maior, então eu já pego aqui. O primeiro oito é maior que oito. Não é
+
+471
+01:25:06.210 --> 01:25:09.630
+Ricardo Garcia: beleza? Me passa para lá três é maior que oito. Não,
+
+472
+01:25:09.910 --> 01:25:17.019
+Ricardo Garcia: quinze. Maior que oito, é. E assim vai. Ele vai testando cada um deles. Então, beleza, vamos parar aqui. Vamos salvar
+
+473
+01:25:17.270 --> 01:25:19.580
+Ricardo Garcia: e vamos executar. Vamos passar lá
+
+474
+01:25:19.920 --> 01:25:21.720
+Ricardo Garcia: a lista. A gente vai passar.
+
+475
+01:25:26.670 --> 01:25:38.950
+Ricardo Garcia: Beleza. Colocou lá, imprimiu lá, né? Oito criou uma lista oito três, quinze. E qual o maior número? É vinte e um. Simplesmente ele fez esse testezinho aqui e no final, imprimiu bem simples, né?
+
+476
+01:25:38.950 --> 01:26:01.699
+Ricardo Garcia: Por que eu fiz um exercício dessa forma aqui? Porque eu estou vendo que tem vários exercícios que tem for, né? Tudo é usado, Ford. E na verdade, a gente usa Ford pra caramba, porque a gente utiliza o for muitas vezes para gravar alguma coisa. A gente joga isso? Num dataset que a gente chama. Aí a gente faz a leitura do dataset que eu acho que não sei se eu acho que já passei para vocês ali naquela parte de dados, né?
+
+477
+01:26:01.700 --> 01:26:26.530
+Ricardo Garcia: E aí a gente vai inserindo no banco de dados, fazendo um looping ali do for e gravando tudo dentro do banco de dados, né? Para cada linha, a gente grava cada linha específica dentro do banco de dados. Então, na verdade, o for. É uma estrutura que a gente usa pra caramba e o For tem várias combinações. Tem Range tem numerade tem uma pancada de coisas que você pode utilizar junto com o for, porque, como é muito utilizada, tem várias
+
+478
+01:26:26.780 --> 01:26:48.390
+Ricardo Garcia: características específicas que você pode utilizar, dependendo do que for fazer ali a tua necessidade em si mesmo. Então, acho que até depois para o próximo aula. Vamos ver se eu faço um mapa mental ali. Com quais são as opções do Ford para a gente ter ali e entender cada uma delas ali, com enumerei, com o Hang, com outros, que tem ali também para a gente entender como é que funciona.
+
+479
+01:26:48.390 --> 01:26:55.040
+Ricardo Garcia: Então um exemplo simples, mas é bacana aqui, só para exercitar um pouco a lógica e depois né?
+
+480
+01:26:55.260 --> 01:27:06.240
+Ricardo Garcia: Eu vou passar outros exercícios aqui também, porque mais ou menos, é a mesma vibe, né? Não tem muito. Só que a gente já depois da.
+
+481
+01:27:06.320 --> 01:27:07.960
+Ricardo Garcia: Na próxima semana.
+
+482
+01:27:08.000 --> 01:27:17.320
+Ricardo Garcia: Daí a gente passa outras questões ali também tem algumas que são um pouco mais complexas também a nível de gerar relatório tem algumas
+
+483
+01:27:17.320 --> 01:27:31.759
+Ricardo Garcia: coisas nesse sentido também. Mas eu acho que sempre o importante mesmo é exercitar aqui, por exemplo, o próximo, por exemplo, que eu tenho aqui, por exemplo, que eu fiz é: quantos são pares? Quais números são pares de uma lista que a gente tem?
+
+484
+01:27:31.790 --> 01:27:39.540
+Ricardo Garcia: Qual que é o objetivo aqui. Mesma coisa. Tem uma entrada lá. Tem um input exatamente igual. Faço um split dos dados aqui. Ó,
+
+485
+01:27:40.470 --> 01:27:41.320
+Ricardo Garcia: entendeu?
+
+486
+01:27:47.530 --> 01:27:53.199
+Ricardo Garcia: Aqui, ó entrada dos dados. Faço um Split Split números aqui e um contador.
+
+487
+01:27:53.380 --> 01:27:57.549
+Ricardo Garcia: Aí pego e faço um for mais simples ainda, né? Four item
+
+488
+01:27:58.910 --> 01:28:08.889
+Ricardo Garcia: para contar os itens que eu tenho aqui dos números. Eu conto quantos números eu tenho a pasta. Lista número aqui
+
+489
+01:28:09.080 --> 01:28:11.140
+Ricardo Garcia: do item. Deixa eu pôr aqui já
+
+490
+01:28:12.590 --> 01:28:20.290
+Ricardo Garcia: bem simplesão. Hein? Mas é bacana, porque é uma forma simples de fazer e funciona.
+
+491
+01:28:21.260 --> 01:28:23.930
+Ricardo Garcia: Esse é o exercício. Qual é o número maior.
+
+492
+01:28:24.950 --> 01:28:28.249
+Ricardo Garcia: Esse aqui. Ah, não, esse aqui é o quando são pagos, né?
+
+493
+01:28:28.760 --> 01:28:42.020
+Ricardo Garcia: Então aqui eu pego o número mesmo em si do item, né? E aí eu faço esse número. Se tiver o resto for zero, ele é a par. E aí ele soma num contador para ele saber quantos números são pares. Então, beleza,
+
+494
+01:28:42.210 --> 01:28:45.990
+Ricardo Garcia: salvar, parar aqui, salvar, executar.
+
+495
+01:28:46.700 --> 01:28:50.239
+Ricardo Garcia: E aí eu vou pôr um número lá. Uma quantidade, um número X,
+
+496
+01:28:52.210 --> 01:28:54.860
+Ricardo Garcia: e ele vai me trazer. Quantos são pares?
+
+497
+01:28:56.700 --> 01:28:58.140
+Ricardo Garcia: Ó, trouxe lá?
+
+498
+01:28:58.290 --> 01:29:13.519
+Ricardo Garcia: Criou a lista. A lista certinha aqui separado, cada item utilizando o espaço em branco. E criou a minha lista lá embaixo. E a quantidade de números pares. Três simplesmente ele fez. Ele passou por cada item da lista.
+
+499
+01:29:13.520 --> 01:29:19.970
+Ricardo Garcia: Viu se esse item dividido por dois, o resultado é zero. O resto é zero.
+
+500
+01:29:19.970 --> 01:29:31.830
+Ricardo Garcia: E aí, o que foi zero. Ele colocou e fez a somatória no contador ali. Oito e vinte são três. Beleza. Fechou mais uma forma de utilizar o vor aqui de uma maneira simples, porque o Four?
+
+501
+01:29:31.830 --> 01:29:51.799
+Ricardo Garcia: Porque a minha lista é um tamanho fixo. Então eu utilizo o quê, o Four. E aqui é a forma mais fácil de pegar isso aqui. Números. Eu tenho uma lista aqui e eu pego já cada item separado. Eu não preciso fazer nada. Ele já pega lá quando eu ponho itens, ele pega o sete, o doze, o três, o oito, o quinze e o 20 e aí eu testo
+
+502
+01:29:52.280 --> 01:30:06.830
+Ricardo Garcia: o item aqui. O valor de cada um deles. Aqui deixa o número inteiro e ele vê se esse número é realmente para ou não bem, simples, mas é uma outra forma de utilizar o forno. Aqui também uma outra leitura de uma forma bem simplificada.
+
+503
+01:30:07.720 --> 01:30:09.959
+Ricardo Garcia: Beleza pessoal. Fechou então,
+
+504
+01:30:10.300 --> 01:30:27.760
+Ricardo Garcia: sexta feira, dez horas. Não vou ficar estendendo mais aqui, mas foi bem bacana aí, né? Espero que vocês tenham curtido na semana que vem. A gente vai trazer um pouco mais a nível de projeto. Banco de dados também vamos terminar aquele banco de dados. Vamos começar o projeto lá da aplicação do
+
+505
+01:30:28.950 --> 01:30:42.869
+Ricardo Garcia: do E. Commerce. Ali também. A gente vai criar um ambiente ali. Vou mostrar para vocês. Desenvolvimento, homologação, produção. Vocês precisam pensar nisso aí a nível de mercado, funciona dessa maneira também. A gente muitas vezes
+
+506
+01:30:42.870 --> 01:30:52.260
+Ricardo Garcia: tem que ter os nossos ambientes separados ali também. Então, para vocês terem pelo menos essa visão de como funcionam as coisas no nosso dia a dia.
+
+507
+01:30:52.380 --> 01:30:53.740
+Ricardo Garcia: Beleza, pessoal.
+
+508
+01:30:54.690 --> 01:31:01.119
+Ricardo Garcia: Ufa, valeu mais uma vez, brigadão. Aí espero que vocês tenham curtido aí.
+
+509
+01:31:01.380 --> 01:31:03.109
+Ricardo Garcia: E a gente valeu. Valeu.
+
+510
+01:31:03.110 --> 01:31:04.470
+Matheus Ramos: Chamados a feira.
+
+511
+01:31:05.390 --> 01:31:07.550
+Ricardo Garcia: Opa, beleza.
+
+512
+01:31:07.720 --> 01:31:16.610
+Ricardo Garcia: Valeu, pessoal. Mais uma vez, obrigado. Bom descanso aí para vocês. Bom final de semana. E a gente se vê na próxima sexta, né?
+
+513
+01:31:16.860 --> 01:31:22.159
+Ricardo Garcia: Se Deus quiser. E valeu. Valeu. Eu que agradeço. Vocês, hein? Valeu, Tamo junto.
+
+514
+01:31:22.460 --> 01:31:34.560
+Ricardo Garcia: Agradeço. Agradeço precisando, né? Se vocês precisarem. Se eu puder ajudar vocês aí, né? Só colocar no fórum ali. Eu tento responder vocês o mais rápido possível. Ali valeu. Eu que agradeço,
+
+515
+01:31:34.610 --> 01:31:48.719
+Ricardo Garcia: beleza valeu a participação de todos. Aí tamo junto aí. E se eu puder ajudar sempre, né? A gente às vezes ajuda tão pouco, né? No sentido é difícil. A gente sabe. Tem tanta coisa nesse mundão aí, né? Principalmente na nossa área de tecnologia,
+
+516
+01:31:48.800 --> 01:31:53.780
+Ricardo Garcia: mas é importante a gente estar aí. Aí, não desistir. Tamo junto. Beleza, pessoal.
+
+517
+01:31:54.790 --> 01:32:00.479
+Ricardo Garcia: Bom descanso. Valeu mais uma vez. Brigadão. Até mais semana que vem. Tamo aí, se Deus quiser.
+
+518
+01:32:01.120 --> 01:32:02.640
+Ricardo Garcia: Valeu, Tchau, Tchau.
+
