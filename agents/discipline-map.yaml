@@ -1,0 +1,35 @@
+# Mapeamento downloads → ISS (slug de disciplina em content/disciplines.json).
+# Sem entrada válida aqui, o pipeline não publica conteúdo dessa pasta.
+#
+# Regra de correspondência com lessons.json:
+#   Ficheiros de transcrição: Aula_NN_-_DDMMYYYY.vtt (NN = número da aula no calendário).
+#   O NN deve igualar o campo `order` da entrada em content/lessons.json para essa disciplina.
+#   O `slug` publicado não é derivado só do ficheiro: define-se na redação da lição e deve ser
+#   único em (discipline, slug) após verificação em lessons.json.
+
+version: 1
+
+slug_naming:
+  description: >
+    NN em Aula_NN alinha com `order` em lessons.json. O slug é semântico (kebab-case),
+    normalmente prefixado com aula-NN- no nome do ficheiro .md sob content/<discipline>/.
+  filename_pattern: '^Aula_(?P<order>\\d+)_-_(?P<date>\\d{8})\\.vtt$'
+
+mappings:
+  - download_folder: Introducao_a_Programacao_com_Python
+    discipline: python
+  - download_folder: Introducao_a_Visualizacao_de_Dados_e_SQL
+    discipline: visualizacao-sql
+  - download_folder: SQL_e_Modelagem_Relacional
+    discipline: sql-modelagem-relacional
+  - download_folder: Python_para_Processamento_de_Dados
+    discipline: python-processamento-dados
+  - download_folder: Projeto_de_Bloco_Fundamentos_do_Processamento_de_Dados
+    discipline: projeto-bloco
+  - download_folder: Planejamento_de_Curso_e_Carreira
+    discipline: planejamento-curso-carreira
+  - download_folder: Fluencia_em_IA
+    discipline: fluencia-ia
+
+# Pastas auxiliares (documentos) não mapeiam para disciplina única; usar só como contexto
+# quando a subpasta da aula existir em downloads/documents/... (ver orquestrador).
