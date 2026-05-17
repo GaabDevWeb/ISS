@@ -9,19 +9,14 @@ fi
 
 # Emojis custom (servidor Discord) e cargo a mencionar (spoiler)
 EMOJI_NOTEPAD="<:notepad:1469775431237501083>"
-EMOJI_OK="<:ok:1469777983463231541>"
-EMOJI_ARROW="<:arrow:1466040382138876061>"
 EMOJI_COFFEE="<:coffeepikachu:1469777951867273216>"
-EMOJI_SMILE="<:smile:1466314368474943539>"
 ROLE_ID="1465931358609215520"
 ISS_URL="https://gaabdevweb.github.io/ISS/"
 
 STATUS="${JOB_STATUS:-unknown}"
 PIPELINE_SUMMARY="${PIPELINE_SUMMARY:-}"
-COMMIT_INFO="${COMMIT_INFO:-}"
 LAST_DISCIPLINE_TITLE="${LAST_DISCIPLINE_TITLE:-}"
 LAST_LESSON_TITLE="${LAST_LESSON_TITLE:-}"
-RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
 
 PUBLISHED=0
 if [[ "$PIPELINE_SUMMARY" =~ Publicados:\ ([0-9]+) ]]; then
@@ -35,98 +30,64 @@ post_discord() {
     -d "$payload"
 }
 
-# —— Sucesso com lições novas: mensagem pedida + ping ao cargo ——
+# —— Sucesso com lições novas: mensagem para alunos + ping ao cargo ——
 if [[ "$STATUS" == "success" && "$PUBLISHED" -gt 0 ]]; then
-  DISC_LINE="a última aula processada"
   if [[ -n "$LAST_DISCIPLINE_TITLE" ]]; then
-    DISC_LINE="a última aula de **${LAST_DISCIPLINE_TITLE}**"
+    BODY="A última aula de **${LAST_DISCIPLINE_TITLE}** já está disponível no site com resumo estruturado, conceitos organizados e exemplos práticos."
+  else
+    BODY="A última aula processada já está disponível no site com resumo estruturado, conceitos organizados e exemplos práticos."
   fi
 
-  DESCRIPTION="${EMOJI_NOTEPAD} **Novo conteúdo publicado no ISS**
+  MESSAGE="${EMOJI_NOTEPAD} **Novo conteúdo publicado no ISS**
 
-${DISC_LINE^} já está disponível no site com resumo estruturado, tópicos organizados e material complementar."
+${BODY}"
 
   if [[ -n "$LAST_LESSON_TITLE" ]]; then
-    DESCRIPTION="${DESCRIPTION}
+    MESSAGE="${MESSAGE}
 
-» *${LAST_LESSON_TITLE}*"
+» ${LAST_LESSON_TITLE}"
   fi
 
-  DESCRIPTION="${DESCRIPTION}
+  MESSAGE="${MESSAGE}
 
-${EMOJI_ARROW} ${ISS_URL}
+🔗 ${ISS_URL}
 
-Atualização automática concluída com sucesso. ${EMOJI_OK} ${EMOJI_COFFEE} ${EMOJI_SMILE}"
+${EMOJI_COFFEE} Pra revisar rápido, recuperar uma aula perdida ou consultar depois."
 
   PAYLOAD="$(jq -n \
-    --arg content "||<@&${ROLE_ID}>||" \
+    --arg content "||<@&${ROLE_ID}>||
+
+${MESSAGE}" \
     --arg role "$ROLE_ID" \
-    --arg desc "$DESCRIPTION" \
-    --arg url "$RUN_URL" \
     '{
       content: $content,
-      allowed_mentions: { parse: [], roles: [$role] },
-      embeds: [{
-        description: $desc,
-        color: 5763719,
-        footer: { text: "ISS · pipeline automático" },
-        fields: [{ name: "Log do workflow", value: ("[Abrir no Actions](" + $url + ")") }]
-      }]
+      allowed_mentions: { parse: [], roles: [$role] }
     }')"
 
   post_discord "$PAYLOAD"
-  echo "Notificação Discord (transcrição disponível) enviada."
+  echo "Notificação Discord enviada."
   exit 0
 fi
 
-# —— Sucesso sem publicações: sem ping ——
+# —— Sucesso sem publicações: não incomodar o canal ——
 if [[ "$STATUS" == "success" ]]; then
-  DESCRIPTION="Nenhuma aula nova nesta execução."
-  [[ -n "$PIPELINE_SUMMARY" ]] && DESCRIPTION="${DESCRIPTION}
-
-_${PIPELINE_SUMMARY}_"
-
-  PAYLOAD="$(jq -n \
-    --arg desc "$DESCRIPTION" \
-    --arg url "$RUN_URL" \
-    '{
-      embeds: [{
-        title: "ISS — pipeline concluído",
-        description: $desc,
-        color: 9807270,
-        fields: [{ name: "Actions", value: ("[Abrir run](" + $url + ")") }]
-      }]
-    }')"
-  post_discord "$PAYLOAD"
-  echo "Notificação Discord (sem novidades) enviada."
+  echo "Nenhuma aula nova — notificação omitida."
   exit 0
 fi
 
-# —— Falha ou cancelado ——
+# —— Falha ou cancelado (texto simples, sem embed de Actions) ——
 case "$STATUS" in
-  failure) COLOR=15548997; TITLE="ISS — pipeline falhou" ;;
-  cancelled) COLOR=9807270; TITLE="ISS — pipeline cancelado" ;;
-  *) COLOR=9807270; TITLE="ISS — pipeline ($STATUS)" ;;
+  failure)
+    MESSAGE="Não foi possível publicar conteúdo novo no ISS desta vez. Se persistir, avisa no servidor."
+    ;;
+  cancelled)
+    MESSAGE="A atualização do ISS foi cancelada antes de terminar."
+    ;;
+  *)
+    MESSAGE="A atualização do ISS não concluiu (${STATUS})."
+    ;;
 esac
 
-DETAIL="${PIPELINE_SUMMARY:-Ver o log no Actions.}"
-[[ -n "$COMMIT_INFO" && "$COMMIT_INFO" != "—" ]] && DETAIL="${DETAIL}
-
-${COMMIT_INFO}"
-
-PAYLOAD="$(jq -n \
-  --arg title "$TITLE" \
-  --argjson color "$COLOR" \
-  --arg detail "$DETAIL" \
-  --arg url "$RUN_URL" \
-  '{
-    embeds: [{
-      title: $title,
-      description: $detail,
-      color: $color,
-      fields: [{ name: "Actions", value: ("[Abrir run](" + $url + ")") }]
-    }]
-  }')"
-
+PAYLOAD="$(jq -n --arg content "$MESSAGE" '{ content: $content }')"
 post_discord "$PAYLOAD"
 echo "Notificação Discord ($STATUS) enviada."
