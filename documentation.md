@@ -4,6 +4,7 @@
 
 ## Índice
 
+- [Pipeline automático (scraper → Actions → site)](#pipeline-automático-scraper--actions--site)
 - [Visão geral](#visão-geral)
 - [Arquitetura e fluxo](#arquitetura-e-fluxo)
 - [Estrutura de pastas](#estrutura-de-pastas)
@@ -18,6 +19,20 @@
 - [Estado local (progresso do utilizador)](#estado-local-progresso-do-utilizador)
 - [Executar o projeto localmente](#executar-o-projeto-localmente)
 - [Checklist de contribuição](#checklist-de-contribuição)
+
+---
+
+## Pipeline automático (scraper → Actions → site)
+
+A documentação **completa** do fluxo ponta-a-ponta (StripperScrapper, GitHub Actions, secrets, skip de VTT, configs) está no **[README.md](README.md#ecossistema-fluxo-completo-automático)**.
+
+Resumo:
+
+1. **[STRIPPERscrapper](https://github.com/GaabDevWeb/STRIPPERscrapper)** (local) — extrai `.vtt` e documentos para `downloads/`.
+2. **Workflow** [`.github/workflows/summarize-transcripts.yml`](.github/workflows/summarize-transcripts.yml) — gera lições em `content/` via Cursor SDK, sem edição manual por aula.
+3. **GitHub Pages** — serve o site estático que lê `content/`.
+
+Convenção VTT: `downloads/<Pasta>/Aula_NN_-_DDMMYYYY.vtt`. Configuração: `config/vtt-to-content.json`, `config/documents-context.json`, `agents/content-summary-*.md`.
 
 ---
 

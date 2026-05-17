@@ -1,0 +1,39 @@
+{
+  "documents_root": "downloads/documents",
+  "office_to_pdf": {
+    "enabled": true,
+    "replace_source": true,
+    "extensions": [".ppt", ".pptx"],
+    "commands": ["libreoffice", "soffice"],
+    "timeout_seconds": 180
+  },
+  "default_mode": "discipline_all",
+  "disciplines": {
+    "Introducao_a_Programacao_com_Python": {
+      "documents_dir": "Introducao_a_Programacao_com_Python_–_Prof_Gesiel_Lopes",
+      "mode": "per_lesson"
+    },
+    "Python_para_Processamento_de_Dados": {
+      "documents_dir": "Python_para_Processamento_de_Dados_[26E2_4]",
+      "mode": "per_lesson"
+    },
+    "Introducao_a_Visualizacao_de_Dados_e_SQL": {
+      "documents_dir": "Introducao_a_Visualizacao_de_Dados_e_SQL_–_Professor_Kadu_Gertners",
+      "mode": "discipline_all"
+    },
+    "SQL_e_Modelagem_Relacional": {
+      "documents_dir": "SQL_e_Modelagem_Relacional_–_Professor_Kadu_Gertners",
+      "mode": "discipline_all"
+    },
+    "Projeto_de_Bloco_Fundamentos_do_Processamento_de_Dados": {
+      "documents_dir": "Projeto_de_Bloco_Fundamentos_do_Processamento_de_Dados_[26E1_5]",
+      "mode": "discipline_all"
+    },
+    "Planejamento_de_Curso_e_Carreira": {
+      "mode": "discipline_all"
+    },
+    "Fluencia_em_IA": {
+      "mode": "discipline_all"
+    }
+  }
+}

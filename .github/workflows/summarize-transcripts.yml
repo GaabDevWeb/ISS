@@ -1,0 +1,98 @@
+# Gera lições ISS a partir de .vtt em downloads/ via API Cursor (@cursor/sdk).
+# Publica em content/<disciplina>/ e atualiza content/lessons.json (só aulas em falta no catálogo).
+# Anexa prompts ISS + contexto downloads/documents (config/documents-context.json).
+# Requer secret: CURSOR_API_KEY (Dashboard Cursor → Integrations ou service account).
+#
+# Ajuste TRANSCRIPT_SUMMARY_MAX_FILES: 0 = todos os .vtt (pode demorar e consumir quota).
+# Proteção de branch em main pode bloquear o push — use bypass com PAT ou regra para o bot.
+
+name: Resumir transcrições (Cursor SDK)
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_files:
+        description: "Máximo de ficheiros .vtt a processar (0 = todos)"
+        required: false
+        type: string
+        default: "5"
+      force:
+        description: "1 = regenerar mesmo que a lição em content/ esteja atualizada"
+        required: false
+        type: string
+        default: "0"
+  schedule:
+    # Semanal, domingo 06:00 UTC — comente se não quiser execução agendada
+    - cron: "0 6 * * 0"
+
+concurrency:
+  group: summarize-transcripts-${{ github.repository }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Instalar conversão Office→PDF e pdftotext
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libreoffice-impress libreoffice-writer poppler-utils
+
+      - name: Substituir .ppt/.pptx por PDF em downloads/documents
+        run: node .github/scripts/convert-office-documents.mjs
+
+      - name: Instalar dependência Cursor SDK
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${{ secrets.CURSOR_API_KEY }}" || { echo "Secret CURSOR_API_KEY não definido no repositório."; exit 1; }
+          npm init -y >/dev/null
+          npm pkg set type=module
+          npm install @cursor/sdk@latest
+
+      - name: Gerar lições ISS em content/ a partir dos .vtt
+        shell: bash
+        env:
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          CURSOR_MODEL_ID: ${{ vars.CURSOR_MODEL_ID }}
+          TRANSCRIPT_SUMMARY_MAX_FILES: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.max_files || '5' }}
+          TRANSCRIPT_SUMMARY_FORCE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.force || '0' }}
+          TRANSCRIPT_SUMMARY_MAX_CHARS: "100000"
+          TRANSCRIPT_SUMMARY_MAX_ATTEMPTS: "3"
+          DOCUMENT_CONTEXT_MAX_CHARS: "80000"
+          DOCUMENT_CONTEXT_MAX_FILE_CHARS: "25000"
+        run: node .github/scripts/summarize-transcripts.mjs
+
+      - name: Commit e push para main
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- 'content/' 'config/' 'agents/content-summary-agent.md' 'agents/content-summary-style-guide.md'
+          git add -- 'downloads/documents/**/*.pdf' 2>/dev/null || true
+          git add -u -- 'downloads/documents/' 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "Nada para comitar."
+            exit 0
+          fi
+          git commit -m "chore: lições ISS automáticas (VTT → content/) [skip ci]"
+          git push origin HEAD:main
