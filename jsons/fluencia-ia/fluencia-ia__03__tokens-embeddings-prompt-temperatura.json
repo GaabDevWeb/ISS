@@ -1,0 +1,55 @@
+{
+  "id": "fluencia-ia:tokens-embeddings-prompt-temperatura",
+  "slug": "tokens-embeddings-prompt-temperatura",
+  "discipline": "fluencia-ia",
+  "order": 3,
+  "name": "Tokens, embeddings, prompt e temperatura em LLMs",
+  "description": "Como modelos de linguagem navegam em espaço vetorial, escolhem próximos tokens e respondem a prompts com diferentes níveis de aleatoriedade. Tópicos abordados: tokens, embeddings, espaço vetorial, LLM, prompt, temperatura, probabilidade, transformers. Objetivos: • Explicar tokens como unidades de processamento de texto. • Relacionar embeddings a proximidade semântica. • Descrever temperatura como controle de aleatoriedade.",
+  "keywords": [
+    "tokens",
+    "embeddings",
+    "espaço vetorial",
+    "LLM",
+    "prompt",
+    "temperatura",
+    "probabilidade",
+    "transformers",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Classificar famílias de IA",
+    "Medium — Analisar prompt e saída",
+    "Hard — Simular escolhas de tokens"
+  ],
+  "concepts": [
+    "tokens",
+    "embeddings",
+    "espaço vetorial",
+    "LLM",
+    "prompt",
+    "temperatura",
+    "probabilidade",
+    "transformers"
+  ],
+  "learning_objectives": [
+    "Explicar tokens como unidades de processamento de texto.",
+    "Relacionar embeddings a proximidade semântica.",
+    "Descrever temperatura como controle de aleatoriedade."
+  ],
+  "exercises": [
+    {
+      "question": "Por que português pode consumir mais tokens que inglês em alguns modelos?",
+      "answer": "Porque a tokenização depende do vocabulário aprendido pelo modelo; palavras e acentos podem ser quebrados em mais partes dependendo da língua e do treinamento.",
+      "hint": "Token não é sempre uma palavra inteira."
+    }
+  ],
+  "content": "---\ntitle: \"Tokens, embeddings, prompt e temperatura em LLMs\"\nslug: \"tokens-embeddings-prompt-temperatura\"\ndiscipline: \"fluencia-ia\"\norder: 3\ndescription: \"Como modelos de linguagem navegam em espaço vetorial, escolhem próximos tokens e respondem a prompts com diferentes níveis de aleatoriedade.\"\nreading_time: 28\ndifficulty: \"medium\"\nconcepts:\n  - tokens\n  - embeddings\n  - espaço vetorial\n  - LLM\n  - prompt\n  - temperatura\n  - probabilidade\n  - transformers\nprerequisites:\n  - ia-ml-deep-learning-generativa-pratica\nlearning_objectives:\n  - Explicar tokens como unidades de processamento de texto.\n  - Relacionar embeddings a proximidade semântica.\n  - Descrever temperatura como controle de aleatoriedade.\nexercises:\n  - question: \"Por que português pode consumir mais tokens que inglês em alguns modelos?\"\n    answer: \"Porque a tokenização depende do vocabulário aprendido pelo modelo; palavras e acentos podem ser quebrados em mais partes dependendo da língua e do treinamento.\"\n    hint: \"Token não é sempre uma palavra inteira.\"\nreview_after_days: [3, 7, 21]\n---\n\n## Visão Geral do Conceito\n\nA aula 03 entra no mecanismo das `LLMs`: texto vira `tokens`, tokens viram vetores, o prompt direciona o espaço de possibilidades e a `temperatura` altera quão previsível é a escolha do próximo token.\n\n> **Regra:** esta lição foi reconstruída a partir da transcrição da aula e dos materiais disponíveis no repositório; quando a fonte não cobre um detalhe, isso é declarado como lacuna em vez de ser tratado como fato.\n\n## Modelo Mental\n\nImagine palavras como pontos em um mapa semântico. O prompt empurra o modelo para uma região do mapa; a cada passo, ele escolhe o próximo token provável, com mais ou menos liberdade.\n\n```mermaid\nflowchart LR\n  A[Prompt] --> B[Tokenizacao]\n  B --> C[Embeddings]\n  C --> D[Contexto no Transformer]\n  D --> E[Probabilidades do proximo token]\n  E --> F{Temperatura}\n  F -->|baixa| G[Mais previsivel]\n  F -->|alta| H[Mais variado]\n```\n\n## Mecânica Central\n\n- `Token` pode ser palavra, parte de palavra, pontuação ou espaço.\n- `Embedding` representa trecho como vetor numérico.\n- Proximidade vetorial aproxima significado, mas não garante verdade.\n- Temperatura baixa favorece tokens mais prováveis; temperatura alta aumenta variação.\n- Slides externos foram mencionados, mas não aparecem no manifest local.\n\n## Uso Prático\n\nAo escrever prompt, especifique contexto e formato. Se precisa consistência, peça temperatura baixa quando a ferramenta permitir; se precisa brainstorm, aceite variação maior e valide depois.\n\n## Erros Comuns\n\n- Achar que token é sempre palavra.\n- Confundir proximidade semântica com factualidade.\n- Usar temperatura alta em tarefa que exige precisão.\n- Medir qualidade só pela fluidez do texto.\n\n## Visão Geral de Debugging\n\nSe a resposta varia demais, reduza abertura do prompt, fixe formato e peça critérios. Se a resposta parece correta demais para ser checada, valide fontes externas.\n\n## Principais Pontos\n\n- LLMs operam token a token.\n- Embeddings aproximam significado em vetores.\n- Prompt direciona o espaço de resposta.\n- Temperatura ajusta previsibilidade.\n\n\n## Preparação para Prática\n\nPegue um prompt seu e reescreva com objetivo, contexto, formato e critério de validação.\n\n## Laboratório de Prática\n### Easy — Classificar famílias de IA\nPreencha a tabela com a família de IA e a justificativa.\n```markdown\n| Exemplo | Família | Justificativa |\n|---|---|---|\n| Chatbot de menu bancário | TODO | TODO |\n| Recomendação de música | TODO | TODO |\n| Gerador de imagem por prompt | TODO | TODO |\n```\nCritérios:\n- Justificar por mecanismo, não por marca.\n- Distinguir regra de aprendizado.\n- Evitar respostas vagas.\n\n### Medium — Analisar prompt e saída\nReescreva o prompt fraco com mais contexto e critérios.\n```markdown\n# Prompt fraco\nExplique IA.\n\n# Prompt melhorado\nTODO: defina público, objetivo, restrições e formato.\n\n# Como validar\nTODO: liste checagens.\n```\nCritérios:\n- Incluir objetivo e público.\n- Definir formato.\n- Incluir validação humana.\n\n### Hard — Simular escolhas de tokens\nComplete a função para escolher o token mais provável quando temperatura for baixa.\n```python\ncandidatos = {'dados': 0.55, 'texto': 0.30, 'imagem': 0.15}\n\ndef escolher_token(candidatos, temperatura_baixa=True):\n    # TODO: se temperatura_baixa, retornar token com maior probabilidade\n    # TODO: caso contrario, retornar um placeholder explicativo\n    return None\n\nprint(escolher_token(candidatos))\n```\nCritérios:\n- Usar probabilidades.\n- Explicar temperatura baixa.\n- Código deve executar antes da solução final.\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"tokens-embeddings-prompt-temperatura-classificar-familias-ia\",\n    \"slug\": \"tokens-embeddings-prompt-temperatura-classificar-familias-ia\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Classificar famílias de IA\",\n    \"discipline\": \"fluencia-ia\",\n    \"editorLanguage\": \"markdown\",\n    \"tags\": [\n      \"ia\",\n      \"machine-learning\",\n      \"conceitos\"\n    ],\n    \"summary\": \"Classificar exemplos em IA determinística, ML, deep learning ou generativa.\"\n  },\n  {\n    \"id\": \"tokens-embeddings-prompt-temperatura-analisar-prompt\",\n    \"slug\": \"tokens-embeddings-prompt-temperatura-analisar-prompt\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Analisar prompt e saída\",\n    \"discipline\": \"fluencia-ia\",\n    \"editorLanguage\": \"markdown\",\n    \"tags\": [\n      \"ia\",\n      \"prompt\",\n      \"validacao\"\n    ],\n    \"summary\": \"Melhorar um prompt com objetivo, contexto e critério de validação.\"\n  },\n  {\n    \"id\": \"tokens-embeddings-prompt-temperatura-tokens-temperatura\",\n    \"slug\": \"tokens-embeddings-prompt-temperatura-tokens-temperatura\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Simular escolhas de tokens\",\n    \"discipline\": \"fluencia-ia\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"ia\",\n      \"tokens\",\n      \"probabilidade\"\n    ],\n    \"summary\": \"Simular escolha de próximo token com probabilidades simplificadas.\"\n  }\n]\n-->\n\n<!-- SOURCE_CONTEXT\ncanonical_memory: MEMORIES.md\nsource: downloads/Fluencia_em_IA/Aula_03_-_05052026.md\nsource_sha256: 8ab61312220fd943bf6d616c38c3db05e211a1628ed3ce3bb24508e7de304b58\nsource: downloads/Fluencia_em_IA/Aula_03_-_05052026.vtt\nsource_sha256: 5b601de9a5c83ea4e6753ff493d787782c0f30e31b86c1eb198d50a05c003288\nnotes:\n  - Slides em Drive foram citados oralmente, mas não estão no manifest local.\n-->\n",
+  "source_path": "content/fluencia-ia/aula-03-tokens-embeddings-prompt-temperatura.md",
+  "source_hash": "00fdc2fe618c6a2a"
+}

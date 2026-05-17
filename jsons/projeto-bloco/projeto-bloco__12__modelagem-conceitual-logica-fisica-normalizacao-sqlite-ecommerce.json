@@ -1,0 +1,53 @@
+{
+  "id": "projeto-bloco:modelagem-conceitual-logica-fisica-normalizacao-sqlite-ecommerce",
+  "slug": "modelagem-conceitual-logica-fisica-normalizacao-sqlite-ecommerce",
+  "discipline": "projeto-bloco",
+  "order": 12,
+  "name": "Modelagem conceitual, lógica e física do e-commerce em SQLite",
+  "description": "Aprofundamento do projeto de e-commerce: camadas de modelagem, normalização, chaves e decisões físicas em SQLite. Tópicos abordados: modelagem conceitual, modelagem lógica, modelagem física, SQLite, normalização, OLTP, POC. Objetivos: • Diferenciar camadas conceitual, lógica e física. • Relacionar requisitos de e-commerce a tabelas e chaves. • Explicar por que SQLite serve como POC didática.",
+  "keywords": [
+    "modelagem conceitual",
+    "modelagem lógica",
+    "modelagem física",
+    "SQLite",
+    "normalização",
+    "OLTP",
+    "POC",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Esboçar entidades do e-commerce",
+    "Medium — Criar view de apoio",
+    "Hard — Validar carga inicial"
+  ],
+  "concepts": [
+    "modelagem conceitual",
+    "modelagem lógica",
+    "modelagem física",
+    "SQLite",
+    "normalização",
+    "OLTP",
+    "POC"
+  ],
+  "learning_objectives": [
+    "Diferenciar camadas conceitual, lógica e física.",
+    "Relacionar requisitos de e-commerce a tabelas e chaves.",
+    "Explicar por que SQLite serve como POC didática."
+  ],
+  "exercises": [
+    {
+      "question": "Qual é a diferença entre modelo conceitual e modelo físico?",
+      "answer": "O conceitual descreve o negócio sem amarrar tecnologia; o físico decide motor, tipos, chaves e detalhes executáveis no banco.",
+      "hint": "Compare conversa de negócio com CREATE TABLE."
+    }
+  ],
+  "content": "---\ntitle: \"Modelagem conceitual, lógica e física do e-commerce em SQLite\"\nslug: \"modelagem-conceitual-logica-fisica-normalizacao-sqlite-ecommerce\"\ndiscipline: \"projeto-bloco\"\norder: 12\ndescription: \"Aprofundamento do projeto de e-commerce: camadas de modelagem, normalização, chaves e decisões físicas em SQLite.\"\nreading_time: 30\ndifficulty: \"medium\"\nconcepts:\n  - modelagem conceitual\n  - modelagem lógica\n  - modelagem física\n  - SQLite\n  - normalização\n  - OLTP\n  - POC\nprerequisites:\n  - requisitos-persistencia-poc-sqlite-ecommerce\nlearning_objectives:\n  - Diferenciar camadas conceitual, lógica e física.\n  - Relacionar requisitos de e-commerce a tabelas e chaves.\n  - Explicar por que SQLite serve como POC didática.\nexercises:\n  - question: \"Qual é a diferença entre modelo conceitual e modelo físico?\"\n    answer: \"O conceitual descreve o negócio sem amarrar tecnologia; o físico decide motor, tipos, chaves e detalhes executáveis no banco.\"\n    hint: \"Compare conversa de negócio com CREATE TABLE.\"\nreview_after_days: [3, 7, 21]\n---\n\n## Visão Geral do Conceito\n\nA aula 12 aprofunda o e-commerce iniciado anteriormente e mostra a passagem entre `modelo conceitual`, `modelo lógico` e `modelo físico`. O foco é decidir o que precisa persistir e como o `SQLite` pode validar a proposta antes de uma arquitetura maior.\n\n> **Regra:** esta lição foi reconstruída a partir da transcrição da aula e dos materiais disponíveis no repositório; quando a fonte não cobre um detalhe, isso é declarado como lacuna em vez de ser tratado como fato.\n\n## Modelo Mental\n\nPense em três camadas: o negócio fala em clientes, produtos e pedidos; o modelo lógico organiza relações; o modelo físico escolhe tipos, PKs, FKs e limitações do motor.\n\n```mermaid\nflowchart TD\n  A[Requisitos do e-commerce] --> B[Modelo conceitual]\n  B --> C[Modelo lógico relacional]\n  C --> D[Normalização]\n  D --> E[Modelo físico SQLite]\n  E --> F[POC e testes]\n```\n\n## Mecânica Central\n\n- `OLTP` prioriza operações transacionais consistentes.\n- Modelo físico precisa de tipos, PKs e FKs.\n- Normalização reduz duplicidade antes da implementação.\n- POC testa viabilidade técnica com custo baixo.\n\n## Uso Prático\n\nNo e-commerce, `produto` pode depender de `fabricante`; `pedido` depende de `cliente`; `pedido_item` resolve múltiplos produtos em um pedido. Esse desenho evita repetir dados de produto em cada venda.\n\n## Erros Comuns\n\n- Pular direto para SQLite sem entender regra de negócio.\n- Tratar POC como produto final.\n- Confundir análise de mercado com modelagem de persistência.\n- Criar tabela gigante com cliente, produto e pedido misturados.\n\n## Visão Geral de Debugging\n\nSe uma tabela cresce com colunas de assuntos diferentes, volte ao modelo lógico e pergunte quais entidades estão misturadas.\n\n## Principais Pontos\n\n- Modelagem tem camadas.\n- SQLite é ótimo para POC didática.\n- Normalização protege consistência.\n- E-commerce exige separar clientes, pedidos, itens e produtos.\n\n\n## Preparação para Prática\n\nRevise a aula anterior e desenhe o fluxo cliente → pedido → item → produto antes de escrever SQL.\n\n## Laboratório de Prática\n### Easy — Esboçar entidades do e-commerce\nComplete o esboço inicial do e-commerce com chaves e relacionamentos.\n```sql\nCREATE TABLE cliente (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  nome TEXT NOT NULL\n);\n\nCREATE TABLE produto (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  nome TEXT NOT NULL,\n  preco NUMERIC NOT NULL\n);\n\n-- TODO: criar tabela pedido com FK para cliente\n```\nCritérios:\n- Usar PK autoincremental.\n- Declarar FK quando houver dependência.\n- Separar entidades principais.\n\n### Medium — Criar view de apoio\nMonte uma view de totais por pedido.\n```sql\n-- TODO: criar tabelas pedido e pedido_item antes de usar em produção\nCREATE VIEW vw_total_pedido AS\nSELECT\n  pedido_id,\n  SUM(quantidade * preco_unitario) AS total\nFROM pedido_item\nGROUP BY pedido_id;\n```\nCritérios:\n- Usar GROUP BY corretamente.\n- Expor só campos necessários.\n- Nomear a view de forma clara.\n\n### Hard — Validar carga inicial\nComplete a carga inicial para popular dados de teste.\n```python\nimport sqlite3\n\nconn = sqlite3.connect('ecommerce.db')\ncur = conn.cursor()\n\nprodutos = [('Camiseta', 59.9), ('Mouse', 89.9)]\n\n# TODO: criar tabela produto se nao existir\n# TODO: inserir produtos usando placeholders\n\nconn.commit()\nconn.close()\n```\nCritérios:\n- Usar placeholders.\n- Executar sem erro antes dos TODOs.\n- Separar criação e carga.\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"modelagem-conceitual-logica-fisica-normalizacao-sqlite-ecommerce-modelar-ecommerce\",\n    \"slug\": \"modelagem-conceitual-logica-fisica-normalizacao-sqlite-ecommerce-modelar-ecommerce\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Esboçar entidades do e-commerce\",\n    \"discipline\": \"projeto-bloco\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"sqlite\",\n      \"ecommerce\"\n    ],\n    \"summary\": \"Criar tabelas base de cliente, produto e pedido em SQLite.\"\n  },\n  {\n    \"id\": \"modelagem-conceitual-logica-fisica-normalizacao-sqlite-ecommerce-criar-view\",\n    \"slug\": \"modelagem-conceitual-logica-fisica-normalizacao-sqlite-ecommerce-criar-view\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Criar view de apoio\",\n    \"discipline\": \"projeto-bloco\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"view\",\n      \"relatorio\"\n    ],\n    \"summary\": \"Criar uma view para expor dados calculados sem abrir tabelas base.\"\n  },\n  {\n    \"id\": \"modelagem-conceitual-logica-fisica-normalizacao-sqlite-ecommerce-validar-carga\",\n    \"slug\": \"modelagem-conceitual-logica-fisica-normalizacao-sqlite-ecommerce-validar-carga\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Validar carga inicial\",\n    \"discipline\": \"projeto-bloco\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"python\",\n      \"sqlite\",\n      \"carga-dados\"\n    ],\n    \"summary\": \"Preparar script de carga inicial com placeholders e commit.\"\n  }\n]\n-->\n\n<!-- SOURCE_CONTEXT\ncanonical_memory: MEMORIES.md\nsource: downloads/Projeto_de_Bloco_Fundamentos_do_Processamento_de_Dados/Aula_12_-_24042026.md\nsource_sha256: 1a3cb1a8791be63ecfb3ff1dc025fd42c78b0fe6501684d6de044b2241ffa80f\nsource: downloads/Projeto_de_Bloco_Fundamentos_do_Processamento_de_Dados/Aula_12_-_24042026.vtt\nsource_sha256: 7c640ba9d992a1dda260584239542b11decbd002ebffc9c482d296a8e0b0ef9c\nnotes:\n  - Sem documento dedicado no manifest para esta aula; transcrição VTT é a fonte principal.\n-->\n",
+  "source_path": "content/projeto-bloco/aula-12-modelagem-conceitual-logica-fisica-normalizacao-sqlite-ecommerce.md",
+  "source_hash": "59133cc04564dcb6"
+}

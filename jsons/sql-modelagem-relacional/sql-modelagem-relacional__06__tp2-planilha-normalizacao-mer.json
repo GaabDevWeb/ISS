@@ -1,0 +1,53 @@
+{
+  "id": "sql-modelagem-relacional:tp2-planilha-normalizacao-mer",
+  "slug": "tp2-planilha-normalizacao-mer",
+  "discipline": "sql-modelagem-relacional",
+  "order": 6,
+  "name": "TP2: planilha desnormalizada, normalização e modelo entidade-relacionamento",
+  "description": "Aplicação de normalização em planilha desnormalizada para derivar entidades, atributos, relacionamentos e cardinalidades. Tópicos abordados: TP2, planilha desnormalizada, anomalia de atualização, 1FN, 2FN, MER, cardinalidade. Objetivos: • Converter uma planilha redundante em modelo relacional. • Reconhecer anomalias de atualização. • Definir cardinalidades a partir de dados observados.",
+  "keywords": [
+    "TP2",
+    "planilha desnormalizada",
+    "anomalia de atualização",
+    "1FN",
+    "2FN",
+    "MER",
+    "cardinalidade",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Identificar entidades e chaves",
+    "Medium — Normalizar atributos problemáticos",
+    "Hard — Validar modelo por regras de negócio"
+  ],
+  "concepts": [
+    "TP2",
+    "planilha desnormalizada",
+    "anomalia de atualização",
+    "1FN",
+    "2FN",
+    "MER",
+    "cardinalidade"
+  ],
+  "learning_objectives": [
+    "Converter uma planilha redundante em modelo relacional.",
+    "Reconhecer anomalias de atualização.",
+    "Definir cardinalidades a partir de dados observados."
+  ],
+  "exercises": [
+    {
+      "question": "Por que mudar endereço em várias linhas repetidas é sintoma de má modelagem?",
+      "answer": "Porque o mesmo fato está duplicado; atualizar só parte das linhas cria inconsistência e anomalia de atualização.",
+      "hint": "Pense em Maria com endereço repetido em várias linhas."
+    }
+  ],
+  "content": "---\ntitle: \"TP2: planilha desnormalizada, normalização e modelo entidade-relacionamento\"\nslug: \"tp2-planilha-normalizacao-mer\"\ndiscipline: \"sql-modelagem-relacional\"\norder: 6\ndescription: \"Aplicação de normalização em planilha desnormalizada para derivar entidades, atributos, relacionamentos e cardinalidades.\"\nreading_time: 24\ndifficulty: \"medium\"\nconcepts:\n  - TP2\n  - planilha desnormalizada\n  - anomalia de atualização\n  - 1FN\n  - 2FN\n  - MER\n  - cardinalidade\nprerequisites:\n  - modelo-logico-normalizacao-1fn-2fn-3fn\nlearning_objectives:\n  - Converter uma planilha redundante em modelo relacional.\n  - Reconhecer anomalias de atualização.\n  - Definir cardinalidades a partir de dados observados.\nexercises:\n  - question: \"Por que mudar endereço em várias linhas repetidas é sintoma de má modelagem?\"\n    answer: \"Porque o mesmo fato está duplicado; atualizar só parte das linhas cria inconsistência e anomalia de atualização.\"\n    hint: \"Pense em Maria com endereço repetido em várias linhas.\"\nreview_after_days: [3, 7, 21]\n---\n\n## Visão Geral do Conceito\n\nA aula aplica a teoria de normalização ao TP2: partir de uma `planilha desnormalizada` e produzir entidades, atributos, relacionamentos e cardinalidades. O valor está na interpretação: a planilha mostra sintomas, mas o modelo exige decisão.\n\n> **Regra:** esta lição foi reconstruída a partir da transcrição da aula e dos materiais disponíveis no repositório; quando a fonte não cobre um detalhe, isso é declarado como lacuna em vez de ser tratado como fato.\n\n## Modelo Mental\n\nVeja a planilha como fotografia achatada de várias tabelas misturadas. Sua tarefa é recuperar as entidades escondidas e recolocar cada fato no lugar onde ele depende da chave correta.\n\n```mermaid\nflowchart LR\n  A[Planilha com repeticoes] --> B[Identificar fatos repetidos]\n  B --> C[Separar entidades]\n  C --> D[Definir PK/FK]\n  D --> E[Cardinalidades]\n  E --> F[MER normalizado]\n```\n\n## Mecânica Central\n\n- Repetição indica candidata a entidade separada.\n- `1FN` impede múltiplos valores na mesma célula.\n- `2FN` evita atributos dependentes só de parte da chave.\n- Cardinalidade nasce da regra de negócio, não só da linha observada.\n\n## Uso Prático\n\nSe uma planilha repete `nome`, `endereco`, `telefone` e `matricula`, separe pessoa, contato e vínculo acadêmico/profissional conforme o significado de cada campo.\n\n## Erros Comuns\n\n- Modelar apenas pelo cabeçalho da planilha.\n- Confundir ausência de dado com inexistência de relacionamento.\n- Usar IA para gerar modelo sem validar regra de negócio.\n- Repetir a teoria da aula anterior sem aplicar ao TP.\n\n## Visão Geral de Debugging\n\nFaça alterações hipotéticas: se um endereço mudar, quantas linhas mudam? Se a resposta for muitas, existe redundância a tratar.\n\n## Principais Pontos\n\n- TP2 é aplicação de normalização.\n- Planilha mistura entidades.\n- Cardinalidade depende de regra de negócio.\n- Anomalias revelam mau desenho.\n\n\n## Preparação para Prática\n\nAntes de desenhar, liste colunas, valores repetidos e perguntas de negócio que a planilha deveria responder.\n\n## Laboratório de Prática\n### Easy — Identificar entidades e chaves\nComplete o esboço com chaves primárias e estrangeiras coerentes com o cenário.\n```sql\n-- TODO: revisar nomes e completar as chaves\nCREATE TABLE exemplo_pai (\n  id INTEGER PRIMARY KEY,\n  nome TEXT NOT NULL\n);\n\nCREATE TABLE exemplo_filho (\n  id INTEGER PRIMARY KEY,\n  pai_id INTEGER NOT NULL,\n  descricao TEXT,\n  -- TODO: declarar FOREIGN KEY para exemplo_pai(id)\n  FOREIGN KEY (pai_id) REFERENCES exemplo_pai(id)\n);\n```\nCritérios:\n- Declarar PK em cada tabela.\n- Declarar FK com tipo compatível.\n- Usar nomes semânticos.\n\n### Medium — Normalizar atributos problemáticos\nReescreva a modelagem para evitar campo multivalorado em uma única coluna.\n```sql\n-- Estrutura ruim: telefones misturados em uma coluna\nCREATE TABLE cliente_ruim (\n  id INTEGER PRIMARY KEY,\n  nome TEXT NOT NULL,\n  telefones TEXT\n);\n\n-- TODO: criar tabela cliente\n-- TODO: criar tabela cliente_telefone com uma linha por telefone\n```\nCritérios:\n- Evitar lista dentro de célula.\n- Criar tabela dependente quando houver múltiplos valores.\n- Manter relacionamento rastreável.\n\n### Hard — Validar modelo por regras de negócio\nAdicione restrições e uma consulta de verificação para encontrar registros órfãos.\n```sql\nCREATE TABLE departamento (\n  id INTEGER PRIMARY KEY,\n  nome TEXT NOT NULL UNIQUE\n);\n\nCREATE TABLE funcionario (\n  id INTEGER PRIMARY KEY,\n  departamento_id INTEGER,\n  nome TEXT NOT NULL\n  -- TODO: adicionar FK quando a regra exigir vínculo obrigatório\n);\n\n-- TODO: escrever SELECT que encontre funcionarios sem departamento válido\n```\nCritérios:\n- Relacionar regra de negócio a NOT NULL quando aplicável.\n- Usar FK para integridade.\n- Criar consulta de auditoria.\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"tp2-planilha-normalizacao-mer-identificar-entidades\",\n    \"slug\": \"tp2-planilha-normalizacao-mer-identificar-entidades\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Identificar entidades e chaves\",\n    \"discipline\": \"sql-modelagem-relacional\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"modelagem\",\n      \"chaves\"\n    ],\n    \"summary\": \"Completar um esboço SQL com entidades, PK e FK coerentes.\"\n  },\n  {\n    \"id\": \"tp2-planilha-normalizacao-mer-normalizar-campos\",\n    \"slug\": \"tp2-planilha-normalizacao-mer-normalizar-campos\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Normalizar atributos problemáticos\",\n    \"discipline\": \"sql-modelagem-relacional\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"normalizacao\",\n      \"1fn\"\n    ],\n    \"summary\": \"Separar campos multipartidos ou multivalorados em estruturas relacionais.\"\n  },\n  {\n    \"id\": \"tp2-planilha-normalizacao-mer-validar-modelo\",\n    \"slug\": \"tp2-planilha-normalizacao-mer-validar-modelo\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Validar modelo por regras de negócio\",\n    \"discipline\": \"sql-modelagem-relacional\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"modelagem\",\n      \"regras-negocio\"\n    ],\n    \"summary\": \"Escrever constraints e consultas para validar cardinalidade e integridade.\"\n  }\n]\n-->\n\n<!-- SOURCE_CONTEXT\ncanonical_memory: MEMORIES.md\nsource: downloads/SQL_e_Modelagem_Relacional/Aula_06_-_07052026.md\nsource_sha256: 744e791f620dda33d15c7de68e2af0683c77a7f3411b2243987a49190c1a3b5b\nsource: downloads/SQL_e_Modelagem_Relacional/Aula_06_-_07052026.vtt\nsource_sha256: 7c69e35852cc517d24ee875c2eda96512fa893a14ab6d2f8963cda3a2bdc1db3\nnotes:\n  - Aula curta com falhas técnicas; lição foca a parte objetiva do TP2.\n-->\n",
+  "source_path": "content/sql-modelagem-relacional/aula-06-tp2-planilha-normalizacao-mer.md",
+  "source_hash": "c72070256fd3c7dc"
+}

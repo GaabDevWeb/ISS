@@ -1,0 +1,87 @@
+{
+  "id": "visualizacao-sql:sql-group-by-having-agregacoes",
+  "slug": "sql-group-by-having-agregacoes",
+  "discipline": "visualizacao-sql",
+  "order": 14,
+  "name": "Agregação em SQL: GROUP BY, HAVING e funções SUM e COUNT",
+  "description": "Agrupar linhas, calcular totais e contagens com SUM e COUNT, filtrar grupos com HAVING e ordenar relatórios; prática com notas fiscais e vendas de jogos (vgsales). Tópicos abordados: funcoes-de-agregacao, group-by, having, where-vs-having, count-asterisco-vs-count-coluna, null-em-agregacoes, order-by-em-relatorios-agrupados, SUM e COUNT em SQL, GROUP BY por dimensão, HAVING para filtrar grupos, WHERE antes da agregação, COUNT asterisco vs COUNT coluna com NULL. Objetivos: • Explicar a diferença entre filtrar linhas com WHERE e filtrar grupos com HAVING. • Escrever consultas com GROUP BY ali...",
+  "keywords": [
+    "funcoes-de-agregacao",
+    "group-by",
+    "having",
+    "where-vs-having",
+    "count-asterisco-vs-count-coluna",
+    "null-em-agregacoes",
+    "order-by-em-relatorios-agrupados",
+    "SUM e COUNT em SQL",
+    "GROUP BY por dimensão",
+    "HAVING para filtrar grupos",
+    "WHERE antes da agregação",
+    "COUNT asterisco vs COUNT coluna com NULL",
+    "ORDER BY em consultas agregadas",
+    "importação CSV vgsales para SQLite",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Funções de agregação usadas na etapa",
+    "GROUP BY e colunas no SELECT",
+    "Ordem lógica das cláusulas",
+    "Modelo da tabela de notas fiscais",
+    "Uso Prático",
+    "1. Totais globais e por cliente (<mark style=\"background-color: #242424; padding: 2px 4px; border-radius: 3px; color: inherit;\">`NF_Cliente`</mark>)",
+    "2. Valores distintos e ordenação",
+    "3. Efeito de NULL em Valor",
+    "4. Dataset vgsales no Excel e no SQLite",
+    "5. WHERE e GROUP BY juntos",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Filtrar grupos com HAVING",
+    "Medium — COUNT(*) versus COUNT(Valor)",
+    "Hard — Ranking de gêneros por vendas mundiais"
+  ],
+  "concepts": [
+    "funcoes-de-agregacao",
+    "group-by",
+    "having",
+    "where-vs-having",
+    "count-asterisco-vs-count-coluna",
+    "null-em-agregacoes",
+    "order-by-em-relatorios-agrupados",
+    "SUM e COUNT em SQL",
+    "GROUP BY por dimensão",
+    "HAVING para filtrar grupos",
+    "WHERE antes da agregação",
+    "COUNT asterisco vs COUNT coluna com NULL",
+    "ORDER BY em consultas agregadas",
+    "importação CSV vgsales para SQLite"
+  ],
+  "learning_objectives": [
+    "Explicar a diferença entre filtrar linhas com WHERE e filtrar grupos com HAVING.",
+    "Escrever consultas com GROUP BY alinhando colunas do SELECT às colunas de agrupamento.",
+    "Usar SUM, COUNT(*) e COUNT(coluna) e interpretar o efeito de valores NULL.",
+    "Combinar agregação com ORDER BY para montar rankings por dimensão (plataforma, gênero, ano, editora)."
+  ],
+  "exercises": [
+    {
+      "question": "Por que você não pode usar WHERE para filtrar `SUM(Valor) > 300` depois de agrupar por cliente?",
+      "answer": "WHERE é avaliado antes do agrupamento, linha a linha; a soma por grupo só existe depois do GROUP BY. Para condições sobre agregados, use HAVING, que filtra os grupos já formados.",
+      "hint": "Pense na ordem lógica: primeiro entram as linhas (WHERE), depois formam-se os grupos e as agregações."
+    },
+    {
+      "question": "Em que situação COUNT(*) e COUNT(Valor) podem dar resultados diferentes na mesma consulta com GROUP BY?",
+      "answer": "Quando Valor é NULL em algumas linhas: COUNT(*) conta todas as linhas do grupo; COUNT(Valor) ignora linhas em que Valor é NULL.",
+      "hint": "Relembre os registros inseridos com Valor nulo no material da NF_Cliente."
+    },
+    {
+      "question": "Qual é o papel de ORDER BY em uma consulta que já usa GROUP BY?",
+      "answer": "GROUP BY define os grupos e as agregações; ORDER BY define a ordem de exibição das linhas do resultado (por exemplo, gêneros com maior venda primeiro). Sem ORDER BY, a ordem dos grupos não é garantida.",
+      "hint": "Compare com uma planilha: primeiro você agrupa e soma, depois classifica a tabela resumo."
+    }
+  ],
+  "content": "---\ntitle: \"Agregação em SQL: GROUP BY, HAVING e funções SUM e COUNT\"\nslug: \"sql-group-by-having-agregacoes\"\ndiscipline: \"visualizacao-sql\"\norder: 14\ndescription: \"Agrupar linhas, calcular totais e contagens com SUM e COUNT, filtrar grupos com HAVING e ordenar relatórios; prática com notas fiscais e vendas de jogos (vgsales).\"\nreading_time: 38\ndifficulty: \"medium\"\nconcepts:\n  - funcoes-de-agregacao\n  - group-by\n  - having\n  - where-vs-having\n  - count-asterisco-vs-count-coluna\n  - null-em-agregacoes\n  - order-by-em-relatorios-agrupados\nprerequisites:\n  - sql-order-by-ordenacao-resultados\n  - consultas-sql-tabela-clientes-pratica\nlearning_objectives:\n  - \"Explicar a diferença entre filtrar linhas com WHERE e filtrar grupos com HAVING.\"\n  - \"Escrever consultas com GROUP BY alinhando colunas do SELECT às colunas de agrupamento.\"\n  - \"Usar SUM, COUNT(*) e COUNT(coluna) e interpretar o efeito de valores NULL.\"\n  - \"Combinar agregação com ORDER BY para montar rankings por dimensão (plataforma, gênero, ano, editora).\"\nexercises:\n  - question: \"Por que você não pode usar WHERE para filtrar `SUM(Valor) > 300` depois de agrupar por cliente?\"\n    answer: \"WHERE é avaliado antes do agrupamento, linha a linha; a soma por grupo só existe depois do GROUP BY. Para condições sobre agregados, use HAVING, que filtra os grupos já formados.\"\n    hint: \"Pense na ordem lógica: primeiro entram as linhas (WHERE), depois formam-se os grupos e as agregações.\"\n  - question: \"Em que situação COUNT(*) e COUNT(Valor) podem dar resultados diferentes na mesma consulta com GROUP BY?\"\n    answer: \"Quando Valor é NULL em algumas linhas: COUNT(*) conta todas as linhas do grupo; COUNT(Valor) ignora linhas em que Valor é NULL.\"\n    hint: \"Relembre os registros inseridos com Valor nulo no material da NF_Cliente.\"\n  - question: \"Qual é o papel de ORDER BY em uma consulta que já usa GROUP BY?\"\n    answer: \"GROUP BY define os grupos e as agregações; ORDER BY define a ordem de exibição das linhas do resultado (por exemplo, gêneros com maior venda primeiro). Sem ORDER BY, a ordem dos grupos não é garantida.\"\n    hint: \"Compare com uma planilha: primeiro você agrupa e soma, depois classifica a tabela resumo.\"\nreview_after_days:\n  - 3\n  - 10\n---\n\n## Visão Geral do Conceito\n\nEm relatórios reais você raramente quer **cada linha bruta** da base: quer **subtotais por cliente**, **contagem de pedidos por status** ou **vendas totais por plataforma**. Em SQL isso é feito com **funções de agregação** (`SUM`, `COUNT`, etc.) e com a cláusula `GROUP BY`, que diz **por qual coluna (ou colunas)** esses totais são calculados.\n\nA Etapa 8 do curso trabalha dois cenários: uma tabela simples de notas fiscais (`NF_Cliente`) e o dataset público de vendas de jogos `vgsales.csv`, importado para `Vendas_Jogos`, para agrupar por plataforma, ano, gênero e editora. Referência complementar: capítulo sobre `GROUP BY` e `ORDER BY` em *Getting Started with SQL* (O’Reilly), citado no material da disciplina.\n\n## Modelo Mental\n\nImagine uma planilha de vendas com milhares de linhas:\n\n- Sem agrupamento, `SUM(Valor)` vira **um único número** (o total geral).\n- Com `GROUP BY Cliente`, o banco **quebra a planilha em montinhos** — um montinho por cliente — e calcula `SUM` e `COUNT` **dentro de cada montinho**.\n\n`WHERE` atua **antes** de empilhar: remove linhas que não entram na análise.  \n`HAVING` atua **depois**: olha para cada **grupo** (já com sua soma, contagem, etc.) e descarta grupos inteiros que não atendem à condição.\n\nNa aula, isso é enfatizado: *HAVING não examina a tabela original linha a linha como o WHERE faz para agregados; ele examina o resultado do agrupamento.*\n\n## Mecânica Central\n\n### Funções de agregação usadas na etapa\n\n- `SUM(coluna)` — soma valores numéricos do grupo; em SQL padrão, `NULL` é ignorado na soma.\n- `COUNT(*)` — conta **linhas** do grupo (incluindo linhas onde alguma coluna é `NULL`).\n- `COUNT(coluna)` — conta linhas em que **essa coluna** não é `NULL`.\n\n### GROUP BY e colunas no SELECT\n\n> **Regra:** Toda coluna “não agregada” listada no `SELECT` deve aparecer no `GROUP BY` (ou ser funcionalmente dependente do agrupamento, em bancos que permitem modo estrito flexível — no SQLite do curso, pense no alinhamento 1:1).\n\nExemplo central do material (`NF_Cliente`):\n\n```sql\nSELECT\n  Cliente,\n  SUM(Valor) AS Soma,\n  COUNT(*) AS QtdeRegistros\nFROM NF_Cliente\nGROUP BY Cliente;\n```\n\n### HAVING\n\nFiltra **grupos** com base em agregados ou em colunas de agrupamento, após o `GROUP BY`:\n\n```sql\nSELECT\n  Cliente,\n  SUM(Valor) AS Soma,\n  COUNT(*) AS QtdeRegistros\nFROM NF_Cliente\nGROUP BY Cliente\nHAVING SUM(Valor) > 300\n   AND COUNT(*) >= 1;\n```\n\n### Ordem lógica das cláusulas\n\nA ordem **de escrita** típica é: `SELECT` … `FROM` … `WHERE` … `GROUP BY` … `HAVING` … `ORDER BY`.\n\n```mermaid\nflowchart TD\n    A[FROM: tabela fonte] --> B[WHERE: filtra linhas]\n    B --> C[GROUP BY: forma grupos]\n    C --> D[HAVING: filtra grupos]\n    D --> E[SELECT: projeta colunas e agregações]\n    E --> F[ORDER BY: ordena linhas do resultado]\n```\n\n### Modelo da tabela de notas fiscais\n\n```mermaid\nerDiagram\n    NF_Cliente {\n        int NF\n        text Produto\n        text Cliente\n        int Quantidade\n        int Valor\n        int Dia\n    }\n```\n\nCada linha representa um item em uma NF; o mesmo `NF` pode aparecer mais de uma vez (vários produtos).\n\n## Uso Prático\n\n### 1. Totais globais e por cliente (`NF_Cliente`)\n\n```sql\n-- Total geral de valor na tabela\nSELECT SUM(Valor) FROM NF_Cliente;\n\n-- Total apenas para o cliente C1 (filtro antes de agregar)\nSELECT SUM(Valor)\nFROM NF_Cliente\nWHERE Cliente = 'C1';\n```\n\n### 2. Valores distintos e ordenação\n\n```sql\nSELECT DISTINCT Cliente FROM NF_Cliente ORDER BY Cliente;\n```\n\n`DISTINCT` elimina duplicatas; `ORDER BY` organiza o resultado (revisão integrada à etapa).\n\n### 3. Efeito de NULL em Valor\n\nApós inserir linhas com `Valor` nulo:\n\n```sql\nSELECT\n  Cliente,\n  SUM(Valor) AS Soma,\n  COUNT(*) AS QtdeLinhas,\n  COUNT(Valor) AS QtdeValorNaoNulo\nFROM NF_Cliente\nGROUP BY Cliente;\n```\n\nCompare `COUNT(*)` com `COUNT(Valor)` para ver o impacto dos nulos.\n\n### 4. Dataset vgsales no Excel e no SQLite\n\nNo material, o CSV é aberto no Excel e soma-se `NA_Sales` + `EU_Sales` + `JP_Sales` + `Other_Sales` e compara-se com `Global_Sales`: **nem sempre bate** — útil para discutir qualidade de dados, arredondamento e origem do dataset.\n\nNo SQLiteStudio, importa-se o CSV para `Vendas_Jogos` (primeira linha como cabeçalho, separador vírgula). O roteiro usa tipos numéricos inteiros nas colunas de venda; em bases reais o ideal é tipo decimal para milhões de cópias. A ideia pedagógica é reproduzir os `GROUP BY` por dimensão:\n\n```sql\nSELECT\n  Plataforma_Jogo,\n  ROUND(SUM(Vendas_Mundial_Jogo), 2) AS Total_Mundial\nFROM Vendas_Jogos\nGROUP BY Plataforma_Jogo\nORDER BY Plataforma_Jogo;\n```\n\nVariações do texto da etapa: agrupar por `Ano_Jogo`, `Genero_Jogo`, `Empresa_Jogo`, e ordenar pelo total regional ou mundial com `DESC`.\n\n### 5. WHERE e GROUP BY juntos\n\n```sql\nSELECT Cliente, SUM(Valor) AS Soma\nFROM NF_Cliente\nWHERE Cliente = 'C1'\nGROUP BY Cliente;\n```\n\n`WHERE` restringe **quais linhas entram** nos grupos; não substitui `HAVING` para condição em `SUM`.\n\n## Erros Comuns\n\n- **Usar WHERE com agregado (ex.: `WHERE SUM(Valor) > 300`)**  \n  Sintoma: erro de sintaxe ou comportamento inesperado.  \n  Correção: use `HAVING SUM(Valor) > 300` após `GROUP BY`.\n\n- **Coluna no SELECT fora do GROUP BY**  \n  Sintoma: erro ou (em modos permissivos de outros SGBDs) valor arbitrário.  \n  Correção: inclua a coluna no `GROUP BY` ou agregue-a com função adequada.\n\n- **Confundir COUNT(*) com COUNT(coluna)**  \n  Sintoma: contagens “estranhas” quando há `NULL`.  \n  Correção: escolha `COUNT(*)` para linhas do grupo e `COUNT(coluna)` para presença de valor na coluna.\n\n- **Esperar ordem “natural” nos grupos**  \n  Correção: sempre `ORDER BY` explícito no relatório agregado.\n\n- **Tipo de coluna inadequado na importação CSV**  \n  Vendas fracionadas em colunas declaradas como inteiro podem truncar ou arredondar.  \n  Correção: preferir `REAL` ou `NUMERIC` para métricas contínuas.\n\n## Visão Geral de Debugging\n\n- **Some ou contagem não batem com o Excel**  \n  Verifique tipos na importação, separador decimal, linhas com `N/A` no ano (o material filtra `Ano_Jogo != 'N/A'` em um dos exemplos) e arredondamento com `ROUND`.\n\n- **HAVING “não funciona”**  \n  Confira se há `GROUP BY` antes e se a expressão no `HAVING` usa agregação coerente com o grupo.\n\n- **Grupos a mais ou a menos**  \n  Revise espaços em branco em chaves textuais (`'C1'` vs `'C1 '`) e valores `NULL` na coluna de agrupamento.\n\n<details>\n<summary>Conferência rápida: soma manual vs SUM</summary>\n\nPara poucos registros, uma soma manual (`160 + 34 + …` no slide) ajuda a validar o resultado de `SUM(Valor)` antes de confiar em consultas maiores.\n\n</details>\n\n## Principais Pontos\n\n- `GROUP BY` define **dimensões** do relatório; agregações calculam **métricas** por dimensão.\n- `WHERE` filtra linhas; `HAVING` filtra grupos após agregar.\n- `COUNT(*)` e `COUNT(coluna)` divergem quando há `NULL` na coluna.\n- `ORDER BY` ordena o **resultado final** (útil para rankings por total de vendas).\n- O fluxo Excel ↔ SQL com `vgsales` reforça leitura de schema, importação e sanidade de métricas.\n\n## Preparação para Prática\n\nVocê deve ser capaz de:\n\n- Criar `NF_Cliente`, carregar os `INSERT`s da etapa e reproduzir os `SELECT` com agregação e `HAVING`.\n- Importar `vgsales.csv` para `Vendas_Jogos` e montar agrupamentos por plataforma, ano, gênero e editora com ordenação por total.\n\nNo Laboratório abaixo, use o mesmo ambiente (SQLiteStudio) e tabelas da etapa.\n\n## Laboratório de Prática\n\n### Easy — Filtrar grupos com HAVING\n\nSobre a tabela `NF_Cliente`, parta da agregação por cliente e **adicione** uma cláusula para manter apenas clientes cuja soma de `Valor` seja estritamente maior que 300.\n\n```sql\nSELECT\n  Cliente,\n  SUM(Valor) AS Soma,\n  COUNT(*) AS QtdeRegistros\nFROM NF_Cliente\nGROUP BY Cliente\n-- TODO: adicionar HAVING com SUM(Valor) > 300\n;\n```\n\n### Medium — COUNT(*) versus COUNT(Valor)\n\nEscreva uma única consulta agrupada por `Cliente` que mostre `SUM(Valor)`, `COUNT(*)` e `COUNT(Valor)`. Rode antes e depois de inserir linhas com `Valor` nulo (como no roteiro da etapa) e compare as colunas de contagem.\n\n```sql\n-- TODO: incluir COUNT(Valor) com alias (ex.: QtdeValorNaoNulo) e comparar com COUNT(*)\nSELECT\n  Cliente,\n  SUM(Valor) AS Soma,\n  COUNT(*) AS QtdeAsterisco\nFROM NF_Cliente\nGROUP BY Cliente;\n```\n\n### Hard — Ranking de gêneros por vendas mundiais\n\nAssumindo a tabela `Vendas_Jogos` preenchida a partir de `vgsales.csv`, produza um relatório com `Genero_Jogo` e soma arredondada de `Vendas_Mundial_Jogo`, **ordenado do gênero com maior total para o menor**.\n\n```sql\nSELECT\n  Genero_Jogo,\n  ROUND(SUM(Vendas_Mundial_Jogo), 2) AS Total_Mundial\nFROM Vendas_Jogos\nGROUP BY Genero_Jogo\n-- TODO: adicionar ORDER BY para ordenar por Total_Mundial DESC\n;\n```\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"sql-group-by-having-easy\",\n    \"slug\": \"sql-group-by-having-easy\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Filtrar grupos com HAVING na NF_Cliente\",\n    \"discipline\": \"visualizacao-sql\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\"sql\", \"group-by\", \"having\", \"sum\"],\n    \"summary\": \"Completar a consulta agregada por cliente com HAVING para manter apenas somas acima de 300.\"\n  },\n  {\n    \"id\": \"sql-group-by-having-medium\",\n    \"slug\": \"sql-group-by-having-medium\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Comparar COUNT(*) e COUNT(Valor) com NULL\",\n    \"discipline\": \"visualizacao-sql\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\"sql\", \"group-by\", \"count\", \"null\"],\n    \"summary\": \"Montar consulta agrupada que expõe diferença entre COUNT(*) e COUNT(Valor) na presença de nulos.\"\n  },\n  {\n    \"id\": \"sql-group-by-having-hard\",\n    \"slug\": \"sql-group-by-having-hard\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Ranking de generos por vendas mundiais (vgsales)\",\n    \"discipline\": \"visualizacao-sql\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\"sql\", \"group-by\", \"order-by\", \"vgsales\"],\n    \"summary\": \"Agrupar vendas por genero e ordenar pelo total mundial decrescente como em relatorio de BI.\"\n  }\n]\n-->\n",
+  "source_path": "content/visualizacao-sql/aula-14-sql-group-by-having-agregacoes.md",
+  "source_hash": "c0dcfe2589199d77"
+}

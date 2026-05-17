@@ -1,0 +1,62 @@
+{
+  "id": "python-processamento-dados:strings-plano-disciplina-processamento-dados",
+  "slug": "strings-plano-disciplina-processamento-dados",
+  "discipline": "python-processamento-dados",
+  "order": 1,
+  "name": "Primeiros passos em Python para processamento de dados: strings e plano da disciplina",
+  "description": "Objetivos da disciplina e revisão prática de strings: concatenação, repetição, métodos úteis, len(), type() e f-strings. Tópicos abordados: strings, concatenação, repetição de strings, métodos de string, split, replace, len, type, f-strings. Objetivos: • Explicar o papel da disciplina como continuidade de Python para uso em dados, arquivos, erros e bibliotecas. • Usar operações básicas de string para preparar texto antes de processá-lo. • Diferenciar concatenação, repetição, interpolação e métodos de transformação de strings.",
+  "keywords": [
+    "strings",
+    "concatenação",
+    "repetição de strings",
+    "métodos de string",
+    "split",
+    "replace",
+    "len",
+    "type",
+    "f-strings",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Normalizar uma linha de log",
+    "Medium — Mensagem de status com f-string",
+    "Hard — Preparar texto para tokenização simples"
+  ],
+  "concepts": [
+    "strings",
+    "concatenação",
+    "repetição de strings",
+    "métodos de string",
+    "split",
+    "replace",
+    "len",
+    "type",
+    "f-strings"
+  ],
+  "learning_objectives": [
+    "Explicar o papel da disciplina como continuidade de Python para uso em dados, arquivos, erros e bibliotecas.",
+    "Usar operações básicas de string para preparar texto antes de processá-lo.",
+    "Diferenciar concatenação, repetição, interpolação e métodos de transformação de strings."
+  ],
+  "exercises": [
+    {
+      "question": "Por que strings são importantes em processamento de dados?",
+      "answer": "Porque muitos dados chegam como texto: entradas do usuário, arquivos TXT, campos de CSV, logs e documentos.",
+      "hint": "Pense no uso posterior de arquivos e textos citado na aula."
+    },
+    {
+      "question": "O que split() produz quando aplicado a uma string sem argumento?",
+      "answer": "Produz uma lista de partes separadas por espaços em branco.",
+      "hint": "A transcrição destaca split como função que quebra a cadeia de caracteres."
+    }
+  ],
+  "content": "---\ntitle: \"Primeiros passos em Python para processamento de dados: strings e plano da disciplina\"\nslug: \"strings-plano-disciplina-processamento-dados\"\ndiscipline: \"python-processamento-dados\"\norder: 1\ndescription: \"Objetivos da disciplina e revisão prática de strings: concatenação, repetição, métodos úteis, len(), type() e f-strings.\"\nreading_time: 22\ndifficulty: \"easy\"\nconcepts:\n  - \"strings\"\n  - \"concatenação\"\n  - \"repetição de strings\"\n  - \"métodos de string\"\n  - \"split\"\n  - \"replace\"\n  - \"len\"\n  - \"type\"\n  - \"f-strings\"\nprerequisites:\n  []\nlearning_objectives:\n  - \"Explicar o papel da disciplina como continuidade de Python para uso em dados, arquivos, erros e bibliotecas.\"\n  - \"Usar operações básicas de string para preparar texto antes de processá-lo.\"\n  - \"Diferenciar concatenação, repetição, interpolação e métodos de transformação de strings.\"\nexercises:\n  - question: \"Por que strings são importantes em processamento de dados?\"\n    answer: \"Porque muitos dados chegam como texto: entradas do usuário, arquivos TXT, campos de CSV, logs e documentos.\"\n    hint: \"Pense no uso posterior de arquivos e textos citado na aula.\"\n  - question: \"O que split() produz quando aplicado a uma string sem argumento?\"\n    answer: \"Produz uma lista de partes separadas por espaços em branco.\"\n    hint: \"A transcrição destaca split como função que quebra a cadeia de caracteres.\"\nreview_after_days: [1, 3, 7, 30]\n---\n\n## Visão Geral do Conceito\n\nA primeira aula situa a disciplina como continuação da introdução à programação em Python. O professor apresenta que o curso aprofundará coleções, manipulação de arquivos, tratamento de erros e bibliotecas, mas começa revisando strings como base para processar texto.\n\n> **Ideia central:** strings são a porta de entrada para muitos dados reais, porque arquivos, entradas, logs e documentos chegam como texto antes de virarem análise.\n\n**Não coberto no material:** a aula menciona arquivos, JSON, erros e bibliotecas como conteúdos futuros, mas ainda não ensina essas APIs nesta sessão.\n\n## Modelo Mental\n\nPense em uma string como uma cadeia ordenada de caracteres. Em processamento de dados, você transforma essa cadeia: verifica tipo, troca trechos, quebra em partes e monta mensagens de saída.\n\n```mermaid\nflowchart TD\n    A[Texto bruto] --> B[Verificar type]\n    B --> C[Transformar com upper/capitalize]\n    C --> D[Substituir com replace]\n    D --> E[Quebrar com split]\n    E --> F[Usar tokens em dados]\n```\n\n## Mecânica Central\n\nA aula revisa declaração de strings, concatenação com `+`, repetição com `*`, verificação com `type()` e medição com `len()`.\n\n```python\nnome = \"Python\"\narea = \"dados\"\nmensagem = nome + \" para \" + area\nrepetida = nome * 3\n\nprint(mensagem)\nprint(repetida)\nprint(type(nome))\nprint(len(mensagem))\n```\n\nMétodos citados: `upper()`, `capitalize()`, `replace()` e `split()`.\n\n## Uso Prático\n\n```python\nlinha = \"  Copom;Inflacao;Juros  \"\nlinha = linha.replace(\";\", \" \").capitalize()\npartes = linha.split()\n\nprint(partes)\nprint(f\"Quantidade de partes: {len(partes)}\")\n```\n\nEsse exemplo segue a direção da aula: transformar uma linha textual em partes manipuláveis.\n\n## Erros Comuns\n\n- Concatenar string com número sem converter gera `TypeError`; use f-string quando houver variáveis.\n- Achar que `capitalize()` altera cada palavra; a aula corrige que ele atua no primeiro caractere da string.\n- Esquecer que `split()` retorna lista, não string.\n\n## Visão Geral de Debugging\n\n1. Verifique o tipo com `type(valor)`.\n2. Imprima antes e depois de cada transformação.\n3. Use `len()` para conferir tamanho.\n4. Se a saída virou lista, revise onde `split()` foi chamado.\n\n## Principais Pontos\n\n- Strings são cadeias de caracteres.\n- A disciplina aprofunda Python para dados, arquivos, erros e bibliotecas.\n- Métodos de string preparam texto para processamento.\n- F-strings tornam mensagens com variáveis mais legíveis.\n\n## Preparação para Prática\n\nPratique criar strings, transformar conteúdo, substituir trechos, quebrar texto em partes e montar mensagens formatadas.\n\n## Laboratório de Prática\n\n### Easy — Normalizar uma linha de log\n\nTransforme uma linha textual simples em partes analisáveis.\n\n```python\nlinha = \"  ERRO;Pipeline;Arquivo ausente  \"\n\n# TODO: substituir ponto e virgula por espaco\n# TODO: transformar a linha para caixa baixa\n# TODO: quebrar a linha em partes\npartes = []\n\nprint(partes)\n```\n\nCritérios:\n\n- usar replace\n\n- usar lower\n\n- usar split\n\n\n### Medium — Mensagem de status com f-string\n\nMonte uma mensagem de status usando variáveis.\n\n```python\narquivo = \"dados.txt\"\nlinhas = 128\nstatus = \"processado\"\n\n# TODO: montar mensagem com f-string\nmensagem = \"\"\n\nprint(mensagem)\n```\n\nCritérios:\n\n- usar f-string\n\n- incluir as três variáveis\n\n\n### Hard — Preparar texto para tokenização simples\n\nNormalize pontuação e gere tokens.\n\n```python\ntexto = \"Copom, inflacao e juros. Copom acompanha o cenario.\"\n\n# TODO: caixa baixa\n# TODO: remover virgula e ponto\n# TODO: gerar tokens com split\ntokens = []\n\nprint(tokens)\n```\n\nCritérios:\n\n- normalizar caixa\n\n- remover pontuação citada\n\n- retornar lista de tokens\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"strings-normalizar-uma-linha-de-log\",\n    \"slug\": \"strings-normalizar-uma-linha-de-log\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Normalizar uma linha de log\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"python\",\n      \"strings\",\n      \"normalizacao\"\n    ],\n    \"summary\": \"Transforme uma linha textual simples em partes analisáveis.\"\n  },\n  {\n    \"id\": \"strings-mensagem-de-status-com-f-string\",\n    \"slug\": \"strings-mensagem-de-status-com-f-string\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Mensagem de status com f-string\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"python\",\n      \"strings\",\n      \"normalizacao\"\n    ],\n    \"summary\": \"Monte uma mensagem de status usando variáveis.\"\n  },\n  {\n    \"id\": \"strings-preparar-texto-para-tokenizacao-simples\",\n    \"slug\": \"strings-preparar-texto-para-tokenizacao-simples\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Preparar texto para tokenização simples\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"python\",\n      \"strings\",\n      \"normalizacao\"\n    ],\n    \"summary\": \"Normalize pontuação e gere tokens.\"\n  }\n]\n-->\n\n<!-- LESSON_METADATA\nsuggested_lesson_entry:\n  discipline: python-processamento-dados\n  slug: strings-plano-disciplina-processamento-dados\n  title: \"Primeiros passos em Python para processamento de dados: strings e plano da disciplina\"\n  order: 1\n  file: python-processamento-dados/aula-01-strings-plano-disciplina-processamento-dados.md\n-->\n\n<!-- SOURCE_CONTEXT\nsource_transcript_vtt: downloads/Python_para_Processamento_de_Dados/Aula_01_-_20042026.vtt\nsource_transcript_vtt_sha256: 2c3d52bff6a14744532ef73d5cf979eebc98b99db967808983b9cb3dfe8dcc6b\nsource_transcript_wrapper: downloads/Python_para_Processamento_de_Dados/Aula_01_-_20042026.md\nsource_transcript_wrapper_sha256: 16513d4972cad343be5bc212ffc66f272c5a2eef0d5ecaf3e52c76863813a4ef\nnotes:\n  - O wrapper Markdown contém apenas metadados; o VTT foi usado como fonte primária.\n  - Contexto auxiliar limitado ao wrapper claramente correspondente à mesma sessão.\n-->\n",
+  "source_path": "content/python-processamento-dados/aula-01-strings-plano-disciplina-processamento-dados.md",
+  "source_hash": "d48afba464a84262"
+}

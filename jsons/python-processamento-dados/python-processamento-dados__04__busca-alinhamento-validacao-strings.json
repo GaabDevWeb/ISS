@@ -1,0 +1,70 @@
+{
+  "id": "python-processamento-dados:busca-alinhamento-validacao-strings",
+  "slug": "busca-alinhamento-validacao-strings",
+  "discipline": "python-processamento-dados",
+  "order": 4,
+  "name": "Busca, alinhamento e validação de strings em pré-processamento",
+  "description": "Uso de find(), index(), rfind(), rindex(), alinhamento de strings e validações isalpha(), isdigit() e isnumeric() em texto. Tópicos abordados: find, index, rfind, rindex, ValueError, center, ljust, rjust, isalpha, isdigit, isnumeric, startswith. Objetivos: • Diferenciar find() e index() ao buscar substrings em Python. • Usar métodos de alinhamento para apresentar strings de forma padronizada. • Aplicar validações de string para filtrar tokens inadequados.",
+  "keywords": [
+    "find",
+    "index",
+    "rfind",
+    "rindex",
+    "ValueError",
+    "center",
+    "ljust",
+    "rjust",
+    "isalpha",
+    "isdigit",
+    "isnumeric",
+    "startswith",
+    "endswith",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Busca segura",
+    "Medium — Apresentar tabela simples",
+    "Hard — Filtrar tokens inválidos"
+  ],
+  "concepts": [
+    "find",
+    "index",
+    "rfind",
+    "rindex",
+    "ValueError",
+    "center",
+    "ljust",
+    "rjust",
+    "isalpha",
+    "isdigit",
+    "isnumeric",
+    "startswith",
+    "endswith"
+  ],
+  "learning_objectives": [
+    "Diferenciar find() e index() ao buscar substrings em Python.",
+    "Usar métodos de alinhamento para apresentar strings de forma padronizada.",
+    "Aplicar validações de string para filtrar tokens inadequados."
+  ],
+  "exercises": [
+    {
+      "question": "Qual é a diferença prática entre find() e index()?",
+      "answer": "find() retorna -1 quando não encontra; index() lança uma exceção.",
+      "hint": "A aula compara busca por strings inexistentes."
+    },
+    {
+      "question": "Quando center(), ljust() e rjust() são úteis?",
+      "answer": "Quando você precisa apresentar strings em larguras fixas, como saídas tabulares simples.",
+      "hint": "A aula usa a palavra tigre para demonstrar posicionamento."
+    }
+  ],
+  "content": "---\ntitle: \"Busca, alinhamento e validação de strings em pré-processamento\"\nslug: \"busca-alinhamento-validacao-strings\"\ndiscipline: \"python-processamento-dados\"\norder: 4\ndescription: \"Uso de find(), index(), rfind(), rindex(), alinhamento de strings e validações isalpha(), isdigit() e isnumeric() em texto.\"\nreading_time: 28\ndifficulty: \"medium\"\nconcepts:\n  - \"find\"\n  - \"index\"\n  - \"rfind\"\n  - \"rindex\"\n  - \"ValueError\"\n  - \"center\"\n  - \"ljust\"\n  - \"rjust\"\n  - \"isalpha\"\n  - \"isdigit\"\n  - \"isnumeric\"\n  - \"startswith\"\n  - \"endswith\"\nprerequisites:\n  - \"funcoes-pre-processamento-list-comprehension-contagem\"\nlearning_objectives:\n  - \"Diferenciar find() e index() ao buscar substrings em Python.\"\n  - \"Usar métodos de alinhamento para apresentar strings de forma padronizada.\"\n  - \"Aplicar validações de string para filtrar tokens inadequados.\"\nexercises:\n  - question: \"Qual é a diferença prática entre find() e index()?\"\n    answer: \"find() retorna -1 quando não encontra; index() lança uma exceção.\"\n    hint: \"A aula compara busca por strings inexistentes.\"\n  - question: \"Quando center(), ljust() e rjust() são úteis?\"\n    answer: \"Quando você precisa apresentar strings em larguras fixas, como saídas tabulares simples.\"\n    hint: \"A aula usa a palavra tigre para demonstrar posicionamento.\"\nreview_after_days: [1, 3, 7, 30]\n---\n\n## Visão Geral do Conceito\n\nA quarta aula fecha a revisão de strings com busca de substrings, alinhamento visual e validações de conteúdo. O professor compara find e index, mostra center/ljust/rjust e usa isalpha, isdigit e isnumeric para validar tokens.\n\n> **Ideia central:** em dados incertos, o método escolhido deve combinar resultado útil com comportamento seguro em caso de ausência ou ruído.\n\n**Não coberto no material:** a aula começa a aplicar as validações na função de pré-processamento, mas a versão final fica para continuação.\n\n## Modelo Mental\n\nBuscar em string é procurar uma ocorrência em uma linha de texto. Algumas ferramentas retornam um marcador de ausência; outras disparam erro e exigem tratamento.\n\n```mermaid\nflowchart TD\n    A[Substring procurada] --> B{Metodo}\n    B -->|find| C{Encontrou?}\n    C -->|sim| D[Indice]\n    C -->|nao| E[-1]\n    B -->|index| F{Encontrou?}\n    F -->|sim| G[Indice]\n    F -->|nao| H[ValueError]\n```\n\n## Mecânica Central\n\n```python\ntexto = \"copom avalia inflacao e juros\"\nprint(texto.find(\"copom\"))\nprint(texto.find(\"petroleo\"))\nprint(texto.index(\"copom\"))\n# texto.index(\"petroleo\")  # ValueError\n```\n\nPara a última ocorrência, use `rfind()` ou `rindex()`. Para apresentação: `center()`, `ljust()` e `rjust()`.\n\n## Uso Prático\n\n```python\ndef token_valido(token):\n    if token == \"\":\n        return False\n    if token.find(\"class=\") != -1:\n        return False\n    if token.isnumeric():\n        return False\n    return True\n\ncandidatos = [\"copom\", \"class=\\\"x\\\"\", \"2025\", \"juros\"]\nvalidos = [token for token in candidatos if token_valido(token)]\nprint(validos)\n```\n\n## Erros Comuns\n\n- Usar `index()` sem tratamento em dados incertos pode quebrar o programa.\n- Achar que `isalpha()` aceita espaços; `\"alo mundo\".isalpha()` é falso.\n- Confundir busca reversa com inversão da string.\n\n## Visão Geral de Debugging\n\n1. Use `find()` para investigar antes de trocar para `index()`.\n2. Imprima tokens com `repr()` se houver espaços invisíveis.\n3. Teste string vazia explicitamente.\n\n## Principais Pontos\n\n- find retorna índice ou -1.\n- index retorna índice ou lança ValueError.\n- rfind e rindex localizam a última ocorrência.\n- Alinhamento melhora apresentação textual.\n- isalpha, isdigit e isnumeric ajudam a filtrar tokens.\n\n## Preparação para Prática\n\nPratique buscar substrings com segurança, alinhar termos no terminal e construir predicados de validação para tokens.\n\n## Laboratório de Prática\n\n### Easy — Busca segura\n\nUse find para detectar palavra sem interromper o programa.\n\n```python\ntexto = \"copom avalia inflacao\"\npalavra = \"juros\"\n\n# TODO: usar find\nposicao = -1\n\nif posicao == -1:\n    print(\"nao encontrado\")\nelse:\n    print(f\"encontrado em {posicao}\")\n```\n\nCritérios:\n\n- usar find\n\n- testar -1\n\n\n### Medium — Apresentar tabela simples\n\nAlinhe termos textuais em largura fixa.\n\n```python\nlinhas = [\"copom\", \"juros\", \"inflacao\"]\n\nfor termo in linhas:\n    # TODO: imprimir termo alinhado a esquerda em largura 12\n    print(termo)\n```\n\nCritérios:\n\n- usar ljust ou f-string\n\n- manter uma linha por termo\n\n\n### Hard — Filtrar tokens inválidos\n\nRemova tokens vazios, numéricos e com marcação.\n\n```python\ntokens = [\"copom\", \"2025\", \"class=\\\"texto\\\"\", \"\", \"juros\"]\n\nvalidos = []\nfor token in tokens:\n    # TODO: ignorar string vazia\n    # TODO: ignorar tokens com class=\n    # TODO: ignorar tokens numericos\n    validos.append(token)\n\nprint(validos)\n```\n\nCritérios:\n\n- validar vazio\n\n- usar find\n\n- usar isnumeric\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"busca-busca-segura\",\n    \"slug\": \"busca-busca-segura\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Busca segura\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"python\",\n      \"strings\",\n      \"validacao\"\n    ],\n    \"summary\": \"Use find para detectar palavra sem interromper o programa.\"\n  },\n  {\n    \"id\": \"busca-apresentar-tabela-simples\",\n    \"slug\": \"busca-apresentar-tabela-simples\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Apresentar tabela simples\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"python\",\n      \"strings\",\n      \"validacao\"\n    ],\n    \"summary\": \"Alinhe termos textuais em largura fixa.\"\n  },\n  {\n    \"id\": \"busca-filtrar-tokens-invalidos\",\n    \"slug\": \"busca-filtrar-tokens-invalidos\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Filtrar tokens inválidos\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"python\",\n      \"strings\",\n      \"validacao\"\n    ],\n    \"summary\": \"Remova tokens vazios, numéricos e com marcação.\"\n  }\n]\n-->\n\n<!-- LESSON_METADATA\nsuggested_lesson_entry:\n  discipline: python-processamento-dados\n  slug: busca-alinhamento-validacao-strings\n  title: \"Busca, alinhamento e validação de strings em pré-processamento\"\n  order: 4\n  file: python-processamento-dados/aula-04-busca-alinhamento-validacao-strings.md\n-->\n\n<!-- SOURCE_CONTEXT\nsource_transcript_vtt: downloads/Python_para_Processamento_de_Dados/Aula_04_-_25042026.vtt\nsource_transcript_vtt_sha256: c0b071c1eacecfcddd63b4303e9d6c326f1659d0ad3e6ff3d5e1c8762201f873\nsource_transcript_wrapper: downloads/Python_para_Processamento_de_Dados/Aula_04_-_25042026.md\nsource_transcript_wrapper_sha256: 74fa799dcfded2503f2b1a724c93ee81e8751b3337d8de41dec03d8da7b9e16e\nnotes:\n  - O wrapper Markdown contém apenas metadados; o VTT foi usado como fonte primária.\n  - Contexto auxiliar limitado ao wrapper claramente correspondente à mesma sessão.\n-->\n",
+  "source_path": "content/python-processamento-dados/aula-04-busca-alinhamento-validacao-strings.md",
+  "source_hash": "ba9ab5b2fd91337b"
+}

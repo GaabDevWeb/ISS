@@ -1,0 +1,63 @@
+{
+  "id": "visualizacao-sql:at-visualizacao-dados-sql-projeto-academia",
+  "slug": "at-visualizacao-dados-sql-projeto-academia",
+  "discipline": "visualizacao-sql",
+  "order": 16,
+  "name": "Avaliação Final (AT): Visualização de Dados e Consultas Analíticas",
+  "description": "Guia técnico e requisitos para o Assessment (AT) integrando Looker Studio e SQL. Tópicos abordados: campos calculados, integração google sheets, filtros de dashboard, consultas sql analíticas, Integração Looker Studio, Campos Calculados SQL/BI, Filtros Multidimensionais, Dashboards Multi-página. Objetivos: • Configurar integração entre Google Sheets e Looker Studio para relatórios dinâmicos. • Criar métricas customizadas através de campos calculados (Taxa de Ocupação). • Implementar controles e filtros para análise multidimensional. • Traduzir requisitos de negócio em consultas SQL de seleç...",
+  "keywords": [
+    "campos calculados",
+    "integração google sheets",
+    "filtros de dashboard",
+    "consultas sql analíticas",
+    "Integração Looker Studio",
+    "Campos Calculados SQL/BI",
+    "Filtros Multidimensionais",
+    "Dashboards Multi-página",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "1. Integração Sheets -> Looker",
+    "2. Campos Calculados",
+    "3. Filtros (Controles)",
+    "Uso Prático: O Projeto Academia",
+    "Exemplo de Consulta SQL Analítica",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Desafio 1: Easy (Métrica Base)",
+    "Desafio 2: Medium (Campo Calculado)",
+    "Desafio 3: Hard (SQL Report)"
+  ],
+  "concepts": [
+    "campos calculados",
+    "integração google sheets",
+    "filtros de dashboard",
+    "consultas sql analíticas",
+    "Integração Looker Studio",
+    "Campos Calculados SQL/BI",
+    "Filtros Multidimensionais",
+    "Dashboards Multi-página"
+  ],
+  "learning_objectives": [
+    "Configurar integração entre Google Sheets e Looker Studio para relatórios dinâmicos.",
+    "Criar métricas customizadas através de campos calculados (Taxa de Ocupação).",
+    "Implementar controles e filtros para análise multidimensional.",
+    "Traduzir requisitos de negócio em consultas SQL de seleção e agregação."
+  ],
+  "exercises": [
+    {
+      "question": "Por que a entrega dos TPs (1, 2 e 3) é obrigatória para a correção do AT, mesmo que não contem pontos?",
+      "answer": "Porque os TPs validam o progresso e a compreensão das competências básicas necessárias para o projeto final (AT)."
+    },
+    {
+      "question": "Qual a fórmula para o campo calculado de Taxa de Ocupação na Academia?",
+      "answer": "Inscritos / Vagas Ofertadas (formatado como porcentagem)."
+    }
+  ],
+  "content": "---\ntitle: \"Avaliação Final (AT): Visualização de Dados e Consultas Analíticas\"\nslug: \"at-visualizacao-dados-sql-projeto-academia\"\ndiscipline: \"visualizacao-sql\"\norder: 16\ndescription: \"Guia técnico e requisitos para o Assessment (AT) integrando Looker Studio e SQL.\"\nreading_time: 15\ndifficulty: \"hard\"\nconcepts:\n  - campos calculados\n  - integração google sheets\n  - filtros de dashboard\n  - consultas sql analíticas\nlearning_objectives:\n  - \"Configurar integração entre Google Sheets e Looker Studio para relatórios dinâmicos.\"\n  - \"Criar métricas customizadas através de campos calculados (Taxa de Ocupação).\"\n  - \"Implementar controles e filtros para análise multidimensional.\"\n  - \"Traduzir requisitos de negócio em consultas SQL de seleção e agregação.\"\nexercises:\n  - question: \"Por que a entrega dos TPs (1, 2 e 3) é obrigatória para a correção do AT, mesmo que não contem pontos?\"\n    answer: \"Porque os TPs validam o progresso e a compreensão das competências básicas necessárias para o projeto final (AT).\"\n  - question: \"Qual a fórmula para o campo calculado de Taxa de Ocupação na Academia?\"\n    answer: \"Inscritos / Vagas Ofertadas (formatado como porcentagem).\"\n---\n\n## Visão Geral do Conceito\n\nO **Assessment Task (AT)** é o projeto final que consolida as competências de extração, manipulação e visualização de dados. Ele exige que o estudante saia do papel de apenas \"escrever código\" e passe a atuar como um analista, transformando dados brutos da operação de uma academia em informações visuais acionáveis e consultas SQL precisas.\n\nEsta etapa avalia não apenas o acerto técnico, mas a capacidade de manter **consistência visual** e **lógica de negócio** em um ambiente de BI (Business Intelligence).\n\n## Modelo Mental\n\nImagine um pipeline de dados onde a informação flui de um arquivo estático para um painel vivo:\n\n1.  **Dados Brutos (`.csv`):** O registro frio das aulas.\n2.  **Repositório Ativo (Google Sheets):** Onde os dados ganham \"vida\" na nuvem.\n3.  **Camada de Visualização (Looker Studio):** Onde os dados são filtrados, agregados e apresentados para decisão.\n\nNo SQL, o modelo mental é o de **filtragem seletiva**: você tem um oceano de dados e precisa pescar apenas os peixes (registros) que atendem a critérios específicos de turno, modalidade ou unidade.\n\n## Mecânica Central\n\n### 1. Integração Sheets -> Looker\nPara que o Looker Studio funcione corretamente, os dados devem estar estruturados no Google Sheets com um cabeçalho claro na primeira linha. O Looker consome essas colunas como **Dimensões** (texto/datas) e **Métricas** (números agregáveis).\n\n### 2. Campos Calculados\nÀs vezes, a informação necessária não está na tabela original. Criamos métricas customizadas no Looker:\n- **Exemplo (Taxa de Ocupação):** `Inscritos / Vagas_Ofertadas`.\n- **Exemplo (Taxa de Presença):** `Presentes / Inscritos`.\n\n### 3. Filtros (Controles)\nOs filtros permitem que o usuário final interaja com o dashboard. Os principais tipos são:\n- **Lista suspensa:** Para categorias (Unidade, Turno).\n- **Filtro de período:** Para dimensões de data.\n\n```mermaid\nflowchart TD\n    CSV[Arquivo CSV] -->|Importar| GS[Google Sheets]\n    GS -->|Conectar| LS[Looker Studio]\n    LS -->|Criar| Metric[Campos Calculados]\n    Metric -->|Visualizar| Dash[Dashboard Final]\n    LS -->|Adicionar| Ctrl[Controles de Filtro]\n```\n\n## Uso Prático: O Projeto Academia\n\nO projeto final foca na análise de ocupação de uma rede de academias. A estrutura do dashboard deve seguir quatro páginas lógicas:\n\n1.  **Visão Geral (Tabela):** Listagem bruta filtrada (`Data`, `Unidade`, `Modalidade`).\n2.  **Métricas de Desempenho (Visão Macro):** Visões de total de inscritos vs. presentes.\n3.  **Análise por Categoria:** Gráficos de barra e pizza para comparar modalidades e professores.\n4.  **Evolução Temporal:** Gráfico de série temporal para identificar picos de uso.\n\n### Exemplo de Consulta SQL Analítica\nPara a Parte 2 do AT, você deve dominar seleções com filtros compostos:\n\n```sql\n-- Buscar alunos presentes em Yoga, no turno da Noite, na Unidade Sul\nSELECT Data_Aula, Professor, Presentes \nFROM Academia\nWHERE Modalidade = 'Yoga' \n  AND Turno = 'Noite' \n  AND Unidade = 'Sul'\nORDER BY Data_Aula DESC;\n```\n\n## Erros Comuns\n\n- `Uso de IA Gerativa`: O uso de ferramentas como ChatGPT na execução do AT é estritamente proibido e passível de desclassificação.\n- `Inconsistência Visual`: Usar cores diferentes ou fontes variadas entre as páginas do relatório quebra a experiência do usuário.\n- `Missing TP3`: Não entregar os trabalhos parciais impede a correção da prova final.\n\n## Visão Geral de Debugging\n\nSe os dados não aparecerem no Looker:\n1.  Verifique se o cabeçalho no Google Sheets não possui células mescladas.\n2.  Certifique-se de que a coluna de **Data** foi reconhecida como tipo \"Data\" pelo Looker (e não apenas texto).\n3.  Confira se não há valores nulos nas colunas de `Vagas` que possam causar erro de divisão por zero em campos calculados.\n\n## Principais Pontos\n\n- O AT é a única entrega que compõe a nota final, mas os TPs são pré-requisitos.\n- Identidade visual coerente é um requisito explícito de avaliação.\n- O relatório no Looker Studio deve conter exatamente 4 páginas.\n- Parte 1 é visual (Looker); Parte 2 é lógica (SQL).\n\n## Preparação para Prática\n\nAo final desta lição e antes de entregar o AT, você deve ser capaz de:\n- Conectar fontes de dados externas ao Looker Studio.\n- Criar métricas matemáticas que não existem na base original.\n- Estruturar um painel interativo e navegável.\n- Escrever consultas SQL que respondam perguntas de negócio específicas.\n\n## Laboratório de Prática\n\n### Desafio 1: Easy (Métrica Base)\nNo Google Sheets, após importar o arquivo `Uso Academia.csv`, identifique a coluna de inscritos. No Looker Studio, crie um **Cartão de Pontuação** que exiba a soma total de `Presentes` em todas as unidades.\n\n### Desafio 2: Medium (Campo Calculado)\nCrie um campo calculado chamado `Percentual_Comparecimento`.\n- **Fórmula:** `SUM(Presentes) / SUM(Inscritos)`\n- **Objetivo:** Exibir este valor em um gráfico de barras comparando a média de comparecimento por **Professor**.\n\n### Desafio 3: Hard (SQL Report)\nEscreva uma consulta SQL para a Parte 2 do AT que retorne:\n- A média de `Duracao_Minutos` por `Modalidade`.\n- Apenas para a unidade 'Centro'.\n- Ordenado da maior duração para a menor.\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"at-métrica-scorecard\",\n    \"slug\": \"at-metrica-scorecard\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Configurando Métrica de Presença\",\n    \"discipline\": \"visualizacao-sql\",\n    \"editorLanguage\": \"javascript\",\n    \"tags\": [\"looker-studio\", \"bi\", \"dashboard\"],\n    \"summary\": \"Implementar um cartão de pontuação para somatório de métricas no Looker Studio.\"\n  },\n  {\n    \"id\": \"at-campo-calculado-percentual\",\n    \"slug\": \"at-campo-calculado-percentual\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Criando Taxa de Comparecimento\",\n    \"discipline\": \"visualizacao-sql\",\n    \"editorLanguage\": \"javascript\",\n    \"tags\": [\"looker-studio\", \"calculos\", \"bi\"],\n    \"summary\": \"Construir um campo calculado que relacione presentes e inscritos.\"\n  },\n  {\n    \"id\": \"at-sql-media-duracao\",\n    \"slug\": \"at-sql-media-duracao\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Média de Duração por Unidade\",\n    \"discipline\": \"visualizacao-sql\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\"sql\", \"agregacao\", \"sqlite\"],\n    \"summary\": \"Escrever uma query SQL para agrupar duração média por modalidade e unidade.\"\n  }\n]\n-->\n",
+  "source_path": "content/visualizacao-sql/aula-16-at-visualizacao-dados-sql-projeto-academia.md",
+  "source_hash": "2d7364e0979e76cb"
+}

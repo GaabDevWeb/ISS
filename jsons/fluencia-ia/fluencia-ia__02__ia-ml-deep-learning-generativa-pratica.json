@@ -1,0 +1,53 @@
+{
+  "id": "fluencia-ia:ia-ml-deep-learning-generativa-pratica",
+  "slug": "ia-ml-deep-learning-generativa-pratica",
+  "discipline": "fluencia-ia",
+  "order": 2,
+  "name": "IA, ML, deep learning e IA generativa na prática",
+  "description": "Revisão aplicada dos tipos de IA com exemplos de ferramentas, demonstrações e limites do aprendizado por exemplos. Tópicos abordados: inteligência artificial, machine learning, deep learning, IA generativa, aprendizado por exemplos, GPU, transformers. Objetivos: • Distinguir IA, ML, deep learning e IA generativa em exemplos práticos. • Explicar a passagem de regras para aprendizado com dados. • Reconhecer limites e escopo de demonstrações web.",
+  "keywords": [
+    "inteligência artificial",
+    "machine learning",
+    "deep learning",
+    "IA generativa",
+    "aprendizado por exemplos",
+    "GPU",
+    "transformers",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Classificar famílias de IA",
+    "Medium — Analisar prompt e saída",
+    "Hard — Simular escolhas de tokens"
+  ],
+  "concepts": [
+    "inteligência artificial",
+    "machine learning",
+    "deep learning",
+    "IA generativa",
+    "aprendizado por exemplos",
+    "GPU",
+    "transformers"
+  ],
+  "learning_objectives": [
+    "Distinguir IA, ML, deep learning e IA generativa em exemplos práticos.",
+    "Explicar a passagem de regras para aprendizado com dados.",
+    "Reconhecer limites e escopo de demonstrações web."
+  ],
+  "exercises": [
+    {
+      "question": "Qual é a diferença central entre regras if/else e machine learning?",
+      "answer": "Em regras, o programador escreve explicitamente os caminhos; em ML, o sistema aprende padrões a partir de exemplos e dados.",
+      "hint": "Pense em programar regra versus treinar padrão."
+    }
+  ],
+  "content": "---\ntitle: \"IA, ML, deep learning e IA generativa na prática\"\nslug: \"ia-ml-deep-learning-generativa-pratica\"\ndiscipline: \"fluencia-ia\"\norder: 2\ndescription: \"Revisão aplicada dos tipos de IA com exemplos de ferramentas, demonstrações e limites do aprendizado por exemplos.\"\nreading_time: 24\ndifficulty: \"easy\"\nconcepts:\n  - inteligência artificial\n  - machine learning\n  - deep learning\n  - IA generativa\n  - aprendizado por exemplos\n  - GPU\n  - transformers\nprerequisites:\n  - introducao-fluencia-ia\nlearning_objectives:\n  - Distinguir IA, ML, deep learning e IA generativa em exemplos práticos.\n  - Explicar a passagem de regras para aprendizado com dados.\n  - Reconhecer limites e escopo de demonstrações web.\nexercises:\n  - question: \"Qual é a diferença central entre regras if/else e machine learning?\"\n    answer: \"Em regras, o programador escreve explicitamente os caminhos; em ML, o sistema aprende padrões a partir de exemplos e dados.\"\n    hint: \"Pense em programar regra versus treinar padrão.\"\nreview_after_days: [3, 7, 21]\n---\n\n## Visão Geral do Conceito\n\nA aula 02 revisita os termos centrais de IA com foco prático. O objetivo é sair da lista de definições e observar como `machine learning`, `deep learning` e `IA generativa` aparecem em ferramentas reais.\n\n> **Regra:** esta lição foi reconstruída a partir da transcrição da aula e dos materiais disponíveis no repositório; quando a fonte não cobre um detalhe, isso é declarado como lacuna em vez de ser tratado como fato.\n\n## Modelo Mental\n\nIA é guarda-chuva; ML aprende padrões; deep learning usa camadas mais profundas; IA generativa produz novos conteúdos a partir desses padrões.\n\n```mermaid\nflowchart TD\n  A[IA] --> B[Regras / if-else]\n  A --> C[Machine Learning]\n  C --> D[Deep Learning]\n  D --> E[IA Generativa]\n  C --> F[Classificacao e recomendacao]\n  E --> G[Texto, imagem, audio]\n```\n\n## Mecânica Central\n\n- `ML` depende de dados e feedback.\n- `Deep learning` amplia capacidade com mais camadas e custo computacional.\n- GPUs ajudam a treinar modelos maiores.\n- `Transformers` melhoraram processamento de linguagem.\n- Prompt injection/jailbreak foi citado como tema futuro, não foco desta aula.\n\n## Uso Prático\n\nClassifique exemplos: Siri/Alexa, recomendador de música, chatbot de banco, gerador de texto e classificador web. O exercício é explicar o mecanismo provável, não adivinhar a marca.\n\n## Erros Comuns\n\n- Chamar qualquer automação de IA generativa.\n- Achar que demonstração web prova entendimento profundo.\n- Confundir ferramenta com conceito.\n- Entrar em segurança de prompts antes de entender famílias de IA.\n\n## Visão Geral de Debugging\n\nQuando não souber classificar uma ferramenta, pergunte: há regra fixa? há treinamento com exemplos? ela gera conteúdo novo?\n\n## Principais Pontos\n\n- IA é guarda-chuva.\n- ML aprende padrões.\n- Deep learning usa mais camadas.\n- Generativa cria saída nova, mas exige validação.\n\n\n## Preparação para Prática\n\nListe cinco ferramentas que você usa e classifique cada uma pela família de IA provável.\n\n## Laboratório de Prática\n### Easy — Classificar famílias de IA\nPreencha a tabela com a família de IA e a justificativa.\n```markdown\n| Exemplo | Família | Justificativa |\n|---|---|---|\n| Chatbot de menu bancário | TODO | TODO |\n| Recomendação de música | TODO | TODO |\n| Gerador de imagem por prompt | TODO | TODO |\n```\nCritérios:\n- Justificar por mecanismo, não por marca.\n- Distinguir regra de aprendizado.\n- Evitar respostas vagas.\n\n### Medium — Analisar prompt e saída\nReescreva o prompt fraco com mais contexto e critérios.\n```markdown\n# Prompt fraco\nExplique IA.\n\n# Prompt melhorado\nTODO: defina público, objetivo, restrições e formato.\n\n# Como validar\nTODO: liste checagens.\n```\nCritérios:\n- Incluir objetivo e público.\n- Definir formato.\n- Incluir validação humana.\n\n### Hard — Simular escolhas de tokens\nComplete a função para escolher o token mais provável quando temperatura for baixa.\n```python\ncandidatos = {'dados': 0.55, 'texto': 0.30, 'imagem': 0.15}\n\ndef escolher_token(candidatos, temperatura_baixa=True):\n    # TODO: se temperatura_baixa, retornar token com maior probabilidade\n    # TODO: caso contrario, retornar um placeholder explicativo\n    return None\n\nprint(escolher_token(candidatos))\n```\nCritérios:\n- Usar probabilidades.\n- Explicar temperatura baixa.\n- Código deve executar antes da solução final.\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"ia-ml-deep-learning-generativa-pratica-classificar-familias-ia\",\n    \"slug\": \"ia-ml-deep-learning-generativa-pratica-classificar-familias-ia\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Classificar famílias de IA\",\n    \"discipline\": \"fluencia-ia\",\n    \"editorLanguage\": \"markdown\",\n    \"tags\": [\n      \"ia\",\n      \"machine-learning\",\n      \"conceitos\"\n    ],\n    \"summary\": \"Classificar exemplos em IA determinística, ML, deep learning ou generativa.\"\n  },\n  {\n    \"id\": \"ia-ml-deep-learning-generativa-pratica-analisar-prompt\",\n    \"slug\": \"ia-ml-deep-learning-generativa-pratica-analisar-prompt\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Analisar prompt e saída\",\n    \"discipline\": \"fluencia-ia\",\n    \"editorLanguage\": \"markdown\",\n    \"tags\": [\n      \"ia\",\n      \"prompt\",\n      \"validacao\"\n    ],\n    \"summary\": \"Melhorar um prompt com objetivo, contexto e critério de validação.\"\n  },\n  {\n    \"id\": \"ia-ml-deep-learning-generativa-pratica-tokens-temperatura\",\n    \"slug\": \"ia-ml-deep-learning-generativa-pratica-tokens-temperatura\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Simular escolhas de tokens\",\n    \"discipline\": \"fluencia-ia\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"ia\",\n      \"tokens\",\n      \"probabilidade\"\n    ],\n    \"summary\": \"Simular escolha de próximo token com probabilidades simplificadas.\"\n  }\n]\n-->\n\n<!-- SOURCE_CONTEXT\ncanonical_memory: MEMORIES.md\nsource: downloads/Fluencia_em_IA/Aula_02_-_28042026.md\nsource_sha256: 83b01521ab1148222a0fae62c17a859dd698bd581f3f13477ae006fdce447bbd\nsource: downloads/Fluencia_em_IA/Aula_02_-_28042026.vtt\nsource_sha256: 66db96a35bc7bcadc1e19df254457e415a4ffcf54a6ace72865d5f93592bf3aa\nnotes:\n  - Sem documento complementar específico no manifest.\n-->\n",
+  "source_path": "content/fluencia-ia/aula-02-ia-ml-deep-learning-generativa-pratica.md",
+  "source_hash": "6a1e6b4906b83397"
+}

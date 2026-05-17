@@ -1,0 +1,68 @@
+{
+  "id": "python-processamento-dados:matrizes-listas-aninhadas-tuplas-imutaveis",
+  "slug": "matrizes-listas-aninhadas-tuplas-imutaveis",
+  "discipline": "python-processamento-dados",
+  "order": 7,
+  "name": "Matrizes com listas aninhadas e tuplas imutáveis",
+  "description": "Representação de matrizes como listas de listas, iteração por linhas e colunas, tuplas, empacotamento, desempacotamento e imutabilidade. Tópicos abordados: listas aninhadas, matrizes, linhas e colunas, laços aninhados, range, len, print end, tuplas, imutabilidade, empacotamento, desempacotamento, operador ternário. Objetivos: • Representar uma matriz simples como lista de listas em Python. • Iterar sobre linhas e colunas usando laços aninhados e índices. • Explicar quando usar tuplas e como funcionam empacotamento e desempacotamento.",
+  "keywords": [
+    "listas aninhadas",
+    "matrizes",
+    "linhas e colunas",
+    "laços aninhados",
+    "range",
+    "len",
+    "print end",
+    "tuplas",
+    "imutabilidade",
+    "empacotamento",
+    "desempacotamento",
+    "operador ternário",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Acessar célula da matriz",
+    "Medium — Imprimir matriz por linhas",
+    "Hard — Classificar métricas com tupla e ternário"
+  ],
+  "concepts": [
+    "listas aninhadas",
+    "matrizes",
+    "linhas e colunas",
+    "laços aninhados",
+    "range",
+    "len",
+    "print end",
+    "tuplas",
+    "imutabilidade",
+    "empacotamento",
+    "desempacotamento",
+    "operador ternário"
+  ],
+  "learning_objectives": [
+    "Representar uma matriz simples como lista de listas em Python.",
+    "Iterar sobre linhas e colunas usando laços aninhados e índices.",
+    "Explicar quando usar tuplas e como funcionam empacotamento e desempacotamento."
+  ],
+  "exercises": [
+    {
+      "question": "Como uma matriz 2x2 é representada com listas em Python?",
+      "answer": "Como uma lista contendo duas listas internas; a lista externa representa linhas e cada lista interna representa colunas.",
+      "hint": "A aula descreve matriz como listas de listas."
+    },
+    {
+      "question": "Por que tuplas são usadas quando os valores não devem mudar?",
+      "answer": "Porque tuplas são imutáveis depois de criadas.",
+      "hint": "Compare com listas, que são mutáveis."
+    }
+  ],
+  "content": "---\ntitle: \"Matrizes com listas aninhadas e tuplas imutáveis\"\nslug: \"matrizes-listas-aninhadas-tuplas-imutaveis\"\ndiscipline: \"python-processamento-dados\"\norder: 7\ndescription: \"Representação de matrizes como listas de listas, iteração por linhas e colunas, tuplas, empacotamento, desempacotamento e imutabilidade.\"\nreading_time: 31\ndifficulty: \"medium\"\nconcepts:\n  - \"listas aninhadas\"\n  - \"matrizes\"\n  - \"linhas e colunas\"\n  - \"laços aninhados\"\n  - \"range\"\n  - \"len\"\n  - \"print end\"\n  - \"tuplas\"\n  - \"imutabilidade\"\n  - \"empacotamento\"\n  - \"desempacotamento\"\n  - \"operador ternário\"\nprerequisites:\n  - \"listas-mutaveis-insercao-remocao-ordenacao-busca\"\nlearning_objectives:\n  - \"Representar uma matriz simples como lista de listas em Python.\"\n  - \"Iterar sobre linhas e colunas usando laços aninhados e índices.\"\n  - \"Explicar quando usar tuplas e como funcionam empacotamento e desempacotamento.\"\nexercises:\n  - question: \"Como uma matriz 2x2 é representada com listas em Python?\"\n    answer: \"Como uma lista contendo duas listas internas; a lista externa representa linhas e cada lista interna representa colunas.\"\n    hint: \"A aula descreve matriz como listas de listas.\"\n  - question: \"Por que tuplas são usadas quando os valores não devem mudar?\"\n    answer: \"Porque tuplas são imutáveis depois de criadas.\"\n    hint: \"Compare com listas, que são mutáveis.\"\nreview_after_days: [1, 3, 7, 30]\n---\n\n## Visão Geral do Conceito\n\nA sétima aula avança de listas simples para listas aninhadas, usadas para representar matrizes. Depois introduz tuplas, destacando imutabilidade, empacotamento, desempacotamento, concatenação, repetição, presença, count e index.\n\n> **Ideia central:** listas aninhadas representam dimensões; tuplas representam grupos ordenados que não devem mudar.\n\n**Não coberto no material:** a aula menciona produto de matrizes como exercício, mas não desenvolve o algoritmo completo.\n\n## Modelo Mental\n\nUma matriz é uma tabela: primeiro selecione a linha, depois a coluna. Uma tupla é um pacote fixo de valores.\n\n```mermaid\nflowchart TD\n    A[Matriz lista externa] --> B[Linha 0]\n    A --> C[Linha 1]\n    B --> D[Coluna 0]\n    B --> E[Coluna 1]\n    C --> F[Coluna 0]\n    C --> G[Coluna 1]\n```\n\n## Mecânica Central\n\n```python\nmatriz = [\n    [3, 2],\n    [6, 1],\n]\nprint(matriz[0][0])\nprint(matriz[1][1])\n```\n\nO primeiro índice acessa linha; o segundo, coluna. Para imprimir por linhas, a aula usa laços aninhados e o parâmetro `end` do `print()`.\n\n```python\nfor linha in matriz:\n    for valor in linha:\n        print(valor, end=\" \")\n    print()\n```\n\nTuplas podem ser criadas com vírgula, mesmo sem parênteses.\n\n## Uso Prático\n\n```python\nmetricas = [\n    (\"api\", 120, 3),\n    (\"etl\", 90, 8),\n    (\"dashboard\", 200, 1),\n]\n\nfor nome, acessos, erros in metricas:\n    status = \"critico\" if erros > 5 else \"ok\"\n    print(f\"{nome}: {acessos} acessos, {erros} erros, status={status}\")\n```\n\n## Erros Comuns\n\n- Trocar linha por coluna ao acessar `matriz[i][j]`.\n- Tentar alterar uma tupla, o que gera `TypeError`.\n- Criar tupla sem perceber por causa de uma vírgula, como `valor = 10,`.\n\n## Visão Geral de Debugging\n\n1. Imprima `len(matriz)` para linhas.\n2. Imprima `len(matriz[0])` para colunas da primeira linha.\n3. Use `type(valor)` para confirmar se uma vírgula criou tupla.\n4. Se precisa alterar valores, use lista; se precisa preservar, use tupla.\n\n## Principais Pontos\n\n- Matrizes podem ser listas de listas.\n- O primeiro índice é linha; o segundo é coluna.\n- Laços aninhados percorrem dimensões aninhadas.\n- Tuplas são ordenadas e imutáveis.\n- Vírgulas podem empacotar valores em tuplas.\n- Tuplas aceitam concatenação, repetição, count e index.\n\n## Preparação para Prática\n\nPratique criar matrizes pequenas, percorrer linhas e colunas, imprimir em formato tabular e desempacotar tuplas de métricas.\n\n## Laboratório de Prática\n\n### Easy — Acessar célula da matriz\n\nAcesse um valor usando linha e coluna.\n\n```python\nmatriz = [\n    [3, 2],\n    [6, 1],\n]\n\n# TODO: acessar segunda linha e primeira coluna\nvalor = None\nprint(valor)\n```\n\nCritérios:\n\n- usar dois índices\n\n- lembrar índice zero\n\n\n### Medium — Imprimir matriz por linhas\n\nMostre uma matriz em formato tabular.\n\n```python\nmatriz = [\n    [1, 2, 3],\n    [4, 5, 6],\n]\n\nfor linha in matriz:\n    for valor in linha:\n        # TODO: imprimir sem quebrar linha por coluna\n        pass\n    # TODO: quebrar linha ao final da linha\n```\n\nCritérios:\n\n- usar laços aninhados\n\n- usar print com end\n\n\n### Hard — Classificar métricas com tupla e ternário\n\nDesempacote tuplas e classifique status.\n\n```python\nmetricas = [\n    (\"api\", 120, 3),\n    (\"etl\", 90, 8),\n    (\"dashboard\", 200, 1),\n]\n\nfor nome, acessos, erros in metricas:\n    # TODO: status = \"critico\" se erros > 5, senao \"ok\"\n    status = \"\"\n    print(f\"{nome}: {acessos} acessos, {erros} erros, status={status}\")\n```\n\nCritérios:\n\n- desempacotar tuplas\n\n- usar expressão condicional\n\n- imprimir relatório\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"matrizes-acessar-celula-da-matriz\",\n    \"slug\": \"matrizes-acessar-celula-da-matriz\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Acessar célula da matriz\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"python\",\n      \"matrizes\",\n      \"tuplas\"\n    ],\n    \"summary\": \"Acesse um valor usando linha e coluna.\"\n  },\n  {\n    \"id\": \"matrizes-imprimir-matriz-por-linhas\",\n    \"slug\": \"matrizes-imprimir-matriz-por-linhas\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Imprimir matriz por linhas\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"python\",\n      \"matrizes\",\n      \"tuplas\"\n    ],\n    \"summary\": \"Mostre uma matriz em formato tabular.\"\n  },\n  {\n    \"id\": \"matrizes-classificar-metricas-com-tupla-e-ternario\",\n    \"slug\": \"matrizes-classificar-metricas-com-tupla-e-ternario\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Classificar métricas com tupla e ternário\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"python\",\n      \"matrizes\",\n      \"tuplas\"\n    ],\n    \"summary\": \"Desempacote tuplas e classifique status.\"\n  }\n]\n-->\n\n<!-- LESSON_METADATA\nsuggested_lesson_entry:\n  discipline: python-processamento-dados\n  slug: matrizes-listas-aninhadas-tuplas-imutaveis\n  title: \"Matrizes com listas aninhadas e tuplas imutáveis\"\n  order: 7\n  file: python-processamento-dados/aula-07-matrizes-listas-aninhadas-tuplas-imutaveis.md\n-->\n\n<!-- SOURCE_CONTEXT\nsource_transcript_vtt: downloads/Python_para_Processamento_de_Dados/Aula_07_-_04052026.vtt\nsource_transcript_vtt_sha256: 2c6542857200eb38f79e3fcdecd8840a6c770dc825b8960356f447c9c3872614\nsource_transcript_wrapper: downloads/Python_para_Processamento_de_Dados/Aula_07_-_04052026.md\nsource_transcript_wrapper_sha256: 8df49f4077ace754540ebeddc004ca310a434d90bdb22dcc31d79c1db04f9546\nnotes:\n  - O wrapper Markdown contém apenas metadados; o VTT foi usado como fonte primária.\n  - Contexto auxiliar limitado ao wrapper claramente correspondente à mesma sessão.\n-->\n",
+  "source_path": "content/python-processamento-dados/aula-07-matrizes-listas-aninhadas-tuplas-imutaveis.md",
+  "source_hash": "cabdc6573d47d395"
+}

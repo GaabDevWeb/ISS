@@ -1,0 +1,56 @@
+{
+  "id": "visualizacao-sql:monitoria-at-looker-fontes-datas-olap",
+  "slug": "monitoria-at-looker-fontes-datas-olap",
+  "discipline": "visualizacao-sql",
+  "order": 18,
+  "name": "Monitoria: AT academia, fontes no Looker, datas e visão OLAP",
+  "description": "Sessão de apoio ao AT com foco em problemas de fontes de dados, datas no Looker Studio, ética acadêmica e noções de OLAP. Tópicos abordados: monitoria AT, Looker Studio, fonte de dados, campo de data, Google Sheets, OLAP, ética acadêmica. Objetivos: • Auditar fonte e tipo de data no Looker Studio. • Decidir quando tratar dados no Sheets antes do Looker. • Diferenciar apoio de IA de plágio.",
+  "keywords": [
+    "monitoria AT",
+    "Looker Studio",
+    "fonte de dados",
+    "campo de data",
+    "Google Sheets",
+    "OLAP",
+    "ética acadêmica",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Auditar fonte no Looker",
+    "Medium — Planejar índice SQL",
+    "Hard — Plano final do AT",
+    "Pendências",
+    "Validações",
+    "Riscos"
+  ],
+  "concepts": [
+    "monitoria AT",
+    "Looker Studio",
+    "fonte de dados",
+    "campo de data",
+    "Google Sheets",
+    "OLAP",
+    "ética acadêmica"
+  ],
+  "learning_objectives": [
+    "Auditar fonte e tipo de data no Looker Studio.",
+    "Decidir quando tratar dados no Sheets antes do Looker.",
+    "Diferenciar apoio de IA de plágio."
+  ],
+  "exercises": [
+    {
+      "question": "Por que corrigir o tipo de data no Google Sheets pode ser melhor do que improvisar no Looker?",
+      "answer": "Porque a fonte fica limpa e reutilizável; o Looker passa a receber a dimensão correta em vez de depender de correções pontuais em cada gráfico.",
+      "hint": "Pense em tratar dado na origem."
+    }
+  ],
+  "content": "---\ntitle: \"Monitoria: AT academia, fontes no Looker, datas e visão OLAP\"\nslug: \"monitoria-at-looker-fontes-datas-olap\"\ndiscipline: \"visualizacao-sql\"\norder: 18\ndescription: \"Sessão de apoio ao AT com foco em problemas de fontes de dados, datas no Looker Studio, ética acadêmica e noções de OLAP.\"\nreading_time: 22\ndifficulty: \"medium\"\nconcepts:\n  - monitoria AT\n  - Looker Studio\n  - fonte de dados\n  - campo de data\n  - Google Sheets\n  - OLAP\n  - ética acadêmica\nprerequisites:\n  - at-visualizacao-dados-sql-projeto-academia\nlearning_objectives:\n  - Auditar fonte e tipo de data no Looker Studio.\n  - Decidir quando tratar dados no Sheets antes do Looker.\n  - Diferenciar apoio de IA de plágio.\nexercises:\n  - question: \"Por que corrigir o tipo de data no Google Sheets pode ser melhor do que improvisar no Looker?\"\n    answer: \"Porque a fonte fica limpa e reutilizável; o Looker passa a receber a dimensão correta em vez de depender de correções pontuais em cada gráfico.\"\n    hint: \"Pense em tratar dado na origem.\"\nreview_after_days: [3, 7, 21]\n---\n\n## Visão Geral do Conceito\n\nEsta sessão foi uma monitoria: não introduz uma sequência nova como as aulas anteriores, mas resolve problemas recorrentes do `AT` no `Looker Studio`. O foco didático é transformar dúvidas operacionais em checklist de qualidade.\n\n> **Regra:** esta lição foi reconstruída a partir da transcrição da aula e dos materiais disponíveis no repositório; quando a fonte não cobre um detalhe, isso é declarado como lacuna em vez de ser tratado como fato.\n\n## Modelo Mental\n\nA entrega final depende menos de decorar recurso e mais de auditar o pipeline: fonte correta, tipos coerentes, filtros funcionais e gráficos que respondem ao objetivo.\n\n```mermaid\nflowchart LR\n  A[CSV/planilha] --> B[Google Sheets: limpar tipos]\n  B --> C[Looker: fonte correta]\n  C --> D[Filtros de pagina]\n  D --> E[Dashboard do AT]\n  E --> F[Revisao etica e autoria]\n```\n\n## Mecânica Central\n\n- Fonte duplicada no Looker pode apontar gráfico para dado errado.\n- Campo de data como texto quebra filtros temporais.\n- `PARSE_DATE` pode ajudar, mas limpar no Sheets tende a simplificar.\n- OLAP aparece como visão analítica extra, não como núcleo da disciplina.\n\n## Uso Prático\n\nAntes de entregar o dashboard da academia, abra cada página, confira a fonte de dados, teste o filtro de data e valide se números principais batem com a planilha.\n\n## Erros Comuns\n\n- Conectar duas fontes com nomes parecidos e editar a errada.\n- Usar campo de texto como data.\n- Copiar solução de IA sem entender.\n- Inserir conteúdo Oracle/OLAP no AT sem relação com o enunciado.\n\n## Visão Geral de Debugging\n\nQuando um filtro de data falhar, confira o tipo do campo na origem, depois no Looker, e só então revise o componente visual.\n\n## Principais Pontos\n\n- Monitoria resolveu riscos do AT.\n- Tipo de data precisa estar correto.\n- Fonte de dados duplicada causa erro silencioso.\n- IA exige autoria e validação.\n\n\n## Preparação para Prática\n\nAbra seu projeto do AT e aplique uma auditoria objetiva antes de mexer em aparência.\n\n## Laboratório de Prática\n### Easy — Auditar fonte no Looker\nComplete o checklist de auditoria antes de entregar o AT.\n```markdown\n# Auditoria Looker\n\n- [ ] TODO: conferir fonte ativa\n- [ ] TODO: verificar campo de data\n- [ ] TODO: testar filtro da pagina\n- [ ] TODO: validar metricas principais\n```\nCritérios:\n- Checar fonte e campo de data.\n- Incluir teste visual.\n- Registrar correção feita.\n\n### Medium — Planejar índice SQL\nComplete os índices para uma consulta de relatório.\n```sql\n-- Consulta alvo\nSELECT p.id, c.nome\nFROM pedido p\nLEFT JOIN cliente c ON c.id = p.cliente_id\nWHERE p.status = 'aberto';\n\n-- TODO: criar índice para o filtro de status\n-- TODO: avaliar índice para FK cliente_id\n```\nCritérios:\n- Indexar coluna usada em filtro seletivo.\n- Avaliar FK usada em JOIN.\n- Explicar custo de escrita.\n\n### Hard — Plano final do AT\nMonte um plano de validação final para o AT.\n```markdown\n# Plano final do AT\n\n## Pendências\n- TODO\n\n## Validações\n- TODO\n\n## Riscos\n- TODO\n```\nCritérios:\n- Separar pendência de risco.\n- Incluir validação com dado real.\n- Priorizar o que impacta nota/entrega.\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"monitoria-at-looker-fontes-datas-olap-auditar-looker\",\n    \"slug\": \"monitoria-at-looker-fontes-datas-olap-auditar-looker\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Auditar fonte no Looker\",\n    \"discipline\": \"visualizacao-sql\",\n    \"editorLanguage\": \"markdown\",\n    \"tags\": [\n      \"looker\",\n      \"dados\",\n      \"at\"\n    ],\n    \"summary\": \"Criar checklist para validar fonte de dados e tipo de data no Looker Studio.\"\n  },\n  {\n    \"id\": \"monitoria-at-looker-fontes-datas-olap-consulta-indices\",\n    \"slug\": \"monitoria-at-looker-fontes-datas-olap-consulta-indices\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Planejar índice SQL\",\n    \"discipline\": \"visualizacao-sql\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"indices\",\n      \"performance\"\n    ],\n    \"summary\": \"Escolher coluna candidata a índice com base em WHERE e JOIN.\"\n  },\n  {\n    \"id\": \"monitoria-at-looker-fontes-datas-olap-plano-at\",\n    \"slug\": \"monitoria-at-looker-fontes-datas-olap-plano-at\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Plano final do AT\",\n    \"discipline\": \"visualizacao-sql\",\n    \"editorLanguage\": \"markdown\",\n    \"tags\": [\n      \"at\",\n      \"looker\",\n      \"sql\"\n    ],\n    \"summary\": \"Planejar ajustes finais do AT com riscos e validações.\"\n  }\n]\n-->\n\n<!-- SOURCE_CONTEXT\ncanonical_memory: MEMORIES.md\nsource: downloads/Introducao_a_Visualizacao_de_Dados_e_SQL/Aula_18_-_31032026.md\nsource_sha256: 5c50c2695cd880b2f9c2ea668251b24e69588b87a789f01ab39a60f0f85d01dd\nsource: downloads/Introducao_a_Visualizacao_de_Dados_e_SQL/Aula_18_-_31032026.vtt\nsource_sha256: c6d58e4816a04f5f42e1eff9dd97f80d8537c0e25059ec708ef8fd6379a6d442\nnotes:\n  - Sessão de monitoria, não aula nova linear.\n  - Sem documento específico da aula no manifest.\n-->\n",
+  "source_path": "content/visualizacao-sql/aula-18-monitoria-at-looker-fontes-datas-olap.md",
+  "source_hash": "f33e597bdbcb11c3"
+}

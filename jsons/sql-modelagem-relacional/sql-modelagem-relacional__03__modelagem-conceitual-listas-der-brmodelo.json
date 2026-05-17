@@ -1,0 +1,51 @@
+{
+  "id": "sql-modelagem-relacional:modelagem-conceitual-listas-der-brmodelo",
+  "slug": "modelagem-conceitual-listas-der-brmodelo",
+  "discipline": "sql-modelagem-relacional",
+  "order": 3,
+  "name": "Modelagem conceitual: listas preliminares, DER com PK/FK e BRModelo",
+  "description": "Continuação da etapa conceitual: transformar requisitos em tabelas candidatas, ler PK/FK no DER e usar BRModelo como apoio visual. Tópicos abordados: modelagem conceitual, lista preliminar de tabelas, chave primária, chave estrangeira, DER, BRModelo. Objetivos: • Construir lista preliminar de tabelas a partir de requisitos. • Ler setas e vínculos PK/FK em DER. • Explicar o papel do BRModelo sem confundir ferramenta com método.",
+  "keywords": [
+    "modelagem conceitual",
+    "lista preliminar de tabelas",
+    "chave primária",
+    "chave estrangeira",
+    "DER",
+    "BRModelo",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Identificar entidades e chaves",
+    "Medium — Normalizar atributos problemáticos",
+    "Hard — Validar modelo por regras de negócio"
+  ],
+  "concepts": [
+    "modelagem conceitual",
+    "lista preliminar de tabelas",
+    "chave primária",
+    "chave estrangeira",
+    "DER",
+    "BRModelo"
+  ],
+  "learning_objectives": [
+    "Construir lista preliminar de tabelas a partir de requisitos.",
+    "Ler setas e vínculos PK/FK em DER.",
+    "Explicar o papel do BRModelo sem confundir ferramenta com método."
+  ],
+  "exercises": [
+    {
+      "question": "Por que uma lista preliminar de tabelas ainda não é o modelo final?",
+      "answer": "Porque ela é hipótese de trabalho: ainda precisa validação, deduplicação, definição de chaves, relacionamentos e regras de negócio.",
+      "hint": "Preliminar significa antes do refinamento."
+    }
+  ],
+  "content": "---\ntitle: \"Modelagem conceitual: listas preliminares, DER com PK/FK e BRModelo\"\nslug: \"modelagem-conceitual-listas-der-brmodelo\"\ndiscipline: \"sql-modelagem-relacional\"\norder: 3\ndescription: \"Continuação da etapa conceitual: transformar requisitos em tabelas candidatas, ler PK/FK no DER e usar BRModelo como apoio visual.\"\nreading_time: 28\ndifficulty: \"medium\"\nconcepts:\n  - modelagem conceitual\n  - lista preliminar de tabelas\n  - chave primária\n  - chave estrangeira\n  - DER\n  - BRModelo\nprerequisites:\n  - mer-der-cardinalidade-terminologia-design\nlearning_objectives:\n  - Construir lista preliminar de tabelas a partir de requisitos.\n  - Ler setas e vínculos PK/FK em DER.\n  - Explicar o papel do BRModelo sem confundir ferramenta com método.\nexercises:\n  - question: \"Por que uma lista preliminar de tabelas ainda não é o modelo final?\"\n    answer: \"Porque ela é hipótese de trabalho: ainda precisa validação, deduplicação, definição de chaves, relacionamentos e regras de negócio.\"\n    hint: \"Preliminar significa antes do refinamento.\"\nreview_after_days: [3, 7, 21]\n---\n\n## Visão Geral do Conceito\n\nA aula retoma a etapa de `modelagem conceitual` e mostra que modelar não é desenhar caixas aleatórias: primeiro surgem entidades candidatas, depois relações, chaves e restrições. O foco é passar da conversa de negócio para uma representação verificável em `DER`, com apoio do BRModelo.\n\n> **Regra:** esta lição foi reconstruída a partir da transcrição da aula e dos materiais disponíveis no repositório; quando a fonte não cobre um detalhe, isso é declarado como lacuna em vez de ser tratado como fato.\n\n## Modelo Mental\n\nPense na etapa conceitual como rascunho controlado: você coleta nomes do negócio, remove duplicidades, testa relações e só depois endurece o desenho. A ferramenta ajuda a visualizar, mas a decisão vem das regras de negócio.\n\n```mermaid\nflowchart LR\n  A[Requisitos e entrevistas] --> B[Lista preliminar de entidades]\n  B --> C[Definir PKs]\n  C --> D[Mapear relacionamentos]\n  D --> E[Indicar FKs]\n  E --> F[Validar DER no BRModelo]\n```\n\n## Mecânica Central\n\n- `Entidade` candidata tende a virar tabela.\n- `PK` identifica uma linha de forma estável.\n- `FK` materializa vínculo com outra entidade.\n- Nomes precisam ser significativos e não restritivos demais.\n- Chaves compostas podem existir, mas aumentam cuidado no modelo lógico.\n\nNão coberto no material: instalação detalhada e troubleshooting do BRModelo em cada sistema operacional.\n\n## Uso Prático\n\nUse um cenário de reserva de salas: identifique `empresa`, `sala`, `apresentacao`, `participante` e `ingresso`. Antes de criar SQL, escreva as frases de negócio: uma empresa possui salas; uma apresentação ocorre em uma sala; participantes compram ingressos.\n\n## Erros Comuns\n\n- Tratar nome de relatório como tabela definitiva.\n- Usar nomes restritivos como `funcionarios_regiao_sudoeste` quando a regra pode mudar.\n- Desenhar FK sem entender a cardinalidade.\n- Achar que BRModelo corrige decisões ruins automaticamente.\n\n## Visão Geral de Debugging\n\nRevise cada relacionamento como frase em português. Se a frase ficar ambígua, o DER também ficará. Depois confirme se cada FK aponta para uma PK ou chave candidata compatível.\n\n## Principais Pontos\n\n- Modelo conceitual organiza ideias antes do SQL.\n- PK identifica; FK relaciona.\n- Ferramenta visual não substitui regra de negócio.\n- Lista preliminar precisa ser refinada.\n\n\n## Preparação para Prática\n\nAntes de praticar, escolha um domínio simples e escreva entidades, atributos-chave e frases de relacionamento.\n\n## Laboratório de Prática\n### Easy — Identificar entidades e chaves\nComplete o esboço com chaves primárias e estrangeiras coerentes com o cenário.\n```sql\n-- TODO: revisar nomes e completar as chaves\nCREATE TABLE exemplo_pai (\n  id INTEGER PRIMARY KEY,\n  nome TEXT NOT NULL\n);\n\nCREATE TABLE exemplo_filho (\n  id INTEGER PRIMARY KEY,\n  pai_id INTEGER NOT NULL,\n  descricao TEXT,\n  -- TODO: declarar FOREIGN KEY para exemplo_pai(id)\n  FOREIGN KEY (pai_id) REFERENCES exemplo_pai(id)\n);\n```\nCritérios:\n- Declarar PK em cada tabela.\n- Declarar FK com tipo compatível.\n- Usar nomes semânticos.\n\n### Medium — Normalizar atributos problemáticos\nReescreva a modelagem para evitar campo multivalorado em uma única coluna.\n```sql\n-- Estrutura ruim: telefones misturados em uma coluna\nCREATE TABLE cliente_ruim (\n  id INTEGER PRIMARY KEY,\n  nome TEXT NOT NULL,\n  telefones TEXT\n);\n\n-- TODO: criar tabela cliente\n-- TODO: criar tabela cliente_telefone com uma linha por telefone\n```\nCritérios:\n- Evitar lista dentro de célula.\n- Criar tabela dependente quando houver múltiplos valores.\n- Manter relacionamento rastreável.\n\n### Hard — Validar modelo por regras de negócio\nAdicione restrições e uma consulta de verificação para encontrar registros órfãos.\n```sql\nCREATE TABLE departamento (\n  id INTEGER PRIMARY KEY,\n  nome TEXT NOT NULL UNIQUE\n);\n\nCREATE TABLE funcionario (\n  id INTEGER PRIMARY KEY,\n  departamento_id INTEGER,\n  nome TEXT NOT NULL\n  -- TODO: adicionar FK quando a regra exigir vínculo obrigatório\n);\n\n-- TODO: escrever SELECT que encontre funcionarios sem departamento válido\n```\nCritérios:\n- Relacionar regra de negócio a NOT NULL quando aplicável.\n- Usar FK para integridade.\n- Criar consulta de auditoria.\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"modelagem-conceitual-listas-der-brmodelo-identificar-entidades\",\n    \"slug\": \"modelagem-conceitual-listas-der-brmodelo-identificar-entidades\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Identificar entidades e chaves\",\n    \"discipline\": \"sql-modelagem-relacional\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"modelagem\",\n      \"chaves\"\n    ],\n    \"summary\": \"Completar um esboço SQL com entidades, PK e FK coerentes.\"\n  },\n  {\n    \"id\": \"modelagem-conceitual-listas-der-brmodelo-normalizar-campos\",\n    \"slug\": \"modelagem-conceitual-listas-der-brmodelo-normalizar-campos\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Normalizar atributos problemáticos\",\n    \"discipline\": \"sql-modelagem-relacional\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"normalizacao\",\n      \"1fn\"\n    ],\n    \"summary\": \"Separar campos multipartidos ou multivalorados em estruturas relacionais.\"\n  },\n  {\n    \"id\": \"modelagem-conceitual-listas-der-brmodelo-validar-modelo\",\n    \"slug\": \"modelagem-conceitual-listas-der-brmodelo-validar-modelo\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Validar modelo por regras de negócio\",\n    \"discipline\": \"sql-modelagem-relacional\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"modelagem\",\n      \"regras-negocio\"\n    ],\n    \"summary\": \"Escrever constraints e consultas para validar cardinalidade e integridade.\"\n  }\n]\n-->\n\n<!-- SOURCE_CONTEXT\ncanonical_memory: MEMORIES.md\nsource: downloads/SQL_e_Modelagem_Relacional/Aula_03_-_28042026.md\nsource_sha256: 52743540f922a24f0def349fb8fea914a5b8a7f5600ccece84514bf26934768f\nsource: downloads/SQL_e_Modelagem_Relacional/Aula_03_-_28042026.vtt\nsource_sha256: 25203f4743ce2ec9de39ac560a31165e1d71d29e5b4b4f36d6dbf2bc27daf0e0\nnotes:\n  - O arquivo Markdown da transcrição contém apenas frontmatter; o conteúdo útil está no VTT.\n  - Documentos de apoio da disciplina existem no manifest como materiais gerais, não como arquivo específico desta aula.\n-->\n",
+  "source_path": "content/sql-modelagem-relacional/aula-03-modelagem-conceitual-listas-der-brmodelo.md",
+  "source_hash": "f9cab93d92d71134"
+}

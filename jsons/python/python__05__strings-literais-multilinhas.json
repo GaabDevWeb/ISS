@@ -1,0 +1,62 @@
+{
+  "id": "python:strings-literais-multilinhas",
+  "slug": "strings-literais-multilinhas",
+  "discipline": "python",
+  "order": 5,
+  "name": "Strings em Python: aspas, literais e textos multilinha",
+  "description": "Como o Python representa texto com strings, diferenças entre aspas simples e duplas, uso de strings multilinha e erros típicos com aspas. Tópicos abordados: strings, literais de string, aspas simples, aspas duplas, strings multilinha, docstrings, SyntaxError, representação de texto na memória, aspas simples e duplas, strings multilinha com três aspas, SyntaxError por string não terminada. Objetivos: • Entender o que é uma string em Python e como ela é armazenada em memória. • Criar strings usando aspas simples, aspas duplas e literais multilinha com três aspas. • Identificar e corrigir erro...",
+  "keywords": [
+    "strings",
+    "literais de string",
+    "aspas simples",
+    "aspas duplas",
+    "strings multilinha",
+    "docstrings",
+    "SyntaxError",
+    "representação de texto na memória",
+    "aspas simples e duplas",
+    "strings multilinha com três aspas",
+    "SyntaxError por string não terminada",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Desafio Easy — Guardar um fragmento de poema",
+    "Desafio Medium — Mensagem com aspas internas",
+    "Desafio Hard — Normalizar texto colado do PDF"
+  ],
+  "concepts": [
+    "strings",
+    "literais de string",
+    "aspas simples",
+    "aspas duplas",
+    "strings multilinha",
+    "docstrings",
+    "SyntaxError",
+    "representação de texto na memória",
+    "aspas simples e duplas",
+    "strings multilinha com três aspas",
+    "SyntaxError por string não terminada"
+  ],
+  "learning_objectives": [
+    "Entender o que é uma string em Python e como ela é armazenada em memória.",
+    "Criar strings usando aspas simples, aspas duplas e literais multilinha com três aspas.",
+    "Identificar e corrigir erros comuns de aspas em literais de string (especialmente `SyntaxError: unterminated string literal`).",
+    "Usar strings multilinha para textos longos, docstrings e templates em projetos de dados."
+  ],
+  "exercises": [
+    {
+      "question": "Por que `poema = 'Que pode uma criatura senão,\\\\nentre criaturas, amar?` (com quebra de linha no meio) gera um `SyntaxError` em Python, e como corrigir isso mantendo o texto em múltiplas linhas?",
+      "answer": "Porque literais de string definidos com aspas simples ou duplas precisam começar e terminar na mesma linha; ao quebrar a linha sem indicar continuação, o Python entende que a string terminou e encontra texto 'solto', gerando `SyntaxError: unterminated string literal`. Para manter o texto em múltiplas linhas, você deve usar três aspas simples ou duplas (`''' ... '''` ou \\\"\\\"\\\" ... \\\"\\\"\\\"), criando uma string multilinha (docstring).",
+      "hint": "Lembre do exemplo com o poema de Carlos Drummond e da diferença entre `'texto'` e `'''texto\\\\nem\\\\nvarias\\\\nlinhas'''`."
+    }
+  ],
+  "content": "---\ntitle: \"Strings em Python: aspas, literais e textos multilinha\"\nslug: \"strings-literais-multilinhas\"\ndiscipline: \"python\"\norder: 5\ndescription: \"Como o Python representa texto com strings, diferenças entre aspas simples e duplas, uso de strings multilinha e erros típicos com aspas.\"\nreading_time: 40\ndifficulty: \"easy\"\nconcepts:\n  - strings\n  - literais de string\n  - aspas simples\n  - aspas duplas\n  - strings multilinha\n  - docstrings\n  - SyntaxError\n  - representação de texto na memória\nprerequisites:\n  - \"por-que-programar-python\"\n  - \"algoritmos-e-notebooks\"\n  - \"variaveis-tipos-estilo-python\"\n  - \"conversao-tipos-operadores-aritmeticos\"\nlearning_objectives:\n  - \"Entender o que é uma string em Python e como ela é armazenada em memória.\"\n  - \"Criar strings usando aspas simples, aspas duplas e literais multilinha com três aspas.\"\n  - \"Identificar e corrigir erros comuns de aspas em literais de string (especialmente `SyntaxError: unterminated string literal`).\"\n  - \"Usar strings multilinha para textos longos, docstrings e templates em projetos de dados.\"\nexercises:\n  - question: \"Por que `poema = 'Que pode uma criatura senão,\\\\nentre criaturas, amar?` (com quebra de linha no meio) gera um `SyntaxError` em Python, e como corrigir isso mantendo o texto em múltiplas linhas?\"\n    answer: \"Porque literais de string definidos com aspas simples ou duplas precisam começar e terminar na mesma linha; ao quebrar a linha sem indicar continuação, o Python entende que a string terminou e encontra texto 'solto', gerando `SyntaxError: unterminated string literal`. Para manter o texto em múltiplas linhas, você deve usar três aspas simples ou duplas (`''' ... '''` ou \\\"\\\"\\\" ... \\\"\\\"\\\"), criando uma string multilinha (docstring).\"\n    hint: \"Lembre do exemplo com o poema de Carlos Drummond e da diferença entre `'texto'` e `'''texto\\\\nem\\\\nvarias\\\\nlinhas'''`.\"\nreview_after_days: [1, 3, 7, 30]\n---\n\n## Visão Geral do Conceito\n\nStrings (`str`) são o tipo básico para representar **texto** em Python: tudo que está entre aspas é guardado como uma sequência de caracteres na memória.\nNesta aula você aprende a definir strings com aspas simples, aspas duplas e três aspas, e a evitar o erro clássico de quebrar o texto no meio de um literal.\n\n## Modelo Mental\n\nPense em uma string como uma **linha de caracteres em caixas consecutivas** na RAM.\nO literal entre aspas diz ao Python “guarde exatamente estes caracteres, nesta ordem”; o nome da variável aponta para o início dessa sequência.\nQuando há quebras de linha, elas são apenas **caracteres especiais** (`\\n`) dentro da mesma sequência.\n\n## Mecânica Central\n\n- `aspas_simples = 'texto'`\n- `aspas_duplas = \"texto\"`\n- `multilinha = '''linha 1\\nlinha 2\\nlinha 3'''` (três aspas simples ou três aspas duplas).\n\nCom **uma** aspa de cada lado (`'...'` ou `\"...\"`), o Python exige que o literal esteja em **uma única linha**; se você apertar Enter no meio, obtém:\n\n```text\nSyntaxError: unterminated string literal\n```\n\nPara textos em várias linhas (como o poema do Carlos Drummond da aula), use três aspas:\n\n```python\npoema = '''Que pode uma criatura senão,\nentre criaturas, amar?'''\n```\n\nE para colocar aspas dentro do texto:\n\n- use aspas duplas por fora quando o texto tem aspas simples: `\"texto entre 'aspas'\"`;\n- use aspas simples por fora quando o texto tem aspas duplas: `'Lorem \"Ipsum\" vem de...'`.\n\n```mermaid\nflowchart TD\n    A[Quero escrever texto] --> B{Cabe em 1 linha?}\n    B -- sim --> C[Usar '...' ou \"...\"]\n    B -- não --> D[Usar '''...''' ou \"\"\"...\"\"\"]\n    C --> E{Texto contém aspas simples?}\n    E -- sim --> F[Usar aspas duplas por fora]\n    E -- não --> G[Escolher estilo preferido]\n```\n\n## Uso Prático\n\n- Documentar um caderno de experimentos com um **bloco de texto multilinha** em uma variável.\n- Guardar um **e‑mail de notificação** ou um **modelo de mensagem** como string de três aspas.\n- Representar corretamente frases com aspas internas, como o exemplo de *Lorem Ipsum* da aula.\n\n## Erros Comuns\n\n- Quebrar um literal `'...'` ou `\"...\"` no meio da linha → `SyntaxError: unterminated string literal`.\n- Esquecer de alternar o tipo de aspas quando o texto já contém aspas internas.\n- Confundir o texto exibido no notebook com o literal em si (achar que pode “colar do PDF” sem adaptar para uma string válida).\n\n## Visão Geral de Debugging\n\nQuando aparecer um `SyntaxError` relacionado a string:\n\n1. Veja **onde** o erro foi detectado (linha indicada pela mensagem).\n2. Confira se o literal começou e terminou na mesma linha e se há o mesmo tipo de aspa abrindo e fechando.\n3. Se o texto é longo ou possui quebras de linha, converta para três aspas.\n\n## Principais Pontos\n\n- Strings são sequências de caracteres entre aspas, todas do tipo `str`.\n- Literais com uma aspa de cada lado precisam caber em uma linha; quebras “cruas” geram `SyntaxError`.\n- Três aspas criam strings multilinha, ideais para poemas, e‑mails, docstrings e templates.\n- Alternar entre aspas simples e duplas é a forma mais simples de incluir aspas dentro do texto.\n\n## Preparação para Prática\n\nVocê deve ser capaz de:\n\n- reescrever textos de múltiplas linhas do mundo real em literais Python válidos;\n- decidir rapidamente quando usar `'...'`, `\"...\"` ou `'''...'''`;\n- corrigir erros de aspas em código próprio ou de colegas.\n\n## Laboratório de Prática\n\n### Desafio Easy — Guardar um fragmento de poema\n\nImplemente uma função que receba três linhas de texto e devolva uma **string multilinha** com o fragmento formatado, usando três aspas.\n\n```python\ndef montar_fragmento_poema(linha1: str, linha2: str, linha3: str) -> str:\n    \"\"\"\n    Monta um pequeno poema em três linhas, usando uma string multilinha.\n    \"\"\"\n    # TODO: retornar uma string criada com ''' ... ''' contendo\n    # as três linhas em linhas separadas.\n    poema = \"\"\n    return poema\n```\n\n### Desafio Medium — Mensagem com aspas internas\n\nCrie uma função que devolva uma mensagem de aviso contendo **aspas simples e duplas** no texto, sem gerar `SyntaxError`.\n\n```python\ndef mensagem_com_aspas() -> str:\n    \"\"\"\n    Retorna algo como:\n    Atenção: o campo \"observação\" não pode conter o caractere '|' .\n    \"\"\"\n    # TODO: escolher o tipo de aspas externas adequado\n    # para que as aspas internas apareçam corretamente.\n    mensagem = \"\"\n    return mensagem\n```\n\n### Desafio Hard — Normalizar texto colado do PDF\n\nSuponha que você recebeu um parágrafo colado de um PDF (com várias quebras de linha) e quer transformá‑lo em uma **string de uma linha só**, pronta para ser exibida em logs.\n\n```python\nfrom typing import Iterable\n\ndef juntar_linhas_em_uma(linhas: Iterable[str]) -> str:\n    \"\"\"\n    Recebe várias linhas (como lidas de um arquivo de texto)\n    e devolve uma única string, com espaços entre as linhas.\n    \"\"\"\n    # TODO:\n    #   1. Juntar as linhas removendo quebras de linha.\n    #   2. Garantir que não haja espaços duplos desnecessários.\n    texto = \"\"\n    return texto\n```\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"python-poema-carlos-drummond-multilinha\",\n    \"slug\": \"python-poema-carlos-drummond-multilinha\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Montar fragmento de poema com string multilinha\",\n    \"discipline\": \"python\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\"python\", \"strings\", \"multilinha\"],\n    \"summary\": \"Construa uma string multilinha a partir de três linhas de texto usando literais de três aspas.\"\n  },\n  {\n    \"id\": \"python-mensagem-aviso-com-aspas\",\n    \"slug\": \"python-mensagem-aviso-com-aspas\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Criar mensagem com aspas internas sem SyntaxError\",\n    \"discipline\": \"python\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\"python\", \"strings\", \"aspas\"],\n    \"summary\": \"Escreva uma função que retorne uma mensagem contendo aspas simples e duplas, escolhendo o literal de string adequado.\"\n  },\n  {\n    \"id\": \"python-normalizar-texto-colado-pdf\",\n    \"slug\": \"python-normalizar-texto-colado-pdf\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Normalizar texto colado de PDF em uma única linha\",\n    \"discipline\": \"python\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\"python\", \"strings\", \"limpeza-texto\"],\n    \"summary\": \"Implemente uma função que recebe várias linhas de texto e devolve uma string única, sem quebras de linha e sem espaços duplicados.\"\n  }\n]\n-->\n",
+  "source_path": "content/python/aula-05-strings-literais-multilinhas.md",
+  "source_hash": "1eb0f16f01b7de10"
+}

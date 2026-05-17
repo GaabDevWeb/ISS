@@ -1,0 +1,51 @@
+{
+  "id": "sql-modelagem-relacional:tp1-livraria-normalizacao-chaves-tipos",
+  "slug": "tp1-livraria-normalizacao-chaves-tipos",
+  "discipline": "sql-modelagem-relacional",
+  "order": 4,
+  "name": "TP1 Livraria: normalização, chaves e tipos de dados",
+  "description": "Leitura técnica do TP1 de livraria e introdução à etapa de normalização, chaves e escolhas de tipo. Tópicos abordados: TP1 livraria, normalização, chave candidata, chave composta, ISBN, tipo de dados. Objetivos: • Interpretar enunciado de modelagem para livraria. • Diferenciar código interno de ISBN. • Escolher tipos de dados coerentes para chaves.",
+  "keywords": [
+    "TP1 livraria",
+    "normalização",
+    "chave candidata",
+    "chave composta",
+    "ISBN",
+    "tipo de dados",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Identificar entidades e chaves",
+    "Medium — Normalizar atributos problemáticos",
+    "Hard — Validar modelo por regras de negócio"
+  ],
+  "concepts": [
+    "TP1 livraria",
+    "normalização",
+    "chave candidata",
+    "chave composta",
+    "ISBN",
+    "tipo de dados"
+  ],
+  "learning_objectives": [
+    "Interpretar enunciado de modelagem para livraria.",
+    "Diferenciar código interno de ISBN.",
+    "Escolher tipos de dados coerentes para chaves."
+  ],
+  "exercises": [
+    {
+      "question": "Por que ISBN e código interno de item não devem ser tratados como a mesma coisa?",
+      "answer": "Porque representam identificadores de naturezas diferentes: ISBN identifica publicação/edição; código interno pode identificar item, estoque ou registro operacional.",
+      "hint": "Pense em dado do mundo real versus identificador do sistema."
+    }
+  ],
+  "content": "---\ntitle: \"TP1 Livraria: normalização, chaves e tipos de dados\"\nslug: \"tp1-livraria-normalizacao-chaves-tipos\"\ndiscipline: \"sql-modelagem-relacional\"\norder: 4\ndescription: \"Leitura técnica do TP1 de livraria e introdução à etapa de normalização, chaves e escolhas de tipo.\"\nreading_time: 30\ndifficulty: \"medium\"\nconcepts:\n  - TP1 livraria\n  - normalização\n  - chave candidata\n  - chave composta\n  - ISBN\n  - tipo de dados\nprerequisites:\n  - modelagem-conceitual-listas-der-brmodelo\nlearning_objectives:\n  - Interpretar enunciado de modelagem para livraria.\n  - Diferenciar código interno de ISBN.\n  - Escolher tipos de dados coerentes para chaves.\nexercises:\n  - question: \"Por que ISBN e código interno de item não devem ser tratados como a mesma coisa?\"\n    answer: \"Porque representam identificadores de naturezas diferentes: ISBN identifica publicação/edição; código interno pode identificar item, estoque ou registro operacional.\"\n    hint: \"Pense em dado do mundo real versus identificador do sistema.\"\nreview_after_days: [3, 7, 21]\n---\n\n## Visão Geral do Conceito\n\nA aula usa o TP1 de livraria para transformar regras de negócio em decisões de `normalização`, chaves e tipos. O ponto importante é não copiar atributos mecanicamente: é preciso entender se o dado identifica edição, item, livro, autor ou relação.\n\n> **Regra:** esta lição foi reconstruída a partir da transcrição da aula e dos materiais disponíveis no repositório; quando a fonte não cobre um detalhe, isso é declarado como lacuna em vez de ser tratado como fato.\n\n## Modelo Mental\n\nTrate o enunciado como contrato: cada frase indica entidade, atributo ou relacionamento. Quando aparecer um identificador famoso, como ISBN, pergunte se ele é suficiente para a necessidade do sistema ou se o sistema precisa de um código próprio.\n\n```mermaid\nerDiagram\n  AUTOR ||--o{ LIVRO : escreve\n  EDITORA ||--o{ LIVRO : publica\n  LIVRO ||--o{ EDICAO : possui\n  EDICAO ||--o{ ESTOQUE : controla\n```\n\n## Mecânica Central\n\n- `ISBN` pode conter letras/hífens e deve ser tratado como texto quando preservar formato importa.\n- `Chave candidata` identifica, mas nem sempre é a melhor PK operacional.\n- Chave composta é possível, mas deve usar o menor número de colunas necessário.\n- Normalização começa ao separar conceitos que parecem iguais no enunciado.\n\n## Uso Prático\n\nModele `autor`, `editora`, `livro` e `edicao`. Se uma edição tem ISBN, páginas e estoque próprios, não coloque tudo diretamente em `livro` sem avaliar a regra por edição.\n\n## Erros Comuns\n\n- Usar tipo numérico para identificadores que têm formato textual.\n- Confundir exemplar, edição e livro.\n- Criar chave composta grande quando um identificador simples resolveria.\n- Ignorar autores/editoras sem livros se a regra permitir cadastro prévio.\n\n## Visão Geral de Debugging\n\nQuando uma chave parecer óbvia, teste três cenários: valor muda? pode repetir em outro contexto? identifica exatamente a entidade correta?\n\n## Principais Pontos\n\n- TP exige interpretação, não cópia literal.\n- ISBN não é sinônimo de código interno.\n- Tipo de dados afeta integridade e performance.\n- Chaves compostas têm custo cognitivo.\n\n\n## Preparação para Prática\n\nReleia o enunciado do TP destacando substantivos, verbos e restrições; depois derive entidades e relações.\n\n## Laboratório de Prática\n### Easy — Identificar entidades e chaves\nComplete o esboço com chaves primárias e estrangeiras coerentes com o cenário.\n```sql\n-- TODO: revisar nomes e completar as chaves\nCREATE TABLE exemplo_pai (\n  id INTEGER PRIMARY KEY,\n  nome TEXT NOT NULL\n);\n\nCREATE TABLE exemplo_filho (\n  id INTEGER PRIMARY KEY,\n  pai_id INTEGER NOT NULL,\n  descricao TEXT,\n  -- TODO: declarar FOREIGN KEY para exemplo_pai(id)\n  FOREIGN KEY (pai_id) REFERENCES exemplo_pai(id)\n);\n```\nCritérios:\n- Declarar PK em cada tabela.\n- Declarar FK com tipo compatível.\n- Usar nomes semânticos.\n\n### Medium — Normalizar atributos problemáticos\nReescreva a modelagem para evitar campo multivalorado em uma única coluna.\n```sql\n-- Estrutura ruim: telefones misturados em uma coluna\nCREATE TABLE cliente_ruim (\n  id INTEGER PRIMARY KEY,\n  nome TEXT NOT NULL,\n  telefones TEXT\n);\n\n-- TODO: criar tabela cliente\n-- TODO: criar tabela cliente_telefone com uma linha por telefone\n```\nCritérios:\n- Evitar lista dentro de célula.\n- Criar tabela dependente quando houver múltiplos valores.\n- Manter relacionamento rastreável.\n\n### Hard — Validar modelo por regras de negócio\nAdicione restrições e uma consulta de verificação para encontrar registros órfãos.\n```sql\nCREATE TABLE departamento (\n  id INTEGER PRIMARY KEY,\n  nome TEXT NOT NULL UNIQUE\n);\n\nCREATE TABLE funcionario (\n  id INTEGER PRIMARY KEY,\n  departamento_id INTEGER,\n  nome TEXT NOT NULL\n  -- TODO: adicionar FK quando a regra exigir vínculo obrigatório\n);\n\n-- TODO: escrever SELECT que encontre funcionarios sem departamento válido\n```\nCritérios:\n- Relacionar regra de negócio a NOT NULL quando aplicável.\n- Usar FK para integridade.\n- Criar consulta de auditoria.\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"tp1-livraria-normalizacao-chaves-tipos-identificar-entidades\",\n    \"slug\": \"tp1-livraria-normalizacao-chaves-tipos-identificar-entidades\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Identificar entidades e chaves\",\n    \"discipline\": \"sql-modelagem-relacional\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"modelagem\",\n      \"chaves\"\n    ],\n    \"summary\": \"Completar um esboço SQL com entidades, PK e FK coerentes.\"\n  },\n  {\n    \"id\": \"tp1-livraria-normalizacao-chaves-tipos-normalizar-campos\",\n    \"slug\": \"tp1-livraria-normalizacao-chaves-tipos-normalizar-campos\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Normalizar atributos problemáticos\",\n    \"discipline\": \"sql-modelagem-relacional\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"normalizacao\",\n      \"1fn\"\n    ],\n    \"summary\": \"Separar campos multipartidos ou multivalorados em estruturas relacionais.\"\n  },\n  {\n    \"id\": \"tp1-livraria-normalizacao-chaves-tipos-validar-modelo\",\n    \"slug\": \"tp1-livraria-normalizacao-chaves-tipos-validar-modelo\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Validar modelo por regras de negócio\",\n    \"discipline\": \"sql-modelagem-relacional\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"modelagem\",\n      \"regras-negocio\"\n    ],\n    \"summary\": \"Escrever constraints e consultas para validar cardinalidade e integridade.\"\n  }\n]\n-->\n\n<!-- SOURCE_CONTEXT\ncanonical_memory: MEMORIES.md\nsource: downloads/SQL_e_Modelagem_Relacional/Aula_04_-_30042026.md\nsource_sha256: b4169e418e726a62002d3c23dd04e9ee8dbe043635430ce89dcd4af5007b3dc9\nsource: downloads/SQL_e_Modelagem_Relacional/Aula_04_-_30042026.vtt\nsource_sha256: b3bdd3da2a7b861661a240da0b9f20f894ab7c4b42ff8696341a811db3af33aa\nnotes:\n  - Markdown sem corpo; VTT é a fonte principal.\n-->\n",
+  "source_path": "content/sql-modelagem-relacional/aula-04-tp1-livraria-normalizacao-chaves-tipos.md",
+  "source_hash": "c8d772692d990751"
+}

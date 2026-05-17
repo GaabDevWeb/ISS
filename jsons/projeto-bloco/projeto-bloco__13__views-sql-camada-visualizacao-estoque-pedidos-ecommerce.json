@@ -1,0 +1,55 @@
+{
+  "id": "projeto-bloco:views-sql-camada-visualizacao-estoque-pedidos-ecommerce",
+  "slug": "views-sql-camada-visualizacao-estoque-pedidos-ecommerce",
+  "discipline": "projeto-bloco",
+  "order": 13,
+  "name": "Views SQL e camada de visualização: estoque, pedidos e carga de dados",
+  "description": "Fechamento do modelo do e-commerce com views, saldos de estoque, totais de pedidos e preparação para carga de dados. Tópicos abordados: views SQL, camada de visualização, estoque, pedido_item, GROUP BY, JOIN, CASE, carga de dados. Objetivos: • Explicar views como camada de exposição controlada. • Criar consultas agregadas para pedidos e estoque. • Preparar dados iniciais para testar modelo.",
+  "keywords": [
+    "views SQL",
+    "camada de visualização",
+    "estoque",
+    "pedido_item",
+    "GROUP BY",
+    "JOIN",
+    "CASE",
+    "carga de dados",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Esboçar entidades do e-commerce",
+    "Medium — Criar view de apoio",
+    "Hard — Validar carga inicial"
+  ],
+  "concepts": [
+    "views SQL",
+    "camada de visualização",
+    "estoque",
+    "pedido_item",
+    "GROUP BY",
+    "JOIN",
+    "CASE",
+    "carga de dados"
+  ],
+  "learning_objectives": [
+    "Explicar views como camada de exposição controlada.",
+    "Criar consultas agregadas para pedidos e estoque.",
+    "Preparar dados iniciais para testar modelo."
+  ],
+  "exercises": [
+    {
+      "question": "Por que uma view pode ser melhor do que dar acesso direto às tabelas base?",
+      "answer": "Porque a view expõe só as colunas e cálculos necessários, reduzindo acoplamento, risco de vazamento e complexidade para quem consome o dado.",
+      "hint": "Pense em Power BI lendo uma consulta pronta."
+    }
+  ],
+  "content": "---\ntitle: \"Views SQL e camada de visualização: estoque, pedidos e carga de dados\"\nslug: \"views-sql-camada-visualizacao-estoque-pedidos-ecommerce\"\ndiscipline: \"projeto-bloco\"\norder: 13\ndescription: \"Fechamento do modelo do e-commerce com views, saldos de estoque, totais de pedidos e preparação para carga de dados.\"\nreading_time: 32\ndifficulty: \"medium\"\nconcepts:\n  - views SQL\n  - camada de visualização\n  - estoque\n  - pedido_item\n  - GROUP BY\n  - JOIN\n  - CASE\n  - carga de dados\nprerequisites:\n  - modelagem-conceitual-logica-fisica-normalizacao-sqlite-ecommerce\nlearning_objectives:\n  - Explicar views como camada de exposição controlada.\n  - Criar consultas agregadas para pedidos e estoque.\n  - Preparar dados iniciais para testar modelo.\nexercises:\n  - question: \"Por que uma view pode ser melhor do que dar acesso direto às tabelas base?\"\n    answer: \"Porque a view expõe só as colunas e cálculos necessários, reduzindo acoplamento, risco de vazamento e complexidade para quem consome o dado.\"\n    hint: \"Pense em Power BI lendo uma consulta pronta.\"\nreview_after_days: [3, 7, 21]\n---\n\n## Visão Geral do Conceito\n\nA aula 13 completa o desenho do e-commerce com `views` e consultas de visualização. O objetivo é transformar tabelas normalizadas em saídas úteis: totais de pedido, saldo de estoque e dados prontos para relatório ou carga de teste.\n\n> **Regra:** esta lição foi reconstruída a partir da transcrição da aula e dos materiais disponíveis no repositório; quando a fonte não cobre um detalhe, isso é declarado como lacuna em vez de ser tratado como fato.\n\n## Modelo Mental\n\nTabelas base guardam fatos; views organizam perguntas. Em vez de cada consumidor repetir JOINs, a view oferece uma camada estável de leitura.\n\n```mermaid\nerDiagram\n  CLIENTE ||--o{ PEDIDO : faz\n  PEDIDO ||--|{ PEDIDO_ITEM : contem\n  PRODUTO ||--o{ PEDIDO_ITEM : vendido_em\n  PRODUTO ||--o{ ESTOQUE_MOVIMENTO : movimenta\n  PEDIDO ||--o{ PAGAMENTO : recebe\n```\n\n## Mecânica Central\n\n- `VIEW` encapsula consulta reutilizável.\n- `JOIN` conecta tabelas normalizadas.\n- `GROUP BY` calcula totais por pedido/produto.\n- `CASE` diferencia entrada e saída de estoque.\n- Carga inicial testa o modelo antes da aplicação completa.\n\n## Uso Prático\n\nCrie `vw_total_pedido` para somar itens por pedido e `vw_saldo_estoque` para consolidar entradas e saídas. Essas views podem alimentar BI ou telas de acompanhamento sem abrir todas as tabelas.\n\n## Erros Comuns\n\n- Criar view como substituta de modelagem correta.\n- Expor dados sensíveis em view pública.\n- Esquecer GROUP BY em agregações.\n- Testar modelo sem carga mínima de dados.\n\n## Visão Geral de Debugging\n\nQuando uma view der total errado, valide em camadas: linhas da tabela base, JOIN, multiplicidade e só então agregação.\n\n## Principais Pontos\n\n- Views são camada de leitura.\n- JOIN e GROUP BY transformam fatos em indicadores.\n- Estoque precisa distinguir entrada e saída.\n- Carga de dados valida hipóteses do modelo.\n\n\n## Preparação para Prática\n\nPrepare amostras pequenas de clientes, produtos, pedidos e movimentos de estoque para validar cada consulta.\n\n## Laboratório de Prática\n### Easy — Esboçar entidades do e-commerce\nComplete o esboço inicial do e-commerce com chaves e relacionamentos.\n```sql\nCREATE TABLE cliente (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  nome TEXT NOT NULL\n);\n\nCREATE TABLE produto (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  nome TEXT NOT NULL,\n  preco NUMERIC NOT NULL\n);\n\n-- TODO: criar tabela pedido com FK para cliente\n```\nCritérios:\n- Usar PK autoincremental.\n- Declarar FK quando houver dependência.\n- Separar entidades principais.\n\n### Medium — Criar view de apoio\nMonte uma view de totais por pedido.\n```sql\n-- TODO: criar tabelas pedido e pedido_item antes de usar em produção\nCREATE VIEW vw_total_pedido AS\nSELECT\n  pedido_id,\n  SUM(quantidade * preco_unitario) AS total\nFROM pedido_item\nGROUP BY pedido_id;\n```\nCritérios:\n- Usar GROUP BY corretamente.\n- Expor só campos necessários.\n- Nomear a view de forma clara.\n\n### Hard — Validar carga inicial\nComplete a carga inicial para popular dados de teste.\n```python\nimport sqlite3\n\nconn = sqlite3.connect('ecommerce.db')\ncur = conn.cursor()\n\nprodutos = [('Camiseta', 59.9), ('Mouse', 89.9)]\n\n# TODO: criar tabela produto se nao existir\n# TODO: inserir produtos usando placeholders\n\nconn.commit()\nconn.close()\n```\nCritérios:\n- Usar placeholders.\n- Executar sem erro antes dos TODOs.\n- Separar criação e carga.\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"views-sql-camada-visualizacao-estoque-pedidos-ecommerce-modelar-ecommerce\",\n    \"slug\": \"views-sql-camada-visualizacao-estoque-pedidos-ecommerce-modelar-ecommerce\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Esboçar entidades do e-commerce\",\n    \"discipline\": \"projeto-bloco\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"sqlite\",\n      \"ecommerce\"\n    ],\n    \"summary\": \"Criar tabelas base de cliente, produto e pedido em SQLite.\"\n  },\n  {\n    \"id\": \"views-sql-camada-visualizacao-estoque-pedidos-ecommerce-criar-view\",\n    \"slug\": \"views-sql-camada-visualizacao-estoque-pedidos-ecommerce-criar-view\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Criar view de apoio\",\n    \"discipline\": \"projeto-bloco\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"view\",\n      \"relatorio\"\n    ],\n    \"summary\": \"Criar uma view para expor dados calculados sem abrir tabelas base.\"\n  },\n  {\n    \"id\": \"views-sql-camada-visualizacao-estoque-pedidos-ecommerce-validar-carga\",\n    \"slug\": \"views-sql-camada-visualizacao-estoque-pedidos-ecommerce-validar-carga\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Validar carga inicial\",\n    \"discipline\": \"projeto-bloco\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\n      \"python\",\n      \"sqlite\",\n      \"carga-dados\"\n    ],\n    \"summary\": \"Preparar script de carga inicial com placeholders e commit.\"\n  }\n]\n-->\n\n<!-- SOURCE_CONTEXT\ncanonical_memory: MEMORIES.md\nsource: downloads/Projeto_de_Bloco_Fundamentos_do_Processamento_de_Dados/Aula_13_-_08052026.md\nsource_sha256: 1a86aa2d8e2b28e06c2a0e49802282cb64c6655ba888c71452cb3a0c36d62c1e\nsource: downloads/Projeto_de_Bloco_Fundamentos_do_Processamento_de_Dados/Aula_13_-_08052026.vtt\nsource_sha256: bde7e91a9b63a786822caa4436b988e402c892e71766426b1454893a461e6ff7\nnotes:\n  - Sem documento dedicado no manifest para esta aula; transcrição VTT é a fonte principal.\n-->\n",
+  "source_path": "content/projeto-bloco/aula-13-views-sql-camada-visualizacao-estoque-pedidos-ecommerce.md",
+  "source_hash": "104ad57410aa4078"
+}

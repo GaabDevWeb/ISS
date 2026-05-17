@@ -1,0 +1,53 @@
+{
+  "id": "sql-modelagem-relacional:modelo-logico-normalizacao-1fn-2fn-3fn",
+  "slug": "modelo-logico-normalizacao-1fn-2fn-3fn",
+  "discipline": "sql-modelagem-relacional",
+  "order": 5,
+  "name": "Modelo lógico: primeira, segunda e terceira formas normais",
+  "description": "Normalização no modelo lógico: 1FN, 2FN e 3FN como mecanismo para reduzir redundância e anomalias. Tópicos abordados: modelo lógico, 1FN, 2FN, 3FN, dependência parcial, dependência transitiva, anomalias. Objetivos: • Explicar 1FN, 2FN e 3FN em sequência cumulativa. • Reconhecer dependência parcial em chave composta. • Reconhecer dependência transitiva em atributos derivados.",
+  "keywords": [
+    "modelo lógico",
+    "1FN",
+    "2FN",
+    "3FN",
+    "dependência parcial",
+    "dependência transitiva",
+    "anomalias",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Identificar entidades e chaves",
+    "Medium — Normalizar atributos problemáticos",
+    "Hard — Validar modelo por regras de negócio"
+  ],
+  "concepts": [
+    "modelo lógico",
+    "1FN",
+    "2FN",
+    "3FN",
+    "dependência parcial",
+    "dependência transitiva",
+    "anomalias"
+  ],
+  "learning_objectives": [
+    "Explicar 1FN, 2FN e 3FN em sequência cumulativa.",
+    "Reconhecer dependência parcial em chave composta.",
+    "Reconhecer dependência transitiva em atributos derivados."
+  ],
+  "exercises": [
+    {
+      "question": "Por que as formas normais são cumulativas?",
+      "answer": "Porque uma tabela em 3FN precisa antes satisfazer 1FN e 2FN; cada etapa remove uma família de problemas de redundância e dependência.",
+      "hint": "Pense em escada: não se chega ao degrau 3 sem passar pelos anteriores."
+    }
+  ],
+  "content": "---\ntitle: \"Modelo lógico: primeira, segunda e terceira formas normais\"\nslug: \"modelo-logico-normalizacao-1fn-2fn-3fn\"\ndiscipline: \"sql-modelagem-relacional\"\norder: 5\ndescription: \"Normalização no modelo lógico: 1FN, 2FN e 3FN como mecanismo para reduzir redundância e anomalias.\"\nreading_time: 34\ndifficulty: \"medium\"\nconcepts:\n  - modelo lógico\n  - 1FN\n  - 2FN\n  - 3FN\n  - dependência parcial\n  - dependência transitiva\n  - anomalias\nprerequisites:\n  - tp1-livraria-normalizacao-chaves-tipos\nlearning_objectives:\n  - Explicar 1FN, 2FN e 3FN em sequência cumulativa.\n  - Reconhecer dependência parcial em chave composta.\n  - Reconhecer dependência transitiva em atributos derivados.\nexercises:\n  - question: \"Por que as formas normais são cumulativas?\"\n    answer: \"Porque uma tabela em 3FN precisa antes satisfazer 1FN e 2FN; cada etapa remove uma família de problemas de redundância e dependência.\"\n    hint: \"Pense em escada: não se chega ao degrau 3 sem passar pelos anteriores.\"\nreview_after_days: [3, 7, 21]\n---\n\n## Visão Geral do Conceito\n\nA aula detalha `normalização` como ponte entre modelo conceitual e lógico. O objetivo não é decorar siglas, mas evitar redundância, anomalias de atualização e dependências mal posicionadas.\n\n> **Regra:** esta lição foi reconstruída a partir da transcrição da aula e dos materiais disponíveis no repositório; quando a fonte não cobre um detalhe, isso é declarado como lacuna em vez de ser tratado como fato.\n\n## Modelo Mental\n\nNormalizar é perguntar: cada coluna depende da chave, da chave inteira e de nada além da chave? Se a resposta falha, há cheiro de separação em nova tabela.\n\n```mermaid\nflowchart TD\n  A[Tabela bruta] --> B{1FN: valores atomicos?}\n  B -->|nao| C[Separar grupos repetidos]\n  B -->|sim| D{2FN: depende da PK inteira?}\n  D -->|nao| E[Separar dependencias parciais]\n  D -->|sim| F{3FN: sem dependencia transitiva?}\n  F -->|nao| G[Separar atributos derivados]\n  F -->|sim| H[Modelo lógico consistente]\n```\n\n## Mecânica Central\n\n- `1FN`: cada célula guarda um valor atômico.\n- `2FN`: atributo não-chave depende da chave primária completa.\n- `3FN`: atributo não-chave não depende de outro atributo não-chave.\n- `FK` preserva relação depois de separar tabelas.\n\n## Uso Prático\n\nEm pedidos, se `subtotal` depende de `quantidade * preco_unitario`, avalie se é cálculo derivado ou valor histórico congelado. Em matrículas, se `nome_cargo` depende de `codigo_cargo`, cargo deve ser tabela própria.\n\n## Erros Comuns\n\n- Chamar campo multivalorado de 'string prática'.\n- Separar demais sem regra de negócio.\n- Guardar subtotal sem decidir se é histórico ou calculado.\n- Ignorar que 2FN só aparece quando há chave composta relevante.\n\n## Visão Geral de Debugging\n\nProcure repetição e pergunte qual atualização quebraria consistência. Se mudar um endereço exige editar muitas linhas, o modelo está denunciando redundância.\n\n## Principais Pontos\n\n- 1FN exige atomicidade.\n- 2FN remove dependência parcial.\n- 3FN remove dependência transitiva.\n- Normalização reduz anomalias.\n\n\n## Preparação para Prática\n\nPegue uma planilha com repetição e marque quais colunas identificam linha, quais repetem e quais dependem de outras.\n\n## Laboratório de Prática\n### Easy — Identificar entidades e chaves\nComplete o esboço com chaves primárias e estrangeiras coerentes com o cenário.\n```sql\n-- TODO: revisar nomes e completar as chaves\nCREATE TABLE exemplo_pai (\n  id INTEGER PRIMARY KEY,\n  nome TEXT NOT NULL\n);\n\nCREATE TABLE exemplo_filho (\n  id INTEGER PRIMARY KEY,\n  pai_id INTEGER NOT NULL,\n  descricao TEXT,\n  -- TODO: declarar FOREIGN KEY para exemplo_pai(id)\n  FOREIGN KEY (pai_id) REFERENCES exemplo_pai(id)\n);\n```\nCritérios:\n- Declarar PK em cada tabela.\n- Declarar FK com tipo compatível.\n- Usar nomes semânticos.\n\n### Medium — Normalizar atributos problemáticos\nReescreva a modelagem para evitar campo multivalorado em uma única coluna.\n```sql\n-- Estrutura ruim: telefones misturados em uma coluna\nCREATE TABLE cliente_ruim (\n  id INTEGER PRIMARY KEY,\n  nome TEXT NOT NULL,\n  telefones TEXT\n);\n\n-- TODO: criar tabela cliente\n-- TODO: criar tabela cliente_telefone com uma linha por telefone\n```\nCritérios:\n- Evitar lista dentro de célula.\n- Criar tabela dependente quando houver múltiplos valores.\n- Manter relacionamento rastreável.\n\n### Hard — Validar modelo por regras de negócio\nAdicione restrições e uma consulta de verificação para encontrar registros órfãos.\n```sql\nCREATE TABLE departamento (\n  id INTEGER PRIMARY KEY,\n  nome TEXT NOT NULL UNIQUE\n);\n\nCREATE TABLE funcionario (\n  id INTEGER PRIMARY KEY,\n  departamento_id INTEGER,\n  nome TEXT NOT NULL\n  -- TODO: adicionar FK quando a regra exigir vínculo obrigatório\n);\n\n-- TODO: escrever SELECT que encontre funcionarios sem departamento válido\n```\nCritérios:\n- Relacionar regra de negócio a NOT NULL quando aplicável.\n- Usar FK para integridade.\n- Criar consulta de auditoria.\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"modelo-logico-normalizacao-1fn-2fn-3fn-identificar-entidades\",\n    \"slug\": \"modelo-logico-normalizacao-1fn-2fn-3fn-identificar-entidades\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Identificar entidades e chaves\",\n    \"discipline\": \"sql-modelagem-relacional\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"modelagem\",\n      \"chaves\"\n    ],\n    \"summary\": \"Completar um esboço SQL com entidades, PK e FK coerentes.\"\n  },\n  {\n    \"id\": \"modelo-logico-normalizacao-1fn-2fn-3fn-normalizar-campos\",\n    \"slug\": \"modelo-logico-normalizacao-1fn-2fn-3fn-normalizar-campos\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Normalizar atributos problemáticos\",\n    \"discipline\": \"sql-modelagem-relacional\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"normalizacao\",\n      \"1fn\"\n    ],\n    \"summary\": \"Separar campos multipartidos ou multivalorados em estruturas relacionais.\"\n  },\n  {\n    \"id\": \"modelo-logico-normalizacao-1fn-2fn-3fn-validar-modelo\",\n    \"slug\": \"modelo-logico-normalizacao-1fn-2fn-3fn-validar-modelo\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Validar modelo por regras de negócio\",\n    \"discipline\": \"sql-modelagem-relacional\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"modelagem\",\n      \"regras-negocio\"\n    ],\n    \"summary\": \"Escrever constraints e consultas para validar cardinalidade e integridade.\"\n  }\n]\n-->\n\n<!-- SOURCE_CONTEXT\ncanonical_memory: MEMORIES.md\nsource: downloads/SQL_e_Modelagem_Relacional/Aula_05_-_05052026.md\nsource_sha256: ac4fdddd1eb1932312fd10502c4eafbe1c0fc606a09099b0238a19a70df5d66d\nsource: downloads/SQL_e_Modelagem_Relacional/Aula_05_-_05052026.vtt\nsource_sha256: 85525c3048fc9c74157ca426580610177aeee587176345da8135c86a48e54063\nnotes:\n  - Markdown sem corpo; VTT é a fonte principal.\n-->\n",
+  "source_path": "content/sql-modelagem-relacional/aula-05-modelo-logico-normalizacao-1fn-2fn-3fn.md",
+  "source_hash": "ff6fb597bbd9a56a"
+}

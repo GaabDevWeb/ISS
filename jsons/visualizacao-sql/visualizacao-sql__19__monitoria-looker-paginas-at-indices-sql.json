@@ -1,0 +1,58 @@
+{
+  "id": "visualizacao-sql:monitoria-looker-paginas-at-indices-sql",
+  "slug": "monitoria-looker-paginas-at-indices-sql",
+  "discipline": "visualizacao-sql",
+  "order": 19,
+  "name": "Monitoria: páginas no Looker, dúvidas do AT e índices em SQL",
+  "description": "Última sessão de apoio: páginas no Looker Studio, revisão do AT e discussão aplicada de índices, JOINs e custo de escrita em SQL. Tópicos abordados: Looker Studio, páginas, AT, índices SQL, JOIN, LEFT JOIN, CREATE INDEX, PL/SQL. Objetivos: • Usar páginas no Looker para organizar dashboards. • Explicar quando um índice ajuda consultas SQL. • Reconhecer o custo de índices em escritas.",
+  "keywords": [
+    "Looker Studio",
+    "páginas",
+    "AT",
+    "índices SQL",
+    "JOIN",
+    "LEFT JOIN",
+    "CREATE INDEX",
+    "PL/SQL",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Uso Prático",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Auditar fonte no Looker",
+    "Medium — Planejar índice SQL",
+    "Hard — Plano final do AT",
+    "Pendências",
+    "Validações",
+    "Riscos"
+  ],
+  "concepts": [
+    "Looker Studio",
+    "páginas",
+    "AT",
+    "índices SQL",
+    "JOIN",
+    "LEFT JOIN",
+    "CREATE INDEX",
+    "PL/SQL"
+  ],
+  "learning_objectives": [
+    "Usar páginas no Looker para organizar dashboards.",
+    "Explicar quando um índice ajuda consultas SQL.",
+    "Reconhecer o custo de índices em escritas."
+  ],
+  "exercises": [
+    {
+      "question": "Por que índice não é sempre uma melhoria gratuita?",
+      "answer": "Porque acelera certas leituras, mas precisa ser mantido em INSERT, UPDATE e DELETE, aumentando custo de escrita e armazenamento.",
+      "hint": "Compare com índice de livro que precisa ser atualizado."
+    }
+  ],
+  "content": "---\ntitle: \"Monitoria: páginas no Looker, dúvidas do AT e índices em SQL\"\nslug: \"monitoria-looker-paginas-at-indices-sql\"\ndiscipline: \"visualizacao-sql\"\norder: 19\ndescription: \"Última sessão de apoio: páginas no Looker Studio, revisão do AT e discussão aplicada de índices, JOINs e custo de escrita em SQL.\"\nreading_time: 24\ndifficulty: \"medium\"\nconcepts:\n  - Looker Studio\n  - páginas\n  - AT\n  - índices SQL\n  - JOIN\n  - LEFT JOIN\n  - CREATE INDEX\n  - PL/SQL\nprerequisites:\n  - monitoria-at-looker-fontes-datas-olap\nlearning_objectives:\n  - Usar páginas no Looker para organizar dashboards.\n  - Explicar quando um índice ajuda consultas SQL.\n  - Reconhecer o custo de índices em escritas.\nexercises:\n  - question: \"Por que índice não é sempre uma melhoria gratuita?\"\n    answer: \"Porque acelera certas leituras, mas precisa ser mantido em INSERT, UPDATE e DELETE, aumentando custo de escrita e armazenamento.\"\n    hint: \"Compare com índice de livro que precisa ser atualizado.\"\nreview_after_days: [3, 7, 21]\n---\n\n## Visão Geral do Conceito\n\nA aula 19 também é monitoria. Ela fecha dúvidas de `Looker Studio` para o AT e traz uma conversa prática sobre `índices SQL` em contexto de trabalho com Oracle. A lição separa o que é essencial ao AT do que é aprofundamento profissional.\n\n> **Regra:** esta lição foi reconstruída a partir da transcrição da aula e dos materiais disponíveis no repositório; quando a fonte não cobre um detalhe, isso é declarado como lacuna em vez de ser tratado como fato.\n\n## Modelo Mental\n\nPáginas organizam a narrativa do dashboard; índices organizam o caminho de busca do banco. Ambos existem para reduzir esforço de leitura, mas exigem projeto consciente.\n\n```mermaid\nflowchart TD\n  A[Dashboard com varias perguntas] --> B[Separar em paginas]\n  B --> C[Validar filtros e fontes]\n  D[Consulta lenta] --> E{Filtro/JOIN frequente?}\n  E -->|sim| F[Avaliar CREATE INDEX]\n  E -->|nao| G[Nao indexar sem motivo]\n```\n\n## Mecânica Central\n\n- Páginas no Looker segmentam análises sem misturar todos os gráficos.\n- `CREATE INDEX` ajuda buscas seletivas e JOINs frequentes.\n- FK usada em JOIN pode se beneficiar de índice conforme volume.\n- `LEFT JOIN` preserva linhas da tabela à esquerda, mas ainda pode custar caro.\n- Trechos de Oracle/PL/SQL são extras, não requisito central do AT.\n\n## Uso Prático\n\nNo AT, use páginas para separar visão geral, métricas por categoria e detalhes. Em SQL profissional, avalie índices nas colunas de filtro e relacionamento antes de otimizar por tentativa.\n\n## Erros Comuns\n\n- Colocar todos os gráficos em uma página.\n- Criar índice em toda coluna sem medir uso.\n- Ignorar custo de escrita.\n- Confundir recurso extra de Oracle com obrigação da disciplina.\n\n## Visão Geral de Debugging\n\nPara dashboard confuso, revise a pergunta de cada página. Para query lenta, veja WHERE, JOIN e volume antes de criar índice.\n\n## Principais Pontos\n\n- Páginas dão narrativa ao dashboard.\n- Índices aceleram leitura seletiva.\n- Índices custam em escrita.\n- Monitoria deve virar checklist final.\n\n\n## Preparação para Prática\n\nListe as perguntas do seu AT e transforme cada grupo em página ou seção; depois revise queries de apoio com foco em filtros e joins.\n\n## Laboratório de Prática\n### Easy — Auditar fonte no Looker\nComplete o checklist de auditoria antes de entregar o AT.\n```markdown\n# Auditoria Looker\n\n- [ ] TODO: conferir fonte ativa\n- [ ] TODO: verificar campo de data\n- [ ] TODO: testar filtro da pagina\n- [ ] TODO: validar metricas principais\n```\nCritérios:\n- Checar fonte e campo de data.\n- Incluir teste visual.\n- Registrar correção feita.\n\n### Medium — Planejar índice SQL\nComplete os índices para uma consulta de relatório.\n```sql\n-- Consulta alvo\nSELECT p.id, c.nome\nFROM pedido p\nLEFT JOIN cliente c ON c.id = p.cliente_id\nWHERE p.status = 'aberto';\n\n-- TODO: criar índice para o filtro de status\n-- TODO: avaliar índice para FK cliente_id\n```\nCritérios:\n- Indexar coluna usada em filtro seletivo.\n- Avaliar FK usada em JOIN.\n- Explicar custo de escrita.\n\n### Hard — Plano final do AT\nMonte um plano de validação final para o AT.\n```markdown\n# Plano final do AT\n\n## Pendências\n- TODO\n\n## Validações\n- TODO\n\n## Riscos\n- TODO\n```\nCritérios:\n- Separar pendência de risco.\n- Incluir validação com dado real.\n- Priorizar o que impacta nota/entrega.\n\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"monitoria-looker-paginas-at-indices-sql-auditar-looker\",\n    \"slug\": \"monitoria-looker-paginas-at-indices-sql-auditar-looker\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Auditar fonte no Looker\",\n    \"discipline\": \"visualizacao-sql\",\n    \"editorLanguage\": \"markdown\",\n    \"tags\": [\n      \"looker\",\n      \"dados\",\n      \"at\"\n    ],\n    \"summary\": \"Criar checklist para validar fonte de dados e tipo de data no Looker Studio.\"\n  },\n  {\n    \"id\": \"monitoria-looker-paginas-at-indices-sql-consulta-indices\",\n    \"slug\": \"monitoria-looker-paginas-at-indices-sql-consulta-indices\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Planejar índice SQL\",\n    \"discipline\": \"visualizacao-sql\",\n    \"editorLanguage\": \"sql\",\n    \"tags\": [\n      \"sql\",\n      \"indices\",\n      \"performance\"\n    ],\n    \"summary\": \"Escolher coluna candidata a índice com base em WHERE e JOIN.\"\n  },\n  {\n    \"id\": \"monitoria-looker-paginas-at-indices-sql-plano-at\",\n    \"slug\": \"monitoria-looker-paginas-at-indices-sql-plano-at\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Plano final do AT\",\n    \"discipline\": \"visualizacao-sql\",\n    \"editorLanguage\": \"markdown\",\n    \"tags\": [\n      \"at\",\n      \"looker\",\n      \"sql\"\n    ],\n    \"summary\": \"Planejar ajustes finais do AT com riscos e validações.\"\n  }\n]\n-->\n\n<!-- SOURCE_CONTEXT\ncanonical_memory: MEMORIES.md\nsource: downloads/Introducao_a_Visualizacao_de_Dados_e_SQL/Aula_19_-_02042026.md\nsource_sha256: 7fa929d89ec94bdbcec170be45d7a2d6ca14f267efa5b3a2fbc63f9f90c288c3\nsource: downloads/Introducao_a_Visualizacao_de_Dados_e_SQL/Aula_19_-_02042026.vtt\nsource_sha256: 1ada56456ea0960930b55e696b5aff15ae6fc0ef20c802da1d8c246b08c5eb56\nnotes:\n  - Sessão de monitoria, não aula nova linear.\n  - Inclui conteúdo Oracle/PL-SQL como extra contextual.\n-->\n",
+  "source_path": "content/visualizacao-sql/aula-19-monitoria-looker-paginas-at-indices-sql.md",
+  "source_hash": "345dc2b931676de1"
+}
