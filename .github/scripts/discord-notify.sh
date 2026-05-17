@@ -19,6 +19,8 @@ ISS_URL="https://gaabdevweb.github.io/ISS/"
 STATUS="${JOB_STATUS:-unknown}"
 PIPELINE_SUMMARY="${PIPELINE_SUMMARY:-}"
 COMMIT_INFO="${COMMIT_INFO:-}"
+LAST_DISCIPLINE_TITLE="${LAST_DISCIPLINE_TITLE:-}"
+LAST_LESSON_TITLE="${LAST_LESSON_TITLE:-}"
 RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
 
 PUBLISHED=0
@@ -35,29 +37,26 @@ post_discord() {
 
 # —— Sucesso com lições novas: mensagem pedida + ping ao cargo ——
 if [[ "$STATUS" == "success" && "$PUBLISHED" -gt 0 ]]; then
-  DESCRIPTION="${EMOJI_NOTEPAD} **Transcrição disponível!**
-A última aula já foi transcrita e adicionada ao projeto de resumos ${EMOJI_OK}
+  DISC_LINE="a última aula processada"
+  if [[ -n "$LAST_DISCIPLINE_TITLE" ]]; then
+    DISC_LINE="a última aula de **${LAST_DISCIPLINE_TITLE}**"
+  fi
+
+  DESCRIPTION="${EMOJI_NOTEPAD} **Novo conteúdo publicado no ISS**
+
+${DISC_LINE^} já está disponível no site com resumo estruturado, tópicos organizados e material complementar."
+
+  if [[ -n "$LAST_LESSON_TITLE" ]]; then
+    DESCRIPTION="${DESCRIPTION}
+
+» *${LAST_LESSON_TITLE}*"
+  fi
+
+  DESCRIPTION="${DESCRIPTION}
 
 ${EMOJI_ARROW} ${ISS_URL}
 
-Pra quem perdeu, pra quem quer revisar, ou pra quem piscou na hora errada ${EMOJI_COFFEE} ${EMOJI_SMILE}"
-
-  if [[ -n "${LAST_PUBLISHED:-}" ]]; then
-    DESCRIPTION="${DESCRIPTION}
-
-\`${LAST_PUBLISHED}\`"
-  fi
-
-  if [[ -n "$PIPELINE_SUMMARY" ]]; then
-    DESCRIPTION="${DESCRIPTION}
-
-_${PIPELINE_SUMMARY}_"
-  fi
-
-  if [[ -n "$COMMIT_INFO" && "$COMMIT_INFO" != "—" ]]; then
-    DESCRIPTION="${DESCRIPTION}
-_${COMMIT_INFO}_"
-  fi
+Atualização automática concluída com sucesso. ${EMOJI_OK} ${EMOJI_COFFEE} ${EMOJI_SMILE}"
 
   PAYLOAD="$(jq -n \
     --arg content "||<@&${ROLE_ID}>||" \

@@ -12,6 +12,8 @@ O ISS é uma plataforma **estática** (HTML, CSS e JavaScript) para estudar no n
 
 Este repositório é o **hub oficial**: site + pasta `downloads/` (fontes) + pipeline **GitHub Actions** que transforma transcrições em lições publicadas — **sem editar lições à mão** depois de as fontes estarem versionadas.
 
+**Wiki técnica** (ISS + StripperScrapper + integração): [`WIKI.md`](WIKI.md).
+
 **Documentação do site** (JSON, URLs, exercícios, contribuição manual): [`documentation.md`](documentation.md).
 
 ---
@@ -175,7 +177,7 @@ flowchart TD
 | Gerar | Para cada `.vtt`: contexto de docs → Cursor Agent → validação → publicação |
 | Commit | `content/`, `config/`, `agents/…`, PDFs em `documents/` |
 
-**Disparadores:** `workflow_dispatch` (manual) ou cron **domingo 06:00 UTC** (`max_files` default 5 no agendamento — use `0` para todos).
+**Disparadores:** `workflow_dispatch` (manual) ou cron **diário 09:30 America/Sao_Paulo** (`max_files` default 5 no agendamento — use `0` para todos).
 
 ### Decisão por VTT (sem API se já publicado)
 

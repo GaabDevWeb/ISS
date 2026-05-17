@@ -25,6 +25,16 @@ export function searchIndexPath(root, config) {
   return join(root, config.search_index_path ?? "content/search-index.json");
 }
 
+export async function loadDisciplines(root) {
+  const raw = await readFile(join(root, "content/disciplines.json"), "utf8");
+  return JSON.parse(raw);
+}
+
+export function disciplineDisplayTitle(disciplines, slug) {
+  const row = disciplines.find((d) => d.slug === slug);
+  return row?.title ?? slug;
+}
+
 export function mapDownloadsFolder(folderName, config) {
   const entry = config.disciplines?.[folderName];
   if (!entry?.discipline) return null;

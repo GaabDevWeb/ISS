@@ -12,8 +12,10 @@ import {
   resolveDocumentContext,
 } from "./document-context.mjs";
 import {
+  disciplineDisplayTitle,
   findLessonByOrder,
   lessonPublishState,
+  loadDisciplines,
   loadLessons,
   loadVttContentConfig,
   lessonsPath,
@@ -239,6 +241,7 @@ async function main() {
   );
 
   const vttCfg = await loadVttContentConfig(ROOT);
+  const disciplines = await loadDisciplines(ROOT);
   const lessonsFile = lessonsPath(ROOT, vttCfg);
   let lessons = await loadLessons(lessonsFile);
   const allCataloged =
@@ -355,6 +358,8 @@ async function main() {
       `Publicado: ${outPath.slice(ROOT.length + 1).replace(/\\/g, "/")} | ` +
         `${entry.discipline}/${entry.slug} order=${entry.order}${metaNote}`,
     );
+    const discTitle = disciplineDisplayTitle(disciplines, entry.discipline);
+    console.log(`NotifyDiscord: ${discTitle} | ${entry.title}`);
     ok++;
   }
   console.log(

@@ -24,7 +24,7 @@
 
 ## Pipeline automático (scraper → Actions → site)
 
-A documentação **completa** do fluxo ponta-a-ponta (StripperScrapper, GitHub Actions, secrets, skip de VTT, configs) está no **[README.md](README.md#ecossistema-fluxo-completo-automático)**.
+A documentação **completa** do ecossistema (dois repositórios, contrato de integração, runbooks) está na **[WIKI.md](WIKI.md)**. Resumo operacional: **[README.md](README.md#ecossistema-fluxo-completo-automático)**.
 
 Resumo:
 
