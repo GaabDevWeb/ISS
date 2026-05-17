@@ -98,6 +98,9 @@ jobs:
           echo "last_discipline_title=$DISC_TITLE" >> "$GITHUB_OUTPUT"
           echo "last_lesson_title=$LESSON_TITLE" >> "$GITHUB_OUTPUT"
 
+      - name: Exportar lições → JSON estruturado
+        run: node .github/scripts/export-lessons-json.mjs
+
       - name: Commit e push para main
         id: commit
         shell: bash
@@ -107,7 +110,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- 'content/' 'config/' 'agents/content-summary-agent.md' 'agents/content-summary-style-guide.md'
+          git add -- 'content/' 'config/' 'jsons/' 'agents/content-summary-agent.md' 'agents/content-summary-style-guide.md'
           git add -- 'downloads/documents/**/*.pdf' 2>/dev/null || true
           git add -u -- 'downloads/documents/' 2>/dev/null || true
           if git diff --staged --quiet; then
