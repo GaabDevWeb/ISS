@@ -87,6 +87,8 @@ jobs:
             SUMMARY="(resumo não encontrado no log — ver Actions)"
           fi
           echo "pipeline_summary=$SUMMARY" >> "$GITHUB_OUTPUT"
+          LAST="$(grep -E '^Publicado:' summarize.log | tail -1 | sed 's/^Publicado: //' || true)"
+          echo "last_published=$LAST" >> "$GITHUB_OUTPUT"
 
       - name: Commit e push para main
         id: commit
@@ -118,6 +120,7 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           JOB_STATUS: ${{ job.status }}
           PIPELINE_SUMMARY: ${{ steps.summarize.outputs.pipeline_summary }}
+          LAST_PUBLISHED: ${{ steps.summarize.outputs.last_published }}
           COMMIT_INFO: ${{ steps.commit.outputs.commit_info }}
           MAX_FILES: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.max_files || '5' }}
           FORCE_FLAG: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.force || '0' }}

@@ -282,9 +282,10 @@ Permitir **push do `github-actions[bot]`** em `main` (ou o passo de commit falha
 1. No Discord: canal → **Editar canal** → **Integrações** → **Webhooks** → copiar **URL do webhook**.
 2. No GitHub: repositório ISS → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**.
 3. Nome: `DISCORD_WEBHOOK_URL` — valor: a URL completa (`https://discord.com/api/webhooks/...`).
-4. Cada fim de workflow (sucesso, falha ou cancelamento) envia um embed com resumo VTT, estado do commit e link para o run.
+4. Com **lições novas publicadas**, envia um embed com a mensagem de “transcrição disponível” (emojis custom do servidor), link do [ISS](https://gaabdevweb.github.io/ISS/) e menção em spoiler ao cargo configurado no script.
+5. Sem publicações ou em falha: embed mais discreto (sem ping ao cargo).
 
-Se o secret não existir, o passo é ignorado (o pipeline continua normalmente).
+Emojis e ID do cargo: [`.github/scripts/discord-notify.sh`](.github/scripts/discord-notify.sh). Se o secret não existir, o passo é ignorado.
 
 ### Disparar o pipeline
 
