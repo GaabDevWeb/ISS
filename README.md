@@ -273,8 +273,18 @@ Detalhes de roteamento, frontmatter e exercícios: [`documentation.md`](document
 |------|------|-------------|
 | `CURSOR_API_KEY` | Secret | Sim |
 | `CURSOR_MODEL_ID` | Variable | Não |
+| `DISCORD_WEBHOOK_URL` | Secret | Não (notificação no servidor Discord) |
 
 Permitir **push do `github-actions[bot]`** em `main` (ou o passo de commit falha).
+
+#### Notificação Discord
+
+1. No Discord: canal → **Editar canal** → **Integrações** → **Webhooks** → copiar **URL do webhook**.
+2. No GitHub: repositório ISS → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**.
+3. Nome: `DISCORD_WEBHOOK_URL` — valor: a URL completa (`https://discord.com/api/webhooks/...`).
+4. Cada fim de workflow (sucesso, falha ou cancelamento) envia um embed com resumo VTT, estado do commit e link para o run.
+
+Se o secret não existir, o passo é ignorado (o pipeline continua normalmente).
 
 ### Disparar o pipeline
 

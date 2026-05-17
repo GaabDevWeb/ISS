@@ -2,6 +2,7 @@
 # Publica em content/<disciplina>/ e atualiza content/lessons.json (só aulas em falta no catálogo).
 # Anexa prompts ISS + contexto downloads/documents (config/documents-context.json).
 # Requer secret: CURSOR_API_KEY (Dashboard Cursor → Integrations ou service account).
+# Opcional: DISCORD_WEBHOOK_URL — notificação no fim do job (sucesso ou falha).
 #
 # Ajuste TRANSCRIPT_SUMMARY_MAX_FILES: 0 = todos os .vtt (pode demorar e consumir quota).
 # Proteção de branch em main pode bloquear o push — use bypass com PAT ou regra para o bot.
@@ -67,6 +68,7 @@ jobs:
           npm install @cursor/sdk@latest
 
       - name: Gerar lições ISS em content/ a partir dos .vtt
+        id: summarize
         shell: bash
         env:
           CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
@@ -77,9 +79,17 @@ jobs:
           TRANSCRIPT_SUMMARY_MAX_ATTEMPTS: "3"
           DOCUMENT_CONTEXT_MAX_CHARS: "80000"
           DOCUMENT_CONTEXT_MAX_FILE_CHARS: "25000"
-        run: node .github/scripts/summarize-transcripts.mjs
+        run: |
+          set -o pipefail
+          node .github/scripts/summarize-transcripts.mjs 2>&1 | tee summarize.log
+          SUMMARY="$(grep -E '^Concluído\. Publicados:' summarize.log | tail -1 || true)"
+          if [[ -z "$SUMMARY" ]]; then
+            SUMMARY="(resumo não encontrado no log — ver Actions)"
+          fi
+          echo "pipeline_summary=$SUMMARY" >> "$GITHUB_OUTPUT"
 
       - name: Commit e push para main
+        id: commit
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -92,7 +102,23 @@ jobs:
           git add -u -- 'downloads/documents/' 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "Nada para comitar."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "commit_info=Nada para comitar (content/ já atualizado)." >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "chore: lições ISS automáticas (VTT → content/) [skip ci]"
           git push origin HEAD:main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+          echo "commit_info=Commit e push para \`main\` concluídos." >> "$GITHUB_OUTPUT"
+
+      - name: Notificar Discord
+        if: always()
+        shell: bash
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          JOB_STATUS: ${{ job.status }}
+          PIPELINE_SUMMARY: ${{ steps.summarize.outputs.pipeline_summary }}
+          COMMIT_INFO: ${{ steps.commit.outputs.commit_info }}
+          MAX_FILES: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.max_files || '5' }}
+          FORCE_FLAG: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.force || '0' }}
+        run: bash .github/scripts/discord-notify.sh
