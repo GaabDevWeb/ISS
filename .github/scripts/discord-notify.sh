@@ -55,13 +55,16 @@ ${BODY}"
 ${EMOJI_COFFEE} Pra revisar rápido, recuperar uma aula perdida ou consultar depois."
 
   PAYLOAD="$(jq -n \
-    --arg content "||<@&${ROLE_ID}>||
-
-${MESSAGE}" \
+    --arg content "||<@&${ROLE_ID}>||" \
     --arg role "$ROLE_ID" \
+    --arg desc "$MESSAGE" \
     '{
       content: $content,
-      allowed_mentions: { parse: [], roles: [$role] }
+      allowed_mentions: { parse: [], roles: [$role] },
+      embeds: [{
+        description: $desc,
+        color: 5763719
+      }]
     }')"
 
   post_discord "$PAYLOAD"
@@ -79,15 +82,21 @@ fi
 case "$STATUS" in
   failure)
     MESSAGE="Não foi possível publicar conteúdo novo no ISS desta vez. Se persistir, avisa no servidor."
+    EMBED_COLOR=15548997
     ;;
   cancelled)
     MESSAGE="A atualização do ISS foi cancelada antes de terminar."
+    EMBED_COLOR=9807270
     ;;
   *)
     MESSAGE="A atualização do ISS não concluiu (${STATUS})."
+    EMBED_COLOR=9807270
     ;;
 esac
 
-PAYLOAD="$(jq -n --arg content "$MESSAGE" '{ content: $content }')"
+PAYLOAD="$(jq -n \
+  --arg desc "$MESSAGE" \
+  --argjson color "$EMBED_COLOR" \
+  '{ embeds: [{ description: $desc, color: $color }] }')"
 post_discord "$PAYLOAD"
 echo "Notificação Discord ($STATUS) enviada."
