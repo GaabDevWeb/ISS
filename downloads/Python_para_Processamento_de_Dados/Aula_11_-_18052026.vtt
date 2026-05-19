@@ -1,0 +1,2830 @@
+WEBVTT
+
+1
+00:00:46.730 --> 00:00:49.650
+Marcelo Tomio Hama: Opa! Boa noite, pessoal. Todo mundo bem aí.
+
+2
+00:00:52.980 --> 00:00:55.879
+Marcelo Tomio Hama: Conseguem me ouvir me ver.
+
+3
+00:00:56.280 --> 00:00:58.230
+Altevir dos Anjos Junior: Boa noite, professor. Está tudo certo.
+
+4
+00:00:58.550 --> 00:01:00.459
+Marcelo Tomio Hama: Ah, beleza. Eu tava aqui
+
+5
+00:01:00.810 --> 00:01:10.310
+Marcelo Tomio Hama: com alguns recentes de que o Host estava configurado errado aqui. Mas acho que deu tudo certo, beleza.
+
+6
+00:01:29.020 --> 00:01:34.020
+Marcelo Tomio Hama: E aí, boa gente. Prazer em conhecê los.
+
+7
+00:01:34.570 --> 00:01:38.529
+Marcelo Tomio Hama: De certa maneira, a gente vai estar começando aqui a disciplina um pouco pela metade.
+
+8
+00:01:39.080 --> 00:01:42.400
+Marcelo Tomio Hama: Eu até me abster de trazer um pouco do
+
+9
+00:01:42.840 --> 00:01:53.070
+Marcelo Tomio Hama: das lâminas ali que antecedem a disciplina. Acho que vocês já devem estar cientes de como a metodologia em geral, as datas aqui, eu vou estar seguindo
+
+10
+00:01:53.190 --> 00:02:01.480
+Marcelo Tomio Hama: muito ali. O calendário dentro do que já foi planejado pelo antigo professor Salvo aqui. Algumas pequenas exceções, algumas pequenas
+
+11
+00:02:01.590 --> 00:02:08.270
+Marcelo Tomio Hama: ajustes pontuais. Corrija me se eu estiver errado aí, a gente está na
+
+12
+00:02:08.530 --> 00:02:12.350
+Marcelo Tomio Hama: na etapa seis. Está certo. É isso.
+
+13
+00:02:15.580 --> 00:02:20.320
+Marcelo Tomio Hama: A etapa seis, ali, a sexta semana, onde a gente vai começar a ver sobre
+
+14
+00:02:20.990 --> 00:02:31.450
+Marcelo Tomio Hama: manipulação e armazenamento de arquivos com o uso de estrutura de dados. Jason, confere aí, pessoal. Tudo bem.
+
+15
+00:02:31.450 --> 00:02:33.000
+Ramon Telles da Silva: Isso mesmo, Professor.
+
+16
+00:02:34.130 --> 00:02:39.510
+Marcelo Tomio Hama: E aí tá bom, gente. Eu disponibilizei esse material para vocês
+
+17
+00:02:39.910 --> 00:02:49.129
+Marcelo Tomio Hama: ali no canal do moodle. Então vocês podem estar fazendo download. Podem estar acompanhando aqui. A nossa videoaula aqui
+
+18
+00:02:49.270 --> 00:02:52.610
+Marcelo Tomio Hama: já também com o próprio material.
+
+19
+00:02:53.650 --> 00:02:56.559
+Marcelo Tomio Hama: Aqui a gente fica mais prático para todo mundo,
+
+20
+00:02:56.680 --> 00:03:02.290
+Marcelo Tomio Hama: gente, antes da gente começar aqui, vou gastar cinco, dez minutinhos só para eu entender um pouquinho
+
+21
+00:03:02.570 --> 00:03:17.600
+Marcelo Tomio Hama: qual que é o nível de conhecimento já de vocês. O que vocês conseguiram ver nas aulas anteriores? A gente teve ali uso de String Betour. Eu não vou. A gente. Não vai ter tempo de repassar todo o conteúdo,
+
+22
+00:03:18.450 --> 00:03:29.209
+Marcelo Tomio Hama: mas é muito mais no sentido da gente eu conseguir ter esse mapeamento do perfil de vocês e conseguir calibrar um pouquinho as nossas aulas
+
+23
+00:03:29.290 --> 00:03:38.559
+Marcelo Tomio Hama: ali. Vocês conseguiram entender? Capturar o conhecimento ali das semanas anteriores, ou ficou alguma eventual ponta solta ali.
+
+24
+00:03:38.560 --> 00:03:57.889
+Victor BITTENCOURT: Professor. A gente teve uma dificuldade com o Gesiel, porque a gente pedia muito exemplos, porque a gente estava pegando a Sintax, mas na hora de aplicar, principalmente nos Tps eats, a gente não estava conseguindo a aplicação. Por quê? Porque a gente não via o exemplo da funcionalidade do código.
+
+25
+00:03:58.270 --> 00:04:02.720
+Victor BITTENCOURT: Então a gente não conseguia enxergar na hora de aplicar, entendeu?
+
+26
+00:04:03.810 --> 00:04:10.230
+Marcelo Tomio Hama: Uma dúvida. Vocês aí! Foi o Victor que comentou.
+
+27
+00:04:11.150 --> 00:04:13.810
+Marcelo Tomio Hama: Vocês têm aí o ambiente.
+
+28
+00:04:14.320 --> 00:04:15.580
+Marcelo Tomio Hama: O Deep note.
+
+29
+00:04:17.320 --> 00:04:25.210
+Victor BITTENCOURT: Sim, temos. E inclusive que a gente queria muito que trabalhasse porque ele trabalhava muito em Pdf. Depois mandava Pdf para a gente.
+
+30
+00:04:25.660 --> 00:04:26.110
+Marcelo Tomio Hama: No Whatsapp.
+
+31
+00:04:26.110 --> 00:04:26.730
+Victor BITTENCOURT: Bom dia.
+
+32
+00:04:26.890 --> 00:04:27.820
+Victor BITTENCOURT: Mas é isso.
+
+33
+00:04:28.420 --> 00:04:36.009
+Marcelo Tomio Hama: Então é sobre as integrações aqui. Vocês conseguiram. Já tem aí dentro da máquina de vocês? Um
+
+34
+00:04:36.670 --> 00:04:41.569
+Marcelo Tomio Hama: um notebook Python, já está tudo funcionando. A gente consegue partir dessa premissa,
+
+35
+00:04:48.100 --> 00:04:49.130
+Marcelo Tomio Hama: beleza.
+
+36
+00:04:51.580 --> 00:04:56.940
+Marcelo Tomio Hama: Bom, então vamos lá, gente, vamos vamos nessa. Então.
+
+37
+00:04:57.690 --> 00:04:59.480
+Marcelo Tomio Hama: E é um.
+
+38
+00:05:00.180 --> 00:05:06.890
+Marcelo Tomio Hama: Eu vou me apresentar brevemente. Aqui tá, pessoal. Só para vocês me conhecerem um pouquinho. Eu não chegar aqui
+
+39
+00:05:07.260 --> 00:05:16.749
+Marcelo Tomio Hama: como uma pessoa completamente diferente, tá? Meu nome é Marcelo. Tá, eu já dou aulas aqui há mais ou menos.
+
+40
+00:05:16.950 --> 00:05:20.720
+Marcelo Tomio Hama: Vai fazer. Acho que uns seis, sete anos desde dois mil e dezoito.
+
+41
+00:05:20.920 --> 00:05:31.129
+Marcelo Tomio Hama: Mas o meu trabalho principal, eu atuo no mundo corporativo. Então eu sou também head de engenharia, software de desenvolvimento de dados.
+
+42
+00:05:32.020 --> 00:05:38.069
+Marcelo Tomio Hama: E aqui eu tenho algumas passagens, tanto pelo mundo acadêmico quanto também pelo
+
+43
+00:05:38.400 --> 00:05:45.419
+Marcelo Tomio Hama: pelo mundo corporativo. Então, primeiramente, eu comecei ali atuando como bolsista Cnpq.
+
+44
+00:05:45.720 --> 00:05:51.870
+Marcelo Tomio Hama: Eu também tive uma passagem pelo registro. Br: É a empresa aqui do Micbr, a empresa que,
+
+45
+00:05:51.970 --> 00:06:02.249
+Marcelo Tomio Hama: licitado pelo governo federal para cuidar de todo. Passei três anos ali, três anos e meio no mercado livre, no mercado. Pago.
+
+46
+00:06:02.560 --> 00:06:10.449
+Marcelo Tomio Hama: Depois eu fui para o Itaú Unibanco. A gente fez o desenvolvimento da autenticação multifator para o projeto do It.
+
+47
+00:06:10.780 --> 00:06:17.309
+Marcelo Tomio Hama: Aí foi mais ou menos o período que eu comecei a dar as aulas ali, primeiramente pela Fmu.
+
+48
+00:06:17.610 --> 00:06:27.749
+Marcelo Tomio Hama: Depois eu peguei alguns conteúdos e também aulas online pela descomplica passagem também pela Olx. Vocês aí. Acho que a grande maioria são do Rio de Janeiro.
+
+49
+00:06:27.970 --> 00:06:35.170
+Marcelo Tomio Hama: Então presumo que devam conhecer a descomplicaria. E também a Olx. São empresas do rio.
+
+50
+00:06:35.530 --> 00:06:37.419
+Marcelo Tomio Hama: O Linkedin está?
+
+51
+00:06:37.760 --> 00:06:42.599
+Marcelo Tomio Hama: Ramon, ele está aqui informado na lâmina
+
+52
+00:06:42.840 --> 00:06:45.530
+Marcelo Tomio Hama: aqui através de um link, tá? Vocês podem
+
+53
+00:06:46.410 --> 00:06:55.900
+Marcelo Tomio Hama: acessar aqui a página. Eu vou ter muito prazer em adicionar vocês. Cada um de vocês como conexão pode pegar aqui o Pdf. Ele está disponível
+
+54
+00:06:56.740 --> 00:07:05.809
+Marcelo Tomio Hama: lá no Google. Aí. Você se conecta a mim. Tem aqui Facebook tem site, pessoal. O Facebook está um pouco largado, diga se de passagem.
+
+55
+00:07:06.630 --> 00:07:12.499
+Marcelo Tomio Hama: O site pessoal tem alguns projetos meus ali. Há muito tempo também, que eu não mexo. Acho que é mais Linkedin mesmo.
+
+56
+00:07:16.000 --> 00:07:23.250
+Marcelo Tomio Hama: Também tive uma passagem pela Natura ali, mais ou menos em dois mil e dezanove,
+
+57
+00:07:23.400 --> 00:07:27.060
+Marcelo Tomio Hama: até dois mil e vinte e três.
+
+58
+00:07:27.410 --> 00:07:34.629
+Marcelo Tomio Hama: Já dei aulas também na Fiap e hoje, onde que eu estou hoje eu sou gerente de engenharia, Red de engenharia
+
+59
+00:07:35.360 --> 00:07:52.100
+Marcelo Tomio Hama: pela Pisme. Então não sei se vocês conhecem a pismo que foi recentemente adquirida pela Visa. Então a nossa governança, a empresa para a qual eu trabalho hoje, é a visa global, a visa. Acho que todo mundo conhece são os meios de pagamento Gateway de pagamento.
+
+60
+00:07:52.320 --> 00:07:58.890
+Marcelo Tomio Hama: A diferença e tudo mais é big tech aqui da área de tecnologia, mas também do mundo financeiro.
+
+61
+00:07:59.170 --> 00:08:04.039
+Marcelo Tomio Hama: Sou formada em ciência da computação estadual, paulista mestrado
+
+62
+00:08:04.330 --> 00:08:16.900
+Marcelo Tomio Hama: em inteligência artificial lá pela Federal do Rio Grande do Sul. E um Mba aqui pela Fiabil. Apesar dessas formações, eu gosto muito de.
+
+63
+00:08:17.110 --> 00:08:22.599
+Marcelo Tomio Hama: Está caminhando nos dois mundos, tanto acadêmico quanto também profissional.
+
+64
+00:08:22.890 --> 00:08:32.770
+Marcelo Tomio Hama: O mundo profissional é o que me dá o Handsome, a experiência do dia a dia. Mas o mundo acadêmico é aquilo que eu acabo me conectando mais,
+
+65
+00:08:32.970 --> 00:08:38.910
+Marcelo Tomio Hama: trazendo as ideias os principais, insights e levando para o mundo corporativo. O Big é meio que uma.
+
+66
+00:08:39.610 --> 00:08:49.149
+Marcelo Tomio Hama: Uma relação ganha, ganha, né? Eu consigo atuar com esse tipo de ponte. Tá? E aqui falando um pouco da minha vida pessoal.
+
+67
+00:08:49.400 --> 00:08:57.709
+Marcelo Tomio Hama: Eu sou casado. Sou casado aqui há mais ou menos sete anos. Tenho dois filhos. Aqui tem uma foto somente do meu menino.
+
+68
+00:08:57.970 --> 00:09:00.369
+Marcelo Tomio Hama: Cinco anos. Vai fazer seis agora.
+
+69
+00:09:00.680 --> 00:09:09.910
+Marcelo Tomio Hama: E recentemente, em dezembro do ano passado, chegou a minha filha. Então eu tenho um casalzinho. Gosto de subir montanha. Não mais. Porque agora eu sou
+
+70
+00:09:10.060 --> 00:09:21.130
+Marcelo Tomio Hama: casado, né? A vida de pai já não me permite isso mais, né? Mas enfim, gostava de subir montanhas, meu hobby. E aqui, algumas imagens
+
+71
+00:09:21.430 --> 00:09:26.699
+Marcelo Tomio Hama: participando de gravação, que é descomplica, fazendo um meetup ali no Mercadolivre.
+
+72
+00:09:27.490 --> 00:09:31.999
+Marcelo Tomio Hama: Foi o momento que a gente tinha feito ali a publicação.
+
+73
+00:09:32.420 --> 00:09:47.380
+Marcelo Tomio Hama: A gente tinha publicado o projeto do It ali no Itaú. Então isso aí só um pouquinho sobre mim. Escalava a montanha assim, tá, Gabriel, eu curtia. Ainda curto. Só que não dá mais tempo. Aí. Agora, quarenta anos, nas costas,
+
+74
+00:09:48.340 --> 00:09:55.009
+Marcelo Tomio Hama: a coluna já não aguenta mais. Carregar a mochila cardíaca de quinze, vinte quilos. A vida já é outra agora,
+
+75
+00:09:55.920 --> 00:09:58.309
+Marcelo Tomio Hama: beleza, gente. Então,
+
+76
+00:09:59.130 --> 00:10:06.380
+Marcelo Tomio Hama: como é que eu costumo ministrar essas aulas aqui. Então tem esse material aqui, que é muito mais um material de apoio. Mas
+
+77
+00:10:06.670 --> 00:10:12.379
+Marcelo Tomio Hama: eu quero muito que vocês na casa de vocês, vocês deixem aberto.
+
+78
+00:10:12.610 --> 00:10:16.599
+Marcelo Tomio Hama: Então, onde vai esses dias? Tá,
+
+79
+00:10:17.500 --> 00:10:21.849
+Marcelo Tomio Hama: enfim, vocês deixem aberto aqui o ambiente do Deep note. E
+
+80
+00:10:22.280 --> 00:10:35.479
+Marcelo Tomio Hama: façam aqui os exemplos que a gente vai estar vendo em cada uma das lâminas. Tá pra quê? Para a gente já botar a mão na massa na medida que a gente vai caminhando de um lado com a lâmina do outro, vocês vão colocando a mão na massa.
+
+81
+00:10:35.670 --> 00:10:37.889
+Marcelo Tomio Hama: Essa aí é a dinâmica da aula.
+
+82
+00:10:38.570 --> 00:10:47.560
+Marcelo Tomio Hama: Qual que é a pegada de hoje? A gente vai falar sobre manipulação de arquivo de Edison. E antes da gente falar sobre isso, eu quero saber. Aí entre vocês,
+
+83
+00:10:48.100 --> 00:10:50.100
+Marcelo Tomio Hama: se vocês sabem o que é, Jason,
+
+84
+00:10:51.480 --> 00:10:54.669
+Marcelo Tomio Hama: todo mundo aí entende. Já ouviu falar em Jason?
+
+85
+00:10:55.800 --> 00:10:57.740
+Marcelo Tomio Hama: Vocês sabem do que a gente está falando?
+
+86
+00:10:58.570 --> 00:11:04.439
+Marcelo Tomio Hama: É um conceito já muito alienígena. Todo mundo.
+
+87
+00:11:04.680 --> 00:11:05.820
+Marcelo Tomio Hama: Diga lá.
+
+88
+00:11:09.360 --> 00:11:11.310
+Marcelo Tomio Hama: Algumas pessoas não sabem, né?
+
+89
+00:11:11.800 --> 00:11:17.199
+Marcelo Tomio Hama: Perfeito, tá? E assim não tem problema, pessoal. A ideia realmente é a gente pegar e tirar algumas dúvidas aqui,
+
+90
+00:11:18.200 --> 00:11:21.280
+Marcelo Tomio Hama: lá atrás. Vou contar um pouquinho da história.
+
+91
+00:11:21.770 --> 00:11:32.399
+Marcelo Tomio Hama: Lá atrás. A gente tinha uma arquitetura que se chamava. Soa que é o Service Oriented Archache. Quando apareceu o webservice,
+
+92
+00:11:32.660 --> 00:11:43.689
+Marcelo Tomio Hama: essa arquitetura era a que estava bombando naquela época. E assim o que é Webservice é basicamente um serviço, por exemplo, cadastramento, por exemplo,
+
+93
+00:11:44.060 --> 00:11:53.679
+Marcelo Tomio Hama: delete Creative. Então, assim, todas aquelas operações de manipular dados, ou então fazer alguma coisa, fazer um cadastramento que seja.
+
+94
+00:11:54.550 --> 00:12:03.400
+Marcelo Tomio Hama: E esses serviços eram disponibilizados pela Internet. Então, isso lá atrás, para que isso fosse disponível para todo mundo,
+
+95
+00:12:04.000 --> 00:12:09.589
+Marcelo Tomio Hama: a gente implementava isso através da arquitetura orientada a serviço. Soa
+
+96
+00:12:09.980 --> 00:12:14.179
+Marcelo Tomio Hama: isso aí. Talvez muitos de vocês já nem saibam mais o que é.
+
+97
+00:12:14.440 --> 00:12:20.839
+Marcelo Tomio Hama: Eu vou presumir aqui que vocês devam ter na casa de vinte a trinta anos. Talvez
+
+98
+00:12:21.050 --> 00:12:26.630
+Marcelo Tomio Hama: então assim isso já meio que está até defasado no mercado de tecnologia.
+
+99
+00:12:27.480 --> 00:12:42.710
+Marcelo Tomio Hama: E naquela época que a gente usava, soa. Tinha um formato de arquivo que agora sim. Talvez vocês conheçam que é o Xml, o Xml, que é o extendable Markup Landridge, que é a linguagem de marcação estendida. É basicamente uma
+
+100
+00:12:43.080 --> 00:12:48.470
+Marcelo Tomio Hama: uma linguagem voltada para transferir dados, representar dado.
+
+101
+00:12:48.640 --> 00:12:51.660
+Marcelo Tomio Hama: E aí, o que é muito parecido com.
+
+102
+00:12:52.000 --> 00:12:57.719
+Marcelo Tomio Hama: É com o Xml. É o Hml. Não sei se vocês já viram o Html aí
+
+103
+00:12:58.200 --> 00:13:06.809
+Marcelo Tomio Hama: a construção de páginas estáticas, e essas páginas, elas mostram ali o spam, o Div.
+
+104
+00:13:07.210 --> 00:13:18.560
+Marcelo Tomio Hama: E assim, basicamente, você apresentava. Dado através desse formato através do Xml. Só que. Qual era o problema ali, lá atrás, quando a gente ainda usava a sua Xml.
+
+105
+00:13:18.960 --> 00:13:33.519
+Marcelo Tomio Hama: O Xml era muito verboso. Era muito pesado. Era muito lento. Você precisava de um Xml gigantesco para conseguir definir um serviço que ia ser chamado através de um webservice,
+
+106
+00:13:34.150 --> 00:13:42.619
+Marcelo Tomio Hama: uma evolução para esse serviço. Aí para a soa, acabou sendo justamente o soul que veio um pouquinho depois.
+
+107
+00:13:42.920 --> 00:13:51.220
+Marcelo Tomio Hama: E para a questão aqui do Xml a gente evoluiu isso com o Jason. Então, o Jason.
+
+108
+00:13:51.480 --> 00:14:03.949
+Marcelo Tomio Hama: Ele é basicamente um formato de objeto. Javascript tem muita similaridade com a linguagem de Javascript, e você consegue ali, através dele, resumir bastante do
+
+109
+00:14:04.310 --> 00:14:05.799
+Marcelo Tomio Hama: do formato do dado.
+
+110
+00:14:05.940 --> 00:14:18.599
+Marcelo Tomio Hama: Então, em um resumo, o que é? O Jason? É uma representação de dados que é trafegada pela Internet. Quando vocês fazem a chamada de um serviço rest
+
+111
+00:14:19.310 --> 00:14:34.410
+Marcelo Tomio Hama: na hora que vocês vão transportar algum dado enviar uma requisição, receber um formulário. Vocês vão fazer isso através do formato. Jason, o Jason. Hoje, ele é amplamente usado, amplamente conhecido. E assim o que acontece? O Python
+
+112
+00:14:34.550 --> 00:14:42.270
+Marcelo Tomio Hama: é uma linguagem que cresceu bastante. Não somente para a gente fazer uso de processamento de dados,
+
+113
+00:14:42.270 --> 00:14:57.990
+Marcelo Tomio Hama: machine Learning, processar inteligência artificial, mas também a gente faz uso de ferramenta de Big Date com o Jason e o Jason. A gente tem não somente a representação do dado, mas muita coisa usa o Jason, por exemplo,
+
+114
+00:14:58.170 --> 00:15:18.119
+Marcelo Tomio Hama: até o formato de alguns bancos de dados no ciclo banco de dados, no ciclo. Qual, que é um exemplo aí, Montivid. Outro exemplo. Aí vocês podem trazer o elastic. Qual que é o lance aí? Se você tem um banco de dados no ciclo orientado a documento.
+
+115
+00:15:18.440 --> 00:15:28.949
+Marcelo Tomio Hama: Você já tem uma implementação com Jason. Então Json é basicamente isso. É uma representação de dado, e esse dado pode ser armazenado. Ele pode ser transportado
+
+116
+00:15:29.010 --> 00:15:40.559
+Marcelo Tomio Hama: pela Internet. Pode ser feito aí em diferentes operações com ele. Não sei se todo mundo conseguiu entender aí. Qual que é a ideia do Jason? Larga aí. Daí para todos, todas,
+
+117
+00:15:46.350 --> 00:15:50.349
+Marcelo Tomio Hama: Jason do facão clássico, né?
+
+118
+00:15:51.150 --> 00:15:54.120
+Marcelo Tomio Hama: Beleza? Então, assim, pegando um pouco aqui da
+
+119
+00:15:54.980 --> 00:16:00.770
+Marcelo Tomio Hama: do propósito. O pai também oferece duas abordagens complementares para a gente trabalhar com dados persistidos.
+
+120
+00:16:01.010 --> 00:16:06.180
+Marcelo Tomio Hama: E aqui a gente vê dados em disco. Arquivos em disco.
+
+121
+00:16:06.360 --> 00:16:09.340
+Marcelo Tomio Hama: Como você não Opa, quer cometa alguma coisa.
+
+122
+00:16:09.340 --> 00:16:18.149
+Kalber Moratti | MG: Professor. Só uma dúvida em matéria de performance é um dos melhores formatos para se trabalhar com dados.
+
+123
+00:16:19.410 --> 00:16:20.810
+Marcelo Tomio Hama: Olha, eu.
+
+124
+00:16:20.960 --> 00:16:30.580
+Marcelo Tomio Hama: Calber, né? Eu conheço. Sim, tá, eu conheço. Sim. Hoje eu não conheço outros formatos que sejam diferentes de Xml e Jason
+
+125
+00:16:30.800 --> 00:16:33.470
+Marcelo Tomio Hama: talvez existam. Certamente existe.
+
+126
+00:16:34.080 --> 00:16:36.040
+Marcelo Tomio Hama: Mas assim o
+
+127
+00:16:37.480 --> 00:16:44.819
+Marcelo Tomio Hama: o Jason é claramente superior ao Xml. Então, assim, tudo que é implementado ali fazendo uso de
+
+128
+00:16:44.970 --> 00:16:50.380
+Marcelo Tomio Hama: Wdsl, que são os Webservices. The Foundation Language, que é estuda script em Xml.
+
+129
+00:16:50.540 --> 00:17:01.960
+Marcelo Tomio Hama: Basicamente, você está escrevendo um contrato todo ali só com Xml. É um negócio super pesado. Então, assim eu digo que é pesado porque ele é muito verboso. Tem muita redundância de Tag.
+
+130
+00:17:02.130 --> 00:17:05.060
+Marcelo Tomio Hama: Por exemplo, se você quiser pegar e definir
+
+131
+00:17:05.550 --> 00:17:17.160
+Marcelo Tomio Hama: uma rei, quem aí já conhece Jason, já está imaginando aí um pouquinho do que eu estou falando. Imagina um Jason. Arrei. É basicamente você abrir
+
+132
+00:17:17.490 --> 00:17:30.059
+Marcelo Tomio Hama: e fechar uma chave, um colchete. Perdão. E ali você vai colocar todos os itens que você quer. Se você estivesse ali dentro de um Xml, você tinha que abrir Tag, escrever o nome da
+
+133
+00:17:30.350 --> 00:17:37.650
+Marcelo Tomio Hama: da sua chave, colocar as propriedades. E aí, para cada item, você tinha que colocar uma outra Tech chamada item.
+
+134
+00:17:38.990 --> 00:17:46.550
+Marcelo Tomio Hama: Então assim na hora de fazer o transporte desse arquivo. Você ia consumir uma quantidade muito maior
+
+135
+00:17:47.000 --> 00:17:54.799
+Marcelo Tomio Hama: de bytes ali na conexão. Então, consumindo mais bytes. Evidentemente, você vai deixar o seu serviço
+
+136
+00:17:55.450 --> 00:18:07.559
+Marcelo Tomio Hama: online muito mais lento. Então, assim sim, é superior. E eu particularmente não sei se eu estou errado aqui, mas não me lembro de outro que seja melhor do que o Jason. Tá?
+
+137
+00:18:08.570 --> 00:18:12.590
+Marcelo Tomio Hama: E aqui. Então o Python oferece duas maneiras
+
+138
+00:18:12.820 --> 00:18:21.960
+Marcelo Tomio Hama: muito interessante da gente estar trabalhando com dados persistidos. Uma delas é muito direta. Que são os dados em disco os arquivos em disco.
+
+139
+00:18:22.140 --> 00:18:37.180
+Marcelo Tomio Hama: Basicamente, você criar ali um ponto do X T, um ponto datil, um binário e uma outra forma que é justamente através dos dados Jason. Na prática, as duas abordagens vão se complementar, porque
+
+140
+00:18:37.330 --> 00:18:38.650
+Marcelo Tomio Hama: você vai acabar
+
+141
+00:18:38.940 --> 00:18:52.670
+Marcelo Tomio Hama: abrindo, tendo que abrir um arquivo de Jason para processar o que tem dentro dele e vice versa. Você vai pegar um arquivo de Jason, por exemplo, um arquivo de logs que foi escrito numa aplicação. Vai empacotar isso, fazer o Parsen dele,
+
+142
+00:18:53.380 --> 00:19:05.350
+Marcelo Tomio Hama: colocar ele ali dentro do baile de uma conexão dentro de uma requisição e mandar ali. Então são muito complementares. Essas duas maneiras de lidar com arquivo,
+
+143
+00:19:05.990 --> 00:19:11.879
+Marcelo Tomio Hama: beleza. Mas vamos quebrar em parte. Vamos ver aí uma de cada vez, para não dar nó na cabeça.
+
+144
+00:19:12.050 --> 00:19:18.480
+Marcelo Tomio Hama: A gente começa aqui com a parte um, que é justamente sobre manipulação de arquivo em disco. Depois a gente vê
+
+145
+00:19:18.940 --> 00:19:20.700
+Marcelo Tomio Hama: sobre o Jason. Tá?
+
+146
+00:19:21.250 --> 00:19:36.920
+Marcelo Tomio Hama: Todo mundo sabe aí como minimamente lidar com o arquivo disco. Então, talvez com o botão direito Ali do Mouse. Vocês já saibam ali que vai aparecer o botão criar arquivo, criar pasta.
+
+147
+00:19:37.020 --> 00:19:50.540
+Marcelo Tomio Hama: Infelizmente para quem trabalha enviando nota para o governo, não tem putz. É verdade, tá? Isso é uma verdade, tá, Gabriel, existem muitos sistemas legados aí. Não somente no setor público,
+
+148
+00:19:51.080 --> 00:20:02.869
+Marcelo Tomio Hama: órgãos governamentais, mas até mesmo alguns setores bancários que a gente ainda tem muito sistema legado, que tem que dar suporte para a Xb. Você tem completa razão aí,
+
+149
+00:20:03.060 --> 00:20:08.580
+Marcelo Tomio Hama: por isso, que é bom entender um pouquinho, até do Xml. Para quê? Porque a gente conseguir fazer eventualmente uma migração.
+
+150
+00:20:09.910 --> 00:20:18.859
+Marcelo Tomio Hama: Bom, então, em caso de saída de arquivo, basicamente, a gente tem aqui um comando.
+
+151
+00:20:19.240 --> 00:20:25.229
+Marcelo Tomio Hama: A gente não está falando ali do clicar com o botão de gays quando a gente vem aqui,
+
+152
+00:20:26.190 --> 00:20:28.189
+Marcelo Tomio Hama: deixa eu até mostrar para vocês aqui.
+
+153
+00:20:28.590 --> 00:20:30.409
+Marcelo Tomio Hama: Se eu venho aqui,
+
+154
+00:20:31.050 --> 00:20:41.170
+Marcelo Tomio Hama: New Folder Shortcut Matmage, né? Eu tenho aqui várias opções de arquivos, né? Posso criar aqui alguns deles. Acontece que
+
+155
+00:20:41.590 --> 00:20:50.559
+Marcelo Tomio Hama: a gente precisa fazer isso de uma maneira orientada à programação. Não podemos ali ter uma ui, uma interface e deixar aqui
+
+156
+00:20:51.050 --> 00:21:08.969
+Marcelo Tomio Hama: o computador. Faça isso, porque isso não vai ser inteligível para ele. E diferentes linguagens implementam isso de diferentes maneiras. O Python tem uma forma aqui bastante padronizada, que é o Open. Então a Sintax do Open é bastante simples. Ela tem aqui basicamente um nome
+
+157
+00:21:09.320 --> 00:21:17.800
+Marcelo Tomio Hama: no arquivo. Você deve passar o Pef. Então, qual que é o caminho ali desse arquivo a ser aberto. E o Mold?
+
+158
+00:21:17.980 --> 00:21:21.669
+Marcelo Tomio Hama: Isso aqui vai devolver para a gente. Basicamente, um ponteiro
+
+159
+00:21:21.870 --> 00:21:27.150
+Marcelo Tomio Hama: para um objeto que vai ser definido ali pelo próprio arquivo e através dele, que a gente vai conseguir
+
+160
+00:21:27.390 --> 00:21:31.560
+Marcelo Tomio Hama: manipular. Então essa funçãozinha criado ao abrir Com Open,
+
+161
+00:21:31.940 --> 00:21:45.810
+Marcelo Tomio Hama: é ela que vai fazer uma chamada da função Open de realizar as seguintes operações. E essas operações. Vocês vão conseguir fazer o quê? Lê um arquivo, escrever um arquivo novo, acrescentar conteúdo. E sobre escrever um arquivo existente.
+
+162
+00:21:46.760 --> 00:21:51.409
+Marcelo Tomio Hama: Então, como que a gente faz aí, né? Antes da gente pegar isso aí já
+
+163
+00:21:51.970 --> 00:21:57.050
+Marcelo Tomio Hama: fazendo uso dele. Então vamos entender um pouquinho melhor como é Sintax
+
+164
+00:21:57.510 --> 00:22:13.000
+Marcelo Tomio Hama: dentro dessa linguagem. Aqui o file object, ele é basicamente. Então o arquivo que a gente vai estar retornando com o Open File vai ser um parâmetro do tipo String, que é basicamente o Path do arquivo, o Mold.
+
+165
+00:22:13.590 --> 00:22:22.269
+Marcelo Tomio Hama: Ele instui para a gente duas configurações. A primeira delas é a operação que a gente precisa fazer.
+
+166
+00:22:22.270 --> 00:22:35.380
+Marcelo Tomio Hama: Então o que eu quero fazer? Eu quero ler. Eu quero escrever. Eu quero sobrescrever. Eu quero escrever de modo apêndida. Então acrescentar no fim. E aí você define através dessas letrinhas.
+
+167
+00:22:36.270 --> 00:22:47.919
+Marcelo Tomio Hama: A segunda letra que tem é basicamente o tipo do arquivo. Então, como que eu vou ler esse arquivo. Ele é um arquivo Plaintext. Texto puga ali direto, ou é um arquivo binário?
+
+168
+00:22:48.200 --> 00:22:52.600
+Marcelo Tomio Hama: Uma nova pergunta para vocês. Vocês sabem qual é a diferença de um arquivo? Texto para um arquivo binário.
+
+169
+00:22:56.340 --> 00:22:57.800
+leonardo Peres: A mínima ideia, Professor.
+
+170
+00:22:58.090 --> 00:23:02.660
+Marcelo Tomio Hama: Não. Beleza, tranquilo. Logo lá explicar, né?
+
+171
+00:23:02.770 --> 00:23:15.570
+Marcelo Tomio Hama: No arquivo texto, Leonardo é algo bastante simples. Então, quando eu vim aqui e eu faço aqui a edição
+
+172
+00:23:16.140 --> 00:23:21.839
+Marcelo Tomio Hama: desse arquivo. Olha só. Na verdade, aqui ele já está abrindo em Biná, porque aqui eu criei um arquivo do tipo
+
+173
+00:23:23.140 --> 00:23:25.100
+Marcelo Tomio Hama: do tipo
+
+174
+00:23:25.730 --> 00:23:33.760
+Marcelo Tomio Hama: text documents, né? Então olha só. Ele escreve para a gente nesse formato bem diferente, né? Deixa eu ver se eu consigo aqui um exemplo de um formato
+
+175
+00:23:34.430 --> 00:23:37.390
+Marcelo Tomio Hama: formato melhor aqui, X documentos.
+
+176
+00:23:37.680 --> 00:23:51.369
+Marcelo Tomio Hama: Então olha só esse aqui é um arquivo texto, então eu vou colocar aqui, Marcelo, beleza, o que ele escreve é exatamente o que a gente consegue ler. Se eu venho aqui está escrito Marcelo e beleza.
+
+177
+00:23:52.140 --> 00:24:05.729
+Marcelo Tomio Hama: Esse caminho aqui, ele provavelmente tem uma extensão Txt. E por quê? Porque o Txt é um arquivo do tipo texto, muitos outros formatos além do Txt. Podem ser arquivos
+
+178
+00:24:06.020 --> 00:24:17.330
+Marcelo Tomio Hama: em formato texto puro. Tá, e aí, deixa eu pagar esse daqui, porque ele não vai ser muito útil, né? Aí o que eu vou fazer aqui? Eu vou criar aqui uma imagem, tá
+
+179
+00:24:17.910 --> 00:24:20.300
+Marcelo Tomio Hama: vou aqui dar um golpe, né?
+
+180
+00:24:20.830 --> 00:24:22.479
+Marcelo Tomio Hama: E aqui eu vou colocar.
+
+181
+00:24:24.180 --> 00:24:30.660
+Marcelo Tomio Hama: Deixa eu ver aqui se eu consigo editar ele de uma maneira diferente. Open With, um paint aqui.
+
+182
+00:24:31.350 --> 00:24:36.190
+Marcelo Tomio Hama: E aí, beleza? Desenhei uma coisa aqui e fechei.
+
+183
+00:24:36.310 --> 00:24:39.999
+Marcelo Tomio Hama: Acontece que esse cara aqui, ele não é um arquivo texto.
+
+184
+00:24:40.150 --> 00:24:45.280
+Marcelo Tomio Hama: Ele é uma representação de um objeto mais complexo, uma imagem.
+
+185
+00:24:45.480 --> 00:24:51.680
+Marcelo Tomio Hama: E além de uma imagem, você também pode ter vídeos. Você pode ter
+
+186
+00:24:51.900 --> 00:25:05.109
+Marcelo Tomio Hama: um arquivo Pdf em que você precisa de metadados. Você pode ter um arquivo do sistema, e esses tipos de arquivos, eles não são do tipo texto. Então se você pega aqui dar um Open With e procura aqui,
+
+187
+00:25:07.450 --> 00:25:17.900
+Marcelo Tomio Hama: bluquinho de notas para tentar abrir com ele. Olha só o que vem para a gente. Então eu abri aqui esse arquivo, o New Bitmath Mage,
+
+188
+00:25:18.060 --> 00:25:37.859
+Marcelo Tomio Hama: através do bloquinho de notas, e ele traz para a gente. Isso aqui. A gente não consegue ler isso aqui, né? Por quê? É justamente. Ele é uma representação binária. E a diferença que existe entre binário e texto. É basicamente o que o nome já diz, né? Aqui você tem bits e bytes. Você tem uma sequência de zeros e uns
+
+189
+00:25:37.950 --> 00:25:47.240
+Marcelo Tomio Hama: em que o computador consegue ler, mas você não. Então essa é a diferença. E, claro, a gente precisa ter esses dois formatos,
+
+190
+00:25:47.650 --> 00:25:53.369
+Marcelo Tomio Hama: porque vai ser muito importante na hora da gente estar trabalhando aqui com esses arquivos.
+
+191
+00:25:53.520 --> 00:26:00.589
+Marcelo Tomio Hama: Então, só que a gente avançar um pouquinho mais, né? Olha só. Então, para a gente criar um arquivo.
+
+192
+00:26:00.890 --> 00:26:12.950
+Marcelo Tomio Hama: Então, após abrir o arquivo através do Open, precisam chamar a função, essa chamada da função é bastante diretinha para a gente aqui. Vocês podem pegar aqui. Então o F Open,
+
+193
+00:26:13.180 --> 00:26:16.930
+Marcelo Tomio Hama: aliás, o fout, esse F Out.
+
+194
+00:26:17.140 --> 00:26:21.070
+Marcelo Tomio Hama: Ele é basicamente o nosso nome do arquivo. O nome do arquivo? Não
+
+195
+00:26:21.370 --> 00:26:30.880
+Marcelo Tomio Hama: o objeto que vai receber o ponteiro aqui da função. E depois disso, o que eu faço? Eu faço web out close. Eu estou fechando o arquivo.
+
+196
+00:26:31.010 --> 00:26:33.899
+Marcelo Tomio Hama: E aí o que eu estou fazendo? Estou passando como parâmetro
+
+197
+00:26:34.040 --> 00:26:41.530
+Marcelo Tomio Hama: um streaming aqui, ó opes Txt: E eu estou criando este arquivo no modo
+
+198
+00:26:41.630 --> 00:26:58.330
+Marcelo Tomio Hama: escrito, e eu estou criando também no modo texto. Texto puro. Então, quando eu executo essa linha de comando. Olha só, Fouch recebe Open Ops. E aqui, Close, vamos tentar executar essa linha de comando aqui.
+
+199
+00:27:00.870 --> 00:27:03.020
+Marcelo Tomio Hama: E tá startando o meu cluster
+
+200
+00:27:06.920 --> 00:27:10.169
+Marcelo Tomio Hama: demorar um pouquinho. Mas logo ele termina aqui. Treino,
+
+201
+00:27:13.680 --> 00:27:24.349
+Marcelo Tomio Hama: beleza terminou de rodar. Se. Eu venho aqui no Fire, que é basicamente o diretório aqui da minha integração do meu contexto, vão atualizar. Olha só, ele já traz aqui Oops para mim.
+
+202
+00:27:24.600 --> 00:27:28.299
+Marcelo Tomio Hama: Professor, essa planilha que está vendo pode compartilhar com a gente
+
+203
+00:27:28.540 --> 00:27:35.189
+Marcelo Tomio Hama: sempre. Quando iniciar as aulas. Se for mais não, Gabriel, posso sim. Tá.
+
+204
+00:27:35.520 --> 00:27:43.199
+Marcelo Tomio Hama: Essa planilha plania. Perdão, aí, Gabriel, qual Plania que seria.
+
+205
+00:27:43.200 --> 00:27:48.289
+leonardo Peres: Eu acho que seria apresentação, mesmo ao menos pra mim, seria bom essa apresentação que o senhor tava o slide sabe.
+
+206
+00:27:48.290 --> 00:27:50.420
+Marcelo Tomio Hama: Ah, já está compartilhado, tá, Gabriel,
+
+207
+00:27:50.570 --> 00:27:58.600
+Marcelo Tomio Hama: é só ir lá. Deixa eu te mostrar para você. Então você vem aqui no feed. Eu deixei aqui no feed. Eu criei uma pasta para a gente.
+
+208
+00:27:59.840 --> 00:28:05.930
+Marcelo Tomio Hama: Tá aqui, ó tá muito mais para cima aqui,
+
+209
+00:28:09.130 --> 00:28:09.880
+Marcelo Tomio Hama: aqui, eu acho.
+
+210
+00:28:10.420 --> 00:28:12.830
+Marcelo Tomio Hama: Tá no professor. Oi.
+
+211
+00:28:12.830 --> 00:28:21.860
+lucas.histirari: Parece que não está aparecendo para a gente. Não, não sei se não estamos linkados, mas eu estou no feed. Aqui não aparece nada.
+
+212
+00:28:22.030 --> 00:28:25.450
+Marcelo Tomio Hama: Não é no feed. Está nos documentos.
+
+213
+00:28:25.450 --> 00:28:27.170
+Kalber Moratti | MG: É dentro de grupos, né?
+
+214
+00:28:27.430 --> 00:28:34.310
+Marcelo Tomio Hama: Isso. Aqui tem documentos. Dois mil e vinte e seis, segundo trimestre. Python paga o processamento de dados.
+
+215
+00:28:35.010 --> 00:28:38.220
+Marcelo Tomio Hama: Deixa eu mandar aqui para vocês. Esse link. Não sei se vai funcionar.
+
+216
+00:28:39.350 --> 00:28:40.859
+Marcelo Tomio Hama: É que mandei aqui no chat.
+
+217
+00:28:42.810 --> 00:28:43.500
+Kalber Moratti | MG: E aí?
+
+218
+00:28:43.740 --> 00:28:50.159
+Marcelo Tomio Hama: Mas se vocês conseguirem abrir o filme de vocês a L2
+
+219
+00:28:50.360 --> 00:28:53.720
+Marcelo Tomio Hama: deixa eu ver. De repente, eu coloquei no lugar errado.
+
+220
+00:28:58.660 --> 00:29:03.730
+nelson.araujo: Eu acho que sim, professor, o código é esse aqui é do grupo.
+
+221
+00:29:03.840 --> 00:29:05.150
+nelson.araujo: Mandei aqui no chat.
+
+222
+00:29:16.860 --> 00:29:19.279
+Marcelo Tomio Hama: Deixa eu ver.
+
+223
+00:29:19.980 --> 00:29:20.830
+Kalber Moratti | MG: E aí?
+
+224
+00:29:20.830 --> 00:29:21.440
+Marcelo Tomio Hama: E aí?
+
+225
+00:29:28.160 --> 00:29:29.070
+Kalber Moratti | MG: Parabéns.
+
+226
+00:29:29.380 --> 00:29:32.009
+Kalber Moratti | MG: Tenha nada que vou ficar junto.
+
+227
+00:29:34.770 --> 00:29:35.870
+Marcelo Tomio Hama: Fundamentos.
+
+228
+00:29:36.460 --> 00:29:38.350
+Marcelo Tomio Hama: Não sei se definiu. É esse aí.
+
+229
+00:29:39.150 --> 00:29:43.060
+Marcelo Tomio Hama: Esse aqui, beleza. Então, documentos.
+
+230
+00:29:44.920 --> 00:29:48.510
+Marcelo Tomio Hama: Eu vou. Opa, obrigado.
+
+231
+00:29:55.480 --> 00:29:57.409
+Marcelo Tomio Hama: Criar aqui uma pasta para a gente.
+
+232
+00:30:06.980 --> 00:30:10.310
+Marcelo Tomio Hama: Deixa eu pegar. Aqui mesmo. Formato
+
+233
+00:30:18.950 --> 00:30:20.430
+Marcelo Tomio Hama: só um momentinho, tá, pessoal?
+
+234
+00:30:21.140 --> 00:30:22.390
+Marcelo Tomio Hama: Correndo aqui para a gente
+
+235
+00:30:25.760 --> 00:30:26.750
+Marcelo Tomio Hama: que é.
+
+236
+00:30:26.890 --> 00:30:29.530
+Marcelo Tomio Hama: É questão de toque mesmo.
+
+237
+00:30:29.710 --> 00:30:32.140
+Marcelo Tomio Hama: Quer colocar o mesmo formato?
+
+238
+00:30:33.880 --> 00:30:35.749
+leonardo Peres: Vai! Diminuiu. Professor!
+
+239
+00:30:35.920 --> 00:30:37.120
+Marcelo Tomio Hama: Tá?
+
+240
+00:30:44.710 --> 00:30:46.489
+Marcelo Tomio Hama: Deixa eu ver. Aqui.
+
+241
+00:30:56.180 --> 00:30:56.870
+Marcelo Tomio Hama: E aí,
+
+242
+00:31:14.650 --> 00:31:17.820
+Marcelo Tomio Hama: beleza? Agora acho que vai para isso para vocês
+
+243
+00:31:21.570 --> 00:31:25.690
+Marcelo Tomio Hama: aí. Se não estiver aparecendo. Podem me interromper aí,
+
+244
+00:31:30.660 --> 00:31:31.770
+Marcelo Tomio Hama: beleza?
+
+245
+00:31:33.070 --> 00:31:38.310
+Marcelo Tomio Hama: Bom, então olha só como que é simples, rápido e prático.
+
+246
+00:31:38.580 --> 00:31:45.700
+Marcelo Tomio Hama: Se vocês estivessem trabalhando com uma linguagem C. Isso aqui ia ser bem mais complexo.
+
+247
+00:31:45.900 --> 00:31:48.509
+Marcelo Tomio Hama: A função era. Vocês tinham que cuidar ali do
+
+248
+00:31:48.760 --> 00:32:04.820
+Marcelo Tomio Hama: de várias diretrizes diferentes, mas não aqui. A linguagem Python é bem simples. Realmente a implementação da criação de um arquivo. Então eu fiz aqui um Fout Open. Passo o nome do arquivo.
+
+249
+00:32:05.550 --> 00:32:22.790
+Marcelo Tomio Hama: Coloco aqui o modo da operação. O tipo do arquivo, beleza. Se eu não tivesse feito aqui o close, basicamente ele teria ficado com o Fout armazenado em memória ali nada aconteceria. Ele só passa a criar o arquivo.
+
+250
+00:32:22.790 --> 00:32:24.370
+Kalber Moratti | MG: Todas as minhas. Como.
+
+251
+00:32:24.370 --> 00:32:25.000
+Marcelo Tomio Hama: E aí?
+
+252
+00:32:25.190 --> 00:32:30.940
+Kalber Moratti | MG: Ahhh demais. E de menos parabéns.
+
+253
+00:32:31.340 --> 00:32:32.720
+Marcelo Tomio Hama: Todo mundo aí, junto.
+
+254
+00:32:33.510 --> 00:32:34.559
+Kalber Moratti | MG: É que é?
+
+255
+00:32:34.870 --> 00:32:53.750
+Marcelo Tomio Hama: Bom, mas a operação não se resume ao App Open. A gente pode também escrever no arquivo. Afinal, é para isso que o arquivo serve. Então, para você escrever no arquivo de texto, você pode utilizar uma forma bem direta que é o print o Print não somente pode ser usado para pintar
+
+256
+00:32:53.920 --> 00:33:00.550
+Marcelo Tomio Hama: informação na tela, mas você pode passar um arquivo como parâmetro e através dele, escrever no arquivo.
+
+257
+00:33:00.680 --> 00:33:03.309
+Marcelo Tomio Hama: Então olha só. A gente vai pegar aqui
+
+258
+00:33:04.390 --> 00:33:08.320
+Marcelo Tomio Hama: e vai fazer algumas definições aqui. Vou colocar.
+
+259
+00:33:10.280 --> 00:33:20.219
+Altevir dos Anjos Junior: Professor localmente esse Open. Ele já cria, tipo, se eu fizer no Vs Code aqui sem ser no Deep note, ele já vai criar. Ou tem que especificar o caminho.
+
+260
+00:33:20.800 --> 00:33:28.360
+Marcelo Tomio Hama: Ele já vai criar. Você precisa sempre especificar o caminho. Não sei se de repente, dependendo da ideia,
+
+261
+00:33:28.430 --> 00:33:45.140
+Marcelo Tomio Hama: ele pode adotar como um Path padrão. Justamente o root do projeto. Mas é só uma presunção da minha parte. Isso aqui é questão de Sintax. Então não é nem questão de ide. Isso aqui é específico. Python.
+
+262
+00:33:45.140 --> 00:33:46.150
+Altevir dos Anjos Junior: Beleza. Obrigado.
+
+263
+00:33:46.430 --> 00:33:47.480
+Marcelo Tomio Hama: Imagina.
+
+264
+00:33:49.480 --> 00:34:00.840
+Marcelo Tomio Hama: Bom, então olha só o que a gente vai fazer agora, né? A gente vai abrir de novo o arquivo em modo texto, e vamos colocar o modo de escrita, e a gente vai fazer um ups.
+
+265
+00:34:01.010 --> 00:34:05.190
+Marcelo Tomio Hama: Eu creio, e vamos passar o Fire
+
+266
+00:34:06.020 --> 00:34:14.999
+Marcelo Tomio Hama: como parâmetro aqui o Uf como parâmetro o destino da escrita. E depois eu vou dar um close. Então, quando a gente roda, essa linha
+
+267
+00:34:16.250 --> 00:34:26.530
+Marcelo Tomio Hama: terminou ao abrir aqui. Olha só o que nós temos. O conteúdo que nós acabamos de escrever. Tudo bem, a gente está aqui dentro de um ambiente
+
+268
+00:34:27.070 --> 00:34:37.599
+Marcelo Tomio Hama: em um momento de cloud, a gente está fazendo uso do Deep note. Mas como o colega de vocês comentou, se vocês estivessem fazendo uso de um ide
+
+269
+00:34:38.560 --> 00:34:48.230
+Marcelo Tomio Hama: vocês estarem passando aqui. O nome do arquivo apenas, tá, então vamos supor aqui, né? Vocês criaram o arquivo. Apenas o Ups sem estar passando.
+
+270
+00:34:48.380 --> 00:34:50.269
+Marcelo Tomio Hama: É um
+
+271
+00:34:50.989 --> 00:35:01.850
+Marcelo Tomio Hama: informações adicionais nenhumas aqui. Ele está recriando esse arquivo do Gst. Muito provavelmente no directório útil do projeto.
+
+272
+00:35:04.230 --> 00:35:13.569
+Marcelo Tomio Hama: Olha só. O nosso colega Pedro já foi incisivo aqui. Ele confirmou aqui para a gente. Vai criar no Hoot do projeto.
+
+273
+00:35:15.040 --> 00:35:17.459
+leonardo Peres: Professor se Fout pode ter qualquer nome.
+
+274
+00:35:18.370 --> 00:35:22.690
+Marcelo Tomio Hama: Esse Fiat? Sim, é o nome de uma variável. Se eu tivesse colocado aqui
+
+275
+00:35:23.310 --> 00:35:35.060
+Marcelo Tomio Hama: ao invés de Fi Alt tivesse colocado, Marcelo não teria problema nenhum. Eu estou dando um nome aqui. Desde que você faça a chamada aqui em cima. Eu nomeei esse ponteiro. Vamos dizer, assim como
+
+276
+00:35:35.400 --> 00:35:43.649
+Marcelo Tomio Hama: o meu objeto, que vai conter o arquivo. E aqui eu estou passando, Marcelo também. Então não tem problema nenhum. Você pode dar o nome que você quiser.
+
+277
+00:35:43.650 --> 00:35:45.220
+leonardo Peres: Entendi. Valeu.
+
+278
+00:35:48.570 --> 00:35:55.670
+Marcelo Tomio Hama: Beleza. A gente já escreveu aqui no arquivo. Vamos fazer uma coisa mais sofisticada aqui.
+
+279
+00:35:55.920 --> 00:35:59.249
+Marcelo Tomio Hama: Eu vou pegar e vou criar aqui esse poema.
+
+280
+00:35:59.670 --> 00:36:02.930
+Marcelo Tomio Hama: E aí deixa ele aqui
+
+281
+00:36:03.430 --> 00:36:14.060
+Marcelo Tomio Hama: na linha de cima. Então olha só o poema aqui em cima. Eu estou aqui colocando um streaming. Curva Was a Young Lady Bright,
+
+282
+00:36:14.180 --> 00:36:19.830
+Marcelo Tomio Hama: os Espírito Santo. E por aí vai.
+
+283
+00:36:20.480 --> 00:36:24.689
+Marcelo Tomio Hama: Quando a gente pega aqui, vamos pegar aqui, escrever no arquivo. Texto com Wright
+
+284
+00:36:25.030 --> 00:36:32.840
+Marcelo Tomio Hama: é diferente. Qual que é a diferença do é um do Print
+
+285
+00:36:33.240 --> 00:36:36.430
+Marcelo Tomio Hama: para o Wright. Alguém sabe dizer aí.
+
+286
+00:36:40.850 --> 00:36:43.419
+leonardo Peres: O Wright. O senhor pode editar lá dentro?
+
+287
+00:36:45.490 --> 00:36:49.799
+Victor BITTENCOURT: O Wright. Ele vai ler o conteúdo do Jason. É isso.
+
+288
+00:36:49.800 --> 00:36:51.679
+Ramon Telles da Silva: Ele escreve, ele escreve.
+
+289
+00:36:55.980 --> 00:36:58.489
+Marcelo Tomio Hama: Faz isso, hein, gente? Mas assim.
+
+290
+00:36:58.490 --> 00:36:59.870
+Altevir dos Anjos Junior: Sobre escreve.
+
+291
+00:37:02.530 --> 00:37:10.020
+Marcelo Tomio Hama: O Wright basicamente, não vê as linhas, os pulos de linha. Ele escreve ali o conteúdo como se fosse
+
+292
+00:37:10.620 --> 00:37:18.479
+Marcelo Tomio Hama: um bloco de memória propriamente dito, enquanto que o Print vai servir muito mais para linhas específicas e simples
+
+293
+00:37:18.490 --> 00:37:35.640
+Marcelo Tomio Hama: são até um pouco redundantes. Devo dizer, de certa maneira, tudo o que o Wright faz, o cliente faz e vice versa. Mas o Wright é mais indicado se você tem um texto muito grande, porque o Wright tem operações, inclusive de você pegar e quebrar
+
+294
+00:37:35.860 --> 00:37:42.960
+Marcelo Tomio Hama: ali o seu conteúdo em blocos, em fragmentos de informação
+
+295
+00:37:44.520 --> 00:38:02.299
+Marcelo Tomio Hama: para esse caso aqui, que é bastante simples. Talvez vocês não vejam grande diferença, mas se vocês tivessem, por exemplo, tendo que abrir um arquivo binário. Por exemplo, um vídeo. Vocês tivessem que processar um vídeo ali de um gigabyte que seja poxa, um giga é dado pra caramba.
+
+296
+00:38:02.440 --> 00:38:12.060
+Marcelo Tomio Hama: E aí, nesse cenário, vocês teriam que talvez em muitos cenários, teriam que ler parte por parte, porque assim,
+
+297
+00:38:12.270 --> 00:38:21.880
+Marcelo Tomio Hama: até um pouco de atenção, tá? Quando vocês carregam um arquivo em memória, qual vai ser o tamanho da variável que vocês vão ocupar
+
+298
+00:38:22.260 --> 00:38:29.679
+Marcelo Tomio Hama: esse F office aqui, né? Se esse arquivo aqui, aqui, ele tiver um giga de tamanho,
+
+299
+00:38:30.270 --> 00:38:33.130
+Marcelo Tomio Hama: o nosso programa Python vai passar a
+
+300
+00:38:33.810 --> 00:38:45.020
+Marcelo Tomio Hama: ocupar um giga de memória. Ham Wright é melhor para Carlos. Alguém arrê e dicionários.
+
+301
+00:38:45.360 --> 00:38:55.200
+Marcelo Tomio Hama: Eu acredito assim, Lucas, na grande maioria dos casos, Sim, porque você tem aí variáveis mais estruturadas. Não é um texto público,
+
+302
+00:38:55.620 --> 00:39:03.009
+Marcelo Tomio Hama: e você vai precisar de alguma maneira integrar também. Então, assim o Wright é mais indicado quando você tem alguma coisa mais complexa, rolando
+
+303
+00:39:07.720 --> 00:39:13.589
+Marcelo Tomio Hama: bom, e vamos executar isso daqui, né? Olha só o que ele vai trazer para a gente, né?
+
+304
+00:39:15.670 --> 00:39:21.740
+Marcelo Tomio Hama: Para atualizar. E eu escrevi aqui um novo arquivo Relativity.
+
+305
+00:39:21.880 --> 00:39:26.449
+Marcelo Tomio Hama: Entrando dentro desse arquivo, vamos ver aqui Open World.
+
+306
+00:39:27.500 --> 00:39:37.180
+Marcelo Tomio Hama: E olha só. Ele mostra aqui para a gente o texto que foi escrito. Mas o que a gente tem aqui, a gente tem que escrevermos através do Wright.
+
+307
+00:39:39.030 --> 00:39:39.740
+Marcelo Tomio Hama: Então
+
+308
+00:39:40.680 --> 00:39:48.460
+Marcelo Tomio Hama: também podemos usar o Comando Rights, o Código Civil escreve o poema inteiro no arquivo Relativity em uma única linha
+
+309
+00:39:51.650 --> 00:39:55.280
+Marcelo Tomio Hama: pô é ainda falando sobre
+
+310
+00:39:55.740 --> 00:40:10.359
+Marcelo Tomio Hama: a manipulação. Então o uso do Print versus o uso do Wright, que acho que é justamente a dúvida de vocês. Então, a principal diferença entre Wright e Print, no Python está no formato de saída, na formatação automática e também no objetivo de cada uma.
+
+311
+00:40:10.670 --> 00:40:14.539
+Marcelo Tomio Hama: O print vai servir para exibir formatos de dados na tela, enquanto que Wright
+
+312
+00:40:14.550 --> 00:40:25.259
+Marcelo Tomio Hama: ele grava dados brutos. Tá, e aí principais diferenças. Então a finalidade. O Print é mais voltado para humanos. Se vocês querem ler o texto,
+
+313
+00:40:25.260 --> 00:40:34.569
+Marcelo Tomio Hama: se o conteúdo ali é um Plantext. É basicamente o Print que vocês vão usar. Então exibe informações legíveis no console
+
+314
+00:40:35.510 --> 00:40:52.029
+Marcelo Tomio Hama: já o Wright é mais voltado para fluxo e manipulação de arquivos de uma maneira mais genérica. Então usava dados puros em disco, enviando também em rede quebra de linha o print adiciona quebra de linha. Então é basicamente um barra N aqui embutido,
+
+315
+00:40:52.170 --> 00:41:01.479
+Marcelo Tomio Hama: uma barriga que aparece de maneira automatizada aqui no final do texto, já. O Wright não tem isso. Ele está tratando ali o dado como um dado bruto. Realmente,
+
+316
+00:41:02.020 --> 00:41:09.090
+Marcelo Tomio Hama: Wright aceita apenas streams enquanto gerando um erro. Caso você tente escrever um número diretamente.
+
+317
+00:41:10.440 --> 00:41:20.960
+Marcelo Tomio Hama: Então assim eu consigo pegar e fazer um print aqui, fazer o Print e passa um String. Agora, se eu pegar o Wright e passar um String aqui,
+
+318
+00:41:21.190 --> 00:41:27.839
+Marcelo Tomio Hama: por exemplo, aqui Abc um dos três. Isso aqui vai dar vai dar eu.
+
+319
+00:41:27.990 --> 00:41:30.730
+Marcelo Tomio Hama: Você precisa aqui. Passar um.
+
+320
+00:41:31.350 --> 00:41:38.389
+Marcelo Tomio Hama: Um ponteiro para fluxo de dados.
+
+321
+00:41:39.420 --> 00:41:53.189
+Marcelo Tomio Hama: Formatação permite aqui do Print permite formatações como F. Strings e outros argumentos. Vocês sabem que é o F. Strings. É basicamente uma substituição ali.
+
+322
+00:41:54.000 --> 00:41:55.830
+Marcelo Tomio Hama: Beleza, maravilha.
+
+323
+00:41:58.410 --> 00:42:14.019
+Marcelo Tomio Hama: Bom, a gente também deve conseguir ler arquivos. Não basta só escrever. Então olha só. A gente tem. Então este outro trechinho. O que a gente vai fazer com esse outro trecho? Aqui a gente vai ler um arquivo. E aqui a gente vai fazer o uso do
+
+324
+00:42:14.680 --> 00:42:21.369
+Marcelo Tomio Hama: do Read. Então, leitura de arquivos, textos com Read Read line e readlines.
+
+325
+00:42:25.710 --> 00:42:27.800
+Marcelo Tomio Hama: Olha só. Então a gente tem aqui o poema.
+
+326
+00:42:28.610 --> 00:42:39.020
+Marcelo Tomio Hama: E aqui eu estou criando apenas uma string vazia. Essa String vazia. É o que a gente vai usar para armazenar as strings do arquivo Lead.
+
+327
+00:42:39.250 --> 00:42:43.010
+Marcelo Tomio Hama: Então eu coloco aqui dentro de F e n.
+
+328
+00:42:43.130 --> 00:42:52.390
+Marcelo Tomio Hama: O meu ponteiro, o meu arquivo. Eu vou abrir o relativity em modo de leitura em modo do texto.
+
+329
+00:42:52.700 --> 00:42:54.499
+Marcelo Tomio Hama: E aí, o que é Chunk. Aqui
+
+330
+00:42:54.630 --> 00:42:57.049
+Marcelo Tomio Hama: vocês sabem o que é o Chunk nesse cenário?
+
+331
+00:42:57.310 --> 00:43:01.900
+Marcelo Tomio Hama: Olha só a linha de código que a gente tem, né? A gente tem Wild
+
+332
+00:43:02.970 --> 00:43:10.449
+Marcelo Tomio Hama: Fragment recebe Finn Read. E aí passa o Chunk, né? Esse Chunk tem valor, cem. O que seria esse Chunk.
+
+333
+00:43:10.870 --> 00:43:13.250
+Ramon Telles da Silva: É a quantidade de valores que ele vai.
+
+334
+00:43:13.530 --> 00:43:24.070
+Ramon Telles da Silva: Sei lá. Eu já fiz no trabalho, Professor. Mas, por exemplo, se o Csv é muito grande. Ele vai dividindo esse Csv em Chunks em vários pedaços. Dependendo da quantidade.
+
+335
+00:43:24.610 --> 00:43:37.350
+Marcelo Tomio Hama: Perfeito, Ramon. Perfeito. Esse Chunk é basicamente a quantidade de bytes que você vai ler. Então esse cem aqui, eu vou ler de cem em cem bytes. E aí o que acontece
+
+336
+00:43:37.750 --> 00:43:43.160
+Marcelo Tomio Hama: se se o conteúdo lido aqui? Ele não é.
+
+337
+00:43:43.540 --> 00:43:45.220
+Marcelo Tomio Hama: Ele não é Nudo.
+
+338
+00:43:45.850 --> 00:43:47.630
+Marcelo Tomio Hama: Então
+
+339
+00:43:48.070 --> 00:44:03.110
+Marcelo Tomio Hama: eu passo adiante. Então eu coloco aqui. Coloco dentro do poema o conteúdo que ele leu. Agora, se ele for nulo, então significa que a gente chegou no final do texto e aí eu simplesmente caio fora aqui do meu laço,
+
+340
+00:44:03.370 --> 00:44:11.649
+Marcelo Tomio Hama: no meu laço Wire. No final. Eu faço o fechamento do arquivo. Por quê? Porque senão fica consumindo memória.
+
+341
+00:44:12.120 --> 00:44:22.079
+Marcelo Tomio Hama: E depois eu faço um leme aqui de poema. Eu quero saber quantos caracteres que eu tenho aqui no meu poema. Fazendo aqui. Então a execução
+
+342
+00:44:22.390 --> 00:44:25.130
+Marcelo Tomio Hama: desse trecho. A gente vai ver aqui
+
+343
+00:44:25.560 --> 00:44:29.110
+Marcelo Tomio Hama: o nosso poema tem cento e sessenta e seis caracteres.
+
+344
+00:44:31.220 --> 00:44:34.420
+Marcelo Tomio Hama: Todo mundo junto. Vocês conseguiram executar a linha de comando.
+
+345
+00:44:34.710 --> 00:44:37.290
+leonardo Peres: Olha só eu, tchan que eu posso escolher o valor que eu quero.
+
+346
+00:44:37.870 --> 00:44:38.470
+Marcelo Tomio Hama: Pode.
+
+347
+00:44:38.950 --> 00:44:40.869
+leonardo Peres: E deu para entender. Tá respondendo a pergunta.
+
+348
+00:44:40.870 --> 00:44:43.480
+Marcelo Tomio Hama: E que só que assim o Chuck
+
+349
+00:44:43.770 --> 00:44:48.780
+Marcelo Tomio Hama: aqui, ele é basicamente uma variável de performance.
+
+350
+00:44:48.910 --> 00:44:56.210
+Marcelo Tomio Hama: Então, dependendo do seu sistema, se você achar que ele tem baixa capacidade de armazenar, é
+
+351
+00:44:56.740 --> 00:45:11.209
+Marcelo Tomio Hama: os ponteiros aqui da leitura. Você vai colocar um valor menor para o Chunk. Se você entende que não tem problema, Live em blocos bem grandes aí tudo bem. Você passa um chunk aqui é bem maior, então uma variável de configuração de performance.
+
+352
+00:45:13.420 --> 00:45:20.449
+Marcelo Tomio Hama: Então, olha só. Podemos definir um número máximo de caracteres, limitando a quantidade de dados alternado pela função Reads.
+
+353
+00:45:20.450 --> 00:45:20.859
+marcos.jose: O senhor.
+
+354
+00:45:21.530 --> 00:45:23.370
+Marcelo Tomio Hama: Marcos.
+
+355
+00:45:23.370 --> 00:45:33.269
+marcos.jose: Pode interromper mais uma dúvida no Chuck. Se eu não colocar nenhum atributo, ele tem um valor de full ou ele quebra o código.
+
+356
+00:45:34.550 --> 00:45:42.290
+Marcelo Tomio Hama: Aqui ele. Se eu não me engano, eu estou um pouquinho esquecido, tá, Marcos? É verdade. Eu acredito que ele vai tentar ler
+
+357
+00:45:42.880 --> 00:45:44.220
+Marcelo Tomio Hama: o arquivo inteiro.
+
+358
+00:45:44.350 --> 00:45:44.850
+Marcelo Tomio Hama: Tá vivendo.
+
+359
+00:45:44.850 --> 00:45:47.879
+marcos.jose: O arquivo inteiro como um Chunk. Vamos dizer assim.
+
+360
+00:45:47.880 --> 00:45:52.589
+Marcelo Tomio Hama: Isso. Esse aí. Acho que foi o valor de Full. Tá, mas depois eu valido ali.
+
+361
+00:45:52.590 --> 00:45:53.280
+marcos.jose: Entendi.
+
+362
+00:45:53.280 --> 00:46:01.430
+Marcelo Tomio Hama: Sobre isso. Vocês podem tentar. Aí vamos tentar fazer aqui, né? Olha só, eu vou. Colocar. Pode chegar aqui. Vou omitir o tchan. E vamos
+
+363
+00:46:01.650 --> 00:46:03.559
+Marcelo Tomio Hama: tentar aqui fazer a chamada, né?
+
+364
+00:46:04.860 --> 00:46:08.780
+Marcelo Tomio Hama: Aqui eu até estou um pouco esquecido. Se isso aqui ele aceita
+
+365
+00:46:09.460 --> 00:46:24.130
+Marcelo Tomio Hama: se. Ele tem esse polimorpismo. Mas olha só, eu acho que é isso mesmo. Tá, marcos? Porque omitindo aqui sem passar nada, ele pegou e leu numa pancada só, né? Ele trouxe aqui esse ano, sessenta e seis. Ou seja, leu tudo de uma vez?
+
+366
+00:46:24.790 --> 00:46:39.169
+Marcelo Tomio Hama: Não sei. Aqui eu fico de validar depois. Se o valor de fogo de repente não está na casa ali de um mega um valor um pouco maior que eventualmente não tenha excedido o tamanho aqui do nosso texto.
+
+367
+00:46:39.320 --> 00:46:40.400
+marcos.jose: Ah, entendi.
+
+368
+00:46:40.400 --> 00:46:44.090
+Marcelo Tomio Hama: Se ele for maior, ele vai trazer duzentos e sessenta e seis caracteres.
+
+369
+00:46:46.040 --> 00:46:53.910
+marcos.jose: Não faz sentido. É só pra saber se, no caso, de repente, você esquece de colocar o atributo aí. Bota pra ler. Pegou toda a memória. Lá porque aí ele tá
+
+370
+00:46:54.230 --> 00:46:56.740
+marcos.jose: tá considerando tudo numa tacada só, né?
+
+371
+00:46:57.190 --> 00:46:58.430
+Marcelo Tomio Hama: Isso. Exato.
+
+372
+00:46:59.660 --> 00:47:03.470
+Marcelo Tomio Hama: Bom, então aqui você consegue passar uma.
+
+373
+00:47:03.890 --> 00:47:09.380
+Marcelo Tomio Hama: Um tamanho, um tamanho de bloco para ler nos seus arquivos.
+
+374
+00:47:09.420 --> 00:47:23.089
+Marcelo Tomio Hama: No final do arquivo, a chamada subsequentes, a Read retorna a um streaming vazio. Então, eventualmente, o texto vai acabar e ele vai retornar vazio. E aí quando isso acontece, esse.
+
+375
+00:47:23.090 --> 00:47:29.810
+Marcelo Tomio Hama: Essa condição aqui tá. Essa condição aqui vai ser fawse. Ele vai chamar o Break que vai quebrar aqui o laço.
+
+376
+00:47:33.240 --> 00:47:42.600
+Marcelo Tomio Hama: Boa, a gente tem outras maneiras também de ler. Então, a gente tem aqui a leitura através do Wordline também. Qual que é a diferença aqui,
+
+377
+00:47:43.210 --> 00:47:43.990
+Marcelo Tomio Hama: não é?
+
+378
+00:47:44.320 --> 00:47:46.650
+Marcelo Tomio Hama: Ao invés de você ler em
+
+379
+00:47:46.780 --> 00:47:53.319
+Marcelo Tomio Hama: em Chunks definidos ali o Red Line vai ler por linhas. Ele vai procurar
+
+380
+00:47:54.360 --> 00:47:57.190
+Marcelo Tomio Hama: o próximo Bahia. Próxima queda de linha.
+
+381
+00:47:57.490 --> 00:48:09.140
+Marcelo Tomio Hama: Então isso aqui é bastante interessante. Caso você tenha ali um texto e você não queira se preocupar com a quantidade de caracteres você queira ler. Linha por linha,
+
+382
+00:48:09.200 --> 00:48:20.560
+Marcelo Tomio Hama: por exemplo, na hora de processar um arquivo de log, os arquivos de log. Cada linha é um evento. Cada linha é um topo. Um fato que aconteceu, e você não vai querer
+
+383
+00:48:20.650 --> 00:48:32.700
+Marcelo Tomio Hama: entender ali, realmente qual é o tamanho de cada linha? Qual foi o registro que aconteceu em cada uma delas nesses cenários, vai ser melhor você fazer uso do Reed Line. Então olha só, readline.
+
+384
+00:48:33.430 --> 00:48:41.470
+Marcelo Tomio Hama: Ele vai mostrar para a gente linha linha a linha, né? Então olha só. Vou fazer aqui um experimento. Aí vou colocar o.
+
+385
+00:48:42.810 --> 00:48:43.910
+Marcelo Tomio Hama: É aquilo.
+
+386
+00:48:44.520 --> 00:48:45.240
+Marcelo Tomio Hama: Obrigado.
+
+387
+00:48:48.320 --> 00:48:49.760
+Marcelo Tomio Hama: Só um vídeo aqui,
+
+388
+00:49:02.140 --> 00:49:08.190
+Marcelo Tomio Hama: aqui o poema, né? E o Print. Claro, ele vai quebrar as linhas pra gente. Vamos ver o que vai. Devolve pra gente.
+
+389
+00:49:10.610 --> 00:49:11.290
+Marcelo Tomio Hama: Tchau.
+
+390
+00:49:12.280 --> 00:49:24.519
+Marcelo Tomio Hama: Então ele vai na linha. A linha. Primeiramente, ele leu a primeira linha. Depois ele pegou o poema com a primeira linha, mais a segunda linha. Depois ele pegou o poema com a segunda linha.
+
+391
+00:49:24.960 --> 00:49:35.379
+Marcelo Tomio Hama: Mais a terceira linha, a primeira, mais a segunda, mais a terceira. Isso por quê? Porque eu estou colocando aqui dentro do poema. Eu estou concatenando o texto, lido
+
+392
+00:49:35.870 --> 00:49:46.000
+Marcelo Tomio Hama: de cada uma das linhas. Mas se eu quiser não concatenar, exibir o poema linha. A linha. Eu vou fazer dessa maneira aqui. Então eu faço apenas um igual.
+
+393
+00:49:46.370 --> 00:49:50.230
+Marcelo Tomio Hama: Olha só. O nome é Bryth.
+
+394
+00:49:50.620 --> 00:49:54.059
+Marcelo Tomio Hama: Os espírito was frustrated by night. E
+
+395
+00:49:54.260 --> 00:49:59.670
+Marcelo Tomio Hama: aqui vai pintar cada uma das linhas. Bastante clarinho para todos vocês. Estão entendendo a lógica.
+
+396
+00:50:03.060 --> 00:50:03.740
+leonardo Peres: Aham!
+
+397
+00:50:05.300 --> 00:50:06.150
+Marcelo Tomio Hama: Beleza.
+
+398
+00:50:10.170 --> 00:50:13.960
+Marcelo Tomio Hama: Muito bem, então, isso aí é o Woodline.
+
+399
+00:50:14.770 --> 00:50:26.939
+Marcelo Tomio Hama: Uma última forma que a gente tem aqui de leitura. É através do Read Line. Ele lê uma linha por vez e retorna uma lista de strings. Então ele é bem parecido
+
+400
+00:50:27.940 --> 00:50:35.149
+Marcelo Tomio Hama: aqui, com os formatos que a gente viu antes. Mas quando você faz aqui fim, é o Open
+
+401
+00:50:35.260 --> 00:50:36.980
+Marcelo Tomio Hama: aqui do Relativity.
+
+402
+00:50:37.340 --> 00:50:39.800
+Marcelo Tomio Hama: O arquivo Relativity.
+
+403
+00:50:40.610 --> 00:50:50.359
+Marcelo Tomio Hama: Você faz aqui o Line recebendo o fim. Pondo Willy Lives. A diferença é que esse caminho aqui ele vai retornar para a gente. Um arrei de streams.
+
+404
+00:50:51.590 --> 00:51:00.940
+Marcelo Tomio Hama: Esse resultado numérico seguia a quantidade de caracteres. Seguia assim. Então, só pegando aqui a pergunta do Gabriel,
+
+405
+00:51:02.320 --> 00:51:04.680
+Marcelo Tomio Hama: isso aqui vamos executar de novo.
+
+406
+00:51:05.520 --> 00:51:14.520
+Marcelo Tomio Hama: Por que ele trouxe trinta e nove? Porque trinta e nove é o valor da quantidade de caracteres
+
+407
+00:51:14.710 --> 00:51:24.879
+Marcelo Tomio Hama: da última linha. Então, como a gente não está concatenando. A última vez que o poema que a variável poem recebeu a linha,
+
+408
+00:51:25.320 --> 00:51:30.450
+Marcelo Tomio Hama: este line aqui. Ele tinha o quê? Isso aqui.
+
+409
+00:51:30.590 --> 00:51:33.229
+Marcelo Tomio Hama: E isso aqui está tão.
+
+410
+00:51:33.880 --> 00:51:41.179
+Marcelo Tomio Hama: É um computador de então, se eu pego e que vem aqui, né?
+
+411
+00:51:42.980 --> 00:51:45.119
+Marcelo Tomio Hama: Então tudo bem que aqui está trazendo
+
+412
+00:51:46.060 --> 00:51:49.720
+Marcelo Tomio Hama: trinta e quatro. Tá, deixa eu ver aqui se está certo.
+
+413
+00:51:49.890 --> 00:51:51.180
+Marcelo Tomio Hama: Trinta e nove, né?
+
+414
+00:51:51.810 --> 00:52:00.509
+Marcelo Tomio Hama: Ele deve estar trazendo algumas quebras de linha a mais, e também contando os espaços. Mas enfim, é o que esse trinta e nove aqui,
+
+415
+00:52:00.640 --> 00:52:10.609
+Marcelo Tomio Hama: o trinta e nove é basicamente a quantidade de caracteres que a gente tem apenas na última leitura. Eu acredito até que Oms of Fire deve contar com algum tipo de característica ali para a gente.
+
+416
+00:52:12.370 --> 00:52:13.269
+Marcelo Tomio Hama: É espaço.
+
+417
+00:52:13.270 --> 00:52:15.969
+Ramon Telles da Silva: Vazio, professor, aí está. Contando mais ali.
+
+418
+00:52:16.650 --> 00:52:20.550
+Marcelo Tomio Hama: Ah, provavelmente bem notado aí, Ramon.
+
+419
+00:52:24.370 --> 00:52:29.310
+Marcelo Tomio Hama: Beleza. Então, já vimos a escrita do arquivo. Já vimos aqui
+
+420
+00:52:30.110 --> 00:52:37.489
+Marcelo Tomio Hama: a leitura do arquivo. Vamos falar aqui um pouco mais aqui do Wright.
+
+421
+00:52:38.620 --> 00:52:50.859
+Marcelo Tomio Hama: Então o Wright é interessante de você combinar ele com a escrita de arquivos binários. Na verdade, o Wright é a única maneira que você tem de escrever binário o Print. Ele não escreve binário.
+
+422
+00:52:51.450 --> 00:52:56.360
+Marcelo Tomio Hama: É muito difícil você fazer o uso de maneira efetiva com o Print.
+
+423
+00:52:56.590 --> 00:53:00.510
+Marcelo Tomio Hama: Então, pegando aqui.
+
+424
+00:53:00.780 --> 00:53:05.870
+Marcelo Tomio Hama: Então deita. Recebe aqui os bytes aqui de
+
+425
+00:53:06.900 --> 00:53:14.500
+Marcelo Tomio Hama: ele recebe aqui basicamente um conjunto de bytes de zero até duzentos e cinquenta e seis. Aqui a gente não está escrevendo
+
+426
+00:53:15.120 --> 00:53:27.449
+Marcelo Tomio Hama: nenhum texto, porque texto é legível, enquanto que um conjunto de bytes não é legível. A gente está apenas fazendo o quê? Criando uma variável que tem duzentos e cinquenta e seis bytes.
+
+427
+00:53:28.800 --> 00:53:40.070
+Marcelo Tomio Hama: A gente abre um arquivo. Então, Bef File, em modo de escrita, e também passando um tipo de arquivo binário. A gente faz o quê? Size recebe Lenda
+
+428
+00:53:40.300 --> 00:53:46.140
+Marcelo Tomio Hama: de Bid. Então é o tamanho do nosso conteúdo
+
+429
+00:53:47.150 --> 00:53:51.840
+Marcelo Tomio Hama: offset zero Chuck cem. E aqui eu vou integrar.
+
+430
+00:53:51.980 --> 00:54:00.510
+Marcelo Tomio Hama: Tá no meu arquivo para estar escrevendo cada um desses bytes no meu arquivo. Então, enquanto o meu offset
+
+431
+00:54:00.810 --> 00:54:03.889
+Marcelo Tomio Hama: é ele não for aqui,
+
+432
+00:54:04.880 --> 00:54:11.040
+Marcelo Tomio Hama: ele não atingiu o tamanho do meu arquivo, que é o Len. O Offset começa com zero.
+
+433
+00:54:11.840 --> 00:54:25.220
+Marcelo Tomio Hama: Assim, aqui, eu fiz a leitura errada. Se o Offset for maior do que o sais, então eu quebro o meu laço, porque daí realmente eu passei do tamanho do conjunto de bases.
+
+434
+00:54:25.990 --> 00:54:34.379
+Marcelo Tomio Hama: Senão o Fouth aqui para a gente que é o conteúdo do arquivo. Ele vai lá e escreve. Então, Wright, e aí eu passo aqui.
+
+435
+00:54:35.350 --> 00:54:53.840
+Marcelo Tomio Hama: O Bid passa o offset, o offset que eu estou utilizando. E aqui o offset mais o Chunk. Ou seja. Vou andando ali e aqui faço o offset mais o chunk. Então o que eu estou fazendo aqui, né? Pessoal, basicamente, eu estou escrevendo num arquivo binali
+
+436
+00:54:53.910 --> 00:54:56.220
+Marcelo Tomio Hama: blocos de cem
+
+437
+00:54:56.420 --> 00:55:06.660
+Marcelo Tomio Hama: bytes. Então eu vou escrever cem vezes. Eu escrevo primeiramente os cem primeiros bytes. Depois eu escrevo os próximos cem bytes. E depois eu escrevo os próximos cinquenta e seis bytes
+
+438
+00:55:06.690 --> 00:55:19.460
+Marcelo Tomio Hama: duzentos e cinquenta e seis. E aí, Nelson, respondendo: o que é offset. É basicamente um ponteiro que eu entender aonde que eu estou, ali, do meu vetor de bytes já está escrevendo dentro do arquivo,
+
+439
+00:55:27.740 --> 00:55:37.039
+Marcelo Tomio Hama: porque no caso do arquivo binário, a gente não tem um texto. A gente não escreve streamings aqui a gente precisa contar efetivamente os bytes. E ali, para você conseguir
+
+440
+00:55:37.450 --> 00:55:41.619
+Marcelo Tomio Hama: navegar entre a escrita dos bytes. Você precisa de um ponteiro interno.
+
+441
+00:55:44.400 --> 00:55:46.660
+Marcelo Tomio Hama: Então executamos esse código.
+
+442
+00:55:51.920 --> 00:55:54.360
+Marcelo Tomio Hama: Vou usar aqui. Então, Be Fiile, né?
+
+443
+00:55:54.550 --> 00:56:01.029
+Marcelo Tomio Hama: Vamos tentar abrir ele. Olha só. A gente tem aqui uma sequência ilegível de.
+
+444
+00:56:01.440 --> 00:56:04.289
+Marcelo Tomio Hama: De taiactérias. Por quê? Porque são uma sequência de partes
+
+445
+00:56:06.550 --> 00:56:10.359
+Marcelo Tomio Hama: dúvidas até o momento. Pessoal, tá tranquilo aí para todo mundo.
+
+446
+00:56:13.000 --> 00:56:16.600
+Marcelo Tomio Hama: A questão aqui do colega Nelson, acho que foi bastante.
+
+447
+00:56:16.800 --> 00:56:25.179
+Marcelo Tomio Hama: É bastante importante aí. Porque tem que realmente entender o que é offset conceito novo que apareceu. Vamos entender.
+
+448
+00:56:29.610 --> 00:56:34.430
+Marcelo Tomio Hama: A gente tem também. Se a gente está escrevendo em Byte, a gente precisa ler também.
+
+449
+00:56:35.200 --> 00:56:37.509
+Marcelo Tomio Hama: Então aqui criamos um arquivo.
+
+450
+00:56:37.730 --> 00:56:41.210
+Marcelo Tomio Hama: Agora vamos ler de um arquivo. Um arquivo binário
+
+451
+00:56:41.880 --> 00:57:01.679
+Marcelo Tomio Hama: não é muito diferente. É até muito simples. Então, B. File é o nome do arquivo que eu vou passar como parâmetro Rb: vou passar como uma leitura do arquivo binário. Então coloca aqui dentro da minha variável bidje que é o conteúdo arquivo reads. E eu vou ler
+
+452
+00:57:01.780 --> 00:57:13.080
+Marcelo Tomio Hama: aqui numa pancada só. Todo o conteúdo ali dentro do arquivo. Depois eu faço. Len, só para conferir. Qual é o tamanho aqui da minha estrutura lida. Ele vai trazer para mim
+
+453
+00:57:13.950 --> 00:57:19.870
+Marcelo Tomio Hama: os duzentos e cinquenta e seis bytes que a gente escreveu anteriormente aqui no Arquivo
+
+454
+00:57:24.520 --> 00:57:25.390
+Marcelo Tomio Hama: Beleza.
+
+455
+00:57:28.280 --> 00:57:33.929
+marcos.jose: Senhor, desculpa se o senhor já explicou isso e me escapou. É só uma dúvida.
+
+456
+00:57:34.070 --> 00:57:47.789
+marcos.jose: Quando você coloca o arquivo Pré Read. Quando você coloca a linha de código Read e embaixo. Len, ele traz o número de linhas. Ele só contou as linhas ou ele percorreu os conteúdos. Se eu precisar
+
+457
+00:57:47.790 --> 00:57:57.870
+marcos.jose: fazer alguma coisa sobre o que tem no conteúdo da leitura, ele também pegou. Ou ele só pegou a quantidade de bytes. A quantidade de linhas de dados que tinha no arquivo.
+
+458
+00:57:58.710 --> 00:58:07.280
+Marcelo Tomio Hama: Perfeito. Marcos aí não é uma questão de arquivo. É uma questão de implementação da função lei.
+
+459
+00:58:07.780 --> 00:58:14.419
+Marcelo Tomio Hama: Tá? Então isso aqui essas três primeiras linhas. É uma coisa.
+
+460
+00:58:15.480 --> 00:58:19.119
+Marcelo Tomio Hama: Essa função aqui é uma coisa completamente diferente.
+
+461
+00:58:19.460 --> 00:58:27.079
+Marcelo Tomio Hama: Essa função aqui. Se você pegar e caçar ali nas entranhas do Python. Você. Em algum momento, você vai encontrar
+
+462
+00:58:27.360 --> 00:58:34.889
+Marcelo Tomio Hama: um.for de zero até o final ali. Então o Ay, ou enquanto
+
+463
+00:58:35.550 --> 00:58:49.850
+Marcelo Tomio Hama: o cagactéria Lido não for um nulo. Basicamente, o que você está fazendo aqui com o leme? Você está contando os kagactéries. Então você tem. Vou dar um exemplo bastante simples aqui vamos supor que
+
+464
+00:58:49.950 --> 00:59:03.409
+Marcelo Tomio Hama: essa espinha aqui, na verdade, seja bytes. Então você tem o Byte um sendo M Byte dois sendo a Byte três sendo R. Byte quatro, sendo um C, e por aí vai o Len, a implementação dele. Não sei se você já ouviram falar de
+
+465
+00:59:03.410 --> 00:59:13.989
+Marcelo Tomio Hama: Big Yeo com textos de complexidade de algoritmos, mas isso aqui ele tem complexidade da ordem de N.
+
+466
+00:59:14.210 --> 00:59:19.119
+Marcelo Tomio Hama: Ele vai fazer o quê? É um foro. Ele vai pegar e vai ler o primeiro. Poxa, isso aqui
+
+467
+00:59:19.460 --> 00:59:24.110
+Marcelo Tomio Hama: é igual a nulo, não? Então vai lá e
+
+468
+00:59:24.700 --> 00:59:37.149
+Marcelo Tomio Hama: size recebe um. É um contador. Aí ele vai para o próximo. E esse cara que pega aqui, ele é diferente de nulo? Também não. Então o que ele vai fazer?
+
+469
+00:59:38.220 --> 00:59:39.670
+Marcelo Tomio Hama: Sais igual. Dois
+
+470
+00:59:39.870 --> 00:59:49.139
+Marcelo Tomio Hama: vai para o próximo. Carteira igual a nulo também não. E aí ele vai entregando, entregando até chegar no final, quando ele chegar no final, esse contador
+
+471
+00:59:49.410 --> 00:59:51.259
+Marcelo Tomio Hama: aqui. Nesse caso tem dezassete.
+
+472
+00:59:51.340 --> 01:00:03.539
+Marcelo Tomio Hama: E aí ele vai retornar. Ele vai fazer algo do tipo Returne Size. E aí esse Len, muito provavelmente está implementado dessa maneira. Ele vai ser tipo um Df
+
+473
+01:00:03.540 --> 01:00:13.029
+Marcelo Tomio Hama: Len. E aí um parâmetro aqui, que seria a Isring propriamente dita. E aí você vai definir aqui essa lógica.
+
+474
+01:00:13.040 --> 01:00:13.960
+Marcelo Tomio Hama: Então,
+
+475
+01:00:14.190 --> 01:00:31.069
+Marcelo Tomio Hama: o que ele está fazendo? Ele está contando cada uma das caracteres que existem naquela String que você passou como parâmetro. Isso é uma coisa completamente diferente disso aqui. Isso aqui é operação com arquivo. Já o leme.
+
+476
+01:00:31.280 --> 01:00:35.159
+Marcelo Tomio Hama: O leme é uma função nativa definida pelo pai.
+
+477
+01:00:38.810 --> 01:00:50.080
+marcos.jose: Entendi. Mas então, nesse caso, o Finn Read leu o conteúdo. Se eu precisasse depois trabalhar, alguma coisa que estava escrita dentro do conteúdo. Ele pegou essa função de Read.
+
+478
+01:00:50.310 --> 01:01:01.040
+Marcelo Tomio Hama: Sim, esse Read aqui é outra coisa que provavelmente deve ter um computador, porque ele vai ter o offset ali. Aquele offset ali que o nosso colega
+
+479
+01:01:01.180 --> 01:01:12.390
+Marcelo Tomio Hama: perguntou anteriormente. O que é o Excel Set? De certa maneira, ele vai estar implementado de maneira implícita dentro desse Read, porque a função Read precisa manter
+
+480
+01:01:12.610 --> 01:01:28.310
+Marcelo Tomio Hama: uma posição do cursor. Então eu estou lendo ali o meu arquivo. Qual posição que eu estou? Estou na posição um. Estou na posição dois. Estou na posição três. E aí eu vou iterando até chegar no final do meu arquivo.
+
+481
+01:01:30.180 --> 01:01:33.610
+marcos.jose: Entendeu, bacana?
+
+482
+01:01:33.610 --> 01:01:42.159
+Marcelo Tomio Hama: Um pouco mais adiante até. Deixa eu ver aqui se a gente vai trazer isso aqui. Já é um
+
+483
+01:01:42.310 --> 01:01:43.310
+Marcelo Tomio Hama: do Jason.
+
+484
+01:01:43.760 --> 01:01:53.190
+Marcelo Tomio Hama: Acho que a gente não vai chegar a falar aqui. A gente tem. A gente tem o Theo e o Sic, que é basicamente manipulação desse cursor.
+
+485
+01:01:53.630 --> 01:01:58.660
+Marcelo Tomio Hama: Então, beleza, a gente está aqui na lâmina doze.
+
+486
+01:02:00.300 --> 01:02:18.789
+Marcelo Tomio Hama: Manipulação de arquivo em disco. Ainda estão fechando arquivos automaticamente e aqui, pessoal. Super interessante. A gente precisa fazer o close do arquivo. Caso contrário, o que vai acontecer? Vocês vão manter uma variável aberta dentro do Python.
+
+487
+01:02:19.190 --> 01:02:33.780
+Marcelo Tomio Hama: Você tem até uma maneira automatizada de fechar o arquivo. O Python tem ali uma certa inteligência de implementação. Então se a gente esquecer de fechar o arquivo com o Close. O arquivo aberto ali. Ele
+
+488
+01:02:33.880 --> 01:02:52.789
+Marcelo Tomio Hama: será fechado automaticamente pelo Python. Assim que não for mais referenciado ele perdeu a referência. Ou seja, se a gente abrir um arquivo dentro de uma função e não o fecharmos explicitamente. Em algum momento, ele vai ser fechado quando essa função terminar, que é super importante. Você não vai ficar ali.
+
+489
+01:02:52.790 --> 01:03:04.330
+Marcelo Tomio Hama: É tendo memória liquide que seria gastar memória, gastar memória e nunca fazer a desalocação. E aí, eventualmente, você exaurir a memória da sua máquina.
+
+490
+01:03:04.870 --> 01:03:15.990
+Marcelo Tomio Hama: Só que assim dependendo da situação. Isso precisa ser vetado. Então esse close aqui. Por mais que você esqueça dele que o Python vá fazer isso para você.
+
+491
+01:03:16.270 --> 01:03:21.299
+Marcelo Tomio Hama: Você precisa sempre estar chamando ele nos momentos oportunos.
+
+492
+01:03:21.550 --> 01:03:36.360
+Marcelo Tomio Hama: Porém, nem sempre é fácil ficar chamando esse close. Às vezes a gente vai esquecer. Ou então, às vezes você vai ver que o código vai ficando muito verboso. O que é verbosidade. O código fica muito cheio de conteúdo ali. Ele fica muito longo.
+
+493
+01:03:36.410 --> 01:03:42.389
+Marcelo Tomio Hama: E aí uma maneira que você tem de trabalhar de uma maneira mais clean.
+
+494
+01:03:42.490 --> 01:03:47.610
+Marcelo Tomio Hama: Escrever um código mais limpo. É através do wifi.
+
+495
+01:03:48.440 --> 01:03:57.360
+Marcelo Tomio Hama: Só pegando aquela descrição. Mas podemos chegar aberto o arquivo em uma função de longa duração. Isso aqui, eu acho que é um bom exemplo. Então, o que aconteceu? Você abriu.
+
+496
+01:03:57.430 --> 01:04:09.850
+Marcelo Tomio Hama: Você chamou uma função dentro dessa função. Tem a abertura de um arquivo. E essa função. Ela é longa. Enquanto essa função durar, a memória que você está consumindo com esse arquivo aberto,
+
+497
+01:04:10.370 --> 01:04:17.489
+Marcelo Tomio Hama: vai ficar locada. Então, se o arquivo tem ali um giga, vai ficar um giga sendo consumido dentro da sua função.
+
+498
+01:04:17.640 --> 01:04:30.409
+Marcelo Tomio Hama: E vamos supor que esse arquivo somente seja útil no começo da função. Ou seja, você está consumindo uma memória ali desnecessária. Então esse exemplo aqui, que ele traz,
+
+499
+01:04:31.520 --> 01:04:43.769
+Marcelo Tomio Hama: nesse caso aí. Então é por isso que a gente faz a chamada com o If. Qual que é a sintaxe dele? Sintaxe Geral Wifi, expressão em que a gente faz o uso da variável
+
+500
+01:04:43.770 --> 01:04:52.219
+Marcelo Tomio Hama: S e variam quando essa instrução aqui acaba. Basicamente, você está chamando ali de maneira automatizada
+
+501
+01:04:52.230 --> 01:04:55.359
+Marcelo Tomio Hama: o seu close. Então me deixa.
+
+502
+01:04:55.720 --> 01:05:04.230
+Marcelo Tomio Hama: A leitura é muito mais intuitiva. Então, olha só como é que fica aqui, né, With Open Relativity
+
+503
+01:05:04.420 --> 01:05:13.959
+Marcelo Tomio Hama: em modo de escrita. Arquiva o texto. Isso aqui, lembrem se que isso aqui devolve uma variável para a gente.
+
+504
+01:05:14.090 --> 01:05:16.129
+Marcelo Tomio Hama: Então isso aqui. É basicamente
+
+505
+01:05:16.680 --> 01:05:24.040
+Marcelo Tomio Hama: isso aqui, né? Avaliado, né? Então a gente está devolvendo aqui. Então, Brief variable essa daqui. As
+
+506
+01:05:25.260 --> 01:05:32.139
+Marcelo Tomio Hama: fiout o que eu vou fazer fiout right. E aí, quando este right acabar,
+
+507
+01:05:32.400 --> 01:05:34.579
+Marcelo Tomio Hama: o que vai acontecer é que
+
+508
+01:05:35.730 --> 01:05:41.740
+Marcelo Tomio Hama: esse arquivo aqui vai ser desalocado automaticamente pela minha.
+
+509
+01:05:41.900 --> 01:05:52.850
+Marcelo Tomio Hama: Pelo meu interpretador pipe tudo que vier depois aqui você já não está mais utilizando a memória consumida da variável.
+
+510
+01:05:53.540 --> 01:05:54.200
+Marcelo Tomio Hama: Tá?
+
+511
+01:05:54.530 --> 01:05:58.290
+Marcelo Tomio Hama: Então, só para a gente ver que isso aqui de fato funciona.
+
+512
+01:06:00.800 --> 01:06:02.790
+Marcelo Tomio Hama: Então é Fields
+
+513
+01:06:06.540 --> 01:06:09.389
+Marcelo Tomio Hama: Wright. Poem, eu vou colocar aqui
+
+514
+01:06:10.260 --> 01:06:15.050
+Marcelo Tomio Hama: um pouco diferente. Vou colocar aqui o modo a a pence e eu colocar aqui
+
+515
+01:06:20.550 --> 01:06:23.210
+Marcelo Tomio Hama: meu nome aqui, né? Vamos escrever aqui.
+
+516
+01:06:25.850 --> 01:06:28.549
+Marcelo Tomio Hama: Então escrevi aqui em Moda Page.
+
+517
+01:06:28.870 --> 01:06:33.010
+Marcelo Tomio Hama: Eu escrevi no Relativity. É o arquivo aqui. Vamos abrir.
+
+518
+01:06:34.140 --> 01:06:36.759
+Marcelo Tomio Hama: Então olha só. A gente tem aqui o.
+
+519
+01:06:37.010 --> 01:06:52.589
+Marcelo Tomio Hama: O poema concatenado com o meu nome, e aí por que ficou só esse trechinho aqui? Porque o Python deixou na memória aquela função que a gente tinha lido apenas a última linha quando a gente fez um right poem, ele pegou e reescreveu. É até um ponto de
+
+520
+01:06:52.830 --> 01:07:11.940
+Marcelo Tomio Hama: de atenção para vocês, porque quando vocês abrem o arquivo em modo right, você pode estar sobrescrevendo um conteúdo já existente. Então tenham aí os devidos cuidados sendo que está tentando aqui aos modos de abertura, a operação e o tipo do arquivo.
+
+521
+01:07:12.130 --> 01:07:13.180
+Marcelo Tomio Hama: Victor.
+
+522
+01:07:13.810 --> 01:07:23.009
+Victor BITTENCOURT: Senhor. Só para esclarecer, uma dúvida, pode ser um pouco mista. Espera aí, filho. Não sei.
+
+523
+01:07:23.120 --> 01:07:40.290
+Victor BITTENCOURT: A partir do momento que a gente abriu o arquivo. Seja qual for o operador dele, a gente é obrigado a fechar, porque senão a gente pode ter essa cautela aí de sobrecrever ou puxar alguma variável para dentro dele. Se a gente não fechar com o White, é isso.
+
+524
+01:07:41.320 --> 01:07:47.040
+Marcelo Tomio Hama: São dois conceitos separados. Aí tá, Victor, se você não fecha o arquivo,
+
+525
+01:07:47.160 --> 01:07:55.629
+Marcelo Tomio Hama: o que vai acontecer é que pode dar o Memory líquido. Você pode estar consumindo uma quantidade bem grande de recursos da máquina de maneira
+
+526
+01:07:55.980 --> 01:08:06.849
+Marcelo Tomio Hama: de maneira desnecessária, com relação à sobre escrita. Então isso tem muito mais a ver. Tem muito a ver com o modo de
+
+527
+01:08:08.320 --> 01:08:21.580
+Marcelo Tomio Hama: de abertura. Então olha só, eu peguei aqui, né? Eu peguei e fiz um Open do Arquivo Relativity. E eu passei aqui a letra a que é de apenas quando eu faço a.
+
+528
+01:08:22.109 --> 01:08:26.090
+Marcelo Tomio Hama: Basicamente, eu estou aprendendo o arquivo. Então eu estou escrevendo. No final.
+
+529
+01:08:26.580 --> 01:08:29.630
+Marcelo Tomio Hama: Se eu tivesse feito aqui um dádio,
+
+530
+01:08:29.740 --> 01:08:35.359
+Marcelo Tomio Hama: eu colocando aqui. Wt. Qual que é a instrução que a gente traz right
+
+531
+01:08:35.510 --> 01:08:41.779
+Marcelo Tomio Hama: e o T? Que é tipo o texto? Vamos olhar aqui a nossa primeira lâmina, né?
+
+532
+01:08:41.990 --> 01:08:46.640
+Marcelo Tomio Hama: Aqui. O que o Wright faz para escrever o
+
+533
+01:08:46.760 --> 01:08:51.319
+Marcelo Tomio Hama: em um arquivo? Se o arquivo não existir, ele será criado.
+
+534
+01:08:51.569 --> 01:09:01.319
+Marcelo Tomio Hama: Se o arquivo já existir, ele vai ser sobrescrito. Olha só. Então o cuidado que a gente tem que ter. Então o Www. Ele sobre escreve
+
+535
+01:09:01.420 --> 01:09:17.580
+Marcelo Tomio Hama: o X aqui de maneira diferente. O X é usado para escrever, mas somente se o arquivo ainda não existir. Então, se a gente pegar e tentar fazer arquivo X. Eu acho que ele vai dar aqui um Eva. Inclusive ele vai falar que o arquivo já existe.
+
+536
+01:09:17.920 --> 01:09:19.080
+Marcelo Tomio Hama: Olha só.
+
+537
+01:09:19.189 --> 01:09:28.410
+Marcelo Tomio Hama: Ele lança uma exceção. Então File existe erro. Então o arquivo já existe. Ele não deixa você, sobranceler. Se você estiver hidratando
+
+538
+01:09:29.120 --> 01:09:37.469
+Marcelo Tomio Hama: um caso aqui de leitura de arquivo, em que vocês acreditem que o arquivo contém informações preciosas. Vocês não podem perder
+
+539
+01:09:37.620 --> 01:09:49.650
+Marcelo Tomio Hama: a maneira mais segura de fazer isso é através do X. E daí? Vocês não vão sobrescrever agora? Claro, se você pegar aqui e colocar um W. É o que a gente falou.
+
+540
+01:09:49.970 --> 01:09:54.600
+Marcelo Tomio Hama: Outro conteúdo já era.
+
+541
+01:09:55.500 --> 01:09:58.340
+Marcelo Tomio Hama: Então executando. Aqui
+
+542
+01:10:00.270 --> 01:10:07.289
+Marcelo Tomio Hama: escreveu: se você vir aqui no reality e abrir aqui o outro conteúdo que a gente tinha antes foi para o espaço.
+
+543
+01:10:08.050 --> 01:10:16.560
+Victor BITTENCOURT: Não, eu tava confundindo aqui. Agora eu lendo. Enquanto você explicava, eu parei para ler o arquivo aqui. A minha dúvida. Na verdade, era assim.
+
+544
+01:10:16.580 --> 01:10:35.739
+Victor BITTENCOURT: A partir do momento que a gente abriu, o arquivo vai modificar ele. Se as linhas abaixam se elas não estiverem para dentro da nossa ação da nossa função, se elas poderiam prescrever o arquivo. Mas agora eu já entendi que é só quando a gente chama a função raide. White.
+
+545
+01:10:36.010 --> 01:10:36.410
+Marcelo Tomio Hama: Entendi.
+
+546
+01:10:36.410 --> 01:10:37.279
+Victor BITTENCOURT: Boa Tv.
+
+547
+01:10:37.830 --> 01:10:49.150
+Marcelo Tomio Hama: Isso. Isso aí. Uma coisa são os dados que você tem armazenados dentro do arquivo. Mas as linhas que estão rodando dentro de uma condução.
+
+548
+01:10:49.350 --> 01:10:54.130
+Marcelo Tomio Hama: Por exemplo, se a gente pegasse e olhasse isso aqui, né?
+
+549
+01:10:54.660 --> 01:10:59.410
+Marcelo Tomio Hama: Isso aqui já seria contexto do ambiente, então já seria a memória, Ham
+
+550
+01:10:59.450 --> 01:11:10.729
+Marcelo Tomio Hama: é um conteúdo que está rodando dentro do programa de computador. Ele não é o conteúdo que vai estar escrito no arquivo. Porque assim, quando você escreve no arquivo, basicamente você está pegando o conteúdo
+
+551
+01:11:10.730 --> 01:11:23.590
+Marcelo Tomio Hama: que sai no teclado, vai ali para a memória Ram e da memória. Ram vai para o disco. Ou quando você vai ler alguma coisa. São os dados que saem do disco. Vão para a memória Ram e aparecem na tela.
+
+552
+01:11:23.950 --> 01:11:25.850
+Marcelo Tomio Hama: Esse aí é o fluxo.
+
+553
+01:11:30.030 --> 01:11:36.970
+marcos.jose: Senhor. Para esse caso, tem algum tipo de rollback? Coloquei o W sem querer lá, e Putz, pago
+
+554
+01:11:37.940 --> 01:11:43.769
+marcos.jose: trinta mil linhas lá de Java. Já estava escrita em alguma coisa que eu estava fazendo há um ano,
+
+555
+01:11:43.880 --> 01:11:47.100
+marcos.jose: apertei o W errado lá sobre. Escrevi.
+
+556
+01:11:47.990 --> 01:11:51.199
+marcos.jose: É dali direto para o Rh. Ou tem como dar um hall back.
+
+557
+01:11:51.460 --> 01:11:57.030
+Marcelo Tomio Hama: Olha, dependendo da situação, vai direto para o Rh, porque assim
+
+558
+01:11:57.140 --> 01:12:02.450
+Marcelo Tomio Hama: a gente está falando de uma operação a nível de
+
+559
+01:12:02.710 --> 01:12:09.780
+Marcelo Tomio Hama: de programa de disco. O que você pode tentar aqui é só se você tiver uma operação de recuperação,
+
+560
+01:12:10.260 --> 01:12:21.139
+Marcelo Tomio Hama: você tentar, tipo, partir chão médico, sabe, você tentar ali um data record, um software forense que execute recuperação avançada.
+
+561
+01:12:21.390 --> 01:12:22.120
+Marcelo Tomio Hama: E assim.
+
+562
+01:12:22.120 --> 01:12:24.629
+marcos.jose: Ah, mas aí a gente tá falando de um gasto absurdo. Aí.
+
+563
+01:12:24.630 --> 01:12:25.110
+Marcelo Tomio Hama: Exato.
+
+564
+01:12:25.110 --> 01:12:27.050
+marcos.jose: Geralmente são muito caras.
+
+565
+01:12:27.050 --> 01:12:34.040
+Marcelo Tomio Hama: Exato. Então, assim, ou então você ter de repente um backup, né? Se você tiver ali uma
+
+566
+01:12:34.390 --> 01:12:42.689
+Marcelo Tomio Hama: uma operação que roda diária no servidor. E todo dia ele vai lá e pega o arquivo e faz uma cópia num lugar seguro.
+
+567
+01:12:42.840 --> 01:12:53.870
+Marcelo Tomio Hama: Aí você está falando de um backup. É um backup que não tem nada a ver com o software. Agora, falando do software aqui da implementação do programa.
+
+568
+01:12:54.010 --> 01:12:55.670
+Marcelo Tomio Hama: A gente está escrevendo.
+
+569
+01:12:55.970 --> 01:12:56.850
+marcos.jose: Já era.
+
+570
+01:12:56.850 --> 01:12:57.670
+Marcelo Tomio Hama: Já era.
+
+571
+01:12:58.100 --> 01:12:58.670
+marcos.jose: Putz.
+
+572
+01:12:58.980 --> 01:13:13.059
+Marcelo Tomio Hama: Então, assim, todo cuidado aí nessas manipulações de arquivo. Então o modo W é perigoso. Por quê? Porque ele vai pegar e vai mandar para espaço o conteúdo que existia antes.
+
+573
+01:13:13.060 --> 01:13:20.810
+Marcelo Tomio Hama: O X é um pouquinho mais seguro, porque ele vai tentar criar um arquivo, mas ele não cria se já existe. E o A
+
+574
+01:13:21.110 --> 01:13:31.949
+Marcelo Tomio Hama: é o mais seguro de todos. Talvez que basicamente você vai aprendar. No final, ele conserva o conteúdo. E claro que é o mais seguro de todos, que é apenas leitura.
+
+575
+01:13:38.020 --> 01:13:38.740
+marcos.jose: Tchau.
+
+576
+01:13:39.830 --> 01:13:47.790
+Marcelo Tomio Hama: E assim, se você tentar fazer uma operação escrita de arquivo, tendo feito aqui a abertura
+
+577
+01:13:47.870 --> 01:13:59.980
+Marcelo Tomio Hama: do arquivo em modo leitura, apenas ele vai lançar esse são então assim esses modos que são passados. De certa maneira, eles são guard rail para a gente. Eles são travas de segurança.
+
+578
+01:14:00.140 --> 01:14:06.200
+Marcelo Tomio Hama: Então, até fazendo aqui uma, vamos fazer um teste.
+
+579
+01:14:09.140 --> 01:14:12.209
+Marcelo Tomio Hama: Eu estou abrindo o arquivo
+
+580
+01:14:13.530 --> 01:14:20.790
+Marcelo Tomio Hama: para que vem em modo de escrito mas vamos tentar gay em modo de leitura. Então, Oops aqui,
+
+581
+01:14:21.190 --> 01:14:28.759
+Marcelo Tomio Hama: abrir um modo de leitura, apenas o que eu estou fazendo. Estou tentando escrever aqui. Acho que ele vai lançar um erro. Uma exceção.
+
+582
+01:14:28.940 --> 01:14:36.059
+Marcelo Tomio Hama: Olha lá, um suported operation é uma exceção aqui Not Rightable. Ele protege
+
+583
+01:14:41.560 --> 01:14:42.490
+Marcelo Tomio Hama: beleza.
+
+584
+01:14:42.880 --> 01:14:46.460
+Marcelo Tomio Hama: Então, beleza, aqui é a última parte que a gente viu
+
+585
+01:14:46.780 --> 01:14:53.139
+Marcelo Tomio Hama: por latitude. Então a gente faz abertura com o Wifi fica mais limpo a sintaxe.
+
+586
+01:14:54.890 --> 01:14:56.620
+Marcelo Tomio Hama: E aqui.
+
+587
+01:14:57.120 --> 01:14:59.169
+Marcelo Tomio Hama: Deixa eu ver o que tem mais ainda pra frente.
+
+588
+01:15:01.130 --> 01:15:04.799
+Marcelo Tomio Hama: Tem mais três lâminas aqui. Acho que dá.
+
+589
+01:15:05.750 --> 01:15:13.070
+Marcelo Tomio Hama: Então aqui é justamente o que eu estava comentando. Mudança de cursor. Então, quando você está fazendo uso do Wright,
+
+590
+01:15:13.350 --> 01:15:31.180
+Marcelo Tomio Hama: na medida que a gente vai lendo o arquivo. O Python também mantém o controle de onde a gente está. E aí, quando a gente faz aqui a chamada do Tel. Ele basicamente retorna ao deslocamento atual a partir do início do arquivo dado em Bytes. Então, se a gente estivesse fazendo aquela chamada ali com aqueles chunks de tamanho cem.
+
+591
+01:15:31.960 --> 01:15:40.700
+Marcelo Tomio Hama: Basicamente, o Tel ia retornar para a gente. Cem, duzentos, duzentos e cinquenta. Então o Theo
+
+592
+01:15:40.830 --> 01:15:44.080
+Marcelo Tomio Hama: com o nome diz, né? Ele informa para você aonde que ele está
+
+593
+01:15:44.330 --> 01:15:53.069
+Marcelo Tomio Hama: e o Sic basicamente busca aquela posição. Então, se eu quero pegar e abrir o arquivo e ler a partir da
+
+594
+01:15:53.370 --> 01:16:00.200
+Marcelo Tomio Hama: da posição cem, eu faço um sic e passo o tamanho o cem como parâmetro.
+
+595
+01:16:02.540 --> 01:16:10.380
+Marcelo Tomio Hama: Aqui, somente, por exemplo, que ficar. Então, fin faço Open bef file Rb é
+
+596
+01:16:10.540 --> 01:16:17.549
+Marcelo Tomio Hama: modo leitura, binário, o fim, ponto zero. Nesse caso, aqui ele vai retornar zero, porque ele começa
+
+597
+01:16:17.940 --> 01:16:22.489
+Marcelo Tomio Hama: na posição zero. Vamos comentar aqui mostrar para vocês.
+
+598
+01:16:22.690 --> 01:16:23.620
+Marcelo Tomio Hama: Muito negra.
+
+599
+01:16:25.010 --> 01:16:29.139
+Marcelo Tomio Hama: Ele começa. A leitura começa na posição zero.
+
+600
+01:16:33.570 --> 01:16:39.610
+Marcelo Tomio Hama: Aí então, beleza, esse cara que eu vou comentar agora, o que eu vou fazer? Eu vou fazer o fim. Sic.
+
+601
+01:16:39.850 --> 01:16:48.299
+Marcelo Tomio Hama: E aqui duzentos e cinquenta e cinco. Basicamente, o que eu estou fazendo. Eu estou pegando o meu arquivo ali. O Fb File
+
+602
+01:16:48.430 --> 01:16:53.029
+Marcelo Tomio Hama: pegando o cursor dele e jogando ali para a penúltima posição.
+
+603
+01:16:53.190 --> 01:16:59.139
+Marcelo Tomio Hama: Então lembrem se que o Ep File tem tamanho de duzentos e cinquenta e seis bytes. Mas eu estou posicionando o cursor
+
+604
+01:16:59.420 --> 01:17:11.139
+Marcelo Tomio Hama: na posição duzentos e cinquenta e cinco. E agora o que eu vou fazer? Eu vou fazer bidata, Read. E aí, quando eu faço Read, ele vai pegar e vai ler a partir do meu cursor.
+
+605
+01:17:11.330 --> 01:17:18.060
+Marcelo Tomio Hama: Ora, o meu cursor está na posição cento e cinquenta e cinco. Quantos bytes que ele vai ler? Apenas um?
+
+606
+01:17:18.250 --> 01:17:24.200
+Marcelo Tomio Hama: E aí, quando eu pego e faço isso. Então ele lê apenas um e coloca dentro dessa variável Bidjeit.
+
+607
+01:17:24.370 --> 01:17:31.510
+Marcelo Tomio Hama: Faço aqui o tamanho do Len e ele vai devolver aqui para mim. Qual. Que é o tamanho aqui? Qual que é o valor que ele vai devolver aqui para a gente?
+
+608
+01:17:31.650 --> 01:17:33.150
+Marcelo Tomio Hama: A gente sabe quem chuta.
+
+609
+01:17:34.290 --> 01:17:34.860
+Victor BITTENCOURT: E aí?
+
+610
+01:17:35.410 --> 01:17:39.490
+Marcelo Tomio Hama: Um. Um beleza. É isso aí, gente.
+
+611
+01:17:40.120 --> 01:17:41.260
+Marcelo Tomio Hama: Perfeito.
+
+612
+01:17:41.260 --> 01:17:49.330
+Victor BITTENCOURT: Professor aí no caso, dá pra gente fazer o Sic. Dá pra fazer um chamado pra ele ler. Quantos?
+
+613
+01:17:49.430 --> 01:17:52.559
+Victor BITTENCOURT: Quantos bytes tem
+
+614
+01:17:53.080 --> 01:18:09.270
+Victor BITTENCOURT: para depois a gente fazer o programa mesmo definir quanto tem aí. A gente já está definindo. A gente sabe que tem duzentos e cinquenta e seis. A gente está colocando duzentos e cinquenta e cinco. Aí tem. Como a gente fazer ele contar no mesmo código ele contar e ele já falar para a gente. Quando parar.
+
+615
+01:18:10.100 --> 01:18:10.710
+Marcelo Tomio Hama: E aí?
+
+616
+01:18:11.050 --> 01:18:23.499
+Marcelo Tomio Hama: Excelente. Aí tá. Porque você antecipou um outro comprando aqui a gente tem alguns modos também de fazer uso do Sic. O Sic aceita um segundo parâmetro.
+
+617
+01:18:23.620 --> 01:18:34.429
+Marcelo Tomio Hama: Que é esse aqui, ó o original, o primeiro parâmetro é o offset, que é justamente assim. Você chama o Sic e você passa ali. Poxa, eu quero pegar e mover n posições
+
+618
+01:18:34.640 --> 01:18:40.029
+Marcelo Tomio Hama: adiante, só que assim você voltando, ele diz respeito a partir da onde?
+
+619
+01:18:40.150 --> 01:18:51.420
+Marcelo Tomio Hama: Então é esse original aqui. Você pode chamar o Sic apenas com um único parâmetro, duzentos e cinquenta e cinco. Ou você pode chamar o Sic passando esses
+
+620
+01:18:51.910 --> 01:19:01.289
+Marcelo Tomio Hama: esses segundos parâmetros aqui. Então o valor zero é se você quiser fazer o deslocamento de N. Caracteres N bytes a partir do início.
+
+621
+01:19:02.510 --> 01:19:14.840
+Marcelo Tomio Hama: O valor origine é, se você quiser fazer esse deslocamento a partir do ponteiro atual, então eu estou lendo ali. Vamos supor que eu esteja lendo de chunks de tamanho cem
+
+622
+01:19:14.960 --> 01:19:27.689
+Marcelo Tomio Hama: e beleza. Eu peguei e fiz a primeira leitura deu ali cem chunks, cem bytes de Chuck. Mas poxa. Agora eu quero pegar e fazer um deslocamento aqui da posição atual, que é o cem para
+
+623
+01:19:27.980 --> 01:19:43.350
+Marcelo Tomio Hama: o cento e trinta. O que eu vou fazer? Eu vou fazer o Cur, o Set Cur, que é o valor um nesse caso, e vou passar para o trinta como pagamento. Então ele vai somar o valor que eu estou atualmente, que é o cem mais o trinta do offset.
+
+624
+01:19:43.740 --> 01:19:56.850
+Marcelo Tomio Hama: Agora, se eu quiser pegar e começar no fim, eu pego e passo o pagamento dois. Então ele vai entender que é lá do fim que eu vou querer fazer o Sic e aí dentro disso. Aí você pode passar o parâmetro que você quer
+
+625
+01:19:57.160 --> 01:20:02.670
+Marcelo Tomio Hama: mover dentro do arquivo. Nesse caso, aqui você ia passar um valor diferente. Vitor.
+
+626
+01:20:05.030 --> 01:20:06.670
+Victor BITTENCOURT: Entendi, entendi.
+
+627
+01:20:06.670 --> 01:20:10.969
+Marcelo Tomio Hama: Comentar alguma coisa? Ah, não. Eu pensei que você estava levantando a mão.
+
+628
+01:20:13.440 --> 01:20:27.530
+Marcelo Tomio Hama: Beleza, o que nós temos? Operações com arquivos. Então o Python oferece aqui algumas maneiras de você manipular arquivo não é somente escrever ou ler. Você pode manipular também
+
+629
+01:20:27.730 --> 01:20:29.730
+Marcelo Tomio Hama: aqui dentro da função
+
+630
+01:20:30.090 --> 01:20:40.670
+Marcelo Tomio Hama: importe Ios dentro do Ios. Você tem a funçãozinha. Exist e o que o existe faz. Ele verifica se um arquivo. Existe
+
+631
+01:20:41.100 --> 01:20:45.129
+Marcelo Tomio Hama: então o Sp existe Ups.
+
+632
+01:20:46.690 --> 01:20:57.659
+Marcelo Tomio Hama: Ele vai devolver True. Por quê? Porque o arquivo existe aqui. Então vocês conseguem fazer um conjunto de verificações e manipulações de arquivo. Vocês têm aí o
+
+633
+01:20:58.440 --> 01:21:01.909
+Marcelo Tomio Hama: Lexistes. Vocês têm aqui também o
+
+634
+01:21:02.050 --> 01:21:17.940
+Marcelo Tomio Hama: a checagem de tipo. Então, quando eu faço West Pf, eu chamo aqui Sp Style. Se o arquivo. Se o Pf é passado como pagamento for um arquivo, ele devolve True.
+
+635
+01:21:18.230 --> 01:21:27.449
+Marcelo Tomio Hama: E aí você também tem aqui a pontapate dele, que é o digitório. Se ele for um digitório, ele retorna. True. Então, só para a gente fazer esse segundo teste
+
+636
+01:21:27.550 --> 01:21:35.730
+Marcelo Tomio Hama: é uns aqui. Eu vou fazer isso aqui. Ó, nem me é recebe aqui o ups, né?
+
+637
+01:21:41.360 --> 01:21:42.430
+Marcelo Tomio Hama: Cheguei aqui
+
+638
+01:21:42.550 --> 01:21:49.319
+Marcelo Tomio Hama: o nome do arquivo. Porque não vai ser útil nesse caso, aqui eu estou checando. Se o diretório atual é
+
+639
+01:21:49.560 --> 01:21:53.870
+Marcelo Tomio Hama: um giratório, isso aqui obviamente vai devolver tudo, né?
+
+640
+01:21:54.120 --> 01:21:55.349
+Marcelo Tomio Hama: É tudo, né?
+
+641
+01:21:57.380 --> 01:22:02.189
+Marcelo Tomio Hama: Agora, se eu faço aqui, se eu passo aqui
+
+642
+01:22:07.440 --> 01:22:09.180
+Marcelo Tomio Hama: porque eu faço name.
+
+643
+01:22:09.590 --> 01:22:12.680
+Marcelo Tomio Hama: Tá vendo isso aqui, acho que devolver falso, né?
+
+644
+01:22:13.690 --> 01:22:19.729
+Marcelo Tomio Hama: Beleza? Isso por quê? Porque o Upst não é um diretório. É um arquivo.
+
+645
+01:22:22.570 --> 01:22:23.460
+Marcelo Tomio Hama: Beleza.
+
+646
+01:22:24.330 --> 01:22:28.279
+Marcelo Tomio Hama: Não é isso que a gente tem. A gente tem o copy. Vocês podem copiar um arquivo.
+
+647
+01:22:28.460 --> 01:22:45.249
+Marcelo Tomio Hama: Ele vai fazer bastante uma cópia. Ele faz aqui também o move. Arquivo. Pega de um lado, coloca no outro, faz uma cópia e apaga a origem. Isso aí é o move. E vocês também têm aqui o Rename trocarnome. Então você pega o arquivo ou o diretório,
+
+648
+01:22:45.820 --> 01:22:55.320
+Marcelo Tomio Hama: e troca de nome, umas manipulações. Aí, outras aqui que a gente tem checagem de link.
+
+649
+01:22:56.160 --> 01:22:59.009
+Marcelo Tomio Hama: É criar link simbólico.
+
+650
+01:22:59.070 --> 01:23:17.850
+Marcelo Tomio Hama: Mudar aqui. Permissão de arquivo. Então isso aqui é baseado no Unix. Tá, pessoal, quem aí já mexeu com o prompt do Linux. Vai se recordar um pouquinho disso. O que é o C Mold? O Sean também. O C Allner, que é o dono do arquivo
+
+651
+01:23:18.960 --> 01:23:29.700
+Marcelo Tomio Hama: aqui no caso. Eu estou mudando. O King é o Auger. O arquivo está passando ele aqui para um grupo de usuários, ou então um usuário especificamente falando. E aqui o delete. Posso também apagar o arquivo?
+
+652
+01:23:32.760 --> 01:23:35.270
+Marcelo Tomio Hama: Beleza, pessoal, dúvidas aí, até o momento.
+
+653
+01:23:40.980 --> 01:23:42.430
+gabriel.diniz: Tranquilos.
+
+654
+01:23:43.810 --> 01:23:49.379
+Marcelo Tomio Hama: Pessoal, temos últimos três minutos aqui. Eu queria passar para vocês rapidinho aqui
+
+655
+01:23:49.550 --> 01:23:53.750
+Marcelo Tomio Hama: a Tt. Número três que eu até esqueci de passar no começo da aula.
+
+656
+01:23:56.300 --> 01:24:03.340
+Marcelo Tomio Hama: Então, número três, tá, eu acho que já está disponível para vocês.
+
+657
+01:24:04.870 --> 01:24:10.770
+Marcelo Tomio Hama: E, bom, a ideia é que vocês não façam uso de
+
+658
+01:24:10.950 --> 01:24:21.210
+Marcelo Tomio Hama: I age. Negativa, né? Porque as nossas aulas aqui são bastante básicas, bastante elementares. E eu acho que se vocês quiserem fazer o uso de I Age negativo. Isso aqui vai ficar
+
+659
+01:24:21.420 --> 01:24:35.040
+Marcelo Tomio Hama: muito, mas muito fácil, né? Ela tem que fazer muito rapidamente. Então acho que é por conta disso que a gente sugere aqui. Não fazer uso de forma nenhuma de a, né? Os exercícios aqui são bem diretos. Tá bom.
+
+660
+01:24:35.780 --> 01:24:40.539
+Marcelo Tomio Hama: Basicamente, o que a gente tem aqui no Tp número três
+
+661
+01:24:41.260 --> 01:24:43.810
+Marcelo Tomio Hama: aqui, fazendo a leitura para vocês.
+
+662
+01:24:43.860 --> 01:24:52.389
+Marcelo Tomio Hama: Esse Tp: aqui. Eu peguei ontem, tá? Mas assim, do que eu fiz, a revisão não está nada complicado aqui. Não tá? Ele recorda que
+
+663
+01:24:52.430 --> 01:25:04.779
+Marcelo Tomio Hama: alguns conteúdos que acho que vocês já viram. Então, olha só. Implementação aqui de lista. Então, acesso aqui, acessos recebendo aqui uma dupla de Streams. Então, Ana Bruno,
+
+664
+01:25:05.000 --> 01:25:13.560
+Marcelo Tomio Hama: Ana, Carla. E aí a saída. Esse aqui é o exercício número um. Basicamente pintar aqui uma.
+
+665
+01:25:14.790 --> 01:25:18.319
+Marcelo Tomio Hama: Uma uma lista, né?
+
+666
+01:25:19.000 --> 01:25:22.410
+Marcelo Tomio Hama: Aqui no número dois, a gente vê também.
+
+667
+01:25:22.730 --> 01:25:27.340
+Marcelo Tomio Hama: Ah, é o uso já dos arquivos.
+
+668
+01:25:27.630 --> 01:25:30.059
+Marcelo Tomio Hama: Conforme a gente vai fazendo aqui
+
+669
+01:25:31.230 --> 01:25:34.900
+Marcelo Tomio Hama: as implementações. Você já vem aqui. O uso do input.
+
+670
+01:25:35.400 --> 01:25:38.350
+Marcelo Tomio Hama: Então para a entrega.
+
+671
+01:25:38.540 --> 01:25:48.629
+Marcelo Tomio Hama: Python, dados, a resposta esperada. Acho que nesse momento que a gente só está lidando com a entrada e saída. Nem o uso de arquivo, por enquanto,
+
+672
+01:25:49.320 --> 01:25:51.459
+Marcelo Tomio Hama: no exercício número três.
+
+673
+01:25:53.780 --> 01:26:00.489
+Marcelo Tomio Hama: Então pode ser aqui a tarefa desenvolver meu problema, que gerencia uma lista
+
+674
+01:26:00.660 --> 01:26:06.619
+Marcelo Tomio Hama: de presença e criativa, permitindo adicionar e remover nomes, garantindo que não haja repetições.
+
+675
+01:26:08.340 --> 01:26:21.379
+Marcelo Tomio Hama: Na verdade, aqui, pessoal, o Tp número três não vai tocar nesses temas aqui de manipulação de arquivo. Muito mais. Os temas que vocês já viram nas aulas anteriores, eu presumo.
+
+676
+01:26:22.690 --> 01:26:27.330
+Marcelo Tomio Hama: Então, aqui é manipulação de lista Set.
+
+677
+01:26:28.580 --> 01:26:31.190
+Marcelo Tomio Hama: É possível fazermos
+
+678
+01:26:31.510 --> 01:26:38.799
+Marcelo Tomio Hama: uns exercícios parecidos com o Dp3 em aula? É possível. Sim, tá, deixa eu ver quem serve isso?
+
+679
+01:26:39.410 --> 01:26:45.639
+Marcelo Tomio Hama: A gente pode fazer sem problemas na aula que vem. Eu trago algumas implementações aqui parecidas. Tá bom,
+
+680
+01:26:45.930 --> 01:26:53.829
+Marcelo Tomio Hama: mas eu acho que você passou nos passapens realmente, Lucas. Aqui
+
+681
+01:26:55.050 --> 01:27:06.740
+Marcelo Tomio Hama: o Tp que ele é passado é sempre baseado no conteúdo anterior. Então, como a gente está na etapa seis, a etapa seis não vai trazer
+
+682
+01:27:08.480 --> 01:27:14.300
+Marcelo Tomio Hama: o Tp número três não vai trazer o conteúdo da aula que a gente passou agora,
+
+683
+01:27:14.470 --> 01:27:18.270
+Marcelo Tomio Hama: mas assim. Sem problema. Tá, pessoal. A gente pega aqui a quarta feira
+
+684
+01:27:18.540 --> 01:27:22.360
+Marcelo Tomio Hama: e eu pego alguns exercícios aqui para a gente fazer juntos.
+
+685
+01:27:23.310 --> 01:27:26.010
+marcos.jose: Qual que é a data de entrega? Professor do Tp3.
+
+686
+01:27:27.440 --> 01:27:32.329
+Marcelo Tomio Hama: Eu acho que deve estar próximo aí. Viu? É um ponto de atenção aí para vocês.
+
+687
+01:27:32.330 --> 01:27:35.279
+lucas.histirari: É dia um de um de Junho.
+
+688
+01:27:36.020 --> 01:27:37.939
+Marcelo Tomio Hama: Obrigado. Aí, Lucas.
+
+689
+01:27:38.880 --> 01:27:47.599
+Marcelo Tomio Hama: Acho que de onde assim não é sugerido vocês usarem o uso de Age neg negativa. Mas
+
+690
+01:27:47.840 --> 01:27:59.829
+Marcelo Tomio Hama: eu particularmente não vejo problema nenhum de vocês até fazerem em grupos, em mais pessoas juntas, tirando dúvidas umas das outras. E aí, depois,
+
+691
+01:28:00.080 --> 01:28:04.970
+Marcelo Tomio Hama: na hora de fazer a entrega do Tp. Claro, cada um país de maneira individualizada,
+
+692
+01:28:05.300 --> 01:28:10.289
+Marcelo Tomio Hama: eu acho até que incentiva um pouquinho da conexão e do networking de vocês.
+
+693
+01:28:14.970 --> 01:28:20.449
+Marcelo Tomio Hama: Como os Tps dão uma nota para a gente. É muito legal fazermos os Tps juntos em Halo.
+
+694
+01:28:21.240 --> 01:28:27.159
+Marcelo Tomio Hama: O nosso amigo disse: a gente pode fazer, tá, Gabriel. A única ressalva que eu trago
+
+695
+01:28:27.240 --> 01:28:43.440
+Marcelo Tomio Hama: é que se a gente pegar e utilizar muito do tempo da aula para resolver. Exercício de Tp. A gente acaba, não tendo o tempo para conseguir passar o conteúdo, que assim são duas partes aqui. Eu nem comentei aqui da manipulação do Jason.
+
+696
+01:28:47.340 --> 01:28:51.079
+Marcelo Tomio Hama: Sim, claro, Gabriel, a gente passa alguns ali.
+
+697
+01:28:51.590 --> 01:28:57.340
+Marcelo Tomio Hama: Não precisa ser tudo. A gente reserva ali. Acho que uns trinta minutos da próxima aula, tá,
+
+698
+01:29:04.340 --> 01:29:05.250
+Marcelo Tomio Hama: beleza?
+
+699
+01:29:06.950 --> 01:29:08.429
+Marcelo Tomio Hama: Deixa eu ver aqui,
+
+700
+01:29:13.500 --> 01:29:17.920
+Marcelo Tomio Hama: pessoal. Então, obrigado de novo, né?
+
+701
+01:29:18.190 --> 01:29:22.600
+Marcelo Tomio Hama: O Ppt está disponível para vocês. Vocês podem pegar o conteúdo aí,
+
+702
+01:29:22.740 --> 01:29:30.500
+Marcelo Tomio Hama: estudar na casa de vocês. Aí, até de repente, adiantar algum entendimento. E na quarta feira. A gente só tira dúvidas.
+
+703
+01:29:31.250 --> 01:29:34.340
+Marcelo Tomio Hama: E acho que é isso.
+
+704
+01:29:34.900 --> 01:29:40.440
+Marcelo Tomio Hama: Dez e três aqui. Acho que dá para a gente encerrar aqui no bagagem,
+
+705
+01:29:40.670 --> 01:29:47.699
+Marcelo Tomio Hama: beleza, galera. Espero que vocês tenham curtido. Tenham gostado. E aí a gente se vê quarta feira.
+
+706
+01:29:50.880 --> 01:29:52.069
+Ramon Telles da Silva: Eu sou um abraço.
+
+707
+01:29:52.950 --> 01:29:56.899
+Marcelo Tomio Hama: Bom descanso. Boa noite para todos e todos.
+
