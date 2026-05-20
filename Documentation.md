@@ -125,6 +125,13 @@ Runners `ubuntu-latest` na nuvem GitHub **não** alcançam `127.0.0.1` na sua m�
 - **Index gap na UI:** aula no catálogo mas ausente do BM25 → `ACL_META` com `reason: index_gap` (ver documentação KernelBot).
 - Não há correção automática de conteúdo nem re-ingest fora deste workflow.
 
+### Opção B2 — ingest unificado (release 2026-05-20)
+
+- **J2** persiste 1 documento/lição (`meta_header + body`) sem chunking MySQL; chunking BM25 (~500/50, meta só no chunk 0) no KernelBot RAM.
+- **Validação pré-UPSERT:** `MAX_CONTENT_CHARS=4_000_000` em `ingest-knowledge.py` — lição rejeitada com erro explícito em `ingest-report.json` (mitiga OOM na origem).
+- **Erros sanitizados:** `_sanitize_error` redige `password=` em stderr/relatório (sem stack trace no CI).
+- **Backlog pós-deploy:** substituir validação OOM pós-fetch por `LIMIT` SQL / validação Job 2 ISS; expandir sensitive log sanitizer (KernelBot `redact_secrets`).
+
 ### Artefatos
 
 Relatórios JSON em [`.github/reports/`](.github/reports/) (uploadados como artifacts GHA): `validate-report.json`, `ingest-report.json`, `reload-report.json`, `verify-report.json`.

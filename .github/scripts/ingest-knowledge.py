@@ -2,10 +2,10 @@
 """
 Ingest ISS content/lessons.json into KernelBot MySQL `knowledge` table.
 
-Lê JSONs enriquecidos em jsons/<discipline>/, fatia o conteúdo (~500 palavras,
-overlap 50 — espelha KernelBot/engine/database.py), prefixa cada chunk com
-cabeçalho de contexto e persiste todos os chunks concatenados com \\n\\n no
-campo `content` (uma row por lição).
+Lê JSONs enriquecidos em jsons/<discipline>/, prefixa o body com bloco de
+metadados léxicos (Opção B) e persiste um documento unificado por lição no
+campo `content`. O chunking BM25 (~500 palavras, overlap 50) ocorre no
+KernelBot/engine/database.py em RAM.
 
 Normalization matches .github/scripts/validate-catalog.mjs (strip, lower, _ → -).
 """
@@ -29,11 +29,21 @@ REPORT_PATH = REPORT_DIR / "ingest-report.json"
 
 FRONTMATTER_RE = re.compile(r"\A---\r?\n.*?\r?\n---\r?\n?", re.DOTALL)
 
-# Espelha KernelBot/engine/database.py (DB_CHUNK_WORDS / DB_CHUNK_OVERLAP)
-CHUNK_WORDS = 500
-CHUNK_OVERLAP = 50
-# Separador entre chunks enriquecidos na string persistida em MySQL (1 row/lição)
-CHUNK_SEPARATOR = "\n\n"
+META_START = "[CONCEITOS E KEYWORDS DA AULA PARA INDEXAÇÃO LÉXICA]"
+META_END = "====== FIM DOS METADADOS ======"
+
+# Alinhado com KernelBot/engine/database.py — mitiga OOM na origem (Job 2).
+MAX_CONTENT_CHARS = 4_000_000
+
+_SENSITIVE_ERR_RE = re.compile(
+    r"(password\s*[=:]\s*)[^\s,\)\'\"]+", re.IGNORECASE
+)
+
+
+def _sanitize_error(exc: BaseException | str) -> str:
+    """Evita vazar credenciais em stderr / ingest-report.json."""
+    return _SENSITIVE_ERR_RE.sub(r"\1***", str(exc))
+
 
 UPSERT_SQL = """
 INSERT INTO knowledge (discipline, slug, title, `order`, content, active)
@@ -65,58 +75,27 @@ def lesson_json_path(discipline: str, slug: str, order: int) -> Path:
     return JSONS_DIR / discipline / f"{discipline}__{order:02d}__{slug}.json"
 
 
-def build_context_header(
+def build_meta_header(
     discipline: str,
     name: str,
     concepts: list,
     keywords: list,
     learning_objectives: list,
 ) -> str:
-    concepts_str = ", ".join(str(c) for c in concepts)
-    keywords_str = ", ".join(str(k) for k in keywords)
-    objectives_str = " ".join(str(o) for o in learning_objectives)
-    return (
-        f"[CONTEXTO DA AULA] Disciplina: {discipline} | Título: {name} | "
-        f"Conceitos: {concepts_str} | Keywords: {keywords_str} | "
-        f"Objetivos: {objectives_str}\n\n"
+    concepts_str = ", ".join(str(c) for c in concepts) if concepts else ""
+    keywords_str = ", ".join(str(k) for k in keywords) if keywords else ""
+    objectives_str = (
+        "; ".join(str(o) for o in learning_objectives) if learning_objectives else ""
     )
-
-
-def chunk_text_words(text: str, chunk_words: int = CHUNK_WORDS, overlap: int = CHUNK_OVERLAP) -> list[str]:
-    """Divide texto em janelas de ~chunk_words palavras com overlap (espelha database.py)."""
-    words = text.split()
-    if not words:
-        return []
-    chunks: list[str] = []
-    start = 0
-    while start < len(words):
-        end = min(start + chunk_words, len(words))
-        chunks.append(" ".join(words[start:end]))
-        if end == len(words):
-            break
-        start += chunk_words - overlap
-    return chunks
-
-
-def build_enriched_content(
-    discipline: str,
-    name: str,
-    concepts: list,
-    keywords: list,
-    learning_objectives: list,
-    raw_content: str,
-) -> str:
-    header = build_context_header(discipline, name, concepts, keywords, learning_objectives)
-    body = strip_frontmatter(raw_content)
-    if not body.strip():
-        raise ValueError("conteúdo vazio após frontmatter")
-
-    text_chunks = chunk_text_words(body)
-    if not text_chunks:
-        raise ValueError("conteúdo sem palavras após frontmatter")
-
-    enriched = [f"{header}{chunk}" for chunk in text_chunks]
-    return CHUNK_SEPARATOR.join(enriched)
+    return (
+        f"{META_START}\n"
+        f"Disciplina: {discipline}\n"
+        f"Título: {name}\n"
+        f"Conceitos: {concepts_str}\n"
+        f"Keywords: {keywords_str}\n"
+        f"Objetivos: {objectives_str}\n"
+        f"{META_END}\n\n"
+    )
 
 
 def _as_str_list(value: object, field: str) -> list:
@@ -152,14 +131,18 @@ def load_lesson_json(discipline: str, slug: str, order: int) -> str:
     keywords = _as_str_list(data.get("keywords"), "keywords")
     learning_objectives = _as_str_list(data.get("learning_objectives"), "learning_objectives")
 
-    return build_enriched_content(
+    meta_header = build_meta_header(
         discipline_val,
         name,
         concepts,
         keywords,
         learning_objectives,
-        raw_content,
     )
+    body = strip_frontmatter(raw_content)
+    if not body.strip():
+        raise ValueError("conteúdo vazio após frontmatter")
+
+    return meta_header + body
 
 
 def load_lessons() -> list[dict]:
@@ -218,9 +201,9 @@ def main() -> int:
     try:
         lessons = load_lessons()
     except Exception as exc:
-        errors.append(str(exc))
+        errors.append(_sanitize_error(exc))
         write_report({**report_base, "errors": errors})
-        print(f"Ingest falhou: {exc}", file=sys.stderr)
+        print(f"Ingest falhou: {_sanitize_error(exc)}", file=sys.stderr)
         return 1
 
     rows: list[tuple[str, str, str, int, str]] = []
@@ -254,7 +237,14 @@ def main() -> int:
         try:
             content = load_lesson_json(discipline, slug, order_int)
         except Exception as exc:
-            errors.append(f"{prefix} ({key}): {exc}")
+            errors.append(f"{prefix} ({key}): {_sanitize_error(exc)}")
+            continue
+
+        if len(content) > MAX_CONTENT_CHARS:
+            errors.append(
+                f"{prefix} ({key}): content excede {MAX_CONTENT_CHARS} caracteres "
+                f"({len(content)}) — rejeitado antes do UPSERT"
+            )
             continue
 
         rows.append((discipline, slug, title, order_int, content))
@@ -278,9 +268,9 @@ def main() -> int:
     try:
         conn = db_connect()
     except Exception as exc:
-        errors.append(f"conexão MySQL: {exc}")
+        errors.append(f"conexão MySQL: {_sanitize_error(exc)}")
         write_report({**report_base, "errors": errors, "processed_keys": processed_keys})
-        print(f"Ingest falhou: {exc}", file=sys.stderr)
+        print(f"Ingest falhou: {_sanitize_error(exc)}", file=sys.stderr)
         return 1
 
     try:
@@ -306,7 +296,7 @@ def main() -> int:
             conn.commit()
     except Exception as exc:
         conn.rollback()
-        errors.append(str(exc))
+        errors.append(_sanitize_error(exc))
         write_report(
             {
                 **report_base,
@@ -316,7 +306,7 @@ def main() -> int:
                 "deactivated_count": 0,
             }
         )
-        print(f"Ingest falhou (rollback): {exc}", file=sys.stderr)
+        print(f"Ingest falhou (rollback): {_sanitize_error(exc)}", file=sys.stderr)
         return 1
 
     report = {
