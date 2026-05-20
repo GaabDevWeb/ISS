@@ -1,0 +1,216 @@
+name: Sync KernelBot knowledge
+
+on:
+  push:
+    paths:
+      - "content/**"
+      - "content/lessons.json"
+      - "content/search-index.json"
+  pull_request:
+    paths:
+      - "content/**"
+      - "content/lessons.json"
+      - "content/search-index.json"
+  workflow_dispatch:
+    inputs:
+      skip_ingest:
+        description: "1 = pular job ingest (só validar)"
+        required: false
+        type: string
+        default: "0"
+
+concurrency:
+  group: kernelbot-sync-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validar catálogo ISS
+        run: node .github/scripts/validate-catalog.mjs
+
+      - name: Upload validate-report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validate-report
+          path: .github/reports/validate-report.json
+          if-no-files-found: ignore
+
+  # Secrets obrigatórios no repositório: KB_DB_HOST, KB_DB_PORT, KB_DB_USER, KB_DB_PASSWORD, KB_DB_NAME
+  ingest:
+    needs: validate
+    if: github.event_name != 'pull_request' && github.event.inputs.skip_ingest != '1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pymysql
+      - name: Ingest to MySQL
+        env:
+          DB_HOST: ${{ secrets.KB_DB_HOST }}
+          DB_PORT: ${{ secrets.KB_DB_PORT }}
+          DB_USER: ${{ secrets.KB_DB_USER }}
+          DB_PASSWORD: ${{ secrets.KB_DB_PASSWORD }}
+          DB_NAME: ${{ secrets.KB_DB_NAME }}
+        run: python .github/scripts/ingest-knowledge.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ingest-report
+          path: .github/reports/ingest-report.json
+
+  # Secrets: KERNELBOT_CHAT_URL (ex. https://host/chat), KERNELBOT_RELOAD_TOKEN (= ACL_RELOAD_BEARER_TOKEN no KernelBot)
+  reload:
+    needs: [validate, ingest]
+    if: |
+      always() &&
+      needs.validate.result == 'success' &&
+      github.event_name != 'pull_request' &&
+      (needs.ingest.result == 'success' ||
+       (github.event_name == 'workflow_dispatch' && github.event.inputs.skip_ingest == '1'))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Reload índice KernelBot (/reload SSE)
+        env:
+          KERNELBOT_CHAT_URL: ${{ secrets.KERNELBOT_CHAT_URL }}
+          KERNELBOT_RELOAD_TOKEN: ${{ secrets.KERNELBOT_RELOAD_TOKEN }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+        run: node .github/scripts/reload-kernelbot.mjs
+
+      - name: Upload reload-report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reload-report
+          path: .github/reports/reload-report.json
+          if-no-files-found: ignore
+
+  verify:
+    needs: [validate, reload]
+    if: |
+      always() &&
+      (needs.reload.result == 'success' ||
+       github.event.inputs.skip_ingest == '1')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download validate-report
+        uses: actions/download-artifact@v4
+        with:
+          name: validate-report
+          path: .github/reports
+
+      - name: Download reload-report
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: reload-report
+          path: .github/reports
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar PyMySQL
+        run: pip install pymysql
+
+      - name: Verificar sync (SSOT + MySQL + RAM)
+        env:
+          DB_HOST: ${{ secrets.KB_DB_HOST }}
+          DB_PORT: ${{ secrets.KB_DB_PORT }}
+          DB_USER: ${{ secrets.KB_DB_USER }}
+          DB_PASSWORD: ${{ secrets.KB_DB_PASSWORD }}
+          DB_NAME: ${{ secrets.KB_DB_NAME }}
+          KERNELBOT_CHAT_URL: ${{ secrets.KERNELBOT_CHAT_URL }}
+          KERNELBOT_RELOAD_TOKEN: ${{ secrets.KERNELBOT_RELOAD_TOKEN }}
+          KERNELBOT_HEALTH_URL: ${{ vars.KERNELBOT_HEALTH_URL }}
+        run: node .github/scripts/verify-kernelbot-sync.mjs
+
+      - name: Upload verify-report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verify-report
+          path: .github/reports/verify-report.json
+          if-no-files-found: ignore
+
+  notify:
+    needs: [validate, ingest, reload, verify]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download validate-report
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: validate-report
+          path: .github/reports
+
+      - name: Download reload-report
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: reload-report
+          path: .github/reports
+
+      - name: Download verify-report
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: verify-report
+          path: .github/reports
+
+      - name: Ops notify (Discord)
+        if: always()
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          JOB_STATUS: ${{ (
+            needs.validate.result == 'failure' ||
+            needs.ingest.result == 'failure' ||
+            needs.reload.result == 'failure' ||
+            needs.verify.result == 'failure'
+          ) && 'failure' || (
+            needs.validate.result == 'cancelled' ||
+            needs.ingest.result == 'cancelled' ||
+            needs.reload.result == 'cancelled' ||
+            needs.verify.result == 'cancelled'
+          ) && 'cancelled' || 'success' }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          PIPELINE_PHASE: kernelbot-sync
+          NEEDS_VALIDATE: ${{ needs.validate.result }}
+          NEEDS_INGEST: ${{ needs.ingest.result }}
+          NEEDS_RELOAD: ${{ needs.reload.result }}
+          NEEDS_VERIFY: ${{ needs.verify.result }}
+        run: bash .github/scripts/ops-notify.sh

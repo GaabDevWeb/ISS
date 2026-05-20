@@ -2,6 +2,8 @@
 
 > **Infet Students Summary**: plataforma estática (HTML, CSS, JavaScript) para leitura de aulas em Markdown, exercícios e acompanhamento de progresso no navegador (localStorage).
 
+> **SSOT de documentação do projeto:** [`documentation.md`](../documentation.md) na raiz do repositório (inclui [Pipeline de Sincronização e Ingestão Automática — Fase 5b](../documentation.md#pipeline-de-sincronização-e-ingestão-automática-fase-5b)). Este ficheiro descreve a plataforma estática ISS para agentes; não duplica o pipeline KernelBot.
+
 ## Índice
 
 - [Visão geral](#visão-geral)

@@ -5,6 +5,7 @@
 ## Índice
 
 - [Pipeline automático (scraper → Actions → site)](#pipeline-automático-scraper--actions--site)
+- [Pipeline de Sincronização e Ingestão Automática (Fase 5b)](#pipeline-de-sincronização-e-ingestão-automática-fase-5b)
 - [Visão geral](#visão-geral)
 - [Arquitetura e fluxo](#arquitetura-e-fluxo)
 - [Estrutura de pastas](#estrutura-de-pastas)
@@ -33,6 +34,100 @@ Resumo:
 3. **GitHub Pages** — serve o site estático que lê `content/`.
 
 Convenção VTT: `downloads/<Pasta>/Aula_NN_-_DDMMYYYY.vtt`. Configuração: `config/vtt-to-content.json`, `config/documents-context.json`, `agents/content-summary-*.md`.
+
+---
+
+## Pipeline de Sincronização e Ingestão Automática (Fase 5b)
+
+Sincroniza o **SSOT** do ISS (`content/lessons.json`, Markdown e `search-index.json`) com o MySQL do **KernelBot** e reconstrói o índice BM25 em RAM. Documentação do lado do chatbot (endpoints `/reload`, `/health/catalog`): repositório [KernelBot](https://github.com/GaabDevWeb/KernelBot) — `documentation.md`.
+
+**Workflow:** [`.github/workflows/sync-kernelbot-knowledge.yml`](.github/workflows/sync-kernelbot-knowledge.yml)
+
+**Disparo:** `push` / `pull_request` em `content/**`, `content/lessons.json`, `content/search-index.json`; `workflow_dispatch` com `skip_ingest=1` (só validar + reload + verify, sem ingest).
+
+### Diagrama (Jobs 1–5)
+
+```mermaid
+flowchart TD
+  subgraph triggers [Disparo]
+    PUSH[push em content/]
+    PR[pull_request]
+    WD[workflow_dispatch]
+  end
+
+  J1[J1 validate\nvalidate-catalog.mjs]
+  J2[J2 ingest\ningest-knowledge.py]
+  J3[J3 reload\nreload-kernelbot.mjs]
+  J4[J4 verify\nverify-kernelbot-sync.mjs]
+  J5[J5 notify\nops-notify.sh]
+
+  PUSH --> J1
+  PR --> J1
+  WD --> J1
+
+  J1 -->|success| J2
+  J1 -->|PR ou skip_ingest| J3
+  J2 -->|success push/main| J3
+  J3 --> J4
+  J4 --> J5
+  J2 --> J5
+  J1 --> J5
+
+  J2 --> MySQL[(MySQL knowledge)]
+  J3 --> KB[KernelBot POST /chat /reload]
+  J4 --> KBH[KernelBot GET /health/catalog]
+  J5 --> Discord[Discord webhook ops]
+```
+
+### Jobs (J1–J5)
+
+| Job | Script | Quando corre | Função |
+|-----|--------|--------------|--------|
+| **J1 `validate`** | [`.github/scripts/validate-catalog.mjs`](.github/scripts/validate-catalog.mjs) | Sempre (push, PR, dispatch) | Valida `lessons.json`, `search-index.json`, `disciplines.json`; normaliza chaves `discipline:slug` (strip, lower, `_` → `-`, alinhado ao KernelBot). Gera [`.github/reports/validate-report.json`](.github/reports/validate-report.json). |
+| **J2 `ingest`** | [`.github/scripts/ingest-knowledge.py`](.github/scripts/ingest-knowledge.py) | `push`/`workflow_dispatch` com ingest (não em PR) | UPSERT em `knowledge` a partir dos `.md`; desativa linhas `active=1` ausentes do SSOT. Requer rede até o MySQL. Relatório: `ingest-report.json`. |
+| **J3 `reload`** | [`.github/scripts/reload-kernelbot.mjs`](.github/scripts/reload-kernelbot.mjs) | Após J1 (+ J2 ok ou `skip_ingest=1`) | `POST` SSE em `KERNELBOT_CHAT_URL` com `message: "/reload"` e Bearer. Rebuild BM25 + refresh de chaves indexadas. Relatório: `reload-report.json`. |
+| **J4 `verify`** | [`.github/scripts/verify-kernelbot-sync.mjs`](.github/scripts/verify-kernelbot-sync.mjs) | Após J3 (ou dispatch com skip ingest) | Tripla verificação: SSOT (`lesson_count` / `validated_keys`), `COUNT(DISTINCT discipline, slug)` no MySQL, `GET /health/catalog` (RAM). Relatório: `verify-report.json`. |
+| **J5 `notify`** | [`.github/scripts/ops-notify.sh`](.github/scripts/ops-notify.sh) | `always()` | Discord **só em falha/cancelamento**; sucesso não pinga ops. |
+
+### Políticas de segurança
+
+- **Secrets no GitHub** (nunca no repositório): `KB_DB_HOST`, `KB_DB_PORT`, `KB_DB_USER`, `KB_DB_PASSWORD`, `KB_DB_NAME`, `KERNELBOT_CHAT_URL`, `KERNELBOT_RELOAD_TOKEN`, `DISCORD_WEBHOOK_URL`. Opcional: variável de repositório `KERNELBOT_HEALTH_URL` (senão derivada de `KERNELBOT_CHAT_URL` → `/health/catalog`).
+- **`KERNELBOT_RELOAD_TOKEN`** deve ser igual a `ACL_RELOAD_BEARER_TOKEN` no `.env` do KernelBot.
+- **PR:** executa apenas **J1** — sem escrita em MySQL nem reload remoto.
+- **Ingest:** aborta com erro se alguma lição falhar; **não** desativa registos no banco se a lista processada estiver vazia (evita wipe acidental).
+- **`/reload` e `/health/catalog`:** exigem `Authorization: Bearer …`; comparação com `secrets.compare_digest` no KernelBot. Sem token configurado: HTTP 503.
+- **Respostas de health:** JSON operacional sem credenciais nem conteúdo de aulas.
+
+### RAM do KernelBot — sem auto-heal
+
+O índice BM25 e o snapshot `indexed_lesson_keys` **não** são atualizados por timer em background (`engine/watcher.py` existe como legado e **não** está ligado ao fluxo atual). A RAM só muda quando:
+
+1. o pipeline **J3** dispara `/reload` após ingest bem-sucedido, ou  
+2. um operador corre `workflow_dispatch` (com ou sem `skip_ingest`) e o job reload/verify corre, ou  
+3. alguém chama manualmente `POST /chat` com `/reload` + Bearer.
+
+Reiniciar o processo do KernelBot também reconstrói a partir do MySQL no boot, mas isso **não** substitui a verificação CI pós-sync.
+
+### Requisito de rede (runners GitHub Actions)
+
+Os jobs **J2–J4** precisam de saída à Internet (ou VPN/firewall configurado) para:
+
+- host/porta MySQL (`KB_DB_*`);
+- URL pública ou interna do KernelBot (`KERNELBOT_CHAT_URL`, `KERNELBOT_HEALTH_URL`);
+- webhook Discord (`DISCORD_WEBHOOK_URL`) no J5 em falha.
+
+Runners `ubuntu-latest` na nuvem GitHub **não** alcançam `127.0.0.1` na sua máquina local — o KernelBot em produção/staging deve estar exposto num host acessível ao runner.
+
+### Limitações conhecidas (BM25 lexical)
+
+- Retrieval é **lexical** (BM25): perguntas com vocabulário diferente do material tendem a `insufficient_context` (hard stop) mesmo com a aula no catálogo.
+- **Catálogo vs índice:** o KernelBot pode ter chave no catálogo ISS (`catalog_only`) ou no índice sem catálogo; J4 falha se `catalog_only_count > 0` após reload.
+- **Index gap na UI:** aula no catálogo mas ausente do BM25 → `ACL_META` com `reason: index_gap` (ver documentação KernelBot).
+- Não há correção automática de conteúdo nem re-ingest fora deste workflow.
+
+### Artefatos
+
+Relatórios JSON em [`.github/reports/`](.github/reports/) (uploadados como artifacts GHA): `validate-report.json`, `ingest-report.json`, `reload-report.json`, `verify-report.json`.
 
 ---
 
