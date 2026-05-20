@@ -17,6 +17,7 @@ STATUS="${JOB_STATUS:-unknown}"
 PIPELINE_SUMMARY="${PIPELINE_SUMMARY:-}"
 LAST_DISCIPLINE_TITLE="${LAST_DISCIPLINE_TITLE:-}"
 LAST_LESSON_TITLE="${LAST_LESSON_TITLE:-}"
+LAST_LESSON_DESCRIPTION="${LAST_LESSON_DESCRIPTION:-}"
 
 PUBLISHED=0
 if [[ "$PIPELINE_SUMMARY" =~ Publicados:\ ([0-9]+) ]]; then
@@ -32,27 +33,30 @@ post_discord() {
 
 # —— Sucesso com lições novas: mensagem para alunos + ping ao cargo ——
 if [[ "$STATUS" == "success" && "$PUBLISHED" -gt 0 ]]; then
+  MESSAGE="${EMOJI_NOTEPAD} **Conteúdo novo acabou de cair no ISS**"
+
   if [[ -n "$LAST_DISCIPLINE_TITLE" ]]; then
-    BODY="A última aula de **${LAST_DISCIPLINE_TITLE}** já está disponível no site com resumo estruturado, conceitos organizados e exemplos práticos."
-  else
-    BODY="A última aula processada já está disponível no site com resumo estruturado, conceitos organizados e exemplos práticos."
+    MESSAGE="${MESSAGE}
+
+${LAST_DISCIPLINE_TITLE}"
   fi
-
-  MESSAGE="${EMOJI_NOTEPAD} **Novo conteúdo publicado no ISS**
-
-${BODY}"
 
   if [[ -n "$LAST_LESSON_TITLE" ]]; then
     MESSAGE="${MESSAGE}
-
 » ${LAST_LESSON_TITLE}"
+  fi
+
+  if [[ -n "$LAST_LESSON_DESCRIPTION" ]]; then
+    MESSAGE="${MESSAGE}
+
+${LAST_LESSON_DESCRIPTION}"
   fi
 
   MESSAGE="${MESSAGE}
 
 🔗 ${ISS_URL}
 
-${EMOJI_COFFEE} Pra revisar rápido, recuperar uma aula perdida ou consultar depois."
+${EMOJI_COFFEE} Tudo organizadinho pra consultar depois sem sofrer no AVA."
 
   PAYLOAD="$(jq -n \
     --arg content "||<@&${ROLE_ID}>||" \

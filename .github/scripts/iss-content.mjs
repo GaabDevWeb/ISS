@@ -257,6 +257,19 @@ function parseFrontmatter(md) {
   return data;
 }
 
+/** Texto curto para notificação Discord (campo `description` do frontmatter). */
+export function lessonNotifyDescription(md, maxChars = 220) {
+  const desc = String(parseFrontmatter(md).description ?? "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!desc) return "";
+  if (desc.length <= maxChars) return desc;
+  let cut = desc.slice(0, maxChars);
+  const sp = cut.lastIndexOf(" ");
+  if (sp > 40) cut = cut.slice(0, sp);
+  return cut.trimEnd() + "…";
+}
+
 function parseHintYaml(block) {
   const data = {};
   for (const line of block.split("\n")) {

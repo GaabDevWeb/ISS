@@ -14,6 +14,7 @@ import {
 import {
   disciplineDisplayTitle,
   findLessonByOrder,
+  lessonNotifyDescription,
   lessonPublishState,
   loadDisciplines,
   loadLessons,
@@ -359,7 +360,10 @@ async function main() {
         `${entry.discipline}/${entry.slug} order=${entry.order}${metaNote}`,
     );
     const discTitle = disciplineDisplayTitle(disciplines, entry.discipline);
-    console.log(`NotifyDiscord: ${discTitle} | ${entry.title}`);
+    const notifyDesc = lessonNotifyDescription(md);
+    console.log(
+      `NotifyDiscord: ${discTitle}\t${entry.title}\t${notifyDesc}`,
+    );
     ok++;
   }
   console.log(

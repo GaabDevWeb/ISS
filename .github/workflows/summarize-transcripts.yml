@@ -91,12 +91,17 @@ jobs:
           LAST="$(grep -E '^Publicado:' summarize.log | tail -1 | sed 's/^Publicado: //' || true)"
           echo "last_published=$LAST" >> "$GITHUB_OUTPUT"
           NOTIFY="$(grep -E '^NotifyDiscord:' summarize.log | tail -1 | sed 's/^NotifyDiscord: //' || true)"
-          DISC_TITLE="${NOTIFY%%|*}"
-          DISC_TITLE="$(echo "$DISC_TITLE" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
-          LESSON_TITLE="${NOTIFY#*|}"
-          LESSON_TITLE="$(echo "$LESSON_TITLE" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
-          echo "last_discipline_title=$DISC_TITLE" >> "$GITHUB_OUTPUT"
-          echo "last_lesson_title=$LESSON_TITLE" >> "$GITHUB_OUTPUT"
+          IFS=$'\t' read -r DISC_TITLE LESSON_TITLE LESSON_DESC <<< "$NOTIFY"
+          DISC_TITLE="$(echo "${DISC_TITLE:-}" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
+          LESSON_TITLE="$(echo "${LESSON_TITLE:-}" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
+          LESSON_DESC="$(echo "${LESSON_DESC:-}" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
+          {
+            echo "last_discipline_title=$DISC_TITLE"
+            echo "last_lesson_title=$LESSON_TITLE"
+            echo "last_lesson_description<<EOF"
+            echo "$LESSON_DESC"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Exportar lições → JSON estruturado
         run: node .github/scripts/export-lessons-json.mjs
@@ -134,6 +139,7 @@ jobs:
           LAST_PUBLISHED: ${{ steps.summarize.outputs.last_published }}
           LAST_DISCIPLINE_TITLE: ${{ steps.summarize.outputs.last_discipline_title }}
           LAST_LESSON_TITLE: ${{ steps.summarize.outputs.last_lesson_title }}
+          LAST_LESSON_DESCRIPTION: ${{ steps.summarize.outputs.last_lesson_description }}
           COMMIT_INFO: ${{ steps.commit.outputs.commit_info }}
           MAX_FILES: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.max_files || '5' }}
           FORCE_FLAG: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.force || '0' }}
