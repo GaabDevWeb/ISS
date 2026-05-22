@@ -7,7 +7,7 @@ if [[ -z "${DISCORD_WEBHOOK_URL:-}" ]]; then
   exit 0
 fi
 
-# Emojis custom (servidor Discord) e cargo a mencionar (spoiler)
+# Emojis custom do servidor — formato <:nome:id> (obrigatório no Discord)
 EMOJI_NOTEPAD="<:notepad:1469775431237501083>"
 EMOJI_COFFEE="<:coffeepikachu:1469777951867273216>"
 ROLE_ID="1465931358609215520"
@@ -32,36 +32,49 @@ post_discord() {
 }
 
 # —— Sucesso com lições novas: mensagem para alunos + ping ao cargo ——
+# Título com notepad em `content`; detalhes + coffeepikachu no embed (IDs acima).
 if [[ "$STATUS" == "success" && "$PUBLISHED" -gt 0 ]]; then
-  MESSAGE="${EMOJI_NOTEPAD} **Conteúdo novo acabou de cair no ISS**"
+  HEADLINE="${EMOJI_NOTEPAD} **Conteúdo novo acabou de cair no ISS**"
+  EMBED_BODY=""
 
   if [[ -n "$LAST_DISCIPLINE_TITLE" ]]; then
-    MESSAGE="${MESSAGE}
-
-${LAST_DISCIPLINE_TITLE}"
+    EMBED_BODY="${LAST_DISCIPLINE_TITLE}"
   fi
 
   if [[ -n "$LAST_LESSON_TITLE" ]]; then
-    MESSAGE="${MESSAGE}
+    if [[ -n "$EMBED_BODY" ]]; then
+      EMBED_BODY="${EMBED_BODY}
 » ${LAST_LESSON_TITLE}"
+    else
+      EMBED_BODY="» ${LAST_LESSON_TITLE}"
+    fi
   fi
 
   if [[ -n "$LAST_LESSON_DESCRIPTION" ]]; then
-    MESSAGE="${MESSAGE}
+    if [[ -n "$EMBED_BODY" ]]; then
+      EMBED_BODY="${EMBED_BODY}
 
 ${LAST_LESSON_DESCRIPTION}"
+    else
+      EMBED_BODY="${LAST_LESSON_DESCRIPTION}"
+    fi
   fi
 
-  MESSAGE="${MESSAGE}
+  if [[ -n "$EMBED_BODY" ]]; then
+    EMBED_BODY="${EMBED_BODY}
 
-🔗 ${ISS_URL}
+"
+  fi
+  EMBED_BODY="${EMBED_BODY}🔗 ${ISS_URL}
 
 ${EMOJI_COFFEE} Tudo organizadinho pra consultar depois sem sofrer no AVA."
 
   PAYLOAD="$(jq -n \
-    --arg content "||<@&${ROLE_ID}>||" \
+    --arg content "||<@&${ROLE_ID}>||
+
+${HEADLINE}" \
     --arg role "$ROLE_ID" \
-    --arg desc "$MESSAGE" \
+    --arg desc "$EMBED_BODY" \
     '{
       content: $content,
       allowed_mentions: { parse: [], roles: [$role] },
