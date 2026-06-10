@@ -1,2206 +1,2518 @@
 WEBVTT
 
 1
-00:00:11.390 --> 00:00:16.209
-Gesiel Lopes: Pessoal. Boa noite. Vamos aguardar aí só mais dois minutinhos. Já já iniciamos
+00:00:09.250 --> 00:00:14.590
+Gesiel Lopes: Pessoal. Boa noite. Vamos aguardar só dois minutinhos. Já. Já iniciamos.
 
 2
-00:03:54.480 --> 00:03:58.300
-Gesiel Lopes: Opa, pessoal. Vamos lá. Vamos dar início ao nosso.
+00:00:16.180 --> 00:00:20.329
+Gesiel Lopes: Dá uns cinco minutinhos de tolerância. Já. Já iniciamos beleza.
 
 3
-00:05:15.980 --> 00:05:16.850
-Gesiel Lopes: E aí?
+00:02:51.100 --> 00:02:56.630
+Gesiel Lopes: Bom, pessoal, vamos lá. Vamos dar início. Estamos sem mais delongas. Vamos iniciar o nosso encontro.
 
 4
-00:05:17.290 --> 00:05:20.390
-Gesiel Lopes: Então vamos lá. Vamos dar início aí o nosso encontro.
+00:02:57.420 --> 00:03:09.260
+Gesiel Lopes: Então, seja muito bem vindo. Muito bem vinda ao nosso primeiro encontro aqui da disciplina de Python para processamento de dados do segundo ciclo
 
 5
-00:05:21.430 --> 00:05:32.069
-Gesiel Lopes: Então, antes de mais nada, seja muito bem vindo. Muito bem vindo ao nosso segundo encontro aqui da disciplina de Python para processamento de dados do bloco
+00:03:09.500 --> 00:03:21.569
+Gesiel Lopes: do bloco de fundamentos de processamento de dados aqui do Instituto Ifnet. Aqui quem nos fala é o Gesiel Lopes. Vamos dar continuidade nessa
 
 6
-00:05:32.190 --> 00:05:42.460
-Gesiel Lopes: do segundo ciclo do bloco de fundamentos de processamento de dados aqui do Instituto Infinity. Aqui quem nos fala é o Gesiel Lopes.
+00:03:21.740 --> 00:03:32.139
+Gesiel Lopes: desse novo ciclo. Para muitos, acredito eu que a grande maioria, que é a continuidade do bloco de entrada
 
 7
-00:05:42.870 --> 00:05:50.500
-Gesiel Lopes: Aproveito aí para pedir um feedback para você que está aqui ao vivo conosco. Vocês conseguem me ouvir? Bem me ver bem, está tranquilo.
+00:03:32.380 --> 00:03:36.590
+Gesiel Lopes: desse universo ou do ecossistema
 
 8
-00:05:51.950 --> 00:05:53.360
-Gianni Silva Santos: Tranquilo, pessoal.
+00:03:36.950 --> 00:03:53.930
+Gesiel Lopes: de programação. Com a linguagem de programação Python. Então a gente vai agora aprofundar um pouco mais sobre os conceitos da linguagem de programação. Python. Então seja muito bem vindo. Seja muito bem vinda.
 
 9
-00:05:53.760 --> 00:05:58.720
-Gesiel Lopes: Ok? E você que estiver assistindo a gravação. Bom dia. Boa tarde. Boa noite. Enfim,
+00:03:54.040 --> 00:03:58.350
+Gesiel Lopes: Mais uma disciplina aqui do Instituto Infinity.
 
 10
-00:05:58.910 --> 00:06:03.460
-Gesiel Lopes: o horário que você tiver luz acompanhando.
+00:03:58.830 --> 00:04:10.420
+Gesiel Lopes: Você que estiver assistindo a gravação como de praxe, né? Bom dia. Boa tarde. Boa noite. Enfim, o horário que você estiver participando, vendo a gravação desse encontro
 
 11
-00:06:03.820 --> 00:06:06.340
-Gesiel Lopes: Seja também muito bem vindo.
+00:04:11.330 --> 00:04:13.519
+Gesiel Lopes: seja também muito bem vindo.
 
 12
-00:06:06.980 --> 00:06:11.520
-Gesiel Lopes: Sem mais delongas. Vou aqui compartilhar a minha tela com vocês.
+00:04:13.640 --> 00:04:23.890
+Gesiel Lopes: E aí, sem mais delongas, tudo tranquilo com vocês. E aí eu aproveito para perguntar: tem alguém
 
 13
-00:06:12.330 --> 00:06:23.039
-Gesiel Lopes: E aí eu já coloco aqui. Acredito que nesse exato momento, vocês estejam vendo
+00:04:24.170 --> 00:04:37.300
+Gesiel Lopes: que está iniciando o bloco ou começou no infinite a partir dessa disciplina. Alguém não. Sim, não
 
 14
-00:06:24.300 --> 00:06:35.100
-Gesiel Lopes: a minha tela. Vou compartilhar aqui o notebook que nós vamos continuar,
+00:04:37.910 --> 00:04:47.860
+Gesiel Lopes: acredito. Que não. Não é. Todos são som ainda do do bloco passado, tá?
 
 15
-00:06:37.720 --> 00:06:44.419
-Gesiel Lopes: beleza. Então vamos lá então, no nosso último encontro, a gente começou a trabalhar um pouquinho,
+00:04:47.970 --> 00:04:51.370
+Gesiel Lopes: Como os blocos são independentes.
 
 16
-00:06:45.120 --> 00:06:54.930
-Gesiel Lopes: relembrar, melhor dizendo, com alguns conceitos sobre strings. A gente está trabalhando aí. Nesse primeiro momento, recapitulando alguma das
+00:04:51.780 --> 00:04:58.140
+Gesiel Lopes: Pode ser que alguém consiga ou esteja refazendo, precisando refazer
 
 17
-00:06:55.540 --> 00:07:04.249
-Gesiel Lopes: alguns dos conceitos. Alguns dos pontos sobre strings, principalmente que a gente trabalhou na nossa primeira disciplina.
+00:04:58.240 --> 00:05:04.539
+Gesiel Lopes: ou começando nessa disciplina. Por isso que eu gosto de fazer sempre essa pergunta.
 
 18
-00:07:04.910 --> 00:07:05.730
-Gesiel Lopes: Tá bom.
+00:05:04.650 --> 00:05:11.920
+Gesiel Lopes: Para todas as disciplinas do do último trimestre de cada semestre,
 
 19
-00:07:07.300 --> 00:07:21.050
-Gesiel Lopes: E aí dando continuidade. Então a gente viu lá algumas funções úteis. Declaração de de Strings, verificação de Strings
+00:05:12.320 --> 00:05:16.200
+Gesiel Lopes: tanto do terceiro trimestre como do quarto trimestre.
 
 20
-00:07:21.250 --> 00:07:28.199
-Gesiel Lopes: e algumas funções úteis que possam ser utilizadas na manipulação de Strings.
+00:05:16.770 --> 00:05:18.800
+Gesiel Lopes: Aí não, beleza.
 
 21
-00:07:28.800 --> 00:07:38.430
-Gesiel Lopes: Um outro ponto que eu gostaria de trazer ainda sobre String são dois pontos extremamente úteis,
+00:05:18.990 --> 00:05:24.300
+Gesiel Lopes: E quem tiver, por favor, só se manifestar. Sem problema nenhum.
 
 22
-00:07:39.680 --> 00:07:43.830
-Gesiel Lopes: que é a indexação de Strings.
+00:05:25.500 --> 00:05:32.580
+Gesiel Lopes: Então, vamos lá. Um grande prazer retornar aqui com vocês. Vamos dar continuidade.
 
 23
-00:07:44.200 --> 00:07:47.739
-Gesiel Lopes: Então, a gente aprendeu lá na primeira disciplina
+00:05:33.230 --> 00:05:39.350
+Gesiel Lopes: Vou compartilhar aqui a minha tela com vocês. Acredito
 
 24
-00:07:48.050 --> 00:07:54.329
-Gesiel Lopes: que uma String nada mais é do que uma cadeia de caracteres.
+00:05:40.320 --> 00:05:43.560
+Gesiel Lopes: que estejam vendo a minha tela.
 
 25
-00:07:54.840 --> 00:08:00.800
-Gesiel Lopes: Então observe que aí, no caso, eu nem estou me referindo a palavras
+00:05:43.950 --> 00:05:48.250
+Gesiel Lopes: Estão vendo beleza? Vocês aproveitando
 
 26
-00:08:01.000 --> 00:08:07.099
-Gesiel Lopes: ou simplesmente anagramas de forma geral. Mas uma cadeia de caracteres geral,
+00:05:48.420 --> 00:05:55.730
+Gesiel Lopes: quem está aqui ao vivo? Vocês estão me ouvindo? Bem, conseguem me ver? Bem, está tudo tranquilo. O áudio. O vídeo está ok.
 
 27
-00:08:07.440 --> 00:08:20.169
-Gesiel Lopes: é a definição formal de Strings e inclusive, foi a primeira coleção que a gente trabalhou na linguagem, mesmo que, de forma rudimentar.
+00:05:56.420 --> 00:05:59.680
+Gesiel Lopes: Algum delay, alguma interferência?
 
 28
-00:08:21.070 --> 00:08:28.840
-Gesiel Lopes: Que foi a Strings. Ela também pode ser entendida como uma lista de caracteres.
+00:06:00.890 --> 00:06:08.110
+Gesiel Lopes: Tudo tranquilo. O Gabriel deu feedback. O Alan Beleza. Alan Beleza. Gabriel, tudo tranquilo.
 
 29
-00:08:29.040 --> 00:08:39.030
-Gesiel Lopes: E aí, por ser uma lista, a gente consegue utilizar algumas operações de listas da linguagem Python,
+00:06:08.720 --> 00:06:15.530
+Gesiel Lopes: Confirmado. Não deixou fazer aqui uma alguma.
 
 30
-00:08:39.620 --> 00:08:44.990
-Gesiel Lopes: para poder manipular essa String para poder conseguir manipulá la
+00:06:15.640 --> 00:06:29.420
+Gesiel Lopes: Fazer aqui, alguns slides fazer aqui alguns apontamentos antes de a gente. Essa disciplina vai ser muito mão na massa. Até bem mais do que a disciplina passada. Então agora a gente vai.
 
 31
-00:08:45.520 --> 00:08:50.220
-Gesiel Lopes: dentre elas é o que a gente chama de indexação.
+00:06:29.570 --> 00:06:34.760
+Gesiel Lopes: E aí eu vou. A gente vai inclusive sem spoiler. Extrapolar um pouquinho,
 
 32
-00:08:50.700 --> 00:08:59.310
-Gesiel Lopes: Então a gente viu que uma String de forma bem simples tá,
+00:06:35.450 --> 00:06:40.650
+Gesiel Lopes: trazer algumas coisas bem interessantes. Pelo menos eu sou suspeito, como sempre.
 
 33
-00:09:14.910 --> 00:09:17.230
-Gesiel Lopes: então, de forma bem simples.
+00:06:40.980 --> 00:06:45.260
+Gesiel Lopes: Eu sou muito suspeito, é?
 
 34
-00:09:17.340 --> 00:09:27.930
-Gesiel Lopes: Então, quando a gente pensa dentro da linguagem Python com Strings. Então vamos supor
+00:06:45.870 --> 00:06:54.490
+Gesiel Lopes: Então a gente vai trazer umas coisas bem legais da disciplina, mas tá, só para reforçar.
 
 35
-00:09:29.380 --> 00:09:32.330
-Gesiel Lopes: que eu tenho aqui uma String chamada
+00:06:54.670 --> 00:07:00.010
+Gesiel Lopes: Então o principal objetivo dessa disciplina pessoal é continuar
 
 36
-00:09:36.100 --> 00:09:38.400
-Gesiel Lopes: essa cadeia aqui. Alô,
+00:07:00.160 --> 00:07:04.500
+Gesiel Lopes: a adentrada, dar o próximo passo
 
 37
-00:09:44.340 --> 00:09:54.290
-Gesiel Lopes: Alô, Paidon? Tá, então a gente viu que essa String tá
+00:07:04.620 --> 00:07:10.220
+Gesiel Lopes: dentro do ecossistema da linguagem de programação Pipe. Então a gente vai
 
 38
-00:09:54.470 --> 00:10:03.899
-Gesiel Lopes: nada mais é do que uma lista de caracteres formado aqui. Ó,
+00:07:10.330 --> 00:07:14.800
+Gesiel Lopes: pegar tudo que a gente já trabalhou na disciplina passada.
 
 39
-00:10:04.810 --> 00:10:13.919
-Gesiel Lopes: por cada um desses caracteres aqui. Por mais que eu não consiga ver um caractere, o espaço é um caractere válido.
+00:07:15.330 --> 00:07:20.540
+Gesiel Lopes: E vai e vai o pessoal. Então, já que eu
 
 40
-00:10:14.040 --> 00:10:20.159
-Gesiel Lopes: Então a gente pode considerar aqui. Ó, essa lista onde cada letra
+00:07:21.910 --> 00:07:30.570
+Gesiel Lopes: aí volto. Nossa. Em relação à disciplina passada. O pessoal já foi
 
 41
-00:10:21.000 --> 00:10:24.139
-Gesiel Lopes: é um elemento dessa minha cadeia.
+00:07:30.570 --> 00:07:44.819
+Gesiel Lopes: tudo sobre o Ater re entrega do ater. Eu não vou. Peço desculpas aí, mas para a gente não fugir do contexto da disciplina, tá? Eu vou. Eu vou.
 
 42
-00:10:24.480 --> 00:10:31.090
-Gesiel Lopes: E a gente viu que cada elemento recebe um indexador
+00:07:45.760 --> 00:07:51.539
+Gesiel Lopes: Eu vou pedir aqui a compreensão de não comentar
 
 43
-00:10:31.850 --> 00:10:37.630
-Gesiel Lopes: que dentro da linguagem Python, ele começa com zero.
+00:07:51.650 --> 00:08:02.209
+Gesiel Lopes: o máximo que eu posso falar. Ainda não finalizei a correção de todas as outras disciplinas, a correção das atividades, mas
 
 44
-00:10:38.430 --> 00:10:46.760
-Gesiel Lopes: Então aqui eu tenho o zero. Significa dizer que é o índice do primeiro caracter da String.
+00:08:02.780 --> 00:08:06.339
+Gesiel Lopes: até porque eu tenho até sexta feira para fazer essas entregas.
 
 45
-00:10:47.520 --> 00:10:51.129
-Gesiel Lopes: E aí você tem até
+00:08:06.500 --> 00:08:12.470
+Gesiel Lopes: Então, qualquer ponto relacionado à disciplina passada,
 
 46
-00:10:54.730 --> 00:11:01.639
-Gesiel Lopes: até os índices até N menos um, onde n é o tamanho do caracter.
+00:08:12.600 --> 00:08:23.250
+Gesiel Lopes: mandem mensagem pelo infinite online que eu tento ajudá los da melhor forma possível dentro das minhas possibilidades. Senão, a gente vai desvirtuar
 
 47
-00:11:02.610 --> 00:11:13.030
-Gesiel Lopes: Então, nesse caso, aqui. Eu vou ter três, quatro, quatro com
+00:08:23.460 --> 00:08:28.950
+Gesiel Lopes: o que a gente tem programado, já que não é pertinente à disciplina.
 
 48
-00:11:13.710 --> 00:11:20.200
-Gesiel Lopes: com seis.dez. Então o último índice aqui vai ser N dez menos um que é. Nove, tá,
+00:08:29.390 --> 00:08:36.009
+Gesiel Lopes: Então, quem tiver qualquer ponto, qualquer dúvida em relação à disciplina de introdução à programação,
 
 49
-00:11:21.400 --> 00:11:29.280
-Gesiel Lopes: então essa é a cadeia. A nossa, cadeia de
+00:08:36.150 --> 00:08:39.479
+Gesiel Lopes: que foi trabalhada por mim no primeiro trimestre
 
 50
-00:11:29.520 --> 00:11:41.610
-Gesiel Lopes: como o Python identifica uma determinada String. Então, dessa forma, eu consigo acessar elementos da minha String.
+00:08:39.720 --> 00:08:45.040
+Gesiel Lopes: me procura num infinity online. Beleza é o lugar mais adequado, mais.
 
 51
-00:11:41.790 --> 00:11:42.530
-Gesiel Lopes: Tá bom.
+00:08:45.140 --> 00:08:51.380
+Gesiel Lopes: E aí eu consigo atendê los da melhor forma possível beleza.
 
 52
-00:11:45.090 --> 00:11:56.010
-Gesiel Lopes: A partir, eu posso acessar caracteres específicos da minha String a partir da sua posição. E a esse processo, a gente chama de indexação.
+00:08:51.870 --> 00:09:00.039
+Gesiel Lopes: Então eu peço aí só a compreensão para a gente não desvirtuar, senão a gente vai desvirtuar e aí a gente não consegue
 
 53
-00:11:56.220 --> 00:12:01.980
-Gesiel Lopes: Então aqui eu criei aqui uma variável que eu também tirei lá do nosso primeiro encontro.
+00:09:00.400 --> 00:09:01.740
+Gesiel Lopes: avançar.
 
 54
-00:12:03.150 --> 00:12:10.740
-Gesiel Lopes: E aí eu estou criando uma string de múltiplas linhas, tá?
+00:09:02.620 --> 00:09:06.680
+Gesiel Lopes: Dito isso, fechado esse disclaiming, esse parênteses
 
 55
-00:12:11.850 --> 00:12:20.350
-Gesiel Lopes: E eu consigo manipular essa string por exemplo, acessando elementos em particular, por exemplo.
+00:09:06.860 --> 00:09:14.740
+Gesiel Lopes: como eu estava falando, o principal objetivo dessa disciplina é a gente estender um pouquinho
 
 56
-00:12:20.700 --> 00:12:32.909
-Gesiel Lopes: E aí, como é que eu faço para acessar um caracter ou um caracter a partir de uma posição dentro da String, a gente vai utilizar o operador que a gente chama de operador colchate.
+00:09:15.290 --> 00:09:20.290
+Gesiel Lopes: curva. Eu gosto de falar que é a fronteira do conhecimento
 
 57
-00:12:33.600 --> 00:12:41.029
-Gesiel Lopes: E aí você consegue passar o índice dentro desse operador que você quer acessar na sua String.
+00:09:20.300 --> 00:09:31.530
+Gesiel Lopes: sobre a linguagem de programação Python, em relação à disciplina de introdução. Então, na disciplina de introdução, a gente entendeu os conceitos fundamentais básicos da linguagem,
 
 58
-00:12:41.500 --> 00:12:47.690
-Gesiel Lopes: Então, por exemplo, se eu pegar a minha variável poema de Carlos.
+00:09:31.530 --> 00:09:42.270
+Gesiel Lopes: como variáveis funções, testes condicionais, laços de repetição. E agora a gente vai aprofundar um pouco a gente vai pegar tudo isso
 
 59
-00:12:48.870 --> 00:12:50.070
-Gesiel Lopes: Poema
+00:09:42.300 --> 00:09:43.810
+Gesiel Lopes: que foi trabalhado
 
 60
-00:12:51.540 --> 00:13:00.540
-Gesiel Lopes: de Carlos Drummond de Andrade Fragmento um: usar aqui o operador colchete passar. Zero, por exemplo, que é o índice zero.
+00:09:44.280 --> 00:10:00.550
+Gesiel Lopes: na primeira disciplina. E vamos colocar alguns outros pontos. Como a gente vai aprofundar um pouco mais sobre o conceito de coleções. Observe que, na primeira disciplina, a gente veio um pouquinho sobre
 
 61
-00:13:00.780 --> 00:13:02.829
-Gesiel Lopes: Isso significa dizer o quê?
+00:10:00.550 --> 00:10:08.530
+Gesiel Lopes: com coleções, em particular, um tipo de coleção. Então, hoje, nessa disciplina, a gente vai expandir esse conceito.
 
 62
-00:13:03.030 --> 00:13:09.669
-Gesiel Lopes: Que eu estou acessando o primeiro caracter da minha String.
+00:10:08.560 --> 00:10:11.820
+Gesiel Lopes: Então a gente vai aprender a lidar com as
 
 63
-00:13:09.960 --> 00:13:19.109
-Gesiel Lopes: E aí, qual foi o primeiro caracter que ele apresentou? O Barra n? Por quê o Barra n? Eu estou fazendo uma quebra de linha.
+00:10:12.280 --> 00:10:28.530
+Gesiel Lopes: estruturas de dados mais utilizadas dentro da linguagem Pike. Então a gente vai entender quais são os tipos de coleções, as características de cada uma delas. E como usá las, a gente vai
 
 64
-00:13:20.200 --> 00:13:31.299
-Gesiel Lopes: Então ele identificou, por mais que não esteja de forma explícita, como eu faço uma quebra de linha ele mostra para mim. Se eu fizer
+00:10:29.170 --> 00:10:37.649
+Gesiel Lopes: a pegar todo o conhecimento. E vai também aprender nessa disciplina. A manipular arquivos
 
 65
-00:13:31.970 --> 00:13:43.990
-Gesiel Lopes: agora o um, ele vai trazer a letra Q, porque é o segundo caracter
+00:10:37.730 --> 00:10:57.399
+Gesiel Lopes: de arquivos do sistema operacional. Então, como abrir, por exemplo, como criar um arquivo, como abrir um arquivo, por exemplo? Txt: como é que eu faço para criar um arquivo Txt: Como é que eu faço para criar ou trabalhar com arquivos mais complexos?
 
 66
-00:13:44.850 --> 00:13:51.780
-Gesiel Lopes: da minha String. E aí eu posso então pegar, acessar qualquer
+00:10:57.400 --> 00:11:04.460
+Gesiel Lopes: Como uma estrutura específica de arquivo, que é o Jason. Então a gente vai entender
 
 67
-00:13:51.970 --> 00:13:56.279
-Gesiel Lopes: posição da minha String a partir do seu índice.
+00:11:04.460 --> 00:11:10.479
+Gesiel Lopes: o que cada uma desses Buzzwood é dentro do isso.
 
 68
-00:13:56.790 --> 00:13:57.580
-Gesiel Lopes: Ah,
+00:11:10.600 --> 00:11:28.360
+Gesiel Lopes: O Ramon. A gente vai aprender nessa disciplina, a manipular arquivos. De forma geral, o Ramon. E aí, quando eu falo de manipular arquivo, é fazer as operações de leitura de escrita de edição, de salvar arquivos. Então a gente vai fazer isso? Sim, e arquivos de texto.
 
 69
-00:13:59.290 --> 00:14:15.090
-Gesiel Lopes: só que o legal é que o Python também faz a indexação das minhas coleções, no caso, em particular, das listas, também no sentido contrário, nesse caso,
+00:11:28.530 --> 00:11:41.329
+Gesiel Lopes: Eu vou dar um spoiler, tá? Eu já tenho até programado. A gente vai usar algumas coisinhas já mais no finalzinho bem mais interessantes. Então a gente vai extrapolar sem muito spoiler, mas a gente vai extrapolar um pouquinho
 
 70
-00:14:15.130 --> 00:14:24.919
-Gesiel Lopes: o Python, quando eu defino uma lista ou uma cadeia de caracteres. Por exemplo, novamente aqui.
+00:11:41.600 --> 00:11:50.159
+Gesiel Lopes: de arquivos tradicionais. A gente vai também aprender a trabalhar nessa disciplina como tratar
 
 71
-00:14:27.350 --> 00:14:29.710
-Gesiel Lopes: Eu vou só colocar o Python aqui.
+00:11:50.430 --> 00:11:55.039
+Gesiel Lopes: possíveis bugs. Não sei se vocês recordam, mas,
 
 72
-00:14:32.470 --> 00:14:38.420
-Gesiel Lopes: Quando a gente utiliza os índices no sentido da esquerda para a direita.
+00:11:55.220 --> 00:12:04.350
+Gesiel Lopes: por exemplo, quando a gente estava trabalhando na primeira disciplina, principalmente com o input com a função input de
 
 73
-00:14:39.060 --> 00:14:45.440
-Gesiel Lopes: Os índices serão positivos e iniciando com zero.
+00:12:04.700 --> 00:12:09.300
+Gesiel Lopes: de variáveis numéricas. Se eu digitasse alguma
 
 74
-00:14:46.320 --> 00:14:51.400
-Gesiel Lopes: Porém, o Python também faz a indexação
+00:12:09.500 --> 00:12:12.120
+Gesiel Lopes: o caracter que não fosse número,
 
 75
-00:14:51.980 --> 00:14:58.230
-Gesiel Lopes: da minha cadeia aqui de caracteres na minha lista, no sentido anti horário,
+00:12:12.490 --> 00:12:22.219
+Gesiel Lopes: ela dava um problema. Ela fazia um crash. Ela dava um erro. Lembram desse problema. Então a gente vai aprender
 
 76
-00:14:58.730 --> 00:15:03.459
-Gesiel Lopes: aliás, anti horário, não no sentido da direita para a esquerda,
+00:12:22.460 --> 00:12:30.049
+Gesiel Lopes: a como resolver esse tipo de problema. A contratar esse tipo de problema. Então a gente vai trabalhar.
 
 77
-00:15:03.600 --> 00:15:11.750
-Gesiel Lopes: e aí a indexação passa a ser com valores negativos, começando do menos um.
+00:12:30.630 --> 00:12:42.890
+Gesiel Lopes: A gente vai entender o que são tratamentos de erros dentro da linguagem Python, e como tratar erros. E a gente vai a cereja do bolo. Vai ser
 
 78
-00:15:12.480 --> 00:15:14.520
-Gesiel Lopes: E aí eu posso usar esses
+00:12:43.010 --> 00:12:51.990
+Gesiel Lopes: como a gente consegue consumir serviços direto da web compite,
 
 79
-00:15:14.910 --> 00:15:25.400
-Gesiel Lopes: índices negativos para acessar uma posição de trás para frente ou do final da String para frente.
+00:12:52.260 --> 00:12:58.709
+Gesiel Lopes: e aí é que entra um pouquinho do que a gente vai apegar esse último conteúdo e extrapolar um pouquinho.
 
 80
-00:15:29.790 --> 00:15:41.580
-Gesiel Lopes: E aí eu posso, por exemplo, pegar a mesma variável, utilizar, por exemplo, menos um,
+00:12:58.970 --> 00:13:03.340
+Gesiel Lopes: Então a gente vai aprender como consumir.
 
 81
-00:15:41.870 --> 00:15:43.939
-Gesiel Lopes: que é o último caracté.
+00:13:04.000 --> 00:13:13.260
+Gesiel Lopes: Aí o Ramon já está colocando sem muito spoiler, mas adianto. Não é com selênio
 
 82
-00:15:46.870 --> 00:15:59.590
-Gesiel Lopes: Eu coloquei aqui mais células novamente. O último caracter que ele faz é uma quebra de linha, porque eu termino a String. Eu fecho a String nessa linha vazia. Então ele faz uma quebra.
+00:13:13.450 --> 00:13:16.609
+Gesiel Lopes: Ramon. A gente não vai usar a manipulação.
 
 83
-00:16:00.100 --> 00:16:08.550
-Gesiel Lopes: Se eu fizer meio poema, menos dois, ele deve aparecer. A interrogação
+00:13:16.770 --> 00:13:21.820
+Gesiel Lopes: Essa ferramenta que o Ramon colocou no chat é uma ferramenta de manipulação
 
 84
-00:16:08.720 --> 00:16:14.330
-Gesiel Lopes: que é o penúltimo caractéria. E assim eu consigo brincar.
+00:13:22.000 --> 00:13:39.589
+Gesiel Lopes: de simulação e manipulação de página. A gente vai aprender a consumir serviços Web. A gente vai entender primeiro o que é um serviço Web, o que significa ter um serviço web e como consumir um serviço web com a linguagem, Pyth. Então a gente vai ver isso.
 
 85
-00:16:14.570 --> 00:16:15.470
-Gesiel Lopes: Não é?
+00:13:40.210 --> 00:13:41.310
+Gesiel Lopes: Não se preocupe.
 
 86
-00:16:17.090 --> 00:16:22.250
-Gesiel Lopes: Outro ponto legal é que as listas
+00:13:41.460 --> 00:13:48.270
+Gesiel Lopes: Então você dá muito spoiler, mas a gente vai brincar. Tem umas coisinhas interessantes que a gente vai
 
 87
-00:16:22.720 --> 00:16:28.709
-Gesiel Lopes: permitem que eu faça algo interessante, que é o que a gente chama de fatiamento.
+00:13:48.540 --> 00:14:00.290
+Gesiel Lopes: que eu vou trazer para vocês. E aí também não está aqui no programa. Mas além disso, a gente vai aprender a usar. Principalmente, acho que o ponto mais interessante dessa disciplina
 
 88
-00:16:29.560 --> 00:16:34.089
-Gesiel Lopes: Você pode a partir de uma string
+00:14:00.410 --> 00:14:03.560
+Gesiel Lopes: é aprender a usar código de terceiros.
 
 89
-00:16:34.760 --> 00:16:44.320
-Gesiel Lopes: ou de uma cadeia de caracteres, obter partes específicas dessa cadeia,
+00:14:03.740 --> 00:14:08.060
+Gesiel Lopes: Então, como é que eu faço para usar dentro do meu próprio código?
 
 90
-00:16:44.500 --> 00:16:49.719
-Gesiel Lopes: fazendo uso do Slice que a gente chama, que é do fatiamento.
+00:14:08.330 --> 00:14:22.649
+Gesiel Lopes: Código desenvolvido por outras pessoas ou outras instituições, e como eu consigo também disponibilizar o meu código para outras pessoas usarem o meu código. Então a gente vai ver um pouquinho disso.
 
 91
-00:16:50.490 --> 00:16:56.079
-Gesiel Lopes: Então, por padrão, o Slice utiliza essa anotação de dois pontos
+00:14:22.910 --> 00:14:26.060
+Gesiel Lopes: Então tem uns pontos bem interessantes que a gente vai.
 
 92
-00:16:57.030 --> 00:17:03.610
-Gesiel Lopes: onde a esquerda dos dois pontos especifica o índice de início
+00:14:26.350 --> 00:14:28.850
+Gesiel Lopes: Vai trabalhar nessa disciplina.
 
 93
-00:17:04.079 --> 00:17:12.710
-Gesiel Lopes: e depois dos dois pontos, o índice de término do fatiamento que eu quero pegar,
+00:14:29.550 --> 00:14:36.569
+Gesiel Lopes: Então a gente aí é o conteúdo programático da disciplina. Então é basicamente contemplando todos os objetivos.
 
 94
-00:17:13.420 --> 00:17:21.730
-Gesiel Lopes: sendo que esse índice de final não é inclusivo, ele. A gente desconsidera
+00:14:36.760 --> 00:14:39.700
+Gesiel Lopes: Então a gente vai abordar já já questões
 
 95
-00:17:22.290 --> 00:17:33.050
-Gesiel Lopes: isso quer dizer o quê? Basicamente, se eu fizer, por exemplo, pegar aqui a minha variável. Se eu fizer
+00:14:39.890 --> 00:14:55.220
+Gesiel Lopes: de manipulação de String. Só mais relembrar. E aí depois a gente vai trabalhar com saber o que são coleções. A gente vai, de fato trabalhar com coleções no mundo. Python, quais são os tipos de coleções que a gente tem,
 
 96
-00:17:33.670 --> 00:17:42.760
-Gesiel Lopes: um, até vou botar um quatro.
+00:14:55.240 --> 00:15:04.379
+Gesiel Lopes: que são tipos de estrutura de dados. Como é que eu faço para e como trabalhar com cada estrutura, com cada tipo
 
 97
-00:17:43.610 --> 00:17:49.919
-Gesiel Lopes: Ele vai trazer os caracteres da minha lista que estão na posição de índice um
+00:15:04.550 --> 00:15:07.189
+Gesiel Lopes: de coleção, depois
 
 98
-00:17:50.950 --> 00:17:56.759
-Gesiel Lopes: até a posição de índice três, porque o quatro não é inclusivo.
+00:15:07.350 --> 00:15:16.620
+Gesiel Lopes: trabalhar com arquivos, tratar erros. E por último, no finalzinho da disciplina, a gente vai brincar um pouquinho com
 
 99
-00:17:57.190 --> 00:18:00.230
-Gesiel Lopes: Então é o primeiro antes do quarto.
+00:15:16.860 --> 00:15:30.279
+Gesiel Lopes: com serviços Web. Então a gente vai entender o que é um serviço web. Aí a gente vai entender essa palavrinha mágica que aparece aí no mundo web, que é de Apis Web ou Api ou Api.
 
 100
-00:18:01.060 --> 00:18:07.939
-Gesiel Lopes: E aí, se eu fizer isso. Olha só, ele vai me trazer a palavra Q. Se eu não me engano, exatamente, que é essa palavra Q,
+00:15:31.580 --> 00:15:32.849
+Gesiel Lopes: Então a gente
 
 101
-00:18:09.220 --> 00:18:21.220
-Gesiel Lopes: tá, você pode aí a partir desse e aí desse método,
+00:15:33.350 --> 00:15:43.589
+Gesiel Lopes: vai entender o que significa esse acrônimo, e como trabalhar com esse cara. Então a gente vai entender alguns paradigmas
 
 102
-00:18:21.520 --> 00:18:32.359
-Gesiel Lopes: fazer a definição de submstrings dentro da sua String e manipular ele da melhor maneira possível. Você pode inclusive especificar
+00:15:43.730 --> 00:15:48.799
+Gesiel Lopes: interessantes. E aí depois a gente vai fazer algumas
 
 103
-00:18:34.570 --> 00:18:43.490
-Gesiel Lopes: apenas um início do slice. Por exemplo, quando eu faço cinco, dois pontos e não especifico o fim.
+00:15:48.940 --> 00:15:59.100
+Gesiel Lopes: integrações bem interessantes, diga se de passagem, tá, então deixando aí,
 
 104
-00:18:43.840 --> 00:18:52.569
-Gesiel Lopes: Isso quer dizer que ele vai pegar todos os caracteres da minha String a partir da posição cinco.
+00:15:59.220 --> 00:16:02.800
+Gesiel Lopes: sem dar muito spoiler, para tentar aí
 
 105
-00:18:52.760 --> 00:18:55.360
-Gesiel Lopes: Então, das cinco até a última.
+00:16:03.120 --> 00:16:08.960
+Gesiel Lopes: cativá los um pouquinho mais sobre o que a gente vai trabalhar. Criar aquela expectativa. Espero
 
 106
-00:18:55.890 --> 00:18:58.499
-Gesiel Lopes: Então ele vai trazer todo mundo.
+00:16:09.450 --> 00:16:20.530
+Gesiel Lopes: que eu consiga superar as expectativas de vocês, ou então consiga realizar essas expectativas. Então tem muita coisa legal nessa disciplina.
 
 107
-00:18:58.710 --> 00:19:02.509
-Gesiel Lopes: Então ele traz todos os caracteres.
+00:16:21.020 --> 00:16:29.749
+Gesiel Lopes: Como o material didático. Eu coloco aí. Esse é o conteúdo. Ao longo da disciplina, na trilha de aprendizagem.
 
 108
-00:19:03.820 --> 00:19:15.830
-Gesiel Lopes: Eu também posso e especificar apenas o final. Vamos supor dez. Eu quero que ele traga
+00:16:30.070 --> 00:16:36.100
+Gesiel Lopes: A gente vai trabalhar com trechos lá. Tem trechos específicos de cada um desses livros
 
 109
-00:19:16.610 --> 00:19:33.170
-Gesiel Lopes: todos os caracteres desde a primeira posição da posição de índice zero do primeiro caracter até o caracter de índice nove, lembrando que o dez não é inclusivo. Então ele vai trazer até o índice nove.
+00:16:36.350 --> 00:16:41.250
+Gesiel Lopes: que estão disponíveis para todos vocês. Aí na biblioteca do Infinity
 
 110
-00:19:33.400 --> 00:19:36.390
-Gesiel Lopes: Então ele vai trazer do primeiro até o nove,
+00:16:41.880 --> 00:16:59.589
+Gesiel Lopes: do infinito. Então vocês podem acessar. Então, na trilha de aprendizagem de cada item, a gente vai abordar esses conteúdos que a gente colocou. E cada trilha vai ter fragmentos de partes de um livro ou de mais de um livro.
 
 111
-00:19:36.610 --> 00:19:40.500
-Gesiel Lopes: que é o nove, é. Pode que é o essa
+00:16:59.840 --> 00:17:04.400
+Gesiel Lopes: Então é interessante aí que vocês conheçam beleza.
 
 112
-00:19:41.490 --> 00:19:46.880
-Gesiel Lopes: ele para aqui no espaço em branco, não é?
+00:17:04.849 --> 00:17:09.150
+Gesiel Lopes: E aqui eu sempre gosto de trazer uma bibliografia
 
 113
-00:19:47.850 --> 00:19:52.630
-Gesiel Lopes: E você, caso queira, também é possível você,
+00:17:09.619 --> 00:17:13.749
+Gesiel Lopes: complementar. Caso alguns de vocês queiram.
 
 114
-00:19:53.350 --> 00:20:01.009
-Gesiel Lopes: por exemplo, definir dentro do Slice o
+00:17:13.930 --> 00:17:19.080
+Gesiel Lopes: Volto a repetir, essa bibliografia não está.
 
 115
-00:20:01.500 --> 00:20:04.370
-Gesiel Lopes: o que a gente chama de passo, que é o step,
+00:17:19.369 --> 00:17:25.819
+Gesiel Lopes: A grande maioria não está disponível na biblioteca online do Infinity,
 
 116
-00:20:04.940 --> 00:20:13.189
-Gesiel Lopes: que é a quantidade de caracteres que eu quero trazer dentro do meu fatiamento.
+00:17:26.420 --> 00:17:32.479
+Gesiel Lopes: porque é uma bibliografia complementar. É uma sugestão
 
 117
-00:20:21.310 --> 00:20:28.910
-Gesiel Lopes: Por exemplo, posso trazer os elementos da posição onze
+00:17:32.710 --> 00:17:38.160
+Gesiel Lopes: de bibliografia, caso alguns de vocês queiram
 
 118
-00:20:29.060 --> 00:20:36.930
-Gesiel Lopes: de índice onze da posição de índice onze até a posição trinta.
+00:17:38.590 --> 00:17:42.350
+Gesiel Lopes: se aprofundar um pouquinho mais dentro desse ecossistema.
 
 119
-00:20:37.980 --> 00:20:45.179
-Gesiel Lopes: E aí eu coloco aqui de dois em dois caracteres.
+00:17:42.560 --> 00:17:49.860
+Gesiel Lopes: A única diferença da minha sugestão para a sugestão da Disciplina Apressada. Foi esse livro
 
 120
-00:20:46.510 --> 00:20:47.180
-Gesiel Lopes: Tchau.
+00:17:50.090 --> 00:17:56.220
+Gesiel Lopes: que é o livro do Neri do Nilo. Nilo Neri.
 
 121
-00:20:49.000 --> 00:20:58.220
-Gesiel Lopes: Então ele vai fazer essa contagem para mim do Índice observe que se eu fizer sem definir um passo.
+00:17:56.620 --> 00:18:00.890
+Gesiel Lopes: É um livro que já está na quarta edição. É um livro que eu gosto bastante.
 
 122
-00:20:59.400 --> 00:21:04.210
-Gesiel Lopes: Ele vai trazer da posição onze até a posição vinte e nove.
+00:18:01.160 --> 00:18:07.780
+Gesiel Lopes: Então tem bastante exercício. Então a gente vai pegar. Eu trouxe algumas coisas desse livro. Ele trabalha
 
 123
-00:21:04.850 --> 00:21:20.740
-Gesiel Lopes: Só que quando eu coloco, passo dois, ele vai trazer. Ele sempre vai pular duas casas. Então ele traz um caracté. Pula dois, traz o karité pula dois até o de índice dois,
+00:18:07.950 --> 00:18:14.040
+Gesiel Lopes: com a versão com a versão três.doze do pai. Então ele já traz
 
 124
-00:21:21.860 --> 00:21:22.650
-Gesiel Lopes: tá?
+00:18:14.440 --> 00:18:21.980
+Gesiel Lopes: muitos dos pontos das últimas versões do Python. O problema da versão trezentos e doze,
 
 125
-00:21:24.820 --> 00:21:31.410
-Gesiel Lopes: E aí o legal é que você pode, por exemplo, através do Slice.
+00:18:22.300 --> 00:18:26.269
+Gesiel Lopes: que é a versão estável que a grande maioria
 
 126
-00:21:31.640 --> 00:21:38.360
-Gesiel Lopes: Além de trazer fragmentos, você pode, por exemplo, fazer o seguinte:
+00:18:26.770 --> 00:18:29.929
+Gesiel Lopes: de quem trabalha com o pai e tu utiliza em ambiente.
 
 127
-00:21:38.850 --> 00:21:45.550
-Gesiel Lopes: eu estou trazendo. Quando eu não especifico nem o início nem o fim. Eu trago todo mundo
+00:18:30.720 --> 00:18:31.910
+Gesiel Lopes: É
 
 128
-00:21:46.440 --> 00:21:52.359
-Gesiel Lopes: quando eu coloco mais dois pontos. Isso quer dizer que eu estou definindo o passo.
+00:18:32.350 --> 00:18:39.979
+Gesiel Lopes: em ambiente real. E eu particularmente todos, inclusive os meus projetos dentro da empresa. São projetos que utilizam sua versão trezentos e onze
 
 129
-00:21:54.740 --> 00:22:05.180
-Gesiel Lopes: Então observe que eu estou trazendo todos os caracteres. E aqui eu posso definir o passo, considerando qual passo. Se eu fizer menos um. Olha só o que acontece com o String.
+00:18:40.100 --> 00:18:54.410
+Gesiel Lopes: não é nem a versão trezentos e doze. Então ele já aborda. E aí ele traz algumas diferenças. E os demais são livros do Daytel do Daytel. É uma coleção clássica
 
 130
-00:22:09.920 --> 00:22:14.900
-Gesiel Lopes: Deu para perceber o que aconteceu com a meia String.
+00:18:54.630 --> 00:19:01.490
+Gesiel Lopes: dentro da programação. Então ele tem livros. Esse autor, a família dele, no caso.
 
 131
-00:22:16.380 --> 00:22:18.970
-Gesiel Lopes: Ele fez.
+00:19:01.910 --> 00:19:07.500
+Gesiel Lopes: Ele já publicou livros de várias linguagens de programação. E tem
 
 132
-00:22:19.150 --> 00:22:24.850
-Gesiel Lopes: Ele fez a inversão. Ele inverte para mim a minha String.
+00:19:07.630 --> 00:19:13.780
+Gesiel Lopes: um livro de Python. Eu tenho esse livro. Eu gosto bastante. É um livro desse tamanho, assim, tá?
 
 133
-00:22:25.420 --> 00:22:26.180
-Gesiel Lopes: Ah, é?
+00:19:14.060 --> 00:19:18.639
+Gesiel Lopes: E tem um livro do. E aí eu sou fã desse cara, que é o Luciano Ramário.
 
 134
-00:22:26.930 --> 00:22:35.340
-Gesiel Lopes: Então você consegue brincar? Eu posso, por exemplo, pegar todos os caracteres
+00:19:19.410 --> 00:19:23.610
+Gesiel Lopes: E esses outros dois livros que são complementares
 
 135
-00:22:36.580 --> 00:22:46.000
-Gesiel Lopes: de dois em dois da minha cadeia. Então ele vai pegando de dois em dois. E aí a brincadeira aqui. O céu é o limite,
+00:19:23.840 --> 00:19:29.649
+Gesiel Lopes: também. Da casa do código. São dois livros que são bem mais acessíveis,
 
 136
-00:22:46.460 --> 00:22:47.300
-Gesiel Lopes: tá?
+00:19:30.280 --> 00:19:37.960
+Gesiel Lopes: que são muito bons. Então são livros que eu tenho esses dois livros. Eu tenho eles na realidade os quatro, os cinco, né?
 
 137
-00:22:47.840 --> 00:22:54.630
-Gesiel Lopes: Que é algo que eu consigo fazer. Que eu posso fazer dentro da manipulação de Strings.
+00:19:38.850 --> 00:19:42.480
+Gesiel Lopes: Então por isso que eu recomendo eles para vocês,
 
 138
-00:22:54.970 --> 00:22:58.619
-Gesiel Lopes: É claro que existem diversas outras funções
+00:19:42.680 --> 00:19:46.230
+Gesiel Lopes: beleza. Quem, quiser claro, aprofundar. Lembrando
 
 139
-00:22:58.780 --> 00:23:06.819
-Gesiel Lopes: que podem ser utilizadas no String com String. A gente não vai revisar e nem trabalhar com todas nesse exato momento,
+00:19:46.530 --> 00:19:52.680
+Gesiel Lopes: a grande maioria desses livros não estão disponíveis no infinite.
 
 140
-00:23:07.280 --> 00:23:15.369
-Gesiel Lopes: aí só recapitular algumas. E aí uma pergunta que talvez vocês possam estar se fazendo beleza, para que o Gesiel está fazendo isso.
+00:19:52.840 --> 00:19:55.610
+Gesiel Lopes: Tá, mas é,
 
 141
-00:23:15.500 --> 00:23:19.300
-Gesiel Lopes: Ou então para que cargas d águas eu preciso aprender
+00:19:57.470 --> 00:20:06.020
+Gesiel Lopes: mas eles estão lá disponíveis, mas eles são bem acessíveis para vocês. O Johnny comprou o Código Limpo. É um excelente livro, Johnny.
 
 142
-00:23:20.020 --> 00:23:36.580
-Gesiel Lopes: a trabalhar com Strings só para fazer as atividades. Sim, e não uma das aplicações bem fortes, digamos assim,
+00:20:06.510 --> 00:20:13.949
+Gesiel Lopes: É um livro que já tem um tempinho, mas até hoje, ele é
 
 143
-00:23:37.410 --> 00:23:43.249
-Gesiel Lopes: da linguagem Python ou da manipulação de strings, da linguagem Python
+00:20:14.520 --> 00:20:25.170
+Gesiel Lopes: muito atual. Muito atual. Ele fez o comentário. É, enfim, todos eles assim. Mas
 
 144
-00:23:43.550 --> 00:23:57.600
-Gesiel Lopes: é no processamento de linguagem natural, que é essa subária da inteligência artificial, que lida com a manipulação
+00:20:25.610 --> 00:20:32.690
+Gesiel Lopes: eu gosto de prestigiar não é pelo valor claro, alguns são bem mais acessíveis e outros nem tanto.
 
 145
-00:23:58.350 --> 00:24:05.940
-Gesiel Lopes: da linguagem natural do ser humano, seja a linguagem falada, ou seja, a linguagem escrita,
+00:20:33.280 --> 00:20:41.090
+Gesiel Lopes: Mas se você tiver condições, eu gosto, porque você na realidade, valoriza o trabalho de quem fez. Geralmente,
 
 146
-00:24:06.920 --> 00:24:13.909
-Gesiel Lopes: que é o que a gente chama de. E é a base. A Pnlp
+00:20:41.660 --> 00:20:45.970
+Gesiel Lopes: quem? Geralmente não. Mas quem fez? Eu digo isso porque eu estou escrevendo um livro
 
 147
-00:24:14.090 --> 00:24:24.729
-Gesiel Lopes: natural process language, que é o acrônimo em inglês. Vocês muito provavelmente já devem ter ouvido falar isso em algum momento,
+00:20:46.360 --> 00:20:53.639
+Gesiel Lopes: e não é fácil. Então, assim, querendo ou não, é uma dedicação que a pessoa tem de escrever.
 
 148
-00:24:25.430 --> 00:24:27.550
-Gesiel Lopes: porque a
+00:20:53.820 --> 00:20:59.969
+Gesiel Lopes: Se você tem condições, você pode. Eu consigo hoje tá
 
 149
-00:24:28.070 --> 00:24:43.890
-Gesiel Lopes: a Znlp, a Nlp, que é a área de pesquisa. A área do conhecimento que lida com a linguagem natural é a base para os modelos de linguagens que fizeram com que o próprio partido se popularizasse
+00:21:00.520 --> 00:21:07.650
+Gesiel Lopes: até para prestigiar cada um dos autores, valorizar o trabalho que eles tiveram
 
 150
-00:24:44.310 --> 00:24:54.709
-Gesiel Lopes: e que o termo de inteligência artificial se estourasse a bolha de tecnologia e virou um buzzworld da própria sociedade.
+00:21:08.100 --> 00:21:19.239
+Gesiel Lopes: de entregar, não somente para um leitor, mas para a comunidade, esses dois caras, principalmente o Luciano Ramalho. Esse cara é um dinossauro da comunidade paito.
 
 151
-00:24:54.930 --> 00:25:11.449
-Gesiel Lopes: Então os modelos de linguagem possibilitaram essa popularização. Estourou a bolha e a base para a construção ou a área de pesquisa responsáveis pela.
+00:21:19.640 --> 00:21:21.560
+Gesiel Lopes: Então é uma figura.
 
 152
-00:25:11.590 --> 00:25:19.560
-Gesiel Lopes: O desenvolvimento dos modelos de linguagem é a área de processamento de linguagem natural.
+00:21:21.940 --> 00:21:23.660
+Gesiel Lopes: É. É.
 
 153
-00:25:20.390 --> 00:25:34.920
-Gesiel Lopes: Então ele é um campo de pesquisa extremamente aquecido. Não é algo novo. Então todos esses modelos de linguagem, pessoal, muitos deles vêm até antes
+00:21:24.150 --> 00:21:35.840
+Gesiel Lopes: É uma figura mais do que é uma figura que está presente nos principais eventos da comunidade. Pai.
 
 154
-00:25:35.490 --> 00:25:45.360
-Gesiel Lopes: do próprio computador. Pessoal, a gente está falando aí. Inclusive o termo veio até antes do termo Ia.
+00:21:36.480 --> 00:21:47.390
+Gesiel Lopes: E esse livro em particular dele já foi traduzido por várias outras línguas. É o livro sobre a linguagem Python, que tem mais traduções.
 
 155
-00:25:45.610 --> 00:25:57.020
-Gesiel Lopes: O de inteligência artificial. Foram meados da década de mil novecentos e quarenta mil novecentos e cinquenta. Esse período só título de curiosidade.
+00:21:47.700 --> 00:21:52.020
+Gesiel Lopes: Então é o livro com mais traduções sobre Paint.
 
 156
-00:25:57.330 --> 00:26:03.019
-Gesiel Lopes: Então é o campo de pesquisa que tem como objetivo investigar
+00:21:52.710 --> 00:22:03.960
+Gesiel Lopes: Então assim é um pouquinho menos acessível. Mas é um livro que eu tenho ele. Eu tenho as duas versões que foi autografado por ele. É, ele é brasileiro,
 
 157
-00:26:03.130 --> 00:26:17.359
-Gesiel Lopes: métodos e sistemas para o processamento computacional da língua humana. É uma área da ciência da computação e está ligada à área de Inteligência Artificial,
+00:22:04.470 --> 00:22:06.930
+Gesiel Lopes: super brasileiro super simples.
 
 158
-00:26:18.220 --> 00:26:28.980
-Gesiel Lopes: e ela tem um relacionamento bem intrínseco a um conceito que a gente chama de linguística computacional, que é a fundamentação teórica
+00:22:07.500 --> 00:22:14.600
+Gesiel Lopes: O Luciano Ramalho. E é um vovozão incrível, muito gente. Boa
 
 159
-00:26:29.090 --> 00:26:41.329
-Gesiel Lopes: ou que possibilitou a construção dos modelos de linguagem. Então, quando a gente pensa em Nlp, a gente vai pegar, transformar recursos
+00:22:14.880 --> 00:22:29.000
+Gesiel Lopes: e ele é presença garantida nos principais eventos da comunidade Python. Ele estava no stand, autografando o livro dele na última Python Brasil.
 
 160
-00:26:42.940 --> 00:26:51.520
-Gesiel Lopes: e ferramentas para desenvolver algumas aplicações. Uma das aplicações são os modelos de linguagem.
+00:22:30.010 --> 00:22:30.820
+Gesiel Lopes: Então
 
 161
-00:26:52.820 --> 00:27:05.280
-Gesiel Lopes: Então, porém, para que a gente consiga desenvolver aplicações, é necessário a gente realizar etapas
+00:22:31.150 --> 00:22:38.309
+Gesiel Lopes: não fazendo Jabá? Porque eu sou fã. Realmente tem uma galera aí da comunidade. Eu sou fã de comunidades de forma geral,
 
 162
-00:27:06.170 --> 00:27:12.940
-Gesiel Lopes: que são chamadas que existe uma convenção que é chamada de pré processamento.
-
-163
-00:27:13.270 --> 00:27:25.020
-Gesiel Lopes: Então eu não posso. Não que eu não posso, mas não é recomendável a gente pegar, Ah, um texto
-
-164
-00:27:25.210 --> 00:27:35.829
-Gesiel Lopes: para utilizar em um modelo de linguagem sem realizar o devido processamento, sem ter que prepará lo.
-
-165
-00:27:36.190 --> 00:27:43.869
-Gesiel Lopes: Então essas etapas para preparar um texto para construir ou para utilizar em um modelo
-
-166
-00:27:44.060 --> 00:27:48.080
-Gesiel Lopes: dentro da Nlp, a gente chama de pré processamento
-
-167
-00:27:48.990 --> 00:28:01.969
-Gesiel Lopes: e dentro do pré processamento. Dentro dessas etapas de pré processamento dentro da Nlp, a gente tem algumas que são bem importantes,
-
-168
-00:28:03.020 --> 00:28:13.239
-Gesiel Lopes: que essas etapas, não necessariamente devem ser sequenciadas ou sequenciais, e nem todas elas devem ser utilizadas.
-
-169
-00:28:13.410 --> 00:28:14.140
-Gesiel Lopes: Ah, é?
-
-170
-00:28:14.970 --> 00:28:18.860
-Gesiel Lopes: Mas sempre que,
-
-171
-00:28:19.220 --> 00:28:30.350
-Gesiel Lopes: claro, depende também dependendo do contexto, eu posso aplicar uma ou mais técnica de pré processamento. Não que eu tenha que sempre aplicar todas elas, não
-
-172
-00:28:31.130 --> 00:28:34.200
-Gesiel Lopes: muitas das vezes, inclusive o próprio.
-
-173
-00:28:34.690 --> 00:28:41.019
-Gesiel Lopes: O próprio modelo de linguagem realiza esse pré processamento de forma transparente.
-
-174
-00:28:41.150 --> 00:28:46.419
-Gesiel Lopes: Então, quando eu escrevo lá um prompt, isso não quer dizer que aquele texto,
-
-175
-00:28:46.590 --> 00:29:02.510
-Gesiel Lopes: ele vai ser entendido da mesma forma que você escreveu Yips literis. Não, muitas das vezes não. Ele realiza as etapas de pré processamento antes para jogar dentro do modelo. E que etapas são essas?
-
-176
-00:29:02.760 --> 00:29:13.520
-Gesiel Lopes: As etapas? Podem ser etapas de remoção de caracteres não semânticos. O que é isso, Gisele? Por exemplo, embojing,
-
-177
-00:29:13.650 --> 00:29:28.290
-Gesiel Lopes: dependendo novamente do contexto da semântica em relação ao contexto, por exemplo, emotion caracteres especiais, números, interrogação, ponto.
-
-178
-00:29:28.370 --> 00:29:46.849
-Gesiel Lopes: Então, muitas das vezes, esses caracteres podem não ter relevância semântica para o meu texto em particular. Então eu posso tirá los. Por exemplo, vamos supor que eu esteja lendo uma página Html.
-
-179
-00:29:47.080 --> 00:29:51.869
-Gesiel Lopes: Só que o que eu quero da página Html é o texto da página.
-
-180
-00:29:52.020 --> 00:30:00.620
-Gesiel Lopes: Porém, o meu robô, quando ele vai ler uma página Html, ele vai trazer, por exemplo, as tags que são utilizadas para marcar,
-
-181
-00:30:00.860 --> 00:30:11.240
-Gesiel Lopes: que eram linguagens de marcação de uma página Html e que essas tags de marcação não são relevantes para o texto.
-
-182
-00:30:12.010 --> 00:30:22.189
-Gesiel Lopes: Então as tags podem ser caracteres não semânticos para análise textual. Então eu posso desconsiderar esses caracteres.
-
-183
-00:30:22.920 --> 00:30:33.419
-Gesiel Lopes: Os símbolos matemáticos, enfim, uma outra etapa de prepotenciamento que a gente tem é a remoção de pontuação,
-
-184
-00:30:33.920 --> 00:30:45.700
-Gesiel Lopes: porque, muitas das vezes, a pontuação ou não agrega um resultado semântico para o texto como um todo.
-
-185
-00:30:47.100 --> 00:30:51.890
-Gesiel Lopes: E aí aqui eu abro mais um adendo. Por que Gisele,
-
-186
-00:30:52.130 --> 00:30:58.159
-Gesiel Lopes: quando eu construo um texto e eu quero construir um modelo. Por exemplo,
-
-187
-00:30:58.840 --> 00:31:13.119
-Gesiel Lopes: o que a gente precisa entender é que o computador, seja ele qual for, seja a linguagem qual for que você esteja utilizando no final das contas, ele consegue só entender número, entender número, entender número, entender número.
-
-188
-00:31:13.250 --> 00:31:17.960
-Gesiel Lopes: Então, no final das contas lá. Quando eu executar o código,
-
-189
-00:31:18.260 --> 00:31:26.460
-Gesiel Lopes: esse código, em algum momento, tem que ser transformado em zero em onze. Isso quer dizer o quê? Que nenhum algoritmo
-
-190
-00:31:27.180 --> 00:31:32.350
-Gesiel Lopes: de aprendizado de máquina. Que é esse universo que a gente está colocando aqui?
-
-191
-00:31:32.560 --> 00:31:37.259
-Gesiel Lopes: Ele entende letras, palavras ou ele não entende caracteres.
-
-192
-00:31:37.930 --> 00:31:44.000
-Gesiel Lopes: Então, muitas das vezes eu tenho que fazer um processo que aí eu vou chamar aqui de transpiller,
-
-193
-00:31:44.310 --> 00:31:50.719
-Gesiel Lopes: que eu vou ter que transformar o meu texto em uma representação numérica.
-
-194
-00:31:50.990 --> 00:32:02.149
-Gesiel Lopes: E aí, muitas das vezes, a pontuação pode gerar uma representação numérica não significativa para a análise ou para a utilização do modelo
-
-195
-00:32:02.620 --> 00:32:04.449
-Gesiel Lopes: de linguagem, por exemplo.
-
-196
-00:32:04.630 --> 00:32:14.319
-Gesiel Lopes: Então eu tenho que retirar para que o processamento seja mais ou traga resultados melhores.
-
-197
-00:32:14.890 --> 00:32:24.860
-Gesiel Lopes: Uma outra etapa que a gente tem é a chamada etapa de remoção de stop motion, que são também palavras sem semântica, porque são palavras de ligação
-
-198
-00:32:25.580 --> 00:32:33.229
-Gesiel Lopes: e, muitas das vezes, ela não traz um contexto ou não representa um contexto dentro do meu texto,
-
-199
-00:32:33.590 --> 00:32:45.640
-Gesiel Lopes: por exemplo, artigos A, o B, a, o e coletivos de e para
-
-200
-00:32:46.670 --> 00:33:02.570
-Gesiel Lopes: posso retirar, porque muitas das vezes ele não atrapalha. Aliás, ele não agrega ele mais atrapalha do que traz alguma informação semântica. Então a gente consegue tirar a gente pode retirá los
-
-201
-00:33:02.800 --> 00:33:10.319
-Gesiel Lopes: porque não agrega a outra etapa. É uma etapa que a gente chama de normalização do meu texto,
-
-202
-00:33:11.480 --> 00:33:18.679
-Gesiel Lopes: porque a representação de uma palavra em caixa alta ou de um caractéria em caixa alta. Ele é diferente
-
-203
-00:33:19.100 --> 00:33:23.609
-Gesiel Lopes: da mesma representação em caixa baixa.
-
-204
-00:33:24.660 --> 00:33:31.129
-Gesiel Lopes: Então é recomendável que a palavra casa com C maiúsculo
-
-205
-00:33:31.210 --> 00:33:45.990
-Gesiel Lopes: tenha o mesmo significado ou a mesma representação de casa com caixa baixa, ou seja, com todos os caracteres em minúsculo, já que são a mesma palavra. Então, se eu não tiver esse cuidado,
-
-206
-00:33:46.400 --> 00:33:49.860
-Gesiel Lopes: possa ser que casa com C maiúsculo
-
-207
-00:33:50.100 --> 00:33:57.059
-Gesiel Lopes: gere uma representação diferente de casa com o C minúsculo.
-
-208
-00:33:57.200 --> 00:34:05.370
-Gesiel Lopes: Então a gente precisa normalizar, fazer o que a gente chama de padronização de todos os caracteres,
-
-209
-00:34:05.980 --> 00:34:15.499
-Gesiel Lopes: uma outra etapa. Muito provavelmente vocês já ouviram falar desse termo, que é a tokenização,
-
-210
-00:34:16.840 --> 00:34:27.490
-Gesiel Lopes: principalmente quem usa modelo de linguagem ou, por exemplo, precisa usar modelos muitas das vezes. Você precisa ter cuidado
-
-211
-00:34:27.489 --> 00:34:37.019
-Gesiel Lopes: na quantidade de Tokins que você está utilizando. Não sei se aqui tem alguém que faz uso. Mas, por exemplo, eu tenho alguns modelos no trabalho
-
-212
-00:34:38.230 --> 00:34:40.830
-Gesiel Lopes: de assistentes de código, principalmente
-
-213
-00:34:41.070 --> 00:34:50.740
-Gesiel Lopes: que eu preciso ter muito cuidado para fazer análise de determinados códigos ou de determinados projetos para ele gerar código para mim,
-
-214
-00:34:51.690 --> 00:35:01.709
-Gesiel Lopes: de ter a quantidade limite, porque o modelo é precificado pela quantidade de tokens que eu utilizo.
-
-215
-00:35:02.460 --> 00:35:07.079
-Gesiel Lopes: Então, quanto mais Token eu utilizo, maior vai ser o custo.
-
-216
-00:35:07.400 --> 00:35:15.709
-Gesiel Lopes: E aí lá vem o gerente. Por mais que seja uma ferramenta para o trabalho, lá vem o gerente dizendo: ó Gisel, está usando muito Tolkien.
-
-217
-00:35:15.840 --> 00:35:19.750
-Gesiel Lopes: Será que é necessário usar essa quantidade de token.
-
-218
-00:35:19.890 --> 00:35:30.109
-Gesiel Lopes: Ou então quem usou o modelo free da vida. E já não recebeu aquela mensagem. Você atingiu um limite do seu plano gratuito,
-
-219
-00:35:30.240 --> 00:35:31.830
-Gesiel Lopes: caso queira.
-
-220
-00:35:32.220 --> 00:35:39.440
-Gesiel Lopes: Você precisa fazer a assinatura. Não sei se isso já aconteceu com vocês.
-
-221
-00:35:39.650 --> 00:35:59.599
-Gesiel Lopes: Porque você atingiu a quantidade de Tolkien. Mas o que cargas d'águas é Tolkien. O Token. Dentro desse contexto de Nlp, uma unidade de caracteres é a menor unidade de caracteres que eu vou utilizar para o meu modelo,
-
-222
-00:36:00.160 --> 00:36:19.920
-Gesiel Lopes: que pode ser uma letra ou uma palavra, ou, na realidade, um anagrama que aí pode ser uma letra, uma palavra ou um conjunto de palavras. E aí eu posso fazer representações de anagramas que a gente chama da maneira que for mais conveniente.
-
-223
-00:36:20.080 --> 00:36:30.439
-Gesiel Lopes: Por isso que quando eu faço a tokenização, é recomendável que eu não faça tokenização de pontuação
-
-224
-00:36:30.680 --> 00:36:39.650
-Gesiel Lopes: de caracteres não semânticos, de conectores de verbos de ligação, por exemplo, é
-
-225
-00:36:39.990 --> 00:36:43.519
-Gesiel Lopes: ou de pontuação, vírgula. Por quê?
-
-226
-00:36:44.310 --> 00:36:49.890
-Gesiel Lopes: Porque cada caracter desse quando eu faço o processo de tokenização.
-
-227
-00:36:50.050 --> 00:36:52.450
-Gesiel Lopes: Ele vai gerar um token.
-
-228
-00:36:53.360 --> 00:36:59.140
-Gesiel Lopes: Será que um token com uma vírgula é tão significativo?
-
-229
-00:36:59.840 --> 00:37:01.389
-Gesiel Lopes: Às vezes não.
-
-230
-00:37:01.500 --> 00:37:11.560
-Gesiel Lopes: E aí eu evito, quando eu retiro ou evito esse processamento, já que ele passa a ser uma informação desnecessária.
-
-231
-00:37:12.650 --> 00:37:24.139
-Gesiel Lopes: E aí outra técnica é mais uma técnica mais avançada, que são técnicas, onde você consegue reduzir a quantidade de geração de Tokins,
-
-232
-00:37:24.260 --> 00:37:33.880
-Gesiel Lopes: considerando apenas radicais da minha palavra ou a forma
-
-233
-00:37:34.120 --> 00:37:37.990
-Gesiel Lopes: infinitiva. Vou chamar assim a forma original,
-
-234
-00:37:38.370 --> 00:37:47.649
-Gesiel Lopes: a forma primitiva da palavra. Por exemplo, um verbo. Eu posso pegar um verbo e colocar ele no infinitivo.
-
-235
-00:37:47.990 --> 00:37:48.850
-Gesiel Lopes: Tá bom.
-
-236
-00:37:53.060 --> 00:38:00.970
-Gesiel Lopes: Então, dependendo do meu contexto, o mesmo verbo conjugado
-
-237
-00:38:01.160 --> 00:38:13.150
-Gesiel Lopes: de diversas outras formas, pode não ser tão significativo. Então a gente pode aplicar uma técnica de reduzir esses verbos para o infinitivo,
-
-238
-00:38:13.560 --> 00:38:14.350
+00:22:38.490 --> 00:22:39.310
 Gesiel Lopes: tá?
 
+163
+00:22:39.820 --> 00:22:54.239
+Gesiel Lopes: É beleza. E aí, antes de eu trazer esses avisos, falando de comunidade, e aí em particular, quem é
+
+164
+00:22:55.400 --> 00:23:08.860
+Gesiel Lopes: da quem está aqui no eixo sul e sudeste, e também norte e nordeste.
+
+165
+00:23:09.450 --> 00:23:15.500
+Gesiel Lopes: Eu gostaria aqui de compartilhar com vocês, tá?
+
+166
+00:23:15.670 --> 00:23:27.649
+Gesiel Lopes: Os eventos sobre a comunidade python sobre a linguagem Python, que estão sendo organizados pela comunidade Python nos quatro cantos
+
+167
+00:23:27.850 --> 00:23:30.480
+Gesiel Lopes: do nosso Brasilzão.
+
+168
+00:23:30.930 --> 00:23:45.080
+Gesiel Lopes: Então, já agora, em Maio, quem for do Sul e a tiver em Joinville em particular, pode participar
+
+169
+00:23:45.510 --> 00:23:52.459
+Gesiel Lopes: do Python Sul, dois mil e vinte e seis.
+
+170
+00:23:52.880 --> 00:23:57.900
+Gesiel Lopes: Então, entre os dias três. Deixa eu ver. Aqui.
+
+171
+00:23:59.730 --> 00:24:05.760
+Gesiel Lopes: Entre. Deixa eu ver se é daqui a dez dias. Entre os dias. Parece que é três, quatro
+
+172
+00:24:08.950 --> 00:24:15.339
+Gesiel Lopes: entre um entre 1o e três de Maio vai acontecer
+
+173
+00:24:15.950 --> 00:24:22.600
+Gesiel Lopes: a Python Sul, na cidade de Londrina. Então, se você tiver quem for do Sul e estiver perto
+
+174
+00:24:22.740 --> 00:24:32.060
+Gesiel Lopes: pode participar ou quem tiver condição. Curiosidade de ver como é um evento da comunidade. Paito tá,
+
+175
+00:24:32.320 --> 00:24:40.570
+Gesiel Lopes: pode participar, Gesiel, não sou do Sul. Não moro no Sul, mas eu sou do Sudeste.
+
+176
+00:24:40.740 --> 00:24:50.830
+Gesiel Lopes: Melhor ainda, eu sou do Rio de Janeiro. Beleza. Então você, que é do Rio de Janeiro, caso queira.
+
+177
+00:24:50.940 --> 00:25:01.260
+Gesiel Lopes: Pode participar da Python Sudeste, que vai acontecer na última semana de
+
+178
+00:25:01.490 --> 00:25:07.449
+Gesiel Lopes: Julho. Período de férias. Então entre. Deixa eu ver se eu acho aqui
+
+179
+00:25:08.120 --> 00:25:15.980
+Gesiel Lopes: a data entre o dia vinte e quatro e vinte e seis de Julho.
+
+180
+00:25:16.220 --> 00:25:18.560
+Gesiel Lopes: A última semana de férias.
+
+181
+00:25:18.800 --> 00:25:26.260
+Gesiel Lopes: Quem for do rio ou quem estiver passando férias no rio ou quem quiser conhecer o rio e quiser participar
+
+182
+00:25:26.450 --> 00:25:36.290
+Gesiel Lopes: de um evento da comunidade. Python, tem aí a Python sudeste que esse ano vai ser lá no Rio de Janeiro.
+
+183
+00:25:36.710 --> 00:25:40.770
+Gesiel Lopes: Ah, a programação ainda não está disponível,
+
+184
+00:25:40.920 --> 00:25:48.279
+Gesiel Lopes: mas espero estar lá. Não vou garantir. Mas eu tenho duas atividades que eu submeti
+
+185
+00:25:48.440 --> 00:25:51.929
+Gesiel Lopes: para Paitun sudeste, um mini curso e uma palestra
+
+186
+00:25:52.090 --> 00:25:55.860
+Gesiel Lopes: ainda não saiu o resultado. Mas
+
+187
+00:25:56.240 --> 00:26:01.790
+Gesiel Lopes: e aí eu também não sei se eu vou conseguir participar, mesmo sendo aprovado ou não. Eu vou fazer de tudo.
+
+188
+00:26:02.490 --> 00:26:10.149
+Gesiel Lopes: Tive umas mudancinhas, mas e as passagens? Estão meio salgadinhas, mas enfim, é um evento que
+
+189
+00:26:11.030 --> 00:26:17.420
+Gesiel Lopes: existe uma grande chance de eu estar lá. E quem quiser bater um papo com o Gesiel, caso eu esteja lá, é só
+
+190
+00:26:17.970 --> 00:26:31.359
+Gesiel Lopes: procurar, ou então participar do mini curso. Se eu conseguir fazer. Então é isso. Beleza vai ser os tutoriais. Vai ser
+
+191
+00:26:31.560 --> 00:26:40.169
+Gesiel Lopes: o evento. Vai ser ali. Eu não conheço muito bem o rio. Quem é do rio deve saber. Mas fica ali entre a praia de Botafogo e Copacabana.
+
+192
+00:26:40.770 --> 00:26:43.680
+Gesiel Lopes: Então é uma região bem legal.
+
+193
+00:26:44.020 --> 00:26:47.880
+Gesiel Lopes: Vocês conseguem participar? Então vai ser três dias
+
+194
+00:26:48.310 --> 00:26:52.929
+Gesiel Lopes: de muito conteúdo sobre Python. E aí você vai ter
+
+195
+00:26:53.110 --> 00:27:01.080
+Gesiel Lopes: conteúdo tanto de alto nível como de nível básico avançado. Então é uma grande oportunidade.
+
+196
+00:27:01.670 --> 00:27:10.219
+Gesiel Lopes: Caso, claro, alguns de vocês queiram ou também quem quiser, e aí,
+
+197
+00:27:18.300 --> 00:27:28.920
+Gesiel Lopes: ou quem quiser, pode também. Caso algum de vocês queira conhecer são Carlos, tá, esse aqui. Eu vou participar.
+
+198
+00:27:29.930 --> 00:27:35.680
+Gesiel Lopes: Seja como um palestrante ministrante de qualquer curso.
+
+199
+00:27:36.280 --> 00:27:45.559
+Gesiel Lopes: Eu estou na comissão organizadora. Então, inevitavelmente, eu estarei nesse evento, que é o caipira,
+
+200
+00:27:45.700 --> 00:27:54.329
+Gesiel Lopes: que é uma trocadilha que a gente faz que é um evento do interior. É um evento da comunidade Python do interior de São Paulo.
+
+201
+00:27:54.480 --> 00:27:55.820
+Gesiel Lopes: Esse ano
+
+202
+00:27:55.940 --> 00:28:06.720
+Gesiel Lopes: vai ser realizado na minha terra, querida, São Carlos, no Instituto, onde eu fiz um monte de coisa
+
+203
+00:28:06.830 --> 00:28:12.769
+Gesiel Lopes: no Icmc. Então, entre os dias e aí ele vai ser antes do.
+
+204
+00:28:13.090 --> 00:28:15.229
+Gesiel Lopes: Ele vai ser antes do Python sudeste.
+
+205
+00:28:15.730 --> 00:28:20.830
+Gesiel Lopes: Então vai ser entre o dia quatro e sete de Junho.
+
+206
+00:28:21.050 --> 00:28:25.209
+Gesiel Lopes: Então inclusive tem uma coisinha bem legal.
+
+207
+00:28:25.410 --> 00:28:33.080
+Gesiel Lopes: A programação ainda também não foi ainda definida. A gente ainda está fazendo a avaliação das atividades.
+
+208
+00:28:33.430 --> 00:28:38.039
+Gesiel Lopes: Beleza, mas já tem algumas. Algumas
+
+209
+00:28:38.520 --> 00:28:43.109
+Gesiel Lopes: pessoa já confirmada. Sem muito spoiler, mas vai ser um evento fantástico.
+
+210
+00:28:43.370 --> 00:28:50.540
+Gesiel Lopes: Quem quiser, quem for da região de São Carlos ou do interior de São Paulo quiser participar,
+
+211
+00:28:50.760 --> 00:28:56.739
+Gesiel Lopes: fica aí o convite para esse evento que dispensa qualquer comentário.
+
+212
+00:28:57.040 --> 00:29:01.759
+Gesiel Lopes: Mas, Gesiel, o senhor falou só do sul e sudeste
+
+213
+00:29:02.320 --> 00:29:06.709
+Gesiel Lopes: e a galera de outros estados lá do norte e do nordeste.
+
+214
+00:29:07.190 --> 00:29:23.320
+Gesiel Lopes: Se você estiver perto da cidade de Ananindeua no pará.
+
+215
+00:29:24.900 --> 00:29:33.640
+Gesiel Lopes: Ele não vai ter o site, mas entre os dias três e cinco de Julho
+
+216
+00:29:34.530 --> 00:29:38.280
+Gesiel Lopes: vai acontecer. Ah, não, ele já tem o site norte aqui. Ó,
+
+217
+00:29:38.490 --> 00:29:44.540
+Gesiel Lopes: acho que é o Nordeste que não está. Mas ó, entre os dias três e cinco de Julho
+
+218
+00:29:44.870 --> 00:29:50.549
+Gesiel Lopes: vai acontecer a Python nordeste. Aliás. Desculpe a Python Norte,
+
+219
+00:29:50.820 --> 00:29:58.150
+Gesiel Lopes: que nesse ano vai ser em Ananindeua, no pará é uma cidade que fica na região metropolitana de Belém.
+
+220
+00:29:58.350 --> 00:30:03.440
+Gesiel Lopes: Eu conheço inclusive o meu sonho era fazer o
+
+221
+00:30:03.790 --> 00:30:07.679
+Gesiel Lopes: paitu que a gente chama a galera da comunidade,
+
+222
+00:30:07.860 --> 00:30:09.970
+Gesiel Lopes: que era, em todos os eventos
+
+223
+00:30:10.160 --> 00:30:15.050
+Gesiel Lopes: da comunidade Python. Mas esse aumento das passagens aéreas ferrou.
+
+224
+00:30:15.390 --> 00:30:22.359
+Gesiel Lopes: Então, quem for da região norte estiver próximo de de
+
+225
+00:30:22.560 --> 00:30:28.939
+Gesiel Lopes: de Belém. Pode aí. Fica aí o convite para participar da Paita Norte.
+
+226
+00:30:30.760 --> 00:30:37.680
+Gesiel Lopes: E quem for do nordeste, meu querido Nordeste também esse ano.
+
+227
+00:30:37.890 --> 00:30:47.080
+Gesiel Lopes: Tá muito provavelmente é um evento que eu queria muito. É um evento que eu deixei para
+
+228
+00:30:50.260 --> 00:30:53.819
+Gesiel Lopes: com carinho para participar. Opa, estou fazendo spoiler.
+
+229
+00:30:54.520 --> 00:30:58.210
+Gesiel Lopes: Que é a Python nordeste.
+
+230
+00:30:58.850 --> 00:31:03.030
+Gesiel Lopes: Então esse ano, a Python nordeste.
+
+231
+00:31:03.560 --> 00:31:13.250
+Gesiel Lopes: Eu não estou logado. Eu não votei. Ele só tem Instagram, tá, mas vai acontecer agora também
+
+232
+00:31:13.690 --> 00:31:19.159
+Gesiel Lopes: em fortaleza a Python nordeste. Então, se você for
+
+233
+00:31:19.620 --> 00:31:22.980
+Gesiel Lopes: da região nordeste, se estiver próximo de fortaleza,
+
+234
+00:31:23.200 --> 00:31:26.439
+Gesiel Lopes: então fica aí o convite para vocês participarem
+
+235
+00:31:26.570 --> 00:31:31.810
+Gesiel Lopes: da Python nordeste. E aí não tem desculpa porque a gente tem evento da comunidade Python
+
+236
+00:31:32.150 --> 00:31:39.529
+Gesiel Lopes: nos quatro cantos do nosso Brasilzão acontecendo entre maio e agosto.
+
+237
+00:31:39.630 --> 00:31:48.789
+Gesiel Lopes: Então esses eventos estão dentro desse intervalo, ou quem não puder participar,
+
+238
+00:31:49.360 --> 00:31:56.300
+Gesiel Lopes: de todos esses ou de algum, pelo menos o último evento que eu recomendo que esse também
+
 239
-00:38:14.390 --> 00:38:31.909
-Gesiel Lopes: Então é um processo que a gente chama de streaming ou lamination. Ou você pode simplesmente considerar radicais a palavra o prefixo ou o sufixo da palavra são técnicas que são utilizadas para você reduzir
+00:31:57.570 --> 00:32:04.930
+Gesiel Lopes: eu faço. Estou querendo muito. Eu já tenho atividade submetida, mas
 
 240
-00:38:31.910 --> 00:38:37.209
-Gesiel Lopes: a quantidade de tokens que podem ser geradas. É claro que isso depende
+00:32:05.800 --> 00:32:09.490
+Gesiel Lopes: também ainda não saiu a programação,
 
 241
-00:38:37.260 --> 00:38:53.309
-Gesiel Lopes: do contexto que você pode estar otimizando. Poxa. Alguém tinha ideia ou quem não é da área. Sabia que preparar um texto para rodar no modelo de linguagem fosse necessário. Tanta coisa assim,
+00:32:09.740 --> 00:32:18.189
+Gesiel Lopes: mas que é o principal evento da comunidade Python, que é a Python, Brasil, e esse ano
 
 242
-00:38:54.220 --> 00:38:59.600
-Gesiel Lopes: pois é é isso que muitos dos modelos fazem por debaixo dos panos.
+00:32:19.110 --> 00:32:24.150
+Gesiel Lopes: acontece em Outubro, e esse ano vai ser um ano especial.
 
 243
-00:38:59.970 --> 00:39:03.650
-Gesiel Lopes: E é aqui um exemplo prático que a gente possa ter
+00:32:24.720 --> 00:32:30.410
+Gesiel Lopes: Que a comunidade de Floripa é fantástica.
 
 244
-00:39:04.100 --> 00:39:08.260
-Gesiel Lopes: aqui. Por exemplo, eu tenho um conjunto de caracteres,
+00:32:30.750 --> 00:32:40.339
+Gesiel Lopes: Então esse ano vai ser em Floripa. O lugar dispensa qualquer comentário. Vai ser um evento muito bom.
 
 245
-00:39:08.910 --> 00:39:18.410
-Gesiel Lopes: e esse conjunto de caracteres, ou um conjunto de documentos, melhor dizendo, eu quero fazer algumas operações desses documentos.
+00:32:40.800 --> 00:32:50.520
+Gesiel Lopes: E aí quem quiser participar. Pessoal, gostaria de fazer esse disclaimer entre os dias. E aí vai ser uma semana
 
 246
-00:39:18.720 --> 00:39:25.350
-Gesiel Lopes: Como por exemplo, contar palavras, fazer a famosa nuvem de palavras,
+00:32:50.950 --> 00:32:56.769
+Gesiel Lopes: de muita imersão no mundo Pike.
 
 247
-00:39:25.640 --> 00:39:29.040
-Gesiel Lopes: fazer o que a gente chama de
+00:32:57.030 --> 00:33:02.750
+Gesiel Lopes: Com o diversos tutoriais mini cursos
 
 248
-00:39:29.190 --> 00:39:44.089
-Gesiel Lopes: Speech Tag. O que é isso? É você definir a classe gramatical de palavras. Quantos substantivos existe no texto? Quantos verbos existem no texto quantos adjetivos,
+00:33:03.070 --> 00:33:11.350
+Gesiel Lopes: e três dias, dois dias intensos de palestras, e finalizar com algumas atividades interessantes.
 
 249
-00:39:44.260 --> 00:40:01.560
-Gesiel Lopes: então esse é um processo, isso dependendo, claro, do contexto de análise, por exemplo, morfológica, pode ser útil eu identificar quantos substantivos e qual a influência dessa quantidade de
+00:33:11.500 --> 00:33:22.840
+Gesiel Lopes: Então, o que vai acontecer entre o dia catorze e dezanove de Outubro em Florianópolis, a Python, Brasil. Então a gente vai ter todos esses esquentas.
 
 250
-00:40:01.840 --> 00:40:07.160
-Gesiel Lopes: de classes gramaticais no resultado do meu texto.
+00:33:23.390 --> 00:33:30.879
+Gesiel Lopes: Todos esses eventos são eventos organizados pela Apib.
 
 251
-00:40:07.270 --> 00:40:18.979
-Gesiel Lopes: Então isso pode ser utilizado, por exemplo, para algumas análises onde você faz o que a gente chama de análise mofoftática de texto muito utilizado na linguística,
+00:33:32.590 --> 00:33:34.950
+Gesiel Lopes: Caso algum de vocês.
 
 252
-00:40:19.150 --> 00:40:25.529
-Gesiel Lopes: ou você pode também fazer o que a gente chama de clasterização é criar grupos
+00:33:36.430 --> 00:33:45.079
+Gesiel Lopes: Eu já tinha falado isso na disciplina anterior. Mas vou só apenas reforçar. Inclusive
 
 253
-00:40:26.150 --> 00:40:32.480
-Gesiel Lopes: de documentos que possuem uma certa semelhança.
+00:33:45.750 --> 00:33:49.310
+Gesiel Lopes: a gente. Vai ter uma surpresinha para vocês da
 
 254
-00:40:33.490 --> 00:40:46.039
-Gesiel Lopes: E essa semelhança pode ser uma semelhança de quantidade, de palavras ou de classes gramaticais ou simplesmente de sentimentos. Eu posso
+00:33:49.510 --> 00:33:52.870
+Gesiel Lopes: mais lá na frente sobre a Pib.
 
 255
-00:40:46.930 --> 00:41:02.400
-Gesiel Lopes: tentar encontrar palavras ou documentos que expressem o mesmo. Um sentimento, seja um sentimento positivo, um sentimento negativo, ou seja, um sentimento neutro,
+00:33:53.120 --> 00:33:55.919
+Gesiel Lopes: Eu acho que algo legal.
 
 256
-00:41:02.590 --> 00:41:12.409
-Gesiel Lopes: então essa clusterização de sentimentos ou análise de sentimento textual é muito utilizado, por exemplo, para você identificar
+00:33:56.500 --> 00:34:05.740
+Gesiel Lopes: Então aqui dispensa qualquer comentário. Todos esses eventos são organizados pela comunidade. Então, se algum de vocês tiver interesse
 
 257
-00:41:12.720 --> 00:41:20.619
-Gesiel Lopes: ou fazer resumos de, por exemplo, reviews de produtos em e commerce,
+00:34:06.100 --> 00:34:17.880
+Gesiel Lopes: de querer participar da comunidade, fica aí o convite de vocês se associarem. Todos os eventos são
 
 258
-00:41:20.820 --> 00:41:24.860
-Gesiel Lopes: ou você inclusive tem pesquisas. É interessante.
+00:34:18.110 --> 00:34:32.659
+Gesiel Lopes: da Associação são abertos públicos e online todas as assembleias, e aí, inclusive, quem quiser fazer a associação, faça porque a gente vai. Teve uma
 
 259
-00:41:26.300 --> 00:41:29.760
-Gesiel Lopes: É um colega aí que.
+00:34:33.170 --> 00:34:36.139
+Gesiel Lopes: teve a assembleia no último sábado.
 
 260
-00:41:29.910 --> 00:41:43.059
-Gesiel Lopes: Que a gente ajudou. Ele que ele na realidade, ele fez a identificação. Ele fez a análise de sentimento de tweets ou do X hoje,
+00:34:36.590 --> 00:34:43.450
+Gesiel Lopes: Então esses valores aqui vão vão ser alterados. Então corra.
 
 261
-00:41:43.310 --> 00:41:50.439
-Gesiel Lopes: para a identificação de pessoas com pensamentos suicidas.
+00:34:43.719 --> 00:34:53.300
+Gesiel Lopes: Eu particularmente aconselho vocês veementemente a serem membros efetivos. Hoje, o valor não é tão significativo. É um valor.
 
 262
-00:41:52.260 --> 00:41:55.550
-Gesiel Lopes: Olha só, você consegue fazer isso.
+00:34:53.500 --> 00:35:02.770
+Gesiel Lopes: Acho que menos de em torno de R cinco,zero por mês, então vale muito a pena. Aliás,
 
 263
-00:41:55.910 --> 00:41:58.249
-Gesiel Lopes: Você consegue identificar o sentimento.
+00:35:03.380 --> 00:35:04.720
+Gesiel Lopes: um pouco mais, né?
 
 264
-00:41:58.370 --> 00:42:13.320
-Gesiel Lopes: Outro colega do laboratório que eu trabalhei, ele fez o seguinte: ele fez análise de tweets para a identificação
+00:35:05.200 --> 00:35:07.360
+Gesiel Lopes: É um pouco menos, um pouco menos.
 
 265
-00:42:13.740 --> 00:42:18.220
-Gesiel Lopes: de áreas suscetíveis a enchentes.
+00:35:07.510 --> 00:35:10.929
+Gesiel Lopes: Então eu recomendo veementemente quem tiver a oportunidade
 
 266
-00:42:19.090 --> 00:42:22.230
-Gesiel Lopes: Como assim, Gisele? Pois é. Ele conseguiu
+00:35:11.230 --> 00:35:17.240
+Gesiel Lopes: quiser. Como membro efetivo, você consegue votar nas assembleias, participar,
 
 267
-00:42:22.340 --> 00:42:30.780
-Gesiel Lopes: desenvolver um resultado onde ele conseguia identificar áreas passíveis de enchente
+00:35:17.560 --> 00:35:21.409
+Gesiel Lopes: ou então, como estudante, mesmo fiquei à vontade.
 
 268
-00:42:30.830 --> 00:42:43.419
-Gesiel Lopes: antes da enchente de fato ocorrer a partir da análise de tweets. Porque quando eu faço um tweet, eu defino. Eu coloco lá a minha posição, a minha localização.
+00:35:21.870 --> 00:35:28.409
+Gesiel Lopes: Quem é associado pode participar da comunidade, organizando o evento, ajudando
 
 269
-00:42:43.910 --> 00:43:00.879
-Gesiel Lopes: E dependendo da quantidade de tweets com algumas palavras chaves, eu consigo criar um modelo que faz a previsão. Esse local. Pode ter enchente, ou tem uma alta incidência de chuva. Então isso pode ser usado para um tomador de decisão, por exemplo, evacuar
+00:35:28.750 --> 00:35:34.639
+Gesiel Lopes: ou simplesmente votando em assuntos relacionados à comunidade, inclusive
 
 270
-00:43:01.010 --> 00:43:08.119
-Gesiel Lopes: uma determinada área. Então tudo. Isso são aplicações do processamento de linguagem natural.
+00:35:35.150 --> 00:35:44.790
+Gesiel Lopes: podendo escolher as próximas sedes da Python, Brasil fica aí a o jabazinho da comunidade.
 
 271
-00:43:09.200 --> 00:43:17.529
-Gesiel Lopes: E aí um exemplo que eu estou colocando aqui. Para você poder realizar essas atividades. Você pode fazer três operações básicas,
+00:35:45.880 --> 00:35:51.400
+Gesiel Lopes: Aproveito aí como a gente vai falar de pai. Por que não falar da comunidade que é algo que
 
 272
-00:43:17.910 --> 00:43:20.380
-Gesiel Lopes: que é a normalização do texto.
+00:35:51.820 --> 00:36:01.510
+Gesiel Lopes: só tem agregar na formação de quem é entusiasta sobre a linguagem, principalmente eu mesmo
 
 273
-00:43:21.400 --> 00:43:30.559
-Gesiel Lopes: Você vai fazer a remoção do texto ou a remoção de Stopwards,
+00:36:01.750 --> 00:36:10.940
+Gesiel Lopes: meu atual emprego, eu consegui dando uma palestra depois de uma palestra. Então eu dei uma palestra num evento,
 
 274
-00:43:31.090 --> 00:43:38.670
-Gesiel Lopes: e depois a tokenização. A partir da tokenização. Você vai ter um documento, um conjunto de documentos
+00:36:11.190 --> 00:36:11.910
+Gesiel Lopes: tá?
 
 275
-00:43:38.810 --> 00:43:44.749
-Gesiel Lopes: pré processados e a partir desse processamento. Você consegue
+00:36:12.050 --> 00:36:17.150
+Gesiel Lopes: E aí, depois dessa palestra, eu recebi um convite de um Linkedin, fiz o teste.
 
 276
-00:43:47.080 --> 00:43:52.269
-Gesiel Lopes: realizar uma dessas atividades. Alguma dessas atividades?
+00:36:17.370 --> 00:36:21.130
+Gesiel Lopes: Fiz uma entrevista depois. Eu fiz o teste técnico e estou na empresa
 
 277
-00:43:53.490 --> 00:43:59.529
-Gesiel Lopes: Mas até agora, às vezes você não falou, falou, falou, falou. E como eu faço isso. Eu trouxe aqui uma String.
+00:36:21.320 --> 00:36:34.610
+Gesiel Lopes: jamais de três anos, diga se de passagem, tá? Então esses são. A gente já está dando a matéria, Tá Heloísa. A gente já está na matéria. Isso aqui que eu estou falando faz parte da matéria.
 
 278
-00:44:00.850 --> 00:44:04.740
-Gesiel Lopes: E aí eu vou aproveitar para tirar ela sem essas.
+00:36:34.610 --> 00:36:42.790
+Gesiel Lopes: Beleza. Isso é tudo relacionado à matéria. Por isso que eu estou trabalhando aqui com vocês. Beleza,
 
 279
-00:44:05.970 --> 00:44:12.949
-Gesiel Lopes: Sem essas, sem fazer a a Quebra de linha.
+00:36:42.820 --> 00:36:44.869
+Gesiel Lopes: a gente não está fora da matéria? Não.
 
 280
-00:44:13.120 --> 00:44:22.110
-Gesiel Lopes: Eu coloquei aqui um texto que, na realidade, esse texto eu extraí,
+00:36:45.270 --> 00:37:04.670
+Gesiel Lopes: Então, como eu estava falando? Então é uma boa oportunidade para quem quer se aprofundar, para quem quer conhecer, então, para quem quer expandir? E aí, quem sabe, no futuro, possam participar, propondo palestras, atividade. Então fiquem
 
 281
-00:44:22.240 --> 00:44:27.339
-Gesiel Lopes: que é o texto completo de um documento público
+00:37:04.790 --> 00:37:10.980
+Gesiel Lopes: aí. Fica aí o fica aí. A dica beleza.
 
 282
-00:44:28.120 --> 00:44:32.050
-Gesiel Lopes: fundamental para o desenvolvimento de políticas
+00:37:11.600 --> 00:37:28.000
+Gesiel Lopes: Dito isso, vou trazer aqui alguns avisos antes de a gente falar de outros assuntos. Um aviso importante sobre o nosso andamento da nossa disciplina. Mais uma vez, não custa nada lembrá los.
 
 283
-00:44:32.710 --> 00:44:46.119
-Gesiel Lopes: ou mais profundo ainda é o texto utilizado para definir a política monetária brasileira, que é um texto de uma ata do copom. Não sei se vocês já ouviram falar em
+00:37:28.200 --> 00:37:39.330
+Gesiel Lopes: A disciplina, essa disciplina, não só essa, mas todas as disciplinas são disciplinas trimestrais e o trimestre do.
 
 284
-00:44:46.230 --> 00:44:55.130
-Gesiel Lopes: determinados momentos do ano. Você vê no noticiário que o banco quer um documento emitido pelo Banco Central brasileiro
+00:37:39.830 --> 00:37:48.260
+Gesiel Lopes: E o trimestre do infinito. Ele é composto por onze semanas ou onze etapas, tá a
 
 285
-00:44:55.260 --> 00:44:57.639
-Gesiel Lopes: e essa Ata. Ela
+00:37:49.360 --> 00:37:53.529
+Gesiel Lopes: sendo que, na semana ou etapa um
 
 286
-00:44:58.880 --> 00:45:09.119
-Gesiel Lopes: traz algumas implicações para a política monetária do Brasil. Por mais que você não saiba ou não queira. Você é a
+00:37:54.010 --> 00:37:58.110
+Gesiel Lopes: até a semana nove ou etapa nove.
 
 287
-00:45:10.910 --> 00:45:17.260
-Gesiel Lopes: influenciada. Você é impactado, querendo ou não, com o texto produzido
+00:37:58.590 --> 00:38:04.030
+Gesiel Lopes: É de conteúdo relacionado à disciplina.
 
 288
-00:45:17.460 --> 00:45:36.850
-Gesiel Lopes: dentro do texto disponibilizado pelo Copom, já que ela define a política monetária. Como vai ser a política monetária do Brasil? Nos meses seguintes à divulgação da ada dentre elas. A taxa básica de juros, que é o principal indicativo.
+00:38:04.250 --> 00:38:11.469
+Gesiel Lopes: Então, a gente vai trabalhar, então, todo assunto relacionado à disciplina.
 
 289
-00:45:36.890 --> 00:45:46.360
-Gesiel Lopes: E aqui. Ó, então eu peguei lá do site do Banco Central, peguei uma ata e tirei todo o texto
+00:38:12.340 --> 00:38:22.030
+Gesiel Lopes: Ele vai finalizar o planejamento. É para finalizar, na nona etapa, depois da nona etapa,
 
 290
-00:45:47.030 --> 00:45:51.349
-Gesiel Lopes: de uma ata. Você não me fala. Foi ata duzentos e cinquenta e seis. Eu não vou lembrar de cabeça.
+00:38:22.150 --> 00:38:26.039
+Gesiel Lopes: não teremos mais conteúdo relacionado à disciplina.
 
 291
-00:45:51.500 --> 00:45:57.960
-Gesiel Lopes: Mas o que importa é que aqui é um texto gigantesco. Ó,
+00:38:26.200 --> 00:38:33.540
+Gesiel Lopes: Então a semana dez será a semana de entrega da última atividade, que é a principal atividade que é o At.
 
 292
-00:46:00.170 --> 00:46:09.770
-Gesiel Lopes: e aqui, só para vocês terem uma ideia que esse texto contém a
+00:38:33.840 --> 00:38:39.640
+Gesiel Lopes: E, na semana onze, a gente vai ter a
 
 293
-00:46:15.730 --> 00:46:19.129
-Gesiel Lopes: mais de dezoito mil caracteres.
+00:38:40.610 --> 00:38:49.970
+Gesiel Lopes: a correção das reentregas para aqueles que não conseguiram ou queiram
 
 294
-00:46:21.050 --> 00:46:27.889
-Gesiel Lopes: Tá mais de dezoito mil caracteres. E aí observem que eu posso ter. Ó,
+00:38:50.190 --> 00:38:57.989
+Gesiel Lopes: se achar inconveniente necessário realizar uma reintegra de um novo trabalho,
 
 295
-00:46:28.050 --> 00:46:35.529
-Gesiel Lopes: eu tenho palavras. Caixa alta, caixa baixa. Eu tenho aqui um.
+00:38:58.610 --> 00:39:06.450
+Gesiel Lopes: contemplando algum item não atingido na primeira avaliação.
 
 296
-00:46:36.690 --> 00:46:45.660
-Gesiel Lopes: Um conectivo aqui. O Dar é um coletivo do. É um conectivo. Copom, caixa alta, apesar.
+00:39:06.700 --> 00:39:22.980
+Gesiel Lopes: E aí a gente vai ficar. Nessas duas semanas. A gente vai ter conteúdo da disciplina. Não, a gente está programando dessa vez, fazer alguma coisa, mas nada de conteúdo, dúvidas. A gente pode tirar alguma dúvida,
 
 297
-00:46:45.780 --> 00:46:55.460
-Gesiel Lopes: E aí, enfim, tem vários esse texto. Eu já tinha feito um pré processamento que eu já tirei pontos.
+00:39:23.150 --> 00:39:34.490
+Gesiel Lopes: mas aí vai ser já na entrega do At. Então não é relacionado ao At. Então qualquer dúvida é só comunicar a gente antes. Procure no infinite online.
 
 298
-00:46:55.780 --> 00:47:06.630
-Gesiel Lopes: Eu fiz um trabalho aí para tirar a ponto quebra de linha. Tudo isso. Deixei só o texto mesmo. Só deixei o texto
+00:39:34.670 --> 00:39:42.850
+Gesiel Lopes: Então já adianto. Mais uma vez, enfatizo entre a semana dez e a semana onze. Não teremos mais
 
 299
-00:47:06.770 --> 00:47:09.800
-Gesiel Lopes: propriamente dito, tá?
+00:39:42.970 --> 00:39:46.169
+Gesiel Lopes: conteúdo da disciplina.
 
 300
-00:47:10.090 --> 00:47:14.879
-Gesiel Lopes: E aí a gente pode fazer algumas etapas interessantes, tá?
+00:39:46.280 --> 00:39:47.190
+Gesiel Lopes: Então,
 
 301
-00:47:15.470 --> 00:47:24.390
-Gesiel Lopes: É a primeira coisa que eu vou fazer, que é a primeira etapa dentro desse processo aqui
+00:39:47.380 --> 00:40:00.169
+Gesiel Lopes: o que a gente pode fazer na décima primeira semana é tirar dúvidas das Reentregas, se for necessário, e quem quiser e julgar necessário, a gente pode programar,
 
 302
-00:47:24.600 --> 00:47:26.330
-Gesiel Lopes: é a normalização.
+00:40:00.170 --> 00:40:09.389
+Gesiel Lopes: mas não teremos conteúdo. Ah Gesiel vai trazer conteúdo. Não, a gente não vai ter conteúdo. Não é o Gesiel que estabelece isso
 
 303
-00:47:26.940 --> 00:47:36.439
-Gesiel Lopes: Ou seja, é a padronização do meu texto. Ou seja, eu quero que todos os caracteres tenham a mesma estrutura.
+00:40:09.480 --> 00:40:13.620
+Gesiel Lopes: é o infinite. Isso é uma regra do infinite.
 
 304
-00:47:36.870 --> 00:47:42.250
-Gesiel Lopes: Então eu vou criar aqui uma variável que eu vou chamar de texto normalizado.
+00:40:13.720 --> 00:40:25.769
+Gesiel Lopes: Que isso fique bem claro. Mais uma vez, a disciplina é composta por quatro atividades que são os Tps
 
 305
-00:47:43.230 --> 00:47:51.869
-Gesiel Lopes: E como é que eu faço para normalizar um texto em geral, a normalização é feita colocando todos os caracteres em caixa baixa.
+00:40:25.960 --> 00:40:27.320
+Gesiel Lopes: e o A T.
 
 306
-00:47:53.230 --> 00:47:58.900
-Gesiel Lopes: Aí eu pergunto: como é que eu faço isso aqui? Olha só. Lembrando
+00:40:27.710 --> 00:40:31.629
+Gesiel Lopes: Então, mais uma vez, reforçando, não custa nada lembrá los.
 
 307
-00:48:00.450 --> 00:48:04.040
-Gesiel Lopes: essa minha variável texto, que é um texto
+00:40:31.910 --> 00:40:39.370
+Gesiel Lopes: A disciplina terá três Tps, sendo que todos os Tps
 
 308
-00:48:04.190 --> 00:48:09.780
-Gesiel Lopes: com dezoito mil caracteres, nada mais é do que uma String.
+00:40:39.650 --> 00:40:57.589
+Gesiel Lopes: devem ser entregues. Eles são obrigatórios, porém, não valem ponto nenhum, gesiel. Entreguei o Pp, tirei todos os itens de rubrica. Atingi todos os pontos. Eu posso utilizar
 
 309
-00:48:11.740 --> 00:48:18.840
-Gesiel Lopes: E qual é a função que eu posso utilizar de Strings para fazer.
+00:40:58.040 --> 00:41:10.769
+Gesiel Lopes: esse desempenho nos ateis para complementar algum item de rubrica no At que eu não atingi? Não, infelizmente não.
 
 310
-00:48:19.370 --> 00:48:24.220
-Gesiel Lopes: Ah, deixar o texto em caixa abaixo.
+00:41:10.910 --> 00:41:15.860
+Gesiel Lopes: Porque os Tps. Eles não valem nenhum ponto.
 
 311
-00:48:27.280 --> 00:48:29.140
-Gesiel Lopes: Alguém lembra.
+00:41:16.070 --> 00:41:20.790
+Gesiel Lopes: E por não valerem ponto. Eles não vão ser usados e não podem ser usados
 
 312
-00:48:32.150 --> 00:48:32.749
-Matheus Ramos: Que usar o.
+00:41:20.910 --> 00:41:33.790
+Gesiel Lopes: para complementar ou suprir algum item de república não atingido na principal atividade, que é o At,
 
 313
-00:48:32.750 --> 00:48:33.250
-Gesiel Lopes: Do que.
+00:41:35.200 --> 00:41:41.880
+Gesiel Lopes: lembrando que todos os Tps, eles são obrigatórios
 
 314
-00:48:33.250 --> 00:48:35.499
-Matheus Ramos: Tem que usar o Lawrence.
+00:41:42.020 --> 00:41:48.499
+Gesiel Lopes: e são pré requisitos para a entrega do At.
 
 315
-00:48:35.500 --> 00:48:36.550
-Gesiel Lopes: Exatamente.
+00:41:48.780 --> 00:42:03.929
+Gesiel Lopes: E aí sim, o Assessment, que é a última atividade da disciplina. Somente ela será utilizada para a definição do conceito de vocês na disciplina,
 
 316
-00:48:37.070 --> 00:48:37.820
-Gesiel Lopes: Pronto,
+00:42:04.210 --> 00:42:09.930
+Gesiel Lopes: beleza. Então, o que vai ser utilizado para
 
 317
-00:48:41.290 --> 00:48:47.990
-Gesiel Lopes: se eu fizer Lauer, eu já faço a minha primeira etapa
+00:42:10.040 --> 00:42:17.989
+Gesiel Lopes: definir o conceito na disciplina é apenas o a At a somente o a T.
 
 318
-00:48:48.670 --> 00:49:01.579
-Gesiel Lopes: dentro de Nlp. É isso que é feito por debaixo dos panos, ou é isso que é feito em um pipeline de pré processamento Nlp? Simplesmente isso. Plauwer,
+00:42:18.500 --> 00:42:21.979
+Gesiel Lopes: Muito cuidado com os prazos.
 
 319
-00:49:03.940 --> 00:49:08.329
-Gesiel Lopes: nossa Gesiel tão difícil assim. Sim, tão difícil.
+00:42:22.240 --> 00:42:32.850
+Gesiel Lopes: Tenho muito. Prestem bem atenção, porque a entrega fora do prazo dos Aps, aliás, dos Tps,
 
 320
-00:49:09.230 --> 00:49:15.760
-Gesiel Lopes: Ah, o outro processo aqui. Eu.
+00:42:34.280 --> 00:42:38.380
+Gesiel Lopes: eles limitam o conceito de vocês.
 
 321
-00:49:16.880 --> 00:49:20.980
-Gesiel Lopes: Eu coloquei a segunda etapa aqui. Dest Stop Worlds.
+00:42:38.540 --> 00:42:44.900
+Gesiel Lopes: Então quem entregar qualquer atividade, seja o Tp, ou seja, o At
 
 322
-00:49:21.870 --> 00:49:33.700
-Gesiel Lopes: Mas para facilitar o mais ou menos isso, Pedro. Mais ou menos isso.
+00:42:45.010 --> 00:42:51.470
+Gesiel Lopes: fora do prazo de entrega automaticamente,
 
 323
-00:49:33.820 --> 00:49:39.990
-Gesiel Lopes: Eu vou para facilitar essa operação de remoção dos Stop Worlds.
+00:42:51.570 --> 00:42:59.429
+Gesiel Lopes: você não poderá, por mais que consiga atingir todos os itens cobrados
 
 324
-00:49:40.330 --> 00:49:42.410
-Gesiel Lopes: Eu vou fazer o seguinte.
+00:42:59.550 --> 00:43:05.780
+Gesiel Lopes: nas avaliações, principalmente no At. Você não vai conseguir atingir o maior conceito,
 
 325
-00:49:42.810 --> 00:49:47.629
-Gesiel Lopes: Eu vou pegar esse meu texto aqui. Ó,
+00:43:06.000 --> 00:43:09.340
+Gesiel Lopes: que é o conceito máximo da disciplina.
 
 326
-00:49:49.180 --> 00:49:56.819
-Gesiel Lopes: eu vou pegar o meu texto padronizado e vou quebrar ele para o espaço em branco,
+00:43:09.930 --> 00:43:12.450
+Gesiel Lopes: Então tomem muito cuidado.
 
 327
-00:49:57.510 --> 00:50:08.789
-Gesiel Lopes: criar uma lista de palavras de anagramas onde cada anagrama, que é o meu conjunto de caracteres,
+00:43:12.690 --> 00:43:20.440
+Gesiel Lopes: Ah, eu entreguei o At e outra além do prazo de entrega. Existe uma data limite
 
 328
-00:50:09.110 --> 00:50:13.910
-Gesiel Lopes: seja definido com o espaço em branco tá,
+00:43:20.540 --> 00:43:37.060
+Gesiel Lopes: de entrega de cada uma dessas atividades. Então se atentem muito a isso. Beleza. Ah, eu vou deixar para entregar tudo no último dia. Então tomem muito cuidado
 
 329
-00:50:16.180 --> 00:50:26.610
-Gesiel Lopes: que aí eu vou criar o que a gente chama de tokenização. Então vou colocar texto tokenizado tokenizado.
+00:43:37.090 --> 00:43:46.739
+Gesiel Lopes: que muitas das vezes você pode ter algum contratempo. Então se atentem. Volta a repetir se. Atentem às datas.
 
 330
-00:50:28.710 --> 00:50:30.809
-Gesiel Lopes: E aí eu pergunto para vocês.
+00:43:46.860 --> 00:43:55.500
+Gesiel Lopes: Tá bom, não é imposição do Gesiel. São regras do infinito.
 
 331
-00:50:31.230 --> 00:50:35.410
-Gesiel Lopes: Qual função aí? Agora eu já vou trabalhar com o meu texto
+00:43:55.710 --> 00:44:01.529
+Gesiel Lopes: E eu gosto particularmente de seguir a risca
 
 332
-00:50:35.650 --> 00:50:39.120
-Gesiel Lopes: normalizado. Qual é a função que eu uso
+00:44:01.740 --> 00:44:13.630
+Gesiel Lopes: essas regras. Tá bom? Até porque é o mínimo que eu preciso fazer. Tá bom? Então tomem muito cuidado. Outro ponto e todos esses pontos
 
 333
-00:50:40.560 --> 00:50:45.120
-Gesiel Lopes: para quebrar uma estringe a partir de um caracté.
+00:44:13.640 --> 00:44:23.720
+Gesiel Lopes: estão lá no manual do aluno. Procurem lá. Certifiquem lá tudo. Está lá, beleza, outro ponto.
 
 334
-00:50:46.660 --> 00:50:48.059
-Gesiel Lopes: Alguém lembra.
+00:44:23.740 --> 00:44:28.059
+Gesiel Lopes: A entrega do At. Depois do prazo estabelecido,
 
 335
-00:50:56.580 --> 00:50:57.690
-Matheus Ramos: Aene.
+00:44:28.620 --> 00:44:32.520
+Gesiel Lopes: você não poderá realizar uma nova entrega,
 
 336
-00:50:58.840 --> 00:51:00.990
-Gesiel Lopes: Não aqui. Ó,
+00:44:32.730 --> 00:44:38.659
+Gesiel Lopes: porque essa entrega atrasada vai ser contabilizada como uma reintegra.
 
 337
-00:51:04.430 --> 00:51:06.430
-Gesiel Lopes: exatamente.
+00:44:38.830 --> 00:44:41.449
+Gesiel Lopes: E o segundo ponto é que
 
 338
-00:51:10.230 --> 00:51:24.569
-Gesiel Lopes: Exatamente o Nelson colocou aqui. Vai ser a etapa etapa de to tokenização.
+00:44:41.630 --> 00:44:48.220
+Gesiel Lopes: a competência fica limitada a D. Então o máximo que você vai conseguir
 
 339
-00:51:24.740 --> 00:51:28.920
-Gesiel Lopes: Basicamente, o que eu vou fazer é chamar a função split.
+00:44:48.990 --> 00:44:53.579
+Gesiel Lopes: na disciplina é o conceito de
 
 340
-00:51:29.710 --> 00:51:48.520
-Gesiel Lopes: Quando eu não passo como parâmetro da função. Nenhum caracter por padrão. Ele vai utilizar o espaço ou o caracter de separação dos anagramas.
+00:44:54.460 --> 00:45:03.199
+Gesiel Lopes: ond. Então, muito cuidado, Ah, Giselle de receber o feedback, e aí, você
 
 341
-00:51:48.870 --> 00:51:51.280
-Gesiel Lopes: E aí ele vai criar uma lista
+00:45:03.200 --> 00:45:16.069
+Gesiel Lopes: ou não atingiu todos os itens ou queira, atingiu o item. Ou então gabaritou todos os itens. Pode isso acontecer. Ah, Gesiel, eu gabaritei todos os itens da rúbrica do At,
 
 342
-00:51:51.510 --> 00:51:59.589
-Gesiel Lopes: onde cada elemento dessa lista vai ser o caracter formado entre dois espaços.
+00:45:16.440 --> 00:45:18.679
+Gesiel Lopes: mas o At.
 
 343
-00:52:00.490 --> 00:52:02.909
-Gesiel Lopes: Então, quando eu faço isso? Olha só
+00:45:19.490 --> 00:45:38.649
+Gesiel Lopes: Mas aqui o meu conceito ficou como D. E aí não é o Gesiel. Isso é automaticamente setado no próprio moodle. Se você entregar um segundo depois da data limite, ela vai ser contada como atraso,
 
 344
-00:52:06.350 --> 00:52:08.240
-Gesiel Lopes: texto.
+00:45:38.890 --> 00:45:54.940
+Gesiel Lopes: então é um segundo, dois segundos ou um dia, dois dias, sete dias. Ela já é contabilizada como atraso. Sendo assim, o seu conceito fica limitado ao conceito D. Por mais que você cumpra
 
 345
-00:52:09.140 --> 00:52:10.060
-Gesiel Lopes: Estou
+00:45:55.000 --> 00:46:05.270
+Gesiel Lopes: ou consiga gabaritar todos os itens da República. Muito cuidado. Isso está lá no manual do aluno. Não é o Gesiel Beleza.
 
 346
-00:52:17.760 --> 00:52:20.330
-Gesiel Lopes: tu quem, Isabel.
+00:46:06.270 --> 00:46:10.170
+Gesiel Lopes: Dito isso, guardem essas datas.
 
 347
-00:52:20.610 --> 00:52:25.669
-Gesiel Lopes: Então, quando eu faço isso, eu fiz etapa de tokenização,
+00:46:10.440 --> 00:46:21.920
+Gesiel Lopes: Guardem essas datas, que são as datas prováveis das entregas dos Tps e dos Ate S e do ate. O ateis só vai ter um, né?
 
 348
-00:52:30.340 --> 00:52:34.240
-Gesiel Lopes: não de pneus. Tá, tá processando.
+00:46:22.200 --> 00:46:28.730
+Gesiel Lopes: Então o primeiro Tp é para o dia cinco de Maio, o segundo Tp dia dezoito de Maio,
 
 349
-00:52:40.630 --> 00:52:42.890
-Gesiel Lopes: Ele dá esse Scratch
+00:46:29.870 --> 00:46:45.520
+Gesiel Lopes: o terceiro Tp dia seis de Junho, e a entrega do At é dia dezasseis de Junho, então
 
 350
-00:52:44.910 --> 00:52:51.700
-Gesiel Lopes: enquanto ele pensa como a gente passou aí do nosso horário habitual do intervalo. Vamos dar a nossa parada
+00:46:45.680 --> 00:46:50.500
+Gesiel Lopes: eu vou disponibilizar, como vocês sabem, os slides. Mas
 
 351
-00:52:52.140 --> 00:52:57.979
-Gesiel Lopes: de dez minutinhos são: 9h24h for 9h35 a gente retorna
+00:46:50.940 --> 00:46:57.400
+Gesiel Lopes: Grifen, salvem essas datas, tá? Salvem essas datas, tá?
 
 352
-00:52:58.440 --> 00:53:02.609
-Gesiel Lopes: aí a gente continua trabalhando um pouquinho. Ele pensou,
+00:46:58.300 --> 00:47:17.219
+Gesiel Lopes: Eu não tenho essa informação. O Gabriel está falando quais a gente abre para dúvida. Já já viu, Gabriel? Mas eu posso ver essas datas porque eu só vi até agora as datas obrigatórias de entrega. Mas depois eu posso trazer as datas máximas.
 
 353
-00:53:03.480 --> 00:53:10.780
-Gesiel Lopes: processou e trouxe o resultado. Mas vamos aproveitar beleza para dar a nossa parada habitual.
+00:47:17.550 --> 00:47:21.950
+Gesiel Lopes: O Gabriel trouxe um ponto interessante.
 
 354
-00:53:15.690 --> 00:53:27.180
-Gesiel Lopes: O Gabriel pode ser usada a outras funções. Inclusive você consegue Gabriel. Customizar funções para gerar os seus tolkens.
+00:47:22.120 --> 00:47:24.940
+Gesiel Lopes: Eu posso trazer essa informação depois.
 
 355
-00:53:27.720 --> 00:53:37.690
-Gesiel Lopes: É e aqui essa etapa de tokenização, para deixar mais claro, a gente está criando a na
+00:47:25.380 --> 00:47:34.490
+Gesiel Lopes: Então guardem essas datas. E aí, aqui eu abro um parêntese. Gostaria de deixar bem claro o professor. Ele
 
 356
-00:53:37.950 --> 00:53:43.930
-Gesiel Lopes: gramas que são cadeias de caracteres.
+00:47:34.850 --> 00:47:40.820
+Gesiel Lopes: ele tem autonomia na sua disciplina tá.
 
 357
-00:53:44.400 --> 00:53:51.050
-Gesiel Lopes: Então eu posso ter mais de um anagrama bigrama, trigrama ou enigrama.
+00:47:41.500 --> 00:47:56.630
+Gesiel Lopes: Porém, essa autonomia não é uma autonomia total e nenhuma decisão deve ser tomada de forma unilateral pelo professor
 
 358
-00:53:51.260 --> 00:53:59.320
-Gesiel Lopes: Então você consegue, inclusive criar funções específicas para tokenizar o seu texto, não é?
+00:47:56.820 --> 00:48:05.550
+Gesiel Lopes: sem devidamente comunicar a coordenação do curso de vocês e a coordenação pedagógica do próprio Instituto.
 
 359
-00:53:59.990 --> 00:54:05.280
-Gesiel Lopes: Isso vai depender do contexto que você esteja gerando seus Tokins, tá,
+00:48:05.780 --> 00:48:17.839
+Gesiel Lopes: Por mais que o professor tenha liberdade, tenha autonomia na disciplina. Essa autonomia não é unilateral.
 
 360
-00:54:05.490 --> 00:54:11.909
-Gesiel Lopes: mas é possível. Sim, não é somente essa. Inclusive você consegue, tá?
+00:48:17.970 --> 00:48:27.209
+Gesiel Lopes: Ela não pode acontecer de forma única e exclusivamente do professor. Ela tem que estar apoiada
 
 361
-00:54:13.360 --> 00:54:30.590
-Gesiel Lopes: Não já? A normalização não é muito. Eu nunca vi normalização dentro de Nlb, inclusive por debaixo dos panos dos principais modelos de linguagem a normalização sempre vai ser deixar todos os caracteres em caixa abaixo.
+00:48:27.980 --> 00:48:35.549
+Gesiel Lopes: com os demais envolvidos dentro do Infinit. E é que eu abro mais um parênteses. Ah, Gesuel, mais
 
 362
-00:54:31.240 --> 00:54:37.809
-Gesiel Lopes: Então, dentro do Python. A única função que possa fazer isso para mim é a Lower.
+00:48:35.850 --> 00:48:45.290
+Gesiel Lopes: professor, colega, fulano, o outro. Professor faz isso. Faz aquilo. Tudo bem, tá perfeito.
 
 363
-00:54:38.350 --> 00:54:54.629
-Gesiel Lopes: A normalização não. Aí, claro, vai depender de qual normal aí, se você estiver fazendo uma normalização customizada, talvez você consiga. Mas por padrão, quando a gente fala de normalizar um texto
+00:48:45.960 --> 00:48:48.569
+Gesiel Lopes: Porque o professor tem essa autonomia.
 
 364
-00:54:54.860 --> 00:55:06.029
-Gesiel Lopes: dentro do contexto de Nlp é tornar esse texto padronizado, todos eles com a mesma estrutura, com a mesma forma, e aí a forma mais habitual é caixa baixa.
+00:48:48.690 --> 00:48:55.030
+Gesiel Lopes: E aí a única sensibilidade que a gente precisa ter. E esse entendimento é fundamental.
 
 365
-00:55:07.620 --> 00:55:08.450
-Gesiel Lopes: Tranquilo.
+00:48:55.840 --> 00:49:01.019
+Gesiel Lopes: O professor tem autonomia na sua disciplina.
 
 366
-00:55:09.360 --> 00:55:19.380
-Gesiel Lopes: Vamos dar a nossa paradinha aí. A gente retoma aí. Se vocês tiverem qualquer outra dúvida, a gente vai tentando tirá la a medida do possível até daqui a pouquinho. Pessoal,
+00:49:01.240 --> 00:49:09.430
+Gesiel Lopes: Isso não quer dizer que a decisão do professor tomar a decisão que ele for tomar na disciplina dele,
 
 367
-01:05:45.640 --> 01:05:50.650
-Gesiel Lopes: pessoal, só deu tempo de pegar água aqui. Vamos lá.
+00:49:09.700 --> 00:49:13.150
+Gesiel Lopes: essa decisão vira em regra do Instituto.
 
 368
-01:05:50.770 --> 01:05:56.410
-Gesiel Lopes: Deixa eu compartilhar aqui novamente a minha tela. Vivos. Vivos ainda
+00:49:13.760 --> 00:49:23.580
+Gesiel Lopes: Então, se um colega faz isso, não quer dizer que todos os demais devem fazer. Então é essa sensibilidade e essa compreensão que eu peço
 
 369
-01:06:00.380 --> 01:06:04.280
-Gesiel Lopes: por enquanto. Sim, né, espero.
+00:49:24.090 --> 00:49:28.940
+Gesiel Lopes: para evitar qualquer.
 
 370
-01:06:04.550 --> 01:06:05.700
-Gesiel Lopes: Vamos lá.
+00:49:29.560 --> 00:49:31.120
+Gesiel Lopes: Vamos dizer assim,
 
 371
-01:06:28.130 --> 01:06:33.120
-Gesiel Lopes: Vocês estão vendo minha tela, beleza?
+00:49:31.320 --> 00:49:47.090
+Gesiel Lopes: qualquer desencontro de informações. Então essas são as regras do Instituto. Qualquer regra além precisa ser passada pela coordenação. Então, para a gente não ter nenhum contratempo.
 
 372
-01:06:33.980 --> 01:06:39.520
-Gesiel Lopes: Amém, Amém. Vamos lá, beleza. Então, aqui eu fiz a etapa.
+00:49:47.760 --> 00:49:52.160
+Gesiel Lopes: A princípio, são essas regras e não é minhas regras.
 
 373
-01:06:40.250 --> 01:06:49.349
-Gesiel Lopes: Só continuando, a gente fez aqui a etapa de tokenização. Ou seja, a gente pegou o nosso texto
+00:49:52.480 --> 00:50:03.330
+Gesiel Lopes: Não é a imposição ou a definição do Gesiel. As regras são do Instituto e devemos, tanto como dissente
 
 374
-01:06:50.300 --> 01:06:58.709
-Gesiel Lopes: e fez a quebra do nosso texto em: Vou chamar de palavras, tá?
+00:50:03.500 --> 00:50:15.920
+Gesiel Lopes: como docente, se sujeitar a essas regras a seguir essas regras. Combinado, pessoal. Então, reforçando. Salvem essa data,
 
 375
-01:06:59.710 --> 01:07:07.460
-Gesiel Lopes: Então eu peguei, criei uma lista com todas as palavras, vou certificar é
+00:50:16.670 --> 00:50:21.290
+Gesiel Lopes: salvem essa data, tá? É o.
 
 376
-01:07:07.910 --> 01:07:20.049
-Gesiel Lopes: que existiam no nosso texto, que é a nossa String gigantesca. Então, aqui a gente tem o nosso texto tokenizado. Então nada mais é
+00:50:23.450 --> 00:50:29.529
+Gesiel Lopes: O Waltv colocou aqui uma pergunta e aí
 
 377
-01:07:20.320 --> 01:07:25.980
-Gesiel Lopes: que essas partes aqui, que é a parte fundamental do nosso texto.
+00:50:29.910 --> 00:50:43.940
+Gesiel Lopes: todas as atividades. Ele está perguntando se eu participo. Se os professores. Aí eu vou fazer de forma geral, participam da criação das atividades. Aí eu não vou nem falar do At. Especificamente vou falar de todas as atividades,
 
 378
-01:07:27.050 --> 01:07:29.500
-Gesiel Lopes: Tá beleza.
+00:50:44.870 --> 00:50:52.159
+Gesiel Lopes: todas as atividades. A partir desse ano, elas foram padronizadas
 
 379
-01:07:30.330 --> 01:07:40.309
-Gesiel Lopes: Então fiz a nossa tokenização aqui. E a partir dessa tokenização, eu posso fazer nesse caso, aqui,
+00:50:52.330 --> 00:51:01.080
+Gesiel Lopes: e pelo infinete, não somente as disciplinas do bloco de entrada. Mas todas as disciplinas, então elas têm uma padronização
 
 380
-01:07:40.440 --> 01:07:53.200
-Gesiel Lopes: eu vou fazer a etapa de remoção de isso top Worlds, tá?
+00:51:01.250 --> 00:51:09.089
+Gesiel Lopes: e uma supervisão dos professores. Então cada atividade que é desenvolvida
 
 381
-01:07:54.330 --> 01:08:01.780
-Gesiel Lopes: E a primeira coisa que a gente precisa fazer, tá, é definir
+00:51:09.750 --> 00:51:24.060
+Gesiel Lopes: em cada disciplina, seja Tp: seja Uat. Elas são padronizadas pelo infinit e curadas supervisionadas pelo professor.
 
 382
-01:08:04.890 --> 01:08:09.560
-Gesiel Lopes: passo um é definir
+00:51:24.190 --> 00:51:35.340
+Gesiel Lopes: Então, o que o professor faz é a supervisão, então verificar se as atividades atendem às rubricas da disciplina.
 
 383
-01:08:13.000 --> 01:08:25.330
-Gesiel Lopes: uma lista que Stop Worlds. Então preciso definir tá?
+00:51:35.440 --> 00:51:48.249
+Gesiel Lopes: E se elas estão contempladas dentro da disciplina? E se elas cobram apenas o conteúdo trabalhado na disciplina.
 
 384
-01:08:25.550 --> 01:08:29.550
-Gesiel Lopes: A língua portuguesa vai ter trocentas
+00:51:48.730 --> 00:52:04.490
+Gesiel Lopes: Então, o que a gente faz é essa supervisão, essa curadoria. Então, antes de ser publicado, todas as atividades, todos os professores fazem a definição. Eles fazem a validação do que é colocado,
 
 385
-01:08:30.460 --> 01:08:38.340
-Gesiel Lopes: trocentos stopwords. A gente vai usar todos os stopwords. Não, tá?
+00:52:04.570 --> 00:52:18.050
+Gesiel Lopes: caso haja a necessidade de alguma adaptação, alguma correção, inclusive isso já aconteceu em uma disciplina de um outro bloco que eu trabalhei. Então as atividades foram adaptadas
 
 386
-01:08:39.000 --> 01:08:40.899
-Gesiel Lopes: Não faz sentido.
+00:52:18.270 --> 00:52:23.150
+Gesiel Lopes: para o contexto do
 
 387
-01:08:41.300 --> 01:08:47.910
-Gesiel Lopes: E também não faz sentido eu digitar na mão todas as stopworlds
+00:52:23.340 --> 00:52:38.920
+Gesiel Lopes: do que era cobrado em cada atividade. Beleza. Então não é que eu participe. Ela é padronizada pelo Instituto, mas elas são curadas por todos os professores, respondido ao Tv. Então tudo que é cobrado,
 
 388
-01:08:48.120 --> 01:08:57.350
-Gesiel Lopes: da língua portuguesa. Então, só como exemplo eu vou tirar da
+00:52:39.150 --> 00:52:53.409
+Gesiel Lopes: ela está relacionada ao que é trabalhado na disciplina, e o conteúdo cobrado é um conteúdo que é trabalhado nenhum conteúdo de nenhuma disciplina que eu já trabalhei. Esse semestre
 
 389
-01:09:03.779 --> 01:09:22.210
-Gesiel Lopes: apenas algumas palavras. E aí eu vou criar uma lista. E aí a gente logo logo a gente vai entender melhor como trabalhar com listas. Então só pequeno dando um pequeno spoiler. A gente viu que a gente a lista.
+00:52:53.960 --> 00:53:03.770
+Gesiel Lopes: nas atividades. Tem algo que, cobrando algo que não foi trabalhado, lembrando que a interpretação,
 
 390
-01:09:22.210 --> 01:09:25.490
-Gesiel Lopes: A gente opera com o operador conchete
+00:53:03.980 --> 00:53:13.509
+Gesiel Lopes: por mais que não seja um item de avaliação, mas ele também é um item a ser avaliado. Beleza
 
 391
-01:09:25.790 --> 01:09:33.519
-Gesiel Lopes: o operador colchete. Também. A gente viu isso na disciplina passada. Também pode ser usada para criar listas.
+00:53:15.140 --> 00:53:16.230
+Gesiel Lopes: tranquilo.
 
 392
-01:09:33.569 --> 01:09:47.189
-Gesiel Lopes: E aí eu vou criar listas de strings aí que são listas cujas strings são os nossos stopwords. Então, quais são os nossos stopwords aí vou colocar alguns apenas.
+00:53:16.960 --> 00:53:30.819
+Gesiel Lopes: Então ele é um item avaliado. Então, por mais que não esteja lá na República, interpretar, também é uma característica. É um item que é cobrado dentro das atividades, beleza.
 
 393
-01:09:48.300 --> 01:09:54.029
-Gesiel Lopes: E por exemplo, é.
+00:53:31.110 --> 00:53:39.160
+Gesiel Lopes: E aí o Noah comentou. É justamente isso que eu ia falar. Agora, o segundo ponto que eu queria trazer
 
 394
-01:09:55.400 --> 01:10:01.390
-Gesiel Lopes: É de dá.
+00:53:39.260 --> 00:53:47.109
+Gesiel Lopes: antes do nosso intervalo. É a nossa reposição. Então, como todos sabem, estamos iniciando o nosso
 
 395
-01:10:04.720 --> 01:10:15.720
-Gesiel Lopes: Eu vou pegar aqui. Dou. Tá bem. Na cara, dou é se para.
+00:53:47.240 --> 00:53:54.479
+Gesiel Lopes: nossa disciplina. Somente agora, porque entre os dias treze e os dias quinze
 
 396
-01:10:17.570 --> 01:10:24.410
-Gesiel Lopes: É ó Oh, Oh, né.
+00:53:54.710 --> 00:54:00.019
+Gesiel Lopes: de Abril, eu estava fora. Eu não pude participar a ausência a esta
 
 397
-01:10:25.400 --> 01:10:33.120
-Gesiel Lopes: Em posso colocar aí e dar.
+00:54:00.230 --> 00:54:05.310
+Gesiel Lopes: ela já era prevista. Isso já estava previsto
 
 398
-01:10:33.380 --> 01:10:49.920
-Gesiel Lopes: Posso ter mais uma lista aí gigantesca. Vale ressaltar isso abrindo um pequeno Adendo. Existem bibliotecas, existem códigos que nos fornecem
+00:54:05.880 --> 00:54:16.400
+Gesiel Lopes: desde o final de Minto. Eu ia falar Abril, né? Mas desde o final de Janeiro, então já tinha comunicado o Infinity.
 
 399
-01:10:50.000 --> 01:11:06.850
-Gesiel Lopes: stopwords das principais línguas utilizadas no mundo. Eu vou ter lista de todas as stopwords do português, Brasil, Pt Br Pt
+00:54:16.460 --> 00:54:36.059
+Gesiel Lopes: Então, mesmo antes de conhecer a data de início das disciplinas, eu já era certeza de eu não estar participando durante esses três dias, porque eu conciliei algumas datas particulares minha com a minha participação em um outro evento
 
 400
-01:11:07.370 --> 01:11:11.830
-Gesiel Lopes: Portugal que muda
+00:54:36.250 --> 00:54:43.730
+Gesiel Lopes: científico. Então por isso eu acabei faltando e o infinete foi devidamente avisado com bastante antecedência.
 
 401
-01:11:12.370 --> 01:11:23.199
-Gesiel Lopes: as top worlds em inglês. Enfim, não se preocupem. E aí, como exemplo, eu vou usar aqui essa lista relativamente pequena
+00:54:43.890 --> 00:54:52.790
+Gesiel Lopes: Porém, seguindo o rito de publicação de vocês, então é algo que já estava planejado. Algo já estava definido
 
 402
-01:11:23.530 --> 01:11:32.460
-Gesiel Lopes: de stopwards, e aí, caso vocês queiram, pode adicionar mais beleza.
+00:54:53.660 --> 00:55:02.740
+Gesiel Lopes: diante disso. Para poder cumprir o nosso calendário, precisamos repor essas duas aulas. Esses dois encontros,
 
 403
-01:11:35.030 --> 01:11:42.340
-Gesiel Lopes: E aqui, olha só o segundo passo. Passo dois:
+00:55:02.970 --> 00:55:07.020
+Gesiel Lopes: lembrando de antemão que essa reposição.
 
 404
-01:11:49.920 --> 01:11:56.299
-Gesiel Lopes: vou criar aqui uma lista para guardar
+00:55:07.190 --> 00:55:24.360
+Gesiel Lopes: A presença é opcional. Então isso quer dizer o quê? Eu sou obrigado a participar. Não, não é. Vai ser gravado como todos os nossos encontros. Porém, a presença é opcional.
 
 405
-01:12:00.320 --> 01:12:03.719
-Gesiel Lopes: o meu texto.
+00:55:24.690 --> 00:55:29.520
+Gesiel Lopes: Se você quiser participar ao vivo conosco. Maravilha, perfeito. A gente vai
 
 406
-01:12:05.280 --> 01:12:12.930
-Gesiel Lopes: Cem isso, top Worlds, Tchau.
+00:55:29.830 --> 00:55:42.919
+Gesiel Lopes: tocar o conteúdo da melhor forma possível. Mas se você, por algum motivo, tiver um compromisso ou quiser utilizar esse horário para fazer qualquer outra atividade e não participar ao vivo.
 
 407
-01:12:15.320 --> 01:12:22.570
-Gesiel Lopes: E aí eu vou criar aqui. Observe que eu vou criar o meu.
+00:55:43.390 --> 00:55:48.439
+Gesiel Lopes: Tudo bem, basta assistir a gravação e não terá problema nenhum.
 
 408
-01:12:22.640 --> 01:12:36.079
-Gesiel Lopes: A minha lista de texto, sem stopwards a partir do texto tokenizado. Então, só para a gente seguir, para ter uma ideia de quais foram as etapas.
+00:55:48.640 --> 00:55:56.739
+Gesiel Lopes: Dito feito esses disclaimers, quais são as datas? Lembrando que essa semana em particular
 
 409
-01:12:36.460 --> 01:12:42.329
-Gesiel Lopes: Eu poderia até ter colocado texto normalizado. Texto normalizado.
+00:55:57.240 --> 00:56:03.980
+Gesiel Lopes: o infinete. Teremos no calendário acadêmico do infinite dois feriados, tá,
 
 410
-01:12:43.510 --> 01:12:49.069
-Gesiel Lopes: Deixa eu até colocar isso aqui. Texto normalizado
+00:56:04.370 --> 00:56:08.550
+Gesiel Lopes: que é o dia vinte e um amanhã, né, terça feira,
 
 411
-01:12:49.290 --> 01:13:04.120
-Gesiel Lopes: tokenizado. Ele vai dar um. Deixa eu só aproveitar para ficar mais aí. Sim, porque eu normalizei. Depois fiz a tokenização. E aí eu vou criar uma lista para guardar o nosso texto sem stopwords.
+00:56:08.870 --> 00:56:15.760
+Gesiel Lopes: que é o dia de tiradentes, que é um feriado nacional.
 
 412
-01:13:05.060 --> 01:13:19.960
-Gesiel Lopes: Então vai ser aqui o meu texto normalizado tokenizado, sem stop.
+00:56:16.140 --> 00:56:18.400
+Gesiel Lopes: E quinta feira,
 
 413
-01:13:21.090 --> 01:13:25.390
-Gesiel Lopes: E aí, como é que eu crio uma lista vazia.
+00:56:18.730 --> 00:56:31.270
+Gesiel Lopes: que é um feriado. E aí eu sempre esqueço. Você não me fala. A memória é um feriado municipal, que é o dia de São Jorge, padroeiro do rio ou é um feriado
 
 414
-01:13:30.800 --> 01:13:38.150
-Gesiel Lopes: E aí é mais ou menos. É a base de Nlp.
+00:56:32.060 --> 00:56:36.860
+Gesiel Lopes: estadual de edição. Jorge, são Jorge, eu falei:
 
 415
-01:13:39.390 --> 01:13:45.180
-Gesiel Lopes: Texto normalizado, tokenizado sem stopwords, beleza.
+00:56:37.480 --> 00:56:40.119
+Gesiel Lopes: É do rio da cidade, né, Ramon?
 
 416
-01:13:46.850 --> 01:13:55.690
-Gesiel Lopes: E aí existe várias maneiras. Existe na realidade duas maneiras de eu criar uma lista vazia. E aí eu vou seguir aqui. O exemplo que o
+00:56:41.360 --> 00:56:45.749
+Gesiel Lopes: Então está aí o Ramon. Então, quinta feira, vocês não terão aula.
 
 417
-01:13:56.010 --> 01:14:07.910
-Gesiel Lopes: o Gabriel colocou, que é só você usar o operador. Colchete vazio quando eu faço isso aqui, eu crio
+00:56:45.990 --> 00:56:52.610
+Gesiel Lopes: Tá num calendário acadêmico por ser um feriado do Rio de Janeiro.
 
 418
-01:14:09.250 --> 01:14:13.990
-Gesiel Lopes: uma lista vazia, tá?
+00:56:53.210 --> 00:57:05.800
+Gesiel Lopes: Então, diante disso, tá, eu gostaria de colocar a nossa primeira reposição para o dia vinte e três.
 
 419
-01:14:14.890 --> 01:14:17.210
-Gesiel Lopes: Então a gente vai ter
+00:57:06.410 --> 00:57:16.469
+Gesiel Lopes: Por que não dia vinte e um? Porque a gente já estou repondo um encontro de outras disciplinas de outra disciplina. Então, por isso.
 
 420
-01:14:17.530 --> 01:14:28.889
-Gesiel Lopes: dando um spoiler. A gente não se preocupe. Na Gisele. Não estou entendendo. A gente vai criar uma lista vazia, mas a gente vai aprofundar mais a manipulação de listas de coleções.
+00:57:16.870 --> 00:57:20.739
+Gesiel Lopes: E aí a gente sobrou dia vinte e três, dia de São Jorge,
 
 421
-01:14:28.890 --> 01:14:37.929
-Gesiel Lopes: Vocês vão ver que é bem mais robusto trabalhar com listas. Então a gente está fazendo uma etapa meio que hard
+00:57:21.330 --> 00:57:38.949
+Gesiel Lopes: para a gente fazer essa reposição. Então, como não terá aula, a gente vai aproveitar para utilizar esse horário para a gente fazer a nossa primeira reposição. Então a reposição vai acontecer no dia vinte e três,
 
 422
-01:14:37.960 --> 01:14:41.950
-Gesiel Lopes: para depois a gente ver como facilitar esse trabalho.
+00:57:39.820 --> 00:57:49.870
+Gesiel Lopes: no mesmo horário dos nossos encontros. Então assim é.
 
 423
-01:14:42.250 --> 01:14:42.990
-Gesiel Lopes: Tá?
+00:57:50.120 --> 00:57:54.890
+Gesiel Lopes: De qualquer forma, você já está no mesmo horário, no mesmo ritmo.
 
 424
-01:14:43.800 --> 01:14:50.810
-Gesiel Lopes: E aí a gente vai agora criar. Então, criei a minha lista vazia.
+00:57:55.270 --> 00:58:05.209
+Gesiel Lopes: Então assim somente só vai alterar a disciplina que aí vocês teriam a disciplina do professor de quinta.
 
 425
-01:14:51.730 --> 01:15:05.390
-Gesiel Lopes: Tá, e aí o terceiro passo, passo três é o pular popular.
+00:58:05.280 --> 00:58:22.020
+Gesiel Lopes: E aí a gente vai ter agora a reposição da nossa aula no mesmo link, tá tudo sem problema nenhum já disponibilizado. Então, a primeira reposição vai acontecer no dia vinte e três. Dia de São Jorge,
 
 426
-01:15:07.100 --> 01:15:24.389
-Gesiel Lopes: E aí popular a lista é a lista cem Stop, Stop e Stopworlds.
+00:58:22.370 --> 00:58:28.079
+Gesiel Lopes: no mesmo horário das aulas dos nossos encontros das vinte
 
 427
-01:15:24.730 --> 01:15:26.689
-Gesiel Lopes: Então a gente vai popular a nossa lista
+00:58:28.880 --> 00:58:32.619
+Gesiel Lopes: horas e trinta minutos às vinte e dois horas.
 
 428
-01:15:27.630 --> 01:15:29.400
-Gesiel Lopes: novamente. Como é que eu faço
+00:58:33.020 --> 00:58:34.190
+Gesiel Lopes: Combinado.
 
 429
-01:15:31.820 --> 01:15:41.519
-Gesiel Lopes: exatamente, Johnny? Como é que eu faço para manipular uma lista para percorrer uma lista. A gente vai usar o fó,
+00:58:34.570 --> 00:58:37.619
+Gesiel Lopes: Porém, a gente precisa de mais uma data
 
 430
-01:15:41.730 --> 01:15:45.620
-Gesiel Lopes: só que no caso, uma lista. Eu preciso saber o quê?
+00:58:37.870 --> 00:58:47.009
+Gesiel Lopes: para a gente repor o segundo encontro da semana passada. E aí o segundo encontro tá
 
 431
-01:15:48.340 --> 01:15:49.160
-Gesiel Lopes: Tá,
+00:58:47.490 --> 00:59:00.910
+Gesiel Lopes: a data que eu coloquei. Sugiro, é o dia vinte e cinco. Próximo sábado. Então a gente já mata essa semana.
 
 432
-01:15:53.340 --> 01:15:57.380
-Gesiel Lopes: e aí, ó Bora popular. Nossa lista. Primeiro, a gente vai pegar.
+00:59:01.030 --> 00:59:20.740
+Gesiel Lopes: Porque sábado, Gisele? Porque é um dia alternativo. É um dia que a maioria de vocês, a não ser quem participa ou quem está em outro Time Zone ou quem faz ou trabalha, mas quem está em outro Time Zone ou exerce alguma profissão
 
 433
-01:15:58.480 --> 01:16:04.120
-Gesiel Lopes: Eu preciso fazer um foco. Precisam percorrer quem?
+00:59:21.400 --> 00:59:27.869
+Gesiel Lopes: que trabalha na Escala vinte e quatro por quarenta e oito. Mas aí ela já vai estar
 
 434
-01:16:04.420 --> 01:16:07.670
-Gesiel Lopes: O meu texto tokenizado.
+00:59:28.080 --> 00:59:39.369
+Gesiel Lopes: desfalcada no horário convencional. Então são somente esses dois casos. Mas sábado é o dia que a maioria de vocês estão livres, inclusive eu,
 
 435
-01:16:09.330 --> 01:16:15.099
-Gesiel Lopes: Então, quem são os elementos do meu texto tokenizado? São os meus tokens.
+00:59:40.050 --> 00:59:43.449
+Gesiel Lopes: entre aspas. Mas a gente vai usar
 
 436
-01:16:15.410 --> 01:16:25.420
-Gesiel Lopes: Então, para cada token aonde, no meu texto normalizado tokenizado.
+00:59:43.840 --> 00:59:55.059
+Gesiel Lopes: para apenas esse sábado para fazer a reposição. Então a data da próxima reposição. E aí o horário Gisele, o horário que eu vou estar sugerindo.
 
 437
-01:16:25.550 --> 01:16:30.720
-Gesiel Lopes: Tá, e aí eu vou fazer aqui um print aqui rapidamente, Token,
+00:59:55.720 --> 00:59:58.089
+Gesiel Lopes: E aí depois eu passo para a coordenação.
 
 438
-01:16:31.960 --> 01:16:36.860
-Gesiel Lopes: que aí eu vou dar um break aqui só para ele fazer o primeiro primeiro,
+00:59:58.490 --> 01:00:01.270
+Gesiel Lopes: Vai ser também um horário bem interessante.
 
 439
-01:16:37.730 --> 01:16:41.619
-Gesiel Lopes: só para ele mostrar o primeiro token.
+01:00:01.820 --> 01:00:08.770
+Gesiel Lopes: É um horário das catorze às quinze horas e trinta minutos.
 
 440
-01:16:41.880 --> 01:16:47.129
-Gesiel Lopes: Então observe que o meu Token é os elementos dessa minha lista aqui
+01:00:09.240 --> 01:00:28.410
+Gesiel Lopes: É um horário que é à tarde. Então a grande maioria não terá nenhum compromisso, acredito eu, de trabalho fora os dois casos em particular que eu falei, algum serviço essencial ou algum time zone diferente do Brasil
 
 441
-01:16:49.990 --> 01:16:52.150
-Gesiel Lopes: e aí. O que eu preciso fazer?
+01:00:29.300 --> 01:00:39.700
+Gesiel Lopes: e é um horário conveniente, porque quem trabalha dia de sábado pela manhã dá tempo de chegar em casa, tomar um banho, almoçar, tirar aquela cestinha descansar um pouquinho
 
 442
-01:16:52.820 --> 01:17:03.580
-Gesiel Lopes: Observe que agora eu preciso verificar se esse Token é uma dessas palavras aqui, correto?
+01:00:39.960 --> 01:00:45.529
+Gesiel Lopes: e aí participar, caso queira do encontro ao vivo.
 
 443
-01:17:04.340 --> 01:17:08.080
-Gesiel Lopes: Se for, hã?
+01:00:45.650 --> 01:00:53.200
+Gesiel Lopes: E aí, assim a gente coloca o nosso calendário em dias, lembrando que
 
 444
-01:17:08.430 --> 01:17:17.040
-Gesiel Lopes: Eu não posso considerar. E se não for, eu adiciono esse Token na minha lista.
+01:00:53.680 --> 01:01:06.759
+Gesiel Lopes: esses dois encontros de reposição não serão contabilizados à presença de vocês. Então, só reforçando aqui a reposição,
 
 445
-01:17:17.740 --> 01:17:20.309
-Gesiel Lopes: E aí novamente, eu preciso fazer um teste.
+01:01:07.320 --> 01:01:20.889
+Gesiel Lopes: a primeira vai acontecer no dia vinte e três das dá isso vinte horas e trinta minutos,
 
 446
-01:17:21.260 --> 01:17:23.289
-Gesiel Lopes: Qual é o teste que eu vou fazer?
+01:01:23.730 --> 01:01:27.970
+Gesiel Lopes: no nosso horário das aulas até as vinte e dois horas.
 
 447
-01:17:25.610 --> 01:17:33.710
-Gesiel Lopes: Um If, então eu preciso verificar se.
+01:01:29.050 --> 01:01:31.599
+Gesiel Lopes: E a segunda reposição.
 
 448
-01:17:34.210 --> 01:17:43.789
-Gesiel Lopes: E aí existem duas maneiras. Eu preciso verificar se esse Token não está na minha lista.
+01:01:31.740 --> 01:01:34.010
+Gesiel Lopes: Dia vinte e cinco.
 
 449
-01:17:44.150 --> 01:17:58.440
-Gesiel Lopes: Por isso que o Python tem uma sintaxe de leitura simples. Então citou quem note não estiver, note em
+01:01:34.710 --> 01:01:39.700
+Gesiel Lopes: Mais dez, catorze até
 
 450
-01:17:58.690 --> 01:18:02.620
-Gesiel Lopes: em lista de Stopwards.
+01:01:45.110 --> 01:01:51.580
+Gesiel Lopes: às quinze horas e trinta minutos. Acho que um horário interessante. Acho que todo mundo
 
 451
-01:18:03.750 --> 01:18:13.619
-Gesiel Lopes: Se o Token não estiver, o que eu preciso fazer, eu tenho que adicionar esse token nessa minha lista aqui de texto
+01:01:52.000 --> 01:02:10.149
+Gesiel Lopes: é um horário. De uma certa forma, a gente consiga repor e colocar sem muito prejuízo, lembrando que as aulas vão ficar gravadas. Então a presença é totalmente opcional,
 
 452
-01:18:13.720 --> 01:18:27.930
-Gesiel Lopes: normalizado tokenizado, sem aspas. E aí, pessoal novamente, eu vou usar aqui uma estrutura até então não trabalhada, mas a gente vai manipular ela lá na frente, entender um pouquinho
+01:02:11.610 --> 01:02:14.330
+Gesiel Lopes: beleza. Mas quem quiser participar ao vivo
 
 453
-01:18:28.400 --> 01:18:34.909
-Gesiel Lopes: como eu estou trabalhando com listas. A lista é um objeto. É uma estrutura de dado
+01:02:14.630 --> 01:02:20.790
+Gesiel Lopes: vai ser como sempre. Todos os nossos encontros vão ser muito bem vindo. Muito bem vindo,
 
 454
-01:18:35.750 --> 01:18:41.590
-Gesiel Lopes: e que permite eu realizar algumas operações, tá
+01:02:21.210 --> 01:02:23.529
+Gesiel Lopes: beleza. Mais alguma dúvida?
 
 455
-01:18:42.460 --> 01:18:56.280
-Gesiel Lopes: que são operações de adicionar elementos da lista e de remover elementos da lista, que são as operações mais comuns, adicionar ou remover, identificar o índice
+01:02:26.250 --> 01:02:28.000
+Gesiel Lopes: Mais algum ponto?
 
 456
-01:18:56.280 --> 01:19:03.710
-Gesiel Lopes: no caso. Eu quero adicionar um elemento. E aí, como o Nelson inclusive já deu o spoiler.
+01:02:28.570 --> 01:02:33.370
+Gesiel Lopes: Dúvidas, não.
 
 457
-01:19:03.860 --> 01:19:16.800
-Gesiel Lopes: Há uma forma de eu adicionar elementos da minha lista. É chamando o método, apende. Estou aprendendo. Estou adicionando
+01:02:34.380 --> 01:02:35.560
+Gesiel Lopes: Então vamos.
 
 458
-01:19:16.800 --> 01:19:25.470
-Gesiel Lopes: elementos da minha lista. Então, quem faz ou estou adicionando elementos da minha lista?
+01:02:36.420 --> 01:02:38.979
+Gesiel Lopes: Vai lá no ar. Pode perguntar. Lua,
 
 459
-01:19:25.510 --> 01:19:29.170
-Gesiel Lopes: Tá, eu vou aprendar. Eu vou adicionar.
+01:02:47.800 --> 01:02:49.939
+Gesiel Lopes: é alguma dúvida? Alguma pergunta?
 
 460
-01:19:29.380 --> 01:19:38.959
-Gesiel Lopes: Então a gente vai usar o método apende. Então toda lista tem esse elemento. Ele tem esse método. Ele tem essa função.
+01:03:07.480 --> 01:03:14.080
+Gesiel Lopes: O Noah tá boa. Dúvida.
 
 461
-01:19:39.160 --> 01:19:44.589
-Gesiel Lopes: Se preocupe que a gente vai entender um pouquinho melhor só para facilitar aqui a nossa.
+01:03:15.250 --> 01:03:18.550
+Gesiel Lopes: Não, não, lua, tá, não, não
 
 462
-01:19:44.780 --> 01:19:53.200
-Gesiel Lopes: O nosso exemplo. Então aqui eu vou ter o meu texto normalizado, tokenizado, sem stopword. Ele é uma lista.
+01:03:19.080 --> 01:03:25.950
+Gesiel Lopes: nua. Fez uma dúvida interessante. Isso tudo está lá no manual do aluno a reintegra.
 
 463
-01:19:53.430 --> 01:19:56.979
-Gesiel Lopes: Então vou usar o método appende? Ele já está.
+01:03:26.380 --> 01:03:31.670
+Gesiel Lopes: Ela serve para melhorar o conceito,
 
 464
-01:19:57.760 --> 01:20:11.360
-Gesiel Lopes: E vou adicionar tá nessa lista o meu token tá, então adicionando, adicionando.
+01:03:31.800 --> 01:03:43.829
+Gesiel Lopes: mas também ela não quer dizer que ela não fica limitada a D. Na realidade, ela fica limitada. E aí eu posso trazer isso no manual. Deixa eu trazer aqui,
 
 465
-01:20:12.370 --> 01:20:26.140
-Gesiel Lopes: E aí, token na lista de tolkens sem x top Wordpress.
+01:03:44.040 --> 01:03:52.100
+Gesiel Lopes: para não falar nada que não esteja certo.
 
 466
-01:20:26.420 --> 01:20:31.100
-Gesiel Lopes: Tá simples assim.
+01:03:53.040 --> 01:04:00.009
+Gesiel Lopes: O que não vai acontecer? Isso eu tenho certeza, é, por exemplo, você, depois da reintegra,
 
 467
-01:20:31.360 --> 01:20:40.319
-Gesiel Lopes: E aí eu vou dar aqui um print. Observem que no final, eu vou ter o meu texto sem os meus stopwards,
+01:04:00.370 --> 01:04:04.970
+Gesiel Lopes: você tirar o maior conceito.
 
 468
-01:20:40.840 --> 01:20:56.979
-Gesiel Lopes: que, no nosso exemplo, apenas esses stopwords aqui. Então, se eu fizer, se eu executar, observem que ela já mudou. Eu não tenho atualização. Dá,
+01:04:05.130 --> 01:04:12.240
+Gesiel Lopes: Você não consegue tirar o maior conceito, mas você consegue melhorar.
 
 469
-01:20:57.070 --> 01:21:05.640
-Gesiel Lopes: não aparece conjuntura e aí a gente pode fazer alguns testes. Por exemplo, é,
+01:04:12.350 --> 01:04:21.099
+Gesiel Lopes: Então pode verificar isso com modelo de ensino que tem as competências.
 
 470
-01:21:07.010 --> 01:21:21.339
-Gesiel Lopes: dá para contar, observe o do não aparece o si. Deixa eu ver se o si, aparece. Eu adicionei o si. Ó
+01:04:22.320 --> 01:04:25.369
+Gesiel Lopes: E aqui, ó, e a reintegra do at.
 
 471
-01:21:21.510 --> 01:21:24.680
-Gesiel Lopes: não aparece, mas ele coloca,
+01:04:27.570 --> 01:04:37.560
+Gesiel Lopes: Então, aqui tem os prazos. A graduação. No caso de vocês a Live, eu posso trazer depois um resumo disso para a gente também não se estender muito.
 
 472
-01:21:24.850 --> 01:21:33.810
-Gesiel Lopes: é claro. Ele não removeu todos os stop. Worlds. Nós é um Stop World. Nada. É um Stop World. Aqui é Estados Unidos.
+01:04:37.680 --> 01:04:43.950
+Gesiel Lopes: E aí qualquer coisinha também é só mandar mensagem lá no infinite online que a gente tenta ajudar
 
 473
-01:21:34.130 --> 01:21:50.829
-Gesiel Lopes: Eu a limitado contágio. Ah, é um Stop World sobre é um Stop World. Até então, observe que eu posso retirar. Definir outros Stop Worlds. No nosso exemplo, a gente considerou um. É um Stop World. Nós,
+01:04:43.950 --> 01:04:57.780
+Gesiel Lopes: e esclarecer da melhor forma possível. Mas o que você fica limitado é não ter a Adl aí vai depender da nota do conceito que você tirou na primeira entrega.
 
 474
-01:21:51.080 --> 01:22:00.320
-Gesiel Lopes: a gente considerou apenas com a gente. Só considerou um conjunto pequeno só para a gente ter ideia de como fazer isso.
+01:04:57.780 --> 01:05:07.610
+Gesiel Lopes: Mas você. Consegue. Ela não fica limitada. A D. O D fica limitado se você entregar fora do prazo.
 
 475
-01:22:00.760 --> 01:22:08.289
-Gesiel Lopes: Simples assim, criei aqui a minha lista de texto sem Stopwards.
+01:05:07.880 --> 01:05:16.289
+Gesiel Lopes: Aí, se você entregar fora do prazo, você não consegue tirar um conceito maior do que de
 
 476
-01:22:08.520 --> 01:22:09.310
-Gesiel Lopes: Tá?
+01:05:16.600 --> 01:05:24.389
+Gesiel Lopes: e também a reintegra. Não lhe dá o direito de tirar o maior conceito, que é o conceito D.
 
 477
-01:22:09.490 --> 01:22:26.890
-Gesiel Lopes: E aí, a partir dessa lista, por exemplo, eu consigo fazer algumas operações interessantes, tá, Ah, alguns resultados.
+01:05:24.940 --> 01:05:36.290
+Gesiel Lopes: Então você consegue melhorar o conceito ou vamos supor. Fiquei em nd com a reintegra. Eu consigo, por exemplo, tirar uma nota melhor.
 
 478
-01:22:27.070 --> 01:22:30.920
-Gesiel Lopes: Tá de análise.
+01:05:36.560 --> 01:05:43.370
+Gesiel Lopes: Consigo reverter o nd para o conceito D, por exemplo.
 
 479
-01:22:32.620 --> 01:22:37.880
-Gesiel Lopes: E aí que eu vou colocar aqui. Modo hard
+01:05:43.490 --> 01:05:53.150
+Gesiel Lopes: Tá, então é isso qualquer dúvida. Procurem a coordenação pedagógica. E aí eu trago esse detalhinho para vocês.
 
 480
-01:22:38.580 --> 01:22:56.620
-Gesiel Lopes: modo hard, por exemplo. Eu quero saber quantas vezes apareceu a palavra copom número ocorrência, copom
+01:05:53.470 --> 01:05:54.270
+Gesiel Lopes: Tá?
 
 481
-01:23:00.230 --> 01:23:02.579
-Gesiel Lopes: zero, né? Porque eu não sei.
+01:05:55.650 --> 01:06:06.179
+Gesiel Lopes: O outro Pedro. Todas essas questões, Pedro, sobre funcionamento da ferramenta, sobre a disponibilidade do
 
 482
-01:23:03.060 --> 01:23:25.250
-Gesiel Lopes: É outra coisa. Número ocorrência da palavra juros, tá é número ocorrência da palavra. Por exemplo, inflá
+01:06:06.420 --> 01:06:12.949
+Gesiel Lopes: da ferramenta ou acesso público ou privado, qualquer dúvida. Procurem o Professor Alan,
 
 483
-01:23:25.800 --> 01:23:30.970
-Gesiel Lopes: cão a inflação, hã?
+01:06:13.270 --> 01:06:23.550
+Gesiel Lopes: que é o coordenador da disciplina, e ele pode ajudá los da melhor forma possível. Então, lembrando que isso é algo que está lá no
 
 484
-01:23:34.050 --> 01:23:45.900
-Gesiel Lopes: Número de ocorrências da palavra inflação, juros.
+01:06:24.180 --> 01:06:37.419
+Gesiel Lopes: está claro lá. E casos específicos de. O link está funcionando ou não, ele não foi um caso geral generalizado foi casos bem pontuais. Então só esse
 
 485
-01:23:47.190 --> 01:23:53.630
-Gesiel Lopes: É cenário. Vou colocar cenário, tá
+01:06:37.520 --> 01:06:44.990
+Gesiel Lopes: esse conceito. E aí outra coisa, aproveito essa deixa aí do Pedro. Outra coisa.
 
 486
-01:23:57.240 --> 01:24:01.730
-Gesiel Lopes: então aqui alguns resultados que a gente pode fazer.
+01:06:45.130 --> 01:06:53.370
+Gesiel Lopes: Todo e qualquer item avaliado é avaliado a partir do que é submetido no mudo.
 
 487
-01:24:02.000 --> 01:24:09.209
-Gesiel Lopes: E aí novamente, eu vou fazer aqui um fó. Observem que aqui é um Token, tá, então o token.
+01:06:53.610 --> 01:06:59.420
+Gesiel Lopes: Então qualquer outra atividade que não seja submetido no moodle
 
 488
-01:24:11.810 --> 01:24:17.499
-Gesiel Lopes: E agora o meu texto normalizado tokenizado.
+01:06:59.440 --> 01:07:07.160
+Gesiel Lopes: ou enviado por outro meio. Ele não vai ser contado para avaliação, beleza.
 
 489
-01:24:18.120 --> 01:24:30.910
-Gesiel Lopes: Então, para cada palavra tokenizado, sem stopwords desse nosso exemplo, eu quero fazer a minha contagem. E aí, como é que eu faço? Eu tenho que incrementar.
+01:07:07.160 --> 01:07:21.840
+Gesiel Lopes: Então tudo que é avaliado só é avaliado a partir do que é submetido no Mudo a partir do que é registrado. Vamos supor. Mandei por e mail, mandei pelo infinite online para o Gesiel, mas o Gesiel não avaliou
 
 490
-01:24:31.250 --> 01:24:40.209
-Gesiel Lopes: Então se o meu token for igual a palavra copom,
+01:07:22.230 --> 01:07:28.330
+Gesiel Lopes: porque eu não entreguei no infinite online ou no Moodle.
 
 491
-01:24:41.520 --> 01:24:44.439
-Gesiel Lopes: e eu vou fazer o quê? Número
+01:07:29.200 --> 01:07:32.599
+Gesiel Lopes: Então por que o Gesiel não avaliou por que
 
 492
-01:24:44.710 --> 01:24:48.209
-Gesiel Lopes: ocorrência, copom. Eu vou incrementar um.
+01:07:32.780 --> 01:07:39.689
+Gesiel Lopes: novamente está lá no manual do aluno. Então eu sou limitado a considerar
 
 493
-01:24:51.300 --> 01:25:03.740
-Gesiel Lopes: Se o meu token for igual a palavra juros, eu vou
+01:07:39.800 --> 01:07:53.500
+Gesiel Lopes: a avaliação das atividades submetidas no mundo, porque lá tem o horário de entrega. Tem o horário que eu fiz. A avaliação tem o horário. Eu consigo notificar a avaliação. Então
 
 494
-01:25:05.390 --> 01:25:09.140
-Gesiel Lopes: incrementar a minha variável de juros.
+01:07:53.890 --> 01:07:57.800
+Gesiel Lopes: fica mais registrado. Esse é o requisito
 
 495
-01:25:12.550 --> 01:25:23.620
-Gesiel Lopes: Se o meu Token Foo igual a palavra é a cenário,
+01:07:58.050 --> 01:08:07.069
+Gesiel Lopes: do próprio infinite. Então sigam as instruções. Qualquer dúvida. Mandem mensagem no Ifnet que a gente tenta ajudá los da melhor forma possível
 
 496
-01:25:27.430 --> 01:25:37.500
-Gesiel Lopes: o copom juros na realidade de inflação, inflação número
+01:08:07.370 --> 01:08:12.280
+Gesiel Lopes: dentro das possibilidades que a gente pode atuar
 
 497
-01:25:38.540 --> 01:25:46.849
-Gesiel Lopes: ocorrência, inflação. Mais um então incremento, o contador de,
+01:08:12.540 --> 01:08:17.250
+Gesiel Lopes: fechou. Vamos dar um intervalozinho de cinco minutos aí, pessoal, só para beber água.
 
 498
-01:25:51.760 --> 01:26:03.840
-Gesiel Lopes: da ocorrência de inflação e o último Token foi igual a cenário.
+01:08:17.760 --> 01:08:25.520
+Gesiel Lopes: E aí. A gente retoma aí nove,quarenta e cinco. Caso tenha qualquer outra dúvida, é só comunicar, beleza.
 
 499
-01:26:06.120 --> 01:26:16.460
-Gesiel Lopes: Aí eu faço um incremento da minha variável de número de ocorrências da palavra cenário igual a um.
+01:08:25.920 --> 01:08:28.110
+Gesiel Lopes: Vou soltar aqui o compartilhamento.
 
 500
-01:26:16.620 --> 01:26:22.530
-Gesiel Lopes: Tá, poderia colocar outros. E aqui eu vou fazer aqui? Um print.
+01:08:28.340 --> 01:08:32.349
+Gesiel Lopes: Vou fechar aqui a câmera e a gente volta daqui a cinco minutinhos.
 
 501
-01:26:23.890 --> 01:26:41.050
-Gesiel Lopes: É: vou fazer uma F. String, que é o número de ocorrência da palavra palavra copom.
+01:13:12.580 --> 01:13:14.249
+Gesiel Lopes: Opa, pessoal, vamos lá.
 
 502
-01:26:45.120 --> 01:26:47.940
-Gesiel Lopes: E aqui, número de ocorrência
+01:13:14.560 --> 01:13:19.819
+Gesiel Lopes: Deixa eu compartilhar aqui novamente a minha tela com vocês só para beber uma água rapidinho.
 
 503
-01:26:52.360 --> 01:27:00.200
-Gesiel Lopes: um, dois, três, então a palavra copom juros.
+01:13:23.130 --> 01:13:29.029
+Gesiel Lopes: Então vamos lá. Bota a mão na massa um pouquinho, pegar esses últimos minutinhos aí, para
 
 504
-01:27:03.570 --> 01:27:06.419
-Gesiel Lopes: Então vou copiar e colar aqui para ser mais rápido.
+01:13:37.800 --> 01:13:40.550
+Gesiel Lopes: de a gente colocar a massa mão na massa.
 
 505
-01:27:08.730 --> 01:27:13.390
-Gesiel Lopes: Eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee em inflação
+01:13:44.840 --> 01:13:51.850
+Gesiel Lopes: Então eu vou aqui compartilhar aqui com vocês rapidamente. O nosso notebook aqui,
 
 506
-01:27:19.840 --> 01:27:23.770
-Gesiel Lopes: e aí da palavra cenário,
+01:13:52.210 --> 01:13:57.549
+Gesiel Lopes: deixa eu aumentar a minha tela aqui. Acredito que vocês estejam vendo a minha tela. Agora
 
 507
-01:27:27.630 --> 01:27:32.500
-Gesiel Lopes: tá, então, ao executar essa célula aqui,
+01:13:58.600 --> 01:14:02.789
+Gesiel Lopes: o notebook. Deixa eu só confirmar. Todo mundo está vendo?
 
 508
-01:27:34.450 --> 01:27:37.149
-Gesiel Lopes: ele vai para fazer a contagem para mim.
+01:14:03.150 --> 01:14:06.290
+Gesiel Lopes: Consegue ver esse tamanho. Tá legal.
 
 509
-01:27:44.380 --> 01:27:49.089
-Gesiel Lopes: E o Deep note está pensando, como sempre,
+01:14:12.180 --> 01:14:13.330
+Gesiel Lopes: Tranquilo.
 
 510
-01:27:49.720 --> 01:27:53.149
-Gesiel Lopes: ele vai pensar aí, justamente nesse momento,
+01:14:15.710 --> 01:14:17.460
+Gesiel Lopes: Vou considerar como Sim.
 
 511
-01:28:07.340 --> 01:28:13.789
-Gesiel Lopes: pensou, pensou e não resolveu o problema agora foi.
+01:14:17.560 --> 01:14:18.880
+gabriel.diniz: Então.
 
 512
-01:28:15.530 --> 01:28:25.870
-Gesiel Lopes: Então, olha só que interessante. Observem que no nosso texto pré processado observem
+01:14:21.920 --> 01:14:24.009
+Gesiel Lopes: Oi. Alguém perguntou alguma coisa?
 
 513
-01:28:26.140 --> 01:28:32.569
-Gesiel Lopes: a palavra copom. Só apareceu doze vezes a palavra juro oito vezes. Olha só.
+01:14:24.550 --> 01:14:25.180
+gabriel.diniz: Tranquilo.
 
 514
-01:28:33.380 --> 01:28:44.709
-Gesiel Lopes: A palavra inflação é uma palavra com uma alta ocorrência nessa ata. Isso dá um indicativo interessante, que essa palavra
+01:14:25.680 --> 01:14:30.590
+Gesiel Lopes: Ah, não, beleza, beleza, Gabriel. Ah, tá. Deu só um feedback. Então tá legal.
 
 515
-01:28:44.850 --> 01:28:55.930
-Gesiel Lopes: pode ser uma palavra que tem um impacto, ou tem uma influência no resultado desse nosso texto.
+01:14:30.730 --> 01:14:44.859
+Gesiel Lopes: Então, beleza. Um dos primeiros pontos que a gente vai trabalhar na disciplina. Na realidade, uma pequena recapitulação. Já que esse conteúdo, a gente, trabalhou ele lá na nossa primeira disciplina. Então a gente vai
 
 516
-01:28:56.960 --> 01:29:15.739
-Gesiel Lopes: Por exemplo, cenário. E aí eu consigo fazer diversos outros procedimentos, e aí eu posso simplesmente gerar. E aí novamente, eu vou agora o texto pré
+01:14:45.240 --> 01:14:58.340
+Gesiel Lopes: lembrar de alguns conceitos de como manipular strings dentro do Python dentro do ecossistema Python. Então, a gente viu
 
 517
-01:29:15.840 --> 01:29:18.900
-Gesiel Lopes: processo sábado.
+01:14:58.820 --> 01:15:04.999
+Gesiel Lopes: que as strings são coleções. É um tipo especial
 
 518
-01:29:19.330 --> 01:29:22.340
-Gesiel Lopes: E aí? Agora, como é que eu faço? Observem
+01:15:05.140 --> 01:15:07.729
+Gesiel Lopes: de dado, um tipo de. Dado
 
 519
-01:29:22.780 --> 01:29:29.500
-Gesiel Lopes: e aí vou. Só para finalizar, observe que o meu.
+01:15:08.150 --> 01:15:12.149
+Gesiel Lopes: que ele é interpretado como uma coleção
 
 520
-01:29:31.250 --> 01:29:41.530
-Gesiel Lopes: O meu texto normalizado tokenizado na realidade, é uma lista. Como é que eu faço agora para transformar essa lista numa String.
+01:15:12.310 --> 01:15:26.849
+Gesiel Lopes: de caracteres. Na realidade, ele é considerado como uma lista de caracteres, que foi inclusive a nossa primeira coleção. A primeira coleção que a gente trabalhou dentro do ecossistema pipe.
 
 521
-01:29:42.480 --> 01:29:47.050
-Gesiel Lopes: Fazer o processo contrário. Uma forma de você fazer isso
+01:15:26.940 --> 01:15:37.180
+Gesiel Lopes: Então, quando eu defino uma variável, e aí aquela premissa, eu posso usar tanto aspas
 
 522
-01:29:47.440 --> 01:29:55.410
-Gesiel Lopes: é pegar cada elemento da minha lista e juntar com espaço em branco.
+01:15:37.470 --> 01:15:44.240
+Gesiel Lopes: simples ou aspas duplas sem problema nenhum sobrenome.
 
 523
-01:29:56.090 --> 01:29:58.020
-Gesiel Lopes: E como é que eu faço isso?
+01:15:45.130 --> 01:15:51.209
+Gesiel Lopes: É que eu estou declarando duas variáveis aqui, por exemplo, onde uma variável chamada Python,
 
 524
-01:29:58.490 --> 01:29:59.450
-Gesiel Lopes: Ah,
+01:15:51.410 --> 01:15:56.259
+Gesiel Lopes: e uma outra variável, que eu vou chamar aqui de.
 
 525
-01:30:03.030 --> 01:30:06.809
-Gesiel Lopes: a String, que é uma estringe vazia.
+01:15:57.200 --> 01:16:02.969
+Gesiel Lopes: É programming, por exemplo.
 
 526
-01:30:07.150 --> 01:30:10.900
-Gesiel Lopes: A String tem um método chamado de Join,
+01:16:04.230 --> 01:16:08.910
+Gesiel Lopes: E aí eu posso realizar algumas operações bem interessantes.
 
 527
-01:30:11.580 --> 01:30:19.030
-Gesiel Lopes: que é um método que junta a elementos de uma lista
+01:16:09.070 --> 01:16:22.580
+Gesiel Lopes: A primeira operação que a gente viu quando trabalhamos com Strings, é a de Concacaf com Karate
 
 528
-01:30:19.570 --> 01:30:23.510
-Gesiel Lopes: com esses elementos, com essa String.
+01:16:22.690 --> 01:16:30.180
+Gesiel Lopes: na ação. Que a concatenação nada mais é do que juntar
 
 529
-01:30:23.700 --> 01:30:26.740
-Gesiel Lopes: Então, nesse caso, o que eu vou fazer?
+01:16:30.450 --> 01:16:39.110
+Gesiel Lopes: duas Strings, ou seja de somar duas strings. E aí a gente vai usar para essa operação um operador
 
 530
-01:30:26.900 --> 01:30:40.169
-Gesiel Lopes: Pegar todos os elementos da minha lista, que é o texto normalizado do tokenizado sem stopwats, e vou criar uma string. Eu vou juntar todos esses elementos com espaço em branco,
+01:16:40.250 --> 01:16:49.450
+Gesiel Lopes: de concatenação, que é um operador coringa, que ele serve tanto para concatenar Strings, como também um operador matemático de soma.
 
 531
-01:30:40.770 --> 01:30:51.370
-Gesiel Lopes: criando o meu texto pré processado. Então o texto pré processado, tá?
+01:16:49.570 --> 01:16:53.280
+Gesiel Lopes: Tá bom, que é o operador mais plus.
 
 532
-01:30:51.710 --> 01:30:54.329
-Gesiel Lopes: E aí eu posso, por exemplo, fazer o leme
+01:16:54.510 --> 01:16:58.279
+Gesiel Lopes: Então a gente pode concatenar Strings.
 
 533
-01:30:55.410 --> 01:31:00.690
-Gesiel Lopes: para verificar quantos caracteres ficou no meu texto pré processado.
+01:16:58.900 --> 01:17:10.280
+Gesiel Lopes: E também a gente consegue fazer algumas operações bem interessantes. Por exemplo, a gente pode fazer uma operação de
 
 534
-01:31:01.910 --> 01:31:05.879
-Gesiel Lopes: Tá, na realidade, o Len não vai aparecer porque o
+01:17:10.400 --> 01:17:21.320
+Gesiel Lopes: repetição de Strings. Então, por exemplo, eu posso criar aqui uma variável que eu vou chamar de repetir, tá?
 
 535
-01:31:07.010 --> 01:31:10.090
-Gesiel Lopes: ele é gigantesco. Eu vou dar dois prints
+01:17:21.510 --> 01:17:33.049
+Gesiel Lopes: E essa variável, melhor dizendo, vai receber três vezes a variável nome, que é uma variável String. Vou colocar aqui só mais uma
 
 536
-01:31:11.810 --> 01:31:15.290
-Gesiel Lopes: aí fica melhor, porque ele faz a quebra para mim.
+01:17:33.210 --> 01:17:35.199
+Gesiel Lopes: célula, tá? Então,
 
 537
-01:31:15.530 --> 01:31:20.590
-Gesiel Lopes: Então observem que eu tenho agora o meu texto, a minha String.
+01:17:35.780 --> 01:17:51.529
+Gesiel Lopes: aqui nessa célula, eu fiz a declaração dessas três variáveis. E aí a gente viu que, para visualizar o resultado, ou para plotar, ou para mostrar no terminal, a gente pode usar a função print
 
 538
-01:31:21.000 --> 01:31:29.219
-Gesiel Lopes: E essa String vai ter dezasseis mil caracteres. É aí só para mostrar que, de fato,
+01:17:51.730 --> 01:18:02.390
+Gesiel Lopes: para visualizar essas variáveis. No caso, no nosso caso, as nossas streams um sobrenome é um print.
 
 539
-01:31:32.300 --> 01:31:41.569
-Gesiel Lopes: Taipe, o meu texto pré processado é de fato uma extingua e não uma lista. Eu verifico o Taipe,
+01:18:02.530 --> 01:18:05.970
+Gesiel Lopes: É nome completo
 
 540
-01:31:42.300 --> 01:31:46.120
-Gesiel Lopes: tá? Ele é um Mar String, tá?
+01:18:08.160 --> 01:18:23.019
+Gesiel Lopes: e repetir que a variável repetir. Então, quando eu executo essa célula, a gente vai mostrar o conteúdo de cada uma dessas variáveis. Então, lembrando que cada uma dessas variáveis,
 
 541
-01:31:46.430 --> 01:31:53.330
-Gesiel Lopes: E aí quem quiser saber mais um pouquinho sobre esse universo chamado Nlp, tem um livro aí que vocês podem baixar um livro aberto
+01:18:23.240 --> 01:18:33.280
+Gesiel Lopes: elas são do tipo String, e uma forma de você ver isso é através do operador, por exemplo, Taipe,
 
 542
-01:31:53.530 --> 01:31:55.940
-Gesiel Lopes: open source, que é um clássico.
+01:18:33.510 --> 01:18:40.600
+Gesiel Lopes: ou através da função taipe, que é uma função beauty. Então ela retorna
 
 543
-01:31:56.170 --> 01:32:06.639
-Gesiel Lopes: Foi escrito pelos principais nomes da pesquisa em Lp no Brasil, tá?
+01:18:40.800 --> 01:18:55.470
+Gesiel Lopes: o tipo de uma determinada variável. Então observe o conteúdo da variável nome é Python. E essa variável é do tipo String
 
 544
-01:32:07.110 --> 01:32:12.979
-Gesiel Lopes: Tem uma ex professora minha que está nesse livro. Enfim, um livro público. Vocês podem baixar
+01:18:55.770 --> 01:18:56.580
+Gesiel Lopes: tá?
 
 545
-01:32:14.670 --> 01:32:20.599
-Gesiel Lopes: Pdf tem a versão online tranquilo. Então era isso o pessoal que eu tinha preparado para hoje.
+01:18:56.900 --> 01:19:02.120
+Gesiel Lopes: Nada. Nada fora do que a gente viu.
 
 546
-01:32:20.900 --> 01:32:29.350
-Gesiel Lopes: Então é justamente uma das formas que eu tenho de trabalhar com String. Muitas das vezes, esses elementos podem não fazer sentido,
+01:19:02.410 --> 01:19:09.830
+Gesiel Lopes: Outro ponto extremamente importante que a gente pode destacar
 
 547
-01:32:29.760 --> 01:32:33.930
-Gesiel Lopes: mas quando a gente começa a usá los para formar algo
+01:19:10.090 --> 01:19:18.279
+Gesiel Lopes: dentro da manipulação de String. São algumas funções úteis
 
 548
-01:32:34.050 --> 01:32:39.880
-Gesiel Lopes: contextualizado, a gente consegue ver um resultado bem significativo.
+01:19:18.440 --> 01:19:26.419
+Gesiel Lopes: com algumas funções bem interessantes. As Strings possuem algumas funções
 
 549
-01:32:41.190 --> 01:32:50.940
-Gesiel Lopes: Beleza, muito obrigado. Lembrando antes, lembrando que amanhã nós teremos o nosso no nosso
+01:19:26.610 --> 01:19:37.100
+Gesiel Lopes: bem específicas que podem ser utilizadas aí para a gente manipular essas stringes. Então vamos supor que eu queira ter uma variável aqui, chamada texto
 
 550
-01:32:51.740 --> 01:33:07.890
-Gesiel Lopes: primeira reposição, reposição da semana passada que a gente faltou. Então a nossa primeira reposição no mesmo horário das aulas. Fechado, pessoal. Então é isso. Muito obrigado. Bom descanso, bons estudos e até a próxima.
+01:19:37.540 --> 01:19:46.060
+Gesiel Lopes: tá que essa variável eu vou colocar aqui. Por exemplo, Python é incrível.
 
 551
-01:33:08.290 --> 01:33:09.300
+01:19:47.410 --> 01:19:48.889
+Gesiel Lopes: Python é,
+
+552
+01:19:52.140 --> 01:19:55.319
+Gesiel Lopes: eu vou botar pai do Fenom
+
+553
+01:19:55.840 --> 01:20:01.340
+Gesiel Lopes: menaut paitu é fenomenal. Por exemplo,
+
+554
+01:20:01.560 --> 01:20:17.169
+Gesiel Lopes: e aqui a gente viu algumas operações ou algumas funções que podem ser aplicadas a uma variável a String, melhor dizendo, não somente a variável, mas uma String
+
+555
+01:20:17.170 --> 01:20:22.009
+Gesiel Lopes: que aí eu posso ter declarado ou não o conteúdo de um Oastricht e uma variável.
+
+556
+01:20:22.010 --> 01:20:25.570
+Gesiel Lopes: Uma função que a gente viu.
+
+557
+01:20:26.320 --> 01:20:29.670
+Gesiel Lopes: Bem interessante. A função Aper
+
+558
+01:20:29.930 --> 01:20:37.590
+Gesiel Lopes: que ela vai fazer com que todos os caracteres fiquem em caixa alta da minha String.
+
+559
+01:20:38.270 --> 01:20:47.540
+Gesiel Lopes: Outra função interessante que a gente viu é a função capitalize que ela vai tornar
+
+560
+01:20:48.020 --> 01:20:55.910
+Gesiel Lopes: o primeiro caracter de cada o conjunto de cada palavra como maiúsculo.
+
+561
+01:20:57.030 --> 01:20:58.090
+Gesiel Lopes: Então vamos.
+
+562
+01:20:58.740 --> 01:21:11.720
+Gesiel Lopes: Vamos ver aqui. Na realidade, o capitais é a primeira karaté da minha String da minha cateia. Não de cada palavra, só corrigindo na realidade o capitais. Ele vai
+
+563
+01:21:11.840 --> 01:21:14.390
+Gesiel Lopes: colocar a primeira.
+
+564
+01:21:14.530 --> 01:21:18.059
+Gesiel Lopes: O primeiro caracter da String em caixa alta.
+
+565
+01:21:18.230 --> 01:21:18.889
+Gesiel Lopes: Tá bom.
+
+566
+01:21:19.650 --> 01:21:23.840
+Gesiel Lopes: O próximo função que a gente viu.
+
+567
+01:21:24.020 --> 01:21:30.370
+Gesiel Lopes: Essa função vai ser muito útil daqui a pouco. Para a gente, é a função replays,
+
+568
+01:21:31.080 --> 01:21:42.250
+Gesiel Lopes: que aí você pode substituir um caracté ou com uma palavra. Uma cadeia de caracté presente na String
+
+569
+01:21:42.690 --> 01:21:45.400
+Gesiel Lopes: por um outro, tá?
+
+570
+01:21:46.180 --> 01:21:48.230
+Gesiel Lopes: É muito
+
+571
+01:21:50.640 --> 01:22:01.689
+Gesiel Lopes: fenomenal, por exemplo. Então eu estou substituindo aonde estiver esse carácter na minha String, ele vai substituir por é muito.
+
+572
+01:22:01.850 --> 01:22:09.710
+Gesiel Lopes: Tá outra operação interessante que a gente pode colocar, tá,
+
+573
+01:22:10.080 --> 01:22:14.600
+Gesiel Lopes: que a gente trabalhou. É a função split.
+
+574
+01:22:15.500 --> 01:22:19.479
+Gesiel Lopes: Então essas funções vão ser bastante útil daqui a pouco. Para a gente
+
+575
+01:22:19.930 --> 01:22:23.929
+Gesiel Lopes: que é a função split, o que ela faz? Ela quebra
+
+576
+01:22:24.040 --> 01:22:40.960
+Gesiel Lopes: a minha cadeia de caracteres. Então ela cria, ela separa na realidade. Nesse caso, quando eu não especifico, qual é o ponto de split? Ele vai separar os caracteres aonde tiver espaço em branco.
+
+577
+01:22:41.110 --> 01:22:45.209
+Gesiel Lopes: Então, nesse caso, aqui ele vai criar uma lista
+
+578
+01:22:45.840 --> 01:22:51.269
+Gesiel Lopes: com três elementos que são os Strings. Só que separado.
+
+579
+01:22:51.430 --> 01:22:55.529
+Gesiel Lopes: A gente vai ver que ele vai criar Python é. E fenomenal.
+
+580
+01:22:56.510 --> 01:23:04.010
+Gesiel Lopes: Outra função também bastante útil que a gente viu é a função Beauty Land
+
+581
+01:23:04.130 --> 01:23:08.909
+Gesiel Lopes: que ela retorna à quantidade de caracteres
+
+582
+01:23:09.210 --> 01:23:12.709
+Gesiel Lopes: que estão presentes dentro daquela String.
+
+583
+01:23:13.010 --> 01:23:16.290
+Gesiel Lopes: Então, se eu executar essas
+
+584
+01:23:16.630 --> 01:23:24.700
+Gesiel Lopes: funções, esses Prints, a gente vai ter o resultado. Como eu falava, o App, ele coloca todos os caracteres em caixa alta.
+
+585
+01:23:24.900 --> 01:23:27.099
+Gesiel Lopes: O Cap tá lá. E se coloca
+
+586
+01:23:27.650 --> 01:23:33.829
+Gesiel Lopes: o primeiro caracter em caixa alta.
+
+587
+01:23:33.990 --> 01:23:40.389
+Gesiel Lopes: O replay só substitui. Então, em vez de aparecer, Python é fundamental. E aqui, ó,
+
+588
+01:23:40.790 --> 01:23:45.530
+Gesiel Lopes: posso até colocar o texto original para a gente poder comparar.
+
+589
+01:23:47.350 --> 01:23:53.340
+Gesiel Lopes: Então, aqui o Python é fundamental, que é o original. Aqui capitalize não é o
+
+590
+01:23:53.530 --> 01:23:57.650
+Gesiel Lopes: aqui. O App é o capitalize o, replace
+
+591
+01:23:57.910 --> 01:24:02.149
+Gesiel Lopes: o split. Observe que o split. Ele quebrou.
+
+592
+01:24:02.420 --> 01:24:10.050
+Gesiel Lopes: Nesse caso, pelo espaço em branco. Então ele criou uma lista com três elementos, tá?
+
+593
+01:24:10.770 --> 01:24:21.789
+Gesiel Lopes: E o último é a função Lemp que retorna a quantidade de caracteres presentes naquela String.
+
+594
+01:24:22.050 --> 01:24:34.239
+Gesiel Lopes: Outro ponto fundamental também que a gente viu é que a gente consegue, dentro de String, fazer um conceito bem legal, que é o conceito de interpolação.
+
+595
+01:24:34.600 --> 01:24:41.590
+Gesiel Lopes: Isso quer dizer o quê? Eu posso adicionar na minha String
+
+596
+01:24:41.850 --> 01:24:54.579
+Gesiel Lopes: alguns elementos externos. A String. Então a interpolação é muito usada. Por exemplo para eu construir uma string em tempo de execução.
+
+597
+01:24:54.800 --> 01:25:00.390
+Gesiel Lopes: Então vamos supor que eu queira criar uma
+
+598
+01:25:00.880 --> 01:25:05.199
+Gesiel Lopes: variável que eu vou pegar em tempo de execução de nome.
+
+599
+01:25:05.930 --> 01:25:15.370
+Gesiel Lopes: E aqui eu coloco uma mensagem. Digite seu nome e aqui uma outra mensagem.
+
+600
+01:25:15.760 --> 01:25:19.780
+Gesiel Lopes: E aí que eu vou chamar aqui de sobre muito nome
+
+601
+01:25:21.490 --> 01:25:37.930
+Gesiel Lopes: e aqui, usando a função input que a gente já trabalhou, que captura o resultado ou o conteúdo a partir do terminal do usuário. E aqui digite seu sobrenome.
+
+602
+01:25:40.690 --> 01:25:50.079
+Gesiel Lopes: E aí eu posso criar uma mensagem. Mensagem é da seguinte maneira:
+
+603
+01:26:05.520 --> 01:26:13.580
+Gesiel Lopes: uma String a partir de outras strings em tempo de execução. Então, nesse caso, aqui,
+
+604
+01:26:14.060 --> 01:26:19.189
+Gesiel Lopes: eu vou colocar aqui o F. String Job, bem vindo bem vindo.
+
+605
+01:26:21.160 --> 01:26:25.520
+Gesiel Lopes: E aí o que eu coloco para fazer a interpolação? A gente usa o colchete
+
+606
+01:26:25.820 --> 01:26:28.660
+Gesiel Lopes: e é aqui, bem vindo. Nome,
+
+607
+01:26:29.080 --> 01:26:32.990
+Gesiel Lopes: e aí. Aqui, ó, vou concatenar sobrenome
+
+608
+01:26:33.600 --> 01:26:44.180
+Gesiel Lopes: sobrenome. E aí? Olha só a concatenação. Eu vou concatenar com uma outra. String, deixa eu
+
+609
+01:26:45.350 --> 01:26:47.500
+Gesiel Lopes: que alguém está com a câmera ligada.
+
+610
+01:26:51.570 --> 01:26:57.650
+Gesiel Lopes: Interromper o vídeo. Pronto, eu vou colocar aqui um espaço em branco.
+
+611
+01:27:00.350 --> 01:27:06.849
+Gesiel Lopes: Eu vou usar aspas como eu já estou usando aspas simples. Eu vou colocar como aspas duplas. Bem vindo
+
+612
+01:27:07.370 --> 01:27:08.200
+Gesiel Lopes: a a
+
+613
+01:27:13.290 --> 01:27:19.610
+Gesiel Lopes: verso da pro programação com Paita.
+
+614
+01:27:21.140 --> 01:27:22.970
+Gesiel Lopes: E aí eu posso Opa
+
+615
+01:27:25.290 --> 01:27:34.339
+Gesiel Lopes: fazer aqui um print da minha mensagem, que seria o resultado. Então executar essa célula, a gente vai fazer gesiel, por exemplo,
+
+616
+01:27:35.570 --> 01:27:36.760
+Gesiel Lopes: Lopes,
+
+617
+01:27:37.120 --> 01:27:46.930
+Gesiel Lopes: e aí ele vai me dar a mensagem. Observe que essa string final foi definida em tempo de execução
+
+618
+01:27:47.190 --> 01:27:59.919
+Gesiel Lopes: através dessa funcionalidade de formatação de Strings, o famoso F. String do Python. Então são algumas das coisas que a gente pode utilizar
+
+619
+01:28:00.060 --> 01:28:08.839
+Gesiel Lopes: com string tá. E aí, no nosso próximo encontro. A gente vai complementar ainda.
+
+620
+01:28:09.020 --> 01:28:13.429
+Gesiel Lopes: E aí algo interessante que pode ser feito
+
+621
+01:28:13.840 --> 01:28:24.019
+Gesiel Lopes: com Strings, que é a parte de indexação. E depois a parte de fatiamento dessas strings. E a gente vai só relembrar alguns desses conceitos.
+
+622
+01:28:24.470 --> 01:28:25.530
+Gesiel Lopes: Beleza.
+
+623
+01:28:25.770 --> 01:28:32.130
+Gesiel Lopes: Então é isso, pessoal que eu havia preparado programado para hoje.
+
+624
+01:28:32.480 --> 01:28:39.540
+Gesiel Lopes: Então conseguimos aí contemplar todos esses pontos.
+
+625
+01:28:39.770 --> 01:28:40.830
+Gesiel Lopes: Beleza,
+
+626
+01:28:41.500 --> 01:28:50.659
+Gesiel Lopes: qualquer dúvida. Só entrar em contato lá no Ifnet online que a gente tenta ajudá los da melhor forma possível.
+
+627
+01:28:51.310 --> 01:28:56.710
+Gesiel Lopes: Espero encontrá los no nosso próximo encontro. Beleza.
+
+628
+01:28:56.930 --> 01:28:59.860
+Gesiel Lopes: Boa noite. Bons estudos e bom descanso.
+
+629
+01:29:00.200 --> 01:29:01.150
 Gesiel Lopes: Fui.
 

@@ -1,0 +1,3030 @@
+WEBVTT
+
+1
+00:01:02.040 --> 00:01:03.820
+Marcelo Tomio Hama: E aí, pessoal? Boa noite.
+
+2
+00:01:05.880 --> 00:01:08.830
+Marcelo Tomio Hama: Tudo bem aí com todos vocês?
+
+3
+00:01:11.040 --> 00:01:13.320
+helio.oliveira: Boa noite, Professor. Tudo, Joia.
+
+4
+00:01:14.530 --> 00:01:15.080
+Marcelo Tomio Hama: E a
+
+5
+00:01:29.200 --> 00:01:31.270
+Marcelo Tomio Hama: pessoal.
+
+6
+00:01:31.890 --> 00:01:36.950
+Marcelo Tomio Hama: Vocês tiveram tempo de dá uma olhadinha no material da nossa.
+
+7
+00:01:37.460 --> 00:01:38.739
+Marcelo Tomio Hama: Na nossa aula.
+
+8
+00:01:39.130 --> 00:01:50.960
+Marcelo Tomio Hama: A gente comentou bastante. No ano passado, sobre métodos Http. Vimos ali alguns cenários experimentativos para fazer chamada Get.
+
+9
+00:01:51.130 --> 00:02:00.199
+Marcelo Tomio Hama: Vimos ali também sobre os tipos de diferentes respostas que uma requisição Htt pode estar lançando.
+
+10
+00:02:00.690 --> 00:02:03.100
+Marcelo Tomio Hama: E a ideia é que a gente
+
+11
+00:02:03.310 --> 00:02:19.690
+Marcelo Tomio Hama: na sequência agora, para um laboratório, eu acho que bem interessante aqui, mas aí, só consultando. Vocês vocês tiveram um tempinho aí. De dar uma olhada no material, até para a gente, eventualmente considerar fazer a construção do servidor aí do lado de vocês.
+
+12
+00:02:21.220 --> 00:02:24.719
+Marcelo Tomio Hama: Alguém teve esse tempinho ou a semana foi puxada?
+
+13
+00:02:34.640 --> 00:02:35.470
+Marcelo Tomio Hama: Ninguém.
+
+14
+00:02:38.050 --> 00:02:42.099
+Marcelo Tomio Hama: Tudo bem aí? Pessoal. Sem problema nenhum, tá?
+
+15
+00:02:42.440 --> 00:02:43.680
+Marcelo Tomio Hama: É,
+
+16
+00:02:45.140 --> 00:02:54.179
+Marcelo Tomio Hama: eu vou trazer aqui um pouquinho do contexto desse laboratório antes de a gente começar aqui, só para que vocês tenham um pouco do
+
+17
+00:02:54.570 --> 00:02:56.879
+Marcelo Tomio Hama: no nosso país, no contexto do nosso cenário.
+
+18
+00:02:57.770 --> 00:03:04.799
+Marcelo Tomio Hama: E eu acredito que talvez vocês devam conhecer algumas das tecnologias que a gente já vai estar utilizando
+
+19
+00:03:06.360 --> 00:03:08.220
+Marcelo Tomio Hama: a ideia dessa.
+
+20
+00:03:08.550 --> 00:03:16.079
+Marcelo Tomio Hama: A terceira parte é que a gente construa um servidor e também um cliente aqui como o Python.
+
+21
+00:03:16.530 --> 00:03:23.769
+Marcelo Tomio Hama: Só que para isso. Para que a gente não fique aqui muito preso na ferramenta do
+
+22
+00:03:24.060 --> 00:03:35.829
+Marcelo Tomio Hama: do Deep note porque o Deep Note é bastante interessante do ponto de vista de plataforma de serviços. Mas se a gente quer um servidor Python, a gente já começa a ter algumas outras complexidades.
+
+23
+00:03:36.370 --> 00:03:43.229
+Marcelo Tomio Hama: E aqui, só para ficar um pouco mais simples. Então a gente faz uso de algumas outras ferramentas. Não é tão simples quanto
+
+24
+00:03:43.590 --> 00:03:46.570
+Marcelo Tomio Hama: ali o próprio Deep. Note
+
+25
+00:03:47.060 --> 00:03:53.670
+Marcelo Tomio Hama: do que se trata então? Dessa Stack que a gente vai estar construindo agora, vocês aí,
+
+26
+00:03:54.000 --> 00:03:58.130
+Marcelo Tomio Hama: não tem a necessidade de construir. A ideia
+
+27
+00:03:58.380 --> 00:04:10.010
+Marcelo Tomio Hama: é que essa Stack seja centralizada aqui do meu lado, e vocês construam aplicações Python para a gente estar se conectando e batendo aqui, nesse servidor do meu lado, a ideia
+
+28
+00:04:10.270 --> 00:04:16.369
+Marcelo Tomio Hama: de vocês construírem servidores do lado de vocês é caso a gente queira trazer um cenário mais
+
+29
+00:04:16.570 --> 00:04:24.519
+Marcelo Tomio Hama: abrangente, então não é nada impeditivo para a gente. Se vocês quiserem construir um servidor. Está valendo, inclusive a gente.
+
+30
+00:04:24.880 --> 00:04:26.219
+Marcelo Tomio Hama: O nosso aqui.
+
+31
+00:04:26.570 --> 00:04:28.319
+Marcelo Tomio Hama: Como fazer isso?
+
+32
+00:04:28.470 --> 00:04:40.709
+Marcelo Tomio Hama: Então eu tenho aqui na minha máquina. Não sei se todos e todas conhecem já. Mas que eu tenho na minha máquina, o Docker. Vocês sabem o que é o Docker? Já ouviram falar de contain
+
+33
+00:04:41.580 --> 00:04:44.000
+Marcelo Tomio Hama: é um tema novo para vocês? Ou já ouviram falar
+
+34
+00:04:46.960 --> 00:04:52.240
+Marcelo Tomio Hama: beleza? Então, pra vocês aí que já ouviram falar, né?
+
+35
+00:04:53.020 --> 00:04:54.830
+Marcelo Tomio Hama: É basicamente uma.
+
+36
+00:04:55.110 --> 00:05:03.130
+Marcelo Tomio Hama: Uma aplicação onde a gente roda sistemas de uma maneira mais leve, a gente cria então
+
+37
+00:05:03.270 --> 00:05:09.120
+Marcelo Tomio Hama: uma aplicação, como se ela estivesse rodando em cima de um sistema Operacional Windows operacional Linux.
+
+38
+00:05:09.510 --> 00:05:16.260
+Marcelo Tomio Hama: Mas a gente não coloca ali tudo o que esses sistemas operacionais possuem. Então assim é uma versão
+
+39
+00:05:16.650 --> 00:05:21.569
+Marcelo Tomio Hama: muito mais leve de uma virtualização,
+
+40
+00:05:22.360 --> 00:05:32.019
+Marcelo Tomio Hama: o que é uma virtualização? Basicamente, é você instalar um sistema operacional dentro do outro. É o que a gente chama de hosting a gente hostar um sistema operacional
+
+41
+00:05:32.380 --> 00:05:34.910
+Marcelo Tomio Hama: dentro do outro. Mas aqui não.
+
+42
+00:05:35.020 --> 00:05:41.360
+Marcelo Tomio Hama: Quando a gente fala de container é muito mais leve, mais simples, porque o container. Ele traz ali
+
+43
+00:05:41.930 --> 00:05:55.660
+Marcelo Tomio Hama: as funções de sistema operacional, persistência em disco, bibliotecas de gerenciamento de processos e tudo mais. Só que ele não traz ali um interface visual. Ele não traz nada ali do que é mais pesado.
+
+44
+00:05:55.990 --> 00:05:59.469
+Marcelo Tomio Hama: Você consegue rodar aplicações de uma maneira mais simples.
+
+45
+00:06:00.720 --> 00:06:01.480
+Marcelo Tomio Hama: E aí?
+
+46
+00:06:01.770 --> 00:06:05.569
+Marcelo Tomio Hama: E o Doctor é basicamente uma plataforma para isso.
+
+47
+00:06:07.160 --> 00:06:11.369
+Marcelo Tomio Hama: Existe uma versão do Docker para.
+
+48
+00:06:11.550 --> 00:06:20.940
+Marcelo Tomio Hama: Está no desktop, que é uma versão local. E aqui eu tenho instalada essa versão local. Então é esse aqui que a gente está mostrando aqui
+
+49
+00:06:21.440 --> 00:06:30.679
+Marcelo Tomio Hama: na esquerda interior. Então isso aqui são todas as minhas aplicações. Tem aqui inclusive aplicações de outras aulas aqui,
+
+50
+00:06:30.810 --> 00:06:40.139
+Marcelo Tomio Hama: no nosso caso, a gente vai fazer uso dessa primeira. Aqui que é o My Api server aqui, eu estou hostil na porta cinco mil.
+
+51
+00:06:40.250 --> 00:06:42.559
+Marcelo Tomio Hama: Então a gente basicamente falou.
+
+52
+00:06:42.990 --> 00:06:48.360
+Marcelo Tomio Hama: E desses dois personagens aqui é o doctor desktop, e também uma aplicação Python.
+
+53
+00:06:48.530 --> 00:06:50.120
+Marcelo Tomio Hama: Essa aplicação baita.
+
+54
+00:06:50.430 --> 00:06:55.190
+Marcelo Tomio Hama: Eu já disponibilizei para vocês também. Ali, nos materiais
+
+55
+00:06:55.730 --> 00:07:04.299
+Marcelo Tomio Hama: dentro ali da pasta, a gente vai ter esses arquivos. Aqui tem. Então o prompt de comando, que é basicamente um prompt.
+
+56
+00:07:04.980 --> 00:07:06.599
+Marcelo Tomio Hama: Que vocês vão rodar
+
+57
+00:07:06.750 --> 00:07:14.930
+Marcelo Tomio Hama: ali dentro do Ms dentro do terminal. São os dois comandos básicos para a gente subir a nossa aplicação. Esse primeiro,
+
+58
+00:07:15.680 --> 00:07:26.299
+Marcelo Tomio Hama: ele basicamente compila e constrói o container. Então, a gente chama aqui o Doctor Bild para a gente passar como parâmetro. Nome da aplicação.
+
+59
+00:07:27.240 --> 00:07:34.240
+Marcelo Tomio Hama: E aqui esse ponto, a gente faz uma referência. Aonde está o arquivo? Ali do Doctor Piper. Eu não vou dar tantos detalhes assim.
+
+60
+00:07:34.650 --> 00:07:42.059
+Marcelo Tomio Hama: Porque essa aula aqui não é sobre Docker. E não é sobre conteineres. Só estou dando uma breve introdução
+
+61
+00:07:42.100 --> 00:07:58.240
+Marcelo Tomio Hama: sobre como vocês podem fazer para executar o servidor. Basicamente executar esse primeiro comando. E depois este segundo comando, esse primeiro ele constrói, ele constrói o Conteiner. E esse segundo executa o container.
+
+62
+00:07:58.240 --> 00:08:08.360
+Marcelo Tomio Hama: Ele disponibiliza o container na porta cinco mil. Faz o mapeamento. Passa aqui o nome como parâmetro, e deixa a aplicação ali, rodando. Nesse caso, aqui,
+
+63
+00:08:08.590 --> 00:08:20.300
+Marcelo Tomio Hama: eu já deixei a aplicação pré construída. Vou deixar aqui mais fácil. Mas no caso de vocês, caso queiram construir o servidor e executar esses dois comandos. Nesse caso, aqui, eu só vou dar o play
+
+64
+00:08:20.690 --> 00:08:26.830
+Marcelo Tomio Hama: na minha aplicação. E ela já está aqui rodando. É um servidor Python.
+
+65
+00:08:27.030 --> 00:08:32.840
+Marcelo Tomio Hama: Mas o que a gente tem dentro deste servidor, Python, o que a gente tem
+
+66
+00:08:33.090 --> 00:08:38.999
+Marcelo Tomio Hama: está dentro desse arquivo aqui App. Pai, quando a gente olha para esse arquivo,
+
+67
+00:08:39.780 --> 00:08:45.329
+Marcelo Tomio Hama: o que nós temos é basicamente a aplicação aqui escrita com
+
+68
+00:08:45.820 --> 00:08:50.790
+Marcelo Tomio Hama: a Lib Flask, o Flask. Ele traz aqui uma série de
+
+69
+00:08:51.420 --> 00:09:01.600
+Marcelo Tomio Hama: de funcionalidades voltadas para servidor Python. E aqui. Então eu estou chamando o Flash e passo aqui o nome da minha aplicação nessa primeira parte aqui,
+
+70
+00:09:01.940 --> 00:09:05.100
+Marcelo Tomio Hama: olha só o que eu estou fazendo? Já tenho que.
+
+71
+00:09:07.440 --> 00:09:08.759
+Marcelo Tomio Hama: Já tem aqui, né?
+
+72
+00:09:09.310 --> 00:09:11.590
+Marcelo Tomio Hama: Um conceito que a gente já conhece.
+
+73
+00:09:11.800 --> 00:09:15.300
+Marcelo Tomio Hama: Então, todo mundo aqui na sala já ouviu falar aqui da
+
+74
+00:09:15.560 --> 00:09:20.029
+Marcelo Tomio Hama: do Jason Nahe. Então, Date Store que a gente tem aqui.
+
+75
+00:09:20.410 --> 00:09:27.730
+Marcelo Tomio Hama: Ele é um Jason Nahree. Vou até mandar para vocês esse código aqui no chat.
+
+76
+00:09:28.890 --> 00:09:38.000
+Marcelo Tomio Hama: E esse Jason Array tem dois objetos. A gente tem o primeiro objeto aqui com Id, um nome, item um
+
+77
+00:09:38.600 --> 00:09:47.760
+Marcelo Tomio Hama: aí de dois. Nem então eu estou criando aqui basicamente uma rei em memória.
+
+78
+00:09:48.030 --> 00:09:53.080
+Marcelo Tomio Hama: E aí, o que eu estou fazendo? Expondo agora uma.
+
+79
+00:09:53.710 --> 00:10:08.850
+Marcelo Tomio Hama: Uma rota para get. Ou seja, eu estou fornecendo o serviço Get para esse tipo de servidor. Não vamos entrar tanto em detalhe assim, porque realmente a ideia é a gente falar mais do lado do cliente. Mas, claro, caso vocês tenham
+
+80
+00:10:09.300 --> 00:10:15.700
+Marcelo Tomio Hama: dúvidas, perguntas aqui, curiosidades em cima dos métodos do servidor. Fica todo mundo super à vontade aí para
+
+81
+00:10:15.990 --> 00:10:18.730
+Marcelo Tomio Hama: abrir o microfone e trazer a questão.
+
+82
+00:10:19.160 --> 00:10:23.759
+Marcelo Tomio Hama: Enfim, aqui a gente tem algumas anotações. Então o App Howard.
+
+83
+00:10:23.900 --> 00:10:28.320
+Marcelo Tomio Hama: A gente chama aqui nessa rota de barracos. Ou seja, vai chamar Sky Et.
+
+84
+00:10:28.630 --> 00:10:33.579
+Marcelo Tomio Hama: Basta que eu passe aqui o Baha itens e eu vou estar chamando esse get aqui.
+
+85
+00:10:34.010 --> 00:10:41.069
+Marcelo Tomio Hama: Receba o Kingetti e passa uma tentativa dele. Então passa um Jason, pai, e eu retorno aqui
+
+86
+00:10:41.290 --> 00:10:49.020
+Marcelo Tomio Hama: todo o meu conteúdo ali presente em Date Store. E eu passo também o duzentos. Por quê?
+
+87
+00:10:49.350 --> 00:10:53.259
+Marcelo Tomio Hama: Se eu tenho essa chamada sendo realizada com sucesso,
+
+88
+00:10:53.780 --> 00:10:59.459
+Marcelo Tomio Hama: nada mais natural, nada mais conveniente do que passar o Http duzentos.
+
+89
+00:10:59.690 --> 00:11:08.470
+Marcelo Tomio Hama: A gente falou sobre isso na hora passada. Os códigos Http duzentos ali significa o quê? Significa ok. Recebi com sucesso.
+
+90
+00:11:09.530 --> 00:11:16.110
+Marcelo Tomio Hama: Tem uns outros cenários aqui. Então é o Barra Ips e o método aqui nesse cenário é o Post.
+
+91
+00:11:16.960 --> 00:11:28.100
+Marcelo Tomio Hama: E nesse caso, eu estou chamando o método aqui. Advert itens e a rota dele também é item. Só que nesse caso, eu estou tocando o método Http. Não estou mais
+
+92
+00:11:28.800 --> 00:11:33.010
+Marcelo Tomio Hama: usando guedes agora estou usando o Post.
+
+93
+00:11:33.350 --> 00:11:34.320
+Marcelo Tomio Hama: E aqui
+
+94
+00:11:34.720 --> 00:11:47.450
+Marcelo Tomio Hama: eu estou criando um novo item. Então eu faço. Aqui o new item recebeu Werequest Getjson. Esse método a gente viu na aula passada. Ele basicamente obtém
+
+95
+00:11:48.030 --> 00:11:57.209
+Marcelo Tomio Hama: o conteúdo recebido no corpo da minha mensagem Http, e eu converto ele em Jason.
+
+96
+00:11:58.030 --> 00:12:06.550
+Marcelo Tomio Hama: Nesse caso, então a gente tem o new item sendo um Jason object. E agora if new item or
+
+97
+00:12:06.960 --> 00:12:15.880
+Marcelo Tomio Hama: name not in light, ou seja, eu verifico se este elemento não está presente na minha lista aqui que eu defini em memória. Eu vou fazer o quê?
+
+98
+00:12:16.480 --> 00:12:31.020
+Marcelo Tomio Hama: Ou retornar aqui se ele está presente, significa que, claro, ele não está ali presente. Se esse item não está contido na minha lista, ele não está presente no meu objeto, e eu retorno. Então
+
+99
+00:12:31.450 --> 00:12:40.309
+Marcelo Tomio Hama: aqui um,quatrocentos significa o quê? Que eu estou tentando fazer algum tipo de alteração, obter aquele item de uma lista
+
+100
+00:12:40.830 --> 00:12:43.520
+Marcelo Tomio Hama: ali, onde se tem, não existe de alguma maneira.
+
+101
+00:12:43.820 --> 00:12:45.479
+Marcelo Tomio Hama: Se isso aqui não.
+
+102
+00:12:45.600 --> 00:12:48.930
+Marcelo Tomio Hama: Se a gente não caiu neste caso,
+
+103
+00:12:49.690 --> 00:12:56.349
+Marcelo Tomio Hama: então eu consigo adicionar este item no meu dicionário.
+
+104
+00:12:56.560 --> 00:12:59.669
+Marcelo Tomio Hama: Então, basicamente, eu crio um overdide.
+
+105
+00:13:00.500 --> 00:13:06.890
+Marcelo Tomio Hama: O Ed dele vai ser basicamente o tamanho do meu dicionário. Mais um. Então, se eu tenho quatro elementos
+
+106
+00:13:07.520 --> 00:13:10.369
+Marcelo Tomio Hama: agora, eu vou fazer o quinto elemento
+
+107
+00:13:10.780 --> 00:13:17.100
+Marcelo Tomio Hama: passar a ser o valor do Id e para esse carinho aqui, Tchau.
+
+108
+00:13:17.770 --> 00:13:24.450
+Marcelo Tomio Hama: Eu faço um atende no meu dicionário. Então, basicamente, eu estou ganhando um novo item aqui para o meu dicionário
+
+109
+00:13:29.830 --> 00:13:33.780
+Marcelo Tomio Hama: beleza com isso feito não, eu retorno o próprio objeto criado.
+
+110
+00:13:34.480 --> 00:13:37.700
+Marcelo Tomio Hama: E também o código Http duzentos e um,
+
+111
+00:13:38.090 --> 00:13:45.359
+Marcelo Tomio Hama: lembrem se ali que o Rtp duzentos e um é o Creative de novo. Faz total sentido
+
+112
+00:13:45.930 --> 00:13:50.090
+Marcelo Tomio Hama: essa última linha, que basicamente estou fazendo a minha aplicação,
+
+113
+00:13:50.510 --> 00:13:58.520
+Marcelo Tomio Hama: executar como servidor. E aí eu faço ela rodar no Host em local. Host dentro da porta quinhentos.
+
+114
+00:13:59.150 --> 00:14:04.209
+Marcelo Tomio Hama: Isso aqui, pessoal, vai rodar em local, Host, que no caso, é
+
+115
+00:14:04.650 --> 00:14:07.059
+Marcelo Tomio Hama: dentro aqui do meu Doctor. Ou seja,
+
+116
+00:14:07.250 --> 00:14:13.570
+Marcelo Tomio Hama: nesse ponto aqui eu ainda estou confinado na minha aplicação Docker.
+
+117
+00:14:13.860 --> 00:14:21.690
+Marcelo Tomio Hama: Não tenho ela ainda disponível para acessá la aqui. Para fazer acesso a esses métodos aqui. Eu precisaria entrar aqui no meu,
+
+118
+00:14:22.200 --> 00:14:29.040
+Marcelo Tomio Hama: no web browser e fazer aqui alguma coisa como local. Host itens, Localhost
+
+119
+00:14:30.070 --> 00:14:34.640
+Marcelo Tomio Hama: corta cinco mil e aí barra Itaitlin e passar aqui os métodos
+
+120
+00:14:35.760 --> 00:14:50.830
+Marcelo Tomio Hama: e a Tim Post conforme fosse a minha necessidade. Só que, claro, a gente não quer parar. Nesse ponto. A gente quer chamar essa aplicação remotamente distribuída como se fosse uma aplicação real distribuída no mundo todo, ali na Internet.
+
+121
+00:14:51.030 --> 00:14:53.919
+Marcelo Tomio Hama: Então, para isso, eu faço uso aqui de uma outra tecnologia.
+
+122
+00:14:54.240 --> 00:15:01.369
+Marcelo Tomio Hama: O Anny Brock basicamente oferece o Thani. Então você passa como parâmetro uma porta, uma Url,
+
+123
+00:15:01.590 --> 00:15:08.489
+Marcelo Tomio Hama: e ele disponibiliza isso como se fosse um serviço público na Internet. Como que eu vou fazer isso?
+
+124
+00:15:08.800 --> 00:15:16.750
+Marcelo Tomio Hama: Fazendo a chamada aqui no web. Brock, eu vou passar. Qual que é o protocolo de comunicação no nosso caso, é o Http
+
+125
+00:15:17.590 --> 00:15:20.499
+Marcelo Tomio Hama: e eu vou passar a porta que eu vou oferecer
+
+126
+00:15:20.810 --> 00:15:24.310
+Marcelo Tomio Hama: ali de maneira pública. Então ele vai chamar isso aqui,
+
+127
+00:15:24.620 --> 00:15:27.250
+Marcelo Tomio Hama: esse serviço, e vai disponibilizar esse tano ali.
+
+128
+00:15:27.610 --> 00:15:34.619
+Marcelo Tomio Hama: E aí eu vou explicar aqui um pouquinho mais, só que a gente conseguir obter a Url.
+
+129
+00:15:35.400 --> 00:15:43.899
+Marcelo Tomio Hama: E é basicamente essa daqui. Então essa Url aqui, ela está apontando para o meu local Host. Cinco mil
+
+130
+00:15:45.260 --> 00:15:48.009
+Marcelo Tomio Hama: pra todo mundo que for fazer o
+
+131
+00:15:48.490 --> 00:15:51.360
+Marcelo Tomio Hama: no laboratório de hoje. Vocês podem.
+
+132
+00:15:51.500 --> 00:15:52.829
+Marcelo Tomio Hama: E aí
+
+133
+00:15:53.580 --> 00:16:00.609
+Marcelo Tomio Hama: vocês podem estar trocando aí. Tudo que tiver Annie Groth por esta linha aqui. Mandei aqui para vocês ao Gl
+
+134
+00:16:02.250 --> 00:16:09.149
+Marcelo Tomio Hama: Beleza. Então, na aula de hoje, a gente começa a utilizar essa Url para os serviços que a gente vai estar oferecendo, inclusive
+
+135
+00:16:09.400 --> 00:16:16.240
+Marcelo Tomio Hama: dentro do Deep. Note essas configurações,
+
+136
+00:16:16.560 --> 00:16:22.630
+Marcelo Tomio Hama: a gente faz ali, a nível de servidor. E aí vocês não precisam executar aí, caso queiram
+
+137
+00:16:22.910 --> 00:16:27.149
+Marcelo Tomio Hama: apenas atuar como cliente beleza, no caso do cliente,
+
+138
+00:16:27.550 --> 00:16:32.740
+Marcelo Tomio Hama: a gente tem essa outra linha aqui, que é o test Api.
+
+139
+00:16:33.940 --> 00:16:42.259
+Marcelo Tomio Hama: Vou mostrar para vocês também o que a gente tem. E aqui tem uns cases. Então a base Url. Aqui a gente vai apenas trocar. A gente poderia colocar aqui o
+
+140
+00:16:43.690 --> 00:16:58.460
+Marcelo Tomio Hama: o Annie Grok, tirar a Url padrão ali e deixar a base Url dessa maneira. E ele acessa através da rock que nós criamos ali no nosso servidor. Então, primeiro cenário, estamos testando aqui o Get. Segundo cenário,
+
+141
+00:16:59.270 --> 00:17:08.529
+Marcelo Tomio Hama: o Post. Terceiro cenário, o get. Depois de ter executado o Post, então reparem também pessoal, que aqui a gente não tem, né?
+
+142
+00:17:09.020 --> 00:17:19.960
+Marcelo Tomio Hama: Nenhuma grande novidade, porque na ano passado, a gente já fez ali alguns pequenos testes envolvendo acesso na Api de consulta meteorológica.
+
+143
+00:17:20.260 --> 00:17:24.939
+Marcelo Tomio Hama: Todo mundo aí conseguiu rodar esse teste aí que a gente fez na alcançada.
+
+144
+00:17:25.180 --> 00:17:27.990
+Marcelo Tomio Hama: Se vocês chegarem a ter alguma dúvida,
+
+145
+00:17:28.730 --> 00:17:31.430
+Marcelo Tomio Hama: deixa eu até executar novamente. Aqui.
+
+146
+00:17:31.930 --> 00:17:35.719
+Marcelo Tomio Hama: Todo mundo está conseguindo ver. Minha tela está aparecendo aí, bonitinho.
+
+147
+00:17:35.970 --> 00:17:38.300
+Marcelo Tomio Hama: Não dá para ensinar a imagem
+
+148
+00:17:38.600 --> 00:17:41.579
+Marcelo Tomio Hama: distorcido, porque aqui eu estou usando um monitor um pouquinho mais.
+
+149
+00:17:41.950 --> 00:17:43.150
+Marcelo Tomio Hama: É White.
+
+150
+00:17:43.670 --> 00:17:46.050
+Marcelo Tomio Hama: Não, não sei se pode estar
+
+151
+00:17:46.180 --> 00:17:53.249
+Marcelo Tomio Hama: aparecendo de maneira diferente aí para vocês. Olha só, a gente tem aqui um Jason. Limporte
+
+152
+00:17:53.640 --> 00:17:59.290
+Marcelo Tomio Hama: para a gente fazer o uso das propriedades do Jason.
+
+153
+00:17:59.400 --> 00:18:06.199
+Marcelo Tomio Hama: O dumpes, o dump, o Lode. Aqui o Requests
+
+154
+00:18:06.630 --> 00:18:12.999
+Marcelo Tomio Hama: para a gente conseguir fazer o uso da dos métodos de Http.
+
+155
+00:18:13.460 --> 00:18:25.519
+Marcelo Tomio Hama: A base Url. No nosso caso, a gente vai usar como domínio. Ali. O Open Ethereum, que é onde a gente vai obter os dados meteorológicos. E aqui a gente constrói a nossa Url
+
+156
+00:18:26.870 --> 00:18:39.180
+Marcelo Tomio Hama: para fazer A. Chamada é bastante simples. Então a gente chama aqui o Requests get. Então, colocando o resultado dessa chamada dentro de um objeto chamado Response, passando aqui
+
+157
+00:18:39.830 --> 00:18:55.019
+Marcelo Tomio Hama: a base Url como parâmetro. E aí, quando eu pego e printo o que a gente tem dentro do Responshpp Code o status code. Ele retorna para o duzentos. Se eu quero pintar a resposta que veio, então eu faço ali
+
+158
+00:18:55.050 --> 00:19:02.249
+Marcelo Tomio Hama: um Jason Damps response, Jason, eu endo com quatro casas, quatro espaços, e depois eu faço o print aqui.
+
+159
+00:19:02.490 --> 00:19:03.360
+Marcelo Tomio Hama: Então,
+
+160
+00:19:03.590 --> 00:19:20.050
+Marcelo Tomio Hama: dessa maneira eu obtenho as informações referentes à latitude quarenta e um-oito e oitenta e dois, longitude menos oitenta e sete seiscentos e vinte e três com as variáveis e parametrizações específicas aqui. De temperatura e velocidade do vento.
+
+161
+00:19:20.200 --> 00:19:23.399
+Marcelo Tomio Hama: Olha só. A gente executa aqui novamente
+
+162
+00:19:24.270 --> 00:19:33.550
+Marcelo Tomio Hama: e a gente obtém aqui a resposta que vem no formato. Jason Pedro tem alguma parte aqui da sintaxe que você queira rever?
+
+163
+00:19:34.070 --> 00:19:41.980
+Marcelo Tomio Hama: Eu vi o que você perguntou. Pode refrescar assim táxi. Qual que seria aí, exatamente? Que você gostaria de rever?
+
+164
+00:19:53.350 --> 00:19:57.570
+Marcelo Tomio Hama: Ah, beleza. Então fechou. Vamos nessa. Então, tchau
+
+165
+00:19:58.500 --> 00:20:06.280
+Marcelo Tomio Hama: bom, então a gente tem aqui. O quê? Nessa primeira parte até minha que vai aparecer. Deixa eu aumentar um pouquinho mais para vocês.
+
+166
+00:20:08.980 --> 00:20:16.640
+Marcelo Tomio Hama: Essa primeira parte. O que aparece para vocês quando vocês estão criando o container aqui. Depois, quando está executando o container,
+
+167
+00:20:16.980 --> 00:20:20.790
+Marcelo Tomio Hama: e aqui depois é quando você está executando a aplicação.
+
+168
+00:20:21.480 --> 00:20:23.469
+Marcelo Tomio Hama: Olha só. A configuração
+
+169
+00:20:23.770 --> 00:20:34.180
+Marcelo Tomio Hama: do Tunely tem que fazer o download ali do Annie Grok para criar uma epi token e a exposição do container. Então, Annie Grok Http
+
+170
+00:20:34.440 --> 00:20:41.779
+Marcelo Tomio Hama: é o protocolo usado. E a porta que eu vou fornecer. E aqui a gente anota essa Url
+
+171
+00:20:42.220 --> 00:20:45.670
+Marcelo Tomio Hama: e depois, claro, basta fazer o uso ali, nos nossos,
+
+172
+00:20:46.110 --> 00:20:49.650
+Marcelo Tomio Hama: nos nossos laboratórios, nos nossos experimentos.
+
+173
+00:20:51.280 --> 00:20:53.060
+Marcelo Tomio Hama: Então
+
+174
+00:20:54.460 --> 00:21:06.649
+Marcelo Tomio Hama: a primeira parte aqui é basicamente o que a gente comentou sobre o nosso código. Vamos trazer ele aqui para o ambiente do Deep Note
+
+175
+00:21:06.840 --> 00:21:08.560
+Marcelo Tomio Hama: na primeira parte aqui.
+
+176
+00:21:11.180 --> 00:21:13.019
+Marcelo Tomio Hama: Uma segunda parte aqui, né?
+
+177
+00:21:13.790 --> 00:21:16.609
+Marcelo Tomio Hama: E aí?
+
+178
+00:21:18.000 --> 00:21:21.779
+Marcelo Tomio Hama: Então eu estou importando o flash
+
+179
+00:21:22.640 --> 00:21:26.400
+Marcelo Tomio Hama: dentro aqui do módulo de Flash. Jason Fi
+
+180
+00:21:27.350 --> 00:21:30.910
+Marcelo Tomio Hama: é basicamente uma conversão de e para o Jason.
+
+181
+00:21:31.090 --> 00:21:34.060
+Marcelo Tomio Hama: E também requests para a gente fazer o uso do
+
+182
+00:21:34.800 --> 00:21:38.430
+Marcelo Tomio Hama: de todos os métodos e chamadas de Http.
+
+183
+00:21:38.640 --> 00:21:45.510
+Marcelo Tomio Hama: Mas olha só aqui. O que eu vou fazer ao invés de estar deixando dessa maneira aqui a gente pode até depois
+
+184
+00:21:46.140 --> 00:21:53.280
+Marcelo Tomio Hama: dentro da nossa aplicação, recriar o nosso, o nosso servidor.
+
+185
+00:21:53.710 --> 00:22:01.099
+Marcelo Tomio Hama: E aqui eu vou colocar um outro objeto só para a gente executar, que em real time
+
+186
+00:22:02.690 --> 00:22:09.439
+Marcelo Tomio Hama: os nossos experimentos. Então vou colocar um, dois, três aqui, três, quatro, cinco.
+
+187
+00:22:11.550 --> 00:22:21.330
+Marcelo Tomio Hama: E aí eu vou colocar aqui. Marcelo, vou colocar aqui o nome de alguns de vocês aí. Eu vou colocar aqui o Matheus.
+
+188
+00:22:22.200 --> 00:22:30.370
+Marcelo Tomio Hama: E aí vou colocar aqui também. Deixa eu ver a Jéssica.
+
+189
+00:22:30.580 --> 00:22:47.380
+Marcelo Tomio Hama: Vou deixar aqui. Então temos aqui cinco objetos aqui criados dentro do meu próprio código. Ele não é uma persistência, tá bom, ele é um Jason Nahe criado em memória. E aí,
+
+190
+00:22:48.040 --> 00:22:54.279
+Marcelo Tomio Hama: só para a gente começar no Zé. Trazer aqui um negócio bem legal. Vou derrubar aqui o meu.
+
+191
+00:22:56.380 --> 00:23:01.220
+Marcelo Tomio Hama: O meu amplificação deixa eu fechar aqui também
+
+192
+00:23:01.960 --> 00:23:05.220
+Marcelo Tomio Hama: fechei tudo. Vou jogar fora essa aplicação. Vou recriar ela.
+
+193
+00:23:05.950 --> 00:23:12.210
+Marcelo Tomio Hama: Então aqui vou rodar de novo o comando ali do do servidor.
+
+194
+00:23:13.170 --> 00:23:19.029
+Marcelo Tomio Hama: Esse aqui. Vou apagar aqui também o container que a gente estava utilizando
+
+195
+00:23:19.250 --> 00:23:31.380
+Marcelo Tomio Hama: Python Rest Test. Então jogava ele fora. Joguei fora beleza, executar. Aqui estou criando aqui o meu container isso
+
+196
+00:23:31.840 --> 00:23:40.119
+Marcelo Tomio Hama: real time aqui, né? Pessoal, essa aplicação que a gente está criando. Vai ter esses novos objetos. Aí vai ter. O Marcelo vai ter o Matheus e vai ter a Jéssica.
+
+197
+00:23:40.480 --> 00:23:44.570
+Marcelo Tomio Hama: E aqui vou subir, né?
+
+198
+00:23:45.920 --> 00:23:48.049
+Marcelo Tomio Hama: Aplicação na porta cinco mil.
+
+199
+00:23:49.120 --> 00:23:57.940
+Marcelo Tomio Hama: Então, olha só. Já recri aqui quando eu volto aqui no outro já vai começar a executar. Bolinha verde está aqui embaixo. Está executando
+
+200
+00:23:58.050 --> 00:24:05.369
+Marcelo Tomio Hama: aí. Agora, o que eu tenho que fazer? Disponibilizar novamente via Thunder.
+
+201
+00:24:05.480 --> 00:24:08.890
+Marcelo Tomio Hama: Então o servidor está aqui, não é?
+
+202
+00:24:10.110 --> 00:24:18.610
+Marcelo Tomio Hama: E aqui está a minha Url. Então, pessoal, esqueçam a Url que eu passei para vocês. Agora a gente vai usar o outro aqui.
+
+203
+00:24:19.150 --> 00:24:21.900
+Marcelo Tomio Hama: Deixa aqui sem querer. Deixa eu executar de novo.
+
+204
+00:24:23.740 --> 00:24:27.430
+Marcelo Tomio Hama: Agora, qual que é a ideia? A gente utilizar
+
+205
+00:24:29.710 --> 00:24:34.200
+Marcelo Tomio Hama: essa outra aqui tá? Que ele pegou e criou uma outra url de tanque.
+
+206
+00:24:39.750 --> 00:24:45.769
+Marcelo Tomio Hama: Então vocês usem por gentileza. Esta segunda.
+
+207
+00:24:46.430 --> 00:24:48.720
+Marcelo Tomio Hama: Olha aí, o Gabriel conseguiu
+
+208
+00:24:48.970 --> 00:24:55.469
+Marcelo Tomio Hama: rodar aqui a aplicação do Test Api. Talvez você precise agora trocar de novo a Url. Tá Gabriel,
+
+209
+00:24:56.680 --> 00:25:01.100
+Marcelo Tomio Hama: porque eu derrubei aqui o tanelinha anterior.
+
+210
+00:25:02.860 --> 00:25:10.599
+Marcelo Tomio Hama: Então a gente fez aqui uma leitura desse código. O que a gente fez? A gente colocou mais objetos.
+
+211
+00:25:11.100 --> 00:25:14.310
+Marcelo Tomio Hama: A gente fez isso aqui, né?
+
+212
+00:25:14.760 --> 00:25:18.740
+Marcelo Tomio Hama: Nós poderíamos, pessoal estar inclusive criando
+
+213
+00:25:19.040 --> 00:25:25.740
+Marcelo Tomio Hama: arquivos. Por que não utilizar de repente um conhecimento que a gente já tem de aulas anteriores.
+
+214
+00:25:26.590 --> 00:25:27.360
+Marcelo Tomio Hama: Então,
+
+215
+00:25:28.110 --> 00:25:36.370
+Marcelo Tomio Hama: o que a gente tem aqui é basicamente um Jason nahe local. Não tem arquivo nem nada, mas vocês podem aí fazer um cenário parecido,
+
+216
+00:25:36.810 --> 00:25:41.450
+Marcelo Tomio Hama: disponibilizando aqui a Rotagget através
+
+217
+00:25:41.990 --> 00:25:57.000
+Marcelo Tomio Hama: do endpoint item Jason Fine para converter em Jason e o retorno aqui à lista. O Http duzentos. Ali vai com resposta, beleza, esse daqui é o servidor. Vamos continuar com os nossos.
+
+218
+00:25:57.980 --> 00:26:01.200
+Marcelo Tomio Hama: Os nossos estudos aqui, os nossos experimentos.
+
+219
+00:26:01.400 --> 00:26:04.590
+Marcelo Tomio Hama: Então, jogar isso aqui, mais pro lado.
+
+220
+00:26:05.770 --> 00:26:12.079
+Marcelo Tomio Hama: Agora vamos olhar aqui como que a gente interpreta uma resposta lá no meu,
+
+221
+00:26:12.640 --> 00:26:17.160
+Marcelo Tomio Hama: no ambiente de teste. Então eu vou pegar aqui o psicódico jogar para cá,
+
+222
+00:26:17.540 --> 00:26:19.499
+Marcelo Tomio Hama: pegar essa segunda parte também, né?
+
+223
+00:26:19.680 --> 00:26:20.880
+Marcelo Tomio Hama: Jogar para cá.
+
+224
+00:26:23.860 --> 00:26:24.520
+Marcelo Tomio Hama: E aí
+
+225
+00:26:24.840 --> 00:26:39.079
+Marcelo Tomio Hama: aqui. Eu vou trocar minha Url. Vou colocar aqui a Url do meu tunelin e essa Url. Pessoal, vocês podem utilizar aí da casa de vocês, tá? Por quê? Porque é como se fosse um serviço real. Como se a gente tivesse
+
+226
+00:26:39.590 --> 00:26:44.149
+Marcelo Tomio Hama: com um servidor de verdade. Mesmo
+
+227
+00:26:44.530 --> 00:26:46.730
+Marcelo Tomio Hama: vocês podem estar acessando de qualquer lugar do mundo.
+
+228
+00:26:47.310 --> 00:26:57.150
+Marcelo Tomio Hama: Então a gente tem aqui o domínio Http, barra barra esse código aqui do Annie Grothree App. E aí eu chamo ele através do itens
+
+229
+00:26:57.420 --> 00:26:58.370
+Marcelo Tomio Hama: beleza.
+
+230
+00:26:58.500 --> 00:27:03.879
+Marcelo Tomio Hama: Vamos fazer o primeiro teste aqui do Get tirar esses carlinhos aqui,
+
+231
+00:27:04.150 --> 00:27:07.330
+Marcelo Tomio Hama: a gente experimentar a língua aqui.
+
+232
+00:27:08.760 --> 00:27:17.630
+Marcelo Tomio Hama: Ele vai fazer primeiro uma mensagem. Traz aqui uma mensagem testando o get na sequência.
+
+233
+00:27:17.770 --> 00:27:23.739
+Marcelo Tomio Hama: Eu pego o Spons, crio ele como uma variável e eu coloco dentro dele
+
+234
+00:27:24.590 --> 00:27:27.740
+Marcelo Tomio Hama: o que eu estou obtendo? Guedes
+
+235
+00:27:27.860 --> 00:27:35.020
+Marcelo Tomio Hama: e passo claro, a minha playl base como parâmetro, tendo o response em mãos.
+
+236
+00:27:35.440 --> 00:27:52.009
+Marcelo Tomio Hama: Eu vou fazer o que vou pintar a resposta. Então, status code response. E aqui eu tenho a chamada interpolação, onde eu passo o F como parâmetro. E eu posso chamar uma variável dentro do meu print.
+
+237
+00:27:52.050 --> 00:27:58.450
+Marcelo Tomio Hama: Vocês se lembram aí de interpolação, né? É uma maneira bastante flexível da gente conseguir usar o Print,
+
+238
+00:27:59.050 --> 00:27:59.900
+Marcelo Tomio Hama: não é?
+
+239
+00:28:04.050 --> 00:28:05.300
+Marcelo Tomio Hama: Depois disso,
+
+240
+00:28:05.540 --> 00:28:20.999
+Marcelo Tomio Hama: eu vou querer obter mais coisas, né? Eu quero exibir a resposta que veio do meu Jason. Então, de novo, eu uso interpolação e agora eu faço responsável.
+
+241
+00:28:21.850 --> 00:28:29.840
+Marcelo Tomio Hama: Não diz um objeto. Eu obtenho o baile dele no formato de ação e pinto.
+
+242
+00:28:30.270 --> 00:28:35.849
+Marcelo Tomio Hama: Pinta o conteúdo. Vamos ver o que a gente obteve aqui. Então a Http ficou de duzentos.
+
+243
+00:28:37.180 --> 00:28:40.150
+Marcelo Tomio Hama: Da. Onde veio isso? Dos anos. Pessoal, alguém sabe dizer
+
+244
+00:28:41.030 --> 00:28:44.029
+Marcelo Tomio Hama: pergunta aí só para ver se vocês estão acompanhando.
+
+245
+00:28:44.930 --> 00:28:45.960
+Matheus Ramos: É?
+
+246
+00:28:46.160 --> 00:28:51.550
+Matheus Ramos: Seria o código que o senhor passou da dano da última aula.
+
+247
+00:28:51.700 --> 00:28:52.840
+Matheus Ramos: Os duzentos.
+
+248
+00:28:53.430 --> 00:28:57.370
+Marcelo Tomio Hama: Exato. Muito bem, o duzentos. Ele vem daqui.
+
+249
+00:28:57.610 --> 00:29:05.730
+Marcelo Tomio Hama: É o código que a gente tem aqui do servidor. Se eventualmente eu tivesse colocado aqui código quatrocentos
+
+250
+00:29:06.710 --> 00:29:10.970
+Marcelo Tomio Hama: na hora que a gente estivesse lendo essa resposta, ele ia retornar quatrocentos.
+
+251
+00:29:11.160 --> 00:29:17.519
+Marcelo Tomio Hama: A gente pode fazer esse experimento logo mais. Mas a gente passou aqui
+
+252
+00:29:17.820 --> 00:29:26.630
+Marcelo Tomio Hama: esse código duzentos quando a gente fez. Então essa primeira chamada Get. A gente está chamando esse serviço aqui.
+
+253
+00:29:27.490 --> 00:29:42.330
+Marcelo Tomio Hama: Então, olha só. Que interessante. Aqui a gente está vendo na prática, como que um serviço, uma webservice Api restful. Funciona. Por quê? Porque a gente está criando uma Api rest.
+
+254
+00:29:42.940 --> 00:29:53.019
+Marcelo Tomio Hama: E a gente está chamando ela remotamente. Tudo bem que eu estou criando esse cenário aqui, todo em laboratório. E está tudo funcionando aqui, dentro da minha máquina aqui.
+
+255
+00:29:53.130 --> 00:30:07.500
+Marcelo Tomio Hama: Mas isso aqui poderia estar muito bem, funcionando remotamente. Poderia ser uma máquina de vocês conversando com uma máquina de outro colega. Isso aqui é um cenário realmente realístico. É um cenário. Apesar de laboratorial.
+
+256
+00:30:07.860 --> 00:30:14.569
+Marcelo Tomio Hama: Ele emula com muito realismo. Como é que funciona no serviço web?
+
+257
+00:30:14.880 --> 00:30:21.540
+Marcelo Tomio Hama: Então, de um lado, a gente tem o servidor de outro lado, a gente tem o cliente
+
+258
+00:30:21.820 --> 00:30:26.280
+Marcelo Tomio Hama: beleza, a gente já sabe que está funcionando o Gat. Só que agora vamos ver
+
+259
+00:30:26.710 --> 00:30:30.169
+Marcelo Tomio Hama: como é que funciona o Post e o Post.
+
+260
+00:30:30.390 --> 00:30:35.179
+Marcelo Tomio Hama: A gente sabe que ele faz uma coisa diferente. Ele não é uma consulta.
+
+261
+00:30:35.340 --> 00:30:41.810
+Marcelo Tomio Hama: Ele é na verdade, uma requisição de criação. Uma requisição de inserção.
+
+262
+00:30:41.970 --> 00:30:42.820
+Marcelo Tomio Hama: Tá?
+
+263
+00:30:43.290 --> 00:30:48.280
+Marcelo Tomio Hama: Então, nesse cenário de Post, eu estou fazendo teste de Post. Estou aqui.
+
+264
+00:30:49.180 --> 00:30:58.399
+Marcelo Tomio Hama: Coloca aqui o piloto, né? Então eu crio o conteúdo dentro desse conteúdo.
+
+265
+00:30:59.050 --> 00:31:03.329
+Marcelo Tomio Hama: Eu vou. Eu vou colocar aqui, né? O valor nem na chave, nem
+
+266
+00:31:03.440 --> 00:31:08.739
+Marcelo Tomio Hama: e eu vou colocar aqui um campo também. Repare, pessoal, que este
+
+267
+00:31:09.120 --> 00:31:12.399
+Marcelo Tomio Hama: payload, e ele é basicamente um Jason. Um object.
+
+268
+00:31:12.550 --> 00:31:19.060
+Marcelo Tomio Hama: Ao invés de colocar item Free. Eu vou colocar outra coisa aqui. Como a gente está trabalhando com nomes,
+
+269
+00:31:19.350 --> 00:31:29.479
+Marcelo Tomio Hama: tá, vamos ver aqui quem nós temos mais aqui. Vou colocar a Beatriz. A Beatriz vai entrar aqui como.
+
+270
+00:31:30.480 --> 00:31:34.370
+Marcelo Tomio Hama: Como o canto do payload.
+
+271
+00:31:35.410 --> 00:31:44.260
+Marcelo Tomio Hama: E depois disso, eu faço aqui um response como um objeto requests aqui chamo então a minha Live. E agora eu vou chamar um post.
+
+272
+00:31:45.550 --> 00:31:59.840
+Marcelo Tomio Hama: Passa aqui a minha base. Então, de novo. Eu vou estar chamando o meu serviço que está disponibilizado via Mcgrock aqui via Thonner para bater aqui no meu container. A minha aplicação é meu servidor,
+
+273
+00:31:59.970 --> 00:32:09.420
+Marcelo Tomio Hama: e aí eu passo aqui o tipo payload. Ou seja, Jason recebe payload.
+
+274
+00:32:09.810 --> 00:32:21.419
+Marcelo Tomio Hama: Claro que depois as linhas são mais simples. Então, a mesma coisa que nós temos pelo cenário anterior antes da gente e fazer essa chamada. Vamos conferir o que a gente tem aqui na nossa resposta,
+
+275
+00:32:21.770 --> 00:32:24.460
+Marcelo Tomio Hama: Jason. Evidente.
+
+276
+00:32:24.630 --> 00:32:30.650
+Marcelo Tomio Hama: Eu vou chamar aqui as indicações para a gente ver o que nós temos
+
+277
+00:32:31.670 --> 00:32:41.200
+Marcelo Tomio Hama: dentro desse objeto. Então ele vai ser um dia se eu narrei e aí deixa eu tirar. Aqui.
+
+278
+00:32:45.500 --> 00:32:52.940
+Marcelo Tomio Hama: Deixa, eu vou pegar e botar outro serviço de Djson idênticas é difícil de minha formatação.
+
+279
+00:32:55.360 --> 00:32:56.359
+Marcelo Tomio Hama: Então vou pegar.
+
+280
+00:32:56.990 --> 00:33:01.480
+Marcelo Tomio Hama: Deixa eu ver se tem algum mais fácil de usar.
+
+281
+00:33:04.070 --> 00:33:05.210
+Marcelo Tomio Hama: É esse daqui.
+
+282
+00:33:12.590 --> 00:33:19.079
+Marcelo Tomio Hama: Ah, sim. Aqui a gente não está conseguindo fazer essa conversão porque esses aspas simples, eles não fazem parte da
+
+283
+00:33:19.190 --> 00:33:24.450
+Marcelo Tomio Hama: na sintaxe do Jason, mas tudo bem. Vamos converter aqui.
+
+284
+00:33:27.580 --> 00:33:34.330
+Marcelo Tomio Hama: É um bom aqui a gente não precisa perder tanto tempo. Tá pessoal,
+
+285
+00:33:35.390 --> 00:33:46.120
+Marcelo Tomio Hama: mas já dá para ver que os valores foram retornados corretamente. Então, olha só. A gente tem aqui o Marcelo. A gente tem aqui o Matheus. A gente tem aqui a Jéssica,
+
+286
+00:33:46.120 --> 00:33:56.539
+Marcelo Tomio Hama: que foi justamente então a aplicação que a gente pegou e criou aqui. Então eu ia aqui querer ser preciosista, fazer mostrar aqui para você que está convertendo tudo certinho, mas
+
+287
+00:33:56.900 --> 00:34:04.960
+Marcelo Tomio Hama: não precisa. Não, a gente já viu. Já provou aqui que a aplicação está retornando o que a gente acabou de criar em real time.
+
+288
+00:34:07.190 --> 00:34:20.329
+Marcelo Tomio Hama: O Nelson aqui, eu, a Biel Marl, no navegador. E tem um botão. Que formato de edição. Ah, bacana aí, Nelson. Então, caso vocês queiram experimentar aqui, podem seguir a dica aqui do colega, tá,
+
+289
+00:34:20.630 --> 00:34:25.900
+Marcelo Tomio Hama: vocês podem traduzir o valor que vem ali do content como
+
+290
+00:34:26.179 --> 00:34:29.899
+Marcelo Tomio Hama: um objeto pintável ali na página,
+
+291
+00:34:33.380 --> 00:34:42.090
+Marcelo Tomio Hama: beleza. Vamos então executar esse trecho aqui, que agora a gente quer fazer o quê? A gente quer inserir a nossa colega Beatriz na nossa lista.
+
+292
+00:34:42.530 --> 00:34:46.429
+Marcelo Tomio Hama: Então vamos mudar aqui minha aplicação. Estou chamando. Estou chamando.
+
+293
+00:34:46.790 --> 00:34:51.600
+Marcelo Tomio Hama: E aí no serviço Web. E agora? Olha só o que ele trouxe.
+
+294
+00:34:51.750 --> 00:35:00.350
+Marcelo Tomio Hama: Status code duzentos e um Creative Jason, Respond, Jason I. D6
+
+295
+00:35:00.490 --> 00:35:06.160
+Marcelo Tomio Hama: nem em Beatriz. De onde que veio essas linhas de comando?
+
+296
+00:35:06.290 --> 00:35:11.130
+Marcelo Tomio Hama: Elas vieram basicamente desse trecho aqui.
+
+297
+00:35:12.160 --> 00:35:13.869
+Marcelo Tomio Hama: E o que eu tenho nesse trecho.
+
+298
+00:35:14.620 --> 00:35:20.379
+Marcelo Tomio Hama: Vamos recordar aqui. Eu tenho basicamente a minha rota para Post.
+
+299
+00:35:20.550 --> 00:35:23.980
+Marcelo Tomio Hama: E por que que eu sei que ela é uma rota post,
+
+300
+00:35:24.390 --> 00:35:29.910
+Marcelo Tomio Hama: porque eu estou definindo aqui. O método é do tipo post, tá?
+
+301
+00:35:30.630 --> 00:35:34.470
+Marcelo Tomio Hama: E o endpoint. Ele se chama itens.
+
+302
+00:35:34.790 --> 00:35:51.230
+Marcelo Tomio Hama: Repare, então pessoal, que eu posso pegar e criar mais de um método Post. Se eu tiver ali uma nomenclatura diferente para a minha rota, eu poderia estar criando, por exemplo, outro método Post, só que agora é chamado de
+
+303
+00:35:51.670 --> 00:36:03.570
+Marcelo Tomio Hama: listagem listagem Underline. Tipo, Por que não? E aí eu tenho agora dois métodos post.
+
+304
+00:36:03.810 --> 00:36:14.559
+Marcelo Tomio Hama: Se eu quiser chamar o primeiro, eu passo barra itens. Então é aqui que eu vou estar chamando. Se eu quiser chamar esse segundo e estágio, tipo, eu faria assim,
+
+305
+00:36:15.400 --> 00:36:16.310
+Marcelo Tomio Hama: não é?
+
+306
+00:36:18.160 --> 00:36:24.530
+Marcelo Tomio Hama: E aí, professor? Depois da explicação, manda esse comando aqui no chat, por favor.
+
+307
+00:36:24.840 --> 00:36:27.849
+Marcelo Tomio Hama: Qual é o comando que você quer, Matheus?
+
+308
+00:36:33.530 --> 00:36:37.389
+Marcelo Tomio Hama: Isso aqui, aqui. Todo todo esse daqui.
+
+309
+00:36:38.260 --> 00:36:41.020
+Matheus Ramos: Isso tanto o primeiro.
+
+310
+00:36:41.260 --> 00:36:46.609
+Matheus Ramos: E você estava mexendo isso. Tanto esse primeiro quanto o segundo.
+
+311
+00:36:47.120 --> 00:36:49.470
+Marcelo Tomio Hama: Ah, beleza. O primeiro.
+
+312
+00:36:50.170 --> 00:36:59.869
+Matheus Ramos: Eu não sei se a gente vai usar esse primeiro aí, mas eu perdi o meu notebook da aula passada, e aí tive que criar um novo aqui. Mas está sem nada.
+
+313
+00:37:00.310 --> 00:37:05.959
+Marcelo Tomio Hama: Beleza. Vamos dar aqui de novo para vocês. Aqui no chat. Esse aqui é o código do servidor.
+
+314
+00:37:06.300 --> 00:37:08.030
+Matheus Ramos: Beleza. Obrigado, professor.
+
+315
+00:37:10.290 --> 00:37:14.330
+Marcelo Tomio Hama: Isso aqui é o código do cliente.
+
+316
+00:37:14.450 --> 00:37:24.270
+Marcelo Tomio Hama: E aí eles estão disponíveis para vocês. Dentro ali da pasta, na aplicação.
+
+317
+00:37:25.550 --> 00:37:28.450
+Marcelo Tomio Hama: Eu mandei uma única vocês lá no mundo.
+
+318
+00:37:29.400 --> 00:37:32.009
+Marcelo Tomio Hama: Um ponto zip ali chamado
+
+319
+00:37:32.120 --> 00:37:50.990
+Marcelo Tomio Hama: Python para o processamento de dados Underline oito, que é a aula de hoje Underlinez. E ele está zipado. E dentro desse arquivo, Zip, a gente tem todos esses arquivos. Tá? Então assim todo conteúdo, inclusive aqui o Ppt. Nessa aula de hoje. Vocês ali podem obter pelo moodle.
+
+320
+00:37:51.500 --> 00:37:52.170
+Marcelo Tomio Hama: Não.
+
+321
+00:37:53.150 --> 00:37:55.530
+Matheus Ramos: Ah, beleza. Eu estou com o arquivo aberto aqui.
+
+322
+00:37:55.680 --> 00:37:57.819
+Matheus Ramos: Agora que eu vi que valeu.
+
+323
+00:37:58.730 --> 00:38:12.420
+Marcelo Tomio Hama: Imagina esse código do servidor. Não roda no Deep Note. E aí que está Lucas, ele não roda, tá, então isso. Por quê? Porque o Deep Note não tem o Flask ali disponível como biblioteca nativa,
+
+324
+00:38:12.500 --> 00:38:19.949
+Marcelo Tomio Hama: apenas as implementações específicas de algumas distribuições Linux e Python. Que tem ela?
+
+325
+00:38:20.100 --> 00:38:25.240
+Marcelo Tomio Hama: Então, quando a gente faz uso aqui do
+
+326
+00:38:26.800 --> 00:38:33.380
+Marcelo Tomio Hama: deixa eu mostrar aqui para vocês explicar aqui um pouquinho mais da Aplicação. A gente tem aqui
+
+327
+00:38:35.370 --> 00:38:45.609
+Marcelo Tomio Hama: o Doctor File. O Docker Fire pessoal. É basicamente uma receita que o Docker utiliza para construir o container
+
+328
+00:38:46.150 --> 00:38:50.180
+Marcelo Tomio Hama: e olhando dentro do Doc, ele tem aqui. Então, qual que é
+
+329
+00:38:50.880 --> 00:39:06.879
+Marcelo Tomio Hama: o sistema operacional que nós vamos utilizar? E nesse caso, então a gente está utilizando aqui esse daqui, o Python três.onze slim, que é uma versão ali do Linux que oferece todo um conjunto de ferramentas no caso aqui. Se a gente quisesse utilizar o
+
+330
+00:39:07.880 --> 00:39:22.089
+Marcelo Tomio Hama: o Flask no Deep, note, a gente teria que fazer algumas instalações prévias, e é por conta disso que eu preferia aqui: criar o servidor utilizando um outro ferramental, diferenciar um pouquinho aqui e deixar um pouco mais simples para a gente.
+
+331
+00:39:23.180 --> 00:39:24.990
+Marcelo Tomio Hama: Então aqui gente tem, Doutor paz.
+
+332
+00:39:24.990 --> 00:39:25.460
+lucas.histirari: Certo.
+
+333
+00:39:25.970 --> 00:39:26.460
+Marcelo Tomio Hama: Oi.
+
+334
+00:39:26.460 --> 00:39:27.630
+lucas.histirari: Desculpa. Aí.
+
+335
+00:39:27.770 --> 00:39:41.359
+lucas.histirari: E para rodar esse segundo código que você mandou ali, o input requis base url lá no Deep. Note. Você tem que estar com o servidor já todo bonitinho rodando, certo.
+
+336
+00:39:41.750 --> 00:39:53.470
+Marcelo Tomio Hama: Certo que aqui no nosso caso, Lucas já está, ok? O único trabalho que você precisa fazer é trocar aqui a base Url e colocar a base Url que eu mandei para vocês aí no chat,
+
+337
+00:39:53.660 --> 00:39:59.630
+Marcelo Tomio Hama: porque esse servidor é o que eu já tenho aqui, rodando aqui na minha máquina.
+
+338
+00:39:59.630 --> 00:40:00.510
+lucas.histirari: Entendi.
+
+339
+00:40:00.510 --> 00:40:12.860
+Marcelo Tomio Hama: Se vocês quiserem criar servidores do lado de vocês, basta seguir aqui, nas instruções que eu tinha passado antes instalação aqui da Docker é criar aqui um container e expor servidor ali.
+
+340
+00:40:15.010 --> 00:40:22.509
+lucas.histirari: Fechou, fechou. É que eu tinha dado na viajada, na maionese aqui. Mas eu consegui pegar. Então a ideia fechado, senhor, valeu.
+
+341
+00:40:23.660 --> 00:40:25.710
+Marcelo Tomio Hama: Beleza.
+
+342
+00:40:26.070 --> 00:40:34.719
+Marcelo Tomio Hama: Alexandre, na aula passada, a gente não falou sobre Docker, tá na aula passada. Só porque a gente dá uma palhinha aqui bem rápida.
+
+343
+00:40:34.880 --> 00:40:36.950
+Marcelo Tomio Hama: A gente falou sobre.
+
+344
+00:40:37.670 --> 00:40:57.090
+Marcelo Tomio Hama: Eu dei ali uma introdução sobre as Apis. Os primórdios das Apis webservices construídos com Wsdl. Quais eram as versões de Http? Como que isso foi evoluindo com o passar do tempo, a arquitetura
+
+345
+00:40:57.450 --> 00:41:14.359
+Marcelo Tomio Hama: cliente, servidor e meio que isso serviu de pano de fundo como motivador para a gente trazer a aula de hoje. Quer dizer, aula passada, que era métodos e conexões Http. Então a gente pecou e trouxe aqui um contexto mais teórico. Então eu apresentei para vocês a.
+
+346
+00:41:16.860 --> 00:41:29.370
+Marcelo Tomio Hama: O que é uma Api Rest, o Representational State Transfer os códigos Http que a gente pode estar devolvendo. Então são serviços Web que a gente usa para
+
+347
+00:41:29.970 --> 00:41:38.450
+Marcelo Tomio Hama: fornecer serviços pela Web, utilizando o protocolo da própria Internet. Então, serviço Web já não é mais ali. Um.
+
+348
+00:41:38.610 --> 00:41:40.250
+Marcelo Tomio Hama: Um aparato de
+
+349
+00:41:40.470 --> 00:41:50.079
+Marcelo Tomio Hama: cliente servidor fornecido através de uma receita através de um cardápio. Vamos dizer assim. Agora, a gente está usando a própria Internet para fornecer serviços.
+
+350
+00:41:50.200 --> 00:41:57.709
+Marcelo Tomio Hama: Eu tinha comentado um pouco sobre isso. Trouxe aqui uma listagem dos métodos. E aqui um exemplo
+
+351
+00:41:57.890 --> 00:42:03.620
+Marcelo Tomio Hama: da anatomia de uma mensagem Http na parte dois. Depois a gente falou sobre o Get.
+
+352
+00:42:03.920 --> 00:42:16.449
+Marcelo Tomio Hama: A gente mostrou aqui como fazer uma primeira chamada Get. Bastante simples, batendo ali na Api da Mitsiel. Com que é um serviço de meteorologia. Esse aqui é o código que a gente trouxe.
+
+353
+00:42:16.860 --> 00:42:23.039
+Marcelo Tomio Hama: A gente trouxe aqui também um pouco das principais bibliotecas que a gente usa para fazer esse requerest, que é justamente o
+
+354
+00:42:23.400 --> 00:42:30.509
+Marcelo Tomio Hama: requests do Python, e eles implementam todos os métodos Http. Essas são as formas que você usa.
+
+355
+00:42:30.660 --> 00:42:37.600
+Marcelo Tomio Hama: Eles têm ali parâmetros. Então tem os haters, as autenticações que você passa como forma de metadata
+
+356
+00:42:38.050 --> 00:42:55.369
+Marcelo Tomio Hama: meta informação para a sua chamada. Se você quiser persistir de alguma maneira. Corpo da mensagem, pode ter ali algum conteúdo, trabalhando também com as respostas. O que ele pode estar devolvendo a forma de resposta, reaproveitar sessões. O que vocês podem fazer
+
+357
+00:42:55.670 --> 00:43:02.550
+Marcelo Tomio Hama: passar ali alguma meta informação meta dado na forma de Cookie ali, no seu healer.
+
+358
+00:43:02.840 --> 00:43:10.820
+Marcelo Tomio Hama: Maneiras também de tratar os erros. Então isso tudo dentro da sintaxe do Requests.
+
+359
+00:43:11.440 --> 00:43:17.639
+Marcelo Tomio Hama: E assim a gente não falou sobre Docker. Tá, Docker. Na verdade, se a gente fosse falar sobre Docker, seria.
+
+360
+00:43:17.660 --> 00:43:31.870
+Marcelo Tomio Hama: Seria falar de uma disciplina completamente diferente. Eu dou pouquinho do contexto do Docker, porque aqui acho que é legal mostrar para vocês que eu estou criando um servidor meio que do Zeca aqui só para
+
+361
+00:43:32.000 --> 00:43:51.359
+Marcelo Tomio Hama: contexto laboratorial. Mas assim, docer não é o contexto da disciplina. Então é só mesmo um breve ganchinho aqui para vocês entenderem o que a gente está fazendo do lado do servidor? Porque assim fica difícil de entender. O lado do cliente. Se você não entende o que está acontecendo do lado do servidor.
+
+362
+00:43:51.360 --> 00:43:55.310
+Marcelo Tomio Hama: Mas assim o Docker não vai cair para vocês em
+
+363
+00:43:55.620 --> 00:44:06.380
+Marcelo Tomio Hama: em Etp em Aat. O Doc ali não faz parte da nossa emenda beleza.
+
+364
+00:44:06.740 --> 00:44:15.180
+Marcelo Tomio Hama: Para falar o passo a passo que eu fiz, baixei a pasta que o senhor mandou. Baixei o Paita na minha máquina. Rodei o Pip de Stall o Prime
+
+365
+00:44:15.440 --> 00:44:20.860
+Marcelo Tomio Hama: e aí foi no caso. Eu pulei o Docker porque eu não precisei instalar. Então, olha só, a gente tem aqui
+
+366
+00:44:21.310 --> 00:44:24.350
+Marcelo Tomio Hama: o caso do colega Gabriel,
+
+367
+00:44:24.490 --> 00:44:30.479
+Marcelo Tomio Hama: que inclusive se você tiver conseguido rodar aí a aplicação da tua máquina e fazer uso do flash.
+
+368
+00:44:30.600 --> 00:44:47.829
+Marcelo Tomio Hama: Você basicamente criou um servidor sem fazer o uso do Docker apenas aqui dentro do Prompt. Então assim você está praticamente a um passo de fornecer o servidor aqui para todo mundo. Mas assim você já conseguiria, em tese aqui, fazer o uso
+
+369
+00:44:48.310 --> 00:44:54.120
+Marcelo Tomio Hama: de um local. Host, tá, Gabriel, você faria algo assim? Ó,
+
+370
+00:44:54.300 --> 00:45:08.579
+Marcelo Tomio Hama: ao invés de fazer essa construção, você poder ir pro Chps. Dois pontos. Colocar o host dois pontos, cinco mil. E você chamar dessa maneira, basicamente, você vai estar chamando o webservice
+
+371
+00:45:08.710 --> 00:45:12.029
+Marcelo Tomio Hama: do próprio servidor executado na tua máquina.
+
+372
+00:45:12.260 --> 00:45:21.390
+Marcelo Tomio Hama: Então, uma maneira aos demais colegas aqui que estão acompanhando, é uma maneira também que acho que é super válida de você levantar um servidor local.
+
+373
+00:45:22.150 --> 00:45:31.050
+Marcelo Tomio Hama: E aí, Gabriel, se você quiser. Agora, um próximo passo, disponibilizar o teu servidor para todo mundo.
+
+374
+00:45:31.340 --> 00:45:36.820
+Marcelo Tomio Hama: Aí, o próximo passo seria fazer o uso aqui do Annie Grotesman, que aí é um Thunder. Tá bom.
+
+375
+00:45:38.480 --> 00:45:46.149
+Marcelo Tomio Hama: Então. Beleza, né? Aqui para fornecer o servidor local, basta executar dessa maneira que deveria. Em tese está funcionando, tá?
+
+376
+00:45:49.170 --> 00:46:00.129
+Marcelo Tomio Hama: Ah, beleza. Olha só. Então vamos tirar a prova aqui do nosso colega. Se o nosso colega executou com sucesso um post, significa que,
+
+377
+00:46:00.680 --> 00:46:01.500
+Marcelo Tomio Hama: né,
+
+378
+00:46:01.700 --> 00:46:10.119
+Marcelo Tomio Hama: esse dicionário agora deveria ter sete elementos. Por quê? Porque a gente tinha cinco. De início, eu aqui executei inserindo
+
+379
+00:46:10.350 --> 00:46:22.630
+Marcelo Tomio Hama: um sexto registro. Eu aqui. Inseri o nome Beatriz. Só que agora, se o colega Gabriel conseguiu executar, então agora ele tem que ter pelo menos sete. Vamos ver aqui. O que tem. Então
+
+380
+00:46:23.260 --> 00:46:30.850
+Marcelo Tomio Hama: dentro desse dentro desse servidor, aqui, dentro das minhas variáveis.
+
+381
+00:46:32.820 --> 00:46:38.030
+Marcelo Tomio Hama: Então, olha lá, a gente tem o primeiro nome. Item One, item Two
+
+382
+00:46:39.250 --> 00:46:42.319
+Marcelo Tomio Hama: item three, né, Marcelo, o Padre Matheus,
+
+383
+00:46:42.950 --> 00:46:53.789
+Marcelo Tomio Hama: a Jéssica. Aqui número cinco, Beatriz. E realmente o colega Gabriel, está aqui. Gabriel Diniz, aqui conseguiu acessar o servidor aqui disponibilizado. Bacana,
+
+384
+00:46:56.700 --> 00:47:02.720
+Marcelo Tomio Hama: o que a gente poderia estar fazendo a mais ainda se a gente estivesse aqui trabalhando com arquivos.
+
+385
+00:47:03.700 --> 00:47:12.889
+Marcelo Tomio Hama: Sim, a gente poderia criar essa persistência aqui. Que nós vimos no nosso servidor aqui, né?
+
+386
+00:47:13.360 --> 00:47:20.250
+Marcelo Tomio Hama: Na forma de um arquivo onde que esse arquivo estaria sendo criado agora, eu perguntei para vocês:
+
+387
+00:47:20.490 --> 00:47:23.900
+Marcelo Tomio Hama: estaria sendo criado aqui no meu ambiente de noite,
+
+388
+00:47:26.540 --> 00:47:28.940
+Marcelo Tomio Hama: se eu estivesse trabalhando com essa persistência,
+
+389
+00:47:36.800 --> 00:47:42.140
+Marcelo Tomio Hama: esse arquivo estaria sendo criado. De qual lado? Do cliente ou do servidor,
+
+390
+00:47:43.820 --> 00:47:49.630
+Marcelo Tomio Hama: professor, no caso, o arquivo original não é alterado porque o Docker faz uma cópia
+
+391
+00:47:49.820 --> 00:47:54.710
+Marcelo Tomio Hama: dele. Correto, correto. E aqui a pergunta aqui do Pedro
+
+392
+00:47:55.260 --> 00:47:58.370
+Marcelo Tomio Hama: Corretíssimo, Tá, Pedro, nós estamos aqui
+
+393
+00:47:58.850 --> 00:48:04.640
+Marcelo Tomio Hama: alterando o contexto. O Run time de uma aplicação.
+
+394
+00:48:04.910 --> 00:48:12.180
+Marcelo Tomio Hama: Essa aplicação está em memória, e esta memória está rodando aqui, dentro da minha plataforma,
+
+395
+00:48:12.420 --> 00:48:19.080
+Marcelo Tomio Hama: o código fonte. Isso que a gente tem aqui. App Py é o arquivo que contém um código fonte.
+
+396
+00:48:19.720 --> 00:48:21.810
+Marcelo Tomio Hama: Da mesma maneira como
+
+397
+00:48:22.020 --> 00:48:26.780
+Marcelo Tomio Hama: a gente não altera o código fonte quando a gente sobe o código ali no Geith.
+
+398
+00:48:26.930 --> 00:48:37.830
+Marcelo Tomio Hama: E depois o código. Que está no Geith diga uma aplicação. Aqui também. A gente não está alterando absolutamente nada do que tem aqui dentro desse arquivo. Isso aqui é apenas código fonte.
+
+399
+00:48:40.450 --> 00:48:48.999
+Marcelo Tomio Hama: Se matar o container, aí já eram todas as alterações. Corretíssimo Pedro, corretíssimo! Por quê a gente está rodando
+
+400
+00:48:49.570 --> 00:48:52.740
+Marcelo Tomio Hama: esse dicionário aqui, em memória.
+
+401
+00:48:53.250 --> 00:49:00.210
+Marcelo Tomio Hama: Então, o que acontece se a gente vir aqui do lado desse caminho? Aqui
+
+402
+00:49:00.400 --> 00:49:03.680
+Marcelo Tomio Hama: dá um stop. Deixa eu te matar. A aplicação aqui.
+
+403
+00:49:04.280 --> 00:49:06.919
+Marcelo Tomio Hama: Vocês querem fazer isso? Vamos derrubar a aplicação.
+
+404
+00:49:07.190 --> 00:49:12.370
+Marcelo Tomio Hama: Vou derrubar tudo aqui. Vou dar um stop aqui na aplicação, tá?
+
+405
+00:49:13.500 --> 00:49:16.060
+Marcelo Tomio Hama: Faria aqui a minha aplicação.
+
+406
+00:49:16.930 --> 00:49:17.850
+Marcelo Tomio Hama: E
+
+407
+00:49:21.430 --> 00:49:23.990
+Marcelo Tomio Hama: estou pagando aqui, esperando ela pagar
+
+408
+00:49:24.820 --> 00:49:30.779
+Marcelo Tomio Hama: aí, agora. Assim, agora eu não estou lembrado se ela vai manter o contexto. Eu acredito que não. Porque aqui a gente realmente
+
+409
+00:49:31.230 --> 00:49:33.109
+Marcelo Tomio Hama: parou, né? Aqui.
+
+410
+00:49:33.880 --> 00:49:41.509
+Marcelo Tomio Hama: E vamos dar agora só para a gente se certificar aqui eu vou.
+
+411
+00:49:42.120 --> 00:49:52.090
+Marcelo Tomio Hama: A aplicação aqui, o running dela. Mas eu estou mantendo aqui a imagem. Então a imagem dela é a mesma. A imagem aqui não foi perdida.
+
+412
+00:49:52.280 --> 00:49:55.309
+Marcelo Tomio Hama: Vou chamar então aqui de novo ao último comando
+
+413
+00:49:56.460 --> 00:49:58.960
+Marcelo Tomio Hama: para a gente subir a aplicação de novo.
+
+414
+00:49:59.710 --> 00:50:05.389
+Marcelo Tomio Hama: E aí cadê a aplicação. Aqui está rodando de novo.
+
+415
+00:50:06.060 --> 00:50:09.449
+Marcelo Tomio Hama: Vou fornecer aqui novamente.
+
+416
+00:50:09.770 --> 00:50:13.139
+Marcelo Tomio Hama: Via Inegrop. Vou colocar ali. Então.
+
+417
+00:50:15.590 --> 00:50:18.520
+Marcelo Tomio Hama: Beleza. A Url mudou, né? A Ur é outra.
+
+418
+00:50:19.090 --> 00:50:23.120
+Marcelo Tomio Hama: Vamos dar aqui para vocês de novo, tá?
+
+419
+00:50:23.770 --> 00:50:25.790
+Marcelo Tomio Hama: Agora vocês têm que usar essa outra. Tá bom?
+
+420
+00:50:28.100 --> 00:50:36.070
+Marcelo Tomio Hama: E aqui eu vou trocar, colocar aqui outra. Então, aqui. Agora vamos executar isso
+
+421
+00:50:38.040 --> 00:50:40.520
+Marcelo Tomio Hama: quando bato esse get. Olha só.
+
+422
+00:50:41.110 --> 00:50:43.890
+Marcelo Tomio Hama: Tenho item um, item dois.
+
+423
+00:50:44.240 --> 00:50:54.580
+Marcelo Tomio Hama: O Marcelo que eu três Mateus é o quatro. Jéssica cinco. Cadê a Beatriz? Cadê o Gabriel?
+
+424
+00:50:54.970 --> 00:51:05.399
+Marcelo Tomio Hama: O contexto foi perdido porque é como o colega Pedro comentou aqui a gente está trabalhando apenas em memória. Nós não estamos trabalhando com uma persistência mais
+
+425
+00:51:05.930 --> 00:51:22.300
+Marcelo Tomio Hama: mais estática, como são no caso. Os arquivos. A gente não está trabalhando com arquivo em disco. Mas se vocês quiserem sempre trabalhar com arquivo em disco, não teríamos problema nenhum. Vocês conhecem? Conhecem aí o.
+
+426
+00:51:23.110 --> 00:51:26.319
+Marcelo Tomio Hama: Você já tem o conhecimento de como fazer isso,
+
+427
+00:51:30.230 --> 00:51:39.380
+Marcelo Tomio Hama: beleza? Então, o que a gente viu aqui? A gente viu como faz um get. Viu como é que faz um post e viu como faz um Gat novamente só para bater a informação
+
+428
+00:51:39.740 --> 00:51:43.220
+Marcelo Tomio Hama: que ali estava vindo de maneira correta.
+
+429
+00:51:49.930 --> 00:51:56.460
+Marcelo Tomio Hama: Então a gente passou aqui a interpretação do Deep Note.
+
+430
+00:51:56.690 --> 00:52:06.879
+Marcelo Tomio Hama: E agora vamos interpretar um pouquinho mais a resposta. Então, quando o Requis faz uma requisição, ele retorna. Um objeto, response com tudo que o servidor devolveu.
+
+431
+00:52:08.090 --> 00:52:11.290
+Marcelo Tomio Hama: Saber interpretar esse objeto,
+
+432
+00:52:11.600 --> 00:52:24.020
+Marcelo Tomio Hama: que é essencial para trabalhar com as Apis. Sempre veio aqui com o status code, ou então use um Risepoint, status e agora sim, é hora de a gente falar do Risepoint status.
+
+433
+00:52:24.520 --> 00:52:25.330
+Marcelo Tomio Hama: E aí
+
+434
+00:52:25.840 --> 00:52:35.199
+Marcelo Tomio Hama: só acesse o Jason quando você tiver certeza que o Context-type é do tipo Aplication Json. Isso por que, pessoal,
+
+435
+00:52:36.210 --> 00:52:39.550
+Marcelo Tomio Hama: quando a gente está trabalhando com uma piada,
+
+436
+00:52:39.840 --> 00:52:49.380
+Marcelo Tomio Hama: tudo pode acontecer. Vocês podem estar chamando aqui um get, só que a resposta que está vindo não necessariamente pode ser do tipo de ação.
+
+437
+00:52:49.590 --> 00:52:51.819
+Marcelo Tomio Hama: Ela pode ser uma imagem.
+
+438
+00:52:52.010 --> 00:52:53.699
+Marcelo Tomio Hama: Ela pode ser um texto.
+
+439
+00:52:53.970 --> 00:53:02.720
+Marcelo Tomio Hama: Ela pode ser um dataframe. Ela pode ser qualquer coisa. Um arquivo binário é.
+
+440
+00:53:03.070 --> 00:53:14.449
+Marcelo Tomio Hama: E se você tentar ler aqui, da maneira como a gente está lendo responsável. O que vai acontecer? Ele vai quebrar. Por quê? Porque ele vai tentar mapear um tipo
+
+441
+00:53:14.810 --> 00:53:21.360
+Marcelo Tomio Hama: incorreto. A gente já viu isso em aulas anteriores. O que acontece lá quando você tenta
+
+442
+00:53:21.780 --> 00:53:32.560
+Marcelo Tomio Hama: converter um Jason não estruturado em objeto. Jason, ele lança a exceção lá. O objeto
+
+443
+00:53:32.750 --> 00:53:34.980
+Marcelo Tomio Hama: não é um Jason bem formado.
+
+444
+00:53:35.170 --> 00:53:39.790
+Marcelo Tomio Hama: Se isso acontecer na sua aplicação, a sua aplicação vai quebrar.
+
+445
+00:53:40.160 --> 00:53:43.970
+Marcelo Tomio Hama: Então isso precisa ser tratado, tá?
+
+446
+00:53:44.190 --> 00:53:48.489
+Marcelo Tomio Hama: Vamos pegar e explorar um pouquinho mais esse caso aqui.
+
+447
+00:53:51.400 --> 00:53:56.840
+Marcelo Tomio Hama: Então não tinha force code na floresta e outro manter aqui o Requests,
+
+448
+00:53:57.350 --> 00:54:02.000
+Marcelo Tomio Hama: a base ou Rl. Eu vou reaproveitar, deixando aqui.
+
+449
+00:54:02.180 --> 00:54:07.299
+Marcelo Tomio Hama: Não é o que eu estou fazendo agora. Então, R. Status code,
+
+450
+00:54:07.440 --> 00:54:14.439
+Marcelo Tomio Hama: no caso, vai recordar duzentos e o print do R vai vir. Ok, então esse caso aqui, ele
+
+451
+00:54:14.730 --> 00:54:16.030
+Marcelo Tomio Hama: está tudo certo.
+
+452
+00:54:16.590 --> 00:54:28.039
+Marcelo Tomio Hama: A maneira que a gente tem que verificar a verificação manual. Seria percorrer cada um dos estados. Então status code foi igual a duzentos.
+
+453
+00:54:28.730 --> 00:54:30.210
+Marcelo Tomio Hama: Fim de sucesso.
+
+454
+00:54:30.660 --> 00:54:39.150
+Marcelo Tomio Hama: Se não R Stat Code é igual a quatrocentos e quatro. O que é o quatrocentos e quatro é o não encontrado Not found.
+
+455
+00:54:39.410 --> 00:54:41.979
+Marcelo Tomio Hama: Se ele for quatrocentos e um
+
+456
+00:54:42.220 --> 00:54:48.379
+Marcelo Tomio Hama: não autorizado for Biden, todos esses códigos estão documentados na
+
+457
+00:54:50.090 --> 00:55:01.210
+Marcelo Tomio Hama: nos status codes do Http. Só para vocês verem aqui http, status code. Vou mostrar rapidinho para vocês.
+
+458
+00:55:02.610 --> 00:55:05.780
+Marcelo Tomio Hama: Pegar aqui do Wikipedia mesmo.
+
+459
+00:55:06.240 --> 00:55:08.880
+Marcelo Tomio Hama: Olha só. Então, todos os possíveis
+
+460
+00:55:08.990 --> 00:55:28.430
+Marcelo Tomio Hama: status hqtps isso aqui é padrão pessoal. Vocês não precisam criar uma nova padronização. Todo mundo sabe. Todo mundo do mundo que codifica aplicações para a Internet sabe que o que vem ali da família dos anos é requisição com sucesso.
+
+461
+00:55:28.460 --> 00:55:31.110
+Marcelo Tomio Hama: Então eles são duzentos. É ok, não é
+
+462
+00:55:31.840 --> 00:55:48.770
+Marcelo Tomio Hama: duzentos e um, é Creative duzentos e dois não Autorizative Information, e é que ele dá um contexto. Então essa resposta significa que
+
+463
+00:55:49.640 --> 00:56:08.850
+Marcelo Tomio Hama: o retorno da meta informação não é exatamente o que estava disponível ali no servidor de origem, mas o que foi coletado no local ou na terceira parte, ali na copa veio com sucesso, o que não deixa de ser uma solicitação com sucesso. Para o nosso caso,
+
+464
+00:56:09.690 --> 00:56:11.090
+Marcelo Tomio Hama: quatrocentos e quatro
+
+465
+00:56:11.280 --> 00:56:29.209
+Marcelo Tomio Hama: é um sucesso, mas não tem conteúdo. Conteúdo vazio. O que o cliente vai fazer? Não, tudo bem. Eu fiz a chamada de obter uma lista. Essa lista veio vazia, o que pode vir de Http. Status Code duzentos e quatro.
+
+466
+00:56:30.090 --> 00:56:39.549
+Marcelo Tomio Hama: Então, olha só quantos códigos https vocês precisam deixar no radar. Vários deles aqui lembramos sempre que
+
+467
+00:56:40.110 --> 00:56:52.999
+Marcelo Tomio Hama: se começa com dois, significa sucesso. Se começa com três. Alguma alteração precisa ser feita. Se começa com quatro. Tem problema do lado do cliente. E se começa com cinco, tem problema do lado do servidor,
+
+468
+00:56:53.410 --> 00:56:54.170
+Marcelo Tomio Hama: tá?
+
+469
+00:56:55.680 --> 00:57:01.970
+Marcelo Tomio Hama: Isso pessoal é tão importante é tão importante ser implementado do lado do cliente
+
+470
+00:57:02.120 --> 00:57:15.200
+Marcelo Tomio Hama: quanto também do lado do servidor. E aí até foi uma questão de um colega ali da aula passada que falou: poxa, o que acontece do lado do servidor? A gente tiver ali o.
+
+471
+00:57:16.180 --> 00:57:25.560
+Marcelo Tomio Hama: O webmaster, os engenheiros de aplicações web, um engenheiro do back end, colocando qualquer coisa aqui no status code do retorno.
+
+472
+00:57:25.680 --> 00:57:27.619
+Marcelo Tomio Hama: Basicamente, você está
+
+473
+00:57:28.060 --> 00:57:41.660
+Marcelo Tomio Hama: é criando uma Api toda quebrada, toda mal interpretável ali. Então o que aconteceria? E agora eu vou fazer esse teste aqui. Vou colocar aqui o Tp40 vamos supor aqui que a gente se esqueceu
+
+474
+00:57:42.020 --> 00:57:50.740
+Marcelo Tomio Hama: de colocar aqui o código correto. A gente vai lá, então vamos rodar de novo aqui a aplicação. Vou compilar aqui novamente
+
+475
+00:57:54.100 --> 00:57:56.799
+Marcelo Tomio Hama: só para a gente testar esse cenário.
+
+476
+00:57:57.930 --> 00:58:02.380
+Marcelo Tomio Hama: Que o mas o resto
+
+477
+00:58:05.960 --> 00:58:19.899
+Marcelo Tomio Hama: fazendo aqui, beauty e aí, beleza subindo aqui para o servidor beleza, fornecendo ele aqui,
+
+478
+00:58:24.730 --> 00:58:30.890
+Marcelo Tomio Hama: pegar aqui a Urn, e vou colocar ela aqui e aí.
+
+479
+00:58:37.750 --> 00:58:45.160
+Marcelo Tomio Hama: Então olha só. Agora essa aplicação está toda quebrada. Por quê? Toda vez que a gente vai chamar um get,
+
+480
+00:58:45.860 --> 00:58:49.639
+Marcelo Tomio Hama: a gente vai obter um quatrocentos de resposta.
+
+481
+00:58:50.740 --> 00:58:57.089
+Marcelo Tomio Hama: Se vocês tentarem aí acessar isso aqui via browser. Vamos tentar bater isso aqui via browser.
+
+482
+00:58:57.380 --> 00:59:02.859
+Marcelo Tomio Hama: Tá tudo bem aqui é basicamente uma
+
+483
+00:59:03.310 --> 00:59:07.669
+Marcelo Tomio Hama: o retorno simples e direto. Mas se a gente tivesse que olhando
+
+484
+00:59:07.920 --> 00:59:14.140
+Marcelo Tomio Hama: um inspecionário, a gente veria aqui que o Hct. Code seria seria o pato, Santos, né?
+
+485
+00:59:15.090 --> 00:59:16.149
+Marcelo Tomio Hama: Olha só.
+
+486
+00:59:17.100 --> 00:59:20.579
+Marcelo Tomio Hama: Quatrocentos, né? A gente tem que ser retornado.
+
+487
+00:59:21.340 --> 00:59:26.790
+Marcelo Tomio Hama: Então o próprio browser já entende que alguma coisa não está certa.
+
+488
+00:59:28.690 --> 00:59:33.979
+Marcelo Tomio Hama: Só que aqui a gente está num cenário até um pouco mais raiz. A gente está falando de webservices
+
+489
+00:59:34.790 --> 00:59:37.950
+Marcelo Tomio Hama: do lado da aplicação. Quando a gente tentar bater
+
+490
+00:59:38.120 --> 00:59:41.180
+Marcelo Tomio Hama: bater nesse webservice aqui nesse Geth,
+
+491
+00:59:42.390 --> 00:59:48.340
+Marcelo Tomio Hama: ele vai lançar o quatrocentos. Então vou criar aqui o código quatrocentos só para a gente ter esse
+
+492
+00:59:48.650 --> 00:59:50.460
+Marcelo Tomio Hama: esse raspelho.
+
+493
+00:59:51.820 --> 00:59:53.899
+Marcelo Tomio Hama: E aqui, algum
+
+494
+00:59:56.990 --> 00:59:58.729
+Marcelo Tomio Hama: algum problema ocorrer?
+
+495
+01:00:02.470 --> 01:00:10.190
+Marcelo Tomio Hama: Então, olha só, eu chamei essa Api. E agora eu estou obtendo o código Http quatrocentos.
+
+496
+01:00:10.410 --> 01:00:16.329
+Marcelo Tomio Hama: False aqui porque ele não é mais. Ok, e algum problema aconteceu,
+
+497
+01:00:16.630 --> 01:00:30.789
+Marcelo Tomio Hama: ou seja, a Ati está funcionando, mas o Http Code. Quando eu pego que faço o R, O R, que é o meu objeto tornado e faço ponto. Ok, o ponto ok, significa código duzentos.
+
+498
+01:00:31.430 --> 01:00:35.590
+Marcelo Tomio Hama: O código nesse caso é duzentos, não é? É quatrocentos.
+
+499
+01:00:36.240 --> 01:00:41.669
+Marcelo Tomio Hama: E aí eu retorno aqui de maneira quebrada. Deveríamos estar retornando duzentos
+
+500
+01:00:42.260 --> 01:00:53.970
+Marcelo Tomio Hama: quando a gente vê aqui esse tipo de tratativo. Então ele funciona. E é interessante, porque você está validando cada caso. E assim esta primeira checagem, ela é
+
+501
+01:00:54.110 --> 01:01:06.709
+Marcelo Tomio Hama: o primeiro guard rail para a gente tratar e interpretar uma requisição Http primeiro checa a resposta porque você não sabe exatamente o que aconteceu ali dentro dessa chamada.
+
+502
+01:01:06.860 --> 01:01:17.119
+Marcelo Tomio Hama: Você não sabe se veio o sucesso. Você não sabe se a chamada de maneira adequada, mas alguma coisa precisa ser alterada.
+
+503
+01:01:17.940 --> 01:01:37.110
+Marcelo Tomio Hama: Você não sabe se de repente o que você chamou tem algum problema do lado do cliente, por exemplo, não autorizado. Ora, o servidor está fornecendo um serviço e ali está tudo tranquilo. Tudo certo. Só que se o cliente não está autorizado a bater no servidor. O servidor vai falar, cara. Pera aí.
+
+504
+01:01:37.590 --> 01:01:45.989
+Marcelo Tomio Hama: O problema não sou eu. O problema é você que não tem credenciamento suficiente. Então o cliente, o que ele tem que fazer depois disso?
+
+505
+01:01:46.490 --> 01:02:01.530
+Marcelo Tomio Hama: O que a aplicação precisa fazer, então ela precisa fornecer algum tipo de feedback para o nosso usuário e falar usuário. Você tentou bater num serviço ali no servidor X. Funcionou, mas você precisa se autenticar antes. Você não é autorizado.
+
+506
+01:02:01.530 --> 01:02:08.990
+Marcelo Tomio Hama: Então você precisa tentar isso. Ou então se for alguma coisa da família quinhentos, significa que o problema está do lado do servidor.
+
+507
+01:02:09.000 --> 01:02:13.290
+Marcelo Tomio Hama: E aí, o que o cliente precisa fazer? Qual é a tentativa do cliente?
+
+508
+01:02:13.430 --> 01:02:17.969
+Marcelo Tomio Hama: Qual é o feedback, a mensagem que você vai dar para o seu usuário,
+
+509
+01:02:18.070 --> 01:02:22.470
+Marcelo Tomio Hama: talvez alguma coisa no sentido de requisição
+
+510
+01:02:22.570 --> 01:02:41.429
+Marcelo Tomio Hama: feita com sucesso, porém, servidor não inoperante ou então serviço indisponível. Tente mais tarde. Eu acho que muito provavelmente vocês já viram uma telinha no browser com algum tipo de mensagem assim, serviço não funcionou. Tente mais tarde.
+
+511
+01:02:41.590 --> 01:02:45.439
+Marcelo Tomio Hama: Quando isso acontece. Provavelmente o código ali veio da família quinhentos.
+
+512
+01:02:45.620 --> 01:02:46.349
+Marcelo Tomio Hama: E aí.
+
+513
+01:02:47.020 --> 01:02:58.850
+Marcelo Tomio Hama: Então o problema. Não está do lado do cliente. Está do lado do servidor. Então precisamos interpretar corretamente todas essas chamadas aqui e aqui. Uma primeira maneira,
+
+514
+01:03:00.030 --> 01:03:01.499
+Marcelo Tomio Hama: quando a gente vê.
+
+515
+01:03:02.400 --> 01:03:04.819
+Marcelo Tomio Hama: Deixa eu ver aqui o Rise Playstatos?
+
+516
+01:03:05.360 --> 01:03:13.920
+Marcelo Tomio Hama: Acho que por enquanto, não. A gente não queria ainda, mas eu vou mostrar para você o que isso significa para vocês aqui. O que isso significa? O Rise by status.
+
+517
+01:03:14.960 --> 01:03:19.180
+Marcelo Tomio Hama: E aí o Rise Forrest. Basicamente, quando a gente está
+
+518
+01:03:19.420 --> 01:03:23.120
+Marcelo Tomio Hama: falando de um cenário Tri Cat.
+
+519
+01:03:24.150 --> 01:03:25.819
+Marcelo Tomio Hama: E aí eu faço aqui
+
+520
+01:03:28.840 --> 01:03:30.369
+Marcelo Tomio Hama: o R aqui, né?
+
+521
+01:03:30.530 --> 01:03:37.509
+Marcelo Tomio Hama: Vou comentar esse código aqui. E esse outro. Vou colocar aqui a minha chamada dentro. E aqui. Eu vou colocar um Except.
+
+522
+01:03:38.170 --> 01:03:43.850
+Marcelo Tomio Hama: E aí erro na aquisição. Tudo bem, vou deixar aqui.
+
+523
+01:03:44.290 --> 01:03:47.219
+Marcelo Tomio Hama: Vou tirar todos esses caras aqui.
+
+524
+01:03:56.000 --> 01:03:58.529
+Marcelo Tomio Hama: Vou deixar aqui o Rise for sete status.
+
+525
+01:04:03.700 --> 01:04:05.700
+Marcelo Tomio Hama: O que é isso que significa?
+
+526
+01:04:06.710 --> 01:04:07.470
+Marcelo Tomio Hama: Não é?
+
+527
+01:04:07.620 --> 01:04:13.479
+Marcelo Tomio Hama: Quando a gente tem uma construção nesse formato, é de ponto.
+
+528
+01:04:13.970 --> 01:04:16.970
+Marcelo Tomio Hama: Rise by status, tá?
+
+529
+01:04:18.260 --> 01:04:24.160
+Marcelo Tomio Hama: Basicamente, ele vai lançar uma exceção propositalmente, caso
+
+530
+01:04:24.400 --> 01:04:30.890
+Marcelo Tomio Hama: a minha requisição, ela retorne qualquer coisa da família quatrocentos ou da família quinhentos.
+
+531
+01:04:31.390 --> 01:04:35.140
+Marcelo Tomio Hama: E aí vocês vão poder tratar isso de maneira adequada.
+
+532
+01:04:35.600 --> 01:04:37.220
+Marcelo Tomio Hama: Então, como?
+
+533
+01:04:37.410 --> 01:04:40.649
+Marcelo Tomio Hama: Como esse cenário aqui? Experimental aqui,
+
+534
+01:04:41.290 --> 01:04:54.750
+Marcelo Tomio Hama: eu estou fazendo Rget mesmo Rl: e certamente ele vai retornar quatrocentos. Porque foi o que a gente colocou aqui. A gente deixou aqui quatrocentos. Ele vai lançar uma inserção e este
+
+535
+01:04:54.900 --> 01:05:06.369
+Marcelo Tomio Hama: Rise of status consegue capturar todos os Http, codes, que lançam status codes da família quatrocentos ou quinhentos.
+
+536
+01:05:06.800 --> 01:05:12.289
+Marcelo Tomio Hama: Então, quando isso acontece, a gente pode estar criando isso aí.
+
+537
+01:05:12.750 --> 01:05:15.180
+Marcelo Tomio Hama: E aí e aí
+
+538
+01:05:15.700 --> 01:05:27.370
+Marcelo Tomio Hama: a gente pode estar criando aqui. Então o except. Vou deixar aqui mais escrito, mais descrito aqui para a gente. Então execute requestsiones
+
+539
+01:05:27.540 --> 01:05:37.419
+Marcelo Tomio Hama: Requests er. Então aqui ele já coloca tudo pra gente. Até auto completou pra mim, deixou mais fácil e ele vai cair aqui na requisição.
+
+540
+01:05:37.530 --> 01:05:40.629
+Marcelo Tomio Hama: Olha só. Erro na requisição. Por quê?
+
+541
+01:05:40.770 --> 01:05:42.850
+Marcelo Tomio Hama: Porque ele lançou quatrocentos.
+
+542
+01:05:42.990 --> 01:05:48.159
+Marcelo Tomio Hama: Se a gente pegar interpolar essa variável, né? Porque não é
+
+543
+01:05:48.330 --> 01:05:52.760
+Marcelo Tomio Hama: colocar dois pontos aqui. Colocar aqui dessa maneira
+
+544
+01:05:53.070 --> 01:05:56.850
+Marcelo Tomio Hama: aqui. Vamos tentar imprimir aqui o objeto, não é?
+
+545
+01:05:57.080 --> 01:06:00.209
+Marcelo Tomio Hama: Olha só. O cliente está retornando quatrocentos.
+
+546
+01:06:00.670 --> 01:06:06.080
+Marcelo Tomio Hama: Então, mensagem que veio ali para a gente. Background Quest For Url.
+
+547
+01:06:07.070 --> 01:06:17.319
+Marcelo Tomio Hama: Aqui é o Rl que a gente passou. Annie Grok, Eiffel. Ou seja, a gente está tentando bater um get em cima dessa Url. Mas ele está dando quatrocentos. Por que está dando quatrocentos?
+
+548
+01:06:17.850 --> 01:06:21.750
+Marcelo Tomio Hama: Porque foi o que a gente, fez, né? Nada novo nesse
+
+549
+01:06:21.950 --> 01:06:31.029
+Marcelo Tomio Hama: nesse mundo. Se a gente tivesse deixado aqui duzentos, isso não teria acontecido. Vamos retornar para duzentos. Então, só para a gente pegar e passar por aqui de novo,
+
+550
+01:06:32.000 --> 01:06:33.630
+Marcelo Tomio Hama: vou derrubar aqui a aplicação.
+
+551
+01:06:34.160 --> 01:06:36.930
+Marcelo Tomio Hama: Vou derrubar aqui o meu.
+
+552
+01:06:37.980 --> 01:06:39.369
+Marcelo Tomio Hama: A minha execução.
+
+553
+01:06:40.780 --> 01:06:44.500
+Marcelo Tomio Hama: Aqui também o container que nós criamos.
+
+554
+01:06:46.210 --> 01:06:49.070
+Marcelo Tomio Hama: Vou compilar tudo de novo.
+
+555
+01:06:50.370 --> 01:07:00.170
+Marcelo Tomio Hama: Então, o Build do container execução do container, disponibilização via Tunelin.
+
+556
+01:07:02.920 --> 01:07:08.680
+Marcelo Tomio Hama: Pega o Rl aqui, forneço no meu cliente.
+
+557
+01:07:09.920 --> 01:07:15.260
+Marcelo Tomio Hama: E agora o que a gente vai ter.
+
+558
+01:07:16.050 --> 01:07:18.790
+Marcelo Tomio Hama: E aí nada.
+
+559
+01:07:19.430 --> 01:07:22.369
+Marcelo Tomio Hama: Por que nada, né? Porque ele não caiu na exceção.
+
+560
+01:07:22.520 --> 01:07:26.370
+Marcelo Tomio Hama: Ele entrou dentro desse Prime. Ele caiu aqui, verificou
+
+561
+01:07:26.940 --> 01:07:35.840
+Marcelo Tomio Hama: onde ele ficou aqui o Rise for X for status e passou limpo. Se a gente vir aqui e.
+
+562
+01:07:37.100 --> 01:07:40.029
+Marcelo Tomio Hama: E pintar aqui, né? O response.
+
+563
+01:07:42.060 --> 01:07:53.270
+Marcelo Tomio Hama: E aqui a gente trazia o R R status stars code, né?
+
+564
+01:07:54.280 --> 01:08:00.369
+Marcelo Tomio Hama: O que ele vai trazer para a gente vai trazer duzentos aí, ó duzentos.
+
+565
+01:08:00.760 --> 01:08:01.490
+Marcelo Tomio Hama: E aí
+
+566
+01:08:02.250 --> 01:08:10.279
+Marcelo Tomio Hama: é o cenário em que a gente não cai no erro. Se a gente tiver chamado ali de uma maneira diferente, teríamos caído numa exceção.
+
+567
+01:08:10.900 --> 01:08:19.380
+Marcelo Tomio Hama: Então vamos dar uma olhada aqui no post if not new item o nome Not.
+
+568
+01:08:21.430 --> 01:08:26.140
+Marcelo Tomio Hama: Então vamos tentar fazer aqui uma chamada deste Post.
+
+569
+01:08:26.770 --> 01:08:29.610
+Marcelo Tomio Hama: Vou tentar aqui simular um erro.
+
+570
+01:08:32.160 --> 01:08:38.680
+Marcelo Tomio Hama: Então esse período aqui, colocar ele dentro desse Digest,
+
+571
+01:08:42.580 --> 01:08:50.789
+Marcelo Tomio Hama: é claro, que response. Precisa ser o nome da minha avaliada informada corretamente
+
+572
+01:08:52.109 --> 01:08:56.330
+Marcelo Tomio Hama: aí. O que eu estou fazendo, main item Three, não é?
+
+573
+01:09:00.920 --> 01:09:02.000
+Marcelo Tomio Hama: E aí,
+
+574
+01:09:09.870 --> 01:09:14.109
+Marcelo Tomio Hama: ornaming not New Whatsapp. Então vamos tentar lançar esse.
+
+575
+01:09:14.439 --> 01:09:31.370
+Marcelo Tomio Hama: Vou colocar aqui outra coisa. Vou colocar a imagem e aí abraço é Rua Rua Flórida.
+
+576
+01:09:32.080 --> 01:09:43.519
+Marcelo Tomio Hama: Agora o payload não tem ali mais o Camponay. Estou tentando aqui lançar um livro, mas vamos ver se vai funcionar. Então, payload vem para cá. A gente chama aqui via Post Post está aqui
+
+577
+01:09:43.620 --> 01:09:52.969
+Marcelo Tomio Hama: a Web Tv, status code. Se tiver tudo certo, ele vai pintar para o status code. E na sequência, a resposta, senão ele vai dar erro na requisição.
+
+578
+01:09:53.470 --> 01:09:54.970
+Marcelo Tomio Hama: Vamos ver se isso vai funcionar.
+
+579
+01:09:56.340 --> 01:10:03.449
+Marcelo Tomio Hama: Aí funcionou aqui, né? Provavelmente porque aqui a gente não está fazendo essa aplicativo?
+
+580
+01:10:04.180 --> 01:10:07.929
+Marcelo Tomio Hama: Estava tentando aqui lançar tipo do erro, né?
+
+581
+01:10:09.340 --> 01:10:12.549
+Marcelo Tomio Hama: Mas vamos ver. Vamos ver como é que ficou. Então o nosso dicionário aqui.
+
+582
+01:10:12.920 --> 01:10:14.930
+Marcelo Tomio Hama: Então e aí?
+
+583
+01:10:15.360 --> 01:10:16.460
+Marcelo Tomio Hama: Fazendo aqui?
+
+584
+01:10:17.500 --> 01:10:18.240
+Marcelo Tomio Hama: Tchau.
+
+585
+01:10:20.070 --> 01:10:21.510
+Marcelo Tomio Hama: Dentro do guetes
+
+586
+01:10:24.710 --> 01:10:33.570
+Marcelo Tomio Hama: é um item. One. Item Two Marcelo Matheus Jéssica.
+
+587
+01:10:33.840 --> 01:10:37.449
+Marcelo Tomio Hama: Não é por isso que ele não trouxe o.
+
+588
+01:10:39.330 --> 01:10:43.580
+Marcelo Tomio Hama: O Andrighi deveria ter trazido aqui.
+
+589
+01:10:44.720 --> 01:10:50.790
+Marcelo Tomio Hama: Isso aqui ficou o streaming do Ney.
+
+590
+01:10:56.020 --> 01:11:04.150
+Marcelo Tomio Hama: Enfim, estou testando aqui alguns cenários fora do script só para a gente brincar um pouquinho e aí.
+
+591
+01:11:05.510 --> 01:11:07.209
+Marcelo Tomio Hama: Mas enfim, a gente viu que
+
+592
+01:11:07.890 --> 01:11:16.119
+Marcelo Tomio Hama: o que ele consegue incluir só faltou a gente fazer a tratativa aqui. Da resposta que deveria ter vindo. Algum tipo de erro.
+
+593
+01:11:16.470 --> 01:11:22.980
+Marcelo Tomio Hama: Depois a gente dá uma olhadinha e captura aí. O cenário aconteceu é:
+
+594
+01:11:23.550 --> 01:11:25.060
+Marcelo Tomio Hama: vou passar aqui na sua frente,
+
+595
+01:11:26.010 --> 01:11:44.189
+Marcelo Tomio Hama: acessando o corpo da resposta. Isso aqui. Então vocês precisam fazer essa tratativa depois de analisar o status code, então o status code veio duzentos. Beleza. Só que muitas outras análises precisam ser feitas porque o corpo da resposta pode vir no formato de ação,
+
+596
+01:11:44.490 --> 01:11:47.339
+Marcelo Tomio Hama: como que a gente trata no formato de ação.
+
+597
+01:11:47.530 --> 01:11:50.830
+Marcelo Tomio Hama: É dessa primeira maneira aqui usuário ponto,
+
+598
+01:11:51.270 --> 01:11:53.650
+Marcelo Tomio Hama: por exemplo. O zague é o nome da minha variável.
+
+599
+01:11:54.140 --> 01:12:01.179
+Marcelo Tomio Hama: Recebe a resposta, ponto de som. E aí, se eu pinto aqui, ele vai trazer aqui o
+
+600
+01:12:01.860 --> 01:12:05.130
+Marcelo Tomio Hama: o campo avaliável como um objeto de ação.
+
+601
+01:12:05.290 --> 01:12:13.220
+Marcelo Tomio Hama: O que a gente faz se a gente quer exibir a informação como se fosse uma página Html, né?
+
+602
+01:12:13.570 --> 01:12:17.690
+Marcelo Tomio Hama: Esse campo aí viria como um uma
+
+603
+01:12:18.400 --> 01:12:22.760
+Marcelo Tomio Hama: no formato Html aqui para nós. E nós teríamos que exibir via texto.
+
+604
+01:12:23.310 --> 01:12:26.140
+Marcelo Tomio Hama: Ele não seria um Jason para a gente.
+
+605
+01:12:26.250 --> 01:12:32.750
+Marcelo Tomio Hama: A gente pode fazer um teste. Então, ao invés de pintar aqui a nossa, chamada
+
+606
+01:12:33.150 --> 01:12:35.419
+Marcelo Tomio Hama: trazer aqui meu chamado aqui,
+
+607
+01:12:41.100 --> 01:12:42.969
+Marcelo Tomio Hama: como uma.
+
+608
+01:12:43.600 --> 01:12:48.340
+Marcelo Tomio Hama: Como disse, fazer um teste. Um texto diz
+
+609
+01:12:49.310 --> 01:12:54.110
+Marcelo Tomio Hama: aqui: Tira esse de som e deixar aqui no formato R Text.
+
+610
+01:13:05.360 --> 01:13:09.760
+Marcelo Tomio Hama: Então, fazendo a execução aqui, ele vem aqui no formato de de texto.
+
+611
+01:13:11.060 --> 01:13:28.190
+Marcelo Tomio Hama: Claro que para a gente não mudou muita coisa, porque o objeto que a gente encoldou aqui do lado do servidor, ele está sendo devolvido via formato também, Djson. Mas se você quiser tratar isso aqui como uma página Html, então seguia o texto.
+
+612
+01:13:28.620 --> 01:13:38.500
+Marcelo Tomio Hama: O cenário não se resume apenas isso. Tem o formato, Jason, que é a maneira como os webservices se comunicam. Tem o formato Text,
+
+613
+01:13:38.550 --> 01:13:51.659
+Marcelo Tomio Hama: que é a forma como as páginas web e formulários são enviados e recebidos. Então, se você estiver fazendo o cadastramento de um cliente, está ali preenchendo vários campos em text input.
+
+614
+01:13:52.840 --> 01:13:56.929
+Marcelo Tomio Hama: Provavelmente você vai ter que chamar um webservice
+
+615
+01:13:57.190 --> 01:14:06.509
+Marcelo Tomio Hama: restful do tipo post. E depois obter a resposta num formato Text. Além desses dois, a gente tem ainda os arquivos,
+
+616
+01:14:06.680 --> 01:14:07.420
+Marcelo Tomio Hama: tá?
+
+617
+01:14:07.890 --> 01:14:24.739
+Marcelo Tomio Hama: E a leitura ali. Então, se você estiver querendo, por exemplo, fazer o download de uma foto, baixar uma foto, baixar um arquivo seguir a Requests. Você passa base Url e aí faz o uso do Wifi. Chama aqui o arquivo obtido
+
+618
+01:14:24.740 --> 01:14:36.180
+Marcelo Tomio Hama: no nome que lhe for oportuno, que a gente está chamando de F. E depois escreve ele f pop right. E aqui você pega o content. Então a gente tem R. Jason
+
+619
+01:14:36.580 --> 01:14:40.080
+Marcelo Tomio Hama: R. Text Rcomp.
+
+620
+01:14:40.950 --> 01:14:43.960
+Marcelo Tomio Hama: Tchau, pessoal. Dúvidas até agora.
+
+621
+01:14:44.870 --> 01:14:47.459
+Marcelo Tomio Hama: Alguma dúvida aí do lado de vocês?
+
+622
+01:14:53.360 --> 01:14:54.470
+Marcelo Tomio Hama: Tudo certo,
+
+623
+01:15:02.570 --> 01:15:12.860
+Marcelo Tomio Hama: beleza? Vocês estão conseguindo executar os cases aqui. Pelo menos o cliente, o lado do cliente.
+
+624
+01:15:13.500 --> 01:15:14.360
+Marcelo Tomio Hama: E aí,
+
+625
+01:15:23.590 --> 01:15:24.550
+Marcelo Tomio Hama: beleza?
+
+626
+01:15:24.690 --> 01:15:28.370
+Marcelo Tomio Hama: O River da resposta também precisa ser interpretado.
+
+627
+01:15:28.800 --> 01:15:36.519
+Marcelo Tomio Hama: Então, depois que você interpretou o status Code. Depois que você viu o tipo do Content do Bayern,
+
+628
+01:15:37.120 --> 01:15:49.180
+Marcelo Tomio Hama: você precisa dar uma olhada também nos Readers para você acessar o Reader, você acessa o Reader como se fosse um dicionário. Então aqui o R tem aqui a carga
+
+629
+01:15:49.760 --> 01:15:56.660
+Marcelo Tomio Hama: do que vem da resposta. Então é ponto. Reevers, você acessa ali todas as propriedades da resposta
+
+630
+01:15:56.910 --> 01:16:01.760
+Marcelo Tomio Hama: para acessar ali um determinado Reader, um Reader específico. Por exemplo, Content.
+
+631
+01:16:01.900 --> 01:16:06.660
+Marcelo Tomio Hama: Basta acessar. Que passa na chave, né? Como como parâmetro.
+
+632
+01:16:06.880 --> 01:16:10.740
+Marcelo Tomio Hama: Eu vou pegar aqui todos esses exemplos aqui e vou
+
+633
+01:16:12.230 --> 01:16:14.539
+Marcelo Tomio Hama: e vou chamar aqui do nosso lado.
+
+634
+01:16:14.980 --> 01:16:17.290
+Marcelo Tomio Hama: Então respondes.
+
+635
+01:16:17.740 --> 01:16:24.180
+Marcelo Tomio Hama: E aí, ao invés, ao invés de estar exibindo, tá
+
+636
+01:16:29.520 --> 01:16:32.769
+Marcelo Tomio Hama: exibindo aqui, vou botar exibida.
+
+637
+01:16:33.740 --> 01:16:37.610
+Marcelo Tomio Hama: Vou estar exibindo cada um deles.
+
+638
+01:16:48.020 --> 01:16:59.420
+Marcelo Tomio Hama: Então, primeiro aqui que o Itaú River do Ii, o Hitler, aqui do terceiro, o líder do parto
+
+639
+01:17:02.540 --> 01:17:10.270
+Marcelo Tomio Hama: e o Hitler. Então a gente está trazendo todos os cabeçalhos.
+
+640
+01:17:10.880 --> 01:17:17.799
+Marcelo Tomio Hama: Esse R é símpedro. É uma variável, só que aqui, no caso, inclusive a gente trocou
+
+641
+01:17:19.270 --> 01:17:27.760
+Marcelo Tomio Hama: por Requests. Então. Bem observado aqui. Isso não iria funcionar. A gente tem que trocar aqui, né? Colocar o
+
+642
+01:17:28.120 --> 01:17:33.109
+Marcelo Tomio Hama: tirar o R e colocar o Requests, porque é o que a gente está usando lá em cima.
+
+643
+01:17:40.400 --> 01:17:45.349
+Marcelo Tomio Hama: Ah, tá um erro de Sintax aqui assim desse primeiro aqui?
+
+644
+01:17:51.170 --> 01:17:52.420
+Marcelo Tomio Hama: Não,
+
+645
+01:17:52.900 --> 01:18:09.689
+Marcelo Tomio Hama: claro, isso por quê? Porque do lado do nosso servidor, a gente não colocou nenhum Hitler. Então também não adianta a gente querer obter os cabeçalhos aqui, do lado da nossa resposta. Se a gente também não está devolvendo
+
+646
+01:18:10.460 --> 01:18:21.659
+Marcelo Tomio Hama: o reader do lado do servidor. Mas, claro, se a gente estivesse querendo aqui de alguma maneira pintar esses Readers aqui seria a maneira que a gente poderia estar fazendo uso.
+
+647
+01:18:22.570 --> 01:18:27.900
+Marcelo Tomio Hama: Então, para obter os valores aqui de cada um deles.
+
+648
+01:18:34.650 --> 01:18:44.780
+Marcelo Tomio Hama: Vamos leituras aqui. Então vocês também podem estar dando uma olhada no tipo do encoding, porque eventualmente,
+
+649
+01:18:45.270 --> 01:18:47.590
+Marcelo Tomio Hama: o tipo do Encon. Se ele estiver errado,
+
+650
+01:18:47.850 --> 01:18:57.290
+Marcelo Tomio Hama: você pode estar lendo dentro de um time coding diferente. E ali, se você estiver dentro desse cenário, a informação vai chegar para vocês
+
+651
+01:18:57.410 --> 01:19:15.150
+Marcelo Tomio Hama: de uma maneira bastante diferente da que foi enviada pelo servidor. Então vai fazer essa checagem aqui do encoding. Se ele é o Tf oito, se é Iso oito mil oitocentos e cinquenta e nove-trassom whatever qualquer outro tipo de encoding
+
+652
+01:19:16.500 --> 01:19:19.459
+Marcelo Tomio Hama: para você pintar. Basta fazer uso aqui do
+
+653
+01:19:19.720 --> 01:19:24.240
+Marcelo Tomio Hama: do tipo R Tex aqui, e você vai estar lendo na bandeira correta.
+
+654
+01:19:25.260 --> 01:19:32.960
+Marcelo Tomio Hama: É outros parâmetros aqui que a gente pode também estar obtendo. Então os cookies. Você pega aqui
+
+655
+01:19:33.100 --> 01:19:40.090
+Marcelo Tomio Hama: e chama a nossa resposta do Worquest Cookies e obtém ali um dicionário com todos eles.
+
+656
+01:19:40.250 --> 01:19:56.389
+Marcelo Tomio Hama: Url é o Url final que a gente usou para acessar. Nesse caso, aqui. Acho que a gente conseguiu vir. Pix. Espero muito que o R, pelo menos, esteja disponível aqui porque o R é parâmetro final.
+
+657
+01:19:58.320 --> 01:20:03.699
+Marcelo Tomio Hama: A gente chama aqui tirar esse vídeo aqui só para.
+
+658
+01:20:04.150 --> 01:20:09.650
+Marcelo Tomio Hama: Deixa mais direto. Tá, então fazendo essa chamada?
+
+659
+01:20:12.090 --> 01:20:20.829
+Marcelo Tomio Hama: Deixa eu ver que se esse servidor Ah, não responde spons R. E
+
+660
+01:20:23.970 --> 01:20:31.809
+Marcelo Tomio Hama: talvez seja até por isso que os outros exemplos aqui não estivessem funcionando. A gente estava chamando aqui com a tipagem errada.
+
+661
+01:20:32.800 --> 01:20:35.149
+Marcelo Tomio Hama: Não está rodando nada aí, Lucas.
+
+662
+01:20:35.440 --> 01:20:37.490
+Marcelo Tomio Hama: Será que não é por conta do tipo?
+
+663
+01:20:37.650 --> 01:20:41.770
+Marcelo Tomio Hama: Talvez seja por conta aqui da na Url. Tá,
+
+664
+01:20:42.510 --> 01:20:46.760
+Marcelo Tomio Hama: deixa eu mandar aqui para você de novo. Porque aqui a gente trocou. Ela várias vezes.
+
+665
+01:20:47.240 --> 01:20:49.050
+Marcelo Tomio Hama: Tenta colocar essa.
+
+666
+01:20:50.940 --> 01:20:52.809
+Marcelo Tomio Hama: Esse domínio aí que eu mandei agora há pouco.
+
+667
+01:20:53.100 --> 01:20:53.780
+Marcelo Tomio Hama: Tchau.
+
+668
+01:21:04.890 --> 01:21:08.630
+Marcelo Tomio Hama: Agora vou tentar imprimir aqui o contentor.
+
+669
+01:21:10.710 --> 01:21:14.349
+Marcelo Tomio Hama: Aí, beleza. O exemplo anterior não estava funcionando, porque eu estava
+
+670
+01:21:14.510 --> 01:21:18.860
+Marcelo Tomio Hama: provavelmente cometendo aqui um erro de sintaxe. Eu estava tentando pegar o
+
+671
+01:21:19.930 --> 01:21:31.159
+Marcelo Tomio Hama: o response que na verdade aqui a gente tinha um Request. Mas o que a gente conseguiu fazer aqui? A gente conseguiu pintar o Reader e o content time dele,
+
+672
+01:21:32.270 --> 01:21:34.669
+Marcelo Tomio Hama: que no caso, é aplicação de Jason
+
+673
+01:21:34.970 --> 01:21:41.190
+Marcelo Tomio Hama: beleza. Vamos pegar mais um River aqui. Eu apenas estou voltando no exemplo anterior. Eu quero ver
+
+674
+01:21:42.340 --> 01:21:46.220
+Marcelo Tomio Hama: qual que é o tamanho, o contente?
+
+675
+01:21:46.680 --> 01:21:50.849
+Marcelo Tomio Hama: O Content. O Content possui
+
+676
+01:21:54.030 --> 01:22:02.379
+Marcelo Tomio Hama: para essa chamada aqui que a gente fez do Get Base Url. O que a gente retorna. A gente retorna ali àquela lista com
+
+677
+01:22:02.620 --> 01:22:03.970
+Marcelo Tomio Hama: os nossos
+
+678
+01:22:05.390 --> 01:22:14.140
+Marcelo Tomio Hama: nomes cadastrados. Então, olha só, eu tenho cento e quarenta e quatro caracteres. Esse é o tamanho da minha resposta.
+
+679
+01:22:14.540 --> 01:22:19.779
+Marcelo Tomio Hama: O que acontece quando executa aqui este post?
+
+680
+01:22:20.040 --> 01:22:29.990
+Marcelo Tomio Hama: Se eu executo esse post agora, basicamente, eu estou incluindo um novo nome, não é?
+
+681
+01:22:30.940 --> 01:22:31.640
+Marcelo Tomio Hama: Tchau.
+
+682
+01:22:32.060 --> 01:22:36.659
+Marcelo Tomio Hama: Vou executar ele aqui. Coloquei ali, aí de seis.
+
+683
+01:22:37.230 --> 01:22:47.150
+Marcelo Tomio Hama: Agora, se eu faço uma nova chamada aqui do meu compense. Lance,
+
+684
+01:22:48.130 --> 01:22:53.570
+Marcelo Tomio Hama: a resposta vai bem maior, porque eu tenho um registro a mais. É esperado. Então
+
+685
+01:22:54.050 --> 01:22:57.299
+Marcelo Tomio Hama: que o tamanho seja maior.
+
+686
+01:22:59.120 --> 01:23:02.490
+Marcelo Tomio Hama: Aquele não vem maior. Provavelmente aqui, por conta da
+
+687
+01:23:03.000 --> 01:23:05.759
+Marcelo Tomio Hama: do cenário mais estático que a gente está trabalhando.
+
+688
+01:23:06.040 --> 01:23:09.590
+Marcelo Tomio Hama: E aí, beleza?
+
+689
+01:23:09.990 --> 01:23:13.549
+Marcelo Tomio Hama: Lucas, você conseguiu rodar aí do teu lado?
+
+690
+01:23:13.950 --> 01:23:16.360
+Marcelo Tomio Hama: Está funcionando. Esse domínio
+
+691
+01:23:26.750 --> 01:23:28.490
+Marcelo Tomio Hama: está perdido.
+
+692
+01:23:29.000 --> 01:23:37.960
+Marcelo Tomio Hama: Pessoal, vocês estão entendendo aí o conteúdo, ou a gente está passando. Talvez rápido demais. Aqui é um.
+
+693
+01:23:38.340 --> 01:23:41.690
+Marcelo Tomio Hama: Você tem uma parte específica que
+
+694
+01:23:42.110 --> 01:23:44.699
+Marcelo Tomio Hama: e alguém eventualmente acabou se perdendo.
+
+695
+01:23:56.970 --> 01:23:59.680
+Pedro Fernandes Fonseca: Opa, professor. Boa noite, beleza.
+
+696
+01:24:00.890 --> 01:24:17.970
+Pedro Fernandes Fonseca: Eu vou dar só o meu feedback mesmo do que eu estou achando das aulas e tal. Eu estou conseguindo compreender que os comandos são bem simples assim. Entre aspas, assim, táxi é mais fácil do que
+
+697
+01:24:18.070 --> 01:24:33.019
+Pedro Fernandes Fonseca: outros comandos e tal, mas eu estou achando que são várias linguagens diferentes. Que a gente já está pegando, né? Igual agora já está mexendo com Jason Tex agora, depois. Já está colocando o binário aí também
+
+698
+01:24:33.070 --> 01:24:39.770
+Pedro Fernandes Fonseca: aí. Eu acho que eu não estou conseguindo absorver tudo. Ainda não estou com essa pequena dificuldade.
+
+699
+01:24:40.420 --> 01:24:42.900
+Marcelo Tomio Hama: Entendi, Tchau.
+
+700
+01:24:43.010 --> 01:24:44.210
+Marcelo Tomio Hama: É um
+
+701
+01:24:44.770 --> 01:24:52.510
+Marcelo Tomio Hama: talvez nessas últimas partes aqui, Pedro, a gente esteja fazendo esse mix de vários conteúdos e conceitos diferentes.
+
+702
+01:24:52.580 --> 01:25:06.170
+Marcelo Tomio Hama: Se a gente, por exemplo, lá nos binários, basta a gente recapitular um pouquinho ali da aula. Acho que foi a aula da etapa seis na etapa sete. A gente já falou de Jason
+
+703
+01:25:07.360 --> 01:25:23.880
+Marcelo Tomio Hama: aqui. Nessa etapa, a gente está trazendo um pouco desses conteúdos anteriores, mas é apenas para exemplificar os cenários que a gente vai estar trabalhando. O importante tá pessoal que vocês entendam desta aula de hoje, e também da aula da segunda feira. É
+
+704
+01:25:24.000 --> 01:25:29.879
+Marcelo Tomio Hama: como fazer chamada Get Post. E o que isso traz
+
+705
+01:25:30.110 --> 01:25:34.499
+Marcelo Tomio Hama: contextualmente falando, o que isso traz de
+
+706
+01:25:34.620 --> 01:25:37.300
+Marcelo Tomio Hama: processamento para o lado do servidor.
+
+707
+01:25:37.460 --> 01:25:38.460
+Marcelo Tomio Hama: Então,
+
+708
+01:25:39.330 --> 01:25:48.200
+Marcelo Tomio Hama: se vocês estão aqui trazendo com dúvidas a respeito do que está acontecendo aqui no cenário do arquivo binário. Não tem problema.
+
+709
+01:25:48.580 --> 01:25:50.710
+Marcelo Tomio Hama: Não tem problema também.
+
+710
+01:25:50.810 --> 01:25:55.310
+Marcelo Tomio Hama: Se a ideia aqui é que a gente esteja
+
+711
+01:25:55.860 --> 01:26:04.370
+Marcelo Tomio Hama: um pouco perdido aqui com relação à base Url. Por que a base Url está sendo trocada todas as vezes aqui que a gente faz
+
+712
+01:26:04.490 --> 01:26:06.269
+Marcelo Tomio Hama: a subida do servidor,
+
+713
+01:26:07.490 --> 01:26:20.559
+Marcelo Tomio Hama: o conteúdo principal da aula de hoje é justamente o Work Requests. Se tem aqui um ponto central que a gente pode concentrar, assim como sendo a parte mais importante. É o Work Requests
+
+714
+01:26:20.800 --> 01:26:28.530
+Marcelo Tomio Hama: Postpost, o Requis Splut e o requis delete
+
+715
+01:26:28.670 --> 01:26:45.189
+Marcelo Tomio Hama: é um pouquinho aqui, até aqui. Da parte dois. Sugestão até. Não sei se de repente vocês topam essa ideia. A gente pode aproveitar um pouco da aula que vem da segunda feira que vem e dar uma repassada aqui na parte dois. Mas assim,
+
+716
+01:26:45.410 --> 01:26:56.629
+Marcelo Tomio Hama: antes até da gente fazer isso, fica sugerido que vocês assistam novamente a gravação do que a gente fez da segunda feira. Porque eu.
+
+717
+01:26:56.920 --> 01:27:10.269
+Marcelo Tomio Hama: Eu reconheço que fica bastante difícil a gente conseguir entender aqui da parte três, quatro e cinco, se essa parte dois. Ela não foi ali muito bem compreendida. Então é sugestão.
+
+718
+01:27:10.300 --> 01:27:17.370
+Marcelo Tomio Hama: Assistam de novo aqui. A parte dois pode ser somente a parte dois, né? Que a gente vê tudo isso aqui
+
+719
+01:27:17.760 --> 01:27:32.869
+Marcelo Tomio Hama: na aula que vem a gente comenta e a gente repassa tudo o que a gente entendeu aqui da parte dois. Se vocês não estão entendendo, poxa, o que significa ali o Jason sendo usado como Reader.
+
+720
+01:27:33.010 --> 01:27:36.740
+Marcelo Tomio Hama: É aqui. Os Readers customizados.
+
+721
+01:27:36.830 --> 01:27:46.439
+Marcelo Tomio Hama: O Alfa aqui passando como vai sendo utilizado como parâmetro. O Jason aqui vindo como o corpo da mensagem.
+
+722
+01:27:46.510 --> 01:27:58.119
+Marcelo Tomio Hama: Quais são os métodos que a gente tem? Olha só o werewqestres aqui aparecendo. Url exemplos Try. A gente tem aqui o Tri. Mas é tri. Do quê? O tri da minha requisição.
+
+723
+01:27:58.470 --> 01:28:10.390
+Marcelo Tomio Hama: Eu tento fazer, mas dentro dele eu posso ter uma Http Code que é diferente da família duzentos sendo retornada. Se ele for da família quatrocentos, se ele for da família quinhentos.
+
+724
+01:28:10.390 --> 01:28:24.830
+Marcelo Tomio Hama: Ele é capturado por este Rise of Perception. E esse Rise of Action vai tratar todo e qualquer tipo de erro de conexão. Então a gente pode trazer e discutir um pouco mais aprofundadamente
+
+725
+01:28:25.070 --> 01:28:44.410
+Marcelo Tomio Hama: essa parte número dois da aula que vem. Mas claro, eu peço encarecidamente aí que vocês também assistam. Só para que a gente não consiga otimizar, porque tem muito mais conteúdo. Depois, só para vocês saberem. Pessoal, eu acho que a semana que vem vai ter muita coisa bacana, tá?
+
+726
+01:28:44.590 --> 01:28:51.020
+Marcelo Tomio Hama: A gente vai começar a falar de integração de serviços de inteligência artificial. Então, Gemini,
+
+727
+01:28:51.070 --> 01:29:06.369
+Marcelo Tomio Hama: fazer uso ali de Llm com o Python. Ou seja, eu acho que é meio que a cereja do bolo aqui da nossa disciplina. Como fazer o uso de integrações de ferramentas de Ia. E olha só, pessoal.
+
+728
+01:29:06.480 --> 01:29:21.060
+Marcelo Tomio Hama: Empresa grande empresa importante, inclusive startup. A galera já está usando essas coisas aí. Então é Python com ferramenta de Ia. Então eu queria muito que a gente conseguisse aproveitar a aula que vem nos dois dias da aula, que vem
+
+729
+01:29:21.160 --> 01:29:37.299
+Marcelo Tomio Hama: para dar um tush nesses conteúdos que são extremamente importantes. Então peço aí que vocês deem uma olhada. Uma estudada nesses temas que vão ser as bases mesmo para a aula que vem. Não tem como a gente pegar e fazer chamada de serviço para um Gemini.
+
+730
+01:29:37.300 --> 01:29:42.429
+Marcelo Tomio Hama: Se vocês não estiverem conseguindo fazer uma chamada de Api para Get,
+
+731
+01:29:43.120 --> 01:29:46.440
+Marcelo Tomio Hama: a gente discute um pouquinho na aula que vem.
+
+732
+01:29:46.880 --> 01:29:48.020
+Marcelo Tomio Hama: É,
+
+733
+01:29:48.360 --> 01:30:00.750
+Marcelo Tomio Hama: peço também. Tá, pessoal, que vocês deem aqui uma lida aqui no material da aula, oito na etapa oito. E aí a gente consegue eventualmente acelerar. Então, olha só.
+
+734
+01:30:00.910 --> 01:30:15.939
+Marcelo Tomio Hama: Tratamento de resposta de uma maneira mais robusta, a parte quatro que a gente já fala de requisições. Post, qual. Que é a diferença do get com post? Olha só, um serviço aqui onde a gente chama uma Api
+
+735
+01:30:15.970 --> 01:30:33.129
+Marcelo Tomio Hama: via Post em que você passa como parâmetro o nome de uma molécula e ela te devolve uma imagem. E essa imagem é uma representação 3d daquela molécula. Então, nesse cenário, aqui a gente está usando a molécula App
+
+736
+01:30:33.740 --> 01:30:45.289
+Marcelo Tomio Hama: e a molécula do glicogênio, e ele traz as imagens aqui para a gente. É. O que é isso? Uma chamada Post. Por quê? Porque o Post. Você precisa enviar informações,
+
+737
+01:30:45.290 --> 01:30:57.020
+Marcelo Tomio Hama: enquanto que no Get é apenas uma consulta. Então, assim dê uma olhadinha também, porque a gente vai precisar falar disso na aula que vem o conteúdo da aula de hoje não ficou completo.
+
+738
+01:30:57.160 --> 01:30:58.300
+Marcelo Tomio Hama: É
+
+739
+01:30:59.980 --> 01:31:17.699
+Marcelo Tomio Hama: aqui, nas diferenças do Web Post. O que a gente tem no requis. A última parte. Manipulação de resposta de ação pessoal, eu tenho completa ciência de que a disciplina é um pouquinho puxada, mas a gente está contando muito também com vocês. Como aí,
+
+740
+01:31:17.960 --> 01:31:25.150
+Marcelo Tomio Hama: um pouco dentro do comportamento autodidata, para que a gente consiga chegar do outro lado.
+
+741
+01:31:25.230 --> 01:31:32.949
+Marcelo Tomio Hama: Então estudem. Estudem bastante que tem bastante conteúdo. E havendo dúvidas, coloco me à disposição de vocês.
+
+742
+01:31:33.010 --> 01:31:38.209
+Marcelo Tomio Hama: Não é burro? Não, Gabriel. Não se sinta assim.
+
+743
+01:31:38.210 --> 01:31:55.059
+Marcelo Tomio Hama: Ninguém aqui é burro. Não, ninguém nasce sabendo, tá, pessoal? E isso tudo que vocês estão vendo basicamente, a gente está pensando lá atrás, eu trouxe a coisa ali de Soap. É coisas de vinte anos atrás. Ou seja, a gente está meio que condensando conhecimento de vinte anos
+
+744
+01:31:55.180 --> 01:32:10.549
+Marcelo Tomio Hama: em sei lá, três horas. Então ninguém é. Quebrou? Não, gente. Vocês aí são super competentes. Já conseguiram, inclusive rodar esses exemplos aqui é o conteúdo que é extenso. Tá pessoal. É o conteúdo bastante extenso mesmo.
+
+745
+01:32:11.490 --> 01:32:18.270
+Marcelo Tomio Hama: Tá, mas estamos juntos. A ideia aqui é?
+
+746
+01:32:18.680 --> 01:32:24.600
+Marcelo Tomio Hama: Todo mundo começou junto. Todo mundo chegar junto. Ninguém fica para trás. Tá bom,
+
+747
+01:32:32.150 --> 01:32:37.909
+Marcelo Tomio Hama: beleza, galera pessoal. Alguma dúvida aí com relação à aula de hoje.
+
+748
+01:32:40.360 --> 01:32:45.850
+Marcelo Tomio Hama: Vocês podem mandar as dúvidas também. Depois ali pelo pelo chat, tá?
+
+749
+01:32:46.260 --> 01:32:49.999
+Marcelo Tomio Hama: Caso tenha alguma no meio do caminho, até a semana que vem.
+
+750
+01:32:53.520 --> 01:32:56.510
+Marcelo Tomio Hama: Imagina, Pedro, Tamo junto aí,
+
+751
+01:33:00.070 --> 01:33:12.509
+Marcelo Tomio Hama: pessoal. Então desejo a todos aí um bom descanso, um bom final de semana e que comece o feriado. Aproveitem o feriado para descansar bastante. Renovar,
+
+752
+01:33:12.640 --> 01:33:14.469
+Marcelo Tomio Hama: recarregar as energias.
+
+753
+01:33:14.690 --> 01:33:17.220
+Marcelo Tomio Hama: Bom feriado para todos e todos.
+
+754
+01:33:23.180 --> 01:33:24.380
+Marcelo Tomio Hama: Beleza.
+
+755
+01:33:24.380 --> 01:33:25.830
+gabriel.diniz: Valeu pro senhor.
+
+756
+01:33:28.820 --> 01:33:31.070
+Marcelo Tomio Hama: Valeu. Bom feriado.
+
+757
+01:33:32.470 --> 01:33:35.040
+Marcelo Tomio Hama: Bom descanso para todos. Até mais.
+

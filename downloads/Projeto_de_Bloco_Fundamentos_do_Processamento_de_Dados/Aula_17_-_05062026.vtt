@@ -1,0 +1,2246 @@
+WEBVTT
+
+1
+00:00:40.620 --> 00:00:42.200
+Ricardo Garcia: Boa noite, pessoal.
+
+2
+00:00:43.070 --> 00:00:48.789
+Ricardo Garcia: Boa noite a todos. Boa noite. Boa noite. Sejam todos bem vindos aí. Mais uma sexta feira.
+
+3
+00:00:49.510 --> 00:00:51.690
+Ricardo Garcia: Boa noite hoje.
+
+4
+00:00:51.990 --> 00:00:56.449
+Ricardo Garcia: Pelo que eu estou vendo aqui, acho que vocês têm a entrega do
+
+5
+00:00:57.220 --> 00:01:06.479
+Ricardo Garcia: do Live Coding aqui o quatro, né? Puxa, coincidiu justamente na aula, né? É ruim, porque para vocês, eu acho que acumula bastante em termos de trabalho também e tudo, né?
+
+6
+00:01:06.840 --> 00:01:12.480
+Ricardo Garcia: Caramba, né? Mas tudo bem, né? Boa noite. Boa noite, Cleber. Beleza, tudo joia.
+
+7
+00:01:12.710 --> 00:01:13.380
+Ricardo Garcia: E aí?
+
+8
+00:01:14.620 --> 00:01:19.630
+Ricardo Garcia: Tudo certo. Bom, acho que vocês estão me ouvindo bem aí, né? Boa noite, beleza.
+
+9
+00:01:22.390 --> 00:01:24.279
+Ricardo Garcia: Tá jóia aqui.
+
+10
+00:01:25.440 --> 00:01:34.430
+Ricardo Garcia: Então é isso aí, pessoal. Uma ótima noite a todos. Uma sexta feira final de semana. Espero que a gente possa descansar um pouco final de semana também, né?
+
+11
+00:01:34.590 --> 00:01:47.099
+Ricardo Garcia: Como vocês, eu acho que em função até da data da entrega aqui. Acho que o pessoal deve estar numa correria lá enorme, porque às vezes é obrigatório assistir aula aquela coisa toda e entregar também o trabalho. Não sei se hoje é o último dia,
+
+12
+00:01:47.630 --> 00:02:00.660
+Ricardo Garcia: mas vou procurar fazer uma aula bem tranquila, bem mais leve, digamos assim, para que vocês também fiquem confortáveis aí também. Porque eu sei que é difícil para todo mundo aí, né?
+
+13
+00:02:01.070 --> 00:02:07.400
+Ricardo Garcia: Então é isso. A gente tem entrega agora dia vinte e nove do cinco. A entrega do Lifecoding quatro.
+
+14
+00:02:07.590 --> 00:02:16.549
+Ricardo Garcia: E aqui a gente tem a entrega já do cinco no dia oito, que é a data do cinco. E aqui é a data final da apresentação final
+
+15
+00:02:16.820 --> 00:02:24.630
+Ricardo Garcia: do Live Code. Nós mesmos. Eu acho que a gente tem mais. Acho que duas aulas. Só acho que é uma.
+
+16
+00:02:24.780 --> 00:02:33.709
+Ricardo Garcia: É uma, duas, duas, três aulas, quatro almas, três ou quatro aulas também, né?
+
+17
+00:02:34.010 --> 00:02:40.010
+Ricardo Garcia: A gente já está na reta final. Pelo que eu estou vendo aqui, acho que as aulas vão até dia
+
+18
+00:02:40.690 --> 00:02:41.929
+Ricardo Garcia: vinte e seis,
+
+19
+00:02:42.330 --> 00:02:57.870
+Ricardo Garcia: mas normalmente, as duas últimas semanas e tal. Pessoal, não sei se as duas últimas alguma coisa assim o pessoal pega mais para estudar e para vocês finalizarem muitas atividades de vocês também. Então, realmente, a gente está na reta final, aí mesmo.
+
+20
+00:02:58.250 --> 00:03:07.749
+Ricardo Garcia: Então hoje a gente vai bater mais um papo sobre o sistema que a gente está vendo ali. O sistema do E. Commerce que a gente está fazendo em.
+
+21
+00:03:08.220 --> 00:03:14.630
+Ricardo Garcia: Em Python um pouco de banco de dados também. Falar um pouco de tudo. Algumas características do do
+
+22
+00:03:15.110 --> 00:03:31.040
+Ricardo Garcia: do Python também, né? A gente vai ter um papo geral assim, mas também puxando a nível de projeto. Mas a gente vai fazer atividades sempre. Agora, focando em Python também, que essa foi a orientação que o pessoal pediu para nós lá. Então a gente vai focar bastante em Python,
+
+23
+00:03:31.280 --> 00:03:47.510
+Ricardo Garcia: mas da mesma forma que a gente fez também a semana passada essa semana, a gente vai procurar fazer um review do que a gente já viu. Dar um Overview ali também. E fazer a integração, mesmo do que a gente vai trazer alguns conceitos
+
+24
+00:03:47.510 --> 00:03:54.749
+Ricardo Garcia: que a gente tem que abordar aqui com relação à parte, até com relação ao banco de dados em si.
+
+25
+00:03:55.150 --> 00:04:06.619
+Ricardo Garcia: Mas vai ser uma aula bem tranquila para vocês também. Fiquem à vontade para quem quiser comentar alguma coisa aí. Fiquem à vontade aí, também nesse sentido, é bem tranquilo.
+
+26
+00:04:06.950 --> 00:04:23.870
+Ricardo Garcia: Então, vamos lá. Vamos começar a nossa aula. Aí a gente vai da mesma forma que a gente fez a semana passada. A gente começa a falar um pouco de banco de dados, e daí vai migrando esses assuntos. Mas fazendo integração com relação ao Python também para a gente trocar uma ideia de algumas situações
+
+27
+00:04:23.940 --> 00:04:29.890
+Ricardo Garcia: que a gente vai encontrar pelo caminho. E hoje é mais um exemplo do que a gente vai ver aí também
+
+28
+00:04:29.960 --> 00:04:42.849
+Ricardo Garcia: com relação a projetos, esse tipo de coisa no nosso mercado do dia a dia. Então, só para recapitular e fazer um review do que a gente já viu. Esse é o nosso armazenamento do nosso e commerce aqui
+
+29
+00:04:42.900 --> 00:05:01.550
+Ricardo Garcia: que o objetivo é simplesmente trazer a parte de armazenamento para a gente entender um pouco. Como é que faz que a gente já comentou sobre isso várias vezes. Eu não vou ser repetitivo aqui também. A gente já viu muitas coisas com relação à normalização dos dados, o armazenamento em si e o relacionamento que existe
+
+30
+00:05:01.550 --> 00:05:17.660
+Ricardo Garcia: entre esses objetos, entre as tabelas, etc, etc. Então isso aí é bem tranquilo, e a gente criou, também teve a oportunidade dentro. De um projeto que a gente criou. É uma camada de visualização onde a gente entrega algumas informações para o nosso usuário
+
+31
+00:05:17.660 --> 00:05:30.569
+Ricardo Garcia: também. Não vou detalhar muito isso aí, porque a gente já bateu um papo sobre isso aqui. É bem tranquilo. Então foi essa estrutura que a gente montou. Dá para melhorar, obviamente aqui, porque você pode adicionar
+
+32
+00:05:30.570 --> 00:05:47.609
+Ricardo Garcia: dentro desse escopo aqui, você pode adicionar várias características aqui dentro. Daqui a gente colocar fornecedores e colocar uma série de coisas que a gente não colocou. A parte de contas a pagar contas, a receber e montar, inclusive um pequeno Irp, com relação
+
+33
+00:05:47.700 --> 00:05:54.550
+Ricardo Garcia: ao armazenamento e as informações que a gente pode ter, a gente pode aprimorar dentro do que a gente colocou aqui.
+
+34
+00:05:54.750 --> 00:06:11.620
+Ricardo Garcia: Então, só para a gente ter essa referência, mesmo nível de dados de armazenamento, esse banco de dados que a gente criou aqui. A gente pode exportar, ele colocar em um Sq, Server, postures, e etc. Também a síntese. Ansi, um modelo que
+
+35
+00:06:11.620 --> 00:06:23.730
+Ricardo Garcia: a gente pode utilizar em vários bancos de dados, então também pode ser criado em outros bancos de dados. Logicamente, que tem alguma característica ou outra que vai mudar. Mas isso é bem tranquilo, também.
+
+36
+00:06:23.940 --> 00:06:38.699
+Ricardo Garcia: Então, beleza. A gente fez armazenamento. A visualização dos dados aqui também. O que é importante para nós aqui dentro da normalização é o que a gente falou. É o tipo de relacionamento que tem as tabelas ali. De um para um, um para n um n para n.
+
+37
+00:06:38.700 --> 00:06:44.559
+Ricardo Garcia: Que a gente coloca uma outra tabelinha que faz um relacionamento. Quando é N para N. A gente tem que colocar uma.
+
+38
+00:06:44.560 --> 00:06:54.389
+Ricardo Garcia: Uma tabela que a gente chama uma tabela de ligação. A gente coloca isso daí essa tabela aqui, por exemplo, categoria onde você tem o produto ali. Boa noite. Boa noite, pessoal.
+
+39
+00:06:54.930 --> 00:06:55.740
+Ricardo Garcia: Não é
+
+40
+00:06:55.800 --> 00:07:10.610
+Ricardo Garcia: para fazer esse relacionamento. Então isso também a gente já falou. A gente já estressou bastante nesse sentido e lembrando o que é importante, também é nesse relacionamento aqui
+
+41
+00:07:10.630 --> 00:07:16.930
+Ricardo Garcia: que, a nível de código, o que a gente faz a nível de código para relacionar as tabelas,
+
+42
+00:07:17.060 --> 00:07:34.690
+Ricardo Garcia: a gente comentou bem por cima sobre a forma de fazer um relacionamento e tal, utilizando o hino, porque vocês vão ter disciplinas específicas para criar esses relacionamentos, inclusive entender melhor dentro de um contexto de banco de dados.
+
+43
+00:07:34.690 --> 00:07:41.510
+Ricardo Garcia: Não é objetivo a gente entrar em detalhes, mas só para a gente entender.
+
+44
+00:07:41.540 --> 00:07:47.289
+Ricardo Garcia: Uma das coisas que eu fiz quando eu aprendi a utilizar esse aqui, por exemplo,
+
+45
+00:07:48.210 --> 00:07:55.009
+Ricardo Garcia: fazer aqui, ó só para, não é? Vou até tirar isso aqui, por enquanto, né?
+
+46
+00:07:55.900 --> 00:08:05.919
+Ricardo Garcia: Normalmente, quando a gente quer encontrar alguma informação, então a gente faz um Select, seleciona os dados.
+
+47
+00:08:05.920 --> 00:08:20.289
+Ricardo Garcia: E aqui vai as colunas que a gente quer visualizar. Então, beleza. A gente coloca as colunas, quais os campos que a gente quer visualizar. Pode ser de qualquer uma dessas tabelas. Aqui é um exemplo. Então a gente coloca os campos lá que a gente quer visualizar
+
+48
+00:08:20.430 --> 00:08:22.789
+Ricardo Garcia: o front. É de onde, né?
+
+49
+00:08:23.020 --> 00:08:28.649
+Ricardo Garcia: Então, de onde a gente vai visualizar o Selic. É o quê?
+
+50
+00:08:30.060 --> 00:08:35.710
+Ricardo Garcia: O que a gente quer visualizar o Froome. É de onde a gente vai
+
+51
+00:08:35.870 --> 00:08:45.090
+Ricardo Garcia: ver esses dados. E o Air é o filtro. Eu vou filtrar essas informações. Então eu ponho aqui um filtro
+
+52
+00:08:45.210 --> 00:08:58.609
+Ricardo Garcia: aqui. Normalmente isso aqui. Quem define esse Select? Aqui é o quê? É a regra de negócio. Então eu tenho uma regra de negócio, uma informação, uma pergunta que eu tenho que responder.
+
+53
+00:08:58.610 --> 00:09:09.170
+Ricardo Garcia: E eu faço o Select dentro do banco de dados. E aí, como é o relacionamento entre esses objetos? É uma cláusula a mais aqui, que é o Join
+
+54
+00:09:09.780 --> 00:09:11.389
+Ricardo Garcia: e o lacionamento.
+
+55
+00:09:15.950 --> 00:09:20.309
+Ricardo Garcia: O Johnny é responsável por nos fazer até assim.
+
+56
+00:09:21.180 --> 00:09:24.959
+Ricardo Garcia: Mas assim é para ficar mais fácil.
+
+57
+00:09:29.810 --> 00:09:31.180
+Ricardo Garcia: Estou tirando aqui.
+
+58
+00:09:42.970 --> 00:09:44.739
+Ricardo Garcia: Ó, é isso aqui. Então, né?
+
+59
+00:09:46.630 --> 00:09:50.890
+Ricardo Garcia: Autografia. Desativar série é o quê?
+
+60
+00:09:51.180 --> 00:10:08.759
+Ricardo Garcia: Você quer visualizar o front? É de onde você quer isso? Aqui pode ser n tabelas. Tem Selects, por exemplo, que tem mais de um.quinhentos linhas, duas mil linhas. Tem uma série de coisas. Aí. Tem várias características. O Join é o relacionamento que você faz entre as tabelas
+
+61
+00:10:08.760 --> 00:10:20.700
+Ricardo Garcia: e o Air é o filtro que você vai empregar. Nesse sentido, esse conjunto é definido pelos requisitos de negócio e as regras de negócio vão ser aplicadas aqui dentro.
+
+62
+00:10:20.730 --> 00:10:33.490
+Ricardo Garcia: Eles vão falar, pá. Beleza. Mas isso aí, a gente já viu algumas coisas. A gente já viu algumas coisas. A gente não detalhou como o John e tal, mas essa estrutura básica de acesso às informações em bancos de dados. Então isso aqui não só para o.
+
+63
+00:10:33.640 --> 00:10:48.099
+Ricardo Garcia: Para o Skylight e tal, mas a nível genérico aqui. E aí o que acontece? A gente já comentou sobre isso também. Mas vou dar só uma pinceladinha para a gente tirar cada banco de dados, por exemplo, da Microsoft.
+
+64
+00:10:50.620 --> 00:11:03.470
+Ricardo Garcia: Ele tem algumas funções específicas que a Microsoft desenvolveu. Então essas funções específicas que ele adicionou no Transact no Skl. Ele gerou um mapa
+
+65
+00:11:03.670 --> 00:11:05.840
+Ricardo Garcia: Transact Sq.
+
+66
+00:11:05.930 --> 00:11:08.520
+Ricardo Garcia: Uma linguagem específica da Microsoft,
+
+67
+00:11:08.520 --> 00:11:32.660
+Ricardo Garcia: que é o Transact Sql, que é o Tsql então por que é o Transact Sql? Porque ele pegou o Ans aqui? Esse aqui, que é o padrão de todos os bancos de dados, adicionou funções características que ela criou. Os engenheiros dela criaram e tal e criou uma linguagem baseada no Skl Ans, que é o Transact Sl que você usa aonde? Nos bancos de dados da Microsoft.
+
+68
+00:11:32.660 --> 00:11:35.259
+Ricardo Garcia: Não é scanners. Serve no banco de dados da Microsoft.
+
+69
+00:11:35.400 --> 00:11:41.740
+Ricardo Garcia: O Oro, por sua vez, também criou funções específicas.
+
+70
+00:11:43.570 --> 00:11:48.810
+Ricardo Garcia: E daí? Ele chamou a linguagem deles lá de Plsql.
+
+71
+00:11:51.060 --> 00:11:51.889
+Ricardo Garcia: Não é
+
+72
+00:11:52.180 --> 00:12:08.360
+Ricardo Garcia: que é do Oracle. Então, quando a gente fala em Plsql. A gente já sabe que existem funções específicas que foi a Oracle que criou para utilizar no próprio banco de dados Oracle. É assim que funciona. Isso é só um exemplo.
+
+73
+00:12:08.360 --> 00:12:17.589
+Ricardo Garcia: Fazendo livecoding. Hoje fui fazer minha querle dentro de um cérebro em nome da tabela e retornou um problema de cintas Near Skinny Near Froome.
+
+74
+00:12:17.630 --> 00:12:24.949
+Ricardo Garcia: Quando fui tentando usar o Sérgio novamente. Por que isso correu? Você colocou o nome da tabela estava entre aspas? Não,
+
+75
+00:12:25.870 --> 00:12:27.800
+Ricardo Garcia: porque aqui.
+
+76
+00:12:28.620 --> 00:12:34.879
+Ricardo Garcia: E não estava. Você fez isso daqui. Deixa, eu só. Eu vou pôr aqui só para a gente ver junto aqui. Então.
+
+77
+00:12:35.840 --> 00:12:43.109
+Matheus Ramos: Na verdade, professor, a Tabela, o Select From já estava lá.
+
+78
+00:12:43.260 --> 00:12:50.679
+Matheus Ramos: A gente tinha que fazer o restante embaixo. E aí quando eu fui fazer o Select para selecionar as colunas.
+
+79
+00:12:50.820 --> 00:12:51.470
+Ricardo Garcia: Uhum.
+
+80
+00:12:51.470 --> 00:12:56.160
+Matheus Ramos: E o Froome para trazer da tabela. Ele deu esse erro de sintaxe.
+
+81
+00:12:58.200 --> 00:13:12.500
+Ricardo Garcia: Verdade, o comando em si. Cérebro testico foi o nome da tabela. Está correto? Eu agora não sei, digamos assim, o contexto em si para a utilização do cérebro de asterisco.
+
+82
+00:13:12.500 --> 00:13:28.419
+Ricardo Garcia: Às vezes, eu não sei. Aqui, nesse sentido, não sei se ele pede para você descrever as colunas. Alguma coisa? Eu não sei as regras de utilização ali. Matheus, você tem alguma ideia nesse sentido? Tinha que colocar os nomes dos campos. Alguma coisa assim. Tinha que colocar alguma informação a mais ou não.
+
+83
+00:13:28.420 --> 00:13:33.199
+Matheus Ramos: Tinha que trazer as colunas da tabela principal.
+
+84
+00:13:33.200 --> 00:13:34.100
+Ricardo Garcia: Aham!
+
+85
+00:13:34.100 --> 00:13:39.540
+Matheus Ramos: Aí. Tinha que fazer debaixo do Select From, que trazia a tabela completa.
+
+86
+00:13:39.540 --> 00:13:41.179
+Ricardo Garcia: Isso. Aham.
+
+87
+00:13:41.390 --> 00:13:51.389
+Matheus Ramos: E aí, quando eu fui tentar fazer, por exemplo, que eu me lembro aqui de cabeça é Select, formas de pagamento e categorias, por exemplo.
+
+88
+00:13:51.390 --> 00:13:52.350
+Ricardo Garcia: Aham!
+
+89
+00:13:52.350 --> 00:13:54.759
+Matheus Ramos: Froome. E o nome da tabela.
+
+90
+00:13:54.760 --> 00:13:55.520
+Ricardo Garcia: Aham!
+
+91
+00:13:55.520 --> 00:14:04.470
+Matheus Ramos: Aí. Ele apareceu na hora que eu for rodar o código, apareceu um erro de Sintax. Aí estava escrito near Front ou Near Select.
+
+92
+00:14:04.950 --> 00:14:24.490
+Ricardo Garcia: É a princípio aqui o que você fez está correto. Se você colocar aqui pagamento ou tipo, sei lá, qualquer coisa assim. Você pode colocar aqui que não tem problema. Então essa síntese aqui que você fez, ela está correta. Não tem nada de errado agora? Eu não sei. Ali, no contexto do exercício em si.
+
+93
+00:14:24.490 --> 00:14:35.940
+Ricardo Garcia: Por que ele deu esse erro? Mas o contexto da síntese aqui, nesse caso, aqui está correto. Lógico. Se você coloca ali. Por isso que eu perguntei se estava entre aspas alguma coisa daí pode ser
+
+94
+00:14:35.940 --> 00:14:51.649
+Ricardo Garcia: que realmente não faz sentido. Mas se for só isso, daqui e tal, aí não tem problema nenhum. Está correto? Não sei porque, para parecer os dados que fiz no código. Precisava selecionar o código e colocar para rodar no Livecoding.
+
+95
+00:14:51.660 --> 00:14:53.439
+Ricardo Garcia: É o João comentou ali. Ó
+
+96
+00:14:53.620 --> 00:15:11.909
+Ricardo Garcia: para aparecer os dados. Fiz no código. Precisava selecionar o código e colocar para rodar. Pode ser alguma coisa nesse sentido, também depende aqui. É interessante o que o João Ali comentou quer ver. Deixa eu colocar aqui só para a gente ter um exemplo, também
+
+97
+00:15:16.720 --> 00:15:21.569
+Ricardo Garcia: vamos fazer assim. Ó select asterisco
+
+98
+00:15:24.900 --> 00:15:34.839
+Ricardo Garcia: Froome, categoria, por exemplo. Então eu estou aqui. Vou dar um ponto em vigor no final. Não é obrigatório, mas estou executando aqui.
+
+99
+00:15:37.280 --> 00:15:54.159
+Ricardo Garcia: Ele trouxe as informações. Então a tua síntese ali, Matheus, a princípio está correta. Não tem nada. Eu posso colocar aí de categoria e tal, né? Mas às vezes, se você seleciona alguma coisa ou se tem alguma coisa selecionada aqui, e você executar, ele pode dar um erro,
+
+100
+00:15:54.260 --> 00:16:12.260
+Ricardo Garcia: porque ele vai pegar. Ele deu erro de síntese, porque eu estou selecionado. Estou selecionando alguma coisa que ele vai executar. Então não sei se é isso que o João comentou. E isso aconteceu já comigo. E acontece várias vezes, né? Pô, eu executo o negócio e dá erro e tal. E vão ver que tem alguma coisa que está selecionada ali, né?
+
+101
+00:16:12.290 --> 00:16:16.630
+Ricardo Garcia: Tinha mais um sério que está com ele cem vírgula entre elas.
+
+102
+00:16:16.630 --> 00:16:26.950
+Matheus Ramos: É basicamente isso que o Nelson falou. Só que aí eu coloquei ponto e vírgula no final, por exemplo, digamos que onde o senhor colocou categoria era o nome da tabela.
+
+103
+00:16:26.950 --> 00:16:28.530
+Ricardo Garcia: Isso, correto?
+
+104
+00:16:28.530 --> 00:16:36.639
+Matheus Ramos: O que eu fiz. Eu coloquei embaixo Select, e aí categorias para trazer só a
+
+105
+00:16:37.380 --> 00:16:46.379
+Matheus Ramos: a tabela de categorias. E aí ele deu esse erro. Mas em cima ficou Select From. Nome da tabela da tabela completa.
+
+106
+00:16:46.550 --> 00:16:51.970
+Matheus Ramos: E embaixo ficou um outro Select. Aí deu como se tivesse um Select próximo do outro.
+
+107
+00:16:52.300 --> 00:17:06.210
+Ricardo Garcia: Ah, entendi. Vamos fazer uma coisa junto aqui. Então, se você não colocar o ponto, isso em vários Ids de desenvolvimento de digitação que a gente tem acesso aos bancos de dados.
+
+108
+00:17:06.280 --> 00:17:20.049
+Ricardo Garcia: Não sei se é isso, mas vou ver aqui, Matheus. Nesse caso, aqui. Não coloquei o ponto em vírgula beleza. Então eu vou executar aqui. E ele executou, certo? Por quê? Porque só tem essa linha agora, se eu fizer isso aqui.
+
+109
+00:17:23.050 --> 00:17:25.720
+Ricardo Garcia: Séries mas feliz.
+
+110
+00:17:25.829 --> 00:17:32.919
+Ricardo Garcia: O cara pronto. E vou botar ali cliente, por exemplo,
+
+111
+00:17:33.040 --> 00:17:43.889
+Ricardo Garcia: se eu executar isso aqui, agora, em teoria, não tem que dar certo. Ele deu porque na verdade é esse. Ide que ele montou aqui e fez um Joy. Entro aqui. Mas isso aqui está errado.
+
+112
+00:17:43.890 --> 00:17:55.779
+Ricardo Garcia: Para que execute as duas separadamente. Eu tenho que botar um ponto em vírgula aqui boto um ponto em vírgula, aqui, boto um ponto em vírgula. Aqui o ponto em vírgula significa final de instrução. Então, beleza,
+
+113
+00:17:55.780 --> 00:17:57.469
+Ricardo Garcia: quando eu executar aqui, ó
+
+114
+00:17:59.970 --> 00:18:09.229
+Ricardo Garcia: ah, ele está trazendo aqui porque eu estou selecionando. Só está a linha selecionada aqui, né? Mas o certo, ó, eu seleciono isso daqui para que execute as duas.
+
+115
+00:18:12.320 --> 00:18:17.679
+Ricardo Garcia: Esse aqui não executa nem as duas. Ó peraí, deixa eu fechar aqui, ó aí, ó,
+
+116
+00:18:21.570 --> 00:18:25.050
+Ricardo Garcia: deveria executar as duas e não executa. Tem que executar por aqui. Ó,
+
+117
+00:18:27.430 --> 00:18:39.629
+Ricardo Garcia: por isso que eu digo: é muito da síntese de utilização. Mesmo aqui. Por exemplo, mesmo eu colocando o ponto e vírgula, que finaliza uma execução.
+
+118
+00:18:39.630 --> 00:18:51.729
+Ricardo Garcia: Se eu executar. Por isso aqui, ele executa a linha que eu estou com o cursor. Então, por mais que eu faça isso aqui, ele vai trazer de cliente. Só porque eu estou nesse cursor. Se eu clicar na de cima,
+
+119
+00:18:51.730 --> 00:19:00.850
+Ricardo Garcia: ele vai trazer só de cima. Se eu não colocar o ponto de vírgula nenhuma, e nem na outra. Ele vai executar só o que está o meu cursor também
+
+120
+00:19:01.220 --> 00:19:02.619
+Ricardo Garcia: aqui deu erro, né?
+
+121
+00:19:03.190 --> 00:19:16.979
+Ricardo Garcia: Porque, Ah, já sei porque ele estava justamente as duas linhas aqui. Tinha que deixar o ponto em vírgula aqui. Mas quando dá esses erros de síntese aqui, é justamente algum caracter que a gente não colocou e deveria ter colocado.
+
+122
+00:19:16.980 --> 00:19:26.489
+Ricardo Garcia: Ou um fechamento de instrução ou um fechamento finalização da instrução em si. Mas isso acontece direto.
+
+123
+00:19:26.490 --> 00:19:46.009
+Ricardo Garcia: Às vezes, a gente tem linhas. Tem mil linhas que a gente está fazendo, e aí não coloca um parênteses, ou até mesmo um ponto em vírgula ou alguma coisa assim. E ocorrem esses erros de síntese. E a gente tem que buscar essa informação aí dentro,
+
+124
+00:19:46.010 --> 00:19:53.330
+Ricardo Garcia: mas depende também da ideia que a gente está executando. Por exemplo, no Plsql, por exemplo, o outro tem
+
+125
+00:19:53.410 --> 00:20:08.239
+Ricardo Garcia: o final de instrução. Pode ser essa barra. Então isso também é final de instrução no skl server. O final de instrução é um gol. Quando você põe o Gol. Aqui só o Gol.
+
+126
+00:20:09.620 --> 00:20:28.179
+Ricardo Garcia: Ele também é o final de instrução. E aqui, nesse caso, daqui é o ponto em vírgula, eu, por exemplo, normalmente, em todas as linguagens que eu utilizo no código que eu faço, eu utilizo o ponto em vírgula, mesmo para finalizar uma instrução sempre
+
+127
+00:20:28.240 --> 00:20:41.719
+Ricardo Garcia: justamente para não ter essa confusão, porque às vezes, a gente seleciona alguma coisa ou deixa de selecionar. Aqui. Por exemplo, nesse caso, a gente executa aqui. Ele executa simplesmente onde está o cursor? Onde está o cursor?
+
+128
+00:20:41.720 --> 00:20:54.570
+Ricardo Garcia: Para evitar esse tipo de problema? Ou esse tipo de erro, dependendo do console, eu uso como regra utilizar o ponto e vírgula no final da instrução. E se eu tiver em algumas outras plataformas
+
+129
+00:20:54.640 --> 00:21:04.489
+Ricardo Garcia: do Sq Plus ou alguma coisa assim. Eu utilizo o barra. E no Skl serve. Eu utilizo o gol ali também. Para finalizar a instrução em si.
+
+130
+00:21:05.520 --> 00:21:10.529
+Ricardo Garcia: Alguma dessas coisas pode ter acontecido ali, né? Não sei. Daí, Matheus beleza.
+
+131
+00:21:11.070 --> 00:21:29.639
+Ricardo Garcia: Mas esses erros de síntese normalmente são isso. A tua instrução estava correta. Não tem problema nenhum. Mas é algum ponto em vírgula, alguma coisa final da instrução ali que tinha que ser reconhecido ali. E naquele momento, não reconheceu. Mas depois conseguiu fazer. Matheus deu boa final.
+
+132
+00:21:32.850 --> 00:21:36.410
+Ricardo Garcia: Valeu, beleza. Valeu, valeu. Desculpa, não tinha visto ali.
+
+133
+00:21:37.190 --> 00:21:43.800
+Ricardo Garcia: Ô pessoal. Peraí. Deixa eu dar uma olhada aqui, daí o Nelson comentou ali, pá, beleza no minutinho. Também
+
+134
+00:21:44.130 --> 00:21:48.379
+Ricardo Garcia: o meu coloquei, mas não foi. Talvez tivesse que selecionar isso. É. Pode ser
+
+135
+00:21:48.750 --> 00:21:53.930
+Ricardo Garcia: para o meu rodar. Eu precisava selecionar meu código. Selecionar beleza.
+
+136
+00:21:54.490 --> 00:21:58.540
+Ricardo Garcia: No meu último Live, podem. Esqueci todas as vivas e ponto de Views.
+
+137
+00:21:59.130 --> 00:22:12.019
+Ricardo Garcia: Também. É que às vezes a gente esquece mesmo. Isso acontece também, hein? Pessoal, não tem que ficar muito encanado com isso. Eu sei que é ruim ali, mas é normal, né? Sua última Live Ponder e só Jesus na calça.
+
+138
+00:22:12.480 --> 00:22:15.349
+Ricardo Garcia: Caramba, né, eu imagino. Eu imagino.
+
+139
+00:22:18.610 --> 00:22:33.960
+Ricardo Garcia: Ah, é? Puxa, até o Vitor ali. Comentou. Na verdade, Victor, eu não sei nem o que. O pessoal vai pedir lá. Até vou colocar aqui para o pessoal, ver porque eles até comentaram no grupo reforçando
+
+140
+00:22:34.160 --> 00:22:42.420
+Ricardo Garcia: para vocês participarem. Não sei se alguém aí vai respirar fundo e encarar amanhã. Deixa eu ver aqui se tem aqui.
+
+141
+00:22:43.080 --> 00:22:45.659
+Ricardo Garcia: Deixa eu ver. Acho que ele colocou aqui, né?
+
+142
+00:22:48.100 --> 00:22:58.289
+Ricardo Garcia: Quem puder participar é bacana, né? Só que eu não sei qual vai ser o tema, cara. Não cheguei nem a ver, né? Mas vou reforçar aqui para todo mundo participar.
+
+143
+00:22:58.360 --> 00:23:11.379
+Ricardo Garcia: Pô legal, legal, Victor, pô. É bem bacana. Esses são desafios assim para todo mundo assim. Sabe, a gente é difícil mesmo. É difícil, né? Aqui está.
+
+144
+00:23:11.390 --> 00:23:22.909
+Ricardo Garcia: Só passando aqui. Avisar que amanhã tem para os calores e tal. Que é a competição interna aqui, né? Dia trinta do cinco das dez ao meio dia, né? Então eles vão passar
+
+145
+00:23:23.720 --> 00:23:38.939
+Ricardo Garcia: o tema, digamos assim, as atividades ali para o pessoal fazer. Então valeu, Victor. Obrigado por terem lembrado aí também, para lembrar todo mundo aí, né? Pessoal? Vou participar. Mas vou ser tipo o cara que só vai
+
+146
+00:23:38.940 --> 00:23:45.580
+Ricardo Garcia: para ter a participação. Eu acho que está valendo. Acho que está valendo também. João não tem essa. Assim não, cara.
+
+147
+00:23:45.580 --> 00:24:02.100
+Ricardo Garcia: Tudo que a gente faz, a gente aprende. A gente está aprendendo e eu falo isso, pessoal, não é só vocês sempre falando. Está todo mundo no mesmo barco. Eu estou no mesmo barco porque muitas vezes tem coisas que a gente não sabe também que a gente aprende no momento e tal, né?
+
+148
+00:24:02.270 --> 00:24:05.700
+Ricardo Garcia: Então é normal. É isso. Aí mesmo, beleza.
+
+149
+00:24:06.120 --> 00:24:10.960
+Ricardo Garcia: Isso aí. Vamos para cima representar isso aí. A turma aí.
+
+150
+00:24:11.240 --> 00:24:15.380
+Ricardo Garcia: Legal, legal. Então é amanhã das dez ao meio dia, pessoal.
+
+151
+00:24:15.560 --> 00:24:21.539
+Ricardo Garcia: Bem bacana. Bem bacana para todo mundo. Aí, acho que vale a pena também.
+
+152
+00:24:22.900 --> 00:24:25.369
+Ricardo Garcia: Então deixa eu voltar lá.
+
+153
+00:24:25.430 --> 00:24:49.359
+Ricardo Garcia: Então é isso. Foi legal. Esse bate papo, porque a gente tira essas dúvidas também com relação ao ponto e vírgula e tal, tem gente que, por exemplo, dependendo do código. Ah, não gosto muito de utilizar. Enfim, tem aquela coisa, mas isso depende muito de cada um. E depende não só de cada um, como da interface do Ide que você está utilizando,
+
+154
+00:24:49.360 --> 00:24:50.130
+Ricardo Garcia: tá?
+
+155
+00:24:50.130 --> 00:24:55.350
+Ricardo Garcia: Então, por exemplo, tem interface com relação ao Oracle, que ele aceita a barra,
+
+156
+00:24:56.070 --> 00:25:10.730
+Ricardo Garcia: tem interface que não aceita a barra e vai dar erro de síntese. Se você colocar a barra e assim vai. Então a gente vai ter que ir testando ali muitas vezes. Ah, dá erro de síntese. Tira, executa. Ah, deu boa. Então, vida que segue. Você já sabe que por ali não vai? E é assim mesmo,
+
+157
+00:25:11.380 --> 00:25:12.290
+Ricardo Garcia: beleza.
+
+158
+00:25:14.900 --> 00:25:22.100
+Ricardo Garcia: Então aqui já foi beleza. Só coloquei ali do John ali, né? Para a gente lembrar aqui.
+
+159
+00:25:22.790 --> 00:25:36.419
+Ricardo Garcia: Então isso aqui está certo. Só para a gente entender aqui como é que funciona também as linguagens com relação a outras, o posto que isso também tem o mais querem também tem, e assim sucessivamente, lembrando também
+
+160
+00:25:36.420 --> 00:25:43.930
+Ricardo Garcia: que, quando a gente faz tanto um delete. Esse aqui é importante. Delete front o nome da tabela e tal.
+
+161
+00:25:43.930 --> 00:26:00.139
+Ricardo Garcia: Sempre colocar ou quando for necessário, sempre colocar o Er ali, que é a regra de filtro que você tem. Porque se você não colocar, ele vai apagar realmente a tabela inteira nesse sentido. E também o update. Você põe o update lá. Nome da tabela,
+
+162
+00:26:01.800 --> 00:26:03.830
+Ricardo Garcia: tabela, sete
+
+163
+00:26:03.840 --> 00:26:21.869
+Ricardo Garcia: sets e os campos, né? Os campos aqui e aqui. Você não significa que você não pode fazer. Join também pode fazer. Join pode fazer Froome aqui, né? Pode fazer o Air aqui também. Porque o updade é perigoso. Você também executar sem o Air. Porque daí você vai atualizar todos os campos que você tem ali, né?
+
+164
+00:26:21.870 --> 00:26:35.120
+Ricardo Garcia: Então só um overview aqui só para a gente ter um review. Na verdade, do que a gente já viu ali bater um papo nesse sentido, reforçando a parte de banco de dados de tratativa de banco de dados.
+
+165
+00:26:35.660 --> 00:26:37.699
+Ricardo Garcia: Então, beleza fechou isso aqui?
+
+166
+00:26:38.660 --> 00:26:58.049
+Ricardo Garcia: Só uma parte de relacionamento que eu queria comentar com vocês. Que é isso aqui, lembre se que relacionamento. Se eu tenho uma chave estrangeira. Normalmente, em todas as tabelas que têm esse relacionamento, eles têm a chave primária e tem a tabela que tem a chave que faz a.
+
+167
+00:26:59.190 --> 00:27:13.049
+Ricardo Garcia: É a chave primária e a chave estrangeira. A chave estrangeira. Eu faço a conexão. Por exemplo, aqui de estoque. Eu tenho uma chave primária, que é o Id do estoque. E tenho uma chave estrangeira que é o Id do produto,
+
+168
+00:27:13.050 --> 00:27:19.340
+Ricardo Garcia: esse do produto aqui é a chave estrangeira nessa tabela. Mas ele é a chave primária de outra tabela.
+
+169
+00:27:19.340 --> 00:27:26.040
+Ricardo Garcia: Então toda a chave estrangeira vai estar ligada a uma chave primária de alguma tabela. Por quê?
+
+170
+00:27:26.040 --> 00:27:27.420
+Ricardo Garcia: Porque ele relaciona.
+
+171
+00:27:27.420 --> 00:27:46.709
+Ricardo Garcia: Então, quando ele relaciona, ele vai ver se aquele Id do produto, um exemplo que a gente está vendo aqui realmente existe na tabela de produto. Se existir o produto lá, ele vai permitir que você utilize se não existir, o produto lá, não tem como utilizar. Você vai ter que primeiro cadastrar o produto na tabela de produto
+
+172
+00:27:46.710 --> 00:27:58.149
+Ricardo Garcia: para depois gerar o teu estoque ali. É assim que funciona. Então, relacionamento entre tabelas é sempre entre chaves chave, primária e chave.
+
+173
+00:27:58.550 --> 00:28:08.809
+Ricardo Garcia: E aí, ah, poxa, esqueci a chave primária e a chave estrangeira, né? Perdão, então é isso aí,
+
+174
+00:28:09.310 --> 00:28:22.829
+Ricardo Garcia: beleza. Então, parte do banco de dados aqui já foi? E agora a gente vai voltar para o Python para o nosso sistema lá também. Que a gente fez. Que a gente está fazendo ali? Que é o nosso
+
+175
+00:28:23.260 --> 00:28:25.420
+Ricardo Garcia: e commerce e tal, né?
+
+176
+00:28:27.790 --> 00:28:30.620
+Ricardo Garcia: Aqui, ó então, beleza,
+
+177
+00:28:31.680 --> 00:28:56.190
+Ricardo Garcia: o projeto que a gente está fazendo de e commerce aqui. Então a gente está estruturando. Eles lembre se que daí a gente estrutura, quando a gente cria o projeto, que a gente vai utilizar uma linguagem específica. Sharp Python, não sei o que que a gente cria. Uma ferramenta específica de projeto vs. Code py charme e tal. Ele já cria as pastas específicas para aquele projeto. Ele já sabe que a gente vai usar o Python
+
+178
+00:28:56.190 --> 00:29:07.000
+Ricardo Garcia: sabe o que vai usar ou ser Sharp ou o que for. E ele cria uma estrutura para, digamos assim, preparar o ambiente para aquela tecnologia que você vai trabalhar. Beleza, show de bola.
+
+179
+00:29:07.000 --> 00:29:24.910
+Ricardo Garcia: Nesse caso, aqui a gente preparou nós mesmos à mão aqui mesmo, porque a gente vai utilizar Python. É bastante simples. O que a gente vai fazer então? A gente criou essa estrutura aqui do projeto e commerce. Aqui nós temos o código em si, Python. Aqui nós temos o Database, que é a conexão que a gente faz com o banco de dados.
+
+180
+00:29:24.940 --> 00:29:36.549
+Ricardo Garcia: E aqui os scripts que a gente tem de criação do ambiente, de banco de dados que a gente tem que a gente pode criar em outros computadores, em outros ambientes, para a gente ter já uma,
+
+181
+00:29:36.550 --> 00:29:46.839
+Ricardo Garcia: digamos assim, simular e já criar de uma forma muito rápida o nosso banco de dados, o armazenamento e tudo mais para que a gente possa trabalhar.
+
+182
+00:29:46.840 --> 00:29:48.840
+Ricardo Garcia: Então é isso que a gente fez, né?
+
+183
+00:29:49.040 --> 00:29:55.780
+Ricardo Garcia: Na aula passada, a gente definiu. E aqui nós estamos na parte de código, desenvolvendo o código.
+
+184
+00:29:55.990 --> 00:30:09.939
+Ricardo Garcia: Outra coisa também bem importante para a gente lembrar também. A gente não vai ficar falando sobre isso. Só Review, mesmo aqui para a gente ver. Não esqueçam que normalmente os ambientes de desenvolvimento. Aqui,
+
+185
+00:30:10.830 --> 00:30:18.090
+Ricardo Garcia: eles têm aqui na parte de banco de dados. Eles têm desenvolvimento, homologação
+
+186
+00:30:18.090 --> 00:30:33.470
+Ricardo Garcia: e produção. A gente sempre trabalha com esses ambientes. Normalmente, o ambiente de desenvolvimento é o ambiente teu local, do teu computador, que é o que a gente usa nas empresas, nos projetos e tal. A galera desenvolve no ambiente local
+
+187
+00:30:33.470 --> 00:30:34.510
+Ricardo Garcia: e depois
+
+188
+00:30:34.510 --> 00:30:55.690
+Ricardo Garcia: faz os testes, ou para a equipe de testes. Testar passa para o ambiente de homologação, os teus códigos ali. E depois, finalmente, depois detestados e já estressados. Ah, pô, está funcionando tudo beleza, coloco em produção o código ali
+
+189
+00:30:55.690 --> 00:31:06.929
+Ricardo Garcia: para ficar compartilhado. E todo mundo está utilizando a empresa. Então, show de bola. Isso aqui é uma estrutura que a gente faz a nível de banco de dados e a nível também de código,
+
+190
+00:31:06.930 --> 00:31:18.380
+Ricardo Garcia: o código que nós temos aqui, nós também poderíamos criar aqui, por exemplo. Da mesma forma, a parte de produção, desenvolvimento e homologação exatamente igual.
+
+191
+00:31:19.120 --> 00:31:26.530
+Ricardo Garcia: Só que essa parte de código também. Pessoal, eu vejo o pessoal lá na empresa, porque a gente participa dos Deploys e tal aquela coisa toda, né?
+
+192
+00:31:26.650 --> 00:31:43.530
+Ricardo Garcia: Hoje em dia é tudo muito automatizado. Tem as tecnologias lá do Waze e várias tecnologias que automatizam todo esse processo. Para que os códigos, tanto o código banco de dados cheguem à produção.
+
+193
+00:31:43.530 --> 00:32:02.450
+Ricardo Garcia: Então existem vários ambientes. É uma tecnologia muito robusta, e tem que ser muito, digamos assim, o pessoal realmente da área ali, os Devops, alguma coisa assim que fazem essa transição entre homologação, ou que tem que subir para a produção. É bem bacana.
+
+194
+00:32:02.450 --> 00:32:12.360
+Ricardo Garcia: Eu particularmente só conheço a parte de banco. Mesmo que a gente pega os scripts e executa nível de banco de dados lá. Mas o pessoal que desenvolve, que está nos projetos em si.
+
+195
+00:32:12.360 --> 00:32:26.709
+Ricardo Garcia: Pô é show de bola, um troço bem complexo. Eu, pelo menos não acho muito simples. Tanto que eu sou muito mais dba muito mais na parte dessa. De engenharia de dados
+
+196
+00:32:26.710 --> 00:32:44.730
+Ricardo Garcia: na parte de infraestrutura. Mesmo eu quase não entro na parte de código. Enfim, esse tipo de coisa. Eu não entro. Mas já participei em vários projetos nesse sentido. Aí vocês vão ter que ver o que vocês curtem mais para fazer ali. Se é mais a nível de código, se é mais a nível de arquitetura de infra.
+
+197
+00:32:44.750 --> 00:32:59.560
+Ricardo Garcia: Como vocês acharem. Melhor ainda, eu me adaptei mais com a parte de infra mesmo. Então é a parte de servidores, instalação, configuração, disponibilizar os ambientes de banco de dados para as aplicações para os projetos
+
+198
+00:32:59.590 --> 00:33:03.589
+Ricardo Garcia: e fazer, logicamente, a manutenção de tudo isso aí.
+
+199
+00:33:04.600 --> 00:33:23.409
+Ricardo Garcia: Mas no nosso caso, aqui. Então a gente criou essa estrutura e a gente parou já entrando aqui no nosso sistema simplificado, mas que traz os conceitos a nível de desenvolvimento que a gente queria ver. Então, beleza, o que a gente vai fazer? Vamos executar lá de novo. Cnd
+
+200
+00:33:23.820 --> 00:33:30.520
+Ricardo Garcia: bem simples. É por isso que eu não estou utilizando nenhuma tecnologia à parte do Python.
+
+201
+00:33:30.660 --> 00:33:45.189
+Ricardo Garcia: Justamente como é que eu posso dizer assim. Ele é cru mesmo. Só o parto que a gente está utilizando. A gente não instalou nenhuma outra interface ou nem nada nesse sentido. Tanto que isso aqui. Olha como eu desenvolvi para vocês verem.
+
+202
+00:33:45.600 --> 00:33:47.850
+Ricardo Garcia: Deixa eu só fazer, pá. Então,
+
+203
+00:33:49.140 --> 00:33:51.800
+Ricardo Garcia: no menu do sistema. Então está aqui. Ó
+
+204
+00:33:52.600 --> 00:33:55.850
+Ricardo Garcia: loida. Está aqui o menuzinho, né, beleza?
+
+205
+00:33:56.410 --> 00:33:59.849
+Ricardo Garcia: Você viu? Deixa eu ver como é que eu vou fazer aqui, então
+
+206
+00:34:01.340 --> 00:34:09.200
+Ricardo Garcia: vou pegar esse aqui tanto que para vocês verem como que eu desenvolvi isso aqui da maneira mais simples possível. Que eu utilizei o bloco de notas aqui,
+
+207
+00:34:11.550 --> 00:34:13.820
+Ricardo Garcia: não salvar
+
+208
+00:34:14.090 --> 00:34:26.260
+Ricardo Garcia: tanto aqui no bloco de notas. E eu utilizei ele para desenvolver. Fui desenvolvendo, olhei ali e tal como fazendo. Fui montando o código um a um ali, copiando Ctrl, Ctrl V. E fui fazendo isso aí.
+
+209
+00:34:26.300 --> 00:34:35.779
+Ricardo Garcia: É de uma forma bem simples para justamente passar para vocês. Que, até com um bloco de notas, a gente consegue desenvolver no Python. Então foi isso que eu fiz
+
+210
+00:34:35.850 --> 00:34:52.059
+Ricardo Garcia: o que eu fiz aqui. Esse menu que nós estamos vendo aqui. Isso aqui. A gente já viu na passada. Só vou dar um review aqui para entrar em outros conceitos, mas só para a gente entender. Então esse menu que a gente está vendo é esse arquivo aqui. Aí eu fiz a importação das bibliotecas
+
+211
+00:34:52.060 --> 00:35:15.550
+Ricardo Garcia: que a gente utiliza aqui, que é os para fazer limpar a tela e tal Skl Light para se conectar com Skl Light. E o resto aqui importa. E cadastros e categorias são o quê? São os arquivos que a gente fez aqui, que são os outros módulos, os que fazem a manutenção dos nossos cadastros, enfim, do nosso sistema em si. Então tem cadastro e categorias, clientes, endereços, fabricantes e produtos.
+
+212
+00:35:15.550 --> 00:35:20.940
+Ricardo Garcia: Então, da mesma forma, aqui, eu aqui
+
+213
+00:35:21.310 --> 00:35:32.660
+Ricardo Garcia: coloquei, né? Fiz a importação porque quando eu faço o importe. Aqui a gente já entendeu o que funciona. Essa parte de consultas também também tem um arquivo aqui. Consultas está aqui
+
+214
+00:35:32.660 --> 00:35:34.249
+Ricardo Garcia: quando a gente faz o input.
+
+215
+00:35:34.250 --> 00:35:57.510
+Ricardo Garcia: Ele está dizendo assim: Opa, beleza. Você quer que eu vá lá naquele arquivo. O arquivo está dentro da mesma pasta do sistema e tal. E você quer que eu trague aquelas informações para um sistema. Único é isso aí que eu quero. Então, beleza só põe ali em Port cadastra, categorias, e o Python vai entender que você quer trazer aquele código que está dentro daquele arquivo também. Para dentro do teu ambiente que você desenvolveu. É isso aí.
+
+216
+00:35:57.560 --> 00:36:04.949
+Ricardo Garcia: Então eu faço. Importa de todos os cadastros que a gente precisa. E também das consultas. É isso que eu faço quando ele executa. Ele faz isso?
+
+217
+00:36:05.020 --> 00:36:06.320
+Ricardo Garcia: Definir.
+
+218
+00:36:06.750 --> 00:36:22.350
+Ricardo Garcia: Crie uma função clean aqui, simplesmente que é utilizando o que eu importei aqui, já. Funções pré definidas dentro do Python, para ele entender qual sistema operacional está usando para ele limpar a tela quando eu abro ele aqui,
+
+219
+00:36:22.380 --> 00:36:34.600
+Ricardo Garcia: tipo assim, se eu dou sair, ele limpa a tela e fecha o sistema. Se eu dou entrar aqui, ele limpa a tela e traz um menu principal aqui. Ele faz simplesmente um clear, que é uma função de defini aqui
+
+220
+00:36:34.600 --> 00:36:43.329
+Ricardo Garcia: bem tranquilo também aqui conecta com o banco de dados. É o arquivo que está ali diretamente no E Commerce
+
+221
+00:36:43.350 --> 00:37:00.959
+Ricardo Garcia: Scary Light, né? O legal desses. Por isso que esse arquivo aqui do Scary Light. Ele é bom quando a gente faz uma aplicação pequena que a gente vai trabalhar mais local. Enfim, aquela coisa menor, né? Se nós formos trabalhar com um sistema mais robusto,
+
+222
+00:37:00.960 --> 00:37:16.329
+Ricardo Garcia: a sugestão que a gente dá, obviamente é utilizar um banco de dados já como um posters, uma Skl, um skl server e tal. E aí você faz a conexão que vocês têm. Os exemplos ali que a gente já passou. Se conecta no banco de dados, e aí fica também
+
+223
+00:37:16.330 --> 00:37:26.849
+Ricardo Garcia: ali, a nível de compartilhamento dos dados das informações. Aqui é bem simples. Para se conectar no Sklight dentro do
+
+224
+00:37:26.850 --> 00:37:38.299
+Ricardo Garcia: do Python. É só essas linhas aqui, essas duas linhas. Você cria uma conexão e depois abre um cursor aqui, que ele fica esperando uma instrução para que você execute a nível de banco de dados.
+
+225
+00:37:38.530 --> 00:37:57.320
+Ricardo Garcia: Então a gente viu isso aqui. E aqui é a definição do próprio menu, que é aquele menu, cadastro de categorias, clientes e tal que ele está dentro do que de um Wile. Então ele vai ficar executando esse Wile aqui até a gente digitar. O Zero digitou o zero. O que ele faz? Ele limpa. Aqui
+
+226
+00:37:57.320 --> 00:37:59.800
+Ricardo Garcia: vai na opção zero lá embaixo.
+
+227
+00:38:01.180 --> 00:38:20.410
+Ricardo Garcia: Aqui Elife. Op opção principal. Igual a zero. Ele dá um print e dá um break. O break é um comando que sai do Eileen. Ele sai de um looping. Então, quando se dá um break, ele sai e ele fecha a aplicação, dá um clique e dá encerrando o sistema e dá um break. Sai do Eileen e ele sai do menu.
+
+228
+00:38:20.410 --> 00:38:22.250
+Ricardo Garcia: Então é isso aí.
+
+229
+00:38:22.250 --> 00:38:44.979
+Ricardo Garcia: Esse é o menu. É esse aqui que a gente está executando. É bem simples. Mas aqui tem vários conceitos. Tem o conceito de import. Tem o conceito de modularização, porque você não vai fazer tudo isso dentro de um arquivo. Só você pode modularizar ele, separar como a gente fez o cadastro de categorias. É aqui que a gente faz. Então vou colocar aqui também. Da mesma forma que a gente fez aqui.
+
+230
+00:38:47.900 --> 00:39:01.819
+Ricardo Garcia: Cadastro de categorias. Está aqui. Esse aqui gerencia a parte de categorias. Põe lá o importe para definir aqui um clean também para limpar a tela. Faz um Print aqui. Então, se eu for aqui edital lá um categorias,
+
+231
+00:39:02.140 --> 00:39:18.670
+Ricardo Garcia: ele abre o menu de categorias, que é isso que a gente está vendo aqui. E daí ele pede para você escolher um valor. Um é listar o dois é cadastrar. O três é atualizar o quatro é excluir. E o zero é voluntário. Então, o que a gente faz? Então, um entra listou, então ele fez uma lista.
+
+232
+00:39:18.810 --> 00:39:33.879
+Ricardo Garcia: O que é essa lista aqui? Mais um conceito que a gente aprendeu também. A lista é essa. Daqui, como a gente está vendo aqui. E ele faz o quê? Ele se conecta ao banco de dados utilizando um select aqui.
+
+233
+00:39:33.970 --> 00:39:37.300
+Ricardo Garcia: Sério? É que ele traz tudo, né? Ó eu ponho
+
+234
+00:39:37.310 --> 00:39:41.199
+Ricardo Garcia: os campos aqui e põe a categoria.
+
+235
+00:39:41.200 --> 00:40:03.919
+Ricardo Garcia: E aí ele traz isso aqui a um cursor. Ele abre aquele cursor para receber esses dados ali dentro dentro desse cursor. E ele vai colocar isso dentro de uma variável que é dados. Então ele faz isso aqui. Se os dados forem igual a zero, ele não encontrou nenhuma categoria. Então significa que está vazio. Não tem nada dentro dessa tabela, senão o que ele faz? Ele só faz um fora aqui, trazendo
+
+236
+00:40:03.920 --> 00:40:09.410
+Ricardo Garcia: só o Ford dados ali. Imprime ele. Que é isso que ele está fazendo aqui.
+
+237
+00:40:09.410 --> 00:40:15.459
+Ricardo Garcia: Está imprimindo aqui o id item um, dois, três, quatro, cinco, seis.
+
+238
+00:40:15.550 --> 00:40:40.379
+Ricardo Garcia: Que é o Id, o Id categoria. O nome que eu ponho o nome aqui da categoria e a descrição. Que é essa descrição aqui? É só isso que ele faz, mas é um conceito bacana. A gente utiliza bastante o Ford. A gente utiliza bastante para visualizar a informação. Quando a gente quer filtrar, a gente fez os exemplos ali também, de filtrar os dados que a gente precisa, às vezes até mesmo inserir em outro banco de dados e tal, e a gente faz como isso através do
+
+239
+00:40:40.380 --> 00:40:41.010
+Ricardo Garcia: fora.
+
+240
+00:40:41.860 --> 00:40:51.089
+Ricardo Garcia: E aqui eu queria abrir um parênteses e entrar num outro conceito, aproveitando essa deixa aqui de uma forma simples,
+
+241
+00:40:51.110 --> 00:41:09.139
+Ricardo Garcia: que a gente entra na parte de projeto. Então, agora trazer um pouquinho de projeto, a gente viu lá o banco de dados. A gente viu o. A parte de Python aqui que é bastante simples para a gente fazer isso aqui. Tecla entra aqui. Ele limpa a tela. Mas o que eu quero comentar com vocês é uma coisa bem importante.
+
+242
+00:41:11.060 --> 00:41:30.670
+Ricardo Garcia: Quando eu faço isso daqui. Nesse caso específico. Nesse caso específico, eu simplesmente fui lá no banco de dados e trouxe toda a tabela de categoria. Fiz um Select lá. Joguei isso dentro de uma variável. Executei um cursor lá. Joguei dentro de uma variável e trouxe toda aquela informação.
+
+243
+00:41:30.770 --> 00:41:46.060
+Ricardo Garcia: O que significa? Isso? Eu acessei o banco de dados e trouxe aquelas informações. E quando eu faço isso, eu posso ter ou não regras para trazer esses dados. O que significa isso aí?
+
+244
+00:41:46.200 --> 00:42:00.610
+Ricardo Garcia: Quando eu tenho uma regra específica. E aí que eu queria chegar essa regra, eu posso fazer de duas formas que vocês, junto com a equipe de vocês, vão ter que definir aonde vão estar as regras de negócio.
+
+245
+00:42:00.670 --> 00:42:14.499
+Ricardo Garcia: As regras de negócio vão estar no código do Python, no código do Python ou da aplicação, ou no código do banco de dados. Então, se eu quisesse. Por exemplo,
+
+246
+00:42:14.870 --> 00:42:25.599
+Ricardo Garcia: trazer alguma informação específica aqui. Acho que eu vou mostrar isso aqui de uma maneira diferente. Deixa para a gente. Ah, eu vou fazer isso aí. Então deixa.
+
+247
+00:42:25.630 --> 00:42:37.119
+Ricardo Garcia: Guardem isso que eu comentei com vocês e a gente vai ver em seguida. Deixa eu só terminar essa parte de cadastrar aqui. E a gente vai ver essa parte das regras do negócio aonde nós colocamos e por quê?
+
+248
+00:42:37.120 --> 00:42:57.870
+Ricardo Garcia: E eu vou mostrar para vocês o seguinte. Do jeito que nós fizemos aqui, nós colocamos as regras de negócio dentro do banco de dados, e eu vou mostrar para vocês aonde. Mas você. Essas regras podem colocar dentro da tua própria aplicação dentro do teu código em Python. E é isso aí que eu queria chegar.
+
+249
+00:42:57.870 --> 00:43:16.180
+Ricardo Garcia: Mas a gente já vai chegar nesse tema aí antes. Para a gente finalizar, só esse exemplo de categoria que os outros são exatamente iguais. Eu simplesmente fiz um Ctrl C Control V e alterei o nome dos bancos. A gente vai ver isso junto. É muito tranquilo de fazer depois que você faz o primeiro.
+
+250
+00:43:16.180 --> 00:43:22.789
+Ricardo Garcia: Então a gente fez a lista aqui, que é o que tem aqui. Então ele lista dessa forma bastante simples. Utilizando um form.
+
+251
+00:43:23.020 --> 00:43:39.839
+Ricardo Garcia: Quando eu dou cadastrar aqui, ele entra na opção dois. O que faz aqui? Ele pede o nome da categoria e a descrição da categoria. E aí o que ele faz? Ele faz o quê? Ao invés de ele fazer um Select buscar essa informação, ele faz o quê, um insert? Então ele faz um insert
+
+252
+00:43:39.880 --> 00:43:49.470
+Ricardo Garcia: os valores aqui. Eu coloco esses sinais aqui de interrogação, que é para ele entender que ele vai receber os valores dessas variáveis que estão aqui
+
+253
+00:43:49.550 --> 00:44:01.899
+Ricardo Garcia: que eu dei a entrada nessas variáveis, beleza. E daí? O que eu faço aqui? Eu faço um comit, um comit comete. Como vamos achar melhor. O Comit. Ele vai dizer o seguinte:
+
+254
+00:44:01.900 --> 00:44:10.710
+Ricardo Garcia: peguem essas informações que estão aqui. Esse valor que eu entrei aqui. Essa instrução aqui e grave no banco de dados.
+
+255
+00:44:10.710 --> 00:44:23.249
+Ricardo Garcia: O Comit faz isso. E não é só com o Sql Light. Ele faz isso com todos os bancos de dados. Quando a gente quiser gravar uma informação no banco de dados, definitivamente que ele escreva no dado
+
+256
+00:44:23.250 --> 00:44:42.830
+Ricardo Garcia: fisicamente no banco de dados. A gente dá um comit. Quando a gente faz um Commit, ele pega o banco de dados em si e fala assim: Opa. Você quer gravar isso aí lá no disco? Então, beleza, ele vai pegar tudo que ele tem na tua sessão, na tua memória, na tua sessão e vai falar isso aqui. Você quer que grave no banco. Então ele vai lá e grava fisicamente.
+
+257
+00:44:42.940 --> 00:45:02.319
+Ricardo Garcia: Quando ele grava dá um convite. Ele grava fisicamente aí. Normalmente, mesmo que reinicie o servidor, você já não perde mais os dados. Por quê? Porque ele persiste dentro do banco de dados. Então é esse o comando que faz isso aqui? Que ele confirma a operação. E daí? Dá um Print na tela e beleza. Olha como é simples.
+
+258
+00:45:02.570 --> 00:45:10.779
+Ricardo Garcia: A gente vem aqui, beleza. E agora a gente vai cadastrar uma categoria. Então vamos lá dois. Nome da categoria, por exemplo, testa
+
+259
+00:45:11.020 --> 00:45:15.920
+Ricardo Garcia: qual a discussão da categoria teste teste? Então inter aqui. Ó,
+
+260
+00:45:15.920 --> 00:45:35.229
+Ricardo Garcia: o que ele fez fez um Insert aqui e armazenou isso dentro do nosso banco de dados. Por quê? Porque ele deu um comit aqui. Ele falou. Opa, ele quer que grave diretamente no banco de dados? Beleza? Dei um inter aqui, voltou ao normal. E agora eu vou dar um listar de novo só para a gente garantir. Então ele gravou a nossa categoria nova aqui, gerou um
+
+261
+00:45:35.490 --> 00:45:53.839
+Ricardo Garcia: um novo, Id e tal aquela coisa toda, e gravou a nossa categoria. Era isso que a gente pediu. Então a opção dois está funcionando e está correta. Eu executei um insight dentro do banco de dados. E ele gravou essa informação. Show de bola. Agora eu posso atualizar
+
+262
+00:45:53.840 --> 00:46:04.159
+Ricardo Garcia: essa categoria também. Se eu for lá ainda. Ah, beleza. O Id. Qual é o Ad é o doze. Então eu venho aqui. Vou lá em
+
+263
+00:46:04.180 --> 00:46:12.149
+Ricardo Garcia: atualizar três, atualizar e desde a categoria é o doze. E agora vamos pôr lá. Teste.
+
+264
+00:46:12.820 --> 00:46:15.789
+Ricardo Garcia: Um, dois, três, quatro.
+
+265
+00:46:16.070 --> 00:46:17.380
+Ricardo Garcia: E aí?
+
+266
+00:46:18.600 --> 00:46:26.189
+Ricardo Garcia: Nova descrição. Teste um, dois, três, quatro. Só para ver se está gravando beleza. Vamos lá. E agora? Vamos listar de novo.
+
+267
+00:46:26.340 --> 00:46:41.749
+Ricardo Garcia: Então ele fez o quê? Ele executou uma atualização. O que é a atualização? Ele selecionou a categoria primeiro, para eu localizar a categoria através do Id que eu passei para ele para saber. Opa, beleza. Ele só quer atualizar doze.
+
+268
+00:46:41.750 --> 00:46:55.279
+Ricardo Garcia: Ele achou aqui o doze. Eu coloquei aqui. Pedi as informações para serem atualizadas e depois eu dei um execute no update. Então aqui, atualize a tabela de categoria. O nome
+
+269
+00:46:55.280 --> 00:47:10.770
+Ricardo Garcia: com o novo nome que eu coloquei aqui, que foi o que a gente deu entrada. E a nova descrição. Beleza aqui embaixo. É isso aqui. E os Ids, que foi o Id que eu passei para ele aqui. Que é esse cara aqui? Essa variável aqui. Então, beleza fez a atualização?
+
+270
+00:47:10.780 --> 00:47:29.139
+Ricardo Garcia: Normalmente, em vários sistemas, não precisa ser só em Python. O que a gente faz aqui em Python? De uma maneira simples, é utilizado também em outros sistemas. E quando a gente faz uma atualização num dado. Um Delite, alguma coisa ele busca aquele Id específico e tal e faz a deleção faz a atualização, esse tipo de coisa.
+
+271
+00:47:29.140 --> 00:47:44.109
+Ricardo Garcia: Agora, o que a gente vai fazer na opção quatro, que é excluir? Então a Id da categoria a gente vai excluir o que a gente tem que fazer. Entrar com a Id da categoria. Então, beleza, vamos lá. Está aqui a categoria doze que a gente vai excluir. Então vamos lá. Quatro
+
+272
+00:47:45.160 --> 00:47:49.659
+Ricardo Garcia: é o doze. Então a gente dá um enter e
+
+273
+00:47:49.900 --> 00:48:07.540
+Ricardo Garcia: beleza. A gente vai lá um. Ó, a categoria doze desapareceu. Então a gente excluiu o que a gente executou no banco de dados. A gente executou um delete no Id da categoria que foi o Id que a gente colocou no input dos dados ali, que foi a categoria doze.
+
+274
+00:48:07.540 --> 00:48:11.620
+Ricardo Garcia: Ele fez. E da mesma forma, executou o convite, né? O convite.
+
+275
+00:48:11.640 --> 00:48:13.890
+Ricardo Garcia: Então reparem que
+
+276
+00:48:13.940 --> 00:48:22.290
+Ricardo Garcia: quando você faz uma seleção beleza, você vai lá no banco de dados e traz essa informação e faz um fora ali para você colocar isso na tua tela
+
+277
+00:48:22.420 --> 00:48:25.159
+Ricardo Garcia: de uma maneira bastante simplificada.
+
+278
+00:48:25.170 --> 00:48:28.110
+Ricardo Garcia: Ou se você vai inserir, você insere.
+
+279
+00:48:28.110 --> 00:48:51.050
+Ricardo Garcia: Coloca isso numa variável e dá um convite para ele mandar para o banco de dados e gravar se você vai fazer uma atualização da mesma forma, você coloca um valor novo na variável busca pelo Id específico que você vai atualizar e faz a atualização e dá um convite para ele gravar no banco e o excluir da mesma forma. Você vai lá, identifica qual categoria ou qual registro você quer excluir
+
+280
+00:48:51.490 --> 00:48:58.890
+Ricardo Garcia: e dá um Delite um comando do Skl e dá um comit, e ele vai lá e
+
+281
+00:48:58.890 --> 00:49:04.130
+Ricardo Garcia: realiza. Elimina essa informação que você colocou ali.
+
+282
+00:49:04.130 --> 00:49:22.849
+Ricardo Garcia: Então é isso aqui que ele faz. O que eu fiz aqui. Para vocês terem uma ideia. Dei um Enter aqui. Então isso aqui é de categorias. Então a gente viu a forma de listar, cadastrar, atualizar e excluir o que eu fiz. Aqui. A gente fez categorias. Então o que eu fiz? Eu peguei, montei o primeiro.
+
+283
+00:49:23.650 --> 00:49:26.089
+Ricardo Garcia: Poxa pessoal, aqui deu uma
+
+284
+00:49:26.640 --> 00:49:35.540
+Ricardo Garcia: deu uma oscilada na internet. Vocês estão me ouvindo aí, né? Qual é a coisa me ouvir, senão vou ficar falando sozinho aí, beleza valeu, valeu, pessoal.
+
+285
+00:49:35.540 --> 00:49:36.109
+gabriel.diniz: Se a.
+
+286
+00:49:36.470 --> 00:49:37.730
+Ricardo Garcia: Valeu, brigadão.
+
+287
+00:49:38.670 --> 00:49:51.690
+Ricardo Garcia: Então, o que acontece aí? Puxa nós. Eu montei a primeira estrutura que eu pensei em montar foi o menu beleza. E aí a segunda estrutura foi. Comecei por cada item ali e montei primeiro cadastro
+
+288
+00:49:51.830 --> 00:50:06.050
+Ricardo Garcia: de categorias show. Então montei o que eu precisava. Eu precisava listar, cadastrar, atualizar, excluir e voltar. Então criei uma coisa bem simples. Poucas linhas. Aí eu fiz um Ctrl Ctrl V e fiz o segundo, que é o de clientes.
+
+289
+00:50:07.760 --> 00:50:20.889
+Ricardo Garcia: Olha como eu fiz. De maneira simples. Mesmo gerenciar clientes aqui importa exatamente igual. Mudei aqui clientes. Botei aqui clientes em vez de categorias ali que está ali.
+
+290
+00:50:21.510 --> 00:50:35.459
+Ricardo Garcia: E aí eu fiz a mesma coisa. Fiz o Selic, trazendo a tabela lá do banco de dados From cliente Semware nem nada. Eu quero que lice todos os clientes ali, sem nenhum problema, né? Aí fiz da mesma forma. O fora aqui. Perdão,
+
+291
+00:50:35.460 --> 00:50:47.219
+Ricardo Garcia: aí. Cadastrar da mesma forma. Entra com nome, dá um insight aqui e dá um comit. Reparem que aqui eu tenho mais inputs de valores, porque é uma tabela maior.
+
+292
+00:50:47.220 --> 00:50:58.290
+Ricardo Garcia: Mas o inset aqui também é o mesmo. Eu coloco as variáveis aqui coloco. Ele faz a substituição aqui dessas variáveis que eu coloquei e dei um comit aqui.
+
+293
+00:50:58.370 --> 00:51:05.970
+Ricardo Garcia: Atualização, a mesma coisa. Busca o Id do que eu quero atualizar. Coloca os novos nomes ali, né?
+
+294
+00:51:06.160 --> 00:51:09.340
+Ricardo Garcia: Ô, Vitor, diga aí. Daí eu dou uma respirada. Aí também.
+
+295
+00:51:09.990 --> 00:51:18.590
+Victor BITTENCOURT: Ali no Select. A gente tem que dar o nome aos bois. Os nomes das colunas. Certinho, a gente não pode colocar o.
+
+296
+00:51:19.300 --> 00:51:21.849
+Victor BITTENCOURT: Eu esqueci o nome, a estrelinha lá que eu esqueci o nome. Agora.
+
+297
+00:51:21.850 --> 00:51:23.559
+Ricardo Garcia: Asterisco. Asterisco ali, né.
+
+298
+00:51:25.080 --> 00:51:33.460
+Victor BITTENCOURT: A gente tem que dar os nomes de cada coluna que a gente quer que ele seleciona. Ali no Select. A gente pode usar o asterístico.
+
+299
+00:51:33.600 --> 00:51:40.719
+Ricardo Garcia: Isso. Exato aí. Foi bem legal essa pergunta aí, Victor. Por que cara?
+
+300
+00:51:41.070 --> 00:51:52.679
+Ricardo Garcia: Normalmente a melhor prática e a gente vai ver isso em todos os manuais. Qualquer coisa assim. É você colocar o nome de todos os campos que você quer que a consulta. Traga
+
+301
+00:51:52.870 --> 00:51:55.160
+Ricardo Garcia: e não colocar asterisco.
+
+302
+00:51:55.360 --> 00:52:11.900
+Ricardo Garcia: Porque se você colocar o asterístico aqui e for criado outros campos, ele vai dar pau depois na tua aplicação. Outra coisa também. Que às vezes você vai estar consultando. Ou ele vai trazer alguma informação dependendo da tua tela. Se você colocar o asterístico tem campos ali,
+
+303
+00:52:12.130 --> 00:52:23.409
+Ricardo Garcia: que muitas vezes não vai nem estar na tua tela. Mas ele vai estar trazendo a informação. Então a melhor prática é você só colocar os campos que você vai realmente utilizar,
+
+304
+00:52:23.440 --> 00:52:28.850
+Ricardo Garcia: descrevendo, não colocar jamais o astelítico. Isso aí é a melhor prática.
+
+305
+00:52:28.850 --> 00:52:46.460
+Ricardo Garcia: Na verdade, nós, Dbasa, Quando a gente vê a asterística, esse tipo de coisa, a gente dá um toquezinho para o pessoal do projeto para não utilizar. Eu sei que hoje tem os Fryer. Apesar que o Fryer descreve cada campo que vai ser utilizado de cada tabela.
+
+306
+00:52:46.480 --> 00:53:06.329
+Ricardo Garcia: Mas tem gente que coloca um asterístico ali na mão, ali mesmo. Mas não é recomendado, porque ele tem uma carga muito maior. Ele traz todos os dados. Ali às vezes não é necessário trazer todas as colunas. E como melhor prática, mesmo é você colocar o nome dos campos jamais,
+
+307
+00:53:06.330 --> 00:53:14.840
+Ricardo Garcia: tipo, jamais utilizar o asterístico. Não use. Não use, porque não é uma prática legal assim,
+
+308
+00:53:15.050 --> 00:53:27.159
+Ricardo Garcia: por quê? Porque existem realmente muitos erros que podem ocorrer. Se você colocar o asterístico ali, alguém muda algum nome de campo, alguma coisa assim adiciona um nome diferente e tal.
+
+309
+00:53:27.340 --> 00:53:45.369
+Ricardo Garcia: É bom que se você colocar o nome de campo e alguém alterou alguma coisa que dê o erro exatamente, ele vai mostrar exatamente onde está o erro. Ali também é mais fácil de você mapear o erro ou monitorar enfim, fazer esse tipo de coisa, então procurar não usar beleza
+
+310
+00:53:45.780 --> 00:53:47.260
+Ricardo Garcia: show. Valeu
+
+311
+00:53:48.400 --> 00:54:06.820
+Ricardo Garcia: então aqui, colocar aqui a gente colocou aqui, faz a lista. Mesma coisa, cadastrar aqui. Eu utilizei. Simplesmente coloquei os campos a mais aqui que a gente precisa de clientes. A opção de atualizar. Também coloquei aqui. Ele faz o update de cliente com o Id. O nome, o e mail
+
+312
+00:54:06.820 --> 00:54:12.810
+Ricardo Garcia: e ele testa aqui. Ele testa se os campos foram preenchidos
+
+313
+00:54:12.810 --> 00:54:16.350
+Ricardo Garcia: enviando valores no input aqui para ele,
+
+314
+00:54:16.350 --> 00:54:22.480
+Ricardo Garcia: beleza. E depois, no final, dá um comite aqui para gravar. E o quatro da mesma forma, faz uma exclusão ali
+
+315
+00:54:22.490 --> 00:54:28.330
+Ricardo Garcia: do registro em si. Então é isso aqui. Então, se a gente for ver lá o dois,
+
+316
+00:54:29.180 --> 00:54:41.279
+Ricardo Garcia: Lista de Clientes está aqui. Ele faz a aí. Eu posso voltar lá e para cadastrar. Então deixa eu ver aqui. Cadastrar é o dois.
+
+317
+00:54:41.590 --> 00:54:45.509
+Ricardo Garcia: Então é teste e mail, teste, telefone.
+
+318
+00:54:46.230 --> 00:54:52.070
+Ricardo Garcia: Vou pôr aqui só um número. Ele não está testando nada, mas só vou colocar aqui só para ficar diferente mesmo.
+
+319
+00:54:52.070 --> 00:55:07.550
+Ricardo Garcia: E ele é ativo. Por exemplo, beleza gravou. E agora eu vou listar ele aqui. Então ele está aqui, então eu registro número três que foi cadastrado. Se for fazer atualização, ele vai funcionar da mesma forma. E agora a gente vai excluir ele, que é o três. Então, beleza,
+
+320
+00:55:07.550 --> 00:55:09.969
+Ricardo Garcia: vamos excluir ele aqui, que é o quatro.
+
+321
+00:55:10.620 --> 00:55:27.429
+Ricardo Garcia: Vou dar um treze. Excluiu, voltou e está. Está lá, treze. Fechou. Então, na verdade, o que eu fiz aqui? Zero para voltar. Ele volta aqui! Eu peguei e fiz a mesma coisa para todos eles. Endereço é igual. Abri aqui.
+
+322
+00:55:31.790 --> 00:55:35.200
+Ricardo Garcia: E agora a gente vai chegar onde a gente falou da parte de.
+
+323
+00:55:35.630 --> 00:55:53.450
+Ricardo Garcia: De regra de negócio. Copiei também ctrl, Ctrl V de clientes, e editei cada um deles para montar o cadastro. Então, como é tudo muito parecido? Eu só fiz isso aí. Ctrl, Ctrl V e alterei lá para fabricante, cliente, produto, endereço. Tanto faz. Aí fiz ali só
+
+324
+00:55:53.450 --> 00:55:59.629
+Ricardo Garcia: bem simples, bem tranquilo. Mas ele já ficou funcional. Então, beleza já está funcional aqui.
+
+325
+00:55:59.860 --> 00:56:17.099
+Ricardo Garcia: Aí, quando eu terminei essa parte de produtos aqui, eu entrei nesse daqui. E aqui estão as regras de negócio que eu queria comentar com vocês. Então, o que a gente fez aqui? Nós separamos as consultas aqui, consultas gerais. Se eu der um nove aqui,
+
+326
+00:56:17.510 --> 00:56:40.979
+Ricardo Garcia: são essas. Eu só coloquei essas por enquanto. Depois eu já vou fazer as outras, porque a gente colocou várias consultas. Essas consultas aqui. É o que a gente comentou, que é a camada de visualização. É a camada que entrega a informação do nosso sistema, do nosso e commerce para os usuários para o negócio, para o que for. Então eu tenho as categorias para faturamento, lista, participação. Daí. Eu tenho os clientes ativos, endereço,
+
+327
+00:56:40.980 --> 00:56:43.110
+Ricardo Garcia: olha quantas perguntas
+
+328
+00:56:43.130 --> 00:56:51.139
+Ricardo Garcia: ele responde aqui para nós. E agora vocês vão entender essa parte aqui. Olha só o que eu fiz.
+
+329
+00:56:52.450 --> 00:57:02.460
+Ricardo Garcia: Fui aqui. Criei a consulta aqui. Toda a mesma coisa. Criei esse menu que a gente está vendo que é esse daqui? E aí peguei. Ó. Opção um,
+
+330
+00:57:02.710 --> 00:57:04.340
+Ricardo Garcia: opção um: aqui
+
+331
+00:57:04.900 --> 00:57:16.450
+Ricardo Garcia: seleciona busca todos os registros da tabela. Só que ele não está buscando da tabela. Ele está buscando da View. Essa view. Nós criamos aqui categoria faturamento está aqui.
+
+332
+00:57:19.010 --> 00:57:29.179
+Ricardo Garcia: Eu peguei cada uma delas. Categoria Faturamento. Ó, é essa? Viu aqui?
+
+333
+00:57:29.530 --> 00:57:36.579
+Ricardo Garcia: Essa View está montada da mesma forma que a gente viu aqui. Deixa eu trazer só para a gente ver de uma forma mais.
+
+334
+00:57:36.850 --> 00:57:40.059
+Ricardo Garcia: É legal assim. É essa a View aqui, né?
+
+335
+00:57:40.540 --> 00:57:47.430
+Ricardo Garcia: Então a gente tem a estrutura dela, que é essa? Daqui a gente está vendo aqui a definição. Essa é a View.
+
+336
+00:57:49.130 --> 00:57:50.879
+Ricardo Garcia: E esses aqui são os dados.
+
+337
+00:57:51.160 --> 00:57:53.699
+Ricardo Garcia: Está aqui. Os dados estão aqui.
+
+338
+00:57:53.990 --> 00:57:58.770
+Ricardo Garcia: Então se eu executar ele aqui. Repare, vou executar um aqui.
+
+339
+00:57:59.280 --> 00:58:07.910
+Ricardo Garcia: Olha, ele trouxe aqui acessórios. O que eu fiz aqui? Olha como é simples. Eu fiz a consulta. Como peguei aqui.
+
+340
+00:58:08.040 --> 00:58:15.530
+Ricardo Garcia: A gente não fez lá a visualização, a lista. Eu utilizei a mesma coisa que a gente utiliza na lista. Peguei ele aqui.
+
+341
+00:58:16.890 --> 00:58:17.690
+Ricardo Garcia: Ó,
+
+342
+00:58:17.720 --> 00:58:34.589
+Ricardo Garcia: então eu fiz lá. Cursor executa Select. Só que agora eu estou fazendo um select da View que eu preciso, que é a categoria faturamento, mas o resto é igual. Daí eu faço um for só para listar as informações que estão retornando dessa View aqui.
+
+343
+00:58:34.590 --> 00:58:47.160
+Ricardo Garcia: Então é isso aqui que eu faço. Então, o que acontece? A nossa camada de visualização. Ela está onde ela está. Nas nossas Views que nós definimos lá no banco de dados.
+
+344
+00:58:47.680 --> 00:58:51.470
+Ricardo Garcia: Com isso, o que eu fiz? Eu transferi
+
+345
+00:58:51.610 --> 00:59:00.450
+Ricardo Garcia: para nossas Views aqui. As regras de negócio. Por quê? Porque é aqui que eu faço as.
+
+346
+00:59:01.130 --> 00:59:04.729
+Ricardo Garcia: O relacionamento entre as tabelas que eu preciso
+
+347
+00:59:04.860 --> 00:59:14.609
+Ricardo Garcia: aqui, que eu faço, Werne. Então os requisitos que eu tenho de negócio. Aí eu faço o grupo Bi, a Orn, faço tudo. Então, o que eu fiz aqui?
+
+348
+00:59:14.800 --> 00:59:31.520
+Ricardo Garcia: A regra de negócio dos filtros. Eu coloquei isso a nível de banco de dados, então eu não coloquei a nível de aplicação a aplicação. A única coisa que ela está fazendo é indo lá fazendo um Select turma View, e trazendo essa informação na tela, só isso.
+
+349
+00:59:31.520 --> 00:59:34.020
+Ricardo Garcia: Eu não tenho regra nenhuma
+
+350
+00:59:34.020 --> 00:59:58.670
+Ricardo Garcia: específica na aplicação. As minhas regras estão dentro do banco de dados, daí vocês vão falar assim. Puxa, mas por que eu fiz assim? Eu fiz simplesmente porque é um jeito que eu faço. Só isso. Não tem agora, em um projeto real, o que vai acontecer? Isso vai ser definido pelo arquiteto, não só arquiteto de dados, mas como arquiteto de soluções.
+
+351
+00:59:58.670 --> 00:59:59.380
+Ricardo Garcia: E aí?
+
+352
+01:00:00.210 --> 01:00:08.450
+Ricardo Garcia: E vai ser definido entre todos. Aonde nós vamos deixar a regra de negócio? Ah, vamos deixar no banco de dados, beleza,
+
+353
+01:00:08.450 --> 01:00:21.909
+Ricardo Garcia: a regra de negócio no banco de dados. É assim que faz. Você coloca a regra do negócio dentro do que você desenha no banco de dados das tuas views ali dentro das tuas tabelas, armazenamento,
+
+354
+01:00:21.930 --> 01:00:34.730
+Ricardo Garcia: os arquitetos chegarem à conclusão e falarem assim, não nós não vamos deixar a regra de negócio no banco de dados. Nós vamos levar tudo isso para a aplicação. O que vai acontecer?
+
+355
+01:00:35.080 --> 01:00:45.369
+Ricardo Garcia: Essas views aqui. Vocês não precisam nem fazer, porque ele não vai mais buscar essas regras. Essas perguntas, quem vai responder é a aplicação a nível de código.
+
+356
+01:00:45.370 --> 01:01:06.089
+Ricardo Garcia: A única coisa que a gente tem que fazer aqui é colocar o armazenamento. Mas as regras em si, as views aqui esquecem porque quem vai fazer isso, quem que é é a aplicação? Então pensa que essas regras aqui, que a gente está vendo aqui, ela vai ter que ser transferida para onde? Ela vai ter que ser transferida para o código
+
+357
+01:01:06.280 --> 01:01:18.120
+Ricardo Garcia: para o teu código. Ela vai ser transferida para cá. Então, quando você apertar aqui categorias de faturamento, ele não vai mais fazer isso. Que a gente está fazendo aqui From Vw. Categoria Faturamento.
+
+358
+01:01:18.120 --> 01:01:33.629
+Ricardo Garcia: Não, ele vai buscar esses dados dentro da tabela de onde ele precisar. E aí ele vai fazer essas regras de negócio. Vai montar tudo dentro da aplicação ou através do Framework, que existem, que montam essas regras e tal, mas é outra camada
+
+359
+01:01:33.630 --> 01:01:49.149
+Ricardo Garcia: que ele vai estipular essas regras. Por que a gente fez assim? Simplesmente porque fica mais fácil para a gente entender como é que funciona e tal. A gente busca no banco de dados e traz essa informação tanto que aqui, se vocês forem ver nessa parte aqui categorias. Faturamento
+
+360
+01:01:49.150 --> 01:02:05.870
+Ricardo Garcia: não tem regra nenhuma. Ele está indo buscar diretamente navio essa aqui. Categorias lista também não tem regra nenhuma. Ele está indo buscar navio e todas elas. A única coisa que ele está fazendo é buscar a informação das Views. Isso significa que
+
+361
+01:02:05.870 --> 01:02:19.730
+Ricardo Garcia: todas essas perguntas que ele faz aqui? Quais são os clientes ativos? Qual o endereço de cada cliente? Quem está respondendo isso aqui não é a aplicação é o banco de dados. Por quê? Porque a regra foi feita no banco de dados. Tá? É só isso aí.
+
+362
+01:02:20.000 --> 01:02:33.070
+Ricardo Garcia: Não é complexo. Não é nada. É só uma definição mesmo. E quem vai definir isso aí? É a equipe. Não é só a gente. Ah, e tal. Aquela coisa toda depende da arquitetura da solução em si.
+
+363
+01:02:33.210 --> 01:02:35.340
+Ricardo Garcia: Quando a gente
+
+364
+01:02:35.660 --> 01:02:45.670
+Ricardo Garcia: define que essas regras que eu comento, vão ficar na aplicação Opa, beleza significa que o banco de dados só vai ter o quê? Só vai ter o
+
+365
+01:02:45.670 --> 01:02:57.760
+Ricardo Garcia: armazenamento. Só essa parte aqui, só as tabelas. Essa parte aqui. Ela não vai ter mais beleza. Não tem problema nenhum aqui. Eu posso ter só o armazenamento e show de bola faça ali o que precisar,
+
+366
+01:02:57.760 --> 01:03:22.569
+Ricardo Garcia: e é tranquilo. E o resto? A aplicação. Os desenvolvedores das aplicações vão ter que criar essas regras a nível de aplicação a nível de C Sharp de python, o que for, qualquer linguagem que estiver sendo utilizada a nível de aplicação. Então, para quem faz ou que vai seguir a carreira de banco de dados, para entender como é que funciona, que essa é uma parte e para quem vai desenvolver. Que está em Ads, que vai se desenvolvedor.
+
+367
+01:03:22.570 --> 01:03:26.600
+Ricardo Garcia: Aquela coisa, para entender também como funciona. Nesse sentido
+
+368
+01:03:26.840 --> 01:03:35.569
+Ricardo Garcia: do tratamento das regras e, hoje em dia, a maioria das regras estão sendo feitas a nível de aplicação
+
+369
+01:03:35.570 --> 01:03:59.989
+Ricardo Garcia: a nível de aplicação. As regras foram tiradas do banco de dados e estão sendo feitas a nível de código, mesmo por quê? Porque o código hoje em dia é diferente. Tem microserviços, especialistas que executam as coisas lá. E tem uma escalabilidade que você pode implementar a nível de código também. Então o banco de dados só faz o trabalho de armazenar os dados mesmo
+
+370
+01:04:00.060 --> 01:04:16.099
+Ricardo Garcia: e a parte de regra de negócio de relacionamento. E tal fica tudo com a aplicação. Então é isso que eu queria introduzir também nesse nosso conceito nesse nosso modelo aqui. Ah, mas isso é complexo. Não, não tem nada assim. É bem tranquilo. É só para entender
+
+371
+01:04:16.100 --> 01:04:27.379
+Ricardo Garcia: que pode ter as duas situações. Nesse nosso exemplo, aqui, a gente colocou as regras de negócio lá dentro do banco de dados ali. E a única coisa que a gente faz a nível de
+
+372
+01:04:27.760 --> 01:04:43.229
+Ricardo Garcia: de aplicação aqui de código Python. Por quê? Por quê? Porque a gente está muito mais preocupado nesse momento de entender o funcionamento, de entender algumas funcionalidades do que desenvolver regra de negócio dentro do Python. Não é esse o objetivo
+
+373
+01:04:43.260 --> 01:05:02.820
+Ricardo Garcia: aqui. Então a gente entendeu justamente, algumas características de funcionamento da aplicação, e essa é uma delas. Então eu coloquei essas consultas. Por exemplo, cliente pendente. Então eu dou um set aqui. Ele traz lá todos que têm status em aberto. O valor que está em aberto, ponto lá?
+
+374
+01:05:02.820 --> 01:05:06.840
+Ricardo Garcia: Traz aqui, por exemplo, clientes por faturamento seis.
+
+375
+01:05:06.840 --> 01:05:12.140
+Ricardo Garcia: Então eu tenho aqui o faturamento de cada um deles aqui, por exemplo.
+
+376
+01:05:14.800 --> 01:05:25.190
+Ricardo Garcia: Ah, então o Matheus colocou exatamente quando a gente transferir essas regras de negócio para dentro da aplicação.
+
+377
+01:05:25.820 --> 01:05:43.960
+Ricardo Garcia: Uma das arquiteturas mais utilizadas hoje em dia é a Api. Exatamente, Matheus. É isso aí valeu mais uma vez. Valeu, porque, puta a gente esquece às vezes, de comentar as coisas. E vocês lembraram ali também, anteriormente.
+
+378
+01:05:43.960 --> 01:05:48.329
+Ricardo Garcia: Bem bacana. A Api faz exatamente isso a Api.
+
+379
+01:05:48.330 --> 01:05:57.060
+Ricardo Garcia: Elas são os microserviços que a gente são. E as Apis normalmente são especialistas nisso. Daí. Então é justamente isso aí.
+
+380
+01:05:57.060 --> 01:06:11.560
+Ricardo Garcia: Você define. Ah, eu quero só saber categorias e faturamento. Então é uma Api que vai buscar essa informação no banco de dados, e ele que vai montar toda essa regra. É isso aí. Poxa, show! É isso aí mesmo.
+
+381
+01:06:11.560 --> 01:06:21.559
+Ricardo Garcia: A Api monta tudo isso aí. E o que a Api vai fazer? Ela simplesmente vai. Aonde vai? Aqui essa parte não vai existir.
+
+382
+01:06:21.630 --> 01:06:45.789
+Ricardo Garcia: Então a Api vai exatamente aonde ela precisa. Ela não vai existir. Isso aqui não vai ter essa regra aqui não vai ter nada. Só vai ter o armazenamento, só as tabelas mesmo ali. E a Api vai criar toda essa regra. Vai exatamente no dado que ela precisa. E pega aquele dado lá. É isso aí. Show de bola show. É isso aí, ajuda pra caramba! Esse entendimento foi bem bacana.
+
+383
+01:06:46.670 --> 01:06:47.360
+Ricardo Garcia: E aí
+
+384
+01:06:47.530 --> 01:07:01.700
+Ricardo Garcia: é isso aí. Então, a Api faz esse serviço. E hoje em dia, a maioria das arquiteturas de soluções. Porque a gente fala assim. Eu, por exemplo,
+
+385
+01:07:02.010 --> 01:07:16.169
+Ricardo Garcia: na minha área, eu sou Dba, a dba de infraestrutura. Então eu cuido somente da infraestrutura de banco de dados. Então, com bastante banco de dados, aquela coisa toda e tal. Mas o que a gente vê de
+
+386
+01:07:16.170 --> 01:07:33.350
+Ricardo Garcia: sistemas modernos hoje é justamente isso. Toda a camada de negócio fica dentro das Apis, dentro dos serviços dos microserviços. E o banco de dados vai ficar só com as tabelas lá, armazenando dados, que faz a parte de armazenamento mesmo.
+
+387
+01:07:33.350 --> 01:07:37.949
+Ricardo Garcia: E todo o resto fica a nível de aplicação. Então esse é um novo.
+
+388
+01:07:38.140 --> 01:07:44.149
+Ricardo Garcia: É um modelo aí. O que acontece hoje é que
+
+389
+01:07:44.580 --> 01:08:01.109
+Ricardo Garcia: existem muitos sistemas. Por exemplo, a nossa empresa, mesmo a nossa empresa tem muitos sistemas. Ela comprou várias empresas também. Então é um grupo de empresas. É muito grande, muito complexo, tudo. E existem os sistemas legados. São os sistemas mais antigos.
+
+390
+01:08:01.190 --> 01:08:14.079
+Ricardo Garcia: E antes de fazer essa migração, os sistemas mais antigos, a regra de negócio tem muita regra de negócio no banco de dados. E aí tem lá procidure. Tem views. Tem um monte de coisa lá, né? Mas normalmente são sistemas legados.
+
+391
+01:08:14.080 --> 01:08:24.750
+Ricardo Garcia: As novas arquiteturas. É justamente essa aí. É a nível de microserviço de Apis. Esse tipo de coisa. Por quê? Porque fica mais fácil escalar esses serviços aí.
+
+392
+01:08:24.960 --> 01:08:35.619
+Ricardo Garcia: É isso aí. Show de bola. Então aqui a gente, só para mostrar para vocês aqui. Um pouco depois, eu vou preparar mais alguma para a próxima semana, eu preparo um pouco mais ali. Inimigos do sistema.
+
+393
+01:08:35.960 --> 01:08:49.650
+Ricardo Garcia: Nível de consultas aqui que a gente tem. E beleza. E aí o nosso sistema vai criando um corpo ali também. Então a gente. O cadastro está pronto já né? Daí eu vou ver se eu preparo a gestão do estoque aqui. Pagamentos e tal, né? E já.
+
+394
+01:08:49.649 --> 01:09:00.410
+Ricardo Garcia: E a parte de consultas adiciona mais algumas consultas ali para a gente entender. Por exemplo, clientes valiosos aqui porque tem um ticket médio. Ele faz esse cálculo aqui
+
+395
+01:09:00.410 --> 01:09:01.290
+Ricardo Garcia: tá joia.
+
+396
+01:09:01.290 --> 01:09:25.760
+Ricardo Garcia: Então vejam que é uma forma bem simples. A gente não está tratando nenhuma ferramenta de desenvolvimento, nenhuma plataforma nem nada, mas os conceitos que são aplicados nisso aqui são conceitos que a gente utiliza para caramba, inclusive, e também ali que foi comentado. Isso. Aí se você faz uma Api, por exemplo,
+
+397
+01:09:25.760 --> 01:09:35.310
+Ricardo Garcia: utiliza Python e tal muitos conceitos que a gente utiliza no desenvolvimento, mesmo utilizando Apis, esse tipo de coisa. Então é isso. Aí mesmo.
+
+398
+01:09:35.310 --> 01:09:46.119
+Ricardo Garcia: Então, aqui está o código bem simples. Depois eu compartilho ali com vocês. E aqui está o nosso sistema está criando uma carinha para a gente
+
+399
+01:09:46.790 --> 01:10:05.009
+Ricardo Garcia: entender o funcionamento dele. Depois vou criar aqui a gestão de estoque que dá entrada, dá entrada no produto lá também. Depois dá entrada no estoque, fazer uma coisa bacana aqui só para a gente finalizar. E também queria criar aqui também. Eu não sei. Mas eu não sei se para a próxima semana
+
+400
+01:10:05.010 --> 01:10:10.160
+Ricardo Garcia: fazer aqui um item a mais aqui, que é ferramentas, por exemplo,
+
+401
+01:10:10.160 --> 01:10:24.899
+Ricardo Garcia: e lógico, como hoje, todo mundo fala sobre Ia Iá Iá aquela coisa toda adicionar uma ferramenta aqui. Se você quiser falar alguma coisa num chat, fazer uma integração com o Ia, para vocês verem como é que funciona também no Python. Integrar
+
+402
+01:10:24.900 --> 01:10:32.559
+Ricardo Garcia: essa tecnologia. Para vocês verem como funciona uma Api. Não sei se vocês já fizeram isso. Não sei se já fizeram também.
+
+403
+01:10:32.560 --> 01:10:43.259
+Ricardo Garcia: Às vezes também é uma coisa que você já tem. Daí, eu colocaria uma Api aqui, não fizeram? Ah, então vou colocar. É bem tranquilo. Vou colocar uma opção aqui,
+
+404
+01:10:43.360 --> 01:10:56.729
+Ricardo Garcia: tipo assim, ferramentas, né? E daí? Vou colocar lá uma integração com o Api. Alguma coisa assim para a gente colocar lá, digitar alguma coisa e ele trazer para nós responder as perguntas ali, e tal,
+
+405
+01:10:56.730 --> 01:11:06.440
+Ricardo Garcia: só para vocês verem como é que a gente faz essa integração com ferramentas também. Inclusive utilizando uma Api. É bem de boa. Então eu vou preparar também,
+
+406
+01:11:07.050 --> 01:11:07.910
+Ricardo Garcia: não é?
+
+407
+01:11:08.160 --> 01:11:24.190
+Ricardo Garcia: Então, show de bola aqui? Eu acho que vocês têm um exemplo bacana aqui. De vários conceitos que podem ajudar vocês também. Nesse sentido, a forma de estruturar aqui. Daí o que eu vou fazer. Eu vou criar a parte de gestão de estoque aqui.
+
+408
+01:11:24.190 --> 01:11:29.439
+Ricardo Garcia: Não digam que eu vou criar tudo para a próxima semana, mas como a gente tem mais umas duas, três aulas ainda, né?
+
+409
+01:11:29.440 --> 01:11:44.350
+Ricardo Garcia: E daí? Depois eu crio também a parte de ferramentas. Outro módulo aqui para receber essa parte da Api de inteligência artificial e tal para vocês verem como é que funciona. Também é bem tranquilo. Não tem segredo nenhum. Não?
+
+410
+01:11:44.940 --> 01:11:52.509
+Ricardo Garcia: Então aqui a gente já comentou e eu queria mostrar para vocês aqui um negócio bacana. Aqui também.
+
+411
+01:11:52.980 --> 01:11:56.889
+Ricardo Garcia: Deixa eu fechar aqui. Então, sair aqui da nossa aplicação,
+
+412
+01:11:59.450 --> 01:12:14.220
+Ricardo Garcia: a gente fecha aqui. Então a gente já está criando essa parte modular aqui e trazer um detalhe importante aqui, só para a gente acompanhar, que é o Debug.
+
+413
+01:12:14.400 --> 01:12:27.480
+Ricardo Garcia: Não sei se vocês já fizeram ou já utilizaram algum Debug normalmente uma coisa bem simples, mas eu vou trazer também que eu utilizo aqui o Mo aqui, que é bem tranquilo de fazer isso. A gente vai depurar
+
+414
+01:12:27.480 --> 01:12:39.559
+Ricardo Garcia: um código aqui só para vocês verem como é que funciona mesmo essa depuração de código aqui e tal, né? Isso é bacana. A gente fazer a gente usa bastante, inclusive na parte de banco de dados. Coisa nada lá, né?
+
+415
+01:12:40.010 --> 01:12:43.539
+Ricardo Garcia: Então vou trazer aqui um exemplo simples aqui
+
+416
+01:12:44.270 --> 01:12:48.130
+Ricardo Garcia: de uma questão que tinha. Deixa eu ver aqui. Cadê
+
+417
+01:12:49.200 --> 01:12:57.779
+Ricardo Garcia: uma loja de eletrônicos? Está promovendo uma liquidação para entrar com dez lá, né? Deixa eu colocar. Aqui está.
+
+418
+01:12:58.460 --> 01:12:59.210
+Ricardo Garcia: E aí
+
+419
+01:13:02.410 --> 01:13:07.420
+Ricardo Garcia: deixa eu colocar aqui significa peraí.
+
+420
+01:13:09.870 --> 01:13:12.880
+Ricardo Garcia: Já dá um jeito. Vou colocar aqui.
+
+421
+01:13:13.550 --> 01:13:32.049
+Ricardo Garcia: Então a loja de eletrônica está promovendo uma liquidação. Dez, sistema de ponta de venda precisa gerar automaticamente uma tabela de preços promocionais. Ao final de apresentar um resumo que é o mais caro, mais barato. A equipe optou por desenvolver uma formatação, transformação utilizando recurso
+
+422
+01:13:32.830 --> 01:13:41.509
+Ricardo Garcia: de List Compression. Essa parte de List Compression. Isso aqui não viesse coisa.
+
+423
+01:13:41.960 --> 01:14:00.829
+Ricardo Garcia: Ah, isso aí. O Pedro usa no Vs Code. É isso aí, Pedro dá para usar bem de boa. E aí eu vou colocar ali só para a gente entender como é que a gente faz a Api da Open Eye ou alguma outra ali que eu vou pegar ali só para a gente fazer a integração, para a gente ver ali para dar um.
+
+424
+01:14:01.610 --> 01:14:06.050
+Ricardo Garcia: Um overview também. Na forma de fazer ali também.
+
+425
+01:14:07.390 --> 01:14:23.339
+Ricardo Garcia: E aí a List Compression. Então o que eu vou fazer aqui? Trazer o List Compression aqui não é todo mundo que usa isso aqui? Não, hein? Tipo assim. Isso aqui tem coisas mais complexas e tal, né? Normalmente, o pessoal faz um forzão ali mesmo e só realmente os mais
+
+426
+01:14:23.340 --> 01:14:40.890
+Ricardo Garcia: especialistas, digamos assim, o pessoal utiliza, mas que também é bem tranquilo aqui, só que isso. Aqui você tem que muitas vezes testar de alguma maneira. E isso a gente vai trazer aqui. Vou trazer aqui para vocês dentro desse exemplo. Aqui,
+
+427
+01:14:41.570 --> 01:14:50.389
+Ricardo Garcia: deixa eu fazer aqui rapidinho aqui. Daí a tarefa. Desenvolver um programa gera uma lista de etiquetas promocionais. Aquela coisa toda, que é esse daqui
+
+428
+01:14:55.980 --> 01:15:07.649
+Ricardo Garcia: com desconto de dez, pá? Pá. No programa, obrigatoriamente utilizando disc compressiono. Então é isso que a gente vai fazer aqui.
+
+429
+01:15:07.840 --> 01:15:24.969
+Ricardo Garcia: Uma das coisas que eu queria comentar também com vocês. Já comentei também na doutora é que existem n maneiras de você fazer a mesma coisa. Não existe só essa aqui que eu fiz assim essa aqui, mas inclusive outro dia. Também eu sempre estou fazendo cursos aí e tal.
+
+430
+01:15:25.490 --> 01:15:36.860
+Ricardo Garcia: Deram uma situação lá para utilizar a inteligência artificial e tal. Meu, cada um fez um jeito e é muito bacana, porque cada um faz um jeito diferente. Meu Deus, nem sabia que poderia fazer dessa forma.
+
+431
+01:15:36.860 --> 01:15:49.539
+Ricardo Garcia: E dá para fazer. Então é show de bola, esse que é o objetivo de você trocar essas ideias e entender que uma atividade você pode fazer dn formas, e algumas
+
+432
+01:15:49.540 --> 01:16:06.840
+Ricardo Garcia: são melhores, outras não são tão boas, mas que cada um faz aí o que achar melhor. Então, por exemplo, tem uma entrada. Tem uma saída. A gente precisa pegar essas entradas e saídas aqui. Já deixei. Pronto, isso aqui não é que eu vou desenvolver agora? Nem muito menos. Mas aqui o que eu quero mostrar para vocês é assim.
+
+433
+01:16:06.840 --> 01:16:10.280
+Ricardo Garcia: Peguei aqui uma entrada, beleza. Vamos dar um input lá também, né?
+
+434
+01:16:10.280 --> 01:16:15.160
+Ricardo Garcia: Que é a entrada dos nomes das categorias. E vamos dar um
+
+435
+01:16:15.380 --> 01:16:24.919
+Ricardo Garcia: entrada de preços do input de preços para a gente fazer essa lista aí. Beleza aí, o que a gente faz a gente? Faz um tratamento básico aqui
+
+436
+01:16:25.920 --> 01:16:50.430
+Ricardo Garcia: só para a gente pegar esses valores aqui, criar essas listas, e entender como é que funciona. Então, antes da gente começar aqui, a gente tem que entender o que a gente está preparando. Puxa, eu tenho entrada de nomes que eu preciso ter ali também dos produtos. Eu tenho os valores, e eu preciso montar isso aqui. Mas eu quero entender como esses comandos funcionam. Então o que eu vou fazer aqui. Vou salvar ele aqui.
+
+437
+01:16:50.430 --> 01:16:56.170
+Ricardo Garcia: Qualquer um deles aqui. Eu já tenho várias aqui. Menu. Não tem nada a ver, mas a gente sabe que mesmo pronto
+
+438
+01:16:56.170 --> 01:17:00.819
+Ricardo Garcia: e agora, na execução. O que eu vou fazer? Eu vou depurar.
+
+439
+01:17:00.980 --> 01:17:18.979
+Ricardo Garcia: Tem um depurar aqui, né? Reparem que aqui ele traz os valores para mim. Aqui o File onde ele está armazenado o Mind aqui que ele vai iniciar. E o que eu vou fazer agora? Eu vou avançar. Então, entrada de nomes. Vai pedir entrada de nomes. Ele está executando. Eu vou colocar aqui.
+
+440
+01:17:21.130 --> 01:17:22.960
+Ricardo Garcia: Eu vou colocar aqui.
+
+441
+01:17:25.170 --> 01:17:27.309
+Ricardo Garcia: Coloquei os nomes aqui.
+
+442
+01:17:27.520 --> 01:17:37.560
+Ricardo Garcia: E aí eu vou entrar. Vou avançar aqui. Entrada de preços. Então vou colocar aqui também os preços relacionados a cada um deles.
+
+443
+01:17:41.540 --> 01:17:47.940
+Ricardo Garcia: Coloquei os preços. Beleza estão fazendo isso. Deixa eu ver aqui uma coisa.
+
+444
+01:17:53.840 --> 01:17:57.209
+Ricardo Garcia: Beleza foi, ó.
+
+445
+01:17:57.710 --> 01:18:09.769
+Ricardo Garcia: Reparem que aqui, quando eu estou depurando. Essa é uma ferramenta super simples, mas tem outras ferramentas que entregam mais informações. Mas, ó, eu tenho os valores aqui, então eu já entendi
+
+446
+01:18:09.830 --> 01:18:25.519
+Ricardo Garcia: que as minhas variáveis. Isso é legal para a gente visualizar a informação. Então eu sei que a minha variável entrada de imóveis. Eu entrei com esses daqui e entrei com entrada de preço. E eu tenho esses valores aqui. Show de bola. É isso aqui, beleza. Vamos avançar lá.
+
+447
+01:18:25.770 --> 01:18:48.249
+Ricardo Garcia: Aí ele já gerou uma variável que ele fez um split. O que faz o Split? Ele busca a vírgula e monta uma lista. Então o zero. Eu tenho o notebook, o um. Então inclusive eu tenho um Index de cada um deles. Um, dois, três, quatro, cinco. Ó notebook mouse teclado, que é uma lista de cinco itens. Que é esse? Nomes,
+
+448
+01:18:48.250 --> 01:18:58.110
+Ricardo Garcia: beleza? Agora vamos para o próximo lá avançar. Preço, texto, mesma coisa. Trouxe zero, um, dois, três, quatro. E aqui ele trouxe os valores,
+
+449
+01:18:58.110 --> 01:19:08.469
+Ricardo Garcia: meu. Então você entende como é o funcionamento dele entender o que está executando em cada linha. Isso aí, a gente usa para caramba. Eu tive que fazer
+
+450
+01:19:08.470 --> 01:19:19.590
+Ricardo Garcia: outros sistemas ali também de conexão conexo acumulado, um banco de dados e para outro. E tem um banco de dados centralizado que tem buscado essas informações e tal
+
+451
+01:19:19.590 --> 01:19:34.799
+Ricardo Garcia: tudo isso a gente faz, depurando, faz, debugando que a gente fala, faz um debug dele ali e vai fazendo linha a linha para entender o que está sendo executado. Porque senão às vezes você nem sabe, puta. Mas que valor é esse aqui o que ele faz. E não sei o quê. E aí a gente acaba se perdendo.
+
+452
+01:19:35.130 --> 01:19:41.639
+Ricardo Garcia: Nesse caso, que a gente está com exemplos mais simples. É bacana a gente fazer isso para justamente entender como é que ele funciona.
+
+453
+01:19:42.100 --> 01:19:52.870
+Ricardo Garcia: Então eu dei preços aqui, o que é o preço? Ele separou aqui. Então esse comando aqui, que ele faz utilizando um fora. Aqui, ele separa
+
+454
+01:19:52.930 --> 01:20:09.259
+Ricardo Garcia: simplesmente os preços aqui. Preço texto. Ele faz o quê? Ele faz separação. Ele separou aqui e eu tenho uma lista de preços relacionada a um índice que eu tenho aqui. Então, beleza, vou parar. Fazer. Montei essa estrutura inicial para separar tudo.
+
+455
+01:20:09.640 --> 01:20:18.010
+Ricardo Garcia: E agora eu preciso definir as etiquetas a etiqueta. Eu vou fazer uma lista aqui também. E aí, o que eu vou fazer?
+
+456
+01:20:18.350 --> 01:20:20.189
+Ricardo Garcia: Eu vou fazer um for
+
+457
+01:20:20.390 --> 01:20:25.489
+Ricardo Garcia: só que não é para fazer o Ford. Mas primeiro eu vou fazer o Ford. Depois eu vou fazer
+
+458
+01:20:26.260 --> 01:20:32.699
+Ricardo Garcia: o Compression lá e tal para a gente entender a diferença de um e a diferença do outro. Então, beleza, vou parar aqui,
+
+459
+01:20:34.740 --> 01:20:39.149
+Ricardo Garcia: salvar Japamine. Salvei lá beleza.
+
+460
+01:20:39.320 --> 01:20:44.360
+Ricardo Garcia: E agora a gente vai depurar e vamos isso avançar.
+
+461
+01:20:45.270 --> 01:20:50.920
+Ricardo Garcia: Ah, tem que colocar aqui. Não esqueço de colocar que
+
+462
+01:20:55.380 --> 01:20:58.720
+Ricardo Garcia: não enter e coloco isso daqui também.
+
+463
+01:21:02.660 --> 01:21:05.130
+Ricardo Garcia: Normalmente, beleza
+
+464
+01:21:06.670 --> 01:21:25.379
+Ricardo Garcia: avançar. Já colocou os dois ali, beleza, vamos avançar. Aqui. Foi, foi. Já tem os valores aqui, ó Norma, os preços já tem as listas. Etiqueta vai ser vazio por enquanto, porque não tem nada. Então ele está aqui. Uma lista vazia. Zero itens, né? E agora ele faz um for
+
+465
+01:21:25.380 --> 01:21:44.660
+Ricardo Garcia: justamente utilizando o enumerante aqui, ele junta os dois nome e preço aqui. E ele coloca dentro dessas variáveis. E olha só. Como é que ele faz aqui? Agora vamos avançar. Número do item. Então, ó, ele põe aqui, ó número do item um preço promocional do item um, beleza. Ele vai lá avançar.
+
+466
+01:21:45.610 --> 01:21:54.690
+Ricardo Garcia: Preço promocional, vinte e oito e dois.oitocentos e oitenta beleza. E aqui ele já põe aqui avançar. Ele já gera a etiqueta.
+
+467
+01:21:55.160 --> 01:21:58.990
+Ricardo Garcia: Cadê a etiqueta? Ó, está aqui. A etiqueta
+
+468
+01:22:00.150 --> 01:22:13.150
+Ricardo Garcia: está aqui. Ele já põe lá o um que ele montou aqui. Que é esse código aqui que ele monta e preenche com zero em duas casas.
+
+469
+01:22:13.150 --> 01:22:29.790
+Ricardo Garcia: Põe o nome, põe o valor original aqui também, com duas casas decimais que ele faz a formatação em duas casas e o preço promocional. Ele já monta aqui, então ele deve estar montando essa lista. Se a gente der em avançar aqui, ele vai fazer a mesma coisa.
+
+470
+01:22:29.930 --> 01:22:41.100
+Ricardo Garcia: Ó dois, ó tá montando aqui, ó três, quatro, cinco. Ó, tá aqui, ó não é?
+
+471
+01:22:41.230 --> 01:22:42.270
+Ricardo Garcia: E aqui
+
+472
+01:22:42.980 --> 01:22:53.080
+Ricardo Garcia: acabou. Então ele montou a lista. Aqui já está. A lista montada dentro desse fórum. Aqui já montou daí. Eu simplesmente eu daria um print aqui. Faria.
+
+473
+01:22:53.080 --> 01:23:08.029
+Ricardo Garcia: Faria um Print ou um Print em cada uma delas aqui e montaria a etiqueta sem nenhum problema. Mas o interessante é ver como que ele monta aqui e agora. Beleza. Vamos finalizar já, porque já está acabando. Uma forma mais rápida de se fazer. Deixa eu parar aqui, ó,
+
+474
+01:23:08.290 --> 01:23:09.940
+Ricardo Garcia: seria assim também.
+
+475
+01:23:10.150 --> 01:23:12.960
+Ricardo Garcia: Tira o Four e faz com
+
+476
+01:23:16.140 --> 01:23:19.329
+Ricardo Garcia: o compréstimo lá. Que é esse daqui? Ó que é esse aqui?
+
+477
+01:23:19.440 --> 01:23:28.150
+Ricardo Garcia: Na verdade, isso aqui está fazendo a mesma coisa que o Four. Só que ele está fazendo isso aqui. Ele monta o Four porque o Four é esse aqui que nós temos que prestar atenção
+
+478
+01:23:28.270 --> 01:23:39.070
+Ricardo Garcia: ele está fazendo na verdade o mesmo Ford. Só que ele está colocando tudo isso aqui numa linha só. Ele faz de uma vez só aqui. Mas o importante é a gente visualizar essa parte. Aqui
+
+479
+01:23:39.070 --> 01:23:59.229
+Ricardo Garcia: enumerait. Ele pega o Zip, monta, faz o nome e o preço aqui igual. E o índice que ele tem aqui, que é o que ele vai colocar aqui dentro e vai falar. Ele é um índice é zero. Por isso que ele põe índice mais um para iniciar a partir do um e faz a formatação exatamente igual. Então, se a gente executar isso aqui, agora, salvar,
+
+480
+01:24:00.210 --> 01:24:01.380
+Ricardo Garcia: Depurar.
+
+481
+01:24:03.340 --> 01:24:08.349
+Ricardo Garcia: Vamos fazer assim. Ó, continuar até aqui embaixo. Deixa eu colocar lá.
+
+482
+01:24:09.070 --> 01:24:18.170
+Ricardo Garcia: Ele junta, ele junta os valores aqui. O Zip quer ver a gente. Já vai ver. Aqui. Deixa eu ver aqui.
+
+483
+01:24:19.250 --> 01:24:23.010
+Ricardo Garcia: Espera aí que eu tenho que colocar os valores aqui.
+
+484
+01:24:25.840 --> 01:24:31.360
+Ricardo Garcia: Eu vou colocar fixo depois para a gente acelerar o processo ali.
+
+485
+01:24:40.310 --> 01:24:42.000
+Ricardo Garcia: Pronto, foi aqui.
+
+486
+01:24:44.300 --> 01:24:47.720
+Ricardo Garcia: Deixa avançar.
+
+487
+01:24:49.130 --> 01:24:53.079
+Ricardo Garcia: Cadê a lista de etiquetas aqui.
+
+488
+01:24:56.950 --> 01:24:58.779
+Ricardo Garcia: Etiquetas aqui. Ó,
+
+489
+01:25:08.490 --> 01:25:09.200
+Ricardo Garcia: obrigado.
+
+490
+01:25:15.530 --> 01:25:18.000
+Ricardo Garcia: Peraí. Deixa eu ampliar aqui só um pouquinho.
+
+491
+01:25:21.660 --> 01:25:27.879
+Ricardo Garcia: E aí, só para pôr exemplo. Certo, aqui, senão vai ficar.
+
+492
+01:25:37.540 --> 01:25:39.260
+Ricardo Garcia: Deixa eu pegar aqui,
+
+493
+01:25:50.800 --> 01:25:52.749
+Ricardo Garcia: peraí. Deixa, eu
+
+494
+01:26:11.700 --> 01:26:13.829
+Ricardo Garcia: peraí, pessoal. Já estou terminando aqui, hein?
+
+495
+01:26:31.840 --> 01:26:34.790
+Ricardo Garcia: Isso é tudo muito bonito aqui, ó
+
+496
+01:26:39.790 --> 01:26:41.779
+Ricardo Garcia: beleza já deu aqui,
+
+497
+01:26:51.520 --> 01:26:59.639
+Ricardo Garcia: tá? Deixa eu só executar aqui o executar de novo. Aqui. Deixa eu ver. Olha, eu. Marquinho aqui para executar o Debugger até aqui embaixo, né?
+
+498
+01:27:00.400 --> 01:27:06.900
+Ricardo Garcia: Deixa eu fazer aqui. Então, só para finalizar, puxa, já está bem na hora. Aqui. Deixa eu parar aqui, executar, novo depurar
+
+499
+01:27:11.230 --> 01:27:14.889
+Ricardo Garcia: e aí colocar aqui. Faz esse aqui.
+
+500
+01:27:17.620 --> 01:27:23.700
+Ricardo Garcia: E esse aqui só para finalizar. Agora, né? A gente monta aqui. Vamos montar tudo aqui,
+
+501
+01:27:27.600 --> 01:27:33.850
+Ricardo Garcia: não foi até lá e vou dar continuar aqui. Ele montou montar
+
+502
+01:27:34.670 --> 01:27:37.759
+Ricardo Garcia: as etiquetas aqui. Deixa eu dar continuar
+
+503
+01:27:39.560 --> 01:27:44.640
+Ricardo Garcia: e ele monta as etiquetas da mesma forma.
+
+504
+01:27:49.360 --> 01:27:54.119
+Ricardo Garcia: Estranho, não consegui. Não deu certo. Quem deixou fazer aqui?
+
+505
+01:27:56.360 --> 01:28:04.269
+Ricardo Garcia: Vou fazer aqui um print e etiqueta. Então não sei se tem que ter vinte kits. Pronto,
+
+506
+01:28:06.050 --> 01:28:10.770
+Ricardo Garcia: pessoal. Não deu certo que o exemplo que eu queria fazer para vocês ali, sacanagem,
+
+507
+01:28:14.200 --> 01:28:15.980
+Ricardo Garcia: parar, depurar.
+
+508
+01:28:17.700 --> 01:28:19.430
+Ricardo Garcia: E vou colocar aqui de novo.
+
+509
+01:28:28.760 --> 01:28:35.250
+Ricardo Garcia: Agora vai dar certo. Peraí que eu estou terminando a aula aqui para não usar você, senão a gente faz isso não
+
+510
+01:28:36.700 --> 01:28:41.890
+Ricardo Garcia: avançar, avançar. Coloquei ali. Os dois avançaram, começaram a avançar
+
+511
+01:28:42.470 --> 01:28:47.429
+Ricardo Garcia: etiquetas. Agora girou. Ah, beleza, etiquetas, etiquetas.
+
+512
+01:28:48.250 --> 01:28:50.560
+Ricardo Garcia: Aí agora gerou, tá?
+
+513
+01:28:51.080 --> 01:28:55.339
+Ricardo Garcia: Ele montou a etiqueta da mesma forma que a gente fez no fórum lá também, né?
+
+514
+01:28:56.960 --> 01:29:02.190
+Ricardo Garcia: E aí ele utilizou o Zip. Nomes aqui. O que é o Zip ali, né?
+
+515
+01:29:02.510 --> 01:29:04.629
+Ricardo Garcia: O Zip faz a.
+
+516
+01:29:04.640 --> 01:29:23.110
+Ricardo Garcia: Não é concatenação, mas pode até achar de um valor com outro valor. Aqui, por exemplo. Então ele pega notebook e coloca o valor de três.duzentos. O Mouse com oitenta e nove, ele faz essa? Não sei se chama concatenar. Isso aí.
+
+517
+01:29:23.520 --> 01:29:38.630
+Ricardo Garcia: Tem outro nome. Agora não me venha. Mas o que ele faz é isso aqui. Ele faz essa ligação entre um valor e outro aqui, dentro do mesmo índice. Então ele está falando o nome que ele está utilizando aqui, e o preço que ele tem, cada produto.
+
+518
+01:29:38.630 --> 01:29:45.550
+Ricardo Garcia: Então é por isso que ele faz isso aqui. E aí ele consegue montar a lista. Ele consegue montar
+
+519
+01:29:45.550 --> 01:30:00.980
+Ricardo Garcia: trazendo essa lista justamente porque ele põe o preço. Ele põe o nome aqui Notebook, traz o preço original e ele faz essa com uma. Não sei se é um alinhamento, Putz. Tem um nome para isso? Não me lembro qual é o nome
+
+520
+01:30:01.260 --> 01:30:05.960
+Ricardo Garcia: que utiliza ali, mas não é também alinhamento. Deixa eu ver se eu acho que.
+
+521
+01:30:07.230 --> 01:30:09.220
+Ricardo Garcia: E foi. Viu,
+
+522
+01:30:11.400 --> 01:30:20.480
+Ricardo Garcia: eu pus a descrição aqui. Deixa eu ver se está aqui. Combina. Ele combina. Combina os elementos
+
+523
+01:30:20.790 --> 01:30:24.889
+Ricardo Garcia: de duas listas. Então ele está combinando aqui o Zip.
+
+524
+01:30:25.460 --> 01:30:32.679
+Ricardo Garcia: Ele está combinando a lista da. Espera aí. Deixa eu pegar aqui. Não está aparecendo.
+
+525
+01:30:32.730 --> 01:30:36.329
+Ricardo Garcia: Ele combina esses valores. Então ele pega. Combina
+
+526
+01:30:36.330 --> 01:30:46.499
+Ricardo Garcia: da lista que ele tem, o nome e o preço. E faz a combinação deles, que é justamente isso que ele faz aqui. Ele coloca um nome aqui
+
+527
+01:30:46.500 --> 01:30:56.539
+Ricardo Garcia: e traz o preço aqui. Então ele faz a combinação de um elemento com outro elemento do mesmo índice daquelas duas listas. É isso que ele faz
+
+528
+01:30:56.620 --> 01:31:00.320
+Ricardo Garcia: beleza. Deu para entender. Não sei se ficou claro,
+
+529
+01:31:00.350 --> 01:31:18.610
+Ricardo Garcia: mas ele faz isso. Ele combina duas listas ali. Beleza, Matheus. E daí? Ele consegue entender que o produto X lá tem esse preço aqui e tal. Ele faz essa combinação das listas ali. Daí monta. Consegue montar a lista aqui. Então é isso. Dei um print aqui também, né? Deixa eu ver se vai rolar aqui. O Print
+
+530
+01:31:18.610 --> 01:31:23.140
+Ricardo Garcia: montou, mas não ficou muito legal. É só para a gente visualizar.
+
+531
+01:31:23.140 --> 01:31:31.379
+Ricardo Garcia: Mas deixa eu finalizar. Aqui a gente já é dez horas ali também não quero cansar vocês ali.
+
+532
+01:31:33.050 --> 01:31:47.029
+Ricardo Garcia: A equipe do E. Commerce vai. Sim, sim, deixa. Eu só. Eu vou colocar mais, melhorar ele colocar mais algumas coisas ali e tal. Depois eu vou disponibilizar toda a estrutura ali para vocês. Sem nenhum problema.
+
+533
+01:31:47.030 --> 01:31:59.780
+Ricardo Garcia: Eu acho que não. Na próxima aula, sexta feira na outra, eu acho. Já dá para se a gente conseguir. Se eu montar aquela parte da
+
+534
+01:31:59.850 --> 01:32:07.829
+Ricardo Garcia: da Ia lá e tal, já passo para vocês ali. Sem problema. Aí, aqui, só para finalizar mesmo. Pessoal, eu já deixei. Pronto, aqui, ó.
+
+535
+01:32:08.010 --> 01:32:16.310
+Ricardo Garcia: E daí a gente roda de uma vez só. A etiqueta faz um print da etiqueta. E aí ele tem aqui o preço mínimo e o preço máximo
+
+536
+01:32:16.910 --> 01:32:17.860
+Ricardo Garcia: também
+
+537
+01:32:21.450 --> 01:32:23.110
+Ricardo Garcia: é. Mas tem bastante coisa.
+
+538
+01:32:23.560 --> 01:32:42.890
+Ricardo Garcia: Vamos deixar para a próxima semana, então. Senão passa muito do tempo, né? Vocês também estão cansados. Também não é o fato da gente. Na próxima semana, daí, a gente fala muito mais dos exemplos que a gente tem aqui. Do que a gente fala um pouquinho menos ali dos sistemas e tal, a gente acaba se empolgando ali e falando um pouco mais,
+
+539
+01:32:42.890 --> 01:32:50.670
+Ricardo Garcia: e daí a gente extrapola um pouco o tempo, mas também não tem problema. Isso aqui é só para a gente entender algumas
+
+540
+01:32:51.010 --> 01:33:00.410
+Ricardo Garcia: mais as características e bater um papo um pouco mais a fundo ali e tal das execuções. Mas o objetivo desse exercício aqui era principalmente vocês debugar
+
+541
+01:33:00.410 --> 01:33:03.690
+Ricardo Garcia: de vocês utilizarem dentro da
+
+542
+01:33:03.690 --> 01:33:21.710
+Ricardo Garcia: das opções aí que vocês têm, das aplicações que vocês estão utilizando dos ides e tal utilizar a parte debugar, porque isso facilita bastante o nosso dia a dia. Ajuda bastante nesse sentido. Então era só mais por isso, aí também, e obviamente, para a gente passar os outros conceitos aqui. Eu já preparei essa parte do
+
+543
+01:33:21.780 --> 01:33:23.460
+Ricardo Garcia: né? De
+
+544
+01:33:23.890 --> 01:33:31.740
+Ricardo Garcia: do compression para a gente ver outros exemplos ali e tal. Bem bacana, mas aí a gente vê isso na semana que vem. Ali não tem problema.
+
+545
+01:33:32.000 --> 01:33:33.320
+Ricardo Garcia: Beleza pessoal.
+
+546
+01:33:33.610 --> 01:33:34.670
+Ricardo Garcia: É isso aí.
+
+547
+01:33:34.810 --> 01:33:42.339
+Ricardo Garcia: Pessoal. Bom descanso. É um final de semana que vocês possam descansar e que dê tudo certo.
+
+548
+01:33:42.700 --> 01:33:55.989
+Ricardo Garcia: E se Deus quiser, eu acho que tem aula semana que vem porque é feriado na quinta feira. Não sei se na sexta feira tem aula, mas eu acho que tem. Pelo menos ninguém me passou, que não teria aula, né? Deixa eu ver se aqui a gente tem agendado. Acho que tem.
+
+549
+01:33:56.320 --> 01:34:00.269
+Ricardo Garcia: Uou beleza. Valeu, pessoal.
+
+550
+01:34:00.390 --> 01:34:12.199
+Ricardo Garcia: Bom fim de semana aí para vocês também. Boa noite. Bom descanso. E a gente se fala. Aí a princípio, semana que vem qualquer coisa se não tiver aula, a gente põe lá no fórum e tal. Mas eu acho que vai ter aula. Sim, beleza.
+
+551
+01:34:12.570 --> 01:34:13.330
+Ricardo Garcia: Valeu, pessoal.
+
+552
+01:34:13.330 --> 01:34:14.699
+gabriel.diniz: Tamo, junto.
+
+553
+01:34:14.700 --> 01:34:17.390
+Ricardo Garcia: Valeu. Tamo, junto, brigadão. Até mais.
+
+554
+01:34:17.510 --> 01:34:18.750
+Ricardo Garcia: Valeu, pessoal.
+
+555
+01:34:19.230 --> 01:34:22.950
+Ricardo Garcia: Bom descanso. Aí valeu. Boa noite.
+
+556
+01:34:24.680 --> 01:34:25.950
+Ricardo Garcia: Valeu, pessoal.
+
+557
+01:34:26.230 --> 01:34:27.689
+Ricardo Garcia: Brigadão, brigadão.
+
+558
+01:34:28.870 --> 01:34:33.670
+Ricardo Garcia: Tamo junto. Bom descanso. Aí. Valeu, Tchau, Tchau, pessoal.
+
+559
+01:34:34.110 --> 01:34:35.540
+Ricardo Garcia: Isso aí.
+
+560
+01:34:35.850 --> 01:34:42.920
+Ricardo Garcia: Está na hora. Ainda bem que chegou, né? Demora, mas chega, né, beleza. Valeu, pessoal.
+
+561
+01:34:43.450 --> 01:34:45.150
+Ricardo Garcia: Até mais. Então. Tchau, tchau.
+

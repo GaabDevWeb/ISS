@@ -1,2346 +1,2558 @@
 WEBVTT
 
 1
-00:00:09.690 --> 00:00:11.349
-Gesiel Lopes: Ô pessoal. Boa tarde.
+00:00:10.700 --> 00:00:15.989
+Gesiel Lopes: Pessoal. Boa noite. Vamos aguardar só dois minutinhos. Já. Já iniciamos. Só beber aqui um pouco d'água.
 
 2
-00:00:13.970 --> 00:00:18.969
-Gesiel Lopes: Vamos já já iniciar. Vamos aguardar os nossos dois minutinhos como de praxe.
+00:02:57.880 --> 00:03:00.919
+Gesiel Lopes: Opa, pessoal. Boa noite. Vamos lá dar início.
 
 3
-00:00:19.700 --> 00:00:21.959
-Gesiel Lopes: E aí já já iniciamos. Tranquilo,
+00:03:02.450 --> 00:03:14.870
+Gesiel Lopes: Então, antes de mais nada, muito boa noite. Seja muito bem vindo. Muito bem vindo aqui ao nosso terceiro encontro da disciplina de Python para processamento de dados aqui do segundo ciclo,
 
 4
-00:04:47.940 --> 00:04:50.869
-Gesiel Lopes: então acho que já dá para a gente começar, pessoal. Então, vamos lá
+00:03:15.110 --> 00:03:25.189
+Gesiel Lopes: que é o ciclo de fundamentos de processamento de dados aqui do Instituto Wifinete. Aqui quem nos fala? Gesiel Lopes. Vamos fazer aquela nossa introdução
 
 5
-00:04:51.570 --> 00:05:04.380
-Gesiel Lopes: então. Antes de mais nada, seja muito bem vindo. Muito bem vindo aqui ao nosso. Há mais um encontro aqui da disciplina de Python para processamento de dados do segundo ciclo
+00:03:25.380 --> 00:03:35.860
+Gesiel Lopes: de sempre. E aproveito aí para pedir um feedback de quem está aqui ao vivo conosco? Vocês conseguem me ouvir ilegal? Conseguem me ver bem, está tudo tranquilo.
 
 6
-00:05:04.750 --> 00:05:20.720
-Gesiel Lopes: do bloco de fundamentos de dados. Aqui quem nos fala é o Gisele Lopes. Muito boa tarde. Vamos chegando. Seja mais uma vez, muito bem vindo. Muito bem vinda. Enfim, lembrando que nós estamos iniciando nesse exato momento o nosso quarto encontro,
+00:03:37.360 --> 00:03:40.409
+Gesiel Lopes: Ok, Massa. Tranquilo.
 
 7
-00:05:20.990 --> 00:05:22.390
-Gesiel Lopes: que consiste
+00:03:40.570 --> 00:03:51.189
+Gesiel Lopes: Obrigado. Aí o Kleber, Noah, o Matheus valeu, pessoal. E você que está assistindo a gravação também, né? Bom dia. Boa tarde. Boa noite. Enfim, por horário que você estiver nos acompanhando.
 
 8
-00:05:23.050 --> 00:05:32.680
-Gesiel Lopes: na reposição do nosso segundo encontro que deveria ter ocorrido no dia quinze, mas por conta aí, de,
+00:03:52.090 --> 00:03:58.999
+Gesiel Lopes: Deixa eu compartilhar aqui minha tela com vocês sem mais delongas.
 
 9
-00:05:32.920 --> 00:05:43.550
-Gesiel Lopes: de alguns compromissos previamente a já realizados antes de iniciarmos a disciplina. A gente teve esse.
+00:03:59.630 --> 00:04:08.270
+Gesiel Lopes: E aí, antes de continuar pessoal, deixa eu só lembrando que é esse encontro. É um encontro que a gente está utilizando para repor
 
 10
-00:05:43.830 --> 00:05:45.000
-Gesiel Lopes: Essa
+00:04:08.640 --> 00:04:13.360
+Gesiel Lopes: o primeiro encontro. É o terceiro encontro,
 
 11
-00:05:45.480 --> 00:05:58.339
-Gesiel Lopes: contratempo de estar repondo hoje. Então, mais uma vez, gostaria de deixar aqui o meu agradecimento a cada um de vocês que estão aqui ao vivo, lembrando que a presença não é obrigatória
+00:04:14.110 --> 00:04:18.820
+Gesiel Lopes: mas na realidade, está repondo o nosso primeiro encontro, tá,
 
 12
-00:05:58.340 --> 00:06:10.080
-Gesiel Lopes: pelo fato do nosso encontro estar sendo realizado fora num horário fora do calendário acadêmico, mas deixamos aqui gravado até para cumprir o nosso calendário.
+00:04:18.940 --> 00:04:25.070
+Gesiel Lopes: então é a primeira reposição relacionada ao dia treze, correto?
 
 13
-00:06:10.080 --> 00:06:21.340
-Gesiel Lopes: E aí aproveito para quem está aqui ao vivo conosco. Dá um feedback. Vocês estão me ouvindo bem? Estão me vendo bem, está tudo tranquilo nesse sabadão.
+00:04:25.320 --> 00:04:36.869
+Gesiel Lopes: Que foi segunda feira passada, e aí a reposição do segundo encontro, que será o nosso quarto encontro será sábado, no dia vinte
 
 14
-00:06:25.480 --> 00:06:35.260
-Gesiel Lopes: Tudo paz. O Alan, o Alan Dutra, o Nelson. Beleza, Alan, vou só ajeitar aqui uma coisa que está me incomodando aqui já. Já.
+00:04:37.520 --> 00:04:39.000
+Gesiel Lopes: e cinco.
 
 15
-00:06:50.520 --> 00:06:52.570
-Gesiel Lopes: Pronto, pronto, pronto.
+00:04:41.220 --> 00:04:42.370
+Gesiel Lopes: Tranquilo.
 
 16
-00:06:52.840 --> 00:06:59.780
-Gesiel Lopes: É que eu moro do lado de um prédio e aí o prédio. Fica. E aí eu preciso
+00:04:43.360 --> 00:04:45.730
+Gesiel Lopes: Outra coisa, pessoal.
 
 17
-00:07:00.470 --> 00:07:10.149
-Gesiel Lopes: colocar aqui para não interferir muito. Eu acredito que vocês não escutam por conta da supressão de ruído do Zoom
+00:04:46.620 --> 00:05:02.699
+Gesiel Lopes: Só fazer aqui um esclarecimento. Muitas das vezes. Vocês. Não sei se vocês perceberam. Antes, na primeira disciplina, eu gostava de entrar uns cinco minutinhos antes, dois minutinhos antes. Às vezes eu entrava na horário, mas
 
 18
-00:07:10.350 --> 00:07:23.830
-Gesiel Lopes: incomoda e você que estiver assistindo a gravação também seja muito bem vindo ao horário que você estiver assistindo. Um bom dia. Boa tarde. Boa noite. Enfim, o horário que você estiver colocando em dias aí os seus estudos.
+00:05:02.700 --> 00:05:14.070
+Gesiel Lopes: em geral, eu tentava entrar um pouco antes. Agora, às vezes vocês perceberam? Às vezes eu entro dois minutinhos depois. Às vezes eu consigo entrar no mesmo horário. Às vezes eu consigo
 
 19
-00:07:23.830 --> 00:07:33.359
-Gesiel Lopes: Então vamos lá, pessoal. Sem mais delonga. Mais uma vez, vou compartilhar logo aqui a minha tela com todos vocês, já para iniciarmos
+00:05:14.210 --> 00:05:17.989
+Gesiel Lopes: então sempre. Eu vou ter esse intervalo aí. Pessoal de cinco minutos,
 
 20
-00:07:34.710 --> 00:07:37.230
-Gesiel Lopes: o nosso encontro. De fato.
+00:05:18.300 --> 00:05:22.140
+Gesiel Lopes: porque eu estou tendo uma disciplina no infinete em outro bloco
 
 21
-00:07:38.210 --> 00:07:47.620
-Gesiel Lopes: Opa, é, vou colocar aqui, acredito eu, que vocês estejam
+00:05:22.690 --> 00:05:29.030
+Gesiel Lopes: que começa antes da de vocês. Então, muitas das vezes eu não consigo terminar
 
 22
-00:07:48.080 --> 00:07:51.460
-Gesiel Lopes: nesse exato momento, vendo a minha tela
+00:05:29.170 --> 00:05:43.180
+Gesiel Lopes: exatamente antes ou no horário. Mas quando dá oito e meia, eu finalizo e aí até sair do Zoom até sair da sala e entrar na sala. Por mais que eu consiga terminar
 
 23
-00:07:52.460 --> 00:07:55.760
-Gesiel Lopes: e vou colocar aqui o Deep note.
+00:05:43.440 --> 00:05:57.340
+Gesiel Lopes: antes das oito e meia, que é o que acontece. Geralmente tem esse delay de poder sair da sala e entrar nessa sala aqui do link de vocês aí. Por isso só para que a gente depois não,
 
 24
-00:07:56.350 --> 00:07:57.370
-Gesiel Lopes: E aí,
+00:05:57.720 --> 00:06:12.159
+Gesiel Lopes: não tenha nenhum desencontro ou vá pensar. Não, Gesuel. Agora só entra atrasado, só entra atrasado. Não, não. É que eu entre atrasado sempre. Eu vou tentar ficar dentro desse intervalo de tolerância que eu sempre utilizei de cinco minutos.
 
 25
-00:08:01.030 --> 00:08:05.880
-Gesiel Lopes: com o um código que nós iremos trabalhar.
+00:06:12.550 --> 00:06:23.530
+Gesiel Lopes: Às vezes eu vou fazer o máximo para conseguir. Às vezes eu consigo. Então, se tiver um atrasozinho de cinco, um pouquinho mais de cinco minutos. Não mais do que isso,
 
 26
-00:08:06.950 --> 00:08:11.940
-Gesiel Lopes: Opa, Opa, aqui, eu aproveito para
+00:06:23.690 --> 00:06:24.770
+Gesiel Lopes: beleza.
 
 27
-00:08:13.570 --> 00:08:16.810
-Gesiel Lopes: expandir. Deixa eu só aumentar aqui um pouquinho a tela.
+00:06:25.360 --> 00:06:27.310
+Gesiel Lopes: Só fazendo esse disclaimer.
 
 28
-00:08:18.080 --> 00:08:22.209
-Gesiel Lopes: Tá bom? Desse tamanho. Acho que tá legal, né? Desse tamanho. Conseguem ver bem, né?
+00:06:27.600 --> 00:06:37.790
+Gesiel Lopes: Porque senão pode criar uma polêmica. E aí, Ah, o Gesiel, ele só entra atrasado agora. Ele não quer mais entrar no horário. Não, não é isso. Muito pelo contrário.
 
 29
-00:08:23.630 --> 00:08:26.659
-Gesiel Lopes: E aí eu estou acompanhando vocês aqui no chat do lado.
+00:06:38.590 --> 00:06:40.469
+Gesiel Lopes: Fechou, pessoal tranquilo.
 
 30
-00:08:27.460 --> 00:08:31.250
-Gesiel Lopes: Pegar hoje. Hoje eu estou com uma coisinha diferente aqui para molhar a garganta.
+00:06:42.040 --> 00:06:43.130
+Gesiel Lopes: E aí?
 
 31
-00:08:36.850 --> 00:08:38.250
+00:06:48.580 --> 00:06:49.929
 Gesiel Lopes: Então vamos lá.
 
 32
-00:08:38.450 --> 00:08:41.799
-Gesiel Lopes: Nós estamos trabalhando nesse isso.
+00:06:51.810 --> 00:06:53.810
+Gesiel Lopes: Vamos dar continuidade.
 
 33
-00:08:41.970 --> 00:08:53.939
-Gesiel Lopes: Encontros que tivemos nessas duas primeiras etapas. A parte de manipulação de dados com Strings ainda. E aí eu trouxe uma aplicação.
+00:06:55.470 --> 00:07:00.290
+Gesiel Lopes: Tchau, deixa eu até fechar. Acho que não preciso mais desse título.
 
 34
-00:08:54.350 --> 00:08:59.489
-Gesiel Lopes: É uma aplicação bem na moda, onde a gente consegue, claro, colocar,
+00:07:01.560 --> 00:07:11.620
+Gesiel Lopes: Acho que já está mais do que demonstrado pessoal que Strings é extremamente importante para realizar algumas tarefas específicas.
 
 35
-00:08:59.590 --> 00:09:08.539
-Gesiel Lopes: explorar muitas das funções que já trabalhamos na primeira disciplina com o Python. Porém, no mundo real, aliás em um problema real,
+00:07:11.760 --> 00:07:18.079
+Gesiel Lopes: Então vamos dar continuidade, ainda explorando um pouquinho ainda as strings
 
 36
-00:09:08.970 --> 00:09:15.210
-Gesiel Lopes: inclusive é um problema que está bem na moda, mas vale ressaltar. Não é um problema novo,
+00:07:18.820 --> 00:07:30.189
+Gesiel Lopes: a partir de uma aplicação dentro da área de processamento de linguagem natural. Então a gente está fazendo ali o trabalho inicial
 
 37
-00:09:15.240 --> 00:09:30.270
-Gesiel Lopes: mas acho, que tem um apelo bem legal, que é a parte de processamento de linguagem natural. Então a gente está vendo aqui alguns fundamentos, claro, sem explorar muito o conceito e a área
+00:07:30.510 --> 00:07:50.299
+Gesiel Lopes: de preparar um texto. E aí a gente viu que um texto dentro do Python nada mais é do que uma String. Mas preparar ali o texto, ou seja, preparar a minha string para que eu possa utilizar essa string, por exemplo, como input
 
 38
-00:09:30.280 --> 00:09:41.310
-Gesiel Lopes: de pesquisa, nem algumas aplicações. Mas, porém, trabalhando alguns aspectos fundamentais
+00:07:50.520 --> 00:08:01.539
+Gesiel Lopes: de um modelo de linguagem ou um modelo de linguagem natural, que é o que faz. É justamente essas etapas
 
 39
-00:09:41.450 --> 00:09:52.560
-Gesiel Lopes: do processamento de linguagem natural, e aí por C, e a gente está trabalhando especificamente com a língua escrita
+00:08:01.640 --> 00:08:14.260
+Gesiel Lopes: que os modelos de linguagem realizam. Alguns realizam essas operações de forma explícita, ou seja, para você poder utilizar o modelo, é necessário que você realize essas atividades,
 
 40
-00:09:52.730 --> 00:10:05.560
-Gesiel Lopes: com manipulação e dentro do Python, tudo que foi escrito vai ser entendido como uma String, e aí a gente consegue explorar alguns conceitos da linguagem.
+00:08:14.640 --> 00:08:34.199
+Gesiel Lopes: ou alguns modelos, como a grande maioria, os grandes modelos de linguagem, eles realizam essas atividades, essas operações de forma transparente. Então, basicamente, o que você faz é passar uma instrução em linguagem natural.
 
 41
-00:10:05.840 --> 00:10:12.830
-Gesiel Lopes: Tá, então vamos lá então. Eu peguei aqui um trecho de código aqui do
+00:08:34.559 --> 00:08:42.160
+Gesiel Lopes: E aí o modelo por debaixo dos panos processa aquela instrução,
 
 42
-00:10:13.490 --> 00:10:21.670
-Gesiel Lopes: aliás, um texto que é um fragmento, na realidade, é o texto de uma das atas do Copom,
+00:08:42.740 --> 00:09:02.559
+Gesiel Lopes: converte aquela instrução em algo que o modelo consiga entender e aí executar as atividades pertinentes àquele comando, aquela instrução que você coloca em linguagem natural. Então, por debaixo dos panos, ele sempre vai estar fazendo essas etapas, ou um ou outro
 
 43
-00:10:22.340 --> 00:10:29.990
-Gesiel Lopes: que é uma ata extremamente importante para a definição de políticas públicas, né
+00:09:02.560 --> 00:09:14.879
+Gesiel Lopes: todas ou não, ou algumas, mas sempre ele realiza algumas atividades, porque, no final das contas, o computador só entende números. Então eu preciso transformar.
 
 44
-00:10:30.600 --> 00:10:35.749
-Gesiel Lopes: econômicas da política econômica brasileira. Então ela tem uma.
+00:09:15.030 --> 00:09:26.359
+Gesiel Lopes: E aí só abrindo um pequeno parêntese, um pequeno andendo. Muitos vão falar que eu preciso. Quando eu utilizo um modelo de linguagem natural,
 
 45
-00:10:36.110 --> 00:10:43.980
-Gesiel Lopes: Uma implicação direta na vida de qualquer cidadão brasileiro,
+00:09:26.500 --> 00:09:35.000
+Gesiel Lopes: eu preciso para usar como input do modelo o que a gente chama de vetor semântico.
 
 46
-00:10:44.190 --> 00:10:49.009
-Gesiel Lopes: diga se de passagem, conhecendo sabendo se interessando ou não.
+00:09:35.530 --> 00:09:37.990
+Gesiel Lopes: Que o
 
 47
-00:10:49.190 --> 00:11:02.899
-Gesiel Lopes: E aí a gente consegue explorar alguns pontos interessantes. Então a gente viu as etapas necessárias para que possa ser trabalhado um texto dentro de Pln,
+00:09:38.130 --> 00:09:49.780
+Gesiel Lopes: que, quando a gente fala, que é uma outra forma de a gente chamar de vetores semânticos é Jim Baggins, porque em Bedins. É um tipo de vetor semântico,
 
 48
-00:11:03.030 --> 00:11:06.590
-Gesiel Lopes: e a gente está trabalhando basicamente com três
+00:09:50.660 --> 00:09:57.240
+Gesiel Lopes: mas também muito popular. Então, Imbegs virou sinônimo de vetor e semântico, mas
 
 49
-00:11:06.960 --> 00:11:23.290
-Gesiel Lopes: etapas de pré processamento de preparação dos textos. Aqui é uma função que eu deixei. Aliás, uma variável que eu deixei para armazenar os stopwards. A gente já viu um. Pouquinho. O que é isso.
+00:09:57.370 --> 00:10:10.800
+Gesiel Lopes: na essência, o vetor semântico é a representação numérica daquele texto, que será utilizado por um modelo de linguagem natural,
 
 50
-00:11:23.610 --> 00:11:34.190
-Gesiel Lopes: E a última função que nós trabalhamos, que foi encapsular na função é alguns
+00:10:11.020 --> 00:10:28.870
+Gesiel Lopes: para que eu utilize o modelo eu preciso construir e definir o meu vetor semântico. E os embeds. É um tipo de vetor semântico. Não é o único, é um tipo. Na verdade, é os que são utilizados por debaixo dos planos para
 
 51
-00:11:34.500 --> 00:11:40.060
-Gesiel Lopes: as etapas de pré processamento. Tá bom, tranquilo.
+00:10:29.230 --> 00:10:34.599
+Gesiel Lopes: para essas Llm. Os modelos de linguagem, os grandes modelos de linguagem.
 
 52
-00:11:40.560 --> 00:11:43.609
-Gesiel Lopes: E aí essa função em particular,
+00:10:35.090 --> 00:10:36.650
+Altevir dos Anjos Junior: Como que escreve, Professor?
 
 53
-00:11:43.980 --> 00:11:47.839
-Gesiel Lopes: ela retorna. Ela faz um retorno.
+00:10:38.260 --> 00:10:39.280
+Gesiel Lopes: O quê?
 
 54
-00:11:49.280 --> 00:11:55.270
-Gesiel Lopes: Ela vai retornar uma dupla. Então ela retorna uma dupla
+00:10:39.280 --> 00:10:40.820
+Altevir dos Anjos Junior: Esse aí que você acabou de falar.
 
 55
-00:11:56.800 --> 00:12:04.910
-Gesiel Lopes: que é uma estrutura de dado é um retorno duplo. A gente já logo logo vai estar trabalhando aonde
+00:10:41.180 --> 00:10:46.379
+Gesiel Lopes: Em Badings, hein? Bota no Google que a.
 
 56
-00:12:05.090 --> 00:12:11.810
-Gesiel Lopes: o primeiro elemento. E aí eu vou só colocar aqui,
+00:10:46.380 --> 00:10:47.370
+Altevir dos Anjos Junior: Ah, tá.
 
 57
-00:12:13.830 --> 00:12:19.669
-Gesiel Lopes: sendo o primeiro elemento aqui. Eu vou colocar assim. É uma dupla. O primeiro elemento.
+00:10:47.920 --> 00:10:49.740
+Gesiel Lopes: Ele mostra, né.
 
 58
-00:12:19.790 --> 00:12:34.000
-Gesiel Lopes: Ah, ali está com os Tokens Tolkens pré processados.
+00:10:49.880 --> 00:10:50.290
+Altevir dos Anjos Junior: Uhum.
 
 59
-00:12:34.220 --> 00:12:35.649
-Gesiel Lopes: Tá? E.
+00:10:50.290 --> 00:10:50.920
+Gesiel Lopes: Tá?
 
 60
-00:12:40.140 --> 00:12:47.659
-Gesiel Lopes: E o segundo retorno dessa minha função, ela é o texto
+00:10:51.040 --> 00:11:00.640
+Gesiel Lopes: Que são em Bedins, em Bedins, tá, que é o.
 
 61
-00:12:52.510 --> 00:12:58.109
-Gesiel Lopes: e aqui eu vou colocar entre aspas, que é a nossa String, né?
+00:11:01.500 --> 00:11:07.439
+Gesiel Lopes: Vou pegar esse link aqui. O Embeding é um método para representar vetores de dados
 
 62
-00:12:59.700 --> 00:13:08.080
-Gesiel Lopes: Pré pronto, você sabe, tranquilo. Então aqui são as etapas. A gente viu que as etapas
+00:11:07.700 --> 00:11:25.019
+Gesiel Lopes: que são como texto, imagens, que é justamente a forma para a representação numérica de uma unidade utilizada dentro do processamento de linguagem natural. Quando a gente fala de linguagem natural,
 
 63
-00:13:08.440 --> 00:13:22.380
-Gesiel Lopes: são bem simples. E aqui a gente consegue colocar cada uma das etapas em uma única linha, que é a etapa de normalização, a etapa de tokenização
+00:11:25.180 --> 00:11:40.769
+Gesiel Lopes: a gente tem ou a língua falada ou a língua escrita. Aí. Eu preciso representar isso para que o modelo possa utilizar. Eu deixei um link. Tem esse link aqui, pessoal desse livro. Deixa eu ver se está aqui o livro.
 
 64
-00:13:22.810 --> 00:13:30.099
-Gesiel Lopes: e a etapa de retirada dos stopwards. Então aqui eu coloquei uma estrutura
+00:11:41.210 --> 00:11:48.100
+Gesiel Lopes: Ah, não coloquei. Deixou no notebook da aula passada.
 
 65
-00:13:30.320 --> 00:13:42.820
-Gesiel Lopes: muito conhecida dentro da linguagem Python, que é o List Comprehension. Eu estou dando um pequeno spoiler das duas próximas etapas. Então, nas próximas etapas,
+00:11:48.720 --> 00:11:54.520
+Gesiel Lopes: Eu deixei aqui no final. Esse link aqui, que é a referência
 
 66
-00:13:42.860 --> 00:13:51.430
-Gesiel Lopes: nós iremos trabalhar com, e aí sim, de forma completa, com todas as coleções da linguagem Python.
+00:11:55.110 --> 00:12:00.309
+Gesiel Lopes: desse livro aqui, que é um livro clássico de processamento de linguagem natural.
 
 67
-00:13:51.800 --> 00:14:01.470
-Gesiel Lopes: E aí eu estou aproveitando para fazer um spoiler de algumas funcionalidades que elas vão nos ajudar bastante. Então essa aqui é uma.
+00:12:00.450 --> 00:12:08.410
+Gesiel Lopes: Então, quem quiser conhecer se aprofundar nesse universo de linguagem de modelos de linguagem.
 
 68
-00:14:01.920 --> 00:14:13.240
-Gesiel Lopes: Uma estrutura que é relativamente simples de ser entendida. Quando você faz ela da primeira vez, e depois você. Quando começa a ter um pouco mais de familiaridade
+00:12:08.670 --> 00:12:14.860
+Gesiel Lopes: E eu recomendo veementemente que vocês dê uma olhadinha nesse livro.
 
 69
-00:14:13.350 --> 00:14:19.060
-Gesiel Lopes: com as estruturas da linguagem Python. Aí você começa a escrever o código mais pytônico,
+00:12:15.110 --> 00:12:17.650
+Gesiel Lopes: Então ele tem uma versão online e tem uma versão.
 
 70
-00:14:19.410 --> 00:14:34.440
-Gesiel Lopes: que foi a construção da estrutura para a gente retirar as stopwards e já ter a nossa lista com os Tolkens já pré processados.
+00:12:18.230 --> 00:12:23.180
+Gesiel Lopes: É em Pdf gratuita. Tem uma versão
 
 71
-00:14:35.010 --> 00:14:49.729
-Gesiel Lopes: E aí, aqui a gente retorna. O Token. A lista de tokens pré processados. E aí a gente trabalhou com mais uma função do Python, que é a função de Join, onde eu consigo juntar.
+00:12:24.310 --> 00:12:31.759
+Gesiel Lopes: impressa também. Mas caso vocês queiram. E aí esse livro foi escrito por um.
 
 72
-00:14:50.410 --> 00:15:04.100
-Gesiel Lopes: É como se eu estivesse concatenando em uma única função, algumas estruturas em uma determinada string, que é a função Joy. Nesse caso, eu estou pegando
+00:12:32.300 --> 00:12:34.840
+Gesiel Lopes: Os principais pesquisadores
 
 73
-00:15:04.270 --> 00:15:15.809
-Gesiel Lopes: a função Joy na estringe vazia e adicionando nessa string vazia. Todos
+00:12:35.210 --> 00:12:50.199
+Gesiel Lopes: brasileiros na área de processamento de linguagem natural. Então ele traz todos os fundamentos desde o que é a área de linguagem de processamento natural. A área de processamento
 
 74
-00:15:15.810 --> 00:15:26.730
-Gesiel Lopes: os elementos da minha lista, que nesse caso, aqui é a lista de tolkens pré processados que é normalizados e sem stopwords tranquilo.
+00:12:50.550 --> 00:12:57.259
+Gesiel Lopes: é na O Pln e aproximamento de linguagem natural ou Nlp,
 
 75
-00:15:30.180 --> 00:15:34.110
-Gesiel Lopes: Feito isso. Vou aqui só executar a nossa função.
+00:12:57.770 --> 00:13:00.760
+Gesiel Lopes: que é natural a linguagem processual.
 
 76
-00:15:34.250 --> 00:15:39.649
-Gesiel Lopes: Eu crio uma variável que recebe o.
+00:13:02.590 --> 00:13:13.079
+Gesiel Lopes: E aí envolve tudo, né? Desde os primórdios, até chegar os, transforma se
 
 77
-00:15:42.570 --> 00:15:44.850
-Gesiel Lopes: E aí eu vou só mudar aqui o nome.
+00:13:13.240 --> 00:13:18.829
+Gesiel Lopes: que aí os Transformers, que é um estilo, é uma estrutura de modelo de linguagem
 
 78
-00:15:46.880 --> 00:15:56.550
-Gesiel Lopes: Vou deixar dessa forma. Não vou mudar nome, não para não confundir que, na realidade, a lista de Tolkins pré processados.
+00:13:19.230 --> 00:13:27.400
+Gesiel Lopes: que esses Transformers deram origem aos grandes modelos de linguagem que a gente tem hoje.
 
 79
-00:15:56.700 --> 00:16:10.790
-Gesiel Lopes: Acho que fica mais fica mais expressivo. Então é a lista de Tolkens pré processados.
+00:13:27.710 --> 00:13:31.000
+Gesiel Lopes: Então ele vai falar desde os fundamentos
 
 80
-00:16:11.670 --> 00:16:18.250
-Gesiel Lopes: Aqui é o meu texto pré processado pré processado.
+00:13:31.500 --> 00:13:37.770
+Gesiel Lopes: até os modelos de Machine Learning utilizados dentro do processamento de linguagem natural.
 
 81
-00:16:19.690 --> 00:16:25.960
-Gesiel Lopes: E e aí, eu acho, adicionam.
+00:13:37.910 --> 00:13:48.100
+Gesiel Lopes: Então ele fala do significado bofologia, as áreas, enfim. Então ele traz toda essa definição.
 
 82
-00:16:27.700 --> 00:16:40.380
-Gesiel Lopes: Eu inicializo essas variáveis a partir da execução da nossa função, que é a função de pré processamento, onde eu passo os stopwords. Que é aquela variável que eu havia criado anteriormente.
+00:13:48.220 --> 00:13:54.570
+Gesiel Lopes: Então quem quiser um livro grande não é muito denso, mas é bem grande, tá?
 
 83
-00:16:40.380 --> 00:16:47.829
-Gesiel Lopes: E a minha ata do Copom, que é a minha variável, que a gente definiu para armazenar o texto da Ata.
+00:13:54.680 --> 00:13:56.110
+Gesiel Lopes: E é assim
 
 84
-00:16:47.960 --> 00:17:00.379
-Gesiel Lopes: E aqui eu só executo a lista onde o Print da lista e depois o texto propriamente dito. Beleza,
+00:13:56.300 --> 00:14:09.439
+Gesiel Lopes: deveria ser o primeiro livro de qualquer pessoa que queira trabalhar com modelo de linguagem. Só que muitos esquecem. É uma discussão mais filosófica. Mas enfim, fica aí a dica.
 
 85
-00:17:01.320 --> 00:17:03.210
-Gesiel Lopes: ainda continuando
+00:14:09.650 --> 00:14:13.090
+Gesiel Lopes: E aí ele traz os modelos
 
 86
-00:17:03.410 --> 00:17:20.400
-Gesiel Lopes: sobre pesquisas. No nosso último encontro, a gente explorou um pouquinho como realizar pesquisas dentro de uma string na linguagem pipe. Então a gente trabalhou basicamente com a função help,
+00:14:13.200 --> 00:14:17.349
+Gesiel Lopes: atuais de linguagem. Ele faz que tem um capítulo que ele fala
 
 87
-00:17:20.810 --> 00:17:25.079
-Gesiel Lopes: aliás, função help com a função find.
+00:14:17.680 --> 00:14:22.049
+Gesiel Lopes: do Igpt. Não sei se essa versão saiu agora em Abril
 
 88
-00:17:25.190 --> 00:17:28.520
-Gesiel Lopes: Então, se eu pegar String Find.
+00:14:22.390 --> 00:14:27.790
+Gesiel Lopes: e eu não tive. Ainda não parei para olhar ela com calma,
 
 89
-00:17:28.960 --> 00:17:29.830
-Gesiel Lopes: Tá?
+00:14:28.200 --> 00:14:45.969
+Gesiel Lopes: mas a versão anterior, ele explicava que é um vetor semântico. Os tipos de vetores semânticos, algoritmos para definição de vetores semânticos. Ele depois falava do Gpt dos Transformers.
 
 90
-00:17:30.060 --> 00:17:35.900
-Gesiel Lopes: E passar essa função para a função Beauty Python
+00:14:47.360 --> 00:14:48.630
+Gesiel Lopes: Fica aí a dica.
 
 91
-00:17:36.470 --> 00:17:42.889
-Gesiel Lopes: help. A função beauty help do Python. A gente tem a documentação do
+00:14:49.370 --> 00:14:51.689
+Gesiel Lopes: Claro que a gente não vai falar isso.
 
 92
-00:17:43.200 --> 00:17:55.100
-Gesiel Lopes: da função. No caso a função Find, ela envia, ela tem como retorno um valor maior ou igual a zero.
+00:14:51.990 --> 00:14:58.749
+Gesiel Lopes: Um livro texto para várias disciplinas de linguagem de processamento de linguagem natural
 
 93
-00:17:55.260 --> 00:18:04.029
-Gesiel Lopes: Quando ele encontra a ocorrência da String que a gente está buscando dentro da outra dentro da String de busca
+00:15:03.130 --> 00:15:04.530
+Gesiel Lopes: beleza.
 
 94
-00:18:04.410 --> 00:18:09.909
-Gesiel Lopes: ou menos um caso ele não o encontre essa ocorrência.
+00:15:09.340 --> 00:15:16.709
+Gesiel Lopes: Voltando, voltando, recapitulando, deixou me organizar beleza então vamos lá.
 
 95
-00:18:10.210 --> 00:18:20.059
-Gesiel Lopes: Ah, vale ressaltar que, no caso, a função Find, ele retorna, esse valor, que é maior, igual a zero
-
-96
-00:18:21.080 --> 00:18:22.340
-Gesiel Lopes: é.
-
-97
-00:18:22.700 --> 00:18:23.650
-Gesiel Lopes: É a.
-
-98
-00:18:23.760 --> 00:18:25.270
-Gesiel Lopes: O índice
-
-99
-00:18:25.400 --> 00:18:36.160
-Gesiel Lopes: do primeiro caracter na String de busca da String que a gente está buscando. Então ele retorna o primeiro índice,
-
-100
-00:18:36.550 --> 00:18:37.410
-Gesiel Lopes: tá,
-
-101
-00:18:37.880 --> 00:18:50.499
-Gesiel Lopes: e aí, lembrando que a função Find também pode receber o intervalo de índices que eu quero utilizar para mim fazer a busca para eu poder fazer a busca.
-
-102
-00:18:50.620 --> 00:18:51.760
-Gesiel Lopes: Tranquilo.
-
-103
-00:18:53.200 --> 00:19:03.220
-Gesiel Lopes: Então a gente trabalhou um pouquinho, e aí a gente trabalhou em particular com o Find, e aqui também com o R
-
-104
-00:19:03.920 --> 00:19:05.680
-Gesiel Lopes: R. Find.
-
-105
-00:19:06.190 --> 00:19:13.849
-Gesiel Lopes: Por quê? Qual a diferença de um para outro? O Find. Ele percorre a String
-
-106
-00:19:14.050 --> 00:19:27.960
-Gesiel Lopes: de busca da esquerda para a direita, e o R. Find faz o processo inverso. Então ele busca a primeira ocorrência da direita para a esquerda,
-
-107
-00:19:29.040 --> 00:19:43.380
-Gesiel Lopes: só recapitulando. Porém, existe somente o Find para fazer a busca. Inclusive teve alguém que comentou uma outra função que a gente pode utilizar.
-
-108
-00:19:46.180 --> 00:19:52.170
-Gesiel Lopes: Outra função de busca de String.
-
-109
-00:19:53.050 --> 00:20:01.460
-Gesiel Lopes: Tá é a função Index e a R Index.
-
-110
-00:20:02.460 --> 00:20:11.700
-Gesiel Lopes: Então, se eu colocar aqui help Str, ponto Index,
-
-111
-00:20:12.440 --> 00:20:25.130
-Gesiel Lopes: ele vai me trazer a documentação, a explicação da função index. E aí, se vocês observarem o
-
-112
-00:20:25.530 --> 00:20:33.830
-Gesiel Lopes: ele vai fazer basicamente a mesma coisa. Da função, Find, hã?
-
-113
-00:20:34.620 --> 00:20:45.440
-Gesiel Lopes: Ou seja, ele vai me retornar à ocorrência do primeiro índice dentro da String de busca da String que eu quero encontrar.
-
-114
-00:20:45.880 --> 00:21:00.609
-Gesiel Lopes: Então, Gesiel, qual é a diferença? A diferença está num detalhe de quando ele não encontra o elemento dentro da String. No caso do Find, ele retorna menos um.
-
-115
-00:21:01.360 --> 00:21:06.140
-Gesiel Lopes: E o Index. Quando ele não encontra. Ele dá um erro.
-
-116
-00:21:06.270 --> 00:21:10.660
-Gesiel Lopes: Ele lança o que a gente chama de exceção. Novamente,
-
-117
-00:21:10.740 --> 00:21:26.710
-Gesiel Lopes: Gesiel, não estou entendendo. Se preocupem, um dos pontos ainda que será trabalhado ao longo da disciplina é o conceito de tratamento de erros e exceções, exceções e erros dentro da linguagem Python.
-
-118
-00:21:26.750 --> 00:21:40.809
-Gesiel Lopes: Então, quando ele não encontra ele para ele dá o Código Crasha, a famosa tela azul. Só que do mundo. Python é o equivalente à tela azul do Python,
-
-119
-00:21:41.690 --> 00:21:45.940
-Gesiel Lopes: que, quando ele lança esse erro o código para de executar.
-
-120
-00:21:46.150 --> 00:21:48.769
-Gesiel Lopes: Então ele quebra. Ele dá um erro
-
-121
-00:21:49.010 --> 00:22:00.449
-Gesiel Lopes: quando ele não encontra o Find. Na realidade, o Index não encontra um elemento que a gente queira dentro da String. Essa é a grande diferença. Então deixa. Eu só.
-
-122
-00:22:00.690 --> 00:22:09.529
-Gesiel Lopes: Observem que dentro do nosso texto, do nosso texto pré processado
-
-123
-00:22:09.780 --> 00:22:18.549
-Gesiel Lopes: quando a gente usou o Find para um elemento que a gente não encontrou, que a gente, no caso, usou uma Stop Worlds.
-
-124
-00:22:19.990 --> 00:22:27.370
-Gesiel Lopes: E aí eu vou usar essa. Vou usar uma outra Stop World que eu sei que não tem é a palavra zero. Zero.
-
-125
-00:22:27.710 --> 00:22:32.960
-Gesiel Lopes: Então, se eu passar o zero para o Find zero o Find,
-
-126
-00:22:33.450 --> 00:22:36.050
-Gesiel Lopes: ele vai me retornar menos um.
-
-127
-00:22:37.470 --> 00:22:42.030
-Gesiel Lopes: Quando eu faço o texto pré processado.
-
-128
-00:22:43.080 --> 00:22:51.830
-Gesiel Lopes: Eu poderia ter feito o contrário, né? Deixa eu primeiro colocar. Aqui tem find o copom,
-
-129
-00:22:52.380 --> 00:22:54.499
-Gesiel Lopes: que é uma palavra bem recorrente.
-
-130
-00:22:54.750 --> 00:22:57.040
-Gesiel Lopes: Quando eu faço um find copom,
-
-131
-00:22:57.400 --> 00:23:06.960
-Gesiel Lopes: ele me retorna. A primeira ocorrência da palavra copom. Na realidade, o índice do primeiro caracter
-
-132
-00:23:07.270 --> 00:23:18.189
-Gesiel Lopes: da ocorrência da palavra copom na estrange de busca na Estringe, que eu estou realizando a busca. Se a gente fizer a mesma busca
-
-133
-00:23:18.440 --> 00:23:21.400
-Gesiel Lopes: com o.
-
-134
-00:23:21.630 --> 00:23:26.120
-Gesiel Lopes: O Index tá. Observem, Copom.
-
-135
-00:23:27.310 --> 00:23:32.429
-Gesiel Lopes: Ele me retorna. O mesmo valor é o mesmo resultado.
-
-136
-00:23:33.210 --> 00:23:51.970
-Gesiel Lopes: Então, qual é a diferença? Quando a gente tenta buscar um índice ou uma String que não exista. Então observe no Find. Como eu estava falando, ele vai retornar menos um. O menos um indica que
-
-137
-00:23:52.020 --> 00:24:06.370
-Gesiel Lopes: essa String zero não está contida ou não se encontra dentro da String, que eu estou usando para buscar a ocorrência no caso aqui. Texto pré processado,
-
-138
-00:24:06.370 --> 00:24:15.880
-Gesiel Lopes: então zero não existe. E a gente sabe que ela não existe porque ela é um dos top worlds. Então a gente faz a retirada dessa string
-
-139
-00:24:16.180 --> 00:24:28.830
-Gesiel Lopes: beleza. Porém, quando eu faço, tento realizar a mesma busca. Porém usando o Index copom no caso. Aqui Copom.
-
-140
-00:24:29.150 --> 00:24:31.370
-Gesiel Lopes: Observem que ele vai dar um erro.
-
-141
-00:24:31.470 --> 00:24:33.590
-Gesiel Lopes: Não, não é copom Gisele
-
-142
-00:24:33.700 --> 00:24:42.189
-Gesiel Lopes: é zero. Quando eu faço index zero. Observe que ele dá um erro. Isso aqui é um erro.
-
-143
-00:24:42.490 --> 00:24:45.320
-Gesiel Lopes: Se eu tivesse qualquer execução,
-
-144
-00:24:45.710 --> 00:24:55.140
-Gesiel Lopes: inclusive eu posso até mostrar aqui para vocês. Se eu fizer um print aqui só para mostrar para vocês
-
-145
-00:24:55.260 --> 00:25:02.070
-Gesiel Lopes: com a mensagem String não encontrada.
-
-146
-00:25:03.610 --> 00:25:09.869
-Gesiel Lopes: E observem que eu vou usar a mesma String no Find.
-
-147
-00:25:10.710 --> 00:25:12.359
-Gesiel Lopes: Ela vai me retornar.
-
-148
-00:25:12.520 --> 00:25:19.040
-Gesiel Lopes: Ela vai dizer na String não encontrada, ok,
-
-149
-00:25:19.420 --> 00:25:37.020
-Gesiel Lopes: só que quando eu tento fazer a mesma coisa aqui com o Index. Observem que ele não vai fazer o Print. Ele não consegue executar a linha seguinte. O script, se fosse um script fosse um código maior, ele ia parar na primeira linha.
-
-150
-00:25:37.230 --> 00:25:40.379
-Gesiel Lopes: Então observem que ele não traz o resultado,
-
-151
-00:25:41.010 --> 00:25:52.680
-Gesiel Lopes: ok? Por quê? Porque o Index quando ele não encontra a String que eu estou querendo encontrar.
-
-152
-00:25:52.830 --> 00:26:06.669
-Gesiel Lopes: Ele dá um erro. Ele lança uma exceção. Então o código para. Então, essa é a grande diferença entre o Find e o Index ou o R Index e o R Find.
-
-153
-00:26:06.890 --> 00:26:22.829
-Gesiel Lopes: Então, muito cuidado com a gente. Utiliza o Index. Porque se eu não fizer o devido tratamento, e aí eu preciso tratar, caso aconteça o erro. E se, caso eu não realize o tratamento e utilize o Index
-
-154
-00:26:22.930 --> 00:26:27.200
-Gesiel Lopes: para fazer uma busca dentro de um string que não exista,
-
-155
-00:26:27.380 --> 00:26:34.570
-Gesiel Lopes: ele vai dar o erro. E todo o código restante vai parar de funcionar. Então o código dá um crash.
-
-156
-00:26:34.720 --> 00:26:39.850
-Gesiel Lopes: Então é só esse cuidado que a gente precisa ter tranquilo
-
-157
-00:26:40.240 --> 00:26:42.800
-Gesiel Lopes: a que é a principal diferença.
-
-158
-00:26:44.160 --> 00:26:51.820
-Gesiel Lopes: E aí o resultado. E aí só abrindo aqui um exemplo, vou colocar aqui novamente. Quando eu faço o texto
-
-159
-00:26:52.500 --> 00:27:07.090
-Gesiel Lopes: para pré processado texto, o texto pré processado R find Copom.
-
-160
-00:27:08.720 --> 00:27:18.300
-Gesiel Lopes: Ele vai me retornar o índice, e quando eu faço, só que dá direita para a esquerda. E quando eu uso o texto
-
-161
-00:27:18.650 --> 00:27:28.900
-Gesiel Lopes: pré processado R Index Copom, ele vai me trazer o mesmo valor.
-
-162
-00:27:31.260 --> 00:27:42.190
-Gesiel Lopes: Então a diferença está apenas no.
-
-163
-00:27:42.760 --> 00:27:52.080
-Gesiel Lopes: Quando ele não o encontro, o Find retorna menos um. E o Index lança uma exceção.
-
-164
-00:27:52.500 --> 00:28:06.770
-Gesiel Lopes: Uma outra função legal bastante interessante, que a gente pode estar utilizando dentro do Python. É uma função para fazer o que a gente chama de Posicionamento de Strings.
-
-165
-00:28:06.910 --> 00:28:22.010
-Gesiel Lopes: Tá, então um pai que também tem algumas funções que ajudam a gente apresentar String. Então, funções ajudam
-
-166
-00:28:22.980 --> 00:28:28.170
-Gesiel Lopes: a apresentar Strings. Tá?
-
-167
-00:28:31.770 --> 00:28:36.950
-Gesiel Lopes: E aqui eu não vou usar o nosso texto pré processado. É mais um ponto
-
-168
-00:28:37.520 --> 00:28:44.440
-Gesiel Lopes: de apresentação. Por exemplo, vamos supor que eu tenha uma.
-
-169
-00:28:47.720 --> 00:28:51.550
-Gesiel Lopes: Vou criar aqui uma variável que eu vou chamar de animal animal.
-
-170
-00:28:52.150 --> 00:29:02.229
-Gesiel Lopes: E aí essa variável, eu vou colocar aqui uma String que representa o nome de um animal, por exemplo, tigre.
-
-171
-00:29:03.920 --> 00:29:04.780
-Gesiel Lopes: Ah,
-
-172
-00:29:05.920 --> 00:29:23.049
-Gesiel Lopes: e aí a gente tem algumas funções que podem ser utilizadas para fazer o posicionamento para apresentar a minha String, como por exemplo, vamos supor que eu esteja querendo
-
-173
-00:29:23.640 --> 00:29:26.619
-Gesiel Lopes: colocar a palavra tigre.
-
-174
-00:29:26.720 --> 00:29:27.540
-Gesiel Lopes: Tá bom.
-
-175
-00:29:28.670 --> 00:29:33.310
-Gesiel Lopes: Entre duas outras strings.
-
-176
-00:29:33.430 --> 00:29:37.060
-Gesiel Lopes: Então vou concatenar aqui, que eu estou colocando com X.
-
-177
-00:29:38.200 --> 00:29:45.080
-Gesiel Lopes: Só que essa observe que se eu colocar simplesmente a String.
-
-178
-00:29:46.460 --> 00:29:52.089
-Gesiel Lopes: Ah, ah, animal! Observem, ele vai juntar.
-
-179
-00:29:55.090 --> 00:29:59.459
-Gesiel Lopes: Porém, se eu fizer a mesma concatenação.
-
-180
-00:30:00.560 --> 00:30:09.139
-Gesiel Lopes: Só que na função, aliás, na String animal, eu chamar a função
-
-181
-00:30:09.410 --> 00:30:16.009
-Gesiel Lopes: de posicionamento, que é a primeira função que a gente vai ver é a função center.
-
-182
-00:30:17.190 --> 00:30:20.460
-Gesiel Lopes: Então, se eu passar o Center tá,
-
-183
-00:30:21.020 --> 00:30:29.629
-Gesiel Lopes: chamar a função center e passar como parâmetro um inteiro. Observe que ele já até dá um.
-
-184
-00:30:30.320 --> 00:30:36.099
-Gesiel Lopes: O co Pilot do Deep. Note. Ele já me dá o valor obrigatório que eu preciso passar.
-
-185
-00:30:36.570 --> 00:30:51.140
-Gesiel Lopes: Observem que se eu passar um, que é um inteiro que esse inteiro, nada mais é do que o tamanho. O espaço que eu vou dar nessa String. Então, se eu passar, por exemplo dez.
-
-186
-00:30:51.140 --> 00:31:05.530
-Gesiel Lopes: O que ele vai fazer? Ele vai padronizar. Ele vai centralizar a String animal cujo valor é tigre. Ele vai justamente colocar no centro,
-
-187
-00:31:05.800 --> 00:31:10.010
-Gesiel Lopes: e utilizando esse tamanho de dez de dez espaços.
-
-188
-00:31:10.370 --> 00:31:18.140
-Gesiel Lopes: Então ele faz a centralização. E aí o legal é que, além
-
-189
-00:31:19.210 --> 00:31:30.669
-Gesiel Lopes: do tamanho que eu passe se a gente inclusive deixa eu só estar colocando aqui o help,
-
-190
-00:31:30.840 --> 00:31:40.949
-Gesiel Lopes: que é o sempre e fica mais fácil assim, quando eu faço o help Stranger
-
-191
-00:31:42.440 --> 00:31:43.930
-Gesiel Lopes: Opa vai dar um erro.
-
-192
-00:31:44.640 --> 00:31:51.600
-Gesiel Lopes: Ele está dizendo que não existe. Essa função é center agora Sim,
-
-193
-00:31:52.120 --> 00:31:56.990
-Gesiel Lopes: a função Center também recebe um outro parâmetro
-
-194
-00:31:57.200 --> 00:31:59.940
-Gesiel Lopes: que, no caso, aqui é vazio,
-
-195
-00:32:00.090 --> 00:32:03.430
-Gesiel Lopes: quando a gente não passa, que é o segundo parâmetro,
-
-196
-00:32:03.600 --> 00:32:15.079
-Gesiel Lopes: que é o karate que eu quero preencher no espaço que eu estou definindo. Nesse caso, aqui, observe que como eu não passei,
-
-197
-00:32:15.140 --> 00:32:31.879
-Gesiel Lopes: coloquei o tamanho e não passei o segundo parâmetro. Ele colocou o espaço vazio para complementar os demais espaços. Porém, se eu colocar um caracté por exemplo, ponto.
-
-198
-00:32:32.320 --> 00:32:38.180
-Gesiel Lopes: O que ele vai fazer? Ele vai concatenar. Porém, o espaço em branco.
-
-199
-00:32:38.320 --> 00:32:42.260
-Gesiel Lopes: Ele vai preencher com um ponto
-
-200
-00:32:43.420 --> 00:32:49.159
-Gesiel Lopes: com esse caracter que eu passei. Então pode ser um ponto.
-
-201
-00:32:49.460 --> 00:32:53.120
-Gesiel Lopes: Pode ser ponto,
-
-202
-00:32:54.640 --> 00:33:06.949
-Gesiel Lopes: espaço. Enfim, você pode passar o parâmetro que você quiser. Eu vou colocar aqui o Dunder, que é o sobrinhado que aí fica Dunder Dunder, que é algo bem interessante.
-
-203
-00:33:07.090 --> 00:33:13.280
-Gesiel Lopes: Então é uma forma de você também utilizar para fazer algumas apresentações.
-
-204
-00:33:13.610 --> 00:33:14.490
-Gesiel Lopes: Tá,
-
-205
-00:33:17.390 --> 00:33:29.960
-Gesiel Lopes: porém, não existe somente essa função. Outra função que a gente pode utilizar para fazer o posicionamento de String é a função L Just:
-
-206
-00:33:31.720 --> 00:33:41.539
-Gesiel Lopes: Então, se eu pegar o meu animal, ponto l justiça, e passar novamente o tamanho
-
-207
-00:33:42.010 --> 00:33:47.040
-Gesiel Lopes: que a gente não vai ter nenhum resultado.
-
-208
-00:33:50.560 --> 00:33:54.470
-Gesiel Lopes: Deixa eu colocar aqui. Eu vou colocar sempre antes o help da função L
-
-209
-00:34:00.470 --> 00:34:03.860
-Gesiel Lopes: Str, que é distingue Ellie Just.
-
-210
-00:34:04.200 --> 00:34:07.430
-Gesiel Lopes: Então o Ellie Justier, ele completa.
-
-211
-00:34:07.610 --> 00:34:14.269
-Gesiel Lopes: Ah, da esquerda para a direita.
-
-212
-00:34:14.800 --> 00:34:17.300
-Gesiel Lopes: Então ele dá um espaçamento.
-
-213
-00:34:18.540 --> 00:34:22.549
-Gesiel Lopes: Então ele retorna a um espaço justificado na String
-
-214
-00:34:22.810 --> 00:34:26.740
-Gesiel Lopes: a partir do tamanho que a gente coloca.
-
-215
-00:34:26.960 --> 00:34:41.269
-Gesiel Lopes: Então observe que ele colocou esse espaço. Então ele deixou a String de tamanho dez com dez posições e ele completa o restante com espaço em branco. Porém, assim como o
-
-216
-00:34:42.010 --> 00:34:50.039
-Gesiel Lopes: o o Center, eu também posso passar, caso queira um parâmetro para ele preencher.
-
-217
-00:34:50.300 --> 00:34:58.429
-Gesiel Lopes: Observe, é muito útil para a gente deixar de forma padronizado algumas opções da String.
-
-218
-00:35:03.350 --> 00:35:04.230
-Gesiel Lopes: Tá.
-
-219
-00:35:04.460 --> 00:35:15.880
-Gesiel Lopes: Outra função também utilizada. Assim como o Ellie Joshua tem o Wright, que é Wright just tá help
-
-220
-00:35:16.930 --> 00:35:25.490
-Gesiel Lopes: strarrjust and the wright então ele vai ter o mesmo comportamento.
-
-221
-00:35:26.570 --> 00:35:37.780
-Gesiel Lopes: Então imagine vocês fazendo um menuzinho lá no terminal. Então se eu fizer animal R. Justin
-
-222
-00:35:39.080 --> 00:35:45.130
-Gesiel Lopes: passando dez observo que ele já vai colocar na esquerda e não na direita.
-
-223
-00:35:45.670 --> 00:35:47.700
-Gesiel Lopes: E se eu fizer animal?
-
-224
-00:35:48.990 --> 00:35:55.570
-Gesiel Lopes: Ponto Rjust dez, ponto.
-
-225
-00:35:55.690 --> 00:36:00.130
-Gesiel Lopes: Ele vai preencher o espaço vazio com o ponto.
-
-226
-00:36:03.030 --> 00:36:12.810
-Gesiel Lopes: Ok, então ela é muito útil para a gente fazer a apresentação melhor de Strings.
-
-227
-00:36:16.490 --> 00:36:17.460
-Gesiel Lopes: Tá
-
-228
-00:36:23.150 --> 00:36:33.220
-Gesiel Lopes: outra forma de os posição.
-
-229
-00:36:33.990 --> 00:36:36.899
-Gesiel Lopes: Outra forma de posição.
-
-230
-00:36:37.090 --> 00:36:49.450
-Gesiel Lopes: Posicionamento com Python é através. A gente também consegue fazer um posicionamento
-
-231
-00:36:49.810 --> 00:36:58.360
-Gesiel Lopes: com o Python através das F. Strings. Então a gente consegue também aplicar o conceito
-
-232
-00:36:58.410 --> 00:37:12.119
-Gesiel Lopes: de posicionamento de String com a função, com o F. String, que a gente já está habituado a trabalhar. Então, se eu fizer F, vou fazer aqui uma F String
-
-233
-00:37:12.890 --> 00:37:25.479
-Gesiel Lopes: com a mesma variável que a gente está trabalhando. Então, se eu fizer Opa é a variável tigre.
-
-234
-00:37:30.010 --> 00:37:32.510
-Gesiel Lopes: Se eu fizer isso, ele só vai apresentar.
-
-235
-00:37:33.670 --> 00:37:35.919
-Gesiel Lopes: Ainda deu o erro aqui.
-
-236
-00:37:39.140 --> 00:37:47.150
-Gesiel Lopes: Ah, não é a função. Não é tigre, né? Gisele é animal. A variável, né? Então ele vai me apresentar a palavra tigre.
-
-237
-00:37:47.520 --> 00:37:52.239
-Gesiel Lopes: Então é String. Então não vai fazer nenhuma diferença.
-
-238
-00:37:52.390 --> 00:37:54.360
-Gesiel Lopes: Porém, se eu passar,
-
-239
-00:38:00.400 --> 00:38:06.980
-Gesiel Lopes: se eu passar dois pontos, utilizar o chapéu,
-
-240
-00:38:09.850 --> 00:38:20.969
-Gesiel Lopes: eu consigo realizar algumas operações. Por exemplo, vinte chapéu vinte.
-
-241
-00:38:21.480 --> 00:38:24.299
-Gesiel Lopes: Então essa operação aqui, ó,
-
-242
-00:38:28.950 --> 00:38:31.010
-Gesiel Lopes: ela funciona
-
-243
-00:38:34.100 --> 00:38:44.500
-Gesiel Lopes: da mesma forma ao Center, tá, se eu fizer F. String
-
-244
-00:38:49.260 --> 00:38:54.720
-Gesiel Lopes: animal dois. Ponto menor vinte.
-
-245
-00:38:55.220 --> 00:38:57.780
-Gesiel Lopes: Essa estrutura tá.
-
-246
-00:38:58.350 --> 00:39:07.330
-Gesiel Lopes: Ela tem a mesma funcionalidade equivalente ao Ellie justiça.
-
-247
-00:39:08.510 --> 00:39:11.220
-Gesiel Lopes: Se eu fizer uma F String
-
-248
-00:39:14.640 --> 00:39:27.110
-Gesiel Lopes: animal dois ponto maior, vinte. Eu estava usando dez. Então vou colocar aqui dez dez, tá?
-
-249
-00:39:27.560 --> 00:39:38.410
-Gesiel Lopes: Tem a mesma funcionalidade. Ou seja, é equivalente a O R just.
-
-250
-00:39:39.860 --> 00:39:44.560
-Gesiel Lopes: Então, se eu executar. Olha só, ele vai ter a.
-
-251
-00:39:45.710 --> 00:39:49.400
-Gesiel Lopes: Ele sempre vai aparecer a última. Então eu tenho que chamar aqui o Print
-
-252
-00:39:55.260 --> 00:39:58.760
-Gesiel Lopes: Print de repente, vinte.
-
-253
-00:39:59.750 --> 00:40:05.000
-Gesiel Lopes: Então observe que ele vai ter a mesma funcionalidade.
-
-254
-00:40:05.490 --> 00:40:09.059
-Gesiel Lopes: E aí eu posso, por exemplo, aqui, colocar
-
-255
-00:40:09.910 --> 00:40:14.480
-Gesiel Lopes: o X só para vocês verem a diferença.
-
-256
-00:40:14.800 --> 00:40:16.930
-Gesiel Lopes: Tá do center.
-
-257
-00:40:17.510 --> 00:40:20.319
-Gesiel Lopes: Então ele vai ter a mesma forma.
-
-258
-00:40:28.210 --> 00:40:31.669
-Gesiel Lopes: E aí, se eu quiser,
-
-259
-00:40:31.820 --> 00:40:41.530
-Gesiel Lopes: no caso aqui do rjust. A gente viu que no próprio Rjust, a gente viu que a gente pode colocar um caracté,
-
-260
-00:40:42.060 --> 00:41:02.050
-Gesiel Lopes: um caracter aqui para ele colocar no lugar do espaço vazio. E como é que eu faço isso? É só você colocar antes do operador maior o ponto ou o caracter que você quer apresentar. É só colocar ponto. Ele funciona igual ao R trust,
-
-261
-00:41:04.130 --> 00:41:23.099
-Gesiel Lopes: só que é passando passando o a string, ponto, né, como como preenchimento, tá?
-
-262
-00:41:23.220 --> 00:41:26.129
-Gesiel Lopes: Essa é a diferença
-
-263
-00:41:26.260 --> 00:41:36.800
-Gesiel Lopes: que são as funções de formatação que podem ser utilizadas na própria string ou através da
-
-264
-00:41:36.980 --> 00:41:44.690
-Gesiel Lopes: do padrão de formatação F. String, que a gente já havia trabalhado anteriormente: beleza
-
-265
-00:41:47.810 --> 00:41:49.200
-Gesiel Lopes: tranquilo.
-
-266
-00:41:50.730 --> 00:41:54.750
-Gesiel Lopes: E aí, só para não perder a viagem.
-
-267
-00:41:55.330 --> 00:42:04.119
-Gesiel Lopes: Recapitulando ainda a gente duas funções. A gente já utilizou uma que foi a
-
-268
-00:42:07.850 --> 00:42:09.520
-Gesiel Lopes: a separação,
-
-269
-00:42:13.030 --> 00:42:20.480
-Gesiel Lopes: a separação de Strings para a gente fazer a normalização. Então a gente tem a função split, tá?
-
-270
-00:42:22.120 --> 00:42:31.500
-Gesiel Lopes: A gente tem a função. Substituição de stringes
-
-271
-00:42:35.050 --> 00:42:47.259
-Gesiel Lopes: só para a gente deixar registrado para fazer a substituição de String. A gente usa a qual mesmo alguém lembra que está aqui ao vivo. Qual é a função que eu utilizo para fazer a substituição.
-
-272
-00:42:53.660 --> 00:42:56.469
-Gesiel Lopes: Então, se eu fizer print alguém,
-
-273
-00:42:57.030 --> 00:43:06.280
-Gesiel Lopes: ninguém lembra. Então, se eu fizer print net Animal Split,
-
-274
-00:43:08.460 --> 00:43:24.990
-Gesiel Lopes: a gente usou a função split para gerar os nossos token. Se eu passar aqui o I, ele vai quebrar a partir do I. Então ele vai onde estiver o I ele vai quebrar ele retornar o eu posso em vez do I. Eu posso usar o G, porque aí ele quebra bem no meio.
-
-275
-00:43:25.570 --> 00:43:30.790
-Gesiel Lopes: Aí eu vou ter ti e R e isso. Uma lista com dois elementos
-
-276
-00:43:31.060 --> 00:43:40.070
-Gesiel Lopes: para fazer. E exato. A Jéssica colocou aí. Então, para fazer a substituição, a gente tem o replace a função replays
-
-277
-00:43:40.410 --> 00:43:46.490
-Gesiel Lopes: Replays. Então Print Animal Replays
-
-278
-00:43:47.060 --> 00:43:57.270
-Gesiel Lopes: e aí a gente vai o primeiro parâmetro da função replays é o caracter ou a cadeia de caracteres que eu quero substituir.
-
-279
-00:43:57.700 --> 00:44:15.929
-Gesiel Lopes: E o segundo parâmetro. É o valor que eu quero colocar. Quando ele encontrar a ocorrência daquele caracter. Então observe que aqui eu vou substituir na minha variável animal que tem a String tigre
-
-280
-00:44:16.860 --> 00:44:27.249
-Gesiel Lopes: onde ele encontrar o G minúsculo, ele vai substituir com o G maiúsculo. Se ele encontrar. Se ele não encontrar, ele não faz nada.
-
-281
-00:44:27.700 --> 00:44:38.580
-Gesiel Lopes: Então você vai executar além da lista. Observe, ele retornou. Ele substituiu outra função
-
-282
-00:44:41.890 --> 00:44:49.069
-Gesiel Lopes: que bastante útil aí que a gente tem aí é a função de
-
-283
-00:44:53.930 --> 00:45:02.050
-Gesiel Lopes: a função de remoção de espaço branco, a remoção de espaço
-
-284
-00:45:03.340 --> 00:45:07.579
-Gesiel Lopes: dentro de um Einstein. Então vou colocar aqui na
-
-285
-00:45:07.950 --> 00:45:19.529
-Gesiel Lopes: uma variável que eu vou chamar aqui de Exemplo Remo são e espaço em branco.
-
-286
-00:45:20.230 --> 00:45:23.930
-Gesiel Lopes: E aí, olha só. Eu vou aproveitar.
-
-287
-00:45:24.620 --> 00:45:27.500
-Gesiel Lopes: Qual é a função? Vou colocar aqui.
-
-288
-00:45:28.650 --> 00:45:29.990
-Gesiel Lopes: É?
-
-289
-00:45:36.490 --> 00:45:43.570
-Gesiel Lopes: Então eu vou pegar aqui a stringpite. Qual é a função que a gente acabou de ver que adiciona espaço para a gente.
-
-290
-00:45:46.540 --> 00:45:53.330
-Gesiel Lopes: É, eu vou usar aqui o center. E aí eu vou passar um parâmetro aqui. Vou colocar vinte
-
-291
-00:45:55.840 --> 00:46:02.079
-Gesiel Lopes: só para mostrar para vocês. E aí a remoção de espaço em branco. Opa, tinha esquecido
-
-292
-00:46:02.360 --> 00:46:12.840
-Gesiel Lopes: o Matheus aí colocou no chat para a gente. É a função Stripe, Stripe. Então, se eu colocar aqui a função,
-
-293
-00:46:12.970 --> 00:46:19.800
-Gesiel Lopes: a função aqui, ó dentro da função print. A minha streaming
-
-294
-00:46:20.420 --> 00:46:24.840
-Gesiel Lopes: observe que ela me deu um espaço em branco aí significativo.
-
-295
-00:46:25.530 --> 00:46:30.720
-Gesiel Lopes: Então, se eu faço, se eu chamo a função Stripe
-
-296
-00:46:31.880 --> 00:46:36.980
-Gesiel Lopes: na minha String. Então observe que essa variável é uma String.
-
-297
-00:46:37.190 --> 00:46:41.460
-Gesiel Lopes: Sabe que o segundo Print, o P
-
-298
-00:46:41.680 --> 00:46:51.339
-Gesiel Lopes: do Python vai estar alinhado com o colchete da minha lista do split e o T da String Tigre
-
-299
-00:46:51.910 --> 00:46:53.410
-Gesiel Lopes: do Repl Place.
-
-300
-00:46:53.640 --> 00:47:00.210
-Gesiel Lopes: Então vamos ver se é isso mesmo, beleza. Então é. É.
-
-301
-00:47:00.590 --> 00:47:08.120
-Gesiel Lopes: Inclusive o streaming. A gente vai usar já já para fazer a nossa próxima versão do nosso método
-
-302
-00:47:08.490 --> 00:47:14.990
-Gesiel Lopes: de pré processamento é garantir que o Token não tenha espaço em branco.
-
-303
-00:47:15.250 --> 00:47:19.010
-Gesiel Lopes: E o streaming fechou.
-
-304
-00:47:19.270 --> 00:47:28.750
-Gesiel Lopes: Tranquilo. Então, só finalizando beleza
-
-305
-00:47:29.310 --> 00:47:36.509
-Gesiel Lopes: quando for 2h50 pessoas, daqui a quatro minutinhos, a gente faz o nosso intervalozinho de praxe.
-
-306
-00:47:36.780 --> 00:47:41.350
-Gesiel Lopes: Tá beber água e a gente finaliza. Tá bom.
-
-307
-00:47:41.600 --> 00:47:49.109
-Gesiel Lopes: Outro ponto interessante que a gente pode. Agora, Sim, uma função que a gente ainda não viu,
-
-308
-00:47:49.460 --> 00:47:55.530
-Gesiel Lopes: que são as funções para fazer a validação por tipo do conteúdo da String.
-
-309
-00:47:55.600 --> 00:48:12.839
-Gesiel Lopes: Então, como é que eu faço para validar o conteúdo de uma determinada String? Então o Python fornece algumas funções. Primeira função que a gente vai ver é a função is
-
-310
-00:48:12.940 --> 00:48:18.470
-Gesiel Lopes: ah is all is all num.
-
-311
-00:48:18.930 --> 00:48:31.019
-Gesiel Lopes: O que essa função faz então, help str ponto is ao Nun.
-
-312
-00:48:32.160 --> 00:48:45.159
-Gesiel Lopes: Então o próprio nome já dá para a gente ter uma ideia. Então esse método ele verifica se a String é formada por número.
-
-313
-00:48:46.100 --> 00:48:54.819
-Gesiel Lopes: Tá bom, ele verifica se a String. Ela é um
-
-314
-00:48:55.020 --> 00:49:04.110
-Gesiel Lopes: uma String com números alfa numérico. Se a String é um alfa numérico.
-
-315
-00:49:04.350 --> 00:49:09.090
-Gesiel Lopes: Como assim, Gerson? Aí ela retorna. True se for alfa numérico,
-
-316
-00:49:09.490 --> 00:49:15.220
-Gesiel Lopes: caso contrário, ela retorna falsa. Então, se eu pegar aqui, por exemplo, uma String.
-
-317
-00:49:15.460 --> 00:49:17.430
-Gesiel Lopes: E aí eu vou fazer aqui um print.
-
-318
-00:49:18.490 --> 00:49:20.010
-Gesiel Lopes: Acho que eu vou.
-
-319
-00:49:21.590 --> 00:49:24.539
-Gesiel Lopes: Vou criar aqui uma variável mesmo exemplo.
-
-320
-00:49:25.190 --> 00:49:26.659
-Gesiel Lopes: E Isau Nun.
-
-321
-00:49:29.950 --> 00:49:30.870
-Gesiel Lopes: Um.
-
-322
-00:49:32.810 --> 00:49:35.400
-Gesiel Lopes: E aí eu vou passar um String. Um, dois, três.
-
-323
-00:49:36.370 --> 00:49:44.410
-Gesiel Lopes: Eu vou fazer exemplo Is All Nun dois,
-
-324
-00:49:44.840 --> 00:49:47.560
-Gesiel Lopes: e aí eu vou passar nessa String,
-
-325
-00:49:48.540 --> 00:49:53.990
-Gesiel Lopes: o nosso Hello hoje. Alô, Mundo Python.
-
-326
-00:49:54.290 --> 00:49:59.960
-Gesiel Lopes: Então, se eu usar exemplo, Isnom
-
-327
-00:50:04.940 --> 00:50:07.890
-Gesiel Lopes: isso ao Nun
-
-328
-00:50:14.130 --> 00:50:25.929
-Gesiel Lopes: dois, dois observem que no primeiro primeiro print, a String é alphanumérica.
-
-329
-00:50:27.070 --> 00:50:29.440
-Gesiel Lopes: Então ele retorna.
-
-330
-00:50:30.740 --> 00:50:33.630
-Gesiel Lopes: Eu posso até fazer o seguinte V2
-
-331
-00:50:35.000 --> 00:50:39.999
-Gesiel Lopes: por mais que eu tenha um número. A String não é alphanumérica.
-
-332
-00:50:40.620 --> 00:50:44.300
-Gesiel Lopes: Então observem que é.
-
-333
-00:50:47.460 --> 00:50:54.990
-Gesiel Lopes: Observem que, como a primeira variável é alphanumérica, a função retorna True.
-
-334
-00:50:55.490 --> 00:51:06.229
-Gesiel Lopes: E a segunda? String não é alfa numérica. Eu tenho um número, mas ela tem caracteres não numerais. Ela retorna falsa,
-
-335
-00:51:06.330 --> 00:51:10.499
-Gesiel Lopes: então é uma função muito útil. A gente vai usar ela já já
-
-336
-00:51:10.560 --> 00:51:18.289
-Gesiel Lopes: para verificar, por exemplo, dentro de uma função de pré processamento. Se aquele token.
-
-337
-00:51:18.310 --> 00:51:35.180
-Gesiel Lopes: Ele é um número ou não? Porque dependendo do pré processamento que eu esteja realizando, eu posso considerar esse token ou não. Tá bom, a outra função de validação de tipo
-
-338
-00:51:35.290 --> 00:51:48.830
-Gesiel Lopes: Deixa eu ver se dá a gente. Já são catorze,cinquenta a gente. Vamos parar os nossos dez minutinhos. E aí a gente mostra as outras funções, tá? Que é a função
-
-339
-00:51:49.390 --> 00:51:55.029
-Gesiel Lopes: e a função is digite tá, e a função Is,
-
-340
-00:51:59.000 --> 00:52:01.570
-Gesiel Lopes: que é a função de Alfa numérico.
-
-341
-00:52:02.130 --> 00:52:04.830
-Gesiel Lopes: Beleza que é is auf
-
-342
-00:52:05.070 --> 00:52:19.349
-Gesiel Lopes: is auf. A gente vai ver essas duas funções, tá? Então vamos lá. Vou só parar aqui o compartilhamento da minha tela e vou fechar aqui o meu microfone e a minha câmera já já a gente retorna.
-
-343
-01:00:40.710 --> 01:00:43.400
-Gesiel Lopes: Qual pau? Pessoal vivos.
-
-344
-01:00:43.930 --> 01:00:49.390
-Gesiel Lopes: Vamos lá. Não dá nem tempo, né? Só deu tempo de pegar água.
-
-345
-01:00:49.740 --> 01:00:56.609
-Gesiel Lopes: Eu vou compartilhar aqui mais uma vez a minha tela com vocês vivos aí, todo mundo aqui comigo acompanhando.
-
-346
-01:01:02.110 --> 01:01:14.030
-Gesiel Lopes: Sim, sim, o Noah. Beleza, Noah, tranquilo. Então vamos lá. Tá, então outra função. Continuando aí, nas funções de validação de tipo distingue
-
-347
-01:01:14.480 --> 01:01:29.920
-Gesiel Lopes: outra função extremamente útil dentro do ecossistema. Python é a função is auf tá isso, alvo.
-
-348
-01:01:31.240 --> 01:01:36.939
-Gesiel Lopes: Eu vou usar o help aqui. Help Str is auf.
-
-349
-01:01:37.220 --> 01:01:38.060
-Gesiel Lopes: Tá.
-
-350
-01:01:40.530 --> 01:01:54.889
-Gesiel Lopes: Então essa função a a ela verifica se a String. Se aquela determinada String, ao contrário da
-
-351
-01:01:55.140 --> 01:02:09.400
-Gesiel Lopes: da Is All nun que ela é bem restrita, ela verifica se a String é uma string com caracteres alfabéticos.
-
-352
-01:02:10.560 --> 01:02:18.950
-Gesiel Lopes: Tem um ou mais caracteres? Beleza.
-
-353
-01:02:19.170 --> 01:02:30.059
-Gesiel Lopes: É, e aí só um ponto que eu acabei não comentando. Mas observem que todas essas funções
-
-354
-01:02:30.700 --> 01:02:32.419
-Gesiel Lopes: botar o três.
-
-355
-01:02:33.010 --> 01:02:37.460
-Gesiel Lopes: Eu sempre vou colocá lo a String vazia, tá?
-
-356
-01:02:38.350 --> 01:02:47.890
-Gesiel Lopes: Se eu tiver uma estringe vazia, ele retorna, True.
-
-357
-01:02:48.150 --> 01:02:50.189
-Gesiel Lopes: Então para que?
-
-358
-01:02:50.800 --> 01:02:51.590
-Gesiel Lopes: E aí?
-
-359
-01:02:55.490 --> 01:02:56.330
-Gesiel Lopes: Para que?
-
-360
-01:02:56.450 --> 01:03:10.680
-Gesiel Lopes: Para que a função retorne verdadeira, ela precisa ser do tipo que a função busca, e ela precisa ser diferente de vazia. Se ela for vazia, ela vai retornar falsa.
-
-361
-01:03:11.650 --> 01:03:19.500
-Gesiel Lopes: Então, novamente aqui, eu vou colocar aqui mais um exemplo da função is auf.
-
-362
-01:03:21.330 --> 01:03:25.070
-Gesiel Lopes: E isso Alf, tá,
-
-363
-01:03:35.450 --> 01:03:36.320
-Gesiel Lopes: hummm.
-
-364
-01:03:46.990 --> 01:03:48.980
-Gesiel Lopes: E aí eu vou passar aqui.
-
-365
-01:03:49.890 --> 01:03:52.989
-Gesiel Lopes: Um, dois, um, dois, três.
-
-366
-01:03:58.460 --> 01:04:01.869
-Gesiel Lopes: E Alô, mundo! Alô, mundo
-
-367
-01:04:12.100 --> 01:04:14.520
-Gesiel Lopes: dois, três.
-
-368
-01:04:17.340 --> 01:04:22.899
-Gesiel Lopes: Byington e o último da minha estringe vazia.
-
-369
-01:04:24.510 --> 01:04:33.800
-Gesiel Lopes: Tá para a gente ver a diferença de cada uma delas. Então Print exemplo.
-
-370
-01:04:34.070 --> 01:04:34.969
-Gesiel Lopes: É isso aí.
-
-371
-01:04:36.270 --> 01:04:37.280
-Gesiel Lopes: E
-
-372
-01:04:41.880 --> 01:04:45.959
-Gesiel Lopes: is auf um is Alpha.
-
-373
-01:04:49.440 --> 01:04:51.649
-Gesiel Lopes: Então eu vou só copiar e colar aqui.
-
-374
-01:04:52.030 --> 01:04:55.590
-Gesiel Lopes: As demais variáveis que eu havia criado.
-
-375
-01:04:55.780 --> 01:04:57.529
-Gesiel Lopes: Então, um, dois, três, quatro.
-
-376
-01:04:58.650 --> 01:05:03.890
-Gesiel Lopes: Um, dois, três, quatro. Então vamos analisar aqui o
-
-377
-01:05:05.120 --> 01:05:08.559
-Gesiel Lopes: o retorno de cada uma das funções. Tá?
-
-378
-01:05:10.050 --> 01:05:15.700
-Gesiel Lopes: E aí, se vocês observarem a primeira verificação,
-
-379
-01:05:17.020 --> 01:05:24.680
-Gesiel Lopes: ele verifica que se a String tem somente caracteres alfabéticos,
-
-380
-01:05:25.120 --> 01:05:28.120
-Gesiel Lopes: como é numérico, ele vai retornar falso.
-
-381
-01:05:28.690 --> 01:05:42.130
-Gesiel Lopes: E o segundo, ela também retornou. False, mas Gesiel, aqui eu tenho. Alô, mundo. Só tenho caracteres. Alguém consegue dar uma resposta? Por que ela está retornando. False no is auf
-
-382
-01:05:42.360 --> 01:05:44.650
-Gesiel Lopes: para string guiá lo ao mundo.
-
-383
-01:05:44.910 --> 01:05:56.289
-Gesiel Lopes: Exatamente porque ela tem um espaço como ala colocou. Ela não é formada somente com caracteres alfabéticos.
-
-384
-01:05:56.310 --> 01:06:05.549
-Gesiel Lopes: O espaço é um caracté e ele é um caracté, porém, um caracter não alfabético.
-
-385
-01:06:06.040 --> 01:06:20.499
-Gesiel Lopes: Já a palavra python. Como ela só tem caracteres alfabéticos. Ela me retornou. True e a string vazia, como já mencionado, ela retorna falsa
-
-386
-01:06:20.620 --> 01:06:37.190
-Gesiel Lopes: tá ok, outra função bacana que a gente tem é a função de validação. Isso digite help Str,
-
-387
-01:06:38.500 --> 01:06:41.869
-Gesiel Lopes: digite, tá. A função is digite
-
-388
-01:06:44.490 --> 01:06:47.960
-Gesiel Lopes: como o próprio nome já diz.
-
-389
-01:06:48.090 --> 01:06:59.140
-Gesiel Lopes: Ela verifica se a String é um dígito em todos os seus caracteres. Então eu vou colocar aqui exemplo.
-
-390
-01:07:00.400 --> 01:07:06.340
-Gesiel Lopes: Underline Is. Digite um.
-
-391
-01:07:06.770 --> 01:07:13.200
-Gesiel Lopes: E aí, na primeira, eu vou colocar aqui sete, sete, sete, cem, dezassete e um.
-
-392
-01:07:13.990 --> 01:07:17.270
-Gesiel Lopes: Vou copiar e colar, né? A dois.
-
-393
-01:07:17.720 --> 01:07:27.020
-Gesiel Lopes: Eu vou colocar setecentos e setenta e um.um, trinta e um, sessenta e três, tá
-
-394
-01:07:32.950 --> 01:07:34.150
-Gesiel Lopes: o três.
-
-395
-01:07:34.440 --> 01:07:37.070
-Gesiel Lopes: Eu vou colocar mais setecentos e setenta e um,
-
-396
-01:07:39.160 --> 01:07:42.200
-Gesiel Lopes: o quatro menos setecentos e setenta e um
-
-397
-01:07:45.390 --> 01:07:50.299
-Gesiel Lopes: e o cinco a meia String vazia
-
-398
-01:07:51.720 --> 01:07:57.960
-Gesiel Lopes: novamente. Vamos verificar aqui com o Print is digit um
-
-399
-01:08:01.100 --> 01:08:06.449
-Gesiel Lopes: aí exemplo is digite um ponto Is.
-
-400
-01:08:07.610 --> 01:08:11.019
-Gesiel Lopes: Digite, verificar se ele é um dígito
-
-401
-01:08:14.200 --> 01:08:27.140
-Gesiel Lopes: e as demais. Tá, um, dois, três, Opa, três, quatro, cinco, dois, três, quatro,
-
-402
-01:08:27.430 --> 01:08:31.869
-Gesiel Lopes: cinco. Estamos executando. Vamos analisar o resultado.
-
-403
-01:08:32.250 --> 01:08:34.389
-Gesiel Lopes: Gesiel. Eu não entendi.
-
-404
-01:08:34.580 --> 01:08:37.389
-Gesiel Lopes: Observem que ele só retornou. True
-
-405
-01:08:37.779 --> 01:08:45.900
-Gesiel Lopes: para a Primeira String, que só tem setecentos e setenta e um. Porém, isso aqui é numérico. Gesiel.
-
-406
-01:08:47.109 --> 01:08:52.870
-Gesiel Lopes: Alguém consegue explicar aqui rapidamente porque ele retornou falso.
-
-407
-01:08:54.220 --> 01:08:55.390
-Gesiel Lopes: Por quê?
-
-408
-01:08:55.500 --> 01:08:57.160
-Gesiel Lopes: Alguém tem uma.
-
-409
-01:08:57.520 --> 01:08:59.229
-Gesiel Lopes: Alguma suspeita?
-
-410
-01:09:05.029 --> 01:09:19.050
-Gesiel Lopes: Exatamente a Jéssica. Justamente porque a função só verifica se toda a String. Se todos os caracteres da String, ela é um dígito,
-
-411
-01:09:19.140 --> 01:09:26.039
-Gesiel Lopes: então é toda. Então aqui. Observem que tem um ponto. O ponto não é um dígito.
-
-412
-01:09:26.040 --> 01:09:40.580
-Gesiel Lopes: A segunda, a terceira, String tem um mais. O mais não é um dígito. O menos também é um caracter e não é um dígito. Então para que ela verifica se todos os caracteres são dígitos,
-
-413
-01:09:40.609 --> 01:09:41.450
-Gesiel Lopes: tá?
-
-414
-01:09:41.540 --> 01:09:48.810
-Gesiel Lopes: Então você pode, por exemplo, usar essa função para validar uma máscara para verificar se a pessoa só digitou o número.
-
-415
-01:09:49.109 --> 01:09:58.920
-Gesiel Lopes: Então ela é uma função bem mais restrita. Porém, vou colocar aqui. Ó,
-
-416
-01:09:59.350 --> 01:10:05.930
-Gesiel Lopes: eu tenho uma outra função que também é bastante útil para a gente
-
-417
-01:10:06.380 --> 01:10:12.730
-Gesiel Lopes: que essa função de validação é muito importante em etapas de pré processamento,
-
-418
-01:10:13.170 --> 01:10:17.220
-Gesiel Lopes: que é a função is numeric.
-
-419
-01:10:18.080 --> 01:10:25.020
-Gesiel Lopes: Vamos supor que eu queira validar se aquela String passada é um número, tá?
-
-420
-01:10:25.410 --> 01:10:41.580
-Gesiel Lopes: E aí eu vou copiar essa mesma estrutura aqui. Ó então, ó real Pi str ponto is
-
-421
-01:10:42.600 --> 01:10:45.769
-Gesiel Lopes: numeric. Use numeric.
-
-422
-01:10:46.900 --> 01:10:55.000
-Gesiel Lopes: Ao contrário do is digite, ele verifica se aquela String é numérica.
-
-423
-01:10:56.200 --> 01:11:11.500
-Gesiel Lopes: Diferentemente, também a função is digite é muito parecida, por exemplo, para verificar se a String aqui é um número alfa. Isso é alfa numérico,
-
-424
-01:11:12.040 --> 01:11:12.870
-Gesiel Lopes: tá?
-
-425
-01:11:13.520 --> 01:11:14.860
-Gesiel Lopes: É equivalente.
-
-426
-01:11:15.200 --> 01:11:18.350
-Gesiel Lopes: E a is numeric?
-
-427
-01:11:22.010 --> 01:11:24.639
-Gesiel Lopes: Isso não é o equipe.
-
-428
-01:11:27.380 --> 01:11:39.579
-Gesiel Lopes: Isnumeric a função isnumeric ela verifica se a String é um número dois, três, quatro, cinco.
-
-429
-01:11:40.540 --> 01:11:43.859
-Gesiel Lopes: Claro. Se a String não for vazia,
-
-430
-01:11:50.580 --> 01:11:56.550
-Gesiel Lopes: um só copiar e colar aqui para ser mais rápido. Dois, três, quatro.
-
-431
-01:11:56.820 --> 01:11:57.890
-Gesiel Lopes: Sempre
-
-432
-01:12:04.400 --> 01:12:13.160
-Gesiel Lopes: dois, três, quatro, cinco. E aqui. Eu tenho que passar a função correta. Isso não numeric.
-
-433
-01:12:13.870 --> 01:12:15.669
-Gesiel Lopes: Vou copiar e colar aqui.
-
-434
-01:12:18.520 --> 01:12:20.940
-Gesiel Lopes: Então vamos analisar aqui o resultado.
-
-435
-01:12:21.810 --> 01:12:27.209
-Gesiel Lopes: Tá a String vazia.
-
-436
-01:12:28.350 --> 01:12:30.780
-Gesiel Lopes: Ela retornou. True tá
-
-437
-01:12:31.240 --> 01:12:46.290
-Gesiel Lopes: o isnumeric setecentos e setenta e um.63 que todos os caracteres, todos os caracterizes devem ser numéricos, tá?
-
-438
-01:12:47.100 --> 01:13:00.459
-Gesiel Lopes: Então ele retornou falso no setecentos e setenta e um.sessenta e três no mais. Ele não considerou, e no setecentos e setenta e um também menos setecentos e setenta e um. Ele não considerou
-
-439
-01:13:04.020 --> 01:13:05.640
-Gesiel Lopes: como não numérico.
-
-440
-01:13:13.100 --> 01:13:15.340
-Gesiel Lopes: E por que essa função
-
-441
-01:13:20.340 --> 01:13:35.880
-Gesiel Lopes: isnumeric é útil, já que ela traz, já que ela traz o mesmo resultado do Is Digit, porque, olha, só observe que o Python
-
-442
-01:13:36.450 --> 01:13:48.550
-Gesiel Lopes: hoje. Ele é uma linguagem de programação universal. Vamos supor que eu esteja criando um programa
-
-443
-01:13:49.010 --> 01:14:00.470
-Gesiel Lopes: que eu faça a validação. Se uma String é um número, por exemplo, em um outro em uma
-
-444
-01:14:01.000 --> 01:14:06.840
-Gesiel Lopes: e uma outra língua, tá, vou colocar aqui no Google.
-
-445
-01:14:07.260 --> 01:14:10.540
-Gesiel Lopes: Observem, tem uma.
-
-446
-01:14:13.040 --> 01:14:17.209
-Gesiel Lopes: Uma língua que é bem interessante. Os números dela são bem interessantes.
-
-447
-01:14:17.690 --> 01:14:30.679
-Gesiel Lopes: Que é o tibetano. Vamos supor que eu esteja criando um programa lá para que valide se um determinado número é,
-
-448
-01:14:30.980 --> 01:14:41.359
-Gesiel Lopes: é válido ou não. Por exemplo, no Tibet, então, nove Tibetanos.
-
-449
-01:14:43.410 --> 01:14:52.630
-Gesiel Lopes: Como é que é o nove do Tibete nove em Tibetano.
-
-450
-01:14:55.020 --> 01:15:00.720
-Gesiel Lopes: Tá em String Python.
-
-451
-01:15:02.120 --> 01:15:07.530
-Gesiel Lopes: Pronto, vou ver se o aqui. Ó tá?
-
-452
-01:15:09.170 --> 01:15:24.269
-Gesiel Lopes: Então vou pegar aqui o exemplo aqui do próprio do próprio Geminai, o Zan, que é o
-
-453
-01:15:26.060 --> 01:15:30.530
-Gesiel Lopes: o nove em tibetano.
-
-454
-01:15:31.640 --> 01:15:38.430
-Gesiel Lopes: Então, usando o unicode. O novo tibetano é essa String?
-
-455
-01:15:39.390 --> 01:15:45.879
-Gesiel Lopes: Ah, Opa. Vou deixar do jeito que está aqui, tá?
-
-456
-01:15:48.700 --> 01:15:56.280
-Gesiel Lopes: E aqui. Olha só porque a gente está usando o is. E aí eu vou mostrar para vocês a grande diferença.
-
-457
-01:15:56.950 --> 01:16:08.140
-Gesiel Lopes: Então nove tibetano com o Is Numeric e o is dígite, digite
-
-458
-01:16:12.890 --> 01:16:15.620
-Gesiel Lopes: o is digit a
-
-459
-01:16:23.410 --> 01:16:24.330
-Gesiel Lopes: tá.
-
-460
-01:16:25.700 --> 01:16:34.130
-Gesiel Lopes: E aqui. Olha só, eu vou deixar aqui a saída sem aparecer. Então, se eu executar essa célula.
-
-461
-01:16:34.250 --> 01:16:35.650
-Gesiel Lopes: Observem,
-
-462
-01:16:43.920 --> 01:16:46.929
-Gesiel Lopes: ele retornou como um numérico,
-
-463
-01:16:52.360 --> 01:16:55.620
-Gesiel Lopes: tá só que.
-
-464
-01:17:00.100 --> 01:17:13.690
-Gesiel Lopes: E agora eu vou fazer um outro teste, que é um texto em O Unicode Uaita,
-
-465
-01:17:21.870 --> 01:17:25.520
-Gesiel Lopes: um terço em Python com Unicode,
-
-466
-01:17:33.730 --> 01:17:34.820
-Gesiel Lopes: um texto,
-
-467
-01:17:41.830 --> 01:17:43.020
-Gesiel Lopes: um terço.
-
-468
-01:17:46.430 --> 01:17:48.830
-Gesiel Lopes: E aí eu vou fazer a mesma coisa.
-
-469
-01:17:49.270 --> 01:17:52.270
-Gesiel Lopes: O is digite e o Is Numeric.
-
-470
-01:17:54.530 --> 01:18:04.339
-Gesiel Lopes: Então observem que quando eu faço um terço que ele representa, o caracter unicode observe que o Python conseguiu identificar,
-
-471
-01:18:04.530 --> 01:18:09.580
-Gesiel Lopes: mesmo sendo um número em uma outra língua.
-
-472
-01:18:09.680 --> 01:18:16.200
-Gesiel Lopes: Porém, aqui, olha só. Quando eu uso um terço a extingui um terço, o caracté,
-
-473
-01:18:16.330 --> 01:18:25.800
-Gesiel Lopes: o conjunto de caracteres unicode para representar o símbolo. Um terço. Quando eu faço a validação com o is digite.
-
-474
-01:18:26.010 --> 01:18:34.699
-Gesiel Lopes: Observe, ele considera como se não fossem somente dígitos por conta do Barra,
-
-475
-01:18:35.090 --> 01:18:50.929
-Gesiel Lopes: já o isnumeric. Considera como se eu estivesse de fato, fazendo a divisão de um por três. Então observe que ele retorna. True. Então são essas anuâncias que a gente pode considerar
-
-476
-01:18:51.410 --> 01:18:55.550
-Gesiel Lopes: quando a gente está fazendo o pré processamento de um texto,
-
-477
-01:18:55.650 --> 01:19:09.959
-Gesiel Lopes: porque a gente precisa sempre considerar o contexto do pré processamento das palavras do texto que a gente está realizando a operação de pré processamento. E aí,
-
-478
-01:19:10.050 --> 01:19:15.749
-Gesiel Lopes: para finalizar essa parte, duas funções úteis também,
-
-479
-01:19:15.880 --> 01:19:19.009
-Gesiel Lopes: que a gente vai utilizar, tá?
-
-480
-01:19:19.520 --> 01:19:25.620
-Gesiel Lopes: É a função das Strings.
-
-481
-01:19:25.940 --> 01:19:29.059
-Gesiel Lopes: E aí eu vou colocar aqui um help, logo um help
-
-482
-01:19:31.500 --> 01:19:34.599
-Gesiel Lopes: Str, ponto que é o start?
-
-483
-01:19:35.550 --> 01:19:36.500
-Gesiel Lopes: O If
-
-484
-01:19:40.260 --> 01:19:41.140
-Gesiel Lopes: tá
-
-485
-01:19:49.470 --> 01:19:51.040
-Gesiel Lopes: e a função.
-
-486
-01:19:51.480 --> 01:19:53.259
-Gesiel Lopes: Bota aqui o help
-
-487
-01:19:57.730 --> 01:20:06.380
-Gesiel Lopes: help é S T R, ponto Endes Uiff.
-
-488
-01:20:06.540 --> 01:20:09.670
-Gesiel Lopes: Então, duas funções bem úteis aqui para a gente.
-
-489
-01:20:09.830 --> 01:20:18.730
-Gesiel Lopes: É a função start with que ele verifica se a String começa com determinado caracter.
-
-490
-01:20:18.980 --> 01:20:25.510
-Gesiel Lopes: E a função entre If que verifica, tá, se
-
-491
-01:20:27.060 --> 01:20:33.940
-Gesiel Lopes: se a String termina com um determinado caracter fechou.
-
-492
-01:20:34.570 --> 01:20:38.250
-Gesiel Lopes: Então, melhorando aí. Agora a gente vai
-
-493
-01:20:38.490 --> 01:20:42.480
-Gesiel Lopes: aplicar isso aqui, dentro da nossa função de pré processamento.
-
-494
-01:20:43.140 --> 01:20:44.680
-Gesiel Lopes: Estão melhorando.
-
-495
-01:20:47.390 --> 01:20:59.529
-Gesiel Lopes: A função de pré processamento tá sem vestígios, sem vestígem,
-
-496
-01:21:02.740 --> 01:21:04.820
-Gesiel Lopes: sem vestigem.
-
-497
-01:21:10.210 --> 01:21:16.949
-Gesiel Lopes: Aqui. Aqui é a nossa função cópia. Ela
-
-498
-01:21:25.320 --> 01:21:30.050
-Gesiel Lopes: e aqui eu vou chamar V2 a nossa função.
-
-499
-01:21:32.920 --> 01:21:34.769
-Gesiel Lopes: E aí, olha só,
-
-500
-01:21:35.110 --> 01:21:43.000
-Gesiel Lopes: eu vou pegar agora um outro texto da ata do Copom. E onde é que estão esses textos?
-
-501
-01:21:43.090 --> 01:21:59.849
-Gesiel Lopes: Uma maneira de a gente pegar esses valores. O Banco central, o próprio governo tem uma política de dados abertos de disponibilização de informações que podem ser públicas. A Ata do Copom é um documento público
-
-502
-01:22:00.800 --> 01:22:07.829
-Gesiel Lopes: e o legal é que, além dela, fornecer o documento em Pdf, o Banco Central.
-
-503
-01:22:08.390 --> 01:22:13.879
-Gesiel Lopes: Ela disponibiliza uma Api, que é um serviço Web
-
-504
-01:22:15.450 --> 01:22:28.680
-Gesiel Lopes: com os textos, com algumas informações e o texto das atas do copom para que esse serviço, por exemplo, possa ser utilizado para um produto ou um software, seja lá o que for,
-
-505
-01:22:28.810 --> 01:22:32.819
-Gesiel Lopes: a gente vai usar muito essa Pi um pouco mais lá na frente.
-
-506
-01:22:33.170 --> 01:22:37.460
-Gesiel Lopes: Então, se eu colocar Api Copom Bc, já está até aqui.
-
-507
-01:22:37.640 --> 01:22:48.039
-Gesiel Lopes: O primeiro link é um link onde ele traz informações do Banco Central sobre a Api do Copom,
-
-508
-01:22:48.820 --> 01:22:52.720
-Gesiel Lopes: e ele já traz uma url aqui, ó tá
-
-509
-01:22:52.900 --> 01:22:56.779
-Gesiel Lopes: que é justamente a documentação desse serviço.
-
-510
-01:22:58.890 --> 01:23:18.860
-Gesiel Lopes: Então ele fala o que é o Copom, que é o comitê de política monetária é o órgão do Banco Central, fundado pelo Presidente, diretores que, a cada quarenta e cinco dias, a taxa básica de juros a Selic. E aí ele explica o que significa.
-
-511
-01:23:18.980 --> 01:23:23.510
-Gesiel Lopes: E aí ele tem o que a gente chama de endpoints, tá?
-
-512
-01:23:24.380 --> 01:23:30.980
-Gesiel Lopes: E aqui um endpoint em particular. Que é esse aqui? Ele. Lista
-
-513
-01:23:31.180 --> 01:23:43.300
-Gesiel Lopes: ele mostra toda a lista de atas do copom disponíveis. Esse outro endpoint.
-
-514
-01:23:43.550 --> 01:23:47.399
-Gesiel Lopes: Ele traz os detalhes da ata do copom.
-
-515
-01:23:47.740 --> 01:24:01.330
-Gesiel Lopes: E aqui são os outros, que é a lista de comunicados e a lista de detalhes sobre um determinado comunicado. E aí ele dá aqui um exemplo. E aí ele mostra ele explica o que significa esse serviço.
-
-516
-01:24:01.550 --> 01:24:06.559
-Gesiel Lopes: E aí ele dá um exemplo. Então se eu clicar aqui, nesse exemplo aqui, ó
-
-517
-01:24:07.770 --> 01:24:17.839
-Gesiel Lopes: o que ele vai fazer? Ele vai fazer a chamada a esse serviço para mim. E aí ele traz algumas informações ao número da reunião.
-
-518
-01:24:18.210 --> 01:24:22.990
-Gesiel Lopes: A data de referência, a data de publicação, o título
-
-519
-01:24:23.240 --> 01:24:33.809
-Gesiel Lopes: A Url da Ata. Ele já traz o Pdf da Ata e ele traz o texto da ata. O gigantesco que é o texto da ata. Eu vou pegar
-
-520
-01:24:35.680 --> 01:24:36.980
-Gesiel Lopes: essa.
-
-521
-01:24:43.900 --> 01:24:46.440
-Gesiel Lopes: Esse texto, tá?
-
-522
-01:24:53.830 --> 01:25:12.330
-Gesiel Lopes: Que é o texto Ata duzentos e cinquenta e cinco, tá, que é uma ata gigantesca texto ata, tá?
-
-523
-01:25:13.510 --> 01:25:17.989
-Gesiel Lopes: Só que se vocês observarem essa ata aqui. Ó,
-
-524
-01:25:18.080 --> 01:25:34.129
-Gesiel Lopes: ela tem alguns caracteres indesejados que não faz sentido analisar, porque isso aqui é uma Tag html, Tag html, ó a barra. O que significa a barra? É um item a tá, ó
-
-525
-01:25:34.300 --> 01:25:38.490
-Gesiel Lopes: Html, ó tem número.
-
-526
-01:25:43.000 --> 01:25:55.420
-Gesiel Lopes: Ó, e aí vai. Ó tá, ó tem ó o o ó a a vírgula.
-
-527
-01:25:55.570 --> 01:25:56.370
-Gesiel Lopes: Tchau.
-
-528
-01:25:56.630 --> 01:25:57.860
-Gesiel Lopes: Olha só.
-
-529
-01:25:59.890 --> 01:26:01.090
+00:15:17.420 --> 00:15:19.150
 Gesiel Lopes: Então
 
-530
-01:26:04.530 --> 01:26:12.619
-Gesiel Lopes: a gente vai melhorar um pouquinho essa nossa função, porque se eu passar essa minha função aqui, olha só
+96
+00:15:19.660 --> 00:15:37.570
+Gesiel Lopes: a gente viu que o processamento de linguagem natural requer que a gente faça. Realize algumas operações. E aqui eu trouxe um exemplo simples de operações que podem ser utilizadas para a gente extrair informações a partir de dados textuais.
 
-531
-01:26:12.760 --> 01:26:18.600
-Gesiel Lopes: da forma que está o Stop,
+97
+00:15:37.900 --> 00:15:44.140
+Gesiel Lopes: E aí, como um texto dentro do Python é uma estringe, o que a gente vai fazer basicamente
 
-532
-01:26:19.400 --> 01:26:23.750
-Gesiel Lopes: o Stop World Br: e agora? Texto:
+98
+00:15:44.330 --> 00:15:50.349
+Gesiel Lopes: utilizar as funções e operações
 
-533
-01:26:23.990 --> 01:26:25.930
-Gesiel Lopes: ata duzentos e cinquenta e cinco.
+99
+00:15:53.950 --> 00:16:01.780
+Gesiel Lopes: da linguagem Python para justamente, realizar essas etapas para a gente e preparar o nosso texto,
 
-534
-01:26:26.400 --> 01:26:29.200
-Gesiel Lopes: Observe que ela vai me trazer um monte de.
+100
+00:16:02.270 --> 00:16:07.500
+Gesiel Lopes: como se a gente estivesse disponibilizando para um modelo de linguagem.
 
-535
-01:26:29.950 --> 01:26:33.050
-Gesiel Lopes: Ah, não, tá, deve. Ah, porque aqui eu não defini.
+101
+00:16:08.160 --> 00:16:14.900
+Gesiel Lopes: Então a gente pegou esse exemplo, que é pegar documentos ou vários documentos
 
-536
-01:26:34.810 --> 01:26:47.350
-Gesiel Lopes: Então ela vai trazer. Ela vai gerar uns tokens. Mas ó Token disso aqui, esse cara aqui, ó Id,
+102
+00:16:15.020 --> 00:16:29.839
+Gesiel Lopes: e fazer operações padrões dentro do pré processamento de um modelo para a linguagem natural que a gente, nesse caso, utilizou três
 
-537
-01:26:47.560 --> 01:26:59.430
-Gesiel Lopes: tem umas coisas, Klez. Isso aqui vai poluir o meu texto, o meu,
+103
+00:16:30.660 --> 00:16:33.520
+Gesiel Lopes: etapas apenas que foi a normalização,
 
-538
-01:27:00.290 --> 01:27:06.060
-Gesiel Lopes: os meus tokens gerando tokens não semânticos.
+104
+00:16:33.730 --> 00:16:38.630
+Gesiel Lopes: a remoção de stopwards e a tokenização. Vale ressaltar
 
-539
-01:27:06.460 --> 01:27:15.069
-Gesiel Lopes: Então a primeira coisa que a gente vai fazer. Tá aqui, ó, e aí eu não vou mais fazer o lixe Comprehension.
+105
+00:16:38.760 --> 00:16:51.679
+Gesiel Lopes: que essas etapas, aqui, que são as etapas de pré processamento em Nlp ou Pln em Lp. Eu sei. Vou estar chamando em Ilp mais fácil, mas estou mais acostumado.
 
-540
-01:27:16.350 --> 01:27:21.009
-Gesiel Lopes: Então eu vou ter cinco minutinhos, pelo menos para começar a fazer esse pré processamento.
+106
+00:16:52.220 --> 00:17:03.699
+Gesiel Lopes: Não necessariamente. Elas são executadas de forma sequencial. Primeiro, isso, primeiro, aquilo são etapas que devem ser executadas,
 
-541
-01:27:24.880 --> 01:27:28.150
-Gesiel Lopes: O pré processamento. Eu vou usar aqui um fó.
+107
+00:17:03.970 --> 00:17:08.470
+Gesiel Lopes: porém, não de forma sequencial. Então aqui eu faço um pré processamento.
 
-542
-01:27:31.510 --> 01:27:34.060
-Gesiel Lopes: Pó tolkien.
+108
+00:17:08.599 --> 00:17:15.619
+Gesiel Lopes: Estou realizando aqui três operações, não necessariamente nessa sequência,
 
-543
-01:27:35.520 --> 01:27:48.790
-Gesiel Lopes: Aí é que eu vou criar aqui uma lista de Tokins válidos.
+109
+00:17:16.579 --> 00:17:27.080
+Gesiel Lopes: mas eu estou fazendo essas operações para fazer alguma tirar alguns resultados dentro de um texto que eu defini aqui.
 
-544
-01:27:49.450 --> 01:27:57.310
-Gesiel Lopes: Vou criar aqui uma lista vazia, como a gente já tinha feito no primeiro encontro dessa semana,
+110
+00:17:27.200 --> 00:17:27.960
+Gesiel Lopes: Tá bom.
 
-545
-01:27:57.910 --> 01:28:03.089
-Gesiel Lopes: Tokins. Então aqui eu tenho meus Tolkens primeira verificação?
+111
+00:17:28.359 --> 00:17:36.070
+Gesiel Lopes: Dentro dessa minha variável, esse texto nada mais é do que um fragmento da Ata
 
-546
-01:28:03.210 --> 01:28:12.710
-Gesiel Lopes: É que a gente é obrigatório fazer? Eu não vou processar se ela for um Stop World. Então já melhora para mim. Então, se for um Token
+112
+00:17:36.840 --> 00:17:41.630
+Gesiel Lopes: do Copom, que é um comitê de
 
-547
-01:28:13.080 --> 01:28:16.640
-Gesiel Lopes: Iz Note em
+113
+00:17:42.430 --> 00:17:55.600
+Gesiel Lopes: que é um comitê monetário, que é um documento disponibilizado pelo Banco Central brasileiro e é esse documento. Essa ata
 
-548
-01:28:20.600 --> 01:28:27.110
-Gesiel Lopes: Stop Words, eu já processo. Porque se for, nem verifico.
+114
+00:17:55.820 --> 00:18:04.529
+Gesiel Lopes: é utilizado como principal instrumento, né de definição das políticas.
 
-549
-01:28:27.280 --> 01:28:32.630
-Gesiel Lopes: Então, a primeira verificação aqui. Primeira, verifique.
+115
+00:18:04.690 --> 00:18:06.210
+Gesiel Lopes: É
 
-550
-01:28:36.320 --> 01:28:49.109
-Gesiel Lopes: Primeira verificação. Eu vou verificar se a String. Olha só, ela é. Começa se for um Html. Ela obrigatoriamente vai começar com um caracter menor.
+116
+00:18:08.370 --> 00:18:18.809
+Gesiel Lopes: financeiras, sei lá que, se um nome é esse, mas da política financeira do Brasil. Então ele dita como é que vai funcionar o mercado financeiro no Brasil?
 
-551
-01:28:49.400 --> 01:28:50.210
+117
+00:18:19.030 --> 00:18:23.300
+Gesiel Lopes: Então aqui eu peguei um fragmento de uma ata.
+
+118
+00:18:23.520 --> 00:18:31.499
+Gesiel Lopes: E aí a gente fez algumas operações. Agora, o que a gente vai fazer antes de a gente avançar?
+
+119
+00:18:31.620 --> 00:18:35.920
+Gesiel Lopes: Eu vou criar uma função. A gente vai encapsular o pré processamento
+
+120
+00:18:36.060 --> 00:18:44.649
+Gesiel Lopes: para que eu consiga reproduzir o processamento para mais de um texto. Então Bora encapsular dentro de uma função.
+
+121
+00:18:44.660 --> 00:18:58.309
+Gesiel Lopes: Eu criei aqui uma variável antes. Aqui eu preparei uma variável, como no primeiro exemplo, a gente utilizou há poucos stopwords, que são palavras que devem ser desconsideradas
+
+122
+00:18:58.480 --> 00:19:13.730
+Gesiel Lopes: quando eu faço a preparação de um texto para um modelo de linguagem, porque são palavras são caracteres ou cadeias de caracteres que não produzem semântica ou não agregam semântica
+
+123
+00:19:13.870 --> 00:19:16.579
+Gesiel Lopes: de forma isolada dentro do texto.
+
+124
+00:19:16.690 --> 00:19:17.710
+Gesiel Lopes: Beleza.
+
+125
+00:19:18.190 --> 00:19:37.410
+Gesiel Lopes: Então eu trouxe aqui uma lista um pouco maior. E aí eu coloquei de forma manual. Vale ressaltar que existem bibliotecas que disponibilizam essas top worlds em várias línguas, não somente brasileiro. Se você colocar Stop
+
+126
+00:19:37.480 --> 00:19:41.490
+Gesiel Lopes: World Spyton, você vai ver um monte de
+
+127
+00:19:41.610 --> 00:19:54.539
+Gesiel Lopes: de o Copilot, o Geminai. Agora até te dá algumas dicas. Ele te mostra algumas bibliotecas que disponibilizam. Ou então você pode encontrar também aí o
+
+128
+00:19:55.590 --> 00:20:00.530
+Gesiel Lopes: no Google e Lista de Stop Worlds.
+
+129
+00:20:00.700 --> 00:20:15.279
+Gesiel Lopes: Eu criei essa aqui manualmente, que traz artigos, contrações, pronomes, proposições, conjunções verbos auxiliares, e verbos comuns demonstrativos, localizadores
+
+130
+00:20:15.410 --> 00:20:24.110
+Gesiel Lopes: e algumas top oito numéricas. A gente tem uma quantidade um pouco maior de Stopworlds. Beleza.
+
+131
+00:20:24.510 --> 00:20:26.969
+Gesiel Lopes: E aqui eu vou criar a minha função,
+
+132
+00:20:27.510 --> 00:20:36.680
+Gesiel Lopes: que eu vou chamar de pré processo samento, tá?
+
+133
+00:20:37.980 --> 00:20:49.560
+Gesiel Lopes: E essa minha função vai receber como parâmetro as Stop Wordpress.
+
+134
+00:20:50.080 --> 00:20:57.339
+Gesiel Lopes: Então, obrigatoriamente. Eu preciso passar as minhas stopwats e o meu texto.
+
+135
+00:20:57.940 --> 00:20:58.900
+Gesiel Lopes: Tá bom.
+
+136
+00:21:00.160 --> 00:21:05.880
+Gesiel Lopes: Dois pontos, beleza. Eu até fiz aqui uns comentários.
+
+137
+00:21:06.090 --> 00:21:06.830
 Gesiel Lopes: Tá?
 
+138
+00:21:09.060 --> 00:21:15.759
+Gesiel Lopes: Deixa eu pegar esses caras aqui esses comentários e colocar aqui, tá?
+
+139
+00:21:17.330 --> 00:21:22.210
+Gesiel Lopes: Então essa minha função vai encapsular o meu pré processamento, tá?
+
+140
+00:21:23.550 --> 00:21:29.499
+Gesiel Lopes: Então aqui. Olha só, eu preciso realizar as etapas de normalização.
+
+141
+00:21:29.890 --> 00:21:35.430
+Gesiel Lopes: Então a primeira coisa que a gente precisa fazer é normalizar o meu texto.
+
+142
+00:21:35.870 --> 00:21:36.660
+Gesiel Lopes: Tá?
+
+143
+00:21:36.880 --> 00:21:39.830
+Gesiel Lopes: Então aqui o que eu vou fazer.
+
+144
+00:21:40.180 --> 00:21:55.589
+Gesiel Lopes: Então vou criar aqui uma variável que eu vou chamar de texto normalizado para a gente ter ideia que simplesmente a normalização, a padronização que nós iremos fazer aqui é só fazer o Lauer
+
+145
+00:21:55.830 --> 00:22:01.550
+Gesiel Lopes: deixar todos os caracteres em caixa baixa, tá?
+
+146
+00:22:02.410 --> 00:22:04.080
+Gesiel Lopes: E aqui. Olha só
+
+147
+00:22:04.630 --> 00:22:12.729
+Gesiel Lopes: para não ficar criando um hold variáveis. Eu vou estar sempre substituindo o conteúdo da própria variável que eu recebo como parâmetro.
+
+148
+00:22:13.140 --> 00:22:19.750
+Gesiel Lopes: Tá então aqui. Ó, eu vou só fazer um comentário, tá?
+
+149
+00:22:22.920 --> 00:22:29.160
+Gesiel Lopes: A gente vai criar uma variável para cada etapa e não precisa, tá?
+
+150
+00:22:29.420 --> 00:22:32.790
+Gesiel Lopes: Então aqui eu fiz a normalização, tá?
+
+151
+00:22:35.640 --> 00:22:45.389
+Gesiel Lopes: Ah, outra parte que a gente precisa fazer é a geração dos tokens
+
+152
+00:22:46.990 --> 00:22:52.360
+Gesiel Lopes: que aqui vai ser a minha tokenização,
+
+153
+00:22:57.040 --> 00:22:58.760
+Gesiel Lopes: minha tokenização.
+
+154
+00:22:58.970 --> 00:23:07.979
+Gesiel Lopes: Então, no exemplo que nós criamos no nosso último encontro, a gente, um token nada mais é do que uma unidade básica
+
+155
+00:23:08.350 --> 00:23:18.799
+Gesiel Lopes: que é considerada para ser processada, que é uma conjunto de caracteres que a gente chama de anagrama,
+
+156
+00:23:18.960 --> 00:23:23.629
+Gesiel Lopes: que é a unidade básica para ser considerada beleza
+
+157
+00:23:24.150 --> 00:23:43.610
+Gesiel Lopes: e não necessariamente uma palavra propriamente dita. O Vitor colocou política monetária. Obrigado, Vitor. Era isso que saiu da minha cabeça. É justamente isso. E eu tenho dois artigos falando sobre. Utilizando técnicas de processamento de linguagem natural
+
+158
+00:23:43.850 --> 00:23:47.360
+Gesiel Lopes: para explicar o comportamento das atas do Copom.
+
+159
+00:23:47.470 --> 00:23:50.520
+Gesiel Lopes: Olha só. É política monetária. Obrigado, Victor.
+
+160
+00:23:50.750 --> 00:23:51.849
+Gesiel Lopes: É isso mesmo.
+
+161
+00:23:52.480 --> 00:23:56.700
+Gesiel Lopes: Então, que foi a função split que quebra os textos,
+
+162
+00:23:56.820 --> 00:24:02.909
+Gesiel Lopes: considerando os espaços em brancos. Então a gente vai fazer isso.
+
+163
+00:24:06.540 --> 00:24:10.440
+Gesiel Lopes: Então eu vou pegar o meu texto, que nesse caso, aqui ele já está
+
+164
+00:24:11.180 --> 00:24:13.989
+Gesiel Lopes: padronizado e eu faço um split.
+
+165
+00:24:15.760 --> 00:24:25.670
+Gesiel Lopes: Tá um split simples assim. Aqui eu gerio os Tokins, tá e aí.
+
+166
+00:24:25.800 --> 00:24:28.449
+Gesiel Lopes: E aí o que eu preciso fazer agora?
+
+167
+00:24:28.670 --> 00:24:32.810
+Gesiel Lopes: Pegar os meus tokens, tá?
+
+168
+00:24:33.060 --> 00:24:34.330
+Gesiel Lopes: E tirar
+
+169
+00:24:34.760 --> 00:24:44.429
+Gesiel Lopes: as Stopwards. Porque quando eu gero os Tolkins, eu vou gerar as palavras e tem algumas palavras que eu preciso desconsiderar
+
+170
+00:24:45.170 --> 00:24:47.950
+Gesiel Lopes: que são as nossas stopwards.
+
+171
+00:24:48.680 --> 00:24:52.329
+Gesiel Lopes: E aí tá, eu vou.
+
+172
+00:24:56.300 --> 00:25:00.150
+Gesiel Lopes: E aí é
+
+173
+00:25:03.510 --> 00:25:08.179
+Gesiel Lopes: utilizar aqui. Aí eu vou fazer um spoiler, tá?
+
+174
+00:25:10.840 --> 00:25:17.369
+Gesiel Lopes: Não se preocupem que a ideia é fazer isso. Na próxima semana, começar a explorar isso.
+
+175
+00:25:17.730 --> 00:25:25.779
+Gesiel Lopes: Eu vou usar aqui uma. A gente utilizou. Eu já adiantei um spoiler de como criar uma lista vazia
+
+176
+00:25:26.020 --> 00:25:42.479
+Gesiel Lopes: e preencher essa lista vazia com os valores através de uma função específica das listas, que é uma função que adiciona elementos da minha lista, que foi a função appende.
+
+177
+00:25:43.220 --> 00:25:46.980
+Gesiel Lopes: Agora eu vou usar uma estrutura do Python.
+
+178
+00:25:47.470 --> 00:25:52.110
+Gesiel Lopes: É uma estrutura que faz a mesma coisa para a gente
+
+179
+00:25:52.660 --> 00:26:02.640
+Gesiel Lopes: que ele cria uma lista e adiciona valores nessa lista, que é uma estrutura que a gente chama de list.
+
+180
+00:26:03.240 --> 00:26:05.520
+Gesiel Lopes: Deixa eu só pegar aqui o nome direitinho,
+
+181
+00:26:13.140 --> 00:26:16.860
+Gesiel Lopes: que é o que a gente chama de List Comprehension.
+
+182
+00:26:17.080 --> 00:26:20.430
+Gesiel Lopes: Um nome bonito. Dá até para treinar o nosso inglês.
+
+183
+00:26:20.580 --> 00:26:29.259
+Gesiel Lopes: Repito, não se preocupem em entender essa estrutura de código
+
+184
+00:26:29.680 --> 00:26:38.930
+Gesiel Lopes: agora, porque nós iremos ainda explorar as duas maneiras que vimos. Tá de
+
+185
+00:26:39.170 --> 00:26:52.280
+Gesiel Lopes: de trabalhar com as listas, que é um tipo de coleção de dados da linguagem Pide. Então, na aula, no nosso encontro passado, eu mostrei uma forma. Agora eu vou usar outra,
+
+186
+00:26:52.310 --> 00:27:00.460
+Gesiel Lopes: que é uma forma mais elegante, que é uma forma mais paitônica
+
+187
+00:27:00.580 --> 00:27:05.410
+Gesiel Lopes: de criar listas com determinados valores.
+
+188
+00:27:05.620 --> 00:27:11.690
+Gesiel Lopes: Então, como é que é um list Comprehension. Então eu vou criar uma lista.
+
+189
+00:27:12.800 --> 00:27:18.499
+Gesiel Lopes: E aí dentro dessa lista eu vou armazenar o meu Token.
+
+190
+00:27:18.850 --> 00:27:19.630
+Gesiel Lopes: Tá?
+
+191
+00:27:21.700 --> 00:27:27.760
+Gesiel Lopes: E esse Token vai vir da lista dos meus tokens,
+
+192
+00:27:28.090 --> 00:27:33.090
+Gesiel Lopes: da lista dos meus tokens. E aí, como é que eu faço para.
+
+193
+00:27:34.450 --> 00:27:44.460
+Gesiel Lopes: Como é que eu faço para percorrer uma lista. A gente já viu. A gente usa o for da estrutura de Lp de são for então para Token,
+
+194
+00:27:46.160 --> 00:27:52.909
+Gesiel Lopes: em Token Tokens. Então eu, para cada elemento,
+
+195
+00:27:53.200 --> 00:28:00.209
+Gesiel Lopes: para cada token, que é um elemento da minha lista de Tokins, eu armazeno aqui.
+
+196
+00:28:01.410 --> 00:28:13.069
+Gesiel Lopes: Então ele começa a adicionar. Só que tem um detalhe. Se eu fizer isso, eu vou estar criando simplesmente pegando um elemento e adicionando, pegando elemento, adicionando, observe que esse Token
+
+197
+00:28:13.290 --> 00:28:20.529
+Gesiel Lopes: é um token que não esteja inserido dentro das minhas stopwords.
+
+198
+00:28:21.210 --> 00:28:27.749
+Gesiel Lopes: Não seja nenhum desses elementos aqui não seja nenhum desses. Tolkens.
+
+199
+00:28:28.140 --> 00:28:29.000
+Gesiel Lopes: Tá bom?
+
+200
+00:28:29.250 --> 00:28:31.270
+Gesiel Lopes: E aí eu preciso fazer um teste.
+
+201
+00:28:31.710 --> 00:28:43.170
+Gesiel Lopes: E aqui o teste é feito dessa forma. Se token notebook Iim.
+
+202
+00:28:44.060 --> 00:28:48.150
+Gesiel Lopes: Isso top worlds.
+
+203
+00:28:49.340 --> 00:28:51.339
+Gesiel Lopes: Eu vou considerar o meu token.
+
+204
+00:28:51.810 --> 00:28:58.250
+Gesiel Lopes: Se vocês observarem. É basicamente a mesma estrutura, tá?
+
+205
+00:28:58.440 --> 00:29:01.909
+Gesiel Lopes: Que a gente utilizou no encontro passado,
+
+206
+00:29:02.200 --> 00:29:05.579
+Gesiel Lopes: porém escrito de uma maneira diferente
+
+207
+00:29:05.840 --> 00:29:19.509
+Gesiel Lopes: e sem criar uma variável anterior, sem declarar uma variável anterior, sem declarar uma lista vazia, para poder manipular essa lista.
+
+208
+00:29:19.630 --> 00:29:30.080
+Gesiel Lopes: Então o João Vitor tem um Br na variável. Não, não Vitor João Vitor. Na realidade, esses topwords é o parâmetro da minha função.
+
+209
+00:29:30.190 --> 00:29:36.559
+Gesiel Lopes: Observa que eu criei uma função que ela recebe dois parâmetros. Os stop worlds
+
+210
+00:29:37.160 --> 00:29:45.229
+Gesiel Lopes: que aí eu posso passar. Qualquer lista de stopwards. Não necessariamente essa que eu criei. Beleza.
+
+211
+00:29:45.440 --> 00:29:52.750
+Gesiel Lopes: Não, não é só a minha. Eu que eu passo para dentro da função beleza
+
+212
+00:29:54.560 --> 00:30:07.050
+Gesiel Lopes: então, quando eu faço isso, traz o mesmo resultado do que a gente fez no nosso último encontro. Só que é uma outra maneira de escrever o mesmo código.
+
+213
+00:30:07.150 --> 00:30:25.469
+Gesiel Lopes: E aí essa forma, essa maneira, esse estilo dentro do código Python é chamado de List Comprehension, que é o que eles chamam de Comprehension. Eu posso tanto criar listas dessa maneira como também dicionário. Se não se preocupe,
+
+214
+00:30:25.550 --> 00:30:30.230
+Gesiel Lopes: se não entenderam, só imaginem, é uma lista.
+
+215
+00:30:30.390 --> 00:30:34.700
+Gesiel Lopes: É uma lista que vai ter todas as minhas palavras
+
+216
+00:30:35.300 --> 00:30:41.479
+Gesiel Lopes: que não sejam nenhuma dessas palavras que eu estou definindo aqui,
+
+217
+00:30:41.980 --> 00:30:53.020
+Gesiel Lopes: beleza. Então tirei aqui que é o meu, que é a remoção remo.
+
+218
+00:30:53.180 --> 00:30:54.160
+Gesiel Lopes: São
+
+219
+00:30:58.650 --> 00:31:15.090
+Gesiel Lopes: das Stop Wordpress beleza, a remoção das minhas Stop World, que é a minha terceira etapa. Tá tranquilo.
+
+220
+00:31:16.580 --> 00:31:26.380
+Gesiel Lopes: Então observe que agora eu já tenho o meu texto pré processado. Então agora eu posso retornar. E aí a minha função
+
+221
+00:31:27.880 --> 00:31:32.290
+Gesiel Lopes: é: vai retornar
+
+222
+00:31:34.100 --> 00:31:44.430
+Gesiel Lopes: a minha lista de tokens. Ele vai retornar uma dupla. Que dupla é essa? É os meus tokens, tá
+
+223
+00:31:44.770 --> 00:31:51.190
+Gesiel Lopes: que é a minha lista de tokens já devidamente processados,
+
+224
+00:31:51.560 --> 00:32:03.080
+Gesiel Lopes: e o texto pré processado. Observem que a gente precisa agora pegar a minha lista de Tolkens e juntar como se fosse uma única String.
+
+225
+00:32:03.290 --> 00:32:20.479
+Gesiel Lopes: Como é que a gente faz isso? A gente viu o uso da função split. Aliás, perdão da função Joy das Strings. Então a função Joy de String é a função que junta elementos dentro de uma String. Nesse caso, aqui o que eu vou juntar?
+
+226
+00:32:20.510 --> 00:32:25.840
+Gesiel Lopes: Eu vou juntar os meus tokens dentro de uma string vazia.
+
+227
+00:32:26.060 --> 00:32:28.690
+Gesiel Lopes: Então eu faço o Join.
+
+228
+00:32:29.230 --> 00:32:32.699
+Gesiel Lopes: De quem? Dos meus tokens.
+
+229
+00:32:33.120 --> 00:32:36.399
+Gesiel Lopes: E aqui, pessoal, só para a gente não perder o costume.
+
+230
+00:32:37.000 --> 00:32:43.449
+Gesiel Lopes: A gente pode definir aqui a nossa documentação da nossa função.
+
+231
+00:32:43.620 --> 00:32:53.430
+Gesiel Lopes: E aqui eu posso fazer a definição. Definição da função. Eu vou deixar aqui como exercício.
+
+232
+00:32:53.570 --> 00:33:01.630
+Gesiel Lopes: A gente também não. E aí dentro da definição da nossa função, a gente pode explicar as etapas
+
+233
+00:33:03.900 --> 00:33:09.329
+Gesiel Lopes: que é o que a nossa função faz só para a gente não perder a boa prática.
+
+234
+00:33:09.500 --> 00:33:14.360
+Gesiel Lopes: Beleza. Fiz isso. Essa é a minha função, tá?
+
+235
+00:33:19.350 --> 00:33:24.900
+Gesiel Lopes: E aí eu posso, tá só criar aqui mais uma variável.
+
+236
+00:33:25.150 --> 00:33:28.740
+Gesiel Lopes: E aí agora eu posso criar meu texto.
+
+237
+00:33:29.070 --> 00:33:36.479
+Gesiel Lopes: Observe que eu posso utilizar a função que realiza todos esses processos. Esse pré processamento,
+
+238
+00:33:36.540 --> 00:33:50.680
+Gesiel Lopes: dentro de um texto como a gente declarou a função, e a gente já tem os nossos Stopwarts. A gente pode já fazer isso de forma automatizada. Então, primeiro, eu vou criar aqui um
+
+239
+00:33:53.460 --> 00:33:54.790
+Gesiel Lopes: é
+
+240
+00:34:06.310 --> 00:34:18.510
+Gesiel Lopes: que é os meus tokens, e o meu texto pré
+
+241
+00:34:19.120 --> 00:34:26.010
+Gesiel Lopes: processado. Então eu vou chamar minha função pré processamento.
+
+242
+00:34:26.400 --> 00:34:33.400
+Gesiel Lopes: E aí, quais são os parâmetros que eu passo as stopworlds, stop e stop.
+
+243
+00:34:33.770 --> 00:34:42.260
+Gesiel Lopes: E agora Sim, João, eu vou passar a variável que eu criei lá na frente,
+
+244
+00:34:42.610 --> 00:34:55.339
+Gesiel Lopes: inclusive eu vou fazer isso nomeado para ficar bem claro, as stopwords que serão utilizadas na minha função são as Top Worlds que eu defini antes,
+
+245
+00:34:56.449 --> 00:35:03.060
+Gesiel Lopes: e o meu texto é o texto Opa, acho que eu apaguei. E o texto
+
+246
+00:35:03.390 --> 00:35:07.880
+Gesiel Lopes: é a minha variável texto que a gente já tinha definido lá anteriormente.
+
+247
+00:35:08.160 --> 00:35:12.380
+Gesiel Lopes: Tá, então quando eu faço isso, tá,
+
+248
+00:35:12.540 --> 00:35:15.819
+Gesiel Lopes: eu vou ter os meus tolkens,
+
+249
+00:35:15.990 --> 00:35:21.050
+Gesiel Lopes: que. É justamente o meu texto normalizado,
+
+250
+00:35:21.310 --> 00:35:29.350
+Gesiel Lopes: tokenizado sem stopwords. Na realidade, eu posso até usar esse próprio nome
+
+251
+00:35:29.950 --> 00:35:36.689
+Gesiel Lopes: em vez de somente tolkens. Então é o texto normalizado tokenizado sem stopwats.
+
+252
+00:35:36.930 --> 00:35:37.750
+Gesiel Lopes: Tá bom.
+
+253
+00:35:38.540 --> 00:35:45.510
+Gesiel Lopes: E o texto pré processado texto pré processado.
+
+254
+00:35:46.200 --> 00:35:57.560
+Gesiel Lopes: Então, um. Eu vou ter a lista de tokens pré processados e o outro vai ser a String, contendo a minha
+
+255
+00:35:57.950 --> 00:36:01.480
+Gesiel Lopes: o meu texto já devidamente pré processado.
+
+256
+00:36:01.750 --> 00:36:14.230
+Gesiel Lopes: E aí a gente pode realizar algumas operações. A primeira operação que a gente fez uma operação de contagem de análise que a gente pode fazer beleza. E eu coloquei aqui o modo hard
+
+257
+00:36:14.560 --> 00:36:20.379
+Gesiel Lopes: só para a gente reproduzir o que a gente fez anteriormente. Então, se eu executar,
+
+258
+00:36:22.130 --> 00:36:33.769
+Gesiel Lopes: a gente vai ter provavelmente. Pessoal, talvez a gente tenha. Na realidade, a gente não vai ter, já que as palavras que eu usei aqui não esquece
+
+259
+00:36:33.850 --> 00:36:43.839
+Gesiel Lopes: as palavras que foram usadas aqui. Elas não são stopworlds. Então ela tem que retornar ao mesmo valor. O que vai mudar é o tamanho da string final,
+
+260
+00:36:44.130 --> 00:36:48.119
+Gesiel Lopes: tá que aqui eu posso usar
+
+261
+00:36:54.010 --> 00:37:11.180
+Gesiel Lopes: usar um F string, que é a quantidade de karate karaquité teres do texto original.
+
+262
+00:37:13.320 --> 00:37:17.030
+Gesiel Lopes: É o zuleme, o texto
+
+263
+00:37:20.230 --> 00:37:28.220
+Gesiel Lopes: e aqui eu coloco a quantidade de caracteres do texto para é processado.
+
+264
+00:37:28.750 --> 00:37:33.080
+Gesiel Lopes: E aí eu faço o texto pré processado.
+
+265
+00:37:34.030 --> 00:37:39.750
+Gesiel Lopes: Então o que vai mudar é a quantidade, já que, no exemplo do nosso último encontro,
+
+266
+00:37:40.100 --> 00:37:43.610
+Gesiel Lopes: a gente utilizou menos Stop Worlds.
+
+267
+00:37:43.990 --> 00:37:47.220
+Gesiel Lopes: Então observem aí que eu tive uma
+
+268
+00:37:48.890 --> 00:37:53.240
+Gesiel Lopes: aqui. Eu posso até fazer mais uma.
+
+269
+00:37:55.570 --> 00:38:09.790
+Gesiel Lopes: A diferença de caracteres do texto original e do texto pré processado
+
+270
+00:38:17.090 --> 00:38:18.370
+Gesiel Lopes: super processado.
+
+271
+00:38:21.220 --> 00:38:26.479
+Gesiel Lopes: Ah, tá, isso diminuiu mais de mil palavras, porque o
+
+272
+00:38:27.670 --> 00:38:35.640
+Gesiel Lopes: ô João, porque a gente está usando mais stopwords. Então a gente vai tirar mais palavras, e aí essas palavras, elas têm uma alta recorrência no texto.
+
+273
+00:38:36.120 --> 00:38:41.809
+Gesiel Lopes: Beleza. Então, por isso e aí faltou eu fazer a operação de subtração.
+
+274
+00:38:42.750 --> 00:38:50.940
+Gesiel Lopes: Então, do texto, que é a quantidade de caracteres do texto, menos a quantidade de caracteres do texto pré processado.
+
+275
+00:38:51.260 --> 00:38:53.550
+Gesiel Lopes: Então observem que eu tirei
+
+276
+00:38:53.920 --> 00:39:11.120
+Gesiel Lopes: do texto original, mais de três mil, quase aproximadamente quase três.quinhentos caracteres. Então são caracteres que, nesse nosso pré processamento, não representam uma semântica
+
+277
+00:39:11.360 --> 00:39:14.080
+Gesiel Lopes: para nossas análises.
+
+278
+00:39:14.200 --> 00:39:16.250
+Gesiel Lopes: Vale ressaltar que
+
+279
+00:39:20.340 --> 00:39:27.529
+Gesiel Lopes: a gente está considerando apenas um managrama que é um Unigramming, que a gente chama que são tolkens apenas
+
+280
+00:39:28.040 --> 00:39:34.050
+Gesiel Lopes: é possível eu juntar tolkens com mais de uma palavra.
+
+281
+00:39:34.480 --> 00:39:37.330
+Gesiel Lopes: E aí eu posso ter N. Grammys,
+
+282
+00:39:37.790 --> 00:39:52.230
+Gesiel Lopes: e aí a gente pode considerar estruturas bem mais complexas de palavras, beleza. Nesse caso, aqui, a unidade básica que a gente está utilizando é os tokens
+
+283
+00:39:52.230 --> 00:39:59.310
+Gesiel Lopes: que são os meus Unigrammys, que são unigramas, né? Beleza ou um anagrama
+
+284
+00:39:59.380 --> 00:40:05.980
+Gesiel Lopes: que é uma cadeia de caracteres, não necessariamente formando uma palavra, tá,
+
+285
+00:40:08.790 --> 00:40:19.369
+Gesiel Lopes: mas a gente está retirando bem, e aí, quando a gente começa a trabalhar com esses elementos, um procedimento, um teste que sempre observe.
+
+286
+00:40:19.540 --> 00:40:24.139
+Gesiel Lopes: Eu não estou entrando nesse mérito, mas um pensamento que é sempre feito
+
+287
+00:40:24.230 --> 00:40:30.720
+Gesiel Lopes: é testes. Então, nada, principalmente em ciência de dados em Data Science.
+
+288
+00:40:30.770 --> 00:40:47.929
+Gesiel Lopes: Então nada é exato. Sempre a gente precisa levar em consideração as hipóteses. Será que eu considerar Unirammys ou unigrammys? Será que isso traz um impacto
+
+289
+00:40:48.100 --> 00:40:50.810
+Gesiel Lopes: para o meu algoritmo, tá?
+
+290
+00:40:51.360 --> 00:40:54.999
+Gesiel Lopes: E aí a gente precisa testar essas hipóteses.
+
+291
+00:40:55.160 --> 00:40:58.069
+Gesiel Lopes: Só abrindo esse pequeno adendo
+
+292
+00:40:59.400 --> 00:41:06.389
+Gesiel Lopes: fechou. Vou fazer o seguinte pessoal antes de mostrar o modo soft. Então a gente só organizou um pouquinho o nosso código
+
+293
+00:41:06.620 --> 00:41:20.579
+Gesiel Lopes: para fazer as nossas análises de forma bem mais encapsulada, porque depois eu vou usar essa função para fazer outras análises. Tá? E colocar inclusive outras etapas.
+
+294
+00:41:22.840 --> 00:41:29.189
+Gesiel Lopes: Então o que eu vou fazer aqui? Então, como são nove, catorze, nove e quinze? Vamos dar o nosso intervalozinho de praxe
+
+295
+00:41:29.700 --> 00:41:34.459
+Gesiel Lopes: até para que eu consiga pegar uma água, renovar aqui minha água.
+
+296
+00:41:34.640 --> 00:41:39.979
+Gesiel Lopes: E aí a gente retorna às nove,vinte e cinco.
+
+297
+00:41:40.230 --> 00:41:41.670
+Gesiel Lopes: Combinado, pessoal.
+
+298
+00:41:42.630 --> 00:41:49.630
+Gesiel Lopes: Então vou parar aqui o meu compartilhamento. Eu só vou fechar aqui a câmera e o microfone. Então, até daqui a pouquinho.
+
+299
+00:50:26.370 --> 00:50:29.610
+Gesiel Lopes: Opa, pessoal, vivos.
+
+300
+00:50:30.570 --> 00:50:37.140
+Gesiel Lopes: Vamos lá. Voltei um pouquinho mais cedo. Deu tempo aí só de pegar aqui uma água, rapidinho. Vamos lá.
+
+301
+00:50:41.750 --> 00:50:43.780
+Gesiel Lopes: Podemos dar continuidade.
+
+302
+00:50:44.110 --> 00:50:48.309
+Gesiel Lopes: Então vou compartilhar mais uma vez aqui a minha tela com você.
+
+303
+00:50:48.580 --> 00:50:49.889
+Gesiel Lopes: Com vocês.
+
+304
+00:50:50.380 --> 00:50:53.050
+Gesiel Lopes: Prepara aqui o chat do lado.
+
+305
+00:50:53.380 --> 00:50:54.360
+Gesiel Lopes: Beleza
+
+306
+00:50:54.850 --> 00:51:01.040
+Gesiel Lopes: dá para que eu possa acompanhar. Mas qualquer coisinha só levanta a mão tiver qualquer dúvida, pessoal, hora, uma
+
+307
+00:51:03.360 --> 00:51:18.459
+Gesiel Lopes: um dos momentos de tirar essa dúvida é agora. Então é só levantar a mão ou abrir o microfone que a gente tenta ajudá los da melhor maneira possível. Então a gente não fez nada de diferente até agora. Só encapsulou melhor as nossas etapas de pré processamento,
+
+308
+00:51:18.650 --> 00:51:22.630
+Gesiel Lopes: e aí a gente precisou fazer uma contagem. Mas, convenhamos,
+
+309
+00:51:23.160 --> 00:51:34.179
+Gesiel Lopes: percorrer uma lista para fazer uma contagem de uma ocorrência de uma palavra de um token.
+
+310
+00:51:34.270 --> 00:51:45.250
+Gesiel Lopes: Não é das maneiras mais performáticas que é bem verboso. Eu tenho que declarar um contador.
+
+311
+00:51:45.620 --> 00:51:48.989
+Gesiel Lopes: Depois tem que usar o fod dentro do fod. Tem que usar o If.
+
+312
+00:51:49.430 --> 00:51:54.849
+Gesiel Lopes: Servem que é bem hard, mesmo né? Bem,
+
+313
+00:51:55.090 --> 00:51:59.920
+Gesiel Lopes: bem, Hardc Coldage, que a gente chama bem explícito.
+
+314
+00:52:00.290 --> 00:52:06.090
+Gesiel Lopes: Só que o Python fornece uma maneira bem mais
+
+315
+00:52:06.270 --> 00:52:24.350
+Gesiel Lopes: fácil de a gente fazer contagens, fazer a contagem da ocorrência de uma String dentro de uma estringe maior, por exemplo, então, fazer a contagem de ocorrência de um caracté
+
+316
+00:52:24.510 --> 00:52:36.769
+Gesiel Lopes: específico ou de uma string específica dentro de uma outra String. E isso é feito esse modo. Software é feito
+
+317
+00:52:36.880 --> 00:52:45.039
+Gesiel Lopes: através da função ou do usando aqui o método.
+
+318
+00:52:45.240 --> 00:52:48.880
+Gesiel Lopes: Se eu quero fazer uma contagem, vocês acham? Qual é o nome do método
+
+319
+00:52:50.620 --> 00:53:07.559
+Gesiel Lopes: Country? Simples assim. Nesse caso, Count, a gente não vai usar. Pode até usar na lista também. Mas esse Count. A gente vai usar na String e não na lista de Tolkens. No nosso texto normalizado, tokenizado
+
+320
+00:53:08.550 --> 00:53:24.120
+Gesiel Lopes: e sem stopwords é no texto pré processado. Então, se eu fizer texto pré processado, ocorrência ocorrência Copom,
+
+321
+00:53:24.290 --> 00:53:30.510
+Gesiel Lopes: por exemplo, Copom, que foi a nossa primeira palavra do nosso If.
+
+322
+00:53:30.830 --> 00:53:35.410
+Gesiel Lopes: Para fazer essa contagem, eu chamo dentro da String.
+
+323
+00:53:35.530 --> 00:53:38.909
+Gesiel Lopes: A função ali. Já até aparece aqui a primeira count
+
+324
+00:53:39.190 --> 00:53:49.160
+Gesiel Lopes: simples. E aqui, eu passo a ocorrência que eu quero verificar. Nesse caso, é a palavra com bom a.
+
+325
+00:53:50.250 --> 00:53:57.010
+Gesiel Lopes: E aí? Olha só. Antes de passar a palavra certa, copom, eu vou colocar aqui o copom.
+
+326
+00:53:57.730 --> 00:54:07.320
+Gesiel Lopes: Vou colocar assim copom copom com.
+
+327
+00:54:08.130 --> 00:54:09.609
+Gesiel Lopes: Com um C maiúsculo.
+
+328
+00:54:10.280 --> 00:54:14.820
+Gesiel Lopes: E aqui eu vou só fazer o Print só para mostrar para vocês
+
+329
+00:54:15.040 --> 00:54:19.120
+Gesiel Lopes: a importância de a gente ter um texto padronizado.
+
+330
+00:54:19.610 --> 00:54:22.719
+Gesiel Lopes: Tá Opa Gisele.
+
+331
+00:54:24.240 --> 00:54:28.420
+Gesiel Lopes: E aí, só para mostrar por que normalizar o texto
+
+332
+00:54:28.730 --> 00:54:37.390
+Gesiel Lopes: para processar textos é extremamente importante. Observem que eu vou usar a mesma palavra tá
+
+333
+00:54:37.520 --> 00:54:43.380
+Gesiel Lopes: escrita de forma diferente. E contar a ocorrência dela.
+
+334
+00:54:46.010 --> 00:54:54.910
+Gesiel Lopes: E aí, copom copom. Deixa eu só ajustar aqui, ó ah, copom!
+
+335
+00:54:55.220 --> 00:54:56.410
+Gesiel Lopes: Agora foi.
+
+336
+00:54:56.550 --> 00:54:57.260
+Gesiel Lopes: Tá?
+
+337
+00:54:58.960 --> 00:55:05.460
+Gesiel Lopes: E aí. Olha só só para a gente entender, tá?
+
+338
+00:55:09.320 --> 00:55:14.179
+Gesiel Lopes: Eu vou fazer o count no nosso texto pré processado
+
+339
+00:55:15.150 --> 00:55:25.839
+Gesiel Lopes: e no nosso texto, sem estar devidamente processado, que é o nosso texto original, só para mostrar aqui a importância do
+
+340
+00:55:26.630 --> 00:55:29.749
+Gesiel Lopes: da padronização. Mas eu vou colocar aqui na
+
+341
+00:55:31.160 --> 00:55:50.539
+Gesiel Lopes: na próxima célula. Destacar aqui a importância fortalecer, de normalizar os o texto em N L. P.
+
+342
+00:55:53.600 --> 00:55:55.899
+Gesiel Lopes: E aí, só para verificar aqui. De fato,
+
+343
+00:55:56.490 --> 00:56:00.269
+Gesiel Lopes: a gente está trazendo a ocorrência correta.
+
+344
+00:56:00.400 --> 00:56:01.220
+Gesiel Lopes: Tá?
+
+345
+00:56:01.770 --> 00:56:14.660
+Gesiel Lopes: Primeiro, eu vou usar a função Count para contar a ocorrência da palavra Copom, e vou imprimir, porém,
+
+346
+00:56:14.800 --> 00:56:23.139
+Gesiel Lopes: usando um teste, porque essa ocorrência aqui, se essa função estiver correta,
+
+347
+00:56:23.550 --> 00:56:32.529
+Gesiel Lopes: ou se essa aqui estiver correta, ela tem que trazer o mesmo resultado. Então é mais fácil o que eu fiz, não estar devidamente correto
+
+348
+00:56:32.770 --> 00:56:36.039
+Gesiel Lopes: do que a função oficial lá da linguagem Python.
+
+349
+00:56:36.210 --> 00:56:43.720
+Gesiel Lopes: Então, para até validar se essa nossa contagem está certa ou não, eu vou comparar o resultado
+
+350
+00:56:44.320 --> 00:56:48.530
+Gesiel Lopes: que a gente fez no nosso modo hard com
+
+351
+00:56:48.860 --> 00:56:54.360
+Gesiel Lopes: a ocorrência realizada com o método account. É um modo soft.
+
+352
+00:56:54.750 --> 00:56:59.669
+Gesiel Lopes: Observe que ele só vai imprimir o resultado
+
+353
+00:56:59.960 --> 00:57:03.260
+Gesiel Lopes: da ocorrência através da função count.
+
+354
+00:57:03.750 --> 00:57:10.109
+Gesiel Lopes: Se a quantidade de ocorrências da palavra compor concound
+
+355
+00:57:10.340 --> 00:57:23.500
+Gesiel Lopes: foi igual com o modo Hard que a gente fez. Então vamos ver se isso está certo. O que a gente fez de fato está certo, apesar de não ser tão limpo,
+
+356
+00:57:23.730 --> 00:57:26.379
+Gesiel Lopes: então a gente pode executar ó
+
+357
+00:57:27.110 --> 00:57:34.889
+Gesiel Lopes: essa função. Opa, ele deu um erro aqui. Claro, faltou detalhe.
+
+358
+00:57:35.040 --> 00:57:40.239
+Gesiel Lopes: Eu colocar os dois pontos para finalizar a função.
+
+359
+00:57:40.340 --> 00:57:43.240
+Gesiel Lopes: Agora, sem ele, vai executar.
+
+360
+00:57:43.610 --> 00:57:50.199
+Gesiel Lopes: E deu resultado, né? O mesmo resultado. Vou colocar entre parênteses. Não vou deixar assim mesmo,
+
+361
+00:57:50.890 --> 00:57:52.639
+Gesiel Lopes: já que é só uma operação
+
+362
+00:57:52.770 --> 00:58:05.520
+Gesiel Lopes: operador lógico. Então ele trouxe doze. Porque de fato, tanto o count como a maneira que a gente fez. Ele vai trazer a mesma quantidade. Observe que é muito mais simples, tá
+
+363
+00:58:06.270 --> 00:58:21.609
+Gesiel Lopes: de fazer esse processamento sem necessariamente criar uma variável. Ou então a gente pode colocar essa forma. Caso eu queira fazer análise de mais de uma palavra, eu posso colocar várias palavras
+
+364
+00:58:21.630 --> 00:58:32.700
+Gesiel Lopes: e fazer a análise da ocorrência dessas palavras dentro de um laço de repetição. Então posso colocar dentro de um foco e fazer a contagem de cada uma dessas palavras,
+
+365
+00:58:32.830 --> 00:58:45.820
+Gesiel Lopes: e aí verificar. Deixa eu até colocar aqui. Então, aqui palavras, palavras, palavras
+
+366
+00:58:49.660 --> 00:58:52.569
+Gesiel Lopes: para análise, por exemplo.
+
+367
+00:58:52.810 --> 00:58:55.969
+Gesiel Lopes: Então é só mostrar. Aqui a gente usou o Copom.
+
+368
+00:58:58.010 --> 00:59:10.730
+Gesiel Lopes: Juros, juros, inflação, inflação.
+
+369
+00:59:11.850 --> 00:59:16.650
+Gesiel Lopes: Qual foi a outra cenário?
+
+370
+00:59:21.650 --> 00:59:22.990
+Gesiel Lopes: Cenário?
+
+371
+00:59:23.090 --> 00:59:27.200
+Gesiel Lopes: E aqui eu vou colocar mais uma, que é
+
+372
+00:59:31.020 --> 00:59:34.280
+Gesiel Lopes: talvez uma palavra que.
+
+373
+00:59:35.200 --> 00:59:39.450
+Gesiel Lopes: Que está na moda, principalmente hoje em dia, é o
+
+374
+00:59:42.680 --> 00:59:43.720
+Gesiel Lopes: o
+
+375
+00:59:50.530 --> 00:59:58.370
+Gesiel Lopes: por exemplo. Quero ver se tem a ocorrência da palavra petróleo, petróleo
+
+376
+01:00:02.090 --> 01:00:08.410
+Gesiel Lopes: e o é preços.
+
+377
+01:00:09.120 --> 01:00:11.629
+Gesiel Lopes: Então, além das
+
+378
+01:00:11.980 --> 01:00:27.280
+Gesiel Lopes: quatro palavras que a gente usou anteriormente, eu adicionei mais duas palavras e observe que eu não vou precisar criar um novo contador. Eu posso colocar isso dentro de um laço de repetição, por exemplo, no fór que aí eu posso chamar de palavra
+
+379
+01:00:28.190 --> 01:00:33.620
+Gesiel Lopes: em palavras para análise, tá?
+
+380
+01:00:34.310 --> 01:00:43.420
+Gesiel Lopes: E fazer aqui o nosso print tá fazer aqui o nosso print.
+
+381
+01:00:45.310 --> 01:00:53.009
+Gesiel Lopes: Só que e aí não, não foi esse aqui, né? Foi esse aqui, ó,
+
+382
+01:00:56.740 --> 01:01:01.040
+Gesiel Lopes: fazendo o nosso print, só formatando.
+
+383
+01:01:01.180 --> 01:01:07.219
+Gesiel Lopes: Então, em vez de colocar a palavra de forma explícita, eu vou usar
+
+384
+01:01:07.380 --> 01:01:14.700
+Gesiel Lopes: aí eu utilizo mais uma função. Observe que eu sempre estava colocando a palavra em caixa alta.
+
+385
+01:01:15.130 --> 01:01:18.399
+Gesiel Lopes: E aí, para fazer isso, eu vou fazer o uso da
+
+386
+01:01:19.010 --> 01:01:22.970
+Gesiel Lopes: qual a função que eu uso para
+
+387
+01:01:23.350 --> 01:01:26.449
+Gesiel Lopes: colocar ela em caixa alta. É a função.
+
+388
+01:01:27.920 --> 01:01:32.910
+Gesiel Lopes: Quem lembra ninguém?
+
+389
+01:01:33.250 --> 01:01:37.959
+Gesiel Lopes: Uma, duas a pé. E isso, ou
+
+390
+01:01:38.200 --> 01:01:45.609
+Gesiel Lopes: o Alexandro é a função aper ou o método aper. Então aper.
+
+391
+01:01:45.800 --> 01:01:48.779
+Gesiel Lopes: E aqui. Olha só.
+
+392
+01:01:49.750 --> 01:01:57.510
+Gesiel Lopes: Eu vou usar só uma variável rencia ocorrência.
+
+393
+01:01:57.920 --> 01:02:00.000
+Gesiel Lopes: Palavra palavra.
+
+394
+01:02:00.230 --> 01:02:02.400
+Gesiel Lopes: Só uma variável para eu guardar
+
+395
+01:02:02.510 --> 01:02:06.220
+Gesiel Lopes: a ocorrência. Não é daquela palavra dentro do meu texto.
+
+396
+01:02:06.510 --> 01:02:11.809
+Gesiel Lopes: Então é só texto pré processado country.
+
+397
+01:02:12.440 --> 01:02:20.010
+Gesiel Lopes: E aqui passo como parâmetro. A minha palavra que eu estou pegando dentro do meu foco.
+
+398
+01:02:20.350 --> 01:02:21.060
+Gesiel Lopes: Tá?
+
+399
+01:02:21.350 --> 01:02:24.620
+Gesiel Lopes: Então aqui, ó menos linhas.
+
+400
+01:02:28.300 --> 01:02:31.060
+Gesiel Lopes: O fito queimou, né?
+
+401
+01:02:31.380 --> 01:02:35.650
+Gesiel Lopes: Mas dá até para programar no próprio celular. Vitor, talvez aí não,
+
+402
+01:02:36.200 --> 01:02:44.699
+Gesiel Lopes: mas enfim, vamos lá. Aí é que faltou. Colocar a variável que tem o valor que é a ocorrência.
+
+403
+01:02:45.250 --> 01:02:52.399
+Gesiel Lopes: Palavra ocorrência da palavra. Eu vou executar. Observe, eu vou trazer até mais resultados
+
+404
+01:02:52.510 --> 01:03:06.599
+Gesiel Lopes: do que a gente tinha visto anteriormente. Porém, olha só, com menos linhas e até trazendo mais resultados. Então o Copom vem doze, comparando doze, oito, quarenta e cinco e nove.
+
+405
+01:03:07.100 --> 01:03:08.950
+Gesiel Lopes: Então, doze.
+
+406
+01:03:09.490 --> 01:03:14.990
+Gesiel Lopes: Ó inflação. Ó, vem mais inflação. Deixa eu ver.
+
+407
+01:03:16.150 --> 01:03:18.240
+Gesiel Lopes: Inflação em quarenta e cinco.
+
+408
+01:03:18.620 --> 01:03:24.770
+Gesiel Lopes: O que a gente fez errado aqui, ó inflação, tá?
+
+409
+01:03:32.260 --> 01:03:42.169
+Gesiel Lopes: Eu até desconfio que possa ser. E o cenário vem doze, vê se cenário bateu o cenário não bateu.
+
+410
+01:03:45.340 --> 01:03:47.229
+Gesiel Lopes: Cenário. Cenário:
+
+411
+01:03:50.380 --> 01:03:53.730
+Gesiel Lopes: inflação, inflação. Tá.
+
+412
+01:03:53.890 --> 01:03:57.030
+Gesiel Lopes: Até desconfiou, mas Cupom bateu, né?
+
+413
+01:03:57.210 --> 01:04:01.559
+Gesiel Lopes: Juros, bateu inflação, não bateu?
+
+414
+01:04:03.040 --> 01:04:09.950
+Gesiel Lopes: Se vocês observarem, está dando erro justamente nas palavras com assento.
+
+415
+01:04:11.280 --> 01:04:11.960
+Gesiel Lopes: Tchau.
+
+416
+01:04:13.510 --> 01:04:20.480
+Gesiel Lopes: E aí vem outras. O petróleo observa que aparece uma única vez. Preços aparecem treze vezes.
+
+417
+01:04:22.340 --> 01:04:25.200
+Gesiel Lopes: Esse erro aqui. Ó não
+
+418
+01:04:25.300 --> 01:04:43.260
+Gesiel Lopes: como a gente fez de forma Hard a gente cometer o erro. Até desconfio. Alguém tem suspeita do que possa ser isso? Eu não sei. Tinha que investigar. A gente chama de debugar. Mais alguém? Eu tenho uma leve suspeita. Alguém poderia dar uma outra.
+
+419
+01:04:43.430 --> 01:04:49.229
+Gesiel Lopes: Será que alguém desconfia de alguma coisa que possa ser?
+
+420
+01:04:51.360 --> 01:04:59.639
+Gesiel Lopes: Não, depois a gente corrige. Se for essa minha hipótese for verdadeira, eu falo para vocês.
+
+421
+01:05:00.010 --> 01:05:07.810
+Gesiel Lopes: Enfim, continuando, por que normalizar. E é aqui, abrindo um parêntese? Porque normalizar é importante
+
+422
+01:05:08.000 --> 01:05:15.640
+Gesiel Lopes: porque se vocês observarem, eu estou verificando a ocorrência aqui esse exemplo não foi um dos melhores.
+
+423
+01:05:17.060 --> 01:05:20.690
+Gesiel Lopes: Tá, ó, mas ó o copom.
+
+424
+01:05:21.060 --> 01:05:33.670
+Gesiel Lopes: Quando eu faço grafias diferentes, ele vai trazer resultados diferentes. Copom, copom uma,
+
+425
+01:05:37.050 --> 01:05:40.210
+Gesiel Lopes: tá? Só um minuto. Só um minuto.
+
+426
+01:05:47.000 --> 01:05:49.840
+Gesiel Lopes: Eu vou só fazer uma.
+
+427
+01:05:51.270 --> 01:05:58.310
+Gesiel Lopes: Uma pequena alteração. Ata de texto.
+
+428
+01:06:00.290 --> 01:06:03.730
+Gesiel Lopes: Ah, tá, copom, tá?
+
+429
+01:06:04.230 --> 01:06:12.179
+Gesiel Lopes: Só vou alterar aqui essa minha variável, já que eu estou processando ela dentro da função, talvez
+
+430
+01:06:13.020 --> 01:06:18.840
+Gesiel Lopes: essa variável está confundindo com a variável que a gente definiu anteriormente.
+
+431
+01:06:19.150 --> 01:06:27.260
+Gesiel Lopes: Um outro conteúdo que a gente vai trabalhar um pouco mais lá na frente, que a gente chama de escopo de uma variável
+
+432
+01:06:27.480 --> 01:06:32.699
+Gesiel Lopes: que é a variável global e uma variável local. E a gente vai entender isso um pouco mais lá na frente.
+
+433
+01:06:32.800 --> 01:06:38.819
+Gesiel Lopes: Talvez seja um desses problemas que a gente está passando.
+
+434
+01:06:39.440 --> 01:06:41.030
+Gesiel Lopes: Então só
+
+435
+01:06:44.860 --> 01:06:51.330
+Gesiel Lopes: ajustando. E aqui o texto vai ser o texto da ata do copom a variável.
+
+436
+01:06:51.500 --> 01:07:03.020
+Gesiel Lopes: Os resultados não vão mudar. Vão trazer os mesmos resultados. O que vai continuar errado, porque o problema provavelmente deve ser outro. Não é o nome da variável.
+
+437
+01:07:04.370 --> 01:07:08.640
+Gesiel Lopes: Então aqui vai trazer os mesmos resultados. E aqui o modo soft
+
+438
+01:07:08.930 --> 01:07:15.239
+Gesiel Lopes: bem mais mesmo resultado. E aqui também vai trazer o mesmo resultado.
+
+439
+01:07:16.640 --> 01:07:23.029
+Gesiel Lopes: Só aqui que eu quero verificar se existe alguma grafia dentro do texto
+
+440
+01:07:23.210 --> 01:07:27.830
+Gesiel Lopes: com caixa alta ou com a letra C maiúscula da palavra copom.
+
+441
+01:07:28.290 --> 01:07:33.480
+Gesiel Lopes: Porque se eu não me fala, a memória tem. Eu não tenho. No texto original com o copom
+
+442
+01:07:33.710 --> 01:07:39.480
+Gesiel Lopes: com a letra maiúscula. Então trouxe o mesmo resultado. Não era isso,
+
+443
+01:07:39.710 --> 01:07:41.800
+Gesiel Lopes: mas a gente. Vamos ver se
+
+444
+01:07:43.400 --> 01:07:46.910
+Gesiel Lopes: se eu posso ter algum indicativo aqui?
+
+445
+01:07:48.500 --> 01:07:49.670
+Gesiel Lopes: E aí?
+
+446
+01:07:57.010 --> 01:08:05.929
+Gesiel Lopes: Aí eu tinha que ver a palavra. O texto original, mas tem aqui. Ó ah, não,
+
+447
+01:08:08.050 --> 01:08:15.700
+Gesiel Lopes: que eu estou usando a variável errada agora. Sim, agora sim, agora sim.
+
+448
+01:08:25.979 --> 01:08:27.700
+Gesiel Lopes: Não mudou o resultado.
+
+449
+01:08:29.240 --> 01:08:33.260
+Gesiel Lopes: O texto texto atacopum.
+
+450
+01:08:36.029 --> 01:08:39.620
+Gesiel Lopes: Deixa eu só ver aqui um detalhe textuada a copom
+
+451
+01:08:41.399 --> 01:08:46.819
+Gesiel Lopes: até aqui. Ó Copon, está aqui, ó Copom
+
+452
+01:08:57.340 --> 01:08:58.569
+Gesiel Lopes: Lady Murphy.
+
+453
+01:08:59.910 --> 01:09:05.279
+Gesiel Lopes: Ah, não, tá certo, tá certo.
+
+454
+01:09:05.689 --> 01:09:10.650
+Gesiel Lopes: Deixa eu mostrar aqui para vocês. Só o detalhe. O print aqui. Talvez é que
+
+455
+01:09:16.859 --> 01:09:20.469
+Gesiel Lopes: não esteja da forma correta.
+
+456
+01:09:21.050 --> 01:09:24.090
+Gesiel Lopes: Eu vou só mudar aqui, ó esse Print
+
+457
+01:09:27.370 --> 01:09:34.470
+Gesiel Lopes: colocando um print ó da forma que que eu tô contando, né?
+
+458
+01:09:40.430 --> 01:09:44.929
+Gesiel Lopes: Só para enfatizar que a normalização é uma etapa fundamental.
+
+459
+01:09:54.100 --> 01:09:56.090
+Gesiel Lopes: Aí eu posso só copiar aqui. Ó
+
+460
+01:09:59.420 --> 01:10:00.200
+Gesiel Lopes: ok.
+
+461
+01:10:05.580 --> 01:10:10.109
+Gesiel Lopes: Eu vou só alterar a ordem aqui só para padronizar.
+
+462
+01:10:11.730 --> 01:10:14.809
+Gesiel Lopes: E aqui eu vou fazer aqui um primeiro print print.
+
+463
+01:10:16.780 --> 01:10:19.910
+Gesiel Lopes: Texto original.
+
+464
+01:10:20.220 --> 01:10:21.040
+Gesiel Lopes: Tá.
+
+465
+01:10:21.960 --> 01:10:24.320
+Gesiel Lopes: E aqui, ó texto
+
+466
+01:10:28.210 --> 01:10:34.820
+Gesiel Lopes: pré processado tá o porquê normalizar é importante.
+
+467
+01:10:35.160 --> 01:10:52.510
+Gesiel Lopes: Então, se vocês observarem no texto original. A palavra copom escrita com a primeira caracter maiúscula. Ele ocorre doze vezes. Não existe ocorrência com a palavra copom e tudo em caixa alta
+
+468
+01:10:52.660 --> 01:10:56.810
+Gesiel Lopes: e nem em caixa baixa no texto original.
+
+469
+01:10:57.230 --> 01:11:01.850
+Gesiel Lopes: Observem, quando eu faço a contagem. Considerando agora
+
+470
+01:11:02.050 --> 01:11:06.340
+Gesiel Lopes: o texto pré processado, observem que eu tenho uma mudança
+
+471
+01:11:06.710 --> 01:11:16.450
+Gesiel Lopes: no valor, porque ele passa a considerar a grafia com tudo minúsculo, com tudo em caixa baixa da String.
+
+472
+01:11:16.570 --> 01:11:19.840
+Gesiel Lopes: Então, por isso que é importante a gente padronizar.
+
+473
+01:11:20.010 --> 01:11:35.910
+Gesiel Lopes: E como o Pyth case sensitive, isso pode trazer resultados bem divergentes, principalmente se eu tiver grafias da mesma palavra de maneiras diferentes.
+
+474
+01:11:37.270 --> 01:11:38.380
+Gesiel Lopes: Ok,
+
+475
+01:11:43.010 --> 01:11:44.110
+Gesiel Lopes: beleza.
+
+476
+01:11:45.810 --> 01:11:55.509
+Gesiel Lopes: Dito isso, vamos lá. A gente pode ainda fazer algumas outras operações dentro de String
+
+477
+01:11:55.830 --> 01:12:01.179
+Gesiel Lopes: primeiro delas. Além de a gente poder fazer a contagem,
+
+478
+01:12:01.270 --> 01:12:20.590
+Gesiel Lopes: a gente consegue também fazer pesquisas dentro de Strings. Então é possível a gente buscar a ocorrência ou aonde a que aparece. Por exemplo, a ocorrência de uma determinada palavra,
+
+479
+01:12:20.890 --> 01:12:26.960
+Gesiel Lopes: por exemplo, e aí, para fazer essa pesquisa.
+
+480
+01:12:28.930 --> 01:12:32.090
+Gesiel Lopes: A gente vai utilizar para pesquisar
+
+481
+01:12:41.780 --> 01:12:44.780
+Gesiel Lopes: se uma estringe tá?
+
+482
+01:12:45.080 --> 01:12:52.370
+Gesiel Lopes: Está dentro de outra. String,
+
+483
+01:12:57.350 --> 01:13:02.629
+Gesiel Lopes: utiliza se o método.
+
+484
+01:13:03.290 --> 01:13:11.939
+Gesiel Lopes: Se eu quero pesquisar, se eu quero buscar? Qual método que eu vou usar? Qual é a função que eu vou usar? Alguém? Alguém desconfia.
+
+485
+01:13:12.940 --> 01:13:21.329
+Gesiel Lopes: É a função e um buscar. E é dentro, né? Eu quero buscar
+
+486
+01:13:23.240 --> 01:13:26.520
+Gesiel Lopes: o Alexandre deu uma dica ruim, né?
+
+487
+01:13:27.350 --> 01:13:33.469
+Gesiel Lopes: Eu quero buscar na realidade um método. O In é um operador.
+
+488
+01:13:33.740 --> 01:13:43.360
+Gesiel Lopes: Alexandre é justamente o Lucas já deu a dica. O Python. Pessoal, ele é muito por isso que ele é fácil de ler,
+
+489
+01:13:43.480 --> 01:13:58.380
+Gesiel Lopes: porque a estrutura do Python é muito parecida com a linguagem natural. E aí, no caso, o Python levou em consideração a língua universal, que é o inglês. Então, se eu quero buscar
+
+490
+01:13:58.870 --> 01:14:03.060
+Gesiel Lopes: a palavra mais indicada é o
+
+491
+01:14:06.270 --> 01:14:21.610
+Gesiel Lopes: sushi, né? Sushi, sushi no chute também poderia ser. Mas aí, no caso aqui, Find, a Sushi daria o mesmo. Um resultado semanticamente. Mas no caso aqui do Python, ele usa o método find.
+
+492
+01:14:21.780 --> 01:14:27.019
+Gesiel Lopes: Então, nesse caso, aqui, eu vou pegar o meu texto
+
+493
+01:14:27.790 --> 01:14:32.080
+Gesiel Lopes: pré processado e chamo a função find.
+
+494
+01:14:32.310 --> 01:14:33.080
+Gesiel Lopes: Tá?
+
+495
+01:14:33.860 --> 01:14:35.969
+Gesiel Lopes: E aí. Aqui. Ó, eu vou
+
+496
+01:14:36.190 --> 01:14:44.040
+Gesiel Lopes: buscar a ocorrência da palavra copom, tá, então quando eu faço isso,
+
+497
+01:14:45.480 --> 01:14:48.189
+Gesiel Lopes: eu vou abrir mais umas células aqui embaixo,
+
+498
+01:14:48.430 --> 01:14:55.340
+Gesiel Lopes: ele vai me retornar. Um valor é que é esse valor.
+
+499
+01:15:00.500 --> 01:15:06.130
+Gesiel Lopes: Tem diferença? Lucas tem uma diferença entre o Find e o Index.
+
+500
+01:15:06.600 --> 01:15:07.300
+Gesiel Lopes: Tá,
+
+501
+01:15:08.170 --> 01:15:18.109
+Gesiel Lopes: mas se eu quero para fazer pesquisa, a gente utiliza o Find. O método Find observe que ele me retorna a um valor. Que valor é esse?
+
+502
+01:15:18.360 --> 01:15:19.080
+Gesiel Lopes: Tá?
+
+503
+01:15:19.550 --> 01:15:25.230
+Gesiel Lopes: O que significa esse valor? Se eu pegar aqui o meu texto pré processado,
+
+504
+01:15:25.650 --> 01:15:32.580
+Gesiel Lopes: usar o operador colchate e usar esse número que o Find retornou, tá?
+
+505
+01:15:33.010 --> 01:15:36.070
+Gesiel Lopes: Ele vai me retornar à letra C.
+
+506
+01:15:36.400 --> 01:15:45.670
+Gesiel Lopes: O Find vai retornar o índice do primeiro carecté
+
+507
+01:15:45.790 --> 01:15:52.799
+Gesiel Lopes: da String que você está buscando na primeira ocorrência.
+
+508
+01:15:53.590 --> 01:16:10.369
+Gesiel Lopes: Então observem que a letra C da palavra Copom aparece a primeira vez dentro da string do texto processado no índice quarenta e um. Então ele vai retornar o valor do índice
+
+509
+01:16:10.600 --> 01:16:12.629
+Gesiel Lopes: do primeiro caracter.
+
+510
+01:16:13.410 --> 01:16:21.759
+Gesiel Lopes: Então, se eu fizer, observe que copom. Ele é formado por cinco caracteres.
+
+511
+01:16:22.170 --> 01:16:27.830
+Gesiel Lopes: Então, se eu fizer de quarenta e um, mais cinco quarenta e seis,
+
+512
+01:16:27.930 --> 01:16:31.260
+Gesiel Lopes: que é a quantidade de caracteres, tá?
+
+513
+01:16:32.230 --> 01:16:38.519
+Gesiel Lopes: Tem que ser mais um. Porque senão eu acho que ele vai retornar. Não retornou. Ele vai me trazer a palavra copom.
+
+514
+01:16:38.850 --> 01:16:43.159
+Gesiel Lopes: Então isso quer dizer que a palavra compom? Ela aparece
+
+515
+01:16:43.930 --> 01:16:53.810
+Gesiel Lopes: na primeira vez, na mainstring, na posição ou de índice quarenta e um tá
+
+516
+01:16:54.710 --> 01:16:58.479
+Gesiel Lopes: beleza. E observem que, nesse caso,
+
+517
+01:16:58.740 --> 01:17:15.810
+Gesiel Lopes: a verificação é feita da esquerda para a direita. Então o Find, o Find analisa da esquerda para direita
+
+518
+01:17:18.490 --> 01:17:22.740
+Gesiel Lopes: e retorna, torna.
+
+519
+01:17:24.330 --> 01:17:30.900
+Gesiel Lopes: É um o valor, um valor
+
+520
+01:17:34.010 --> 01:17:45.200
+Gesiel Lopes: maior ou igual a zero ou menos um.
+
+521
+01:17:46.400 --> 01:17:59.710
+Gesiel Lopes: Por quê? Se eu tiver um valor positivo, significa dizer o quê? Que ele encontrou a ocorrência daquela String dentro da String que eu estou usando para pesquisar,
+
+522
+01:18:00.050 --> 01:18:06.229
+Gesiel Lopes: que é o índice que é o índice pode ser zero ou maior do que zero.
+
+523
+01:18:06.910 --> 01:18:09.990
+Gesiel Lopes: Se ele não encontrar
+
+524
+01:18:10.210 --> 01:18:26.999
+Gesiel Lopes: a ocorrência dessa palavra ou dessa String dentro da String que a gente está utilizando para pesquisar. Ele vai retornar a menos um. Então o menos um significa que a String não foi encontrada só para a gente validar.
+
+525
+01:18:29.510 --> 01:18:39.440
+Gesiel Lopes: Observe, eu vou usar um Stop World, que é o G, por exemplo, tá,
+
+526
+01:18:41.510 --> 01:18:45.240
+Gesiel Lopes: talvez o dia não seja. Vamos fazer esse teste.
+
+527
+01:18:45.500 --> 01:18:52.140
+Gesiel Lopes: Então eu vou pegar o meu texto pré processado.
+
+528
+01:18:53.340 --> 01:18:57.850
+Gesiel Lopes: Finde de
+
+529
+01:19:02.420 --> 01:19:07.690
+Gesiel Lopes: como seria para mostrar a segunda ocorrência. A gente vai fazer já, já.
+
+530
+01:19:10.590 --> 01:19:14.750
+Gesiel Lopes: Allan, deixa eu ver o dia. Talvez o dia não seja
+
+531
+01:19:14.890 --> 01:19:17.860
+Gesiel Lopes: porque ele vai buscar. Deixa eu.
+
+532
+01:19:18.270 --> 01:19:21.719
+Gesiel Lopes: Deixa eu só ver aqui as minhas stopwords.
+
+533
+01:19:26.140 --> 01:19:28.590
+Gesiel Lopes: Chuva aquele.
+
+534
+01:19:34.670 --> 01:19:36.740
+Gesiel Lopes: Acho que aonde é mais fácil,
+
+535
+01:19:37.590 --> 01:19:48.740
+Gesiel Lopes: porque ele busca a ocorrência dessa String dentro. E aí. Se eu tiver uma Estringe, por exemplo, depósito. Ele encontra o D, então tem o de. E
+
+536
+01:19:49.540 --> 01:19:56.360
+Gesiel Lopes: deixa eu botar onde não sei se tem aonde. Beleza.
+
+537
+01:19:56.720 --> 01:20:00.620
+Gesiel Lopes: Então, o aonde é uma Stop World que a gente utilizou
+
+538
+01:20:00.720 --> 01:20:19.919
+Gesiel Lopes: e observe que de fato, essa palavra, onde ela não deve estar, no nosso texto pré processado, porque uma das etapas que a gente realizou foi retirar a ocorrência da palavra onde, então observe que quando eu faço find aonde
+
+539
+01:20:20.010 --> 01:20:39.259
+Gesiel Lopes: ele retorna a menos um, porque ele não encontrou a ocorrência dessa cadeia de caracteres dentro do texto processado. Que é o texto que a String, que a tais está utilizando para fazer a análise de colocar mais algumas células. Beleza,
+
+540
+01:20:39.770 --> 01:20:40.510
+Gesiel Lopes: tá?
+
+541
+01:20:41.750 --> 01:20:49.099
+Gesiel Lopes: E aí, antes de responder o Alan, porque o Finder retorna à primeira ocorrência.
+
+542
+01:20:49.370 --> 01:20:53.800
+Gesiel Lopes: E se eu tiver mais uma ocorrência, tá?
+
+543
+01:20:54.120 --> 01:20:57.719
+Gesiel Lopes: E outra. A gente está fazendo a análise.
+
+544
+01:20:58.110 --> 01:21:01.230
+Gesiel Lopes: O Find faz a busca da esquerda
+
+545
+01:21:01.620 --> 01:21:09.160
+Gesiel Lopes: para a direita. E se eu quiser fazer o contrário, tá o.
+
+546
+01:21:10.980 --> 01:21:29.210
+Gesiel Lopes: E aí, se o objetivo, se o objetivo Full pesquisar, dá e aí da direita, para a esquerda
+
+547
+01:21:32.430 --> 01:21:47.190
+Gesiel Lopes: utiliza se o método Find. Então, se eu quiser fazer o contrário, ou seja, pesquisar da direita para
+
+548
+01:21:47.500 --> 01:21:52.120
+Gesiel Lopes: esquerda, eu uso o R find. Então, se eu pegar texto
+
+549
+01:21:56.810 --> 01:22:04.640
+Gesiel Lopes: pré processado R find copom,
+
+550
+01:22:09.890 --> 01:22:27.310
+Gesiel Lopes: ele vai buscar a primeira ocorrência do índice do primeiro caracter da palavra copom da esquerda para a direita, aliás, da direita para a esquerda. Então, se eu fizer
+
+551
+01:22:27.620 --> 01:22:46.219
+Gesiel Lopes: muito provavelmente o valor vai ser bem diferente da primeira ocorrência. Então a primeira ocorrência, na realidade, seria a última ocorrência da palavra copom. Ele está num índice de número catorze.novecentos e quarenta.novecentos e dois.
+
 552
-01:28:50.640 --> 01:28:54.069
-Gesiel Lopes: E aí eu já começo a fazer essa verificação.
+01:22:46.320 --> 01:22:53.800
+Gesiel Lopes: Então, se eu fizer texto pré processado, fazer o Slice catorze.novecentos e dois
 
 553
-01:28:54.230 --> 01:28:56.420
-Gesiel Lopes: Se e aí.
+01:22:53.930 --> 01:23:00.580
+Gesiel Lopes: mais cinco vai dar catorze.novecentos e sete. Ele também vai me trazer a palavra copom.
 
 554
-01:28:57.880 --> 01:29:03.080
-Gesiel Lopes: Toque se Token não é
+01:23:00.780 --> 01:23:02.850
+Gesiel Lopes: Só que
 
 555
-01:29:03.600 --> 01:29:10.529
-Gesiel Lopes: Start. E aí, qual é a função que eu vou usar? A Start With? Se ela começar
+01:23:07.060 --> 01:23:14.439
+Gesiel Lopes: observem que se eu utilizar o primeiro índice, a primeira ocorrência da esquerda para a direita,
 
 556
-01:29:14.580 --> 01:29:19.500
-Gesiel Lopes: com menor ou
+01:23:14.640 --> 01:23:22.130
+Gesiel Lopes: que foi o índice quarenta e um? Não. Qual foi o índice quarenta e um? Exato, como
 
 557
-01:29:25.490 --> 01:29:26.660
-Gesiel Lopes: Tolkien.
+01:23:23.070 --> 01:23:30.349
+Gesiel Lopes: o início do Slice. Observe que ele vai trazer um texto, uma string bem maior.
 
 558
-01:29:28.510 --> 01:29:36.600
-Gesiel Lopes: Isso é Endes Wiffi.
+01:23:32.200 --> 01:23:42.310
+Gesiel Lopes: E se eu utilizar essa ocorrência aqui, que seria a última, como início do meu Slice.
 
 559
-01:29:36.840 --> 01:29:38.899
-Gesiel Lopes: Qual é o que tem que ser maior?
+01:23:42.500 --> 01:23:52.329
+Gesiel Lopes: Ele vai trazer uma outra string tá uma outra substrangue que nessa segunda substância,
 
 560
-01:29:39.060 --> 01:29:44.690
-Gesiel Lopes: O outro cara que está aí do Html, maior, tá,
+01:23:52.470 --> 01:24:00.240
+Gesiel Lopes: como essa ocorrência é a última. A palavra copom só vai aparecer uma vez.
 
 561
-01:29:48.410 --> 01:29:59.319
-Gesiel Lopes: ela é um item válido. E aí, no caso, eu não quero que ela seja. Então eu tenho que negar se note token start If ou note
+01:24:00.340 --> 01:24:11.720
+Gesiel Lopes: E aí eu posso garantir. Olha só, com o count countee copom tá?
 
 562
-01:30:00.890 --> 01:30:04.290
-Gesiel Lopes: Tolkien andes maior, né?
+01:24:13.240 --> 01:24:24.849
+Gesiel Lopes: Já. Se eu utilizar, dá a primeira ocorrência da esquerda para a direita. Observem que a palavra Copom.
 
 563
-01:30:05.390 --> 01:30:18.040
-Gesiel Lopes: Ela é um token válido. Então eu faço o meu apende token, tá
+01:24:25.160 --> 01:24:31.309
+Gesiel Lopes: Ela pode, caso ela apareça mais de uma vez e a gente viu que ela aparece.
 
 564
-01:30:19.110 --> 01:30:25.349
-Gesiel Lopes: e aí, eu vou colocar aqui a minha lista de Tokens e os Tokens, só para mostrar o primeiro resultado.
+01:24:32.880 --> 01:24:36.859
+Gesiel Lopes: Ela vai continuar aparecendo porque é a primeira ocorrência.
 
 565
-01:30:32.410 --> 01:30:34.730
-Gesiel Lopes: E aí, só porque eu quero finalizar.
+01:24:36.970 --> 01:24:42.120
+Gesiel Lopes: Então ele observe que a palavra copom ocorre doze vezes. Por quê?
 
 566
-01:30:40.220 --> 01:30:42.630
-Gesiel Lopes: Ah, tá. Ela deu um erro aqui. Ó,
+01:24:42.240 --> 01:24:54.660
+Gesiel Lopes: Porque quando eu faço a análise da esquerda para a direita, é a primeira ocorrência, o índice da primeira ocorrência. E quando eu uso da direita para a esquerda. Na realidade, vai ser a última ocorrência
 
 567
-01:30:46.010 --> 01:30:52.139
-Gesiel Lopes: é isso, não, né, Gisele note in.
+01:24:54.790 --> 01:24:59.220
+Gesiel Lopes: só para a gente saber também diferenciar, tá?
 
 568
-01:30:53.090 --> 01:30:55.259
-Gesiel Lopes: E aqui como eu estou usando o uou,
+01:24:59.810 --> 01:25:01.640
+Gesiel Lopes: E aí, para finalizar.
 
 569
-01:30:56.320 --> 01:31:06.000
-Gesiel Lopes: eu vou colocar entre aspas entre parênteses, para garantir que aquele é o resultado que eu quero. Então ele validou.
+01:25:02.040 --> 01:25:17.140
+Gesiel Lopes: Como é que eu faço a definição aqui? No caso, a pesquisa de todas as oco hencias.
 
 570
-01:31:06.410 --> 01:31:08.829
-Gesiel Lopes: E aí eu vou pegar a mesma.
+01:25:17.570 --> 01:25:18.350
+Gesiel Lopes: Tá?
 
 571
-01:31:13.660 --> 01:31:18.699
-Gesiel Lopes: O mesmo resultado. Agora vou colocar até em outra célula.
+01:25:18.500 --> 01:25:30.359
+Gesiel Lopes: E aí. Nesse caso, Alan, a gente precisa programar. Então essa pesquisa é feita de forma programática.
 
 572
-01:31:19.160 --> 01:31:24.050
-Gesiel Lopes: E se eu executar, observem. Que
+01:25:30.570 --> 01:25:33.709
+Gesiel Lopes: Uma maneira de você fazer isso, tá?
 
 573
-01:31:27.240 --> 01:31:36.700
-Gesiel Lopes: olha trouxe o, Div, né? Deixa eu ver. Se está válido, ok, o meu texto
+01:25:34.150 --> 01:25:39.559
+Gesiel Lopes: Eu vou criar aqui uma variável de. Vou chamar aqui uma variável.
 
 574
-01:31:41.300 --> 01:31:42.930
-Gesiel Lopes: se astringue.
+01:25:40.100 --> 01:25:50.280
+Gesiel Lopes: E é índice índice da ocorrência.
 
 575
-01:31:48.090 --> 01:31:52.110
-Gesiel Lopes: Vamos ver aí a gente tinha que debugar, né?
+01:25:52.400 --> 01:25:54.399
+Gesiel Lopes: E aí vou começar com zero.
 
 576
-01:31:52.260 --> 01:31:56.989
-Gesiel Lopes: O Stop oito ata texto Procon.
+01:25:55.610 --> 01:26:01.400
+Gesiel Lopes: E aí eu vou usar um wiley tá
 
 577
-01:31:57.310 --> 01:31:59.140
-Gesiel Lopes: Ele tá trazendo ainda, né?
+01:26:04.840 --> 01:26:17.850
+Gesiel Lopes: da seguinte maneira: tá, enquanto esse índice aqui de ocorrência for maior do que menos um,
 
 578
-01:32:10.600 --> 01:32:21.520
-Gesiel Lopes: Psicopom super para a gente não avançar muito. Já deu as três às quinze e trinta e um.
+01:26:19.280 --> 01:26:21.840
+Gesiel Lopes: isso quer dizer que eu estou encontrando um índice.
 
 579
-01:32:22.540 --> 01:32:33.400
-Gesiel Lopes: Eu vou parar aqui, tá? E aí, no nosso próximo encontro, a gente faz uma procura fazer uma investigação. Porque ela está acontecendo. Isso,
+01:26:23.820 --> 01:26:33.390
+Gesiel Lopes: E aí eu vou printar esse índice, e aí eu faço o print.
 
 580
-01:32:33.580 --> 01:32:40.300
-Gesiel Lopes: beleza. Aí. A gente valida com vocês e corrige esse ponto, tá
+01:26:33.680 --> 01:26:35.699
+Gesiel Lopes: Nesse caso, aqui, olha só
 
 581
-01:32:44.420 --> 01:32:47.820
-Gesiel Lopes: beleza. Toquei em válido. Toquei em válidos,
+01:26:40.620 --> 01:26:45.300
+Gesiel Lopes: eu faço o print desse índice.
 
 582
-01:32:50.260 --> 01:32:55.940
-Gesiel Lopes: tranquilo. E aí a gente começa a colocar as demais validações. Fechado, pessoal.
+01:26:46.860 --> 01:26:56.209
+Gesiel Lopes: E aí para finalizar, vale uma pequena observação. O método Find, o método Find.
 
 583
-01:32:56.810 --> 01:32:58.889
-Gesiel Lopes: Sempre assim, né? Quando a gente corre.
+01:26:56.720 --> 01:27:13.100
+Gesiel Lopes: Se eu fizer aqui um help, é str find tá o método find. Ele recebe
 
 584
-01:33:00.680 --> 01:33:15.129
-Gesiel Lopes: Então vou parar aqui o compartilhamento. Então é isso. Era o que eu tinha programado para hoje. A gente só termina de melhorar a nossa função usando as funções de manipulação de streaming que a gente viu no encontro de hoje.
+01:27:13.560 --> 01:27:26.399
+Gesiel Lopes: também mais dois parâmetros que podem ser utilizados, que são opcionais. O primeiro parâmetro é a String que a gente quer fazer a busca da ocorrência
 
 585
-01:33:15.130 --> 01:33:21.930
-Gesiel Lopes: Então é isso. Valeu, pessoal. Muito obrigado. Aí. Bom descanso. E até a próxima.
+01:27:27.140 --> 01:27:34.129
+Gesiel Lopes: e opcionalmente. Eu posso passar um parâmetro que eu especifico
 
 586
-01:33:21.970 --> 01:33:22.980
+01:27:34.730 --> 01:27:43.109
+Gesiel Lopes: o início. Qual é o índice inicial que eu vou começar a fazer essa pesquisa a partir de qual índice?
+
+587
+01:27:43.280 --> 01:27:46.270
+Gesiel Lopes: E posso especificar
+
+588
+01:27:46.420 --> 01:28:02.389
+Gesiel Lopes: o índice final. Então eu quero que ele busque apenas de um determinado índice até o índice um. Por exemplo, o Índice Zero, o índice um0 até um índice finito. Então, para ele não percorrer toda
+
+589
+01:28:02.390 --> 01:28:07.830
+Gesiel Lopes: a String. Então posso definir um índice inicial
+
+590
+01:28:07.900 --> 01:28:12.569
+Gesiel Lopes: e um índice final. Então eu posso passar essas duas ocorrências.
+
+591
+01:28:12.690 --> 01:28:15.560
+Gesiel Lopes: Nesse caso, aqui. Ó tá.
+
+592
+01:28:15.890 --> 01:28:18.119
+Gesiel Lopes: Nesse caso, aqui.
+
+593
+01:28:18.320 --> 01:28:27.770
+Gesiel Lopes: E eu vou só colocar aqui Myth String só para é denotar.
+
+594
+01:28:29.110 --> 01:28:30.819
+Gesiel Lopes: É o use.
+
+595
+01:28:36.980 --> 01:28:47.110
+Gesiel Lopes: Oposição é da palavra com
+
+596
+01:28:54.790 --> 01:28:55.580
+Gesiel Lopes: tá.
+
+597
+01:28:55.890 --> 01:29:03.309
+Gesiel Lopes: E aqui eu só vou fazer mais uma validação. Além de ser o Wiley, é só para verificar se ele vai encontrar.
+
+598
+01:29:03.530 --> 01:29:16.549
+Gesiel Lopes: Só que eu quero garantir que ele só imprima a posição quando ela for uma posição válida. E qual é a posição válida? É zero maior, igual a zero.
+
+599
+01:29:16.840 --> 01:29:19.600
+Gesiel Lopes: Então aqui eu faço só uma validação. If:
+
+600
+01:29:19.760 --> 01:29:28.490
+Gesiel Lopes: Se o índice for maior ou igual a zero. Eu imprimo, tá?
+
+601
+01:29:29.610 --> 01:29:33.990
+Gesiel Lopes: Só que aqui eu preciso agora fazer o seguinte. Ó tá?
+
+602
+01:29:34.930 --> 01:29:46.659
+Gesiel Lopes: O índice da ocorrência vai receber a pesquisa do meu texto pré processado. Find
+
+603
+01:29:47.400 --> 01:29:49.789
+Gesiel Lopes: a palavra que eu estou buscando é Copom.
+
+604
+01:29:50.600 --> 01:29:52.329
+Gesiel Lopes: E aqui que está o pulo do gato.
+
+605
+01:29:52.510 --> 01:29:57.420
+Gesiel Lopes: Eu quero que ele comece a partir do índice de ocorrência
+
+606
+01:29:57.690 --> 01:30:01.630
+Gesiel Lopes: que o primeiro valor vai ser qual vai ser zero.
+
+607
+01:30:01.790 --> 01:30:08.080
+Gesiel Lopes: Então ele deve fazer as doze buscas. Então ele vai printar doze vezes.
+
+608
+01:30:11.390 --> 01:30:21.710
+Gesiel Lopes: Então, em vez de ser ó ou Oh, oh, renzia.
+
+609
+01:30:38.560 --> 01:30:46.400
+Gesiel Lopes: Deixa eu só deixar um pouco mais semântico. Ocorrência da palavra copom, né?
+
+610
+01:30:46.850 --> 01:30:54.910
+Gesiel Lopes: Na posição. Aí eu vou colocar oposição essa ocorrência. Eu vou criar só mais um contador aqui. Ó,
+
+611
+01:30:55.450 --> 01:30:58.479
+Gesiel Lopes: eu vou chamar de ocorrência.
+
+612
+01:31:00.350 --> 01:31:07.350
+Gesiel Lopes: Vai começar de zero. E aí eu só vou começar com um Opa.
+
+613
+01:31:09.630 --> 01:31:11.350
+Gesiel Lopes: Apertei o botão errado.
+
+614
+01:31:13.320 --> 01:31:15.070
+Gesiel Lopes: Vou começar aqui com um.
+
+615
+01:31:15.720 --> 01:31:19.909
+Gesiel Lopes: Tá para ele aparecer aqui a ocorrência.
+
+616
+01:31:21.970 --> 01:31:26.200
+Gesiel Lopes: E aí ele vai fazer um incremento. Eu vou fazer só a ocorrência.
+
+617
+01:31:26.580 --> 01:31:29.590
+Gesiel Lopes: Mais um. E aí ele vai começar a contar.
+
+618
+01:31:30.680 --> 01:31:34.480
+Gesiel Lopes: Então a ocorrência deve ser doze nossa.
+
+619
+01:31:34.910 --> 01:31:39.129
+Gesiel Lopes: Opa deu um stop, deu um loop infinito.
+
+620
+01:31:45.530 --> 01:31:54.310
+Gesiel Lopes: Ele está dando um lump infinito find copom. Texto processado.
+
+621
+01:32:05.190 --> 01:32:06.920
+Gesiel Lopes: Índice de ocorrência.
+
+622
+01:32:10.510 --> 01:32:22.760
+Gesiel Lopes: Faço o Find dentro do texto processado da palavra copom, iniciando aqui com zero.
+
+623
+01:32:26.370 --> 01:32:29.440
+Gesiel Lopes: Se esse índice for maior, igual a zero,
+
+624
+01:32:33.590 --> 01:32:39.710
+Gesiel Lopes: tá, voltou a fazer o seguinte: eu tenho que incrementar a ocorrência.
+
+625
+01:32:40.220 --> 01:32:45.850
+Gesiel Lopes: E tem que incrementar esse índice, tá?
+
+626
+01:32:46.280 --> 01:32:49.400
+Gesiel Lopes: Mas agora sim.
+
+627
+01:32:52.250 --> 01:32:56.410
+Gesiel Lopes: Agora sim. Eu não estava incrementando.
+
+628
+01:32:56.510 --> 01:32:59.739
+Gesiel Lopes: Esse é o índice de ocorrência.
+
+629
+01:33:00.090 --> 01:33:09.370
+Gesiel Lopes: Então a palavra copom. Só para finalizar, ele aparece na posição quarenta e um dois mil e vinte e sete até a última,
+
+630
+01:33:09.720 --> 01:33:13.670
+Gesiel Lopes: que é catorze.novecentos e dois.
+
+631
+01:33:13.930 --> 01:33:14.750
+Gesiel Lopes: Tá
+
+632
+01:33:19.630 --> 01:33:20.740
+Gesiel Lopes: ok,
+
+633
+01:33:25.760 --> 01:33:31.180
+Gesiel Lopes: então é isso. Se eu quiser mostrar mais de uma ocorrência, eu preciso programar
+
+634
+01:33:32.170 --> 01:33:35.830
+Gesiel Lopes: tranquilo. Então é isso que eu tinha preparado para hoje. Pessoal,
+
+635
+01:33:35.930 --> 01:33:43.809
+Gesiel Lopes: próximo encontro. A gente continua ainda trabalhando um pouquinho com as funções de String
+
+636
+01:33:43.950 --> 01:33:49.699
+Gesiel Lopes: para a gente fechar e contemplar bem o como tirar os.
+
+637
+01:33:50.180 --> 01:34:05.189
+Gesiel Lopes: O maior proveito da função. Extinguei nos nossos pré processamentos. Então, muito obrigado. Lembrando que a gente terá mais uma reposição no próximo sábado. Hoje, a gravação dia vinte e três de Abril.
+
+638
+01:34:05.220 --> 01:34:19.409
+Gesiel Lopes: A nossa próxima reposição vai ser no dia vinte e quatro, às duas horas, das duas às três e meia fechado. Então é isso, pessoal. Muito obrigado. Bons estudos. Boa noite. Bom descanso. E até a próxima.
+
+639
+01:34:19.520 --> 01:34:20.390
 Gesiel Lopes: Fui.
 
