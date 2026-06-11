@@ -1,0 +1,180 @@
+3. Realizar queries SELECT em uma bases de dados SQL
+3.1 Entender a motivação de utilizar banco de dados
+3.2 Compreender os conceitos básicos de bases de dados SQL
+3.3 Operar o ambiente de programação Replit com SQL (será usado o Deepnote)
+3.4 Recuperar informações de uma base de dados SQL com queries simples
+
+-- Aula 1
+(1) Guia
+(1.1) Introdução
+Dado
+
+Informação
+
+Banco de Dados x Arquivos
+
+SGBD
+
+SGBD Relacional
+
+Outros SGBDs
+
+SQL (Linguagem de quarta geração)
+ 
+
+(1.2) Link 1
+https://docs.google.com/presentation/d/16y5cw4mBVxAN6SLjloe10r4QxXZ6h6Bxd9Q_OK3tN8s/edit#slide=id.p --> Databases and SQL (até o slide 25)
+ 
+
+(1.3) Sobre o SQLite
+O SQLite não é diretamente comparável aos mecanismos de banco de dados SQL cliente/servidor, como MySQL, Oracle, PostgreSQL ou SQL Server, pois o SQLite está tentando resolver um problema diferente.
+
+Os mecanismos de banco de dados SQL cliente/servidor se esforçam para implementar um repositório compartilhado de dados corporativos. Eles enfatizam escalabilidade, simultaneidade, centralização e controle. O SQLite se esforça para fornecer armazenamento de dados local para aplicativos e dispositivos individuais. SQLite enfatiza economia, eficiência, confiabilidade, independência e simplicidade.
+
+SQLite não compete com bancos de dados cliente/servidor.
+
+(1.4) Sobre o DuckDB
+O DuckDB é um Sistema de Gerenciamento de Banco de Dados (SGBD) de código aberto, leve, rápido e fácil de usar, projetado para armazenar e gerenciar dados em ambientes de ciência de dados, análise de dados e machine learning. Ele é conhecido por sua:
+- Leveza e portabilidade
+- Rápido desempenho
+- Sintaxe SQL simples e fácil de usar
+- Compatibilidade com formatos de dados comuns (CSV, JSON, Parquet, etc.)
+- Integração com ferramentas de ciência de dados populares (Python, R, etc.) 
+Obs.: No Deepnote é usado o DuckDB. 
+
+-- Aula 2
+(1.5) Acessar o Deepnote
+------------ Acesso ao Deepnote (Início) ---------------
+Acessar a página https://deepnote.com/ --> Deepnote
+(1.5.1) Clicar no botão 'Sign-in'
+
+(1.5.2) Clicar no botão 'Continue with Google'
+Obs.: Você deverá estar conectado ao browser (por exemplo: Google Chrome) com o usuário de aluno do Infnet. 
+
+(1.5.3) A partir do ícone Workspace (são 3 linhas uma em cima da outra)
+	Clicar em 'Private Projects   +'
+		Clicar no botão 'Create new' --> New Project
+		Colocar o nome do projeto para 'Introdução à Visualização de Dados e SQL'
+
+(1.5.4) Clicar no botão 'SQL' --> SQL
+
+(1.5.5) No bloco 'DataFrame SQL' colocar os comandos abaixo e executar o bloco SQL.
+
+-- Criar a tabela Celebrities
+-- Colocar no bloco 1 - Dataframe SQL - Variable df_1
+-- Apagar a tabela 
+DROP TABLE IF EXISTS Celebrities;
+
+CREATE TABLE Celebrities (
+   AGE int, 
+   GENDER varchar(6),
+   NATIONALITY varchar(15),
+   FULLNAME varchar(40) 
+);
+
+-- Inserir registros na tabela Celebrities
+INSERT INTO Celebrities VALUES (63, 'Male', 'American', 'Tom Hanks'); 
+
+INSERT INTO Celebrities VALUES (24, 'Male', 'English', 'Tom Holland'); 
+
+INSERT INTO Celebrities VALUES (35, 'Female', 'American', 'Scarlett Johansson'); 
+
+INSERT INTO Celebrities VALUES (48, 'Male', 'American', 'Dwayne Johnson'); 
+
+INSERT INTO Celebrities VALUES (29, 'Female', 'Australian', 'Margot Robbie'); 
+
+INSERT INTO Celebrities VALUES (35, 'Female', 'Israelli', 'Gal Gadot'); 
+
+-- Consulta para mostrar todas as colunas da tabela Celebrities
+SELECT * FROM Celebrities; 
+
+-- Colocar no bloco 2 - Dataframe SQL - Variable df_2
+-- Consulta para mostrar a coluna AGE da tabela Celebrities
+SELECT AGE FROM Celebrities; 
+
+-- Colocar no bloco 3 - Dataframe SQL - Variable df_3
+-- Consulta para mostrar as colunas AGE e GENDER da tabela Celebrities
+SELECT AGE, GENDER FROM Celebrities; 
+
+-- Colocar no bloco 4 - Dataframe SQL - Variable df_4
+-- Consulta para mostrar as colunas FULLNAME e NATIONALITY da tabela Celebrities
+SELECT FULLNAME, NATIONALITY FROM Celebrities; 
+
+------------ Acesso ao Deepnote (Fim) --------------- 
+
+(1.6) Outros links interessantes:
+. https://www.sqlite.org/index.html --> Site do SQLite.
+
+. https://www.sqlite.org/download.html --> Baixar o SQLite.
+
+. https://www.sqlite.org/whentouse.html --> Appropriate Uses For SQLite (Usos apropriados para SQLite)
+
+. https://db-engines.com/en/ranking --> DB-Engines Ranking.  
+
+. https://duckdb.org/ --> DuckDB is a fast in-process (portable, analytical, open-source) database system 
+
+(1.7) Usar o SQLite no Windows (por linha de comando) 
+https://www.sqlite.org/download.html
+            . Baixar o arquivo sqlite-tools-win-x64-3510200.zip. 
+
+            . Criar uma nova pasta de sua escolha (por exemplo: c:\SQLite).
+
+            . Mover para a nova pasta criada o arquivo sqlite-tools-win-x64-3510200.zip.
+
+            . Descompactar o arquivo sqlite-tools-win-x64-3510200.zip.
+
+            . Abrir uma janela DOS:
+            -- Procurar onde está o arquivo sqlite3.exe
+            dir c:\sqlite3.exe /s
+            Obs.: Caso você saiba onde está o arquivo citado, ir para o próximo passo.
+        
+            -- Ir para o diretório (pasta) citada no comando anterior
+            cd c:\SQLite
+
+            -- Iniciar o SQlite e usar o database teste.db
+            sqlite3 teste.db
+
+            -- Help
+            .help 
+
+            -- Mostrar os databases existentes
+            .databases
+
+            -- Listar as tabelas existentes
+            .tables
+
+           -- Criar tabela clientes
+           create table clientes
+           (cod_cliente int,
+           nome_cliente varchar(10),
+           celular_cliente varchar(11));
+
+            -- Listar as tabelas existentes
+            .tables
+	
+            -- Verificar o conteúdo da tabela
+            select * from clientes;
+
+            -- Inserir registros	
+            insert into clientes values (1, 'Maria', '9000');
+            insert into clientes values (2, 'João', '8000');
+
+            -- Verificar o conteúdo da tabela
+            select * from clientes;
+
+            -- Verificar o modo padrão do SQLite
+            .mode
+
+            -- Alterar o modo padrão do SQLite
+            .mode table
+
+            -- Verificar o conteúdo da tabela
+            select * from clientes;
+
+            -- Para sair da linha de comando do SQLite
+            .quit
+
+            Obs.: Com isso você desativa o database.
+
+            Comentário: Se tiver interesse seguir os passos do link:
+            https://www.devmedia.com.br/sqlite-o-pequeno-notavel/7249 --> SQLite - O Pequeno Notável

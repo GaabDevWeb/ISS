@@ -1,0 +1,51 @@
+# VARIÁVEIS: Lista principal de etapas do projeto
+etapas = [
+    "Apresentação", "Convencimento", "Solução", "Proposta", "Especificação",
+    "Funcionalidades", "Requisitos", "Cronograma", "Etapas", "Equipe",
+    "Planejamento", "Entendimento", "Detalhamento", "Avaliação", "Análise",
+    "Entidades", "Relacionamentos", "Modelagem", "Desenvolvimento",
+    "Construção", "Verificação", "Cenários", "Avaliação", "Testes",
+    "Instalação", "Liberação", "Cliente", "Implantação", "Comprovação",
+    "Cliente", "Validação", "Aprovação", "Aceitação", "Melhoria contínua",
+    "Evolução incremental"
+]
+
+# DICIONÁRIO: Descrições curtas (3 palavras) para algumas etapas (exemplos anteriores)
+descricoes = {
+    "Apresentação": "Exibição e validação.",
+    "Proposta": "Elaboração e aprovação.",
+    "Requisitos": "Identificação e especificação.",
+    "Etapas": "Sequência e controle.",
+    "Análise": "Análise e avaliação.",
+    "Testes": "Verificação e validação."
+}
+
+# TUPLA: Etapas críticas fixas (imutáveis)
+etapas_criticas = ("Requisitos", "Testes", "Aprovação")
+
+# OPERADORES MATEMÁTICOS: Calcula total de etapas
+total_etapas = len(etapas)  # len() conta itens
+print(f"Total de etapas: {total_etapas}")  # Saída: 35
+
+# CONDICIONAL: Verifica se "Testes" está na lista
+if "Testes" in etapas:
+    print("Testes encontrados!")  # Executa se verdadeiro
+else:
+    print("Sem testes.")
+
+# LOOP FOR: Itera lista e mostra com descrição (se existir)
+print("\nLista de etapas:")
+for i, etapa in enumerate(etapas):  # enumerate dá índice + item
+    indice = i + 1  # Operador + para numerar de 1
+    desc = descricoes.get(etapa, "Sem descrição")  # get() seguro
+    print(f"{indice}. {etapa} - {desc}")
+
+# CONDICIONAL + LOOP: Filtra etapas críticas
+print("\nEtapas críticas:")
+for etapa in etapas_criticas:  # Loop em tupla
+    if etapa in etapas:  # Condicional in
+        print(f"✅ {etapa}")
+
+# LISTA MUTÁVEL: Adiciona nova etapa
+etapas.append("Fechamento")  # append adiciona no fim
+print(f"\nNova lista (adicionada): {len(etapas)} etapas")  # len atualizado

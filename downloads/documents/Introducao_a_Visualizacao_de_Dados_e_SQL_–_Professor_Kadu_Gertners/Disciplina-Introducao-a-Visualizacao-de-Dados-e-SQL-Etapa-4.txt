@@ -1,0 +1,533 @@
+2. Construir um relatório interativo baseado em dados usando Google Data Studio
+2.5 Adicionar controles e configurações a um relatório
+2.6 Compartilhar o relatório com terceiros
+
+(1) Material de Estudo
+https://learning.oreilly.com/library/view/google-data-studio/9781484251560/html/485069_1_En_4_Chapter.xhtml --> 4. An Online Survey (Livro Google Data Studio for Beginners: Start Making Your Data Actionable - Grant Kemp, Gerry White)
+https://learning.oreilly.com/library/view/hands-on-with/9781119616085/c03.xhtml --> Enhancing Basic Graphs (Livro Hands On With Google Data Studio - Lee Hurst)
+https://learning.oreilly.com/library/view/hands-on-with/9781119616085/c04.xhtml --> Data Exploration with Interactive Elements (Livro Hands On With Google Data Studio - Lee Hurst) 
+
+(2) Guia
+https://learning.oreilly.com/library/view/hands-on-with/9781119616085/c03.xhtml
+	Comparações de tempo (ano de 2018 e ano anterior 2017). Design de relatório estático. Gerar uma saída no formato PDF. 
+	
+		Cabeçalho: Nome da pessoa/empresa e o período 2018.
+
+		Visão Geral (scorecards): Comparação de datas para mostrar as alterações de valor de 2017 para 2018.
+
+		Série temporal: Mostrar os valores do Saldo Médio de 2017 comparados com os valores de 2018.
+
+		Tabela: Mostrar Mês (Month), total das transações no mês (Monthly Total Transactions) e média de saldo no mês (Monthly Average Balance).
+		Obs.: Vinculado ao link https://learning.oreilly.com/library/view/hands-on-with/9781119616085/c03.xhtml 'Figura 3.1' ou 'Figure 3.1'. 
+
+
+Passo 1: Copie o relatório
+	Acessar o link (https://lookerstudio.google.com/). 
+
+		Abrir o relatório 'Conta corrente – Exemplo prático do Looker Studio 1.0'.
+
+		Copiar esse relatório. A partir do lado direito da tela em cima clicar nos três pontos (um em cima do outro que fica ao lado do botão 'Editar') e selecionar a opção 'Fazer uma cópia'
+
+		Na janela 'Copiar este relatório' clicar no botão 'Copiar relatório'. 
+
+		Colocar o nome do novo relatório 'Conta corrente – Exemplo prático do Looker Studio 2.0'.
+
+		Fechar o relatório 'Conta corrente – Exemplo prático do Looker Studio 1.0' na outra guia do browser. 
+
+
+Passo 2: Modifique o cabeçalho e defina o intervalo de datas
+
+	Apagar o 'Controle de Período' no cabeçalho do relatório. Selecionar este item e apagá-lo. 
+
+	A partir do menu Página --> Configurações da página atual.
+
+		Na guia 'Configuração'
+
+			Em 'Fonte de Dados' clicar em 'Selecionar a fonte de dados' (ou 'Select a data source') e selecionar 'Chapter2-AccountData'. 
+
+			Em Dimensão do período selecionar 'Date'.
+
+			Em 'Filtro de período padrão' selecionar a opção 'Personalizado'.
+
+				Clicar em 'Período automático'
+
+				No campo 'Data de início': 01/01/2018
+
+				No campo 'Data de término': 31/12/2018
+
+				Clicar no botão 'Aplicar'.
+
+		Na guia 'Estilo'
+
+                        Em 'Tamanho da tela' no campo 'Altura (px)' 900
+
+	Selecionar a caixa de texto 'Conta Corrente Chris Cooper', copiá-la e colá-la mais para o lado direito do cabeçalho. Editar a nova caixa de texto 'Visão Geral de 2018'.
+
+
+Passo 3: Modificar os Scorecards
+
+	Selecionar o Scorecard 'Saldo Médio'
+
+		Na guia 'Configuração'
+
+			Em 'Filtro de período padrão' selecionar a opção 'Personalizado'.
+
+				Clicar na faixa de datas (1 de jan de 2018 - ...)
+
+				No campo 'Data de início': 01/01/2018
+	
+				No campo 'Data de término': 31/12/2018
+
+				Clicar no botão 'Aplicar'.
+
+			Em 'Período de comparação' ativar esta opção e clicar em 'Nenhuma' (por duas vezes) e escolher a opção 'Ano anterior' e clicar no botão 'Aplicar'.
+
+		Na guia 'Estilo'
+
+			Em 'Métrica principal' no campo Precisão decimal selecionar o valor 0.
+
+                        Em 'Campos de comparação' no campo Precisão decimal selecionar o valor 0.
+
+			Marcar a opção 'Exibir variação absoluta'.
+
+	Selecionar o Scorecard 'Saldo Máximo'
+
+		Na guia 'Configuração'
+
+			Em 'Filtro de período padrão' selecionar a opção 'Personalizado'.
+
+				Clicar na faixa de datas (1 de jan de 2018 - ...)
+
+				No campo 'Data de início': 01/01/2018
+
+				No campo 'Data de término': 31/12/2018
+
+				Clicar no botão 'Aplicar'.
+
+			Em 'Período de comparação' ativar esta opção e clicar em 'Nenhuma' (por duas vezes) e escolher a opção 'Ano anterior' e clicar no botão 'Aplicar'.
+
+		Na guia 'Estilo'
+
+			Em 'Métrica principal' no campo Precisão decimal selecionar o valor 0.
+
+			Em 'Campos de comparação' no campo Precisão decimal selecionar o valor 0.
+
+			Marcar a opção 'Exibir variação absoluta'.
+
+	Selecionar o Scorecard 'Saldo Mínimo'
+
+		Na guia 'Configuração'
+
+			Em 'Filtro de período padrão' selecionar a opção 'Personalizado'.
+
+				Clicar na faixa de datas (1 de jan de 2018 - ...)
+
+				No campo 'Data de início': 01/01/2018
+
+				No campo 'Data de término': 31/12/2018
+
+				Clicar no botão 'Aplicar'.
+
+			Em 'Período de comparação' ativar esta opção e clicar em 'Nenhuma' (por duas vezes) e escolher a opção 'Ano anterior' e clicar no botão 'Aplicar'.
+
+		Na guia 'Estilo'
+
+			Em 'Métrica principal' no campo Precisão decimal selecionar o valor 0.
+
+			Em 'Campos de comparação' no campo Precisão decimal selecionar o valor 0.
+
+			Marcar a opção 'Exibir variação absoluta'.
+
+	
+Passo 4: Modificar o gráfico de séries temporais
+
+	Selecionar o 'gráfico de série temporal'
+
+		Na guia 'Configuração'
+
+			Em 'Filtro de período padrão' selecionar a opção 'Personalizado'.
+
+				Clicar na faixa de datas (1 de jan de 2018 - ...)
+
+				No campo 'Data de início': 01/01/2018
+
+				No campo 'Data de término': 31/12/2018
+
+				Clicar no botão 'Aplicar'.
+
+			Em 'Período de comparação' ativar esta opção e clicar em 'Nenhuma' (por duas vezes) e escolher a opção 'Ano anterior' e clicar no botão 'Aplicar'.
+
+
+Passo 5: Modifique a Tabela de Transações
+
+	Selecionar a 'Tabela de Transações'
+
+		Na guia 'Configuração'
+
+			Em 'Dimensão' tirar as colunas: Description e Memo.
+
+			Em 'Dimensão' clicar no ícone de lápis ao lado da coluna Date
+
+				Em 'Nome de exibição' Mês       
+
+				Em 'Tipo de dados' selecionar Data e hora --> Mês
+
+			Em 'Métrica'
+
+				Clicar no ícone de lápis ao lado da coluna 'Transaction Amount'
+
+					Em 'Nome de exibição' Total transações mensais
+
+				Clicar no ícone de lápis ao lado da coluna 'Balance'
+
+					Em 'Nome de exibição' Saldo médio mensal
+
+			Em 'Classificar' Classificação no. 1 selecionar a coluna 'Date (Data)' e marcar Crescente
+
+		Na guia 'Estilo'
+
+			Em 'Métricas'
+
+				Em 'Métrica no. 1' clicar em 'Número' e selecionar 'Mapa de calor'
+
+					Em 'Cor da coluna' selecionar uma cor verde.
+
+				Em 'Métrica no. 2' clicar em 'Número' e selecionar 'Barra'
+
+					Em 'Cor da coluna' selecionar uma cor vermelha.
+
+					Marcar a opção 'Mostrar número'
+
+					Marcar a opção 'Compactar números'
+
+	Com o botão direito 'Redimensionar Colunas' --> 'Ajustar aos dados'
+
+	Clicar no botão 'Leitura'.
+
+
+Passo 6: Salve o relatório como PDF para compartilhamento
+
+	Ao lado do botão 'Compartilhar' clicar na seta para baixo e selecionar 'Baixar o relatório'
+
+		Na janela 'Fazer download do relatório (PDF)'
+		
+			Marcar a opção 'Proteger o relatório com senha' e definir a senha para MinhaSenha
+
+			Clicar no botão 'Fazer download'
+
+			Na janela 'Senha' informar a senha MinhaSenha e clicar no botão 'OK'. 
+			Obs.: Caso não mostre a janela 'Senha', abri o arquivo baixado e informar a senha MinhaSenha e clicar no botão 'Enviar'. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+https://learning.oreilly.com/library/view/hands-on-with/9781119616085/c04.xhtml
+	Criação de um relatório com maior grau de liberdade para explorar os dados. Serão usados campos calculados. 
+
+		Cabeçalho da página: É usado o 'Controle de Período'.
+
+		Gráfico de pizza: Mostra o saldo entre depósitos e saques. É um filtro interativo.
+
+		Gráfico de barras: Mostra valores de categorias e o tipo de transação. É um filtro interativo (explorar e isolar categorias).
+
+		Gráfico de linhas: Semelhante ao gráfico de série temporal. Nesse caso divide os valores das categorias.
+
+			Ao clicar no rótulo na legenda da categoria destaca a categoria selecionada.
+
+			Clicar e arrastar no gráfico filtra um intervalo de tempo selecionado.
+
+		Tabela: Mostra detalhes sobre transações por tipo e categoria de memorando. São criadas duas colunas calculadas.
+
+		Controles de filtro
+
+                        Controles de filtro expansível com pesquisa: Expande quando clicado para pesquisar e navegar por todas as entradas de memorando. O usuário pode selecionar ou desmarcar quaisquer valores.
+
+                        Controle de filtros sem Busca: Isola depósitos ou saques.
+
+                        Controle de filtro com pesquisa: Veja vários valores e role para seleção ou use a caixa Pesquisar para isolar valores.
+	Obs.: Vinculado ao link https://learning.oreilly.com/library/view/hands-on-with/9781119616085/c04.xhtml 'Figura 4.1' ou 'Figure 4.1'. 
+
+ 
+Passo 1: Copie o relatório
+
+	Acessar o link (https://lookerstudio.google.com/). 
+
+		Abrir o relatório 'Conta corrente – Exemplo prático do Looker Studio 1.0'.
+
+		Copiar esse relatório. A partir do lado direito da tela em cima clicar nos três pontos (um em cima do outro que fica ao lado do botão 'Editar') e selecionar a opção 'Fazer uma cópia'
+
+		Na janela 'Copiar este relatório' clicar no botão 'Copiar relatório'. 
+
+		Colocar o nome do novo relatório 'Conta corrente – Exemplo prático do Looker Studio 3.0'.
+
+		Fechar o relatório 'Conta corrente – Exemplo prático do Looker Studio 1.0' na outra guia do browser. 
+
+
+Passo 2: Modificar o tamanho da página
+
+	A partir do menu Página --> Configurações da página atual
+
+		Na guia 'Configuração'
+
+			Em 'Fonte de Dados' clicar em 'Selecionar a fonte de dados' e selecionar 'Chapter2-AccountData'. 
+
+		Na guia 'Estilo'
+
+			No campo 'Largura (px)' 1100                                         
+
+			No campo 'Altura (px)' 800
+
+ 
+Passo 3: Alteração de um campo e adição de dois campos calculados
+
+	No relatório 'Conta corrente – Exemplo prático do Looker Studio 3.0'
+
+		Do lado direito da tela em 'Dados' clicar em '+ Adicionar um campo' e selecionar 'Adicionar campo calculado'.
+		Obs.: Caso na janela mostrada mostre o botão 'RECONECTAR', clicar neste botão. Na janela mostrada clicar no botão 'Continuar'.  
+
+		No campo 'Transaction Amount' em 'Agregação padrão' colocar 'Nenhum'.
+
+		Clicar em '+ Adicionar um campo' e 'Adicionar campo calculado'
+
+			Em 'Nome do campo' Transaction Type.
+
+			Em 'Fórmula'
+
+CASE
+
+	WHEN Transaction Amount > 0 THEN "Deposit"
+
+	ELSE "Withdrawal"
+
+END
+
+			Clicar no botão 'Salvar'.
+
+		Clicar em '<- Todos os campos'.
+
+			Clicar em '+ Adicionar um campo' e 'Adicionar campo calculado'
+
+				Em 'Nome do campo' ABS Amount.
+
+				Em 'Fórmula'
+
+ABS(Transaction Amount)
+
+			Clicar no botão 'Salvar'.
+
+		Clicar no botão 'Concluído'.
+
+ 
+Passo 4: Apagar os elementos do relatório abaixo do cabeçalho
+
+	Selecionar os elementos abaixo do cabeçalho e com o botão direito escolher a opção Excluir (ou clicar na tecla Del ou Delete).
+
+ 
+Passo 5: Modificar o cabeçalho
+
+	Ajustar o cabeçalho ao tamanho da página. 
+
+	Na caixa de texto modificar o texto para 'Chris Cooper Verificando Conta'.
+		
+	Selecionar a caixa de texto, copiar e colar. Na caixa de texto colada colocar 'Exploração de Dados'.
+
+	Selecionar o controle de período.
+
+		Em 'Configuração'
+
+			Clicar em 'Filtro de período padrão' na data citada '1 de jan. de 2018 - 31...'
+
+				No campo 'Data de início' selecionar '01/janeiro/2017'.
+
+				No campo 'Data de término' selecionar '31/março/2019'.
+
+				Clicar no botão 'Aplicar'.
+
+
+Passo 6: Adicionando um gráfico de pizza       
+
+	Clicar em 'Adicionar um gráfico'
+
+		Em 'Pizza' selecionar o gráfico 'Gráfico de pizza'.
+
+		Colocá-lo do lado esquerdo abaixo do cabeçalho.
+
+		Em 'Configuração'
+
+			Em 'Dimensão' colocar apenas o campo 'Transaction Type'.
+
+			Em 'Métrica' colocar apenas o campo 'ABS Amount'.
+
+
+Passo 7: Adicionando o Gráfico de Barras
+
+	Clicar em 'Adicionar um gráfico'
+
+		Em 'Barras' selecionar o gráfico 'Gráfico de barras'.
+
+		Colocá-lo do lado esquerdo abaixo do gráfico de pizza.
+
+		Em 'Configuração'
+
+			Em 'Dimensão (eixo Y)' colocar apenas o campo 'Category'.
+
+			Em 'Dimensão detalhada' colocar o campo 'Transaction Type'.
+
+			Em 'Métrica (eixo X)' colocar apenas o campo 'ABS Amount'.
+
+			Com o gráfico de barras selecionado passar o mouse, nos rótulos e quando o ponteiro do mouse se transformar em um símbolo direcional arrastá-lo para a direita até mostrar o nome dos rótulos por completo.
+
+		Em 'Estilo'
+		
+			Em 'Barras' colocar o valor 20.
+
+			Marcar a opção 'Barras empilhadas'.
+	
+			Em 'Eixo Y' no campo 'Tamanho da fonte' 8. 
+
+			Em 'Cabeçalho do gráfico' selecionar a opção 'Não mostrar'.
+ 
+
+Passo 8: Especificar as cores para a dimensão
+
+	A partir do menu Recurso --> Gerenciar cores de valor de dimensão
+
+		Clicar no campo 'Cor' e selecionar uma cor vermelha. No campo 'Valor' Withdrawal. Clicar no botão 'Criar'. 
+
+		Clicar no campo 'Cor' Deposit e selecionar uma cor verde.
+
+		Clicar no botão 'X FECHAR'.
+
+ 
+Passo 9: Adicionando o gráfico de linhas
+
+	Clicar em 'Adicionar um gráfico'
+
+		Em 'Linhas' selecionar o gráfico 'Gráfico de linhas'.
+
+		Colocá-lo centralizado abaixo do cabeçalho.
+
+		Em 'Configuração'
+
+			Em 'Dimensão (eixo X)' colocar apenas o campo 'Date'.
+
+				Clicar no lápis em 'Tipo de dados' clicar em Data em seguida Data e hora --> Ano e Mês.           
+
+			Em 'Dimensão detalhada' colocar o campo 'Category'.
+
+			Em 'Métrica (eixo Y)' colocar apenas o campo 'ABS Amount'.
+
+			Em 'Classificar' selecionar 'Date (Ano e Mês)' e marcar 'Crescente'.
+
+ 
+Passo 10: Configurando a tabela
+
+	Clicar em 'Adicionar um gráfico'
+
+		Em 'Tabela' selecionar o gráfico 'Tabela'.
+
+		Colocá-lo centralizado abaixo do gráfico de linhas.
+
+		Em 'Configuração'
+
+			Em 'Dimensão' colocar os seguintes campos: 'Transaction Type', 'Memo' e 'Category'.
+
+			Em 'Métrica' colocar apenas o campo 'ABS Amount'.
+
+			Em 'Número de linhas' marcar a opção 'N principais' selecionar o 100 e apagá-lo (tem que ficar vazio). 
+
+			Marcar a opção 'Exibir a linha de resumo'.
+
+			Em 'Classificar' colocar o campo 'Transaction Type' e marcar 'Crescente'.
+
+                        Clicar no botão '+ Adicionar classificação' e selecionar o campo 'ABS Amount' e marcar 'Decrescente'.
+
+		Em 'Estilo'
+
+			Em 'Corpo da tabela' desmarcar a opção 'Números das linhas'.
+
+ 
+Passo 11: Configurando os controles de filtro padrão
+
+	Clicar em 'Adicionar um controle'
+
+		Selecionar 'Lista Suspensa'.
+
+			Colocá-lo do lado direito abaixo do cabeçalho.                                              
+
+			Em 'Configuração'
+
+				Em 'Campo "Controle"' colocar o campo 'Memo'.
+
+				Em 'Métrica' somente o campo 'ABS Amount'.
+
+				Em 'Dimensão do período' não pode ter nenhum campo.
+
+		Selecionar a Lista Suspensa 'Memo'
+
+			Copiá-la e colá-la abaixo da própria Lista Suspensa 'Memo'.
+
+				Em 'Configuração'
+
+					Em 'Campo "Controle"' colocar o campo 'Transaction Type'.
+
+					Em 'Métrica' não pode ter nenhum campo.
+
+					Em 'Dimensão do período' não pode ter nenhum campo.
+
+				Em 'Estilo'
+
+					Em 'Controle' marcar a opção 'Tamanho fixo' e desmarcar a opção 'Ativar caixa de pesquisa'.
+		
+			Arraste a Lista Suspensa 'Transaction Type' para motrar 'Withdrawal' e 'Deposit'. 
+
+		Selecionar a Lista Suspensa 'Transaction Type'                                              
+
+			Copiá-la e colá-la abaixo da própria Lista Suspensa 'Transaction Type'.
+
+				Em 'Configuração'
+
+					Em 'Campo "Controle"' colocar o campo 'Category'.
+
+					Em 'Métrica' somente o campo 'ABS Amount'.
+
+					Em 'Dimensão do período' não pode ter nenhum campo.
+
+					Em 'Classificar' selecionar 'ABS Amount' e marcar 'Decrescente'.
+
+				Em 'Estilo'
+
+					Em 'Controle' marcar a opção 'Tamanho fixo' e desmarcar a opção 'Ativar caixa de pesquisa'.                        
+
+			Arraste a Lista Suspensa 'Category' para mostrar quase todas as categorias. 
+
+
+Passo 12: Clicar no botão 'Leitura'
+
+	. Quando uma página é carregada, todos os filtros têm todos os itens selecionados por padrão.
+
+	. Cada 'Lista Suspensa' tem sua própria caixa de seleção de cabeçalho.
+
+	. As seleções feitas nos filtros afetam todos os gráficos por padrão.
+
+	. Fazer algumas análises com o relatório em si para verificar as possibilidades dos filtros existentes.
+
+Legenda (Tipo da transação)
+Deposit = Depósito (Entra na conta)
+Withdrawal = Retirada (Sai da conta)
+
+Legenda (categorias):
+Dividends = Dividendos (valores recebidos da empresa)
+Transfer = Transferência
+Housing = Habitação
+Auto & Transport = Automóvel e Transporte
+Fees & Charges = Taxas e Encargos
+Health & Fitness = Saúde e Condicionamento Físico
+Utilities = Serviço de Utilidade Pública
+Entertainment = Entretenimento
+Royalties = Royalties
+Shopping = Compras
+Loans = Empréstimos
+Insurance = Seguro
+Food & Dining = Comida e Jantar
+Clothing & Personal = Vestuário e itens pessoais
+Pets = Animais de estimação
+Uncategorized = Sem categoria

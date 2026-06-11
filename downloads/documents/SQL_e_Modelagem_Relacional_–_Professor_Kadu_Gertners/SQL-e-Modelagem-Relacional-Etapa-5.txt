@@ -1,0 +1,186 @@
+. https://learning.oreilly.com/library/view/practical-sql-2nd/9781098129866/c10.xhtml --> 10. INSPECIONANDO E MODIFICANDO DADOS (Livro Practical SQL, 2nd Edition - Anthony DeBarros - 
+Published by No Starch Press). 
+	. Dados Sujos (dados com erros, valores ausentes ou organização ruim do dado) 
+	. Origem dados sujos
+		. Converter dados de um tipo de dado para outro;
+		. Fornecer a uma coluna o tipo de dados errado pode causar a perda de informações;
+		. Inserir ou editar dados, deixando para trás erros de digitação e inconsistências ortográficas. 
+		Obs.: É um problema para o analista de dados.
+
+	. Usar o arquivo Estabelecimentos.csv disponibilizado no infnet.online da disciplina SQL e Modelagem Relacional. 
+	. Verificar o conteúdo do arquivo baixado 
+		Abrir o Excel e escolher Pasta de trabalho em branco. 
+		A partir do menu Dados e clicar no botão/link 'De Text/CSV'. Ir para o diretório onde está o arquivo baixado, selecionar esse arquivo e clicar no botão 'Importar'. 
+		Na janela 'Estabelecimentos.csv' clicar no botão 'Carregar'. 
+
+	. Acessar o SQLiteStudio.exe
+		. No menu Banco de Dados --> Adicionar um banco de dados
+			Na janela 'Banco de Dados'
+			Obs.: Escolher a pasta na qual estamos guardando os arquivos do SQLite. 
+			Colocar o nome do arquivo como estabelecimento.db e clicar no botão 'Selecionar'. 
+				Clicar no botão 'Testar conexão'. 
+				Clicar no botão 'OK'	
+
+CREATE TABLE estabelecimentos (
+    id_estabelecimento text CONSTRAINT est_number_key PRIMARY KEY,
+    empresa text,
+    rua text,
+    cidade text,
+    estado text,
+    cep text,
+    telefone text,
+    data_concessao date,
+    atividades text,
+    nome_fantasia text
+);
+
+select * from estabelecimentos;
+
+A partir do menu Ferramentas --> Importar
+	Em 'Importar dados'
+		Em 'Banco de Dados': estabelecimento.db
+		Em 'Table': estabelecimentos
+		Clicar no botão 'Next'.
+	Em 'Dados para importar'
+		Clicar no ícone que indica uma pasta, selecionar o caminho do arquivo Estabelecimentos.csv, selecionar o arquivo Estabelecimentos.csv e clicar no botão 'Abrir'.
+		Em 'Opções de fonte de dados' marcar a opção 'A primeira linha será os nomes das colunas'
+		Em 'Separador de coluna' marcar a opção ', (vírgula)'
+		Clicar no botão 'Finish'. 
+
+select count(*) from estabelecimentos;
+
+select * from estabelecimentos;
+
+	. Entendendo os dados
+-- A mesma empresa é citada no mesmo endereço mais de uma vez? 
+SELECT empresa,
+       rua,
+       cidade,
+       estado,
+       count(*) AS conta_endereco
+FROM estabelecimentos
+GROUP BY empresa, rua, cidade, estado
+HAVING count(*) > 1
+ORDER BY empresa, rua, cidade, estado;
+
+-- Quantas empresas existem em cada estado? 
+SELECT estado,
+       count(*) AS conta_estado
+FROM estabelecimentos
+GROUP BY estado
+ORDER BY estado;
+
+-- Mostrar as colunas quando o estado for NULL
+SELECT id_estabelecimento,
+       empresa,
+       cidade,
+       estado,
+       cep
+FROM estabelecimentos
+WHERE estado IS NULL;
+
+SELECT char(39)||estado||char(39),
+       count(*) AS conta_estado
+FROM estabelecimentos
+GROUP BY estado
+ORDER BY estado;
+
+SELECT id_estabelecimento,
+       empresa,
+       cidade,
+       estado,
+       cep
+FROM estabelecimentos
+WHERE estado = '';
+
+-- Quantos locais cada empresa possui? 
+SELECT empresa,
+       count(*) AS conta_empresa
+FROM estabelecimentos
+GROUP BY empresa
+ORDER BY empresa ASC;
+Obs.: Buscar o nome da empresa iniciada por 'Armour'. Existem 4 formas diferentes de escrever essa empresa. 
+
+SELECT empresa,
+       count(*) AS conta_empresa
+FROM estabelecimentos
+WHERE empresa like '%Armour%'
+GROUP BY empresa
+ORDER BY empresa ASC;
+
+-- Quantos registros apresentam 5 caracteres na coluna cep? 
+SELECT length(cep),
+       count(*) AS conta_comprimento
+FROM estabelecimentos
+GROUP BY length(cep)
+ORDER BY length(cep) ASC;
+
+SELECT length(cep), cep
+FROM estabelecimentos
+ORDER BY cep ASC;
+
+-- Confirmar se determinados registros apresentam menos do que 5 caracteres para a coluna cep
+SELECT estado,
+       count(*) AS conta_estado
+FROM estabelecimentos
+WHERE length(cep) < 5
+GROUP BY estado
+ORDER BY estado ASC;
+Obs.: Os estados citados teriam no início do texto um número 0 ou dois números 0s. Na conversão foram tirados os zeros. 
+
+SELECT estado, cep, length(cep) 
+FROM estabelecimentos
+WHERE length(cep) < 5
+ORDER BY estado ASC, cep ASC;
+
+	. Corrigir os seguintes problemas: 
+(1) Valores sem indicar o estado (para a coluna estado) para 3 registros; 
+(2) Ortografia inconsistente do nome de pelo menos uma empresa (Armour);
+(3) CEPs imprecisos devido à conversão de arquivos (no início do campo possuía 1 ou 2 números 0 e devido a conversão para número esses zeros foram desconsiderados). 
+
+Se a análise dos dados revelar muitos valores ausentes ou valores que desafiam o senso comum - exemplo: na tabela existem 1 milhão de registros, porém foram detectados problemas na metade dos registros (em 500 mil registros) - é hora de reavaliar o uso deles. Os dados podem não ser confiáveis ​​o suficiente para servir de base para sua análise.
+Se você suspeitar disso:
+	Primeiro passo --> É revisitar o arquivo de dados original. Certifique-se de tê-lo importado corretamente e de que os valores em todas as colunas de origem estejam localizados nas mesmas colunas da tabela. Talvez seja necessário abrir a planilha original ou o arquivo CSV e fazer uma comparação visual. 
+	Segundo passo --> É ligar para quem produziu os dados para confirmar o que você vê e buscar uma explicação. Você também pode pedir conselhos de outras pessoas que usaram os mesmos dados.
+Terão vezes que será melhor descartar o uso desses dados. Às vezes, a quantidade de trabalho necessária para tornar um conjunto de dados utilizável prejudica sua utilidade. Essas situações exigem que você faça um julgamento difícil. Mas é melhor começar de novo ou encontrar uma alternativa do que usar dados ruins que podem levar a conclusões erradas.
+
+-- Criando uma cópia da tabela 
+CREATE TABLE estabelecimentos_backup AS
+SELECT * FROM estabelecimentos;
+
+select count(*) from estabelecimentos;
+
+select count(*) from estabelecimentos_backup;
+
+-- Criando uma cópia de coluna
+ALTER TABLE estabelecimentos ADD COLUMN estado_copy text;
+
+SELECT empresa, estado, estado_copy
+FROM estabelecimentos;
+
+UPDATE estabelecimentos
+SET estado_copy = estado;
+
+SELECT empresa, estado, estado_copy
+FROM estabelecimentos;
+
+SELECT estado,
+       estado_copy
+FROM estabelecimentos
+WHERE estado <> estado_copy
+ORDER BY estado;
+
+SELECT estado,
+       estado_copy
+FROM estabelecimentos
+WHERE estado = estado_copy
+ORDER BY estado;
+
+SELECT id_estabelecimento,
+       empresa,
+       cidade,
+       estado,
+       cep,
+       estado_copy
+FROM estabelecimentos
+WHERE estado = '';

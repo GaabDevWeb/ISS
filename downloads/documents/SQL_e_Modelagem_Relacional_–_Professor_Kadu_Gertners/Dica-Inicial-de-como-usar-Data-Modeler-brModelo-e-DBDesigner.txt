@@ -1,0 +1,35 @@
+Dica inicial de como usar programas que criam os modelos do banco de dados. 
+
+(1) DB Designer
+. https://erd.dbdesigner.net/ --> DB Designer
+	Clicar em 'LOGIN'
+	Selecionar o login do Infnet Google (carlos.magalhaes@prof.infnet.edu.br). 
+	Clicar no botão '+ NEW PROJECT' ou no botão 'CREATE YOUR FIRST PROJECT'.
+		Title: Depto_Func
+		Database: Generic
+		Clicar no botão 'CREATE A NEW SCHEMA'
+	Serão criadas as tabelas:
+	(1) Deptos
+		cod_depto integer
+		nome_depto string
+	(2) Funcionarios
+		matricula integer
+		nome string
+		salario decimal
+		cod_depto integer
+
+(2) brModelo 
+https://www.youtube.com/watch?v=sItFiqAN5YY --> BRMODELO - Construindo um modelo de Banco de dados lógico utilizando BRModelo (13min56seg)
+Para fazer o download do brModelo:
+http://www.sis4.com/brModelo/download.html
+	Clicar no link 'brModelo.zip'. 
+Criar a pasta C:\Design Banco de Dados. 
+Copiar o arquivo baixado para a pasta criada. 
+Descompactar o arquivo brModelo.zip
+
+(3) Data Modeler
+. https://www.youtube.com/watch?v=Zxn6IDB2otU --> Modelo Lógico - Oracle SQL Developer Data Modeler 3.3 PT-BR (12min06seg).
+Para fazer o download do Data Modeler: 
+http://www.oracle.com/technetwork/developer-tools/datamodeler/overview/index.html
+Obs.: Você terá que criar uma conta vinculada a empresa Oracle. 
+

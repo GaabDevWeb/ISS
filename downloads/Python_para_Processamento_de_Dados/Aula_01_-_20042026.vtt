@@ -1,3010 +1,2518 @@
 WEBVTT
 
 1
-00:00:09.920 --> 00:00:11.010
-Kadu Gertners: Turma.
+00:00:09.250 --> 00:00:14.590
+Gesiel Lopes: Pessoal. Boa noite. Vamos aguardar só dois minutinhos. Já. Já iniciamos.
 
 2
-00:00:11.140 --> 00:00:17.010
-Kadu Gertners: Excelente noite para vocês. Tudo bem, pessoal? Tranquilo.
+00:00:16.180 --> 00:00:20.329
+Gesiel Lopes: Dá uns cinco minutinhos de tolerância. Já. Já iniciamos beleza.
 
 3
-00:00:17.270 --> 00:00:19.730
-helio.oliveira: Boa noite, Professor. Tudo, Joia.
+00:02:51.100 --> 00:02:56.630
+Gesiel Lopes: Bom, pessoal, vamos lá. Vamos dar início. Estamos sem mais delongas. Vamos iniciar o nosso encontro.
 
 4
-00:00:19.730 --> 00:00:22.230
-Kadu Gertners: Lente e noite. Maravilha.
+00:02:57.420 --> 00:03:09.260
+Gesiel Lopes: Então, seja muito bem vindo. Muito bem vinda ao nosso primeiro encontro aqui da disciplina de Python para processamento de dados do segundo ciclo
 
 5
-00:00:22.800 --> 00:00:28.640
-Kadu Gertners: Excelente noite, Nelson. Excelente noite, Hélio. Maravilha. Excelente noite, Gabriel Silva.
+00:03:09.500 --> 00:03:21.569
+Gesiel Lopes: do bloco de fundamentos de processamento de dados aqui do Instituto Ifnet. Aqui quem nos fala é o Gesiel Lopes. Vamos dar continuidade nessa
 
 6
-00:00:29.870 --> 00:00:33.250
-Kadu Gertners: Excelente noite, Lucas. Excelente noite, Matheus.
+00:03:21.740 --> 00:03:32.139
+Gesiel Lopes: desse novo ciclo. Para muitos, acredito eu que a grande maioria, que é a continuidade do bloco de entrada
 
 7
-00:00:33.510 --> 00:00:36.130
-Kadu Gertners: Maravilha. Excelente noite, Alan.
+00:03:32.380 --> 00:03:36.590
+Gesiel Lopes: desse universo ou do ecossistema
 
 8
-00:00:37.560 --> 00:00:39.380
-Kadu Gertners: Pessoal, vamos lá.
+00:03:36.950 --> 00:03:53.930
+Gesiel Lopes: de programação. Com a linguagem de programação Python. Então a gente vai agora aprofundar um pouco mais sobre os conceitos da linguagem de programação. Python. Então seja muito bem vindo. Seja muito bem vinda.
 
 9
-00:00:39.570 --> 00:00:40.750
-Kadu Gertners: Olha só.
+00:03:54.040 --> 00:03:58.350
+Gesiel Lopes: Mais uma disciplina aqui do Instituto Infinity.
 
 10
-00:00:41.050 --> 00:00:43.040
-Kadu Gertners: É bom.
+00:03:58.830 --> 00:04:10.420
+Gesiel Lopes: Você que estiver assistindo a gravação como de praxe, né? Bom dia. Boa tarde. Boa noite. Enfim, o horário que você estiver participando, vendo a gravação desse encontro
 
 11
-00:00:44.240 --> 00:00:47.350
-Kadu Gertners: Deixa eu começar pelo seguinte.
+00:04:11.330 --> 00:04:13.519
+Gesiel Lopes: seja também muito bem vindo.
 
 12
-00:00:47.550 --> 00:00:53.610
-Kadu Gertners: Temos que falar alguns pontos importantes antes que eu esqueça.
+00:04:13.640 --> 00:04:23.890
+Gesiel Lopes: E aí, sem mais delongas, tudo tranquilo com vocês. E aí eu aproveito para perguntar: tem alguém
 
 13
-00:00:53.870 --> 00:01:05.000
-Kadu Gertners: E vamos aí botar a nossa aula aí para frente. Em primeiro lugar. Hoje, pessoal, é a oitava semana. Começamos a oitava semana de aula,
+00:04:24.170 --> 00:04:37.300
+Gesiel Lopes: que está iniciando o bloco ou começou no infinite a partir dessa disciplina. Alguém não. Sim, não
 
 14
-00:01:05.080 --> 00:01:16.629
-Kadu Gertners: a oitava semana ou a oitava etapa de aula. E nós agora, hoje, turma, vamos ver um pouquinho aí
+00:04:37.910 --> 00:04:47.860
+Gesiel Lopes: acredito. Que não. Não é. Todos são som ainda do do bloco passado, tá?
 
 15
-00:01:16.750 --> 00:01:20.380
-Kadu Gertners: a parte de fazer a ligação
+00:04:47.970 --> 00:04:51.370
+Gesiel Lopes: Como os blocos são independentes.
 
 16
-00:01:20.460 --> 00:01:33.400
-Kadu Gertners: efetivamente de uma tabela com a outra tabela. Então, a partir de hoje e na semana que vem, nós vamos realmente entrar nessa análise.
+00:04:51.780 --> 00:04:58.140
+Gesiel Lopes: Pode ser que alguém consiga ou esteja refazendo, precisando refazer
 
 17
-00:01:33.410 --> 00:01:41.620
-Kadu Gertners: Vamos dar uma olhada nisso. Vamos executar alguns comandos aí para vocês entenderem. Começar a entender um pouquinho melhor. Isso aí.
+00:04:58.240 --> 00:05:04.539
+Gesiel Lopes: ou começando nessa disciplina. Por isso que eu gosto de fazer sempre essa pergunta.
 
 18
-00:01:41.840 --> 00:01:55.250
-Kadu Gertners: Tá legal. O grande, realmente segredo dos modelos relacionais. Só para nós lembrarmos um pouquinho. É exatamente esse vínculo, essa facilidade de ter
+00:05:04.650 --> 00:05:11.920
+Gesiel Lopes: Para todas as disciplinas do do último trimestre de cada semestre,
 
 19
-00:01:55.250 --> 00:02:03.679
-Kadu Gertners: a chave primária de uma tabela conversando com a chave estrangeira da outra tabela. Tá legal. Excelente noite, Eduardo. Ribeiro.
+00:05:12.320 --> 00:05:16.200
+Gesiel Lopes: tanto do terceiro trimestre como do quarto trimestre.
 
 20
-00:02:03.720 --> 00:02:08.450
-Kadu Gertners: Bom, então o que acontece, galera? Agora nós temos que lembrar de uma coisa.
+00:05:16.770 --> 00:05:18.800
+Gesiel Lopes: Aí não, beleza.
 
 21
-00:02:08.800 --> 00:02:16.440
-Kadu Gertners: Quinta feira. Nós não teremos aula. Por quê? Porque quinta feira será feriado nacional.
+00:05:18.990 --> 00:05:24.300
+Gesiel Lopes: E quem tiver, por favor, só se manifestar. Sem problema nenhum.
 
 22
-00:02:16.760 --> 00:02:26.459
-Kadu Gertners: Então a ideia, turma, hoje é eu tentar passar a matéria toda para vocês da etapa oito.
+00:05:25.500 --> 00:05:32.580
+Gesiel Lopes: Então, vamos lá. Um grande prazer retornar aqui com vocês. Vamos dar continuidade.
 
 23
-00:02:26.620 --> 00:02:28.649
-Kadu Gertners: Então é isso que eu vou tentar fazer
+00:05:33.230 --> 00:05:39.350
+Gesiel Lopes: Vou compartilhar aqui a minha tela com vocês. Acredito
 
 24
-00:02:28.960 --> 00:02:37.240
-Kadu Gertners: a aula será prática hoje prática. Então eu vou tentar passar essa matéria para vocês hoje, porque
+00:05:40.320 --> 00:05:43.560
+Gesiel Lopes: que estejam vendo a minha tela.
 
 25
-00:02:37.510 --> 00:02:41.330
-Kadu Gertners: é importante para vocês avançarem com o estudo de vocês.
+00:05:43.950 --> 00:05:48.250
+Gesiel Lopes: Estão vendo beleza? Vocês aproveitando
 
 26
-00:02:41.960 --> 00:02:44.750
-Kadu Gertners: Agora, galera tem dois pontos aí
+00:05:48.420 --> 00:05:55.730
+Gesiel Lopes: quem está aqui ao vivo? Vocês estão me ouvindo? Bem, conseguem me ver? Bem, está tudo tranquilo. O áudio. O vídeo está ok.
 
 27
-00:02:44.930 --> 00:02:50.329
-Kadu Gertners: que me deixaram pensativos aí. E nós temos que falar sobre isso.
+00:05:56.420 --> 00:05:59.680
+Gesiel Lopes: Algum delay, alguma interferência?
 
 28
-00:02:50.490 --> 00:03:01.829
-Kadu Gertners: Primeiro, eu não consegui finalizar aquela aula que juntos nós fizemos aí na quinta feira. Eu não esqueci disso.
+00:06:00.890 --> 00:06:08.110
+Gesiel Lopes: Tudo tranquilo. O Gabriel deu feedback. O Alan Beleza. Alan Beleza. Gabriel, tudo tranquilo.
 
 29
-00:03:01.940 --> 00:03:17.619
-Kadu Gertners: Não esqueci. Mas eu acredito que hoje nós não vamos conseguir botar isso para frente. E como quinta feira será feriado. Então essa semana nós não vamos conseguir provavelmente pegar nisso.
+00:06:08.720 --> 00:06:15.530
+Gesiel Lopes: Confirmado. Não deixou fazer aqui uma alguma.
 
 30
-00:03:17.980 --> 00:03:25.120
-Kadu Gertners: Então a ideia é que eu volte a pegar nisso, ou na semana que vem,
+00:06:15.640 --> 00:06:29.420
+Gesiel Lopes: Fazer aqui, alguns slides fazer aqui alguns apontamentos antes de a gente. Essa disciplina vai ser muito mão na massa. Até bem mais do que a disciplina passada. Então agora a gente vai.
 
 31
-00:03:25.320 --> 00:03:30.930
-Kadu Gertners: que será a nona semana de aula, a nona etapa de aula,
+00:06:29.570 --> 00:06:34.760
+Gesiel Lopes: E aí eu vou. A gente vai inclusive sem spoiler. Extrapolar um pouquinho,
 
 32
-00:03:31.200 --> 00:03:46.050
-Kadu Gertners: ou ainda na outra semana, quando aí já vai ter acabado a parte de passar matéria para vocês. E vocês vão estar preocupados em fazer o ate da nossa disciplina,
+00:06:35.450 --> 00:06:40.650
+Gesiel Lopes: trazer algumas coisas bem interessantes. Pelo menos eu sou suspeito, como sempre.
 
 33
-00:03:46.050 --> 00:03:55.169
-Kadu Gertners: fazer o At de Python e fazer o trabalho da entrega do trabalho da disciplina de projeto.
+00:06:40.980 --> 00:06:45.260
+Gesiel Lopes: Eu sou muito suspeito, é?
 
 34
-00:03:55.510 --> 00:04:03.310
-Kadu Gertners: Então nós vamos juntos analisar. Vamos ver como é que nós vamos conseguir fazer isso.
+00:06:45.870 --> 00:06:54.490
+Gesiel Lopes: Então a gente vai trazer umas coisas bem legais da disciplina, mas tá, só para reforçar.
 
 35
-00:04:03.680 --> 00:04:05.219
-Kadu Gertners: Esse é o primeiro ponto,
+00:06:54.670 --> 00:07:00.010
+Gesiel Lopes: Então o principal objetivo dessa disciplina pessoal é continuar
 
 36
-00:04:05.570 --> 00:04:13.699
-Kadu Gertners: galera. O segundo ponto foi um ponto que realmente também me deixou pensativo. E até por causa do prazo.
+00:07:00.160 --> 00:07:04.500
+Gesiel Lopes: a adentrada, dar o próximo passo
 
 37
-00:04:13.970 --> 00:04:19.479
-Kadu Gertners: Pelo que eu vi, deixe me confirmar aqui, rapidinho.
+00:07:04.620 --> 00:07:10.220
+Gesiel Lopes: dentro do ecossistema da linguagem de programação Pipe. Então a gente vai
 
 38
-00:04:19.940 --> 00:04:22.270
-Kadu Gertners: Eu fiz essa anotação. Aqui
+00:07:10.330 --> 00:07:14.800
+Gesiel Lopes: pegar tudo que a gente já trabalhou na disciplina passada.
 
 39
-00:04:23.320 --> 00:04:39.990
-Kadu Gertners: é o que acontece, turma, hoje é dia dois de junho de dois mil e vinte e seis. Então, se nós fizermos assim dois mais sete, que será a próxima terça, dois mais sete já dão nove.
+00:07:15.330 --> 00:07:20.540
+Gesiel Lopes: E vai e vai o pessoal. Então, já que eu
 
 40
-00:04:40.230 --> 00:04:42.039
-Kadu Gertners: Então, nove de Junho.
+00:07:21.910 --> 00:07:30.570
+Gesiel Lopes: aí volto. Nossa. Em relação à disciplina passada. O pessoal já foi
 
 41
-00:04:42.120 --> 00:04:52.939
-Kadu Gertners: Então a minha ideia era que eu passasse para vocês hoje. Mesmo que nós acabássemos a aula mais tarde, o At,
+00:07:30.570 --> 00:07:44.819
+Gesiel Lopes: tudo sobre o Ater re entrega do ater. Eu não vou. Peço desculpas aí, mas para a gente não fugir do contexto da disciplina, tá? Eu vou. Eu vou.
 
 42
-00:04:53.000 --> 00:05:11.160
-Kadu Gertners: o At da nossa disciplina. Só pessoal, que eu vou pedir formalmente aqui. Desculpa para vocês, porque ainda não foi disponibilizado o At. Porque tinham que ser feitos realmente alguns acertos e não deu tempo de disponibilizar o At.
+00:07:45.760 --> 00:07:51.539
+Gesiel Lopes: Eu vou pedir aqui a compreensão de não comentar
 
 43
-00:05:11.420 --> 00:05:14.569
-Kadu Gertners: Então, o que vai acontecer com isso?
+00:07:51.650 --> 00:08:02.209
+Gesiel Lopes: o máximo que eu posso falar. Ainda não finalizei a correção de todas as outras disciplinas, a correção das atividades, mas
 
 44
-00:05:14.800 --> 00:05:23.709
-Kadu Gertners: Vai acontecer que provavelmente o At será disponibilizado na próxima terça, que será dia nove.
+00:08:02.780 --> 00:08:06.339
+Gesiel Lopes: até porque eu tenho até sexta feira para fazer essas entregas.
 
 45
-00:05:23.870 --> 00:05:29.540
-Kadu Gertners: E vocês teriam que entregar o At
+00:08:06.500 --> 00:08:12.470
+Gesiel Lopes: Então, qualquer ponto relacionado à disciplina passada,
 
 46
-00:05:30.000 --> 00:05:34.520
-Kadu Gertners: uma semana depois, que seria no dia dezasseis.
+00:08:12.600 --> 00:08:23.250
+Gesiel Lopes: mandem mensagem pelo infinite online que eu tento ajudá los da melhor forma possível dentro das minhas possibilidades. Senão, a gente vai desvirtuar
 
 47
-00:05:34.890 --> 00:05:38.629
-Kadu Gertners: Então, assim eu já estou realmente prevendo isso.
+00:08:23.460 --> 00:08:28.950
+Gesiel Lopes: o que a gente tem programado, já que não é pertinente à disciplina.
 
 48
-00:05:38.650 --> 00:05:56.549
-Kadu Gertners: E prevendo isso, eu já estou percebendo que eu vou ter que abrir aí mais uma semana para vocês fazerem o ate, porque assim o ate galera. Ele está trabalhoso. Ele não está pequeno. Vocês vão
+00:08:29.390 --> 00:08:36.009
+Gesiel Lopes: Então, quem tiver qualquer ponto, qualquer dúvida em relação à disciplina de introdução à programação,
 
 49
-00:05:56.780 --> 00:06:16.179
-Kadu Gertners: tem que estudar. Vocês vão ter que analisar muita coisa do At. Então, assim não tem jeito. Então, assim, sabendo como é que está o at sabendo que teve um atraso na disponibilização do At. Eu vou ter que flexibilizar isso para vocês.
+00:08:36.150 --> 00:08:39.479
+Gesiel Lopes: que foi trabalhada por mim no primeiro trimestre
 
 50
-00:06:16.610 --> 00:06:24.789
-Kadu Gertners: Tá legal. Nós relembramos isso sem falta na semana que vem. Eu não vou esquecer isso. É um ponto importante.
+00:08:39.720 --> 00:08:45.040
+Gesiel Lopes: me procura num infinity online. Beleza é o lugar mais adequado, mais.
 
 51
-00:06:25.510 --> 00:06:39.270
-Kadu Gertners: Sim, Lucas. Gabriel, a entrega está para dia dezasseis de Junho de dois mil e vinte e seis. Mas é exatamente sobre isso que eu estou falando, Lucas. Eu vou flexibilizar isso aí.
+00:08:45.140 --> 00:08:51.380
+Gesiel Lopes: E aí eu consigo atendê los da melhor forma possível beleza.
 
 52
-00:06:39.440 --> 00:06:55.829
-Kadu Gertners: Isso aí vai ficar muito em cima para vocês entregarem. E galera de novo. Eu como. Eu falo para vocês. Eu sei que vocês têm a disciplina de Python, que é a disciplina considerada de algoritmo, que é o Python.
+00:08:51.870 --> 00:09:00.039
+Gesiel Lopes: Então eu peço aí só a compreensão para a gente não desvirtuar, senão a gente vai desvirtuar e aí a gente não consegue
 
 53
-00:06:55.930 --> 00:06:58.080
-Kadu Gertners: Ok, Lucas.
+00:09:00.400 --> 00:09:01.740
+Gesiel Lopes: avançar.
 
 54
-00:06:58.340 --> 00:07:07.300
-Kadu Gertners: De nada. Pedro. E a disciplina de Python é considerada muito pesada.
+00:09:02.620 --> 00:09:06.680
+Gesiel Lopes: Dito isso, fechado esse disclaiming, esse parênteses
 
 55
-00:07:07.310 --> 00:07:21.159
-Kadu Gertners: E eu tenho certeza que o ate. Vocês vão ter que se esforçar bastante para fazer o ate da disciplina de Python. Então assim eu vou flexibilizar. Com certeza.
+00:09:06.860 --> 00:09:14.740
+Gesiel Lopes: como eu estava falando, o principal objetivo dessa disciplina é a gente estender um pouquinho
 
 56
-00:07:21.400 --> 00:07:27.130
-Kadu Gertners: Olha, vamos fazer o seguinte. Não vamos ficar nas palavras. Não, deixa eu pegar
+00:09:15.290 --> 00:09:20.290
+Gesiel Lopes: curva. Eu gosto de falar que é a fronteira do conhecimento
 
 57
-00:07:27.230 --> 00:07:30.550
-Kadu Gertners: e tentar aqui. Deixa eu acessar rapidinho aqui.
+00:09:20.300 --> 00:09:31.530
+Gesiel Lopes: sobre a linguagem de programação Python, em relação à disciplina de introdução. Então, na disciplina de introdução, a gente entendeu os conceitos fundamentais básicos da linguagem,
 
 58
-00:07:32.750 --> 00:07:35.979
-Kadu Gertners: Espera aí. Deixa eu ver uma coisa aqui um minuto, por favor.
+00:09:31.530 --> 00:09:42.270
+Gesiel Lopes: como variáveis funções, testes condicionais, laços de repetição. E agora a gente vai aprofundar um pouco a gente vai pegar tudo isso
 
 59
-00:07:38.820 --> 00:07:41.160
-Kadu Gertners: Ah, não. Já vamos botar direto lá.
+00:09:42.300 --> 00:09:43.810
+Gesiel Lopes: que foi trabalhado
 
 60
-00:07:41.560 --> 00:07:42.450
-Kadu Gertners: E aí?
+00:09:44.280 --> 00:10:00.550
+Gesiel Lopes: na primeira disciplina. E vamos colocar alguns outros pontos. Como a gente vai aprofundar um pouco mais sobre o conceito de coleções. Observe que, na primeira disciplina, a gente veio um pouquinho sobre
 
 61
-00:07:45.730 --> 00:07:48.079
-Kadu Gertners: Vamos lá. Deixa eu ver.
+00:10:00.550 --> 00:10:08.530
+Gesiel Lopes: com coleções, em particular, um tipo de coleção. Então, hoje, nessa disciplina, a gente vai expandir esse conceito.
 
 62
-00:07:49.290 --> 00:08:07.630
-Kadu Gertners: Beleza é, tá aqui. Tal como vocês falaram. Já aí tá? De a dezasseis editar configurações,
+00:10:08.560 --> 00:10:11.820
+Gesiel Lopes: Então a gente vai aprender a lidar com as
 
 63
-00:08:09.770 --> 00:08:17.540
-Kadu Gertners: cara. Eu já vou botar logo para uma semana pra frente, tá? Então, ao invés de dia vinte, dezasseis,
+00:10:12.280 --> 00:10:28.530
+Gesiel Lopes: estruturas de dados mais utilizadas dentro da linguagem Pike. Então a gente vai entender quais são os tipos de coleções, as características de cada uma delas. E como usá las, a gente vai
 
 64
-00:08:17.650 --> 00:08:21.039
-Kadu Gertners: mais sete, ficará para dia vinte e três.
+00:10:29.170 --> 00:10:37.649
+Gesiel Lopes: a pegar todo o conhecimento. E vai também aprender nessa disciplina. A manipular arquivos
 
 65
-00:08:21.420 --> 00:08:22.400
-Kadu Gertners: Tá bom.
+00:10:37.730 --> 00:10:57.399
+Gesiel Lopes: de arquivos do sistema operacional. Então, como abrir, por exemplo, como criar um arquivo, como abrir um arquivo, por exemplo? Txt: como é que eu faço para criar um arquivo Txt: Como é que eu faço para criar ou trabalhar com arquivos mais complexos?
 
 66
-00:08:22.630 --> 00:08:25.080
-Kadu Gertners: Deixa eu pegar, atualizar aqui.
+00:10:57.400 --> 00:11:04.460
+Gesiel Lopes: Como uma estrutura específica de arquivo, que é o Jason. Então a gente vai entender
 
 67
-00:08:25.400 --> 00:08:36.390
-Kadu Gertners: Cadê bom para mim? Atualizou Lucas. Gabriel confirma para mim, amigão.
+00:11:04.460 --> 00:11:10.479
+Gesiel Lopes: o que cada uma desses Buzzwood é dentro do isso.
 
 68
-00:08:36.450 --> 00:08:51.919
-Kadu Gertners: Excelente noite. De nada. Beatriz Lucas, Gabriel, você que tá com a mão na massa. Aí dá uma atualizada na tua página aí para nós, amigão. E vê se para você. Foi mudada aí a data para dia vinte e três de junho atualizou, fechou.
+00:11:10.600 --> 00:11:28.360
+Gesiel Lopes: O Ramon. A gente vai aprender nessa disciplina, a manipular arquivos. De forma geral, o Ramon. E aí, quando eu falo de manipular arquivo, é fazer as operações de leitura de escrita de edição, de salvar arquivos. Então a gente vai fazer isso? Sim, e arquivos de texto.
 
 69
-00:08:51.930 --> 00:08:57.440
-Kadu Gertners: Então, galera, tá oficial aí tá? Obrigado, Lucas, pela confirmação.
+00:11:28.530 --> 00:11:41.329
+Gesiel Lopes: Eu vou dar um spoiler, tá? Eu já tenho até programado. A gente vai usar algumas coisinhas já mais no finalzinho bem mais interessantes. Então a gente vai extrapolar sem muito spoiler, mas a gente vai extrapolar um pouquinho
 
 70
-00:08:57.500 --> 00:09:06.019
-Kadu Gertners: É confirmado. A entrega do nosso At será dia vinte e três de Junho.
+00:11:41.600 --> 00:11:50.159
+Gesiel Lopes: de arquivos tradicionais. A gente vai também aprender a trabalhar nessa disciplina como tratar
 
 71
-00:09:06.070 --> 00:09:20.529
-Kadu Gertners: Tá legal? Então, não. De nada. Galera assim de novo. Eu acho que é bom senso. Eu tenho uma ideia. Um pouquinho das outras disciplinas. Então, assim, galera, eu sei que vocês vão ter que
+00:11:50.430 --> 00:11:55.039
+Gesiel Lopes: possíveis bugs. Não sei se vocês recordam, mas,
 
 72
-00:09:20.820 --> 00:09:26.119
-Kadu Gertners: ralar aí firme. Então, galera, eu só peço para vocês o seguinte.
+00:11:55.220 --> 00:12:04.350
+Gesiel Lopes: por exemplo, quando a gente estava trabalhando na primeira disciplina, principalmente com o input com a função input de
 
 73
-00:09:26.570 --> 00:09:39.160
-Kadu Gertners: Ok, Alan, ok, Pedro, se organizem a partir de hoje, comecem a se organizar. Porque, galera, vocês vão ter esses prazos. E lembrem se,
+00:12:04.700 --> 00:12:09.300
+Gesiel Lopes: de variáveis numéricas. Se eu digitasse alguma
 
 74
-00:09:39.270 --> 00:09:43.420
-Kadu Gertners: no fim desse trimestre, finalizará O. Bloco.
+00:12:09.500 --> 00:12:12.120
+Gesiel Lopes: o caracter que não fosse número,
 
 75
-00:09:43.790 --> 00:09:55.299
-Kadu Gertners: Então, não só sou eu, mas os outros dois professores precisarão acelerar as correções para eles entregarem, inclusive as notas de vocês.
+00:12:12.490 --> 00:12:22.219
+Gesiel Lopes: ela dava um problema. Ela fazia um crash. Ela dava um erro. Lembram desse problema. Então a gente vai aprender
 
 76
-00:09:55.720 --> 00:10:01.360
-Kadu Gertners: Então vai na minha, organizem se com carinho,
+00:12:22.460 --> 00:12:30.049
+Gesiel Lopes: a como resolver esse tipo de problema. A contratar esse tipo de problema. Então a gente vai trabalhar.
 
 77
-00:10:01.650 --> 00:10:06.330
-Kadu Gertners: ver como é que você vai estudar, vê se de repente
+00:12:30.630 --> 00:12:42.890
+Gesiel Lopes: A gente vai entender o que são tratamentos de erros dentro da linguagem Python, e como tratar erros. E a gente vai a cereja do bolo. Vai ser
 
 78
-00:10:06.450 --> 00:10:10.190
-Kadu Gertners: você vai estudar com algum amigo ou amiga? Desculpe
+00:12:43.010 --> 00:12:51.990
+Gesiel Lopes: como a gente consegue consumir serviços direto da web compite,
 
 79
-00:10:10.520 --> 00:10:19.550
-Kadu Gertners: da sala. Se você vai tirar alguma dúvida, então se organizem, porque realmente será pesado.
+00:12:52.260 --> 00:12:58.709
+Gesiel Lopes: e aí é que entra um pouquinho do que a gente vai apegar esse último conteúdo e extrapolar um pouquinho.
 
 80
-00:10:20.140 --> 00:10:22.370
-Kadu Gertners: Tá? Espera aí. Só um minuto, pessoal.
+00:12:58.970 --> 00:13:03.340
+Gesiel Lopes: Então a gente vai aprender como consumir.
 
 81
-00:10:27.160 --> 00:10:28.030
-Kadu Gertners: Bom
+00:13:04.000 --> 00:13:13.260
+Gesiel Lopes: Aí o Ramon já está colocando sem muito spoiler, mas adianto. Não é com selênio
 
 82
-00:10:28.720 --> 00:10:41.330
-Kadu Gertners: dito isso, caduzão. Vamos lá. Vamos para a aula de hoje. Aí. Como é que será a aula de hoje? Então, galera, eu já disponibilizei o material. Deixa eu começar a compartilhar aqui o
+00:13:13.450 --> 00:13:16.609
+Gesiel Lopes: Ramon. A gente não vai usar a manipulação.
 
 83
-00:10:41.610 --> 00:10:43.479
-Kadu Gertners: a tela com vocês.
+00:13:16.770 --> 00:13:21.820
+Gesiel Lopes: Essa ferramenta que o Ramon colocou no chat é uma ferramenta de manipulação
 
 84
-00:10:44.030 --> 00:10:45.820
-Kadu Gertners: Agora vamos lá.
+00:13:22.000 --> 00:13:39.589
+Gesiel Lopes: de simulação e manipulação de página. A gente vai aprender a consumir serviços Web. A gente vai entender primeiro o que é um serviço Web, o que significa ter um serviço web e como consumir um serviço web com a linguagem, Pyth. Então a gente vai ver isso.
 
 85
-00:10:46.860 --> 00:10:47.810
-Kadu Gertners: E aí?
+00:13:40.210 --> 00:13:41.310
+Gesiel Lopes: Não se preocupe.
 
 86
-00:10:49.740 --> 00:10:59.640
-Kadu Gertners: Então, turma, eu vou aqui, deixe me acessar aqui o infinite online.
+00:13:41.460 --> 00:13:48.270
+Gesiel Lopes: Então você dá muito spoiler, mas a gente vai brincar. Tem umas coisinhas interessantes que a gente vai
 
 87
-00:11:02.020 --> 00:11:07.470
-Kadu Gertners: Maravilha, deixe me.
+00:13:48.540 --> 00:14:00.290
+Gesiel Lopes: que eu vou trazer para vocês. E aí também não está aqui no programa. Mas além disso, a gente vai aprender a usar. Principalmente, acho que o ponto mais interessante dessa disciplina
 
 88
-00:11:08.650 --> 00:11:13.290
-Kadu Gertners: É só para vocês ficarem cientes, né?
+00:14:00.410 --> 00:14:03.560
+Gesiel Lopes: é aprender a usar código de terceiros.
 
 89
-00:11:15.110 --> 00:11:18.789
-Kadu Gertners: É, deixa eu ver se é essa?
+00:14:03.740 --> 00:14:08.060
+Gesiel Lopes: Então, como é que eu faço para usar dentro do meu próprio código?
 
 90
-00:11:18.890 --> 00:11:28.690
-Kadu Gertners: É essa mesmo. Ó aqui no infinite online, aqui na guia, documentações, documentos.
+00:14:08.330 --> 00:14:22.649
+Gesiel Lopes: Código desenvolvido por outras pessoas ou outras instituições, e como eu consigo também disponibilizar o meu código para outras pessoas usarem o meu código. Então a gente vai ver um pouquinho disso.
 
 91
-00:11:29.030 --> 00:11:36.190
-Kadu Gertners: Aqui Dade se do bloco nosso atual, fundamentos para o orçamento de dados, né? Ó,
+00:14:22.910 --> 00:14:26.060
+Gesiel Lopes: Então tem uns pontos bem interessantes que a gente vai.
 
 92
-00:11:36.310 --> 00:11:42.270
-Kadu Gertners: aqui na nossa pasta Sql. Modelagem relacional. Tá aqui.
+00:14:26.350 --> 00:14:28.850
+Gesiel Lopes: Vai trabalhar nessa disciplina.
 
 93
-00:11:42.590 --> 00:11:50.400
-Kadu Gertners: Estou entrando lá na pasta, beleza. E aí, aqui. Ó, tá o arquivinho no qual usaremos hoje.
+00:14:29.550 --> 00:14:36.569
+Gesiel Lopes: Então a gente aí é o conteúdo programático da disciplina. Então é basicamente contemplando todos os objetivos.
 
 94
-00:11:50.630 --> 00:11:55.599
-Kadu Gertners: Tá legal esse arquivo aqui, ó o Sql. Modelagem relacional da etapa oito:
+00:14:36.760 --> 00:14:39.700
+Gesiel Lopes: Então a gente vai abordar já já questões
 
 95
-00:11:55.830 --> 00:12:02.480
-Kadu Gertners: Beleza Cadu. Então de posse desse arquivo. Aí o arquivo já está aqui para nós.
+00:14:39.890 --> 00:14:55.220
+Gesiel Lopes: de manipulação de String. Só mais relembrar. E aí depois a gente vai trabalhar com saber o que são coleções. A gente vai, de fato trabalhar com coleções no mundo. Python, quais são os tipos de coleções que a gente tem,
 
 96
-00:12:02.810 --> 00:12:10.420
-Kadu Gertners: Beleza, galera. Vamos lá. Primeiro ponto caduzão. Você montou essa aula? De onde desse link aqui.
+00:14:55.240 --> 00:15:04.379
+Gesiel Lopes: que são tipos de estrutura de dados. Como é que eu faço para e como trabalhar com cada estrutura, com cada tipo
 
 97
-00:12:10.810 --> 00:12:12.880
-Kadu Gertners: Então, ó o link.
+00:15:04.550 --> 00:15:07.189
+Gesiel Lopes: de coleção, depois
 
 98
-00:12:13.000 --> 00:12:18.920
-Kadu Gertners: Ele foi montado desse link aqui, ó beleza.
+00:15:07.350 --> 00:15:16.620
+Gesiel Lopes: trabalhar com arquivos, tratar erros. E por último, no finalzinho da disciplina, a gente vai brincar um pouquinho com
 
 99
-00:12:19.920 --> 00:12:22.460
-Kadu Gertners: Então é essa matéria aí,
+00:15:16.860 --> 00:15:30.279
+Gesiel Lopes: com serviços Web. Então a gente vai entender o que é um serviço web. Aí a gente vai entender essa palavrinha mágica que aparece aí no mundo web, que é de Apis Web ou Api ou Api.
 
 100
-00:12:23.400 --> 00:12:33.969
-Kadu Gertners: beleza, que foi que eu montei o material para vocês. E aí, galera tem um detalhe. O que acontece? Eu fiz
+00:15:31.580 --> 00:15:32.849
+Gesiel Lopes: Então a gente
 
 101
-00:12:34.240 --> 00:12:46.800
-Kadu Gertners: é exatamente a adaptação de novo. Essa parte do material oficial aqui, o material oficial é em inglês.
+00:15:33.350 --> 00:15:43.589
+Gesiel Lopes: vai entender o que significa esse acrônimo, e como trabalhar com esse cara. Então a gente vai entender alguns paradigmas
 
 102
-00:12:47.130 --> 00:13:03.869
-Kadu Gertners: Então, quando vocês pegarem e verem algumas questões, aí verem alguns comandos, vocês vão ver que eles estão em inglês. Mesmo que você troque aqui de inglês para Português,
+00:15:43.730 --> 00:15:48.799
+Gesiel Lopes: interessantes. E aí depois a gente vai fazer algumas
 
 103
-00:13:06.000 --> 00:13:10.909
-Kadu Gertners: tem algumas partes que elas não são traduzidas,
+00:15:48.940 --> 00:15:59.100
+Gesiel Lopes: integrações bem interessantes, diga se de passagem, tá, então deixando aí,
 
 104
-00:13:11.560 --> 00:13:29.169
-Kadu Gertners: beleza. Então tem alguns comandos aqui que eles não são traduzidos. Mas o que eu fiz no nosso material para facilitar para todos, eu resolvi traduzir algumas coisas para nós falarmos aqui com mais tranquilidade.
+00:15:59.220 --> 00:16:02.800
+Gesiel Lopes: sem dar muito spoiler, para tentar aí
 
 105
-00:13:29.250 --> 00:13:34.500
-Kadu Gertners: Tá legal, mais o material pessoal em inglês é esse aqui dessa página.
+00:16:03.120 --> 00:16:08.960
+Gesiel Lopes: cativá los um pouquinho mais sobre o que a gente vai trabalhar. Criar aquela expectativa. Espero
 
 106
-00:13:35.210 --> 00:13:36.389
-Kadu Gertners: Tudo bem,
+00:16:09.450 --> 00:16:20.530
+Gesiel Lopes: que eu consiga superar as expectativas de vocês, ou então consiga realizar essas expectativas. Então tem muita coisa legal nessa disciplina.
 
 107
-00:13:36.930 --> 00:13:48.510
-Kadu Gertners: lógico. Se confundir vocês ou qualquer coisa que vocês queiram tirar de dúvidas. Enfim, podem me procurar. Não tem problema nenhum,
+00:16:21.020 --> 00:16:29.749
+Gesiel Lopes: Como o material didático. Eu coloco aí. Esse é o conteúdo. Ao longo da disciplina, na trilha de aprendizagem.
 
 108
-00:13:48.920 --> 00:13:56.620
-Kadu Gertners: tá legal. Eu só estou tentando facilitar um pouquinho para vocês. Tá bom, então vamos lá.
+00:16:30.070 --> 00:16:36.100
+Gesiel Lopes: A gente vai trabalhar com trechos lá. Tem trechos específicos de cada um desses livros
 
 109
-00:13:56.760 --> 00:14:02.639
-Kadu Gertners: Então, o que acontece se nós vamos usar hoje. Mais uma vez, o Sk. Light Studio.
+00:16:36.350 --> 00:16:41.250
+Gesiel Lopes: que estão disponíveis para todos vocês. Aí na biblioteca do Infinity
 
 110
-00:14:02.870 --> 00:14:09.300
-Kadu Gertners: Tá bom. Nós vamos fazer como eu falei, uma aula prática. Então, beleza. Então vamos acessar aqui
+00:16:41.880 --> 00:16:59.589
+Gesiel Lopes: do infinito. Então vocês podem acessar. Então, na trilha de aprendizagem de cada item, a gente vai abordar esses conteúdos que a gente colocou. E cada trilha vai ter fragmentos de partes de um livro ou de mais de um livro.
 
 111
-00:14:09.630 --> 00:14:11.560
-Kadu Gertners: o nosso ambiente.
+00:16:59.840 --> 00:17:04.400
+Gesiel Lopes: Então é interessante aí que vocês conheçam beleza.
 
 112
-00:14:13.690 --> 00:14:17.729
-Kadu Gertners: E vamos pegar aqui e vamos lá
+00:17:04.849 --> 00:17:09.150
+Gesiel Lopes: E aqui eu sempre gosto de trazer uma bibliografia
 
 113
-00:14:17.850 --> 00:14:22.529
-Kadu Gertners: para o nosso diretório aqui no meu notebook, né?
+00:17:09.619 --> 00:17:13.749
+Gesiel Lopes: complementar. Caso alguns de vocês queiram.
 
 114
-00:14:23.360 --> 00:14:28.140
-Kadu Gertners: E eu vou executar esse arquivo aqui. Sklattitude zero.
+00:17:13.930 --> 00:17:19.080
+Gesiel Lopes: Volto a repetir, essa bibliografia não está.
 
 115
-00:14:28.790 --> 00:14:31.870
-Kadu Gertners: Tá bom, beleza.
+00:17:19.369 --> 00:17:25.819
+Gesiel Lopes: A grande maioria não está disponível na biblioteca online do Infinity,
 
 116
-00:14:32.450 --> 00:14:36.050
-Kadu Gertners: Bom, está aqui, né?
+00:17:26.420 --> 00:17:32.479
+Gesiel Lopes: porque é uma bibliografia complementar. É uma sugestão
 
 117
-00:14:36.950 --> 00:14:53.939
-Kadu Gertners: Beleza pura. E aqui como nós vamos usar um outro Database hoje vou fazer aquele procedimento no qual normalmente eu tenho feito. Eu clico com o botão direito aqui, e vou remover esse banco de dados daqui.
+00:17:32.710 --> 00:17:38.160
+Gesiel Lopes: de bibliografia, caso alguns de vocês queiram
 
 118
-00:14:55.050 --> 00:15:00.890
-Kadu Gertners: Então, Yes, tirei o banco de dados daqui só relembrando
+00:17:38.590 --> 00:17:42.350
+Gesiel Lopes: se aprofundar um pouquinho mais dentro desse ecossistema.
 
 119
-00:15:01.030 --> 00:15:15.279
-Kadu Gertners: mais uma vez quando eu faço isso, né, caduzão? Você só tirou o banco de dados da visão do Slides Studio. Eu não apaguei o arquivo,
+00:17:42.560 --> 00:17:49.860
+Gesiel Lopes: A única diferença da minha sugestão para a sugestão da Disciplina Apressada. Foi esse livro
 
 120
-00:15:15.880 --> 00:15:19.519
-Kadu Gertners: beleza, o arquivo continua existindo.
+00:17:50.090 --> 00:17:56.220
+Gesiel Lopes: que é o livro do Neri do Nilo. Nilo Neri.
 
 121
-00:15:19.760 --> 00:15:20.740
-Kadu Gertners: Tá?
+00:17:56.620 --> 00:18:00.890
+Gesiel Lopes: É um livro que já está na quarta edição. É um livro que eu gosto bastante.
 
 122
-00:15:20.930 --> 00:15:22.270
-Kadu Gertners: Então vamos lá
+00:18:01.160 --> 00:18:07.780
+Gesiel Lopes: Então tem bastante exercício. Então a gente vai pegar. Eu trouxe algumas coisas desse livro. Ele trabalha
 
 123
-00:15:22.380 --> 00:15:30.399
-Kadu Gertners: então para a aula de hoje. Nós vamos fazer aquele procedimento no qual temos feito. Eu vou acessar lá, né?
+00:18:07.950 --> 00:18:14.040
+Gesiel Lopes: com a versão com a versão três.doze do pai. Então ele já traz
 
 124
-00:15:30.650 --> 00:15:35.529
-Kadu Gertners: A parte aqui, ó banco de dados, adicionar
+00:18:14.440 --> 00:18:21.980
+Gesiel Lopes: muitos dos pontos das últimas versões do Python. O problema da versão trezentos e doze,
 
 125
-00:15:35.640 --> 00:15:39.620
-Kadu Gertners: banco de dados. E aí nós vamos
+00:18:22.300 --> 00:18:26.269
+Gesiel Lopes: que é a versão estável que a grande maioria
 
 126
-00:15:40.240 --> 00:15:43.810
-Kadu Gertners: na janela. Banco de dados, data base.
+00:18:26.770 --> 00:18:29.929
+Gesiel Lopes: de quem trabalha com o pai e tu utiliza em ambiente.
 
 127
-00:15:44.070 --> 00:15:56.869
-Kadu Gertners: Nós vamos escolher a pasta. Então clica na pasta e reparem que ele abre numa pastinha aqui, na qual está para mim, que ele já mostra outros bancos de dados.
+00:18:30.720 --> 00:18:31.910
+Gesiel Lopes: É
 
 128
-00:15:57.240 --> 00:16:06.139
-Kadu Gertners: E aí, por acaso o banco de dados que nós acabamos de tirar aqui é esse último aqui que nós usamos na semana passada.
+00:18:32.350 --> 00:18:39.979
+Gesiel Lopes: em ambiente real. E eu particularmente todos, inclusive os meus projetos dentro da empresa. São projetos que utilizam sua versão trezentos e onze
 
 129
-00:16:06.890 --> 00:16:25.980
-Kadu Gertners: Beleza. Então ele está aqui. Como eu falei para vocês, ele não foi apagado na visão do sistema operacional. Então, pelo sistema operacional, pela parte do Windows Explorer. Aquele arquivinho continua existindo.
+00:18:40.100 --> 00:18:54.410
+Gesiel Lopes: não é nem a versão trezentos e doze. Então ele já aborda. E aí ele traz algumas diferenças. E os demais são livros do Daytel do Daytel. É uma coleção clássica
 
 130
-00:16:26.600 --> 00:16:36.100
-Kadu Gertners: Tá legal. Então, ó, agora nós vamos botar aqui o nome desse arquivo aqui. Ligação sublinhado, tabelas Db:
+00:18:54.630 --> 00:19:01.490
+Gesiel Lopes: dentro da programação. Então ele tem livros. Esse autor, a família dele, no caso.
 
 131
-00:16:36.560 --> 00:16:41.299
-Kadu Gertners: copiei o nome do arquivo, coloquei para cá.
+00:19:01.910 --> 00:19:07.500
+Gesiel Lopes: Ele já publicou livros de várias linguagens de programação. E tem
 
 132
-00:16:42.860 --> 00:16:48.590
-Kadu Gertners: Seleciono o nome do arquivo. É mostrado aqui.
+00:19:07.630 --> 00:19:13.780
+Gesiel Lopes: um livro de Python. Eu tenho esse livro. Eu gosto bastante. É um livro desse tamanho, assim, tá?
 
 133
-00:16:48.920 --> 00:16:53.669
-Kadu Gertners: Testa conexão. Ele dá um Ok para nós
+00:19:14.060 --> 00:19:18.639
+Gesiel Lopes: E tem um livro do. E aí eu sou fã desse cara, que é o Luciano Ramário.
 
 134
-00:16:53.770 --> 00:16:56.030
-Kadu Gertners: e clicamos aqui no botão. Ok,
+00:19:19.410 --> 00:19:23.610
+Gesiel Lopes: E esses outros dois livros que são complementares
 
 135
-00:16:56.780 --> 00:16:59.679
-Kadu Gertners: passamos a ter o banco de dados aqui.
+00:19:23.840 --> 00:19:29.649
+Gesiel Lopes: também. Da casa do código. São dois livros que são bem mais acessíveis,
 
 136
-00:16:59.810 --> 00:17:01.530
-Kadu Gertners: Dois cliques nele aqui.
+00:19:30.280 --> 00:19:37.960
+Gesiel Lopes: que são muito bons. Então são livros que eu tenho esses dois livros. Eu tenho eles na realidade os quatro, os cinco, né?
 
 137
-00:17:02.190 --> 00:17:08.740
-Kadu Gertners: Beleza passa a mostrar do lado esquerdo para nós, a opção, tabelas e visualizações.
+00:19:38.850 --> 00:19:42.480
+Gesiel Lopes: Então por isso que eu recomendo eles para vocês,
 
 138
-00:17:08.849 --> 00:17:20.460
-Kadu Gertners: Maravilha aí o que acontece? Bom, nós aqui, caduzão, galera, olha só algumas colocações interessantes aí
+00:19:42.680 --> 00:19:46.230
+Gesiel Lopes: beleza. Quem, quiser claro, aprofundar. Lembrando
 
 139
-00:17:20.780 --> 00:17:35.549
-Kadu Gertners: que é uma decisão de vocês. Lógico, eu vou dar uma sugestão. Um caminho que você pode seguir não é uma obrigatoriedade, é só uma dica ou em alguns pontos considerados uma boa prática.
+00:19:46.530 --> 00:19:52.680
+Gesiel Lopes: a grande maioria desses livros não estão disponíveis no infinite.
 
 140
-00:17:35.750 --> 00:17:49.310
-Kadu Gertners: Então, repara aqui nós temos duas tabelas: a tabela de departamentos e a tabela, funcionários legal, a tabela de departamentos. Ela tem o Id do departamento
+00:19:52.840 --> 00:19:55.610
+Gesiel Lopes: Tá, mas é,
 
 141
-00:17:49.510 --> 00:17:51.020
-Kadu Gertners: que é inteiro.
+00:19:57.470 --> 00:20:06.020
+Gesiel Lopes: mas eles estão lá disponíveis, mas eles são bem acessíveis para vocês. O Johnny comprou o Código Limpo. É um excelente livro, Johnny.
 
 142
-00:17:51.270 --> 00:17:58.450
-Kadu Gertners: Tem o departamento em si. A descrição do departamento que é um texto.
+00:20:06.510 --> 00:20:13.949
+Gesiel Lopes: É um livro que já tem um tempinho, mas até hoje, ele é
 
 143
-00:17:58.810 --> 00:18:08.089
-Kadu Gertners: Tem a cidade que é um texto. E aí? Olha que interessante. Aqui ele coloca a palavra constrangente
+00:20:14.520 --> 00:20:25.170
+Gesiel Lopes: muito atual. Muito atual. Ele fez o comentário. É, enfim, todos eles assim. Mas
 
 144
-00:18:08.380 --> 00:18:28.050
-Kadu Gertners: e ele coloca um apelido. Olha que legal. Ele está indicando aqui. Pk, que significa primarkia. Chave primária, sublinhado. Mas é a chave primária de qual tabela da tabela, departamentos. Por isso que eu botei Pk sublinhado departamentos.
+00:20:25.610 --> 00:20:32.690
+Gesiel Lopes: eu gosto de prestigiar não é pelo valor claro, alguns são bem mais acessíveis e outros nem tanto.
 
 145
-00:18:28.630 --> 00:18:42.830
-Kadu Gertners: Aí colocamos aqui a primeira Key e entre parênteses qual é a coluna ou quais são as colunas que pertencem à chave primária.
+00:20:33.280 --> 00:20:41.090
+Gesiel Lopes: Mas se você tiver condições, eu gosto, porque você na realidade, valoriza o trabalho de quem fez. Geralmente,
 
 146
-00:18:43.870 --> 00:18:45.050
-Kadu Gertners: Tá legal.
+00:20:41.660 --> 00:20:45.970
+Gesiel Lopes: quem? Geralmente não. Mas quem fez? Eu digo isso porque eu estou escrevendo um livro
 
 147
-00:18:45.150 --> 00:18:49.260
-Kadu Gertners: Aí, ó, nós botamos aqui a Ad do departamento,
+00:20:46.360 --> 00:20:53.639
+Gesiel Lopes: e não é fácil. Então, assim, querendo ou não, é uma dedicação que a pessoa tem de escrever.
 
 148
-00:18:49.420 --> 00:18:51.940
-Kadu Gertners: que é exatamente essa primeira coluna.
+00:20:53.820 --> 00:20:59.969
+Gesiel Lopes: Se você tem condições, você pode. Eu consigo hoje tá
 
 149
-00:18:52.970 --> 00:19:06.919
-Kadu Gertners: Beleza, essa primeira coluna aqui, beleza. Aí ele faz uma outra colocação interessante que ele fala para nós assim, olha, vamos criar também uma outra constrente
+00:21:00.520 --> 00:21:07.650
+Gesiel Lopes: até para prestigiar cada um dos autores, valorizar o trabalho que eles tiveram
 
 150
-00:19:07.080 --> 00:19:13.080
-Kadu Gertners: galera constrente pode ser traduzido como restrição.
+00:21:08.100 --> 00:21:19.239
+Gesiel Lopes: de entregar, não somente para um leitor, mas para a comunidade, esses dois caras, principalmente o Luciano Ramalho. Esse cara é um dinossauro da comunidade paito.
 
 151
-00:19:13.920 --> 00:19:26.890
-Kadu Gertners: Tá legal. Agora, Caldzon, essa constrente aqui tem que ficar dessa forma tem por quê? Porque isso é a palavra reservada do comando que foi criado.
+00:21:19.640 --> 00:21:21.560
+Gesiel Lopes: Então é uma figura.
 
 152
-00:19:27.320 --> 00:19:36.220
-Kadu Gertners: Então a parte de Skl tem algumas partes do Skl que eles são na língua inglesa. Então tem que ficar aqui. Constroente mesmo
+00:21:21.940 --> 00:21:23.660
+Gesiel Lopes: É. É.
 
 153
-00:19:36.520 --> 00:19:38.210
-Kadu Gertners: tanto aqui como aqui.
+00:21:24.150 --> 00:21:35.840
+Gesiel Lopes: É uma figura mais do que é uma figura que está presente nos principais eventos da comunidade. Pai.
 
 154
-00:19:38.790 --> 00:19:52.410
-Kadu Gertners: Então, ó constante, aí, olha que legal. Ele coloca aqui o Nick. Quer dizer, o Nick está em inglês, né? Mas o Nick significa em português único.
+00:21:36.480 --> 00:21:47.390
+Gesiel Lopes: E esse livro em particular dele já foi traduzido por várias outras línguas. É o livro sobre a linguagem Python, que tem mais traduções.
 
 155
-00:19:52.750 --> 00:20:10.749
-Kadu Gertners: Então ele vai colocar um apelido Unic. Aí ele pega departamento e cidade usa a palavra reservada, Unic. E quem ele vai considerar como valor único a junção
+00:21:47.700 --> 00:21:52.020
+Gesiel Lopes: Então é o livro com mais traduções sobre Paint.
 
 156
-00:20:10.950 --> 00:20:25.000
-Kadu Gertners: da coluna departamento com a coluna cidade. Então, se você tiver o Departamento dois e botar Rio de Janeiro, você nunca mais vai poder botar dois Rio de Janeiro,
+00:21:52.710 --> 00:22:03.960
+Gesiel Lopes: Então assim é um pouquinho menos acessível. Mas é um livro que eu tenho ele. Eu tenho as duas versões que foi autografado por ele. É, ele é brasileiro,
 
 157
-00:20:25.070 --> 00:20:31.129
-Kadu Gertners: senão ele indicará para nós que o valor está duplicado.
+00:22:04.470 --> 00:22:06.930
+Gesiel Lopes: super brasileiro super simples.
 
 158
-00:20:32.280 --> 00:20:33.390
-Kadu Gertners: Tá legal.
+00:22:07.500 --> 00:22:14.600
+Gesiel Lopes: O Luciano Ramalho. E é um vovozão incrível, muito gente. Boa
 
 159
-00:20:34.980 --> 00:20:38.040
-Kadu Gertners: Bom. Aqui na tabela. Funcionários
+00:22:14.880 --> 00:22:29.000
+Gesiel Lopes: e ele é presença garantida nos principais eventos da comunidade Python. Ele estava no stand, autografando o livro dele na última Python Brasil.
 
 160
-00:20:38.520 --> 00:20:50.190
-Kadu Gertners: legal, nós temos a coluna. Matrícula que ela é inteiro. Ínteger é First Name, não tá bom, isso não
+00:22:30.010 --> 00:22:30.820
+Gesiel Lopes: Então
 
 161
-00:20:50.550 --> 00:20:52.039
-Kadu Gertners: vamos mudar isso aqui.
+00:22:31.150 --> 00:22:38.309
+Gesiel Lopes: não fazendo Jabá? Porque eu sou fã. Realmente tem uma galera aí da comunidade. Eu sou fã de comunidades de forma geral,
 
 162
-00:20:52.860 --> 00:20:58.740
-Kadu Gertners: First Name, vamos botar assim force name.
+00:22:38.490 --> 00:22:39.310
+Gesiel Lopes: tá?
 
 163
-00:20:59.370 --> 00:21:00.250
-Kadu Gertners: E aí?
+00:22:39.820 --> 00:22:54.239
+Gesiel Lopes: É beleza. E aí, antes de eu trazer esses avisos, falando de comunidade, e aí em particular, quem é
 
 164
-00:21:03.690 --> 00:21:05.830
-Kadu Gertners: Primeiro nome.
+00:22:55.400 --> 00:23:08.860
+Gesiel Lopes: da quem está aqui no eixo sul e sudeste, e também norte e nordeste.
 
 165
-00:21:07.220 --> 00:21:09.150
-Kadu Gertners: Substitui tudo.
+00:23:09.450 --> 00:23:15.500
+Gesiel Lopes: Eu gostaria aqui de compartilhar com vocês, tá?
 
 166
-00:21:09.480 --> 00:21:12.339
-Kadu Gertners: Esse aqui também. Last Name.
+00:23:15.670 --> 00:23:27.649
+Gesiel Lopes: Os eventos sobre a comunidade python sobre a linguagem Python, que estão sendo organizados pela comunidade Python nos quatro cantos
 
 167
-00:21:14.430 --> 00:21:26.060
-Kadu Gertners: Vamos botar aqui. Último nome substitui tudo. E esse celery aqui também não tá bom. Não, celery.
+00:23:27.850 --> 00:23:30.480
+Gesiel Lopes: do nosso Brasilzão.
 
 168
-00:21:26.770 --> 00:21:31.490
-Kadu Gertners: Salário, beleza.
+00:23:30.930 --> 00:23:45.080
+Gesiel Lopes: Então, já agora, em Maio, quem for do Sul e a tiver em Joinville em particular, pode participar
 
 169
-00:21:31.770 --> 00:21:33.009
-Kadu Gertners: Desculpe, meu.
+00:23:45.510 --> 00:23:52.459
+Gesiel Lopes: do Python Sul, dois mil e vinte e seis.
 
 170
-00:21:33.200 --> 00:21:36.140
-Kadu Gertners: Eu bapei essa mosca aí. Mas vamos lá,
+00:23:52.880 --> 00:23:57.900
+Gesiel Lopes: Então, entre os dias três. Deixa eu ver. Aqui.
 
 171
-00:21:36.910 --> 00:21:41.019
-Kadu Gertners: depois eu vou atualizar o arquivinho para vocês aí no material de vocês, tá?
+00:23:59.730 --> 00:24:05.760
+Gesiel Lopes: Entre. Deixa eu ver se é daqui a dez dias. Entre os dias. Parece que é três, quatro
 
 172
-00:21:41.380 --> 00:21:42.380
-Kadu Gertners: Vamos lá.
+00:24:08.950 --> 00:24:15.339
+Gesiel Lopes: entre um entre 1o e três de Maio vai acontecer
 
 173
-00:21:42.710 --> 00:21:46.189
-Kadu Gertners: A tabela, funcionários está aqui.
+00:24:15.950 --> 00:24:22.600
+Gesiel Lopes: a Python Sul, na cidade de Londrina. Então, se você tiver quem for do Sul e estiver perto
 
 174
-00:21:46.350 --> 00:21:49.970
-Kadu Gertners: Então tem a coluna, matrícula
+00:24:22.740 --> 00:24:32.060
+Gesiel Lopes: pode participar ou quem tiver condição. Curiosidade de ver como é um evento da comunidade. Paito tá,
 
 175
-00:21:50.080 --> 00:22:09.739
-Kadu Gertners: tem. Ele é do tipo inteiro legal. O primeiro nome é texto. O último nome, texto também salário é um número no qual tem dez números, sendo que os dois últimos números são o quê, decimais?
+00:24:32.320 --> 00:24:40.570
+Gesiel Lopes: pode participar, Gesiel, não sou do Sul. Não moro no Sul, mas eu sou do Sudeste.
 
 176
-00:22:10.440 --> 00:22:17.010
-Kadu Gertners: Não é beleza aí. Olha que maneiro ele pega. Ele fala. Olha,
+00:24:40.740 --> 00:24:50.830
+Gesiel Lopes: Melhor ainda, eu sou do Rio de Janeiro. Beleza. Então você, que é do Rio de Janeiro, caso queira.
 
 177
-00:22:17.120 --> 00:22:22.640
-Kadu Gertners: ele também tem a coluna nessa tabela chamada Id. Departamento,
+00:24:50.940 --> 00:25:01.260
+Gesiel Lopes: Pode participar da Python Sudeste, que vai acontecer na última semana de
 
 178
-00:22:23.220 --> 00:22:25.519
-Kadu Gertners: que ela é do tipo inteiro.
+00:25:01.490 --> 00:25:07.449
+Gesiel Lopes: Julho. Período de férias. Então entre. Deixa eu ver se eu acho aqui
 
 179
-00:22:25.810 --> 00:22:30.230
-Kadu Gertners: Aqui também é do tipo inteiro e referencia
+00:25:08.120 --> 00:25:15.980
+Gesiel Lopes: a data entre o dia vinte e quatro e vinte e seis de Julho.
 
 180
-00:22:30.340 --> 00:22:40.700
-Kadu Gertners: a tabela departamentos. Que é essa tabela através da própria coluna aí de departamento. Que é essa coluna aqui?
+00:25:16.220 --> 00:25:18.560
+Gesiel Lopes: A última semana de férias.
 
 181
-00:22:42.000 --> 00:22:53.330
-Kadu Gertners: Beleza. Então isso é a definição. É como nós associamos. Fazemos um vínculo de uma chave estrangeira. Exatamente isso.
+00:25:18.800 --> 00:25:26.260
+Gesiel Lopes: Quem for do rio ou quem estiver passando férias no rio ou quem quiser conhecer o rio e quiser participar
 
 182
-00:22:54.220 --> 00:23:00.819
-Kadu Gertners: Como é que nós referenciamos a tabela corrente e mencionamos a tabela, mãe.
+00:25:26.450 --> 00:25:36.290
+Gesiel Lopes: de um evento da comunidade. Python, tem aí a Python sudeste que esse ano vai ser lá no Rio de Janeiro.
 
 183
-00:23:01.220 --> 00:23:03.340
-Kadu Gertners: É exatamente dessa forma.
+00:25:36.710 --> 00:25:40.770
+Gesiel Lopes: Ah, a programação ainda não está disponível,
 
 184
-00:23:04.480 --> 00:23:08.489
-Kadu Gertners: Então, na criação das tabelas, né?
+00:25:40.920 --> 00:25:48.279
+Gesiel Lopes: mas espero estar lá. Não vou garantir. Mas eu tenho duas atividades que eu submeti
 
 185
-00:23:08.800 --> 00:23:12.120
-Kadu Gertners: Legal, aí nós temos uma outra constrente,
+00:25:48.440 --> 00:25:51.929
+Gesiel Lopes: para Paitun sudeste, um mini curso e uma palestra
 
 186
-00:23:12.250 --> 00:23:20.120
-Kadu Gertners: uma outra restrição que fala. Olha, Pk, que é a Primer Key da tabela. Agora a funcionários.
+00:25:52.090 --> 00:25:55.860
+Gesiel Lopes: ainda não saiu o resultado. Mas
 
 187
-00:23:20.300 --> 00:23:26.230
-Kadu Gertners: A primeira Key entre parênteses é somente a coluna matrícula.
+00:25:56.240 --> 00:26:01.790
+Gesiel Lopes: e aí eu também não sei se eu vou conseguir participar, mesmo sendo aprovado ou não. Eu vou fazer de tudo.
 
 188
-00:23:27.150 --> 00:23:30.430
-Kadu Gertners: Então ó, vamos pegar os comandos.
+00:26:02.490 --> 00:26:10.149
+Gesiel Lopes: Tive umas mudancinhas, mas e as passagens? Estão meio salgadinhas, mas enfim, é um evento que
 
 189
-00:23:33.290 --> 00:23:40.600
-Kadu Gertners: Vamos colocar para cá e vamos criar as nossas tabelas.
+00:26:11.030 --> 00:26:17.420
+Gesiel Lopes: existe uma grande chance de eu estar lá. E quem quiser bater um papo com o Gesiel, caso eu esteja lá, é só
 
 190
-00:23:41.960 --> 00:23:43.609
-Kadu Gertners: Primeira tabela.
+00:26:17.970 --> 00:26:31.359
+Gesiel Lopes: procurar, ou então participar do mini curso. Se eu conseguir fazer. Então é isso. Beleza vai ser os tutoriais. Vai ser
 
 191
-00:23:46.730 --> 00:23:52.430
-Kadu Gertners: E aí, ó repara só. Departamentos.
+00:26:31.560 --> 00:26:40.169
+Gesiel Lopes: o evento. Vai ser ali. Eu não conheço muito bem o rio. Quem é do rio deve saber. Mas fica ali entre a praia de Botafogo e Copacabana.
 
 192
-00:23:53.640 --> 00:23:55.619
-Kadu Gertners: E agora funcionários também.
+00:26:40.770 --> 00:26:43.680
+Gesiel Lopes: Então é uma região bem legal.
 
 193
-00:23:57.240 --> 00:24:01.380
-Kadu Gertners: Aqui estão as colunas de departamentos.
+00:26:44.020 --> 00:26:47.880
+Gesiel Lopes: Vocês conseguem participar? Então vai ser três dias
 
 194
-00:24:02.390 --> 00:24:04.939
-Kadu Gertners: Aqui estão as colunas de funcionários.
+00:26:48.310 --> 00:26:52.929
+Gesiel Lopes: de muito conteúdo sobre Python. E aí você vai ter
 
 195
-00:24:05.740 --> 00:24:06.780
-Kadu Gertners: Beleza.
+00:26:53.110 --> 00:27:01.080
+Gesiel Lopes: conteúdo tanto de alto nível como de nível básico avançado. Então é uma grande oportunidade.
 
 196
-00:24:07.430 --> 00:24:08.670
-Kadu Gertners: Bom, aí
+00:27:01.670 --> 00:27:10.219
+Gesiel Lopes: Caso, claro, alguns de vocês queiram ou também quem quiser, e aí,
 
 197
-00:24:11.990 --> 00:24:13.150
-Kadu Gertners: vamos lá.
+00:27:18.300 --> 00:27:28.920
+Gesiel Lopes: ou quem quiser, pode também. Caso algum de vocês queira conhecer são Carlos, tá, esse aqui. Eu vou participar.
 
 198
-00:24:13.650 --> 00:24:18.819
-Kadu Gertners: Se nós pegarmos e dermos um Select para cada uma dessas tabelas.
+00:27:29.930 --> 00:27:35.680
+Gesiel Lopes: Seja como um palestrante ministrante de qualquer curso.
 
 199
-00:24:20.040 --> 00:24:21.829
-Kadu Gertners: Nós vamos reparar
+00:27:36.280 --> 00:27:45.559
+Gesiel Lopes: Eu estou na comissão organizadora. Então, inevitavelmente, eu estarei nesse evento, que é o caipira,
 
 200
-00:24:22.150 --> 00:24:32.949
-Kadu Gertners: que por enquanto, essas tabelas estão vazias. Não tem nenhum registro, porque nós não executamos por enquanto, nenhum comando Insert.
+00:27:45.700 --> 00:27:54.329
+Gesiel Lopes: que é uma trocadilha que a gente faz que é um evento do interior. É um evento da comunidade Python do interior de São Paulo.
 
 201
-00:24:33.000 --> 00:24:44.659
-Kadu Gertners: E não fizemos uma carga de dados. Não pegamos um arquivinho de fora do banco de dados e colocamos dentro da tabela. Não fizemos nenhuma das duas opções.
+00:27:54.480 --> 00:27:55.820
+Gesiel Lopes: Esse ano
 
 202
-00:24:44.780 --> 00:24:46.490
-Kadu Gertners: Então a tabela está vazia.
+00:27:55.940 --> 00:28:06.720
+Gesiel Lopes: vai ser realizado na minha terra, querida, São Carlos, no Instituto, onde eu fiz um monte de coisa
 
 203
-00:24:47.030 --> 00:24:58.100
-Kadu Gertners: Beleza, então, como exemplo, vamos pegar aqui e nós vamos inserir ó
+00:28:06.830 --> 00:28:12.769
+Gesiel Lopes: no Icmc. Então, entre os dias e aí ele vai ser antes do.
 
 204
-00:24:59.090 --> 00:25:02.880
-Kadu Gertners: no departamento, nós vamos inserir o Departamento um,
+00:28:13.090 --> 00:28:15.229
+Gesiel Lopes: Ele vai ser antes do Python sudeste.
 
 205
-00:25:04.450 --> 00:25:17.590
-Kadu Gertners: que é o Departamento de Taxas como se fossem taxas e na cidade Atlanta. O segundo é o Departamento Ti de Ti que fica em Boston.
+00:28:15.730 --> 00:28:20.830
+Gesiel Lopes: Então vai ser entre o dia quatro e sete de Junho.
 
 206
-00:25:18.220 --> 00:25:19.350
-Kadu Gertners: Beleza
+00:28:21.050 --> 00:28:25.209
+Gesiel Lopes: Então inclusive tem uma coisinha bem legal.
 
 207
-00:25:19.660 --> 00:25:31.909
-Kadu Gertners: nos funcionários. Nós temos quatro funcionários. A Júlia Rais, que ganha por ano um5.trezentos pertencem ao departamento. Um taxi,
+00:28:25.410 --> 00:28:33.080
+Gesiel Lopes: A programação ainda também não foi ainda definida. A gente ainda está fazendo a avaliação das atividades.
 
 208
-00:25:33.250 --> 00:25:34.699
-Kadu Gertners: a Janete,
+00:28:33.430 --> 00:28:38.039
+Gesiel Lopes: Beleza, mas já tem algumas. Algumas
 
 209
-00:25:35.460 --> 00:25:43.999
-Kadu Gertners: que o sobrenome dela. O último nome é King. Ela ganha por ano noventa e oito mil dólares. E o departamento dela também é taxi
+00:28:38.520 --> 00:28:43.109
+Gesiel Lopes: pessoa já confirmada. Sem muito spoiler, mas vai ser um evento fantástico.
 
 210
-00:25:44.690 --> 00:25:57.219
-Kadu Gertners: legal. O três. O Arthur tem o último nome, papas e ele ganha por ano setenta e dois.setecentos. Ele está no Departamento dois, que é o Departamento de Ti
+00:28:43.370 --> 00:28:50.540
+Gesiel Lopes: Quem quiser, quem for da região de São Carlos ou do interior de São Paulo quiser participar,
 
 211
-00:25:57.730 --> 00:26:01.910
-Kadu Gertners: Legal. E finalmente, o Michael,
+00:28:50.760 --> 00:28:56.739
+Gesiel Lopes: fica aí o convite para esse evento que dispensa qualquer comentário.
 
 212
-00:26:04.400 --> 00:26:14.949
-Kadu Gertners: o último nome. Taylor ganha por ano oitenta e nove.quinhentos indicando aqui o dois, que é também do departamento de Ti.
+00:28:57.040 --> 00:29:01.759
+Gesiel Lopes: Mas, Gesiel, o senhor falou só do sul e sudeste
 
 213
-00:26:15.340 --> 00:26:22.839
-Kadu Gertners: Maravilha. Pegamos esses comandos aqui, jogamos para cá.
+00:29:02.320 --> 00:29:06.709
+Gesiel Lopes: e a galera de outros estados lá do norte e do nordeste.
 
 214
-00:26:24.840 --> 00:26:28.579
-Kadu Gertners: Ó, vamos fazer um inserto. Primeiro, para departamentos.
+00:29:07.190 --> 00:29:23.320
+Gesiel Lopes: Se você estiver perto da cidade de Ananindeua no pará.
 
 215
-00:26:28.870 --> 00:26:37.189
-Kadu Gertners: São dois registros, duas linhas legal e para funcionários. São quatro.
+00:29:24.900 --> 00:29:33.640
+Gesiel Lopes: Ele não vai ter o site, mas entre os dias três e cinco de Julho
 
 216
-00:26:38.480 --> 00:26:48.579
-Kadu Gertners: Ó quatro para funcionários Cadu, podemos checar aí agora. Como é que estão os conteúdos das tabelas? Sim,
+00:29:34.530 --> 00:29:38.280
+Gesiel Lopes: vai acontecer. Ah, não, ele já tem o site norte aqui. Ó,
 
 217
-00:26:48.870 --> 00:26:54.660
-Kadu Gertners: faremos isso agora, ó Select.
+00:29:38.490 --> 00:29:44.540
+Gesiel Lopes: acho que é o Nordeste que não está. Mas ó, entre os dias três e cinco de Julho
 
 218
-00:26:55.620 --> 00:26:59.500
-Kadu Gertners: Todas as colunas a partir da tabela departamentos.
+00:29:44.870 --> 00:29:50.549
+Gesiel Lopes: vai acontecer a Python nordeste. Aliás. Desculpe a Python Norte,
 
 219
-00:26:59.650 --> 00:27:02.529
-Kadu Gertners: Ó tá bonitinho. Aqui.
+00:29:50.820 --> 00:29:58.150
+Gesiel Lopes: que nesse ano vai ser em Ananindeua, no pará é uma cidade que fica na região metropolitana de Belém.
 
 220
-00:27:02.630 --> 00:27:13.360
-Kadu Gertners: Dois registros e o funcionários, os quatro registros, beleza.
+00:29:58.350 --> 00:30:03.440
+Gesiel Lopes: Eu conheço inclusive o meu sonho era fazer o
 
 221
-00:27:13.650 --> 00:27:24.509
-Kadu Gertners: Bom, antes de prosseguir, deixa eu ver se vocês já colocaram alguma coisa aqui de mensagem aqui
+00:30:03.790 --> 00:30:07.679
+Gesiel Lopes: paitu que a gente chama a galera da comunidade,
 
 222
-00:27:24.840 --> 00:27:31.250
-Kadu Gertners: Pedro. Ok, excelente beleza. Galera até aqui, turma, dúvidas?
+00:30:07.860 --> 00:30:09.970
+Gesiel Lopes: que era, em todos os eventos
 
 223
-00:27:31.400 --> 00:27:38.130
-Kadu Gertners: Alguma coisa que ainda não tenha ficado clara até hoje. Ok, Lucas. Ok, Léo,
+00:30:10.160 --> 00:30:15.050
+Gesiel Lopes: da comunidade Python. Mas esse aumento das passagens aéreas ferrou.
 
 224
-00:27:38.290 --> 00:27:45.060
-Kadu Gertners: querem perguntar alguma coisa? Acrescentar alguma coisa ou podemos lhe seguir. Vamos embora, então. Tá legal.
+00:30:15.390 --> 00:30:22.359
+Gesiel Lopes: Então, quem for da região norte estiver próximo de de
 
 225
-00:27:48.850 --> 00:27:53.879
-Kadu Gertners: Mas deu erro de sintaxe aonde Mateus, exatamente em que ponto, meu amigo.
+00:30:22.560 --> 00:30:28.939
+Gesiel Lopes: de Belém. Pode aí. Fica aí o convite para participar da Paita Norte.
 
 226
-00:27:54.590 --> 00:28:00.589
-Kadu Gertners: Mas você está seguindo? Passo sim ou passinho que eu estou fazendo aí? Pegando o comando inteiro.
+00:30:30.760 --> 00:30:37.680
+Gesiel Lopes: E quem for do nordeste, meu querido Nordeste também esse ano.
 
 227
-00:28:00.800 --> 00:28:08.930
-Kadu Gertners: Tem que seguir e botar o comandinho todo conforme eu tô botando, tá? Matheus, aonde você teve o erro, amigão. Fala comigo.
+00:30:37.890 --> 00:30:47.080
+Gesiel Lopes: Tá muito provavelmente é um evento que eu queria muito. É um evento que eu deixei para
 
 228
-00:28:09.130 --> 00:28:22.110
-Matheus Ramos: No meu caso, aqui Cadu foi na ligação tabela. Você está dando erro de Sintax aqui, mas eu vou recopiar o código e colar aqui de novo para ver se ali funciona.
+00:30:50.260 --> 00:30:53.819
+Gesiel Lopes: com carinho para participar. Opa, estou fazendo spoiler.
 
 229
-00:28:22.640 --> 00:28:23.300
-Kadu Gertners: Eu vou.
+00:30:54.520 --> 00:30:58.210
+Gesiel Lopes: Que é a Python nordeste.
 
 230
-00:28:23.300 --> 00:28:27.070
-Matheus Ramos: Ponto de vírgula que ficou faltando no copiar escolar.
+00:30:58.850 --> 00:31:03.030
+Gesiel Lopes: Então esse ano, a Python nordeste.
 
 231
-00:28:27.710 --> 00:28:29.970
-Matheus Ramos: Pode ser beleza.
+00:31:03.560 --> 00:31:13.250
+Gesiel Lopes: Eu não estou logado. Eu não votei. Ele só tem Instagram, tá, mas vai acontecer agora também
 
 232
-00:28:29.970 --> 00:28:30.340
-Kadu Gertners: Bom dia.
+00:31:13.690 --> 00:31:19.159
+Gesiel Lopes: em fortaleza a Python nordeste. Então, se você for
 
 233
-00:28:30.340 --> 00:28:31.170
-Matheus Ramos: Fazer isso.
+00:31:19.620 --> 00:31:22.980
+Gesiel Lopes: da região nordeste, se estiver próximo de fortaleza,
 
 234
-00:28:31.870 --> 00:28:40.520
-Kadu Gertners: Pode ser. Eu vou executar aqui também. Mas beleza, Matheus qualquer coisa. Dá um toque aí de novo, meu amigo. Eu vou tentar executar aqui também, beleza.
+00:31:23.200 --> 00:31:26.439
+Gesiel Lopes: então fica aí o convite para vocês participarem
 
 235
-00:28:42.640 --> 00:28:44.090
-Kadu Gertners: Bom, vamos lá.
+00:31:26.570 --> 00:31:31.810
+Gesiel Lopes: da Python nordeste. E aí não tem desculpa porque a gente tem evento da comunidade Python
 
 236
-00:28:44.390 --> 00:28:57.770
-Kadu Gertners: Legal Caduzon como exemplo aqui. Olha que legal! Eu vou dar um select de todas as colunas aí, o que acontece até aqui? A gente conhece a partir da tabela. Funcionários,
+00:31:32.150 --> 00:31:39.529
+Gesiel Lopes: nos quatro cantos do nosso Brasilzão acontecendo entre maio e agosto.
 
 237
-00:28:57.960 --> 00:29:07.319
-Kadu Gertners: beleza. Só que na próxima linha, Opa caduzão. Apareceu um Join Join. Significa o quê? Ligação
+00:31:39.630 --> 00:31:48.789
+Gesiel Lopes: Então esses eventos estão dentro desse intervalo, ou quem não puder participar,
 
 238
-00:29:08.090 --> 00:29:20.349
-Kadu Gertners: com a tabela, departamentos. E aí, como é que acontece, caduzão? Essa conversa de uma tabela com a outra. Olha que bacana! Aí vem a cláusula on
+00:31:49.360 --> 00:31:56.300
+Gesiel Lopes: de todos esses ou de algum, pelo menos o último evento que eu recomendo que esse também
 
 239
-00:29:20.360 --> 00:29:30.759
-Kadu Gertners: para fazer a ligação. E aí a tabela, funcionários a partir da coluna Ai de sublinhado departamento
+00:31:57.570 --> 00:32:04.930
+Gesiel Lopes: eu faço. Estou querendo muito. Eu já tenho atividade submetida, mas
 
 240
-00:29:30.780 --> 00:29:34.639
-Kadu Gertners: tem que ser igual. Tem que ter o mesmo valor
+00:32:05.800 --> 00:32:09.490
+Gesiel Lopes: também ainda não saiu a programação,
 
 241
-00:29:35.340 --> 00:29:45.729
-Kadu Gertners: lá da tabela, departamentos e a coluna, a de departamento. Então, a conversa entre as tabelas.
+00:32:09.740 --> 00:32:18.189
+Gesiel Lopes: mas que é o principal evento da comunidade Python, que é a Python, Brasil, e esse ano
 
 242
-00:29:45.780 --> 00:29:58.580
-Kadu Gertners: Ela ocorre através da coluna Id sublinhado departamento que aparece tanto na tabela. Funcionários como na tabela departamentos.
+00:32:19.110 --> 00:32:24.150
+Gesiel Lopes: acontece em Outubro, e esse ano vai ser um ano especial.
 
 243
-00:29:58.990 --> 00:30:07.709
-Kadu Gertners: E aí vai ordenar pelo funcionário, pela tabela, funcionários,
+00:32:24.720 --> 00:32:30.410
+Gesiel Lopes: Que a comunidade de Floripa é fantástica.
 
 244
-00:30:07.840 --> 00:30:10.830
-Kadu Gertners: ponto a coluna. Ai de departamento.
+00:32:30.750 --> 00:32:40.339
+Gesiel Lopes: Então esse ano vai ser em Floripa. O lugar dispensa qualquer comentário. Vai ser um evento muito bom.
 
 245
-00:30:11.440 --> 00:30:21.469
-Kadu Gertners: Então, ó, pegamos o comando, colocamos para cá e vamos tentar executar.
+00:32:40.800 --> 00:32:50.520
+Gesiel Lopes: E aí quem quiser participar. Pessoal, gostaria de fazer esse disclaimer entre os dias. E aí vai ser uma semana
 
 246
-00:30:22.860 --> 00:30:34.419
-Kadu Gertners: Ó mostrou bonitinho beleza pura. Reparem que eu só usei uma coluna por ordenação.
+00:32:50.950 --> 00:32:56.769
+Gesiel Lopes: de muita imersão no mundo Pike.
 
 247
-00:30:35.180 --> 00:30:36.270
-Kadu Gertners: Beleza.
+00:32:57.030 --> 00:33:02.750
+Gesiel Lopes: Com o diversos tutoriais mini cursos
 
 248
-00:30:36.400 --> 00:30:42.859
-Kadu Gertners: Nós podemos causar usar outra coluna para ordenação. Lógico,
+00:33:03.070 --> 00:33:11.350
+Gesiel Lopes: e três dias, dois dias intensos de palestras, e finalizar com algumas atividades interessantes.
 
 249
-00:30:43.300 --> 00:30:46.229
-Kadu Gertners: é só você repetir o comando
+00:33:11.500 --> 00:33:22.840
+Gesiel Lopes: Então, o que vai acontecer entre o dia catorze e dezanove de Outubro em Florianópolis, a Python, Brasil. Então a gente vai ter todos esses esquentas.
 
 250
-00:30:46.350 --> 00:30:50.789
-Kadu Gertners: do Select até aqui. O fim da linha do on.
+00:33:23.390 --> 00:33:30.879
+Gesiel Lopes: Todos esses eventos são eventos organizados pela Apib.
 
 251
-00:30:50.890 --> 00:31:03.220
-Kadu Gertners: Ó e aí, Order by. Agora eu quero ordenar pela tabela funcionários.
+00:33:32.590 --> 00:33:34.950
+Gesiel Lopes: Caso algum de vocês.
 
 252
-00:31:03.740 --> 00:31:07.529
-Kadu Gertners: Só que eu quero ordenar pelo primeiro nome.
+00:33:36.430 --> 00:33:45.079
+Gesiel Lopes: Eu já tinha falado isso na disciplina anterior. Mas vou só apenas reforçar. Inclusive
 
 253
-00:31:09.990 --> 00:31:12.019
-Kadu Gertners: Quero ordenar pelo primeiro nome.
+00:33:45.750 --> 00:33:49.310
+Gesiel Lopes: a gente. Vai ter uma surpresinha para vocês da
 
 254
-00:31:12.550 --> 00:31:21.120
-Kadu Gertners: Ó seleciona executa. Ó primeiro nome. Vamos ver se ordenou. Ó primeiro A,
+00:33:49.510 --> 00:33:52.870
+Gesiel Lopes: mais lá na frente sobre a Pib.
 
 255
-00:31:21.790 --> 00:31:34.150
-Kadu Gertners: depois o J A, depois o Ju e depois o M. Michael. Então realmente ordenou por essa coluna, beleza.
+00:33:53.120 --> 00:33:55.919
+Gesiel Lopes: Eu acho que algo legal.
 
 256
-00:31:36.290 --> 00:31:37.860
-Kadu Gertners: Bom, vamos seguir.
+00:33:56.500 --> 00:34:05.740
+Gesiel Lopes: Então aqui dispensa qualquer comentário. Todos esses eventos são organizados pela comunidade. Então, se algum de vocês tiver interesse
 
 257
-00:31:39.480 --> 00:31:41.819
-Kadu Gertners: E aí, Matheus descobriu o erro, amigo.
+00:34:06.100 --> 00:34:17.880
+Gesiel Lopes: de querer participar da comunidade, fica aí o convite de vocês se associarem. Todos os eventos são
 
 258
-00:31:43.770 --> 00:31:45.229
-Kadu Gertners: Como é que ficou aí.
+00:34:18.110 --> 00:34:32.659
+Gesiel Lopes: da Associação são abertos públicos e online todas as assembleias, e aí, inclusive, quem quiser fazer a associação, faça porque a gente vai. Teve uma
 
 259
-00:31:46.360 --> 00:31:52.369
-Matheus Ramos: Na verdade, agora está parecendo que não é possível executar a consulta
+00:34:33.170 --> 00:34:36.139
+Gesiel Lopes: teve a assembleia no último sábado.
 
 260
-00:31:52.690 --> 00:31:56.879
-Matheus Ramos: no banco de dados indefinido ou inválido.
+00:34:36.590 --> 00:34:43.450
+Gesiel Lopes: Então esses valores aqui vão vão ser alterados. Então corra.
 
 261
-00:31:58.530 --> 00:32:00.419
-Kadu Gertners: Você criou o banco de dados, cara.
+00:34:43.719 --> 00:34:53.300
+Gesiel Lopes: Eu particularmente aconselho vocês veementemente a serem membros efetivos. Hoje, o valor não é tão significativo. É um valor.
 
 262
-00:32:01.480 --> 00:32:02.880
-Matheus Ramos: Criei, criei.
+00:34:53.500 --> 00:35:02.770
+Gesiel Lopes: Acho que menos de em torno de R cinco,zero por mês, então vale muito a pena. Aliás,
 
 263
-00:32:04.560 --> 00:32:06.310
-Matheus Ramos: Deixa eu tentar de novo aqui.
+00:35:03.380 --> 00:35:04.720
+Gesiel Lopes: um pouco mais, né?
 
 264
-00:32:07.130 --> 00:32:11.729
-Matheus Ramos: Talvez tenha sido porque na hora que eu fiz o segundo Insert,
+00:35:05.200 --> 00:35:07.360
+Gesiel Lopes: É um pouco menos, um pouco menos.
 
 265
-00:32:12.020 --> 00:32:15.310
-Matheus Ramos: que foi na criação da tabela dos funcionários,
+00:35:07.510 --> 00:35:10.929
+Gesiel Lopes: Então eu recomendo veementemente quem tiver a oportunidade
 
 266
-00:32:15.590 --> 00:32:22.859
-Matheus Ramos: apareceu a tabela e eu cliquei em cima. E aí na hora de tentar voltar para a tela dos comandos.
+00:35:11.230 --> 00:35:17.240
+Gesiel Lopes: quiser. Como membro efetivo, você consegue votar nas assembleias, participar,
 
 267
-00:32:22.980 --> 00:32:26.399
-Matheus Ramos: Eu acabei clicando em alguma coisa errada aqui que deve ter
+00:35:17.560 --> 00:35:21.409
+Gesiel Lopes: ou então, como estudante, mesmo fiquei à vontade.
 
 268
-00:32:26.760 --> 00:32:29.429
-Matheus Ramos: corrompido o arquivo. Vou desligar do banco de dados.
+00:35:21.870 --> 00:35:28.409
+Gesiel Lopes: Quem é associado pode participar da comunidade, organizando o evento, ajudando
 
 269
-00:32:31.120 --> 00:32:32.009
-Matheus Ramos: Eu vou tentar.
+00:35:28.750 --> 00:35:34.639
+Gesiel Lopes: ou simplesmente votando em assuntos relacionados à comunidade, inclusive
 
 270
-00:32:32.010 --> 00:32:32.430
-Kadu Gertners: Mulher.
+00:35:35.150 --> 00:35:44.790
+Gesiel Lopes: podendo escolher as próximas sedes da Python, Brasil fica aí a o jabazinho da comunidade.
 
 271
-00:32:32.430 --> 00:32:33.439
-Matheus Ramos: Que, por enquanto.
+00:35:45.880 --> 00:35:51.400
+Gesiel Lopes: Aproveito aí como a gente vai falar de pai. Por que não falar da comunidade que é algo que
 
 272
-00:32:33.850 --> 00:32:34.560
-Kadu Gertners: Tá bom.
+00:35:51.820 --> 00:36:01.510
+Gesiel Lopes: só tem agregar na formação de quem é entusiasta sobre a linguagem, principalmente eu mesmo
 
 273
-00:32:34.980 --> 00:32:36.310
-Matheus Ramos: Beleza valeu, cadu.
+00:36:01.750 --> 00:36:10.940
+Gesiel Lopes: meu atual emprego, eu consegui dando uma palestra depois de uma palestra. Então eu dei uma palestra num evento,
 
 274
-00:32:36.310 --> 00:32:38.760
-Kadu Gertners: Beleza pô de nada, irmão.
+00:36:11.190 --> 00:36:11.910
+Gesiel Lopes: tá?
 
 275
-00:32:39.690 --> 00:32:52.889
-Kadu Gertners: Bom Alexandre, aí está dando uma dica. Se for o caso de você tentar dopar a tabela e repetir do início. Pode ser uma sugestão também, né, Alexandre? Obrigado aí pela ajuda. Para o Matheus. Pode ser uma dica, também,
+00:36:12.050 --> 00:36:17.150
+Gesiel Lopes: E aí, depois dessa palestra, eu recebi um convite de um Linkedin, fiz o teste.
 
 276
-00:32:54.240 --> 00:32:55.820
-Kadu Gertners: beleza. Vamos lá.
+00:36:17.370 --> 00:36:21.130
+Gesiel Lopes: Fiz uma entrevista depois. Eu fiz o teste técnico e estou na empresa
 
 277
-00:32:57.040 --> 00:33:09.179
-Kadu Gertners: Legal, Caduzon. Vamos lá. Próximo comando. Ó vamos lá. Aí nós vamos fazer o seguinte, galera. O Join repara que eu botei nesse primeiro comando. Eu só botei escrito Join.
+00:36:21.320 --> 00:36:34.610
+Gesiel Lopes: jamais de três anos, diga se de passagem, tá? Então esses são. A gente já está dando a matéria, Tá Heloísa. A gente já está na matéria. Isso aqui que eu estou falando faz parte da matéria.
 
 278
-00:33:09.270 --> 00:33:18.230
-Kadu Gertners: Agora caduzone se eu Botar Inner, Join, galera, já vou adiantar o Inner Join. É a mesma coisa do que o John.
+00:36:34.610 --> 00:36:42.790
+Gesiel Lopes: Beleza. Isso é tudo relacionado à matéria. Por isso que eu estou trabalhando aqui com vocês. Beleza,
 
 279
-00:33:19.040 --> 00:33:23.150
-Kadu Gertners: Mesma coisa, mesma finalidade.
+00:36:42.820 --> 00:36:44.869
+Gesiel Lopes: a gente não está fora da matéria? Não.
 
 280
-00:33:23.760 --> 00:33:36.520
-Kadu Gertners: O Join Pool significa ligação, e o Winner significa uma ligação interna Inner significa interno.
+00:36:45.270 --> 00:37:04.670
+Gesiel Lopes: Então, como eu estava falando? Então é uma boa oportunidade para quem quer se aprofundar, para quem quer conhecer, então, para quem quer expandir? E aí, quem sabe, no futuro, possam participar, propondo palestras, atividade. Então fiquem
 
 281
-00:33:37.370 --> 00:33:42.940
-Kadu Gertners: Então repara, vamos pegar esse comando e vamos executar de novo.
+00:37:04.790 --> 00:37:10.980
+Gesiel Lopes: aí. Fica aí o fica aí. A dica beleza.
 
 282
-00:33:43.330 --> 00:33:52.920
-Kadu Gertners: Quer dizer, e vamos executar esse comando pela primeira vez com o Inner John, selecionamos o comando executa,
+00:37:11.600 --> 00:37:28.000
+Gesiel Lopes: Dito isso, vou trazer aqui alguns avisos antes de a gente falar de outros assuntos. Um aviso importante sobre o nosso andamento da nossa disciplina. Mais uma vez, não custa nada lembrá los.
 
 283
-00:33:53.230 --> 00:34:01.450
-Kadu Gertners: então trouxe o resultado. Ordenando pelo funcionários id departamento.
+00:37:28.200 --> 00:37:39.330
+Gesiel Lopes: A disciplina, essa disciplina, não só essa, mas todas as disciplinas são disciplinas trimestrais e o trimestre do.
 
 284
-00:34:01.820 --> 00:34:11.880
-Kadu Gertners: Ó, se você abrir aqui, ó esse ar de departamento aqui.
+00:37:39.830 --> 00:37:48.260
+Gesiel Lopes: E o trimestre do infinito. Ele é composto por onze semanas ou onze etapas, tá a
 
 285
-00:34:13.949 --> 00:34:17.929
-Kadu Gertners: Ele inicialmente está mencionando a tabela, funcionários
+00:37:49.360 --> 00:37:53.529
+Gesiel Lopes: sendo que, na semana ou etapa um
 
 286
-00:34:18.620 --> 00:34:26.140
-Kadu Gertners: e o Id. Departamento um aqui é o da tabela departamentos, porque ele está seguindo a ordem das tabelas aqui.
+00:37:54.010 --> 00:37:58.110
+Gesiel Lopes: até a semana nove ou etapa nove.
 
 287
-00:34:26.550 --> 00:34:27.679
-Kadu Gertners: Tá legal.
+00:37:58.590 --> 00:38:04.030
+Gesiel Lopes: É de conteúdo relacionado à disciplina.
 
 288
-00:34:28.739 --> 00:34:30.120
-Kadu Gertners: Vamos seguir.
+00:38:04.250 --> 00:38:11.469
+Gesiel Lopes: Então, a gente vai trabalhar, então, todo assunto relacionado à disciplina.
 
 289
-00:34:30.500 --> 00:34:32.750
-Kadu Gertners: Ó galera, por favor.
+00:38:12.340 --> 00:38:22.030
+Gesiel Lopes: Ele vai finalizar o planejamento. É para finalizar, na nona etapa, depois da nona etapa,
 
 290
-00:34:32.940 --> 00:34:40.039
-Kadu Gertners: Se tiver dúvidas tiver estranho não tiver legal, sinaliza,
+00:38:22.150 --> 00:38:26.039
+Gesiel Lopes: não teremos mais conteúdo relacionado à disciplina.
 
 291
-00:34:40.300 --> 00:34:50.310
-Kadu Gertners: sinaliza que vocês precisam perceber algumas coisas, e vocês precisam realmente de agora por diante. Galera, lembrem se do que eu falei no início da aula.
+00:38:26.200 --> 00:38:33.540
+Gesiel Lopes: Então a semana dez será a semana de entrega da última atividade, que é a principal atividade que é o At.
 
 292
-00:34:50.530 --> 00:34:55.540
-Kadu Gertners: O At não está muito fácil, não está?
+00:38:33.840 --> 00:38:39.640
+Gesiel Lopes: E, na semana onze, a gente vai ter a
 
 293
-00:34:55.800 --> 00:35:05.279
-Kadu Gertners: Quando eu mostrar para vocês, eu vou pontuar algumas coisas para vocês que vocês vão ter que pensar várias coisas aí para vocês resolverem as questões.
+00:38:40.610 --> 00:38:49.970
+Gesiel Lopes: a correção das reentregas para aqueles que não conseguiram ou queiram
 
 294
-00:35:05.440 --> 00:35:07.850
-Kadu Gertners: Então vai na minha.
+00:38:50.190 --> 00:38:57.989
+Gesiel Lopes: se achar inconveniente necessário realizar uma reintegra de um novo trabalho,
 
 295
-00:35:07.980 --> 00:35:14.430
-Kadu Gertners: Vai testando. Vai treinando, se tiver com alguma dúvida. Vai perguntando.
+00:38:58.610 --> 00:39:06.450
+Gesiel Lopes: contemplando algum item não atingido na primeira avaliação.
 
 296
-00:35:15.480 --> 00:35:16.909
-Kadu Gertners: Bom, vamos lá.
+00:39:06.700 --> 00:39:22.980
+Gesiel Lopes: E aí a gente vai ficar. Nessas duas semanas. A gente vai ter conteúdo da disciplina. Não, a gente está programando dessa vez, fazer alguma coisa, mas nada de conteúdo, dúvidas. A gente pode tirar alguma dúvida,
 
 297
-00:35:19.720 --> 00:35:32.499
-Kadu Gertners: Bom, aqui no próximo comando. Isso aqui é uma sintaxe, que é a sintaxe na qual eu até prefiro.
+00:39:23.150 --> 00:39:34.490
+Gesiel Lopes: mas aí vai ser já na entrega do At. Então não é relacionado ao At. Então qualquer dúvida é só comunicar a gente antes. Procure no infinite online.
 
 298
-00:35:32.800 --> 00:35:33.710
-Kadu Gertners: Agora
+00:39:34.670 --> 00:39:42.850
+Gesiel Lopes: Então já adianto. Mais uma vez, enfatizo entre a semana dez e a semana onze. Não teremos mais
 
 299
-00:35:34.340 --> 00:35:54.250
-Kadu Gertners: tem banco de dados antigos que ele usa uma sintaxe assim. Ó, olha que interessante. Ele faz um select de todas as colunas. Ele menciona from a tabela, funcionários, vírgula, uma segunda tabela, departamentos e na cláusulaware
+00:39:42.970 --> 00:39:46.169
+Gesiel Lopes: conteúdo da disciplina.
 
 300
-00:35:54.720 --> 00:35:59.740
-Kadu Gertners: que é feita a ligação entre as tabelas.
+00:39:46.280 --> 00:39:47.190
+Gesiel Lopes: Então,
 
 301
-00:36:00.010 --> 00:36:03.240
-Kadu Gertners: Você vai reparar que esse ou era aqui. Ó,
+00:39:47.380 --> 00:40:00.169
+Gesiel Lopes: o que a gente pode fazer na décima primeira semana é tirar dúvidas das Reentregas, se for necessário, e quem quiser e julgar necessário, a gente pode programar,
 
 302
-00:36:03.370 --> 00:36:16.159
-Kadu Gertners: esse item aqui que eu estou destacando. Funcionários Id, departamento igual a departamentos Id. Departamento é igual ao que está aqui na cláusula. Um igualzinho.
+00:40:00.170 --> 00:40:09.389
+Gesiel Lopes: mas não teremos conteúdo. Ah Gesiel vai trazer conteúdo. Não, a gente não vai ter conteúdo. Não é o Gesiel que estabelece isso
 
 303
-00:36:16.990 --> 00:36:22.050
-Kadu Gertners: Beleza Macadur. Por que você está falando uma coisa que de repente é mais antiga
+00:40:09.480 --> 00:40:13.620
+Gesiel Lopes: é o infinite. Isso é uma regra do infinite.
 
 304
-00:36:22.120 --> 00:36:38.029
-Kadu Gertners: que talvez muitas pessoas não estão usando com tanta frequência hoje, porque de repente, vocês podem pegar um sistema mais antigo e vocês terem que fazer a manutenção em uma base de dados muito mais antiga,
+00:40:13.720 --> 00:40:25.769
+Gesiel Lopes: Que isso fique bem claro. Mais uma vez, a disciplina é composta por quatro atividades que são os Tps
 
 305
-00:36:39.180 --> 00:36:45.870
-Kadu Gertners: entendeu? E aí o pessoal usava essa referência desse comando aqui.
+00:40:25.960 --> 00:40:27.320
+Gesiel Lopes: e o A T.
 
 306
-00:36:46.560 --> 00:36:55.449
-Kadu Gertners: Beleza de novo. Estamos ordenando pela tabela, funcionários, a coluna Id, departamento.
+00:40:27.710 --> 00:40:31.629
+Gesiel Lopes: Então, mais uma vez, reforçando, não custa nada lembrá los.
 
 307
-00:36:55.910 --> 00:37:00.690
-Kadu Gertners: Então, ó, se você pegar o comando e colocar para cá,
+00:40:31.910 --> 00:40:39.370
+Gesiel Lopes: A disciplina terá três Tps, sendo que todos os Tps
 
 308
-00:37:02.420 --> 00:37:08.990
-Kadu Gertners: você vai reparar que ele vai dar exatamente esse resultado aqui. Ó, vamos executar.
+00:40:39.650 --> 00:40:57.589
+Gesiel Lopes: devem ser entregues. Eles são obrigatórios, porém, não valem ponto nenhum, gesiel. Entreguei o Pp, tirei todos os itens de rubrica. Atingi todos os pontos. Eu posso utilizar
 
 309
-00:37:09.230 --> 00:37:12.670
-Kadu Gertners: Selecionamos o comando e play.
+00:40:58.040 --> 00:41:10.769
+Gesiel Lopes: esse desempenho nos ateis para complementar algum item de rubrica no At que eu não atingi? Não, infelizmente não.
 
 310
-00:37:13.070 --> 00:37:17.449
-Kadu Gertners: Ó, ele dá o mesmo resultado.
+00:41:10.910 --> 00:41:15.860
+Gesiel Lopes: Porque os Tps. Eles não valem nenhum ponto.
 
 311
-00:37:20.140 --> 00:37:23.030
-Kadu Gertners: Ok, vamos seguir
+00:41:16.070 --> 00:41:20.790
+Gesiel Lopes: E por não valerem ponto. Eles não vão ser usados e não podem ser usados
 
 312
-00:37:23.720 --> 00:37:33.619
-Kadu Gertners: beleza, galera aqui. Eu não entrei em muitos detalhes. Eu só fiz a ligação para mostrar tabelas. E lembrem se,
+00:41:20.910 --> 00:41:33.790
+Gesiel Lopes: para complementar ou suprir algum item de república não atingido na principal atividade, que é o At,
 
 313
-00:37:33.730 --> 00:37:37.500
-Kadu Gertners: quando for para a próxima parte da matéria.
+00:41:35.200 --> 00:41:41.880
+Gesiel Lopes: lembrando que todos os Tps, eles são obrigatórios
 
 314
-00:37:37.630 --> 00:37:46.139
-Kadu Gertners: Nós vamos começar a usar também a parte do Group by, não é?
+00:41:42.020 --> 00:41:48.499
+Gesiel Lopes: e são pré requisitos para a entrega do At.
 
 315
-00:37:46.250 --> 00:37:48.209
-Kadu Gertners: É do Heavy.
+00:41:48.780 --> 00:42:03.929
+Gesiel Lopes: E aí sim, o Assessment, que é a última atividade da disciplina. Somente ela será utilizada para a definição do conceito de vocês na disciplina,
 
 316
-00:37:48.740 --> 00:37:53.750
-Kadu Gertners: E aí lembrem se, nós não vamos fazer isso só para uma tabela.
+00:42:04.210 --> 00:42:09.930
+Gesiel Lopes: beleza. Então, o que vai ser utilizado para
 
 317
-00:37:54.120 --> 00:38:11.749
-Kadu Gertners: Agora, nesse momento da matéria de vocês, nós vamos começar a fazer ligações de tabelas, e nós vamos pegar determinadas colunas para montarmos o nosso group by. E para mostrar o resultado, por alguma função de agregação,
+00:42:10.040 --> 00:42:17.989
+Gesiel Lopes: definir o conceito na disciplina é apenas o a At a somente o a T.
 
 318
-00:38:12.050 --> 00:38:23.179
-Kadu Gertners: seja uma função de agregação, que é o Sam, que é somar, seja o count que é contar seja o Min, que é o mínimo, seja o Max que é o valor máximo.
+00:42:18.500 --> 00:42:21.979
+Gesiel Lopes: Muito cuidado com os prazos.
 
 319
-00:38:24.310 --> 00:38:25.420
-Kadu Gertners: Beleza.
+00:42:22.240 --> 00:42:32.850
+Gesiel Lopes: Tenho muito. Prestem bem atenção, porque a entrega fora do prazo dos Aps, aliás, dos Tps,
 
 320
-00:38:26.070 --> 00:38:33.019
-Kadu Gertners: Bom, vamos lá, pessoal. É lógico. Oi, fala comigo.
+00:42:34.280 --> 00:42:38.380
+Gesiel Lopes: eles limitam o conceito de vocês.
 
 321
-00:38:33.430 --> 00:38:35.619
-lucas.histirari: Desculpa atrapalhar aqui. A gente está mandando.
+00:42:38.540 --> 00:42:44.900
+Gesiel Lopes: Então quem entregar qualquer atividade, seja o Tp, ou seja, o At
 
 322
-00:38:35.620 --> 00:38:36.010
-Kadu Gertners: Não é.
+00:42:45.010 --> 00:42:51.470
+Gesiel Lopes: fora do prazo de entrega automaticamente,
 
 323
-00:38:36.010 --> 00:38:37.330
-lucas.histirari: Aí no chat.
+00:42:51.570 --> 00:42:59.429
+Gesiel Lopes: você não poderá, por mais que consiga atingir todos os itens cobrados
 
 324
-00:38:37.730 --> 00:38:38.620
-Kadu Gertners: Opa, é verdade.
+00:42:59.550 --> 00:43:05.780
+Gesiel Lopes: nas avaliações, principalmente no At. Você não vai conseguir atingir o maior conceito,
 
 325
-00:38:38.620 --> 00:38:40.779
-lucas.histirari: Não perdeu o raciocínio.
+00:43:06.000 --> 00:43:09.340
+Gesiel Lopes: que é o conceito máximo da disciplina.
 
 326
-00:38:41.420 --> 00:38:48.870
-Kadu Gertners: Tá bom, professor. Vamos lá, professor. Pode dar uma destrinchada? Boa no Inerjoy
+00:43:09.930 --> 00:43:12.450
+Gesiel Lopes: Então tomem muito cuidado.
 
 327
-00:38:49.720 --> 00:38:58.339
-Kadu Gertners: Brother me deu um salve falando para pegar bem essa parte cara. O Inerjoy é exatamente, né, Lucas Ishirare.
+00:43:12.690 --> 00:43:20.440
+Gesiel Lopes: Ah, eu entreguei o At e outra além do prazo de entrega. Existe uma data limite
 
 328
-00:38:58.470 --> 00:39:03.570
-Kadu Gertners: O Inerjoy é exatamente a ligação de uma tabela com a outra.
+00:43:20.540 --> 00:43:37.060
+Gesiel Lopes: de entrega de cada uma dessas atividades. Então se atentem muito a isso. Beleza. Ah, eu vou deixar para entregar tudo no último dia. Então tomem muito cuidado
 
 329
-00:39:03.810 --> 00:39:16.379
-Kadu Gertners: E essa ligação de uma tabela com a outra. Ela ocorre de uma chave primária de uma tabela mãe, com a chave estrangeira de uma tabela, filha,
+00:43:37.090 --> 00:43:46.739
+Gesiel Lopes: que muitas das vezes você pode ter algum contratempo. Então se atentem. Volta a repetir se. Atentem às datas.
 
 330
-00:39:16.840 --> 00:39:26.159
-Kadu Gertners: entendeu, Lucas? E realmente é o que você está falando. É extremamente importante de vocês começarem a entender isso.
+00:43:46.860 --> 00:43:55.500
+Gesiel Lopes: Tá bom, não é imposição do Gesiel. São regras do infinito.
 
 331
-00:39:26.760 --> 00:39:30.020
-Kadu Gertners: E aí, Lucas e Shirari.
+00:43:55.710 --> 00:44:01.529
+Gesiel Lopes: E eu gosto particularmente de seguir a risca
 
 332
-00:39:30.170 --> 00:39:35.689
-Kadu Gertners: Vocês têm que fazer esse vínculo através desse comando
+00:44:01.740 --> 00:44:13.630
+Gesiel Lopes: essas regras. Tá bom? Até porque é o mínimo que eu preciso fazer. Tá bom? Então tomem muito cuidado. Outro ponto e todos esses pontos
 
 333
-00:39:35.830 --> 00:39:42.050
-Kadu Gertners: desse comando aqui, que é o comando que eu acho mais interessante vocês usarem
+00:44:13.640 --> 00:44:23.720
+Gesiel Lopes: estão lá no manual do aluno. Procurem lá. Certifiquem lá tudo. Está lá, beleza, outro ponto.
 
 334
-00:39:42.170 --> 00:40:00.199
-Kadu Gertners: o inner Joinabela Inner Join, a segunda tabela. Você tem que usar o on que indica que você vai fazer um link, uma ligação,
+00:44:23.740 --> 00:44:28.059
+Gesiel Lopes: A entrega do At. Depois do prazo estabelecido,
 
 335
-00:40:00.340 --> 00:40:07.099
-Kadu Gertners: uma conversação entre a coluna da primeira tabela,
+00:44:28.620 --> 00:44:32.520
+Gesiel Lopes: você não poderá realizar uma nova entrega,
 
 336
-00:40:07.810 --> 00:40:12.519
-Kadu Gertners: igualando com a coluna da segunda tabela.
+00:44:32.730 --> 00:44:38.659
+Gesiel Lopes: porque essa entrega atrasada vai ser contabilizada como uma reintegra.
 
 337
-00:40:13.480 --> 00:40:32.409
-Kadu Gertners: Beleza. Então esse vínculo aí, Lucas, você entender um pouquinho. Isso realmente é bem importante. Ah, mas caldozão. Como é que eu vou começar a perceber mais isso, né, Lucas? Quando você começar a executar mais os comandos para você começar a perceber como é que isso funciona,
+00:44:38.830 --> 00:44:41.449
+Gesiel Lopes: E o segundo ponto é que
 
 338
-00:40:33.470 --> 00:40:35.630
-Kadu Gertners: Lucas, tudo bem, meu amigo.
+00:44:41.630 --> 00:44:48.220
+Gesiel Lopes: a competência fica limitada a D. Então o máximo que você vai conseguir
 
 339
-00:40:35.840 --> 00:40:41.790
-Kadu Gertners: Vê se você conseguiu entender alguma coisa ou está estranho? Ainda pode perguntar.
+00:44:48.990 --> 00:44:53.579
+Gesiel Lopes: na disciplina é o conceito de
 
 340
-00:40:43.090 --> 00:40:50.599
-Kadu Gertners: Ok, Lucas, você respondeu, beleza, meu amigo. Se tiver dúvida de novo, volta aí. Pode perguntar. Não tem problema.
+00:44:54.460 --> 00:45:03.199
+Gesiel Lopes: ond. Então, muito cuidado, Ah, Giselle de receber o feedback, e aí, você
 
 341
-00:40:51.010 --> 00:40:58.310
-Kadu Gertners: Vamos lá, Gabriel Crepaldi. Esse Select traz o mesmo resultado do anterior que só tem o John. Sim,
+00:45:03.200 --> 00:45:16.069
+Gesiel Lopes: ou não atingiu todos os itens ou queira, atingiu o item. Ou então gabaritou todos os itens. Pode isso acontecer. Ah, Gesiel, eu gabaritei todos os itens da rúbrica do At,
 
 342
-00:40:58.420 --> 00:41:07.030
-Kadu Gertners: os três comandos. Gabriel Crepaldi. Ó, deixa eu destacar aqui para vocês esses três comandos aqui. Ó
+00:45:16.440 --> 00:45:18.679
+Gesiel Lopes: mas o At.
 
 343
-00:41:08.280 --> 00:41:15.119
-Kadu Gertners: que eu estou destacando aqui na tela eles mostram exatamente o mesmo resultado,
+00:45:19.490 --> 00:45:38.649
+Gesiel Lopes: Mas aqui o meu conceito ficou como D. E aí não é o Gesiel. Isso é automaticamente setado no próprio moodle. Se você entregar um segundo depois da data limite, ela vai ser contada como atraso,
 
 344
-00:41:15.510 --> 00:41:29.410
-Kadu Gertners: tendo usando só Join usando o inerjoin ou usando a notação da ligação das tabelas, não pela cláusula, on, mas pela cláusulaware.
+00:45:38.890 --> 00:45:54.940
+Gesiel Lopes: então é um segundo, dois segundos ou um dia, dois dias, sete dias. Ela já é contabilizada como atraso. Sendo assim, o seu conceito fica limitado ao conceito D. Por mais que você cumpra
 
 345
-00:41:30.620 --> 00:41:34.160
-Kadu Gertners: Tudo bem, Gabriel Crepaldi. Eles são realmente iguaizinhos.
+00:45:55.000 --> 00:46:05.270
+Gesiel Lopes: ou consiga gabaritar todos os itens da República. Muito cuidado. Isso está lá no manual do aluno. Não é o Gesiel Beleza.
 
 346
-00:41:35.280 --> 00:41:39.850
-Kadu Gertners: Beleza, meu amigo. Vê se você entendeu aí beleza, irmão
+00:46:06.270 --> 00:46:10.170
+Gesiel Lopes: Dito isso, guardem essas datas.
 
 347
-00:41:40.460 --> 00:41:49.289
-Kadu Gertners: Gabriel Diniz, vamos lá. O Joy no caso, ele pega os registros da tabela A e B, com ou sem em relação não,
+00:46:10.440 --> 00:46:21.920
+Gesiel Lopes: Guardem essas datas, que são as datas prováveis das entregas dos Tps e dos Ate S e do ate. O ateis só vai ter um, né?
 
 348
-00:41:49.420 --> 00:41:56.900
-Kadu Gertners: o Inerjoy é quando tem obrigatoriamente, Gabriel Diniz tem como relação entre as duas tabelas.
+00:46:22.200 --> 00:46:28.730
+Gesiel Lopes: Então o primeiro Tp é para o dia cinco de Maio, o segundo Tp dia dezoito de Maio,
 
 349
-00:41:57.250 --> 00:42:04.109
-Kadu Gertners: Se não tiver um determinado valor, não estiver na outra tabela, não traz.
+00:46:29.870 --> 00:46:45.520
+Gesiel Lopes: o terceiro Tp dia seis de Junho, e a entrega do At é dia dezasseis de Junho, então
 
 350
-00:42:04.490 --> 00:42:14.500
-Kadu Gertners: Então tem que ter aí na sua afirmação, o John no caso, ele pega os registros da tabela A e B com relação
+00:46:45.680 --> 00:46:50.500
+Gesiel Lopes: eu vou disponibilizar, como vocês sabem, os slides. Mas
 
 351
-00:42:14.670 --> 00:42:21.130
-Kadu Gertners: o Inerj. Somente os registros da Tabela A e B com relação. É isso? Sim, é isso.
+00:46:50.940 --> 00:46:57.400
+Gesiel Lopes: Grifen, salvem essas datas, tá? Salvem essas datas, tá?
 
 352
-00:42:22.940 --> 00:42:31.039
-Kadu Gertners: Ok, Gabriel Diniz, beleza, beleza. Gabriel Diniz, maravilha, irmão.
+00:46:58.300 --> 00:47:17.219
+Gesiel Lopes: Eu não tenho essa informação. O Gabriel está falando quais a gente abre para dúvida. Já já viu, Gabriel? Mas eu posso ver essas datas porque eu só vi até agora as datas obrigatórias de entrega. Mas depois eu posso trazer as datas máximas.
 
 353
-00:42:32.210 --> 00:42:48.510
-Kadu Gertners: Vamos lá. João Vitor caduzão. Não sei se é por escolha sua, mas percebi que só de clicar no final de um código já fica selecionado automaticamente e é só executar que vai, cara. Tudo tranquilo. Pode ser? Não tem problema.
+00:47:17.550 --> 00:47:21.950
+Gesiel Lopes: O Gabriel trouxe um ponto interessante.
 
 354
-00:42:48.990 --> 00:42:52.410
-Kadu Gertners: Não tem problema nenhum problema nenhum.
+00:47:22.120 --> 00:47:24.940
+Gesiel Lopes: Eu posso trazer essa informação depois.
 
 355
-00:42:53.000 --> 00:42:54.100
-Kadu Gertners: Tá bom.
+00:47:25.380 --> 00:47:34.490
+Gesiel Lopes: Então guardem essas datas. E aí, aqui eu abro um parêntese. Gostaria de deixar bem claro o professor. Ele
 
 356
-00:42:55.340 --> 00:43:10.790
-Kadu Gertners: O Alexandre Oliveira está falando também. Ele só clica no final e aperta o F9 é, ele deve ter uma sensibilidade que ele percebe o início do comando até o fim. Se está funcionando, pessoal, está valendo sem problema nenhum.
+00:47:34.850 --> 00:47:40.820
+Gesiel Lopes: ele tem autonomia na sua disciplina tá.
 
 357
-00:43:11.200 --> 00:43:28.660
-Kadu Gertners: Eu estou tentando sempre selecionar o comando, até para quem não percebeu perceber que aquele comando está selecionado e eu clico no botão play para executar. Mas se vocês dois se sentem confortáveis em fazer assim, pessoal. Não tem problema nenhum.
+00:47:41.500 --> 00:47:56.630
+Gesiel Lopes: Porém, essa autonomia não é uma autonomia total e nenhuma decisão deve ser tomada de forma unilateral pelo professor
 
 358
-00:43:28.870 --> 00:43:31.510
-Kadu Gertners: Tá bom, João e Alexandre. Problema zero.
+00:47:56.820 --> 00:48:05.550
+Gesiel Lopes: sem devidamente comunicar a coordenação do curso de vocês e a coordenação pedagógica do próprio Instituto.
 
 359
-00:43:31.650 --> 00:43:32.850
-Kadu Gertners: Problema nenhum.
+00:48:05.780 --> 00:48:17.839
+Gesiel Lopes: Por mais que o professor tenha liberdade, tenha autonomia na disciplina. Essa autonomia não é unilateral.
 
 360
-00:43:33.150 --> 00:43:35.259
-Kadu Gertners: Tá bom, amigos, não tem problema nenhum.
+00:48:17.970 --> 00:48:27.209
+Gesiel Lopes: Ela não pode acontecer de forma única e exclusivamente do professor. Ela tem que estar apoiada
 
 361
-00:43:38.930 --> 00:43:48.400
-Kadu Gertners: Bom, maravilha legal. Isso aí, galera! Perguntar, tirar dúvidas, entender isso aí. Muito bom.
+00:48:27.980 --> 00:48:35.549
+Gesiel Lopes: com os demais envolvidos dentro do Infinit. E é que eu abro mais um parênteses. Ah, Gesuel, mais
 
 362
-00:43:48.680 --> 00:43:50.950
-Kadu Gertners: Vamos seguir Caldzon.
+00:48:35.850 --> 00:48:45.290
+Gesiel Lopes: professor, colega, fulano, o outro. Professor faz isso. Faz aquilo. Tudo bem, tá perfeito.
 
 363
-00:43:51.500 --> 00:44:03.160
-Kadu Gertners: Vamos seguir um pouco mais. Olha só. Aqui nós vamos começar a colocar uns outros conceitos também em evidência.
+00:48:45.960 --> 00:48:48.569
+Gesiel Lopes: Porque o professor tem essa autonomia.
 
 364
-00:44:04.090 --> 00:44:05.459
-Kadu Gertners: Olha que legal!
+00:48:48.690 --> 00:48:55.030
+Gesiel Lopes: E aí a única sensibilidade que a gente precisa ter. E esse entendimento é fundamental.
 
 365
-00:44:07.990 --> 00:44:12.950
-Kadu Gertners: Temos a primeira tabela que é a distrito dois mil e vinte.
+00:48:55.840 --> 00:49:01.019
+Gesiel Lopes: O professor tem autonomia na sua disciplina.
 
 366
-00:44:13.830 --> 00:44:17.760
-Kadu Gertners: Tem a coluna Id que é inteiro.
+00:49:01.240 --> 00:49:09.430
+Gesiel Lopes: Isso não quer dizer que a decisão do professor tomar a decisão que ele for tomar na disciplina dele,
 
 367
-00:44:17.950 --> 00:44:21.929
-Kadu Gertners: Vai criar uma restrição
+00:49:09.700 --> 00:49:13.150
+Gesiel Lopes: essa decisão vira em regra do Instituto.
 
 368
-00:44:22.290 --> 00:44:31.779
-Kadu Gertners: usando aquele termo que eu falei para vocês. Ele pega Pk, que é a primeira Key sublinhado e ele pega o nome da tabela. Tá vendo?
+00:49:13.760 --> 00:49:23.580
+Gesiel Lopes: Então, se um colega faz isso, não quer dizer que todos os demais devem fazer. Então é essa sensibilidade e essa compreensão que eu peço
 
 369
-00:44:31.900 --> 00:44:34.559
-Kadu Gertners: Ó distrito dois mil e vinte,
+00:49:24.090 --> 00:49:28.940
+Gesiel Lopes: para evitar qualquer.
 
 370
-00:44:35.990 --> 00:44:50.179
-Kadu Gertners: distrito dois mil e vinte. Então, isso aqui é a chave primária da tabela. Distrito dois mil e vinte. Como ele está? A primeira está vinculada somente a uma coluna.
+00:49:29.560 --> 00:49:31.120
+Gesiel Lopes: Vamos dizer assim,
 
 371
-00:44:50.810 --> 00:45:01.099
-Kadu Gertners: Então, nesse caso, a tabela tem a chave primária somente vinculada a uma coluna.
+00:49:31.320 --> 00:49:47.090
+Gesiel Lopes: qualquer desencontro de informações. Então essas são as regras do Instituto. Qualquer regra além precisa ser passada pela coordenação. Então, para a gente não ter nenhum contratempo.
 
 372
-00:45:01.520 --> 00:45:05.489
-Kadu Gertners: Quando você quer criar uma chave primária
+00:49:47.760 --> 00:49:52.160
+Gesiel Lopes: A princípio, são essas regras e não é minhas regras.
 
 373
-00:45:05.850 --> 00:45:11.999
-Kadu Gertners: que ela tem mais de uma coluna obrigatoriamente. Você tem que botar para a América aqui embaixo.
+00:49:52.480 --> 00:50:03.330
+Gesiel Lopes: Não é a imposição ou a definição do Gesiel. As regras são do Instituto e devemos, tanto como dissente
 
 374
-00:45:12.440 --> 00:45:20.289
-Kadu Gertners: Você teria que botar aqui e define aqui pra América. E entre parênteses, coloca Coluna um
+00:50:03.500 --> 00:50:15.920
+Gesiel Lopes: como docente, se sujeitar a essas regras a seguir essas regras. Combinado, pessoal. Então, reforçando. Salvem essa data,
 
 375
-00:45:21.140 --> 00:45:24.579
-Kadu Gertners: e depois a Coluna dois. Aqui, por exemplo,
+00:50:16.670 --> 00:50:21.290
+Gesiel Lopes: salvem essa data, tá? É o.
 
 376
-00:45:25.300 --> 00:45:34.220
-Kadu Gertners: como nós só temos uma coluna. Nós podemos botar para a Merick do lado da coluna, que é a coluna Id.
+00:50:23.450 --> 00:50:29.529
+Gesiel Lopes: O Waltv colocou aqui uma pergunta e aí
 
 377
-00:45:35.030 --> 00:45:37.140
-Kadu Gertners: Tá bom, legal.
+00:50:29.910 --> 00:50:43.940
+Gesiel Lopes: todas as atividades. Ele está perguntando se eu participo. Se os professores. Aí eu vou fazer de forma geral, participam da criação das atividades. Aí eu não vou nem falar do At. Especificamente vou falar de todas as atividades,
 
 378
-00:45:37.810 --> 00:45:43.060
-Kadu Gertners: Outra coluna escola sublinhada dois mil e vinte. É do tipo texto.
+00:50:44.870 --> 00:50:52.159
+Gesiel Lopes: todas as atividades. A partir desse ano, elas foram padronizadas
 
 379
-00:45:43.200 --> 00:45:47.389
-Kadu Gertners: E aí, olha que legal. Nós vamos criar uma segunda tabela,
+00:50:52.330 --> 00:51:01.080
+Gesiel Lopes: e pelo infinete, não somente as disciplinas do bloco de entrada. Mas todas as disciplinas, então elas têm uma padronização
 
 380
-00:45:47.680 --> 00:45:51.280
-Kadu Gertners: que é a Distrito dois mil e trinta e cinco. Repara,
+00:51:01.250 --> 00:51:09.089
+Gesiel Lopes: e uma supervisão dos professores. Então cada atividade que é desenvolvida
 
 381
-00:45:51.430 --> 00:46:02.490
-Kadu Gertners: tem uma que é de dois mil e vinte, a outra de dois mil e trinta e cinco. Vamos embora. Aí mesma coisa. A coluna Id é do tipo inteiro.
+00:51:09.750 --> 00:51:24.060
+Gesiel Lopes: em cada disciplina, seja Tp: seja Uat. Elas são padronizadas pelo infinit e curadas supervisionadas pelo professor.
 
 382
-00:46:02.630 --> 00:46:06.290
-Kadu Gertners: Será criada uma constrente. Uma restrição
+00:51:24.190 --> 00:51:35.340
+Gesiel Lopes: Então, o que o professor faz é a supervisão, então verificar se as atividades atendem às rubricas da disciplina.
 
 383
-00:46:06.670 --> 00:46:12.170
-Kadu Gertners: será definida a Pk para Meriti, agora da tabela.
+00:51:35.440 --> 00:51:48.249
+Gesiel Lopes: E se elas estão contempladas dentro da disciplina? E se elas cobram apenas o conteúdo trabalhado na disciplina.
 
 384
-00:46:12.430 --> 00:46:14.709
-Kadu Gertners: Distrito dois mil e vinte e cinco.
+00:51:48.730 --> 00:52:04.490
+Gesiel Lopes: Então, o que a gente faz é essa supervisão, essa curadoria. Então, antes de ser publicado, todas as atividades, todos os professores fazem a definição. Eles fazem a validação do que é colocado,
 
 385
-00:46:15.860 --> 00:46:17.050
-Kadu Gertners: Beleza
+00:52:04.570 --> 00:52:18.050
+Gesiel Lopes: caso haja a necessidade de alguma adaptação, alguma correção, inclusive isso já aconteceu em uma disciplina de um outro bloco que eu trabalhei. Então as atividades foram adaptadas
 
 386
-00:46:17.220 --> 00:46:26.719
-Kadu Gertners: que é a primeiriqu também a coluna Id e a segunda coluna é a coluna escola sublinhada dois mil e trinta e cinco, que é um texto
+00:52:18.270 --> 00:52:23.150
+Gesiel Lopes: para o contexto do
 
 387
-00:46:27.390 --> 00:46:32.560
-Kadu Gertners: beleza. Vamos pegar os comandos, vamos colocar para cá.
+00:52:23.340 --> 00:52:38.920
+Gesiel Lopes: do que era cobrado em cada atividade. Beleza. Então não é que eu participe. Ela é padronizada pelo Instituto, mas elas são curadas por todos os professores, respondido ao Tv. Então tudo que é cobrado,
 
 388
-00:46:34.210 --> 00:46:35.240
-Kadu Gertners: Opa,
+00:52:39.150 --> 00:52:53.409
+Gesiel Lopes: ela está relacionada ao que é trabalhado na disciplina, e o conteúdo cobrado é um conteúdo que é trabalhado nenhum conteúdo de nenhuma disciplina que eu já trabalhei. Esse semestre
 
 389
-00:46:40.340 --> 00:46:41.180
-Kadu Gertners: e aí,
+00:52:53.960 --> 00:53:03.770
+Gesiel Lopes: nas atividades. Tem algo que, cobrando algo que não foi trabalhado, lembrando que a interpretação,
 
 390
-00:46:44.770 --> 00:46:46.170
-Kadu Gertners: beleza? Vamos.
+00:53:03.980 --> 00:53:13.509
+Gesiel Lopes: por mais que não seja um item de avaliação, mas ele também é um item a ser avaliado. Beleza
 
 391
-00:46:46.380 --> 00:46:49.270
-Kadu Gertners: Podemos selecionar as duas de uma vez.
+00:53:15.140 --> 00:53:16.230
+Gesiel Lopes: tranquilo.
 
 392
-00:46:52.460 --> 00:46:58.250
-Kadu Gertners: E aqui. Ó, você vai reparar que vão passar a ter mais duas tabelas aqui. Olha lá,
+00:53:16.960 --> 00:53:30.819
+Gesiel Lopes: Então ele é um item avaliado. Então, por mais que não esteja lá na República, interpretar, também é uma característica. É um item que é cobrado dentro das atividades, beleza.
 
 393
-00:46:59.300 --> 00:47:02.539
-Kadu Gertners: beleza a distrito dois mil e vinte
+00:53:31.110 --> 00:53:39.160
+Gesiel Lopes: E aí o Noah comentou. É justamente isso que eu ia falar. Agora, o segundo ponto que eu queria trazer
 
 394
-00:47:02.910 --> 00:47:05.999
-Kadu Gertners: e a distrito dois mil e treze e cinto.
+00:53:39.260 --> 00:53:47.109
+Gesiel Lopes: antes do nosso intervalo. É a nossa reposição. Então, como todos sabem, estamos iniciando o nosso
 
 395
-00:47:06.530 --> 00:47:07.920
-Kadu Gertners: Maravilha.
+00:53:47.240 --> 00:53:54.479
+Gesiel Lopes: nossa disciplina. Somente agora, porque entre os dias treze e os dias quinze
 
 396
-00:47:08.420 --> 00:47:11.790
-Kadu Gertners: E aí. Ó, vamos pegar.
+00:53:54.710 --> 00:54:00.019
+Gesiel Lopes: de Abril, eu estava fora. Eu não pude participar a ausência a esta
 
 397
-00:47:12.630 --> 00:47:18.610
-Kadu Gertners: Dá um Select nessas tabelas em cada uma delas,
+00:54:00.230 --> 00:54:05.310
+Gesiel Lopes: ela já era prevista. Isso já estava previsto
 
 398
-00:47:20.590 --> 00:47:26.739
-Kadu Gertners: para ver se tem algum conteúdo, como nós não inserimos nenhum registro
+00:54:05.880 --> 00:54:16.400
+Gesiel Lopes: desde o final de Minto. Eu ia falar Abril, né? Mas desde o final de Janeiro, então já tinha comunicado o Infinity.
 
 399
-00:47:26.990 --> 00:47:29.540
-Kadu Gertners: ou não, fizemos carga de dados.
+00:54:16.460 --> 00:54:36.059
+Gesiel Lopes: Então, mesmo antes de conhecer a data de início das disciplinas, eu já era certeza de eu não estar participando durante esses três dias, porque eu conciliei algumas datas particulares minha com a minha participação em um outro evento
 
 400
-00:47:29.850 --> 00:47:33.550
-Kadu Gertners: Ambas as tabelas estão vazias.
+00:54:36.250 --> 00:54:43.730
+Gesiel Lopes: científico. Então por isso eu acabei faltando e o infinete foi devidamente avisado com bastante antecedência.
 
 401
-00:47:36.030 --> 00:47:41.440
-Kadu Gertners: Beleza aí. Agora nós vamos fazer um insert para a primeira tabela.
+00:54:43.890 --> 00:54:52.790
+Gesiel Lopes: Porém, seguindo o rito de publicação de vocês, então é algo que já estava planejado. Algo já estava definido
 
 402
-00:47:41.570 --> 00:47:50.200
-Kadu Gertners: Galera. Repara, o inset da primeira tem quatro registros que são os números
+00:54:53.660 --> 00:55:02.740
+Gesiel Lopes: diante disso. Para poder cumprir o nosso calendário, precisamos repor essas duas aulas. Esses dois encontros,
 
 403
-00:47:50.620 --> 00:48:00.400
-Kadu Gertners: dois, cinco e seis, respectivamente, com esses nomes aqui Oak Roosevelt Dover Web Tuck.
+00:55:02.970 --> 00:55:07.020
+Gesiel Lopes: lembrando de antemão que essa reposição.
 
 404
-00:48:01.070 --> 00:48:09.519
-Kadu Gertners: Ok, e aí na segunda tabela, reparem que eu botei mesmo o um.
+00:55:07.190 --> 00:55:24.360
+Gesiel Lopes: A presença é opcional. Então isso quer dizer o quê? Eu sou obrigado a participar. Não, não é. Vai ser gravado como todos os nossos encontros. Porém, a presença é opcional.
 
 405
-00:48:09.710 --> 00:48:17.119
-Kadu Gertners: O a que aqui, ó, é o mesmo nome. Então ó dois, aqui, ó Roosevelt é o mesmo nome.
+00:55:24.690 --> 00:55:29.520
+Gesiel Lopes: Se você quiser participar ao vivo conosco. Maravilha, perfeito. A gente vai
 
 406
-00:48:17.550 --> 00:48:24.060
-Kadu Gertners: Beleza aqui, ó embaixo ele tem o três tem o quatro e não tem o cinco, tá vendo?
+00:55:29.830 --> 00:55:42.919
+Gesiel Lopes: tocar o conteúdo da melhor forma possível. Mas se você, por algum motivo, tiver um compromisso ou quiser utilizar esse horário para fazer qualquer outra atividade e não participar ao vivo.
 
 407
-00:48:24.260 --> 00:48:28.840
-Kadu Gertners: E os seis aqui tem nos dois. Então é literalmente isso.
+00:55:43.390 --> 00:55:48.439
+Gesiel Lopes: Tudo bem, basta assistir a gravação e não terá problema nenhum.
 
 408
-00:48:28.950 --> 00:48:35.020
-Kadu Gertners: Os números iguais entre as duas tabelas é que tem o mesmo nome da escola.
+00:55:48.640 --> 00:55:56.739
+Gesiel Lopes: Dito feito esses disclaimers, quais são as datas? Lembrando que essa semana em particular
 
 409
-00:48:35.770 --> 00:48:38.230
-Kadu Gertners: Beleza é esse intuito mesmo.
+00:55:57.240 --> 00:56:03.980
+Gesiel Lopes: o infinete. Teremos no calendário acadêmico do infinite dois feriados, tá,
 
 410
-00:48:38.650 --> 00:48:54.220
-Kadu Gertners: Então, vamos embora. Vamos pegar os dois. Insert, copia, trazemos para cá vamos pegar o primeiro inserte.
+00:56:04.370 --> 00:56:08.550
+Gesiel Lopes: que é o dia vinte e um amanhã, né, terça feira,
 
 411
-00:48:54.320 --> 00:48:55.830
-Kadu Gertners: Maravilha.
+00:56:08.870 --> 00:56:15.760
+Gesiel Lopes: que é o dia de tiradentes, que é um feriado nacional.
 
 412
-00:48:56.000 --> 00:49:03.440
-Kadu Gertners: Inserimos quatro registros e para o segundo Insert, inserimos cinco registros.
+00:56:16.140 --> 00:56:18.400
+Gesiel Lopes: E quinta feira,
 
 413
-00:49:05.630 --> 00:49:14.460
-Kadu Gertners: Maravilha, caduzon. Podemos pegar e dar um Select nas tabelas. Aí, agora que tem dados. Lógico, ó
+00:56:18.730 --> 00:56:31.270
+Gesiel Lopes: que é um feriado. E aí eu sempre esqueço. Você não me fala. A memória é um feriado municipal, que é o dia de São Jorge, padroeiro do rio ou é um feriado
 
 414
-00:49:17.240 --> 00:49:22.499
-Kadu Gertners: Select, para pegar todas as colunas da tabela. Distrito dois mil e vinte,
+00:56:32.060 --> 00:56:36.860
+Gesiel Lopes: estadual de edição. Jorge, são Jorge, eu falei:
 
 415
-00:49:22.670 --> 00:49:26.239
-Kadu Gertners: Opa tem quatro registros aí, bonitinho
+00:56:37.480 --> 00:56:40.119
+Gesiel Lopes: É do rio da cidade, né, Ramon?
 
 416
-00:49:26.780 --> 00:49:29.620
-Kadu Gertners: e na Distrito dois mil treze e cinto.
+00:56:41.360 --> 00:56:45.749
+Gesiel Lopes: Então está aí o Ramon. Então, quinta feira, vocês não terão aula.
 
 417
-00:49:29.750 --> 00:49:32.330
-Kadu Gertners: Tem cinco registros
+00:56:45.990 --> 00:56:52.610
+Gesiel Lopes: Tá num calendário acadêmico por ser um feriado do Rio de Janeiro.
 
 418
-00:49:35.330 --> 00:49:37.020
-Kadu Gertners: legal aí.
+00:56:53.210 --> 00:57:05.800
+Gesiel Lopes: Então, diante disso, tá, eu gostaria de colocar a nossa primeira reposição para o dia vinte e três.
 
 419
-00:49:37.710 --> 00:49:41.240
-Kadu Gertners: Aqui vai começar de novo o vínculo das tabelas.
+00:57:06.410 --> 00:57:16.469
+Gesiel Lopes: Por que não dia vinte e um? Porque a gente já estou repondo um encontro de outras disciplinas de outra disciplina. Então, por isso.
 
 420
-00:49:41.400 --> 00:49:55.140
-Kadu Gertners: Então repara aqui. Nós vamos dar um Select de todas as colunas a partir da tabela. Distrito dois mil e vinte. Será feito um Join com a tabela. Distrito dois mil e trinta e cinco,
+00:57:16.870 --> 00:57:20.739
+Gesiel Lopes: E aí a gente sobrou dia vinte e três, dia de São Jorge,
 
 421
-00:49:55.230 --> 00:50:05.599
-Kadu Gertners: onde nós vamos fazer o seguinte. Na tabela, distrito dois mil e vinte. Nós vamos pegar a coluna Id e vamos igualar
+00:57:21.330 --> 00:57:38.949
+Gesiel Lopes: para a gente fazer essa reposição. Então, como não terá aula, a gente vai aproveitar para utilizar esse horário para a gente fazer a nossa primeira reposição. Então a reposição vai acontecer no dia vinte e três,
 
 422
-00:50:06.300 --> 00:50:11.900
-Kadu Gertners: com a tabela. Distrito dois mil e trinta e cinco, também com a coluna Id
+00:57:39.820 --> 00:57:49.870
+Gesiel Lopes: no mesmo horário dos nossos encontros. Então assim é.
 
 423
-00:50:12.510 --> 00:50:18.650
-Kadu Gertners: e vamos ordenar pela tabela. Distritodois mil e vinte Id.
+00:57:50.120 --> 00:57:54.890
+Gesiel Lopes: De qualquer forma, você já está no mesmo horário, no mesmo ritmo.
 
 424
-00:50:19.090 --> 00:50:20.960
-Kadu Gertners: Pega o Comando.
+00:57:55.270 --> 00:58:05.209
+Gesiel Lopes: Então assim somente só vai alterar a disciplina que aí vocês teriam a disciplina do professor de quinta.
 
 425
-00:50:21.840 --> 00:50:26.389
-Kadu Gertners: Traz para cá e executa.
+00:58:05.280 --> 00:58:22.020
+Gesiel Lopes: E aí a gente vai ter agora a reposição da nossa aula no mesmo link, tá tudo sem problema nenhum já disponibilizado. Então, a primeira reposição vai acontecer no dia vinte e três. Dia de São Jorge,
 
 426
-00:50:28.010 --> 00:50:30.100
-Kadu Gertners: Ó está vendo
+00:58:22.370 --> 00:58:28.079
+Gesiel Lopes: no mesmo horário das aulas dos nossos encontros das vinte
 
 427
-00:50:30.420 --> 00:50:47.199
-Kadu Gertners: esse aqui. Ó, foi o que vocês perguntaram, caduzão. Quando nós pegamos aqui, ele pegou os valores que existem em ambas as tabelas, não foi? Foi? Como é que nós estamos comprovando isso? É só você com carinho. Olhar aqui para a tela.
+00:58:28.880 --> 00:58:32.619
+Gesiel Lopes: horas e trinta minutos às vinte e dois horas.
 
 428
-00:50:47.450 --> 00:50:50.219
-Kadu Gertners: Ó o id um Id um
+00:58:33.020 --> 00:58:34.190
+Gesiel Lopes: Combinado.
 
 429
-00:50:50.320 --> 00:50:54.679
-Kadu Gertners: ai de dois. Ai de dois. Ai de seis. Ai de seis
+00:58:34.570 --> 00:58:37.619
+Gesiel Lopes: Porém, a gente precisa de mais uma data
 
 430
-00:50:55.140 --> 00:51:00.399
-Kadu Gertners: são os valores em comum que aparecem nas duas tabelas.
+00:58:37.870 --> 00:58:47.009
+Gesiel Lopes: para a gente repor o segundo encontro da semana passada. E aí o segundo encontro tá
 
 431
-00:51:01.740 --> 00:51:02.890
-Kadu Gertners: Beleza.
+00:58:47.490 --> 00:59:00.910
+Gesiel Lopes: a data que eu coloquei. Sugiro, é o dia vinte e cinco. Próximo sábado. Então a gente já mata essa semana.
 
 432
-00:51:03.040 --> 00:51:03.939
-Kadu Gertners: Bom dia.
+00:59:01.030 --> 00:59:20.740
+Gesiel Lopes: Porque sábado, Gisele? Porque é um dia alternativo. É um dia que a maioria de vocês, a não ser quem participa ou quem está em outro Time Zone ou quem faz ou trabalha, mas quem está em outro Time Zone ou exerce alguma profissão
 
 433
-00:51:04.180 --> 00:51:13.940
-Kadu Gertners: O mesmo comando com o mesmo resultado. Se ao invés de Join, nós usarmos o Inner Joy,
+00:59:21.400 --> 00:59:27.869
+Gesiel Lopes: que trabalha na Escala vinte e quatro por quarenta e oito. Mas aí ela já vai estar
 
 434
-00:51:15.500 --> 00:51:22.599
-Kadu Gertners: então, ó, repara que o comando é igualzinho. Select asterístico From, Distrito dois mil e vinte
+00:59:28.080 --> 00:59:39.369
+Gesiel Lopes: desfalcada no horário convencional. Então são somente esses dois casos. Mas sábado é o dia que a maioria de vocês estão livres, inclusive eu,
 
 435
-00:51:22.800 --> 00:51:41.910
-Kadu Gertners: aqui, que muda só Join, distrito dois mil e trinta e cinco. E aqui Nerdjoin, distrito dois mil e trinta e cinco. Mas o One igualzinho. Ó distrito dois mil e vinte, Id igual a distrito dois mil e trinta e cinco Id igualzinho. E o Order by também. Igual
+00:59:40.050 --> 00:59:43.449
+Gesiel Lopes: entre aspas. Mas a gente vai usar
 
 436
-00:51:42.090 --> 00:51:46.759
-Kadu Gertners: distrito sublinhado dois mil e vinte Id, que é igual a esse de baixo.
+00:59:43.840 --> 00:59:55.059
+Gesiel Lopes: para apenas esse sábado para fazer a reposição. Então a data da próxima reposição. E aí o horário Gisele, o horário que eu vou estar sugerindo.
 
 437
-00:51:47.610 --> 00:51:52.960
-Kadu Gertners: Então pegamos esse comando, trazemos para cá
+00:59:55.720 --> 00:59:58.089
+Gesiel Lopes: E aí depois eu passo para a coordenação.
 
 438
-00:51:57.060 --> 00:51:58.709
-Kadu Gertners: e vamos executá lo.
+00:59:58.490 --> 01:00:01.270
+Gesiel Lopes: Vai ser também um horário bem interessante.
 
 439
-00:52:01.070 --> 00:52:12.659
-Kadu Gertners: Ó, o mesmo resultado, beleza, vamos lá, aí, ó, existe uma outra forma
+01:00:01.820 --> 01:00:08.770
+Gesiel Lopes: É um horário das catorze às quinze horas e trinta minutos.
 
 440
-00:52:13.270 --> 00:52:31.550
-Kadu Gertners: de fazer o Join das tabelas, que é uma forma que, na prática, não é muito usada, mas o comando funciona em vários Lgbds relacionais. Então é o select com asterisco para pegar as colunas de todas as tabelas vinculadas ao comando.
+01:00:09.240 --> 01:00:28.410
+Gesiel Lopes: É um horário que é à tarde. Então a grande maioria não terá nenhum compromisso, acredito eu, de trabalho fora os dois casos em particular que eu falei, algum serviço essencial ou algum time zone diferente do Brasil
 
 441
-00:52:31.580 --> 00:52:40.850
-Kadu Gertners: Ó menciona distrito dois mil e vinte, Join ligando com o distrito dois mil e trinta e cinco. E esse vínculo
+01:00:29.300 --> 01:00:39.700
+Gesiel Lopes: e é um horário conveniente, porque quem trabalha dia de sábado pela manhã dá tempo de chegar em casa, tomar um banho, almoçar, tirar aquela cestinha descansar um pouquinho
 
 442
-00:52:40.930 --> 00:52:49.890
-Kadu Gertners: ocorrerá usando a coluna Id de ambas as tabelas.
+01:00:39.960 --> 01:00:45.529
+Gesiel Lopes: e aí participar, caso queira do encontro ao vivo.
 
 443
-00:52:50.290 --> 00:52:59.519
-Kadu Gertners: Então é sabido que o nome da coluna é igual nas duas tabelas. Então você pode usar essa sintaxe aqui.
+01:00:45.650 --> 01:00:53.200
+Gesiel Lopes: E aí, assim a gente coloca o nosso calendário em dias, lembrando que
 
 444
-00:52:59.890 --> 00:53:01.870
-Kadu Gertners: Order by.
+01:00:53.680 --> 01:01:06.759
+Gesiel Lopes: esses dois encontros de reposição não serão contabilizados à presença de vocês. Então, só reforçando aqui a reposição,
 
 445
-00:53:02.090 --> 00:53:06.670
-Kadu Gertners: Mais uma vez pela tabela. Distritodois mil e vinte Id.
+01:01:07.320 --> 01:01:20.889
+Gesiel Lopes: a primeira vai acontecer no dia vinte e três das dá isso vinte horas e trinta minutos,
 
 446
-00:53:07.550 --> 00:53:14.230
-Kadu Gertners: Pega o comando, coloca para cá e executa.
+01:01:23.730 --> 01:01:27.970
+Gesiel Lopes: no nosso horário das aulas até as vinte e dois horas.
 
 447
-00:53:14.700 --> 00:53:17.930
-Kadu Gertners: Ó está vendo?
+01:01:29.050 --> 01:01:31.599
+Gesiel Lopes: E a segunda reposição.
 
 448
-00:53:18.890 --> 00:53:25.430
-Kadu Gertners: E ele aqui. Só mostrou o Id uma vez. Está vendo essa sintaxe? Ele mostra o Id somente uma vez.
+01:01:31.740 --> 01:01:34.010
+Gesiel Lopes: Dia vinte e cinco.
 
 449
-00:53:27.590 --> 00:53:35.100
-Kadu Gertners: Maravilha, ó legal! Agora olha que maneiro. O que vai acontecer agora?
+01:01:34.710 --> 01:01:39.700
+Gesiel Lopes: Mais dez, catorze até
 
 450
-00:53:35.290 --> 00:53:40.480
-Kadu Gertners: Ele vai fazer um select de todas as colunas. Tá bom. Até aí tudo bem.
+01:01:45.110 --> 01:01:51.580
+Gesiel Lopes: às quinze horas e trinta minutos. Acho que um horário interessante. Acho que todo mundo
 
 451
-00:53:40.760 --> 00:53:46.889
-Kadu Gertners: Ele vai fazer um froome da primeira tabela, que é distrito dois mil e vinte. Só que Ué
+01:01:52.000 --> 01:02:10.149
+Gesiel Lopes: é um horário. De uma certa forma, a gente consiga repor e colocar sem muito prejuízo, lembrando que as aulas vão ficar gravadas. Então a presença é totalmente opcional,
 
 452
-00:53:48.140 --> 00:53:54.629
-Kadu Gertners: caduzão tem um Last Join. O que é o Left, Joey Left Join Left significa esquerda.
+01:02:11.610 --> 01:02:14.330
+Gesiel Lopes: beleza. Mas quem quiser participar ao vivo
 
 453
-00:53:55.050 --> 00:54:01.469
-Kadu Gertners: Então ele vai fazer o seguinte. Ele vai fazer um Join entre as duas tabelas, os valores em comum.
+01:02:14.630 --> 01:02:20.790
+Gesiel Lopes: vai ser como sempre. Todos os nossos encontros vão ser muito bem vindo. Muito bem vindo,
 
 454
-00:54:01.810 --> 00:54:09.239
-Kadu Gertners: Só que ele vai pegar o left. Os valores a mais na tabela que está do lado esquerdo.
+01:02:21.210 --> 01:02:23.529
+Gesiel Lopes: beleza. Mais alguma dúvida?
 
 455
-00:54:09.760 --> 00:54:17.469
-Kadu Gertners: Então ó a tabela do lado esquerdo no comando. É a tabela. Distrito dois mil e vinte,
+01:02:26.250 --> 01:02:28.000
+Gesiel Lopes: Mais algum ponto?
 
 456
-00:54:18.340 --> 00:54:27.279
-Kadu Gertners: beleza. E aí ele vai fazer um Lastjoin com a tabela. Distrito dois mil e trinta e cinco. Então, além de mostrar
+01:02:28.570 --> 01:02:33.370
+Gesiel Lopes: Dúvidas, não.
 
 457
-00:54:27.430 --> 00:54:37.930
-Kadu Gertners: os valores em comum das duas tabelas, ele mostrará também os valores a mais da coluna
+01:02:34.380 --> 01:02:35.560
+Gesiel Lopes: Então vamos.
 
 458
-00:54:38.140 --> 00:54:47.460
-Kadu Gertners: da tabela que está à esquerda, que no nosso caso, é o Distrito dois mil e vinte. Vamos fazer um teste.
+01:02:36.420 --> 01:02:38.979
+Gesiel Lopes: Vai lá no ar. Pode perguntar. Lua,
 
 459
-00:54:47.850 --> 00:54:57.430
-Kadu Gertners: Pega o comando maravilha coloca para cá e executa.
+01:02:47.800 --> 01:02:49.939
+Gesiel Lopes: é alguma dúvida? Alguma pergunta?
 
 460
-00:54:58.370 --> 00:55:08.500
-Kadu Gertners: Reparem que na primeira tabela existe um valor a mais que é o cinco Dover Middle School.
+01:03:07.480 --> 01:03:14.080
+Gesiel Lopes: O Noah tá boa. Dúvida.
 
 461
-00:55:08.940 --> 00:55:20.009
-Kadu Gertners: Só que na tabela dois não existem os valores. E aí, como é que o banco representa isso? Caldozon? Ele representa isso para nós, mostrando nu
+01:03:15.250 --> 01:03:18.550
+Gesiel Lopes: Não, não, lua, tá, não, não
 
 462
-00:55:20.490 --> 00:55:38.390
-Kadu Gertners: nu e nulo, indicando que não existe um valor para essas colunas correspondentes ao registro cinco aqui da Escola Dover. Aqui não tem um correspondente na segunda tabela, que é a tabela. Distrito dois mil e trinta e cinco.
+01:03:19.080 --> 01:03:25.950
+Gesiel Lopes: nua. Fez uma dúvida interessante. Isso tudo está lá no manual do aluno a reintegra.
 
 463
-00:55:39.960 --> 00:55:45.020
-Kadu Gertners: Beleza, bom caldzão.
+01:03:26.380 --> 01:03:31.670
+Gesiel Lopes: Ela serve para melhorar o conceito,
 
 464
-00:55:45.020 --> 00:55:45.390
-gabriel.diniz: Eu sei.
+01:03:31.800 --> 01:03:43.829
+Gesiel Lopes: mas também ela não quer dizer que ela não fica limitada a D. Na realidade, ela fica limitada. E aí eu posso trazer isso no manual. Deixa eu trazer aqui,
 
 465
-00:55:45.390 --> 00:55:47.449
-Kadu Gertners: Oi, fala comigo.
+01:03:44.040 --> 01:03:52.100
+Gesiel Lopes: para não falar nada que não esteja certo.
 
 466
-00:55:47.730 --> 00:55:48.500
-Kadu Gertners: Pode falar.
+01:03:53.040 --> 01:04:00.009
+Gesiel Lopes: O que não vai acontecer? Isso eu tenho certeza, é, por exemplo, você, depois da reintegra,
 
 467
-00:55:48.500 --> 00:56:05.330
-gabriel.diniz: Eu tinha falado ali no chat em relação ao Join. O Inerjoy. Só pegar os dados das tabelas com relação no caso ali, eu me retratei errado no caso. O que eu estava querendo dizer era que tinha o Full Join e o Inerjoy,
+01:04:00.370 --> 01:04:04.970
+Gesiel Lopes: você tirar o maior conceito.
 
 468
-00:56:05.510 --> 00:56:07.630
-gabriel.diniz: que eu tinha dado uma olhada.
+01:04:05.130 --> 01:04:12.240
+Gesiel Lopes: Você não consegue tirar o maior conceito, mas você consegue melhorar.
 
 469
-00:56:07.630 --> 00:56:10.630
-Kadu Gertners: O Full Join é outra coisa.
+01:04:12.350 --> 01:04:21.099
+Gesiel Lopes: Então pode verificar isso com modelo de ensino que tem as competências.
 
 470
-00:56:10.990 --> 00:56:20.060
-gabriel.diniz: Isso aí. Eu tentei falar que era esse Full Joy no caso, ele pegaria os dados com e sem relação da esquerda e da direita. No caso.
+01:04:22.320 --> 01:04:25.369
+Gesiel Lopes: E aqui, ó, e a reintegra do at.
 
 471
-00:56:20.230 --> 00:56:27.710
-Kadu Gertners: É o full full a palavra fu L L significa cheio completo, por exemplo.
+01:04:27.570 --> 01:04:37.560
+Gesiel Lopes: Então, aqui tem os prazos. A graduação. No caso de vocês a Live, eu posso trazer depois um resumo disso para a gente também não se estender muito.
 
 472
-00:56:28.250 --> 00:56:34.970
-Kadu Gertners: Então, realmente sim, é o que você já falou um pouquinho. Você vai pegar todos os valores possíveis,
+01:04:37.680 --> 01:04:43.950
+Gesiel Lopes: E aí qualquer coisinha também é só mandar mensagem lá no infinite online que a gente tenta ajudar
 
 473
-00:56:36.540 --> 00:56:39.460
-Kadu Gertners: mas a gente vai falar. Isso vai ter o comando aí.
+01:04:43.950 --> 01:04:57.780
+Gesiel Lopes: e esclarecer da melhor forma possível. Mas o que você fica limitado é não ter a Adl aí vai depender da nota do conceito que você tirou na primeira entrega.
 
 474
-00:56:40.650 --> 00:56:41.770
-gabriel.diniz: Valeu, valeu.
+01:04:57.780 --> 01:05:07.610
+Gesiel Lopes: Mas você. Consegue. Ela não fica limitada. A D. O D fica limitado se você entregar fora do prazo.
 
 475
-00:56:42.090 --> 00:56:42.960
-Kadu Gertners: Tá bom.
+01:05:07.880 --> 01:05:16.289
+Gesiel Lopes: Aí, se você entregar fora do prazo, você não consegue tirar um conceito maior do que de
 
 476
-00:56:49.810 --> 00:57:00.670
-Kadu Gertners: Mateus ramos. Como é que você. Ok, maravilha. Como é que você vai usar a restrição que é a constrente.
+01:05:16.600 --> 01:05:24.389
+Gesiel Lopes: e também a reintegra. Não lhe dá o direito de tirar o maior conceito, que é o conceito D.
 
 477
-00:57:01.110 --> 00:57:12.130
-Kadu Gertners: A constrente é usada. A constrente é igual à restrição. Mateus ramos é igual constrente. É igual à restrição.
+01:05:24.940 --> 01:05:36.290
+Gesiel Lopes: Então você consegue melhorar o conceito ou vamos supor. Fiquei em nd com a reintegra. Eu consigo, por exemplo, tirar uma nota melhor.
 
 478
-00:57:12.360 --> 00:57:17.469
-Kadu Gertners: Quando você pode usar uma restrição para definir uma chave primária.
+01:05:36.560 --> 01:05:43.370
+Gesiel Lopes: Consigo reverter o nd para o conceito D, por exemplo.
 
 479
-00:57:18.060 --> 00:57:20.959
-Kadu Gertners: Para definir uma chave estrangeira.
+01:05:43.490 --> 01:05:53.150
+Gesiel Lopes: Tá, então é isso qualquer dúvida. Procurem a coordenação pedagógica. E aí eu trago esse detalhinho para vocês.
 
 480
-00:57:21.350 --> 00:57:31.079
-Kadu Gertners: E aí, a definição da chave estrangeira é para quê, Matheus ramos para você botar uma tabela a tabela mãe para conversar com uma tabela filha. Por exemplo.
+01:05:53.470 --> 01:05:54.270
+Gesiel Lopes: Tá?
 
 481
-00:57:31.310 --> 00:57:44.270
-Kadu Gertners: Então você permite que através da tabela mãe de uma coluna. Você vai botar a tabela filha através de uma coluna também para elas conversarem entre si.
+01:05:55.650 --> 01:06:06.179
+Gesiel Lopes: O outro Pedro. Todas essas questões, Pedro, sobre funcionamento da ferramenta, sobre a disponibilidade do
 
 482
-00:57:45.090 --> 00:58:01.980
-Kadu Gertners: Além disso, também é considerada uma constrente ou uma restrição Mateus Ramos, aquele que eu te falei para vocês no início da aula chamado Unic, que é o valor único. Ele também é uma constrente ou uma restrição.
+01:06:06.420 --> 01:06:12.949
+Gesiel Lopes: da ferramenta ou acesso público ou privado, qualquer dúvida. Procurem o Professor Alan,
 
 483
-00:58:02.900 --> 00:58:15.179
-Kadu Gertners: Tudo bem, amigo. São nesses contextos que você vai usar um outro contexto. Você pode definir uma constrente ou uma restrição para uma coluna. Quando você fala que ela é note nu,
+01:06:13.270 --> 01:06:23.550
+Gesiel Lopes: que é o coordenador da disciplina, e ele pode ajudá los da melhor forma possível. Então, lembrando que isso é algo que está lá no
 
 484
-00:58:15.600 --> 00:58:33.570
-Kadu Gertners: isso significa que, na prática, quando você fizer o inset para aquela coluna que ela foi definida como not new. Aquela coluna no momento do Insert. Aquele valor para aquela coluna tem que ser preenchido de forma obrigatória.
+01:06:24.180 --> 01:06:37.419
+Gesiel Lopes: está claro lá. E casos específicos de. O link está funcionando ou não, ele não foi um caso geral generalizado foi casos bem pontuais. Então só esse
 
 485
-00:58:34.450 --> 00:58:38.100
-Kadu Gertners: Aquele valor tem que ser preenchido de forma obrigatória.
+01:06:37.520 --> 01:06:44.990
+Gesiel Lopes: esse conceito. E aí outra coisa, aproveito essa deixa aí do Pedro. Outra coisa.
 
 486
-00:58:40.080 --> 00:58:40.750
-Kadu Gertners: Tá bom.
+01:06:45.130 --> 01:06:53.370
+Gesiel Lopes: Todo e qualquer item avaliado é avaliado a partir do que é submetido no mudo.
 
 487
-00:58:41.660 --> 00:58:57.989
-Matheus Ramos: Então a constrente. Eu só vou usar ela quando eu estiver criando uma tabela no caso, porque aí eu vou definir uma chave primária ou uma estrangeira. No caso. É só na criação de tabela que dá para fazer isso.
+01:06:53.610 --> 01:06:59.420
+Gesiel Lopes: Então qualquer outra atividade que não seja submetido no moodle
 
 488
-00:58:58.390 --> 00:59:00.240
-Kadu Gertners: Cara? Ótima pergunta.
+01:06:59.440 --> 01:07:07.160
+Gesiel Lopes: ou enviado por outro meio. Ele não vai ser contado para avaliação, beleza.
 
 489
-00:59:00.540 --> 00:59:09.730
-Kadu Gertners: Não é? Só nesse caso, você pode, dependendo do Sgbd que você use, você pode criar a tabela primeiro
+01:07:07.160 --> 01:07:21.840
+Gesiel Lopes: Então tudo que é avaliado só é avaliado a partir do que é submetido no Mudo a partir do que é registrado. Vamos supor. Mandei por e mail, mandei pelo infinite online para o Gesiel, mas o Gesiel não avaliou
 
 490
-00:59:09.940 --> 00:59:23.250
-Kadu Gertners: e depois Mateus. Você usa um comando chamado altertable, que o altertable daquela tabela que já exista, você pode adicionar uma constrente que pode ser uma premiere Key.
+01:07:22.230 --> 01:07:28.330
+Gesiel Lopes: porque eu não entreguei no infinite online ou no Moodle.
 
 491
-00:59:23.300 --> 00:59:34.029
-Kadu Gertners: Você pode adicionar uma constante que pode ser uma forem Key também você pode adicionar uma forem Key, que também pode ser um valor único. Não tem problema,
+01:07:29.200 --> 01:07:32.599
+Gesiel Lopes: Então por que o Gesiel não avaliou por que
 
 492
-00:59:35.120 --> 00:59:36.660
-Kadu Gertners: entendeu? Mas isso.
+01:07:32.780 --> 01:07:39.689
+Gesiel Lopes: novamente está lá no manual do aluno. Então eu sou limitado a considerar
 
 493
-00:59:36.660 --> 00:59:37.050
-Matheus Ramos: E.
+01:07:39.800 --> 01:07:53.500
+Gesiel Lopes: a avaliação das atividades submetidas no mundo, porque lá tem o horário de entrega. Tem o horário que eu fiz. A avaliação tem o horário. Eu consigo notificar a avaliação. Então
 
 494
-00:59:37.050 --> 00:59:38.310
-Kadu Gertners: E do banco de lados.
+01:07:53.890 --> 01:07:57.800
+Gesiel Lopes: fica mais registrado. Esse é o requisito
 
 495
-00:59:38.570 --> 00:59:39.820
-Kadu Gertners: Sem problema.
+01:07:58.050 --> 01:08:07.069
+Gesiel Lopes: do próprio infinite. Então sigam as instruções. Qualquer dúvida. Mandem mensagem no Ifnet que a gente tenta ajudá los da melhor forma possível
 
 496
-00:59:43.440 --> 00:59:45.330
-Kadu Gertners: Maravilha, vamos lá.
+01:08:07.370 --> 01:08:12.280
+Gesiel Lopes: dentro das possibilidades que a gente pode atuar
 
 497
-00:59:45.540 --> 00:59:49.600
-Kadu Gertners: Isso aí, galera perguntando. É isso aí, ó, vamos seguir.
+01:08:12.540 --> 01:08:17.250
+Gesiel Lopes: fechou. Vamos dar um intervalozinho de cinco minutos aí, pessoal, só para beber água.
 
 498
-00:59:50.310 --> 00:59:52.340
-Kadu Gertners: Bom, aí
+01:08:17.760 --> 01:08:25.520
+Gesiel Lopes: E aí. A gente retoma aí nove,quarenta e cinco. Caso tenha qualquer outra dúvida, é só comunicar, beleza.
 
 499
-00:59:53.300 --> 01:00:04.330
-Kadu Gertners: tá. Eu tô no left, Join. Aqui, beleza, tá, caduzão. Vamos pegar o right Join, cara, o right, Join. Ele é o oposto do Left. O Left é esquerda.
+01:08:25.920 --> 01:08:28.110
+Gesiel Lopes: Vou soltar aqui o compartilhamento.
 
 500
-01:00:04.440 --> 01:00:07.289
-Kadu Gertners: Então o Wright é a direita.
+01:08:28.340 --> 01:08:32.349
+Gesiel Lopes: Vou fechar aqui a câmera e a gente volta daqui a cinco minutinhos.
 
 501
-01:00:07.370 --> 01:00:13.369
-Kadu Gertners: Então o comando aqui select asterisco de todas as colunas
+01:13:12.580 --> 01:13:14.249
+Gesiel Lopes: Opa, pessoal, vamos lá.
 
 502
-01:00:13.430 --> 01:00:28.049
-Kadu Gertners: a partir da tabela. Distrito dois mil e vinte, ele fará um right, Join. Quer dizer, ele fará uma ligação à direita, pegando os valores a mais da tabela. Distrito dois mil e trinta e cinco.
+01:13:14.560 --> 01:13:19.819
+Gesiel Lopes: Deixa eu compartilhar aqui novamente a minha tela com vocês só para beber uma água rapidinho.
 
 503
-01:00:28.400 --> 01:00:36.480
-Kadu Gertners: E a ligação das duas tabelas acontecerá a partir da Tabela,
+01:13:23.130 --> 01:13:29.029
+Gesiel Lopes: Então vamos lá. Bota a mão na massa um pouquinho, pegar esses últimos minutinhos aí, para
 
 504
-01:00:36.770 --> 01:00:38.950
-Kadu Gertners: Distrito dois mil e trinta e cinco.
+01:13:37.800 --> 01:13:40.550
+Gesiel Lopes: de a gente colocar a massa mão na massa.
 
 505
-01:00:39.310 --> 01:00:47.929
-Kadu Gertners: A coluna Id. Igualando com a tabela. Distrito dois mil e vinte, a Coluna Id.
+01:13:44.840 --> 01:13:51.850
+Gesiel Lopes: Então eu vou aqui compartilhar aqui com vocês rapidamente. O nosso notebook aqui,
 
 506
-01:00:48.120 --> 01:00:55.689
-Kadu Gertners: E nós vamos ordenar pela tabela. Distrito dois mil e trinta e cinco através da coluna Id.
+01:13:52.210 --> 01:13:57.549
+Gesiel Lopes: deixa eu aumentar a minha tela aqui. Acredito que vocês estejam vendo a minha tela. Agora
 
 507
-01:00:55.950 --> 01:01:04.360
-Kadu Gertners: Ó, pegamos o comando, colocamos para cá e vamos executar.
+01:13:58.600 --> 01:14:02.789
+Gesiel Lopes: o notebook. Deixa eu só confirmar. Todo mundo está vendo?
 
 508
-01:01:05.720 --> 01:01:09.600
-Kadu Gertners: Ó, ele executou a direita.
+01:14:03.150 --> 01:14:06.290
+Gesiel Lopes: Consegue ver esse tamanho. Tá legal.
 
 509
-01:01:09.680 --> 01:01:21.409
-Kadu Gertners: Tá vendo aqui a tabela direita, que era a distrito é dois mil e trinta e cinco. Ó foram pegos os valores a mais dela, que é o valor três e quatro.
+01:14:12.180 --> 01:14:13.330
+Gesiel Lopes: Tranquilo.
 
 510
-01:01:21.410 --> 01:01:30.630
-Kadu Gertners: Então o valor três e quatro aqui, como nós estamos vendo lá direito existe só na tabela que está a mais do lado direito.
+01:14:15.710 --> 01:14:17.460
+Gesiel Lopes: Vou considerar como Sim.
 
 511
-01:01:31.150 --> 01:01:48.879
-Kadu Gertners: Os valores correspondentes três e quatro não existem na tabela que está à esquerda, que é a tabela distrito dois mil e vinte. Então, o que ele faz? Ele coloca isso aqui. Como ele não tem nenhum valor para representar.
+01:14:17.560 --> 01:14:18.880
+gabriel.diniz: Então.
 
 512
-01:01:49.080 --> 01:01:53.170
-Kadu Gertners: Ele coloca o valor né? Nu,
+01:14:21.920 --> 01:14:24.009
+Gesiel Lopes: Oi. Alguém perguntou alguma coisa?
 
 513
-01:01:53.520 --> 01:01:57.470
-Kadu Gertners: que significa? Não significa ausência de valor.
+01:14:24.550 --> 01:14:25.180
+gabriel.diniz: Tranquilo.
 
 514
-01:01:59.780 --> 01:02:02.270
-Kadu Gertners: E aí, beleza?
+01:14:25.680 --> 01:14:30.590
+Gesiel Lopes: Ah, não, beleza, beleza, Gabriel. Ah, tá. Deu só um feedback. Então tá legal.
 
 515
-01:02:03.890 --> 01:02:10.949
-Kadu Gertners: Ainda podemos usar como o amigo comentou podemos usar.
+01:14:30.730 --> 01:14:44.859
+Gesiel Lopes: Então, beleza. Um dos primeiros pontos que a gente vai trabalhar na disciplina. Na realidade, uma pequena recapitulação. Já que esse conteúdo, a gente, trabalhou ele lá na nossa primeira disciplina. Então a gente vai
 
 516
-01:02:11.120 --> 01:02:27.799
-Kadu Gertners: O Full Alter Join. Então vamos selecionar todas as colunas a partir da tabela. Distrito dois mil e vinte. E aqui o nosso Join, mais uma vez, será feito com a tabela. Distrito dois mil e trinta e cinco. Porém,
+01:14:45.240 --> 01:14:58.340
+Gesiel Lopes: lembrar de alguns conceitos de como manipular strings dentro do Python dentro do ecossistema Python. Então, a gente viu
 
 517
-01:02:27.900 --> 01:02:32.319
-Kadu Gertners: tem isso aqui escrito full significa completo
+01:14:58.820 --> 01:15:04.999
+Gesiel Lopes: que as strings são coleções. É um tipo especial
 
 518
-01:02:32.590 --> 01:02:38.450
-Kadu Gertners: e halter significa o oposto de interno. É externo.
+01:15:05.140 --> 01:15:07.729
+Gesiel Lopes: de dado, um tipo de. Dado
 
 519
-01:02:38.730 --> 01:02:50.269
-Kadu Gertners: Então, Halter é externo. Eu vou pegar todos os valores a mais, seja do lado esquerdo, ou seja, do lado direito. Eu vou mostrar todos os valores.
+01:15:08.150 --> 01:15:12.149
+Gesiel Lopes: que ele é interpretado como uma coleção
 
 520
-01:02:50.650 --> 01:02:56.039
-Kadu Gertners: Aí ele faz a ligação entre as tabelas através da coluna Id.
+01:15:12.310 --> 01:15:26.849
+Gesiel Lopes: de caracteres. Na realidade, ele é considerado como uma lista de caracteres, que foi inclusive a nossa primeira coleção. A primeira coleção que a gente trabalhou dentro do ecossistema pipe.
 
 521
-01:02:56.660 --> 01:03:03.709
-Kadu Gertners: E ele ordena pela tabela. Distrito dois mil e vinte através da coluna Id.
+01:15:26.940 --> 01:15:37.180
+Gesiel Lopes: Então, quando eu defino uma variável, e aí aquela premissa, eu posso usar tanto aspas
 
 522
-01:03:04.220 --> 01:03:07.809
-Kadu Gertners: Olha como é que vai ficar esse comando. Vamos botar aqui.
+01:15:37.470 --> 01:15:44.240
+Gesiel Lopes: simples ou aspas duplas sem problema nenhum sobrenome.
 
 523
-01:03:09.570 --> 01:03:16.700
-Kadu Gertners: E aí, ó, selecionamos o comando e executa. Olha lá,
+01:15:45.130 --> 01:15:51.209
+Gesiel Lopes: É que eu estou declarando duas variáveis aqui, por exemplo, onde uma variável chamada Python,
 
 524
-01:03:17.760 --> 01:03:19.679
-Kadu Gertners: olha como é que fica. Claro?
+01:15:51.410 --> 01:15:56.259
+Gesiel Lopes: e uma outra variável, que eu vou chamar aqui de.
 
 525
-01:03:19.850 --> 01:03:26.259
-Kadu Gertners: Está vendo o valor três e quatro só existe na tabela. À direita.
+01:15:57.200 --> 01:16:02.969
+Gesiel Lopes: É programming, por exemplo.
 
 526
-01:03:26.730 --> 01:03:28.830
-Kadu Gertners: Não existe na tabela esquerda
+01:16:04.230 --> 01:16:08.910
+Gesiel Lopes: E aí eu posso realizar algumas operações bem interessantes.
 
 527
-01:03:29.340 --> 01:03:41.539
-Kadu Gertners: o valor um existe nas duas tabelas. O valor dois existe nas duas tabelas. Opa. O valor cinco só existe na tabela à esquerda
+01:16:09.070 --> 01:16:22.580
+Gesiel Lopes: A primeira operação que a gente viu quando trabalhamos com Strings, é a de Concacaf com Karate
 
 528
-01:03:41.730 --> 01:03:44.339
-Kadu Gertners: e não existe na tabela direita.
+01:16:22.690 --> 01:16:30.180
+Gesiel Lopes: na ação. Que a concatenação nada mais é do que juntar
 
 529
-01:03:44.950 --> 01:03:48.880
-Kadu Gertners: E o valor seis existe nas duas tabelas.
+01:16:30.450 --> 01:16:39.110
+Gesiel Lopes: duas Strings, ou seja de somar duas strings. E aí a gente vai usar para essa operação um operador
 
 530
-01:03:50.400 --> 01:03:58.070
-Kadu Gertners: Galera é, na prática, mesmo do dia a dia. O comando mais usado é o Inner Joy,
+01:16:40.250 --> 01:16:49.450
+Gesiel Lopes: de concatenação, que é um operador coringa, que ele serve tanto para concatenar Strings, como também um operador matemático de soma.
 
 531
-01:03:58.250 --> 01:04:14.109
-Kadu Gertners: que é a ligação interna que todos os valores batem. O segundo mais usado é o Left. Join. Você quer pegar os valores iguais das duas tabelas e os valores a mais da tabela do lado esquerdo.
+01:16:49.570 --> 01:16:53.280
+Gesiel Lopes: Tá bom, que é o operador mais plus.
 
 532
-01:04:15.320 --> 01:04:33.870
-Kadu Gertners: Tá bom. Ah, Cadu. Mas eu estou usando Left Joel Right. Join, eu posso reverter aqui a posição das colunas da tabela. Lógico, você pode botar o Distrito dois mil e trinta e cinco para cima e botar o Distrito dois mil e vinte para baixo. Não tem problema nenhum.
+01:16:54.510 --> 01:16:58.279
+Gesiel Lopes: Então a gente pode concatenar Strings.
 
 533
-01:04:35.230 --> 01:04:39.100
-Kadu Gertners: Beleza, beleza.
+01:16:58.900 --> 01:17:10.280
+Gesiel Lopes: E também a gente consegue fazer algumas operações bem interessantes. Por exemplo, a gente pode fazer uma operação de
 
 534
-01:04:39.580 --> 01:04:40.950
-Kadu Gertners: Vamos seguir.
+01:17:10.400 --> 01:17:21.320
+Gesiel Lopes: repetição de Strings. Então, por exemplo, eu posso criar aqui uma variável que eu vou chamar de repetir, tá?
 
 535
-01:04:41.680 --> 01:04:45.260
-Kadu Gertners: Ó, aqui tem um outro comando
+01:17:21.510 --> 01:17:33.049
+Gesiel Lopes: E essa variável, melhor dizendo, vai receber três vezes a variável nome, que é uma variável String. Vou colocar aqui só mais uma
 
 536
-01:04:46.100 --> 01:04:49.290
-Kadu Gertners: que ele também quase não é usado, mas existe.
+01:17:33.210 --> 01:17:35.199
+Gesiel Lopes: célula, tá? Então,
 
 537
-01:04:51.970 --> 01:04:54.560
-Kadu Gertners: Que é o select de todas as colunas
+01:17:35.780 --> 01:17:51.529
+Gesiel Lopes: aqui nessa célula, eu fiz a declaração dessas três variáveis. E aí a gente viu que, para visualizar o resultado, ou para plotar, ou para mostrar no terminal, a gente pode usar a função print
 
 538
-01:04:56.240 --> 01:04:59.329
-Kadu Gertners: a partir da Tabela distrito dois mil e vinte
+01:17:51.730 --> 01:18:02.390
+Gesiel Lopes: para visualizar essas variáveis. No caso, no nosso caso, as nossas streams um sobrenome é um print.
 
 539
-01:04:59.630 --> 01:05:08.580
-Kadu Gertners: fazendo um Crossjoy. Quer dizer um Join cruzado com a tabela. Distrito dois mil e trinta e cinco.
+01:18:02.530 --> 01:18:05.970
+Gesiel Lopes: É nome completo
 
 540
-01:05:08.700 --> 01:05:14.670
-Kadu Gertners: Repara só quando ele faz isso. Repara que ele não está nem explicitando
+01:18:08.160 --> 01:18:23.019
+Gesiel Lopes: e repetir que a variável repetir. Então, quando eu executo essa célula, a gente vai mostrar o conteúdo de cada uma dessas variáveis. Então, lembrando que cada uma dessas variáveis,
 
 541
-01:05:14.800 --> 01:05:31.040
-Kadu Gertners: qual é a coluna de uma tabela com a outra. Por quê? Porque ele vai cruzar todos os valores de uma tabela com a outra. Então olha que legal! Aí ele vai ordenar isso pelo Distrito dois mil e vinte, Id, vírgula e Distrito dois mil e trinta e cinco Id.
+01:18:23.240 --> 01:18:33.280
+Gesiel Lopes: elas são do tipo String, e uma forma de você ver isso é através do operador, por exemplo, Taipe,
 
 542
-01:05:31.170 --> 01:05:32.399
-Kadu Gertners: Então vamos lá.
+01:18:33.510 --> 01:18:40.600
+Gesiel Lopes: ou através da função taipe, que é uma função beauty. Então ela retorna
 
 543
-01:05:33.210 --> 01:05:39.110
-Kadu Gertners: Ele vai pegar o comando aqui, colocar para cá e executar.
+01:18:40.800 --> 01:18:55.470
+Gesiel Lopes: o tipo de uma determinada variável. Então observe o conteúdo da variável nome é Python. E essa variável é do tipo String
 
 544
-01:05:39.780 --> 01:05:40.690
-Kadu Gertners: Ó,
+01:18:55.770 --> 01:18:56.580
+Gesiel Lopes: tá?
 
 545
-01:05:41.750 --> 01:05:50.199
-Kadu Gertners: repare que aqui ele faz o seguinte. Se uma tabela tem quatro registros e a outra tabela tem cinco,
+01:18:56.900 --> 01:19:02.120
+Gesiel Lopes: Nada. Nada fora do que a gente viu.
 
 546
-01:05:50.430 --> 01:05:56.540
-Kadu Gertners: e você está falando para nós, caduzon, que ele vai combinar
+01:19:02.410 --> 01:19:09.830
+Gesiel Lopes: Outro ponto extremamente importante que a gente pode destacar
 
 547
-01:05:56.830 --> 01:06:02.800
-Kadu Gertners: todos os valores de uma tabela com a outra. É uma conta de multiplicação simples.
+01:19:10.090 --> 01:19:18.279
+Gesiel Lopes: dentro da manipulação de String. São algumas funções úteis
 
 548
-01:06:02.990 --> 01:06:10.760
-Kadu Gertners: Se uma tabela tem quatro registros, a outra cinco é só multiplicar quatro vezes. Cinco vão dar vinte registros.
+01:19:18.440 --> 01:19:26.419
+Gesiel Lopes: com algumas funções bem interessantes. As Strings possuem algumas funções
 
 549
-01:06:10.870 --> 01:06:17.700
-Kadu Gertners: Ele fez todas as combinações possíveis da primeira tabela com a segunda tabela.
+01:19:26.610 --> 01:19:37.100
+Gesiel Lopes: bem específicas que podem ser utilizadas aí para a gente manipular essas stringes. Então vamos supor que eu queira ter uma variável aqui, chamada texto
 
 550
-01:06:18.590 --> 01:06:25.169
-Kadu Gertners: Beleza, ó, os vinte valores possíveis.
+01:19:37.540 --> 01:19:46.060
+Gesiel Lopes: tá que essa variável eu vou colocar aqui. Por exemplo, Python é incrível.
 
 551
-01:06:27.390 --> 01:06:31.470
-Kadu Gertners: Maravilha, vamos seguir.
+01:19:47.410 --> 01:19:48.889
+Gesiel Lopes: Python é,
 
 552
-01:06:31.970 --> 01:06:42.120
-Kadu Gertners: Ó, podemos de novo conferir todos os registros da tabela. Distrito dois mil e vinte.
+01:19:52.140 --> 01:19:55.319
+Gesiel Lopes: eu vou botar pai do Fenom
 
 553
-01:06:43.180 --> 01:06:44.570
-Kadu Gertners: Quatro registros.
+01:19:55.840 --> 01:20:01.340
+Gesiel Lopes: menaut paitu é fenomenal. Por exemplo,
 
 554
-01:06:45.860 --> 01:06:48.490
-Kadu Gertners: Todos os registros da tabela Opa
+01:20:01.560 --> 01:20:17.169
+Gesiel Lopes: e aqui a gente viu algumas operações ou algumas funções que podem ser aplicadas a uma variável a String, melhor dizendo, não somente a variável, mas uma String
 
 555
-01:06:49.480 --> 01:06:58.590
-Kadu Gertners: dois mil e trinta e cinco, que são cinco registros, beleza.
+01:20:17.170 --> 01:20:22.009
+Gesiel Lopes: que aí eu posso ter declarado ou não o conteúdo de um Oastricht e uma variável.
 
 556
-01:06:59.200 --> 01:07:08.700
-Kadu Gertners: Bom, reparem. Caduzon. Eu posso fazer um Select de todas as colunas a partir da tabela.
+01:20:22.010 --> 01:20:25.570
+Gesiel Lopes: Uma função que a gente viu.
 
 557
-01:07:08.930 --> 01:07:26.709
-Kadu Gertners: Distrito dois mil e vinte, fazer um Left Join do distrito dois mil e trinta e cinco. E olha que maneiro! Eu vou fazer um Join entre as colunas Id de ambas as tabelas. Só que na cláusula uer eu vou falar assim. Olha,
+01:20:26.320 --> 01:20:29.670
+Gesiel Lopes: Bem interessante. A função Aper
 
 558
-01:07:26.750 --> 01:07:33.600
-Kadu Gertners: é quando o Distrito sublinhado dois mil e trinta e cinco, ele for nulo,
+01:20:29.930 --> 01:20:37.590
+Gesiel Lopes: que ela vai fazer com que todos os caracteres fiquem em caixa alta da minha String.
 
 559
-01:07:33.720 --> 01:07:42.989
-Kadu Gertners: então eu só quero pegar quando ele for exatamente os valores que só existem na tabela à esquerda.
+01:20:38.270 --> 01:20:47.540
+Gesiel Lopes: Outra função interessante que a gente viu é a função capitalize que ela vai tornar
 
 560
-01:07:43.250 --> 01:07:47.210
-Kadu Gertners: Então, ó, eu pego esse comando.
+01:20:48.020 --> 01:20:55.910
+Gesiel Lopes: o primeiro caracter de cada o conjunto de cada palavra como maiúsculo.
 
 561
-01:07:47.450 --> 01:07:49.160
-Kadu Gertners: Olha que interessante.
+01:20:57.030 --> 01:20:58.090
+Gesiel Lopes: Então vamos.
 
 562
-01:07:49.620 --> 01:07:58.279
-Kadu Gertners: Só vou pegar os valores nesse comando dos valores que só existem para a esquerda. Então o único valor
+01:20:58.740 --> 01:21:11.720
+Gesiel Lopes: Vamos ver aqui. Na realidade, o capitais é a primeira karaté da minha String da minha cateia. Não de cada palavra, só corrigindo na realidade o capitais. Ele vai
 
 563
-01:07:58.940 --> 01:08:01.980
-Kadu Gertners: que só existe na tabela.
+01:21:11.840 --> 01:21:14.390
+Gesiel Lopes: colocar a primeira.
 
 564
-01:08:02.540 --> 01:08:11.520
-Kadu Gertners: A esquerda, que é a tabela. Distrito dois mil e vinte é o valor cinco. É o Id5 Beleza.
+01:21:14.530 --> 01:21:18.059
+Gesiel Lopes: O primeiro caracter da String em caixa alta.
 
 565
-01:08:14.040 --> 01:08:14.929
-Kadu Gertners: Bom dia.
+01:21:18.230 --> 01:21:18.889
+Gesiel Lopes: Tá bom.
 
 566
-01:08:16.050 --> 01:08:25.010
-Kadu Gertners: Podemos pegar e selecionar, fazer só da coluna Id, fazendo um Froome com a tabela Distrito dois mil e vinte,
+01:21:19.650 --> 01:21:23.840
+Gesiel Lopes: O próximo função que a gente viu.
 
 567
-01:08:25.140 --> 01:08:30.249
-Kadu Gertners: fazendo um Lastjoin com a tabela. Distrito dois mil e trinta e cinco.
+01:21:24.020 --> 01:21:30.370
+Gesiel Lopes: Essa função vai ser muito útil daqui a pouco. Para a gente, é a função replays,
 
 568
-01:08:30.590 --> 01:08:42.019
-Kadu Gertners: E juntando as duas tabelas através da coluna Id, pega o comando, coloco para cá e executo.
+01:21:31.080 --> 01:21:42.250
+Gesiel Lopes: que aí você pode substituir um caracté ou com uma palavra. Uma cadeia de caracté presente na String
 
 569
-01:08:42.609 --> 01:08:43.490
-Kadu Gertners: Olha lá.
+01:21:42.690 --> 01:21:45.400
+Gesiel Lopes: por um outro, tá?
 
 570
-01:08:44.630 --> 01:08:55.890
-Kadu Gertners: Aqui ele tem um problema. Ele fala. Se você não especifica o nome da tabela
+01:21:46.180 --> 01:21:48.230
+Gesiel Lopes: É muito
 
 571
-01:08:56.029 --> 01:09:11.149
-Kadu Gertners: e existe um nome de uma coluna que exista nas duas tabelas. Ele dá essa mensagem de erro aqui, olha, poxa. A coluna Id existe nas duas tabelas.
+01:21:50.640 --> 01:22:01.689
+Gesiel Lopes: fenomenal, por exemplo. Então eu estou substituindo aonde estiver esse carácter na minha String, ele vai substituir por é muito.
 
 572
-01:09:11.250 --> 01:09:25.000
-Kadu Gertners: Então, para mim, está sendo ambíguo. Você não explicou de qual coluna? De qual tabela que você quer? A coluna, então ele dá essa mensagem de erro aqui, conforme eu estou mostrando para vocês.
+01:22:01.850 --> 01:22:09.710
+Gesiel Lopes: Tá outra operação interessante que a gente pode colocar, tá,
 
 573
-01:09:26.520 --> 01:09:29.180
-Kadu Gertners: Beleza para resolver isso.
+01:22:10.080 --> 01:22:14.600
+Gesiel Lopes: que a gente trabalhou. É a função split.
 
 574
-01:09:29.420 --> 01:09:33.000
-Kadu Gertners: Tranquilo, é só você botar não é
+01:22:15.500 --> 01:22:19.479
+Gesiel Lopes: Então essas funções vão ser bastante útil daqui a pouco. Para a gente
 
 575
-01:09:33.649 --> 01:09:36.820
-Kadu Gertners: o prefixo aqui de uma das tabelas.
+01:22:19.930 --> 01:22:23.929
+Gesiel Lopes: que é a função split, o que ela faz? Ela quebra
 
 576
-01:09:37.189 --> 01:09:40.920
-Kadu Gertners: Quando você fizer isso, ele não vai dar mais erro.
+01:22:24.040 --> 01:22:40.960
+Gesiel Lopes: a minha cadeia de caracteres. Então ela cria, ela separa na realidade. Nesse caso, quando eu não especifico, qual é o ponto de split? Ele vai separar os caracteres aonde tiver espaço em branco.
 
 577
-01:09:41.220 --> 01:09:44.689
-Kadu Gertners: Ó beleza
+01:22:41.110 --> 01:22:45.209
+Gesiel Lopes: Então, nesse caso, aqui ele vai criar uma lista
 
 578
-01:09:48.500 --> 01:09:55.719
-Kadu Gertners: legal aqui nós podemos
+01:22:45.840 --> 01:22:51.269
+Gesiel Lopes: com três elementos que são os Strings. Só que separado.
 
 579
-01:09:56.130 --> 01:10:05.809
-Kadu Gertners: botar explicitamente, né? Aqui eu estou botando explicitamente o nome das colunas. Ó distritodois mil e vinte Id,
+01:22:51.430 --> 01:22:55.529
+Gesiel Lopes: A gente vai ver que ele vai criar Python é. E fenomenal.
 
 580
-01:10:06.190 --> 01:10:13.259
-Kadu Gertners: distrito dois mil e vinte, Escola dois mil e vinte e Distrito dois mil e trinta e cinco. Escola dois mil e trinta e cinco.
+01:22:56.510 --> 01:23:04.010
+Gesiel Lopes: Outra função também bastante útil que a gente viu é a função Beauty Land
 
 581
-01:10:13.830 --> 01:10:17.480
-Kadu Gertners: Fazer o Join de novo com a Distrito dois mil e vinte
+01:23:04.130 --> 01:23:08.909
+Gesiel Lopes: que ela retorna à quantidade de caracteres
 
 582
-01:10:17.710 --> 01:10:21.330
-Kadu Gertners: Left Join com a Distrito dois mil e trinta e cinco.
+01:23:09.210 --> 01:23:12.709
+Gesiel Lopes: que estão presentes dentro daquela String.
 
 583
-01:10:21.550 --> 01:10:26.419
-Kadu Gertners: Vamos juntar as duas tabelas mais uma vez pela coluna Id
+01:23:13.010 --> 01:23:16.290
+Gesiel Lopes: Então, se eu executar essas
 
 584
-01:10:26.560 --> 01:10:35.090
-Kadu Gertners: e vamos ordenar pela tabela. Distrito dois mil e vinte. A coluna Id Bora pega o comando,
+01:23:16.630 --> 01:23:24.700
+Gesiel Lopes: funções, esses Prints, a gente vai ter o resultado. Como eu falava, o App, ele coloca todos os caracteres em caixa alta.
 
 585
-01:10:36.660 --> 01:10:39.950
-Kadu Gertners: coloca para cá e executa.
+01:23:24.900 --> 01:23:27.099
+Gesiel Lopes: O Cap tá lá. E se coloca
 
 586
-01:10:40.830 --> 01:10:44.400
-Kadu Gertners: Ó, ficou até melhor de ver. Assim.
+01:23:27.650 --> 01:23:33.829
+Gesiel Lopes: o primeiro caracter em caixa alta.
 
 587
-01:10:44.800 --> 01:10:46.790
-Kadu Gertners: Na minha opinião, é melhor assim.
+01:23:33.990 --> 01:23:40.389
+Gesiel Lopes: O replay só substitui. Então, em vez de aparecer, Python é fundamental. E aqui, ó,
 
 588
-01:10:48.440 --> 01:10:51.390
-Kadu Gertners: Mas é uma decisão de cada um
+01:23:40.790 --> 01:23:45.530
+Gesiel Lopes: posso até colocar o texto original para a gente poder comparar.
 
 589
-01:10:51.780 --> 01:10:55.559
-Kadu Gertners: aqui nesse comando. O comando é igual.
+01:23:47.350 --> 01:23:53.340
+Gesiel Lopes: Então, aqui o Python é fundamental, que é o original. Aqui capitalize não é o
 
 590
-01:10:56.080 --> 01:11:01.300
-Kadu Gertners: É feita uma ligação das duas tabelas. Repara que o comando
+01:23:53.530 --> 01:23:57.650
+Gesiel Lopes: aqui. O App é o capitalize o, replace
 
 591
-01:11:01.460 --> 01:11:08.119
-Kadu Gertners: aqui no Select na primeira parte do Select, eles são iguaizinhos.
+01:23:57.910 --> 01:24:02.149
+Gesiel Lopes: o split. Observe que o split. Ele quebrou.
 
 592
-01:11:08.480 --> 01:11:13.460
-Kadu Gertners: Ó, aqui, aqui, aqui
+01:24:02.420 --> 01:24:10.050
+Gesiel Lopes: Nesse caso, pelo espaço em branco. Então ele criou uma lista com três elementos, tá?
 
 593
-01:11:14.000 --> 01:11:25.569
-Kadu Gertners: e aqui. Eles são iguaizinhos. Mas o que ele fez de diferente? Caduzon, ele botou um apelido. Ó essa coluna sendo mostrada como D20 sublinhada e D
+01:24:10.770 --> 01:24:21.789
+Gesiel Lopes: E o último é a função Lemp que retorna a quantidade de caracteres presentes naquela String.
 
 594
-01:11:25.790 --> 01:11:26.950
-Kadu Gertners: aqui
+01:24:22.050 --> 01:24:34.239
+Gesiel Lopes: Outro ponto fundamental também que a gente viu é que a gente consegue, dentro de String, fazer um conceito bem legal, que é o conceito de interpolação.
 
 595
-01:11:27.160 --> 01:11:38.139
-Kadu Gertners: D20 sublinhado Shh de escola sublinhado dois mil e vinte e D23cinco, sublinhado Shh dois mil e trinta e cinco.
+01:24:34.600 --> 01:24:41.590
+Gesiel Lopes: Isso quer dizer o quê? Eu posso adicionar na minha String
 
 596
-01:11:38.290 --> 01:11:41.670
-Kadu Gertners: Mas a resposta será igual.
+01:24:41.850 --> 01:24:54.579
+Gesiel Lopes: alguns elementos externos. A String. Então a interpolação é muito usada. Por exemplo para eu construir uma string em tempo de execução.
 
 597
-01:11:42.090 --> 01:11:46.340
-Kadu Gertners: Ó, a resposta será igual.
+01:24:54.800 --> 01:25:00.390
+Gesiel Lopes: Então vamos supor que eu queira criar uma
 
 598
-01:11:47.790 --> 01:11:51.149
-Kadu Gertners: Ele só vai mudar aqui o nome das colunas.
+01:25:00.880 --> 01:25:05.199
+Gesiel Lopes: variável que eu vou pegar em tempo de execução de nome.
 
 599
-01:11:51.850 --> 01:11:56.140
-Kadu Gertners: Ó aqui! Ele só mudou o nome das colunas
+01:25:05.930 --> 01:25:15.370
+Gesiel Lopes: E aqui eu coloco uma mensagem. Digite seu nome e aqui uma outra mensagem.
 
 600
-01:11:57.170 --> 01:12:04.500
-Kadu Gertners: Cadu. Podemos botar um apelido aí separando com espaço. Podemos
+01:25:15.760 --> 01:25:19.780
+Gesiel Lopes: E aí que eu vou chamar aqui de sobre muito nome
 
 601
-01:12:04.640 --> 01:12:10.609
-Kadu Gertners: se, no momento de definirmos a coluna, colocarmos a coluna entre aspas.
+01:25:21.490 --> 01:25:37.930
+Gesiel Lopes: e aqui, usando a função input que a gente já trabalhou, que captura o resultado ou o conteúdo a partir do terminal do usuário. E aqui digite seu sobrenome.
 
 602
-01:12:11.070 --> 01:12:22.630
-Kadu Gertners: Então é o mesmo comando anterior. Vai mudar só o apelido. Vai tirar esse apelido e vai botar ó Distrito dois mil e vinte de
+01:25:40.690 --> 01:25:50.079
+Gesiel Lopes: E aí eu posso criar uma mensagem. Mensagem é da seguinte maneira:
 
 603
-01:12:23.340 --> 01:12:30.560
-Kadu Gertners: vai mudar. D20sh dois mil e vinte. Vai botar District dois mil e vinte School
+01:26:05.520 --> 01:26:13.580
+Gesiel Lopes: uma String a partir de outras strings em tempo de execução. Então, nesse caso, aqui,
 
 604
-01:12:30.910 --> 01:12:35.230
-Kadu Gertners: vai mudar de trinta e cinco Shh, dois mil e trinta e cinco
+01:26:14.060 --> 01:26:19.189
+Gesiel Lopes: eu vou colocar aqui o F. String Job, bem vindo bem vindo.
 
 605
-01:12:35.410 --> 01:12:39.280
-Kadu Gertners: e vai botar distritos de dois mil e trinta e cinco School.
+01:26:21.160 --> 01:26:25.520
+Gesiel Lopes: E aí o que eu coloco para fazer a interpolação? A gente usa o colchete
 
 606
-01:12:40.400 --> 01:12:46.380
-Kadu Gertners: Só isso que vai mudar. Vamos fazer o teste e aí
+01:26:25.820 --> 01:26:28.660
+Gesiel Lopes: e é aqui, bem vindo. Nome,
 
 607
-01:12:49.070 --> 01:12:52.290
-Kadu Gertners: só vai mudar de novo o cabeçalho.
+01:26:29.080 --> 01:26:32.990
+Gesiel Lopes: e aí. Aqui, ó, vou concatenar sobrenome
 
 608
-01:12:53.250 --> 01:12:56.320
-Kadu Gertners: Olha lá, só mudou o cabeçalho,
+01:26:33.600 --> 01:26:44.180
+Gesiel Lopes: sobrenome. E aí? Olha só a concatenação. Eu vou concatenar com uma outra. String, deixa eu
 
 609
-01:12:59.410 --> 01:13:00.660
-Kadu Gertners: beleza.
+01:26:45.350 --> 01:26:47.500
+Gesiel Lopes: que alguém está com a câmera ligada.
 
 610
-01:13:01.370 --> 01:13:02.230
-Kadu Gertners: Bom,
+01:26:51.570 --> 01:26:57.650
+Gesiel Lopes: Interromper o vídeo. Pronto, eu vou colocar aqui um espaço em branco.
 
 611
-01:13:02.860 --> 01:13:18.770
-Kadu Gertners: o último comando desse grupo aqui, caduzão. Eu posso botar um apelido para as tabelas. Também posso. Eu posso, ao invés de ficar representando como Distrito dois mil e vinte, eu dou um apelido para essa tabela, que é o D20
+01:27:00.350 --> 01:27:06.849
+Gesiel Lopes: Eu vou usar aspas como eu já estou usando aspas simples. Eu vou colocar como aspas duplas. Bem vindo
 
 612
-01:13:19.260 --> 01:13:29.709
-Kadu Gertners: para a Tabela, Distrito dois mil e trinta e cinco. Eu dou o apelido de trinta e cinco. Aqui será feito um Lastjoin entre as duas tabelas.
+01:27:07.370 --> 01:27:08.200
+Gesiel Lopes: a a
 
 613
-01:13:29.830 --> 01:13:36.580
-Kadu Gertners: Ele vai usar o apelido todas as vezes que ele mencionar a coluna D2id
+01:27:13.290 --> 01:27:19.610
+Gesiel Lopes: verso da pro programação com Paita.
 
 614
-01:13:36.700 --> 01:13:39.449
-Kadu Gertners: igual a D trinta e cinco Id.
+01:27:21.140 --> 01:27:22.970
+Gesiel Lopes: E aí eu posso Opa
 
 615
-01:13:39.760 --> 01:13:49.030
-Kadu Gertners: Vai ordenar pelo D20 Id e vai mostrar só os apelidos. Aqui D20 Id,
+01:27:25.290 --> 01:27:34.339
+Gesiel Lopes: fazer aqui um print da minha mensagem, que seria o resultado. Então executar essa célula, a gente vai fazer gesiel, por exemplo,
 
 616
-01:13:49.510 --> 01:13:55.230
-Kadu Gertners: D20 escola dois mil e vinte e d23cinco. Escola dois mil e trinta e cinco.
+01:27:35.570 --> 01:27:36.760
+Gesiel Lopes: Lopes,
 
 617
-01:13:56.620 --> 01:14:01.040
-Kadu Gertners: Pega o comando e coloco para cá.
+01:27:37.120 --> 01:27:46.930
+Gesiel Lopes: e aí ele vai me dar a mensagem. Observe que essa string final foi definida em tempo de execução
 
 618
-01:14:02.970 --> 01:14:11.390
-Kadu Gertners: Executa, ó tá bonitinho, cadu. Eu poderia botar um apelido
+01:27:47.190 --> 01:27:59.919
+Gesiel Lopes: através dessa funcionalidade de formatação de Strings, o famoso F. String do Python. Então são algumas das coisas que a gente pode utilizar
 
 619
-01:14:11.510 --> 01:14:20.899
-Kadu Gertners: aqui para essas colunas também eu posso dar ao mesmo tempo apelido para as tabelas e apelido para as colunas. Sim, pode.
+01:28:00.060 --> 01:28:08.839
+Gesiel Lopes: com string tá. E aí, no nosso próximo encontro. A gente vai complementar ainda.
 
 620
-01:14:23.270 --> 01:14:25.500
-Kadu Gertners: Beleza, pode. Não tem problema.
+01:28:09.020 --> 01:28:13.429
+Gesiel Lopes: E aí algo interessante que pode ser feito
 
 621
-01:14:29.950 --> 01:14:34.900
-Kadu Gertners: Maravilha. Ó parte três.
+01:28:13.840 --> 01:28:24.019
+Gesiel Lopes: com Strings, que é a parte de indexação. E depois a parte de fatiamento dessas strings. E a gente vai só relembrar alguns desses conceitos.
 
 622
-01:14:35.260 --> 01:14:40.550
-Kadu Gertners: Vamos fazer o seguinte. Vamos criar uma tabela chamada Distrito dois mil e vinte inscrição
+01:28:24.470 --> 01:28:25.530
+Gesiel Lopes: Beleza.
 
 623
-01:14:40.660 --> 01:14:46.559
-Kadu Gertners: nela terá a coluna Id do tipo inteiro e inscrição inteiro
+01:28:25.770 --> 01:28:32.130
+Gesiel Lopes: Então é isso, pessoal que eu havia preparado programado para hoje.
 
 624
-01:14:46.850 --> 01:14:58.840
-Kadu Gertners: terá uma outra tabela. Distrito dois mil e vinte notas. E nós vamos pegar a coluna Id que é inteiro, e as notas que é varchar de dez.
+01:28:32.480 --> 01:28:39.540
+Gesiel Lopes: Então conseguimos aí contemplar todos esses pontos.
 
 625
-01:14:59.070 --> 01:15:00.650
-Kadu Gertners: Maravilha.
+01:28:39.770 --> 01:28:40.830
+Gesiel Lopes: Beleza,
 
 626
-01:15:00.860 --> 01:15:05.999
-Kadu Gertners: Pegamos as duas tabelas, puxamos para cá
+01:28:41.500 --> 01:28:50.659
+Gesiel Lopes: qualquer dúvida. Só entrar em contato lá no Ifnet online que a gente tenta ajudá los da melhor forma possível.
 
 627
-01:15:06.580 --> 01:15:09.789
-Kadu Gertners: e vamos criar mais duas tabelas.
+01:28:51.310 --> 01:28:56.710
+Gesiel Lopes: Espero encontrá los no nosso próximo encontro. Beleza.
 
 628
-01:15:09.950 --> 01:15:11.960
-Kadu Gertners: Tem quatro tabelas.
+01:28:56.930 --> 01:28:59.860
+Gesiel Lopes: Boa noite. Bons estudos e bom descanso.
 
 629
-01:15:12.830 --> 01:15:19.150
-Kadu Gertners: E agora ficarão quatro. Mais duas tabelas, seis tabelas,
-
-630
-01:15:22.210 --> 01:15:26.120
-Kadu Gertners: beleza, maravilha.
-
-631
-01:15:27.380 --> 01:15:31.369
-Kadu Gertners: Ó, vamos ver, caduzão o conteúdo das tabelas.
-
-632
-01:15:31.750 --> 01:15:41.319
-Kadu Gertners: Vamos lá, ó primeira tabela. Distrito dois mil e vinte. Inscrição, nenhum registro.
-
-633
-01:15:41.780 --> 01:15:52.749
-Kadu Gertners: Segunda tabela, distrito dois mil e vinte. Notas. Nenhum registro. Também não inserimos nenhum registro. Aí
-
-634
-01:15:53.700 --> 01:16:04.040
-Kadu Gertners: nós vamos pegar a primeira tabela e vamos inserir os registros um, o Id um, dois, cinco e seis,
-
-635
-01:16:06.280 --> 01:16:09.310
-Kadu Gertners: respectivamente, com esses valores de inscrição.
-
-636
-01:16:12.720 --> 01:16:17.920
-Kadu Gertners: E vamos pegar ó, e aí o incerte. Into
-
-637
-01:16:18.050 --> 01:16:31.349
-Kadu Gertners: vamos fazer um inset também com quatro registros também para a tabela. Distrito dois mil e vinte notas. Reparem que eu estou pegando exatamente os mesmos números, né? Ó um, duzentos e cinquenta e seis, cento e duzentos e cinquenta e seis.
-
-638
-01:16:31.550 --> 01:16:37.530
-Kadu Gertners: E aí, isso aqui são as notas K391dois seis mil oitocentos e noventa e doze.
-
-639
-01:16:38.070 --> 01:16:43.050
-Kadu Gertners: Então, ó, pegamos o comando os comandos.
-
-640
-01:16:43.170 --> 01:16:44.959
-Kadu Gertners: Pegamos os comandos.
-
-641
-01:16:46.000 --> 01:16:49.499
-Kadu Gertners: Vamos fazer os dois insights de uma vez só.
-
-642
-01:16:52.580 --> 01:17:05.570
-Kadu Gertners: Como eu peguei tudo de uma vez. Eram quatro registros de uma e quatro da outra. Quatro mais quatro. Ele inseriu de uma vez só oito registros, mas só que quatro registros em cada tabela.
-
-643
-01:17:07.170 --> 01:17:17.870
-Kadu Gertners: E aí, maravilha, ó, aqui podemos verificar
-
-644
-01:17:18.190 --> 01:17:20.910
-Kadu Gertners: o conteúdo das tabelas. Como é que elas ficaram?
-
-645
-01:17:22.240 --> 01:17:25.269
-Kadu Gertners: Primeiro da Distrito dois mil e vinte. Inscrição.
-
-646
-01:17:25.420 --> 01:17:27.819
-Kadu Gertners: Os quatro registros estão aqui.
-
-647
-01:17:28.610 --> 01:17:34.420
-Kadu Gertners: E o distrito dois mil e vinte notas. Os quatro registros também.
-
-648
-01:17:35.070 --> 01:17:36.830
-Kadu Gertners: Os quatro registros aqui.
-
-649
-01:17:37.620 --> 01:17:43.990
-Kadu Gertners: Beleza. Reparem, nós vamos fazer agora. Galera um,
-
-650
-01:17:45.400 --> 01:17:51.469
-Kadu Gertners: nós vamos fazer agora um Join com três Tabelas. Então repara,
-
-651
-01:17:51.620 --> 01:18:00.080
-Kadu Gertners: eu vou colocar o apelido D20 para a tabela. Distrito dois mil e vinte que nós criamos antes. Hoje
-
-652
-01:18:00.230 --> 01:18:13.790
-Kadu Gertners: vamos pegar a tabela. Distrito dois mil e vinte, inscrição que tem o apelido? En. Repara que a ligação dessas tabelas é feita pelo apelido D20 Id
-
-653
-01:18:14.000 --> 01:18:16.760
-Kadu Gertners: e pelo apelido, é N Id.
-
-654
-01:18:17.530 --> 01:18:18.460
-Kadu Gertners: Tá,
-
-655
-01:18:18.910 --> 01:18:29.150
-Kadu Gertners: faz se um Join com a terceira tabela que nós acabamos de criar agora também a Distrito dois mil e vinte notas, e ela terá o apelido Gr.
-
-656
-01:18:29.370 --> 01:18:35.330
-Kadu Gertners: Então, ó aqui a ligação será da tabela D20
-
-657
-01:18:35.480 --> 01:18:37.640
-Kadu Gertners: que é a primeira que aparece aqui
-
-658
-01:18:37.790 --> 01:18:53.900
-Kadu Gertners: através da coluna, id igualando com o apelido Id dessa tabela. Aqui dá notas, beleza. Aí vamos ordenar
-
-659
-01:18:54.080 --> 01:18:57.190
-Kadu Gertners: pelo apelido D20 Id.
-
-660
-01:18:57.500 --> 01:19:00.290
-Kadu Gertners: Então, ó, quando ele faz isso,
-
-661
-01:19:00.720 --> 01:19:11.929
-Kadu Gertners: pegamos e vão mostrar essas colunas, né? O D20 Id, o D20 escola dois mil e vinte o En Inscrição e o Grnotas
-
-662
-01:19:12.720 --> 01:19:14.540
-Kadu Gertners: copiamos o comando.
-
-663
-01:19:18.470 --> 01:19:20.059
-Kadu Gertners: Colocamos para cá
-
-664
-01:19:20.220 --> 01:19:34.229
-Kadu Gertners: e olha que maneiro ele aqui num comando só ele está pegando informações. De três tabelas em paralelo. Olha que maneiro. O lance do John é exatamente isso.
-
-665
-01:19:34.400 --> 01:19:45.229
-Kadu Gertners: Você poder potencializar de você pegar e mencionar mais colunas ao fazer o Join entre as tabelas. A ligação entre as tabelas.
-
-666
-01:19:47.340 --> 01:19:50.529
-Kadu Gertners: Maravilha aí, aqui, ó,
-
-667
-01:19:51.020 --> 01:19:58.809
-Kadu Gertners: ele faz um distint, pega o valor todo da Tabela. Distrito dois mil e vinte e dois mil e trinta e cinco.
-
-668
-01:19:59.270 --> 01:20:00.130
-Kadu Gertners: Ó
-
-669
-01:20:04.430 --> 01:20:09.589
-Kadu Gertners: distrito dois mil e vinte tem quatro registros
-
-670
-01:20:11.260 --> 01:20:13.310
-Kadu Gertners: e a dois mil e trinta e cinco.
-
-671
-01:20:14.170 --> 01:20:19.889
-Kadu Gertners: Tem cinco registros aí. Olha só. Que interessante.
-
-672
-01:20:20.440 --> 01:20:26.180
-Kadu Gertners: Nós podemos cadu fazer um Union das duas tabelas. Podemos?
-
-673
-01:20:26.300 --> 01:20:28.109
-Kadu Gertners: Então vamos ver como é que vai ficar
-
-674
-01:20:28.600 --> 01:20:42.329
-Kadu Gertners: quando nós botamos um Union para todas as colunas a partir da Distrito dois mil e vinte, com a distrito dois mil e trinta e cinco, fazendo uma união e ordenando pelo Idea. Olha como é que vai ficar o resultado.
-
-675
-01:20:44.410 --> 01:20:52.170
-Kadu Gertners: Ó, vou mostrar todos os resultados somente uma vez.
-
-676
-01:20:52.830 --> 01:20:56.330
-Kadu Gertners: Agora, qual é a diferença desse caduzão
-
-677
-01:20:56.810 --> 01:20:59.230
-Kadu Gertners: de nós botarmos o Union Wall?
-
-678
-01:20:59.390 --> 01:21:06.580
-Kadu Gertners: Se nós botarmos o Union Wall, ele será um pouco diferente. Por quê? Olha que interessante.
-
-679
-01:21:07.790 --> 01:21:11.650
-Kadu Gertners: O Union Wall pega os valores repetidos.
-
-680
-01:21:11.820 --> 01:21:21.800
-Kadu Gertners: Ele não vai pegar o valor só uma vez, ele vai pegar o valor todas as vezes que aquele valor aparecer. Ó, vamos comprovar.
-
-681
-01:21:22.140 --> 01:21:27.910
-Kadu Gertners: Pega o comando, executa ó, e reparem.
-
-682
-01:21:29.580 --> 01:21:32.810
-Kadu Gertners: Ó o um aparece duas vezes.
-
-683
-01:21:32.940 --> 01:21:35.140
-Kadu Gertners: Duas duas vezes.
-
-684
-01:21:35.290 --> 01:21:45.040
-Kadu Gertners: Três, uma vez, quatro, uma vez, cinco, uma vez e o seis, duas vezes. Isso significa, na prática, que o valor um,
-
-685
-01:21:45.200 --> 01:21:56.390
-Kadu Gertners: dois e seis. Nesse exemplo, eles encontram se nas duas tabelas, como nós vimos com os Joes, que nós fomos executando
-
-686
-01:21:57.830 --> 01:21:58.870
-Kadu Gertners: beleza.
-
-687
-01:22:00.690 --> 01:22:03.710
-Kadu Gertners: Bom caldozão.
-
-688
-01:22:04.750 --> 01:22:12.949
-Kadu Gertners: Nós podemos botar um Union aí all e botar um apelido, colocar uma coluna
-
-689
-01:22:13.250 --> 01:22:18.570
-Kadu Gertners: com um valor fixo que é o dois.dois0 para indicar o ano
-
-690
-01:22:19.450 --> 01:22:22.290
-Kadu Gertners: e colocar um dois mil e trinta e cinco
-
-691
-01:22:22.630 --> 01:22:26.410
-Kadu Gertners: para indicar um ano aqui da tabela.
-
-692
-01:22:26.670 --> 01:22:28.870
-Kadu Gertners: Distrito dois mil e trinta e cinco.
-
-693
-01:22:29.000 --> 01:22:37.280
-Kadu Gertners: E colocarmos o dois mil e vinte para representarmos a tabela. Distrito dois mil e vinte. União Uol, ó, olha que maneiro
-
-694
-01:22:37.520 --> 01:22:39.610
-Kadu Gertners: para você identificar melhor.
-
-695
-01:22:40.020 --> 01:22:44.199
-Kadu Gertners: Você pega esse comando, coloque ele para cá.
-
-696
-01:22:46.130 --> 01:22:51.879
-Kadu Gertners: Ele está mostrando a coluna dois mil e vinte para ano. Ele vai mostrar o nome da escola
-
-697
-01:22:52.740 --> 01:23:11.560
-Kadu Gertners: aqui para a Tabela. Distrito dois mil e vinte embaixo. Ele vai mostrar o ano dois mil e trinta e cinco Ear é ano. Vai mostrar a coluna escola dois mil e trinta e cinco a partir da tabela. Distrito dois mil e trinta e cinco. Vai ordenar pela coluna School,
-
-698
-01:23:11.870 --> 01:23:18.480
-Kadu Gertners: pela coluna Skull, não pelo apelido Skull aqui e pelo ano, vamos testar.
-
-699
-01:23:19.920 --> 01:23:21.210
-Kadu Gertners: Executa.
-
-700
-01:23:21.580 --> 01:23:24.520
-Kadu Gertners: Olha lá, beleza.
-
-701
-01:23:26.790 --> 01:23:30.349
-Kadu Gertners: Olha como o colégio, por exemplo,
-
-702
-01:23:31.270 --> 01:23:34.890
-Kadu Gertners: é Oaki. Aqui, ó, ele aparece
-
-703
-01:23:35.100 --> 01:23:39.909
-Kadu Gertners: para a tabela dois mil e vinte e para dois mil e trinta e cinco.
-
-704
-01:23:41.580 --> 01:23:45.200
-Kadu Gertners: Beleza maravilha.
-
-705
-01:23:45.870 --> 01:23:52.410
-Kadu Gertners: Ó, o Intersect é um comando de interseção.
-
-706
-01:23:52.820 --> 01:23:58.200
-Kadu Gertners: Quais são os valores que são em comum as duas tabelas.
-
-707
-01:23:58.770 --> 01:24:06.429
-Kadu Gertners: Quais são os valores que tem nas duas tabelas? Então, se você não quiser usar o Join. O Inner Join. Mas aí vai depender do caso. Tá?
-
-708
-01:24:06.640 --> 01:24:10.179
-Kadu Gertners: Vai dependendo do caso. Mas nesse exemplo,
-
-709
-01:24:10.320 --> 01:24:15.130
-Kadu Gertners: para pegar os valores em comum das duas tabelas. Podemos usar esse comando aqui.
-
-710
-01:24:15.270 --> 01:24:26.910
-Kadu Gertners: A interseção entre a tabela. Distrito dois mil e vinte e a Tabela, distrito dois mil e trinta e cinco a partir de todas as colunas. E vamos ordenar pela coluna Id.
-
-711
-01:24:27.340 --> 01:24:34.460
-Kadu Gertners: Vambora traz para cá e executa ó
-
-712
-01:24:35.200 --> 01:24:42.379
-Kadu Gertners: os valores que existem nas duas tabelas. Exatamente com esses números aqui. Um, dois e seis.
-
-713
-01:24:44.720 --> 01:24:56.380
-Kadu Gertners: Ok, bom, para finalizar, nós podemos pegar Cadu. Como é que eu vejo os valores a mais
-
-714
-01:24:56.570 --> 01:25:09.350
-Kadu Gertners: que existem na tabela. Distrito dois mil e vinte. Os valores a mais que existem em relação à tabela dois mil e trinta e cinco. Então você usa o except.
-
-715
-01:25:09.560 --> 01:25:26.329
-Kadu Gertners: Você vai fazer um Select de uma tabela, e vai tirar um excet. Vai tirar um menos, subtrair os valores em comum da outra tabela. E você com isso só vai mostrar os valores que só existem na tabela de cima.
-
-716
-01:25:26.510 --> 01:25:29.830
-Kadu Gertners: Nesse caso, da Distrito dois mil e vinte.
-
-717
-01:25:30.470 --> 01:25:37.919
-Kadu Gertners: Vamos fazer um teste para ver como é que fica ó, pegamos o comando, colocamos para cá.
-
-718
-01:25:38.650 --> 01:25:46.590
-Kadu Gertners: E quais são os valores que só existem na tabela. Distrito dois mil e vinte. Só o valor. O Id com o Id cinco
-
-719
-01:25:47.320 --> 01:25:59.659
-Kadu Gertners: cadu. Posso trocar a posição das tabelas para descobrir agora como aí é uma obrigatoriedade, tá? A tabela que está acima. Ela manda no comando.
-
-720
-01:26:00.100 --> 01:26:13.690
-Kadu Gertners: Então podemos inverter e botar a Distrito dois mil e trinta e cinco agora em cima para mostrar os valores a mais dela em relação à tabela. Distrito dois mil e vinte, podemos
-
-721
-01:26:14.040 --> 01:26:21.400
-Kadu Gertners: então, ó pega o comando, traz para cá e executa.
-
-722
-01:26:22.220 --> 01:26:28.960
-Kadu Gertners: Ó na tabela. Distrito dois mil e trinta e cinco. Existem os valores a mais
-
-723
-01:26:29.460 --> 01:26:33.399
-Kadu Gertners: três e quatro em relação à tabela. Distrito dois mil e vinte
-
-724
-01:26:39.730 --> 01:26:42.780
-Kadu Gertners: Opa, se eles botaram mais coisas aqui, peraí.
-
-725
-01:26:46.700 --> 01:26:56.759
-Kadu Gertners: O problema de adicionar uma constrente no alter é que pode dar problema com os dados resistentes, né, Gabriel Diniz? Sim, isso pode acontecer. Sim,
-
-726
-01:26:57.100 --> 01:26:59.930
-Kadu Gertners: dependendo do caso, pode dar problema. Sim,
-
-727
-01:27:01.140 --> 01:27:05.229
-Kadu Gertners: tá legal só para te afirmar o que você falou. Sim, pode dar problema.
-
-728
-01:27:05.340 --> 01:27:15.819
-Kadu Gertners: Você tem que se policiar. E tem que realmente ter certeza que as chaves, as constrentes criadas. Elas não vão te gerar esse problema.
-
-729
-01:27:16.330 --> 01:27:28.030
-Kadu Gertners: Você tem que ficar meio que analisando ou controlando isso lógico, o banco de dados vai te avisar isso e você vai poder tratar isso se for o caso.
-
-730
-01:27:28.720 --> 01:27:29.710
-Kadu Gertners: Tá bom,
-
-731
-01:27:31.280 --> 01:27:44.749
-Kadu Gertners: professor, se eu utilizar apenas o Using ao invés do On, poderia causar algum problema, cara, olha só. É interessante usar Pedro pingueiro a sintaxe de verdade como ela é.
-
-732
-01:27:45.130 --> 01:27:58.850
-Kadu Gertners: Eu aconselho usar o On porque de repente ele pode ter um comportamento inesperado. Mas se você seguir Pedro Pingueiro a sintaxe real. Você não vai ter dor de cabeça.
-
-733
-01:27:59.510 --> 01:28:00.749
-Kadu Gertners: Tá bom, amigo.
-
-734
-01:28:02.390 --> 01:28:12.370
-Kadu Gertners: Professor, eu preciso usar sempre o Id na criação das tabelas, ou posso usar o auto incremento nesse nosso caso específico. Cara, toma cuidado.
-
-735
-01:28:12.500 --> 01:28:16.489
-Kadu Gertners: O Id é o nome da coluna.
-
-736
-01:28:17.610 --> 01:28:18.830
-Kadu Gertners: Vamos devagar.
-
-737
-01:28:19.030 --> 01:28:29.189
-Kadu Gertners: O Id é o nome da coluna Mateus Auto Increment. É uma característica da coluna
-
-738
-01:28:29.580 --> 01:28:49.140
-Kadu Gertners: que você, nesse caso, vai colocar a característica de auto incrementar para a coluna Id. Mas você pode botar um auto incrementar para uma coluna código. Você poderia botar um auto incrementar para uma coluna de código de cliente também, por exemplo, não tem problema nenhum,
-
-739
-01:28:49.930 --> 01:28:55.730
-Kadu Gertners: beleza. Então, de novo, o Id Mateus é o nome da coluna.
-
-740
-01:28:56.020 --> 01:29:04.280
-Kadu Gertners: O auto incremento é uma característica da coluna independente do nome da coluna beleza.
-
-741
-01:29:04.450 --> 01:29:12.390
-Kadu Gertners: Ok, ok, show que você escreveu aqui. Maravilha, Pedro Pinheiro. Entendi, beleza, Pedro, que bom que você entendeu.
-
-742
-01:29:14.970 --> 01:29:27.060
-Kadu Gertners: Sem problema, Eduardo. Excelente noite para vocês, pessoal. Eu acabei aqui a material hoje. Vocês querem tirar mais alguma dúvida ou perguntar mais alguma coisa pessoal,
-
-743
-01:29:27.170 --> 01:29:37.530
-Kadu Gertners: senão nós ficamos por aqui. Eu vou desejar logicamente aí um excelente feriado fim de semana para vocês, galera e vai na minha.
-
-744
-01:29:37.730 --> 01:29:52.459
-Kadu Gertners: Vai estudando as matérias. Vocês viram que hoje eu falei bastante coisas diferentes. Assim é legal vocês de repente ouvirem de novo essa aula. Se vocês tiverem tempo para vocês
-
-745
-01:29:52.460 --> 01:30:05.760
-Kadu Gertners: consolidar em alguns conceitos e lógico, se vocês tiverem dúvidas, passa mensagem para mim no Whatsapp, passa mensagem no e mail. Passa a mensagem no infinite online.
-
-746
-01:30:06.310 --> 01:30:07.630
-Kadu Gertners: Beleza, galera.
-
-747
-01:30:07.780 --> 01:30:20.440
-Kadu Gertners: E aí na semana que vem vamos falar sobre o At de vocês aí direitinho. Tá bom. Vou passar o resto da matéria. E assim que der, eu vou finalizar aquela matéria também com vocês.
-
-748
-01:30:20.650 --> 01:30:29.400
-Kadu Gertners: Tá bom, pessoal, muito obrigado pela presença de vocês aqui hoje. Pela ajuda, como sempre na aula.
-
-749
-01:30:29.770 --> 01:30:37.700
-Kadu Gertners: Uma excelente noite para vocês e vamos nos falando, pessoal. Beijo no coração de vocês, tá? Valeu, galera. Obrigado. Valeu, Matheus.
-
-750
-01:30:38.520 --> 01:30:41.180
-Kadu Gertners: Valeu, Gabriel Diniz. Valeu, Alan.
-
-751
-01:30:42.450 --> 01:30:45.229
-Kadu Gertners: Valeu, Matheus Ramos. Excelente noite, irmão.
-
-752
-01:30:48.570 --> 01:30:50.709
-Kadu Gertners: Tchau, pessoal. Câmbio final.
+01:29:00.200 --> 01:29:01.150
+Gesiel Lopes: Fui.
 

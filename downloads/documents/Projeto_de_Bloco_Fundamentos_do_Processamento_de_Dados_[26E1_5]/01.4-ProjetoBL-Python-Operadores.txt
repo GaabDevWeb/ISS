@@ -1,0 +1,45 @@
+Exemplo 1: Operações Básicas Aritméticas
+# + (soma): Adiciona dois números
+resultado1 = 10 + 5
+print(f"Soma: {resultado1}")  # Saída: 15
+
+# - (subtração): Subtrai o segundo do primeiro
+resultado2 = 10 - 5
+print(f"Subtração: {resultado2}")  # Saída: 5
+
+# * (multiplicação): Multiplica os números
+resultado3 = 10 * 5
+print(f"Multiplicação: {resultado3}")  # Saída: 50
+
+# / (divisão real): Divide e retorna float
+resultado4 = 10 / 2
+print(f"Divisão: {resultado4}")  # Saída: 5.0
+
+
+Exemplo 2: Divisão Inteira e Módulo
+# // (divisão inteira): Divide e descarta decimal (floor division)
+resultado1 = 10 // 3
+print(f"Divisão inteira: {resultado1}")  # Saída: 3
+
+# % (módulo/resto): Retorna o resto da divisão
+resultado2 = 10 % 3
+print(f"Resto: {resultado2}")  # Saída: 1
+
+# Exemplo prático: Verifica se par (resto == 0)
+numero = 10
+if numero % 2 == 0:
+    print(f"{numero} é par!")  # Saída: 10 é par!
+
+
+Exemplo 3: Potência e Precedência
+# ** (potência): Eleva base ao expoente
+resultado1 = 2 ** 3
+print(f"Potência: {resultado1}")  # Saída: 8
+
+# Precedência: () > ** > * / // % > + -
+resultado2 = 2 + 3 * 4 ** 2  # 3*16=48 +2=50 (não 2+3=5*16)
+print(f"Precedência: {resultado2}")  # Saída: 50
+
+# Com parênteses para alterar ordem
+resultado3 = (2 + 3) * 4 ** 2
+print(f"Com (): {resultado3}")  # Saída: 5*16=80

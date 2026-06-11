@@ -1,0 +1,14 @@
+import csv
+
+# Nome do seu arquivo CSV
+nome_arquivo = r'D:\Documentos\TTTrabalhos\InfNET\ProjetoBL06\Databases\csv_Cliente.csv'
+
+# Abre o arquivo CSV para leitura
+with open(nome_arquivo, mode='r', encoding='utf-8') as arquivo:
+    # Cria um objeto leitor
+    leitor = csv.reader(arquivo)
+
+    # Itera sobre cada linha do arquivo
+    for linha in leitor:
+        # Exibe a linha na tela do MU
+        print(linha)

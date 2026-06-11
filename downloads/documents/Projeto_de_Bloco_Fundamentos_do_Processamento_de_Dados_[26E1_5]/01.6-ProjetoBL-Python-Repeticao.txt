@@ -1,0 +1,30 @@
+Exemplo 1: Loop For com Range
+# Loop for itera um número fixo de vezes (range gera sequência 0 a 4)
+for i in range(5):
+    # Imprime o índice atual (i vai de 0 a 4)
+    print(f"Índice: {i}")
+
+
+Exemplo 2: Loop While com Condição
+# Inicializa contador
+contador = 0
+# While executa enquanto condição verdadeira (contador < 5)
+while contador < 5:
+    # Imprime e incrementa (operador += soma 1)
+    print(f"Contador: {contador}")
+    contador += 1
+
+Exemplo 3: For com Lista e Break/Continue
+# Lista de números
+numeros = [1, 2, 4, 5, 6]
+# For itera sobre lista
+for num in numeros:
+    # Continue pula ímpares (continua próxima iteração)
+    if num % 2 != 0:
+        continue
+    # Break sai do loop se encontrar 5
+    if num == 5:
+        print("Encontrou 5!")
+        break
+    # Imprime só pares
+    print(f"Par: {num}")

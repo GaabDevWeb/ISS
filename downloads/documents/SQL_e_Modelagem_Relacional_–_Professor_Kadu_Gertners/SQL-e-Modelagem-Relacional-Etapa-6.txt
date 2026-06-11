@@ -1,0 +1,247 @@
+. https://learning.oreilly.com/library/view/practical-sql-2nd/9781098129866/c10.xhtml --> 10. INSPECIONANDO E MODIFICANDO DADOS (Livro Practical SQL, 2nd Edition - Anthony DeBarros - Published by No Starch Press). 
+
+	Acessar o SQLiteStudio.exe
+		. No menu Database --> Add a database 
+			Na janela 'Database'
+			Obs.: Escolher a pasta na qual estamos guardando os arquivos do SQLite. 
+			Colocar o nome do arquivo como estabelecimento.db e clicar no botão 'Salvar' 
+				Clicar no botão 'Test connection'. 
+				Clicar no botão 'OK'	
+
+	. Corrigir os seguintes problemas: 
+(1) Valores sem indicar o estado (para a coluna st) para 3 registros (lembrando da etapa 5); 
+SELECT id_estabelecimento,
+       empresa,
+       cidade,
+       estado,
+       cep
+FROM estabelecimentos
+WHERE estado = '';
+
+(2) Ortografia inconsistente do nome de pelo menos uma empresa (Armour) (lembrando da etapa 5);
+SELECT empresa,
+       count(*) AS conta_empresa
+FROM estabelecimentos
+GROUP BY empresa
+ORDER BY empresa ASC;
+Obs.: Buscar o nome da empresa iniciada por 'Armour'. Existem 4 formas diferentes de escrever essa empresa. 
+
+SELECT empresa,
+       count(*) AS conta_empresa
+FROM estabelecimentos
+WHERE empresa like '%Armour%'
+GROUP BY empresa
+ORDER BY empresa ASC;
+
+(3) CEPs imprecisos devido à conversão de arquivos (no início do campo possuía 1 ou 2 números 0 e devido a conversão para número esses zeros foram desconsiderados(lembrando da etapa 5). 
+SELECT estado,
+       count(*) AS conta_estado
+FROM estabelecimentos
+WHERE length(cep) < 5
+GROUP BY estado
+ORDER BY estado ASC;
+Obs.: Os estados citados teria no início do texto 1 número 0 ou dois números 0s. Na conversão foram tirados os zeros. 
+
+-- Cópia da tabela estabelecimentos (lembrando da etapa 5)
+SELECT count(*) 
+FROM estabelecimentos;
+
+SELECT count(*) 
+FROM estabelecimentos_backup;
+
+-- Cópia da coluna estado (no caso estado_copy)  (lembrando da etapa 5)
+SELECT empresa, estado, estado_copy
+FROM estabelecimentos;
+
+
+-- Atualizando linhas onde faltam valores
+SELECT id_estabelecimento,
+       empresa,
+       cidade,
+       estado,
+       cep
+FROM estabelecimentos
+WHERE estado = '';
+
+UPDATE estabelecimentos
+SET estado = 'MN'
+WHERE id_estabelecimento = 'V18677A';
+
+UPDATE estabelecimentos
+SET estado = 'AL'
+WHERE id_estabelecimento = 'M45319+P45319';
+
+UPDATE estabelecimentos
+SET estado = 'WI'
+WHERE id_estabelecimento = 'M263A+P263A+V263A';
+
+SELECT id_estabelecimento,
+       empresa,
+       cidade,
+       estado,
+       cep
+FROM estabelecimentos
+WHERE estado = '';
+
+SELECT id_estabelecimento,
+       empresa,
+       cidade,
+       estado,
+       cep
+FROM estabelecimentos
+WHERE id_estabelecimento = 'V18677A'
+        OR id_estabelecimento = 'M45319+P45319'
+        OR id_estabelecimento = 'M263A+P263A+V263A'; 
+
+SELECT id_estabelecimento,
+       empresa,
+       cidade,
+       estado,
+       cep
+FROM estabelecimentos
+WHERE id_estabelecimento in ('V18677A', 'M45319+P45319', 'M263A+P263A+V263A'); 
+
+-- Restaurando Valores Originais
+SELECT count(*) 
+FROM estabelecimentos;
+
+SELECT count(*) 
+FROM estabelecimentos
+WHERE estado <> estado_copy;
+
+SELECT id_estabelecimento,
+        estado, 
+        estado_copy
+FROM estabelecimentos
+WHERE estado <> estado_copy;
+
+SELECT count(*) 
+FROM estabelecimentos
+WHERE estado = estado_copy;
+
+UPDATE estabelecimentos
+SET estado = estado_copy;
+
+SELECT count(*) 
+FROM estabelecimentos
+WHERE estado <> estado_copy;
+
+SELECT count(*) 
+FROM estabelecimentos
+WHERE estado = estado_copy;
+
+-- Atualizando linhas onde faltam valores
+UPDATE estabelecimentos
+SET estado = 'MN'
+WHERE id_estabelecimento = 'V18677A';
+
+UPDATE estabelecimentos
+SET estado = 'AL'
+WHERE id_estabelecimento = 'M45319+P45319';
+
+UPDATE estabelecimentos
+SET estado = 'WI'
+WHERE id_estabelecimento = 'M263A+P263A+V263A';
+
+SELECT count(*) 
+FROM estabelecimentos
+WHERE estado <> estado_copy;
+
+-- Atualizando valores para consistência
+ALTER TABLE estabelecimentos ADD COLUMN empresa_padrao text;
+
+SELECT empresa_padrao, empresa
+FROM estabelecimentos; 
+
+UPDATE estabelecimentos
+SET empresa_padrao = empresa;
+
+SELECT empresa_padrao, empresa
+FROM estabelecimentos; 
+
+UPDATE estabelecimentos
+SET empresa_padrao = 'Armour-Eckrich Meats'
+WHERE empresa LIKE 'Armour%'
+RETURNING empresa, empresa_padrao;
+Obs.: Para padronizar outros nomes de empresas na tabela, usaríamos o UPDATE para cada caso. 
+
+SELECT empresa,
+       count(*) AS conta_empresa
+FROM estabelecimentos
+GROUP BY empresa
+ORDER BY empresa ASC;
+Obs.: Buscar o nome da empresa iniciada por 'Armour'. Existem 4 formas diferentes de escrever essa empresa. 
+
+SELECT empresa,
+       count(*) AS conta_empresa
+FROM estabelecimentos
+WHERE empresa like '%Armour%'
+GROUP BY empresa
+ORDER BY empresa ASC;
+
+SELECT empresa_padrao,
+       count(*) AS conta_empresa_padrao
+FROM estabelecimentos
+GROUP BY empresa_padrao
+ORDER BY empresa_padrao ASC;
+Obs.: Buscar o nome da empresa iniciada por 'Armour'. Existe apenas 1 valor. 
+
+SELECT empresa_padrao,
+       count(*) AS empresa_count
+FROM estabelecimentos
+WHERE empresa_padrao like '%Armour%'
+GROUP BY empresa_padrao
+ORDER BY empresa_padrao ASC;
+
+-- Reparando CEPs usando concatenação
+ALTER TABLE estabelecimentos ADD COLUMN cep_copia text;
+
+UPDATE estabelecimentos
+SET cep_copia = cep;
+
+SELECT id_estabelecimento, cep, cep_copia
+FROM estabelecimentos;
+
+UPDATE estabelecimentos
+SET cep = '00' || cep
+WHERE estado IN('PR','VI') AND length(cep) = 3;
+
+SELECT distinct estado
+FROM estabelecimentos
+WHERE length(cep_copia) = 3
+ORDER BY estado;
+
+UPDATE estabelecimentos
+SET cep = '0' || cep
+WHERE estado IN('CT','MA','ME','NH','NJ','RI','VT') AND length(cep) = 4;
+
+SELECT distinct estado
+FROM estabelecimentos
+WHERE length(cep_copia) = 4
+ORDER BY estado;
+
+SELECT length(cep),
+       count(*) AS conta_comprimento_cep
+FROM estabelecimentos
+GROUP BY length(cep)
+ORDER BY length(cep) ASC;
+
+SELECT estado, estado_copy, empresa, empresa_padrao, cep, cep_copia
+FROM estabelecimentos
+WHERE id_estabelecimento in ('V18677A', 'M45319+P45319', 'M263A+P263A+V263A') 
+ORDER BY estado ASC, empresa ASC;
+
+SELECT estado, estado_copy, empresa, empresa_padrao, cep, cep_copia
+FROM estabelecimentos
+ORDER BY empresa ASC;
+
+SELECT estado, estado_copy, empresa, empresa_padrao, cep, cep_copia
+FROM estabelecimentos
+ORDER BY cep ASC;
+
+SELECT estado, estado_copy, empresa, empresa_padrao, cep, cep_copia
+FROM estabelecimentos
+WHERE (estado <> estado_copy) 
+        OR (empresa <> empresa_padrao) 
+        OR (cep <> cep_copia) 
+ORDER BY estado ASC, empresa ASC;

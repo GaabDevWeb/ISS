@@ -1,0 +1,27 @@
+Exemplo 1: Declaração e Tipos Básicos
+# Declara variável inteira (int) sem especificar tipo (Python é dinâmico)
+idade = 25
+print(f"Idade: {idade} (tipo: {type(idade)})")  # Saída: <class 'int'>
+
+# Declara variável float (decimal)
+altura = 1.75
+print(f"Altura: {altura} (tipo: {type(altura)})")  # Saída: <class 'float'>
+
+# Declara variável string (str) com aspas
+nome = "Ana"
+print(f"Nome: '{nome}' (tipo: {type(nome)})")  # Saída: <class 'str'>
+
+#Declara variável boolean
+bonus = True
+print(f"Bonus: '{bonus}' (tipo: {type(bonus)})")  # Saída: <class 'bool'>
+
+
+Exemplo 2: Reatribuição e Tipos Dinâmicos
+# Declara variável como int
+numero = 10
+print(f"Original: {numero} (tipo: {type(numero)})")  # Saída: <class 'int'>
+
+# Reatribui o mesmo nome para string (tipos dinâmicos: muda sem erro)
+numero = "dez"
+print(f"Reatribuído: '{numero}' (tipo: {type(numero)})")  # Saída: <class 'str'>
+

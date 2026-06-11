@@ -1,0 +1,123 @@
+. https://learning.oreilly.com/library/view/practical-sql-2nd/9781098129866/c10.xhtml --> 10. INSPECIONANDO E MODIFICANDO DADOS (Livro Practical SQL, 2nd Edition - Anthony DeBarros - Published by No Starch Press). 
+
+	Acessar o SQLiteStudio.exe
+		. No menu Database --> Add a database 
+			Na janela 'Database'
+			Obs.: Escolher a pasta na qual estamos guardando os arquivos do SQLite. 
+			Colocar o nome do arquivo como estabelecimento.db e clicar no botão 'Salvar' 
+				Clicar no botão 'Test connection'. 
+				Clicar no botão 'OK'	
+
+-- Excluindo dados desnecessários
+. Ter certeza que você precisa apagar os dados. 
+. E caso o dado seja apagado e posteriormente aja necessidade de desfazer o que foi apagado, dependerá do SGBD (com seus recursos e versões) para saber se isso será possível. 
+. Têm vezes que o dado é apagado apenas logicamente (no caso uma coluna é alterada e assim na visão do sistema parece que o dado foi apagado). Não ocorrendo um apagar físico. 
+
+CREATE TABLE estabelecimentos_backup2
+AS SELECT * from estabelecimentos_backup; 
+
+SELECT count(*)
+FROM estabelecimentos_backup2; 
+
+SELECT count(*)
+FROM estabelecimentos_backup; 
+
+SELECT count(*) 
+FROM estabelecimentos_backup2
+WHERE estado IN('AS','GU','MP','PR','VI');
+
+SELECT estado, count(*) 
+FROM estabelecimentos_backup2
+WHERE estado IN('AS','GU','MP','PR','VI')
+group by estado
+order by estado;
+
+DELETE FROM estabelecimentos_backup2
+WHERE estado IN('AS','GU','MP','PR','VI');
+
+SELECT count(*) 
+FROM estabelecimentos_backup2
+WHERE estado IN('AS','GU','MP','PR','VI');
+
+SELECT count(*)
+FROM estabelecimentos_backup2; 
+
+select 6287-105; 
+
+DELETE FROM estabelecimentos_backup2;
+
+SELECT count(*)
+FROM estabelecimentos_backup2; 
+
+INSERT INTO estabelecimentos_backup2
+SELECT * from estabelecimentos_backup; 
+
+SELECT count(*)
+FROM estabelecimentos_backup2; 
+
+SELECT count(*)
+FROM estabelecimentos_backup; 
+
+TRUNCATE TABLE estabelecimentos_backup2;
+Obs.: Não existe o comando truncate para o SQLite. 
+	Então para apagar os dados em si (DML):
+		DELETE FROM estabelecimentos_backup2;
+		SELECT count(*) FROM estabelecimentos_backup2; 
+	Para apagar a estrutura da tabela (DDL): 
+		DROP TABLE estabelecimentos_backup2;
+		SELECT count(*) FROM estabelecimentos_backup2; 
+
+DROP TABLE estabelecimentos_backup;
+
+CREATE TABLE estabelecimentos_backup
+AS SELECT * from estabelecimentos;
+
+SELECT count(*)
+FROM estabelecimentos_backup;
+
+ALTER TABLE estabelecimentos_backup DROP COLUMN cep_copia;
+
+ALTER TABLE estabelecimentos_backup ADD COLUMN cep_copia text;
+
+ALTER TABLE estabelecimentos_backup
+    RENAME TO estabelecimentos_temp;
+
+No SQLite Studio
+	Primary Key
+	Foreign Key
+	Unique
+	Check Condition (Verificar)
+	Not NULL
+	Default (Valor padrão)
+
+SELECT count(*) 
+FROM estabelecimentos_temp
+WHERE nome_fantasia is null; 
+
+SELECT id_estabelecimento, nome_fantasia
+FROM estabelecimentos_temp
+WHERE nome_fantasia is null; 
+
+SELECT count(*) 
+FROM estabelecimentos_temp 
+WHERE nome_fantasia is not null; 
+
+SELECT count(*) 
+FROM estabelecimentos_temp;
+
+SELECT count(*) 
+FROM estabelecimentos_temp 
+WHERE nome_fantasia = '';       
+
+SELECT id_estabelecimento, nome_fantasia
+FROM estabelecimentos_temp
+WHERE nome_fantasia = '';   
+
+SELECT count(*) 
+FROM estabelecimentos_temp 
+WHERE nome_fantasia <> '';        
+
+select 4400+1887;  
+
+DROP TABLE estabelecimentos_temp;
+

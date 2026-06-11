@@ -1,0 +1,293 @@
+. https://learning.oreilly.com/library/view/practical-sql-2nd/9781098129866/c07.xhtml --> Livro Practical SQL, 2nd Edition - Anthony DeBarros - Chapter 7 JOINING TABLES IN A RELATIONAL DATABASE
+
+	Acessar o SQLiteStudio.exe
+		. No menu Database --> Add a database 
+			Na janela 'Database'
+			Obs.: Escolher a pasta na qual estamos guardando os arquivos do SQLite. 
+			Colocar o nome do arquivo como ligacao_tabelas.db e clicar no botão 'Salvar' 
+				Clicar no botão 'Test connection'. 
+				Clicar no botão 'OK'	
+-- Parte 1
+CREATE TABLE departamentos (
+    id_departamento integer,
+    departamento text,
+    cidade text,
+    CONSTRAINT pk_departamentos PRIMARY KEY (id_departamento),
+    CONSTRAINT unique_departamento_cidade UNIQUE (departamento, cidade)
+);
+
+CREATE TABLE funcionarios (
+    matricula integer,
+    primeiro_nome text,
+    ultimo_nome text,
+    salario numeric(10,2),
+    id_departamento integer REFERENCES departamentos (id_departamento),
+    CONSTRAINT pk_funcionarios PRIMARY KEY (matricula)
+);
+
+SELECT * 
+FROM departamentos; 
+
+SELECT * 
+FROM funcionarios;
+
+INSERT INTO departamentos
+VALUES
+    (1, 'Tax', 'Atlanta'),
+    (2, 'IT', 'Boston');
+
+INSERT INTO funcionarios
+VALUES
+    (1, 'Julia', 'Reyes', 115300, 1),
+    (2, 'Janet', 'King', 98000, 1),
+    (3, 'Arthur', 'Pappas', 72700, 2),
+    (4, 'Michael', 'Taylor', 89500, 2);
+
+SELECT * 
+FROM departamentos; 
+
+SELECT * 
+FROM funcionarios;
+
+SELECT *
+FROM funcionarios 
+  JOIN departamentos
+ON funcionarios.id_departamento = departamentos.id_departamento
+ORDER BY funcionarios.id_departamento;
+
+SELECT *
+FROM funcionarios 
+  INNER JOIN departamentos
+ON funcionarios.id_departamento = departamentos.id_departamento
+ORDER BY funcionarios.id_departamento;
+
+SELECT *
+FROM funcionarios,  
+  departamentos
+WHERE funcionarios.id_departamento = departamentos.id_departamento
+ORDER BY funcionarios.id_departamento;
+
+
+-- Parte 2
+CREATE TABLE distrito_2020 (
+    id integer CONSTRAINT pk_distrito_2020 PRIMARY KEY,
+    escola_2020 text
+);
+
+CREATE TABLE distrito_2035 (
+    id integer CONSTRAINT pk_distrito_2035 PRIMARY KEY,
+    escola_2035 text
+);
+
+SELECT * 
+FROM distrito_2020;
+
+SELECT * 
+FROM distrito_2035;
+
+INSERT INTO distrito_2020 VALUES
+    (1, 'Oak Street School'),
+    (2, 'Roosevelt High School'),
+    (5, 'Dover Middle School'),
+    (6, 'Webutuck High School');
+
+INSERT INTO distrito_2035 VALUES
+    (1, 'Oak Street School'),
+    (2, 'Roosevelt High School'),
+    (3, 'Morrison Elementary'),
+    (4, 'Chase Magnet Academy'),
+    (6, 'Webutuck High School');
+
+SELECT * 
+FROM distrito_2020;
+
+SELECT * 
+FROM distrito_2035;
+
+SELECT *
+FROM distrito_2020 
+  JOIN distrito_2035
+ON distrito_2020.id = distrito_2035.id
+ORDER BY distrito_2020.id;
+
+SELECT *
+FROM distrito_2020 
+  INNER JOIN distrito_2035
+ON distrito_2020.id = distrito_2035.id
+ORDER BY distrito_2020.id;
+
+SELECT *
+FROM distrito_2020 
+  JOIN distrito_2035
+ USING (id)
+ORDER BY distrito_2020.id;
+
+SELECT *
+FROM distrito_2020 
+LEFT JOIN distrito_2035
+  ON distrito_2020.id = distrito_2035.id
+ORDER BY distrito_2020.id;
+
+SELECT *
+FROM distrito_2020 
+RIGHT JOIN distrito_2035
+  ON distrito_2035.id = distrito_2020.id
+ORDER BY distrito_2035.id;
+
+SELECT *
+FROM distrito_2020 
+FULL OUTER JOIN distrito_2035
+ON distrito_2020.id = distrito_2035.id
+ORDER BY distrito_2020.id;
+
+SELECT *
+FROM distrito_2020 
+CROSS JOIN distrito_2035
+ORDER BY distrito_2020.id, distrito_2035.id;
+
+SELECT * 
+FROM distrito_2020;
+
+SELECT * 
+FROM distrito_2035;
+
+SELECT *
+FROM distrito_2020 
+LEFT JOIN distrito_2035
+ON distrito_2020.id = distrito_2035.id
+WHERE distrito_2035.id IS NULL;
+
+SELECT id 
+FROM distrito_2020 
+LEFT JOIN distrito_2035
+ON distrito_2020.id = distrito_2035.id;
+
+SELECT distrito_2020.id,
+       distrito_2020.escola_2020,
+       distrito_2035.escola_2035
+FROM distrito_2020 
+LEFT JOIN distrito_2035
+ON distrito_2020.id = distrito_2035.id
+ORDER BY distrito_2020.id;
+
+SELECT distrito_2020.id as  d20_id,
+       distrito_2020.escola_2020 as d20_sch_2020,
+       distrito_2035.escola_2035 as d35_sch_2035
+FROM distrito_2020 
+LEFT JOIN distrito_2035
+ON distrito_2020.id = distrito_2035.id
+ORDER BY distrito_2020.id;
+
+SELECT distrito_2020.id as "District 2020 ID",
+       distrito_2020.escola_2020 as "District 2020 School",
+       distrito_2035.escola_2035 as "District 2035 School"
+FROM distrito_2020 
+LEFT JOIN distrito_2035
+ON distrito_2020.id = distrito_2035.id
+ORDER BY distrito_2020.id;
+
+SELECT d20.id, 
+       d20.escola_2020,
+       d35.escola_2035
+FROM distrito_2020 AS d20 
+LEFT JOIN distrito_2035 AS d35
+ON d20.id = d35.id
+ORDER BY d20.id;
+
+-- Parte 3
+CREATE TABLE distrito_2020_inscricao (
+    id integer,
+    inscricao integer
+);
+
+CREATE TABLE distrito_2020_notas (
+    id integer,
+    notas varchar(10)
+);
+
+SELECT * 
+FROM distrito_2020_inscricao;
+
+SELECT *
+FROM distrito_2020_notas;
+
+INSERT INTO distrito_2020_inscricao
+VALUES
+    (1, 360),
+    (2, 1001),
+    (5, 450),
+    (6, 927);
+
+INSERT INTO distrito_2020_notas
+VALUES
+    (1, 'K-3'),
+    (2, '9-12'),
+    (5, '6-8'),
+    (6, '9-12');
+
+SELECT * 
+FROM distrito_2020_inscricao;
+
+SELECT *
+FROM distrito_2020_notas;
+
+SELECT d20.id,
+       d20.escola_2020,
+       en.inscricao,
+       gr.notas
+FROM distrito_2020 AS d20 
+   JOIN distrito_2020_inscricao AS en
+      ON d20.id = en.id
+   JOIN distrito_2020_notas AS gr
+      ON d20.id = gr.id
+ORDER BY d20.id;
+
+SELECT * 
+FROM distrito_2020;
+
+SELECT * 
+FROM distrito_2035;
+
+SELECT * 
+FROM distrito_2020
+UNION
+SELECT * 
+FROM distrito_2035
+ORDER BY id;
+
+SELECT * 
+FROM distrito_2020
+UNION ALL
+SELECT * 
+FROM distrito_2035
+ORDER BY id;
+
+SELECT '2020' AS year,
+     escola_2020 AS school
+FROM distrito_2020
+UNION ALL
+SELECT '2035' AS year,
+       escola_2035
+FROM distrito_2035
+ORDER BY school, year;
+
+SELECT * 
+FROM distrito_2020
+INTERSECT
+SELECT * 
+FROM distrito_2035
+ORDER BY id;
+
+SELECT * 
+FROM distrito_2020
+EXCEPT
+SELECT * 
+FROM distrito_2035
+ORDER BY id;
+
+SELECT * 
+FROM distrito_2035
+EXCEPT
+SELECT * 
+FROM distrito_2020
+ORDER BY id;

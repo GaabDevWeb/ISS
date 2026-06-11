@@ -1,0 +1,39 @@
+Listas: coleções ordenadas e mutáveis []
+Exemplo 1: Criar e Acessar Lista
+Listas guardam itens em ordem. Use [] para acessar por índice (começa em 0). len() conta quantos itens
+# Cria lista com 3 frutas (elementos separados por vírgula)
+frutas = ['maçã', 'banana', 'laranja']
+# Acessa primeiro item (índice 0)
+print(frutas[0])  # Saída: maçã
+# Acessa último item (índice -1)
+print(frutas[-1])  # Saída: laranja
+# Tamanho da lista (função len)
+print(len(frutas))  # Saída: 3
+
+
+Exemplo 2: Adicionar e Remover Itens
+append() insere no final da lista. remove() remove um item específico
+# Lista inicial vazia
+numeros = []
+# Adiciona 10 no final (append adiciona um item)
+numeros.append(10)
+# Adiciona 20 no final
+numeros.append(20)
+# Remove 10 (remove apaga o primeiro que encontra)
+numeros.remove(10)
+# Mostra lista atual
+print(numeros)  # Saída: [20]
+
+
+Exemplo 3: Iterar Lista com For
+# Lista de notas
+notas = [8.5, 7.0, 9.2]
+# Soma total (acumulador inicia em 0)
+soma = 0
+# For itera cada item (soma += nota adiciona)
+for nota in notas:
+    soma += nota
+# Média simples
+media = soma / len(notas)
+print(f"Média: {media}")  # Saída: 8.233333333333334
+for item in lista passa por cada um. Use para somar, contar ou processar itens.

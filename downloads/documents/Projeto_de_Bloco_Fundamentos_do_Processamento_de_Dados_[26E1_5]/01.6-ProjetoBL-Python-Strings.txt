@@ -1,0 +1,49 @@
+Exemplo 1: cadastro CPF
+cpf = input('Insira seu CPF (digite apenas números) ')
+if len(cpf) == 11 and cpf.isnumeric():
+    print(cpf)
+else:
+    print('Digite seu CPF corretamente e digite apenas números')
+
+
+Exemplo 2: cadastro CPF melhorado
+cpf = input('Insira seu CPF ')
+#tratar o cpf
+#tirar espaços no inicio e no final
+cpf = cpf.strip()
+#tirar os . (pontos)
+cpf = cpf.replace('.', '')
+#tirar os traços (-)
+cpf = cpf.replace('-', '')
+if len(cpf) == 11 and cpf.isnumeric():
+    print(cpf)
+else:
+    print('Digite seu CPF corretamente e digite apenas números')
+
+
+Exemplo 3: cadastro e-mails
+nome = input('Digite seu nome ')
+email = input('Digite o seu e-mail ')
+if nome and email:
+    pos_a = email.find('@')
+    servidor = email[pos_a:]
+    if pos_a != -1 and '.' in servidor:
+        print('Cadastro concluído')
+    else:
+        print('Email inválido')
+else:
+    print('Digite seu nome e e-mail corretamente')
+
+
+Exemplo 4: outras funções
+texto = 'faculdade infnet'
+print(texto.upper()) #letras maiusculas
+print(texto.lower()) #letras minusculas
+print(texto.capitalize()) #inicio em maiusculo
+print(texto.title()) #inicio das palavras em maiusculo
+print(texto.split()) #separa cada palavra
+lista = texto.split()
+''.join(lista)
+print(texto.strip()) #remove espaços
+
+

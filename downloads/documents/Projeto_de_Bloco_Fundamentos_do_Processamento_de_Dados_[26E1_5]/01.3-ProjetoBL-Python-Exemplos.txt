@@ -1,0 +1,43 @@
+## Exemplo 1: Olá, mundo
+print("Olá, mundo! Bem-vindo à aula de Python.")
+
+
+## Exemplo 2: Somando dois números
+print("Vamos somar dois números?")
+n1 = float(input("Digite o primeiro número: "))
+n2 = float(input("Digite o segundo número: "))
+resultado = n1 + n2
+print("A soma é:", resultado)
+
+
+## Exemplo 3 – Verificando maioridade
+idade = int(input("Digite sua idade: "))
+if idade >= 18:
+    print("Você é maior de idade.")
+else:
+    print("Você é menor de idade.")
+
+
+## Exemplo 4 – Média de notas
+notas = [7.5, 8.0, 6.0, 9.0]
+soma = 0
+for nota in notas:
+    soma = soma + nota
+media = soma / len(notas)
+print("Média das notas:", media)
+
+
+## Exemplo 5 - Cadastro de alunos em Python sem banco
+--Lista de dicionário
+alunos = [] 
+while True:
+    nome = input("Nome do aluno (ou ENTER para sair): ")
+    if nome == "":
+        break
+    idade = int(input("Idade: "))
+    curso = input("Curso: ")
+    aluno = {"nome": nome, "idade": idade, "curso": curso}
+    alunos.append(aluno)
+print("Alunos cadastrados:")
+for a in alunos:
+    print(a["nome"], "-", a["idade"], "anos -", a["curso"])

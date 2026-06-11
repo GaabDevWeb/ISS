@@ -1,0 +1,62 @@
+import os  # Importa a biblioteca 'os' para que o Python possa enviar comandos ao sistema operacional (como limpar a tela)
+
+# Criamos a variável 'opcao' com um texto vazio para que o loop 'while' possa começar
+opcao = ""
+
+# Inicia um laço de repetição que só para quando a variável 'opcao' for igual a "0"
+while opcao != "0":
+    # Exibe o título do menu no console
+    print("\n--- MENU DE OPERAÇÕES ---")
+    # Exibe as opções disponíveis para o usuário
+    print("1. Adição (+)")
+    print("2. Subtração (-)")
+    print("3. Multiplicação (*)")
+    print("4. Divisão (/)")
+    print("0. Sair e Limpar Tela")
+
+    # O comando input() pausa o programa e espera o usuário digitar algo, guardando o valor em 'opcao'
+    opcao = input("\nEscolha uma opção: ")
+
+    # Verifica se o usuário escolheu a opção de sair (zero)
+    if opcao == "0":
+        # 'os.name' verifica o sistema: 'nt' significa Windows. Se for, usa 'cls', senão usa 'clear' (Mac/Linux)
+        if os.name == 'nt':
+            os.system('cls')  # Envia o comando de limpar terminal para o Windows
+        else:
+            os.system('clear') # Envia o comando de limpar terminal para Linux ou Mac
+            
+        # Exibe uma mensagem final após a tela ser limpa
+        print("Programa encerrado com sucesso!")
+        # O comando 'break' interrompe o loop 'while' imediatamente, finalizando o script
+        break 
+
+    # O operador 'in' verifica se o que o usuário digitou está dentro da lista de opções válidas
+    if opcao in ["1", "2", "3", "4"]:
+        # O input() recebe texto, por isso usamos float() para converter em número decimal e permitir cálculos
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+
+        # Se a opção foi '1', realiza a operação de soma
+        if opcao == "1":
+            print(f"Resultado: {num1} + {num2} = {num1 + num2}")
+            
+        # Se a opção foi '2', realiza a subtração
+        elif opcao == "2":
+            print(f"Resultado: {num1} - {num2} = {num1 - num2}")
+            
+        # Se a opção foi '3', realiza a multiplicação
+        elif opcao == "3":
+            print(f"Resultado: {num1} * {num2} = {num1 * num2}")
+            
+        # Se a opção foi '4', entra na lógica de divisão
+        elif opcao == "4":
+            # Estrutura condicional para garantir que o segundo número não seja zero (erro matemático)
+            if num2 != 0:
+                print(f"Resultado: {num1} / {num2} = {num1 / num2}")
+            else:
+                # Mensagem de aviso caso o usuário tente dividir por zero
+                print("Erro: Não é possível dividir por zero!")
+    
+    # Se o usuário digitar qualquer coisa que não esteja entre 0 e 4, cai neste bloco
+    else:
+        print("Opção inválida! Por favor, escolha um número de 0 a 4.")

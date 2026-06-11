@@ -1,0 +1,32 @@
+Exemplo 1: Condicional Simples (if/else)
+# Verifica se idade >= 18 (operador >= para comparação)
+idade = 20
+if idade >= 18:
+    print("Maior de idade!")  # Executa só se condição verdadeira
+else:
+    print("Menor de idade.")  # Executa se falsa
+
+
+Exemplo 2: Múltiplas Condições (if/elif/else)
+# Nota do aluno para classificar desempenho
+nota = 85
+if nota >= 90:
+    print("Aprovado com Excelente!")  # Primeira condição
+elif nota >= 70:
+    print("Aprovado!")  # Segunda condição (elif só roda se anterior falsa)
+elif nota >= 50:
+    print("Recuperação!")  # Terceira condição
+else:
+    print("Reprovado.")  # Caso final (todas falsas)
+
+
+Exemplo 3: Condições Compostas (and/or/not)
+# Verifica elegibilidade para voto (idade e nacionalidade)
+idade = 22
+brasileiro = True
+if idade >= 16 and brasileiro:
+    print("Pode votar!")  # and: ambas verdadeiras
+elif idade < 16 or not brasileiro:
+    print("Não pode votar.")  # or: pelo menos uma verdadeira | not: inverte booleano
+else:
+    print("Condição inválida.")

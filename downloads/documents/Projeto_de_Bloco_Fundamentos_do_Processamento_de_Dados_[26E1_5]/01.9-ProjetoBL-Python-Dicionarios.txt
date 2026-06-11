@@ -1,0 +1,39 @@
+Dicionário: coleções chave-valor, mutáveis e ordenados {}
+Exemplo 1: Criar e Acessar Dicionário
+Dicionários usam {chave: valor}. Acesse por chave dict['chave']. get() evita erros se chave não existir.
+# Cria dicionário com chaves e valores (chave: valor)
+pessoa = {'nome': 'Ana', 'idade': 25, 'cidade': 'SP'}
+# Acessa valor por chave (ex: nome)
+print(pessoa['nome'])  # Saída: Ana
+# Acessa com get() (seguro, retorna None se não existir)
+print(pessoa.get('idade'))  # Saída: 25
+# Verifica se chave existe
+print('cidade' in pessoa)  # Saída: True
+
+
+Exemplo 2: Adicionar e Remover Itens
+Adicione com dict['nova_chave'] = valor. Atualize igual. del dict['chave'] remove. Mutável como listas
+# Dicionário inicial
+carro = {'marca': 'Toyota', 'ano': 2020}
+# Adiciona nova chave-valor
+carro['cor'] = 'azul'
+# Atualiza valor existente
+carro['ano'] = 2022
+# Remove chave (del apaga)
+del carro['cor']
+# Mostra dicionário atual
+print(carro)  # Saída: {'marca': 'Toyota', 'ano': 2022}
+
+
+Exemplo 3: Iterar Dicionário com For
+for chave in dict passa por chaves. Acesse valor com dict[chave]. Bom para somar ou processar dados.
+# Dicionário de notas
+notas = {'Ana': 8.5, 'João': 7.0, 'Maria': 9.2}
+# Soma valores (acumulador inicia em 0)
+soma = 0
+# For itera chaves (por padrão)
+for aluno in notas:
+    soma += notas[aluno]
+# Média simples
+media = soma / len(notas)
+print(f"Média: {media}")  # Saída: 8.233333333333334

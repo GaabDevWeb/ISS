@@ -1,0 +1,39 @@
+Tuplas: coleções ordenadas e imutáveis ()
+Tuplas são imutáveis – após criadas, não pode adicionar, remover ou alterar itens. 
+Exemplo 1: Criar e Acessar Tupla
+Tuplas usam () e não mudam após criadas. Acessa como listas por índice
+# Cria tupla com 3 números (use () ou vírgulas, imutável!)
+coordenadas = (10, 20, 30)
+# Acessa segundo item (índice 1)
+print(coordenadas[1])  # Saída: 20
+# Acessa último item (índice -1)
+print(coordenadas[-1])  # Saída: 30
+# Tamanho da tupla (função len funciona igual lista)
+print(len(coordenadas))  # Saída: 3
+
+
+Exemplo 2: Desempacotamento de Tupla
+a, b = tupla separa itens em variáveis
+# Tupla com nome e idade
+pessoa = ("João", 25)
+# Desempacota: atribui cada item a uma variável
+nome, idade = pessoa
+# Usa as variáveis
+print(f"Nome: {nome}, Idade: {idade}")  # Saída: João, 25
+# Tupla de um item precisa vírgula: (5,)
+unico = (5,)
+print(type(unico))  # Saída: <class 'tuple'>
+
+
+Exemplo 3: Iterar Tupla com For
+for item in tupla passa por todos. Boa para dados fixos que não muda
+# Tupla de cidades
+cidades = ("SP", "RJ", "MG")
+# Soma comprimentos (acumulador inicia em 0)
+total_letras = 0
+# For itera cada item (igual lista)
+for cidade in cidades:
+    total_letras += len(cidade)
+# Média simples
+media = total_letras / len(cidades)
+print(f"Média de letras: {media}")  # Saída: 2.0

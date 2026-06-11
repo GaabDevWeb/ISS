@@ -1,0 +1,29 @@
+CREATE TABLE alunos (
+    id INT PRIMARY KEY,
+    nome VARCHAR(100),
+    idade INT,
+    curso VARCHAR(100)
+);
+
+INSERT INTO alunos (id, nome, idade, curso)
+VALUES (1, 'Ana Souza', 19, 'Sistemas de Informação');
+
+INSERT INTO alunos (id, nome, idade, curso)
+VALUES (2, 'Maria Oliveira', 20, 'Ciência de Dados');
+
+-- Buscar todos os alunos
+SELECT * FROM alunos;
+
+-- Buscar nome e idade somente
+SELECT nome, idade FROM alunos;
+
+-- Buscar alunos com idade maior ou igual a 20
+SELECT * FROM alunos
+WHERE idade >= 20;
+
+UPDATE alunos
+SET curso = 'Engenharia de Software'
+WHERE id = 2;
+
+DELETE FROM alunos
+WHERE id = 1;

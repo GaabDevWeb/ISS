@@ -1,0 +1,276 @@
+. https://learning.oreilly.com/library/view/practical-sql-2nd/9781098129866/c09.xhtml --> Livro Practical SQL, 2nd Edition - Anthony DeBarros - Chapter 9 EXTRACTING INFORMATION BY GROUPING AND SUMMARIZING
+
+	Acessar o SQLiteStudio.exe
+		. No menu Database --> Add a database 
+			Na janela 'Database'
+			Obs.: Escolher a pasta na qual estamos guardando os arquivos do SQLite. 
+			Colocar o nome do arquivo como ligacao_tabelas_group_sum.db e clicar no botão 'Salvar' 
+				Clicar no botão 'Test connection'. 
+				Clicar no botão 'OK'	
+
+. Criaremos três tabelas para conter os dados das pesquisas de 2018, 2017 e 2016. (Muitas vezes, é útil avaliar vários anos de dados para discernir tendências.) Em seguida, resumiremos os dados mais interessantes em cada tabela e uniremos as tabelas para ver como as medidas mudaram ao longo do tempo.
+
+CREATE TABLE pls_fy2016_libraries (
+    stabr text NOT NULL,
+    fscskey text CONSTRAINT fscskey_2016_pkey PRIMARY KEY,
+    libid text NOT NULL,
+    libname text NOT NULL,
+    address text NOT NULL,
+    city text NOT NULL,
+    zip text NOT NULL,
+    phone text NOT NULL, 
+    visits integer NOT NULL, 
+    longitude text NOT NULL,
+    latitude text NOT NULL
+);
+
+select * 
+from pls_fy2016_libraries;
+
+A partir do menu Tools --> Import
+	Em 'Table to import to'
+		Em 'Database': link_tables_group_sum.db
+		Em 'Table': pls_fy2016_libraries
+		Clicar no botão 'Next'.
+	Em 'Data source to import from'
+		Em 'Data source type' CSV
+		Clicar no ícone que indica uma pasta, selecionar o caminho do arquivo PLS_FY2016.csv, selecionar o arquivo PLS_FY2016.csv e clicar no botão 'Abrir'.
+		Em 'Text encoding' System
+		Em 'Data source options' 
+			Marcar a opção 'First line represents CSV column names'
+			Em 'Field separator' marcar a opção '; (semicolon)'
+		Clicar no botão 'Finish'. 
+
+select count(*) 
+from pls_fy2016_libraries;
+
+select * 
+from pls_fy2016_libraries;
+
+
+CREATE TABLE pls_fy2017_libraries (
+    stabr text NOT NULL,
+    fscskey text CONSTRAINT fscskey_2017_pkey PRIMARY KEY,
+    libid text NOT NULL,
+    libname text NOT NULL,
+    address text NOT NULL,
+    city text NOT NULL,
+    zip text NOT NULL,
+    phone text NOT NULL, 
+    visits integer NOT NULL, 
+    longitude text NOT NULL,
+    latitude text NOT NULL
+);
+
+select *
+from pls_fy2017_libraries;
+
+A partir do menu Tools --> Import
+	Em 'Table to import to'
+		Em 'Database': link_tables_group_sum.db
+		Em 'Table': pls_fy2017_libraries
+		Clicar no botão 'Next'.
+	Em 'Data source to import from'
+		Em 'Data source type' CSV
+		Clicar no ícone que indica uma pasta, selecionar o caminho do arquivo PLS_FY2017.csv, selecionar o arquivo PLS_FY2017.csv e clicar no botão 'Abrir'.
+		Em 'Text encoding' System
+		Em 'Data source options' 
+			Marcar a opção 'First line represents CSV column names'
+			Em 'Field separator' marcar a opção '; (semicolon)'
+		Clicar no botão 'Finish'. 
+
+select count(*) 
+from pls_fy2017_libraries;
+
+select * 
+from pls_fy2017_libraries;
+
+
+CREATE TABLE pls_fy2018_libraries (
+    stabr text NOT NULL,
+    fscskey text CONSTRAINT fscskey_2018_pkey PRIMARY KEY,
+    libid text NOT NULL,
+    libname text NOT NULL,
+    address text NOT NULL,
+    city text NOT NULL,
+    zip text NOT NULL,
+    phone text NOT NULL, 
+    visits integer NOT NULL, 
+    longitude text NOT NULL,
+    latitude text NOT NULL
+);
+
+select *
+from pls_fy2018_libraries;
+
+A partir do menu Tools --> Import
+	Em 'Table to import to'
+		Em 'Database': link_tables_group_sum.db
+		Em 'Table': pls_fy2018_libraries
+		Clicar no botão 'Next'.
+	Em 'Data source to import from'
+		Em 'Data source type' CSV
+		Clicar no ícone que indica uma pasta, selecionar o caminho do arquivo PLS_FY2018.csv, selecionar o arquivo PLS_FY2018.csv e clicar no botão 'Abrir'.
+		Em 'Text encoding' System
+		Em 'Data source options' 
+			Marcar a opção 'First line represents CSV column names'
+			Em 'Field separator' marcar a opção '; (semicolon)'
+		Clicar no botão 'Finish'. 
+
+select count(*) 
+from pls_fy2018_libraries;
+
+select * 
+from pls_fy2018_libraries;
+
+
+SELECT count(*)
+FROM pls_fy2016_libraries;
+
+SELECT count(*)
+FROM pls_fy2017_libraries;
+
+SELECT count(*)
+FROM pls_fy2018_libraries;
+
+
+SELECT count(phone)
+FROM pls_fy2016_libraries;
+
+SELECT count(phone)
+FROM pls_fy2017_libraries;
+
+SELECT count(phone)
+FROM pls_fy2018_libraries;
+
+
+SELECT count(DISTINCT libname)
+FROM pls_fy2016_libraries;
+
+SELECT count(DISTINCT libname)
+FROM pls_fy2017_libraries;
+
+SELECT count(DISTINCT libname)
+FROM pls_fy2018_libraries;
+
+
+SELECT max(visits), min(visits)
+FROM pls_fy2016_libraries;
+
+SELECT max(visits), min(visits)
+FROM pls_fy2017_libraries;
+
+SELECT max(visits), min(visits)
+FROM pls_fy2018_libraries;
+Obs.: 
+1. Um valor de -1 indica uma "não resposta" para essa coluna. 
+2. Um valor de -3 indica "não aplicável" e é usado quando uma agência de biblioteca fecha temporariamente ou permanentemente.
+
+
+SELECT stabr
+FROM pls_fy2016_libraries
+GROUP BY stabr
+ORDER BY stabr;
+
+SELECT stabr
+FROM pls_fy2017_libraries
+GROUP BY stabr
+ORDER BY stabr;
+
+SELECT stabr
+FROM pls_fy2018_libraries
+GROUP BY stabr
+ORDER BY stabr;
+Obs.: Funciona como se fosse um distinct. 
+
+
+SELECT city, stabr
+FROM pls_fy2016_libraries
+GROUP BY city, stabr
+ORDER BY city, stabr;
+
+SELECT city, stabr
+FROM pls_fy2017_libraries
+GROUP BY city, stabr
+ORDER BY city, stabr;
+
+SELECT city, stabr
+FROM pls_fy2018_libraries
+GROUP BY city, stabr
+ORDER BY city, stabr;
+
+
+SELECT stabr, count(*)
+FROM pls_fy2016_libraries
+GROUP BY stabr
+ORDER BY count(*) DESC;
+
+SELECT stabr, count(*)
+FROM pls_fy2017_libraries
+GROUP BY stabr
+ORDER BY count(*) DESC;
+
+SELECT stabr, count(*)
+FROM pls_fy2018_libraries
+GROUP BY stabr
+ORDER BY count(*) DESC;
+Obs.: Número de agências por estado. 
+
+
+SELECT sum(visits) AS visits_2016
+FROM pls_fy2016_libraries
+WHERE visits >= 0;
+
+SELECT sum(visits) AS visits_2017
+FROM pls_fy2017_libraries
+WHERE visits >= 0;
+
+SELECT sum(visits) AS visits_2018
+FROM pls_fy2018_libraries
+WHERE visits >= 0;
+
+
+SELECT sum(pls16.visits) AS visits_2016, 
+       sum(pls17.visits) AS visits_2017,
+       sum(pls18.visits) AS visits_2018
+FROM pls_fy2018_libraries pls18
+       JOIN pls_fy2017_libraries pls17 
+          ON pls18.fscskey = pls17.fscskey
+       JOIN pls_fy2016_libraries pls16 
+          ON pls18.fscskey = pls16.fscskey
+WHERE pls18.visits >= 0
+       AND pls17.visits >= 0
+       AND pls16.visits >= 0;
+
+
+SELECT pls18.stabr,
+       sum(pls16.visits) AS visits_2016,
+       sum(pls17.visits) AS visits_2017,
+       sum(pls18.visits) AS visits_2018,
+       round (cast (sum(pls18.visits) - sum(pls17.visits) as float) / cast (sum(pls17.visits) as float) *100,1) as chg_2018_17, 
+       round (cast (sum(pls17.visits) - sum(pls16.visits) as float) / cast (sum(pls16.visits) as float) *100,1) as chg_2017_16
+FROM pls_fy2018_libraries pls18
+       JOIN pls_fy2017_libraries pls17 ON pls18.fscskey = pls17.fscskey
+       JOIN pls_fy2016_libraries pls16 ON pls18.fscskey = pls16.fscskey
+WHERE pls18.visits >= 0
+       AND pls17.visits >= 0
+       AND pls16.visits >= 0
+GROUP BY pls18.stabr
+ORDER BY chg_2018_17 DESC;
+
+
+SELECT pls18.stabr,
+       sum(pls16.visits) AS visits_2016,
+       sum(pls17.visits) AS visits_2017,
+       sum(pls18.visits) AS visits_2018,
+       round (cast (sum(pls18.visits) - sum(pls17.visits) as float) / cast (sum(pls17.visits) as float) *100,1) as chg_2018_17, 
+       round (cast (sum(pls17.visits) - sum(pls16.visits) as float) / cast (sum(pls16.visits) as float) *100,1) as chg_2017_16
+FROM pls_fy2018_libraries pls18
+       JOIN pls_fy2017_libraries pls17 ON pls18.fscskey = pls17.fscskey
+       JOIN pls_fy2016_libraries pls16 ON pls18.fscskey = pls16.fscskey
+WHERE pls18.visits >= 0
+       AND pls17.visits >= 0
+       AND pls16.visits >= 0
+GROUP BY pls18.stabr
+HAVING sum(pls18.visits) > 50000000
+ORDER BY chg_2018_17 DESC;

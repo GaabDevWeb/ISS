@@ -1,0 +1,29 @@
+import random  # Biblioteca para gerar números aleatórios
+import os      # Para limpar a tela
+
+# O computador escolhe um número secreto entre 1 e 20
+numero_secreto = random.randint(1, 20)
+tentativas = 0
+chute = 0
+
+os.system('cls' if os.name == 'nt' else 'clear') # Limpa a tela ao começar
+print("--- JOGO DE ADIVINHAÇÃO ---")
+print("Tente adivinhar o número que eu pensei entre 1 e 20!")
+
+# O loop continua enquanto o jogador não acertar
+while chute != numero_secreto:
+    try:
+        tentativas += 1 # Soma 1 ao contador de tentativas a cada rodada
+        chute = int(input(f"\nTentativa {tentativas} - Qual seu chute? "))
+
+        if chute < numero_secreto:
+            print("Muito baixo! Tente um número maior. ⬆️")
+        elif chute > numero_secreto:
+            print("Muito alto! Tente um número menor. ⬇️")
+        else:
+            print(f"🎉 PARABÉNS! Você acertou em {tentativas} tentativas!")
+            
+    except ValueError:
+        print("Apenas números inteiros são aceitos!")
+
+print("Obrigado por jogar!")
