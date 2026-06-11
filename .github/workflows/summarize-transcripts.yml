@@ -84,6 +84,10 @@ jobs:
           set -o pipefail
           node .github/scripts/summarize-transcripts.mjs 2>&1 | tee summarize.log
           SUMMARY="$(grep -E '^Concluído\. Publicados:' summarize.log | tail -1 || true)"
+          FAILURES="$(grep -E '^Concluído\. Publicados:.*\| falhas: [1-9]' summarize.log | tail -1 || true)"
+          if [[ -n "$FAILURES" ]]; then
+            echo "::warning::Pipeline concluiu com falhas parciais — ver log summarize.log"
+          fi
           if [[ -z "$SUMMARY" ]]; then
             SUMMARY="(resumo não encontrado no log — ver Actions)"
           fi
