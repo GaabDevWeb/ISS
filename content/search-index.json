@@ -203,5 +203,85 @@
     "discipline": "fluencia-ia",
     "slug": "etica-verificacao-critica-ecossistema-ias-generativas",
     "excerpt": "Princípios éticos, controle humano, limites das IAs generativas e orquestração prática de ferramentas no mercado criativo e técnico Conceitos: ética em IA, princípios de Floridi, controle humano, IAs generativas, orquestração de ferramentas, alucinação e contexto longo, neutralidade algorítmica, verificação crítica de outputs, orquestração multi-ferramenta, alucinação, verificação crítica, personalização de prompts."
+  },
+  {
+    "discipline": "fluencia-ia",
+    "slug": "engenharia-de-prompt-fundamentos",
+    "excerpt": "Como direcionar LLMs com prompts claros: persona, componentes estruturais, formatos de saída e few-shot learning Conceitos: engenharia de prompt, tokens iniciais, persona, contexto tarefa entrada saída restrições, zero-shot one-shot few-shot, formato de saída JSON, prompts reutilizáveis, memória de conversa, componentes do prompt (tarefa contexto entrada saída restrições), zero-shot learning, one-shot learning, few-shot learning."
+  },
+  {
+    "discipline": "fluencia-ia",
+    "slug": "tecnicas-avancadas-prompt-auditoria",
+    "excerpt": "Chain of Thought, decomposição em etapas, refinamento com rubricas e auditoria crítica de respostas de LLM Conceitos: chain of thought, decomposição em etapas, serviço versus modelo, auditoria de respostas, refinamento com rubricas, engenharia de prompt, condutor versus passageiro."
+  },
+  {
+    "discipline": "fluencia-ia",
+    "slug": "prompts-resumos-aula-notebooklm",
+    "excerpt": "Construção iterativa de prompts para resumir transcrições WebVTT, decomposição List-to-Most e uso do NotebookLM como assistente ancorado em fontes Conceitos: transcrição WebVTT, engenharia de prompts, seis ingredientes do prompt, List-to-Most, decomposição de tarefas, formato de saída estruturado, NotebookLM, RAG, system prompt, template de saída Markdown, limite de fontes."
+  },
+  {
+    "discipline": "projeto-bloco",
+    "slug": "joins-views-ambientes-estrutura-python",
+    "excerpt": "Revisão de modelagem relacional, consultas com JOIN e VIEWs, ambientes de deploy e organização de um projeto Python com SQLite Conceitos: banco transacional vs analítico, chave primária e estrangeira, relacionamento N para N, JOIN em SQL, VIEW como camada de visualização, ambientes dev homologação produção, estrutura modular em Python, funções com def, import de bibliotecas, sqlite3 e CRUD, dados estruturados vs não estruturados, chave primária."
+  },
+  {
+    "discipline": "projeto-bloco",
+    "slug": "integracao-python-sql-crud-regras-negocio",
+    "excerpt": "Revise a arquitetura do projeto e-commerce, execute CRUD com sqlite3, entenda Views como camada de visualização e decida onde colocar regras de negócio Conceitos: SELECT FROM JOIN WHERE, sqlite3 e cursor, CRUD com commit, modularização Python, chaves primárias e estrangeiras, Views SQL, regras de negócio, ambientes dev homolog produção, list comprehension, debug passo a passo, sqlite3 cursor commit, CRUD Python."
+  },
+  {
+    "discipline": "projeto-bloco",
+    "slug": "debug-python-normalizacao-ecommerce",
+    "excerpt": "Depuração passo a passo em Python, decomposição de problemas e refatoração de modelo relacional no projeto e-commerce Conceitos: debug e depuração passo a passo, zip e enumerate, list comprehension, min max e índice de listas, decomposição de problemas, normalização de dados, pedido compra e pedido venda, commit e rollback, custo de refatoração, debug passo a passo, formatação f-string, min max e index."
+  },
+  {
+    "discipline": "python-processamento-dados",
+    "slug": "tratamento-excecoes-pipelines-dados",
+    "excerpt": "try/except, hierarquia de exceções, normalização de strings e contagem com dicionários em pipelines de arquivos de texto Conceitos: exceções, try/except, hierarquia de exceções, context manager with open, normalização de strings, contagem com dicionário, serialização JSON, exceções Python, FileNotFoundError, ValueError, ZeroDivisionError, strip lower split."
+  },
+  {
+    "discipline": "python-processamento-dados",
+    "slug": "try-except-else-finally",
+    "excerpt": "Tratamento estruturado de exceções: hierarquia, ordem dos blocos, raise, exceções customizadas e boas práticas para pipelines de dados Conceitos: try / except, hierarquia de exceções, except múltiplo, bloco else, bloco finally, raise, exceções customizadas, boas práticas de tratamento de erro, except múltiplo com tupla, captura com as e."
+  },
+  {
+    "discipline": "python-processamento-dados",
+    "slug": "pass-excecoes-e-debug-pdb",
+    "excerpt": "Instrução pass em blocos de exceção, alternativas seguras e depuração interativa com pdb Conceitos: pass, try/except/else, supressão de exceções, contextlib.suppress, traceback, pdb, erros de sintaxe, runtime e lógica, try/except, continue vs break, logging em pipelines, erros de sintaxe runtime e lógica."
+  },
+  {
+    "discipline": "python-processamento-dados",
+    "slug": "cliente-http-requests-apis",
+    "excerpt": "Consumir APIs REST com a biblioteca requests, interpretar status codes, corpo da resposta e headers de forma robusta Conceitos: biblioteca requests, objeto Response, métodos HTTP GET e POST, status codes HTTP, raise_for_status, Content-Type, response.json, response.text, response.content, headers HTTP, GET e POST HTTP, response.json text content."
+  },
+  {
+    "discipline": "python-processamento-dados",
+    "slug": "requisicoes-http-python-get-post",
+    "excerpt": "Consumir APIs REST com requests, parametrizar chamadas, validar respostas e persistir dados JSON em arquivos locais Conceitos: requisições HTTP, biblioteca requests, GET e POST, query string, headers HTTP, objeto Response, status code, raise_for_status, Content-Type, parsing JSON, serialização JSON, status code HTTP."
+  },
+  {
+    "discipline": "sql-modelagem-relacional",
+    "slug": "manipulacao-dados-sql-ddl",
+    "excerpt": "INSERT, UPDATE, DELETE, ALTER TABLE, TRUNCATE e DROP — com boas práticas de verificação, integridade referencial e DuckDB no Deep Note Conceitos: INSERT, UPDATE, DELETE, ALTER TABLE, TRUNCATE, DROP TABLE, integridade referencial, DuckDB, CURRENT_DATE, CASE em UPDATE, TRUNCATE TABLE, FOREIGN KEY."
+  },
+  {
+    "discipline": "sql-modelagem-relacional",
+    "slug": "exclusao-dados-backup-alter-table",
+    "excerpt": "DELETE seguro com backup, diferença entre exclusão lógica e física, DDL com ALTER/DROP e distinção entre NULL e string vazia Conceitos: DELETE, DROP, DML e DDL, backup com CTAS, exclusão lógica, ALTER TABLE, constraints, NULL vs string vazia, TRUNCATE no SQLite, DROP TABLE, CREATE TABLE AS SELECT, INSERT INTO SELECT."
+  },
+  {
+    "discipline": "sql-modelagem-relacional",
+    "slug": "modelagem-hotel-reservas-ocupacao-servicos",
+    "excerpt": "Construção de um modelo relacional completo para hotel, com reservas, ocupação efetiva e consumo de serviços via tabela de junção Conceitos: modelagem entidade-relacionamento, chave primária e estrangeira, cardinalidade 1:N e N:N, tabela de junção, reserva versus ocupação, normalização (1FN), DB Designer, chave primária, chave estrangeira, cardinalidade 1:N, cardinalidade N:N, primeira forma normal."
+  },
+  {
+    "discipline": "sql-modelagem-relacional",
+    "slug": "joins-e-ligacao-de-tabelas",
+    "excerpt": "Como unir tabelas relacionais com INNER, LEFT, RIGHT, FULL OUTER e CROSS JOIN, além de UNION, INTERSECT e EXCEPT Conceitos: chave primária e chave estrangeira, INNER JOIN, LEFT JOIN e RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, UNION e UNION ALL, INTERSECT e EXCEPT, apelidos de tabela e coluna, LEFT JOIN, chave estrangeira, UNION UNION ALL, INTERSECT."
+  },
+  {
+    "discipline": "sql-modelagem-relacional",
+    "slug": "assessment-at-guia-execucao",
+    "excerpt": "Como executar o AT no DeepNote com DuckDB, resolver consultas sobre dados CSV crus e projetar o marketplace normalizado Conceitos: assessment AT, DeepNote e DuckDB, importação CSV sem restrições, DDL e DML, INNER JOIN e LEFT JOIN, antijoin, agregação e CASE, self-join, normalização 1FN 2FN 3FN, modelagem entidade-relacionamento, Assessment AT DeepNote, importação CSV DuckDB."
   }
 ]
