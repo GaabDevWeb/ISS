@@ -71,6 +71,54 @@ function dateVariants(ddmmyyyy) {
   return new Set([dd, mm, yyyy, yy, String(parseInt(dd, 10)), String(parseInt(mm, 10))]);
 }
 
+function lessonInRange(lesson, range) {
+  if (!Array.isArray(range) || range.length < 2) return true;
+  const [min, max] = range;
+  return lesson >= min && lesson <= max;
+}
+
+function expandFilenamePattern(pattern, lesson) {
+  const nn = String(lesson).padStart(2, "0");
+  const n = String(lesson);
+  return pattern.replace(/\{NN\}/g, nn).replace(/\{N\}/g, n);
+}
+
+function pathMatchesFilenamePattern(relPath, lesson, pattern) {
+  const prefix = expandFilenamePattern(pattern, lesson);
+  const parts = relPath.replace(/\\/g, "/").split("/");
+  for (const part of parts) {
+    if (part === prefix || part.startsWith(prefix)) return true;
+  }
+  return false;
+}
+
+export function pickDocumentsSource(entry, lesson) {
+  if (!entry?.sources?.length) return null;
+  if (lesson == null) return entry.sources[0];
+  for (const source of entry.sources) {
+    if (lessonInRange(lesson, source.lesson_range)) return source;
+  }
+  return null;
+}
+
+async function resolveSourceDir(documentsRoot, source) {
+  if (!source?.documents_dir) return null;
+  const candidate = join(documentsRoot, source.documents_dir);
+  try {
+    const s = await stat(candidate);
+    if (s.isDirectory()) return candidate;
+  } catch { /* */ }
+  return null;
+}
+
+export async function matchLessonByFilename(disciplineDir, lesson, pattern) {
+  const allFiles = await collectFiles(disciplineDir, true);
+  return allFiles.filter((filePath) => {
+    const rel = filePath.slice(disciplineDir.length + 1);
+    return pathMatchesFilenamePattern(rel, lesson, pattern);
+  });
+}
+
 export async function matchLessonFolder(disciplineDir, lesson, ddmmyyyy) {
   let entries;
   try {
@@ -280,9 +328,12 @@ export function logDocumentContextIndex(vttRel, result) {
   console.log(`[contexto] Modo: ${ctx.mode}`);
   console.log(`[contexto] Disciplina (downloads): ${ctx.disciplineKey}`);
   console.log(`[contexto] Pasta documents: ${docsRel}`);
+  if (ctx.sourceLabel) {
+    console.log(`[contexto] Fonte: ${ctx.sourceLabel}`);
+  }
   if (ctx.lessonDir) {
     console.log(`[contexto] Pasta da aula: ${ctx.lessonDir.split(/[/\\]/).pop()}`);
-  } else if (ctx.mode === "per_lesson") {
+  } else if (ctx.mode === "per_lesson" || ctx.mode === "per_lesson_filename") {
     console.log("[contexto] Pasta da aula: (não encontrada — fallback na raiz da disciplina)");
   }
   const included = ctx.index.filter((e) => e.status === "included");
@@ -410,6 +461,62 @@ async function buildPromptSection({
   return { promptSection, index, promptChars: promptSection.length };
 }
 
+async function resolveFilesForSource(source, disciplineDir, parsed, cfgMode) {
+  let mode = cfgMode;
+  let lessonDir = null;
+  let files = [];
+  let matchNote = "";
+  const lessonMatch = source?.lesson_match ?? (cfgMode === "per_lesson" ? "folder" : "discipline_all");
+
+  if (lessonMatch === "discipline_all" || cfgMode === "discipline_all") {
+    return {
+      mode: "discipline_all",
+      lessonDir: null,
+      files: await collectFiles(disciplineDir, false),
+      matchNote: "",
+    };
+  }
+
+  if (!parsed) {
+    return {
+      mode: "per_lesson",
+      lessonDir: null,
+      files: [],
+      matchNote: "nome VTT sem padrão Aula_NN_-_DDMMYYYY",
+    };
+  }
+
+  if (lessonMatch === "filename") {
+    mode = "per_lesson_filename";
+    const pattern = source.filename_pattern;
+    if (!pattern) {
+      return {
+        mode,
+        lessonDir: null,
+        files: [],
+        matchNote: `aula ${parsed.lesson} — filename_pattern em falta na config`,
+      };
+    }
+    files = await matchLessonByFilename(disciplineDir, parsed.lesson, pattern);
+    if (!files.length) {
+      matchNote =
+        `aula ${parsed.lesson} — nenhum ficheiro com padrão ` +
+        `'${expandFilenamePattern(pattern, parsed.lesson)}'`;
+    }
+    return { mode, lessonDir: null, files, matchNote };
+  }
+
+  lessonDir = await matchLessonFolder(disciplineDir, parsed.lesson, parsed.ddmmyyyy);
+  if (!lessonDir) {
+    matchNote = `aula ${parsed.lesson} data ${parsed.ddmmyyyy} — pasta aula-* não encontrada`;
+    mode = "discipline_all_fallback";
+    files = await collectFiles(disciplineDir, false);
+  } else {
+    files = await collectFiles(lessonDir, true);
+  }
+  return { mode, lessonDir, files, matchNote };
+}
+
 export async function resolveDocumentContext(vttPath, root, options = {}) {
   const maxTotalChars = options.maxTotalChars ?? 80_000;
   const maxFileChars = options.maxFileChars ?? 25_000;
@@ -420,12 +527,36 @@ export async function resolveDocumentContext(vttPath, root, options = {}) {
   if (!m) return { ctx: null, missReason: "VTT fora de downloads/" };
   const disciplineKey = m[1];
   const vttRel = rel.replace(/^downloads\//, "");
+  const entry = config.disciplines?.[disciplineKey] ?? {};
+  const cfgMode = entry.mode ?? config.default_mode ?? "discipline_all";
+  const parsed = parseVttLesson(vttPath);
 
-  const { dir: disciplineDir, mode: cfgMode } = await resolveDocumentsDisciplineDirAsync(
-    disciplineKey,
-    documentsRoot,
-    config,
-  );
+  let disciplineDir = null;
+  let sourceLabel = "";
+  let activeSource = null;
+
+  if (entry.sources?.length) {
+    activeSource = pickDocumentsSource(entry, parsed?.lesson ?? null);
+    if (!activeSource) {
+      return {
+        ctx: null,
+        missReason: `nenhuma source em documents-context para aula ${parsed?.lesson ?? "?"}`,
+      };
+    }
+    disciplineDir = await resolveSourceDir(documentsRoot, activeSource);
+    const range = activeSource.lesson_range;
+    sourceLabel =
+      `${activeSource.documents_dir} (${activeSource.lesson_match}` +
+      (range ? `, aulas ${range[0]}–${range[1]}` : "") +
+      ")";
+  } else {
+    const resolved = await resolveDocumentsDisciplineDirAsync(disciplineKey, documentsRoot, config);
+    disciplineDir = resolved.dir;
+    activeSource = {
+      lesson_match: cfgMode === "per_lesson" ? "folder" : "discipline_all",
+    };
+  }
+
   if (!disciplineDir) {
     return {
       ctx: null,
@@ -433,31 +564,17 @@ export async function resolveDocumentContext(vttPath, root, options = {}) {
     };
   }
 
-  let mode = cfgMode;
-  let lessonDir = null;
-  let files = [];
-  let matchNote = "";
-  const parsed = parseVttLesson(vttPath);
-
-  if (cfgMode === "per_lesson") {
-    if (parsed) {
-      lessonDir = await matchLessonFolder(disciplineDir, parsed.lesson, parsed.ddmmyyyy);
-      if (!lessonDir) matchNote = `aula ${parsed.lesson} data ${parsed.ddmmyyyy} — pasta aula-* não encontrada`;
-    } else {
-      matchNote = "nome VTT sem padrão Aula_NN_-_DDMMYYYY";
-    }
-    if (lessonDir) files = await collectFiles(lessonDir, true);
-    else {
-      mode = "discipline_all_fallback";
-      files = await collectFiles(disciplineDir, false);
-    }
-  } else {
-    files = await collectFiles(disciplineDir, false);
-  }
+  const { mode, lessonDir, files, matchNote } = await resolveFilesForSource(
+    activeSource,
+    disciplineDir,
+    parsed,
+    cfgMode,
+  );
 
   if (!files.length) {
     let reason = `0 ficheiros em ${disciplineDir.split(/[/\\]/).pop()}`;
     if (matchNote) reason += `; ${matchNote}`;
+    if (sourceLabel) reason += `; fonte: ${sourceLabel}`;
     return { ctx: null, missReason: reason };
   }
 
@@ -476,7 +593,7 @@ export async function resolveDocumentContext(vttPath, root, options = {}) {
     return { ctx: null, missReason: "ficheiros encontrados mas nenhum conteúdo legível para o prompt" };
   }
 
-  if (matchNote && mode === "discipline_all_fallback") {
+  if (matchNote && (mode === "discipline_all_fallback" || mode === "per_lesson_filename")) {
     index.unshift({
       rel: "(resolução)",
       status: "included",
@@ -496,6 +613,7 @@ export async function resolveDocumentContext(vttPath, root, options = {}) {
       promptSection,
       index,
       promptChars,
+      sourceLabel,
     },
     missReason: null,
   };
