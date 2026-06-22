@@ -1,0 +1,143 @@
+Acessar o SQLiteStudio.exe
+	. No menu Database --> Add a database 
+		Na janela 'Database'
+		Obs.: Escolher a pasta na qual estamos guardando os arquivos do SQLite. 
+		Colocar o nome do arquivo como hotel.db e clicar no botão 'Salvar' 
+			Clicar no botão 'Test connection'. 
+			Clicar no botão 'OK'	
+
+CREATE TABLE Clientes (
+    RG integer,
+    nome text,
+    celular text,
+    sexo text, 
+    CONSTRAINT pk_clientes PRIMARY KEY (RG)
+);
+
+INSERT INTO Clientes
+VALUES 
+	(1, 'Maria', '900000000', 'F'),
+	(2, 'João', '900000001', 'M'),
+	(3, 'Ana', '900000002', 'F'),
+	(4, 'Rodrigo', '900000003', 'M'),
+	(5, 'Carol', '900000004', 'F'),
+	(6, 'Ivo', '900000005', 'M');
+
+
+CREATE TABLE Servicos (
+    codigo integer,
+    tipo text,
+    descricao text,
+    valor integer, 
+    CONSTRAINT pk_servicos PRIMARY KEY (codigo)
+);
+
+INSERT INTO Servicos
+VALUES 
+	(10, 'Limpeza', 'Lavar roupa', 100),
+	(11, 'Limpeza', 'Passar roupa', 150),
+	(12, 'Alimentação', 'Café da manhã', 150),
+	(13, 'Alimentação', 'Almoço para 1 pessoa', 180),
+	(14, 'Alimentação', 'Almoço para 2 pessoa', 320),
+	(15, 'Consumo', 'Chocolate', 10),
+	(16, 'Consumo', 'Água', 8),
+	(17, 'Consumo', 'Refrigerante', 10),
+	(18, 'Consumo', 'Cerveja', 12),
+	(19, 'Consumo', 'Amendoim', 10);
+
+CREATE TABLE Quartos (
+    numero_quarto integer,
+    andar text,
+    tipo text,
+    descricao text, 
+    preco integer, 
+    CONSTRAINT pk_quartos PRIMARY KEY (numero_quarto)
+);
+
+INSERT INTO Quartos
+VALUES 
+	(101, '1', 'Simples', 'Quarto simples', 150),
+	(102, '1', 'Simples', 'Quarto simples', 150),
+	(103, '1', 'Simples', 'Quarto simples', 150),
+	(104, '1', 'Simples', 'Quarto simples', 150),
+	(105, '1', 'Simples', 'Quarto simples', 150),
+	(106, '1', 'Simples', 'Quarto simples', 150),
+	(201, '2', 'Luxo', 'Quarto luxo', 250),
+	(202, '2', 'Luxo', 'Quarto luxo', 250),
+	(203, '2', 'Luxo', 'Quarto luxo', 250),
+	(204, '2', 'Luxo', 'Quarto luxo', 250),
+	(301, '3', 'Extra luxo', 'Quarto extra luxo', 450),
+	(302, '3', 'Extra luxo', 'Quarto extra luxo', 450);
+
+CREATE TABLE Reservas (
+    id integer,
+    numero_quarto integer REFERENCES Quartos (numero_quarto),
+    data_inicial text,
+    qtd_dias integer, 
+    RG integer REFERENCES Clientes (RG),
+    CONSTRAINT pk_reservas PRIMARY KEY (id)
+);
+
+INSERT INTO Reservas
+VALUES 
+	(1, 101, '01-jan-2026', 3, 1),
+	(2, 103, '03-jan-2026', 6, 2),
+	(3, 201, '04-jan-2026', 5, 3),
+	(4, 204, '04-jan-2026', 4, 5),
+	(5, 302, '05-jan-2026', 4, 6),
+	(6, 202, '06-jan-2026', 3, 4);
+
+CREATE TABLE Ocupados (
+    id integer,
+    RG integer REFERENCES Clientes (RG),
+    numero_quarto integer REFERENCES Quartos (numero_quarto),
+    data_inicio text,
+    data_fim text, 
+    CONSTRAINT pk_ocupados PRIMARY KEY (id)
+);
+
+INSERT INTO Ocupados
+VALUES 
+	(1, 1, 101, '01-jan-2026', '04-jan2026'),
+	(2, 3, 201, '04-jan-2026', '09-jan2026'),
+	(3, 4, 202, '06-jan-2026', '09-jan2026');
+
+CREATE TABLE Ocupados_Servicos (
+    id integer,
+    id_ocupados integer REFERENCES Ocupados (id),
+    codigo_servico integer REFERENCES Servicos (codigo), 
+    CONSTRAINT pk_ocupados PRIMARY KEY (id)
+);
+
+INSERT INTO Ocupados_Servicos
+VALUES 
+	(1, 1, 10),
+	(2, 1, 12),
+	(3, 1, 13),
+	(4, 1, 18),
+	(5, 1, 19),
+	(6, 2, 14),
+	(7, 2, 15),
+	(8, 2, 16),
+	(9, 3, 14),
+	(10, 3, 17),
+	(11, 3, 18),
+	(12, 3, 19);
+
+SELECT * 
+FROM Clientes; 
+
+SELECT *
+FROM Servicos; 
+
+SELECT *
+FROM Quartos;
+
+SELECT *
+FROM Reservas;
+
+SELECT *
+FROM Ocupados;
+
+SELECT *
+FROM Ocupados_Servicos; 

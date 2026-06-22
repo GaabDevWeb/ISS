@@ -1,0 +1,2414 @@
+WEBVTT
+
+1
+00:00:22.480 --> 00:00:24.520
+Kadu Gertners: Turma. Esse
+
+2
+00:00:37.950 --> 00:00:41.919
+Kadu Gertners: excelente noite, pessoal. Tranquilo. Tudo numa boa.
+
+3
+00:00:43.730 --> 00:00:48.339
+Kadu Gertners: Você. Você é. Eu me motei mesmo, Pedro. Agora que eu reparei também, cara. Obrigado,
+
+4
+00:00:49.980 --> 00:00:57.379
+Kadu Gertners: maravilha. Maravilha, Alan. Maravilha, Pedro, pessoal. Excelente noite aí. Excelente noite, Gabriel Sandré,
+
+5
+00:00:57.490 --> 00:01:03.130
+Kadu Gertners: pessoal, sejam bem vindos aí a mais um dia de aula juntos aqui.
+
+6
+00:01:03.720 --> 00:01:08.130
+Kadu Gertners: E bom, para dar continuidade ao que eu falei na terça feira.
+
+7
+00:01:08.700 --> 00:01:16.350
+Kadu Gertners: Hoje, turma, a ideia realmente é só nós finalizarmos a matéria propriamente dita.
+
+8
+00:01:16.560 --> 00:01:36.260
+Kadu Gertners: Eu quero passar esse material para vocês. Nós vamos falar aí. Nós vamos usar o Sql de estúdio de novo e galera. Tem um procedimento hoje que eu fiz um pouco diferente. Eu tinha comentado com vocês que em algumas aulas, eu tinha feito uma tradução
+
+9
+00:01:37.030 --> 00:01:49.599
+Kadu Gertners: para facilitar um pouco a leitura de vocês. Excelente noite, Adailton. Mas, cara, desculpem me, eu acabei não tendo tempo. Aí eu estou um pouco ocupado com minhas atividades,
+
+10
+00:01:49.730 --> 00:02:05.470
+Kadu Gertners: e eu acabei não tendo tempo para fazer isso para vocês. Então ficou em inglês, mas a gente tenta falar aqui com calma, com tranquilidade independente. Na verdade, até de estar em inglês ou estar em português, né? Ok, Pedro,
+
+11
+00:02:05.580 --> 00:02:24.620
+Kadu Gertners: o mais importante é nós termos uma ideia do conteúdo dos valores das colunas, mesmo de cada registro de cada linha. E aí. Nós vamos hoje tentar fazer essa análise aí com carinho, para nós entendermos um pouquinho o que eu estou querendo dizer.
+
+12
+00:02:25.110 --> 00:02:29.639
+Kadu Gertners: Tá legal, bom, turma, antes de começar.
+
+13
+00:02:29.760 --> 00:02:34.730
+Kadu Gertners: Eu não sei se vocês já tiveram um tempo aí, mas é sempre bom perguntar.
+
+14
+00:02:34.730 --> 00:02:51.629
+Kadu Gertners: Vocês já começaram a dar uma lida aí um pouquinho no ate alguém já começou a fazer o ate? Já pintou alguma dúvida aí? Você já quer perguntar alguma coisa para mim agora? De curiosidade ou para ajudar você e os amigos?
+
+15
+00:02:51.750 --> 00:02:55.729
+Kadu Gertners: Porque assim, galera, se tiver já alguma dúvida, pode trazer.
+
+16
+00:02:55.870 --> 00:03:06.350
+Kadu Gertners: Nós já falamos aqui na aula direitinho para vocês começarem um a ajudar o outro a ir e a botarem o trabalho de vocês para frente. Ok, João, maravilha.
+
+17
+00:03:07.400 --> 00:03:19.450
+Kadu Gertners: Não tranquilo. Gabriel Sandré. Aí nós falamos na próxima terça. Também não tem problema. Lembra que o prazo é só na outra terça, ainda que será dia vinte e três de junho. Tá,
+
+18
+00:03:22.970 --> 00:03:41.949
+Kadu Gertners: tá sem problema. Pedro, entendi que você está no The Python. Por enquanto. Galera, tudo tranquilo não tem problema no tempo de vocês. É isso aí. Vocês têm que fazer a análise de vocês. Vocês analisam aí, mas sempre que for necessário. Ou vocês lembrarem, tragam aqui
+
+19
+00:03:41.950 --> 00:03:46.849
+Kadu Gertners: para quando nos encontrarmos. Cara, nós vamos ter dois encontros na semana que vem.
+
+20
+00:03:46.850 --> 00:03:58.040
+Kadu Gertners: Provavelmente na terça. Eu vou finalizar aquela parte que nós estávamos vendo junto na terça. Mas na quinta eu vou estar aqui. Eu vou entrar na aula.
+
+21
+00:03:58.110 --> 00:04:11.289
+Kadu Gertners: Eu inclusive devo também para eu me organizar aqui. Eu vou fazer um levantamento aí dos Tps galera. E é sempre bom falar nisso, né? Eu só vou corrigir
+
+22
+00:04:11.390 --> 00:04:16.550
+Kadu Gertners: o At de quem entregou os três Tps.
+
+23
+00:04:16.839 --> 00:04:35.859
+Kadu Gertners: Se você deixou de entregar algum Tp: você tem que entregar o Tp e se você estiver com problema com isso, manda mensagem que eu abro lá. O acesso para você enviar com urgência o respectivo Tp que você não enviou. Porque galera é uma regra importante no infinite,
+
+24
+00:04:36.070 --> 00:04:52.309
+Kadu Gertners: vocês têm que fazer o Tp de forma obrigatória. Ele não conta, ponto não conta, ponto. Vocês têm que entregar. E aí eu tenho que ir lá ver. Eu faço algumas anotações minhas. Enfim, mas vocês têm a obrigatoriedade de entregar
+
+25
+00:04:52.380 --> 00:04:58.359
+Kadu Gertners: e é pré requisito. Ah, não. Um aluno não entregou um. Eu nem corrijo o At.
+
+26
+00:04:58.510 --> 00:04:59.950
+Kadu Gertners: É simples assim.
+
+27
+00:05:00.760 --> 00:05:05.470
+Kadu Gertners: Beleza só para fazer essa lembrança aí também, legal.
+
+28
+00:05:06.660 --> 00:05:10.439
+Kadu Gertners: Vamos botar para frente, turma. Ok, Pedro, maravilha.
+
+29
+00:05:10.760 --> 00:05:14.849
+Kadu Gertners: Ok, Gabriel, Sandré, bom, vamos pra cima, galera. Vamos lá.
+
+30
+00:05:22.100 --> 00:05:26.190
+Kadu Gertners: Bom, deixa eu compartilhar a janela e vamos.
+
+31
+00:05:27.440 --> 00:05:31.680
+Kadu Gertners: E aí cair pra dentro. Vamos lá.
+
+32
+00:05:34.600 --> 00:05:35.459
+Kadu Gertners: Bom dia.
+
+33
+00:05:35.830 --> 00:05:43.889
+Kadu Gertners: Acredito que vocês já estão vendo. Não tem problema. Não, Pedro Pingueiro. Seja bem vindo, irmão. O importante é você estar aqui conosco. Não tem problema. Não,
+
+34
+00:05:44.660 --> 00:05:49.340
+Kadu Gertners: eu vou começar inclusive a matéria agora. Ainda nem comecei a falar da matéria propriamente dita.
+
+35
+00:05:50.110 --> 00:05:51.100
+Kadu Gertners: Vamos lá.
+
+36
+00:05:52.020 --> 00:05:57.709
+Kadu Gertners: É bom. Deixa eu compartilhar. Ah, já compartilhei.
+
+37
+00:05:58.020 --> 00:05:59.360
+Kadu Gertners: É verdade.
+
+38
+00:06:01.180 --> 00:06:05.699
+Kadu Gertners: E agora deixa eu botar lá no nosso arquivo
+
+39
+00:06:06.030 --> 00:06:13.489
+Kadu Gertners: maravilha. Bom, turma, a aula de hoje. Ela remete a essa página aqui.
+
+40
+00:06:13.640 --> 00:06:23.180
+Kadu Gertners: Essa página, esse link aqui, que eu vou abri lo rapidinho aqui para nós termos uma ideia. É esse material aqui,
+
+41
+00:06:23.570 --> 00:06:24.480
+Kadu Gertners: tá?
+
+42
+00:06:25.470 --> 00:06:34.260
+Kadu Gertners: Deixa ele carregar um pouquinho, ó, extraindo informações por meio de grupamento e de resumo, né?
+
+43
+00:06:34.470 --> 00:06:38.580
+Kadu Gertners: Então é essa matéria aqui? Ó
+
+44
+00:06:38.750 --> 00:06:41.710
+Kadu Gertners: que nós vamos ver um pouquinho. Ó, tá vendo?
+
+45
+00:06:42.860 --> 00:06:44.940
+Kadu Gertners: Então nós vamos pegar e.
+
+46
+00:06:44.940 --> 00:06:49.400
+Jayy Ferreira: Nós não estamos vendo os professores. Nós não estamos vendo.
+
+47
+00:06:50.000 --> 00:06:52.350
+Kadu Gertners: Vocês não estão vendo ué?
+
+48
+00:06:54.620 --> 00:06:56.389
+Kadu Gertners: Eu não compartilhei.
+
+49
+00:06:57.190 --> 00:07:02.080
+Kadu Gertners: Não, Eita Ferro não tem problema. Não, vamos lá,
+
+50
+00:07:03.000 --> 00:07:08.610
+Kadu Gertners: Caraca. Será que eu devo. Sem querer ter bom, enfim, não tem problema. A gente compartilha de novo.
+
+51
+00:07:08.920 --> 00:07:09.970
+Kadu Gertners: Problema nenhum.
+
+52
+00:07:11.590 --> 00:07:14.689
+Kadu Gertners: Desculpe me aí. Obrigado pela correção aí. Obrigado.
+
+53
+00:07:16.580 --> 00:07:23.430
+Kadu Gertners: Vamos lá. Cadê meu filho? Vai!
+
+54
+00:07:27.880 --> 00:07:28.730
+Kadu Gertners: Bom,
+
+55
+00:07:30.100 --> 00:07:40.080
+Kadu Gertners: acredito que agora vocês estão vendo. Eu tinha parado de compartilhar. Nelson. Obrigado. A amiga também avisou aqui. Ok, Alan. Ok, Gabriel Crepaldi. Maravilha.
+
+56
+00:07:40.540 --> 00:07:42.620
+Kadu Gertners: Acho que já acertamos isso aí.
+
+57
+00:07:43.040 --> 00:07:50.710
+Kadu Gertners: Então, vamos lá, pessoal. O Link então é esse aqui galera. É o arquivo da aula de hoje, tá?
+
+58
+00:07:50.740 --> 00:08:05.820
+Kadu Gertners: É esse arquivo aqui da aula de hoje, que é o arquivo da etapa nove da nossa disciplina tá legal que está direitinho lá no infinite online. Lá naquela nossa pasta do infinity online da nossa disciplina.
+
+59
+00:08:06.080 --> 00:08:15.040
+Kadu Gertners: Tá legal além disso, eu disponibilizei dentro da nossa pasta um arquivo Zip
+
+60
+00:08:15.260 --> 00:08:19.770
+Kadu Gertners: galera. Esse arquivo, Zip, é esse arquivo aqui. Ó,
+
+61
+00:08:20.920 --> 00:08:23.090
+Kadu Gertners: ó, deixa eu mostrar para vocês.
+
+62
+00:08:24.440 --> 00:08:30.139
+Kadu Gertners: O arquivo Zip é esse aqui. Ó ó, esse
+
+63
+00:08:30.620 --> 00:08:42.980
+Kadu Gertners: Pls Fy dois mil e dezasseis, dois mil e dezassete, dois mil e dezoito. Zip, esse arquivo aqui compactado. Ele tem esses três arquivinhos aqui.
+
+64
+00:08:43.120 --> 00:08:55.029
+Kadu Gertners: O dois mil e dezasseis Csv, O dois mil e dezassete Csv e o dois mil e dezoito Csv. Então, quando nós fizermos o procedimento do sqlattitude hoje,
+
+65
+00:08:55.250 --> 00:09:00.109
+Kadu Gertners: eu vou carregar os dados desses três arquivinhos aqui.
+
+66
+00:09:00.860 --> 00:09:06.330
+Kadu Gertners: Beleza que nós vamos fazer juntos aqui no decorrer da aula, beleza.
+
+67
+00:09:07.330 --> 00:09:15.969
+Kadu Gertners: Bom, vamos lá então, caldozão. Vamos em primeiro lugar, abrir
+
+68
+00:09:16.330 --> 00:09:19.650
+Kadu Gertners: o essa que é lá de estúdio. Então vamos lá.
+
+69
+00:09:19.920 --> 00:09:22.980
+Kadu Gertners: Aqui de novo, no nosso amigo Windows Explorer.
+
+70
+00:09:24.570 --> 00:09:27.890
+Kadu Gertners: Beleza, Sklight.
+
+71
+00:09:31.620 --> 00:09:37.180
+Kadu Gertners: Pá, psq light,
+
+72
+00:09:44.040 --> 00:09:50.340
+Kadu Gertners: beleza pura e aí eu vou
+
+73
+00:09:51.430 --> 00:09:59.410
+Kadu Gertners: executar o arquivinho, que é até redundante. Mas é. Vamos
+
+74
+00:09:59.580 --> 00:10:07.069
+Kadu Gertners: ativá lo aí, né? Para falar outra palavra, vamos ativar esse arquivo aqui. Sklattitude Z.
+
+75
+00:10:07.390 --> 00:10:14.119
+Kadu Gertners: Então dois cliques nele, e nós vamos aqui para a parte
+
+76
+00:10:14.300 --> 00:10:21.089
+Kadu Gertners: do Skla de estúdio galera. Conforme nós temos feito. Eu vou fazer aquele procedimento. Eu vou tirar
+
+77
+00:10:21.940 --> 00:10:29.050
+Kadu Gertners: as linhas daqui para não nos confundir. E eu vou tirar esse banco de dados daqui,
+
+78
+00:10:29.420 --> 00:10:33.469
+Kadu Gertners: beleza. Então eu vou remover o banco de dados daqui.
+
+79
+00:10:33.630 --> 00:10:43.570
+Kadu Gertners: Confirmo com Yes aqui do lado esquerdo. Ele some da nossa visão do Sk Light Studio, Beleza.
+
+80
+00:10:43.700 --> 00:10:45.860
+Kadu Gertners: E aí vamos
+
+81
+00:10:46.000 --> 00:10:56.400
+Kadu Gertners: é começar a ler aqui o nosso passo a passo. Então vamos lá. Eu abri o Slides Studio, beleza. E lá no menu de sempre,
+
+82
+00:10:56.910 --> 00:11:02.479
+Kadu Gertners: eu venho aqui, ó banco de dados, adicionar um banco de dados
+
+83
+00:11:02.640 --> 00:11:09.369
+Kadu Gertners: na janelinha. Banco de dados. Nós clicamos aqui na pasta para abrir a pasta.
+
+84
+00:11:09.500 --> 00:11:26.410
+Kadu Gertners: Então, beleza é essa pasta? Mesmo que nós queremos. E aí eu vou botar esse nome de arquivo aqui. Ligação tabelas, ligação sublinhado, tabelas sublinhado. Grupsublinhado. Sam, Db,
+
+85
+00:11:27.320 --> 00:11:29.319
+Kadu Gertners: Copie. O nome desse arquivo.
+
+86
+00:11:29.790 --> 00:11:32.949
+Kadu Gertners: Coloco aqui ó aonde está o nome.
+
+87
+00:11:33.490 --> 00:11:35.670
+Kadu Gertners: Selecionam esse arquivo.
+
+88
+00:11:36.010 --> 00:11:41.989
+Kadu Gertners: Reparem que o arquivo que eu acabei de colocá lo. Ele fica representado aqui.
+
+89
+00:11:42.090 --> 00:11:43.150
+Kadu Gertners: E ele
+
+90
+00:11:43.300 --> 00:11:52.639
+Kadu Gertners: em relação ao nome do arquivo. Ele sugere de dar o nome da base com o mesmo nome, sem a extensão.
+
+91
+00:11:53.020 --> 00:12:10.750
+Kadu Gertners: Então, ó, nós vamos manter o mesmo nome. E esse nome vai aparecer aqui do lado esquerdo. Agora, depois de clicar no botão. Ok, tá bom. Se quiser, pode fazer um teste de conexão. Mas inclusive, na maioria das vezes, esse teste de conexão vai dar.
+
+92
+00:12:10.960 --> 00:12:16.000
+Kadu Gertners: Vai ocorrer com sucesso, até porque
+
+93
+00:12:16.140 --> 00:12:24.730
+Kadu Gertners: nós estamos colocando o banco de dados dentro da própria máquina. Quer dizer, no meu notebook. No caso,
+
+94
+00:12:24.930 --> 00:12:44.129
+Kadu Gertners: ela é ao mesmo tempo a máquina, que é o servidor do banco de dados? Quer dizer, quem está disponibilizando os dados, assim como também é o lado do cliente. A ferramenta na qual nós vamos usar para acessar o banco de dados.
+
+95
+00:12:44.630 --> 00:12:55.990
+Kadu Gertners: Tá legal. Então, o que é então? Caduzão? O servidor é exatamente esse arquivo. Db: Aqui ele é onde está o banco de dados? Ele é o lado servidor.
+
+96
+00:12:56.240 --> 00:13:10.519
+Kadu Gertners: E o que é a parte do cliente? Olha, é exatamente essa interface que nós usamos aqui do Sklatt Studio. Porque nós conseguimos interagir com um banco de dados ao irmos e executando comandos.
+
+97
+00:13:10.690 --> 00:13:28.919
+Kadu Gertners: Tá legal. Criar a tabela, adicionar uma coluna a mais para uma tabela poxa, fazer o comando. Insert executar o comando. Insert executar o comando Up Date, executar o comando de elite, executar os comandos. Algumas opções do comando Select
+
+98
+00:13:29.020 --> 00:13:33.950
+Kadu Gertners: que nós vimos aqui no decorrer dessa aula, e etc.
+
+99
+00:13:34.340 --> 00:13:41.589
+Kadu Gertners: Então vou direto hoje aqui. Não vou nem clicar no testar, tá? Vou clicar direto em: Ok,
+
+100
+00:13:41.750 --> 00:13:49.700
+Kadu Gertners: ó aí, ó, ele passa a mostrar do lado esquerdo. E lembrem se, ele parece que ele fica desativado
+
+101
+00:13:49.890 --> 00:14:01.040
+Kadu Gertners: para ele meio que mostrar para nós que ele está ativo. Dá dois cliques aqui. Aí ele abre. Parece que ele está ativo, né? Ele torna se ativo
+
+102
+00:14:01.160 --> 00:14:06.300
+Kadu Gertners: e ele passa a mostrar as opções, tabelas e visualizações aqui, do lado esquerdo.
+
+103
+00:14:06.750 --> 00:14:09.580
+Kadu Gertners: Beleza maravilha.
+
+104
+00:14:09.920 --> 00:14:15.870
+Kadu Gertners: Então, ó, fizemos isso até aqui. Legal, esse trecho aqui,
+
+105
+00:14:15.990 --> 00:14:21.280
+Kadu Gertners: eu acho legal nós darmos uma lida. Olha só o que ele está falando. Olha só.
+
+106
+00:14:21.600 --> 00:14:24.140
+Kadu Gertners: Criaremos três tabelas
+
+107
+00:14:24.280 --> 00:14:31.729
+Kadu Gertners: para conter os dados das pesquisas de dois mil e dezoito, dois mil e dezassete e dois mil e dezasseis.
+
+108
+00:14:31.860 --> 00:14:34.830
+Kadu Gertners: Olha só o que está entre parênteses aqui.
+
+109
+00:14:35.560 --> 00:14:41.800
+Kadu Gertners: Muitas vezes é útil avaliar vários anos de dados
+
+110
+00:14:41.900 --> 00:14:49.740
+Kadu Gertners: para nós discernirmos as tendências. O que tem acontecido ao passar do tempo,
+
+111
+00:14:49.940 --> 00:15:01.230
+Kadu Gertners: galera, ao falar desse assunto, ele tem tudo a ver com uma sigla que nós já falamos. Em algum momento lá para trás das nossas aulas, que é a sigla Bi
+
+112
+00:15:01.480 --> 00:15:16.970
+Kadu Gertners: Business Intelligence, em português, a inteligência do negócio que muitas empresas estão usando Bi hoje em dia, mas muitas empresas estão tentando
+
+113
+00:15:17.090 --> 00:15:25.229
+Kadu Gertners: com carinho com calma. Elas estão tentando cada vez mais entender os dados que já existem na empresa.
+
+114
+00:15:25.910 --> 00:15:40.570
+Kadu Gertners: Então essa colocação aqui, da análise de comparação de anos, de meses, de determinados períodos de um ano com outro ou de um dia com outro ou de uma semana com a outra
+
+115
+00:15:40.570 --> 00:15:50.169
+Kadu Gertners: galera, a unidade de tempo. Vocês vão analisar de acordo logicamente, com o negócio de vocês no negócio que vocês trabalham,
+
+116
+00:15:50.290 --> 00:16:00.490
+Kadu Gertners: é que as pessoas também vinculadas à parte de negócio, elas vão poder falar para vocês algumas coisas para vocês aprenderem, caso vocês não saibam.
+
+117
+00:16:01.120 --> 00:16:07.840
+Kadu Gertners: Então é por isso que essa colocação aí é tão importante.
+
+118
+00:16:08.440 --> 00:16:21.619
+Kadu Gertners: Em seguida, nós vamos resumir os dados mais interessantes em cada tabela, e nós vamos unir as tabelas para ver como as medidas mudam ao longo do tempo.
+
+119
+00:16:22.480 --> 00:16:23.670
+Kadu Gertners: Então vamos lá.
+
+120
+00:16:24.200 --> 00:16:33.880
+Kadu Gertners: Nós vamos fazer o seguinte, galera. Nós vamos criar a primeira tabela, que é a de dois mil e dezasseis libras bibliotecas.
+
+121
+00:16:34.480 --> 00:16:43.689
+Kadu Gertners: E aí nós vamos botar essas coluninhas aqui. S T a. Br: é texto. Repare todas as colunas aqui.
+
+122
+00:16:43.860 --> 00:16:46.379
+Kadu Gertners: Ó, eles não aceitam o nulo
+
+123
+00:16:46.820 --> 00:16:50.720
+Kadu Gertners: caduzon, o que significa isso mesmo quando está escrito not new
+
+124
+00:16:50.980 --> 00:16:54.390
+Kadu Gertners: pessoal, quando está escrito note uma coluna,
+
+125
+00:16:54.520 --> 00:17:03.559
+Kadu Gertners: ele quer dizer que aquela coluna tem que ser preenchida de forma obrigatória no momento do insetic
+
+126
+00:17:04.810 --> 00:17:07.749
+Kadu Gertners: a coluna não pode ficar.
+
+127
+00:17:07.859 --> 00:17:14.090
+Kadu Gertners: Desculpa, não pode ficar com um valor nulo para aquela coluna
+
+128
+00:17:14.890 --> 00:17:20.520
+Kadu Gertners: tá legal. Isso obriga que a pessoa no momento do insetic
+
+129
+00:17:20.790 --> 00:17:24.419
+Kadu Gertners: o momento do inerte, a pessoa tem que botar um valor ali dentro.
+
+130
+00:17:25.599 --> 00:17:26.589
+Kadu Gertners: Ok?
+
+131
+00:17:26.920 --> 00:17:36.300
+Kadu Gertners: E no momento do update. A pessoa tem que trocar um valor que exista para aquele registro daquela coluna e botar um novo valor
+
+132
+00:17:36.590 --> 00:17:44.280
+Kadu Gertners: não pode mudar um valor que exista e Botar nu. Ele não vai aceitar. Ele vai dar problema.
+
+133
+00:17:44.790 --> 00:17:45.949
+Kadu Gertners: Tá legal.
+
+134
+00:17:46.340 --> 00:17:48.010
+Kadu Gertners: Bom, aí.
+
+135
+00:17:48.450 --> 00:17:57.510
+Kadu Gertners: Aqui tem a próxima coluna. Essa coluna chamada Fsc é uma chave que é texto.
+
+136
+00:17:57.810 --> 00:18:04.650
+Kadu Gertners: E aqui, reparem, nós estamos dando um nome para essa constante para essa restrição.
+
+137
+00:18:04.780 --> 00:18:14.660
+Kadu Gertners: O nome da coluna sublinhado dois mil e dezasseis sublinhado Pk pequei aqui, indicando pra América.
+
+138
+00:18:14.830 --> 00:18:23.630
+Kadu Gertners: E aí aqui do lado está falando a palavra reservada. Opa, essa coluna é a primeriquia, a chave primária da tabela
+
+139
+00:18:24.430 --> 00:18:25.540
+Kadu Gertners: legal.
+
+140
+00:18:25.710 --> 00:18:30.419
+Kadu Gertners: A próxima coluna é a Libby, que é texto
+
+141
+00:18:30.890 --> 00:18:40.289
+Kadu Gertners: Libname, que é texto Adress, endereço que é texto, siricidade, texto Zip, que é o Cep. Texto:
+
+142
+00:18:40.740 --> 00:18:54.980
+Kadu Gertners: Fone Text, o telefone é texto também Visit se o número de visitas longitude é texto, também
+
+143
+00:18:55.430 --> 00:19:01.889
+Kadu Gertners: visitas aqui. Eu esqueci até de falar, né? Desculpem me. Visitas é inteiro ínteger,
+
+144
+00:19:02.500 --> 00:19:07.130
+Kadu Gertners: o longitude é texto e o latitude texto.
+
+145
+00:19:07.370 --> 00:19:20.920
+Kadu Gertners: Reparem que todas as colunas estão com note nu, à exceção dessa. Mas quando você fala uma praia americ está subentendendo que a praia Meriky também tem que ser preenchida com algum valor.
+
+146
+00:19:21.930 --> 00:19:24.290
+Kadu Gertners: Ok, legal.
+
+147
+00:19:24.430 --> 00:19:28.130
+Kadu Gertners: Então pegamos a nossa primeira tabela.
+
+148
+00:19:29.320 --> 00:19:30.889
+Kadu Gertners: Vamos colocar para cá.
+
+149
+00:19:31.500 --> 00:19:33.710
+Kadu Gertners: Selecionamos a tabela.
+
+150
+00:19:34.300 --> 00:19:42.630
+Kadu Gertners: E aí, play, ó aqui, do lado esquerdo, passou a existir essa tabela.
+
+151
+00:19:43.580 --> 00:19:48.819
+Kadu Gertners: Pls sublinhado F Y dois mil e dezasseis. Sublinhado libras.
+
+152
+00:19:49.290 --> 00:20:03.679
+Kadu Gertners: Maravilha, caduzon. Podemos dar uma olhada se essa tabela realmente está vazia? Bom, como nós acabamos de criá la. E não fizemos nenhuma carga de dados e nenhum Insert. A Tabela tem que estar vazia.
+
+153
+00:20:03.950 --> 00:20:09.030
+Kadu Gertners: Então, ó select asterístico Froome a partir da tabela.
+
+154
+00:20:09.380 --> 00:20:13.950
+Kadu Gertners: Ó tabela vazia, beleza.
+
+155
+00:20:14.500 --> 00:20:29.240
+Kadu Gertners: Bom, caduzon. Vamos começar a fazer os importes aí então, ó primeiro importe. Nós vamos fazer vamos lá, lá em ferramentas no menu, ferramentas, né ou em Tools.
+
+156
+00:20:29.630 --> 00:20:33.740
+Kadu Gertners: Vamos na opção importar ou como está aqui, importe.
+
+157
+00:20:34.220 --> 00:20:41.370
+Kadu Gertners: Então vamos lá, ferramentas importar.
+
+158
+00:20:42.030 --> 00:20:49.619
+Kadu Gertners: Aí, ó em tablet to import. Quer dizer, aqui na parte de importar os dados, importar a tabela para
+
+159
+00:20:50.370 --> 00:20:55.420
+Kadu Gertners: nós. Vamos botar aqui o nome do arquivo, né?
+
+160
+00:20:55.850 --> 00:21:01.849
+Kadu Gertners: O nome do artista, o nome do banco de dados, né?
+
+161
+00:21:03.790 --> 00:21:07.410
+Kadu Gertners: O nome do banco de dados aqui
+
+162
+00:21:08.420 --> 00:21:12.189
+Kadu Gertners: que nós vamos botar o nome do banco de dados. E é esse aqui.
+
+163
+00:21:12.680 --> 00:21:14.719
+Kadu Gertners: Deixa eu botar isso aqui.
+
+164
+00:21:16.090 --> 00:21:18.079
+Kadu Gertners: Deixa eu acertar isso aqui.
+
+165
+00:21:21.510 --> 00:21:30.360
+Kadu Gertners: Ó, o nome do banco de dados é esse aqui. Ó ligação, tabelas groupsum. É esse aqui mesmo. Só tem um Database é esse mesmo.
+
+166
+00:21:31.010 --> 00:21:38.780
+Kadu Gertners: A tabela é a única que tem também. Por enquanto. Pls Fy dois mil e dezasseis libras.
+
+167
+00:21:38.980 --> 00:21:47.720
+Kadu Gertners: Ó, não tem nenhuma outra tabela por enquanto beleza é essa tabela mesmo clicar no botão Next,
+
+168
+00:21:47.830 --> 00:21:54.889
+Kadu Gertners: que significa próximo beleza. Aí, o que nós vamos fazer
+
+169
+00:21:56.280 --> 00:22:02.179
+Kadu Gertners: nessa nova janela? Na origem dos dados para fazer o procedimento de importar
+
+170
+00:22:02.650 --> 00:22:11.939
+Kadu Gertners: aqui, no tipo da origem do dado o tipo de fonte de dados é o arquivo Csv mesmo. Está certinho. Isso aí.
+
+171
+00:22:12.350 --> 00:22:13.980
+Kadu Gertners: Maravilha.
+
+172
+00:22:14.240 --> 00:22:25.490
+Kadu Gertners: Bom, clicar no ícone que indica uma pasta e selecionar o caminho. Aonde está esse arquivo? O arquivo Csv do ano de dois mil e dezasseis.
+
+173
+00:22:25.750 --> 00:22:28.269
+Kadu Gertners: Maravilha, vamos clicar na pasta.
+
+174
+00:22:30.830 --> 00:22:34.080
+Kadu Gertners: Nós vamos colocar aqui o caminho do arquivo
+
+175
+00:22:36.410 --> 00:22:39.809
+Kadu Gertners: até voltar aqui para facilitar a nossa vida.
+
+176
+00:22:41.810 --> 00:22:43.559
+Kadu Gertners: Copiei o caminho.
+
+177
+00:22:44.360 --> 00:22:49.129
+Kadu Gertners: Ó, vamos pegar o dois mil e dezasseis, selecioná lo.
+
+178
+00:22:50.110 --> 00:22:54.220
+Kadu Gertners: Clicar no botão, Abrir beleza.
+
+179
+00:22:55.330 --> 00:23:01.760
+Kadu Gertners: Vamos lá, caduzão. E aí, ó legal? Vamos verificar aqui, ó,
+
+180
+00:23:02.050 --> 00:23:06.890
+Kadu Gertners: na parte da codificação de texto, assistem, está certo
+
+181
+00:23:07.130 --> 00:23:14.270
+Kadu Gertners: na opção de origem da fonte. Opção de fonte do dado. Ó,
+
+182
+00:23:15.970 --> 00:23:25.120
+Kadu Gertners: tem que estar marcada a opção. A primeira linha serão os nomes das colunas. Está marcada beleza.
+
+183
+00:23:28.400 --> 00:23:31.610
+Kadu Gertners: Só que aqui tem uma diferença
+
+184
+00:23:31.910 --> 00:23:37.749
+Kadu Gertners: nesse arquivo Csv, o separador de coluna não é a vírgula,
+
+185
+00:23:38.380 --> 00:23:40.530
+Kadu Gertners: ele é o ponto e vírgula.
+
+186
+00:23:40.640 --> 00:23:47.809
+Kadu Gertners: Então aqui. Ó, não é a vírgula é o ponto e vírgula. Então, ponto e vírgula,
+
+187
+00:23:48.750 --> 00:23:54.369
+Kadu Gertners: beleza tem que mudar isso. E vamos clicar agora no botão Finish.
+
+188
+00:23:54.560 --> 00:23:55.410
+Kadu Gertners: Ó,
+
+189
+00:23:55.770 --> 00:24:06.519
+Kadu Gertners: repara aqui embaixo. Ele já mostrou para nós a carga dos dados que foi feita. A carga de dados que foi feita.
+
+190
+00:24:06.850 --> 00:24:17.499
+Kadu Gertners: Então aqui ele está mostrando que foram carregados nove.duzentos e cinquenta e dois linhas ou nove.duzentos e cinquenta e dois registros,
+
+191
+00:24:18.190 --> 00:24:19.310
+Kadu Gertners: beleza.
+
+192
+00:24:19.870 --> 00:24:29.210
+Kadu Gertners: Bom, aí o que nós vamos fazer? Vamos dar um Select Count a partir dessa tabela, ó,
+
+193
+00:24:30.100 --> 00:24:39.380
+Kadu Gertners: selecionamos a tabela e executa maravilha que é o valor que ele está botando aqui embaixo. Ó igualzinho
+
+194
+00:24:39.810 --> 00:24:42.169
+Kadu Gertners: nove.duzentos e cinquenta e dois.
+
+195
+00:24:43.290 --> 00:24:46.500
+Kadu Gertners: Ok, vamos lá,
+
+196
+00:24:46.690 --> 00:24:55.590
+Kadu Gertners: caduzão. Podemos dar uma olhada um pouquinho nos dados. Vamos lá então. Faz um Select asterístico, Froome e o nome da tabela.
+
+197
+00:24:56.510 --> 00:25:01.640
+Kadu Gertners: Então, para tabela Pls F Y dois mil e dezasseis libras.
+
+198
+00:25:02.270 --> 00:25:07.980
+Kadu Gertners: Seleciona e executa. Ó, esse aqui ó
+
+199
+00:25:08.950 --> 00:25:13.080
+Kadu Gertners: é o nome do estado. Ó tá vendo? Do estado lá dos Estados Unidos.
+
+200
+00:25:13.820 --> 00:25:19.369
+Kadu Gertners: Beleza, isso aqui é o nome do estado. Isso aqui é uma chave
+
+201
+00:25:20.400 --> 00:25:31.949
+Kadu Gertners: que eu acho que ele está tentando botar uma chave única aqui. É exatamente porque essa chave aqui é exatamente a primeira, Key. É isso mesmo. Botar um valor único.
+
+202
+00:25:32.340 --> 00:25:41.680
+Kadu Gertners: O Live Id. Quer dizer, o Id da Live da biblioteca, o Live Naming quer dizer o nome da biblioteca?
+
+203
+00:25:41.950 --> 00:25:47.660
+Kadu Gertners: O endereço que é o logradouro beleza,
+
+204
+00:25:47.850 --> 00:25:53.849
+Kadu Gertners: Siri cidade, o Cep, o telefone, o número de visitantes
+
+205
+00:25:54.430 --> 00:26:09.099
+Kadu Gertners: e aqui, a longitude e a latitude dessa localidade maravilha, vamos seguir. Aí nós faremos a mesma coisa
+
+206
+00:26:09.400 --> 00:26:17.160
+Kadu Gertners: para a tabela. Nós fizemos, por enquanto, para a tabela de dois mil e dezasseis. Agora nós vamos criar uma tabela para dois mil e dezassete,
+
+207
+00:26:17.350 --> 00:26:21.770
+Kadu Gertners: galera. Serão as mesmas colunas, tá, então, ó,
+
+208
+00:26:22.220 --> 00:26:24.800
+Kadu Gertners: vamos pegar aqui o dois mil e dezassete,
+
+209
+00:26:28.700 --> 00:26:30.130
+Kadu Gertners: botar para cá.
+
+210
+00:26:30.940 --> 00:26:46.279
+Kadu Gertners: E, pessoal, vocês de repente podem ficar desconfiados ou queiram fazer de repente, uma checagem pô. Vamos confirmar se as colunas batem mesmo se ficará igual às colunas da outra tabela. Aí você bate aqui. Ó, olha lá,
+
+211
+00:26:46.340 --> 00:26:51.239
+Kadu Gertners: Sta. Br Fscs que
+
+212
+00:26:51.360 --> 00:27:09.150
+Kadu Gertners: está aqui. Lieber está aqui. Liebename está aqui. Adress City, City, Zip, Zip Phone, Phone visits visits longitude, latitude, latitude são as mesmas colunas
+
+213
+00:27:09.790 --> 00:27:15.619
+Kadu Gertners: beleza selecionamos o comando de criação da tabela.
+
+214
+00:27:15.940 --> 00:27:20.970
+Kadu Gertners: E aí vai surgir aqui a nossa segunda tabela.
+
+215
+00:27:23.340 --> 00:27:24.340
+Kadu Gertners: Ok.
+
+216
+00:27:24.970 --> 00:27:34.100
+Kadu Gertners: Bom, podemos dar um select de todas as colunas dessas para essa nova tabela dois mil e dezassete
+
+217
+00:27:34.590 --> 00:27:44.039
+Kadu Gertners: e não tem nenhum registro beleza. Então, caduzão. Vamos fazer o procedimento de carregar os dados. Vamos embora.
+
+218
+00:27:44.420 --> 00:27:47.799
+Kadu Gertners: Então. Ó, como é que nós vamos fazer isso?
+
+219
+00:27:49.630 --> 00:27:53.240
+Kadu Gertners: Ferramentas, importar.
+
+220
+00:27:53.430 --> 00:28:03.959
+Kadu Gertners: Aqui, toma cuidado. O nome do banco de dados só tem um. Mesmo agora tem mais de uma tabela. Então eu vou pegar aqui, botar para a tabela
+
+221
+00:28:04.840 --> 00:28:09.329
+Kadu Gertners: de dois mil e dezassete, selecionei dois mil e dezassete.
+
+222
+00:28:09.560 --> 00:28:11.310
+Kadu Gertners: Clica no botão Next.
+
+223
+00:28:13.230 --> 00:28:15.730
+Kadu Gertners: Aqui o tipo da fonte de dados
+
+224
+00:28:15.860 --> 00:28:19.560
+Kadu Gertners: Ssv. E vamos pegar o arquivo de origem.
+
+225
+00:28:20.140 --> 00:28:23.020
+Kadu Gertners: Ó dois mil e dezassete.
+
+226
+00:28:23.380 --> 00:28:31.820
+Kadu Gertners: Abrir. Ó, mudou aqui. Beleza. A codificação de dados é System. Está certinha.
+
+227
+00:28:32.250 --> 00:28:37.259
+Kadu Gertners: A primeira linha será os nomes das colunas. Está correto.
+
+228
+00:28:37.890 --> 00:28:43.400
+Kadu Gertners: E o separador de coluna é o ponto e vírgula, não é?
+
+229
+00:28:43.920 --> 00:28:48.339
+Kadu Gertners: E essa opção de Full pode deixar e Finnish.
+
+230
+00:28:50.900 --> 00:29:01.110
+Kadu Gertners: Ó, foram inseridos nove.duzentos e quarenta e cinco registros dessa vez para essa outra tabela.
+
+231
+00:29:02.030 --> 00:29:07.230
+Kadu Gertners: Ok, então ó, vamos pegar
+
+232
+00:29:10.530 --> 00:29:15.049
+Kadu Gertners: o comando que faz o Count Select Count
+
+233
+00:29:18.660 --> 00:29:22.180
+Kadu Gertners: a partir da tabela dois mil e dezassete e executar.
+
+234
+00:29:22.360 --> 00:29:27.839
+Kadu Gertners: Ó, tem nove mil
+
+235
+00:29:28.740 --> 00:29:34.689
+Kadu Gertners: duzentos e quarenta e cinco registros ou linhas. E é o mesmo que ele carregou aqui. Ó,
+
+236
+00:29:34.830 --> 00:29:36.850
+Kadu Gertners: tá batendo. Tá direitinho.
+
+237
+00:29:37.930 --> 00:29:38.810
+Kadu Gertners: Tá bom.
+
+238
+00:29:39.120 --> 00:29:47.160
+Kadu Gertners: Aqui nós podemos dar uma rápida paquerada nos dados, beleza,
+
+239
+00:29:47.610 --> 00:29:54.240
+Kadu Gertners: as mesmas colunas. Só que de outro ano, beleza.
+
+240
+00:29:55.670 --> 00:29:57.069
+Kadu Gertners: Vamos seguir.
+
+241
+00:29:58.100 --> 00:30:06.740
+Kadu Gertners: Vamos criar a nossa terceira e última tabela chamada Pls sublinhado F Y
+
+242
+00:30:07.760 --> 00:30:10.529
+Kadu Gertners: dois mil e dezoito. Subordinado libras.
+
+243
+00:30:10.960 --> 00:30:16.330
+Kadu Gertners: Pegamos o comando, trazemos para cá
+
+244
+00:30:16.810 --> 00:30:21.349
+Kadu Gertners: de novo. Se você estiver com dúvida nas colunas. Aqui
+
+245
+00:30:21.620 --> 00:30:24.859
+Kadu Gertners: é só bater cada coluna aqui
+
+246
+00:30:25.010 --> 00:30:34.689
+Kadu Gertners: da nova tabela. Agora de dois mil e dezoito, por exemplo, com a de dois mil e dezasseis, já que nós tínhamos comparado que dois mil e dezasseis e dois mil e dezassete, elas são iguais.
+
+247
+00:30:35.280 --> 00:30:41.179
+Kadu Gertners: Então você pode comparar dois mil e dezoito com dois mil e dezasseis ou com dois mil e dezassete. Você que sabe
+
+248
+00:30:42.860 --> 00:30:43.950
+Kadu Gertners: beleza.
+
+249
+00:30:44.160 --> 00:30:56.080
+Kadu Gertners: Bom, selecionamos a tabela e vamos clicar criar a nossa terceira tabela.
+
+250
+00:30:56.690 --> 00:31:08.580
+Kadu Gertners: Ó, a terceira tabela foi devidamente criada aqui. Ó a dois mil e dezoito beleza.
+
+251
+00:31:08.710 --> 00:31:16.140
+Kadu Gertners: Bom, vamos fazer caduzão um Select Asterisco, não é?
+
+252
+00:31:17.050 --> 00:31:20.079
+Kadu Gertners: A partir da tabela, é dois mil e dezoito.
+
+253
+00:31:20.540 --> 00:31:26.370
+Kadu Gertners: Seleciona ó nenhum registro beleza.
+
+254
+00:31:27.070 --> 00:31:32.870
+Kadu Gertners: Bom, aí nós vamos fazer esse terceiro e último importe.
+
+255
+00:31:33.290 --> 00:31:40.300
+Kadu Gertners: Então vamos lá então, ó ferramentas importar.
+
+256
+00:31:40.840 --> 00:31:51.030
+Kadu Gertners: O Database é único. Está direitinho. Só que agora lembrem se, a tabela que aparece aqui é de dois mil e dezasseis, não,
+
+257
+00:31:51.280 --> 00:31:54.780
+Kadu Gertners: a de dois mil e dezasseis já está carregada.
+
+258
+00:31:54.930 --> 00:32:02.270
+Kadu Gertners: A tabela de dois mil e dezassete já está carregada e só falta nós carregarmos a de dois mil e dezoito,
+
+259
+00:32:02.900 --> 00:32:13.469
+Kadu Gertners: selecionamos e next aqui. Ó, mantemos o Csv no tipo fonte de dados.
+
+260
+00:32:14.060 --> 00:32:19.489
+Kadu Gertners: Clicamos na pasta e nós vamos escolher o terceiro arquivo.
+
+261
+00:32:19.630 --> 00:32:27.779
+Kadu Gertners: O Pls sublinhado é. É. É. É F Y dois mil e dezoito Csv.
+
+262
+00:32:28.230 --> 00:32:38.009
+Kadu Gertners: Selecionei abro a codificação do sistema. Existem, tá bonitinho.
+
+263
+00:32:40.340 --> 00:32:44.609
+Kadu Gertners: A primeira linha está marcada. É ponto e vírgula Finish.
+
+264
+00:32:45.030 --> 00:32:51.430
+Kadu Gertners: Ó, esse aqui. Ele carregou nove.duzentos e sessenta e um registros.
+
+265
+00:32:52.980 --> 00:32:59.769
+Kadu Gertners: Então vamos pegar aqui o Select Count
+
+266
+00:33:04.440 --> 00:33:08.519
+Kadu Gertners: e o Select para pegar todas as colunas da tabela dois mil e dezoito.
+
+267
+00:33:10.640 --> 00:33:13.109
+Kadu Gertners: Primeiro, o Select Count.
+
+268
+00:33:15.700 --> 00:33:24.810
+Kadu Gertners: Ó, esse número tem que bater com a carga de dados que fizemos aqui com o importe que fizemos,
+
+269
+00:33:25.060 --> 00:33:32.009
+Kadu Gertners: bateu direitinho. E se nós quisermos dar uma espiada nos dados? Ó, os dados estão aí.
+
+270
+00:33:33.650 --> 00:33:38.300
+Kadu Gertners: Beleza. Select Asterisco a partir da tabela dois mil e dezoito.
+
+271
+00:33:38.540 --> 00:33:45.970
+Kadu Gertners: Mostra aí para nós todas as colunas, beleza.
+
+272
+00:33:46.210 --> 00:33:53.410
+Kadu Gertners: Bom, nós agora podemos pegar e eu quero caduzão
+
+273
+00:33:53.600 --> 00:33:59.050
+Kadu Gertners: fazer o seguinte: eu quero contar fazer um count aí.
+
+274
+00:33:59.530 --> 00:34:01.730
+Kadu Gertners: De cada uma dessas coleções.
+
+275
+00:34:02.270 --> 00:34:11.740
+Kadu Gertners: Coleções. Não de cada tabela, primeiro da tabela de dois mil e dezasseis. Opa tem nove.duzentos e cinquenta e dois registros.
+
+276
+00:34:12.290 --> 00:34:20.900
+Kadu Gertners: A de dois mil e dezassete tem nove mil duzentos e quarenta e cinco
+
+277
+00:34:26.730 --> 00:34:29.280
+Kadu Gertners: e a de dois mil e dezoito.
+
+278
+00:34:31.400 --> 00:34:38.530
+Kadu Gertners: Ela tem nove.duzentos e sessenta e um registros, beleza.
+
+279
+00:34:38.840 --> 00:34:50.680
+Kadu Gertners: Bom, reparem, nós vamos fazer agora um select count em cima da coluna fone que é o telefone.
+
+280
+00:34:51.230 --> 00:34:56.730
+Kadu Gertners: Então, ó, pegamos aqui o comando, colocamos para cá
+
+281
+00:34:59.930 --> 00:35:09.390
+Kadu Gertners: e vamos lá, ó Select country de fone.
+
+282
+00:35:10.380 --> 00:35:15.069
+Kadu Gertners: Ó, reparem que todas as colunas estão preenchidas. Tá?
+
+283
+00:35:15.340 --> 00:35:25.019
+Kadu Gertners: Ó nove.duzentos e cinquenta e dois é exatamente o mesmo número de registro da tabela. Então todos os valores estão preenchidos de alguma forma.
+
+284
+00:35:26.890 --> 00:35:28.020
+Kadu Gertners: Beleza.
+
+285
+00:35:35.160 --> 00:35:38.559
+Kadu Gertners: Bom, vamos fazer o mesmo agora
+
+286
+00:35:39.400 --> 00:35:49.390
+Kadu Gertners: para a tabela de dois mil e dezassete, contando o fone Bora ó nove.duzentos e quarenta e cinco,
+
+287
+00:35:49.630 --> 00:35:58.190
+Kadu Gertners: que é o mesmo número que nós vimos acima ao contar todos os registros da tabela, está batendo direitinho,
+
+288
+00:35:59.830 --> 00:36:01.180
+Kadu Gertners: beleza.
+
+289
+00:36:03.930 --> 00:36:09.360
+Kadu Gertners: E agora o count da coluna. Telefone
+
+290
+00:36:09.570 --> 00:36:12.029
+Kadu Gertners: em relação à tabela dois mil e dezoito.
+
+291
+00:36:12.910 --> 00:36:19.190
+Kadu Gertners: Ó nove mil duzentos e sessenta e um, que é o valor que está aqui.
+
+292
+00:36:26.490 --> 00:36:31.230
+Kadu Gertners: Ok, maravilha.
+
+293
+00:36:32.490 --> 00:36:34.030
+Kadu Gertners: Próximo comando.
+
+294
+00:36:34.240 --> 00:36:35.070
+Kadu Gertners: Ó,
+
+295
+00:36:36.110 --> 00:36:53.419
+Kadu Gertners: nós vamos fazer um comando aqui. Interessante que ele vai falar para nós fazermos o seguinte. Olha, eu quero fazer um count, só que dentro do count. Primeiro, eu quero que ele faça entre parênteses, pegar os valores diferentes do labname
+
+296
+00:36:54.220 --> 00:36:56.780
+Kadu Gertners: do nome da biblioteca.
+
+297
+00:36:56.940 --> 00:37:00.860
+Kadu Gertners: Os nomes que apareçam uma vez, pelo menos
+
+298
+00:37:01.550 --> 00:37:03.899
+Kadu Gertners: a partir da tabela dois mil e dezasseis.
+
+299
+00:37:04.140 --> 00:37:10.220
+Kadu Gertners: Então, beleza, quando você faz isso, ele dá esse retorno aqui.
+
+300
+00:37:13.490 --> 00:37:17.280
+Kadu Gertners: Então aí teve já
+
+301
+00:37:17.430 --> 00:37:29.180
+Kadu Gertners: uma perda do número de registro. Então quer dizer, indicando para nós que existem determinados Libname que tem o mesmo nome.
+
+302
+00:37:30.450 --> 00:37:35.090
+Kadu Gertners: Beleza tem o mesmo nome.
+
+303
+00:37:35.210 --> 00:37:38.560
+Kadu Gertners: Quando nós fizemos um Select Count nele lá. Ó,
+
+304
+00:37:38.890 --> 00:37:53.850
+Kadu Gertners: ele tem nove.duzentos e cinquenta e dois e caiu para R oito.quatrocentos e cinquenta e seis. Então essa diferença de nove.duzentos e cinquenta e dois menos oito.quatrocentos e cinquenta e seis é exatamente?
+
+305
+00:37:54.140 --> 00:37:56.789
+Kadu Gertners: É essa diferença.
+
+306
+00:37:57.940 --> 00:38:05.770
+Kadu Gertners: É o número de registros que tem valores duplicados para a coluna.
+
+307
+00:38:05.970 --> 00:38:07.600
+Kadu Gertners: É Libname.
+
+308
+00:38:08.630 --> 00:38:12.040
+Kadu Gertners: Tá bom, legal.
+
+309
+00:38:12.580 --> 00:38:23.490
+Kadu Gertners: Vamos fazer a mesma coisa. Select count, distinting Libname. Agora para a tabela dois mil e dezassete ó, oito.zero,
+
+310
+00:38:24.340 --> 00:38:29.290
+Kadu Gertners: quatrocentos e cinquenta e cinco beleza
+
+311
+00:38:31.460 --> 00:38:37.760
+Kadu Gertners: dois mil e dezassete. Lembro que dois mil e dezassete tem, no total nove.duzentos e quarenta e cinco registros
+
+312
+00:38:37.960 --> 00:38:42.779
+Kadu Gertners: de novo, indicando que existem valores duplicados para a Libname.
+
+313
+00:38:43.260 --> 00:38:44.780
+Kadu Gertners: Maravilha.
+
+314
+00:38:45.060 --> 00:38:55.539
+Kadu Gertners: E a terceira tabela para dois mil e dezoito, a mesma coisa, um count por fora e dentro do parênteses, pegar os valores diferentes de Libname.
+
+315
+00:38:56.500 --> 00:39:07.500
+Kadu Gertners: Ó oito.zero, quatrocentos e setenta e oito ok,
+
+316
+00:39:10.910 --> 00:39:14.800
+Kadu Gertners: que é menor do que o número de registro da tabela,
+
+317
+00:39:15.080 --> 00:39:20.260
+Kadu Gertners: indicando mais uma vez que existem valores que estão duplicados.
+
+318
+00:39:21.500 --> 00:39:27.159
+Kadu Gertners: Beleza caduzon. Nós podemos fazer uma análise.
+
+319
+00:39:27.370 --> 00:39:28.360
+Kadu Gertners: É
+
+320
+00:39:29.350 --> 00:39:48.600
+Kadu Gertners: para pegar o máximo de visitantes e o mínimo de visitantes em relação à coluna. Visits. Então vamos lá. Vamos fazer um Select para pegar o valor máximo da coluna visits, vírgula, e o mínimo da coluna. Visits para a tabela dois mil e dezasseis.
+
+321
+00:39:49.100 --> 00:39:55.590
+Kadu Gertners: Ó, ele mostra esses valores aí, ó o máximo.
+
+322
+00:39:56.790 --> 00:40:02.150
+Kadu Gertners: Dezassete.quatrocentos e vinte mil e o mínimo menos três.
+
+323
+00:40:02.930 --> 00:40:06.099
+Kadu Gertners: Não é bom aí, aqui.
+
+324
+00:40:06.440 --> 00:40:14.909
+Kadu Gertners: Quando eu tinha obtido esses dados, aí ele fala para nós. Assim, um valor de menos três
+
+325
+00:40:15.220 --> 00:40:18.080
+Kadu Gertners: indica não aplicável.
+
+326
+00:40:18.240 --> 00:40:28.930
+Kadu Gertners: E é usado quando uma agência de biblioteca fecha de forma o temporária ou de forma permanente.
+
+327
+00:40:29.840 --> 00:40:30.780
+Kadu Gertners: Tá bom.
+
+328
+00:40:31.190 --> 00:40:36.639
+Kadu Gertners: É um status aí que eles, no contexto de negócio deles, lá, eles botaram
+
+329
+00:40:37.000 --> 00:40:39.450
+Kadu Gertners: aí fica com esse valor de menos três.
+
+330
+00:40:40.570 --> 00:40:49.390
+Kadu Gertners: Ok, bom, ao executar agora o comando
+
+331
+00:40:49.800 --> 00:40:57.059
+Kadu Gertners: para a tabela dois mil e dezassete para pegar o máximo da coluna, visits e o mínimo da coluna visits.
+
+332
+00:40:57.230 --> 00:41:00.570
+Kadu Gertners: Ó, olha o valor que ele põe de novo
+
+333
+00:41:00.820 --> 00:41:05.179
+Kadu Gertners: o Main Visit com menos três
+
+334
+00:41:05.640 --> 00:41:10.380
+Kadu Gertners: e o máximo de visitantes. Ó nossa!
+
+335
+00:41:10.570 --> 00:41:13.930
+Kadu Gertners: É dezassete milhões.
+
+336
+00:41:14.180 --> 00:41:17.330
+Kadu Gertners: Tá maravilha!
+
+337
+00:41:20.240 --> 00:41:24.460
+Kadu Gertners: E o de dois mil e dezoito de dois mil e dezoito.
+
+338
+00:41:26.340 --> 00:41:33.630
+Kadu Gertners: Ele pega lá o máximo de Visit também. E o mínimo de visitas executa.
+
+339
+00:41:36.950 --> 00:41:38.470
+Kadu Gertners: Está aí o resultado.
+
+340
+00:41:41.300 --> 00:41:48.550
+Kadu Gertners: Bom, nós podemos agora pegar a coluna Sta Br, que é o Estado
+
+341
+00:41:48.810 --> 00:42:00.730
+Kadu Gertners: fazer um grupamento por essa coluna Sta Br e ordenar pela coluna Sta. Br: então, ó, pegamos o comando.
+
+342
+00:42:05.110 --> 00:42:10.650
+Kadu Gertners: Colocamos para cá e executa.
+
+343
+00:42:11.770 --> 00:42:12.570
+Kadu Gertners: Ó
+
+344
+00:42:18.090 --> 00:42:19.160
+Kadu Gertners: beleza,
+
+345
+00:42:25.350 --> 00:42:27.050
+Kadu Gertners: ó perdão.
+
+346
+00:42:27.270 --> 00:42:31.549
+Kadu Gertners: Executei errado. Ele tinha que mostrar S T a. Br: agora, assim que ele foi?
+
+347
+00:42:31.690 --> 00:42:34.910
+Kadu Gertners: Ele estava mencionando a execução anterior. Desculpem me.
+
+348
+00:42:35.220 --> 00:42:37.640
+Kadu Gertners: Ó, tá vendo?
+
+349
+00:42:38.910 --> 00:42:47.099
+Kadu Gertners: Então ele está mostrando para nós os estados, e que são cinquenta e três estados.
+
+350
+00:42:49.780 --> 00:42:55.250
+Kadu Gertners: Beleza, nós podemos fazer isso. A mesma coisa
+
+351
+00:42:55.640 --> 00:42:57.689
+Kadu Gertners: para o ano de dois mil e dezassete.
+
+352
+00:42:58.050 --> 00:43:02.700
+Kadu Gertners: Esse comando mostra o Select para a coluna Sta Br
+
+353
+00:43:03.640 --> 00:43:06.190
+Kadu Gertners: a partir da tabela dois mil dezassete.
+
+354
+00:43:06.370 --> 00:43:10.090
+Kadu Gertners: Grupa pela coluna Sta Br.
+
+355
+00:43:10.350 --> 00:43:11.200
+Kadu Gertners: E aí
+
+356
+00:43:13.750 --> 00:43:23.359
+Kadu Gertners: grupa pela coluna Sta Br e ordena pela própria coluna. Sta. Br. Vamos ver quantos registros tem para dois mil e dezassete?
+
+357
+00:43:23.620 --> 00:43:28.140
+Kadu Gertners: Ó para dois mil e dezassete nós temos ó
+
+358
+00:43:28.670 --> 00:43:32.349
+Kadu Gertners: um a mais cinquenta e quatro que ele está considerando
+
+359
+00:43:35.780 --> 00:43:38.820
+Kadu Gertners: para finalizar esse bloquinho aí, ó
+
+360
+00:43:44.890 --> 00:43:57.339
+Kadu Gertners: pegar a coluna Sta br a partir da tabela dois mil e dezoito, vamos grupar pela própria coluna Sta Br. E ordenar por essa própria coluna.
+
+361
+00:43:58.970 --> 00:44:03.040
+Kadu Gertners: Ó selecionei o comando, executei.
+
+362
+00:44:03.270 --> 00:44:05.990
+Kadu Gertners: E ó, esse ainda por cima
+
+363
+00:44:06.290 --> 00:44:13.810
+Kadu Gertners: ele não tem nem cinquenta e três, nem cinquenta e quatro. Ele tem cinquenta e cinco, beleza.
+
+364
+00:44:16.300 --> 00:44:20.010
+Kadu Gertners: Bom, vamos lá.
+
+365
+00:44:20.920 --> 00:44:23.499
+Kadu Gertners: Nós podemos pegar um outro comando
+
+366
+00:44:24.260 --> 00:44:26.080
+Kadu Gertners: que ele vai fazer assim, ó,
+
+367
+00:44:29.740 --> 00:44:33.110
+Kadu Gertners: vamos pegar cidade
+
+368
+00:44:33.270 --> 00:44:43.010
+Kadu Gertners: e a referência do estado para a tabela dois mil e dezasseis. Vamos grupar pela cidade e pelo Sta. Br
+
+369
+00:44:43.780 --> 00:44:48.329
+Kadu Gertners: e ordenar também pela cidade. E o Sta. Br.
+
+370
+00:44:51.620 --> 00:44:53.040
+Kadu Gertners: O comando
+
+371
+00:45:09.470 --> 00:45:11.280
+Kadu Gertners: é, não executei, né?
+
+372
+00:45:12.540 --> 00:45:14.309
+Kadu Gertners: Eu não copiei o comando.
+
+373
+00:45:15.270 --> 00:45:18.820
+Kadu Gertners: Ah, sim. Agora sim. Eu tinha copiado e nunca olhei.
+
+374
+00:45:19.160 --> 00:45:34.099
+Kadu Gertners: Bom, vamos lá, select para a cidade e vírgula, para o estado da tabela dois mil e dezasseis, grupando por essas duas mesmas colunas cidade e estado e ordenando pela cidade e o estado.
+
+375
+00:45:34.220 --> 00:45:44.470
+Kadu Gertners: Ó beleza, ó bonitinho, aí ordenado, beleza.
+
+376
+00:45:44.470 --> 00:45:45.040
+Allan Dultra: Bom dia.
+
+377
+00:45:45.360 --> 00:45:46.020
+Kadu Gertners: Oi.
+
+378
+00:45:46.320 --> 00:45:48.679
+Allan Dultra: Tem um risco verde aí no meio da tela.
+
+379
+00:45:49.630 --> 00:45:52.810
+Kadu Gertners: Tem um risco verde no meio da tela.
+
+380
+00:45:53.440 --> 00:45:59.390
+Kadu Gertners: Saiu não? Risco verde, cara e.
+
+381
+00:45:59.390 --> 00:46:00.879
+gabriel.diniz: Que alguém utilizou aquela.
+
+382
+00:46:00.880 --> 00:46:02.570
+João Victor Gasparoto: No Zoom. É no Zoom.
+
+383
+00:46:03.410 --> 00:46:05.790
+gabriel.diniz: Aí riscou na tela.
+
+384
+00:46:07.410 --> 00:46:09.110
+Kadu Gertners: Rapaz é no zoom
+
+385
+00:46:15.660 --> 00:46:17.000
+Kadu Gertners: na minha.
+
+386
+00:46:17.220 --> 00:46:19.510
+Kadu Gertners: Ah, é, cara. É verdade.
+
+387
+00:46:21.870 --> 00:46:27.820
+Kadu Gertners: Que coisa é, rapaz? Eu não sei o que eu fiz aqui? Não pô. Mas fui eu. É
+
+388
+00:46:28.510 --> 00:46:30.470
+Kadu Gertners: isso. Fui eu que fiz, cara.
+
+389
+00:46:31.070 --> 00:46:35.350
+Kadu Gertners: Mas isso está atrapalhando vocês a verem. Pessoal, isso está atrapalhando tanto assim.
+
+390
+00:46:36.140 --> 00:46:37.929
+gabriel.diniz: É só um incômodo na real.
+
+391
+00:46:40.380 --> 00:46:43.429
+Kadu Gertners: É cara, mas engraçado. Mas até eu mostro.
+
+392
+00:46:43.430 --> 00:46:47.120
+João Victor Gasparoto: Melhor para cima do risco, a ver se dá para ver quem fez.
+
+393
+00:46:47.460 --> 00:46:49.599
+João Victor Gasparoto: Não, né?
+
+394
+00:46:50.340 --> 00:46:53.230
+Kadu Gertners: Não tô vendo. Não, cara.
+
+395
+00:46:54.440 --> 00:46:59.960
+João Victor Gasparoto: É só o pessoal ver ali. Ó clica no lápisinho. Aí vê quem chega e tira facinho.
+
+396
+00:47:05.210 --> 00:47:06.720
+Kadu Gertners: E se passar borracha.
+
+397
+00:47:08.460 --> 00:47:10.759
+Kadu Gertners: Ó ah, é, sumiu!
+
+398
+00:47:10.760 --> 00:47:11.970
+João Victor Gasparoto: Eu tirar. Saiu.
+
+399
+00:47:11.970 --> 00:47:13.250
+gabriel.diniz: Valeu!
+
+400
+00:47:14.050 --> 00:47:16.310
+Kadu Gertners: Fechou, fechou.
+
+401
+00:47:16.910 --> 00:47:22.919
+Kadu Gertners: Beleza, beleza, galera, Lucas. Valeu, Ana. Maravilha. União. Faz a força, café e açúcar. É ou não é?
+
+402
+00:47:23.590 --> 00:47:31.960
+Kadu Gertners: Vamos lá. Obrigado, pessoal. Valeu, bom, beleza. Ok, Gabriel Crepaldi.
+
+403
+00:47:32.160 --> 00:47:35.270
+Kadu Gertners: Ok, Gabriel de Andrade. Ok, João, Victor.
+
+404
+00:47:36.060 --> 00:47:39.880
+Kadu Gertners: Ok, Ramon. Ok, Lucas, Gabriel, crepão,
+
+405
+00:47:40.910 --> 00:47:46.239
+Kadu Gertners: não beleza. Já descobrimos o mistério. Ok, vitor maravilha.
+
+406
+00:47:46.930 --> 00:47:49.269
+Kadu Gertners: Vamos lá. Bom, que dê uma descontraída.
+
+407
+00:47:49.400 --> 00:47:52.110
+Kadu Gertners: Então, ó legal! Então, aqui, ó
+
+408
+00:47:52.600 --> 00:48:03.689
+Kadu Gertners: de novo caduzão, você está mostrando a coluna cidade, o estado. E você grupou pela cidade pelo estado.
+
+409
+00:48:04.190 --> 00:48:09.329
+Kadu Gertners: E você ordenou também pela coluna.
+
+410
+00:48:09.740 --> 00:48:14.600
+Kadu Gertners: A cidade de estado conforme vocês estão vendo aqui, beleza?
+
+411
+00:48:15.560 --> 00:48:19.749
+Kadu Gertners: Ah, sim. Eu ia botar o número total de registros daqui.
+
+412
+00:48:19.970 --> 00:48:23.909
+Kadu Gertners: Vamos botar aí nove mil e trinta e nove.
+
+413
+00:48:24.350 --> 00:48:36.019
+Kadu Gertners: Beleza é esse? Foi o primeiro. Agora vamos pegar da tabela dois mil e dezassete.
+
+414
+00:48:37.420 --> 00:48:51.080
+Kadu Gertners: O comando equivalente de novo para mostrar cidade e o estado fazendo o grupamento dessas duas colunas e ordenando por essas duas colunas. Só que agora de dois mil e dezassete
+
+415
+00:48:52.040 --> 00:48:53.380
+Kadu Gertners: executa.
+
+416
+00:48:53.940 --> 00:48:59.400
+Kadu Gertners: Ó, ele foi para nove.trinta.
+
+417
+00:49:03.210 --> 00:49:04.109
+Kadu Gertners: E aí?
+
+418
+00:49:05.730 --> 00:49:09.410
+Kadu Gertners: Agora o de dois mil e dezoito, que é o único que está faltando.
+
+419
+00:49:12.100 --> 00:49:14.239
+Kadu Gertners: Pega aí o dois mil e dezoito
+
+420
+00:49:14.430 --> 00:49:23.300
+Kadu Gertners: de novo, vamos listar a cidade e o Estado grupar pela cidade e o estado e ordenar pela cidade e o estado
+
+421
+00:49:23.960 --> 00:49:32.210
+Kadu Gertners: seleciona e executa. Ó, esse diminuiu mais ainda, nove.treze.
+
+422
+00:49:34.180 --> 00:49:35.360
+Kadu Gertners: Beleza.
+
+423
+00:49:36.130 --> 00:49:48.029
+Kadu Gertners: Bom, aqui nós podemos fazer um group by por acaso, para exatamente pegar
+
+424
+00:49:48.240 --> 00:49:53.570
+Kadu Gertners: o número de registros por estado, bibliotecas por estado.
+
+425
+00:49:53.730 --> 00:49:57.430
+Kadu Gertners: Então, como é que nós fazemos isso? Codesom? Vamos lá, vamos relembrar,
+
+426
+00:49:57.910 --> 00:50:07.529
+Kadu Gertners: vamos pegar primeiro para dois mil e dezasseis. Ó Select, a coluna Sta Br, que é o estado vírgula, uma contagem.
+
+427
+00:50:07.820 --> 00:50:15.510
+Kadu Gertners: Não é uma função de resumo de sumarização no caso.
+
+428
+00:50:15.820 --> 00:50:29.169
+Kadu Gertners: Nós vamos usar da tabela dois mil e dezasseis grupar pela coluna Sta Br, que é o estado e vamos ordenar pela contagem de forma decrescente
+
+429
+00:50:29.700 --> 00:50:36.219
+Kadu Gertners: do estado, que tem o maior número até o Estado que tem o menor número.
+
+430
+00:50:36.400 --> 00:50:41.440
+Kadu Gertners: Então, ó Vambora, peguei o comando. Executa. Ó
+
+431
+00:50:42.490 --> 00:50:49.630
+Kadu Gertners: New York tem setecentos e cinquenta e seis, beleza.
+
+432
+00:50:51.280 --> 00:50:52.270
+Kadu Gertners: Então
+
+433
+00:50:52.480 --> 00:51:00.409
+Kadu Gertners: depois, Il, né, seiscentos e vinte e seis Tx, que eu acho que é o Texas quinhentos e cinquenta e nove e assim por diante.
+
+434
+00:51:01.390 --> 00:51:02.520
+Kadu Gertners: Beleza.
+
+435
+00:51:02.930 --> 00:51:07.240
+Kadu Gertners: Bom, podemos fazer o mesmo com dois mil e dezassete.
+
+436
+00:51:08.490 --> 00:51:14.639
+Kadu Gertners: Galera, eu estou mostrando esse passo a passo. Nós fizemos a carga dos dados.
+
+437
+00:51:15.560 --> 00:51:17.999
+Kadu Gertners: Nós vimos alguns dados primeiro.
+
+438
+00:51:18.130 --> 00:51:27.740
+Kadu Gertners: Nós agora estamos vendo um tipo de grupamento ainda com as tabelas em separado, só para vocês terem umas ideias de algumas coisas inicialmente.
+
+439
+00:51:28.380 --> 00:51:32.900
+Kadu Gertners: Então, ó dois mil e dezassete, ó
+
+440
+00:51:33.310 --> 00:51:35.540
+Kadu Gertners: New York setecentos e cinquenta e seis
+
+441
+00:51:35.830 --> 00:51:39.749
+Kadu Gertners: e L seiscentos e vinte e dois. Vamos ver se ele vai mudar alguma coisa aqui
+
+442
+00:51:41.030 --> 00:51:52.220
+Kadu Gertners: setecentos e cinquenta e seis, ó e seiscentos e vinte e dois. Ó New York não mudou, mas o Il mudou. Eram seiscentos e vinte e dois. Passaram a ser seiscentos e vinte e três.
+
+443
+00:51:52.460 --> 00:51:56.200
+Kadu Gertners: Olha que interessante beleza.
+
+444
+00:51:56.390 --> 00:52:02.890
+Kadu Gertners: Bom, aqui nós vamos pegar a mesma coisa. Número de agências por estado.
+
+445
+00:52:03.340 --> 00:52:12.130
+Kadu Gertners: Então vamos pegar aqui o de dois mil e dezoito.
+
+446
+00:52:13.440 --> 00:52:15.869
+Kadu Gertners: Ó de dois mil e dezoito
+
+447
+00:52:16.000 --> 00:52:18.450
+Kadu Gertners: setecentos e cinquenta e seis-seiscentos e vinte e três
+
+448
+00:52:19.670 --> 00:52:28.409
+Kadu Gertners: ó, o mesmo número para os dois primeiros. Por acaso, galera, vocês podem fazer uma conferência muito maior.
+
+449
+00:52:28.440 --> 00:52:46.859
+Kadu Gertners: Eu estou fazendo só uma análise das coisas aqui que eu mapeei aqui para vocês. Que é que tem vínculo direto com o que eu tenho que passar para vocês. É lógico que vocês, ao terem tempo, enfim, vocês podem fazer outras análises. Não tem nenhum problema.
+
+450
+00:52:47.480 --> 00:53:00.900
+Kadu Gertners: Tá bom, bom, legal. Aí, caduzão. Nós vamos fazer o seguinte. Nós queremos saber é pegar, né?
+
+451
+00:53:01.770 --> 00:53:09.969
+Kadu Gertners: O somar, o número de visitantes da coluna visitante. Vamos colocar aqui o apelido. São visitantes de dois mil e dezasseis,
+
+452
+00:53:10.170 --> 00:53:16.340
+Kadu Gertners: a partir da tabela de dois mil e dezasseis, é quando, né?
+
+453
+00:53:18.740 --> 00:53:26.430
+Kadu Gertners: Onde o número de visitantes, a coluna visits tem que ser maior ou igual a zero.
+
+454
+00:53:26.870 --> 00:53:35.389
+Kadu Gertners: Então, ó, pegamos esse comando, colocamos para cá e executa.
+
+455
+00:53:35.750 --> 00:53:38.410
+Kadu Gertners: Ó, é esse número aqui.
+
+456
+00:53:39.920 --> 00:53:45.580
+Kadu Gertners: Então o número de visitantes no ano para todas as bibliotecas.
+
+457
+00:53:46.810 --> 00:53:55.290
+Kadu Gertners: Foi isso, aqui, ó um bilhão trezentos e cinquenta e cinco.seiscentos e quarenta e oito.novecentos e oitenta e sete
+
+458
+00:53:56.540 --> 00:54:01.430
+Kadu Gertners: beleza. Agora, caduzão. Vamos fazer a mesma analogia com dois mil e dezassete.
+
+459
+00:54:01.760 --> 00:54:08.000
+Kadu Gertners: Bora, ó, vamos pegar dois mil e dezassete e executa.
+
+460
+00:54:08.340 --> 00:54:14.660
+Kadu Gertners: Ó, pego aqui, coloca para cá para nós vermos melhor.
+
+461
+00:54:15.560 --> 00:54:20.780
+Kadu Gertners: E vamos ver se o número foi menor, igual ou maior.
+
+462
+00:54:22.880 --> 00:54:23.710
+Kadu Gertners: Ó,
+
+463
+00:54:24.350 --> 00:54:40.110
+Kadu Gertners: então repara o que dois mil e dezasseis foram um bilhão e trezentos e cinquenta e cinco milhões já em dois mil e dezassete, foi um bilhão trezentos e dezanove milhões. Então caiu
+
+464
+00:54:40.220 --> 00:54:42.100
+Kadu Gertners: consideravelmente, né?
+
+465
+00:54:42.220 --> 00:54:44.749
+Kadu Gertners: Alguns milhões aí de diferença.
+
+466
+00:54:45.870 --> 00:54:52.160
+Kadu Gertners: Beleza caduzon. Podemos fazer a mesma analogia para o dois mil e dezoito Vambora.
+
+467
+00:54:52.570 --> 00:54:56.010
+Kadu Gertners: A ideia é essa mesmo aqui. Ó
+
+468
+00:55:02.620 --> 00:55:03.450
+Kadu Gertners: ó,
+
+469
+00:55:06.740 --> 00:55:08.680
+Kadu Gertners: vamos trazer para cá.
+
+470
+00:55:09.880 --> 00:55:12.609
+Kadu Gertners: Vamos botar o separador de milhar,
+
+471
+00:55:12.810 --> 00:55:23.809
+Kadu Gertners: porque fica mais fácil para nós percebermos o número. E repara que em dois mil e dezoito, ele decresceu mais ainda, né? Diminuiu mais ainda. Olha lá,
+
+472
+00:55:25.430 --> 00:55:26.540
+Kadu Gertners: beleza.
+
+473
+00:55:28.080 --> 00:55:32.590
+Kadu Gertners: Bom, e aí a ideia nessa parte final aqui
+
+474
+00:55:32.780 --> 00:55:39.160
+Kadu Gertners: é exatamente falar o seguinte. Poxa, olha só. Eu quero ver numa consulta. Só
+
+475
+00:55:39.910 --> 00:55:46.630
+Kadu Gertners: eu quero ver as informações sobre isso. Eu quero ver caduzão aí. A soma
+
+476
+00:55:46.840 --> 00:55:53.629
+Kadu Gertners: do Pls dezasseis Pls dezasseis. Ele está mencionando a tabela de dois mil e dezasseis,
+
+477
+00:55:54.110 --> 00:56:00.929
+Kadu Gertners: o Pls dezassete, a tabela de dois mil e dezassete
+
+478
+00:56:01.330 --> 00:56:06.539
+Kadu Gertners: Pls dezoito. A tabela de dois mil e dezoito.
+
+479
+00:56:07.190 --> 00:56:16.739
+Kadu Gertners: Tá bom. Então esses aqui. Esses Pls dezasseis, dezassete e dezoito são os apelidos da tabela. O nome da tabela
+
+480
+00:56:17.150 --> 00:56:19.620
+Kadu Gertners: é esse aqui, por exemplo,
+
+481
+00:56:20.250 --> 00:56:27.510
+Kadu Gertners: Pls sublinhado F Y dois mil e dezoito, sublinhado libras. E como é que é o apelido?
+
+482
+00:56:28.320 --> 00:56:41.280
+Kadu Gertners: O apelido nessa consulta para essa tabela Pls dezoito. Que é esse item aqui, beleza.
+
+483
+00:56:41.620 --> 00:56:44.850
+Kadu Gertners: Bom, repara que nós vamos juntar
+
+484
+00:56:45.020 --> 00:56:56.320
+Kadu Gertners: as três tabelas. Então o Caduzon tem que ter Join ele significa inerj Sim,
+
+485
+00:56:56.520 --> 00:57:04.149
+Kadu Gertners: é o padrão. Se você coloca só John e não menciona Inner automaticamente. Ele é Inner,
+
+486
+00:57:05.250 --> 00:57:09.770
+Kadu Gertners: ok, é o padrão dele legal.
+
+487
+00:57:10.160 --> 00:57:17.840
+Kadu Gertners: Aí, repara que o vínculo de uma tabela com a outra. No caso da tabela dezoito, com a tabela dezassete
+
+488
+00:57:18.080 --> 00:57:25.569
+Kadu Gertners: é exatamente através da coluna Fsces, que é a chave primária da coluna.
+
+489
+00:57:26.440 --> 00:57:27.400
+Kadu Gertners: Tá bom.
+
+490
+00:57:28.010 --> 00:57:36.720
+Kadu Gertners: E ele faz um Join também com a tabela dois mil e dezasseis e pega o dois mil,
+
+491
+00:57:37.030 --> 00:57:39.040
+Kadu Gertners: a tabela de dois mil e dezoito,
+
+492
+00:57:39.420 --> 00:57:48.599
+Kadu Gertners: a coluna de novo. A coluna Fs Csq iguala com a coluna de dois mil e dezasseis. Fs. Csq também.
+
+493
+00:57:49.160 --> 00:58:03.410
+Kadu Gertners: E aí repara que na cláusula aqui no Air, no filtro, ele pegou que cada uma a tabela dois mil e dezoito a dois mil e dezassete e a dois mil e dezasseis têm que ter os valores maiores ou iguais a zero
+
+494
+00:58:03.570 --> 00:58:13.130
+Kadu Gertners: então, ó, olha que maneiro! Quando você executa isso no mesmo comando. Ao fazer o Join, olha como é que fica o resultado.
+
+495
+00:58:13.760 --> 00:58:14.860
+Kadu Gertners: Olha só.
+
+496
+00:58:16.000 --> 00:58:20.560
+Kadu Gertners: Seleciona o comando e executa. Ó,
+
+497
+00:58:20.730 --> 00:58:30.890
+Kadu Gertners: não dá para ter uma ideia bem melhor de você ver aqui o número diretamente numa consulta. Só das três tabelas.
+
+498
+00:58:32.050 --> 00:58:40.210
+Kadu Gertners: É essa a ideia, beleza, nós podemos fazer aqui, ó aqui,
+
+499
+00:58:40.840 --> 00:58:50.669
+Kadu Gertners: nesse outro comando aqui, ele fez o seguinte. Ele está querendo mencionar o Estado para nós termos uma ideia de qual é o estado.
+
+500
+00:58:51.530 --> 00:58:59.160
+Kadu Gertners: Ele vai somar os visitantes de dois mil e dezasseis, os visitantes de dois mil e dezassete
+
+501
+00:58:59.540 --> 00:59:04.780
+Kadu Gertners: vai somar os visitantes também. Em dois mil e dezoito, cada um na sua linha.
+
+502
+00:59:04.890 --> 00:59:12.840
+Kadu Gertners: E aí ele vai fazer o seguinte: ele quer fazer uma análise comparativa.
+
+503
+00:59:13.000 --> 00:59:17.949
+Kadu Gertners: Não é do ano de dois mil e dezoito com dois mil e dezassete
+
+504
+00:59:18.550 --> 00:59:21.919
+Kadu Gertners: e de dois mil e dezassete, com dois mil e dezasseis.
+
+505
+00:59:22.370 --> 00:59:25.410
+Kadu Gertners: Então ele montou um cálculo aqui,
+
+506
+00:59:25.640 --> 00:59:34.450
+Kadu Gertners: usando você repara que num determinado momento, ele pega. Ele está fazendo aqui o Sam
+
+507
+00:59:34.810 --> 00:59:39.530
+Kadu Gertners: da tabela dezoito nessa linha daqui,
+
+508
+00:59:40.860 --> 00:59:46.119
+Kadu Gertners: com a coluna visits, e está subtraindo da soma
+
+509
+00:59:46.440 --> 01:00:04.369
+Kadu Gertners: do dezassete e está transformando isso para float. Esse cast aqui, pessoal, é uma função de conversão de tipo de dado. Então ele vai converter para o float float. É o número real. São aqueles que têm casas decimais.
+
+510
+01:00:05.640 --> 01:00:18.000
+Kadu Gertners: Tudo bem, bom, e aí ele está subtraindo esses dois. Ele vai dividir isso pela soma
+
+511
+01:00:18.180 --> 01:00:20.970
+Kadu Gertners: do valor da tabela dois mil e dezassete.
+
+512
+01:00:21.270 --> 01:00:29.580
+Kadu Gertners: E desse valor aqui ele vai multiplicar por cem beleza.
+
+513
+01:00:29.690 --> 01:00:31.409
+Kadu Gertners: Vai multiplicar por cem.
+
+514
+01:00:31.620 --> 01:00:34.660
+Kadu Gertners: E aí ó ele vai pegar
+
+515
+01:00:34.830 --> 01:00:49.550
+Kadu Gertners: e tem um arredondamento. Repara que tem uma outra função round aqui de arredondamento para ele arredondar para mostrar um valor num determinado número de casas decimais.
+
+516
+01:00:50.210 --> 01:00:58.369
+Kadu Gertners: Então repara aqui. O que está depois do S. Pessoal, é o apelido que será botado aqui para a coluna.
+
+517
+01:00:59.190 --> 01:01:06.130
+Kadu Gertners: Isso aqui é o apelido no momento do Select. Vai ficar lá no cabeçalho da coluna.
+
+518
+01:01:06.330 --> 01:01:07.050
+Kadu Gertners: Tá bom.
+
+519
+01:01:07.390 --> 01:01:19.379
+Kadu Gertners: E aqui a mudança de dois mil change Cg é de change de mudança de dois mil e dezoito para dois mil e dezassete e change de dois mil e dezassete para dois mil e dezasseis.
+
+520
+01:01:19.740 --> 01:01:26.930
+Kadu Gertners: Então, de novo, ele vai pegar as tabelas dois mil e dezoito
+
+521
+01:01:27.250 --> 01:01:36.079
+Kadu Gertners: dois mil e dezassete dois mil e dezasseis. Vai usar as ligações que já falamos aqui na consulta anterior,
+
+522
+01:01:36.250 --> 01:01:37.080
+Kadu Gertners: não é?
+
+523
+01:01:37.830 --> 01:01:44.080
+Kadu Gertners: Vai pegar entre dois mil e dezoito e dois mil e dezassete, a coluna Fss que
+
+524
+01:01:44.310 --> 01:01:51.559
+Kadu Gertners: e entre a tabela dois mil e dezoito e dois mil e dezasseis, também a coluna Fsc
+
+525
+01:01:52.230 --> 01:01:58.840
+Kadu Gertners: de novo. Repara que ele, mais uma vez, está usando que os valores lá do Visit
+
+526
+01:01:59.030 --> 01:02:03.450
+Kadu Gertners: para dois mil e dezasseis dois mil e dezassete dois mil e dezoito. Eles têm que ser maior ou igual a zero.
+
+527
+01:02:03.950 --> 01:02:13.070
+Kadu Gertners: Vamos grupar em cima do Pls dezoito aqui e vamos ordenar
+
+528
+01:02:13.390 --> 01:02:16.940
+Kadu Gertners: pela coluna dois mil e dezoito dois mil e dezassete.
+
+529
+01:02:17.280 --> 01:02:18.480
+Kadu Gertners: Então vamos embora.
+
+530
+01:02:19.010 --> 01:02:22.100
+Kadu Gertners: Pega o comando e aí
+
+531
+01:02:26.830 --> 01:02:29.180
+Kadu Gertners: coloca para cá. Opa,
+
+532
+01:02:35.750 --> 01:02:39.450
+Kadu Gertners: seleciona o comando e executa.
+
+533
+01:02:39.990 --> 01:02:46.239
+Kadu Gertners: Olha lá aquele vírgula um lá é uma casa decimal.
+
+534
+01:02:46.580 --> 01:02:57.949
+Kadu Gertners: Deixa eu voltar aqui de novo esse vírgula um aqui, ele indica uma casa decimal. E repara, ele aqui só está botando uma casa decimal,
+
+535
+01:02:59.750 --> 01:03:00.860
+Kadu Gertners: beleza.
+
+536
+01:03:01.430 --> 01:03:07.779
+Kadu Gertners: Então, aqui, turma, ele está fazendo essa análise.
+
+537
+01:03:07.890 --> 01:03:14.060
+Kadu Gertners: É de dois mil e dezoito para dois mil e dezassete. Está vendo
+
+538
+01:03:14.960 --> 01:03:25.500
+Kadu Gertners: que teve um aumento aqui nesse estado? Sd: aqui aumentou aqui. Cadê é, aumentou um pouquinho
+
+539
+01:03:25.670 --> 01:03:27.870
+Kadu Gertners: o número de pessoas que visitaram
+
+540
+01:03:28.800 --> 01:03:31.099
+Kadu Gertners: está vendo, de dois mil e dezoito
+
+541
+01:03:31.560 --> 01:03:36.989
+Kadu Gertners: em relação a dois mil e dezassete. Então é por isso que botou até um percentual positivo.
+
+542
+01:03:37.330 --> 01:03:39.650
+Kadu Gertners: Agora, quando compara
+
+543
+01:03:39.840 --> 01:03:47.890
+Kadu Gertners: a mudança de dois mil e dezassete para dois mil e dezasseis, dois mil e dezassete, foram menos pessoas,
+
+544
+01:03:49.620 --> 01:03:59.930
+Kadu Gertners: e dois mil e dezasseis, foram mais pessoas. Então, ao analisar dois mil e dezasseis, com dois mil e dezassete dois mil e dezasseis, tinha um número mais alto
+
+545
+01:04:00.240 --> 01:04:09.210
+Kadu Gertners: e dois mil e dezassete. Um número menor. Então ele teve uma perda percentual de menos zero,seis, ponto percentual
+
+546
+01:04:10.420 --> 01:04:13.429
+Kadu Gertners: beleza é esse cálculo que ele tenta fazer aí.
+
+547
+01:04:14.220 --> 01:04:21.510
+Kadu Gertners: Então, galera esses dados. Eu estou falando de forma aqui na aula.
+
+548
+01:04:21.510 --> 01:04:34.470
+Kadu Gertners: Lógico que se vocês precisarem disso, vocês têm que dar uma treinada para vocês verem como é que funciona isso? Vocês aqui. Ele colocou um exemplo. Diria até realmente mais complexo,
+
+549
+01:04:34.500 --> 01:04:45.850
+Kadu Gertners: mais você vai poder usar outras funções que os bancos de dados emprestam para nós até a própria função Avg, que é para pegar a média
+
+550
+01:04:45.850 --> 01:05:01.020
+Kadu Gertners: de um campo que você vai poder fazer algumas análises com outras funções. Se for o caso, é lógico que você tem que fazer as devidas análises até para ver se os valores estão batendo com o esperado.
+
+551
+01:05:01.390 --> 01:05:03.710
+Kadu Gertners: Galera, olha só
+
+552
+01:05:03.970 --> 01:05:23.170
+Kadu Gertners: o que eu tento falar para vocês aqui. Essas informações que eu tento citar para vocês um pouquinho aqui. Galera, isso aí é o dia a dia de funcionamento das empresas, montar uma consulta. Assim, são essas consultas. Assim, quando você já pegou uma certa intimidade que você vai começar a fazer.
+
+553
+01:05:23.300 --> 01:05:37.309
+Kadu Gertners: E quem trabalha com você, seja você como um Dba, ou seja, você. Na área de desenvolvimento, você cada vez vai aumentar mais a complexidade das suas consultas, das suas queries,
+
+554
+01:05:37.960 --> 01:05:44.190
+Kadu Gertners: entendeu? Então é bom. Você com calma e começando a se acostumar com essas coisas.
+
+555
+01:05:45.050 --> 01:05:48.140
+Kadu Gertners: Tá bom, bom.
+
+556
+01:05:49.640 --> 01:05:50.440
+Kadu Gertners: E aí
+
+557
+01:05:53.650 --> 01:05:55.600
+Kadu Gertners: o nosso último aqui.
+
+558
+01:05:55.770 --> 01:06:04.259
+Kadu Gertners: Ele é o comando igualzinho ao comando anterior. A única diferença é essa linha aqui.
+
+559
+01:06:04.650 --> 01:06:10.149
+Kadu Gertners: Ele quer saber? Somente aqueles estados
+
+560
+01:06:10.430 --> 01:06:18.580
+Kadu Gertners: que ele fez um heavy com o somatório do Pls dezoito visit.
+
+561
+01:06:18.710 --> 01:06:24.450
+Kadu Gertners: Quando ele foi maior do que cinquenta milhões de visitas.
+
+562
+01:06:25.230 --> 01:06:32.720
+Kadu Gertners: Ele só quer saber os Estados em relação ao ano de dois mil e dezoito,
+
+563
+01:06:33.090 --> 01:06:37.739
+Kadu Gertners: que tiveram o número de visitações maior do que cinquenta milhões.
+
+564
+01:06:37.910 --> 01:06:47.970
+Kadu Gertners: Então vamos lá. É a única diferença. Então lembrem se, o Heavy é o filtro
+
+565
+01:06:48.080 --> 01:06:50.960
+Kadu Gertners: de um grupamento que foi feito.
+
+566
+01:06:51.310 --> 01:07:01.329
+Kadu Gertners: E o grupamento que foi feito. Ele foi em cima da tabela dois mil e dezoito, em cima da coluna Sta. Br
+
+567
+01:07:02.220 --> 01:07:03.320
+Kadu Gertners: beleza.
+
+568
+01:07:03.700 --> 01:07:10.780
+Kadu Gertners: Então lembra a cláusula Uer caduzão faz um filtro registro a registro.
+
+569
+01:07:11.510 --> 01:07:19.019
+Kadu Gertners: A cláusula Heavy faz o seguinte. O Heavy está subentendido que o Comando tem um Group By.
+
+570
+01:07:19.460 --> 01:07:22.899
+Kadu Gertners: Então o que ele fez? Ele executou a consulta.
+
+571
+01:07:23.100 --> 01:07:36.130
+Kadu Gertners: Ele pegou o Group By, pegou todas as linhas que tinham nesse exemplo, aí, todos os estados iguais. Ele juntou todos os estados iguais e somou todos os valores.
+
+572
+01:07:37.700 --> 01:07:46.820
+Kadu Gertners: Beleza. Aí ele vai pegar em relação ao ano de dois mil e dezoito daquele Estado. Ele quer só os que têm
+
+573
+01:07:47.270 --> 01:07:53.550
+Kadu Gertners: um número maior de visitantes maior do que cinquenta milhões. Só esses que ele quer de resposta.
+
+574
+01:07:54.000 --> 01:08:00.989
+Kadu Gertners: Então, quando nós pegarmos esse comando e trazíamos para cá.
+
+575
+01:08:02.280 --> 01:08:09.890
+Kadu Gertners: Repara aqui. Nesse exemplo, ele listou cinquenta e três registros.
+
+576
+01:08:10.160 --> 01:08:20.210
+Kadu Gertners: Agora, quando nós fizermos isso aqui, ó, e executarmos
+
+577
+01:08:20.560 --> 01:08:23.579
+Kadu Gertners: com o Heavy, olha o que ele fará.
+
+578
+01:08:24.170 --> 01:08:34.969
+Kadu Gertners: Ó, ó, eram uns cinquenta e três, hein? Agora, com o Heavy só seis apresentam. Olha lá
+
+579
+01:08:35.390 --> 01:08:42.519
+Kadu Gertners: o Heavy com a coluna e Pls dezoito visits maior do que cinquenta milhões.
+
+580
+01:08:43.500 --> 01:08:45.020
+Kadu Gertners: Só esses aqui, ó,
+
+581
+01:08:46.890 --> 01:08:54.729
+Kadu Gertners: só esses estados aqui têm mais do que cinquenta milhões de visitas no ano de dois mil e dezoito,
+
+582
+01:08:58.170 --> 01:08:59.319
+Kadu Gertners: pessoal.
+
+583
+01:09:00.080 --> 01:09:04.140
+Kadu Gertners: Tudo bem, tranquilo. Ok, Lucas.
+
+584
+01:09:05.569 --> 01:09:06.330
+Kadu Gertners: E aí?
+
+585
+01:09:09.479 --> 01:09:13.789
+Kadu Gertners: Ok, Gabriel Crepaldi. Ok, Gabriel Sandré,
+
+586
+01:09:15.640 --> 01:09:35.380
+Kadu Gertners: pessoal, era isso que eu queria mostrar hoje para vocês. Para relembrarmos um pouquinho o Group by. E para relembrar o Heavy galera, lembrem se no at de vocês na nossa disciplina. Vocês têm alguns casos que vocês têm que usar. O Heavy.
+
+587
+01:09:35.649 --> 01:09:45.459
+Kadu Gertners: Então estuda. Primeiro, analisa com carinho as perguntas. Nós ainda vamos ter duas aulas, dois encontros
+
+588
+01:09:46.550 --> 01:09:48.189
+Kadu Gertners: na semana que vem,
+
+589
+01:09:48.590 --> 01:10:06.470
+Kadu Gertners: até com o meu compromisso de fechar a terça feira que vem aquele material que juntos iniciamos. Vamos, se Deus quiser finalizá lo aí na próxima terça, tá? E aí vamos finalizar aí na quinta. Se for o caso
+
+590
+01:10:06.610 --> 01:10:12.129
+Kadu Gertners: fica liberado até para vocês, para nós tirarmos mais dúvidas de vocês. E lógico,
+
+591
+01:10:12.130 --> 01:10:29.089
+Kadu Gertners: se vocês não tiverem dúvidas, eu já vou começar a fazer algumas coisas que eu vou precisar para ir começando a fechar aqui. O nosso bloco inteiro, que eu vou começar a fazer algumas coisas vinculadas à parte de correções aí de vocês.
+
+592
+01:10:29.500 --> 01:10:36.059
+Kadu Gertners: Tá legal, turma, beleza. Alguma dúvida? Alguma colocação?
+
+593
+01:10:36.570 --> 01:10:40.380
+Kadu Gertners: Trazer algum caso aqui para nós. Está tudo tranquilo, pessoal.
+
+594
+01:10:40.780 --> 01:10:41.580
+Kadu Gertners: Bom dia.
+
+595
+01:10:41.640 --> 01:11:00.880
+Kadu Gertners: Se não temos mais perguntas, podemos ficar por aqui, galera? Mandem ver aí como um dos amigos aí. Falou mais cedo, né? No trabalho de Python de vocês. Eu tenho certeza que o trabalho de Python vai dar trabalho. Então manda ver. Aí cai pra dentro, tá?
+
+596
+01:11:01.870 --> 01:11:06.339
+Kadu Gertners: É, é cara. Enfim.
+
+597
+01:11:08.040 --> 01:11:09.180
+Kadu Gertners: Ah, sim,
+
+598
+01:11:09.380 --> 01:11:15.730
+Kadu Gertners: é só. Vai começar realmente a pintar. Lucas, você tem razão. Quando vocês realmente começarem a botar a mão na massa.
+
+599
+01:11:15.990 --> 01:11:26.019
+Kadu Gertners: Mas, enfim, quando começar a pintar isso aí é só vocês irem falando comigo, e vamos juntos aí, tentando ver como é que eu vou poder ajudar vocês.
+
+600
+01:11:26.200 --> 01:11:38.019
+Kadu Gertners: Tá legal, galera, mandem ver nos estudos das outras disciplinas também, para vocês irem ficando livres. Não esqueçam que os prazos têm que ser respeitados. Agora,
+
+601
+01:11:38.080 --> 01:11:56.619
+Kadu Gertners: para todos os professores, não é só para mim. Então manda ver aí um excelente fim de semana para vocês. E até terça feira que vem, galera. Tá bom. Obrigado pela presença de todos pela ajuda de sempre. Um beijo no coração de todos. Galera, valeu. Obrigado, Tchau.
+
+602
+01:11:57.350 --> 01:11:59.280
+gabriel.diniz: Valeu, pessoa. Boa noite.
+
+603
+01:11:59.280 --> 01:12:00.800
+Kadu Gertners: Valeu. Excelente noite.
+
