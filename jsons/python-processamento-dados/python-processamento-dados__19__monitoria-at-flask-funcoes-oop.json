@@ -1,0 +1,80 @@
+{
+  "id": "python-processamento-dados:monitoria-at-flask-funcoes-oop",
+  "slug": "monitoria-at-flask-funcoes-oop",
+  "discipline": "python-processamento-dados",
+  "order": 19,
+  "name": "Monitoria do AT: Flask, funções e introdução à orientação a objetos",
+  "description": "Sessão assistida do AT Parte B — endpoint produtos comuns, nomenclatura de funções e classes em Python Tópicos abordados: Flask, endpoint GET, list comprehension, definição de funções, parâmetros, orientação a objetos, classe, __init__, self, Flask GET, jsonify, classe e objeto. Objetivos: • Implementar rota Flask GET que retorna interseção de listas de produtos. • Nomear funções e parâmetros de forma legível sem usar palavras reservadas. • Diferenciar classe (modelo) de objeto (instância) e reconhecer o construtor __init__.",
+  "keywords": [
+    "Flask",
+    "endpoint GET",
+    "list comprehension",
+    "definição de funções",
+    "parâmetros",
+    "orientação a objetos",
+    "classe",
+    "__init__",
+    "self",
+    "Flask GET",
+    "jsonify",
+    "classe e objeto",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Endpoint produtos comuns",
+    "Sem entrada HTTP neste exercício",
+    "Depuração servidor + cliente",
+    "Funções: nomes e parâmetros",
+    "Introdução à orientação a objetos (visão resumida)",
+    "Uso Prático",
+    "Prazos do AT (contexto administrativo)",
+    "Testar com Thunder Client / navegador",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Interseção pura (sem Flask)",
+    "Medium — Rota Flask isolada",
+    "Hard — Cliente com validação de status"
+  ],
+  "concepts": [
+    "Flask",
+    "endpoint GET",
+    "list comprehension",
+    "definição de funções",
+    "parâmetros",
+    "orientação a objetos",
+    "classe",
+    "__init__",
+    "self",
+    "Flask GET",
+    "jsonify",
+    "classe e objeto"
+  ],
+  "learning_objectives": [
+    "Implementar rota Flask GET que retorna interseção de listas de produtos.",
+    "Nomear funções e parâmetros de forma legível sem usar palavras reservadas.",
+    "Diferenciar classe (modelo) de objeto (instância) e reconhecer o construtor __init__."
+  ],
+  "exercises": [
+    {
+      "question": "Por que o nome do parâmetro em def produtos_comuns(loja_a, loja_b) pode ser arbitrário?",
+      "answer": "Parâmetros são espaços reservados locais à função; o que importa é a ordem e o uso consistente no corpo, não o rótulo em si.",
+      "hint": "Compare com var1/var2 versus loja_a/loja_b."
+    },
+    {
+      "question": "O que torna um endpoint completo no Flask?",
+      "answer": "A combinação do caminho (@app.route) com o método HTTP declarado em methods, por exemplo GET em /produtos-comuns.",
+      "hint": "API abstrata vs ponto concreto de acesso."
+    },
+    {
+      "question": "Qual a diferença entre classe Conta e conta = Conta('Ana', 100)?",
+      "answer": "Conta é o molde (abstração); conta é a instância concreta na memória com estado próprio (titular, saldo).",
+      "hint": "Modelo vs concretização."
+    }
+  ],
+  "content": "---\ntitle: \"Monitoria do AT: Flask, funções e introdução à orientação a objetos\"\nslug: \"monitoria-at-flask-funcoes-oop\"\ndiscipline: \"python-processamento-dados\"\norder: 19\ndescription: \"Sessão assistida do AT Parte B — endpoint produtos comuns, nomenclatura de funções e classes em Python\"\nreading_time: 26\ndifficulty: \"medium\"\nconcepts:\n  - Flask\n  - endpoint GET\n  - list comprehension\n  - definição de funções\n  - parâmetros\n  - orientação a objetos\n  - classe\n  - __init__\n  - self\nprerequisites:\n  - \"integracao-llms-servidor-flask\"\n  - \"funcoes-pre-processamento-list-comprehension-contagem\"\nlearning_objectives:\n  - \"Implementar rota Flask GET que retorna interseção de listas de produtos.\"\n  - \"Nomear funções e parâmetros de forma legível sem usar palavras reservadas.\"\n  - \"Diferenciar classe (modelo) de objeto (instância) e reconhecer o construtor __init__.\"\nexercises:\n  - question: \"Por que o nome do parâmetro em def produtos_comuns(loja_a, loja_b) pode ser arbitrário?\"\n    answer: \"Parâmetros são espaços reservados locais à função; o que importa é a ordem e o uso consistente no corpo, não o rótulo em si.\"\n    hint: \"Compare com var1/var2 versus loja_a/loja_b.\"\n  - question: \"O que torna um endpoint completo no Flask?\"\n    answer: \"A combinação do caminho (@app.route) com o método HTTP declarado em methods, por exemplo GET em /produtos-comuns.\"\n    hint: \"API abstrata vs ponto concreto de acesso.\"\n  - question: \"Qual a diferença entre classe Conta e conta = Conta('Ana', 100)?\"\n    answer: \"Conta é o molde (abstração); conta é a instância concreta na memória com estado próprio (titular, saldo).\"\n    hint: \"Modelo vs concretização.\"\nreview_after_days: [3, 7]\n---\n\n## Visão Geral do Conceito\n\nEsta aula é uma **sessão de monitoria** focada na Parte B do AT: exercícios que expõem um **servidor Flask** com rota `GET /produtos-comuns`, consomem o endpoint com `requests` e revisam **funções** e **classes** necessárias para organizar a lógica. O professor resolve junto com a turma, incluindo depuração de ambiente (Docker, portas, serialização JSON).\n\nO problema prático: duas filiais mantêm listas de produtos em estoque; o enunciado pede um **serviço web** que devolva apenas os itens presentes em **ambas** as listas, sem entrada do cliente — dados já definidos no servidor.\n\n> **Regra de correção citada na aula:** na avaliação do AT, o foco é **se a resposta final funciona**; list comprehension, `set` ou `for` são aceitos se o resultado estiver correto.\n\n## Modelo Mental\n\nFluxo do exercício 13 (núcleo da sessão):\n\n1. **Servidor** — Flask com listas `loja_a` e `loja_b` no módulo.\n2. **Função de domínio** — `produtos_comuns(a, b)` calcula interseção.\n3. **Rota** — `@app.route(\"/produtos-comuns\", methods=[\"GET\"])` chama a função e retorna JSON.\n4. **Cliente** — outro notebook/célula faz `requests.get(BASE_URL + \"/produtos-comuns\")` e interpreta o corpo.\n\n```mermaid\nflowchart TD\n    A[Células 13: definir loja_a e loja_b] --> B{Exercício 14+?}\n    B -->|sim| C[Subir Flask app.run]\n    C --> D[GET /produtos-comuns]\n    D --> E[produtos_comuns loja_a loja_b]\n    E --> F[jsonify lista comum]\n    F --> G[Cliente requests.get]\n    G --> H[response.json]\n```\n\n**Funções** encapsulam um passo nomeado; **classes** encapsulam estado + comportamento de uma entidade (conta bancária, bicicleta) — introdução feita ao final da aula para quem ainda não teve disciplina de OO.\n\n## Mecânica Central\n\n### Endpoint produtos comuns\n\nEstrutura mínima discutida em aula:\n\n```python\nfrom flask import Flask, jsonify\n\napp = Flask(__name__)\n\nloja_a = [\"arroz\", \"feijão\", \"café\"]\nloja_b = [\"café\", \"leite\", \"arroz\"]\n\n\ndef produtos_comuns(lista_a, lista_b):\n    return [item for item in lista_a if item in lista_b]\n\n\n@app.route(\"/produtos-comuns\", methods=[\"GET\"])\ndef get_produtos_comuns():\n    resultado = produtos_comuns(loja_a, loja_b)\n    return jsonify(resultado)\n\n\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\", port=8080)\n```\n\nAlternativas mencionadas: loop `for`, `set(lista_a) & set(lista_b)` — válidas se o enunciado não restringir estrutura.\n\n### Sem entrada HTTP neste exercício\n\nDiferente de APIs que leem `request.json`, aqui as listas já estão no servidor. O cliente só dispara GET; não envia corpo.\n\n### Depuração servidor + cliente\n\nOrdem recomendada na aula:\n\n1. Garantir `app` definido antes das rotas (erro `app não está definido` ocorreu ao vivo).\n2. Alinhar **porta** do `app.run` com mapeamento Docker/Deepnote (8080 vs 5000).\n3. Com servidor OK, ajustar cliente: `BASE_URL`, path `/produtos-comuns`, `response.json()`.\n4. Problemas de **encoding** (`jsonify` vs texto HTML) — testar `Content-Type` da resposta.\n\n**Lacuna da transmissão:** o professor não concluiu a demonstração end-to-end no ambiente dele; alunos que rodaram localmente tiveram sucesso. Resolução formal foi adiada para a aula 20.\n\n### Funções: nomes e parâmetros\n\n- Sintaxe: `def nome(param1, param2):` + corpo indentado + `return`.\n- Nomes de função e parâmetros são **escolha do programador**, desde que não sejam palavras reservadas (`def`, `class`, `return`).\n- Boa prática: nomes **sugestivos** (`produtos_comuns`, `loja_a`) — ajudam leitura, não alteram semântica.\n- `pass` permite esqueleto vazio ao prototipar.\n\n### Introdução à orientação a objetos (visão resumida)\n\n| Termo | Significado |\n|-------|-------------|\n| **Classe** | Modelo / abstração (ex.: `Conta`, `Bicicleta`) |\n| **Objeto** | Instância concreta (`conta = Conta(\"Ana\", 100)`) |\n| **`__init__`** | Construtor; inicializa atributos (`self.saldo`) |\n| **`self`** | Referência à instância atual |\n| **Método** | Função dentro da classe (`depositar`, `pedalar`) |\n\nExemplo conta bancária citado:\n\n```python\nclass Conta:\n    def __init__(self, titular, saldo_inicial):\n        self.titular = titular\n        self.saldo = saldo_inicial\n\n    def depositar(self, valor):\n        self.saldo += valor\n\n    def sacar(self, valor):\n        self.saldo -= valor\n\n\nconta = Conta(\"Ana\", 100)\nconta.depositar(50)\nconta.sacar(30)\nprint(conta.saldo)  # 120\n```\n\n**Herança** (veículo → carro/bicicleta) e **classe abstrata** foram mencionadas superficialmente — aprofundamento fica para disciplina de Orientação a Objetos.\n\n> **Não coberto em profundidade no material:** polimorfismo, UML completo, padrão MVC além da menção ao “controller” na URL.\n\n## Uso Prático\n\n### Prazos do AT (contexto administrativo)\n\nData de entrega e janela com penalidade após o prazo foram esclarecidos na abertura; envio via link compartilhado (Deepnote), não anexo do notebook inteiro por e-mail.\n\n### Testar com Thunder Client / navegador\n\nCom servidor rodando, acessar `http://host:porta/produtos-comuns` deve retornar JSON array. Cliente Python:\n\n```python\nimport requests\n\nBASE_URL = \"http://127.0.0.1:8080\"\nresp = requests.get(f\"{BASE_URL}/produtos-comuns\")\nprint(resp.status_code)\nprint(resp.json())\n```\n\n## Erros Comuns\n\n**`NameError: name 'app' is not defined`:** instanciar `app = Flask(__name__)` antes dos decorators `@app.route`.\n\n**404 no cliente, 200 no navegador:** path errado (`/produtos-comum` vs `/produtos-comuns`) ou método diferente.\n\n**Resposta HTML em vez de JSON:** rota ausente (página de erro Flask) ou `return` de string sem `jsonify`.\n\n**Notebook travado após `app.run`:** esperado — servidor bloqueia a célula; usar segundo notebook para cliente (detalhado na aula 20).\n\n**Usar palavra reservada como nome de função:** `def def(...)` ou `def return(...)` gera `SyntaxError`.\n\n## Visão Geral de Debugging\n\n1. Testar função pura `produtos_comuns` no REPL sem Flask.\n2. Subir servidor e chamar rota com `curl` ou navegador.\n3. Só então rodar cliente `requests` com URL do túnel/Common Connections.\n4. Para funções: conferir nomes de parâmetros usados no corpo vs assinatura.\n5. Para classes: verificar se `self.` prefixa atributos de instância.\n\n## Principais Pontos\n\n- Exercício 13+: servidor Flask GET com listas fixas e interseção de produtos.\n- Correção do AT prioriza funcionamento, não estilo da comprehension.\n- Nomes de função/parâmetro são livres mas devem ser legíveis.\n- Endpoint = rota + método HTTP.\n- Classe é molde; objeto é instância; `__init__` inicializa estado.\n- Depurar servidor antes do cliente; ambiente ao vivo teve falhas não resolvidas na sessão.\n\n## Preparação para Prática\n\nVocê deve implementar rota GET funcional, consumi-la com requests e explicar por que separar `produtos_comuns` da rota Flask facilita teste e leitura — preparação direta para a resolução formal na aula 20.\n\n## Laboratório de Prática\n\n### Easy — Interseção pura (sem Flask)\n\n```python\nLOJA_A = [\"notebook\", \"mouse\", \"teclado\", \"hub\"]\nLOJA_B = [\"mouse\", \"monitor\", \"teclado\", \"cabo\"]\n\n\ndef produtos_em_ambas(loja_a: list, loja_b: list) -> list:\n    # TODO: retornar produtos presentes nas duas listas\n    return []\n\n\nif __name__ == \"__main__\":\n    print(produtos_em_ambas(LOJA_A, LOJA_B))\n```\n\n### Medium — Rota Flask isolada\n\n```python\nfrom flask import Flask, jsonify\n\napp = Flask(__name__)\nESTOQUE_SP = [\"ssd\", \"ram\", \"gpu\"]\nESTOQUE_RJ = [\"ram\", \"cpu\", \"ssd\"]\n\n\ndef em_comum(a, b):\n    # TODO: implementar interseção\n    return []\n\n\n@app.route(\"/produtos-comuns\", methods=[\"GET\"])\ndef rota_comuns():\n    # TODO: jsonify(em_comum(ESTOQUE_SP, ESTOQUE_RJ))\n    return jsonify([])\n\n\nif __name__ == \"__main__\":\n    app.run(port=5000)\n```\n\n### Hard — Cliente com validação de status\n\n```python\nimport requests\n\nBASE_URL = \"http://127.0.0.1:5000\"\n\n\ndef buscar_produtos_comuns(base_url: str) -> list | None:\n    # TODO: GET em /produtos-comuns\n    # TODO: se status 200, retornar response.json(); senão None\n    return None\n\n\nif __name__ == \"__main__\":\n    dados = buscar_produtos_comuns(BASE_URL)\n    print(dados if dados is not None else \"Falha na API\")\n```\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"intersecao-listas-estoque\",\n    \"slug\": \"intersecao-listas-estoque\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Interseção de listas de estoque\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\"python\", \"listas\", \"comprehension\"],\n    \"summary\": \"Função que retorna produtos presentes em duas listas de filiais.\"\n  },\n  {\n    \"id\": \"flask-rota-estoque-comuns\",\n    \"slug\": \"flask-rota-estoque-comuns\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Rota Flask produtos comuns\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\"python\", \"flask\", \"get\", \"jsonify\"],\n    \"summary\": \"Expor GET /produtos-comuns com jsonify da interseção de estoques.\"\n  },\n  {\n    \"id\": \"cliente-validar-get-comuns\",\n    \"slug\": \"cliente-validar-get-comuns\",\n    \"difficulty\": \"hard\",\n    \"title\": \"Cliente GET com validação\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\"python\", \"requests\", \"flask\", \"http\"],\n    \"summary\": \"Consumir /produtos-comuns e retornar JSON só se status for 200.\"\n  }\n]\n-->\n",
+  "source_path": "content/python-processamento-dados/aula-19-monitoria-at-flask-funcoes-oop.md",
+  "source_hash": "a5b9cfdf52070662"
+}

@@ -1,0 +1,86 @@
+{
+  "id": "python-processamento-dados:resolucao-at-flask-escopo-funcoes",
+  "slug": "resolucao-at-flask-escopo-funcoes",
+  "discipline": "python-processamento-dados",
+  "order": 20,
+  "name": "Resolução do AT Parte B: Flask no Deepnote, deduplicação e escopo de funções",
+  "description": "Exercícios 12–16 resolvidos: servidor/cliente Deepnote, OpenRouter, limpeza de cadastros e múltiplos retornos Tópicos abordados: Flask no Deepnote, Common Connections, requests, deduplicação de cadastros, normalização, escopo de funções, retorno múltiplo, recursão, Flask Deepnote, deduplicação, normalização email telefone, escopo de função. Objetivos: • Subir servidor Flask no Deepnote e expor URL via Common Connections. • Separar notebook servidor e notebook cliente durante app.run. • Implementar deduplicação de cadastros com normalização de e-mail e telefone. • Explicar escopo local/globa...",
+  "keywords": [
+    "Flask no Deepnote",
+    "Common Connections",
+    "requests",
+    "deduplicação de cadastros",
+    "normalização",
+    "escopo de funções",
+    "retorno múltiplo",
+    "recursão",
+    "Flask Deepnote",
+    "deduplicação",
+    "normalização email telefone",
+    "escopo de função",
+    "OpenRouter",
+    "Visão Geral do Conceito",
+    "Modelo Mental",
+    "Mecânica Central",
+    "Exercício 13 — Servidor `produtos-comuns`",
+    "Exercício 14 — Rota `/relatorio`",
+    "Exercício 15 — Cliente `requests`",
+    "Exercício 16 — OpenRouter (LLM gratuita)",
+    "Exercício 12 — Deduplicar cadastros",
+    "Escopo e execução",
+    "Recursão (alerta)",
+    "Uso Prático",
+    "Entrega do AT",
+    "Revisão de código em grupo",
+    "Separar funções auxiliares",
+    "Erros Comuns",
+    "Visão Geral de Debugging",
+    "Principais Pontos",
+    "Preparação para Prática",
+    "Laboratório de Prática",
+    "Easy — Normalizar campos de cadastro",
+    "Medium — Deduplicar e contar",
+    "Hard — Cliente POST OpenRouter (mock local)"
+  ],
+  "concepts": [
+    "Flask no Deepnote",
+    "Common Connections",
+    "requests",
+    "deduplicação de cadastros",
+    "normalização",
+    "escopo de funções",
+    "retorno múltiplo",
+    "recursão",
+    "Flask Deepnote",
+    "deduplicação",
+    "normalização email telefone",
+    "escopo de função",
+    "OpenRouter"
+  ],
+  "learning_objectives": [
+    "Subir servidor Flask no Deepnote e expor URL via Common Connections.",
+    "Separar notebook servidor e notebook cliente durante app.run.",
+    "Implementar deduplicação de cadastros com normalização de e-mail e telefone.",
+    "Explicar escopo local/global e retorno de múltiplos valores em funções."
+  ],
+  "exercises": [
+    {
+      "question": "Por que o notebook trava após app.run no Deepnote?",
+      "answer": "app.run inicia loop bloqueante do servidor; a célula não termina até o processo ser interrompido — use outro notebook para o cliente.",
+      "hint": "Servidor vs cliente em ambientes notebook."
+    },
+    {
+      "question": "Como Python retorna duas listas de uma função?",
+      "answer": "return lista_unicos, lista_descartados — o chamador pode desempacotar com a, b = func().",
+      "hint": "Tupla de retorno."
+    },
+    {
+      "question": "Por que recursão sem caso base causa RecursionError?",
+      "answer": "A função chama a si mesma indefinidamente; a pilha de chamadas estoura o limite do interpretador.",
+      "hint": "Pense em factorial com chamada infinita."
+    }
+  ],
+  "content": "---\ntitle: \"Resolução do AT Parte B: Flask no Deepnote, deduplicação e escopo de funções\"\nslug: \"resolucao-at-flask-escopo-funcoes\"\ndiscipline: \"python-processamento-dados\"\norder: 20\ndescription: \"Exercícios 12–16 resolvidos: servidor/cliente Deepnote, OpenRouter, limpeza de cadastros e múltiplos retornos\"\nreading_time: 30\ndifficulty: \"hard\"\nconcepts:\n  - Flask no Deepnote\n  - Common Connections\n  - requests\n  - deduplicação de cadastros\n  - normalização\n  - escopo de funções\n  - retorno múltiplo\n  - recursão\nprerequisites:\n  - \"monitoria-at-flask-funcoes-oop\"\n  - \"conjuntos-sets-python\"\nlearning_objectives:\n  - \"Subir servidor Flask no Deepnote e expor URL via Common Connections.\"\n  - \"Separar notebook servidor e notebook cliente durante app.run.\"\n  - \"Implementar deduplicação de cadastros com normalização de e-mail e telefone.\"\n  - \"Explicar escopo local/global e retorno de múltiplos valores em funções.\"\nexercises:\n  - question: \"Por que o notebook trava após app.run no Deepnote?\"\n    answer: \"app.run inicia loop bloqueante do servidor; a célula não termina até o processo ser interrompido — use outro notebook para o cliente.\"\n    hint: \"Servidor vs cliente em ambientes notebook.\"\n  - question: \"Como Python retorna duas listas de uma função?\"\n    answer: \"return lista_unicos, lista_descartados — o chamador pode desempacotar com a, b = func().\"\n    hint: \"Tupla de retorno.\"\n  - question: \"Por que recursão sem caso base causa RecursionError?\"\n    answer: \"A função chama a si mesma indefinidamente; a pilha de chamadas estoura o limite do interpretador.\"\n    hint: \"Pense em factorial com chamada infinita.\"\nreview_after_days: [3, 7]\n---\n\n## Visão Geral do Conceito\n\nA aula fecha o ciclo do **AT Parte B** com resolução guiada dos exercícios **12 a 16**: deduplicação de cadastros importados, servidor Flask `GET /produtos-comuns` no **Deepnote**, cliente com `requests`, e chamada **POST** a LLM gratuita via **OpenRouter**. Complementa com **escopo de funções**, **retornos múltiplos** e alerta sobre **recursão**.\n\nO fio condutor: em ADS você alterna entre **lógica de dados pura** (ex. 12), **serviço HTTP** (13–15) e **integração com API externa** (16) — sempre validando ambiente (notebook servidor preso, URL pública, headers JSON).\n\n## Modelo Mental\n\nArquitetura Deepnote para exercícios 13–15:\n\n```mermaid\nflowchart LR\n    subgraph NB_Servidor\n        A[pip install flask]\n        B[app + rotas]\n        C[app.run]\n        D[Common Connections URL]\n    end\n    subgraph NB_Cliente\n        E[import requests]\n        F[BASE_URL do link]\n        G[GET /produtos-comuns]\n    end\n    D --> F\n    G --> B\n```\n\nExercício **12** é offline: lista de dicts de clientes → normalizar → separar únicos e descartados com contadores.\n\nExercício **16**: cliente POST para OpenRouter com `Authorization: Bearer`, corpo JSON com `model` e `messages`.\n\n## Mecânica Central\n\n### Exercício 13 — Servidor `produtos-comuns`\n\nPassos da resolução em aula:\n\n1. `pip install flask` (comentar célula após primeira execução).\n2. Definir `app`, listas `loja_a` / `loja_b`, função interseção.\n3. `@app.route(\"/produtos-comuns\", methods=[\"GET\"])`.\n4. `app.run` — notebook entra em modo servidor.\n5. Menu **Common Connections** → URL pública para o cliente.\n\nCódigo servidor (equivalente à demonstração):\n\n```python\nfrom flask import Flask, jsonify\n\napp = Flask(__name__)\n\nloja_a = [\"a\", \"b\", \"c\", \"d\"]\nloja_b = [\"c\", \"d\", \"e\", \"f\"]\n\n\ndef produtos_comuns(a, b):\n    return [x for x in a if x in b]\n\n\n@app.route(\"/produtos-comuns\", methods=[\"GET\"])\ndef get_produtos_comuns():\n    return jsonify(produtos_comuns(loja_a, loja_b))\n\n\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\", port=8080)\n```\n\n### Exercício 14 — Rota `/relatorio`\n\nRota adicional que devolve string JSON via `json.dumps` do relatório — cliente faz GET e exibe texto/JSON.\n\n### Exercício 15 — Cliente `requests`\n\n```python\nimport requests\n\nBASE_URL = \"https://....deepnoteusercontent.com\"  # Common Connections\n\nresp = requests.get(f\"{BASE_URL}/produtos-comuns\")\nprint(resp.status_code)\nprint(resp.json())\n```\n\n**Problema recorrente na aula:** mesmo erro de parsing da sessão anterior em `/produtos-comuns`; professor adiou correção e mostrou exercício 16 com sucesso.\n\n### Exercício 16 — OpenRouter (LLM gratuita)\n\nFluxo:\n\n1. Criar chave em openrouter.ai (conta pessoal).\n2. `POST` na URL base da API com header `Authorization: Bearer CHAVE`.\n3. Corpo: `model`, `messages` com role `user` e conteúdo da pergunta.\n4. Extrair texto de `response.json()[\"choices\"][0][\"message\"][\"content\"]` (estrutura típica; validar no payload real).\n\n### Exercício 12 — Deduplicar cadastros\n\nRegras do enunciado (síntese):\n\n- Normalizar **e-mail** (minúsculas, strip) e **telefone** (apenas dígitos).\n- Duplicata se e-mail normalizado **ou** telefone normalizado coincidir com registro já aceito.\n- Retornar: contagem de únicos, contagem de descartados, lista de descartados com motivo.\n- Usar `set` auxiliar para e-mails/telefones vistos.\n\nEsqueleto conceitual:\n\n```python\ndef normalizar_email(email: str) -> str:\n    return email.strip().lower()\n\n\ndef normalizar_telefone(tel: str) -> str:\n    return \"\".join(c for c in tel if c.isdigit())\n\n\ndef deduplicar_cadastros(cadastros: list) -> tuple:\n    unicos = []\n    descartados = []\n    emails_vistos = set()\n    fones_vistos = set()\n\n    for cad in cadastros:\n        em = normalizar_email(cad.get(\"email\", \"\"))\n        fone = normalizar_telefone(cad.get(\"telefone\", \"\"))\n        if em in emails_vistos or fone in fones_vistos:\n            descartados.append({**cad, \"motivo\": \"duplicata\"})\n            continue\n        emails_vistos.add(em)\n        fones_vistos.add(fone)\n        unicos.append(cad)\n\n    return unicos, descartados\n\n\ndef processar(cadastros: list) -> tuple:\n    unicos, descartados = deduplicar_cadastros(cadastros)\n    return len(unicos), len(descartados), descartados\n```\n\nProfessor enfatizou: **várias implementações válidas**; avaliação foca em funcionar para entradas genéricas, não em performance algorítmica.\n\n### Escopo e execução\n\n- Definições `def` no topo do módulo **não executam** até serem chamadas.\n- Bloco `if __name__ == \"__main__\":` é o ponto de entrada do script.\n- Parâmetro `cadastros` dentro da função é **local**; variável global homônima é outro objeto.\n- Função pode **retornar múltiplos valores** (tupla implícita): `return unicos, descartados`.\n\n### Recursão (alerta)\n\nFatorial recursivo só termina com **caso base** (`n <= 1`). Função que chama a si mesma sem base → `RecursionError`. Citado como contraste com loops iterativos usados no AT.\n\n## Uso Prático\n\n### Entrega do AT\n\nCompartilhar link do Deepnote com o professor (não reenviar notebook como arquivo solto). Correções previstas no fim de semana seguinte à aula.\n\n### Revisão de código em grupo\n\nAlunos apresentaram implementação do exercício 12; sugestão pedagógica: comentários linha a linha ajudam correção sem penalizar estilo, desde que o resultado seja correto.\n\n### Separar funções auxiliares\n\nExtrair `normalizar_email` e `normalizar_telefone` melhora leitura — recomendação de design, não requisito de nota.\n\n## Erros Comuns\n\n**Notebook servidor sem cliente separado:** tentar rodar requests na mesma sessão bloqueada por `app.run`.\n\n**URL base errada:** copiar link Common Connections incompleto ou desatualizado após reiniciar servidor.\n\n**OpenRouter sem header Authorization:** HTTP 401.\n\n**Confundir variável global `cadastros` com parâmetro `cadastros`:** lógica correta no parâmetro, mas loop usando global errada.\n\n**Recursão infinita em exercícios que não pedem recursão:** preferir `for` e `set` no 12.\n\n## Visão Geral de Debugging\n\n1. **Ex. 12:** testar normalizadores com strings sujas isoladas.\n2. **Ex. 13–14:** `curl` na URL pública antes do notebook cliente.\n3. **Ex. 15:** imprimir `resp.headers`, `resp.text[:200]` se `json()` falhar.\n4. **Ex. 16:** validar modelo gratuito disponível na documentação OpenRouter.\n5. **Escopo:** usar `print(locals().keys())` dentro da função para ver parâmetros.\n\n## Principais Pontos\n\n- Deepnote: servidor em um notebook, cliente em outro; Common Connections fornece BASE_URL.\n- Ex. 13 = Flask GET + jsonify; ex. 15 = requests GET; ex. 16 = POST LLM externa.\n- Ex. 12 = normalização + sets + retorno múltiplo + relatório de descartados.\n- Parâmetros de função são locais; nomes podem diferir das variáveis globais.\n- Professor não estabilizou ex. 14–15 ao vivo; estrutura de código permanece válida.\n- Recursão exige caso base; AT usa iteração.\n\n## Preparação para Prática\n\nConsolidar entrega do AT: servidor Flask acessível, cliente requests funcional, exercício 12 com saídas no formato do enunciado e exercício 16 com pergunta real à LLM via OpenRouter.\n\n## Laboratório de Prática\n\n### Easy — Normalizar campos de cadastro\n\n```python\ndef normalizar_email(email: str) -> str:\n    # TODO: strip + lower\n    return email\n\n\ndef normalizar_telefone(telefone: str) -> str:\n    # TODO: manter apenas dígitos\n    return telefone\n\n\nif __name__ == \"__main__\":\n    print(normalizar_email(\"  User@Mail.COM \"))\n    print(normalizar_telefone(\"(11) 98765-4321\"))\n```\n\n### Medium — Deduplicar e contar\n\n```python\nCADASTROS = [\n    {\"nome\": \"Ana\", \"email\": \"ana@x.com\", \"telefone\": \"11999990000\"},\n    {\"nome\": \"Bia\", \"email\": \"ANA@x.com\", \"telefone\": \"11888880000\"},\n]\n\n\ndef deduplicar(cadastros: list) -> tuple:\n    # TODO: retornar (unicos, descartados) usando normalização e sets\n    return [], []\n\n\nif __name__ == \"__main__\":\n    u, d = deduplicar(CADASTROS)\n    print(len(u), len(d))\n```\n\n### Hard — Cliente POST OpenRouter (mock local)\n\nSimule estrutura de chamada; use URL fictícia que não dispara rede se chave vazia.\n\n```python\nimport os\nimport requests\n\nOPENROUTER_URL = \"https://openrouter.ai/api/v1/chat/completions\"\n\n\ndef perguntar_llm(pergunta: str, api_key: str) -> str:\n    if not api_key:\n        return \"\"\n    headers = {\n        \"Authorization\": f\"Bearer {api_key}\",\n        \"Content-Type\": \"application/json\",\n    }\n    payload = {\n        \"model\": \"meta-llama/llama-3.2-3b-instruct:free\",\n        \"messages\": [{\"role\": \"user\", \"content\": pergunta}],\n    }\n    # TODO: requests.post(OPENROUTER_URL, headers=headers, json=payload, timeout=30)\n    # TODO: extrair texto da resposta JSON; return \"\" se falhar\n    return \"\"\n\n\nif __name__ == \"__main__\":\n    chave = os.getenv(\"OPENROUTER_API_KEY\", \"\")\n    texto = perguntar_llm(\"Em uma frase: o que é uma API?\", chave)\n    print(texto or \"sem resposta\")\n```\n\n\n\n<!-- EXERCISES_JSON\n[\n  {\n    \"id\": \"normalizar-email-telefone\",\n    \"slug\": \"normalizar-email-telefone\",\n    \"difficulty\": \"easy\",\n    \"title\": \"Normalizar e-mail e telefone\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\"python\", \"strings\", \"normalizacao\", \"cadastros\"],\n    \"summary\": \"Implementar normalização de e-mail e telefone para pipeline de deduplicação.\"\n  },\n  {\n    \"id\": \"deduplicar-cadastros-sets\",\n    \"slug\": \"deduplicar-cadastros-sets\",\n    \"difficulty\": \"medium\",\n    \"title\": \"Deduplicar cadastros importados\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\"python\", \"set\", \"dict\", \"dados\"],\n    \"summary\": \"Separar cadastros únicos e descartados por e-mail ou telefone normalizado.\"\n  },\n  {\n    \"id\": \"openrouter-post-pergunta\",\n    \"slug\": \"openrouter-post-pergunta\",\n    \"difficulty\": \"hard\",\n    \"title\": \"POST OpenRouter com pergunta\",\n    \"discipline\": \"python-processamento-dados\",\n    \"editorLanguage\": \"python\",\n    \"tags\": [\"python\", \"requests\", \"post\", \"llm\", \"openrouter\"],\n    \"summary\": \"Enviar pergunta via POST à API OpenRouter e extrair texto da resposta JSON.\"\n  }\n]\n-->\n",
+  "source_path": "content/python-processamento-dados/aula-20-resolucao-at-flask-escopo-funcoes.md",
+  "source_hash": "60348d81e78b5161"
+}
