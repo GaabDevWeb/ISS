@@ -1,0 +1,2322 @@
+WEBVTT
+
+1
+00:00:23.650 --> 00:00:24.960
+Gabriel De Andrade: E aí?
+
+2
+00:00:26.540 --> 00:00:28.900
+Rafael Cruz: Olá, pessoal. Tudo bem? Boa noite.
+
+3
+00:00:30.300 --> 00:00:31.220
+Rafael Cruz: Tudo bem.
+
+4
+00:00:32.329 --> 00:00:32.799
+Pablo Pinheiro Nunes: E a.
+
+5
+00:00:33.650 --> 00:00:35.030
+helio.oliveira: Boa noite, Professor.
+
+6
+00:00:35.030 --> 00:00:35.830
+Rafael Cruz: Boa noite.
+
+7
+00:00:35.830 --> 00:00:37.040
+gabriel.diniz: Boa noite. Boa noite.
+
+8
+00:00:37.490 --> 00:00:40.740
+Rafael Cruz: Boa noite. Boa noite a todos. Sejam bem vindos.
+
+9
+00:00:41.070 --> 00:00:47.650
+Rafael Cruz: E aí o pessoal estava com uma certa dificuldade de entrar aqui no infinite online. Vocês conseguiram.
+
+10
+00:00:51.980 --> 00:00:56.380
+gabriel.diniz: Deu uma instabilidade aí. O sistema não querer abrir? Não, mas agora acho que voltou.
+
+11
+00:00:56.660 --> 00:01:00.410
+Rafael Cruz: Exato. Estava batalhando aqui também para conseguir entrar.
+
+12
+00:01:03.480 --> 00:01:06.509
+Rafael Cruz: Vamos lá, pessoal, deixa eu me apresentar aqui para vocês
+
+13
+00:01:08.620 --> 00:01:12.269
+Rafael Cruz: e para a gente falar um pouquinho aqui da nossa matéria de.
+
+14
+00:01:12.380 --> 00:01:22.870
+Rafael Cruz: Do bloco de C. Sharp, que é o fundamento de C. Sharp. Provavelmente vocês estão tendo aula também de Java, que é o fundamento de Java, que é um bloco de fundamentos de backend.
+
+15
+00:01:23.230 --> 00:01:35.319
+Rafael Cruz: O bloco de fundamentos de backend compreende ali a gente entender as capacidades para que a gente consiga criar aplicativos, programações,
+
+16
+00:01:35.480 --> 00:01:41.429
+Rafael Cruz: estruturas de dados que hoje são comumente utilizados ali na
+
+17
+00:01:42.280 --> 00:01:46.050
+Rafael Cruz: no mundo corporativo, principalmente como a gente está falando de backend,
+
+18
+00:01:47.010 --> 00:01:57.899
+Rafael Cruz: e é basicamente é o que a gente conecta nossos aplicativos, nossos sites nossos mobile e precisam de um backend.
+
+19
+00:01:58.260 --> 00:02:05.879
+Rafael Cruz: E esse backend é compreendido ali em tecnologias, por exemplo, como cshap, que a gente vai ver como Java como Nold
+
+20
+00:02:06.160 --> 00:02:07.650
+Rafael Cruz: um Python, né?
+
+21
+00:02:07.780 --> 00:02:09.650
+Rafael Cruz: É,
+
+22
+00:02:10.250 --> 00:02:20.819
+Rafael Cruz: enfim, tem outras tecnologias também, mas comumente mais usando no mundo corporativo. Isso é Sharp Java, Node Python ali, que são basicamente que reina ali
+
+23
+00:02:20.920 --> 00:02:29.120
+Rafael Cruz: por trás, ali, né? Principalmente das grandes empresas, umas ou outras ali vão usar outro tipo de stack que a gente chama
+
+24
+00:02:29.200 --> 00:02:45.020
+Rafael Cruz: principalmente ali, quando a gente está vendo ali de Rush, como está vendo de rubi, mas são empresas ali que geralmente mais voltadas ali por um pequeno porte. Então a gente vai começar a ver aqui a nossa
+
+25
+00:02:45.670 --> 00:02:47.949
+Rafael Cruz: nosso backend aqui a gente vai
+
+26
+00:02:48.350 --> 00:02:50.140
+Rafael Cruz: falar um pouquinho sobre ser Sharp.
+
+27
+00:02:50.410 --> 00:03:01.450
+Rafael Cruz: Vou apresentar aqui para vocês aqui para que vocês me conheçam. Eu basicamente aqui. Dou aula aqui no infinite. Basicamente, já deve ter uns dez anos ali.
+
+28
+00:03:01.690 --> 00:03:19.509
+Rafael Cruz: Eu estou ministrando aula hoje. Eu trabalho aqui no itaú. Sou gestor de tecnologia no Itaú. Hoje eu cuido ali da área de investimentos. Ali, por sinal, também. Tecnologia que a gente usa ali no Itaú. Posso falar? Não tem problema. A gente usa o C Sharp ali, na maioria das nossas soluções.
+
+29
+00:03:19.530 --> 00:03:29.489
+Rafael Cruz: Então os problemas que estão vendo que você acessa o aplicativo para você fazer um investimento. Provavelmente o backend que você está vendo ali é C Sharp.
+
+30
+00:03:29.600 --> 00:03:38.940
+Rafael Cruz: E para não ficar mentindo ali também. Muita coisa ali dentro do superapp ali que você está vendo. Como você loga na tua conta, vem um extrato.
+
+31
+00:03:39.750 --> 00:03:52.539
+Rafael Cruz: Ele é feito em Java. Existem algumas coisas backends ali. Ainda feito em Mayfraaming. Bem antigos, mas grandes capacidades. Ali ainda é Java e C. Sharp. Principalmente, que está ali,
+
+32
+00:03:52.660 --> 00:03:55.010
+Rafael Cruz: que predomina ali na.
+
+33
+00:03:56.990 --> 00:04:16.249
+Rafael Cruz: No aplicativo ali do banco. E não só C, Sharp ou Java ali que predomina, mas não só no Itaú, mas como por exemplo, Ali Santander, que é Java Bradesco. Tem muita coisa em Java. Tem muita coisa em Dotnet. Tem muita coisa em Dotnet, principalmente na área de investimentos.
+
+34
+00:04:16.519 --> 00:04:27.499
+Rafael Cruz: Então, assim, grandes empresas, grandes corporações utilizam essas tecnologias, e, obviamente por isso que a gente vai estar falando um pouquinho sobre ela. Legal,
+
+35
+00:04:28.440 --> 00:04:31.850
+Rafael Cruz: como é que vai se consistir na nossa aula aqui, né? Primeiro,
+
+36
+00:04:32.730 --> 00:04:35.230
+Rafael Cruz: é o nosso primeiro bate papo.
+
+37
+00:04:35.390 --> 00:04:41.059
+Rafael Cruz: Vocês estão vendo aqui numa turma aqui de entrada de um bloco de entrada. Basicamente,
+
+38
+00:04:41.580 --> 00:04:55.450
+Rafael Cruz: o nosso papo hoje ele vai parar a instalação e no nosso Hello World do do Dotnet.
+
+39
+00:04:55.600 --> 00:04:58.140
+Rafael Cruz: Amanhã a gente vai continuar com nossas aulas
+
+40
+00:04:58.800 --> 00:05:05.470
+Rafael Cruz: e aí eu vou dar o passo a passo para vocês hoje, para vocês instalarem e deixarem o ambiente pronto. Hoje é um.
+
+41
+00:05:06.370 --> 00:05:08.009
+Rafael Cruz: É preparação do ambiente.
+
+42
+00:05:08.170 --> 00:05:16.190
+Rafael Cruz: Obviamente, eu não vou conseguir aqui que todos instalem. Eu vou dar um guia para vocês, passo a passo para que vocês consigam deixar o ambiente equalizado.
+
+43
+00:05:16.250 --> 00:05:30.689
+Rafael Cruz: E aí, amanhã a gente já começa a explorar um pouquinho o ambiente, explorar um pouquinho as ferramentas que a gente vai utilizar. Vamos criar o nosso primeiro aplicativo, a nossa primeira linha de programação em C. Sharp,
+
+44
+00:05:30.690 --> 00:05:41.030
+Rafael Cruz: deixar todo o ambiente preparado. Então, hoje, o primeiro dia de aula é o quê? Deixar o ambiente preparado para que amanhã a gente consiga já fazer algumas coisas interessantes. Obviamente conhecer a ferramenta.
+
+45
+00:05:46.960 --> 00:06:05.209
+Rafael Cruz: Perguntas aqui. Sistema operacional que vamos usar relevante. Não, você pode usar Windows. Pode usar Linux. Pode usar Mac não tem nenhum tipo de problema. O que vai diferenciar um pouquinho? É a ferramenta que a gente vai utilizar. Tá? Nesse caso, aqui a ferramenta que a gente vai utilizar aqui é o visual Studio,
+
+46
+00:06:05.550 --> 00:06:14.870
+Rafael Cruz: o visual Studio só roda no Windows. Existem paralelos que eu vou falar também que, para quem quiser utilizar os paralelos nesse.
+
+47
+00:06:14.870 --> 00:06:28.139
+Rafael Cruz: Nessa cadeira aqui também não faz muita diferença. A gente pode usar um paralelo também. Que vai rodar em qualquer máquina. Tanto Windows, Linux ou Mac, que é o Vs Code ou visual studio code. Ali ele geralmente roda em qualquer máquina.
+
+48
+00:06:28.210 --> 00:06:33.609
+Rafael Cruz: E para o que a gente vai fazer, vai funcionar do mesmo jeito ponto aqui. Importante de atenção
+
+49
+00:06:34.620 --> 00:06:43.450
+Rafael Cruz: é que o Vs code ali que eu vou mostrar não tem tantas capacidades como o visual Studio que a gente vai trabalhar, então, assim
+
+50
+00:06:43.820 --> 00:06:54.780
+Rafael Cruz: respondendo de uma forma direta. O sistema operacional é relevante? Não, não é relevante. Contudo, você pode perder algumas capacidades ali, quando você está trabalhando com visual Studio. Tá bom.
+
+51
+00:06:56.270 --> 00:06:59.770
+Rafael Cruz: Todos os exemplos vão funcionar em qualquer sistema operacional
+
+52
+00:07:01.220 --> 00:07:07.090
+Rafael Cruz: compartilhar aqui, minha tela pessoal deixa dar um tapa aqui na apresentação.
+
+53
+00:07:11.820 --> 00:07:14.770
+Rafael Cruz: Boa, tirar aqui a tela.
+
+54
+00:07:16.530 --> 00:07:19.959
+Rafael Cruz: Quando vocês estiverem vendo a minha tela, que vocês me avisam. Por favor.
+
+55
+00:07:23.190 --> 00:07:24.060
+lucas.ssantos: Estamos vendo.
+
+56
+00:07:25.320 --> 00:07:25.970
+Rafael Cruz: Boa.
+
+57
+00:07:32.090 --> 00:07:35.219
+Rafael Cruz: Valeu, deixa eu deixar aqui a câmera aqui também.
+
+58
+00:07:36.290 --> 00:07:51.390
+Rafael Cruz: Vamos lá, pessoal. Qual é a ideia? Aqui tá. A ideia é a gente preparar um ambiente de desenvolvimento para a gente trabalhar com o C Sharp net, beleza. Mas qual é o ponto aqui. Né? O que são isso, né? O que é o ponto net? O que é o C. Sharp
+
+59
+00:07:52.070 --> 00:07:52.950
+Rafael Cruz: que
+
+60
+00:07:53.460 --> 00:08:00.700
+Rafael Cruz: o que a gente está falando. Então, primeiro aqui. Antes de preparar o nosso ambiente, a gente vai entender um pouquinho essas tecnologias.
+
+61
+00:08:01.220 --> 00:08:04.889
+Rafael Cruz: E aí sim, a gente começar a preparar o nosso ambiente.
+
+62
+00:08:05.160 --> 00:08:06.090
+Rafael Cruz: Letra
+
+63
+00:08:11.420 --> 00:08:20.850
+Rafael Cruz: tá. Primeiro capítulo. A gente vai entender ali a relação entre o C Sharp e o Net, e a gente vai entender os principais componentes.
+
+64
+00:08:20.970 --> 00:08:27.659
+Rafael Cruz: E como é que a plataforma funciona, cara, isso aqui é a parte importante que você tem que prestar atenção.
+
+65
+00:08:27.790 --> 00:08:33.010
+Rafael Cruz: É a parte essencial, porque é como funciona por trás
+
+66
+00:08:33.179 --> 00:08:36.710
+Rafael Cruz: net e o C Sharp. O que significa isso?
+
+67
+00:08:36.929 --> 00:08:51.890
+Rafael Cruz: É extremamente importante entender a grande diferença entre a linguagem de programação que a gente está falando. C. Sharp e os componentes que a gente usam da linguagem C Sharp, que é o ponto net. Tem diferença e são diferenças que é importante. Saber.
+
+68
+00:08:54.080 --> 00:08:57.460
+Rafael Cruz: Vamos lá. O que é Plataforma Net.
+
+69
+00:08:57.540 --> 00:09:03.110
+Rafael Cruz: A Plataforma Net foi uma plataforma desenvolvida para Microsoft
+
+70
+00:09:03.130 --> 00:09:15.979
+Rafael Cruz: hoje, ela é código aberto, o que significa ser código aberto que hoje não tem dono. Apesar de ser a Criadora Microsoft e a principal manetedora, ela que mantém a plataforma
+
+71
+00:09:15.980 --> 00:09:27.340
+Rafael Cruz: hoje, o código fonte dela é aberto. O que significa isso? Que qualquer um pode pegar o código fonte, fazer alterações necessárias e rodar o ponto nerd da sua maneira que achar melhor.
+
+72
+00:09:27.410 --> 00:09:46.020
+Rafael Cruz: Então, o ponto net hoje é uma plataforma completa. Ela é desenvolvida pela Microsoft. É a manetedora. É a Microsoft. Ainda em Grow Apart. Existem outros manetedores, por exemplo, como a oraco, como a Google, por exemplo, que ajuda a comunidade também de tecnologia, também faz
+
+73
+00:09:46.130 --> 00:09:50.219
+Rafael Cruz: criam funcionalidades dentro da plataforma Net,
+
+74
+00:09:50.770 --> 00:10:05.909
+Rafael Cruz: mas é uma plataforma completa. Ela vai integrar tanto bibliotecas, ferramentas, padrões, o ambiente de execução a gente chama de run time dentro de um único ambiente.
+
+75
+00:10:06.680 --> 00:10:14.460
+Rafael Cruz: Então o grande, a gente pula do gato aqui da plataforma net, que ele é extremamente versátil,
+
+76
+00:10:14.660 --> 00:10:21.060
+Rafael Cruz: porque uma única plataforma permite você criar qualquer tipo de aplicação, desde
+
+77
+00:10:21.470 --> 00:10:24.260
+Rafael Cruz: um console aplicativo. O que você é isso? Um terminal,
+
+78
+00:10:24.860 --> 00:10:30.159
+Rafael Cruz: até sistemas corporativos. Como eu mencionei ali, que a gente trabalha ali no Itaú,
+
+79
+00:10:30.340 --> 00:10:40.100
+Rafael Cruz: utilizando C Sharp sistemas corporativos que podem ser em nuvem utilizando Ws utilizando Azure, utilizando Google Cloud
+
+80
+00:10:40.730 --> 00:10:50.210
+Rafael Cruz: criações de aplicações mobile jogo, por exemplo, também está na plataforma Net. Para quem gosta de jogo. Existe um Unit,
+
+81
+00:10:50.950 --> 00:10:56.380
+Rafael Cruz: que é a biblioteca de desenvolvimento de jogos
+
+82
+00:10:56.990 --> 00:11:05.700
+Rafael Cruz: na plataforma net. Para quem joga aí um pouquinho. Teve um jogo agora recente. Aqui que é o
+
+83
+00:11:07.160 --> 00:11:15.539
+Rafael Cruz: tem um ralo que foi feito ali por ponto. Net, por exemplo, C. Sharp, que está rodando o ralo. E existe agora um recente.
+
+84
+00:11:16.540 --> 00:11:23.349
+Rafael Cruz: Caramba, me esqueci o nome do jogo estava tendo Playstation cinco. Agora
+
+85
+00:11:25.780 --> 00:11:29.789
+Rafael Cruz: deixa eu pegar aqui na bugada aqui porque eu realmente não me lembro.
+
+86
+00:11:40.760 --> 00:11:45.290
+Rafael Cruz: Ah, tem um pouquinho longo gol, mas não é esse não foi até de um desenvolvedor.
+
+87
+00:11:46.090 --> 00:11:48.959
+Rafael Cruz: Então desenvolvedor que fez foi meio indie ali.
+
+88
+00:11:49.440 --> 00:11:51.920
+Rafael Cruz: É só
+
+89
+00:11:55.580 --> 00:11:58.580
+Rafael Cruz: Rolo Knight. Exatamente isso aí que eu tô.
+
+90
+00:11:59.270 --> 00:12:03.940
+Rafael Cruz: Estou querendo me lembrar. Rolou Night, por exemplo, fez C Sharp, entendeu
+
+91
+00:12:05.550 --> 00:12:07.299
+Rafael Cruz: ele feito de ser shop unit.
+
+92
+00:12:08.220 --> 00:12:13.079
+Rafael Cruz: O hollow Knight olha tanto pra me lembrar sobre isso.
+
+93
+00:12:13.210 --> 00:12:14.410
+Rafael Cruz: Sobre isso aí.
+
+94
+00:12:15.310 --> 00:12:26.400
+Rafael Cruz: Então assim é uma plataforma. Qual é o ponto que eu estou querendo chegar aqui? É uma plataforma completa que você vai rodar tanto aplicações corporativas como aplicações, console aplicación,
+
+95
+00:12:26.400 --> 00:12:36.080
+Rafael Cruz: como fazer jogo como criações de aplicativos mobile. Então, apesar de ela ser da Microsoft ali como a gente fala.
+
+96
+00:12:37.860 --> 00:12:47.920
+Rafael Cruz: Ela é multiplataforma. Isso é a grande virada, né? Apesar de ser na Microsoft, você vai pensar assim. Pô é da Microsoft lá. Só vai rodar um Windows
+
+97
+00:12:48.390 --> 00:12:55.709
+Rafael Cruz: da Microsoft. Eu vou ter que pagar para a Microsoft. Você não paga nada para você trabalhar com a plataforma Net
+
+98
+00:12:56.470 --> 00:12:57.730
+Rafael Cruz: zero reais.
+
+99
+00:12:59.280 --> 00:13:05.120
+Rafael Cruz: E ela roda em qualquer sistema operacional Windows, Linux e macos,
+
+100
+00:13:06.550 --> 00:13:13.129
+Rafael Cruz: e ainda com suporte ali a diversas tecnologias. De container como Doc, que provavelmente vocês vão ver um pouquinho mais para frente
+
+101
+00:13:13.570 --> 00:13:17.569
+Rafael Cruz: e hospedado também em diversas infraestruturas externas,
+
+102
+00:13:17.990 --> 00:13:21.629
+Rafael Cruz: como Azura como Aws como Google Cloud.
+
+103
+00:13:22.410 --> 00:13:35.660
+Rafael Cruz: Então é uma plataforma extremamente completa, robusta e muito confiável para você criar as suas aplicações. Por isso, grandes empresas utilizam ela de forma muito massiva nas suas soluções corporativas.
+
+104
+00:13:43.130 --> 00:13:51.780
+Rafael Cruz: Então, qual é o ser Sharp e o ponto Net? Qual é a sua relação que a gente está falando. Ser Sharp é basicamente a linguagem de programação
+
+105
+00:13:52.900 --> 00:13:58.639
+Rafael Cruz: que a gente utiliza dentro do ecossistema do ponto net.
+
+106
+00:13:58.770 --> 00:14:09.130
+Rafael Cruz: Então o C. Sharp é a linguagem de programação, que é extremamente moderna, extremamente expressiva. Você escreve pouca linha de código e faz muita coisa.
+
+107
+00:14:09.610 --> 00:14:16.339
+Rafael Cruz: Ela é totalmente orientada a objetos que provavelmente vocês vão vir um pouquinho mais para frente. Mas ela foi criada pela Microsoft.
+
+108
+00:14:16.730 --> 00:14:23.590
+Rafael Cruz: E o ponto net é o ecossistema que vai pegar a linguagem de programação
+
+109
+00:14:23.950 --> 00:14:29.030
+Rafael Cruz: vai interpretar aquela linguagem e vai executar o código
+
+110
+00:14:29.210 --> 00:14:35.830
+Rafael Cruz: dentro do seu computador. Então a gente pode pensar assim. O C. Sharp é basicamente o idioma que você fala.
+
+111
+00:14:36.420 --> 00:14:44.410
+Rafael Cruz: E o ponto net é o país com toda a infraestrutura necessária para que essa comunicação aconteça.
+
+112
+00:14:45.480 --> 00:14:49.189
+Rafael Cruz: Então o ponto Net é o idioma que a gente conversa com o computador,
+
+113
+00:14:50.370 --> 00:14:56.379
+Rafael Cruz: como que o computador vai traduzir o C Sharp e entender os comandos do C. Sharp. É o ponto nerd que vai fazer isso.
+
+114
+00:14:56.660 --> 00:15:03.179
+Rafael Cruz: Então o C. Sharp é extremamente ideal. Extremamente necessário
+
+115
+00:15:03.670 --> 00:15:06.719
+Rafael Cruz: para que você consiga trabalhar com o ponto net
+
+116
+00:15:08.350 --> 00:15:12.530
+Rafael Cruz: pessoal tranquilo. Aí alguma dúvida? Estou indo muito rápido. Como é que estamos?
+
+117
+00:15:16.110 --> 00:15:17.200
+gabriel.diniz: Tranqüe se.
+
+118
+00:15:18.060 --> 00:15:18.860
+Rafael Cruz: Beleza
+
+119
+00:15:23.690 --> 00:15:24.610
+Rafael Cruz: boa.
+
+120
+00:15:25.320 --> 00:15:31.609
+Rafael Cruz: Então, continuando, como é que foi a evolução do ponto net ali, né?
+
+121
+00:15:31.740 --> 00:15:35.220
+Rafael Cruz: O ponto net teve um ciclos.
+
+122
+00:15:36.230 --> 00:15:43.050
+Rafael Cruz: O ciclo dele do ponto Net começou na época de dois mil,
+
+123
+00:15:43.420 --> 00:15:47.590
+Rafael Cruz: que era o ponto Net Framework. Eu comecei a trabalhar com o ponto Net Framework aqui
+
+124
+00:15:47.880 --> 00:15:49.920
+Rafael Cruz: nessa época, que mais ou menos
+
+125
+00:15:51.020 --> 00:15:54.939
+Rafael Cruz: Net Framework, um.um visual Studio dois mil e dois.
+
+126
+00:15:56.510 --> 00:15:57.610
+Rafael Cruz: Então tem tempo.
+
+127
+00:15:57.970 --> 00:16:03.650
+Rafael Cruz: Ele surgiu no ano de dois mil. Basicamente, ele só rodava no Windows.
+
+128
+00:16:04.090 --> 00:16:12.160
+Rafael Cruz: O foco dele era só aplicações desktop. O que é a aplicação desktop. Aquela da aplicação Windows com janelinha que a gente chama.
+
+129
+00:16:12.350 --> 00:16:15.570
+Rafael Cruz: É uma aplicação desktop que você instala no teu computador.
+
+130
+00:16:16.610 --> 00:16:22.640
+Rafael Cruz: São programas que você instala no teu computador. A gente fala que é aplicações desktop
+
+131
+00:16:22.880 --> 00:16:27.129
+Rafael Cruz: e aplicações de legada. E Web começou Ali com web.
+
+132
+00:16:27.680 --> 00:16:38.680
+Rafael Cruz: Então eu só tinha dois tipos para você trabalhar. Ou você fazia programas instaladores na máquina, ou você trabalhava pela Internet, lembrando que na época de dois mil ali. Internet ainda não.
+
+133
+00:16:39.440 --> 00:16:43.169
+Rafael Cruz: Ainda estava engatinhando. Ali é a Internet, tá?
+
+134
+00:16:43.440 --> 00:16:49.590
+Rafael Cruz: Então o ponto Net Framework surgiu ali no ano de dois mil, mais ou menos. Fazendo um
+
+135
+00:16:50.110 --> 00:16:53.330
+Rafael Cruz: mais exato, surgiu em dois mil e um.
+
+136
+00:16:53.750 --> 00:16:58.629
+Rafael Cruz: Com a tua versão um.zero dois mil e dois na versão um.
+
+137
+00:16:59.400 --> 00:17:05.119
+Rafael Cruz: Então, em dois mil e um, surgiu. Qual é o grande lance aqui?
+
+138
+00:17:11.329 --> 00:17:15.470
+Rafael Cruz: Exato. Qual é o grande lance aqui do ponto Net Framework
+
+139
+00:17:15.890 --> 00:17:18.110
+Rafael Cruz: era que ele só rodava em Windows.
+
+140
+00:17:18.420 --> 00:17:26.150
+Rafael Cruz: Então você fazia uma aplicação. Ela só rodava em Windows. Você fazia uma aplicação Web. Ela só rodava em servidores
+
+141
+00:17:26.300 --> 00:17:27.319
+Rafael Cruz: Windows.
+
+142
+00:17:27.550 --> 00:17:35.030
+Rafael Cruz: E obviamente, a Microsoft ganhou muito dinheiro com isso porque ela vendia licença. Ela falava. O ponto net é gratuito.
+
+143
+00:17:35.200 --> 00:17:37.049
+Rafael Cruz: Você pode pegar e executar.
+
+144
+00:17:37.310 --> 00:17:46.299
+Rafael Cruz: Pô beleza. Contudo, para você rodar, ela precisa de um Windows para você rodar ela em um ambiente corporativo. Você precisa de uma licença do Windows server.
+
+145
+00:17:46.970 --> 00:18:01.799
+Rafael Cruz: Então a Michael ganhou muito dinheiro falando sobre a questão de licenças. Contudo, todavia, isso não era um caminho muito viável a ser feito. Por quê? Porque nessa época estava crescendo muito. O Java ali, no caso,
+
+146
+00:18:02.390 --> 00:18:07.680
+Rafael Cruz: comia uma grande quantidade, grande fatia ali do mercado,
+
+147
+00:18:08.590 --> 00:18:12.040
+Rafael Cruz: juntamente com a. No caso, não era a hora com era a Sam
+
+148
+00:18:12.640 --> 00:18:16.370
+Rafael Cruz: que é onde o Java. O grande diferencial do Java era o quê?
+
+149
+00:18:16.930 --> 00:18:20.850
+Rafael Cruz: Na época, era que o Java rodava a multiplataforma.
+
+150
+00:18:20.950 --> 00:18:27.000
+Rafael Cruz: Então java, rodava no Linux rodava no Windows e rodava em qualquer outro sistema operacional.
+
+151
+00:18:27.420 --> 00:18:33.460
+Rafael Cruz: Então, a Sam, na época que é dessa época, era da Sam.
+
+152
+00:18:34.080 --> 00:18:45.290
+Rafael Cruz: Ela ganhava muito dinheiro com questão de servidores, independente do código do sistema operacional, que será feito lembrando que a Internet basicamente roda em servidores Linux.
+
+153
+00:18:47.210 --> 00:18:52.279
+Rafael Cruz: E aí, no passo dois, teve o ponto Net core.
+
+154
+00:18:52.670 --> 00:18:59.019
+Rafael Cruz: O ponto net core foi uma plataforma que foi totalmente reescrita
+
+155
+00:19:00.080 --> 00:19:06.539
+Rafael Cruz: por que disso, a Microsoft começou a perder muito espaço ali em questão de servidores, questões de banco, de dados, questão de
+
+156
+00:19:06.880 --> 00:19:11.239
+Rafael Cruz: ambiente de desenvolvimento começou a perder muito espaço.
+
+157
+00:19:11.910 --> 00:19:17.719
+Rafael Cruz: E aí a Microsoft resolveu abrir o código Font do ponto net
+
+158
+00:19:18.200 --> 00:19:20.250
+Rafael Cruz: e criar o ponto net core
+
+159
+00:19:20.990 --> 00:19:30.320
+Rafael Cruz: esse aí a gente está falando em torno de dois mil e dez, dois mil e doze por aí. Tá bom.
+
+160
+00:19:30.590 --> 00:19:35.489
+Rafael Cruz: Onde o ponto Net Core foi totalmente reescrito
+
+161
+00:19:36.950 --> 00:19:42.970
+Rafael Cruz: para ser multiplataforma, ou seja, rodar no Windows, rodar no Mac, rodar no Linux,
+
+162
+00:19:43.850 --> 00:19:46.230
+Rafael Cruz: e ela que ela seja também o Pensócia.
+
+163
+00:19:46.370 --> 00:19:54.089
+Rafael Cruz: Cara, esse movimento da Microsoft em torno de dois mil e dez dois mil e doze é relativo a hoje
+
+164
+00:19:54.590 --> 00:20:00.260
+Rafael Cruz: você pegar o iphone, pegar o código fonte do iphone e dá pra Samsung
+
+165
+00:20:00.420 --> 00:20:03.069
+Rafael Cruz: falar assim. Tá aqui meu código fundo. Vê o que você faz
+
+166
+00:20:03.470 --> 00:20:07.959
+Rafael Cruz: abrir o código fonte para todo mundo ver, inclusive seus concorrentes.
+
+167
+00:20:10.080 --> 00:20:11.800
+Rafael Cruz: Então é
+
+168
+00:20:12.830 --> 00:20:22.189
+Rafael Cruz: hoje em dia ali, pô a Microsoft abriu o código Found Net. As pessoas não veem isso hoje como uma coisa assim. Ah, legal, abriu. Ok,
+
+169
+00:20:22.790 --> 00:20:23.869
+Rafael Cruz: não vê isso.
+
+170
+00:20:24.030 --> 00:20:28.389
+Rafael Cruz: Mas naquela época, isso era um passo assim
+
+171
+00:20:29.170 --> 00:20:32.440
+Rafael Cruz: extremamente assim. Provável que a Microsoft fizesse isso
+
+172
+00:20:33.020 --> 00:20:38.460
+Rafael Cruz: porque a Microsoft sempre foi de vender licença. Sempre foi de vender servidor. Sempre foi muito fechada nesse sentido.
+
+173
+00:20:39.450 --> 00:20:44.499
+Rafael Cruz: E quando ela fez esse passo, ela abriu totalmente o ecossistema dela de desenvolvimento.
+
+174
+00:20:46.060 --> 00:20:54.919
+Rafael Cruz: Então, no ponto Net Core teve a grande virada ali de ser abrir o código fonte,
+
+175
+00:20:55.650 --> 00:21:01.399
+Rafael Cruz: para que não somente a comunidade também abraçasse o ponto Net,
+
+176
+00:21:01.590 --> 00:21:11.530
+Rafael Cruz: como também os concorrentes melhorassem também ali. Então foi uma jogada arriscada, mas foi uma jogada que deu muito certo.
+
+177
+00:21:11.630 --> 00:21:17.060
+Rafael Cruz: Então, no passo três hoje, que, a partir do ponto Net cinco. Hoje estamos no ponto Net dez.
+
+178
+00:21:17.960 --> 00:21:24.590
+Rafael Cruz: Ela unificou todas as plataformas e uma única versão que a gente chama de ponto net
+
+179
+00:21:24.950 --> 00:21:32.069
+Rafael Cruz: não existe mais o ponto Net Core. E não existe mais o ponto Net Framework. A gente só chama de Ponto Net,
+
+180
+00:21:33.520 --> 00:21:40.159
+Rafael Cruz: e ele tem lançamentos anuais. Todo ano, lança uma nova versão do ponto Net. Esse ano,
+
+181
+00:21:40.390 --> 00:21:45.870
+Rafael Cruz: em novembro, basicamente que eles lançam, vamos ser lançadas. A versão do ponto net Dash.
+
+182
+00:21:47.390 --> 00:21:50.010
+Rafael Cruz: Então o ponto net é uma
+
+183
+00:21:50.480 --> 00:22:04.340
+Rafael Cruz: plataforma de desenvolvimento ali super robusta super atual, que é reatualizada literalmente todo ano a informática, ela
+
+184
+00:22:04.960 --> 00:22:13.070
+Rafael Cruz: avança de uma maneira absal em termos de inovações, e o ponto Net acompanha essas inovações.
+
+185
+00:22:14.220 --> 00:22:17.929
+Rafael Cruz: Então, hoje como funciona? Depois eu vou explicar um pouquinho ali,
+
+186
+00:22:18.360 --> 00:22:23.810
+Rafael Cruz: nessa última frase aqui, não vou ficar explicando muito sobre isso,
+
+187
+00:22:23.990 --> 00:22:32.590
+Rafael Cruz: porque ainda ali falta muito conhecimento de engenharia de softwares que vocês ainda não têm. Vocês vão adquirir ao longo do tempo.
+
+188
+00:22:33.040 --> 00:22:36.029
+Rafael Cruz: Tá bom? Aqui só vai confundir mais a cabeça de vocês.
+
+189
+00:22:38.650 --> 00:22:39.950
+Rafael Cruz: Estou passando aqui.
+
+190
+00:22:41.180 --> 00:22:44.639
+Rafael Cruz: Então, pessoal, qual é o ponto? Falando sobre pontonete?
+
+191
+00:23:03.350 --> 00:23:07.770
+Rafael Cruz: Falou que preferencialmente seria ideal. Windows para.
+
+192
+00:23:09.370 --> 00:23:15.570
+Rafael Cruz: Eu não entendi. Algo deve ser algo, né? Como é que o Lindo fica muito pra trás a nível de ferramenta?
+
+193
+00:23:16.020 --> 00:23:19.649
+Rafael Cruz: Não, cara. Assim, Nino que se mete, ele não fica pra trás, não tá?
+
+194
+00:23:19.810 --> 00:23:21.900
+Rafael Cruz: É?
+
+195
+00:23:23.170 --> 00:23:31.219
+Rafael Cruz: Existe uma ferramenta muito boa que a gente tem licença. Vocês têm licença. Eu vou explicar um pouquinho mais para frente, que ela não perde nada. Ali para o visual Studio.
+
+196
+00:23:31.760 --> 00:23:35.110
+Rafael Cruz: A nossa ementa aqui desse curso aqui
+
+197
+00:23:35.300 --> 00:23:37.239
+Rafael Cruz: é para usar o visual Studio
+
+198
+00:23:38.190 --> 00:23:40.339
+Rafael Cruz: e o visual Studio só roda no Windows.
+
+199
+00:23:40.550 --> 00:23:49.580
+Rafael Cruz: Mas existem outras ferramentas que rodam também em Mac e Linux de forma igual, com as mesmas capacidades da ferramenta que eu vou usar aqui.
+
+200
+00:23:49.960 --> 00:23:54.500
+Rafael Cruz: E vocês têm licença. Eu vou explicar um pouco mais forte. Ela é chamada de Netrider.
+
+201
+00:23:55.040 --> 00:24:09.640
+Rafael Cruz: Vocês, como aluno, têm licença gratuita, então vocês podem pegar, instalar e ela vai rodar no Linux. Vai rodar no Mac. Vai rodar no Windows e o cara vai ter as mesmas capacidades. Eu sou obrigado a seguir a emenda aqui do curso.
+
+202
+00:24:09.820 --> 00:24:12.170
+Rafael Cruz: O imensa do curso utiliza
+
+203
+00:24:13.120 --> 00:24:21.220
+Rafael Cruz: é o visual Studio. Tá bom, mas em nível de ferramenta, cara, você fica, perde nada, tá
+
+204
+00:24:27.160 --> 00:24:30.760
+Rafael Cruz: componente que a gente trabalha aqui com.
+
+205
+00:24:32.140 --> 00:24:39.340
+Rafael Cruz: Para que não é uma aplicação Web. Por exemplo, criar um site, criar um e commerce, criar uma loja na Internet
+
+206
+00:24:39.950 --> 00:24:42.470
+Rafael Cruz: Todododnet.
+
+207
+00:24:42.880 --> 00:24:45.240
+Rafael Cruz: Ele tem capacidade para fazer isso.
+
+208
+00:24:45.610 --> 00:24:47.120
+Rafael Cruz: Tudo embutido
+
+209
+00:24:47.800 --> 00:25:03.200
+Rafael Cruz: dentro da plataforma, sem você precisar pagar nada. Por isso o que a gente está chamando é o Aspnet Core. Por exemplo, o Aspinet Core. Ele nada mais é do que um conjunto de bibliotecas, conjunto de funcionalidades,
+
+210
+00:25:03.400 --> 00:25:07.399
+Rafael Cruz: para que você consiga criar, por exemplo, aplicativos web.
+
+211
+00:25:07.820 --> 00:25:14.129
+Rafael Cruz: E aí a gente está falando de aplicativos Web. É teu site, é teu. E commerce. É a tua solução que esteja na Internet?
+
+212
+00:25:14.720 --> 00:25:19.230
+Rafael Cruz: É uma página que vai promover a tua empresa ou até um incomici,
+
+213
+00:25:21.150 --> 00:25:28.760
+Rafael Cruz: ou até um e commerce complexo. Ali, tipo o mercadolivre. Ele te dá todas as ferramentas para você fazer e para rodar
+
+214
+00:25:29.480 --> 00:25:32.449
+Rafael Cruz: o teu website. Tá rodar o teu e commerce
+
+215
+00:25:33.220 --> 00:25:42.880
+Rafael Cruz: dentro do ponto inerte. Existe também o Castro, que é basicamente um servidor web para que você consiga hospedar
+
+216
+00:25:43.000 --> 00:25:46.569
+Rafael Cruz: a tua aplicação web também gratuito dentro do ponto net.
+
+217
+00:25:47.570 --> 00:25:56.540
+Rafael Cruz: E obviamente, tem um ponto net que nada mais é que a plataforma que vai orquestrar essas duas
+
+218
+00:25:58.540 --> 00:26:03.849
+Rafael Cruz: tecnologias ali, tanto Aspinet Core para construir sites na web
+
+219
+00:26:04.220 --> 00:26:09.290
+Rafael Cruz: quanto o Castro, que é para você servir os teus sites na web.
+
+220
+00:26:09.990 --> 00:26:15.009
+Rafael Cruz: Então é tudo embutido dentro do ponto net, sem você pagar nada a mais por isso. Tá bom.
+
+221
+00:26:22.620 --> 00:26:25.749
+Rafael Cruz: Próximo bloco. A gente vai trabalhar muito sobre isso aqui. Ó,
+
+222
+00:26:26.140 --> 00:26:30.699
+Rafael Cruz: sobre esses três aqui, que é o Asp Net, o Castro, o Net
+
+223
+00:26:36.420 --> 00:26:40.539
+Rafael Cruz: Beleza. Pessoal. Agora eu quero que vocês prestem muita atenção sobre isso.
+
+224
+00:26:42.080 --> 00:26:50.029
+Rafael Cruz: Quando a gente vai instalar o ponto Net, existem duas versões, o Sdk
+
+225
+00:26:51.100 --> 00:26:54.620
+Rafael Cruz: e o Ham Tim. Então, quando você for fazer download do ponto net,
+
+226
+00:26:55.470 --> 00:26:58.889
+Rafael Cruz: ele vai falar. Você quer fazer download do Sdk ou do Ham Time.
+
+227
+00:26:59.210 --> 00:27:02.379
+Rafael Cruz: Qual é a diferença de um para outro? O que é o Sdk?
+
+228
+00:27:02.770 --> 00:27:08.049
+Rafael Cruz: O Sdk? A gente chama de software Development Kit,
+
+229
+00:27:08.680 --> 00:27:15.350
+Rafael Cruz: que ele é o quê? Ele é feito para desenvolvedores. Ele é feito para gente que está criando coisas.
+
+230
+00:27:15.910 --> 00:27:19.969
+Rafael Cruz: Está construindo. Então ele vai incluir todas as ferramentas
+
+231
+00:27:20.090 --> 00:27:26.249
+Rafael Cruz: para que a gente consiga construir, desenvolver, programar em cima do ponto net.
+
+232
+00:27:26.870 --> 00:27:34.180
+Rafael Cruz: Ele vai incluir o compilador. Ele vai incluir projetos. Ele vai tudo o que você precisa para criar um software.
+
+233
+00:27:35.160 --> 00:27:42.200
+Rafael Cruz: Aí, o Ham1 timer, o Handtimer é somente um motor de execução de código.
+
+234
+00:27:42.890 --> 00:27:47.460
+Rafael Cruz: Ele é usado somente quando a aplicação já está pronta. Eu já desenvolvi ela toda.
+
+235
+00:27:48.860 --> 00:27:50.889
+Rafael Cruz: Ela já está toda desenvolvida.
+
+236
+00:27:51.050 --> 00:27:59.730
+Rafael Cruz: Ah, eu não preciso mais. Eu só preciso do Ham Time. Por que eu tenho essa diferença? Porque o Sdk vai trazer ferramentas
+
+237
+00:28:00.130 --> 00:28:02.859
+Rafael Cruz: que, para servidores em produção, não precisa ter.
+
+238
+00:28:03.280 --> 00:28:08.440
+Rafael Cruz: E isso acaba ocupando o espaço do servidor sem necessidade.
+
+239
+00:28:08.760 --> 00:28:14.889
+Rafael Cruz: Então a gente utiliza um round time, que é só o modelo de execução daquele código fonte,
+
+240
+00:28:15.420 --> 00:28:22.589
+Rafael Cruz: para que a gente consiga executar e rodar a aplicação já pronta, ocupando muito menos espaço.
+
+241
+00:28:22.990 --> 00:28:26.679
+Rafael Cruz: Então, qual é a grande pergunta aqui? Qual que eu devo instalar?
+
+242
+00:28:27.220 --> 00:28:28.560
+Rafael Cruz: Qual que eu vou instalar
+
+243
+00:28:28.730 --> 00:28:34.569
+Rafael Cruz: para desenvolvimento é o que a gente vai fazer. Trabalhar com a linguagem. A gente sempre vai escolher o Sdk
+
+244
+00:28:35.080 --> 00:28:39.840
+Rafael Cruz: sempre o Sdk já inclui o ham time de forma automática.
+
+245
+00:28:41.110 --> 00:28:44.179
+Rafael Cruz: Então a gente sempre vai instalar o Sdk.
+
+246
+00:29:01.130 --> 00:29:04.510
+Rafael Cruz: Beleza, tranquilo. Aí. Alguma dúvida?
+
+247
+00:29:14.800 --> 00:29:16.230
+Rafael Cruz: Fala aí, Gabriel Beleza.
+
+248
+00:29:17.380 --> 00:29:19.300
+Gabriel Marquez Volponi: Boa noite, professor. Tudo bem.
+
+249
+00:29:19.300 --> 00:29:20.130
+Rafael Cruz: Beleza.
+
+250
+00:29:20.870 --> 00:29:26.630
+Gabriel Marquez Volponi: Deixa eu tirar uma dúvida, professor, no caso, se, por exemplo, eu fizer um
+
+251
+00:29:27.460 --> 00:29:38.309
+Gabriel Marquez Volponi: um aplicativo ou o que for, né? Com o C. Sharp e o Dotnet e eu quiser mandar isso para um amigo visualizar, eu mandaria só esse run time no caso, para ele.
+
+252
+00:29:42.420 --> 00:29:44.060
+Rafael Cruz: Desculpa. Não entendi a pergunta.
+
+253
+00:29:44.910 --> 00:29:45.400
+Rafael Cruz: Tudo é.
+
+254
+00:29:45.400 --> 00:29:46.529
+Gabriel Marquez Volponi: A pergunta se
+
+255
+00:29:46.760 --> 00:29:55.850
+Gabriel Marquez Volponi: a pergunta seria: qualquer pessoa que for apenas executar o que eu criei ali. Ela precisaria instalar só o Run time, não o Sdk. No caso.
+
+256
+00:29:56.140 --> 00:29:58.039
+Rafael Cruz: Só home time. Exatamente.
+
+257
+00:29:58.490 --> 00:30:04.019
+Gabriel Marquez Volponi: Entendi agora um outro Dev que fosse desenvolver junto comigo. Precisaria instalar o Stk.
+
+258
+00:30:04.020 --> 00:30:11.600
+Rafael Cruz: Exatamente assim. A grande diferença é a seguinte: se eu estou desenvolvendo, eu preciso do Sdk.
+
+259
+00:30:12.620 --> 00:30:17.980
+Rafael Cruz: Se já está pronto, eu preciso só do Hang Time, entendeu?
+
+260
+00:30:20.430 --> 00:30:21.920
+Gabriel Marquez Volponi: Entendi, professor. Obrigado.
+
+261
+00:30:23.090 --> 00:30:25.999
+Rafael Cruz: Se eu tenho uma equipe que eu estou desenvolvendo a aplicação.
+
+262
+00:30:26.540 --> 00:30:28.250
+Rafael Cruz: A aplicação não está pronta.
+
+263
+00:30:28.460 --> 00:30:29.939
+Rafael Cruz: Eu preciso da Sdk.
+
+264
+00:30:31.580 --> 00:30:34.959
+Rafael Cruz: Se minha aplicação já está pronta. Eu só quero executar ela.
+
+265
+00:30:35.210 --> 00:30:36.799
+Rafael Cruz: Eu só preciso do Hang Time
+
+266
+00:30:45.100 --> 00:30:46.220
+Rafael Cruz: Show de bola.
+
+267
+00:30:54.270 --> 00:30:57.840
+Rafael Cruz: Boa, então, pessoal, vou avançar um pouquinho aqui.
+
+268
+00:31:02.590 --> 00:31:04.359
+Rafael Cruz: Quando você instala.
+
+269
+00:31:05.380 --> 00:31:09.050
+Rafael Cruz: Quando a gente instala o ponto net,
+
+270
+00:31:09.660 --> 00:31:14.150
+Rafael Cruz: ele vai te dar uma coisa que a gente chama de Cli. O que é Cli,
+
+271
+00:31:14.340 --> 00:31:18.649
+Rafael Cruz: se ela em nada mais é que a gente chama de common line interface,
+
+272
+00:31:19.060 --> 00:31:22.499
+Rafael Cruz: que é a execução através de terminais.
+
+273
+00:31:22.700 --> 00:31:28.240
+Rafael Cruz: A gente como desenvolvedor acaba trabalhando muito com o terminal.
+
+274
+00:31:28.540 --> 00:31:34.330
+Rafael Cruz: Então, quando a gente instala o ponto net, o Sdk, ele vai instalar
+
+275
+00:31:34.630 --> 00:31:36.699
+Rafael Cruz: o que a gente chama de Cli,
+
+276
+00:31:37.110 --> 00:31:41.230
+Rafael Cruz: e a Seli vai te dar alguns comandos
+
+277
+00:31:41.790 --> 00:31:44.839
+Rafael Cruz: que não necessariamente. Você precisa de uma ferramenta
+
+278
+00:31:45.080 --> 00:31:52.529
+Rafael Cruz: como vs. Code vs. Community para você trabalhar com C. Sharp. Cara, a gente pode programar no notepad. Se quiser,
+
+279
+00:31:53.700 --> 00:31:56.629
+Rafael Cruz: a gente pode programar com notepad. Eu vou fazer um exemplo aqui.
+
+280
+00:31:56.780 --> 00:32:00.269
+Rafael Cruz: Contou todavia não é eficiente eu programar no notepad.
+
+281
+00:32:00.470 --> 00:32:03.949
+Rafael Cruz: Por quê? Porque eu não cara, vou ter que escrever muita coisa.
+
+282
+00:32:04.820 --> 00:32:12.589
+Rafael Cruz: Então, quando a gente está trabalhando com o ponto net, a gente escolhe algumas ferramentas, mas
+
+283
+00:32:12.870 --> 00:32:28.749
+Rafael Cruz: quando a gente está num ambiente de produção, por exemplo, é extremamente importante que a gente tenha Clay, que vem no Hang Time, que a gente consegue ver como é que está o estado no nosso servidor. Então, por exemplo, eu vou executar aqui no meu terminalzinho.
+
+284
+00:32:30.710 --> 00:32:32.359
+Rafael Cruz: Vocês estão vendo meu terminal.
+
+285
+00:32:34.750 --> 00:32:35.440
+lucas.ssantos: Sim.
+
+286
+00:32:36.550 --> 00:32:38.849
+Rafael Cruz: Deixa eu pegar o terminal aqui, porque eu não gosto muito desse.
+
+287
+00:32:39.770 --> 00:32:43.650
+Rafael Cruz: Deixa eu ver. Aqui é,
+
+288
+00:32:56.110 --> 00:32:56.929
+Rafael Cruz: não são muito.
+
+289
+00:32:57.060 --> 00:32:57.750
+Rafael Cruz: E aí?
+
+290
+00:32:59.570 --> 00:33:00.760
+Rafael Cruz: Estão vendo aí, né?
+
+291
+00:33:04.060 --> 00:33:04.490
+Rafael Cruz: Sim, sim.
+
+292
+00:33:04.490 --> 00:33:04.830
+Arthur Braz Farias: Sim.
+
+293
+00:33:04.830 --> 00:33:05.970
+Rafael Cruz: Pequeno aqui.
+
+294
+00:33:09.240 --> 00:33:13.670
+Rafael Cruz: Só ver se eu tenho que Deus terminal.
+
+295
+00:33:13.790 --> 00:33:15.080
+Rafael Cruz: É melhor receber.
+
+296
+00:33:16.910 --> 00:33:19.080
+Rafael Cruz: Pega isso aqui. É só um exemplo mesmo. Não tem problema, não
+
+297
+00:33:19.230 --> 00:33:23.170
+Rafael Cruz: é? Tá bom. A fonte aí, né? O tamanho da fonte, né?
+
+298
+00:33:23.990 --> 00:33:24.630
+Arthur Braz Farias: Sim.
+
+299
+00:33:24.630 --> 00:33:29.379
+Rafael Cruz: Então, por exemplo, se está instalado O Dotnet aqui, o ponto net na minha máquina.
+
+300
+00:33:29.500 --> 00:33:32.400
+Rafael Cruz: Se eu fizer esse comando aqui, por exemplo, Dotnet,
+
+301
+00:33:33.650 --> 00:33:36.420
+Rafael Cruz: ele vai aparecer algumas informações aqui. Ó,
+
+302
+00:33:39.480 --> 00:33:46.590
+Rafael Cruz: então, por exemplo, aqui vou limpar aqui, Dotcher de traço traço info.
+
+303
+00:33:49.390 --> 00:33:59.000
+Rafael Cruz: Vocês não vão conseguir fazer esse comando. Provavelmente vocês não estão instalados. O que ele está dizendo? Aqui, Opa, eu tenho umas versões instaladas aqui do ponto net. Tenho a versão dez.
+
+304
+00:33:59.220 --> 00:34:15.460
+Rafael Cruz: Ele vai pegar aqui o Hunt Time aqui do Windows e tal. Ele vai ver que eu tenho outras versões instaladas de Sdk, ponto Net Sdk: eu tenho versão oito. Tem a versão dez? Eu tenho alguns Run Times aqui de execução. Acho que Net Core, que é para trabalhar com
+
+305
+00:34:15.530 --> 00:34:23.210
+Rafael Cruz: fazer web. E a Fitch. Não necessariamente. Eu preciso do ponto net para.
+
+306
+00:34:25.580 --> 00:34:27.260
+Rafael Cruz: Eu preciso do ponto net.
+
+307
+00:34:27.659 --> 00:34:35.660
+Rafael Cruz: Eu preciso de alguma ferramenta para trabalhar com ponto net. Tá? Deixa eu terminar o aqui porque eu não sei se eu vou conseguir fazer o que eu quero,
+
+308
+00:34:39.170 --> 00:34:46.969
+Rafael Cruz: a gente pode ser um comandeiro aqui, Midpest, que é mesmo que aqui
+
+309
+00:34:52.460 --> 00:34:53.800
+Rafael Cruz: é tudo
+
+310
+00:35:02.700 --> 00:35:03.630
+Rafael Cruz: explode.
+
+311
+00:35:05.890 --> 00:35:09.449
+Rafael Cruz: Ele vai trazer. Trouxe aqui, certo?
+
+312
+00:35:12.180 --> 00:35:19.080
+Rafael Cruz: É chamar aqui it sample acontecesse.
+
+313
+00:35:24.600 --> 00:35:32.120
+Rafael Cruz: Eu vou botar aqui. Ó, eu criei um arquivinho ali. Tá, é?
+
+314
+00:35:49.600 --> 00:35:50.890
+Rafael Cruz: Deixa eu pegar aqui.
+
+315
+00:35:58.150 --> 00:35:58.950
+Rafael Cruz: Escreveu
+
+316
+00:36:27.570 --> 00:36:31.550
+Rafael Cruz: só lhe ponto light.
+
+317
+00:36:33.050 --> 00:36:35.210
+Rafael Cruz: Ai vou botar aqui.
+
+318
+00:36:36.850 --> 00:36:38.980
+Rafael Cruz: Bem vindo.
+
+319
+00:36:41.510 --> 00:36:44.729
+Rafael Cruz: Não fundamentos desse chat.
+
+320
+00:36:46.340 --> 00:36:53.660
+Rafael Cruz: Vocês tem console Light line. Vou salvar aqui X.
+
+321
+00:36:54.720 --> 00:37:01.650
+Rafael Cruz: E aí salvei Dotnet Beauty.
+
+322
+00:37:23.030 --> 00:37:30.030
+Rafael Cruz: O que eu estou fazendo aqui agora? Estou construindo. Fiz um comando, fiz um comando.
+
+323
+00:37:32.790 --> 00:37:38.310
+Rafael Cruz: Eu escrevi aqui um comando numa linha de código né? Então a gente pode ver aqui mais calma.
+
+324
+00:37:42.560 --> 00:37:44.340
+Rafael Cruz: Escrevi esse comando aqui.
+
+325
+00:37:46.370 --> 00:37:51.469
+Rafael Cruz: System console Wrightline. Bem vindo ao fundamento C. Sharp.
+
+326
+00:37:53.380 --> 00:38:01.099
+Rafael Cruz: Aí, o que eu fiz agora? Usei um comando do Net Build que é para pegar aquele comando que eu fiz.
+
+327
+00:38:02.580 --> 00:38:07.829
+Rafael Cruz: E gerar um aplicativo, gerar um código Font, gerar um executável que a gente chama.
+
+328
+00:38:08.350 --> 00:38:10.770
+Rafael Cruz: Que é esse carinha? Aqui a gente chama de Executável.
+
+329
+00:38:13.800 --> 00:38:16.650
+Rafael Cruz: E agora eu vou executar esse carinha.
+
+330
+00:38:17.230 --> 00:38:19.839
+Rafael Cruz: Dot Net Titulan.
+
+331
+00:38:22.240 --> 00:38:23.420
+Rafael Cruz: Sample.
+
+332
+00:38:27.790 --> 00:38:34.090
+Rafael Cruz: Deixa eu ver aqui onde que ele colocou esse carinho aqui?
+
+333
+00:38:34.900 --> 00:38:39.610
+Rafael Cruz: Ele jogou aqui longe, aqui,
+
+334
+00:38:46.210 --> 00:38:47.220
+Rafael Cruz: óbica.
+
+335
+00:38:49.510 --> 00:38:51.729
+Rafael Cruz: Deixa eu só pegar esse carinho aqui.
+
+336
+00:38:53.920 --> 00:38:55.800
+Rafael Cruz: Vou ver que não é tão.
+
+337
+00:38:57.230 --> 00:38:59.830
+Rafael Cruz: Dá para trabalhar. Dá, não é tão.
+
+338
+00:39:02.000 --> 00:39:03.530
+Rafael Cruz: Deixa eu compilar aqui de novo.
+
+339
+00:39:07.200 --> 00:39:08.530
+Rafael Cruz: Tendo isso. Ó,
+
+340
+00:39:19.910 --> 00:39:21.269
+Rafael Cruz: deixa eu ver. Aqui seria
+
+341
+00:39:27.180 --> 00:39:33.620
+Rafael Cruz: acesso, por isso que não, não rodou. Então tá,
+
+342
+00:39:37.530 --> 00:39:39.860
+Rafael Cruz: vou colar aqui. O caminho que ele executou.
+
+343
+00:39:41.600 --> 00:39:42.800
+Rafael Cruz: Esse carinha aqui,
+
+344
+00:39:50.790 --> 00:39:52.460
+Rafael Cruz: provavelmente aqui.
+
+345
+00:40:01.440 --> 00:40:02.860
+Rafael Cruz: Deixa eu fazer o seguinte.
+
+346
+00:40:04.440 --> 00:40:06.040
+Rafael Cruz: Dando uma pasta aqui.
+
+347
+00:40:10.120 --> 00:40:11.260
+Rafael Cruz: Esse aqui.
+
+348
+00:40:11.900 --> 00:40:14.489
+Rafael Cruz: Estou na pasta que acho que não vai conseguir.
+
+349
+00:40:16.560 --> 00:40:19.209
+Rafael Cruz: Vamos lá. Vou fazer de novo aqui.
+
+350
+00:40:19.580 --> 00:40:22.649
+Rafael Cruz: Eu estava numa pasta aqui de sistema. Talvez ele não vá conseguir.
+
+351
+00:40:23.040 --> 00:40:25.170
+Rafael Cruz: E aí
+
+352
+00:40:28.770 --> 00:40:29.820
+Rafael Cruz: não.
+
+353
+00:40:31.090 --> 00:40:37.019
+Rafael Cruz: Sampaio Ses seja em torno consólico.
+
+354
+00:40:37.390 --> 00:40:46.700
+Rafael Cruz: Lightning, bem vindo ao fundamento justiça, Sharp.
+
+355
+00:40:47.750 --> 00:40:54.430
+Rafael Cruz: Vou salvar aqui White Rotinete
+
+356
+00:40:59.180 --> 00:41:02.480
+Rafael Cruz: Bill de só um pouco.
+
+357
+00:41:04.070 --> 00:41:05.510
+Rafael Cruz: Vai executar.
+
+358
+00:41:17.420 --> 00:41:20.260
+Rafael Cruz: Deixa eu só pegar aqui a data de nascimento do menu. Isol.
+
+359
+00:41:20.830 --> 00:41:24.530
+Rafael Cruz: A hashtag chama de essa aqui.
+
+360
+00:41:39.070 --> 00:41:44.470
+Rafael Cruz: Agora. Sim, é dotneto.
+
+361
+00:41:46.410 --> 00:41:50.439
+Rafael Cruz: Deixa eu entrar aqui na pasta. Sampaolese
+
+362
+00:41:54.110 --> 00:42:01.230
+Rafael Cruz: Gottina, Teerã Sampaok, ponto da Helena
+
+363
+00:42:27.950 --> 00:42:30.359
+Rafael Cruz: já sei que só vou fazer o seguinte.
+
+364
+00:42:34.650 --> 00:42:35.330
+Rafael Cruz: Tchau.
+
+365
+00:42:36.150 --> 00:42:39.470
+Rafael Cruz: Me parece aqui não é esse aqui.
+
+366
+00:42:43.820 --> 00:42:46.000
+Rafael Cruz: Tem que ir lá no negócio. Calma aí.
+
+367
+00:42:47.200 --> 00:42:48.960
+Rafael Cruz: Deixa eu pegar aqui uma coisa.
+
+368
+00:42:53.200 --> 00:42:55.840
+Rafael Cruz: Fica mais fácil aqui que eu tô batendo cabeça aqui,
+
+369
+00:43:10.900 --> 00:43:13.400
+Rafael Cruz: compilei. Fica mais fácil.
+
+370
+00:43:27.100 --> 00:43:31.660
+Rafael Cruz: Sorte, sampaol. Tá nossa carinha aqui. Ó executar ele.
+
+371
+00:43:37.820 --> 00:43:40.979
+Rafael Cruz: Boa, então só basta fazer isso aqui.
+
+372
+00:43:49.690 --> 00:43:50.999
+Rafael Cruz: O nosso cliente.
+
+373
+00:43:56.060 --> 00:44:03.129
+Rafael Cruz: Eu não preciso de nenhuma ferramenta, mas olha só o trabalhão que eu tenho para fazer para executar um simples comandinho,
+
+374
+00:44:05.330 --> 00:44:06.069
+Rafael Cruz: não é?
+
+375
+00:44:07.150 --> 00:44:09.440
+Rafael Cruz: Então não é tão
+
+376
+00:44:09.750 --> 00:44:13.459
+Rafael Cruz: por isso que a gente precisa de ferramentas para que a gente consiga fazer as coisas,
+
+377
+00:44:13.790 --> 00:44:16.119
+Rafael Cruz: porque senão fica muito difícil
+
+378
+00:44:16.960 --> 00:44:21.589
+Rafael Cruz: eu ficar fazendo tudo na mão. Obviamente não é nada produtivo a gente fazer tudo na mão.
+
+379
+00:44:23.730 --> 00:44:26.939
+Rafael Cruz: Então as ferramentas que a gente vai instalar
+
+380
+00:44:27.110 --> 00:44:29.810
+Rafael Cruz: por baixo dos Pangos. Ela vai fazer isso aqui.
+
+381
+00:44:30.370 --> 00:44:33.320
+Rafael Cruz: Vai usar os comandos que estará do Sdk.
+
+382
+00:44:33.560 --> 00:44:41.410
+Rafael Cruz: Dotnet Run Dotnet Bild, por exemplo, para encurtar os nossos caminhos,
+
+383
+00:44:42.880 --> 00:44:48.950
+Rafael Cruz: como eu falei, eu não preciso de uma ferramenta para eu trabalhar. Posso usar um notepad como usei aqui?
+
+384
+00:44:49.970 --> 00:44:51.769
+Rafael Cruz: Ela não te pede para fazer isso
+
+385
+00:44:52.430 --> 00:44:55.239
+Rafael Cruz: como tudo. Todavia, não é muito.
+
+386
+00:44:57.590 --> 00:45:00.169
+Rafael Cruz: Não é muito produtivo ficar fazendo isso tudo na mão
+
+387
+00:45:01.480 --> 00:45:08.830
+Rafael Cruz: sem o auxílio de ferramentas. Por isso que a gente tem ferramentas para auxiliar o nosso nosso desenvolvimento.
+
+388
+00:45:10.260 --> 00:45:14.170
+Rafael Cruz: Show de bola. Aí vocês viram aqui, ó a saga.
+
+389
+00:45:15.640 --> 00:45:25.460
+Rafael Cruz: Então vamos voltar aqui. Cadê onde está a apresentação? A gente parou aqui. Então, como eu falei, Dotnet Build, ele vai pegar a minha linha de código
+
+390
+00:45:42.010 --> 00:45:46.619
+Rafael Cruz: em pensar que saímos do pai do que para escrever no Selai. Era só print.
+
+391
+00:45:46.810 --> 00:45:57.040
+Rafael Cruz: Existe também a maneira aqui do Dotnet para a gente escrever também na sela. Somente dar um print. Dá também para fazer isso. Existe uma maneira de fazer isso
+
+392
+00:45:57.670 --> 00:46:00.080
+Rafael Cruz: aqui, tá? É,
+
+393
+00:46:07.280 --> 00:46:11.580
+Rafael Cruz: existe como fazer aqui para fazer isso, tá?
+
+394
+00:46:20.950 --> 00:46:26.820
+Rafael Cruz: Não é tão complexa, mas eu queria mostrar para vocês, na verdade, que não é a dificuldade para fazer.
+
+395
+00:46:27.380 --> 00:46:30.660
+Rafael Cruz: Obviamente, aqui também
+
+396
+00:46:31.710 --> 00:46:39.620
+Rafael Cruz: ferramenta. A gente vai usar, por exemplo, deve ter saído do Lauro de Python ali, que deve ter sido a lógica de programação e tal. Enfim,
+
+397
+00:46:39.910 --> 00:46:42.070
+Rafael Cruz: é.
+
+398
+00:46:44.160 --> 00:46:50.359
+Rafael Cruz: Obviamente vocês usaram ferramentas. Provavelmente usaram vs Code para programar no Python. Vocês não ficaram fazendo ninguém de comando.
+
+399
+00:46:51.140 --> 00:46:53.480
+Rafael Cruz: Por isso que aqui é a mesma coisa.
+
+400
+00:46:54.590 --> 00:47:00.420
+Rafael Cruz: Então o ponto net aqui, ele vai auxiliar vocês a com ferramentas
+
+401
+00:47:01.170 --> 00:47:05.739
+Rafael Cruz: a sua que a gente chama de a sua experiência como desenvolvedor vai melhorar muito.
+
+402
+00:47:07.100 --> 00:47:13.939
+Rafael Cruz: E aí, quando a gente está falando de ferramentas, a gente está falando em escolher as nossas ferramentas. Que a gente trabalha com C Sharp.
+
+403
+00:47:14.640 --> 00:47:22.070
+Rafael Cruz: Existem diversas ferramentas, e a gente pode trabalhar com a ferramenta que seja mais adequada para a gente trabalhar.
+
+404
+00:47:24.700 --> 00:47:27.239
+Rafael Cruz: Ferramentas que a gente pode utilizar.
+
+405
+00:47:29.380 --> 00:47:35.200
+Rafael Cruz: Ferramentas visual studio visual Studio é a ferramenta que a gente vai utilizar aqui durante as aulas.
+
+406
+00:47:36.650 --> 00:47:42.670
+Rafael Cruz: Ela é uma ferramenta completa desenvolvida pela Microsoft gratuita.
+
+407
+00:47:43.110 --> 00:47:52.139
+Rafael Cruz: E você consegue trabalhar, desenvolver e publicar qualquer coisa vs. Coach.
+
+408
+00:47:52.910 --> 00:47:56.250
+Rafael Cruz: O Vs. Code também é uma ferramenta para a gente trabalhar.
+
+409
+00:47:57.250 --> 00:48:02.529
+Rafael Cruz: E a gente consegue instalar o Plugin do C Sharp Dev kit, por exemplo, para trabalhar,
+
+410
+00:48:02.970 --> 00:48:04.879
+Rafael Cruz: e ela ajuda muito
+
+411
+00:48:05.620 --> 00:48:11.629
+Rafael Cruz: vs. Code. Você pode trabalhar no Linux, pode trabalhar no Windows e pode trabalhar no Mac Ios
+
+412
+00:48:12.030 --> 00:48:14.820
+Rafael Cruz: visual Studio só funciona no Windows
+
+413
+00:48:15.090 --> 00:48:19.430
+Rafael Cruz: Jetbranch. Nesse caso, aqui o ponto Net Rider.
+
+414
+00:48:20.110 --> 00:48:21.450
+Rafael Cruz: O Rider
+
+415
+00:48:21.630 --> 00:48:29.079
+Rafael Cruz: também. Ele é uma ideia. Paga. A gente tem licença por ser professor ou aluno ali, que é da Infinity.
+
+416
+00:48:29.820 --> 00:48:39.650
+Rafael Cruz: Você consegue utilizar o Rider? O Rider não perde de nada para o visual Studio, que são ferramentas a nível corporativo, que a gente trabalha no dia a dia
+
+417
+00:48:39.960 --> 00:48:41.349
+Rafael Cruz: de Aplicações.
+
+418
+00:48:41.840 --> 00:48:44.569
+Rafael Cruz: Ela não perde em nada para o visual Studio.
+
+419
+00:48:45.120 --> 00:48:48.809
+Rafael Cruz: Às vezes tem até funcionalidade. Até melhor que o visual. Studio. Tá,
+
+420
+00:48:49.010 --> 00:48:53.880
+Rafael Cruz: então ela é muito legal de aprender qual é a grande vantagem dela?
+
+421
+00:48:54.080 --> 00:49:08.430
+Rafael Cruz: Que ela trabalha tanto no Linux, tanto no Mac ponto no Windows Visual Studio. Somente um Windows beleza como
+
+422
+00:49:08.580 --> 00:49:10.049
+Rafael Cruz: que a gente vai estar lá.
+
+423
+00:49:11.650 --> 00:49:16.979
+Rafael Cruz: A gente vai trabalhar com o visual Studio para que a gente consiga.
+
+424
+00:49:17.150 --> 00:49:19.240
+Rafael Cruz: Fazia o nosso bloco.
+
+425
+00:49:20.080 --> 00:49:25.549
+Rafael Cruz: Quem quiser, pode utilizar também o Vs Code, mas eu sugiro para quem estiver no ambiente Windows,
+
+426
+00:49:26.570 --> 00:49:29.160
+Rafael Cruz: trabalhar com visual Studio.
+
+427
+00:49:32.420 --> 00:49:39.899
+Rafael Cruz: Por que a gente utiliza o visual studio. Primeiro que ele é. A gente consegue fazer diversas operações dentro dele.
+
+428
+00:49:40.570 --> 00:49:46.149
+Rafael Cruz: Ele tem uma instalação simplificada e é totalmente gratuito.
+
+429
+00:49:46.640 --> 00:49:50.839
+Rafael Cruz: A versão completa dele é completamente gratuita. Você não precisa fazer nada.
+
+430
+00:49:52.770 --> 00:49:56.610
+Rafael Cruz: Como é que a gente instala o visual Studio Community.
+
+431
+00:49:58.100 --> 00:50:01.269
+Rafael Cruz: A primeira coisa que a gente tem que fazer é obter
+
+432
+00:50:01.950 --> 00:50:06.599
+Rafael Cruz: a versão comum. Unitins, visaustudio, Microsoft. Com então a gente vai lá.
+
+433
+00:50:07.160 --> 00:50:09.099
+Rafael Cruz: Vou pegar aqui o nosso carinha.
+
+434
+00:50:12.220 --> 00:50:16.479
+Rafael Cruz: Vou digitar que vocês estão vendo aqui meu browser visual.
+
+435
+00:50:17.250 --> 00:50:19.360
+Rafael Cruz: Estúdio, comunitismo.
+
+436
+00:50:21.640 --> 00:50:29.429
+Rafael Cruz: Cara, eu fiz uma pesquisa aqui, ou você pode entrar direto aqui no link. Eu vou dar um link aqui pra vocês. Que é esse carinho aqui? Ó,
+
+437
+00:50:31.890 --> 00:50:33.219
+Rafael Cruz: dá o link,
+
+438
+00:50:38.840 --> 00:50:39.520
+Rafael Cruz: tá.
+
+439
+00:50:42.870 --> 00:50:45.389
+Rafael Cruz: Vão clicar aqui em baixar.
+
+440
+00:50:48.890 --> 00:50:50.239
+Rafael Cruz: Clicou em baixar.
+
+441
+00:50:58.460 --> 00:50:59.869
+Rafael Cruz: Fez o download.
+
+442
+00:51:01.630 --> 00:51:08.470
+Rafael Cruz: Vai abrir o arquivo e ele vai fazer o instalador. Tá vendo que ele aparece aqui para instalar
+
+443
+00:51:11.640 --> 00:51:13.070
+Rafael Cruz: e vai clicar em si
+
+444
+00:51:24.980 --> 00:51:27.060
+Rafael Cruz: com o visual Studio Instaler.
+
+445
+00:51:29.800 --> 00:51:32.590
+Rafael Cruz: Vou aqui, dar um. Continuar.
+
+446
+00:51:33.520 --> 00:51:39.029
+Rafael Cruz: Ele vai fazer download do instalador pequenininho, tá, não é a instalação do visual Studio.
+
+447
+00:51:59.680 --> 00:52:03.760
+Rafael Cruz: Beleza. No meu caso, aqui eu já tenho visual Studio instalado. Tá?
+
+448
+00:52:04.360 --> 00:52:07.350
+Rafael Cruz: Ele já tem aqui o meu e já tem o visual studio instalado.
+
+449
+00:52:07.520 --> 00:52:09.220
+Rafael Cruz: Então eu vou fechar aqui.
+
+450
+00:52:09.970 --> 00:52:12.759
+Rafael Cruz: Quando vocês forem instalar o visual Studio.
+
+451
+00:52:13.830 --> 00:52:18.739
+Rafael Cruz: Eu vou botar um modificar que vai ser basicamente na tela que vocês vão precisar.
+
+452
+00:52:22.230 --> 00:52:25.460
+Rafael Cruz: Ele vai cair nessa tela aqui, basicamente,
+
+453
+00:52:28.930 --> 00:52:34.569
+Rafael Cruz: que essa tela é a estela do instalador. O que a gente vai marcar? Vocês vão marcar esse carinha aqui. Ó
+
+454
+00:52:34.870 --> 00:52:37.220
+Rafael Cruz: Aspinet e Desenvolvimento Web.
+
+455
+00:52:38.580 --> 00:52:42.889
+Rafael Cruz: Vamos marcar desenvolvimento Ia com Wesley.
+
+456
+00:52:48.030 --> 00:52:53.859
+Rafael Cruz: Se vocês quiserem explorar mais, vocês podem explorar. Mas o ideal são esses dois carinhas aqui tá
+
+457
+00:52:54.500 --> 00:53:01.060
+Rafael Cruz: Aspinet de Desenvolvimento web, desenvolvimento de A e do Edger.
+
+458
+00:53:01.780 --> 00:53:07.159
+Rafael Cruz: E aí vocês podem instalar o que vocês acharem que tiver instalar o principal. São esses dois primeiros aqui.
+
+459
+00:53:07.710 --> 00:53:13.260
+Rafael Cruz: O resto. Se você quiser instalar, você pode instalar. Só que o ponto é o quê?
+
+460
+00:53:14.540 --> 00:53:22.280
+Rafael Cruz: Geralmente o visual Studio. Ele tem em torno. Ele é pesado para instalar. Ele ocupa muito espaço, tá?
+
+461
+00:53:23.030 --> 00:53:25.440
+Rafael Cruz: Ele realmente ocupa muito espaço.
+
+462
+00:53:26.240 --> 00:53:33.989
+Rafael Cruz: A gente está falando uma instalação do visual Studio em torno de dez gigas a oito giga só de espaço na tua máquina
+
+463
+00:53:34.810 --> 00:53:40.650
+Rafael Cruz: ele dá. É, então ele tem.
+
+464
+00:53:46.980 --> 00:53:47.950
+Rafael Cruz: É isso.
+
+465
+00:53:49.630 --> 00:53:54.430
+Rafael Cruz: Então ele consome muito espaço, tá?
+
+466
+00:53:55.530 --> 00:53:59.539
+Rafael Cruz: O principal é instalar esses dois aqui. Depois que você instalou esses dois,
+
+467
+00:54:00.030 --> 00:54:06.709
+Rafael Cruz: ele já vai instalar tudo que você precisa. Todos os componentes, ponto net. Tudo que você precisa para trabalhar. Você não precisa fazer nada.
+
+468
+00:54:07.450 --> 00:54:10.519
+Rafael Cruz: O importante é fazer essas instalações aqui.
+
+469
+00:54:11.100 --> 00:54:20.919
+Rafael Cruz: Instalar esses dois Aspnet e Desenvolvimento Web e aqui, Desenvolvimento Ia e do Eso. Beleza aí, cara. Se vocês quiserem instalar outras coisas para você explorar.
+
+470
+00:54:21.160 --> 00:54:27.519
+Rafael Cruz: E não sei o que. Tudo bem. Só lembre se, como eu falei, ele ocupa muito espaço,
+
+471
+00:54:28.780 --> 00:54:33.660
+Rafael Cruz: cara. É isso. Basicamente é isso, tá? Não tem muito a instalação. É isso
+
+472
+00:54:35.040 --> 00:54:39.260
+Rafael Cruz: é simples, simples. Aí você vai instalar, e depois você vai botar Next Next Finish
+
+473
+00:54:39.600 --> 00:54:42.590
+Rafael Cruz: e vai esperar concluir a instalação.
+
+474
+00:54:44.270 --> 00:54:47.470
+Rafael Cruz: Ele é muito simples de instalar. Depois que você instalou,
+
+475
+00:54:49.700 --> 00:54:53.100
+Rafael Cruz: você vai instalar as ferramentas de trabalho, como eu falei.
+
+476
+00:54:53.570 --> 00:54:56.929
+Rafael Cruz: O que é um workload que a gente está falando? O workload
+
+477
+00:54:57.450 --> 00:55:03.319
+Rafael Cruz: ou carga de trabalho é o conjunto de ferramentas que a gente vai desenvolver a nossa aplicação.
+
+478
+00:55:04.080 --> 00:55:08.540
+Rafael Cruz: Então ele tem um conjunto de ferramentas para que a gente consiga
+
+479
+00:55:09.020 --> 00:55:14.880
+Rafael Cruz: trabalhar. Então, para ser Sharp, a gente vai marcar desenvolvimento Aspnet e Web,
+
+480
+00:55:15.050 --> 00:55:22.460
+Rafael Cruz: que ele já vai instalar o ponto Net Sdk automaticamente e tudo que a gente precisa para trabalhar no nosso dia a dia
+
+481
+00:55:24.090 --> 00:55:25.050
+Rafael Cruz: perfeito.
+
+482
+00:55:25.770 --> 00:55:31.759
+Rafael Cruz: Então, no mínimo, você tem que colocar desenvolvimento ashp net web, no mínimo.
+
+483
+00:55:32.640 --> 00:55:36.770
+Rafael Cruz: Senão não vai rolar beleza
+
+484
+00:55:38.480 --> 00:55:48.799
+Rafael Cruz: se você quiser trabalhar e desenvolver com desktop, ou seja, fazer programas que instala dentro do seu computador. Você pode colocar
+
+485
+00:55:49.590 --> 00:55:58.209
+Rafael Cruz: o desktop. A gente vai fazer alguma coisa com desktop aqui? Não vamos fazer nada com desktop, mas caso você queira explorar
+
+486
+00:56:02.860 --> 00:56:04.700
+Rafael Cruz: caso você queira explorar,
+
+487
+00:56:08.590 --> 00:56:10.059
+Rafael Cruz: você pode.
+
+488
+00:56:10.220 --> 00:56:12.839
+Rafael Cruz: Pode estar lá. Tá bom,
+
+489
+00:56:17.680 --> 00:56:19.559
+Rafael Cruz: eu vou dar a opção para quem
+
+490
+00:56:21.680 --> 00:56:25.980
+Rafael Cruz: vou dar opção aqui, para quem vai trabalhar com o Vs Coach.
+
+491
+00:56:27.350 --> 00:56:29.320
+Rafael Cruz: O Vs Code é o seguinte.
+
+492
+00:56:30.820 --> 00:56:35.780
+Rafael Cruz: Ele não vai ter esse tipo de workload ali dentro do vsc code.
+
+493
+00:56:37.900 --> 00:56:39.420
+Rafael Cruz: Então eu vou fechar aqui
+
+494
+00:56:45.640 --> 00:56:47.390
+Rafael Cruz: dentro do vs. Code.
+
+495
+00:56:48.160 --> 00:56:50.980
+Rafael Cruz: O que você tem que fazer? Você tem que vir aqui. Ó,
+
+496
+00:56:53.520 --> 00:56:59.100
+Rafael Cruz: e você vai instalar o C. Sharp. Dev. Kit, vai procurar esse carinho aqui.
+
+497
+00:56:59.490 --> 00:57:01.859
+Rafael Cruz: Que é esse aqui? Ó C. Sharp, deve kit
+
+498
+00:57:07.340 --> 00:57:12.449
+Rafael Cruz: escolheu ser Sharp deve. Kit, você vai clicar em Install.
+
+499
+00:57:30.970 --> 00:57:35.080
+Rafael Cruz: E aí você vai seguir aqui. Esse template aqui, ó
+
+500
+00:57:35.860 --> 00:57:41.440
+Rafael Cruz: que ele vai fazer o setup do teu Vs. Coach.
+
+501
+00:57:43.450 --> 00:57:48.559
+Rafael Cruz: E aqui nesse aqui é o principal. Ele vai instalar o ponto Net Sdk,
+
+502
+00:57:48.770 --> 00:57:55.070
+Rafael Cruz: que é o segundo aqui. Ó, eu instalei esse carinho. Eu vou aqui clicar Install Netsdk.
+
+503
+00:57:55.910 --> 00:58:00.320
+Rafael Cruz: Você vai vir aqui e vai clicar aqui em Install Net Sdk:
+
+504
+00:58:18.000 --> 00:58:22.359
+Rafael Cruz: então o ideal é instalar o C. Sharp Devkit.
+
+505
+00:58:24.390 --> 00:58:25.739
+Rafael Cruz: Vou dar um hello. De quê?
+
+506
+00:58:30.670 --> 00:58:37.410
+Rafael Cruz: Instalar um C. Sharp deve kit aqui no meu caso. Já está instalado e seguir aqui. Ó
+
+507
+00:58:39.990 --> 00:58:45.850
+Rafael Cruz: os passo a passos aqui para que você consiga ter o seu ambiente. Pronto, tá bom.
+
+508
+00:58:49.150 --> 00:58:51.009
+Rafael Cruz: Isso para quem for trabalhar.
+
+509
+00:58:52.700 --> 00:58:57.880
+Rafael Cruz: Com conversa Coach beleza.
+
+510
+00:59:02.050 --> 00:59:04.949
+Rafael Cruz: Já está até aqui instalar aqui. Agora, porque eu já tenho.
+
+511
+00:59:05.590 --> 00:59:13.779
+Rafael Cruz: Ficou claro, pessoal, beleza, outra opção também é utilizar o Rider.
+
+512
+00:59:16.060 --> 00:59:21.489
+Rafael Cruz: Que é esse carinha aqui, que é o Rayder?
+
+513
+00:59:28.280 --> 00:59:30.300
+Rafael Cruz: O Rider?
+
+514
+00:59:30.510 --> 00:59:36.540
+Rafael Cruz: Ele também é para trabalhar com o ponto net. Qual é a diferença do Rider? O Rider
+
+515
+00:59:37.260 --> 00:59:41.540
+Rafael Cruz: e você consegue utilizar ali no Linux, no Windows
+
+516
+00:59:41.730 --> 00:59:45.440
+Rafael Cruz: e no Mac. Ele é muito mais parecido com o visual Studio.
+
+517
+00:59:46.390 --> 00:59:48.390
+Rafael Cruz: Ele é muito parecido com o Visual Studio.
+
+518
+00:59:49.030 --> 00:59:50.640
+Rafael Cruz: Então você pode trabalhar
+
+519
+00:59:51.530 --> 00:59:58.280
+Rafael Cruz: com ele de uma forma bem tranquila. E se eu não me engano? Se não me engano? Não tem certeza.
+
+520
+00:59:58.940 --> 01:00:01.629
+Rafael Cruz: A gente tem licença para trabalhar com Rider
+
+521
+01:00:01.950 --> 01:00:05.110
+Rafael Cruz: e ele tem a versão não paga dele, que é Community.
+
+522
+01:00:06.070 --> 01:00:11.980
+Rafael Cruz: Então você pode pegar o Rider Community e você trabalhar da mesma maneira. Só que a grande diferença do Rider,
+
+523
+01:00:12.320 --> 01:00:18.469
+Rafael Cruz: que você pode trabalhar em qualquer sistema operacional. Então ele é muito parecido. Ele tem as mesmas
+
+524
+01:00:20.520 --> 01:00:32.549
+Rafael Cruz: capacidades do visual Studio. Então assim. Ah, não tô usando um Windows. Eu tô usando Mac. Estou usando um Linux, cara, eu sugiro ir pro Rider, que ele é muito mais parecido. Dá pra fazer um depara bem legal.
+
+525
+01:00:36.280 --> 01:00:38.020
+Rafael Cruz: Ficou claro? Pessoal? Tranquilo,
+
+526
+01:00:51.590 --> 01:00:52.650
+Rafael Cruz: beleza,
+
+527
+01:00:55.940 --> 01:00:57.750
+Rafael Cruz: cara. Terminou de estar lá.
+
+528
+01:00:59.430 --> 01:01:02.010
+Rafael Cruz: O que a gente vai fazer. A gente vai abrir o visual Studio.
+
+529
+01:01:06.500 --> 01:01:08.390
+Rafael Cruz: Vou abrir com o visual Studio. Ó,
+
+530
+01:01:15.970 --> 01:01:17.629
+Rafael Cruz: vou abrir aqui o visual Studio
+
+531
+01:01:21.740 --> 01:01:25.469
+Rafael Cruz: e vou verificar se ele vai executar se. Ele vai abrir tudo bonitinho
+
+532
+01:01:42.660 --> 01:01:49.170
+Rafael Cruz: abriu o visual Studio Opa Legal. A gente vai fechar o visual Studio.
+
+533
+01:01:50.570 --> 01:02:02.139
+Rafael Cruz: E a gente vai fazer isso aqui. Vai abrir um prompt de comando e vai digitar Dotnetversion.
+
+534
+01:02:03.170 --> 01:02:08.430
+Rafael Cruz: Se ele trouxer aqui. Ó, significa que o meu ambiente está ok,
+
+535
+01:02:08.910 --> 01:02:18.630
+Rafael Cruz: outro que eu posso fazer. Dotnet List Sdks trouxe dois.
+
+536
+01:02:18.830 --> 01:02:25.690
+Rafael Cruz: O que esses comandos estão fazendo? Significa que a minha instalação do visual Studio está correta,
+
+537
+01:02:26.100 --> 01:02:29.989
+Rafael Cruz: e eu estou com o ponto net instalado de forma corretamente.
+
+538
+01:02:30.290 --> 01:02:32.050
+Rafael Cruz: Eu só estou validando o ambiente,
+
+539
+01:02:32.370 --> 01:02:37.979
+Rafael Cruz: feito isso está tudo pronto para criar o nosso primeiro aplicativo.
+
+540
+01:02:44.770 --> 01:02:47.160
+Rafael Cruz: Então tudo pronto para a gente começar a trabalhar.
+
+541
+01:02:47.630 --> 01:02:59.359
+Rafael Cruz: Então tem alguns problemas que podem ser conhecidos. Tá primeiro, Dotnet é um comando não reconhecido.
+
+542
+01:02:59.640 --> 01:03:04.709
+Rafael Cruz: Provavelmente você instalou o ponto net. Se você reinicia o terminal
+
+543
+01:03:04.900 --> 01:03:10.300
+Rafael Cruz: ou reinicia o computador, por exemplo, como instalar o visual Studio ou o ponto Net Sdk,
+
+544
+01:03:12.450 --> 01:03:15.769
+Rafael Cruz: você pode corrigir via instalador do Visual Studio.
+
+545
+01:03:16.310 --> 01:03:19.030
+Rafael Cruz: Ou você pode instalar manualmente o Sdk.
+
+546
+01:03:22.680 --> 01:03:31.030
+Rafael Cruz: Geralmente você instalou o visual. Studio, instalou aquela opção de desenvolvimento Web cara reinicia a máquina que vai ficar tudo certo.
+
+547
+01:03:38.410 --> 01:03:42.050
+Rafael Cruz: O importante pessoal é o seguinte.
+
+548
+01:03:44.460 --> 01:03:46.570
+Rafael Cruz: Se você já tem um ponto net instalado,
+
+549
+01:03:54.300 --> 01:03:58.250
+Rafael Cruz: o importante é ter isso aqui. Dez.zero na frente.
+
+550
+01:03:58.840 --> 01:04:04.359
+Rafael Cruz: O final aqui não faz muita diferença. O importante é que esteja dez aqui na frente,
+
+551
+01:04:04.650 --> 01:04:09.500
+Rafael Cruz: que é o que faz diferença, tá, beleza?
+
+552
+01:04:10.610 --> 01:04:11.819
+Rafael Cruz: O importante é esse
+
+553
+01:04:22.180 --> 01:04:27.590
+Rafael Cruz: beleza. Pessoal, eu vou parar por aqui hoje que eu.
+
+554
+01:04:28.000 --> 01:04:33.910
+Rafael Cruz: Então, pessoal, eu espero que você. Amanhã todo mundo aí consiga estar lá.
+
+555
+01:04:34.170 --> 01:04:39.340
+Rafael Cruz: Já vinha o instalador. Pronto, aqui já esteja um ambiente preparado para a gente começar
+
+556
+01:04:39.450 --> 01:04:43.770
+Rafael Cruz: a criar as nossas aplicações, tá?
+
+557
+01:04:43.940 --> 01:04:46.330
+Rafael Cruz: É,
+
+558
+01:04:52.050 --> 01:04:59.599
+Rafael Cruz: começa a criar nossas aplicações. Então, pessoal, eu espero que então amanhã venha todo mundo já
+
+559
+01:04:59.990 --> 01:05:12.230
+Rafael Cruz: instalado com Dotnet rodando e funcional no Rider ou no verso code ou no visual Studio. O importante é estar instalado como eu falei, eu vou seguir em menta em menta. Aqui é o visual Studio.
+
+560
+01:05:12.510 --> 01:05:13.410
+Rafael Cruz: Tá?
+
+561
+01:05:13.540 --> 01:05:23.100
+Rafael Cruz: É para quem está trabalhando com um ambiente diferente de Windows. Sugira utilizar o hardware,
+
+562
+01:05:23.370 --> 01:05:27.319
+Rafael Cruz: dado que ele é muito parecido com o Vs com o Isol Studio. Tá bom,
+
+563
+01:05:31.800 --> 01:05:34.710
+Rafael Cruz: eu vou botar agora o material lá no.
+
+564
+01:05:35.540 --> 01:05:39.329
+Rafael Cruz: No infinite online se ele estiver em pé, né? Tem isso também.
+
+565
+01:05:49.800 --> 01:05:51.870
+Rafael Cruz: Deixa eu ver se tá em Pec.
+
+566
+01:05:53.330 --> 01:05:54.899
+Rafael Cruz: Acho que tá em pé.
+
+567
+01:05:55.450 --> 01:05:56.950
+Rafael Cruz: Está lento, mas está indo.
+
+568
+01:05:59.260 --> 01:06:00.680
+Rafael Cruz: Deixa eu salvar aqui
+
+569
+01:06:12.250 --> 01:06:13.909
+Rafael Cruz: só vou em Pdf. Aqui
+
+570
+01:06:24.070 --> 01:06:25.360
+Rafael Cruz: é quente
+
+571
+01:06:31.320 --> 01:06:32.550
+Rafael Cruz: documentos,
+
+572
+01:06:39.210 --> 01:06:42.030
+Rafael Cruz: criar uma pasta aqui. Eu vou chamar de fundamento. C. Sharp,
+
+573
+01:07:25.780 --> 01:07:26.610
+Rafael Cruz: foi.
+
+574
+01:07:37.490 --> 01:07:42.429
+Rafael Cruz: Está aqui o Pdf aqui. Que faz a instalação? Deixa eu fechar aqui essas paradas aqui também. Que tá bravo.
+
+575
+01:07:44.480 --> 01:07:45.649
+Rafael Cruz: Tá aqui, ó
+
+576
+01:07:45.830 --> 01:07:54.819
+Rafael Cruz: a apresentação de hoje. Então, pessoal, espero que todo mundo aí amanhã esteja com o ambiente preparado para a gente começar a avançar um pouquinho aqui nas fundações aqui da linguagem.
+
+577
+01:07:54.940 --> 01:07:58.440
+Rafael Cruz: Tá bom, fechou.
+
+578
+01:08:06.170 --> 01:08:08.559
+Rafael Cruz: É isso, pessoal. Boa noite a todos.
+
+579
+01:08:09.420 --> 01:08:13.670
+Rafael Cruz: A gente se vê amanhã, aqui, nesse mesmo horário. Tá bom. Valeu, pessoal. Abraço.
+
+580
+01:08:15.200 --> 01:08:16.120
+Arthur Braz Farias: Valeu!
+

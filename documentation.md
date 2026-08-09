@@ -139,7 +139,7 @@ Array de objetos. Campos usados na UI:
 | `description` | string | Texto do cartão na home |
 | `professor` | string | Aparece nos resultados de pesquisa |
 | `order` | number | Ordenação na home |
-| `trimester` | `1`, `2` ou `[1, 2]` | Filtro “1º / 2º / Ambos” na home |
+| `trimester` | `1`, `2`, `3` ou array (ex. `[1, 2]`) | Filtro “1º / 2º / 3º / Todos” na home |
 
 ### `content/lessons.json`
 

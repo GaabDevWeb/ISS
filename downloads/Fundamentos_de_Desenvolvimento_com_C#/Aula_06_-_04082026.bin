@@ -1,0 +1,2274 @@
+WEBVTT
+
+1
+00:01:05.260 --> 00:01:10.950
+Luiz Maia: Boa noite, pessoal. Dia quatro de Agosto de dois mil e vinte e seis.
+
+2
+00:01:12.430 --> 00:01:13.500
+Luiz Maia: É
+
+3
+00:01:39.020 --> 00:01:43.590
+Luiz Maia: então hoje a gente vai falar sobre
+
+4
+00:01:48.580 --> 00:01:49.930
+Luiz Maia: data e hora.
+
+5
+00:01:51.850 --> 00:01:54.000
+Luiz Maia: É o assunto da aula de hoje.
+
+6
+00:01:55.340 --> 00:02:00.409
+Luiz Maia: Deixa eu pegar aqui. A gente vai fazer bastante código hoje.
+
+7
+00:02:04.110 --> 00:02:06.880
+Luiz Maia: Deixa eu organizar aqui o meu.
+
+8
+00:02:14.380 --> 00:02:16.150
+Luiz Maia: Deixa eu arrumar aqui o meu.
+
+9
+00:02:21.760 --> 00:02:32.310
+Luiz Maia: Ok, cursos, Patinete, se Sharp aulas
+
+10
+00:02:33.830 --> 00:02:46.800
+Luiz Maia: aula três ontem. A gente fez o quê? Na aula de ontem, a gente fez uma revisão aí de tudo que a gente,
+
+11
+00:02:49.690 --> 00:02:54.679
+Luiz Maia: tudo que vocês viram aí nas duas últimas semanas com o Professor Rafael.
+
+12
+00:02:55.290 --> 00:02:56.070
+Luiz Maia: Tchau.
+
+13
+00:03:06.340 --> 00:03:10.889
+Luiz Maia: Então, hoje a gente vai falar sobre data e hora,
+
+14
+00:03:14.640 --> 00:03:19.099
+Luiz Maia: data e hora. Tem um tipo especial no C sharp, chamada Date time,
+
+15
+00:03:19.930 --> 00:03:26.539
+Luiz Maia: que representa a data e hora. Existem diversos métodos para manipulação de data, e hora,
+
+16
+00:03:26.670 --> 00:03:37.860
+Luiz Maia: e a gente vai aprender isso na prática. Sem sem muito, sem precisar de.
+
+17
+00:03:42.990 --> 00:03:46.790
+Luiz Maia: Deixa eu botar aqui, meu Linkedin de novo aqui para vocês.
+
+18
+00:03:47.170 --> 00:03:53.999
+Luiz Maia: Porque deve ter gente. Talvez que não tenha pego ontem tenha faltado aula de ontem.
+
+19
+00:03:58.700 --> 00:04:02.660
+Luiz Maia: Deixa eu botar aqui meu Linkedin de novo para vocês.
+
+20
+00:04:14.970 --> 00:04:22.019
+Luiz Maia: Eu queria também que vocês elegessem aí um representante de turma, alguém que fosse um contato
+
+21
+00:04:22.370 --> 00:04:26.620
+Luiz Maia: que pudesse fazer o meio de campo entre o professor e a turma.
+
+22
+00:04:27.250 --> 00:04:29.460
+Luiz Maia: Se alguém pudesse
+
+23
+00:04:30.760 --> 00:04:49.649
+Luiz Maia: puder ser esse representante, eu agradeço, porque aí fica mais fácil para mim fazer o contato com vocês. Por exemplo, estou com problema de saúde. Não vou dar aula. Eu mando mensagem para ele, etc. Falar sobre Tp. Falar sobre qualquer assunto
+
+24
+00:04:50.190 --> 00:04:53.059
+Luiz Maia: relacionado à disciplina,
+
+25
+00:04:53.200 --> 00:05:03.239
+Luiz Maia: fica mais fácil ter um ponto focal. Aí, um representante de turma. Se você puder mandar uma mensagem para mim no infinito online. Eu agradeço.
+
+26
+00:05:08.220 --> 00:05:09.640
+Luiz Maia: Então, vamos lá, gente.
+
+27
+00:05:11.020 --> 00:05:13.890
+Luiz Maia: Vamos trabalhar com Date Time.
+
+28
+00:05:23.730 --> 00:05:29.380
+Luiz Maia: Eu vou criar uma solução. Uma solução que vai ter vários projetos, tá?
+
+29
+00:05:29.780 --> 00:05:33.289
+Luiz Maia: E cada projeto vai ser.
+
+30
+00:05:37.400 --> 00:05:40.930
+Luiz Maia: Eu vou chamar esse projeto de data a hora.
+
+31
+00:05:42.170 --> 00:05:45.929
+Luiz Maia: Se você quiser fazer junto comigo, tá, data, hora. Um.
+
+32
+00:05:46.490 --> 00:05:48.890
+Luiz Maia: E o nome da solução vai se dar a teora.
+
+33
+00:05:49.280 --> 00:05:52.440
+Luiz Maia: Eu vou mudar aqui o diretório onde esse cara está,
+
+34
+00:05:57.090 --> 00:05:58.910
+Luiz Maia: vou botar em documents.
+
+35
+00:06:05.490 --> 00:06:09.900
+Luiz Maia: Então o nome da solução vai ser data e hora. E o projeto vai ser data, hora, um,
+
+36
+00:06:13.210 --> 00:06:15.330
+Luiz Maia: Dotnet oito.
+
+37
+00:06:15.760 --> 00:06:17.670
+Luiz Maia: Ok.
+
+38
+00:06:36.170 --> 00:06:36.960
+karoline.scheidegger: E aí?
+
+39
+00:07:09.850 --> 00:07:11.610
+Luiz Maia: Ok, vamos lá então.
+
+40
+00:07:16.790 --> 00:07:23.609
+Luiz Maia: O Tp2 de vocês tem pelo menos eu acho que três questões sobre data e hora.
+
+41
+00:07:26.170 --> 00:07:29.019
+Luiz Maia: Vamos dar uma trabalhada em cima disso.
+
+42
+00:07:29.380 --> 00:07:38.930
+Luiz Maia: Date time, que é o tipo que manipula esse cara
+
+43
+00:07:42.180 --> 00:07:48.450
+Luiz Maia: date Time Now console
+
+44
+00:07:52.730 --> 00:07:53.820
+Luiz Maia: agora,
+
+45
+00:08:00.330 --> 00:08:05.010
+Luiz Maia: data, agora,
+
+46
+00:08:09.360 --> 00:08:13.740
+Luiz Maia: isso aqui é uma forma de você fazer uma congatenação de Strings.
+
+47
+00:08:13.910 --> 00:08:16.640
+Luiz Maia: Ele pega essa String aqui.
+
+48
+00:08:17.330 --> 00:08:31.420
+Luiz Maia: Ele vê esse operador aqui de soma. Na verdade, ele não é Soma. Ele é de concatenação. Ele olha para esse cara aqui. Ele transforma isso aqui em String e Concatena com o que está do lado esquerdo.
+
+49
+00:08:32.799 --> 00:08:39.159
+Luiz Maia: Isso aqui parece uma coisa boba, mas não é isso. Aqui é polimorfismo.
+
+50
+00:08:40.220 --> 00:08:42.419
+Luiz Maia: É um polimorfismo estático.
+
+51
+00:08:43.210 --> 00:08:47.040
+Luiz Maia: Onde você está fazendo uma transformação
+
+52
+00:08:48.500 --> 00:08:54.820
+Luiz Maia: que não é uma adição. É uma concatenação. Isso é um chamado sobrecarga de operador.
+
+53
+00:08:56.170 --> 00:09:02.729
+Luiz Maia: Então o operador de adição pode ser também de concatenação. Isso é polimorfismo.
+
+54
+00:09:03.500 --> 00:09:09.500
+Luiz Maia: Veremos mais sobre esse assunto nas aulas nas próximas aulas.
+
+55
+00:09:11.190 --> 00:09:16.810
+Luiz Maia: Então isso aqui parece uma bobagem. Mas aqui dentro tem um monte de coisa interessante.
+
+56
+00:09:17.490 --> 00:09:21.889
+Luiz Maia: Isso aqui é poliomorfismo, poliomofismo estático,
+
+57
+00:09:22.340 --> 00:09:25.480
+Luiz Maia: e também chamado de sobrecarga de operador.
+
+58
+00:09:26.380 --> 00:09:30.489
+Luiz Maia: Nem todas as linguagens têm isso. Python, por exemplo. Não tem isso.
+
+59
+00:09:36.590 --> 00:09:40.799
+Luiz Maia: Veremos mais de poemorfismo nas próximas aulas.
+
+60
+00:09:41.190 --> 00:09:44.450
+Luiz Maia: Vamos rodar, para ver aqui o código que vai sair.
+
+61
+00:09:53.200 --> 00:09:59.060
+Luiz Maia: Ele mostra quatro do oito dois mil e vinte e seis e o horário direitinho.
+
+62
+00:10:04.170 --> 00:10:08.349
+Luiz Maia: Se por acaso a sua máquina não mostrou o horário correto.
+
+63
+00:10:08.620 --> 00:10:16.049
+Luiz Maia: Provavelmente a sua máquina está com um Time Zone diferente do Brasil.
+
+64
+00:10:16.770 --> 00:10:21.420
+Luiz Maia: Ele está pegando um time Zone, por exemplo, de Nova York, por exemplo.
+
+65
+00:10:21.910 --> 00:10:23.989
+Luiz Maia: E aí vai dar diferente o horário
+
+66
+00:10:28.820 --> 00:10:30.459
+Luiz Maia: para mudar isso,
+
+67
+00:10:30.690 --> 00:10:44.140
+Luiz Maia: ou você vai ter que configurar alguma coisa no teu programa para customizar ele para Brasil, ou você vai ter que alterar o teu Windows para estar no Time Zone do Brasil.
+
+68
+00:10:44.280 --> 00:10:45.190
+Luiz Maia: Tá certo.
+
+69
+00:10:45.450 --> 00:10:46.310
+Luiz Maia: E aí,
+
+70
+00:10:51.630 --> 00:10:57.110
+Luiz Maia: Date Time hoje
+
+71
+00:11:01.820 --> 00:11:07.840
+Luiz Maia: recebe Date Time ponto Today.
+
+72
+00:11:25.000 --> 00:11:27.550
+Luiz Maia: Eu vou mostrar outras formas de você
+
+73
+00:11:27.670 --> 00:11:31.340
+Luiz Maia: evitar esse mais aqui tá? Daqui a pouco.
+
+74
+00:11:31.870 --> 00:11:36.139
+Luiz Maia: Se tiver alguma dúvida, você fala. Tá a data de hoje.
+
+75
+00:11:36.690 --> 00:11:44.389
+Luiz Maia: Esse comando aqui, ele pega só a data. Não pega a hora. Vem, vem zerada.
+
+76
+00:11:46.980 --> 00:11:53.090
+Luiz Maia: Aqui, ó, a hora vem zerada. Ele só pega a data. Não pega a hora, tá?
+
+77
+00:11:57.220 --> 00:12:02.320
+Luiz Maia: A gente pode formatar esse cara aqui.
+
+78
+00:12:02.950 --> 00:12:05.229
+Luiz Maia: Tá certo. Assim, ó
+
+79
+00:12:08.520 --> 00:12:15.030
+Luiz Maia: data de hoje, deixa eu copiar esse código aqui de cima.
+
+80
+00:12:18.850 --> 00:12:22.760
+Luiz Maia: Data de hoje, hoje.
+
+81
+00:12:25.190 --> 00:12:32.450
+Luiz Maia: Ponto. 2tring é dia
+
+82
+00:12:34.730 --> 00:12:43.060
+Luiz Maia: aqui tem que ser Mm maiúsculo. Se você botar m minusculo, ele vai pegar os minutos e não vai pegar o mês.
+
+83
+00:12:44.090 --> 00:12:45.489
+Luiz Maia: E aqui é o ano.
+
+84
+00:12:56.010 --> 00:13:01.780
+Luiz Maia: Ele pegou a data certinha sem pegar a hora.
+
+85
+00:13:02.840 --> 00:13:04.629
+Luiz Maia: Você quer pegar a hora
+
+86
+00:13:11.830 --> 00:13:19.440
+Luiz Maia: hora de hoje todo esse código. Eu vou colocar dentro da aula para vocês poderem pegar. Tá certo,
+
+87
+00:13:21.490 --> 00:13:23.680
+Luiz Maia: H maiúsculo.
+
+88
+00:13:24.050 --> 00:13:31.659
+Luiz Maia: Eu vou mostrar por que tem que ser a Hh maiúsculo. Eu vou mostrar para vocês a diferença do H.
+
+89
+00:13:32.130 --> 00:13:35.130
+Luiz Maia: Aqui é minúsculo, porque é o minuto.
+
+90
+00:13:35.420 --> 00:13:44.150
+Luiz Maia: E aqui é o segundo Ss roda
+
+91
+00:13:47.560 --> 00:13:53.909
+Luiz Maia: horas de hoje. Veio zerada porque eu usei esse cara aqui e não agora.
+
+92
+00:13:57.230 --> 00:13:59.840
+Luiz Maia: Pronto, o Now,
+
+93
+00:14:00.000 --> 00:14:09.840
+Luiz Maia: o Today, ele não vem hora nenhuma. O Now vem com a data com a hora também. Então agora ele vai pegar certinho,
+
+94
+00:14:10.630 --> 00:14:14.220
+Luiz Maia: vinte, quarenta e quatro, trinta. E nove segundos.
+
+95
+00:14:14.390 --> 00:14:24.419
+Luiz Maia: Beleza, aqui tem uma outra forma de representar também a hora. Assim, ó com h minusculo
+
+96
+00:14:27.530 --> 00:14:34.240
+Luiz Maia: esse H minúsculo, ele vai trazer a hora no formato americano.
+
+97
+00:14:37.170 --> 00:14:48.670
+Luiz Maia: 8h45 ele não mostra o Pm aqui no final, porque a minha máquina está configurada para Brasil,
+
+98
+00:14:49.250 --> 00:14:52.339
+Luiz Maia: então ele não mostra no formato
+
+99
+00:14:53.150 --> 00:15:01.739
+Luiz Maia: o Pm a Mpm, né? A Im é de manhã. A Pm é anti Meridian pós Meridian.
+
+100
+00:15:07.130 --> 00:15:14.090
+Luiz Maia: Ele não mostra que o O. Pm, mas ele dá a hora num formato americano.
+
+101
+00:15:16.220 --> 00:15:25.380
+Luiz Maia: Aliás, eu nunca vou entender porque tem formatação de horário diferente. Vê se é tudo um padrão internacional
+
+102
+00:15:26.260 --> 00:15:28.789
+Luiz Maia: aqui. Eu vou pular uma linhazinha.
+
+103
+00:15:29.590 --> 00:15:31.599
+Luiz Maia: Você pode utilizar.
+
+104
+00:15:32.160 --> 00:15:33.440
+Luiz Maia: É?
+
+105
+00:15:33.660 --> 00:15:40.000
+Luiz Maia: Não é só americano. Não cara. Na Inglaterra também é diferente. Não é só americano. Não, gente.
+
+106
+00:15:40.710 --> 00:15:43.440
+Luiz Maia: A gente pode fazer aqui.
+
+107
+00:15:45.980 --> 00:15:55.970
+Luiz Maia: Deixa eu fazer aqui uma console White Line. Eu quero pegar. Por exemplo, só o dia, dia
+
+108
+00:16:00.860 --> 00:16:02.300
+Luiz Maia: ponto.
+
+109
+00:16:02.780 --> 00:16:05.520
+Luiz Maia: Dei, pego só o dia.
+
+110
+00:16:08.500 --> 00:16:10.599
+Luiz Maia: Eu quero só o mês
+
+111
+00:16:18.100 --> 00:16:19.299
+Luiz Maia: que é o Manf.
+
+112
+00:16:22.340 --> 00:16:24.059
+Luiz Maia: Eu quero só o ano
+
+113
+00:16:32.910 --> 00:16:34.310
+Luiz Maia: que é o ir.
+
+114
+00:16:35.740 --> 00:16:37.580
+Luiz Maia: Eu quero só a hora,
+
+115
+00:16:50.900 --> 00:16:51.930
+Luiz Maia: Power.
+
+116
+00:16:52.760 --> 00:16:57.990
+Luiz Maia: Eu quero só os minutos, o minas,
+
+117
+00:17:10.280 --> 00:17:16.780
+Luiz Maia: horas, minutos. Professor. Desculpa, uma dúvida. Quando pulamos a linha no C. Sharp,
+
+118
+00:17:20.079 --> 00:17:26.819
+Luiz Maia: não precisa botar o Bahrain. Ele já faz o Wright Line já tem o Bahrain embutido dentro dele. Cara,
+
+119
+00:17:27.290 --> 00:17:37.919
+Luiz Maia: você não precisa fazer isso. Não, não precisa botar barra n nenhum. Se você botar barra n aqui, é possível que ele salte duas linhas? Quer ver? Deixa eu ver se funciona?
+
+120
+00:17:41.050 --> 00:17:45.660
+Luiz Maia: Não sei. Vou testar aqui. Você vai pular duas linhas. Pulou duas linhas. Ó,
+
+121
+00:17:48.720 --> 00:17:59.900
+Luiz Maia: o Wright Line já faz as duas. Ele faz o salto de linha e o barra N pula outra. Linha. Então você não precisa botar barra n aqui não,
+
+122
+00:18:00.670 --> 00:18:08.320
+Luiz Maia: aqui são os segundos que são os circum.
+
+123
+00:18:10.860 --> 00:18:11.800
+Luiz Maia: Pronto,
+
+124
+00:18:14.020 --> 00:18:25.479
+Luiz Maia: a gente roda aqui para a gente ver se ele pegou tudo direitinho. Dia quatro, mês oito, ano vinte e oito horas e segundos. Cadê os minutos?
+
+125
+00:18:26.020 --> 00:18:28.420
+Luiz Maia: Tem alguma coisa estranha aqui.
+
+126
+00:18:30.350 --> 00:18:33.460
+Luiz Maia: Eu não botei os minutos. Ok?
+
+127
+00:18:34.030 --> 00:18:42.379
+Luiz Maia: Esse código vai ser todo copiado para o drive de vocês. Se você não está fazendo junto comigo. Não tem problema nenhum.
+
+128
+00:18:46.200 --> 00:18:48.780
+Luiz Maia: Minutos.
+
+129
+00:18:49.650 --> 00:18:57.810
+Luiz Maia: Pronto, vamos fazer agora mais aqui algumas funções. Vamos pular uma linha aqui também.
+
+130
+00:19:00.080 --> 00:19:01.659
+Luiz Maia: Dia da semana.
+
+131
+00:19:02.840 --> 00:19:06.449
+Luiz Maia: Qual é o dia da semana? Dia da semana
+
+132
+00:19:11.460 --> 00:19:12.890
+Luiz Maia: é
+
+133
+00:19:17.190 --> 00:19:24.640
+Luiz Maia: agora. Ponto Day of the Week
+
+134
+00:19:26.370 --> 00:19:34.319
+Luiz Maia: e também o dia do ano, dia do ano.
+
+135
+00:19:38.440 --> 00:19:40.020
+Luiz Maia: Agora.
+
+136
+00:19:41.140 --> 00:19:45.940
+Luiz Maia: Ponto Day of the Ear.
+
+137
+00:19:48.580 --> 00:19:51.369
+Luiz Maia: Então aqui você vai ver que ele vai mostrar.
+
+138
+00:19:51.550 --> 00:19:57.520
+Luiz Maia: É dia da semana. É Tuesday terça feira
+
+139
+00:19:57.700 --> 00:20:02.690
+Luiz Maia: a gente está no dia duzentos e dezasseis do ano,
+
+140
+00:20:06.160 --> 00:20:19.170
+Luiz Maia: cara. Assim, eu. Na década de oitenta, gente, eu tive que construir uma biblioteca de manipulação de data e hora, cara. Foi um inferno. Eu odeio isso. Sinceramente. Assim,
+
+141
+00:20:19.510 --> 00:20:24.290
+Luiz Maia: se tem uma coisa que me aborrece muito, é mexer com data e hora.
+
+142
+00:20:24.490 --> 00:20:27.490
+Luiz Maia: Eu criei uma biblioteca que fazia exatamente isso.
+
+143
+00:20:27.710 --> 00:20:31.410
+Luiz Maia: Tudo isso. Eu tinha que fazer na mão. Não tinha nada. Pronto.
+
+144
+00:20:31.690 --> 00:20:33.919
+Luiz Maia: Era simplesmente um inferno.
+
+145
+00:20:39.450 --> 00:20:41.570
+Luiz Maia: Aí tem dias corridos.
+
+146
+00:20:43.020 --> 00:20:44.280
+Luiz Maia: É?
+
+147
+00:20:45.960 --> 00:20:53.349
+Luiz Maia: Tem dias que tem final de semana. Tem dias que tem feriado.
+
+148
+00:20:53.860 --> 00:21:03.400
+Luiz Maia: Nossa. É uma loucura. Gente nossa. Eu tive que construir essa biblioteca toda que vocês estão usando aqui. Eu tive que fazer na mão.
+
+149
+00:21:04.470 --> 00:21:05.840
+Luiz Maia: Foi um inferno
+
+150
+00:21:06.130 --> 00:21:12.580
+Luiz Maia: isso na década de oitenta. Hoje, qualquer linguagem tem isso pronto para você? Você não tem que se preocupar com nada,
+
+151
+00:21:12.860 --> 00:21:13.600
+Luiz Maia: tá?
+
+152
+00:21:14.290 --> 00:21:26.620
+Luiz Maia: Então você viu aqui um monte de funções já prontas para pegar o que você quiser da data e hora. Então assim é muito mais prático. Muito mais fácil de fazer.
+
+153
+00:21:29.430 --> 00:21:44.409
+Luiz Maia: Uma coisa que a gente também gosta de fazer em relação à data e hora, professor, boa noite. Não sei se chegou a comentar sobre Tpu, porque cheguei um pouco atrás no caso. Podemos fazer o que está no moodle. Ou vai mudar, não é? O que
+
+154
+00:21:44.940 --> 00:21:48.860
+Luiz Maia: até não muda. Pode pegar lá e fazer.
+
+155
+00:21:50.340 --> 00:21:54.599
+Luiz Maia: Não, está maravilhoso? Mas segue o fluxo.
+
+156
+00:21:54.990 --> 00:22:04.400
+Luiz Maia: Uma coisa que a gente pode querer fazer é somar dias, meses, anos numa data.
+
+157
+00:22:04.510 --> 00:22:08.560
+Luiz Maia: Tá certo. Então vamos criar aqui um outro projeto.
+
+158
+00:22:10.650 --> 00:22:11.610
+Luiz Maia: Adianta.
+
+159
+00:22:12.260 --> 00:22:18.630
+Luiz Maia: New Project console data.
+
+160
+00:22:19.010 --> 00:22:20.220
+Luiz Maia: Ora,
+
+161
+00:22:23.420 --> 00:22:24.460
+Luiz Maia: dois.
+
+162
+00:22:28.330 --> 00:22:40.859
+Luiz Maia: Aí fica tudo arrumadinho, né? A gente tem uma solução chamada data, hora e um monte de projetinho dentro dela, onde tudo que tem data e hora está aqui dentro. Está certo.
+
+163
+00:22:41.260 --> 00:22:44.630
+Luiz Maia: Como é que a gente cria uma data?
+
+164
+00:22:44.750 --> 00:22:52.660
+Luiz Maia: Não é desde time, data a hora.
+
+165
+00:22:55.650 --> 00:23:00.669
+Luiz Maia: Bom, aqui eu vou ter que instanciar um objeto da classe datetime.
+
+166
+00:23:00.830 --> 00:23:08.470
+Luiz Maia: Está certo date time é uma classe. Eu estou instanciando essa classe criando um objeto, data, hora,
+
+167
+00:23:09.640 --> 00:23:21.119
+Luiz Maia: assim. Eu não sei se vocês já repararam, mas esse Sharp Java, quando você tem uma variável que tem dois nomes, data e hora.
+
+168
+00:23:21.270 --> 00:23:27.320
+Luiz Maia: O data começa com letra minúscula, e o hora começa com letra maiúscula.
+
+169
+00:23:27.660 --> 00:23:31.429
+Luiz Maia: Esse é um padrão do Java e do C Sharp.
+
+170
+00:23:32.280 --> 00:23:39.090
+Luiz Maia: E aí você criar uma data e hora qualquer que você queira. Sei lá, o seu aniversário. Por exemplo,
+
+171
+00:23:40.940 --> 00:23:44.170
+Luiz Maia: dois mil e vinte e seis é o ano
+
+172
+00:23:45.660 --> 00:23:52.500
+Luiz Maia: dois mil e vinte e seis. É o ano. O mês é agosto, oito.
+
+173
+00:23:52.940 --> 00:23:55.380
+Luiz Maia: O dia é quatro.
+
+174
+00:23:56.110 --> 00:24:05.500
+Luiz Maia: A hora é vinte horas, cinquenta e quatro minutos.
+
+175
+00:24:05.820 --> 00:24:07.940
+Luiz Maia: E quantos segundos?
+
+176
+00:24:09.050 --> 00:24:11.550
+Luiz Maia: Quarenta segundos, por exemplo.
+
+177
+00:24:12.750 --> 00:24:14.540
+Luiz Maia: É assim que a gente cria uma data,
+
+178
+00:24:17.560 --> 00:24:23.799
+Luiz Maia: ano, mês, dia, hora, minuto e segundos. Aí você criou uma data.
+
+179
+00:24:24.280 --> 00:24:28.919
+Luiz Maia: Eu vou mandar printar isso aqui para ver se funcionou.
+
+180
+00:24:29.620 --> 00:24:38.219
+Luiz Maia: Console Wrightline, data e hora, esse streaming. Eu acho que eu já mostrei aqui em cima.
+
+181
+00:24:39.290 --> 00:24:46.560
+Luiz Maia: Mostrei aqui para vocês, né? Tá, bom, então não preciso mostrar mais, tá? É
+
+182
+00:24:51.700 --> 00:24:54.339
+Luiz Maia: data e hora.
+
+183
+00:24:56.380 --> 00:25:01.570
+Luiz Maia: Dois pontos, mais data, e hora.
+
+184
+00:25:04.070 --> 00:25:05.840
+Luiz Maia: Só para ver se funcionou.
+
+185
+00:25:06.410 --> 00:25:09.550
+Luiz Maia: Reparem, ele pegou o Projeto um,
+
+186
+00:25:09.630 --> 00:25:23.790
+Luiz Maia: porque esse cara aqui está o setado como principal para eu sentar esse cara, para ele poder executar esse cara tem duas formas. Ou você vem aqui e dá um set s startup Project,
+
+187
+00:25:23.790 --> 00:25:36.920
+Luiz Maia: ou você vem aqui nessa engrenagenzinha. Engraçado, não aparece essa engrenagem pra mim. Aqui você escolhe esse cara. Ele fica em negrito. Olha só. Agora eu vou executar. Ele vai pegar o da hora dois.
+
+188
+00:25:37.410 --> 00:25:43.940
+Luiz Maia: Tá lá? Quatro de dois mil e vinte e seis, vinte horas, cinquenta e quatro minutos, quarenta segundos.
+
+189
+00:25:51.300 --> 00:25:57.260
+Luiz Maia: Tá é pular uma linha aqui.
+
+190
+00:26:00.710 --> 00:26:05.180
+Luiz Maia: Eu quero somar nessa data alguma coisa?
+
+191
+00:26:05.650 --> 00:26:10.370
+Luiz Maia: Eu quero saber quando é que vai cair essa nova data em algum lugar.
+
+192
+00:26:10.640 --> 00:26:18.840
+Luiz Maia: Então eu vou fazer assim. Ó Date Time desde time.
+
+193
+00:26:21.090 --> 00:26:34.950
+Luiz Maia: Nova data recebe data a hora, ponto a de ir.
+
+194
+00:26:38.640 --> 00:26:43.100
+Luiz Maia: Eu quero somar um ano, ponto.
+
+195
+00:26:44.780 --> 00:26:49.700
+Luiz Maia: Eu quero somar dias.
+
+196
+00:26:50.630 --> 00:26:52.579
+Luiz Maia: Não, eu quero somar meses.
+
+197
+00:26:55.930 --> 00:26:57.869
+Luiz Maia: Eu quero somar dias.
+
+198
+00:27:03.930 --> 00:27:06.320
+Luiz Maia: Isso aqui é chamado de Chain.
+
+199
+00:27:08.510 --> 00:27:17.149
+Luiz Maia: Quando você está fazendo uma operação que envolve vários métodos de uma determinada classe.
+
+200
+00:27:17.350 --> 00:27:25.419
+Luiz Maia: E aí você está fazendo um chain, ou seja, uma corrente. Eu estou adicionando o ano, adicionando um mês adicionando dia.
+
+201
+00:27:25.850 --> 00:27:29.400
+Luiz Maia: Vamos ver o que ele vai printar aqui. Agora, para a gente.
+
+202
+00:27:36.070 --> 00:27:37.980
+Luiz Maia: Nova data
+
+203
+00:27:50.080 --> 00:27:51.500
+Luiz Maia: nova. Data,
+
+204
+00:27:59.630 --> 00:28:08.599
+Luiz Maia: eu estou adicionando a essa data aqui. Data e hora. Eu estou adicionando esse cara aqui. O data e hora não mudou.
+
+205
+00:28:09.750 --> 00:28:11.790
+Luiz Maia: Ele continua o mesmo.
+
+206
+00:28:12.790 --> 00:28:19.390
+Luiz Maia: Eu estou atribuindo a esse cara aqui a soma de um ano, um mês e um dia
+
+207
+00:28:19.650 --> 00:28:21.440
+Luiz Maia: vamos ver o que vai aparecer.
+
+208
+00:28:26.020 --> 00:28:34.100
+Luiz Maia: Está aqui. Nova data, dia cinco de setembro de dois mil e vinte e sete. E o horário é o mesmo.
+
+209
+00:28:37.480 --> 00:28:44.730
+Luiz Maia: Isso é bem interessante de você entender. Para você poder fazer datas futuras.
+
+210
+00:28:45.190 --> 00:28:52.490
+Luiz Maia: Eu também posso fazer a mesma coisa com a hora
+
+211
+00:28:55.970 --> 00:28:57.670
+Luiz Maia: nova data.
+
+212
+00:29:19.980 --> 00:29:25.760
+Luiz Maia: Eu posso pegar aqui criar uma nova hora.
+
+213
+00:29:26.690 --> 00:29:29.129
+Luiz Maia: A gente pode fazer aqui um Ad.
+
+214
+00:29:30.520 --> 00:29:34.420
+Luiz Maia: É horas.
+
+215
+00:29:35.660 --> 00:29:38.980
+Luiz Maia: Eu posso fazer um a de minutos.
+
+216
+00:29:44.210 --> 00:29:47.500
+Luiz Maia: Eu posso fazer um Ad. In seconds.
+
+217
+00:29:50.220 --> 00:29:57.490
+Luiz Maia: Pronto, nova hora. Eu posso fazer a mesma coisa com a data e com a hora
+
+218
+00:29:59.210 --> 00:30:01.009
+Luiz Maia: rodar aqui para ver. Funciona.
+
+219
+00:30:03.630 --> 00:30:08.550
+Luiz Maia: Então, aqui a nossa hora é vinte, cinquenta e quatro quarenta.
+
+220
+00:30:09.490 --> 00:30:15.910
+Luiz Maia: Tchau, aqui. Eu não alterei o Nova.
+
+221
+00:30:16.650 --> 00:30:21.349
+Luiz Maia: Ora pronto. Agora vai ficar arrumadinho. Deixa eu ver.
+
+222
+00:30:22.440 --> 00:30:31.019
+Luiz Maia: Vinte e um, cinquenta e cinco, quarenta e um. Por quê? Someio um aqui, somei um aqui e somei um. Aqui.
+
+223
+00:30:31.220 --> 00:30:34.379
+Luiz Maia: Então ficou vinte e um, cinquenta e cinco quarenta e um
+
+224
+00:30:36.480 --> 00:30:51.860
+Luiz Maia: professor. Última dúvida do Tp. Tem algumas questões que pedem explicação para usar recursos do Visual Studio. Como por exemplo? Eu tenho um Mac. Estou usando o Vs Code como o deve kit, como proceder?
+
+225
+00:30:57.090 --> 00:30:58.100
+Luiz Maia: Não sei.
+
+226
+00:31:00.280 --> 00:31:04.199
+Luiz Maia: Questões. Quatro e seis. Quais são as questões? Quatro e seis?
+
+227
+00:31:05.120 --> 00:31:06.430
+Luiz Maia: Eu não faço ideia.
+
+228
+00:31:09.610 --> 00:31:18.489
+Gabriel Marquez Volponi: Ô, professor. Boa noite. Só para explicar essa pergunta minha, que essas questões pedem explicitamente para você usar o visual Studio
+
+229
+00:31:18.490 --> 00:31:31.819
+Gabriel Marquez Volponi: no caso, esse aí do Windows, né? Tem uma questão que pede para instalar ele. E uma outra questão que pede para usar um recurso dele lá de depuração. Só que aí quem não está no Windows não conseguiria concluir nenhuma dessas duas questões. No caso, entendeu.
+
+230
+00:31:33.970 --> 00:31:43.049
+Luiz Maia: Cara instala uma máquina virtual Windows e instala o visual Studio. Pô
+
+231
+00:31:43.230 --> 00:31:47.049
+Luiz Maia: simples. Não tem nada de mistério nisso.
+
+232
+00:31:48.000 --> 00:31:49.500
+Luiz Maia: Se você.
+
+233
+00:31:50.090 --> 00:31:58.899
+Luiz Maia: Se você está trabalhando com ou cria uma partição Windows na tua máquina para poder fazer boot dual. Para poder usar o visual Studio.
+
+234
+00:31:59.980 --> 00:32:02.440
+Luiz Maia: Eu criei uma máquina virtual. Cara.
+
+235
+00:32:05.500 --> 00:32:07.389
+Gabriel Marquez Volponi: Não. Tá certo, professor. Obrigado.
+
+236
+00:32:08.570 --> 00:32:16.000
+Luiz Maia: Não sei se está tudo legal. Você entendeu o que é uma máquina virtual? Sabe usar a máquina virtual.
+
+237
+00:32:17.360 --> 00:32:26.050
+Gabriel Marquez Volponi: Não, eu sei. Só não acho que teria uma performance assim. Tipo, agradável. Assim. Acho que ia ficar próximo à performance do Deep note lá.
+
+238
+00:32:27.130 --> 00:32:33.449
+Luiz Maia: É? Vai ser uma performance sofrível, mesmo, cara. Não tem muito o que fazer. Talvez usar o Rider
+
+239
+00:32:33.710 --> 00:32:39.339
+Luiz Maia: talvez seja uma solução para você. O pessoal está usando o Rider para fugir do Visual Studio.
+
+240
+00:32:41.590 --> 00:32:46.709
+Gabriel Marquez Volponi: É não maravilha a professora. Eu vou discutindo com o pessoal aqui, também. Vê o que eles estão pensando em fazer.
+
+241
+00:32:47.170 --> 00:32:49.060
+Luiz Maia: Obrigado.
+
+242
+00:32:49.750 --> 00:32:52.610
+Luiz Maia: Não é um problema do pessoal que usa Linux.
+
+243
+00:32:52.940 --> 00:32:58.449
+Luiz Maia: O cara que está usando o Linux. Ele vai usar o quê? Ele vai usar talvez o video studio code
+
+244
+00:32:59.610 --> 00:33:04.860
+Luiz Maia: para fazer isso, ou criar a máquina virtual para poder instalar o visual Studio.
+
+245
+00:33:06.500 --> 00:33:15.500
+Luiz Maia: O que a coordenação imagina é que a maioria de vocês, e na verdade, isso é verdade é
+
+246
+00:33:16.100 --> 00:33:19.399
+Luiz Maia: que a maioria dos alunos usam o Windows.
+
+247
+00:33:20.100 --> 00:33:27.639
+Luiz Maia: E aí acontecem essas situações onde isso não é uma definição minha.
+
+248
+00:33:28.140 --> 00:33:43.250
+Luiz Maia: É uma definição da coordenação. Eles pensam que todo mundo usa o Windows. E aí acontece de gente usando o Linux, usando o Mac os. E aí dá esses problemas. De incompatibilidade
+
+249
+00:33:44.120 --> 00:33:58.939
+Luiz Maia: é um problema. É um problema que acho que a gente tem que contornar isso de alguma maneira. Talvez usando Rider seja uma opção. Eu nunca usei Rider gente. Nunca usei. Não posso falar mal. Falar bem,
+
+250
+00:33:59.210 --> 00:34:03.679
+Luiz Maia: não é uma ideia que eu conheça profundamente.
+
+251
+00:34:04.080 --> 00:34:07.039
+Luiz Maia: Então assim eu trabalho com o intermediário.
+
+252
+00:34:07.930 --> 00:34:10.640
+Luiz Maia: Mas o Rider. Eu nunca usei.
+
+253
+00:34:13.969 --> 00:34:18.239
+Luiz Maia: Usando máquina virtual. Fica mais fácil, porque você vai ter lá,
+
+254
+00:34:18.510 --> 00:34:23.409
+Luiz Maia: pelo menos como instalar como funciona fazer o teu Tp.
+
+255
+00:34:23.630 --> 00:34:31.760
+Luiz Maia: Eu acho que a questão da instalação do visual Studio, uma coisa meio sem sentido.
+
+256
+00:34:35.639 --> 00:34:41.210
+Luiz Maia: A Beatriz está falando que no Ryan tem a opção de escolher o visual Studio,
+
+257
+00:34:41.739 --> 00:34:46.060
+Luiz Maia: que fica quase idêntico, ok, não sei. Não conheço.
+
+258
+00:34:46.980 --> 00:34:54.489
+Luiz Maia: Não tenho essa cara. Eu gosto muito do visual Studio, acho uma ferramenta muito poderosa.
+
+259
+00:34:56.940 --> 00:35:03.210
+Luiz Maia: Deixa eu fazer um pequeno intervalo para tomar uma água, porque eu estou dando aula desde sete horas da manhã.
+
+260
+00:35:03.790 --> 00:35:07.660
+Luiz Maia: Estou morto. Já é.
+
+261
+00:35:08.140 --> 00:35:18.309
+Luiz Maia: Mas assim talvez o Rider seja a melhor solução para todo mundo, porque ele roda em todas as plataformas.
+
+262
+00:35:18.670 --> 00:35:20.729
+Luiz Maia: Não vejo nenhum problema.
+
+263
+00:35:20.890 --> 00:35:26.869
+Luiz Maia: Se tiver algum problema com o monitor, a gente conversa com ele para dar uma.
+
+264
+00:35:27.960 --> 00:35:32.780
+Luiz Maia: Uma a parada nas arestas.
+
+265
+00:35:38.090 --> 00:35:41.629
+Luiz Maia: Eu estou usando o visual Studio em dois mil e vinte e dois.
+
+266
+00:35:41.940 --> 00:35:44.570
+Luiz Maia: O pessoal já está usando dois mil e vinte e seis.
+
+267
+00:35:44.940 --> 00:35:51.499
+Luiz Maia: Eu tenho que fazer um upgrade aqui na minha máquina, mas dá um frio na espinha. Absurdo quando a gente vai fazer isso
+
+268
+00:35:52.170 --> 00:36:00.499
+Luiz Maia: de atualizar a Visual Studio. Cara, não sei se vai dar problema se vai dar algum xabu, né? Não sei.
+
+269
+00:36:01.960 --> 00:36:05.310
+Luiz Maia: Daqui a pouco eu volto fazer aqui um peraí.
+
+270
+00:36:08.380 --> 00:36:18.749
+Luiz Maia: Estou baixando o Rider aqui usando o Vs Code com extensão Do Dotnet C Sharp, mas sinto que falta um pouco de recurso. Não sei. Não sei dizer. Para vocês,
+
+271
+00:36:19.940 --> 00:36:22.590
+Luiz Maia: o curso foi todo baseado em visual Studio.
+
+272
+00:36:23.910 --> 00:36:33.260
+Luiz Maia: Esses Tps que estão aí, cara, foram feitos não por mim, pela coordenação. Então eles estão baseados no visual Studio,
+
+273
+00:36:35.180 --> 00:36:39.760
+Luiz Maia: não no Rider, e nem uma outra ferramenta. Já volto, gente,
+
+274
+00:41:06.280 --> 00:41:08.270
+Luiz Maia: estamos de volta.
+
+275
+00:41:08.440 --> 00:41:13.569
+Luiz Maia: Uma coisa importante. Bom, aqui tem um monte de mensagem aqui, cara.
+
+276
+00:41:31.720 --> 00:41:36.699
+Luiz Maia: É ok, Gabriel, se for uma solução para você tá bom.
+
+277
+00:41:36.850 --> 00:41:40.640
+Luiz Maia: Fico feliz que tenha funcionado para você aí, cara.
+
+278
+00:41:41.730 --> 00:41:43.520
+Luiz Maia: Tenha sido legal.
+
+279
+00:41:44.260 --> 00:41:54.370
+Luiz Maia: Uma coisa que vocês vão precisar usar no Tp2 é manipulação de datas
+
+280
+00:41:54.640 --> 00:42:02.719
+Luiz Maia: de início ao fim. Por exemplo, quantos dias faltam para o seu aniversário?
+
+281
+00:42:02.920 --> 00:42:06.730
+Luiz Maia: Aí eu fiz aqui um projetinho bem simples
+
+282
+00:42:06.870 --> 00:42:10.800
+Luiz Maia: para a manipulação de datas e ver quantos dias faltam
+
+283
+00:42:11.390 --> 00:42:15.530
+Luiz Maia: em relação a isso. Eu vou criar um novo projeto.
+
+284
+00:42:19.190 --> 00:42:24.119
+Luiz Maia: Tudo isso eu vou colocar para vocês no no drive, tá?
+
+285
+00:42:24.370 --> 00:42:29.940
+Luiz Maia: Ontem não peguei o link do drive. Depois poderia enviar de novo. Posso?
+
+286
+00:42:31.020 --> 00:42:32.759
+Luiz Maia: Data e hora três
+
+287
+00:42:39.290 --> 00:42:51.459
+Luiz Maia: aqui. Se você reparar a data e hora dois está com o time negrito, porque ele é o projeto corrente para você trocar para esse cara aqui. Você vem aqui
+
+288
+00:42:51.650 --> 00:42:56.380
+Luiz Maia: e faz isso. Pronto, agora é o corrente, tá?
+
+289
+00:43:02.530 --> 00:43:04.950
+Luiz Maia: Vamos criar uma data aqui.
+
+290
+00:43:07.760 --> 00:43:09.740
+Luiz Maia: Date time
+
+291
+00:43:12.740 --> 00:43:14.280
+Luiz Maia: início.
+
+292
+00:43:17.800 --> 00:43:19.730
+Luiz Maia: Como é que eu crio uma data?
+
+293
+00:43:21.030 --> 00:43:22.880
+Luiz Maia: Eu tenho que distanciar.
+
+294
+00:43:23.250 --> 00:43:34.959
+Luiz Maia: Vocês não sabem exatamente o que é isso. Mas eu estou instanciando a classe date Time. E estou colocando aqui o construtor dessa classe,
+
+295
+00:43:35.830 --> 00:43:39.559
+Luiz Maia: que é. Vou botar aqui dois mil e vinte e seis
+
+296
+00:43:42.140 --> 00:43:47.500
+Luiz Maia: dia que o mês e aqui o dia,
+
+297
+00:43:50.350 --> 00:43:56.209
+Luiz Maia: eu poderia também colocar a data e hora aqui, caso vocês quisessem
+
+298
+00:43:56.720 --> 00:44:06.180
+Luiz Maia: uma forma bem tosca de você mostrar esse conteúdo.
+
+299
+00:44:07.740 --> 00:44:12.330
+Luiz Maia: Nós vimos isso aqui no Data hora um.
+
+300
+00:44:15.010 --> 00:44:25.159
+Luiz Maia: A gente usou o Three String para fazer a formatação. Mas se você não quiser usar nada disso, você pode fazer assim. É bem feio, gente. Mas funciona também
+
+301
+00:44:26.720 --> 00:44:28.290
+Luiz Maia: início.
+
+302
+00:44:29.210 --> 00:44:41.160
+Luiz Maia: Aí você faz assim, ó, mas início ponto dia.
+
+303
+00:44:42.040 --> 00:44:48.500
+Luiz Maia: Mas barra é bem feio isso aqui. Mas funciona.
+
+304
+00:44:49.670 --> 00:44:54.100
+Luiz Maia: Início manf
+
+305
+00:44:57.100 --> 00:44:58.770
+Luiz Maia: mais a barra.
+
+306
+00:44:58.910 --> 00:45:02.439
+Luiz Maia: Essa é a maneira mais feia de fazer isso. Mas funciona.
+
+307
+00:45:03.430 --> 00:45:14.050
+Luiz Maia: Eu queria mostrar diversas maneiras de você printar a data usando streaming, e usando essa maneira feiosa aqui
+
+308
+00:45:14.290 --> 00:45:18.520
+Luiz Maia: e daqui a pouco eu vou mostrar mais uma forma para fazer isso.
+
+309
+00:45:19.220 --> 00:45:25.770
+Luiz Maia: Quer o ir? Pronto, é bem, feio isso aqui, mas funciona.
+
+310
+00:45:33.690 --> 00:45:39.990
+Luiz Maia: Tá lá? Início, quatro de oito de dois mil e vinte e seis, beleza.
+
+311
+00:45:41.050 --> 00:45:49.450
+Luiz Maia: Vamos pegar aqui. Uma data de fim desde Time fim.
+
+312
+00:45:52.120 --> 00:46:00.020
+Luiz Maia: Vou instanciar um objeto da classe datetime especificando aqui
+
+313
+00:46:00.170 --> 00:46:10.369
+Luiz Maia: que eu quero dois mil e vinte e sete, o dia nove, o mês nove, na verdade,
+
+314
+00:46:10.880 --> 00:46:13.400
+Luiz Maia: o dia cinco.
+
+315
+00:46:14.640 --> 00:46:16.619
+Luiz Maia: Estou especificando aqui.
+
+316
+00:46:16.900 --> 00:46:20.790
+Luiz Maia: Agora. Eu vou fazer uma outra forma de imprimir isso.
+
+317
+00:46:22.400 --> 00:46:24.670
+Luiz Maia: Que é usando a interpolação.
+
+318
+00:46:26.150 --> 00:46:27.200
+Luiz Maia: Fim
+
+319
+00:46:31.640 --> 00:46:34.959
+Luiz Maia: para usar a interpolação. Eu tenho que usar aqui o.
+
+320
+00:46:35.160 --> 00:46:43.910
+Luiz Maia: O cifrão aqui dentro tem que usar é chaves
+
+321
+00:46:47.860 --> 00:46:49.960
+Luiz Maia: aqui. Eu coloco fim.
+
+322
+00:46:51.240 --> 00:47:05.360
+Luiz Maia: Dois pontos dedê barra mm, maiúsculo. Se você botar minúsculo, ele vai pegar os minutos, barra e aí
+
+323
+00:47:07.780 --> 00:47:13.999
+Luiz Maia: está aí uma forma mais elegante, mais bonita de você fazer exatamente o que eu fiz aqui em cima.
+
+324
+00:47:14.920 --> 00:47:17.040
+Luiz Maia: E o que eu fiz aqui também,
+
+325
+00:47:17.490 --> 00:47:22.169
+Luiz Maia: esse String aqui para formatar a data.
+
+326
+00:47:23.370 --> 00:47:27.779
+Luiz Maia: Então eu estou mostrando para vocês várias formas de você formatar essa data.
+
+327
+00:47:31.380 --> 00:47:32.230
+Luiz Maia: É
+
+328
+00:47:36.030 --> 00:47:40.450
+Luiz Maia: cada linguagem tem forma de formatar aqui, ó
+
+329
+00:47:40.730 --> 00:47:44.809
+Luiz Maia: cinco do nove de dois mil e vinte e sete.
+
+330
+00:47:46.140 --> 00:47:47.310
+Luiz Maia: Beleza.
+
+331
+00:47:47.740 --> 00:47:58.969
+Luiz Maia: Eu quero saber quantos dias tem de diferença entre uma data e outra. Eu uso uma classe chamada Time
+
+332
+00:47:59.700 --> 00:48:05.479
+Luiz Maia: Stan. Stan, que eu vou chamar de intervalo.
+
+333
+00:48:06.410 --> 00:48:08.570
+Luiz Maia: Aí eu faço o intervalo.
+
+334
+00:48:09.260 --> 00:48:15.560
+Luiz Maia: Se o fim. Ponto subtract do início.
+
+335
+00:48:17.280 --> 00:48:23.209
+Luiz Maia: Aí eu mando printar esse cara. Intervalo
+
+336
+00:48:26.270 --> 00:48:27.720
+Luiz Maia: em dias.
+
+337
+00:48:45.260 --> 00:48:46.790
+Luiz Maia: Vamos ver o que acontece.
+
+338
+00:48:50.700 --> 00:48:54.770
+Luiz Maia: Aparece o número de dias no intervalo
+
+339
+00:48:54.880 --> 00:48:58.290
+Luiz Maia: das duas datas. Mas aparece esse monte de
+
+340
+00:49:00.040 --> 00:49:04.469
+Luiz Maia: de hora aqui, né? Isso aqui fica feio. Aqui, não fica?
+
+341
+00:49:04.670 --> 00:49:11.260
+Luiz Maia: Então a gente pode fazer assim. Ó intervalo. Ponto dez.
+
+342
+00:49:11.390 --> 00:49:15.200
+Luiz Maia: E aí ele tira a questão de horário
+
+343
+00:49:19.600 --> 00:49:25.279
+Luiz Maia: trezentos e noventa e sete dias para essa data acontecer.
+
+344
+00:49:26.260 --> 00:49:39.460
+Luiz Maia: A maneira mais prática de fazer isso vai fazer isso aqui, ó intervalo, recebe fim.
+
+345
+00:49:39.820 --> 00:49:42.760
+Luiz Maia: Menos início,
+
+346
+00:49:46.900 --> 00:49:51.140
+Luiz Maia: como se fosse uma operação aritmética, né? Ele está pegando
+
+347
+00:49:54.850 --> 00:50:00.090
+Luiz Maia: o fim e subtraindo do início. É bem tranquilo, isso, né?
+
+348
+00:50:00.280 --> 00:50:04.120
+Luiz Maia: Você pode usar isso no teu Tp3
+
+349
+00:50:06.370 --> 00:50:11.390
+Luiz Maia: ó deu certinho trezentos e noventa e sete dias não é
+
+350
+00:50:12.360 --> 00:50:15.770
+Luiz Maia: uma outra coisa que você pode fazer também.
+
+351
+00:50:26.040 --> 00:50:30.480
+Luiz Maia: Fazer testes bulianos
+
+352
+00:50:31.060 --> 00:50:39.140
+Luiz Maia: entre uma data entre duas datas. Se uma data é maior que a outra, se é igual, se é menor, então assim
+
+353
+00:50:41.800 --> 00:50:47.320
+Luiz Maia: início maior que fim?
+
+354
+00:50:53.660 --> 00:50:55.870
+Luiz Maia: Deixa eu botar uma interrogação aqui.
+
+355
+00:51:00.790 --> 00:51:09.389
+Luiz Maia: Eu faço uma expressão relacional aqui. Início
+
+356
+00:51:12.620 --> 00:51:14.379
+Luiz Maia: maior que fim.
+
+357
+00:51:18.060 --> 00:51:25.640
+Luiz Maia: E nisso eu moro. Que fim falso tá aqui, ó,
+
+358
+00:51:25.780 --> 00:51:34.570
+Luiz Maia: o início é quatro, de oito, de dois mil e vinte e seis e o fim é cinco de nove de dois mil e vinte e sete. O início não é maior. Que fim.
+
+359
+00:51:37.180 --> 00:51:38.559
+Luiz Maia: Vamos ver se é igual.
+
+360
+00:51:42.340 --> 00:51:46.119
+Luiz Maia: Início igual a fim.
+
+361
+00:51:46.560 --> 00:51:48.620
+Luiz Maia: É que eu tenho que botar igual igual.
+
+362
+00:51:49.710 --> 00:51:50.760
+Luiz Maia: Vamos ver.
+
+363
+00:52:05.800 --> 00:52:07.210
+Luiz Maia: Falso também.
+
+364
+00:52:09.610 --> 00:52:13.399
+Luiz Maia: O que a gente pode fazer também. O quê? Se a data
+
+365
+00:52:13.770 --> 00:52:18.290
+Luiz Maia: é menor do que o fim. Aqui vai dar verdadeiro.
+
+366
+00:52:24.030 --> 00:52:27.080
+Luiz Maia: O início é menor do que fim. É verdade.
+
+367
+00:52:34.990 --> 00:52:39.939
+Luiz Maia: Então aqui você tem as operações de manipulação de data
+
+368
+00:52:40.690 --> 00:52:45.039
+Luiz Maia: para pegar o número de dias que tem um intervalo.
+
+369
+00:52:45.180 --> 00:52:51.229
+Luiz Maia: Então, por exemplo, lá no Tp dois, vai ter lá. Quantos dias faltam para o seu aniversário.
+
+370
+00:52:54.520 --> 00:53:00.809
+Luiz Maia: Você vai pegar criar uma variável com a data do seu aniversário,
+
+371
+00:53:02.090 --> 00:53:12.559
+Luiz Maia: colocar a data de hoje e a data do seu próximo aniversário. Aí você vai fazer a diferença
+
+372
+00:53:12.860 --> 00:53:17.220
+Luiz Maia: para saber quantos dias faltam para o seu próximo aniversário.
+
+373
+00:53:19.400 --> 00:53:25.489
+Luiz Maia: E aí tem uns detalhezinhos que você vai ter que dar uma pensada para poder fazer isso.
+
+374
+00:53:27.520 --> 00:53:35.109
+Luiz Maia: Por que não está fechando esse cara aqui? Porque está com Pim? É isso é, provavelmente sim.
+
+375
+00:53:37.880 --> 00:53:43.159
+Luiz Maia: Lp: Dá para entrar com a data via teclado da.
+
+376
+00:53:44.900 --> 00:53:48.130
+Luiz Maia: Então aqui a gente vai fazer um outro projeto.
+
+377
+00:53:48.530 --> 00:53:58.919
+Luiz Maia: Então, aqui no projeto um, a gente basicamente fez uma manipulação da data atual, com a impressão dela
+
+378
+00:53:59.070 --> 00:54:11.250
+Luiz Maia: aqui nesse dois aqui, a gente viu como acrescentar anos, meses, dias, horas, minutos, segundos numa data.
+
+379
+00:54:11.380 --> 00:54:16.489
+Luiz Maia: E aqui a gente viu como subtrair uma data da outra para obter os dias
+
+380
+00:54:16.990 --> 00:54:19.399
+Luiz Maia: para poder ter essa noção.
+
+381
+00:54:20.730 --> 00:54:25.850
+Luiz Maia: É, vou criar um novo projeto.
+
+382
+00:54:26.760 --> 00:54:35.260
+Luiz Maia: Consolem data, hora quatro.
+
+383
+00:54:39.020 --> 00:54:48.850
+Luiz Maia: Ele não está setado para executar. Eu venho aqui e exceto ele. Ele já trocou. Data, hora três para o data, hora quatro,
+
+384
+00:54:49.140 --> 00:54:59.330
+Luiz Maia: tá, é toda vez que você entra dados via console. Ele lê como String.
+
+385
+00:54:59.710 --> 00:55:03.679
+Luiz Maia: Tá certo. Então aqui eu tenho uma string de texto
+
+386
+00:55:06.000 --> 00:55:15.140
+Luiz Maia: que ele vai ler a data e hora nesse formato de texto, eu vou transformar.
+
+387
+00:55:15.700 --> 00:55:16.790
+Luiz Maia: E aí
+
+388
+00:55:20.380 --> 00:55:27.350
+Luiz Maia: esse texto em data em data.
+
+389
+00:55:29.310 --> 00:55:36.519
+Luiz Maia: Então eu vou ler do teclado, e aí eu vou fazer aqui em vez de ser um Wright Line. Um Wright
+
+390
+00:55:37.610 --> 00:55:45.100
+Luiz Maia: é entre com uma data.
+
+391
+00:55:48.230 --> 00:55:53.910
+Luiz Maia: Esse texto vai receber o console readline.
+
+392
+00:55:54.730 --> 00:55:56.010
+Luiz Maia: Tá certo.
+
+393
+00:55:56.140 --> 00:56:01.840
+Luiz Maia: E aí eu vou fazer o quê? Eu vou converter esse texto para a data.
+
+394
+00:56:03.160 --> 00:56:12.090
+Luiz Maia: É desde o time ponto passe texto,
+
+395
+00:56:13.070 --> 00:56:16.699
+Luiz Maia: e aqui. Eu vou dar um print nessa data.
+
+396
+00:56:34.440 --> 00:56:39.609
+Luiz Maia: Então ele vai me perguntar na entrada. Olha, você quer entrar com
+
+397
+00:56:40.030 --> 00:56:49.530
+Luiz Maia: uma data beleza? Aí você entra aqui e ele vai entrar. Isso como um texto, como uma String. Ele vai converter essa String para
+
+398
+00:56:50.070 --> 00:56:55.080
+Luiz Maia: pra Date Time e vai printar esse cara. Vamos ver se funciona.
+
+399
+00:56:58.280 --> 00:56:59.919
+Luiz Maia: Entra com uma data.
+
+400
+00:57:00.640 --> 00:57:03.990
+Luiz Maia: Sei lá. Vou entrar com a data, sei lá, um
+
+401
+00:57:04.120 --> 00:57:11.050
+Luiz Maia: do um dois mil e vinte e seis, por exemplo, ele imprimiu a data direitinho.
+
+402
+00:57:12.900 --> 00:57:15.589
+Luiz Maia: Mas se eu entrar com uma data inválida
+
+403
+00:57:16.830 --> 00:57:21.649
+Luiz Maia: e aí data inválida. Pode ser um monte de coisa.
+
+404
+00:57:21.810 --> 00:57:26.929
+Luiz Maia: A data inválida pode ser, por exemplo, isso aqui, ó
+
+405
+00:57:31.020 --> 00:57:34.170
+Luiz Maia: aí, o que aconteceu? Ele gerou uma exceção.
+
+406
+00:57:35.570 --> 00:57:38.930
+Luiz Maia: Exceção. É um erro que você não prevê.
+
+407
+00:57:39.050 --> 00:57:43.349
+Luiz Maia: Ele acontece e você não tem como prever que ele vai acontecer.
+
+408
+00:57:49.960 --> 00:57:52.250
+Luiz Maia: Isso é um dos problemas.
+
+409
+00:57:53.050 --> 00:57:58.450
+Luiz Maia: Outro problema que pode acontecer, suponha,
+
+410
+00:57:58.670 --> 00:58:05.160
+Luiz Maia: dia vinte e nove de Fevereiro de dois mil e vinte e seis.
+
+411
+00:58:06.720 --> 00:58:07.940
+Luiz Maia: Não tem
+
+412
+00:58:08.990 --> 00:58:22.859
+Luiz Maia: esse ano não teve vinte e nove dias. Em Fevereiro, teve vinte e oito. Quer ver se eu entrar aqui com vinte e oito do dois de dois mil e vinte e seis.
+
+413
+00:58:23.060 --> 00:58:28.979
+Luiz Maia: Ele aceita, mas dois9 do dois. Ele não aceita, porque esse ano não é bissexto.
+
+414
+00:58:29.940 --> 00:58:32.020
+Luiz Maia: Então tem dois problemas aqui.
+
+415
+00:58:33.100 --> 00:58:34.719
+Luiz Maia: Eu tenho um problema
+
+416
+00:58:35.010 --> 00:58:44.619
+Luiz Maia: da entrada da data num formato errado e a data que não é válida. Por exemplo, dia trinta e dois de Janeiro vai dar problema
+
+417
+00:58:45.490 --> 00:58:49.590
+Luiz Maia: se eu entrar aqui, por exemplo, trinta e dois
+
+418
+00:58:50.310 --> 00:58:55.610
+Luiz Maia: de Janeiro de dois mil e vinte e seis vai quebrar.
+
+419
+00:58:57.450 --> 00:59:02.880
+Luiz Maia: Ele vai dar essa exceção aqui. Ó formate Exception
+
+420
+00:59:04.210 --> 00:59:08.900
+Luiz Maia: gente. Exceção em C. Sharp, Java
+
+421
+00:59:10.250 --> 00:59:14.179
+Luiz Maia: e Python. É mais ou menos a mesma coisa.
+
+422
+00:59:17.120 --> 00:59:20.899
+Luiz Maia: A gente vai tratar com o Tri Cat
+
+423
+00:59:21.080 --> 00:59:28.620
+Luiz Maia: em C. Sharp e Java. Você não tem Triaccept. Você tem Tri Cat, mas a ideia é a mesma.
+
+424
+00:59:30.030 --> 00:59:32.400
+Luiz Maia: É exatamente a mesma ideia.
+
+425
+00:59:32.510 --> 00:59:41.679
+Luiz Maia: Você vai tentar executar um comando. Se ele der problema, ele vai para exceção. Ele vai para o Except, para o Cat,
+
+426
+00:59:42.420 --> 00:59:45.929
+Luiz Maia: caso contrário, ele executa o restante do Tri.
+
+427
+00:59:48.760 --> 00:59:53.839
+Luiz Maia: Eu sei que isso talvez seja um pouco mais avançado para vocês,
+
+428
+00:59:54.120 --> 00:59:58.710
+Luiz Maia: mas eu acho que vale a pena já começar a trabalhar com isso.
+
+429
+00:59:59.300 --> 01:00:02.399
+Luiz Maia: Vamos tratar aqui essa exceção.
+
+430
+01:00:04.230 --> 01:00:11.750
+Luiz Maia: A gente vai ver mais sobre isso nas próximas aulas, mas a gente já vai começar a iniciar esse processo de
+
+431
+01:00:11.970 --> 01:00:14.579
+Luiz Maia: tratamento de exceção.
+
+432
+01:00:15.640 --> 01:00:20.220
+Luiz Maia: O problema que vai acontecer? Eu vou botar aqui. Um comentário.
+
+433
+01:00:20.500 --> 01:00:30.420
+Luiz Maia: Pode gerar uma exceção, não é?
+
+434
+01:00:30.610 --> 01:00:35.690
+Luiz Maia: Se pode gerar uma exceção. Esse cara aqui tem que vir para cá, Tri.
+
+435
+01:00:36.290 --> 01:00:38.420
+Luiz Maia: E é assim que funciona o Try.
+
+436
+01:00:40.610 --> 01:00:45.270
+Luiz Maia: Os comandos do Tri. É igualzinho o Python. Gente não muda nada.
+
+437
+01:00:45.640 --> 01:00:48.540
+Luiz Maia: Só tem as chaves para ficar mais chato.
+
+438
+01:00:48.750 --> 01:00:54.260
+Luiz Maia: Cat, que é o Exception, que é o except, né?
+
+439
+01:00:58.380 --> 01:00:59.680
+Luiz Maia: Erro,
+
+440
+01:01:08.490 --> 01:01:14.990
+Luiz Maia: data um data inválida.
+
+441
+01:01:15.700 --> 01:01:19.969
+Luiz Maia: Então vamos rodar de novo aqui e ver o que acontece.
+
+442
+01:01:21.600 --> 01:01:23.530
+Luiz Maia: Vou colocar aqui uma barra assim.
+
+443
+01:01:24.470 --> 01:01:26.269
+Luiz Maia: Erro, data inválida.
+
+444
+01:01:27.540 --> 01:01:30.459
+Luiz Maia: Já melhorou o nosso código. Ele não quebrou.
+
+445
+01:01:30.870 --> 01:01:34.420
+Luiz Maia: Ele está mandando mensagem de erro e o código seguiu em frente.
+
+446
+01:01:35.100 --> 01:01:44.879
+Luiz Maia: Poderia fazer um loop aqui, por exemplo, até enquanto ele não entrar uma data válida. Ele não sai daqui. Isso a gente vai ver mais para frente.
+
+447
+01:01:45.310 --> 01:01:46.180
+Luiz Maia: Tá?
+
+448
+01:01:47.320 --> 01:01:54.110
+Luiz Maia: Da mesma maneira que o Python tem como tratar exceções
+
+449
+01:01:55.460 --> 01:02:04.680
+Luiz Maia: específicas, né? E aí é importante vocês entenderem esse conceito, tentar tratar
+
+450
+01:02:04.860 --> 01:02:10.340
+Luiz Maia: as exceções da maneira mais específica que você puder,
+
+451
+01:02:11.620 --> 01:02:17.530
+Luiz Maia: porque tem aluno que faz o seguinte: o cara coloca um Try aqui em cima,
+
+452
+01:02:18.400 --> 01:02:21.600
+Luiz Maia: e aí ele coloca cem linhas de comandos.
+
+453
+01:02:21.940 --> 01:02:27.129
+Luiz Maia: Coloca duzentas linhas de comando dentro do Troikash
+
+454
+01:02:27.410 --> 01:02:32.789
+Luiz Maia: do Troy Cat. Qualquer erro que aconteça ali dentro, ele vai pegar no Cat qualquer um.
+
+455
+01:02:33.580 --> 01:02:37.780
+Luiz Maia: Ou seja, você não sabe exatamente que erro você está tratando.
+
+456
+01:02:38.840 --> 01:02:51.400
+Luiz Maia: Então assim, o código limpo, ele indica. Ele aconselha a que você trate erros o mais especificamente possível
+
+457
+01:02:51.690 --> 01:02:58.330
+Luiz Maia: e que ele não seja algo abrangente, que ele seja alguma coisa específico.
+
+458
+01:02:59.270 --> 01:03:03.099
+Luiz Maia: Sim, tem. Tem como Sim, tem como tratar o erro
+
+459
+01:03:07.620 --> 01:03:09.670
+Luiz Maia: Format exception.
+
+460
+01:03:10.160 --> 01:03:12.510
+Luiz Maia: E aqui eu tenho que contratar.
+
+461
+01:03:12.860 --> 01:03:19.710
+Luiz Maia: Eu tenho que pegar. Eu tenho como pegar a exceção igual no Python.
+
+462
+01:03:22.120 --> 01:03:24.250
+Luiz Maia: Então aqui, eu posso fazer assim. Ó,
+
+463
+01:03:31.800 --> 01:03:33.359
+Luiz Maia: eu posso fazer isso.
+
+464
+01:03:36.060 --> 01:03:40.699
+Luiz Maia: Eu pego apenas format exception
+
+465
+01:03:41.810 --> 01:03:57.619
+Luiz Maia: e coloco dentro de X, que é um objeto criado na hora que acontece o Cat. Então isso aqui, na verdade, é como se eu estivesse instanciando um objeto da classe Format Exception.
+
+466
+01:03:57.850 --> 01:04:00.819
+Luiz Maia: Se você for olhar aqui, no
+
+467
+01:04:01.390 --> 01:04:05.299
+Luiz Maia: deixa eu botar aqui o meu Linkedin de novo para vocês aqui.
+
+468
+01:04:07.440 --> 01:04:17.700
+Luiz Maia: Se você olhar aqui, se Sharp excepções. Deixa eu ver. Aqui se aparece excepções.
+
+469
+01:04:19.490 --> 01:04:30.990
+Luiz Maia: Deixa eu ver se aparece alguma imagem aqui. Ó, você tem aqui Exception.
+
+470
+01:04:31.590 --> 01:04:36.139
+Luiz Maia: Isso aqui é uma herança.
+
+471
+01:04:36.320 --> 01:04:37.070
+Luiz Maia: Tá
+
+472
+01:04:38.090 --> 01:04:55.590
+Luiz Maia: aqui. Eu tenho o objeto exception. O objeto está herdando Exception. Aí eu tenho System. Aí eu tenho toda uma definição das exceções
+
+473
+01:04:55.730 --> 01:05:04.379
+Luiz Maia: não é possíveis aqui. E engraçado que não tem aqui a exceção que eu estou tratando.
+
+474
+01:05:04.520 --> 01:05:08.249
+Luiz Maia: Deixa eu ver se eu consigo achar uma coisa melhor do que essa
+
+475
+01:05:08.940 --> 01:05:17.949
+Luiz Maia: nu em vale de Operation. Não, também não tem aqui o que eu estou querendo que ele mostre.
+
+476
+01:05:19.000 --> 01:05:21.669
+Luiz Maia: Deixa eu ver se eu consigo pegar aqui.
+
+477
+01:05:22.810 --> 01:05:35.990
+Luiz Maia: Divisão por zero no Overflow não tem format exception. Em nenhuma dessas figuras.
+
+478
+01:05:37.070 --> 01:05:46.550
+Luiz Maia: Aqui tem. Ó system excepcion format exception. Tá aqui. Ó,
+
+479
+01:05:48.220 --> 01:05:54.880
+Luiz Maia: então é uma estrutura de herança que você pode especificar
+
+480
+01:05:55.000 --> 01:05:58.540
+Luiz Maia: exatamente qual é o erro que você quer tratar.
+
+481
+01:05:59.340 --> 01:06:05.409
+Luiz Maia: Tem pouca coisa aqui em relação a isso. Bem, ruinzinho, isso aqui.
+
+482
+01:06:06.440 --> 01:06:09.830
+Luiz Maia: Você vê como é que a Internet
+
+483
+01:06:09.990 --> 01:06:15.690
+Luiz Maia: parece ser um mundo, mas tem horas que você empaca?
+
+484
+01:06:17.470 --> 01:06:22.679
+Luiz Maia: Deixa eu ver se no material da Microsoft. Tem alguma coisa mais interessante do que essa
+
+485
+01:06:26.580 --> 01:06:32.089
+Luiz Maia: naquel Divisão por zero. Eu vou até fazer isso com vocês. Mais para frente.
+
+486
+01:06:35.340 --> 01:06:40.579
+Luiz Maia: Não tem nenhum desenho para mostrar a estrutura de exceções.
+
+487
+01:06:43.920 --> 01:06:50.899
+Luiz Maia: Mas aqui você está pegando exatamente. Ah, mas. Lp: Eu posso pegar só action pode você pode fazer assim.
+
+488
+01:06:53.900 --> 01:06:56.450
+Luiz Maia: Só que está pegando qualquer exceção.
+
+489
+01:06:57.890 --> 01:06:58.910
+Luiz Maia: Tá certo.
+
+490
+01:06:59.030 --> 01:07:04.420
+Luiz Maia: Aqui eu estou Botando data inválida, né? Aqui, ó,
+
+491
+01:07:04.660 --> 01:07:10.580
+Luiz Maia: esse cara não foi reconhecido como um valor válido para date time
+
+492
+01:07:14.120 --> 01:07:20.870
+Luiz Maia: como format exception. É uma subclasse de excepcion.
+
+493
+01:07:21.510 --> 01:07:27.080
+Luiz Maia: Vai valer. Também vai ser a mesma mensagem que ele vai dar. Deixa eu ver se vai ser a mesma mensagem mesmo.
+
+494
+01:07:28.340 --> 01:07:30.660
+Luiz Maia: É, ele vai dar a mesma mensagem.
+
+495
+01:07:30.810 --> 01:07:37.989
+Luiz Maia: E aí não pode ser qualquer coisa. Pode ser. É,
+
+496
+01:07:38.170 --> 01:07:41.619
+Luiz Maia: pode ser. Excepcion. Pode ser o que você quiser.
+
+497
+01:07:42.270 --> 01:07:51.999
+Luiz Maia: Aqui, por exemplo. Pode ser. E, por exemplo, em vez de X. Pode ser. E o Python geralmente usa e não usa X.
+
+498
+01:07:59.590 --> 01:08:05.550
+Luiz Maia: Eu costumo usar X tanto no Python quanto no
+
+499
+01:08:05.870 --> 01:08:09.549
+Luiz Maia: no C. Sharp e no Java.
+
+500
+01:08:11.720 --> 01:08:17.069
+Luiz Maia: Mas o mais importante que tem aqui gente é o seguinte: quando
+
+501
+01:08:17.340 --> 01:08:24.589
+Luiz Maia: o erro é gerado, isso que vocês têm que entender. É talvez a coisa que mais confunda
+
+502
+01:08:25.069 --> 01:08:27.130
+Luiz Maia: que pouca gente entende.
+
+503
+01:08:27.399 --> 01:08:30.700
+Luiz Maia: Quando acontece o erro dentro do Try,
+
+504
+01:08:30.910 --> 01:08:37.329
+Luiz Maia: ele para de executar o Try. Ele não executa o comando seguinte.
+
+505
+01:08:38.000 --> 01:08:43.890
+Luiz Maia: Ele para de executar o Tri. E desvia para o Cat.
+
+506
+01:08:44.250 --> 01:08:52.100
+Luiz Maia: Ele não executa o próximo comando. Se, por exemplo, suponha vinte e
+
+507
+01:08:56.279 --> 01:08:57.830
+Luiz Maia: recebe zero.
+
+508
+01:09:01.520 --> 01:09:09.119
+Luiz Maia: E aí, mas mais, incrementei o Id um.
+
+509
+01:09:10.080 --> 01:09:16.559
+Luiz Maia: Se acontecer um erro aqui, nessa linha. Ele não vai somar um no I, não vai?
+
+510
+01:09:17.270 --> 01:09:23.850
+Luiz Maia: Posso mostrar isso para vocês. Ó console Wrightline. E
+
+511
+01:09:26.120 --> 01:09:33.210
+Luiz Maia: vou fazer agora rodar o código para vocês entenderem isso direitinho, porque tem muito aluno que não entende isso.
+
+512
+01:09:34.460 --> 01:09:43.100
+Luiz Maia: Olha só o ícone que aparece. Zero, ele não executa nada que vem depois
+
+513
+01:09:43.560 --> 01:09:50.740
+Luiz Maia: do erro aconteceu o erro. Ele desvia para cá, para o Cat. Ele não soma um no, I
+
+514
+01:09:51.920 --> 01:09:53.219
+Luiz Maia: não soma.
+
+515
+01:09:55.410 --> 01:10:05.930
+Luiz Maia: E aí, se você achar que ele vai dar o erro e seguir executando o código, você vai acabar quebrando a cara.
+
+516
+01:10:06.720 --> 01:10:15.350
+Luiz Maia: Então essa somatória de ir aqui. Não vai acontecer. Se houver erro, ele vai executar esse comando
+
+517
+01:10:15.600 --> 01:10:26.120
+Luiz Maia: e ele vai desviar para o Cat esse I e esse Wright Line não serão executados. Tem muito aluno bom, que não sabe disso
+
+518
+01:10:32.230 --> 01:10:34.480
+Luiz Maia: e vai dar um monte de dor de cabeça,
+
+519
+01:10:35.690 --> 01:10:40.589
+Luiz Maia: porque se você está achando que ele vai somar um no I, ele não vai.
+
+520
+01:10:41.510 --> 01:10:49.540
+Luiz Maia: Ele só vai somar um no I se não der erro. Por exemplo, quatro
+
+521
+01:10:50.000 --> 01:10:55.789
+Luiz Maia: de Agosto, dois mil e vinte e seis. Aí ele mostra o Icom um.
+
+522
+01:10:57.950 --> 01:11:03.770
+Luiz Maia: Mas caso aconteça um erro, uma exceção. Ele não vai somar nada no erro.
+
+523
+01:11:11.830 --> 01:11:13.619
+Luiz Maia: Eu acho que é isso, gente,
+
+524
+01:11:15.360 --> 01:11:18.400
+Luiz Maia: o que a gente vai ver na próxima aula.
+
+525
+01:11:24.720 --> 01:11:27.690
+Luiz Maia: Comando de Decisão Comando o If.
+
+526
+01:11:28.070 --> 01:11:34.080
+Luiz Maia: Quando comanda o If Elcy, vou mandar tudo agora.
+
+527
+01:11:34.800 --> 01:11:36.529
+Luiz Maia: Vou mandar tudo para vocês.
+
+528
+01:11:36.700 --> 01:11:38.260
+Luiz Maia: Comando Switch.
+
+529
+01:11:38.940 --> 01:11:49.699
+Luiz Maia: Aí eu explico cada um dos comandos. Você já sabe como é que isso funciona. Talvez o Comando Switch seja novidade para vocês, mas o Python já tem um comando suíte chamado Match.
+
+530
+01:11:51.060 --> 01:11:54.440
+Luiz Maia: E aí a gente vai fazer um projeto calculadora
+
+531
+01:11:55.310 --> 01:12:02.570
+Luiz Maia: com várias versões. Vai ter versão um, dois, três, quatro, cinco, seis, sete, oito.
+
+532
+01:12:06.990 --> 01:12:12.770
+Luiz Maia: No Python. O Switch é o Match M a Tch.
+
+533
+01:12:12.890 --> 01:12:22.209
+Luiz Maia: Tá bom, não é Suíte Match, é isso aí, M a Tch
+
+534
+01:12:22.740 --> 01:12:33.550
+Luiz Maia: no Python. Não sei se vocês viram isso no curso de Python, mas já tem o Switch no é
+
+535
+01:12:36.580 --> 01:12:44.539
+Luiz Maia: em Python. Isso não é muito recente. Não, isso aí tem algum tempo. Já que eles já botaram essa
+
+536
+01:12:44.910 --> 01:12:46.580
+Luiz Maia: esse comando,
+
+537
+01:12:46.720 --> 01:12:55.579
+Luiz Maia: eu achei ótimo. Só não gostei do nome. Podia ter sido switch também. Pra ficar igual todas as outras linguagens. Mas os caras querem ser diferentes, né?
+
+538
+01:12:56.350 --> 01:13:08.030
+Luiz Maia: Então, na próxima aula na próxima segunda feira, a gente vai fazer exatamente isso. A gente vai estudar os comandos de decisão e fazer um projeto.
+
+539
+01:13:08.170 --> 01:13:11.470
+Luiz Maia: E aí a gente vai fazer refaturação.
+
+540
+01:13:12.220 --> 01:13:20.100
+Luiz Maia: Eu sei que o curso não é de refaturação, mas a gente vai aprender código limpo e refaturação junto com o C Sharp
+
+541
+01:13:22.900 --> 01:13:34.720
+Luiz Maia: aqui, eu coloquei aqui o livro de refaturação que eu costumo usar para dar as aulas de refaturação. Eu vou ensinar um pouco de refaturação para vocês
+
+542
+01:13:35.070 --> 01:13:36.800
+Luiz Maia: na próxima aula.
+
+543
+01:13:36.960 --> 01:13:48.049
+Luiz Maia: A próxima aula vai ser uma aula de comando desse professor. A entrega do Dp pode ser feita em Zip ou tem que ser o Pdf? Como está descrito lá?
+
+544
+01:13:48.340 --> 01:13:49.530
+Luiz Maia: É,
+
+545
+01:13:50.640 --> 01:13:57.910
+Luiz Maia: eu acho que pode ser zip, cara, não vejo grandes problemas. Não, o problema é que tem coisas que não são Zip, né?
+
+546
+01:13:58.160 --> 01:14:01.409
+Luiz Maia: A instalação do visual Studio.
+
+547
+01:14:01.690 --> 01:14:11.430
+Luiz Maia: Não sei se dá para fazer alguma coisa em relação a isso, mas assim fazer um Pdf,
+
+548
+01:14:11.950 --> 01:14:18.589
+Luiz Maia: você usar Windows shift s para fazer isso aqui, eu acho. Windows shift s.
+
+549
+01:14:18.960 --> 01:14:22.090
+Luiz Maia: Aí você copia e cola. O que você quer aqui?
+
+550
+01:14:32.310 --> 01:14:34.329
+Luiz Maia: Pode ser também não sei.
+
+551
+01:14:36.890 --> 01:14:40.570
+Luiz Maia: Deixa eu copiar esse código todo para vocês
+
+552
+01:14:41.420 --> 01:14:45.729
+Luiz Maia: lá no drive para vocês terem esse código.
+
+553
+01:14:46.520 --> 01:14:49.530
+Luiz Maia: Deixa eu copiar isso aqui. Aula três.
+
+554
+01:14:50.260 --> 01:14:54.660
+Luiz Maia: Deixa eu pegar esse código todo.
+
+555
+01:14:57.790 --> 01:15:07.070
+Luiz Maia: Deixa eu pegar esse código para vocês e copiar lá para dentro do da Teora.
+
+556
+01:15:07.250 --> 01:15:12.070
+Luiz Maia: Fechou o valor. Deixa eu pegar aqui e copiar aqui para dentro da aula. Três.
+
+557
+01:15:13.860 --> 01:15:15.940
+Luiz Maia: Pasta compactada.
+
+558
+01:15:17.940 --> 01:15:23.060
+Luiz Maia: Não, peraí. Eu tenho que fechar esse cara aqui.
+
+559
+01:15:24.110 --> 01:15:33.890
+Luiz Maia: Ok, eu acho que agora vai. Deixa eu copiar tudo para vocês aí dentro para vocês terem esse código. Ok, data e hora, Zip,
+
+560
+01:15:34.480 --> 01:15:35.860
+Luiz Maia: aula três.
+
+561
+01:15:37.250 --> 01:15:46.560
+Luiz Maia: Ah, eu não tenho aqui o endereço do drive. Beleza, copy link,
+
+562
+01:15:49.500 --> 01:15:52.340
+Luiz Maia: tá aí. Vê se consegue acessar João.
+
+563
+01:16:02.530 --> 01:16:08.490
+Luiz Maia: Então, gente, uma boa noite para vocês até a próxima segunda feira.
+
+564
+01:16:08.850 --> 01:16:13.190
+Luiz Maia: A gente vai entrar na parte de comando de decisão
+
+565
+01:16:13.500 --> 01:16:27.890
+Luiz Maia: e a gente vai fazer um projeto bacana em relação a esses comandos. Esse projeto vai se arrastando durante bastante tempo no curso.
+
+566
+01:16:28.010 --> 01:16:31.410
+Luiz Maia: Obrigado pela atenção de vocês.
+
+567
+01:16:32.210 --> 01:16:40.620
+Luiz Maia: Nos vemos na próxima segunda feira, beleza,
+
+568
+01:16:40.800 --> 01:16:44.779
+Luiz Maia: um abraço. Beijo para vocês todos. Tchau, Tchau, gente.
+

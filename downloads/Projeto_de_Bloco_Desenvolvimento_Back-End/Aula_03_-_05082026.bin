@@ -1,0 +1,2882 @@
+WEBVTT
+
+1
+00:01:18.630 --> 00:01:20.880
+Orlando Fonseca: Boa noite, pessoal. Tudo certo.
+
+2
+00:01:21.320 --> 00:01:22.509
+Orlando Fonseca: Tranquilo, né?
+
+3
+00:01:24.680 --> 00:01:29.129
+Orlando Fonseca: Então, pessoal, vamos iniciar hoje na sala número três do projeto de bloco
+
+4
+00:01:29.580 --> 00:01:37.180
+Orlando Fonseca: de baquente, né? Tá certo, beleza. Gabriel, né? Todo mundo que tá assistindo aqui ao vivo, pessoal, é um.
+
+5
+00:01:37.360 --> 00:01:47.420
+Orlando Fonseca: Vamos dar continuidade ao ciclo de vida aos modelos de software que a gente começou na anterior.
+
+6
+00:01:47.540 --> 00:01:54.290
+Orlando Fonseca: E lembrando que falavam do primeiro modelo que era. Põe o quê, modelo cascata, certo?
+
+7
+00:01:54.770 --> 00:01:57.380
+Orlando Fonseca: Lembrando que ele tem um desse movimento mais
+
+8
+00:01:57.570 --> 00:02:06.000
+Orlando Fonseca: sequencial. Tipo uma cascata mesmo. E tinha um tipo assim desse movimento.
+
+9
+00:02:06.320 --> 00:02:13.329
+Orlando Fonseca: É essa metodologia é boa. Quando o desenvolvimento tem um,
+
+10
+00:02:13.770 --> 00:02:17.129
+Orlando Fonseca: tem um planejamento já, né? Desde a.
+
+11
+00:02:17.440 --> 00:02:24.149
+Orlando Fonseca: A concessão do projeto, já fica tudo bonitinho. O planejamento certinho, o cronograma certo?
+
+12
+00:02:24.320 --> 00:02:26.510
+Orlando Fonseca: E aí sim, podemos.
+
+13
+00:02:26.800 --> 00:02:28.579
+Orlando Fonseca: É bom
+
+14
+00:02:28.910 --> 00:02:48.640
+Orlando Fonseca: para ser aquelas quatro ou cinco fases já pré definidas até o final. Quer dizer, vamos fazer, por exemplo, até uma hora na tapa da implementação. Vamos implementar tudo. Vamos fazer o teste até finalmente entregar o projeto para o antidem, para o usuário. Aí tem algumas inconvenientes. Tem alguma desvantagem? O que é você lembra
+
+15
+00:02:49.250 --> 00:03:04.620
+Orlando Fonseca: especificamente isso, né? A gente não tem como voltar atrás. Se acontecer algum erro ali, no meio do caminho, não tem como consertar quem você tem, né? Só que tem que ser feito o fluxo todo. Isso não pode voltar atrás. Tem que fazer o fluxo todo até chegar no final, que
+
+16
+00:03:04.880 --> 00:03:09.169
+Orlando Fonseca: provavelmente o usuário, né? Se gostou beleza, mas você tiver com um erro ali, no final,
+
+17
+00:03:09.720 --> 00:03:18.219
+Orlando Fonseca: é complicado, tá? Pelo que é fazer, de inovo o planejamento como sendo uma cascata.
+
+18
+00:03:19.480 --> 00:03:20.610
+Orlando Fonseca: E eu:
+
+19
+00:03:21.000 --> 00:03:27.289
+Orlando Fonseca: Ah, é isso. A gente perde essa troca com o usuário, mas é válido numa teologia válida. Como é que é pra vocês?
+
+20
+00:03:27.960 --> 00:03:30.499
+Orlando Fonseca: Então, pessoal, vamos compartilhar essa tela aqui,
+
+21
+00:03:31.770 --> 00:03:35.730
+Orlando Fonseca: porque hoje vou mostrar para vocês
+
+22
+00:03:35.970 --> 00:03:40.490
+Orlando Fonseca: desculpa. Aí. Vou mostrar para você aí, três é
+
+23
+00:03:40.700 --> 00:03:45.750
+Orlando Fonseca: assim. Não vou falar de metodologia porque tudo bem. Não é considerado um framework, um deles, né?
+
+24
+00:03:45.960 --> 00:03:55.539
+Orlando Fonseca: Outra, Sim, uma metodologia. Mas vamos falar de um modelo mais incremental. Vamos falar do Hupp anterior. Pelo menos você sabe
+
+25
+00:03:55.890 --> 00:04:12.869
+Orlando Fonseca: o nomeações. Vou ensinar para você. O que seria isso? Esse tipo de modelagem. Utilizando o Hoop, e finalizamos então, com uma metodologia ágil, lembrando que esses três projetos, essas tres missões,
+
+26
+00:04:12.890 --> 00:04:20.410
+Orlando Fonseca: ela não só um ecluente. A gente pode combinar ela em fazer um projeto bem legal. Então agora sim, vou compartilhar essa tela?
+
+27
+00:04:21.970 --> 00:04:22.910
+Orlando Fonseca: Não, só
+
+28
+00:04:40.910 --> 00:04:42.020
+Orlando Fonseca: beleza.
+
+29
+00:04:45.540 --> 00:04:49.050
+Orlando Fonseca: Eu estou colocando nosso slide no infinity online.
+
+30
+00:04:49.270 --> 00:04:50.150
+Orlando Fonseca: Tá
+
+31
+00:05:04.240 --> 00:05:05.190
+Orlando Fonseca: ok,
+
+32
+00:05:10.690 --> 00:05:17.299
+Orlando Fonseca: tá sentindo bachilhando, ok, pessoal.
+
+33
+00:05:17.660 --> 00:05:19.380
+Orlando Fonseca: Então vamos estudar aqui.
+
+34
+00:05:21.200 --> 00:05:23.910
+Orlando Fonseca: Modelo incremental. O hoop
+
+35
+00:05:24.770 --> 00:05:36.950
+Orlando Fonseca: metodologia, pelo menos assim. Bem pra cima, tá, porque isso aqui pode ser só falar da metodologia. A gente pode levar todo um curso para ficar bem claro. A forma de trabalho,
+
+36
+00:05:37.550 --> 00:05:43.960
+Orlando Fonseca: requisitos e finalizamos com o Ml. Essa linguagem, que a gente vai trabalhar bastante aqui nesse acordo.
+
+37
+00:05:45.910 --> 00:05:49.669
+Orlando Fonseca: Então, pessoal, o que seria o incremental?
+
+38
+00:05:49.990 --> 00:05:56.970
+Orlando Fonseca: O produto é construído em interações curtas. E aqui já tem um primeiro conceito, hã?
+
+39
+00:05:57.260 --> 00:06:08.890
+Orlando Fonseca: Que tínhamos interações para o desenvolvimento. Se temos interações e elas são curtas, por que eu quero fazer isso?
+
+40
+00:06:09.340 --> 00:06:14.549
+Orlando Fonseca: Pô? Ok, eu vou ter entregas parciais.
+
+41
+00:06:14.800 --> 00:06:27.329
+Orlando Fonseca: Então, uma interação. A gente vai ter uma entrega e vai ser a forma de demonstrar para o usuário que a gente está entregando um produto de valor.
+
+42
+00:06:27.690 --> 00:06:28.430
+Orlando Fonseca: Tá,
+
+43
+00:06:28.770 --> 00:06:39.570
+Orlando Fonseca: então a cada ciclo. Veja, quando eu coloquei o nome do ciclo, porque quando estamos falando da mitologia ágil e nada ali equivalente definir um ciclo com interações,
+
+44
+00:06:40.070 --> 00:06:41.050
+Orlando Fonseca: beleza.
+
+45
+00:06:42.730 --> 00:06:50.509
+Orlando Fonseca: A equipe entrega um incremento operacional do software, e dali vem o nome o incremental vem, porque.
+
+46
+00:06:50.820 --> 00:06:54.220
+Orlando Fonseca: Por quê é?
+
+47
+00:06:54.940 --> 00:07:08.419
+Orlando Fonseca: Estamos adicionando uma pequena parte nesse projeto, que, no final, vai aumentar o valor do sistema,
+
+48
+00:07:09.360 --> 00:07:16.510
+Orlando Fonseca: certo? Por isso que o incrementar são pequenas partes que a gente vai entregando para o usuário.
+
+49
+00:07:18.780 --> 00:07:27.030
+Orlando Fonseca: Então o trabalho de Ah, então esse processo se repete até que o produto completo seja desenvolvido e entregue. O que dizia isso? Pessoal,
+
+50
+00:07:27.510 --> 00:07:28.350
+Orlando Fonseca: aqui, ó,
+
+51
+00:07:28.590 --> 00:07:40.020
+Orlando Fonseca: vamos dividir o sistema em diferentes páginas. Vamos fazer a primeira entrega. A segunda entrega. Só que essas entregas, elas são feitas em ciclos curtos.
+
+52
+00:07:40.700 --> 00:07:52.620
+Orlando Fonseca: Vamos repetir o processo até ter o projeto final totalmente desenvolvido. Veja que essas entregas é um produto de valor. Você entende quando eu falo assim. O que seria um produto de valor?
+
+53
+00:07:52.900 --> 00:07:56.860
+Orlando Fonseca: Não é tipo, é um.
+
+54
+00:07:57.390 --> 00:08:05.489
+Orlando Fonseca: Não. É que a gente tenha entregado o código tipo, Ah, já fiz essa função. Mas tudo bem. O que o suor enxerga quando você fez essa função?
+
+55
+00:08:05.650 --> 00:08:14.670
+Orlando Fonseca: Eu não estou entregando um código. Entreguei sei lá quantas linhas de código. Não é isso. Do que o modelo incremental está falando? O modelo incremental está falando
+
+56
+00:08:15.080 --> 00:08:28.720
+Orlando Fonseca: que vocês precisam entregar uma pequena parte pronta, pronta para ser testada, por exemplo, pronta para o usuário interagir com esse pedacinho do sistema e dar um feedback.
+
+57
+00:08:29.130 --> 00:08:36.700
+Orlando Fonseca: Ok, então o trabalho. Isso aqui é tudo certo, né?
+
+58
+00:08:37.390 --> 00:08:39.350
+Orlando Fonseca: Ah, seria tipo versões.
+
+59
+00:08:40.559 --> 00:08:43.200
+Orlando Fonseca: Vamos lá. Eu não. Assim.
+
+60
+00:08:44.070 --> 00:08:49.559
+Orlando Fonseca: Eu não gosto muito desse nome de versão. Por quê?
+
+61
+00:08:49.760 --> 00:08:57.860
+Orlando Fonseca: Porque quando a gente fala de versão um, dois e três dá a entender que você finalizou o projeto
+
+62
+00:08:58.020 --> 00:09:02.710
+Orlando Fonseca: nessa versão um como um todo. Tá? Ah, mas agora a versão dois.
+
+63
+00:09:02.820 --> 00:09:06.299
+Orlando Fonseca: Vamos fazer uma pequena melhoria. Entendido?
+
+64
+00:09:06.530 --> 00:09:18.450
+Orlando Fonseca: Pense. Você concorda comigo. A ideia de inversão vem por aí. Ó, tá ali. Entreguei ali, por exemplo, vamos supor que está entrando com um sistema operativo, o Windows. Entreguei o Windows. Tá na versão no,
+
+65
+00:09:19.000 --> 00:09:26.600
+Orlando Fonseca: tá nossa letra, sistema, pratinho. Qualquer sistema, o que for, tá? Então
+
+66
+00:09:28.130 --> 00:09:42.440
+Orlando Fonseca: seria um sistema. Seria entregar um módulo. Isso aí. Perfeito, mas perfeito seria aqui. Ó, vamos dividir o meu sistema em pedacinhos, e eu vou entregar um módulo que o usuário consiga ver no sistema todo.
+
+67
+00:09:42.600 --> 00:09:44.919
+Orlando Fonseca: Tem uma pequena parte dele.
+
+68
+00:09:45.440 --> 00:09:49.850
+Orlando Fonseca: Então veja que o módulo de cadastro pode ser feito
+
+69
+00:09:50.600 --> 00:09:52.620
+Orlando Fonseca: no primeiro momento. Vamos supor, tá
+
+70
+00:09:53.560 --> 00:10:00.800
+Orlando Fonseca: e já entregar para o usuário. Fez um ciclo oculto numa primeira interação, e ele viu lá e viu. Ó, ele! É essa música lá. Tá certo.
+
+71
+00:10:01.060 --> 00:10:12.180
+Orlando Fonseca: Agora vamos incrementar, colocar mais uma página no seu sistema. Já tem o módulo de cadastro. Agora, vamos, colocar, sei lá, qualquer outro modo. Um outro módulo. Vamos supor que seja.
+
+72
+00:10:13.170 --> 00:10:14.980
+Orlando Fonseca: É,
+
+73
+00:10:16.680 --> 00:10:23.770
+Orlando Fonseca: vamos supor que a gente tenha trabalhado num sistema. Vamos supor que a gente está se movendo. Um sistema que tem a ver com
+
+74
+00:10:23.900 --> 00:10:32.220
+Orlando Fonseca: o caixa do supermercado. Estamos planejando, implementando o seu sistema. Quais seriam os módulos que vão ter
+
+75
+00:10:33.130 --> 00:10:35.579
+Orlando Fonseca: um sistema de supermercado?
+
+76
+00:10:36.510 --> 00:10:47.819
+Orlando Fonseca: Quais seriam os módulos que ele vai ter? Ah, vai ter um cadastro. Vai ter um login. Vai ter o sextop do produto. Vai ter um caixa pra mente. Vai ter relatório. Então é isso, pessoal.
+
+77
+00:10:48.800 --> 00:10:50.930
+Orlando Fonseca: Como que seria a entrega?
+
+78
+00:10:51.170 --> 00:11:02.210
+Orlando Fonseca: A primeira entrega do modelo incremental. Vai ser que vocês falaram? O módulo cadastro. Pronto, quais seria o próximo. Vamos entregar agora o login ou o link
+
+79
+00:11:03.200 --> 00:11:18.010
+Orlando Fonseca: estoque, né? Um deles. O próximo vai ser o estoque. A gente entrega. Finalizamos o hemograma colocar mais. E no final, quando a gente faz esse hemógrafo incrementado, todo se temos o produto
+
+80
+00:11:18.750 --> 00:11:25.729
+Orlando Fonseca: completo para ser entregue então ali. Sim, podemos chamar esse produto de inversão
+
+81
+00:11:26.550 --> 00:11:31.300
+Orlando Fonseca: agora? Sim, vem. Melhoria depois desse sistema vem tudo.
+
+82
+00:11:33.250 --> 00:11:36.830
+Orlando Fonseca: Tá beleza, entendeu, né?
+
+83
+00:11:37.940 --> 00:11:38.780
+Orlando Fonseca: Ok,
+
+84
+00:11:42.770 --> 00:11:43.810
+Orlando Fonseca: beleza.
+
+85
+00:11:46.620 --> 00:11:54.550
+Orlando Fonseca: Então o trabalho guiado por um foco de soluções de problemas. Por exemplo, desenvolverem ciclos interativos. Vocês entendem quando eu falo itinerativo,
+
+86
+00:11:57.170 --> 00:12:00.750
+Orlando Fonseca: tá interativo, porque
+
+87
+00:12:01.400 --> 00:12:09.490
+Orlando Fonseca: deixa eu ver aqui. Ó, sim, beleza. Lembrando que a gente está num ciclo, um loop onde o nosso sistema vai ser construído.
+
+88
+00:12:10.980 --> 00:12:17.159
+Orlando Fonseca: Olhando para esse conceito de interação. Só que essas interações são curtas.
+
+89
+00:12:18.200 --> 00:12:20.149
+Orlando Fonseca: E é,
+
+90
+00:12:21.560 --> 00:12:29.040
+Orlando Fonseca: tá bom. Colher feedback rápido e de alta qualidade do usuário evoluir incrementalmente, adicionando capacidade passo a passo.
+
+91
+00:12:29.870 --> 00:12:41.600
+Orlando Fonseca: Então é aqui. Tá, então esse aí é o último mais importante, né? Evoluir incrementalmente, dali vem o nome. Nós estamos construindo um sistema de uma vez só. Estamos construindo ele aos pouquinhos
+
+92
+00:12:42.200 --> 00:12:44.800
+Orlando Fonseca: e cada parte.
+
+93
+00:12:45.030 --> 00:12:50.990
+Orlando Fonseca: Vejam aqui como seria essa aqui é a figura que mais representa o modelo incrementado.
+
+94
+00:12:51.370 --> 00:12:56.749
+Orlando Fonseca: Levantamento de requisitos. Análise, projeto, Implementação, Teste, Implantação e
+
+95
+00:13:00.380 --> 00:13:01.520
+Orlando Fonseca: volta de novo.
+
+96
+00:13:02.350 --> 00:13:03.160
+Orlando Fonseca: Tá?
+
+97
+00:13:05.340 --> 00:13:15.180
+Orlando Fonseca: Então vamos olhar um pouquinho esse antes de falar do ruplo. Vamos olhar mais um pouquinho essa série tá?
+
+98
+00:13:17.500 --> 00:13:22.180
+Orlando Fonseca: Nessa primeira parte aqui. Levantamento, requisito, análise do Projeto Implementação, teste e Implantação.
+
+99
+00:13:23.540 --> 00:13:27.559
+Orlando Fonseca: Ele assim meio parecido, cascata. Quando é comigo.
+
+100
+00:13:29.220 --> 00:13:37.039
+Orlando Fonseca: Sim, então, desde a aula anterior, eu falei: Ah, mas veja, né?
+
+101
+00:13:37.910 --> 00:13:39.580
+Orlando Fonseca: A cascata.
+
+102
+00:13:40.080 --> 00:13:43.390
+Orlando Fonseca: Você faz essa primeira parte.
+
+103
+00:13:43.800 --> 00:13:53.699
+Orlando Fonseca: Para implementar o projeto todo, até ele implementado todos os módulos do projeto.
+
+104
+00:13:54.980 --> 00:14:01.060
+Orlando Fonseca: Só que no incrementar, que é interativo. A gente não faz isso.
+
+105
+00:14:01.770 --> 00:14:17.040
+Orlando Fonseca: Quando chegamos ali, no teste de plantação, no teste. E demais, é porque estamos várias cacatas menores. Sim, várias cacatas menores. Mas olhando que a gente tem uma entrega parcial, tem aquelas entregas de valor.
+
+106
+00:14:17.590 --> 00:14:24.109
+Orlando Fonseca: Então, pessoal, cada parte. Por exemplo, o módulo de cadastro. Ele passa por todas as listas fáceis.
+
+107
+00:14:24.810 --> 00:14:35.360
+Orlando Fonseca: Cada págio vai ter uma análise. Vai ter o projeto vai ser projetado, vai ser implementada, vai ser testada, vai ser implantada
+
+108
+00:14:35.600 --> 00:14:40.700
+Orlando Fonseca: e entregue ao usuário nesse primeiro modo, por exemplo,
+
+109
+00:14:40.810 --> 00:14:44.279
+Orlando Fonseca: mas continua próxima interação, a gente vai ter um incremento,
+
+110
+00:14:45.550 --> 00:14:50.230
+Orlando Fonseca: o que seria um incremento. O módulo de estoque, por exemplo.
+
+111
+00:14:50.430 --> 00:14:57.100
+Orlando Fonseca: E aí sim, vamos de novo, fazer requisitos. Vamos fazer tudo. Vamos fazer análise, projeto, implantação e ver.
+
+112
+00:14:58.040 --> 00:15:05.390
+Orlando Fonseca: E vamos ter agora. Nessa segunda interação, já tínhamos implementado o cadastro. Agora vamos ter Stock.
+
+113
+00:15:06.840 --> 00:15:07.800
+Orlando Fonseca: Okay
+
+114
+00:15:11.690 --> 00:15:17.400
+Orlando Fonseca: então, pessoal muito importante. Isso tenha na mente sempre que
+
+115
+00:15:18.400 --> 00:15:24.300
+Orlando Fonseca: quando trabalhamos com modelo incremental, não estamos incrementando funções não é incrementar o código que o usuário não vê.
+
+116
+00:15:24.440 --> 00:15:29.700
+Orlando Fonseca: Tem que ser uma coisa. Uma função ali ser atrelado a uma necessidade do usuário,
+
+117
+00:15:30.350 --> 00:15:32.719
+Orlando Fonseca: hã? Parece que a gente chama mogipano.
+
+118
+00:15:33.510 --> 00:15:39.949
+Orlando Fonseca: Uma parte do sistema que tem pronta, protegida pelo sessuários finais.
+
+119
+00:15:42.170 --> 00:15:46.350
+Orlando Fonseca: Tá muito bem.
+
+120
+00:15:47.200 --> 00:15:50.009
+Orlando Fonseca: Agora, creio que você me fala em alguma coisa.
+
+121
+00:15:54.040 --> 00:16:04.020
+Orlando Fonseca: Só como várias cacatas. Então é isso, né? Seria uma entrega que entrega valor do usuário. Isso aí e uma entrega. Isso aí, tá.
+
+122
+00:16:04.200 --> 00:16:07.230
+Orlando Fonseca: Quando eu falo, entrega valor. É porque o suor e não sabe.
+
+123
+00:16:07.490 --> 00:16:18.250
+Orlando Fonseca: Ah, demorei, sei lá quanto essa função, que é muito difícil. Mas o usuário não entregou valor para a gente. Tem que. Vamos supor que a gente tenha uma parte de segurança, tá?
+
+124
+00:16:18.350 --> 00:16:21.200
+Orlando Fonseca: Litografia e demais. A gente demorou fazendo isso
+
+125
+00:16:21.520 --> 00:16:24.169
+Orlando Fonseca: não quer dizer que seja menos importante para a gente.
+
+126
+00:16:24.280 --> 00:16:30.130
+Orlando Fonseca: Isso é? Isso é muito importante para o sistema, senhor. Não temos, né? Não tem segurança. Mas o senhor não chegou.
+
+127
+00:16:30.770 --> 00:16:32.280
+Orlando Fonseca: O que a senhora enxerga
+
+128
+00:16:32.580 --> 00:16:38.090
+Orlando Fonseca: chegar lá na ponta, aí na parte dele e falar. Opa, o módulo de login está feito,
+
+129
+00:16:39.090 --> 00:16:47.630
+Orlando Fonseca: tá? Fui testar. Essa seria a entrega. Oh, terminei a função que tenha criptografia, hã?
+
+130
+00:16:49.240 --> 00:16:54.500
+Orlando Fonseca: No mundo real, se incrementar o scrum, vamos lá.
+
+131
+00:16:54.620 --> 00:16:57.070
+Orlando Fonseca: Pode ser tá bom.
+
+132
+00:16:57.450 --> 00:16:58.690
+Orlando Fonseca: Pois, é
+
+133
+00:16:58.930 --> 00:17:05.339
+Orlando Fonseca: por que eu estou falando isso? Porque a gente pode ter um modelo incremental sem ser uma metodologia ágil
+
+134
+00:17:06.130 --> 00:17:17.440
+Orlando Fonseca: tá perfeitamente. Vamos chegar na partida cru e sim, né. Podemos ter Scroohn também. Porque scrum também é literativo.
+
+135
+00:17:17.589 --> 00:17:23.389
+Orlando Fonseca: E também trabalha com esse modelo incremental. Ou seja, por isso. Eu falo que eles não são excluentes. Eles trabalham em conjunto.
+
+136
+00:17:23.500 --> 00:17:26.570
+Orlando Fonseca: Você foca ali nessa parte incremental.
+
+137
+00:17:27.200 --> 00:17:34.130
+Orlando Fonseca: Som na parte incremental, ou você tem uma metodologia. Acha? Qual seria a diferença?
+
+138
+00:17:34.570 --> 00:17:38.609
+Orlando Fonseca: Vou deixar essa pergunta aqui anotada porque eu acho muito importante
+
+139
+00:17:39.350 --> 00:17:41.780
+Orlando Fonseca: deixar se você conseguir me ajudar, né?
+
+140
+00:17:43.950 --> 00:17:48.220
+Orlando Fonseca: É, qual seria a diferença?
+
+141
+00:17:48.800 --> 00:17:55.820
+Orlando Fonseca: Então entra o modelo incremental, tá?
+
+142
+00:17:55.990 --> 00:17:58.049
+Orlando Fonseca: E a metodologia artística.
+
+143
+00:17:59.310 --> 00:18:04.440
+Orlando Fonseca: Beleza, hã?
+
+144
+00:18:05.230 --> 00:18:10.229
+Orlando Fonseca: Vamos deixar ir até o final, se eu quiser. Você me lembra, tá? Vou deixar anotar aqui.
+
+145
+00:18:12.450 --> 00:18:17.130
+Orlando Fonseca: Muito bem, tá, então, respondendo a pergunta do Lucas.
+
+146
+00:18:17.280 --> 00:18:25.839
+Orlando Fonseca: Assim, a maioria das vezes. Sim, a gente usa scrum e já tem ali por padrão o modelo incremental. A gente trabalha já com esse modelo incremental?
+
+147
+00:18:25.990 --> 00:18:28.599
+Orlando Fonseca: Às vezes, sim, mas nem sempre.
+
+148
+00:18:31.830 --> 00:18:32.740
+Orlando Fonseca: Beleza.
+
+149
+00:18:33.590 --> 00:18:36.690
+Orlando Fonseca: Dúvida pessoal.
+
+150
+00:18:37.630 --> 00:18:38.870
+Orlando Fonseca: Certinho, né,
+
+151
+00:18:44.590 --> 00:18:46.140
+Orlando Fonseca: beleza?
+
+152
+00:18:47.370 --> 00:18:48.889
+Orlando Fonseca: Então vamos lá falar do Hupp.
+
+153
+00:18:51.580 --> 00:18:56.490
+Orlando Fonseca: Eu não coloquei o nome do uhup. Eu vou ter que.
+
+154
+00:18:58.150 --> 00:19:01.349
+Orlando Fonseca: Tá? Você trabalhou em grupo. O quê?
+
+155
+00:19:02.250 --> 00:19:07.730
+Orlando Fonseca: Tá, pode falar, Rafael. Qual o trabalho? O projeto, do bloco ou
+
+156
+00:19:08.840 --> 00:19:12.580
+Orlando Fonseca: o desenvolvimento de sorte nesse sempre que eu estou falando
+
+157
+00:19:16.370 --> 00:19:20.520
+Orlando Fonseca: o projeto mesmo, né? Fica em dúvida, tá?
+
+158
+00:19:23.980 --> 00:19:29.319
+Orlando Fonseca: Não, aqui me pareceu ser uma equipe de alunos
+
+159
+00:19:36.690 --> 00:19:46.069
+Orlando Fonseca: é você está falando do projeto de bloco? É isso aí. A avaliação do projeto de bloco de vocês.
+
+160
+00:19:48.770 --> 00:19:51.829
+Orlando Fonseca: Fui à vontade. Não tem problema não
+
+161
+00:19:54.960 --> 00:20:03.550
+Orlando Fonseca: se o projeto individual tá? O projeto de bloco, né? Não é essa metodologia, a entrega. Ah, beleza. Enfim, tudo bem,
+
+162
+00:20:04.670 --> 00:20:14.659
+Orlando Fonseca: beleza, Sim, pessoal, tá, não, o que disser não é individual, não é em grupo. Você põe ênfase em dupla ou até três pessoas no
+
+163
+00:20:16.690 --> 00:20:18.049
+Orlando Fonseca: o projeto de bloco.
+
+164
+00:20:18.260 --> 00:20:24.139
+Orlando Fonseca: Tá, mas se esse projeto que eu estou falando aqui, do modelo incremental da gente pôde ter, né?
+
+165
+00:20:24.940 --> 00:20:30.609
+Orlando Fonseca: Enfim, grupo, nem grupo. E vai ficar no seu movimento fazendo essas entregas,
+
+166
+00:20:33.750 --> 00:20:34.530
+Orlando Fonseca: beleza.
+
+167
+00:20:35.110 --> 00:20:43.650
+Orlando Fonseca: Então, pessoal, o Hupp vamos lá. Eu preciso é,
+
+168
+00:20:46.230 --> 00:20:54.450
+Orlando Fonseca: estou lembrando aqui do nome porque eu não coloquei num slide, né? Essa aqui é o Fire, pros, né, Racy una.
+
+169
+00:20:55.100 --> 00:20:57.930
+Orlando Fonseca: Se você puder me procurar. Eu vou procurar aqui.
+
+170
+00:21:04.050 --> 00:21:04.860
+Orlando Fonseca: E aí
+
+171
+00:21:09.120 --> 00:21:09.819
+Orlando Fonseca: vamos lá.
+
+172
+00:21:09.930 --> 00:21:19.470
+Orlando Fonseca: Porque eu sei. Eu vou aplicar agora qualquer. Ah, dá isso aí. The racional no Fire Pros. Tá ok,
+
+173
+00:21:20.020 --> 00:21:22.599
+Orlando Fonseca: então, pessoal, vamos falar do Hulk.
+
+174
+00:21:23.100 --> 00:21:26.860
+Orlando Fonseca: O que ele faz é um.
+
+175
+00:21:28.010 --> 00:21:31.570
+Orlando Fonseca: Vamos lá. Eu lembrei da U do Unify poker,
+
+176
+00:21:31.670 --> 00:21:37.690
+Orlando Fonseca: porque assim ele é uma mitologia muito estudada. Acha que agora vamos partir da Ibm também.
+
+177
+00:21:38.430 --> 00:21:44.439
+Orlando Fonseca: E essa que eu ia dizer que, na época, ele tentou essa.
+
+178
+00:21:44.560 --> 00:21:50.669
+Orlando Fonseca: Enfim, essa essa metodologia, ou esse processo, como também é chamado.
+
+179
+00:21:52.080 --> 00:21:56.250
+Orlando Fonseca: Ele tentou unificar
+
+180
+00:21:56.750 --> 00:22:08.110
+Orlando Fonseca: as boas práticas dos outros modelos existentes na época, a prática, a metodologia, e trazer para um modelo que ele chamou de Hoop, um processo que ele chamou de hoop.
+
+181
+00:22:08.900 --> 00:22:14.770
+Orlando Fonseca: O que ele faz?
+
+182
+00:22:16.560 --> 00:22:27.869
+Orlando Fonseca: Divide o ciclo de vida do desenvolvimento de software em quatro fases principais. E organiza todos os elementos do processo. Um container lógico chamado disciplina.
+
+183
+00:22:29.090 --> 00:22:29.960
+Orlando Fonseca: Tá,
+
+184
+00:22:33.110 --> 00:22:40.939
+Orlando Fonseca: então vamos lá. O eixo horizontal tem um aspecto dinâmico do processo. Vai ter faces
+
+185
+00:22:41.340 --> 00:22:50.279
+Orlando Fonseca: e o eixo vertical vai ter o aspecto estático do processo que vai organizar em disciplinas.
+
+186
+00:22:51.140 --> 00:22:54.020
+Orlando Fonseca: Essa aqui não ficou muito boa essa imagem, mas dá para ver,
+
+187
+00:22:57.210 --> 00:22:58.100
+Orlando Fonseca: hã?
+
+188
+00:22:59.080 --> 00:23:09.060
+Orlando Fonseca: Essa imagem. Só que está no livro do Ml do Larman, que eu acho um livro excelente, uma leitura obrigatória
+
+189
+00:23:10.470 --> 00:23:15.089
+Orlando Fonseca: essa questão ali. Iniciando engenharia solta. Esse momento é solta e demais.
+
+190
+00:23:15.550 --> 00:23:16.390
+Orlando Fonseca: Tchau.
+
+191
+00:23:17.030 --> 00:23:21.040
+Orlando Fonseca: E ele é o livro todo. Faz a rodagem de utilização do golpe.
+
+192
+00:23:21.910 --> 00:23:25.150
+Orlando Fonseca: Então, pessoal, vamos lá.
+
+193
+00:23:26.680 --> 00:23:29.980
+Orlando Fonseca: Ele tem como eu falei. Né?
+
+194
+00:23:30.220 --> 00:23:37.100
+Orlando Fonseca: Ele tem quatro faces e várias disciplinas.
+
+195
+00:23:37.590 --> 00:23:41.050
+Orlando Fonseca: Vem aqui, faça. Temos né? Quatro. Face. Temos aqui ó
+
+196
+00:23:41.830 --> 00:23:52.680
+Orlando Fonseca: Inception ou Concepción. Temos a elaboração, a construção e a transição. Tá vendo aqui, né? Só nessa
+
+197
+00:23:53.130 --> 00:24:02.170
+Orlando Fonseca: quatro faceis e várias disciplinas. Veja as disciplinas aqui. Ó por exemplo, o requerimento,
+
+198
+00:24:03.200 --> 00:24:12.039
+Orlando Fonseca: a análise, a análise, o design, a implementação. O Ted, enfim, tem várias disciplinas aqui são nove total, né?
+
+199
+00:24:12.230 --> 00:24:19.210
+Orlando Fonseca: Nove discipline e o gráfico? Ela é. Traz a gente vê como arminioquinha,
+
+200
+00:24:19.350 --> 00:24:27.280
+Orlando Fonseca: porque isso aqui tem um esforço para cada face em cada face. Elas são feitas algumas disciplinas aqui.
+
+201
+00:24:28.540 --> 00:24:30.510
+Orlando Fonseca: Por aqui, sempre
+
+202
+00:24:31.860 --> 00:24:40.779
+Orlando Fonseca: aqui. Vejam que na parte da implementação, ele está aqui, nessa parte da construção, que é onde, de fato, a gente implementa mais.
+
+203
+00:24:41.630 --> 00:24:46.069
+Orlando Fonseca: Ok, então como que seria? Vamos falar dessa primeira face aqui
+
+204
+00:24:46.370 --> 00:24:51.739
+Orlando Fonseca: e além disso, temos as interações. São baixas, né?
+
+205
+00:24:54.440 --> 00:24:55.330
+Orlando Fonseca: Tá,
+
+206
+00:24:58.900 --> 00:25:03.710
+Orlando Fonseca: então veja a elaboração. Tem duas interações aqui, né?
+
+207
+00:25:03.970 --> 00:25:11.970
+Orlando Fonseca: Da namoração. A construção tem três, três interações.
+
+208
+00:25:12.990 --> 00:25:14.840
+Orlando Fonseca: Demora um pouquinho mais.
+
+209
+00:25:15.080 --> 00:25:20.749
+Orlando Fonseca: A transição tem duas. Não é fixo. A gente pode ter n n interações para cada fase.
+
+210
+00:25:21.990 --> 00:25:25.920
+Orlando Fonseca: Ok, então vamos entender.
+
+211
+00:25:27.370 --> 00:25:33.490
+Orlando Fonseca: A primeira fase é a face da concepção. A iniciação, tá bom?
+
+212
+00:25:34.710 --> 00:25:37.589
+Orlando Fonseca: Quais seriam o seu objetivo ou essa fase,
+
+213
+00:25:38.730 --> 00:25:43.399
+Orlando Fonseca: temos que estabelecer uma base sólida para o projeto.
+
+214
+00:25:44.590 --> 00:25:53.169
+Orlando Fonseca: O que é de ser isso? E claro que é tudo interativo, né? Por isso eu coloco aqui interativamente o que disse? É isso. É a fase onde temos que decidir o que fazer.
+
+215
+00:25:54.620 --> 00:26:09.140
+Orlando Fonseca: Além disso, temos que decidir, por exemplo, custos, os riscos envolvidos, braços, tá?
+
+216
+00:26:09.460 --> 00:26:11.310
+Orlando Fonseca: Tudo nessa primeira parte,
+
+217
+00:26:14.700 --> 00:26:16.160
+Orlando Fonseca: até aí tranquilo.
+
+218
+00:26:16.680 --> 00:26:22.960
+Orlando Fonseca: E é fácil. Da gente atende o projeto que é para ser feito. Compreende o escopo do projeto?
+
+219
+00:26:23.380 --> 00:26:25.419
+Orlando Fonseca: O esforço para fazer isso.
+
+220
+00:26:27.610 --> 00:26:31.029
+Orlando Fonseca: Ok, construiu costa de negócio.
+
+221
+00:26:31.710 --> 00:26:32.940
+Orlando Fonseca: Beleza, né?
+
+222
+00:26:35.050 --> 00:26:35.800
+Orlando Fonseca: Não é?
+
+223
+00:26:36.170 --> 00:26:40.390
+Orlando Fonseca: Finalizou a falsa da concepção.
+
+224
+00:26:40.830 --> 00:26:43.840
+Orlando Fonseca: Temos a segunda fase, que é a elaboração.
+
+225
+00:26:45.730 --> 00:26:47.679
+Orlando Fonseca: O que temos aqui?
+
+226
+00:26:48.130 --> 00:26:53.349
+Orlando Fonseca: O foco é mitigar principais riscos técnicos e criar uma arquitetura base para o sistema.
+
+227
+00:26:53.720 --> 00:26:59.859
+Orlando Fonseca: Planeja planejar as atividades e recursos necessários. O que dizer isso?
+
+228
+00:27:00.670 --> 00:27:11.969
+Orlando Fonseca: Porque nessa face, o Hupp fala assim. Beleza. Nessa fase de elaboração, você precisa definir já a arquitetura que você vai emprear. Você vai ali usar o nosso sistema.
+
+229
+00:27:12.460 --> 00:27:19.950
+Orlando Fonseca: Okay, e se na face da concessão, vocês se identificaram?
+
+230
+00:27:20.330 --> 00:27:21.949
+Orlando Fonseca: Algum risco?
+
+231
+00:27:22.080 --> 00:27:27.669
+Orlando Fonseca: Alguma coisa, por exemplo, difícil para ser resolvido ali na elaboração.
+
+232
+00:27:28.190 --> 00:27:33.739
+Orlando Fonseca: Seria bom já ter pelo menos uma visão de que o projeto é viável.
+
+233
+00:27:34.160 --> 00:27:49.879
+Orlando Fonseca: Vamos supor que seja um empecilho. Alguma coisa difícil na parte de implementação propriamente dito. Então, na elaboração, vamos testar se a gente consegue fazer isso. Essa conexão com o Api, de terceiro, por exemplo,
+
+234
+00:27:50.190 --> 00:27:54.600
+Orlando Fonseca: ou uma conexão com um site do governo, ou o que seja que é difícil
+
+235
+00:27:54.700 --> 00:28:00.750
+Orlando Fonseca: vamos atestar aqui, nessa fase de elaboração. Opa. Conseguimos então esse risco
+
+236
+00:28:00.910 --> 00:28:12.299
+Orlando Fonseca: do sistema não sair do papel foi resolvido aqui. Pelo menos essa função, que era difícil. A gente implementou. A gente viu que era beleza. Dava para ir. Tá, mas também podemos ver, por exemplo, o custo. Aqui também
+
+237
+00:28:12.450 --> 00:28:16.090
+Orlando Fonseca: foi identificado um custo. Enfim,
+
+238
+00:28:16.310 --> 00:28:26.459
+Orlando Fonseca: precisamos de verba recurso nessa fase da concessão, mas na inauguração, a gente vê realmente quais são os recursos necessários. Bem por cima, não vamos retaliar isso.
+
+239
+00:28:26.660 --> 00:28:28.040
+Orlando Fonseca: Entendido, pessoal.
+
+240
+00:28:28.330 --> 00:28:34.409
+Orlando Fonseca: E já planejar a arquitetura. Então, saindo dessa fase de elaboração, o projeto tem que ser viável.
+
+241
+00:28:36.100 --> 00:28:37.040
+Orlando Fonseca: Ok,
+
+242
+00:28:40.310 --> 00:28:41.150
+Orlando Fonseca: muito bom.
+
+243
+00:28:47.400 --> 00:28:51.050
+Orlando Fonseca: Terceira face é a face da construção.
+
+244
+00:28:52.200 --> 00:28:57.159
+Orlando Fonseca: A face da maior parte da implementação do sistema ocorra por que eu falei, a maior parte
+
+245
+00:28:57.320 --> 00:29:03.310
+Orlando Fonseca: porque você vê que na elaboração, já tive que implementar alguma coisa, e vamos voltar aqui atrás só para vocês verem,
+
+246
+00:29:04.480 --> 00:29:05.330
+Orlando Fonseca: tá?
+
+247
+00:29:06.130 --> 00:29:09.570
+Orlando Fonseca: Cadê a elaboração? A. Faça a elaboração. Está aqui.
+
+248
+00:29:10.010 --> 00:29:19.470
+Orlando Fonseca: Eu fui até duas interações. Eu fiz duas interações da elaboração uma vez aqui na implementação que ela está aqui bem pouquinho aqui, né?
+
+249
+00:29:20.120 --> 00:29:25.279
+Orlando Fonseca: Queria elaboração, porque isso aí ele estava bem, um pouquinho, mas deu uma, né?
+
+250
+00:29:26.660 --> 00:29:29.079
+Orlando Fonseca: De um momento aqui, nessa curva,
+
+251
+00:29:29.710 --> 00:29:39.359
+Orlando Fonseca: nessa fase de elaboração. Mas se ela vai no topo, onde, na construção, essa disciplina aqui da implementação, está vendo. Todo mundo
+
+252
+00:29:40.460 --> 00:29:42.270
+Orlando Fonseca: dá problema meu mago. Isso aqui.
+
+253
+00:29:43.010 --> 00:29:44.989
+Orlando Fonseca: A face da implementação
+
+254
+00:29:45.430 --> 00:29:52.470
+Orlando Fonseca: na disciplina de implementação na construção é onde ela mais está no topo ou está no auge.
+
+255
+00:29:52.690 --> 00:29:58.270
+Orlando Fonseca: Mas ali na elaboração, pode ser que alguém precisa resolver algum problema pontual,
+
+256
+00:29:58.520 --> 00:30:06.720
+Orlando Fonseca: mas não é o foco nessa fase, o foco não é a implementação. Eu olhar custo, ver o recuso, ver o
+
+257
+00:30:07.910 --> 00:30:11.930
+Orlando Fonseca: arquitetura, mas agora na construção. Veja.
+
+258
+00:30:12.710 --> 00:30:14.670
+Orlando Fonseca: E é bom, né?
+
+259
+00:30:14.830 --> 00:30:17.980
+Orlando Fonseca: Aqui, agora é onde mais implementação tem.
+
+260
+00:30:19.270 --> 00:30:26.260
+Orlando Fonseca: Tá entendido? Agora o gráfico. Venham aqui, por exemplo, na face da da
+
+261
+00:30:27.370 --> 00:30:38.289
+Orlando Fonseca: de ver o que fazer no meu sistema. Que está o modelo de negócio e os requisitos. Eles têm aqui o pico. A minhoca está aqui. Barriga está aqui,
+
+262
+00:30:39.680 --> 00:30:40.530
+Orlando Fonseca: tá?
+
+263
+00:30:40.770 --> 00:30:47.860
+Orlando Fonseca: O pico está exatamente nessa primeira face. Depois ela vai caindo porque vai caindo póquer.
+
+264
+00:30:48.840 --> 00:30:55.350
+Orlando Fonseca: Enfim, não vai ter tanto foco assim em continuar, né?
+
+265
+00:30:55.750 --> 00:31:03.589
+Orlando Fonseca: Fazendo essa documentação, porque já está tudo bem decidido que para fazer, se tiver alguma ajuda, é mínimo.
+
+266
+00:31:04.730 --> 00:31:15.110
+Orlando Fonseca: Vem aqui, até na parte da construção que hoje mais temos que implementar. Também tem. Ele voltou na face atrás. Ele voltou. Nos
+
+267
+00:31:15.410 --> 00:31:28.160
+Orlando Fonseca: pode ser que a gente tenha que definir. Mas sum requisito ou refinar algum requisito. Pode ser por isso que tem, né?
+
+268
+00:31:29.980 --> 00:31:35.589
+Orlando Fonseca: Esses picos aqui, essa montanhinha pequena montanha aqui, né? Mas de novo, né?
+
+269
+00:31:36.370 --> 00:31:42.569
+Orlando Fonseca: A antipática do esforço está na primeira fase. Essa parte do requisito e construção estaria na implementação.
+
+270
+00:31:45.360 --> 00:31:52.240
+Orlando Fonseca: Tá, então é o que vão fazer na construção. Onde eu tinha o principal desta fase
+
+271
+00:31:52.360 --> 00:31:55.409
+Orlando Fonseca: é construir a primeira versão operacional do produto
+
+272
+00:31:55.720 --> 00:31:58.470
+Orlando Fonseca: que não está me implementando. Vamos mudar, né?
+
+273
+00:31:58.830 --> 00:32:03.270
+Orlando Fonseca: Talvez isso é um funcionário. Deve ser capaz de ser testada e avaliada, tá?
+
+274
+00:32:04.340 --> 00:32:09.690
+Orlando Fonseca: E, finalmente, a transição, tá?
+
+275
+00:32:09.990 --> 00:32:11.380
+Orlando Fonseca: O que é uma façanela?
+
+276
+00:32:12.140 --> 00:32:29.159
+Orlando Fonseca: A face é foco em garantir que o sistema esteja pronto para serem entregues aos horários finais e durante esta face, a equipe finaliza esse movimento, realize, enfim, corrige o problema. Enfim, pessoal, a face da transição. O que vamos fazer um pente fino olhando agora o teste
+
+277
+00:32:30.160 --> 00:32:48.759
+Orlando Fonseca: tá tudo certo com o teste, vamos testar o sistema. Pode ser que precisamos. Bom para implantar o sistema. Pode ser que precisemos dar um treinamento. Não seja usuário. Enfim, a gente pode até ter um manual, mas ele não nasce sabendo. A gente vai ter que treinar ele a usar o nosso sistema.
+
+278
+00:32:49.350 --> 00:32:54.069
+Orlando Fonseca: Tá bom? E isso é feito na face da transição é bem especificado pelo Huck.
+
+279
+00:32:54.910 --> 00:33:00.930
+Orlando Fonseca: Ok, é tchau.
+
+280
+00:33:07.750 --> 00:33:17.579
+Orlando Fonseca: Cada uma da face contém uma ou mais interações. Como eu já falei, um ciclo. As interações são ciclos de desenvolvimento entre cada face e.
+
+281
+00:33:18.030 --> 00:33:23.010
+Orlando Fonseca: E vamos, né? O objetivo é realmente alcançar os objetivos de negócio daquela face
+
+282
+00:33:23.960 --> 00:33:35.359
+Orlando Fonseca: beleza então importante. Cada iteração permite um crescimento incrementado do produto de software. Ao iterar sobre as atividades planejada. Então se o Up é interativo e é incrementar.
+
+283
+00:33:39.560 --> 00:33:46.759
+Orlando Fonseca: Tá bom, as disciplinas. Já falei para vocês. Têm nova disciplina padronrupo.
+
+284
+00:33:47.770 --> 00:33:54.149
+Orlando Fonseca: Que modelagem de negócio, gestão, de requisitos, análise, design implementada,
+
+285
+00:33:54.640 --> 00:34:00.330
+Orlando Fonseca: implementação, implantação, teste, gerenciamento de produtos, gerenciamento de mudanças e ambientes.
+
+286
+00:34:00.780 --> 00:34:06.120
+Orlando Fonseca: Ok, pergunta para vocês.
+
+287
+00:34:08.070 --> 00:34:12.679
+Orlando Fonseca: Vamos votar aqui atrás nessa figura que não ficou boa, mas dá para ver.
+
+288
+00:34:13.940 --> 00:34:19.969
+Orlando Fonseca: Eu já falei para você que o Hoop era interativo, certo? O Hope é interativo incremental,
+
+289
+00:34:22.000 --> 00:34:23.820
+Orlando Fonseca: mas eu quero que você me fale.
+
+290
+00:34:25.090 --> 00:34:26.620
+Orlando Fonseca: É
+
+291
+00:34:31.380 --> 00:34:33.270
+Orlando Fonseca: ele. É um.
+
+292
+00:34:34.409 --> 00:34:36.130
+Orlando Fonseca: Vamos supor. Ele faz.
+
+293
+00:34:36.260 --> 00:34:45.439
+Orlando Fonseca: Vamos, ele primeiro faz toda a concessão até o final. Toda essa primeira etapa, toda essa primeira fase.
+
+294
+00:34:45.670 --> 00:34:50.890
+Orlando Fonseca: Depois ela faz toda a elaboração do projeto até o final.
+
+295
+00:34:51.199 --> 00:34:52.150
+Orlando Fonseca: Tá?
+
+296
+00:34:54.940 --> 00:35:01.570
+Orlando Fonseca: E assim vai com todas as fases. Verdadeiro ou falso, ele faz isso, entendido a pergunta.
+
+297
+00:35:05.840 --> 00:35:06.679
+Orlando Fonseca: Acho que sim.
+
+298
+00:35:08.410 --> 00:35:15.970
+Orlando Fonseca: Parece falta. Sim ou não, então ele faz. Ele faz? Ó, acabei a inserção. Acabei a elaboração toda.
+
+299
+00:35:16.750 --> 00:35:17.990
+Orlando Fonseca: Então, não, né?
+
+300
+00:35:19.290 --> 00:35:20.340
+Orlando Fonseca: Por quê?
+
+301
+00:35:22.060 --> 00:35:25.929
+Orlando Fonseca: Porque se não fosse também um cascata com incrementos,
+
+302
+00:35:26.650 --> 00:35:29.679
+Orlando Fonseca: a gente tem que ter um jeito de voltar atrás.
+
+303
+00:35:30.360 --> 00:35:35.599
+Orlando Fonseca: É literativo. Isso. Então, como é literativo? Muito bem, tá.
+
+304
+00:35:35.880 --> 00:35:38.510
+Orlando Fonseca: Vejam que cada face
+
+305
+00:35:39.630 --> 00:35:53.559
+Orlando Fonseca: tem uma ou mais interações, então, sim, a gente pode ir lá e refinar no requisito. Pode ir lá e colocar uma nova regra de negócio pode ir lá alterar, implementar. A gente pode estar no teste e fazer uma parte de implementação. Beleza.
+
+306
+00:35:53.940 --> 00:35:58.990
+Orlando Fonseca: Então não é cascata? Não, ele é interativo. A gente volta atrás e ele é incrementado.
+
+307
+00:36:00.250 --> 00:36:01.860
+Orlando Fonseca: Tá muito bem.
+
+308
+00:36:03.810 --> 00:36:05.879
+Orlando Fonseca: Mas tinha uma pergunta.
+
+309
+00:36:06.910 --> 00:36:09.050
+Orlando Fonseca: Mais uma pergunta.
+
+310
+00:36:10.240 --> 00:36:11.090
+Orlando Fonseca: E aí,
+
+311
+00:36:13.520 --> 00:36:22.969
+Orlando Fonseca: o que vocês acham de bom nesse exemplo? Aliás, o que vocês acham de bom de vantagem no incremental e no Hoop?
+
+312
+00:36:26.460 --> 00:36:29.260
+Orlando Fonseca: Você acha? Ah, tá bom, né? Bom, já falei, né?
+
+313
+00:36:30.840 --> 00:36:33.270
+Orlando Fonseca: A gente pôde voltar atrás. O que mais
+
+314
+00:36:40.130 --> 00:36:41.130
+Orlando Fonseca: ninguém
+
+315
+00:36:45.620 --> 00:36:58.120
+Orlando Fonseca: incrementar as entregas, passear isso aí para fazer o teste mais prático. Beleza o que disser, né? Para fazer essa parte do teste, que se tiver um erro, a gente não guarda até o final. O erro pode aparecer cedo.
+
+316
+00:36:58.210 --> 00:37:07.309
+Orlando Fonseca: Pareceu cedo porque o usuário tentou cedo. Também viu a gente tentou. Voltamos atrás, deu um erro aqui. Então é mais, né?
+
+317
+00:37:07.870 --> 00:37:12.659
+Orlando Fonseca: É mais flexível, beleza. Muito bem,
+
+318
+00:37:12.850 --> 00:37:18.259
+Orlando Fonseca: dá para usar o produto realmente antes de finalizar. Ele é todo. Dá para usar.
+
+319
+00:37:18.900 --> 00:37:25.899
+Orlando Fonseca: Não está concluído. Mas o que está implementado já dá para usar. Dá para ver. Dá para testar. Muito bem.
+
+320
+00:37:27.160 --> 00:37:37.020
+Orlando Fonseca: E o Hupp e vejam, o Hoop é muito organizado. Tá, aliás, demais.
+
+321
+00:37:37.900 --> 00:37:38.760
+Orlando Fonseca: Tá.
+
+322
+00:37:39.420 --> 00:37:42.760
+Orlando Fonseca: Desses modelos que estão aqui assim, na prática.
+
+323
+00:37:43.500 --> 00:37:49.300
+Orlando Fonseca: Enfim, arquiteto de soluções. Enfim, no meu trabalho, tá?
+
+324
+00:37:49.970 --> 00:37:55.639
+Orlando Fonseca: É da minha experiência. Tenho muito pouco
+
+325
+00:37:55.760 --> 00:38:00.909
+Orlando Fonseca: assim, muita pouca sorte de trabalhar, certamente no modelo Hope.
+
+326
+00:38:01.030 --> 00:38:07.550
+Orlando Fonseca: O que eu disse é isso, na verdade, falando aqui sinceramente com vocês, só trabalhei num único
+
+327
+00:38:08.600 --> 00:38:17.919
+Orlando Fonseca: sistema, seguindo essa metodologia, e foi uma abordagem proposital mais acadêmica para a gente ver como seria
+
+328
+00:38:18.240 --> 00:38:30.510
+Orlando Fonseca: trabalhar nesse modelo, tá, por quê? Porque como ele é muito organizado
+
+329
+00:38:30.890 --> 00:38:38.549
+Orlando Fonseca: demais. É uma vantagem. A organização é boa. A documentação é boa, mas ela é muito, não chama?
+
+330
+00:38:39.010 --> 00:38:43.250
+Orlando Fonseca: Pronto, é burocrático.
+
+331
+00:38:43.640 --> 00:38:45.480
+Orlando Fonseca: Muito burocrático.
+
+332
+00:38:45.780 --> 00:38:51.669
+Orlando Fonseca: Então, às vezes atrapalham um pouco, tá? Então ela tem sua vantagem em sua desvantagens.
+
+333
+00:38:53.150 --> 00:38:54.560
+Orlando Fonseca: Deixa eu ver com o Thiago.
+
+334
+00:38:55.510 --> 00:39:08.460
+Orlando Fonseca: Exige muita documentação, mas exige. Veja a primeira face, né? Esse requisito e demais é custo alto. É bom. Às vezes é bom ter a documentação certinho, mas às vezes tudo depende do projeto,
+
+335
+00:39:08.580 --> 00:39:09.490
+Orlando Fonseca: tá?
+
+336
+00:39:11.060 --> 00:39:15.420
+Orlando Fonseca: É beleza.
+
+337
+00:39:17.290 --> 00:39:18.910
+Orlando Fonseca: Deixa eu ver aqui o chá, né?
+
+338
+00:39:22.970 --> 00:39:35.370
+Orlando Fonseca: Ah, boa, João. Não falei isso. Não, não falei isso. Não, eu falei que a entrega do projeto de bloco. Ela pode ser feita,
+
+339
+00:39:35.600 --> 00:39:41.950
+Orlando Fonseca: ou seja, sozinho. Um integrante, dois integrantes ou três integrantes, no máximo.
+
+340
+00:39:42.300 --> 00:39:51.599
+Orlando Fonseca: Tá, mas cada Tp a entrega tem que ser feita de forma individual.
+
+341
+00:39:52.730 --> 00:40:00.650
+Orlando Fonseca: Tá e individual. Por quê? Porque o mundo ele faz, né?
+
+342
+00:40:00.940 --> 00:40:11.319
+Orlando Fonseca: De forma automática. Essa avaliação é de vocês. Se você. Vamos supor que tenha uma dupla, uma entregou e o outro não entregou o outro fica reprovado,
+
+343
+00:40:12.850 --> 00:40:14.800
+Orlando Fonseca: ok? De forma automática.
+
+344
+00:40:15.760 --> 00:40:17.129
+Orlando Fonseca: Oi, falado João.
+
+345
+00:40:18.370 --> 00:40:22.180
+João Victor Gasparoto: Beth, deixa eu reformular a minha pergunta
+
+346
+00:40:22.980 --> 00:40:42.700
+João Victor Gasparoto: para a questão da dúvida, a entrega do Tp. Tudo bem, eu entendi. Cada um tem que entregar a sua. Lógico para ter a própria nota. A dúvida minha é que, lá na entrega do trabalho, no entrega do trabalho final. Fala que esse trabalho. Não sei se fala exatamente assim, mas que o trabalho é com base nos Tps feitos,
+
+347
+00:40:43.000 --> 00:40:48.159
+João Victor Gasparoto: então vamos dizer a minha equipe. Eu fiz todos os Tps separados,
+
+348
+00:40:48.360 --> 00:40:51.689
+João Victor Gasparoto: e daí o último trabalho eu fiz junto com a minha equipe, entendeu?
+
+349
+00:40:51.690 --> 00:40:52.510
+Orlando Fonseca: Eu sou.
+
+350
+00:40:52.510 --> 00:41:00.489
+João Victor Gasparoto: Eu posso fazer todos os Tps juntos. A entrega, o trabalho junto com as pessoas e mais entregar cada um separado, né?
+
+351
+00:41:00.490 --> 00:41:03.290
+Orlando Fonseca: Junto.
+
+352
+00:41:03.640 --> 00:41:09.260
+Orlando Fonseca: Então vamos supor que eu tenha começando já o Tp um. O Tp um tem que ser feito já em equipe.
+
+353
+00:41:09.380 --> 00:41:17.630
+Orlando Fonseca: Então a entrega no mundo é o mesmo Pdf. Só que um até para deixar o mesmo Pdf com os dois nomes.
+
+354
+00:41:17.870 --> 00:41:22.789
+Orlando Fonseca: Falando em uma dupla, mas você não me enche o meu trabalho, entendido? Eu só não pude ficar o buraco no mundo.
+
+355
+00:41:23.820 --> 00:41:32.530
+Orlando Fonseca: Você trabalha no conjunto do Tp1 até o Tp5 você entrega o projeto, você se apresenta o projeto para mim.
+
+356
+00:41:33.120 --> 00:41:37.240
+Orlando Fonseca: E na entrega no mundo, cada um vai ter que entregar
+
+357
+00:41:37.880 --> 00:41:40.860
+Orlando Fonseca: o mesmo projeto, mas tem que fazer a entrega.
+
+358
+00:41:41.130 --> 00:41:42.109
+Orlando Fonseca: Tá bom?
+
+359
+00:41:43.220 --> 00:41:44.080
+Orlando Fonseca: Ok,
+
+360
+00:41:47.130 --> 00:41:56.189
+Orlando Fonseca: é muito bom. Então vamos voltar. Então me dá um minuto.
+
+361
+00:41:58.960 --> 00:41:59.920
+Orlando Fonseca: O celular.
+
+362
+00:42:14.320 --> 00:42:15.270
+Orlando Fonseca: Ok,
+
+363
+00:42:25.320 --> 00:42:29.029
+Orlando Fonseca: bom. Agora sim, pessoal, é um.
+
+364
+00:42:30.230 --> 00:42:38.469
+Orlando Fonseca: Vamos falar da mitologia ágil que muitos de vocês já provavelmente já usem. Eu acho bem bacana, isso, né? Certo,
+
+365
+00:42:40.300 --> 00:42:42.630
+Orlando Fonseca: por quê? Tá, vamos,
+
+366
+00:42:42.970 --> 00:42:55.340
+Orlando Fonseca: dá uma leitura. E agora vou ligar melhor a metodologia charge promove um ritmo sustentável de trabalho, evitando sobrecarga Burnout. Esse aqui é o primeiro slide, duas
+
+367
+00:42:55.850 --> 00:43:03.139
+Orlando Fonseca: colocar um equilíbrio entre rapidez e robusteio para que as entregas sejam ao mesmo tempo céleres, eficazes, sustentáveis. Enfim,
+
+368
+00:43:03.500 --> 00:43:11.430
+Orlando Fonseca: o que é dizer, isso? Pessoal, aqui tem muita palavra mais bonita, mas eu vou trazer isso de uma forma mais natural, tá?
+
+369
+00:43:11.910 --> 00:43:18.680
+Orlando Fonseca: Quando a gente. Bom, primeiro age numa metodologia. É uma cultura de trabalho.
+
+370
+00:43:19.320 --> 00:43:26.639
+Orlando Fonseca: Ok, o nome ásio no que disser
+
+371
+00:43:26.820 --> 00:43:30.190
+Orlando Fonseca: que a gente tenha que entregar o trabalho mais rápido
+
+372
+00:43:31.170 --> 00:43:36.119
+Orlando Fonseca: que a gente tenha mais rapidez na entrega. Sim, vai ter mais.
+
+373
+00:43:36.330 --> 00:43:44.330
+Orlando Fonseca: Isso é que eu tenho até mais rapidez comparar com outro modelo, tá, mas o nome não vem da agilidade no sentido de entregas rápidas.
+
+374
+00:43:44.450 --> 00:43:50.470
+Orlando Fonseca: Ele vem de ágil ali. O sentido de flexível.
+
+375
+00:43:51.070 --> 00:43:59.350
+Orlando Fonseca: O rápido vem de adaptar se rápido as mudanças do cliente, hã?
+
+376
+00:44:02.150 --> 00:44:09.790
+Orlando Fonseca: Então veja se eu tenho uma aqui. Eu tenho uma missão de como
+
+377
+00:44:10.390 --> 00:44:17.239
+Orlando Fonseca: de como o time do seu movimento deve se comportar. Vai ter algumas regras. Que é
+
+378
+00:44:17.890 --> 00:44:24.020
+Orlando Fonseca: que são flexíveis também. Mas a gente vai ter que seguir nessa metodologia ágil e por outra parte,
+
+379
+00:44:24.270 --> 00:44:34.709
+Orlando Fonseca: temos que o modelo incremental, colocando cada vez mais um incremento, dando valor ao usuário.
+
+380
+00:44:35.150 --> 00:44:37.649
+Orlando Fonseca: As duas connos combinadas são ótimas.
+
+381
+00:44:39.760 --> 00:44:49.970
+Orlando Fonseca: O age da cadência e o princípio da colaboração que fazem cada incremento, entregar valor real e orientar o próximo passo com base no aprendizado correto,
+
+382
+00:44:50.150 --> 00:44:55.640
+Orlando Fonseca: tá na metodologia ágil
+
+383
+00:44:56.600 --> 00:45:07.050
+Orlando Fonseca: como ela incremental. A ideia usa também as ideias de incrementar essa pequena Page que está sendo entregue.
+
+384
+00:45:07.180 --> 00:45:15.379
+Orlando Fonseca: Simples, é chamado de Mvp, o produto minimamente viável.
+
+385
+00:45:16.740 --> 00:45:22.439
+Orlando Fonseca: O que é dizer isso? Que estamos entregando? Um produto que o usuário
+
+386
+00:45:22.840 --> 00:45:28.879
+Orlando Fonseca: vai conseguir testar em uma parte funcional do meu sistema
+
+387
+00:45:29.880 --> 00:45:38.499
+Orlando Fonseca: para que eu quero isso? Porque eu quero que ele que o usuário tenha feedback tenha já normal quanto antes. Essa parte para ele
+
+388
+00:45:38.880 --> 00:45:40.830
+Orlando Fonseca: é, enfim,
+
+389
+00:45:41.340 --> 00:45:49.220
+Orlando Fonseca: ver alguns erros, ver se realmente foi feito. Foi implementado, certo? Se atende os requisitos que ele mesmo colocou.
+
+390
+00:45:49.650 --> 00:45:53.740
+Orlando Fonseca: Tá, tá bom.
+
+391
+00:45:55.210 --> 00:46:06.570
+Orlando Fonseca: Então veja, ó, quando falamos de metodologia ágil, o que estamos colocando
+
+392
+00:46:07.240 --> 00:46:10.390
+Orlando Fonseca: não é uma divisão por face tipo Hoop
+
+393
+00:46:11.390 --> 00:46:19.680
+Orlando Fonseca: ou o projeto tem que ser implementado. Assim, você precisa da inserção. Você precisa de uma fase de elaboração. Você precisa de uma fase média de
+
+394
+00:46:19.830 --> 00:46:31.090
+Orlando Fonseca: de construção. Você precisa respeitar essa disciplina. Ele está falando da construção do software. Metodologia ágil não fala de construção de software.
+
+395
+00:46:31.580 --> 00:46:37.029
+Orlando Fonseca: Sim, ele é o seu modelo incrementar. Mas se ele fala de como a equipe
+
+396
+00:46:37.420 --> 00:46:45.759
+Orlando Fonseca: vai se organizar para fazer o projeto, está vendo as duas diferenças? Enfim, já estou falando. Está vendo como funciona
+
+397
+00:46:46.210 --> 00:46:47.279
+Orlando Fonseca: uma com outra?
+
+398
+00:46:48.190 --> 00:46:49.110
+Orlando Fonseca: Tá bom.
+
+399
+00:46:49.220 --> 00:46:55.660
+Orlando Fonseca: Por exemplo, o screw que onde você já colocou aqui uma das
+
+400
+00:46:56.160 --> 00:47:01.669
+Orlando Fonseca: metodologia ságeis mais usadas agora, no momento, é o scrum.
+
+401
+00:47:02.780 --> 00:47:05.130
+Orlando Fonseca: Depois que você querem, eu dou mais.
+
+402
+00:47:05.260 --> 00:47:06.580
+Orlando Fonseca: É isso.
+
+403
+00:47:07.570 --> 00:47:17.730
+Orlando Fonseca: Eu coloco aqui minha experiência também. Trabalhando com metodologia ágica. Tem alguns salmos já nesse modelo. E na verdade, se eu falo para vocês como que a gente aplica a metodologia Ásia.
+
+404
+00:47:18.030 --> 00:47:21.490
+Orlando Fonseca: Você fala? Ah, produção. Mas isso aqui não é
+
+405
+00:47:22.330 --> 00:47:31.370
+Orlando Fonseca: como eu falo, não é? O que está ali na literatura? Não, a gente não. Só adaptação, metodologia e está tudo bem. Só na adaptação das cruz e está tudo bem,
+
+406
+00:47:31.570 --> 00:47:32.470
+Orlando Fonseca: tá,
+
+407
+00:47:33.380 --> 00:47:41.389
+Orlando Fonseca: mas vou falar para vocês. Ele organiza o trabalho. Por exemplo, ele tem uma organização também que tem que ser, né?
+
+408
+00:47:42.870 --> 00:47:50.459
+Orlando Fonseca: Se você vai na literatura. Tradicionalmente tem uma Daily. São aquelas reuniões que são diárias.
+
+409
+00:47:50.640 --> 00:47:51.560
+Orlando Fonseca: Tá bom.
+
+410
+00:47:51.960 --> 00:48:00.459
+Orlando Fonseca: Por exemplo, eu já trabalhei com dedicação diária no dia apresentado. Nesse momento, não temos mais dele qualquer. Enfim,
+
+411
+00:48:00.580 --> 00:48:08.899
+Orlando Fonseca: a gente acha seu projeto não é específico para o time em específico, não acha uma boa a gente faz cada dois dias e está tudo bem.
+
+412
+00:48:10.370 --> 00:48:11.010
+Orlando Fonseca: Tá
+
+413
+00:48:13.170 --> 00:48:20.569
+Orlando Fonseca: isso de quinze minutos. Beleza máximo, quinze minutos. Não quer dizer que seja quinze minutos ali, né? Pelo relógio
+
+414
+00:48:20.620 --> 00:48:34.700
+Orlando Fonseca: máximo de quinze minutos e passou demais. Por quê? Porque a reunião normalmente demora até trinta horas. Perdão, trinta minutos, quarenta e cinco minutos ali. Um clima de futebol. Ah, você viu? Já saiu da metodologia ágil.
+
+415
+00:48:36.350 --> 00:48:44.040
+Orlando Fonseca: Então acho que um organismo utilizando sprint utilizando retroativa.
+
+416
+00:48:44.870 --> 00:48:51.120
+Orlando Fonseca: Ele tem também aquele o Bucky Log, onde colocávamos nossas tarefas. Enfim,
+
+417
+00:48:51.390 --> 00:49:07.140
+Orlando Fonseca: tem uma organização. Ele está falando como que a gente tem que organizar para o andamento do projeto. Mas como a gente como time, tem que se organizar, e ele também tem uma hierarquia. Como mata. Tem como Peor. Enfim, tem algumas.
+
+418
+00:49:08.610 --> 00:49:13.580
+Orlando Fonseca: Alguns atores ali. Nessa metodologia também.
+
+419
+00:49:15.620 --> 00:49:20.340
+Orlando Fonseca: De novo, ele não fala como dividir o sistema módulo.
+
+420
+00:49:21.820 --> 00:49:26.600
+Orlando Fonseca: Ele diz como a pessoa tem que trabalhar para resolver.
+
+421
+00:49:28.150 --> 00:49:29.130
+Orlando Fonseca: Ok,
+
+422
+00:49:30.550 --> 00:49:36.870
+Orlando Fonseca: eu vou trazer agora um. Vamos ver essa imagem aqui antes de o exemplo que eu estou pensando aqui, vamos ver essa imagem
+
+423
+00:49:38.690 --> 00:49:42.859
+Orlando Fonseca: que está todo mundo aqui pensando nessa primeira que tem essa X em vermelho?
+
+424
+00:49:45.160 --> 00:49:52.739
+Orlando Fonseca: Um, dois, três, quatro. Veja, né? Desde que começou a implementação, vamos supor que seja a construção do produto seja esse tal
+
+425
+00:49:53.160 --> 00:49:54.880
+Orlando Fonseca: até chegar no carro.
+
+426
+00:49:55.430 --> 00:50:02.360
+Orlando Fonseca: Aqui o dois e o quatro pergunta para vocês. O primeiro
+
+427
+00:50:02.830 --> 00:50:06.829
+Orlando Fonseca: nesse primeiro nível, que tem esse nível em médio.
+
+428
+00:50:07.290 --> 00:50:12.280
+Orlando Fonseca: Ele que tem um skate, né? Skate. O dois
+
+429
+00:50:14.160 --> 00:50:17.900
+Orlando Fonseca: roda, né? Do carro, chás o teu carro, seu primeiro nível.
+
+430
+00:50:18.820 --> 00:50:22.179
+Orlando Fonseca: E lá estaria na mitologia ágil.
+
+431
+00:50:24.200 --> 00:50:25.490
+Orlando Fonseca: Essa representação
+
+432
+00:50:33.350 --> 00:50:42.300
+Orlando Fonseca: não tá beleza? Por que não? Porque isso aqui não. E a última. Sim, por exemplo.
+
+433
+00:50:45.520 --> 00:50:47.310
+Orlando Fonseca: Ah, porque.
+
+434
+00:50:50.970 --> 00:50:52.920
+Orlando Fonseca: Por que ela deixou aqui no chão?
+
+435
+00:50:53.820 --> 00:50:56.070
+Orlando Fonseca: Por conta do Mvp? Isso aí.
+
+436
+00:50:56.920 --> 00:50:59.769
+Orlando Fonseca: O usuário. O que queria o usuário? Queria um carro.
+
+437
+00:51:00.240 --> 00:51:08.660
+Orlando Fonseca: Veja aqui. Mas eu digo para ele uma queixa roda. Mas o que ele vai fazer com a roda? Com o chances do carro. Se ele não vai conseguir, se locomover, não vai conseguir
+
+438
+00:51:08.950 --> 00:51:10.170
+Orlando Fonseca: testar o carro.
+
+439
+00:51:11.430 --> 00:51:12.579
+Orlando Fonseca: Deixa eu ver aqui o chat.
+
+440
+00:51:13.680 --> 00:51:18.840
+Orlando Fonseca: Isso, perfeito. Requisito um carro. Não estou aí a gente tá andando. Veja, né? Eu entreguei
+
+441
+00:51:19.070 --> 00:51:21.820
+Orlando Fonseca: uma pequena página do projeto. Sim,
+
+442
+00:51:21.930 --> 00:51:25.549
+Orlando Fonseca: mas não está entregando o valor para ele.
+
+443
+00:51:25.710 --> 00:51:30.469
+Orlando Fonseca: Tudo bem. Aí a gente fez o chassi do carro. Mas beleza. Mas aí o que eu vou fazer com isso,
+
+444
+00:51:30.910 --> 00:51:32.099
+Orlando Fonseca: então, é claro,
+
+445
+00:51:32.360 --> 00:51:42.220
+Orlando Fonseca: tem importância. Mas não está entregando o valor para o cliente que ele queria. Já veio o carro? Sei lá como vem, né? Pelo menos fazer uma função com ele. Ele se promover com ele. Beleza,
+
+446
+00:51:43.050 --> 00:51:43.920
+Orlando Fonseca: tá,
+
+447
+00:51:45.030 --> 00:52:00.090
+Orlando Fonseca: então, pessoal, se o requisito for o carro realmente o quatro exemplo três é o que mais representa esse mínimo? Produto inviável. Esse Mvp. Por quê? Porque já entregou um carro.
+
+448
+00:52:01.010 --> 00:52:02.639
+Orlando Fonseca: Não é dos melhores.
+
+449
+00:52:03.220 --> 00:52:05.459
+Orlando Fonseca: Podia ser melhorado. Pode?
+
+450
+00:52:05.720 --> 00:52:10.650
+Orlando Fonseca: A gente vai ter que refinar. Vai ter que melhorar. Ele veja aqui. Ele sai de um carro, né?
+
+451
+00:52:11.600 --> 00:52:14.330
+Orlando Fonseca: Enfim, tá.
+
+452
+00:52:15.750 --> 00:52:32.459
+Orlando Fonseca: Não está de acordo, né? O que ele pediu, mas já funciona. Se a polícia é testada, assim a gente vai melhorando, né? Vamos colocando. Ah, mas agora veja, né? Vamos colocar mais uma página. Mas essa parte, esse incremento já está no sistema que está funcionando. Já tem ali o carro, né?
+
+453
+00:52:32.950 --> 00:52:35.500
+Orlando Fonseca: Até o final. Tem essa carona que você tá vendo aqui?
+
+454
+00:52:37.330 --> 00:52:38.290
+Orlando Fonseca: Tá bom,
+
+455
+00:52:41.390 --> 00:52:48.189
+Orlando Fonseca: o dois. Por que vocês acham que eu não seria uma metodologia ágil? Realmente esse aqui, meio né?
+
+456
+00:52:48.380 --> 00:52:56.490
+Orlando Fonseca: Deixa eu ver. Aqui fiz o repúgio, fiz o repúgio e fui de muita fogo.
+
+457
+00:52:56.720 --> 00:53:05.900
+Orlando Fonseca: Pois é também, né? Mas tem que entregar a valor. Tem que falar beleza, tá, mas eu vi. Estou testando. E tá certo. Agora vamos melhorar. Pois é.
+
+458
+00:53:06.520 --> 00:53:13.420
+Orlando Fonseca: E o atendimento mínimo de requisito. Pois, também. Atendimento mínimo. É um requisito. Sim, tá
+
+459
+00:53:16.930 --> 00:53:17.860
+Orlando Fonseca: tá bom.
+
+460
+00:53:19.630 --> 00:53:20.590
+Orlando Fonseca: É um.
+
+461
+00:53:22.020 --> 00:53:29.379
+Orlando Fonseca: Porque o dois não, não seria o Asimo aqui. Ela é.
+
+462
+00:53:29.940 --> 00:53:36.390
+Orlando Fonseca: Tem alguma pessoa que fala que sim. Alguns alunos nessa discussão passavam a. Falaram que sim, que poderia ser ágil,
+
+463
+00:53:37.810 --> 00:53:38.660
+Orlando Fonseca: não é?
+
+464
+00:53:38.990 --> 00:53:44.109
+Orlando Fonseca: Depende do que seria uma entrega de valor para o cliente.
+
+465
+00:53:44.580 --> 00:53:45.920
+Orlando Fonseca: Isso aí. A resposta
+
+466
+00:53:48.990 --> 00:53:52.990
+Orlando Fonseca: tá o que ele queria? Deixa eu ver. Aqui o chão.
+
+467
+00:53:54.780 --> 00:53:57.720
+Orlando Fonseca: Requisito de carros, entregou uma e o trampo. Isso.
+
+468
+00:53:57.890 --> 00:54:05.470
+Orlando Fonseca: V vai lá de Bisse. Vale para Dibice beleza.
+
+469
+00:54:06.340 --> 00:54:15.900
+Orlando Fonseca: Ah, então funcionou. Ele foi de a Tv, não foi o que ele pediu. Que ele sabe como ver. Mas conseguiu. Mas não
+
+470
+00:54:15.900 --> 00:54:27.650
+Orlando Fonseca: uma bicicleta um pouquinho melhor de repente, né? Sei lá, elétrica, uma moto até chegar no carro. Então ele variou muito
+
+471
+00:54:28.360 --> 00:54:29.590
+Orlando Fonseca: ali, né?
+
+472
+00:54:31.150 --> 00:54:40.030
+Orlando Fonseca: Que também é ruim. Pessoal, a metodologia ágil é flexível, mas se toda hora o senhor está mudando. O sistema não é bom, também não tá? Deixa isso claro.
+
+473
+00:54:40.340 --> 00:54:42.399
+Orlando Fonseca: Ela é flexível a mudar.
+
+474
+00:54:43.900 --> 00:54:50.770
+Orlando Fonseca: Vou fazer alteração de uma forma rápida, mas se muda, muda. Muda toda hora. Atrapalha beleza.
+
+475
+00:54:52.730 --> 00:54:53.850
+Orlando Fonseca: Muito bem.
+
+476
+00:54:54.340 --> 00:54:55.580
+Orlando Fonseca: E aí?
+
+477
+00:54:58.070 --> 00:55:00.960
+Orlando Fonseca: Eu ia falar para vocês como é, sempre se lembram? Aqui.
+
+478
+00:55:01.660 --> 00:55:02.550
+Orlando Fonseca: E aí.
+
+479
+00:55:03.760 --> 00:55:08.330
+Orlando Fonseca: Ah, o exemplo do livro, tá,
+
+480
+00:55:09.300 --> 00:55:14.989
+Orlando Fonseca: vamos supor que eu estou escrevendo um livro. Estou escrevendo um livro e fiz o capítulo um:
+
+481
+00:55:16.620 --> 00:55:18.960
+Orlando Fonseca: Beleza. Entreguei ali para.
+
+482
+00:55:20.800 --> 00:55:30.369
+Orlando Fonseca: Para alguém que está para o editor, para já ir colocando ou para alguém que gosta do meu livro. Um familiar. Vai lendo aí. Capítulo um. Fiz o capítulo dois.
+
+483
+00:55:30.720 --> 00:55:34.990
+Orlando Fonseca: Fiz o capítulo três e assim eu vou até finalizar o livro.
+
+484
+00:55:35.140 --> 00:55:37.390
+Orlando Fonseca: Então tá chegando o capitão no final. E acabou.
+
+485
+00:55:37.560 --> 00:55:39.669
+Orlando Fonseca: O que vocês acham que seria uma entrega aqui?
+
+486
+00:55:40.480 --> 00:55:47.880
+Orlando Fonseca: Essa entrega. Eu fiz ela seria o quê, ágil?
+
+487
+00:55:48.540 --> 00:55:55.880
+Orlando Fonseca: Pronto, é um pouco mais ali incremental.
+
+488
+00:56:03.920 --> 00:56:05.080
+Orlando Fonseca: O que você sabe?
+
+489
+00:56:07.780 --> 00:56:09.539
+Orlando Fonseca: Todo mundo entendeu o problema.
+
+490
+00:56:18.610 --> 00:56:27.510
+Orlando Fonseca: Tá? Então vou repetir se estou escrevendo um livro. Capítulo um, dois três, tá? Vou entregar no pra Game. Oh, vem aqui. Capítulo um:
+
+491
+00:56:27.990 --> 00:56:37.280
+Orlando Fonseca: se alguém está lendo, eu fiz o capítulo dois e entreguei. Capítulo três. Entreguei capítulo quatro. Entreguei capítulo cinco, entreguei. Eu vou fazendo, fazendo, fazendo até chegar no final
+
+492
+00:56:37.750 --> 00:56:45.720
+Orlando Fonseca: e pronto. Fiz o livro. Ele estaria mais no modelo incremental, né? Porque perdeu essa tipo. Assim, esse.
+
+493
+00:56:46.890 --> 00:56:54.400
+Orlando Fonseca: Essa troca com o usuário tão importante na mitologia, que ele é farol para fazer o projeto. Você tem ali
+
+494
+00:56:54.770 --> 00:57:01.299
+Orlando Fonseca: que deixa eu ver aqui. Ó, você tem que
+
+495
+00:57:01.850 --> 00:57:05.510
+Orlando Fonseca: que priorizar, por exemplo, o cliente.
+
+496
+00:57:06.180 --> 00:57:13.680
+Orlando Fonseca: Ok, então veja o que diferente seria se o tivesse construído. O capítulo um, tá
+
+497
+00:57:14.660 --> 00:57:29.450
+Orlando Fonseca: entrego o capítulo dois. Entrego. Só que, como a gente está na metodologia ágil e o cliente está colaborando com a gente porque não tem sentido também estar na metodologia ágil. E não tem nenhum feedback, tá? Não tem sentido, também não.
+
+498
+00:57:31.050 --> 00:57:35.770
+Orlando Fonseca: E no capítulo dois ou três, né? Não sei. Capítulo dois ou três.
+
+499
+00:57:36.760 --> 00:57:43.870
+Orlando Fonseca: Aí teve um feedback desse usuário do leitor que falou. Olha, sabe o que é? Eu gostei dessa personagem?
+
+500
+00:57:44.330 --> 00:57:45.609
+Orlando Fonseca: O que eu vou fazer.
+
+501
+00:57:45.910 --> 00:57:49.519
+Orlando Fonseca: Eu estou já fazendo o capítulo quatro. Eu falei: Ah, gostou?
+
+502
+00:57:50.030 --> 00:57:50.820
+Orlando Fonseca: Tá,
+
+503
+00:57:51.370 --> 00:57:57.070
+Orlando Fonseca: então é o seguinte. Vamos supor que seja uma pessoa. Só posso fazer sete com três ou quatro leitores
+
+504
+00:57:57.220 --> 00:58:05.249
+Orlando Fonseca: ali de teste. Eu falei: Ah, tá botando essa personagem. Então vou colocar no capítulo quatro, mas
+
+505
+00:58:05.820 --> 00:58:12.469
+Orlando Fonseca: mais participação desse personagem. Tá beleza então ali, que eu vou colocar muito,
+
+506
+00:58:13.120 --> 00:58:28.510
+Orlando Fonseca: muitas interações com ele. Vou escrever mais sobre esse personagem porque o pessoal está gostando dele. Então, o que eu fiz? Eu adaptei o capítulo quatro que já estava quase feito. Para o quê? Porque o pessoal, todo mundo está gostando dessa personagem. Vou colocar,
+
+507
+00:58:28.630 --> 00:58:35.489
+Orlando Fonseca: se alguém tivesse falar, mas tudo bem. Mas agora o último capítulo não ficou mais um jeito, sei lá,
+
+508
+00:58:36.160 --> 00:58:44.830
+Orlando Fonseca: diferente ou muito longo. Aí eu vou ajustando, dependendo do que o senhor está falando. Esse aí seria perfeitamente uma metodologia ásica.
+
+509
+00:58:46.440 --> 00:58:49.910
+Orlando Fonseca: Tá beleza?
+
+510
+00:58:51.330 --> 00:59:03.780
+Orlando Fonseca: Vamos conhecer agora, já como você tem a ideia? Vamos conhecer os princípios dessa metodologia. Ele foi inspirado no manifesto. Age de dois mil e um. Por quê? Porque na época, veja, em dois mil e um,
+
+511
+00:59:04.180 --> 00:59:06.599
+Orlando Fonseca: até o momento, posso falar até um momento aí,
+
+512
+00:59:07.640 --> 00:59:10.870
+Orlando Fonseca: naquela época, pessoal, dois mil e um,
+
+513
+00:59:12.130 --> 00:59:23.249
+Orlando Fonseca: o que mais era usado no modelo cascata, né? Nesse momento, eu só estava bem restringido na sua parte mais sequencial e, bom, teve essa reunião
+
+514
+00:59:24.140 --> 00:59:31.470
+Orlando Fonseca: de pesquisadores na época, e é ele.
+
+515
+00:59:33.010 --> 00:59:37.430
+Orlando Fonseca: Bom, inauguraram um documento onde prioriza
+
+516
+00:59:37.890 --> 00:59:43.950
+Orlando Fonseca: alguns aspectos, alguns pontos sobre outros, por exemplo.
+
+517
+00:59:45.270 --> 00:59:59.520
+Orlando Fonseca: Ok, tá, indivíduos e interações, indivíduos e interações. Tá a gente tem que priorizar mais que processos e ferramentas,
+
+518
+01:00:01.560 --> 01:00:02.470
+Orlando Fonseca: tá?
+
+519
+01:00:03.190 --> 01:00:05.440
+Orlando Fonseca: A gente tem que priorizar mais.
+
+520
+01:00:06.310 --> 01:00:07.380
+Orlando Fonseca: O quê?
+
+521
+01:00:09.700 --> 01:00:11.519
+Orlando Fonseca: Dá mais valor
+
+522
+01:00:11.830 --> 01:00:20.090
+Orlando Fonseca: porque o cliente, essa retroalimentação com o cliente dá mais valor que fazer uma documentação extensa abrangente.
+
+523
+01:00:21.000 --> 01:00:30.610
+Orlando Fonseca: Ok, então não fica dependendo muito de uma documentação muito pesada. Muito bem feita desde o início.
+
+524
+01:00:30.840 --> 01:00:41.409
+Orlando Fonseca: Por quê? Porque o usuário pode mudar. Vamos ser flexíveis. Vamos usar esse feedback em tempo real. Vamos adaptar nosso produto
+
+525
+01:00:41.790 --> 01:00:52.019
+Orlando Fonseca: a metodologia age. Quer trazer o cliente como um parceiro quando eu falo cliente. Estou falando do Po, né? Aquele que representa o cliente, uma pessoa,
+
+526
+01:00:52.150 --> 01:00:52.830
+Orlando Fonseca: enfim,
+
+527
+01:00:53.390 --> 01:01:04.820
+Orlando Fonseca: que vai representar o cliente. Eu quero trazer ele para o nosso mundo, esse momento para me explicar tudo certinho para colocar o negócio, para validar o aumento do projeto, ou seja, que está certo que está entregando o valor
+
+528
+01:01:05.760 --> 01:01:12.269
+Orlando Fonseca: para dar uma prioridade também na tarefa que está surgindo. Aquela que tem mais valor para ele.
+
+529
+01:01:12.440 --> 01:01:13.350
+Orlando Fonseca: Ok,
+
+530
+01:01:16.860 --> 01:01:19.000
+Orlando Fonseca: tá, é um.
+
+531
+01:01:22.110 --> 01:01:27.400
+Orlando Fonseca: Antes de falar do requisito, né? Que já vocês sabem. Aí a gente finaliza essa aula. Não está faltando muito. Não
+
+532
+01:01:28.560 --> 01:01:33.059
+Orlando Fonseca: vamos responder a pergunta, né?
+
+533
+01:01:34.400 --> 01:01:37.450
+Orlando Fonseca: Que eu tinha colocado aqui para vocês.
+
+534
+01:01:37.700 --> 01:01:39.820
+Orlando Fonseca: Veja, se você conseguir chegar agora
+
+535
+01:01:39.940 --> 01:01:44.590
+Orlando Fonseca: a diferença entre o modelo incremental e a metodologia ágil.
+
+536
+01:01:47.930 --> 01:01:52.860
+Orlando Fonseca: Eu já falei que ele não compreende, hã?
+
+537
+01:01:53.940 --> 01:02:07.210
+Orlando Fonseca: Por que não compete? Porque se olharmos o modelo scrooge, o scrum faz ela se springe tá,
+
+538
+01:02:07.930 --> 01:02:14.429
+Orlando Fonseca: e cada uma dessas sprint tem um incremento do produto.
+
+539
+01:02:15.160 --> 01:02:17.290
+Orlando Fonseca: Então ela está competindo.
+
+540
+01:02:17.990 --> 01:02:20.760
+Orlando Fonseca: Mas quais seria a diferença? Uma com a outra?
+
+541
+01:02:24.000 --> 01:02:28.410
+Orlando Fonseca: Veja se ficou claro agora, tá tudo bem. Quero trabalhar em conjunto.
+
+542
+01:02:28.670 --> 01:02:33.349
+Orlando Fonseca: Guardem poxa o Sar assim para te incrementar. Tudo bem.
+
+543
+01:02:34.120 --> 01:02:35.480
+Orlando Fonseca: O que a diferencia?
+
+544
+01:02:42.890 --> 01:02:43.930
+Orlando Fonseca: Ninguém
+
+545
+01:02:57.570 --> 01:03:01.100
+Orlando Fonseca: não entendeu a diferença? Beleza. Só que eu queria escutar.
+
+546
+01:03:02.630 --> 01:03:11.330
+Orlando Fonseca: E vou falar para vocês a diferença, tá? Ó primeiro, eles não são concorrentes.
+
+547
+01:03:12.110 --> 01:03:14.400
+Orlando Fonseca: Quer dizer, nós somos ecluente uma da outra.
+
+548
+01:03:14.820 --> 01:03:22.939
+Orlando Fonseca: Você pode utilizar uma metodologia ágil, porque se for Krume Crohn já trabalha com incremento. Porque se ele é incrementar.
+
+549
+01:03:23.710 --> 01:03:35.420
+Orlando Fonseca: Toda vez que a gente faz uma interação no final de interação, vamos ter um Mp que é um produto minimamente viável, que ele é um incremento. Então tá. As duas, Van. Uma do lado da outra.
+
+550
+01:03:38.770 --> 01:03:46.040
+Orlando Fonseca: Perfeito, Luís. Isso aí. Vejam que o incremental está voltado ao processo.
+
+551
+01:03:46.810 --> 01:03:50.790
+Orlando Fonseca: Muito bom, o que de ser voltado ao processo
+
+552
+01:03:51.050 --> 01:03:57.900
+Orlando Fonseca: que ele a incrementar o hupe, o que for. Se não for, age, né?
+
+553
+01:03:58.040 --> 01:04:06.730
+Orlando Fonseca: Essas metodologias organizam o desenvolvimento do software, o processo do software.
+
+554
+01:04:07.040 --> 01:04:14.710
+Orlando Fonseca: Ele organiza isso. Lembra o Hupp como que organiza tudo com disciplina. Como vai ser essa construção do software?
+
+555
+01:04:15.040 --> 01:04:23.379
+Orlando Fonseca: Tá, a cacata também está incrementado. Também tem uma organização. Tem uma etapa,
+
+556
+01:04:23.700 --> 01:04:27.450
+Orlando Fonseca: tá, não é esse requisito texto, implementação, sei lá o que for
+
+557
+01:04:28.020 --> 01:04:37.120
+Orlando Fonseca: incremental tem isso tem uma organização como que o projeto tem que ser feito agora, a mitologia ágil
+
+558
+01:04:37.250 --> 01:04:42.990
+Orlando Fonseca: não está falando disso. Tá tudo bem que ela use ela usa incremental
+
+559
+01:04:43.580 --> 01:04:51.799
+Orlando Fonseca: ali embaixo dos Paro vai ter que fazer isso, né? Essa partida incremental. Mas quando fala da Metologia ágil,
+
+560
+01:04:51.960 --> 01:05:02.260
+Orlando Fonseca: o que ela responde realmente é como a equipe vai trabalhar, tá beleza
+
+561
+01:05:04.020 --> 01:05:05.710
+Orlando Fonseca: como que a equipe vai trabalhar.
+
+562
+01:05:05.860 --> 01:05:07.130
+Orlando Fonseca: Beleza, olha
+
+563
+01:05:07.150 --> 01:05:16.750
+Orlando Fonseca: para a equipe trabalhar. Bem, você precisa fazer uma reunião diária. Está vendo a diferença para a equipe trabalhar bem e fazer essas entregas de valor.
+
+564
+01:05:16.750 --> 01:05:29.550
+Orlando Fonseca: Você precisa colocar uma interação curta. Vamos chamar ela de springe. Vamos fazer uma reunião de retrospetiva, vamos organizar tarefas. Vamos colocar numa lista de tarefas. Vamos criar aquelas histórias de usuários.
+
+565
+01:05:30.320 --> 01:05:36.979
+Orlando Fonseca: E, além disso, vamos ter, né? Vamos fazer. Essa retroalimentação com o cliente. Tá vendo?
+
+566
+01:05:37.100 --> 01:05:45.140
+Orlando Fonseca: Ele está organizando o meu trabalho. Como que seria essa interação com o cliente? O foco é o cliente agora
+
+567
+01:05:46.640 --> 01:05:57.150
+Orlando Fonseca: tá muito menos documentação, beleza, entendido? Agora fechou.
+
+568
+01:06:00.120 --> 01:06:04.300
+Orlando Fonseca: Muito bem, então, requisitos
+
+569
+01:06:06.370 --> 01:06:14.649
+Orlando Fonseca: como eu já falei para vocês, tanto na carcata como no modelo incrementado, como no Hoop. Tem essa faixa de requisitos porque orienta como um software, tem que ser construído.
+
+570
+01:06:14.710 --> 01:06:29.520
+Orlando Fonseca: E essa primeira fase é fundamental até. Olhe, até na Age, a gente tem levantamento de requisito beleza. Só que com esse nível de a gente não vai aprimorar muito nesse nível de detalhe. Não temos isso. Não
+
+571
+01:06:30.130 --> 01:06:36.900
+Orlando Fonseca: repente temos algum para a gente começar a trabalhar, mas vamos refinar eles tá, mas exercício também ali.
+
+572
+01:06:38.770 --> 01:06:44.080
+Orlando Fonseca: Então ali identificamos, documentámos, gerenciamos necessidades do cliente.
+
+573
+01:06:44.200 --> 01:06:45.109
+Orlando Fonseca: Tá bom?
+
+574
+01:06:45.580 --> 01:06:51.550
+Orlando Fonseca: Os requisitos descrevem o que o sistema deve fazer e como deve ser, hã?
+
+575
+01:06:55.460 --> 01:07:04.889
+Orlando Fonseca: Então precisamos transformar o material bruto, porque nessa primeira fase da concessão. Sim, tudo bem. A gente fez entrevista,
+
+576
+01:07:05.040 --> 01:07:10.090
+Orlando Fonseca: documento, formulário, tudo isso para entender o que realmente o cliente quer.
+
+577
+01:07:10.360 --> 01:07:13.559
+Orlando Fonseca: E quais seriam as regras do negócio.
+
+578
+01:07:14.200 --> 01:07:18.060
+Orlando Fonseca: A partir dali, vamos ter uma lista de requisitos,
+
+579
+01:07:18.760 --> 01:07:22.690
+Orlando Fonseca: documento que vai transformar tudo que foi coletado.
+
+580
+01:07:23.020 --> 01:07:33.650
+Orlando Fonseca: Tudo bem, claro, o baquilong do produto vai organizar esse requisito vai colocar aquela história do usuário. Vai dar uma prioridade para essas história do usuário.
+
+581
+01:07:34.420 --> 01:07:35.270
+Orlando Fonseca: Tá
+
+582
+01:07:37.060 --> 01:07:48.059
+Orlando Fonseca: e diagramas de casos de uso. Também pode ser uma variante que oferece uma visão visual das interações principais entre atores e sistemas.
+
+583
+01:07:48.670 --> 01:07:51.279
+Orlando Fonseca: Ok, diagrama de caça de uso.
+
+584
+01:07:51.470 --> 01:07:53.540
+Orlando Fonseca: Eu vou ensinar a você como fazer,
+
+585
+01:07:54.540 --> 01:08:02.930
+Orlando Fonseca: ok? Por quê? Porque é um dos pontos que está sendo cobrado em alguns Tpms. Realmente o Tp dois de vocês.
+
+586
+01:08:03.370 --> 01:08:06.699
+Orlando Fonseca: Você vai ter que fazer a medicação de uso do sistema.
+
+587
+01:08:08.650 --> 01:08:09.590
+Orlando Fonseca: E aí
+
+588
+01:08:11.280 --> 01:08:19.419
+Orlando Fonseca: os artefatos seriam o que o modelo de casa de uso. Ele vai descrever os requisitos funcionais do sistema.
+
+589
+01:08:20.140 --> 01:08:26.480
+Orlando Fonseca: São aquelas que representam funções, valor, né? Tipo assim, ó, quero fazer uma.
+
+590
+01:08:26.830 --> 01:08:31.290
+Orlando Fonseca: Vamos fazer um gerenciamento de token. Vamos fazer essa parte da caixa.
+
+591
+01:08:32.020 --> 01:08:34.840
+Orlando Fonseca: Então vamos fazer um relatório. Funcionais
+
+592
+01:08:36.040 --> 01:08:41.339
+Orlando Fonseca: especificações suplementares descrevem outros requisitos não funcionais.
+
+593
+01:08:43.529 --> 01:08:45.349
+Orlando Fonseca: Você vai dar tempo a sala toda, né?
+
+594
+01:08:46.340 --> 01:08:53.230
+Orlando Fonseca: Outro requisito a não funcionar. O que é dizer isso? Ah, de repente, quando o senhor fala assim. Olha, mas eu queria que.
+
+595
+01:08:54.310 --> 01:09:04.270
+Orlando Fonseca: Eu queria que quando fazendo uma determinada consulta, isso aqui não demora mais de três segundos,
+
+596
+01:09:04.950 --> 01:09:07.780
+Orlando Fonseca: ok, eu quero que essa interface aqui seja.
+
+597
+01:09:09.120 --> 01:09:17.360
+Orlando Fonseca: Eu vou colocar entre aspas, tá? Porque não é muito mensurável. Fácil de usar. Tá um pouquinho mais amigável beleza
+
+598
+01:09:18.290 --> 01:09:20.689
+Orlando Fonseca: a partir da segurança também.
+
+599
+01:09:21.260 --> 01:09:22.960
+Orlando Fonseca: Então, o glossário
+
+600
+01:09:24.330 --> 01:09:32.730
+Orlando Fonseca: veja como seria os artefactos. Vamos ter um glossário. Por quê? Porque ali vamos ter que definir quais são todas as terminologias que vamos usar no software,
+
+601
+01:09:33.260 --> 01:09:40.329
+Orlando Fonseca: como eu falei para você na primeira aula. Se todo mundo está falando de item. Esse item não é produto. Se estamos falando de estoque,
+
+602
+01:09:40.600 --> 01:09:50.419
+Orlando Fonseca: por exemplo, estamos falando no estoque de item. Tem um vocabulário específico que o pessoal do negócio tem que
+
+603
+01:09:51.370 --> 01:09:55.940
+Orlando Fonseca: tem que falar. Igual ao personagem que está no desenvolvimento.
+
+604
+01:09:56.630 --> 01:10:00.049
+Orlando Fonseca: É a mesma linguagem, cliente, desenvolvimento
+
+605
+01:10:00.220 --> 01:10:01.789
+Orlando Fonseca: e o time vai ser bom momento.
+
+606
+01:10:01.920 --> 01:10:07.369
+Orlando Fonseca: Tá bom, bom. Uma missão.
+
+607
+01:10:08.150 --> 01:10:12.440
+Orlando Fonseca: São todos os casos de negócio do projeto. Enfim, regras de negócio.
+
+608
+01:10:12.740 --> 01:10:18.410
+Orlando Fonseca: Tá bom, então, pessoal importante, essa parte do requisito é a qualidade deles.
+
+609
+01:10:19.250 --> 01:10:24.270
+Orlando Fonseca: Então ele tem que ser interpretada da mesma forma, tanto pelo
+
+610
+01:10:25.460 --> 01:10:32.330
+Orlando Fonseca: pelo pessoal que vai implementar tanto como o pessoal. Que vai fazer o teste? Se estiverem em Times separados.
+
+611
+01:10:32.910 --> 01:10:37.769
+Orlando Fonseca: Tem que ser consistente não pode ser contradiz entre eles.
+
+612
+01:10:38.430 --> 01:10:42.550
+Orlando Fonseca: Tem que ser testável, tá?
+
+613
+01:10:42.680 --> 01:10:44.360
+Orlando Fonseca: E priorizados.
+
+614
+01:10:46.130 --> 01:10:50.799
+Orlando Fonseca: Claro que, se vamos desenvolver o requisitos, temos que sempre priorizar aqueles que gera mais valor.
+
+615
+01:10:51.130 --> 01:10:58.960
+Orlando Fonseca: Essa definição está sendo definida ali. A priorização pelo representante do cliente
+
+616
+01:11:02.800 --> 01:11:09.090
+Orlando Fonseca: beleza, eu não quero que você confunda o valor com a
+
+617
+01:11:09.810 --> 01:11:18.660
+Orlando Fonseca: complexidade em fazer essa tarefa. São duas coisas diferentes. Valor: eu, que entrego ali um.
+
+618
+01:11:19.010 --> 01:11:25.619
+Orlando Fonseca: Essa entrega para o cliente que está vendo ele acontecer, o sistema acontecer, que ele está tendo um.
+
+619
+01:11:26.410 --> 01:11:31.340
+Orlando Fonseca: Enfim, ele vai dar um feedback de satisfatório ou não, se ele realmente o que queria. Isso é um valor,
+
+620
+01:11:32.530 --> 01:11:40.109
+Orlando Fonseca: e o outro seria a cumplicidade de eu como desenvolvedor, fazer uma determinada tarefa. Por isso que fazer essa parte
+
+621
+01:11:40.350 --> 01:11:45.379
+Orlando Fonseca: da do login como você, que tenha uma complexidade alta.
+
+622
+01:11:46.080 --> 01:11:49.020
+Orlando Fonseca: Tá entendido?
+
+623
+01:11:49.330 --> 01:11:54.550
+Orlando Fonseca: Então veja a diferença entre o valor para o cliente e a complexidade que ela tem.
+
+624
+01:11:57.150 --> 01:11:58.980
+Orlando Fonseca: Quais são os problemas dos requisitos?
+
+625
+01:12:01.040 --> 01:12:04.869
+Orlando Fonseca: Como eu já falei para vocês. Se a senhora começa a mudar muito. Esse é um problema.
+
+626
+01:12:05.190 --> 01:12:13.490
+Orlando Fonseca: A metodologia age. Aceita, mas que ele aceita, não quer dizer que seja um, hã?
+
+627
+01:12:14.730 --> 01:12:23.929
+Orlando Fonseca: Você tem que também ter um senso ali para não ter essa mudança toda hora de requisitos, senão vai atrapalhar o projeto. Sim, mesmo estando na mitologia ágil,
+
+628
+01:12:24.770 --> 01:12:25.660
+Orlando Fonseca: tá
+
+629
+01:12:26.250 --> 01:12:40.380
+Orlando Fonseca: diferença na compreensão de temas entre esse moeda, clientes e usuários. Por isso eu falei que todo mundo tem que ficar ciente do que está sendo falado no requisito tanto o mundo tem que interpretar ele da mesma forma. Esse moedor, clientes e usuários,
+
+630
+01:12:40.620 --> 01:12:55.629
+Orlando Fonseca: a ambiguidade, requisitos de forma vaga, por isso que seja só uma sentença, mas não na hora de implementar, de analisar. Ele está faltando. Está faltando detalhe para a gente ir em frente. Contradições nas especificações.
+
+631
+01:12:55.780 --> 01:13:01.079
+Orlando Fonseca: Por exemplo, hã, More Than.
+
+632
+01:13:02.790 --> 01:13:05.159
+Orlando Fonseca: Veja esse conflito simples.
+
+633
+01:13:05.450 --> 01:13:12.389
+Orlando Fonseca: Isso não, é simples, né? Eu coloquei simples aqui porque está um do lado do outro. Mas às vezes ele vem dentro de um conjunto de requisitos e fica mais
+
+634
+01:13:13.090 --> 01:13:18.739
+Orlando Fonseca: difícil de achar, né? Num primeiro momento, essa contradição, veja, requisita um
+
+635
+01:13:19.590 --> 01:13:28.070
+Orlando Fonseca: exige que o estoque de um produto nunca seja inferior ao mínimo para garantir que o produto esteja sempre disponível para o cliente.
+
+636
+01:13:29.360 --> 01:13:34.810
+Orlando Fonseca: Então você quer dizer que ele não pode ser inferior ao mínimo. Ele sempre ter que ser maior.
+
+637
+01:13:36.300 --> 01:13:38.400
+Orlando Fonseca: Tá maior que esse mínimo.
+
+638
+01:13:39.170 --> 01:13:49.590
+Orlando Fonseca: E o dois está falando. Reduzir os custos de estoque, mantendo o estoque mais baixo possível para evitar despesas adicionais. E aí
+
+639
+01:13:50.030 --> 01:13:54.789
+Orlando Fonseca: não está falando que. Olha, não posso ficar sem um produto.
+
+640
+01:13:55.160 --> 01:14:00.150
+Orlando Fonseca: Não estou aqui. Tem que sempre ter uma capacidade, tem que ter uma quantidade mínima aí.
+
+641
+01:14:00.650 --> 01:14:11.899
+Orlando Fonseca: Deixa produto, porque eu não posso ficar sem ele. E o dois tá falando, ó, reduzem o custo aí do estoque. Deixa uma faixa possível. Não quero despesa adicional e aí vamos fazer o quê?
+
+642
+01:14:15.440 --> 01:14:16.370
+Orlando Fonseca: Tá bom.
+
+643
+01:14:17.380 --> 01:14:20.289
+Orlando Fonseca: É contraditório. Está faltando mais algum dado?
+
+644
+01:14:20.520 --> 01:14:25.910
+Orlando Fonseca: Vou dar um detalhes nele, tá?
+
+645
+01:14:26.880 --> 01:14:31.399
+Orlando Fonseca: A gente faz o um faz o dois, a gente pacifica o menor. Esses requisitos
+
+646
+01:14:31.790 --> 01:14:35.419
+Orlando Fonseca: deixa como sendo um só, especificando.
+
+647
+01:14:35.870 --> 01:14:36.760
+Orlando Fonseca: Tá?
+
+648
+01:14:38.260 --> 01:14:42.010
+Orlando Fonseca: O mínimo é esse. Aqui tá esse número e.
+
+649
+01:14:42.770 --> 01:14:47.190
+Orlando Fonseca: Mas não pode reduzir o estoque menor desse mínimo.
+
+650
+01:14:48.720 --> 01:14:53.740
+Orlando Fonseca: Tá faltando detalhe eles dois para separado. Quando a gente vê eles, ele entra em contradição.
+
+651
+01:14:54.860 --> 01:15:07.170
+Orlando Fonseca: Ok, show o E Ml pessoal, o que é de seu Ml? O Ml é linguagem de modelagem unificada.
+
+652
+01:15:07.770 --> 01:15:10.389
+Orlando Fonseca: É uma linguagem visual.
+
+653
+01:15:10.820 --> 01:15:23.160
+Orlando Fonseca: Que temos para especificar, construir e documentar todos os artefatos do sistema. Quer dizer, os requisitos funcionais, até as interações, enfim, tudo
+
+654
+01:15:23.960 --> 01:15:28.009
+Orlando Fonseca: fazer tudo com o e mail. A representação das classes das entidades
+
+655
+01:15:28.140 --> 01:15:38.629
+Orlando Fonseca: fornece uma anotação comum, permitindo criar modelos na linguagem do público alvo e documentar as informações de forma padronizada.
+
+656
+01:15:38.880 --> 01:15:40.740
+Orlando Fonseca: Vou fazer um parênteses aqui.
+
+657
+01:15:40.940 --> 01:15:43.240
+Orlando Fonseca: Televisual intou.
+
+658
+01:15:43.450 --> 01:15:47.860
+Orlando Fonseca: O objetivo dela é simplificar o entendimento.
+
+659
+01:15:49.320 --> 01:15:50.180
+Orlando Fonseca: Ok,
+
+660
+01:15:50.790 --> 01:15:56.940
+Orlando Fonseca: então só quer dizer que o público ave aqueles usuários. Ele vai entender esse diagrama. Tá, beleza? Você vai com diagrama.
+
+661
+01:15:57.230 --> 01:16:02.890
+Orlando Fonseca: Isso aí é uma representação visual. É um bonequinho. Uma setinha. Dá para ver.
+
+662
+01:16:03.080 --> 01:16:08.409
+Orlando Fonseca: Mas no mesmo tempo, o time que vai desenvolver também também ajuda.
+
+663
+01:16:09.190 --> 01:16:12.880
+Orlando Fonseca: Ele não precisa. De repente,
+
+664
+01:16:14.450 --> 01:16:25.349
+Orlando Fonseca: você precisa ler se a documentação tá? O requisito. Mas você não precisa revisitar esse requisito o tempo todo. Se você tem do lado dessa documentação do requisito você tem do lado
+
+665
+01:16:25.890 --> 01:16:32.890
+Orlando Fonseca: ou do sistema como um todo. Um diagrama de Castro de luxo, por exemplo, tá, se você tem uma figura
+
+666
+01:16:33.100 --> 01:16:38.980
+Orlando Fonseca: que já dá para vocês. Esse relacionamento dá para você quais seriam essas funções e tudo mais ajuda.
+
+667
+01:16:39.940 --> 01:16:44.749
+Orlando Fonseca: Então é um recurso que temos para entender o requisitos
+
+668
+01:16:44.950 --> 01:16:50.419
+Orlando Fonseca: para a gente ver. Uma solução para documentar de forma consistente.
+
+669
+01:16:51.910 --> 01:17:01.580
+Orlando Fonseca: Ok, ferramenta. Olha, essa imagem nessa idade está meio crítica, mas tudo bem, hãs,
+
+670
+01:17:02.180 --> 01:17:20.589
+Orlando Fonseca: como vamos trabalhar bastante fazendo o Ml? Vamos, de classe de interação de sequência. Enfim, o que dê tempo nesse projeto de bloco. Eu vou ver, né? Dependendo da turma, eu vou colocando alguns que são obrigatórias e outras que são opcionais. Aí vamos valorando, né? Ao longo das aulas.
+
+671
+01:17:21.670 --> 01:17:22.780
+Orlando Fonseca: É um.
+
+672
+01:17:26.050 --> 01:17:33.679
+Orlando Fonseca: Tem alguma ferramenta pessoal que são ferramentas que são boas ferramentas.
+
+673
+01:17:34.040 --> 01:17:38.360
+Orlando Fonseca: Ela trabalha como ml para você fazer essa representação visual.
+
+674
+01:17:38.560 --> 01:17:41.979
+Orlando Fonseca: E tem algumas dela que são pagas.
+
+675
+01:17:42.750 --> 01:17:52.090
+Orlando Fonseca: Tá, tem essa aqui que é modelo, tem o hashtag que a gente usa bastante, né? Moderna, diagrama,
+
+676
+01:17:53.500 --> 01:17:59.179
+Orlando Fonseca: beleza. Essas duas são exemplos de pagas. Tem alguns recursos que são pagas, outras não.
+
+677
+01:18:01.040 --> 01:18:10.390
+Orlando Fonseca: Mas nesse curso aqui, você pode fazer essa modelagem fazendo no drau, e o sem problema nenhum
+
+678
+01:18:11.880 --> 01:18:23.039
+Orlando Fonseca: tem um recurso. Agora a gente usa na ferramenta de agenerativa que já gera nesse diagrama para a gente, vou ensinar para você como fazer também.
+
+679
+01:18:23.270 --> 01:18:30.660
+Orlando Fonseca: Só colocando alguns códigos já era fácil. A representação tá.
+
+680
+01:18:31.110 --> 01:18:33.489
+Orlando Fonseca: Pode isso aí também, Pedro. Pode ser também,
+
+681
+01:18:33.720 --> 01:18:50.919
+Orlando Fonseca: mas estou falando aqui. Eu não vou cobrar de vocês o uso da ferramenta, essa que eu declaro nessa aula. Você pode usar qualquer uma paga de graça, o que for, eu não vou cobrar de vocês essa ferramenta.
+
+682
+01:18:51.330 --> 01:18:57.990
+Orlando Fonseca: Eu vou cobrar de vocês o diagrama. Entendido? Tanto assim que se vocês querem,
+
+683
+01:18:58.180 --> 01:19:06.549
+Orlando Fonseca: coloque em uma folha de papel, tá? Você faça o tegram no folha de papel, tira o print e me envia e eu vou aceitar, se estiver correto
+
+684
+01:19:07.130 --> 01:19:09.989
+Orlando Fonseca: e dizer que a ferramenta para mim,
+
+685
+01:19:10.720 --> 01:19:18.829
+Orlando Fonseca: só pra facilitar, tá? Porque já vem prontinho. Já vem a cetinha já vem, né? Vem coisas prontas.
+
+686
+01:19:19.400 --> 01:19:31.229
+Orlando Fonseca: O Dragon decide. Então tem um monte de ferramentas. Fiquem livres de colher. Uma que você tem a familiaridade porque já tem, já, né? Enfim, os
+
+687
+01:19:32.150 --> 01:19:40.490
+Orlando Fonseca: já tem. Os elementos que vamos colocar no diagrama já estão pronto. Você não perde tempo em desenhar e tem um
+
+688
+01:19:40.590 --> 01:19:50.070
+Orlando Fonseca: que só via coisa. Já faz o diagrama também para vocês. E depois, de forma interativa, vai mudando. Vou mostrar também. Você colhe uma e avança,
+
+689
+01:19:51.710 --> 01:19:52.600
+Orlando Fonseca: tá?
+
+690
+01:19:52.990 --> 01:19:58.790
+Orlando Fonseca: O único requisito, se é porque estou sendo flexível com vocês.
+
+691
+01:19:58.900 --> 01:20:01.679
+Orlando Fonseca: O único requisito é recolher entre chave e sejá
+
+692
+01:20:02.970 --> 01:20:06.210
+Orlando Fonseca: essa Sim, tem que ser essas dois,
+
+693
+01:20:06.320 --> 01:20:16.080
+Orlando Fonseca: tá? No momento de implementar o projeto, são uma, duas já você chama tá beleza, pessoal,
+
+694
+01:20:21.240 --> 01:20:25.129
+Orlando Fonseca: ressalva, ficou claro.
+
+695
+01:20:26.230 --> 01:20:30.810
+Orlando Fonseca: Entendido, tranquilazo, né?
+
+696
+01:20:31.110 --> 01:20:32.330
+Orlando Fonseca: Tá bom, pessoal.
+
+697
+01:20:32.560 --> 01:20:35.770
+Orlando Fonseca: Então é um tranquilo muito bom.
+
+698
+01:20:37.360 --> 01:20:39.809
+Orlando Fonseca: Então é isso. Próxima aula.
+
+699
+01:20:40.790 --> 01:20:44.880
+Orlando Fonseca: Vamos continuar falando, de eu acho.
+
+700
+01:20:46.390 --> 01:20:53.630
+Orlando Fonseca: O que seriam esses? Diagrama tranquilo, tranquila, tá bom, né?
+
+701
+01:20:55.250 --> 01:21:01.270
+Orlando Fonseca: Deixa eu ver aqui, ó, o próximo.
+
+702
+01:21:03.500 --> 01:21:05.739
+Orlando Fonseca: A Engenharia requisita tudo de caça.
+
+703
+01:21:08.860 --> 01:21:12.999
+Orlando Fonseca: Essa é a próxima para te compartilhar.
+
+704
+01:21:14.770 --> 01:21:17.780
+Orlando Fonseca: É, e aí?
+
+705
+01:21:20.270 --> 01:21:25.570
+Orlando Fonseca: Ah, desculpa. Quais seria esse diagrama? Então, só um diagrama. Si,
+
+706
+01:21:25.900 --> 01:21:32.790
+Orlando Fonseca: vamos estudar. Sim, já. Provavelmente na próxima aula, já o diagrama de casos de uso. Vamos ter que colocar quais seriam
+
+707
+01:21:33.060 --> 01:21:51.390
+Orlando Fonseca: relacionamentos entre essas classes relacionais, tá?
+
+708
+01:21:51.860 --> 01:22:01.800
+Orlando Fonseca: E alguns outros, mas é tudo visual. Porque você está fazendo essa primeira parte. O forte, esse projeto de bloco é a parte da implementação.
+
+709
+01:22:02.030 --> 01:22:05.159
+Orlando Fonseca: Perdão a partir da documentação, tá? Você vai
+
+710
+01:22:05.410 --> 01:22:12.419
+Orlando Fonseca: fazer um requisito. Você vai ter que colocar quase uma casa de uso. Você vai ter que fazer um dicionário de dados
+
+711
+01:22:12.590 --> 01:22:15.709
+Orlando Fonseca: vai ter que modelar
+
+712
+01:22:16.080 --> 01:22:22.670
+Orlando Fonseca: utilizando todo esse diagrama que eu vou ensinar para vocês. E no final, até a parte da implementação.
+
+713
+01:22:23.010 --> 01:22:23.840
+Orlando Fonseca: Tá
+
+714
+01:22:28.760 --> 01:22:37.409
+Orlando Fonseca: tá bom, então fiquem tranquilo, porque vamos trabalhar bastante diagrama.
+
+715
+01:22:37.540 --> 01:22:42.620
+Orlando Fonseca: Vou explicar aos poucos como fazer. Quero que você tenha habilidade fazendo isso.
+
+716
+01:22:43.300 --> 01:22:49.020
+Orlando Fonseca: E no final preto de bloco, vou cobrar de vocês pelo menos quatro, cinco de gramas. Vamos ver, tá?
+
+717
+01:22:49.820 --> 01:22:57.520
+Orlando Fonseca: Que isso. Tô aprendendo aqui bastante com vocês, né? Tranquilíssimo. Nossa Senhora tá até difícil de ir para o mundo. Certo,
+
+718
+01:22:58.170 --> 01:23:05.930
+Orlando Fonseca: mas tá bom, pessoal eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee tá tá bom boa noite. Pra vocês e aguardo então
+
+719
+01:23:06.170 --> 01:23:11.000
+Orlando Fonseca: na próxima quarta para continuar falando de um
+
+720
+01:23:11.110 --> 01:23:15.050
+Orlando Fonseca: maquinhante de forma geral, essa parte da pretensificação. Tá bom, valeu.
+

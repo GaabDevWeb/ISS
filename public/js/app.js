@@ -45,6 +45,7 @@ function initHome() {
   const searchResultsEl = document.getElementById('search-results');
   const trimesterBtn1 = document.getElementById('iss-trimester-1');
   const trimesterBtn2 = document.getElementById('iss-trimester-2');
+  const trimesterBtn3 = document.getElementById('iss-trimester-3');
   const trimesterBtnBoth = document.getElementById('iss-trimester-both');
   const mainEl = document.querySelector('main');
   if (!grid) return;
@@ -105,14 +106,19 @@ function initHome() {
   const TRIMESTER_STORAGE_KEY = 'iss_home_trimester';
   const BOTH_VALUE = 'both';
 
+  function normalizeTrimesterNumber(n) {
+    const v = Number(n);
+    if (v === 1 || v === 2 || v === 3) return v;
+    return 3;
+  }
+
   function getDisciplineTrimesters(discipline) {
     const t = discipline && discipline.trimester;
     if (Array.isArray(t)) {
-      const out = t.map((x) => Number(x)).filter((n) => n === 1 || n === 2);
-      return out.length > 0 ? out : [1];
+      const out = t.map((x) => Number(x)).filter((n) => n === 1 || n === 2 || n === 3);
+      return out.length > 0 ? out : [3];
     }
-    const n = Number(t);
-    return [n === 2 ? 2 : 1];
+    return [normalizeTrimesterNumber(t)];
   }
 
   function readSelectedTrimester() {
@@ -121,11 +127,12 @@ function initHome() {
     })();
     if (raw === BOTH_VALUE) return BOTH_VALUE;
     const n = Number(raw);
-    return n === 1 ? 1 : 2;
+    if (n === 1 || n === 2 || n === 3) return n;
+    return 3;
   }
 
   function setSelectedTrimester(v) {
-    const next = v === BOTH_VALUE ? BOTH_VALUE : (Number(v) === 2 ? 2 : 1);
+    const next = v === BOTH_VALUE ? BOTH_VALUE : normalizeTrimesterNumber(v);
     try { localStorage.setItem(TRIMESTER_STORAGE_KEY, String(next)); } catch {}
     return next;
   }
@@ -133,24 +140,20 @@ function initHome() {
   let selectedTrimester = readSelectedTrimester();
 
   function updateTrimesterButtons() {
-    if (trimesterBtn1) {
-      const active = selectedTrimester === 1;
-      trimesterBtn1.setAttribute('aria-pressed', active ? 'true' : 'false');
-      trimesterBtn1.classList.toggle('bg-black/5', active);
-      trimesterBtn1.classList.toggle('dark:bg-white/5', active);
-    }
-    if (trimesterBtn2) {
-      const active = selectedTrimester === 2;
-      trimesterBtn2.setAttribute('aria-pressed', active ? 'true' : 'false');
-      trimesterBtn2.classList.toggle('bg-black/5', active);
-      trimesterBtn2.classList.toggle('dark:bg-white/5', active);
-    }
-    if (trimesterBtnBoth) {
-      const active = selectedTrimester === BOTH_VALUE;
-      trimesterBtnBoth.setAttribute('aria-pressed', active ? 'true' : 'false');
-      trimesterBtnBoth.classList.toggle('bg-black/5', active);
-      trimesterBtnBoth.classList.toggle('dark:bg-white/5', active);
-    }
+    [
+      [trimesterBtn1, 1],
+      [trimesterBtn2, 2],
+      [trimesterBtn3, 3],
+      [trimesterBtnBoth, BOTH_VALUE],
+    ].forEach(function (pair) {
+      const btn = pair[0];
+      const value = pair[1];
+      if (!btn) return;
+      const active = selectedTrimester === value;
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      btn.classList.toggle('bg-black/5', active);
+      btn.classList.toggle('dark:bg-white/5', active);
+    });
 
     grid.classList.toggle('iss-home-cards__grid--both', selectedTrimester === BOTH_VALUE);
     if (mainEl) mainEl.classList.toggle('iss-home-main--both', selectedTrimester === BOTH_VALUE);
@@ -171,7 +174,7 @@ function initHome() {
 
   function filterDisciplinesByTrimester(disciplines, trimester) {
     if (trimester === BOTH_VALUE) return Array.isArray(disciplines) ? disciplines : [];
-    const t = Number(trimester) === 2 ? 2 : 1;
+    const t = normalizeTrimesterNumber(trimester);
     return (Array.isArray(disciplines) ? disciplines : []).filter((d) => getDisciplineTrimesters(d).includes(t));
   }
 
@@ -459,7 +462,7 @@ function initHome() {
         if (!btn) return;
         btn.addEventListener('click', function () {
           const raw = String(btn.getAttribute('data-trimester') || '');
-          const next = raw === BOTH_VALUE ? BOTH_VALUE : (Number(raw) === 2 ? 2 : 1);
+          const next = raw === BOTH_VALUE ? BOTH_VALUE : normalizeTrimesterNumber(raw);
           if (selectedTrimester === next) return;
           selectedTrimester = setSelectedTrimester(next);
           updateTrimesterButtons();
@@ -473,6 +476,7 @@ function initHome() {
       }
       bindTrimester(trimesterBtn1);
       bindTrimester(trimesterBtn2);
+      bindTrimester(trimesterBtn3);
       bindTrimester(trimesterBtnBoth);
     })
     .catch((err) => {

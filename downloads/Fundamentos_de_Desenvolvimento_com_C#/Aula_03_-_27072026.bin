@@ -1,0 +1,2578 @@
+WEBVTT
+
+1
+00:00:10.220 --> 00:00:11.939
+Rafael Cruz: Boa noite, pessoal. Tudo bem.
+
+2
+00:00:15.860 --> 00:00:16.799
+helio.oliveira: Boa noite, Professor.
+
+3
+00:00:16.800 --> 00:00:18.110
+José Antonio: Noite, Professor.
+
+4
+00:00:18.110 --> 00:00:19.750
+Rafael Cruz: Boa noite, pessoal.
+
+5
+00:00:34.420 --> 00:00:36.110
+Rafael Cruz: Boa noite. Boa noite a todos.
+
+6
+00:00:38.750 --> 00:00:39.430
+Rafael Cruz: E aí,
+
+7
+00:00:44.980 --> 00:00:54.089
+Rafael Cruz: pessoal? A gente já vai começar. Tô esperando um pouquinho aqui, pelo menos dá mais cinco minutinhos para a gente entrar. A gente vai falar sobre Strings. Hoje vamos falar um pouquinho, sobre
+
+8
+00:00:55.900 --> 00:01:00.459
+Rafael Cruz: falar sobre String. Vamos falar sobre variáveis. Também vamos falar sobre aves de verdade.
+
+9
+00:01:00.890 --> 00:01:04.310
+Rafael Cruz: Então o nosso objetivo hoje, aí,
+
+10
+00:01:04.830 --> 00:01:17.010
+Rafael Cruz: que a gente entre nos conceitos fundamentais aqui do C. Sharp, principalmente quando a gente está falando manipulação de String, quando a gente está falando. Operadores aritméticos,
+
+11
+00:01:17.250 --> 00:01:21.060
+Rafael Cruz: quando a gente está falando nos operadores lógicos, por exemplo.
+
+12
+00:01:21.300 --> 00:01:30.500
+Rafael Cruz: Pelo menos a gente vai entrar aí, pelo menos nesses capítulos. Aí tá
+
+13
+00:01:31.740 --> 00:01:36.370
+Rafael Cruz: que é basicamente mais o que a gente está falando já na etapa ali, né?
+
+14
+00:01:36.540 --> 00:01:47.599
+Rafael Cruz: Etapa dois, ali. Então. Tp dois, principalmente manipulação de dados, controle de fluxo, entrada de usuário e afins que a gente já vai começar dando uma olhada hoje. A nossa missão é essa.
+
+15
+00:01:48.490 --> 00:01:56.360
+Rafael Cruz: Amanhã. Aí eu passo uma lista de exercícios sobre manipulação de string operadores básicos.
+
+16
+00:01:56.660 --> 00:01:59.859
+Rafael Cruz: É para que a gente consiga
+
+17
+00:02:00.980 --> 00:02:03.439
+Rafael Cruz: entender e diminuir um pouquinho. Aqui.
+
+18
+00:02:03.670 --> 00:02:10.079
+Rafael Cruz: Nossa curva de aprendizado. Vou dar alguns exemplos hoje aqui, então acredito aqui que
+
+19
+00:02:10.259 --> 00:02:15.120
+Rafael Cruz: que a gente vai avançar muito nos conceitos. Eu vou disponibilizar também a questão do
+
+20
+00:02:16.600 --> 00:02:18.839
+Rafael Cruz: do slide no final da aula, né?
+
+21
+00:02:19.170 --> 00:02:27.230
+Rafael Cruz: A gente vai entrar em conceitos desde mais básicos até um pouco mais avançados. Aí amanhã a gente trabalha
+
+22
+00:02:27.350 --> 00:02:34.020
+Rafael Cruz: um pouquinho mais ali na a. Gente trabalha um pouquinho mais ali
+
+23
+00:02:34.170 --> 00:02:36.380
+Rafael Cruz: para fixar esses conceitos. Tá bom,
+
+24
+00:02:45.620 --> 00:02:47.069
+Rafael Cruz: terminando aqui. Diego,
+
+25
+00:02:52.130 --> 00:02:53.380
+Rafael Cruz: a gente já começa.
+
+26
+00:04:01.860 --> 00:04:02.970
+Rafael Cruz: E aqui minha tela
+
+27
+00:04:35.730 --> 00:04:39.360
+Rafael Cruz: vai rolar uma correção da lista de exercícios que a gente passou
+
+28
+00:04:40.130 --> 00:04:44.550
+Rafael Cruz: deixa eu dar o conteúdo aqui, aí eu corrijo a lista. Não tem problema. Não
+
+29
+00:04:45.660 --> 00:04:51.770
+Rafael Cruz: quero só fazer esse conteúdo aqui antes da gente começar, tá aí? Eu corrijo aqui a lista anterior aqui no final da aula.
+
+30
+00:05:01.860 --> 00:05:03.310
+Rafael Cruz: Deixa eu compartilhar aqui na tela.
+
+31
+00:05:09.130 --> 00:05:10.220
+Rafael Cruz: Estão vendo aí.
+
+32
+00:05:14.980 --> 00:05:15.590
+lucas.ssantos: Sim.
+
+33
+00:05:16.740 --> 00:05:17.370
+gabriel.diniz: Sim.
+
+34
+00:05:18.580 --> 00:05:19.190
+Rafael Cruz: Tchau.
+
+35
+00:05:28.330 --> 00:05:36.529
+Rafael Cruz: Vamos lá, pessoal. Vamos falar um pouquinho sobre os básicos. Os comandos básicos. Ali a gente vai entrar nos comandos um pouquinho mais essenciais.
+
+36
+00:05:37.520 --> 00:05:39.639
+Rafael Cruz: Falando um pouquinho sobre ser Sharp, tá?
+
+37
+00:05:40.130 --> 00:05:48.459
+Rafael Cruz: Então a gente já sabe. Vamos fazer só uma recapitalização. C. Sharp foi criado ali pelo Anders Heisenberg.
+
+38
+00:05:48.590 --> 00:05:57.229
+Rafael Cruz: Que Reaisberg, né? Reaisberg. Lá na Microsoft, ele foi muito inspirado ali no Java, no C, mais como ele é lembrança, né?
+
+39
+00:05:57.550 --> 00:06:04.439
+Rafael Cruz: E o Anders, na verdade, foi o criador da linguagem Delphi, para quem já é da área ou conhece um pouquinho.
+
+40
+00:06:04.580 --> 00:06:14.629
+Rafael Cruz: Ele foi um dos criadores da linguagem Delphi, que era no caso da Borland. Ele era um funcionário da Borland e aí, Microsoft deu um caminhão de dinheiro para ele, para ele criar o C. Sharp.
+
+41
+00:06:15.060 --> 00:06:21.220
+Rafael Cruz: Então, a ideia aqui que o C Sharp faz parte de um ecossistema.
+
+42
+00:06:23.580 --> 00:06:28.809
+Rafael Cruz: Opa, tem alguma coisa errada aqui. Então, na minha compartilhamento, deixa eu compartilhar aqui de novo.
+
+43
+00:06:32.190 --> 00:06:33.940
+Rafael Cruz: E agora está vendo aqui
+
+44
+00:06:39.760 --> 00:06:43.259
+Rafael Cruz: mudou aqui. O slide mudou o slide.
+
+45
+00:06:44.400 --> 00:06:45.659
+Rafael Cruz: Beleza foi.
+
+46
+00:06:46.410 --> 00:06:53.839
+Rafael Cruz: É o C Sharp. Faz parte de um ecossistema, que é o no ponto net,
+
+47
+00:06:54.180 --> 00:07:03.709
+Rafael Cruz: que é a linguagem que a gente conecta ali. As aplicações desktop Web Mobile Nuven, uma única plataforma.
+
+48
+00:07:03.860 --> 00:07:14.309
+Rafael Cruz: Então, hoje, o C. Sharp é uma das linguagens mais utilizadas ali no mundo tem uma comunidade muito ativa e diversos
+
+49
+00:07:15.130 --> 00:07:19.949
+Rafael Cruz: novas fitures, que vai surgindo ao longo do tempo ali da Microsoft
+
+50
+00:07:25.110 --> 00:07:27.939
+Rafael Cruz: tem uma história que o C veio primeiro.
+
+51
+00:07:28.080 --> 00:07:35.769
+Rafael Cruz: E que o C mais seria uma evolução do C e o C. Sharp seria de ser mais, mais
+
+52
+00:07:36.700 --> 00:07:42.529
+Rafael Cruz: que seria quatro, formando mais o quanto que isso será verdade
+
+53
+00:07:46.760 --> 00:07:48.550
+Rafael Cruz: é, vamos lá. O C.
+
+54
+00:07:49.720 --> 00:07:52.909
+Rafael Cruz: Ele foi criado basicamente ali.
+
+55
+00:07:54.580 --> 00:08:01.120
+Rafael Cruz: Qual é o ponto? Vamos contar um pouquinho dessas histórias, porque as histórias são legais. De a gente entender.
+
+56
+00:08:01.230 --> 00:08:04.010
+Rafael Cruz: Quando a gente foi, criou o ser.
+
+57
+00:08:05.930 --> 00:08:09.600
+Rafael Cruz: Existiam algumas linguagens de programação muito baixo nível,
+
+58
+00:08:09.800 --> 00:08:14.860
+Rafael Cruz: principalmente que a gente estava falando ali em torno de assembleia,
+
+59
+00:08:15.100 --> 00:08:23.060
+Rafael Cruz: que era linguagens muito básicas no nível. Basicamente, tu conversava com a máquina, né? Então era muito complicado você programar.
+
+60
+00:08:24.330 --> 00:08:29.619
+Rafael Cruz: E aí o ser foi criado
+
+61
+00:08:30.370 --> 00:08:40.539
+Rafael Cruz: pro Dennis. Denis. Caramba, qual o nome dele, cara, eu tô com é, deixou
+
+62
+00:08:43.669 --> 00:08:47.039
+Rafael Cruz: me lembrar o nome do cara aqui. Linguagem C,
+
+63
+00:08:50.970 --> 00:08:52.230
+Rafael Cruz: Dance Rich.
+
+64
+00:08:53.330 --> 00:09:02.119
+Rafael Cruz: Ele foi criado por um Dennis Rich. Cara, hoje em dia a gente só tem um computador do jeito que a gente tem até toda a tecnologia do jeito que a gente tem
+
+65
+00:09:02.440 --> 00:09:04.860
+Rafael Cruz: por causa desse sujeito chamado Danny Rich.
+
+66
+00:09:05.480 --> 00:09:15.230
+Rafael Cruz: Ele criou o C. Tudo que a gente utiliza hoje, cara. Desde Mobile Web, computadores, cara, graças ao C. Até hoje, tem muita coisa em C
+
+67
+00:09:15.530 --> 00:09:19.279
+Rafael Cruz: e ser. É a base de qualquer tipo de
+
+68
+00:09:20.190 --> 00:09:26.570
+Rafael Cruz: dispositivo que a gente tá falando, cara. A geladeira que você tá colocando ali, apertando o botão para aquela
+
+69
+00:09:26.970 --> 00:09:31.870
+Rafael Cruz: escureça, ou ela fica mais gelada ou menos gelada. Ela é feita em seco.
+
+70
+00:09:32.560 --> 00:09:41.990
+Rafael Cruz: Então o selo é universal e ele é feito para ser. É uma linguagem que para conversar com hardware.
+
+71
+00:09:42.340 --> 00:09:47.510
+Rafael Cruz: Só que no problema do Sec, era uma linguagem estrutural.
+
+72
+00:09:48.640 --> 00:09:58.209
+Rafael Cruz: E aí fizeram uma extensão do ser que era o ser mais, mais.
+
+73
+00:09:59.210 --> 00:10:06.970
+Rafael Cruz: Você é, mais, mais, nada mais é de você ter ocê. Com tomando bomba. Vamos botar assim com mais
+
+74
+00:10:08.800 --> 00:10:14.310
+Rafael Cruz: capacidade é um ser bombado.
+
+75
+00:10:15.140 --> 00:10:24.089
+Rafael Cruz: Então o C, mais nada mais. É ali que uma extensão do C continua no C das suas capacidades
+
+76
+00:10:24.670 --> 00:10:32.630
+Rafael Cruz: aí sobre o C. Sharp que tem ali, o que seria evolução? Na verdade, ele não foi a evolução do C. Mais
+
+77
+00:10:32.740 --> 00:10:35.290
+Rafael Cruz: existia essa história, realmente,
+
+78
+00:10:35.620 --> 00:10:49.150
+Rafael Cruz: que seria a evolução do C mais. Mas conceitualmente, não é a evolução do C mais, o C. Sharp veio ali realmente pela Microsoft. Para questão de Market Share,
+
+79
+00:10:49.320 --> 00:10:55.460
+Rafael Cruz: Microsoft estava perdendo espaço em torno do ecossistema de desenvolvimento, principalmente para a Delphi,
+
+80
+00:10:55.660 --> 00:11:02.009
+Rafael Cruz: que era na Borland. Era empresa e, principalmente, com o crescimento do Java, que era na época, era da Sam.
+
+81
+00:11:02.320 --> 00:11:16.210
+Rafael Cruz: Então a Microsoft, para não ficar para trás. Ele criou uma linguagem nova, baseada em C, que era a linguagem que basicamente todo mundo estava utilizando. Sabia utilizar que era java ser mais Javascript na época também. Que estava surgindo.
+
+82
+00:11:16.550 --> 00:11:23.769
+Rafael Cruz: E surgiu o C. Sharp, que foi uma linguagem moderna para rivalizar basicamente com o Java.
+
+83
+00:11:24.200 --> 00:11:33.159
+Rafael Cruz: Então ele não é uma evolução do C, mas basicamente a Microsoft queria rivalizar com Java, Data, que ele estava perdendo muito espaço de desenvolvimento.
+
+84
+00:11:33.570 --> 00:11:37.920
+Rafael Cruz: Beleza. Agora, sobre o Sharp ali.
+
+85
+00:11:38.550 --> 00:11:40.210
+Rafael Cruz: O sustenido ali.
+
+86
+00:11:40.770 --> 00:11:51.020
+Rafael Cruz: Essa história é verdadeira. Tá? Quando foi criado ali o C. Sharp. Ele falou: Pô beleza. Mas como que a gente vai colocar? Como que vai ser o símbolo do C. Sharp?
+
+87
+00:11:51.130 --> 00:11:53.850
+Rafael Cruz: Eles colocaram quatro mais
+
+88
+00:11:56.030 --> 00:12:07.540
+Rafael Cruz: e acabou fornando sustenido. E aí surgiu o C. Sharp ali, com esse jogo da velha e o tralha que a galera fala, tá bom, essa é a história, basicamente do C. Sharp.
+
+89
+00:12:10.460 --> 00:12:13.410
+Rafael Cruz: Então, pessoal, é.
+
+90
+00:12:17.330 --> 00:12:26.019
+Rafael Cruz: Não, não era Fake news? Não, isso era realmente verdade. Tá, mas ele não é uma evolução do C. Mais, ele realmente veio para rivalizar com o Java.
+
+91
+00:12:28.310 --> 00:12:30.890
+Rafael Cruz: Hoje em dia, é uma linguagem
+
+92
+00:12:31.170 --> 00:12:38.890
+Rafael Cruz: extremamente mais usadas ali da nível global. É a quinta mais utilizada ali. Tá a nível global.
+
+93
+00:12:40.120 --> 00:12:42.479
+Rafael Cruz: Então ainda tem muita relevância
+
+94
+00:12:46.920 --> 00:12:54.779
+Rafael Cruz: cara com o nosso primeiro contato que a gente viu na última aula era a gente ver o nosso console White Line. Mais uma estrutura
+
+95
+00:12:55.060 --> 00:13:00.609
+Rafael Cruz: de um programa C. Sharp. Ele é formado por essa estrutura aqui.
+
+96
+00:13:01.120 --> 00:13:06.379
+Rafael Cruz: A estrutura mínima é o que a gente utiliza na primeira linha. O System.
+
+97
+00:13:06.810 --> 00:13:15.680
+Rafael Cruz: Ele vai importar as classes para que a gente consiga escrever menos código.
+
+98
+00:13:15.860 --> 00:13:25.840
+Rafael Cruz: Por exemplo, console Wright Line. Se eu não importar, o System que está aqui. Eu vou ter que escrever System console Wright Line. Vou ter que escrever o nome todo.
+
+99
+00:13:26.220 --> 00:13:29.930
+Rafael Cruz: Então, se isto tem aqui é basicamente o importe dos pacotes.
+
+100
+00:13:30.300 --> 00:13:32.450
+Rafael Cruz: O Nam Space que a gente,
+
+101
+00:13:33.690 --> 00:13:38.089
+Rafael Cruz: esse Memespace. O que é o Namespace? Ele vai organizar teu código em módulos.
+
+102
+00:13:39.140 --> 00:13:44.310
+Rafael Cruz: E o Main é o ponto de entrada de todo o programa C Sharp.
+
+103
+00:13:44.620 --> 00:13:48.639
+Rafael Cruz: Então sempre vou ter um Static Voidman,
+
+104
+00:13:48.920 --> 00:13:53.249
+Rafael Cruz: que é sempre o nosso ponto de entrada do nosso programa.
+
+105
+00:13:53.910 --> 00:13:59.350
+Rafael Cruz: Então, quando a gente está utilizando C. Sharp, isso aqui, em modo clássico,
+
+106
+00:13:59.510 --> 00:14:02.119
+Rafael Cruz: ele vai ter essa estrutura aqui.
+
+107
+00:14:03.260 --> 00:14:10.860
+Rafael Cruz: O System, o Namespace e o ponto de entrada que é o Stetic Voidman Beleza.
+
+108
+00:14:11.620 --> 00:14:15.410
+Rafael Cruz: Então esse é o mínimo que a gente vai ter dos nossos programas.
+
+109
+00:14:20.980 --> 00:14:29.599
+Rafael Cruz: E aí, pessoal, vamos fazer os elementos fundamentais que a gente tem aqui. Para a gente entender o que é variáveis, o que são tipos, o que é uma constante
+
+110
+00:14:30.470 --> 00:14:37.550
+Rafael Cruz: estrutura que sustenta ali qualquer tipo de programa, cara, você para programar isso é Sharp. Você tem que saber no mínimo. Isso aí,
+
+111
+00:14:38.010 --> 00:14:40.129
+Rafael Cruz: né? É,
+
+112
+00:14:52.950 --> 00:15:00.360
+Rafael Cruz: sim, exatamente. Hoje em dia, o C. Sharp e Java tem muitas similaridades ali, principalmente.
+
+113
+00:15:00.620 --> 00:15:03.550
+Rafael Cruz: Mas o grande pro do gato
+
+114
+00:15:03.700 --> 00:15:07.240
+Rafael Cruz: foi a Microsoft ali fazer multiplataforma com Network
+
+115
+00:15:07.640 --> 00:15:10.470
+Rafael Cruz: ela rodar em todos os sistemas operacionais
+
+116
+00:15:10.750 --> 00:15:22.839
+Rafael Cruz: que aí começou a rivalizar ali, junto com a Oracle. Então, hoje, o C. Sharp ali tem uma artista muito grande ali, principalmente em empresas open source, que era
+
+117
+00:15:23.150 --> 00:15:29.089
+Rafael Cruz: principalmente ali um qualquer lado de Aquiles, Ali, da Microsoft.
+
+118
+00:15:32.040 --> 00:15:38.460
+Rafael Cruz: Então, pessoal, o que a gente tem o capítulo um aqui. Elementos fundamentais, variáveis, tipos constantes. Vamos dar uma olhada aqui.
+
+119
+00:15:41.680 --> 00:15:51.319
+Rafael Cruz: Variáveis e tipagens variáveis. Toda variável. A gente coloca o tipo dela primeiro e depois o nome.
+
+120
+00:15:52.580 --> 00:15:58.799
+Rafael Cruz: Então, por exemplo, aqui, eu tenho idade ente idade igual a vinte e cinco. Então ela é uma variável do tipo inteira.
+
+121
+00:15:59.930 --> 00:16:04.790
+Rafael Cruz: E aí, String? Nome igual a Maria.
+
+122
+00:16:04.890 --> 00:16:11.620
+Rafael Cruz: Significa que ela é uma variável do tipo String Date Time Nascimento.
+
+123
+00:16:12.190 --> 00:16:16.540
+Rafael Cruz: Ela é uma variável do timbo date Time, que é para comportar datas
+
+124
+00:16:18.770 --> 00:16:24.140
+Rafael Cruz: Double. Salário é uma variável do tipo doble, com pontos flutuantes
+
+125
+00:16:25.460 --> 00:16:31.179
+Rafael Cruz: e boa, ativo. Ela é uma variável do tipo buleana que vai receber falso ou Tru.
+
+126
+00:16:32.050 --> 00:16:44.109
+Rafael Cruz: Então, qual é a regra de ouro que a gente tem aqui. Tá variáveis sempre Kamel Case para variáveis locais. Então a minha variável local aqui eu sempre vou, Kamel Case.
+
+127
+00:16:44.280 --> 00:16:49.160
+Rafael Cruz: Então, aqui um exemplo. Aqui que está o nome. Como é que eu faria se fosse nome completo?
+
+128
+00:16:49.610 --> 00:16:54.669
+Rafael Cruz: Nome com n minúsculo e o C de completo com C maiúsculo.
+
+129
+00:16:55.170 --> 00:16:57.190
+Rafael Cruz: Então, nomes compostos
+
+130
+00:17:00.350 --> 00:17:02.360
+Rafael Cruz: para a variável do tipo local
+
+131
+00:17:03.130 --> 00:17:05.560
+Rafael Cruz: pascho, que é o case particular.
+
+132
+00:17:05.710 --> 00:17:13.820
+Rafael Cruz: Primeira palavra e a segunda palavra inicial, sempre com letra maiúscula. A gente vai usar para classes e métodos, ou seja, funções.
+
+133
+00:17:13.990 --> 00:17:18.089
+Rafael Cruz: Então minhas funções sempre vão seguir o padrão do Pascal Case.
+
+134
+00:17:18.190 --> 00:17:21.480
+Rafael Cruz: Se eu não seguir esse padrão,
+
+135
+00:17:22.310 --> 00:17:29.609
+Rafael Cruz: vai dar erro no teu programa. Não, não vai dar erro no teu programa, mas é extremamente fora da convenção da linguagem,
+
+136
+00:17:29.810 --> 00:17:32.760
+Rafael Cruz: tá, então é
+
+137
+00:17:37.480 --> 00:17:44.030
+Rafael Cruz: o C. Sharp. Vai entender esse tipo de escrita. Ele não vai dar erro por causa disso.
+
+138
+00:17:45.010 --> 00:17:59.260
+Rafael Cruz: Se você não seguir essas regras de ouro. Contudo, vai ficar estranho pra quem vê a mesma coisa. Você conversando no teu Whatsapp, vai conversar com uma pessoa e ela não segue as regras gramaticais. Bota aí. Concordo.
+
+139
+00:17:59.450 --> 00:18:04.099
+Rafael Cruz: Bota com certeza. Tudo junto, por exemplo, não sabe a diferença de mais. E mães.
+
+140
+00:18:04.440 --> 00:18:07.410
+Rafael Cruz: Você entende o que está sendo escrito.
+
+141
+00:18:07.780 --> 00:18:12.959
+Rafael Cruz: Mas você quer Putz? Caramba, não era mais. Era Muzz, por exemplo.
+
+142
+00:18:13.730 --> 00:18:23.770
+Rafael Cruz: Com certeza. Com certeza é separado e tal. Cara, você consegue entender ali a frase, mas tu.
+
+143
+00:18:23.880 --> 00:18:32.000
+Rafael Cruz: Chega até o coração. Dá até uma pulada aqui. Quando a gente começa a ler esses tipos de frases, a mesma coisa vai ser que no computador
+
+144
+00:18:32.230 --> 00:18:45.119
+Rafael Cruz: não vai dar erro por causa disso. Mas fica estranho ali uma pessoa pegar teu código e falar assim. Cara, ela não segue convenções aqui da linguagem. Não sabe o que está fazendo. Então é tomar cuidado com essas regras, tá?
+
+145
+00:18:47.690 --> 00:18:54.680
+Rafael Cruz: Outro ponto importante que o C. Sharp é fortemente chipado diferentemente do Delph.
+
+146
+00:18:54.880 --> 00:18:57.520
+Rafael Cruz: Diferentemente do Python, que você estava vendo,
+
+147
+00:18:58.260 --> 00:19:06.080
+Rafael Cruz: o que é ser fortemente tipado o compilador. Vai verificar se os tipos são aderentes
+
+148
+00:19:06.240 --> 00:19:08.749
+Rafael Cruz: com os valores que estão recebendo.
+
+149
+00:19:09.060 --> 00:19:13.200
+Rafael Cruz: Então, por exemplo, se eu tenho uma variável do tipo inteiro.
+
+150
+00:19:14.590 --> 00:19:17.020
+Rafael Cruz: Eu não posso colocar uma String lá dentro.
+
+151
+00:19:17.960 --> 00:19:21.489
+Rafael Cruz: Eu não posso botar entidade igual a Maria vai dar erro,
+
+152
+00:19:21.990 --> 00:19:26.400
+Rafael Cruz: porque uma palavra String não cabe dentro de um inteiro.
+
+153
+00:19:26.680 --> 00:19:34.270
+Rafael Cruz: E a mesma coisa ao contrário. Uma String nome não vai receber um numérico. Um inteiro, por exemplo, vai dar erro.
+
+154
+00:19:35.180 --> 00:19:39.760
+Rafael Cruz: É importante você ter esse tipo de situação. Deixa eu abrir o vídeo ao estúdio. Aqui.
+
+155
+00:20:16.230 --> 00:20:18.689
+Rafael Cruz: Deixa eu pegar aqui o exemplo de ontem. Tá
+
+156
+00:20:25.120 --> 00:20:28.879
+Rafael Cruz: tem uma pergunta interessante aqui, mas o time também não é tipagem forte.
+
+157
+00:20:29.430 --> 00:20:32.239
+Rafael Cruz: Ele é de parte forte, mas de uma forma diferente.
+
+158
+00:20:34.310 --> 00:20:42.169
+Rafael Cruz: Como é que o Python faz aí? Eu. Vamos abrir aqui para a gente ver aqui. Vamos fazer uma diferença do Python.
+
+159
+00:20:42.650 --> 00:20:47.500
+Rafael Cruz: Já que vocês vieram do Python, fica mais fácil aqui. Eu tava até com algumas coisas aqui de Python. Aqui também.
+
+160
+00:20:51.130 --> 00:20:53.920
+Rafael Cruz: Jessica e Light no Python.
+
+161
+00:20:55.440 --> 00:20:59.490
+Rafael Cruz: Deixa eu pegar aqui, para a gente ver. Aqui fica mais fácil
+
+162
+00:21:08.430 --> 00:21:15.729
+Rafael Cruz: depois mais pra frente. Eu vou explicar o uso do Var, tá? Só pra gente entender o conceito. Tá bom. Tem um pouquinho de lá de mais pra frente.
+
+163
+00:21:17.160 --> 00:21:20.129
+Rafael Cruz: Vamos pegar um exemplo aqui. Eu vou botar. Aqui
+
+164
+00:21:20.750 --> 00:21:23.369
+Rafael Cruz: tem um exemplo. Aqui vamos botar variáveis.
+
+165
+00:21:26.030 --> 00:21:31.930
+Rafael Cruz: Então você imagina aqui uma variável aqui. Eu vou botar nome igual a Maria.
+
+166
+00:21:33.280 --> 00:21:35.920
+Rafael Cruz: E daqui a pouco o nome igual a vinte e cinco.
+
+167
+00:21:38.500 --> 00:21:48.970
+Rafael Cruz: Então, print Taipe. Nome, print Taipe. Nome. Certo, vamos lá, pessoal.
+
+168
+00:21:51.650 --> 00:21:56.199
+Rafael Cruz: Vamos lá, me respondam aqui. Essa primeira linha que vocês estão vendo aqui no Vs. Code. Certo,
+
+169
+00:22:04.710 --> 00:22:07.580
+Rafael Cruz: beleza. Qual o tipo dessa variável na linha um, aqui
+
+170
+00:22:12.260 --> 00:22:13.470
+Rafael Cruz: é uma String.
+
+171
+00:22:15.040 --> 00:22:17.910
+Rafael Cruz: Qual é o tipo da variável aqui na linha quatro
+
+172
+00:22:22.890 --> 00:22:23.910
+Rafael Cruz: inteiro.
+
+173
+00:22:24.270 --> 00:22:26.399
+Rafael Cruz: Essas variáveis aqui são iguais.
+
+174
+00:22:28.320 --> 00:22:31.749
+Rafael Cruz: Nome, nome ali na linha um. É igual. A linha quatro.
+
+175
+00:22:34.870 --> 00:22:36.649
+Rafael Cruz: Sim, não, Sim ou não?
+
+176
+00:22:38.080 --> 00:22:39.360
+Rafael Cruz: Não, não são.
+
+177
+00:22:39.600 --> 00:22:42.410
+Rafael Cruz: Por quê aí vamos abrir o nosso.
+
+178
+00:22:42.620 --> 00:22:45.970
+Rafael Cruz: É bom vocês tentarem entender isso aí, porque isso é importante, tá?
+
+179
+00:22:59.000 --> 00:23:00.820
+Rafael Cruz: Como é que vai funcionar no Python?
+
+180
+00:23:18.210 --> 00:23:19.669
+Rafael Cruz: Vou pegar uma tabela aqui.
+
+181
+00:23:26.200 --> 00:23:33.570
+Rafael Cruz: Vamos pegar uma tabela aqui e vamos chamar aqui. Ó Memória.
+
+182
+00:23:35.270 --> 00:23:37.510
+Rafael Cruz: Então aqui vamos pegar aqui um
+
+183
+00:23:41.410 --> 00:23:45.650
+Rafael Cruz: nome igual Maria,
+
+184
+00:23:47.420 --> 00:23:53.539
+Rafael Cruz: aí, o que vai fazer. Ah, ele vai ter aqui um. Maria vai ter um endereço de memória
+
+185
+00:23:53.940 --> 00:23:56.750
+Rafael Cruz: que vai ser o seguinte: ó nome
+
+186
+00:24:00.780 --> 00:24:04.620
+Rafael Cruz: é igual a Str com o valor Maria.
+
+187
+00:24:12.140 --> 00:24:13.830
+Rafael Cruz: Então, aqui ó
+
+188
+00:24:17.200 --> 00:24:18.770
+Rafael Cruz: no endereço um.
+
+189
+00:24:19.180 --> 00:24:21.039
+Rafael Cruz: O meu programa Python.
+
+190
+00:24:21.800 --> 00:24:32.810
+Rafael Cruz: Ele fala assim. Cara, eu preciso de uma variável do tipo nome pode botar o valor. Maria. Ah, beleza. Vou te dar o nome de memória aqui, que é uma memória. Um do tipo String
+
+191
+00:24:33.290 --> 00:24:37.109
+Rafael Cruz: com o nome Maria. Ah, beleza. Aí cheguei um pouco mais pra frente.
+
+192
+00:24:40.720 --> 00:24:46.580
+Rafael Cruz: Eu cheguei um pouco mais pra frente. Aí falei assim pô. Mas agora, Maria, o nome agora não é Maria. Maria. Agora é.
+
+193
+00:24:48.030 --> 00:24:49.439
+Rafael Cruz: É vinte e cinco.
+
+194
+00:24:54.330 --> 00:25:01.659
+Rafael Cruz: O que o Python vai fazer ao invés de o Python dar erro, o que ele vai pegar? Pô eu tenho esse endereço de memória aqui,
+
+195
+00:25:02.290 --> 00:25:07.779
+Rafael Cruz: que é do tipo String e o galã aqui mais na frente. Agora virou inteiro.
+
+196
+00:25:10.760 --> 00:25:14.679
+Rafael Cruz: Virou inteiro. O que eu tenho que fazer pô não dá, né?
+
+197
+00:25:15.680 --> 00:25:18.810
+Rafael Cruz: Esse ponteiro aqui. Ó que eu tenho aqui? Ó,
+
+198
+00:25:19.210 --> 00:25:23.999
+Rafael Cruz: ele vai apontar agora para vinte e cinco. Só com esse endereço de memória. Aqui vai mudar
+
+199
+00:25:25.270 --> 00:25:27.290
+Rafael Cruz: agora, o meu nome
+
+200
+00:25:33.090 --> 00:25:37.059
+Rafael Cruz: é do tipo inteiro com o valor de vinte e cinco.
+
+201
+00:25:38.720 --> 00:25:40.670
+Rafael Cruz: E esse cara que ficou aqui,
+
+202
+00:25:41.380 --> 00:25:44.870
+Rafael Cruz: o que aconteceu em alguma hora,
+
+203
+00:25:45.130 --> 00:25:47.060
+Rafael Cruz: esse valor não vai existir mais.
+
+204
+00:25:48.820 --> 00:25:53.440
+Rafael Cruz: O Python faz isso de forma dinâmica que a gente chama.
+
+205
+00:25:53.810 --> 00:26:00.049
+Rafael Cruz: Ele vai fazer essa tipagem para você de forma dinâmica na execução do seu programa.
+
+206
+00:26:00.390 --> 00:26:01.430
+Rafael Cruz: Por quê?
+
+207
+00:26:02.140 --> 00:26:05.160
+Rafael Cruz: O Python é o quê? Ele é interpretado
+
+208
+00:26:08.090 --> 00:26:11.679
+Rafael Cruz: quando você está executando o Python. O Python não é compilado.
+
+209
+00:26:12.650 --> 00:26:17.630
+Rafael Cruz: Ele vai ler o teu programa. Vai executar o seu programa
+
+210
+00:26:18.230 --> 00:26:22.199
+Rafael Cruz: em tempo de Hang. Então ele vai fazer essa checagem de
+
+211
+00:26:23.070 --> 00:26:29.620
+Rafael Cruz: de sintaxe, checagem de memória e execução do teu programa. Por isso que a gente fala que o paitõ lento
+
+212
+00:26:29.980 --> 00:26:36.259
+Rafael Cruz: porque o pai está interpretado. Tudo que a gente tem que fazer compilando. Ele tem que fazer isso em tempo de execução
+
+213
+00:26:39.330 --> 00:26:44.909
+Rafael Cruz: no C. Sharp, ou melhor, não somente no C. Sharp.
+
+214
+00:26:59.840 --> 00:27:03.090
+Rafael Cruz: Ele é fortemente tipado.
+
+215
+00:27:05.270 --> 00:27:06.909
+Rafael Cruz: Deixa eu colocar aqui. Ó
+
+216
+00:27:28.110 --> 00:27:30.030
+Rafael Cruz: tá todo mundo vendo o meu visual studio.
+
+217
+00:27:35.260 --> 00:27:35.930
+lucas.ssantos: Sim.
+
+218
+00:27:37.000 --> 00:27:44.040
+Rafael Cruz: Então, o que o C. Sharp vai fazer? Ele veio da família C, que ele é fortemente tipado. Então ele vai fazer aqui, ó Int
+
+219
+00:27:44.770 --> 00:27:46.950
+Rafael Cruz: String.
+
+220
+00:27:47.550 --> 00:27:49.200
+Rafael Cruz: Nome João.
+
+221
+00:27:52.140 --> 00:27:56.310
+Rafael Cruz: Nome igual a vinte e cinco.
+
+222
+00:27:57.680 --> 00:28:02.890
+Rafael Cruz: O que ele vai falar aqui? Ó, eu não consigo jogar
+
+223
+00:28:03.790 --> 00:28:07.400
+Rafael Cruz: um tipo inteiro dentro de uma variável string.
+
+224
+00:28:09.370 --> 00:28:12.270
+Rafael Cruz: Por quê? Porque a tipagem dele,
+
+225
+00:28:14.940 --> 00:28:17.489
+Rafael Cruz: a tipagem dele é do tipo String.
+
+226
+00:28:21.170 --> 00:28:27.839
+Rafael Cruz: Então o Python faz isso de forma dinâmica. Mas por baixo dos panos, é fortemente tipado.
+
+227
+00:28:28.020 --> 00:28:33.750
+Rafael Cruz: Ser fortemente tipado significa o quê? Que uma vez definido o teu tipo.
+
+228
+00:28:34.420 --> 00:28:39.709
+Rafael Cruz: Eu só somente consigo colocar aquele valor daquele tipo que ele aceita.
+
+229
+00:28:44.590 --> 00:28:51.260
+Rafael Cruz: Então, para eu fazer isso, o C. Sharp não deixa explicitamente
+
+230
+00:28:53.510 --> 00:28:57.309
+Rafael Cruz: explicitamente eu colocar um outro tipo
+
+231
+00:28:57.670 --> 00:29:00.430
+Rafael Cruz: dentro de uma variável com um tipo diferente.
+
+232
+00:29:03.060 --> 00:29:08.510
+Rafael Cruz: Isso ia ser fortemente tipado. Todas as linguagens de programação da família C.
+
+233
+00:29:08.950 --> 00:29:12.659
+Rafael Cruz: C mais Java C. Sharp.
+
+234
+00:29:14.650 --> 00:29:17.060
+Rafael Cruz: Eles seguem o mesmo princípio.
+
+235
+00:29:17.660 --> 00:29:21.770
+Rafael Cruz: Você não consegue colocar um tipo diferente, nenhuma variável.
+
+236
+00:29:23.360 --> 00:29:24.300
+Rafael Cruz: Tá bom.
+
+237
+00:29:24.840 --> 00:29:26.500
+Rafael Cruz: Isso é ser fortemente tipado.
+
+238
+00:29:32.120 --> 00:29:42.509
+Rafael Cruz: Mestre, só precisa definir o tipo da variável. A primeira vez que usa. Ela Sim, somente a primeira vez. Então aqui. Ó eu posso vir e colocar a Maria
+
+239
+00:29:43.350 --> 00:29:46.999
+Rafael Cruz: tranquilo, de boa. Tá bom pra usar ela.
+
+240
+00:29:50.030 --> 00:29:53.819
+Rafael Cruz: Show ficou alguma dúvida, pessoal
+
+241
+00:30:13.220 --> 00:30:16.290
+Rafael Cruz: boa. Qual é a grande diferença aqui do C. Sharp?
+
+242
+00:30:17.150 --> 00:30:18.209
+Rafael Cruz: Fala aí, tredo.
+
+243
+00:30:19.880 --> 00:30:21.790
+pedro.yamato: O senhor. Boa noite. Ouvir bem.
+
+244
+00:30:22.650 --> 00:30:23.410
+Rafael Cruz: Sim.
+
+245
+00:30:24.660 --> 00:30:30.170
+pedro.yamato: É beleza. Eu venho de linguagens que não são tipos, né? Então é
+
+246
+00:30:30.990 --> 00:30:35.039
+pedro.yamato: o C Sharp. Para mim é tudo meio que novo?
+
+247
+00:30:35.320 --> 00:30:40.999
+pedro.yamato: Aquele método man ali que o senhor mostrou que você dá um simples
+
+248
+00:30:41.120 --> 00:30:44.779
+pedro.yamato: print na tela. Vamos dizer assim. O console Wright, né?
+
+249
+00:30:44.920 --> 00:30:50.850
+pedro.yamato: Sempre tem que declarar dentro de todos aqueles módulos. Tipo, tem que criar uma classe
+
+250
+00:30:50.990 --> 00:30:57.719
+pedro.yamato: aí dentro dessa classe. Coloca ali o o consolo, Wright ou o
+
+251
+00:30:57.940 --> 00:31:02.550
+pedro.yamato: o compilador já meio que automatiza isso. Quando você vai codar.
+
+252
+00:31:05.430 --> 00:31:12.719
+Rafael Cruz: Tradicionalmente, a gente coloca aqui automaticamente isso aqui. Ele já vem. Então ele já vem. Essa estrutura básica, e você só tem que escrever aqui o código,
+
+253
+00:31:13.860 --> 00:31:14.530
+Rafael Cruz: tá?
+
+254
+00:31:14.900 --> 00:31:16.490
+pedro.yamato: Tá ok, beleza.
+
+255
+00:31:16.970 --> 00:31:22.480
+Rafael Cruz: Mas em programas modernos. C Sharp, existe o C. Sharp Skriplath,
+
+256
+00:31:23.080 --> 00:31:25.310
+Rafael Cruz: que é onde a gente não precisa
+
+257
+00:31:25.880 --> 00:31:32.060
+Rafael Cruz: seguir esse conceito aqui, que é o primeiro que a gente olhou. Por exemplo, aqui, nosso programa Hello Word.
+
+258
+00:31:32.260 --> 00:31:38.319
+Rafael Cruz: A gente não tinha toda a estrutura do programa. Olha só aqui. Eu estou programando direto ela
+
+259
+00:31:38.450 --> 00:31:40.479
+Rafael Cruz: sem passar por aquela estrutura.
+
+260
+00:31:41.520 --> 00:31:52.530
+pedro.yamato: Isso. Era isso que eu queria dizer. Mas daí, tipo no dia a dia. Assim se usa dessa forma igual o senhor mostrando na tela, ou mostra ou se usa o método mais antigo.
+
+261
+00:31:52.890 --> 00:31:56.809
+Rafael Cruz: Você usa essa forma aqui, que é a forma da orientação. Objeto.
+
+262
+00:31:58.050 --> 00:31:59.500
+pedro.yamato: Ah, tá, beleza.
+
+263
+00:31:59.670 --> 00:32:02.639
+Rafael Cruz: Qual a linguagem que você programa.
+
+264
+00:32:04.160 --> 00:32:12.810
+pedro.yamato: Não, eu nunca trabalhei na área. Eu comecei aqui no infinito por Javascript. E depois Python. Agora.
+
+265
+00:32:13.120 --> 00:32:19.019
+Rafael Cruz: É o Python. Ele não tem. Mas o Javascript também é tipado. Tá?
+
+266
+00:32:19.680 --> 00:32:24.559
+Rafael Cruz: Todas as linguagens que você já falou aí. Javascript Python é tipo padre.
+
+267
+00:32:25.480 --> 00:32:29.359
+Rafael Cruz: Só que ele faz a tipagem dele de forma automática
+
+268
+00:32:30.740 --> 00:32:37.439
+Rafael Cruz: no C. Sharp. Não é automático. Não somente no C Sharp como Java também. Que vocês estão vendo aí durante a semana.
+
+269
+00:32:37.690 --> 00:32:38.389
+Rafael Cruz: Tá bom.
+
+270
+00:32:38.510 --> 00:32:44.309
+Rafael Cruz: Javascript, Python. Eles fazem a tipagem de forma automática.
+
+271
+00:32:45.510 --> 00:32:47.900
+Rafael Cruz: Você tem um lado bom e você tem um lado ruim.
+
+272
+00:32:48.220 --> 00:32:58.770
+Rafael Cruz: Qual é o lado bom? Você não ficar se preocupando com isso, cara. Vou usar uma variável do tipo nome. Ela, String, daqui a pouco. Ela é inteira. Daqui a pouco ela volta para String de novo. E daqui a pouco ela tá float.
+
+273
+00:32:59.330 --> 00:33:05.960
+Rafael Cruz: Quem tem que tomar a decisão da tipagem correta é o computador.
+
+274
+00:33:06.940 --> 00:33:13.159
+Rafael Cruz: Contudo, você está delegando esse tipo de responsabilidade do computador. Ele pode chegar e tipar a variável da forma errada.
+
+275
+00:33:15.440 --> 00:33:17.060
+Rafael Cruz: E isso pode gerar um problema.
+
+276
+00:33:18.160 --> 00:33:20.410
+Rafael Cruz: Então, linguagens mais seguras.
+
+277
+00:33:22.750 --> 00:33:28.389
+Rafael Cruz: A forma do tipo é delegado para o programador. Decisão humana e não decisão do computador.
+
+278
+00:33:28.820 --> 00:33:38.360
+Rafael Cruz: Então, por isso que C. Sharp e Java, a tipagem não é automática, porque quem tem que fazer a tipagem de forma correta
+
+279
+00:33:38.990 --> 00:33:41.650
+Rafael Cruz: é o programador, entendeu.
+
+280
+00:33:43.440 --> 00:33:44.800
+pedro.yamato: Oh, professor. Obrigado.
+
+281
+00:33:45.480 --> 00:33:46.240
+Rafael Cruz: Bom,
+
+282
+00:33:51.710 --> 00:33:55.049
+Rafael Cruz: a outra pergunta. Aqui, Gabriel. Ele perguntou: Aqui é
+
+283
+00:33:57.260 --> 00:34:08.509
+Rafael Cruz: no caso. Eu só vou precisar tipar uma única vez. Depois disso, pode ir tacando variáveis direto sem tipar mais. Isso não precisa. Uma vez tipado, já era. Você pode utilizar ela da forma correta pode tipar.
+
+284
+00:34:08.510 --> 00:34:21.090
+Rafael Cruz: Você só pode estar tacando variáveis diretos sem equipar mais, desde que elas sejam tipos compatíveis com string Inch com inch float com float. Você pode trabalhar de forma à vontade. Tá bom.
+
+285
+00:34:25.880 --> 00:34:27.009
+Rafael Cruz: Fala aí, Gabriel.
+
+286
+00:34:28.659 --> 00:34:30.289
+Gabriel Marquez Volponi: Oi, professor. Boa noite. Tudo bem.
+
+287
+00:34:30.290 --> 00:34:31.650
+Rafael Cruz: Igualmente tudo.
+
+288
+00:34:31.650 --> 00:34:56.619
+Gabriel Marquez Volponi: Professor. Deixa eu tirar uma dúvida sobre essa questão da tipagem aí do C Sharp, né? A gente tava aprendendo o Javascript e o Typescript. E no caso do Typescript, ele já inferia muita coisa sozinho, né? Que ele já meio que a gente adivinhava qual. Que era o tipo da variável no C Sharp? Ele consegue inferir bastante coisa também. Ou você acha que é mais verboso? Eu preciso estar o tempo todo fazendo
+
+289
+00:34:56.620 --> 00:34:58.200
+Gabriel Marquez Volponi: falando o que é o quê?
+
+290
+00:34:58.450 --> 00:35:02.830
+Rafael Cruz: O Typhones também é fortemente tipado.
+
+291
+00:35:03.210 --> 00:35:09.549
+Rafael Cruz: Ele tem o seu tipo lá. Ele não infere. Se você botar o tipo errado. Ele vai começar a dar erro
+
+292
+00:35:09.920 --> 00:35:18.419
+Rafael Cruz: aqui também no C Sharp, ele segue a mesma filosofia do Typescript só para ter uma ideia. Quem criou o typescript foi o fundador do C. Sharp.
+
+293
+00:35:18.890 --> 00:35:19.830
+Gabriel Marquez Volponi: Ah, tá.
+
+294
+00:35:19.830 --> 00:35:31.309
+Rafael Cruz: É o mesmo cara que criou o typescript. É o mesmo cara que cria o C. Sharp. Então muitos dos conceitos dos timescript. Se você vê, até a estrutura da linguagem de programação é muito parecida com o C Sharp,
+
+295
+00:35:32.300 --> 00:35:34.349
+Rafael Cruz: não é?
+
+296
+00:35:35.120 --> 00:35:40.390
+Rafael Cruz: Então muitos dos conceitos aqui do C. Sharp foi do Typescript.
+
+297
+00:35:40.810 --> 00:35:43.959
+Rafael Cruz: O Anders pegou muito conceito disso. Aí
+
+298
+00:35:44.250 --> 00:35:52.480
+Rafael Cruz: então a gente tem forma de tipar e tem forma de inferência também. Como a gente faz. Eu vou chegar um pouco mais pra frente, tá?
+
+299
+00:35:53.010 --> 00:35:55.060
+Gabriel Marquez Volponi: Tá bom. Não? Tranquilo, professor. Obrigado.
+
+300
+00:35:56.900 --> 00:35:57.560
+Rafael Cruz: Boa.
+
+301
+00:36:02.820 --> 00:36:11.940
+Rafael Cruz: Vamos lá, pessoal. Qual é o ponto aqui de ser Sharp? Tá, esse é um slide principal, cara. E esse slide aqui funciona tanto pra ser Sharp quanto pra Java.
+
+302
+00:36:12.420 --> 00:36:15.220
+Rafael Cruz: Ele segue os mesmos conceitos.
+
+303
+00:36:19.550 --> 00:36:32.569
+Rafael Cruz: Alexandre. Perguntando: então, quando tipar dentro de um bloco. Eu posso colocar várias variáveis, contanto que ela seja o mesmo tipo. Sim, podem. Contanto que ela seja o mesmo tipo, podem fazer. Tá bom.
+
+304
+00:36:37.670 --> 00:36:43.620
+Rafael Cruz: Qual é o ponto aqui de ser Sharp? Esse é um pouco mais avançado, mas isso é importante entender
+
+305
+00:36:44.060 --> 00:36:47.149
+Rafael Cruz: que tanto Java quando ser Sharp
+
+306
+00:36:49.010 --> 00:36:52.840
+Rafael Cruz: é uma linguagem de programação orientada ao objeto.
+
+307
+00:36:53.500 --> 00:36:58.420
+Rafael Cruz: Ou seja, tudo é objeto dentro do C Sharp e dentro do Java,
+
+308
+00:36:59.300 --> 00:37:01.080
+Rafael Cruz: e por que isso é importante?
+
+309
+00:37:01.220 --> 00:37:06.050
+Rafael Cruz: Porque as formas que a gente trabalha é a forma que ele vai organizar a memória do computador.
+
+310
+00:37:07.110 --> 00:37:14.750
+Rafael Cruz: Então a gente tem tipos por valor e tipos por referência.
+
+311
+00:37:14.910 --> 00:37:17.170
+Rafael Cruz: Pô beleza. Por que eu tenho que aprender isso?
+
+312
+00:37:17.280 --> 00:37:26.170
+Rafael Cruz: Tipo ir por valor é a forma que a gente joga e taca o número aqui direto ou o valor direto, por exemplo. Nome igual a João
+
+313
+00:37:26.670 --> 00:37:28.420
+Rafael Cruz: nome igual a Maria.
+
+314
+00:37:29.990 --> 00:37:39.430
+Rafael Cruz: Ínte X igual a dez Double Z. Igual a vinte vinte.cinco.
+
+315
+00:37:40.210 --> 00:37:42.470
+Rafael Cruz: Isso aqui é o tipo por valor.
+
+316
+00:37:43.230 --> 00:37:50.110
+Rafael Cruz: O que significa isso que em nenhuma parte do meu programa eu posso ter. Tipo, posso ter um.
+
+317
+00:37:51.300 --> 00:37:55.670
+Rafael Cruz: Eu posso ocorrer um erro, uma exceção,
+
+318
+00:37:56.600 --> 00:37:58.420
+Rafael Cruz: porque ele já tem um valor definido.
+
+319
+00:37:59.460 --> 00:38:08.479
+Rafael Cruz: E eu, obviamente, eu posso trocar esse valor aqui também. Mais para frente, se quiser ver cinquenta, por exemplo, cinquenta,setenta e cinco.
+
+320
+00:38:09.060 --> 00:38:11.820
+Rafael Cruz: Posso fazer ir trocando os valores.
+
+321
+00:38:12.540 --> 00:38:18.940
+Rafael Cruz: Não é normalmente atribuindo aqui. Só posso criar aqui um outro
+
+322
+00:38:19.170 --> 00:38:25.630
+Rafael Cruz: Double T igual a dez.cinco seis e depois, e igual a T, por exemplo.
+
+323
+00:38:26.350 --> 00:38:28.140
+Rafael Cruz: Posso fazer isso à vontade.
+
+324
+00:38:41.800 --> 00:38:46.060
+Rafael Cruz: Contudo, todavia, existe um outro tipo,
+
+325
+00:38:47.020 --> 00:38:50.509
+Rafael Cruz: um outro tipo que a gente chama como tipo de referência.
+
+326
+00:38:51.360 --> 00:38:53.320
+Rafael Cruz: O que é um tipo por referência?
+
+327
+00:38:53.930 --> 00:38:57.899
+Rafael Cruz: O tipo por referência é quando a gente aloca
+
+328
+00:38:59.910 --> 00:39:05.299
+Rafael Cruz: manualmente um endereço de memória. Por exemplo, aqui eu pego aqui uma lista que é uma rei
+
+329
+00:39:05.850 --> 00:39:07.589
+Rafael Cruz: e eu dou mil nela.
+
+330
+00:39:08.100 --> 00:39:11.010
+Rafael Cruz: Esse é também um tipo é um arrei isso aqui.
+
+331
+00:39:15.010 --> 00:39:16.989
+Rafael Cruz: Então eu tenho uma lista.
+
+332
+00:39:18.330 --> 00:39:24.329
+Rafael Cruz: E eu tenho um endereço de memória. Como é que eu vou dizer para o computador que eu tenho que alocar um endereço por referência
+
+333
+00:39:24.970 --> 00:39:26.690
+Rafael Cruz: através da palavra New.
+
+334
+00:39:27.520 --> 00:39:33.910
+Rafael Cruz: Eu estou dizendo que ela é uma variável do tipo referência.
+
+335
+00:39:34.410 --> 00:39:36.779
+Rafael Cruz: Por que é importante saber isso? Por quê?
+
+336
+00:39:37.470 --> 00:39:41.629
+Rafael Cruz: Tipos por valor. Eu nunca vou ter problema.
+
+337
+00:39:42.330 --> 00:39:46.410
+Rafael Cruz: Tipos por referência. Eu posso ter problema de memória.
+
+338
+00:39:46.800 --> 00:39:47.910
+Rafael Cruz: Que é o quê?
+
+339
+00:39:48.400 --> 00:39:49.650
+Rafael Cruz: Liste
+
+340
+00:39:54.390 --> 00:39:55.350
+Rafael Cruz: dois?
+
+341
+00:39:57.540 --> 00:40:01.810
+Rafael Cruz: Então eu vou colocar um nu nela
+
+342
+00:40:04.900 --> 00:40:12.020
+Rafael Cruz: nu. E depois aqui eu dei uma de maluco aqui. Eu quero usar ela adicionar um objeto.
+
+343
+00:40:20.990 --> 00:40:28.630
+Rafael Cruz: O que vai acontecer aqui? Ó, essa linha vinte e cinco irá jogar uma exceção,
+
+344
+00:40:29.860 --> 00:40:32.540
+Rafael Cruz: porque a lista dois está nula.
+
+345
+00:40:33.130 --> 00:40:37.220
+Rafael Cruz: A gente chama de uma exceção chamada de referência nula.
+
+346
+00:40:39.890 --> 00:40:41.080
+Rafael Cruz: Então,
+
+347
+00:40:41.230 --> 00:40:48.479
+Rafael Cruz: tipos por valor nunca vai dar esse tipo de nulo. Por quê? Porque eu sempre vou definir com valor
+
+348
+00:40:49.750 --> 00:41:01.470
+Rafael Cruz: tipos por referência. Eu posso ter esse tipo de situação estourar um erro de, no referencer excepcional, ou seja,
+
+349
+00:41:02.000 --> 00:41:04.870
+Rafael Cruz: uma exceção de referência nula.
+
+350
+00:41:06.060 --> 00:41:09.869
+Rafael Cruz: Então é importante saber esse tipo de diferença. Tá,
+
+351
+00:41:14.650 --> 00:41:18.960
+Rafael Cruz: é tudo no C Sharp. É o objeto.
+
+352
+00:41:24.160 --> 00:41:29.249
+Rafael Cruz: É equivalente ao no ponte exception do Java. Exatamente igual. É a mesma.
+
+353
+00:41:31.820 --> 00:41:33.060
+Rafael Cruz: É a mesma coisa.
+
+354
+00:41:37.930 --> 00:41:41.610
+Rafael Cruz: Qual é a diferença de nulo ou vazio? Uma lista nula
+
+355
+00:41:41.870 --> 00:41:45.810
+Rafael Cruz: o nu significa que eu não tenho nenhum apontamento de memória.
+
+356
+00:41:48.340 --> 00:41:51.829
+Rafael Cruz: Uma lista vazia. É uma lista que só não tem elementos.
+
+357
+00:41:52.940 --> 00:41:54.419
+Rafael Cruz: Essa é a diferença, tá
+
+358
+00:42:06.730 --> 00:42:07.690
+Rafael Cruz: ok.
+
+359
+00:42:15.930 --> 00:42:18.680
+Rafael Cruz: Se ela fosse vazia, eu conseguiria adicionar o valor.
+
+360
+00:42:18.930 --> 00:42:24.850
+Rafael Cruz: Você só conseguiria usar o valor se ela tivesse com uma referência de memória. Por exemplo, aquilo
+
+361
+00:42:29.690 --> 00:42:31.970
+Rafael Cruz: não o nu.
+
+362
+00:42:32.710 --> 00:42:36.229
+Rafael Cruz: O que é o nu. Pessoal, vamos lá. O nu significa o seguinte.
+
+363
+00:42:39.610 --> 00:42:49.800
+Rafael Cruz: Vou pagar esse exemplo aqui. Ó, então vamos pegar minha lista lista que eu adicionei listão.
+
+364
+00:42:51.180 --> 00:42:54.579
+Rafael Cruz: O que significa aqui, ó, tô com minha lista igual a nu.
+
+365
+00:42:55.280 --> 00:42:59.730
+Rafael Cruz: Significa que eu não tenho nenhum endereço de memória apontado para. Ela.
+
+366
+00:43:01.420 --> 00:43:07.420
+Rafael Cruz: Não tem memória. Não tem espaço no computador definido. Não tem nenhuma memória para esse cara,
+
+367
+00:43:10.630 --> 00:43:11.560
+Rafael Cruz: tá?
+
+368
+00:43:12.000 --> 00:43:16.569
+Rafael Cruz: Quando eu coloco esse carinho aqui, New,
+
+369
+00:43:18.760 --> 00:43:26.360
+Rafael Cruz: o que eu estou fazendo? Eu estou fazendo o seguinte, ó uniu agora a lista
+
+370
+00:43:28.960 --> 00:43:34.870
+Rafael Cruz: do tipo inteiro igual a zero elementos.
+
+371
+00:43:39.310 --> 00:43:40.960
+Rafael Cruz: É isso que eu estou fazendo na prática.
+
+372
+00:43:41.340 --> 00:43:46.380
+Rafael Cruz: Então, New, Eu estou criando um apontamento de endereço de memória.
+
+373
+00:43:54.510 --> 00:44:00.659
+Rafael Cruz: Isso é bom para economizar a memória. Isso é bom para ser mais performático. A sua aplicação.
+
+374
+00:44:01.220 --> 00:44:06.209
+Rafael Cruz: Por isso que a gente trabalha, porque ele só vai alocar a memória a partir do momento que você precisar.
+
+375
+00:44:07.940 --> 00:44:09.120
+Rafael Cruz: Então,
+
+376
+00:44:09.240 --> 00:44:17.660
+Rafael Cruz: a partir do momento que eu dei um New, eu consigo utilizar de boa utilizar todas as capacidades possíveis dentro daquele objeto. Tá bom.
+
+377
+00:44:26.260 --> 00:44:29.649
+Rafael Cruz: Por que é importante saber isso? Tipo de referência?
+
+378
+00:44:30.400 --> 00:44:36.429
+Rafael Cruz: A gente sempre tem que usar o New tipo de valor.
+
+379
+00:44:36.620 --> 00:44:38.270
+Rafael Cruz: Eu não preciso usar o New.
+
+380
+00:44:46.290 --> 00:44:47.290
+Rafael Cruz: Ok,
+
+381
+00:44:59.860 --> 00:45:02.290
+Rafael Cruz: show. Vamos lá, pessoal.
+
+382
+00:45:02.400 --> 00:45:09.100
+Rafael Cruz: Agora, passando um pouquinho de fundamentos aqui, vamos falar sobre constâncias e inferências de tipo,
+
+383
+00:45:12.050 --> 00:45:17.930
+Rafael Cruz: muitas das vezes, quando você viu na primeira aula, eu estava usando var para definir uma variável.
+
+384
+00:45:19.050 --> 00:45:31.079
+Rafael Cruz: O que é o Var? O Var? O compilador. Ele vai inferir o tipo automaticamente. Talvez eu ficar digitando int tal Double tal
+
+385
+00:45:31.660 --> 00:45:36.550
+Rafael Cruz: string tal. Eu não preciso ficar escrevendo. Só basta eu botar var
+
+386
+00:45:36.660 --> 00:45:41.020
+Rafael Cruz: varsidade igual a São Paulo. Ele já vai saber que o tipo dela é String
+
+387
+00:45:41.550 --> 00:45:51.500
+Rafael Cruz: Var. Total igual tal. Tal. Ele já vai saber que é do tipo Float de forma automática. Então eu não preciso ficar escrevendo todos os tipos. Basta
+
+388
+00:45:51.900 --> 00:46:00.000
+Rafael Cruz: eu colocar o tipo var na frente. Então tudo que eu estou fazendo aqui, ó, tirando esses conceitos aqui,
+
+389
+00:46:00.600 --> 00:46:06.269
+Rafael Cruz: eu poderia fazer isso aqui. Ó Var. Nome igual a João.
+
+390
+00:46:06.460 --> 00:46:15.240
+Rafael Cruz: Ele já vai saber. Ó que o tipo é String. Ó vá X, igual a dez.
+
+391
+00:46:16.390 --> 00:46:19.799
+Rafael Cruz: Ele já vai saber. Ó que é o do tipo inteiro.
+
+392
+00:46:20.270 --> 00:46:21.200
+Rafael Cruz: Olha aqui,
+
+393
+00:46:27.580 --> 00:46:31.529
+Rafael Cruz: Var Y. Igual a três.catorze.
+
+394
+00:46:32.370 --> 00:46:36.830
+Rafael Cruz: Ele já vai saber. Ó que é do tipo ó do bom.
+
+395
+00:46:41.590 --> 00:46:50.330
+Rafael Cruz: Contudo, todavia eu não posso fazer isso aqui. Ó nome igual a Y não dá.
+
+396
+00:46:51.200 --> 00:46:52.200
+Rafael Cruz: Por quê?
+
+397
+00:46:53.610 --> 00:46:56.589
+Rafael Cruz: Não posso converter um tipo doble para String.
+
+398
+00:46:58.380 --> 00:47:03.170
+Rafael Cruz: Apesar de eu estar usando o Var para economizar a tipagem, ele vai seguir a regra.
+
+399
+00:47:04.660 --> 00:47:13.799
+Rafael Cruz: Ele vai seguir a regra de ser fortemente tipado. Eu não consigo colocar uma variável do tipo inteira
+
+400
+00:47:15.160 --> 00:47:17.170
+Rafael Cruz: dentro de uma variável de tipo String.
+
+401
+00:47:17.980 --> 00:47:26.430
+Rafael Cruz: Olha o erro aqui, ó e anote implicit Convert Taipe Double Strict.
+
+402
+00:47:27.660 --> 00:47:31.579
+Rafael Cruz: Então o Var é só uma shirt cut
+
+403
+00:47:31.690 --> 00:47:36.309
+Rafael Cruz: para que você não precise ficar toda hora tipando as variáveis de você mesmo.
+
+404
+00:47:37.070 --> 00:47:42.639
+Rafael Cruz: Mas as regras de ouro lá ser fortemente tipadas. Ela continua,
+
+405
+00:47:42.940 --> 00:47:46.030
+Rafael Cruz: tá bom. Então já estou respondendo aqui. A dúvida aqui tá bom.
+
+406
+00:47:48.150 --> 00:47:49.110
+Rafael Cruz: Ok.
+
+407
+00:47:54.670 --> 00:47:55.720
+Jorge José Luiz Santos da Silva: Professor.
+
+408
+00:47:56.050 --> 00:47:56.700
+Rafael Cruz: Oi.
+
+409
+00:47:56.920 --> 00:48:05.220
+Jorge José Luiz Santos da Silva: Uma dúvida. E se eu quisesse, por exemplo, fazer um Var Z que ele soma ou multiplica a var de X e Y.
+
+410
+00:48:05.720 --> 00:48:07.130
+Jorge José Luiz Santos da Silva: Ele aceitaria.
+
+411
+00:48:08.490 --> 00:48:13.840
+Rafael Cruz: Você está falando isso aqui, ó ah, vá!
+
+412
+00:48:14.500 --> 00:48:16.630
+Rafael Cruz: Resultado igual a Xy.
+
+413
+00:48:17.180 --> 00:48:18.620
+Jorge José Luiz Santos da Silva: Isso, por exemplo. Isso.
+
+414
+00:48:19.200 --> 00:48:22.300
+Rafael Cruz: O que vai acontecer inteiro.
+
+415
+00:48:22.580 --> 00:48:27.200
+Rafael Cruz: Fronte isso. Aqui ele vai. Ele vai deixar fazer.
+
+416
+00:48:27.620 --> 00:48:30.090
+Rafael Cruz: Contudo, todavia tu vai perder precisão
+
+417
+00:48:30.560 --> 00:48:32.810
+Rafael Cruz: porque um é o tipo inteiro.
+
+418
+00:48:32.940 --> 00:48:35.820
+Rafael Cruz: E o outro resultado aqui vai ser tipo Double.
+
+419
+00:48:36.240 --> 00:48:42.549
+Rafael Cruz: Você pode ter perda de precisão, tá? Pode. Tá.
+
+420
+00:48:42.670 --> 00:48:44.410
+Rafael Cruz: Então, o que acontece, né?
+
+421
+00:48:44.630 --> 00:48:49.930
+Rafael Cruz: Por exemplo, aqui eu ia chegar um pouco mais para frente. Isso aqui tá. O que acontece? A gente tem um winch.
+
+422
+00:48:51.860 --> 00:48:53.870
+Rafael Cruz: Idade vinte e cinco. O que é o Int
+
+423
+00:48:55.610 --> 00:49:08.260
+Rafael Cruz: o inteiro é isso aqui, ó vinte, trinta e dois, tá, eu tenho um Int sessenta e quatro
+
+424
+00:49:12.580 --> 00:49:18.050
+Rafael Cruz: e a gente tem um Int dezasseis.
+
+425
+00:49:23.940 --> 00:49:26.060
+Rafael Cruz: Bom, por que eu tenho três inteiros?
+
+426
+00:49:26.200 --> 00:49:31.760
+Rafael Cruz: Coisa de maluco, né? Mas na verdade não é precisão dele. O que é o inteiro vinte e dezasseis é o dois
+
+427
+00:49:34.110 --> 00:49:38.780
+Rafael Cruz: é o dois elevado a um6 menos um.
+
+428
+00:49:43.330 --> 00:49:45.890
+Rafael Cruz: O que é um ente trinta e dois?
+
+429
+00:49:46.060 --> 00:49:50.030
+Rafael Cruz: É o dois elevado a trinta e dois menos um.
+
+430
+00:49:55.240 --> 00:49:57.109
+Rafael Cruz: E o que é o quinhentos e sessenta e quatro
+
+431
+00:49:59.500 --> 00:50:02.210
+Rafael Cruz: é o dois elevado a sessenta e quatro menos um.
+
+432
+00:50:03.040 --> 00:50:09.769
+Rafael Cruz: O que significa isso? É capacidade de armazenamento dele. Se a gente pegar aqui. Uma calculadora de leve
+
+433
+00:50:15.890 --> 00:50:19.280
+Rafael Cruz: dois elevado a dezasseis dois.
+
+434
+00:50:22.920 --> 00:50:24.020
+Rafael Cruz: Cadê o elevado?
+
+435
+00:50:32.640 --> 00:50:34.450
+Rafael Cruz: Deixa eu pegar aqui outro padrão aqui
+
+436
+00:50:37.860 --> 00:50:42.260
+Rafael Cruz: dois elevado a dezasseis.
+
+437
+00:50:43.460 --> 00:50:47.529
+Rafael Cruz: Vamos botar aqui só pra gente ter. Então, ó
+
+438
+00:50:49.810 --> 00:50:54.009
+Rafael Cruz: o máximo de um número que eu consigo colocar no vinte, dezasseis
+
+439
+00:50:54.710 --> 00:50:57.400
+Rafael Cruz: é dezasseis. E cinto mil quinhentos e trinta e seis.
+
+440
+00:50:59.230 --> 00:51:00.110
+Rafael Cruz: Tá bom.
+
+441
+00:51:00.740 --> 00:51:01.760
+Rafael Cruz: É o máximo.
+
+442
+00:51:02.330 --> 00:51:07.030
+Rafael Cruz: Se a minha conta der maior do que isso abraço já era.
+
+443
+00:51:07.190 --> 00:51:09.110
+Rafael Cruz: Não vai funcionar. Não vai dar erro.
+
+444
+00:51:12.550 --> 00:51:13.620
+Rafael Cruz: Então vai dar aí.
+
+445
+00:51:14.090 --> 00:51:16.420
+Rafael Cruz: Ele não tem capacidade para isso.
+
+446
+00:51:17.230 --> 00:51:24.269
+Rafael Cruz: Se a gente agora botar no Int que a gente usa. Normalmente é um It trinta e dois, que é basicamente dois elevado
+
+447
+00:51:26.520 --> 00:51:32.700
+Rafael Cruz: trinta e dois, pô. Já mudou aqui, ó tá, quatro, blá, blá, blá, quatro bilhões
+
+448
+00:51:32.830 --> 00:51:43.779
+Rafael Cruz: novecentos e noventa e quatro, blá, blá, novecentos e sessenta e sete.duzentos e noventa e seis. Ou seja, se meu número da minha conta for maior do que isso,
+
+449
+00:51:44.460 --> 00:51:48.790
+Rafael Cruz: vai estourar. A capacidade de memória do meu computador vai dar erro também.
+
+450
+00:51:52.020 --> 00:51:57.540
+Rafael Cruz: E o 26o4 dois elevada sessenta e quatro.
+
+451
+00:51:58.880 --> 00:52:04.600
+Rafael Cruz: Olha porlhão de tamanho que tem o meu objeto para obter
+
+452
+00:52:05.320 --> 00:52:07.349
+Rafael Cruz: uma conta. Consigo fazer uma conta
+
+453
+00:52:07.880 --> 00:52:13.149
+Rafael Cruz: gigantesca com esse carinho. Tá vendo que só mudou a forma da precisão dos meus objetos?
+
+454
+00:52:19.290 --> 00:52:24.130
+Rafael Cruz: E por que eu sempre faço dois? Por causa que é o binário, né? Zero em um
+
+455
+00:52:25.400 --> 00:52:26.459
+Rafael Cruz: que a gente tem.
+
+456
+00:52:27.460 --> 00:52:30.340
+Rafael Cruz: Então, conforme você vai aumentando a capacidade,
+
+457
+00:52:32.640 --> 00:52:35.310
+Rafael Cruz: você vai aumentando a precisão dele?
+
+458
+00:52:36.570 --> 00:52:39.900
+Rafael Cruz: Não, ele não considera positivos e negativos porque é inteiro,
+
+459
+00:52:42.480 --> 00:52:46.550
+Rafael Cruz: tá, é inteiro. Então inteiro. Ele não tem pontos flutuante.
+
+460
+00:52:48.810 --> 00:52:58.539
+Rafael Cruz: Então isso aqui a gente vai definir a capacidade do meu cara também. Conforme a gente vai utilizando vinte e sessenta e quatro. Int326 é a forma de alocação de memória.
+
+461
+00:52:58.770 --> 00:53:01.909
+Rafael Cruz: Quanto menor menos memória, quanto maior mais memória
+
+462
+00:53:03.130 --> 00:53:07.690
+Rafael Cruz: você vai alocar. Faz diferença. Isso para vocês hoje em dia não faz tanta diferença.
+
+463
+00:53:10.280 --> 00:53:12.630
+Rafael Cruz: Mas antigamente fazia.
+
+464
+00:53:13.220 --> 00:53:19.450
+Rafael Cruz: Hoje o C. Sharp tem um Winch cento e vinte e oito.
+
+465
+00:53:22.280 --> 00:53:28.530
+Rafael Cruz: O que significa isso? Aqui é o dois elevado a cento e vinte e oito menos um.
+
+466
+00:53:29.860 --> 00:53:32.180
+Rafael Cruz: Se a gente viu que o sessenta e quatro.
+
+467
+00:53:34.910 --> 00:53:45.930
+Rafael Cruz: O sessenta e quatro é gigantesco. Cento e vinte e oito, menos um super gigantesco
+
+468
+00:53:46.440 --> 00:53:50.950
+Rafael Cruz: armazena muita coisa com tu. Todavia, vai alocar muito espaço de memória.
+
+469
+00:53:52.360 --> 00:53:56.969
+Rafael Cruz: É isso. É perda de precisão que a gente chama.
+
+470
+00:53:57.210 --> 00:54:01.180
+Rafael Cruz: Isso é perda de prescrição, tá?
+
+471
+00:54:01.740 --> 00:54:05.360
+Rafael Cruz: Como a gente utiliza Java C. Sharp,
+
+472
+00:54:05.530 --> 00:54:09.070
+Rafael Cruz: linguagens mais poderosas para fazer contas.
+
+473
+00:54:09.560 --> 00:54:15.640
+Rafael Cruz: E a gente está falando em contas aqui. Mercado financeiro, por exemplo, são contas bizarras que a gente faz.
+
+474
+00:54:16.100 --> 00:54:18.899
+Rafael Cruz: A gente tem que ter precisões muito grandes.
+
+475
+00:54:20.400 --> 00:54:21.680
+Rafael Cruz: Justamente.
+
+476
+00:54:22.010 --> 00:54:24.370
+Rafael Cruz: Então a gente precisa de uma linguagem que
+
+477
+00:54:27.260 --> 00:54:33.750
+Rafael Cruz: que consiga ali absorver essa quantidade de precisão e contas muito precisas.
+
+478
+00:54:34.720 --> 00:54:42.680
+Rafael Cruz: Alguém tinha me perguntado aqui sobre como define isso. Ali, no exemplo ali do vá aí. Nesse caso, aqui.
+
+479
+00:54:52.910 --> 00:54:58.130
+Rafael Cruz: Nesse caso, aqui, eu não tenho como definir aqui no bar, tá? Porque automaticamente,
+
+480
+00:54:58.330 --> 00:55:02.070
+Rafael Cruz: quando a gente coloca aqui T igual a dez.
+
+481
+00:55:03.290 --> 00:55:06.650
+Rafael Cruz: Ele já vai entender aqui que é um inteiro e um inteiro é.
+
+482
+00:55:07.230 --> 00:55:08.890
+Rafael Cruz: É a Ente trinta e dois.
+
+483
+00:55:09.890 --> 00:55:14.619
+Rafael Cruz: Então tem que explicitamente dizer Int sessenta e quatro.
+
+484
+00:55:16.690 --> 00:55:17.520
+Rafael Cruz: Ok,
+
+485
+00:55:20.690 --> 00:55:22.380
+Rafael Cruz: pergunta aqui tá
+
+486
+00:55:26.080 --> 00:55:30.809
+Rafael Cruz: prof. Os números negativos também são inteiros? Sim, aqui é
+
+487
+00:55:32.350 --> 00:55:35.239
+Rafael Cruz: dois elevado a um6 menos um.
+
+488
+00:55:35.380 --> 00:55:36.290
+Rafael Cruz: Até a.
+
+489
+00:55:37.570 --> 00:55:42.979
+Rafael Cruz: Aqui vai esse aqui, ó. Menos sessenta e cinco quinhentos e trinta e seis
+
+490
+00:55:43.090 --> 00:55:47.300
+Rafael Cruz: até sessenta e cinco quinhentos e trinta e cinco.
+
+491
+00:55:48.730 --> 00:55:50.639
+Rafael Cruz: É o range dele que ele aguenta.
+
+492
+00:55:51.340 --> 00:55:54.589
+Rafael Cruz: Ele vai de menos sessenta e cinco trezentos e vinte,
+
+493
+00:55:54.970 --> 00:55:58.350
+Rafael Cruz: sessenta e cinco até sessenta e cinco.trezentos e sessenta e seis.
+
+494
+00:55:58.850 --> 00:56:01.370
+Rafael Cruz: É o que o 2trinta e dois
+
+495
+00:56:04.440 --> 00:56:06.530
+Rafael Cruz: calcular. E aqui é a mesma coisa.
+
+496
+00:56:06.880 --> 00:56:11.840
+Rafael Cruz: Vinte e trinta e dois. Era quatro, blá, blá, blá. Negativo
+
+497
+00:56:15.160 --> 00:56:22.260
+Rafael Cruz: até quatro dois nove até isso aqui. Positivo,
+
+498
+00:56:29.290 --> 00:56:30.670
+Rafael Cruz: beleza. E assim vai.
+
+499
+00:56:32.410 --> 00:56:33.300
+Rafael Cruz: Tá bom.
+
+500
+00:56:34.300 --> 00:56:35.330
+Rafael Cruz: E assim vai.
+
+501
+00:56:37.330 --> 00:56:42.780
+Rafael Cruz: Então é assim que funciona essas linguagens. Isso aqui não é específico de ser Sharp.
+
+502
+00:56:43.370 --> 00:56:58.319
+Rafael Cruz: Linguagens baseadas em C, principalmente, eles têm essas nuances. Se você pegar C C mais C, Sharp Java, você vai ver que os conceitos são muito parecidos que essa árvore de decisão. Essa árvore de estrutura é muito parecida.
+
+503
+00:56:59.100 --> 00:57:00.030
+Rafael Cruz: Tá bom,
+
+504
+00:57:08.500 --> 00:57:10.080
+Rafael Cruz: continuando, pessoal.
+
+505
+00:57:14.290 --> 00:57:23.590
+Rafael Cruz: Ainda hoje você considera necessário? Ainda hoje você considera necessário óbvio, é que necessário, com certeza é necessário.
+
+506
+00:57:24.800 --> 00:57:31.269
+Rafael Cruz: A maioria dos sistemas que a gente tem de previdência, de conta corrente de transações é baseada nessa.
+
+507
+00:57:31.520 --> 00:57:32.710
+Rafael Cruz: Nessa.
+
+508
+00:57:32.970 --> 00:57:34.429
+Rafael Cruz: Nessa tabela de dados.
+
+509
+00:57:35.480 --> 00:57:41.629
+Rafael Cruz: Então não souber isso, aí fica difícil você programar nesse tipo de situação.
+
+510
+00:57:48.630 --> 00:57:51.740
+Rafael Cruz: Eu não entendi os números primos. O que tem? Números primos,
+
+511
+00:58:08.470 --> 00:58:12.789
+Rafael Cruz: números primos a ver com as transações de contas bancárias. Não estou entendendo.
+
+512
+00:58:32.160 --> 00:58:36.189
+Rafael Cruz: Ainda não entendi o que tem alguma coisa a ver com números primos.
+
+513
+00:58:41.340 --> 00:58:44.789
+Rafael Cruz: Depois eu me explicou com calma que eu ainda não consegui pegar. Tá?
+
+514
+00:58:47.850 --> 00:58:54.809
+Rafael Cruz: Vamos lá, pessoal. Existe um conceito aqui. Também. A gente falou sobre o Var. Que é a inferência do tipo. E existe o conceito que a gente chama de const,
+
+515
+00:58:55.200 --> 00:58:59.200
+Rafael Cruz: o que é uma constante, como a gente fala. Uma constante é uma coisa que isso não pode mudar.
+
+516
+00:58:59.490 --> 00:59:02.349
+Rafael Cruz: Por exemplo, o número do Pi. O número do Pi não muda.
+
+517
+00:59:02.510 --> 00:59:13.980
+Rafael Cruz: Três.catorze, quinze e nove. Aí, esse é um Pi o número Pi. Uma constante. É uma variável que a gente define um valor e nunca mais muda.
+
+518
+00:59:14.310 --> 00:59:21.499
+Rafael Cruz: Por que isso é importante? Porque, em determinadas contas, a gente trabalha com números fixos que não se alteram.
+
+519
+00:59:22.130 --> 00:59:28.159
+Rafael Cruz: Então a gente pode definir constantes ali constantes.
+
+520
+00:59:31.630 --> 00:59:37.700
+Rafael Cruz: A gente define constante intim idade mínima.
+
+521
+00:59:38.370 --> 00:59:44.130
+Rafael Cruz: Então essa concha é uma constante que não pode ser alterada. O que significa? Eu não posso chegar aqui. Idade
+
+522
+00:59:44.830 --> 00:59:47.479
+Rafael Cruz: mínima igual é vinte e um.
+
+523
+00:59:48.090 --> 00:59:50.869
+Rafael Cruz: Não posso fazer isso, porque isso vai dar erro.
+
+524
+00:59:51.140 --> 00:59:54.030
+Rafael Cruz: A idade mínima constante já está reclamando aqui até
+
+525
+00:59:57.170 --> 01:00:06.880
+Rafael Cruz: então constantes são variáveis que a gente define para que auxilie a gente a fazer contas.
+
+526
+01:00:11.040 --> 01:00:19.499
+Rafael Cruz: Tá? Ou programações. Vou dar um exemplo aqui mais prático. Imagina aqui que eu vou criar uma constante constante.
+
+527
+01:00:20.210 --> 01:00:25.540
+Rafael Cruz: Double é desconto.
+
+528
+01:00:26.810 --> 01:00:33.250
+Rafael Cruz: Produto igual a trinta.
+
+529
+01:00:37.880 --> 01:00:45.269
+Rafael Cruz: Ela não é uma constante. Então, por exemplo, aqui ela vai me ajudar a fazer uma conta aqui. Então, por exemplo, if,
+
+530
+01:00:48.260 --> 01:00:50.830
+Rafael Cruz: o ar cliente igual a Vip.
+
+531
+01:00:57.040 --> 01:00:58.359
+Rafael Cruz: É isso.
+
+532
+01:00:59.040 --> 01:01:01.320
+Rafael Cruz: Cliente Vip. Por exemplo.
+
+533
+01:01:02.620 --> 01:01:04.470
+Rafael Cruz: Ah, eu vou fazer aqui. Ó
+
+534
+01:01:08.080 --> 01:01:12.930
+Rafael Cruz: é. Vá produto
+
+535
+01:01:16.390 --> 01:01:17.490
+Rafael Cruz: igual.
+
+536
+01:01:17.690 --> 01:01:26.810
+Rafael Cruz: Aham, falei lá um.quinhentos, um.quinhentos ponto noventa e nove.
+
+537
+01:01:27.440 --> 01:01:29.299
+Rafael Cruz: Ah, se o cliente for Vip,
+
+538
+01:01:29.660 --> 01:01:39.750
+Rafael Cruz: então o produto, agora o valor do produto vai ser produto menos produto vezes desconto
+
+539
+01:01:47.830 --> 01:01:52.150
+Rafael Cruz: significa o quê? Que essa constante aqui, que eu estou dando um.
+
+540
+01:01:52.300 --> 01:01:54.700
+Rafael Cruz: Estou fazendo uma conta que o produto agora
+
+541
+01:01:55.480 --> 01:02:00.180
+Rafael Cruz: ele tem um cálculo de desconto de trinta por Lcvip.
+
+542
+01:02:03.090 --> 01:02:06.210
+Rafael Cruz: A constante. Sempre precisa ser definido.
+
+543
+01:02:07.040 --> 01:02:09.179
+Rafael Cruz: Sempre precisa ser definida. Tá
+
+544
+01:02:10.600 --> 01:02:19.460
+Rafael Cruz: aí, em algum determinado momento, mudou o desconto. Agora já não é trinta. Agora é vinte e cinco. O pessoal vem aqui no meu cálculo
+
+545
+01:02:20.230 --> 01:02:21.870
+Rafael Cruz: e mudo. Agora é vinte e cinco.
+
+546
+01:02:32.140 --> 01:02:34.560
+Rafael Cruz: A conta aqui que está embaixo continua a mesma coisa.
+
+547
+01:02:35.380 --> 01:02:36.689
+Rafael Cruz: São muito esse carinho.
+
+548
+01:02:39.940 --> 01:02:46.830
+Rafael Cruz: Então a constante é uma variável que não pode ser alterada. Condutor da vida. Ela tem que sempre ser
+
+549
+01:02:48.060 --> 01:02:50.139
+Rafael Cruz: inicializada. Tá bom.
+
+550
+01:02:52.990 --> 01:02:54.820
+Rafael Cruz: Sempre ser inicializada.
+
+551
+01:02:58.400 --> 01:02:59.689
+Rafael Cruz: Então, o nosso carinho aqui,
+
+552
+01:03:06.780 --> 01:03:08.149
+Rafael Cruz: o Reed Only.
+
+553
+01:03:08.620 --> 01:03:10.179
+Rafael Cruz: Ele é uma variável.
+
+554
+01:03:10.750 --> 01:03:17.159
+Rafael Cruz: Ela é tipo uma constante. É só de leitura. Ela é o mesmo conceito de uma constante.
+
+555
+01:03:17.580 --> 01:03:21.200
+Rafael Cruz: Quanto, todavia, eu não preciso inicializar ela
+
+556
+01:03:21.440 --> 01:03:28.180
+Rafael Cruz: toda hora, definir logo a inicialização, eu posso inicializar ela em um momento posterior.
+
+557
+01:03:28.820 --> 01:03:31.319
+Rafael Cruz: Contudo, uma vez que eu já inicializei,
+
+558
+01:03:31.710 --> 01:03:33.550
+Rafael Cruz: eu não posso inicializar de novo
+
+559
+01:03:33.660 --> 01:03:38.200
+Rafael Cruz: tão diferente da constante. Aqui o Reed only. Eu posso fazer isso aqui, ó
+
+560
+01:03:41.480 --> 01:03:43.380
+Rafael Cruz: readjione
+
+561
+01:03:53.220 --> 01:03:56.430
+Rafael Cruz: intim Xix.
+
+562
+01:03:57.190 --> 01:04:04.619
+Rafael Cruz: E aí eu posso fazer meu cálculo daqui a pouco. Botar aqui X igual a sessenta e quatro.
+
+563
+01:04:07.180 --> 01:04:10.350
+Rafael Cruz: Então o Rich One é uma constante,
+
+564
+01:04:10.790 --> 01:04:14.159
+Rafael Cruz: mas pode ser alterada no construtor da classe.
+
+565
+01:04:17.470 --> 01:04:19.290
+Rafael Cruz: O Ridgeway é uma constante.
+
+566
+01:04:19.910 --> 01:04:25.450
+Rafael Cruz: O Lead and é a mesma situação daqui da constante, ela é igualzinho a uma constante
+
+567
+01:04:26.380 --> 01:04:32.910
+Rafael Cruz: só que ao invés de eu ter que inicializar logo direto a minha constante, eu posso inicializar ela de forma posterior.
+
+568
+01:04:35.040 --> 01:04:37.459
+Rafael Cruz: Eu não preciso inicializar ela logo de cara.
+
+569
+01:04:42.330 --> 01:04:44.740
+Rafael Cruz: Mas ela continua sendo uma constante também.
+
+570
+01:04:53.200 --> 01:04:55.160
+Rafael Cruz: O que a gente vai mais utilizar,
+
+571
+01:04:55.380 --> 01:05:01.310
+Rafael Cruz: constante e variáveis Region um pouco mais avançado. Um pouco mais pra frente, tá?
+
+572
+01:05:10.710 --> 01:05:16.399
+Rafael Cruz: Aonde você vai? Usar o Reedony? Quando você definir que você vai usar uma constante,
+
+573
+01:05:16.750 --> 01:05:22.680
+Rafael Cruz: você vai escolher entre read only e constante. Eles têm os mesmos comportamentos. Tá bom.
+
+574
+01:05:26.720 --> 01:05:28.020
+Rafael Cruz: A ideia é a mesma.
+
+575
+01:05:28.460 --> 01:05:31.199
+Rafael Cruz: Se você pensar assim, vou usar uma constante
+
+576
+01:05:31.800 --> 01:05:36.099
+Rafael Cruz: ao invés de usar uma constante, eu posso usar um Region. Tá bom, essa é a ideia.
+
+577
+01:05:41.190 --> 01:05:51.399
+Rafael Cruz: Você pode utilizar uma constante tanto para inteiro quanto para String. Para qualquer objeto. Tá, literalmente basta você querer utilizar.
+
+578
+01:05:51.680 --> 01:05:57.970
+Rafael Cruz: Por exemplo, eu posso utilizar uma constante, um weed only.
+
+579
+01:05:59.050 --> 01:06:03.460
+Rafael Cruz: Vou chamar aqui de String.
+
+580
+01:06:08.510 --> 01:06:10.570
+Rafael Cruz: Mensagem.
+
+581
+01:06:12.040 --> 01:06:16.020
+Rafael Cruz: Desconto igual.
+
+582
+01:06:20.290 --> 01:06:22.370
+Rafael Cruz: Está vendo que o comportamento aqui é o mesmo.
+
+583
+01:06:22.750 --> 01:06:28.429
+Rafael Cruz: Eu posso usar tanto mais constante quanto um Region é o mesmo comportamento.
+
+584
+01:06:31.070 --> 01:06:31.940
+Rafael Cruz: Ok,
+
+585
+01:06:36.180 --> 01:06:40.420
+Rafael Cruz: então eu posso utilizar ela.
+
+586
+01:06:42.270 --> 01:06:46.400
+Rafael Cruz: Existe uma nuance pequenininha do read only.
+
+587
+01:06:49.010 --> 01:06:52.179
+Rafael Cruz: Nome de constante é sempre maiúsculo, sempre maiúsculo.
+
+588
+01:06:52.510 --> 01:06:55.109
+Rafael Cruz: Nome de constante. É sempre mausco. Tá bom?
+
+589
+01:06:59.020 --> 01:07:02.029
+Rafael Cruz: Existe uma nuance pequena do Read Only,
+
+590
+01:07:04.100 --> 01:07:07.339
+Rafael Cruz: e aí a gente vai fazer aqui? Para a gente fechar a aula de hoje
+
+591
+01:07:09.040 --> 01:07:14.940
+Rafael Cruz: na manhã? Eu corrijo a lista no começo e passo uma outra lista sobre variadas.
+
+592
+01:07:15.400 --> 01:07:18.549
+Rafael Cruz: Existe uma nuance pequena do Read only.
+
+593
+01:07:19.030 --> 01:07:22.670
+Rafael Cruz: O que eu falei. Uma constante. Eu não posso ser alterada.
+
+594
+01:07:25.960 --> 01:07:31.820
+Rafael Cruz: Um Region. Ele é uma constante. Mas olha o mais aqui. Mas pode ser alterada
+
+595
+01:07:35.030 --> 01:07:36.700
+Rafael Cruz: no construtor da classe.
+
+596
+01:07:38.800 --> 01:07:46.190
+Rafael Cruz: Então eu posso criar aqui e alterar aqui a mensagem.
+
+597
+01:07:51.520 --> 01:07:53.830
+Rafael Cruz: Desconto aplicado de vinte e cinco.
+
+598
+01:07:56.610 --> 01:07:59.259
+Rafael Cruz: Essa é a diferença. Read only.
+
+599
+01:07:59.620 --> 01:08:04.810
+Rafael Cruz: Eu posso alterar somente em um determinado método.
+
+600
+01:08:05.280 --> 01:08:10.980
+Rafael Cruz: A gente chama de construtor. Não queria avançar aqui porque construtor é um conceito muito de orientação. Objeto. A gente nem chegou nisso lá,
+
+601
+01:08:11.190 --> 01:08:12.730
+Rafael Cruz: mas ela pode ser alterada,
+
+602
+01:08:15.810 --> 01:08:22.460
+Rafael Cruz: já que o meu desconto produto eu não consigo alterar.
+
+603
+01:08:22.609 --> 01:08:23.620
+Rafael Cruz: Está dando um erro.
+
+604
+01:08:29.580 --> 01:08:32.040
+Rafael Cruz: Deu para pegar a diferença de um para o outro.
+
+605
+01:08:45.510 --> 01:08:54.309
+Rafael Cruz: Então aqui é essa. Aqui são algumas nuances da nossa linguagem, principalmente.
+
+606
+01:08:55.250 --> 01:09:00.450
+Rafael Cruz: E a gente para aqui que a gente viu toda a parte de tipos.
+
+607
+01:09:01.979 --> 01:09:05.499
+Rafael Cruz: Você, Sharp. Declarações variáveis. Vá.
+
+608
+01:09:05.990 --> 01:09:10.989
+Rafael Cruz: Tipos de variáveis constantes e Ridley only.
+
+609
+01:09:11.950 --> 01:09:15.210
+Rafael Cruz: Não vou avançar mais amanhã a gente vai ver sobre Strings.
+
+610
+01:09:16.660 --> 01:09:18.259
+Rafael Cruz: Eu vou corrigir a lista.
+
+611
+01:09:20.890 --> 01:09:23.750
+Rafael Cruz: Eu vou passar alguns exercícios sobre String e a gente.
+
+612
+01:09:26.580 --> 01:09:30.609
+Rafael Cruz: A gente fala sobre String.
+
+613
+01:09:31.279 --> 01:09:35.870
+Rafael Cruz: Você vai disponibilizar esse slide, cara. Vou disponibilizar amanhã
+
+614
+01:09:36.540 --> 01:09:39.360
+Rafael Cruz: que aí eu já disponibilizo fechando o conceito. Tá
+
+615
+01:09:51.069 --> 01:09:56.900
+Rafael Cruz: pessoal deu uma lida também nas trilhas que tá no
+
+616
+01:09:59.090 --> 01:10:03.779
+Rafael Cruz: está no site da Infinity. É importante dar uma lida na trilha.
+
+617
+01:10:20.220 --> 01:10:29.650
+Rafael Cruz: Deixa eu ver. Números pensam gigantes. A base da criptografia moderna. Multiplicar dois números é fácil para o computador, mas fazer o caminho inverso, faturar o produto.
+
+618
+01:10:30.060 --> 01:10:32.830
+Rafael Cruz: Cara. Então vamos lá,
+
+619
+01:10:38.220 --> 01:10:40.360
+Rafael Cruz: cara, eu sugiro passar aquele
+
+620
+01:10:40.480 --> 01:10:50.879
+Rafael Cruz: cara. Eu acho que a trilha e os cursos ali é importantes. Cara, eu acho que o curso da Microsoft é importante. Mas assim as trilhas também são baseadas no curso da Microsoft. Então, assim
+
+621
+01:10:51.590 --> 01:10:55.919
+Rafael Cruz: fosse, para escolher o que eu achava que eu achei mais conveniente para mim,
+
+622
+01:10:56.290 --> 01:10:57.989
+Rafael Cruz: entendeu? Os dois são bons, tá?
+
+623
+01:10:59.450 --> 01:11:09.340
+Rafael Cruz: Os números estão lentos, cara. Então. Mas é mais ou menos assim, ok, os números. Tudo bem, falando sobre chapa pública ali com Rsa,
+
+624
+01:11:10.640 --> 01:11:18.579
+Rafael Cruz: mas em termos financeiros, são contas que a gente faz, que não usam muito números primos. Tá
+
+625
+01:11:19.600 --> 01:11:24.879
+Rafael Cruz: isso aqui é uma outra parte. Aqui a gente chamava de Saiba segurança é outra nuance.
+
+626
+01:11:25.540 --> 01:11:36.830
+Rafael Cruz: Mas as contas são contas por exemplo, de rendimentos, saldo de conta que são contas pesadas, contas pesadas.
+
+627
+01:11:37.390 --> 01:11:42.910
+Rafael Cruz: Por exemplo, vou dar um exemplo. Aqui. A gente tem contas ali dentro dos sistemas previdenciários
+
+628
+01:11:43.570 --> 01:11:49.080
+Rafael Cruz: que você utiliza até vinte casas decimais para fazer essas contas.
+
+629
+01:11:50.460 --> 01:11:59.060
+Rafael Cruz: Então, se você errar ali um cálculo previdenciário, por exemplo, com menos casas decimais. A conta não fecha.
+
+630
+01:11:59.380 --> 01:12:02.770
+Rafael Cruz: Dá errado o cálculo.
+
+631
+01:12:03.040 --> 01:12:10.210
+Rafael Cruz: Então existem contas que precisam com todas as precisões de dígitos.
+
+632
+01:12:11.420 --> 01:12:18.270
+Rafael Cruz: Então é por isso que a gente tem diversas diferenças de de tipagens.
+
+633
+01:12:18.780 --> 01:12:38.220
+Rafael Cruz: Uma que comporta menos dígitos, outra vai comportar mais dígitos e assim vai justamente por causa dessas contas ali, que são um pouco mais complexas e cara. A gente está falando sistemas financeiros. A gente pode falar sistemas científico. A gente pode falar sobre astronomia. Existem diversos tipos de contas ali que são muito mais complexas do que a gente acha,
+
+634
+01:12:38.430 --> 01:12:52.049
+Rafael Cruz: até para jogo também. Que a gente está falando. Tem contas muito complexas ali também. Para fazer cálculos de parábola, cálculos de impacto de colisão e afins ali, que precisam ser feitas também são contas pesadas. Ok,
+
+635
+01:12:59.040 --> 01:13:04.789
+Rafael Cruz: pessoal, vamos fechar aqui, por aqui. Hoje a gente passou por toda a parte ali,
+
+636
+01:13:06.040 --> 01:13:11.440
+Rafael Cruz: sobre declarações de tipo variáveis distância, falando sobre
+
+637
+01:13:12.020 --> 01:13:17.259
+Rafael Cruz: o que é tipo o valor, o que é tipo referência, então, bem legal. Aqui o conteúdo.
+
+638
+01:13:17.510 --> 01:13:18.730
+Rafael Cruz: A gente
+
+639
+01:13:19.140 --> 01:13:25.300
+Rafael Cruz: se vê amanhã aqui, continuando um pouquinho das aulas, avançando um pouquinho sobre manipulação de String. Tá bom.
+
+640
+01:13:25.890 --> 01:13:32.710
+Rafael Cruz: E aí a gente corrige a lista e eu vou passar mais uma outra lista sobre variáveis e strings
+
+641
+01:13:34.610 --> 01:13:36.610
+Rafael Cruz: show. Pessoal. Muito obrigado.
+
+642
+01:13:36.740 --> 01:13:38.739
+Rafael Cruz: Boa noite para vocês. Até amanhã.
+
+643
+01:13:41.250 --> 01:13:42.810
+Jorge José Luiz Santos da Silva: Valeu, professor. Boa noite.
+
+644
+01:13:42.810 --> 01:13:44.179
+Rafael Cruz: Valeu. Boa noite. Tchau.
+

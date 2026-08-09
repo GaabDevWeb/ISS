@@ -1,0 +1,2314 @@
+WEBVTT
+
+1
+00:00:43.640 --> 00:00:44.489
+Audio shared by Elberth Moraes: E não sei.
+
+2
+00:00:46.690 --> 00:00:47.390
+Audio shared by Elberth Moraes: E aí?
+
+3
+00:00:54.780 --> 00:00:55.550
+Audio shared by Elberth Moraes: E aí?
+
+4
+00:00:56.830 --> 00:00:57.580
+Audio shared by Elberth Moraes: E aí?
+
+5
+00:01:09.320 --> 00:01:10.840
+Audio shared by Elberth Moraes: Você?
+
+6
+00:01:50.050 --> 00:01:54.090
+Audio shared by Elberth Moraes: E aí, você.
+
+7
+00:01:57.280 --> 00:01:58.010
+Audio shared by Elberth Moraes: E aí?
+
+8
+00:02:01.330 --> 00:02:02.040
+Audio shared by Elberth Moraes: E aí?
+
+9
+00:02:06.600 --> 00:02:07.320
+Audio shared by Elberth Moraes: E aí,
+
+10
+00:04:08.850 --> 00:04:09.530
+Audio shared by Elberth Moraes: o pé.
+
+11
+00:04:36.000 --> 00:04:36.710
+Audio shared by Elberth Moraes: E aí?
+
+12
+00:04:37.140 --> 00:04:38.040
+Audio shared by Elberth Moraes: E aí?
+
+13
+00:04:42.100 --> 00:04:42.990
+Audio shared by Elberth Moraes: E aí?
+
+14
+00:04:43.720 --> 00:04:47.220
+Audio shared by Elberth Moraes: E aí?
+
+15
+00:04:47.800 --> 00:04:49.480
+Audio shared by Elberth Moraes: E aí?
+
+16
+00:05:05.450 --> 00:05:06.310
+Audio shared by Elberth Moraes: Isso aí.
+
+17
+00:05:07.910 --> 00:05:08.620
+Audio shared by Elberth Moraes: E aí?
+
+18
+00:05:34.070 --> 00:05:35.160
+Audio shared by Elberth Moraes: E aí?
+
+19
+00:05:35.910 --> 00:05:37.140
+Audio shared by Elberth Moraes: Bora lá. Bora lá.
+
+20
+00:05:38.780 --> 00:05:41.720
+Elberth Moraes: Boa noite, companheiros. Companheiras. Todo mundo bem.
+
+21
+00:05:41.720 --> 00:05:43.290
+Audio shared by Elberth Moraes: Vocês.
+
+22
+00:05:43.890 --> 00:05:50.760
+Elberth Moraes: E aí, firme. É isso aí.
+
+23
+00:05:52.310 --> 00:05:57.160
+Elberth Moraes: O som está bom. Qualidade de podcast. Tela está boa. Podemos começar?
+
+24
+00:05:59.460 --> 00:06:02.619
+Elberth Moraes: Maravilha, vamos lá que está na hora
+
+25
+00:06:03.390 --> 00:06:09.539
+Elberth Moraes: que hoje ainda não é sexta feira para a gente ficar enrolando tanto assim.
+
+26
+00:06:10.310 --> 00:06:18.450
+Elberth Moraes: Galera, vamos lá, a gente. Hoje, a gente vai começar aqui uma nova etapa dessa nossa linda disciplina.
+
+27
+00:06:18.560 --> 00:06:32.999
+Elberth Moraes: Até agora, a nossa grande preocupação foi construir uma base. A gente entendeu como o Java funciona. A gente viu o código fonte, compilador, batecode Jvm, como que a gente executa.
+
+28
+00:06:33.000 --> 00:06:53.919
+Elberth Moraes: E aí a gente começou a trabalhar com informações. A gente criou variável. Utilizamos tipos diferentes. A gente recebeu informação do teclado com o scanner. A gente realizou algum cálculo. Mostramos alguns resultados no console. E agora eu quero que vocês
+
+29
+00:06:54.280 --> 00:07:03.170
+Elberth Moraes: comecem a perceber. Assim, uma limitação nos nossos programas, todos eles executam praticamente da mesma forma.
+
+30
+00:07:03.420 --> 00:07:14.919
+Elberth Moraes: O programa começa naquela nossa instrução, Main. Ele executa o programa. Depois ele vai para a próxima e ele continua até chegar no final. Não importa o valor
+
+31
+00:07:14.920 --> 00:07:28.129
+Elberth Moraes: que foi informado lá pelo usuário, o caminho do programa é praticamente o mesmo. Ele não muda na calculadora. Por exemplo, nós recebemos lá dois números. Executamos todas as operações na média do aluno. A gente calculou
+
+32
+00:07:28.130 --> 00:07:36.149
+Elberth Moraes: resultado. A gente mostrou o número no cadastro. A gente recebeu nome, idade, altura, e apresentamos os dados.
+
+33
+00:07:36.150 --> 00:07:41.299
+Elberth Moraes: Mas os sistemas reais precisam fazer algo a mais se a gente for olhar
+
+34
+00:07:41.300 --> 00:07:58.899
+Elberth Moraes: para um sistema bancário, por exemplo, a gente precisa verificar, sei lá se existe um saldo antes da gente permitir um saque. Se a gente for olhar para um sistema acadêmico, a gente precisa interpretar se o aluno foi aprovado ou se ele ficou em recuperação
+
+35
+00:07:58.900 --> 00:08:17.009
+Elberth Moraes: ou se ele foi até mesmo reprovado. E aí a gente começa a ver que uma aplicação precisa impedir algumas coisas. Ela precisa bloquear. Ela precisa fugir um pouquinho. Então tudo isso envolve uma ideia fundamental na programação,
+
+36
+00:08:17.010 --> 00:08:25.030
+Elberth Moraes: que é o programa precisa tomar algumas decisões. E aí, nessa semana, os nossos programas, eles deixarão
+
+37
+00:08:25.050 --> 00:08:30.329
+Elberth Moraes: de ser apenas essas execuções, executar informações em sequência,
+
+38
+00:08:30.330 --> 00:08:52.959
+Elberth Moraes: e eles vão começar a escolher alguns caminhos diferentes. E, além disso, algumas tarefas. Elas não devem acontecer. Sei lá, apenas uma vez. Se o usuário informar uma idade inválida. A gente não quer simplesmente encerrar o programa. A gente quer pedir para o cara digitar novamente. Se a pessoa está utilizando a calculadora. Talvez ela queira realizar várias operações
+
+39
+00:08:52.960 --> 00:09:07.070
+Elberth Moraes: antes de sair. E se a gente quer contar, sei lá, de um até dez, não faz sentido a gente escrever dez comandos iguais. Por isso que a gente além dessas decisões, a gente vai aprender também sobre repetição.
+
+40
+00:09:07.070 --> 00:09:24.329
+Elberth Moraes: Existe uma outra mudança importante aqui hoje, que agora a gente vai começar. Eu deixei essa tela preta aqui, simplesmente para causar impacto. Que o objetivo é a gente largar esse cara de mão e a gente ir para dentro da nossa. Ide isso aqui foi só para a gente
+
+41
+00:09:24.330 --> 00:09:39.660
+Elberth Moraes: pressionar para ter um momento de tensão. Então esse cara daqui saiu da nossa circulação. A gente não usa ele mais dentro do nosso curso. Claro que se vocês quiserem, vocês podem usá los usar a vontade dele, porque ele é legal para a gente aprender, para a gente
+
+42
+00:09:39.660 --> 00:09:47.119
+Elberth Moraes: escrever bastante. Mas aí a gente vai começar a utilizar uma ide. A gente tem lá a ide padrão
+
+43
+00:09:47.530 --> 00:10:04.459
+Elberth Moraes: do que forma ali no mudam, que é o inteligei. E aí eu queria fazer só um levantamento aqui sem fazer uma enquete, fazendo apenas um bate papo aqui. Um joinha. Quem aqui que está com uma ide instalada
+
+44
+00:10:04.870 --> 00:10:07.020
+Elberth Moraes: só dá um joinha aí pra eu dar uma olhada.
+
+45
+00:10:08.970 --> 00:10:14.859
+Elberth Moraes: Preciso de alguém assim que tem uma ide instalada. Já tem ali uma meia dúzia de.
+
+46
+00:10:15.040 --> 00:10:16.880
+Elberth Moraes: De quase dez pessoas.
+
+47
+00:10:17.000 --> 00:10:34.239
+Elberth Moraes: Essa ideia que vocês instalaram, vocês conseguem digitar aqui no chat. O nome dela se foi. A nossa querida Intelligence se foi o S. Code se foi o eclipse, se foi qualquer outra aí que vocês estão ligados nela,
+
+48
+00:10:34.270 --> 00:10:44.079
+Elberth Moraes: beleza. Então a gente tem aqui uma galera no Vs Code inter Dj e tal perfeito, tá? Não tem problema. A Idr. Essa disciplina, que é uma disciplina
+
+49
+00:10:44.080 --> 00:10:56.229
+Elberth Moraes: ainda de fundamentos. E aí a única coisa que vai diferenciar uma coisa da outra. É a forma que se usa a ferramenta. Eu estou usando aqui dentro o eclipse,
+
+50
+00:10:56.410 --> 00:11:11.500
+Elberth Moraes: mas eu posso usar o Inter Ej. Eu posso usar o West Code. Não vai ter diferença nenhuma. Tudo que eu estiver fazendo em um, a gente vai poder fazer em outro. E aí o grande barato da gente é a gente começar a usar essa ideia
+
+51
+00:11:11.940 --> 00:11:15.770
+Elberth Moraes: já, já, ainda hoje, para a gente começar a
+
+52
+00:11:15.830 --> 00:11:31.599
+Elberth Moraes: focar em cima desse mundo mais profissional. A gente vai abrir aqui alguns códigos existentes que a gente já desenvolveu, que isso aí. É um trabalho que o desenvolvedor faz no mundo real. A gente vai ler. A gente vai entender. A gente vai encontrar
+
+53
+00:11:31.600 --> 00:11:49.719
+Elberth Moraes: algumas limitações. A gente vai fazer manutenção. A calculadora funciona. Mas o que acontece se um segundo número for zero? O programa de média já calcula, mas ele consegue dizer se o aluno foi aprovado ou reprovado. Eu vou usar o eclipse, tá, Gabriel,
+
+54
+00:11:49.790 --> 00:12:03.450
+Elberth Moraes: daqui a pouco eu vou informar aqui links para vocês baixarem. Quem não baixou não é para deixar quem não tem o ambiente perdido. Não, a gente vai fazer junto aqui. Então, o grande barato desse nosso trabalho aqui é a gente pegar essa nossa.
+
+55
+00:12:04.000 --> 00:12:08.719
+Elberth Moraes: Essa nossa experiência, que a gente já tem de programação. E trazer aqui para o nosso mundo.
+
+56
+00:12:08.890 --> 00:12:18.069
+Elberth Moraes: Observem que eu estou aqui. Galera num diretório onde a gente estava trabalhando nos projetos que a gente fez.
+
+57
+00:12:18.130 --> 00:12:36.970
+Elberth Moraes: Então eu tenho aqui no disco local o nome do nosso bloco, o nome da nossa primeira disciplina. E dentro dessa primeira disciplina, a gente tem um monte de arquivo. Java. Percebam que eu estou deletando aqui os Portocles. Esses caras aqui a gente pode gerar a qualquer hora. Eu só quero olhar para esses carinhas daqui.
+
+58
+00:12:37.080 --> 00:12:44.830
+Elberth Moraes: Dentro dessa minha disciplina. Eu não vou criar uma pastinha separada. Não, eu vou criar uma pastinha separada aqui dentro desse bloco,
+
+59
+00:12:44.970 --> 00:12:51.339
+Elberth Moraes: porque eu vou criar um espaço, um ambiente de desenvolvimento que a gente chama no mundo da programação de Workspace.
+
+60
+00:12:51.400 --> 00:13:07.860
+Elberth Moraes: Um lugar onde você consegue ali dentro, guardar os seus projetos, organizar o seu portfólio. Então o que eu vou fazer. Eu estou dentro do bloco e aí a organização de cada um tá galera. Vocês podem fazer do jeito que vocês quiserem. Não tem problema nenhum. Eu vou criar aqui dentro uma nova pasta.
+
+61
+00:13:08.360 --> 00:13:13.979
+Elberth Moraes: E essa pasta. Eu vou chamar aqui de Work Space. Tudo junto.
+
+62
+00:13:14.240 --> 00:13:18.589
+Elberth Moraes: Workspace é um termo tradicional aqui no mundo da programação,
+
+63
+00:13:18.590 --> 00:13:41.040
+Elberth Moraes: onde a galera coloca aqui dentro os seus projetos. Ok, a gente. Até agora, estava criando classes. Eu vou daqui a pouco pegar essas classes e jogar para dentro de projetos para a gente ter ela mais organizada e na hora que a gente for compartilhar com alguém em vez da gente compartilhar meia dúzia de classes, a gente vai compartilhar um projeto. E dentro desse projeto, a gente tem meia dúzia de classes. Ok,
+
+64
+00:13:41.040 --> 00:13:45.349
+Elberth Moraes: vamos organizar a escalinha direitinho, porque daqui duas semanas, a gente vai começar a trabalhar
+
+65
+00:13:45.350 --> 00:13:51.949
+Elberth Moraes: com novas classes, com classes, objetos, aquelas coisas todas. E a gente precisa de um pouquinho mais de organização.
+
+66
+00:13:52.060 --> 00:13:56.649
+Elberth Moraes: Eu estava dando uma olhada hoje cedo, onde a galera está
+
+67
+00:13:56.660 --> 00:14:14.299
+Elberth Moraes: baixando as suas ideias, onde a galera está montando o seu ambiente. Então, se vocês tiverem aí qualquer ambiente que vocês usem, que vocês estejam utilizando. Deixa eu até entrar aqui. Nossa, aqui foi da outra disciplina. Mas eu posso aumentar aqui o nosso.
+
+68
+00:14:14.510 --> 00:14:16.690
+Elberth Moraes: Trazer para o nosso mundinho. Aqui
+
+69
+00:14:16.830 --> 00:14:25.199
+Elberth Moraes: a gente pode usar qualquer uma, mas se vocês quiserem no chat aí, ajudar a galera. Eu estava vendo um dia desse lá no trabalho.
+
+70
+00:14:25.260 --> 00:14:39.440
+Elberth Moraes: Que o pessoal tem várias formas, né? A gente tem que olhar. Claro, a versão que a gente está utilizando do nosso Jdk. Isso, a gente já viu aquele Barraversion lembra que a gente fez algumas aulas. A gente consegue fazer. E aí, aqui dentro, a gente consegue botar
+
+71
+00:14:40.180 --> 00:14:42.190
+Elberth Moraes: esse cara daqui. Eu acho.
+
+72
+00:14:46.310 --> 00:14:53.330
+Elberth Moraes: Acho que é esse? Vê se vocês conseguem entrar nesse link aqui. Galera, esse carinha daqui.
+
+73
+00:14:56.870 --> 00:15:04.390
+Elberth Moraes: Acho que é isso mesmo. Ele tem aqui para baixo a possibilidade de você baixar esse instalador.
+
+74
+00:15:04.430 --> 00:15:20.140
+Elberth Moraes: Então você tem aqui para baixo os downloads da vida. Uma coisa que vocês têm que ficar ligado. E aí eu acho que já pensando mais na frente. Isso, a galera que vai usar o eclipse, tá? A gente pode usar também. O. Qual o nome do Edj? Acho que é Jet Brains. Não é isso.
+
+75
+00:15:20.530 --> 00:15:26.149
+Elberth Moraes: Jets Brains, Jetson Braings. Acho que é isso.
+
+76
+00:15:27.390 --> 00:15:28.730
+Elberth Moraes: Acho que é isso aqui?
+
+77
+00:15:30.010 --> 00:15:41.860
+Elberth Moraes: É esse galera que vocês estão pegando. Que vocês estão usando. Ou vocês estão pegando de algum lugar? A galera que está com o Italy Day. Ele tem aqui a possibilidade de você baixar. Está vendo um instalador?
+
+78
+00:15:41.880 --> 00:15:57.079
+Elberth Moraes: Acho que é isso aqui mesmo. E aí, mais uma vez, quando você baixa esse instalador. Assim, quando você baixa o eclipse, você tem que pensar na Jdk que você está baixando a versão do seu carinha. E observem que eu queria que para a galera que está usando o eclipse.
+
+79
+00:15:57.080 --> 00:16:10.190
+Elberth Moraes: Observem que vocês vão baixar esse instalador. E aí, quando vocês clicarem para instalar, ele vai aparecer uma tela. Tipo essa daqui. Eu queria que vocês usassem esse cara daqui. Ó eclipse! Ide, forjava eeee.
+
+80
+00:16:10.200 --> 00:16:15.630
+Elberth Moraes: Ok, esse aqui, ele já vai trabalhar com a parte de desenvolvimento web.
+
+81
+00:16:15.670 --> 00:16:27.110
+Elberth Moraes: Então, se mais para frente, vocês quiserem continuar com o mesmo carinha, vocês vão usar esse aqui, que é o Enterprise Edition? Ok, o Inter e J. Eu não sei
+
+82
+00:16:27.140 --> 00:16:44.890
+Elberth Moraes: qual é a versão que se usa aqui, mas eu acho que é simplesmente você baixar esse instalador, né? Galera deve ser um Next Next, Next, Next. E segue adiante. Não é isso. Eu acho que tem uma proposta também de vocês. Com o e mail do Instituto Infinity. Vocês têm alguma facilidade, não tem?
+
+83
+00:16:47.200 --> 00:17:01.059
+Elberth Moraes: Tem alguma coisa assim de vocês terem versões que a galera paga e vocês não pagariam. Tem um negócio desse. Então vocês podem entrar em contato até entre vocês, mesmo no grupo dos clandestinos que vocês têm. E aí tal
+
+84
+00:17:01.630 --> 00:17:08.650
+Elberth Moraes: para o nosso Tp: Você pode usar qualquer Ide e essa ide. Vocês vão utilizar
+
+85
+00:17:08.670 --> 00:17:21.909
+Elberth Moraes: durante toda a disciplina de vocês nesse bloco ou em outros blocos que vocês utilizem. O Java, por exemplo. E dependendo da ideia, você pode programar em diferentes linguagens.
+
+86
+00:17:22.089 --> 00:17:36.810
+Elberth Moraes: Então tem muita. Gente. Que programa? Python C. Sharp. O Java no Vs. Code e tem outros legais aí também para você tá bom. O Vs code. É uma ideia muito
+
+87
+00:17:36.950 --> 00:17:55.809
+Elberth Moraes: rápida, muito limpa. Eu uso eclipse porque a própria empresa está usando. E às vezes eu vou estar no computador da empresa. E eu não vou poder instalar nada porque eu tenho que ter o usuário de administrador, e às vezes eu não vou usar, mas eu vou usar o eclipse. Por exemplo, quando eu estou aqui na minha área de trabalho,
+
+88
+00:17:56.310 --> 00:18:08.529
+Elberth Moraes: eu já tenho esse eclipse. Esse eclipse. Aqui é o Enterprise. Tá vendo, ó Enterprise, aquele Eee que a gente estava falando. Esse cara daqui observe que eu estalei tem um ano. Tá vendo, ó dois mil e vinte e cinco tal.
+
+89
+00:18:08.590 --> 00:18:21.880
+Elberth Moraes: Mas o que interessa não é a data que você está instalando é quando você for fazer a configuração dele. Quando você for baixar, você lembrar que algumas ideias são meio que guiadas pela própria versão do Java.
+
+90
+00:18:21.910 --> 00:18:29.499
+Elberth Moraes: Então, se você baixar uma versão do Java vinte e cinco, você não vai poder usar um eclipse muito antigo. Você vai ter que usar um eclipse mais novo
+
+91
+00:18:29.570 --> 00:18:49.409
+Elberth Moraes: se você for baixar um eclipse muito novo, você tiver um Java muito antigo, você também não vai poder usar. Então isso eu estou falando do eclipse, tá? Mas a proposta é que, com o ambiente que a gente tem até agora. Java dezassete, vinte e um, vinte e cinco. O eclipse que vocês baixarem aí, ou o intelligence, vocês vão continuar tranquilamente.
+
+92
+00:18:49.460 --> 00:18:59.169
+Elberth Moraes: Observem que quando eu abrir aqui esse nosso carinha, vocês podem abrir em qualquer um aqui. Eles pedem para a gente selecionar. Tá vendo o Workspace.
+
+93
+00:18:59.280 --> 00:19:14.690
+Elberth Moraes: Então aquele workspace não é uma coisa que utilize da minha cabeça. É um nome utilizado realmente nos nossos mundos, aqui de diferentes programadores. E aí a gente tem a possibilidade de você usar o Browse aqui, esse botãozinho, Browse,
+
+94
+00:19:14.690 --> 00:19:27.690
+Elberth Moraes: e dar um pulinho lá naquela pastinha. Por exemplo, eu tenho outros projetos de outras disciplinas, mas eu quero ir lá naquele meu bloco de backend aqui de desenvolvimento fundamentos, e encontrar a nossa
+
+95
+00:19:28.290 --> 00:19:36.630
+Elberth Moraes: pastinha Workspace. Selecionei essa pastinha. Significa que os projetos que eu criar. Eu vou botar dentro dela,
+
+96
+00:19:36.640 --> 00:19:53.390
+Elberth Moraes: mas observe que a gente pode ter uma série de Workspaces. Tá vendo? Eu tenho aqui para a pós graduação. Eu tenho aqui para uma outra pós de arquitetura. Eu tenho aqui para a disciplina de graduação disso, dos primórdios até hoje em dia. Então eu tenho vários carinhas aqui dentro. Aqui dentro. Ele traz para mim
+
+97
+00:19:53.390 --> 00:20:09.369
+Elberth Moraes: os mais recentes. Tá vendo? Inclusive esse que a gente colocou agora isso aqui não, esse aqui é o da pós graduação, que eu também coloquei uma pastinha workspace lá dentro. Mas a gente vem, tá vendo? Vários projetinhos que eu venho criando aí no infinite. Então botei esse carinha daqui
+
+98
+00:20:09.900 --> 00:20:20.930
+Elberth Moraes: e vou botar aqui para ele carregar. E aí ele vai demorar um pouquinho, uns minutinhos segundinhos para carregar. E a gente vai ter o nosso ambiente pronto para programar,
+
+99
+00:20:21.100 --> 00:20:34.980
+Elberth Moraes: lembrando, tá? Vocês vão poder fazer essa instalação durante a aula. Não sei se vocês costumam programar juntos comigo, mas hoje vai ser uma aula bem tranquila. Não vai ser uma aula para vocês pegarem e ir escrevendo linha a linha não
+
+100
+00:20:35.000 --> 00:20:52.889
+Elberth Moraes: continuem aí vivendo a nossa aula. Gostando dela ou não, espero que vocês gostem, mas que vocês curtam, curtam a aula. E aí amanhã vocês tentem estar com o ambiente todo prontinho para a gente conseguir trabalhar juntos aqui. Se vocês quiserem,
+
+101
+00:20:53.060 --> 00:21:10.999
+Elberth Moraes: provavelmente vai aparecer essa tela se vocês estiverem usando essa. Ide e aí eles vão pedir aqui para você esconder. Ou você pode fechar aqui em cima que ela também some. E a ideia nada mais é do que um espaço onde você tem uma área de digitação.
+
+102
+00:21:11.000 --> 00:21:29.369
+Elberth Moraes: E aqui dentro, você vai aparecer um bloco de notas para você programar, e ela disponibiliza uma série de partes que vão facilitar o uso desse nosso trabalho. E aí a gente vai conseguir ganhar um pouquinho de celeridade dentro do nosso
+
+103
+00:21:29.860 --> 00:21:33.720
+Elberth Moraes: nosso mundo. Java, galera,
+
+104
+00:21:33.950 --> 00:21:41.820
+Elberth Moraes: posso começar a trabalhar aqui, em cima do nosso mundo de programação. Posso tocar a bola aqui,
+
+105
+00:21:44.070 --> 00:21:51.049
+Elberth Moraes: se eu tiver hoje, eu vou tocar uma parada bem mais suave. Assim, a gente vai trabalhar em cima dos projetos que a gente fez.
+
+106
+00:21:51.060 --> 00:22:01.489
+Elberth Moraes: Então a gente tem aí uma hora e dez para a gente fazer um barulho legal, tá? Mas qualquer dúvida que vocês tiverem sobre o assunto ou sobre qualquer coisa,
+
+107
+00:22:01.490 --> 00:22:12.310
+Elberth Moraes: me grite. É aí que a gente conversa questões burocráticas. Vocês têm alguma pendência comigo? Vocês querem resolver alguma coisa? Está tudo em ordem? Está tudo bem. Por enquanto.
+
+108
+00:22:14.400 --> 00:22:23.100
+Elberth Moraes: O curso de vocês ainda está suave, perfeito. As outras disciplinas também estão legais. Alguma pendência por lá para a gente quebrar tudo ou está tudo em ordem?
+
+109
+00:22:26.770 --> 00:22:29.030
+Elberth Moraes: Então, beleza. Então vamos trabalhar.
+
+110
+00:22:29.380 --> 00:22:32.980
+Elberth Moraes: Eu estou aqui dentro desse nosso mega projeto
+
+111
+00:22:33.350 --> 00:22:37.989
+Elberth Moraes: lembrando. Até eu estou fazendo um projeto inicial,
+
+112
+00:22:38.150 --> 00:22:42.150
+Elberth Moraes: um projeto Java básico. Mas aqui dentro, eu consigo criar
+
+113
+00:22:42.510 --> 00:22:49.770
+Elberth Moraes: projetos de diferentes tipos. A gente está fazendo o Java básico. E aí eu vou chegar aqui, nesse meu menuzinho file
+
+114
+00:22:49.880 --> 00:23:04.400
+Elberth Moraes: simples assim. E vou pedir aqui um novo projeto. Ele traz um monte de coisa pra gente. Projeto Web, projeto. Não sei o que lá projeto eu vou encontrar aqui dentro de Project. Tá vendo um java, um Projeto Java.
+
+115
+00:23:04.500 --> 00:23:22.310
+Elberth Moraes: Claro que uma vez que eu usei, ele vai virar aqui um cara novo para mim, um item novo. Mas eu vou aqui nesse cara, porque nunca vai ter erro. E eu tenho que escolher aquele Java Project que está ali. Tá vendo? Se eu digitar Java, ele filtra ali para a gente. Mas ele sempre vai trazer aqui um Java Project.
+
+116
+00:23:22.310 --> 00:23:24.979
+Elberth Moraes: Cliquei nesse carinha, dei um Next.
+
+117
+00:23:25.530 --> 00:23:34.130
+Elberth Moraes: O projeto que eu vou criar, eu vou chamar aqui inicialmente de fundamentos Java: ok,
+
+118
+00:23:34.290 --> 00:23:44.610
+Elberth Moraes: então dentro do meu Workspace, observe que a pastinha está sendo organizada. Se o nome do bloco, o Workspace está aqui. Fundamentus Java.
+
+119
+00:23:44.670 --> 00:23:59.500
+Elberth Moraes: Observem que eu estou usando aqui o Java vinte e um, ok, tem um monte de informações de Java. Eu estou usando esse daqui. E aí eu vou dar um. Vou dar até um nexo aqui não vai mudar muito. Não, eu vou criar esse meu projeto.
+
+120
+00:23:59.610 --> 00:24:05.560
+Elberth Moraes: Deixa ele fazer aqui os refresh da vida. Ele apresenta aqui para a gente. Uma organização
+
+121
+00:24:05.730 --> 00:24:16.020
+Elberth Moraes: de pasta. Então eu vou ter o meu projeto. Eu vou ter esse Src, o famoso Sorce, um ambiente onde eu vou guardar as minhas classes
+
+122
+00:24:16.020 --> 00:24:29.400
+Elberth Moraes: aqui embaixo. Ele dá um detalhamento do que você vai encontrar em cada pastinha e tal, mas isso aí tudo. A gente vai ver e aqui para fora. São informações que depois a gente vai entendendo melhor. Mas a gente não precisa
+
+123
+00:24:29.860 --> 00:24:33.739
+Elberth Moraes: se estressar com nada disso. Fiz aqui o nosso querido Phine.
+
+124
+00:24:35.470 --> 00:24:38.379
+Elberth Moraes: Posso abrir aqui a perspectiva que ele está querendo.
+
+125
+00:24:38.750 --> 00:24:41.519
+Elberth Moraes: Vou dar ou não, não tem problema nenhum. Não vai mudar em nada.
+
+126
+00:24:41.650 --> 00:24:53.959
+Elberth Moraes: E eu estou aqui com esse ambiente. Observe que eu estou do lado esquerdo. Aqui. Essas pastinhas aqui, tudo se fecham. Tudo minimizam a gente não precisa. Na primeira versão, ele aparece, depois a gente vai
+
+127
+00:24:53.960 --> 00:25:07.149
+Elberth Moraes: configurando. Ele tem esquema de tamanho de fontes das letras. Depois a gente vê isso. Mas eu estou aqui com esse meu mega projeto, esse mega projeto. Ele tem aqui essa pasta, sócio. E ele tem um arquivo aqui dentro que eu sempre deleto. Ele.
+
+128
+00:25:07.150 --> 00:25:22.519
+Elberth Moraes: Ninguém vai criar nenhum arquivo aqui dentro sem ser eu paguei esse cara de dentro do sócio aqui. Ele só está dizendo informações da minha biblioteca. Tudo que eu posso utilizar pelo Java vinte e um as coisas que eu vou utilizar aqui dentro desse cara. Deixa esse cara aí guardado.
+
+129
+00:25:22.540 --> 00:25:27.839
+Elberth Moraes: Daqui a pouco a gente usa. Mas eu estou aqui, dentro do nosso sócio.
+
+130
+00:25:27.910 --> 00:25:39.359
+Elberth Moraes: E aí dentro desse sócio, a gente tem que ficar ligado que dentro do Java, como em algumas outras linguagens programadas de forma orientada a objeto, que é um cara que a gente vai estudar bastante.
+
+131
+00:25:39.360 --> 00:25:48.599
+Elberth Moraes: A gente começa a organizar as nossas classes em diretórios. E esses diretórios aqui, dentro do nosso mundo, Java, a gente chama de pacotes.
+
+132
+00:25:48.640 --> 00:25:55.300
+Elberth Moraes: Então os pacotes. Imagine assim: quando você tem um site? Sei lá, Globocom fantástico.
+
+133
+00:25:55.530 --> 00:26:06.529
+Elberth Moraes: Significa que lá por dentro do seu programa, Java, lá. Você vai ter uma pastinha chamada com Globo. Fantástico.
+
+134
+00:26:06.530 --> 00:26:20.439
+Elberth Moraes: Por quê? Ah, porque você tem um projeto fantástico que pertence a globo. Ah, legal. E aquele globocom, né? O com seriam todos os projetos que eu tenho da globo. Mas a gente não tem nenhum. Então tá ótimo. É só um que a gente tem o globo.
+
+135
+00:26:20.440 --> 00:26:28.440
+Elberth Moraes: Exemplo: Infinit Edu Br: Eu vou ter dentro desse carinha o Projeto da Disciplina
+
+136
+00:26:28.820 --> 00:26:38.110
+Elberth Moraes: de fundamentos. Então eu chego lá e Boto Br Edu Ifnet, o nome do carinha que a gente vai organizar.
+
+137
+00:26:38.180 --> 00:26:51.270
+Elberth Moraes: E aí, beleza? Estou falando isso aqui porque a gente tem essa organização de pasta em projetos porque você acaba tendo exemplo, tá uma empresa que eu trabalhei era uma empresa de educação.
+
+138
+00:26:51.430 --> 00:27:09.110
+Elberth Moraes: E aí essa empresa de educação tinha um site muito parecido com o Infinity infinite Edu Br. Mas só que ela tinha o dono da empresa. Além da área de educação, ela tinha uma área de comércio, o ponto com da vida.
+
+139
+00:27:09.230 --> 00:27:18.380
+Elberth Moraes: Então, quando ela foi organizar os pacotes dele, ele botou assim. Br: Edu escola.
+
+140
+00:27:18.700 --> 00:27:27.830
+Elberth Moraes: Ok. Br: ponto, escola, o nome da escola. E aí embaixo ele botou Br: com, sei lá, minha empresa.
+
+141
+00:27:28.170 --> 00:27:33.039
+Elberth Moraes: Observem que esse Br é igual para os dois projetos que são projetos do Brasil.
+
+142
+00:27:33.280 --> 00:27:46.089
+Elberth Moraes: Depois do Br tem o Edu e o com. Então, todos os projetos de educação ficariam dentro da pastinha. Edu. Todos os projetos com ficariam dentro dessa outra pastinha. E aí ele teria lá dentro da
+
+143
+00:27:46.090 --> 00:28:03.479
+Elberth Moraes: escola tudo que ele tem que fazer, ele teria dentro da empresa tudo que ele queria fazer. A gente está fazendo projetos para o infinite. Imagine assim: imaginem que nós somos uma empresa de desenvolvimento, e a gente está construindo uma série de projetos para o infinite. Então vou chegar aqui embaixo
+
+144
+00:28:03.700 --> 00:28:18.819
+Elberth Moraes: e vou criar aqui dentro dele. É dentro do sócio é sempre assim. O botão direito e a gente fazer alguma coisa. Ou os menús aqui em cima. Mas a proposta é: cliquei com o botão direito em cima. De sóci. Dei um file e busco aqui, dentro desse meu carinha
+
+145
+00:28:19.190 --> 00:28:27.200
+Elberth Moraes: a possibilidade da gente criar pastas, pacotes classes, tudo aqui. Eu encontrei aqui o tal do Package
+
+146
+00:28:27.300 --> 00:28:46.680
+Elberth Moraes: Package vai ser o nosso diretório. Como eu estava falando. Então, quando eu crio esse package aqui. Observe que eu vou botar Br: edu tudo minúsculo. Tudo separado por ponto. Tudo minúsculo. Br edu, infinit fundamentos.
+
+147
+00:28:47.500 --> 00:28:51.089
+Elberth Moraes: Tá. Botei aqui, cheguei aqui, dei um feliz.
+
+148
+00:28:51.250 --> 00:28:59.969
+Elberth Moraes: Esse carinha fica assim por enquanto. Um do lado do outro. Mas dependendo da sua formatação, pode estar assim numa escadinha Br do Infinity fundamentos
+
+149
+00:29:00.270 --> 00:29:05.709
+Elberth Moraes: esse carinha daqui, esse projeto tem uma tecla de atalhos. Se eu der um out enter,
+
+150
+00:29:05.740 --> 00:29:22.909
+Elberth Moraes: ele abre uma janelona para a gente que ele diz exatamente onde está o nosso projeto. Está vendo aqui no Ressorts, tem o locations. Dei um out enter em cima do projeto aqui em cima, tá? Não é em cima do pacote, nem em cima do sócio em cima do projeto.
+
+151
+00:29:22.930 --> 00:29:26.369
+Elberth Moraes: E aí, aqui, nessa setinha, ele leva a gente lá para o diretório.
+
+152
+00:29:26.490 --> 00:29:40.990
+Elberth Moraes: E aí aquele diretório que a gente já tinha aberto no início da aula. E aí ele vai e abre aquele diretório aqui, dentro desse meu fundamento. Já foi o projeto que eu criei. Tá vendo? Já aparece aqui. E aí quando eu entro aqui, ele já traz um monte de arquivos
+
+153
+00:29:40.990 --> 00:29:51.460
+Elberth Moraes: de configuração do Java e ele tem aquela pasta sorce onde a gente criou o nosso pacote. Quando eu entro aqui nesse sorce, ele traz a minha pasta. Br:
+
+154
+00:29:51.460 --> 00:30:01.809
+Elberth Moraes: Ele poderia ter Br: poderia ter com nesse nível. Aqui entrei no Br. Ele trouxe a minha pasta edu aqui dentro. Eu poderia ter edu com Gov. Sei lá.
+
+155
+00:30:01.810 --> 00:30:19.720
+Elberth Moraes: E aí dentro desse edu. Eu tenho Infinity. Imagine que eu seja um programador, e aí eu seja um programador de várias instituições da educação Infinity, Mit Harvard ia estar tudo aqui dentro. Não ia estar, porque não são. Br: e aí, quando a gente entra em infinite, a gente tem a pasta.
+
+156
+00:30:19.720 --> 00:30:24.280
+Elberth Moraes: Fundamentos que vai ser tudo que a gente vai aprender nessa disciplina.
+
+157
+00:30:24.320 --> 00:30:30.889
+Elberth Moraes: E aí quando a gente entra aqui. Não tem nada aqui dentro. Poxa, lamentável. O que eu vou fazer?
+
+158
+00:30:31.230 --> 00:30:37.740
+Elberth Moraes: Eu vou lá naquele meu diretório onde eu tinha feito todo aquele trabalho que era aqui. Fundamentos e tal
+
+159
+00:30:37.930 --> 00:30:40.339
+Elberth Moraes: esse monte de coisa aqui. Tá vendo?
+
+160
+00:30:40.840 --> 00:30:48.969
+Elberth Moraes: Vou copiar esses caras aqui. Eu copiei. Fez um Ctrl C aqui. Observe que eu vim dentro da minha. Ide aqui ó dentro da minha ideia,
+
+161
+00:30:49.120 --> 00:30:52.860
+Elberth Moraes: cliquei em cima do meu pacote e colhei aqui dentro.
+
+162
+00:30:53.210 --> 00:30:57.930
+Elberth Moraes: Observe que esses caras vieram parar aqui cheio de erro. Mas vieram parar aqui.
+
+163
+00:30:58.170 --> 00:31:16.679
+Elberth Moraes: E aí quando eu volto aqui, no meu diretório, naquele diretório que a gente estava se desenvolvimento. Backend Workspace Fundamento, Java Sorce, Br Edu Infinit fundamentos. Esse cara aparece aqui também.
+
+164
+00:31:16.840 --> 00:31:24.609
+Elberth Moraes: Então, o que você faz na Ide? Aparece aqui. O que você faz aqui? Aparece na Ide. O ideal é que você trabalhe pela Ide?
+
+165
+00:31:24.700 --> 00:31:37.489
+Elberth Moraes: Porque se você começar nesse negócio de lá e cá lá e cá uma hora, não vai dar certo, então eu vim para cá para a minha ide, e eu vou sempre trabalhar por aqui. E tudo que eu fizer aqui, eu salvando. Eu guardo naquele meu diretório
+
+166
+00:31:38.260 --> 00:31:44.380
+Elberth Moraes: até aqui. Galera, nove horas de Brasília. Está tudo em ordem. Posso seguir
+
+167
+00:31:49.380 --> 00:31:55.320
+Elberth Moraes: beleza. Qualquer derrota grita não muito alto,
+
+168
+00:31:55.550 --> 00:32:06.569
+Elberth Moraes: mas estou aqui, beleza. Vou começar a dar uma olhada nesses erros. Que erro! Nunca é legal, né? A gente fica meio assim, pô. Jura que eu quebrei isso tudo. Vou entrar numa primeira classe aqui. Entrei aqui,
+
+169
+00:32:06.960 --> 00:32:24.699
+Elberth Moraes: observe, quando a gente entra nessa primeira classe e ele vai abrir aqui as nossas fontes. A primeira coisa que eu ia perguntar a vocês é a seguinte: o tamanho dessa letra está legal para vocês enxergarem. Vocês estão conseguindo enxergar. Eu devo aumentar um pouquinho. Eu devo reduzir um pouquinho. Como é que está
+
+170
+00:32:29.250 --> 00:32:33.780
+Elberth Moraes: então, beleza. Vou deixar desse tamanho. Ele começa a reclamar aqui,
+
+171
+00:32:34.380 --> 00:32:41.139
+Elberth Moraes: porque sempre que você está desenvolvendo uma classe dessa, construir uma classe,
+
+172
+00:32:41.250 --> 00:32:48.949
+Elberth Moraes: ele tem que dizer assim. Poxa essa classe aqui. Eu preciso indicar em que diretório está essa classe
+
+173
+00:32:49.070 --> 00:32:58.719
+Elberth Moraes: e essa classe. A gente lembra que ela está lá dentro daquele C. Dois pontos. Não sei o que lá que essa galera toda aqui de cima, né? Nosso workspace papapá,
+
+174
+00:32:58.930 --> 00:33:09.689
+Elberth Moraes: mas só que não é isso que ele está querendo. Ele está dando erro ali em cima. Porque ele está falando assim? Eu quero que você indique aqui na minha primeira linha. Qual é o pacote que essa classe se encontra
+
+175
+00:33:10.010 --> 00:33:14.770
+Elberth Moraes: aí? Eu vou chegar aqui. Vou escrever package
+
+176
+00:33:14.920 --> 00:33:21.710
+Elberth Moraes: backed desse jeito aqui. E eu vou botar o nome do meu pacote ali. Ó Br
+
+177
+00:33:21.870 --> 00:33:32.479
+Elberth Moraes: Edu Ifnet fundamentos, é aqui que eu estou. Ok, observe quando eu boto isso daqui. O erro é solucionado.
+
+178
+00:33:32.610 --> 00:33:43.829
+Elberth Moraes: Por quê? Ah, ele estava perdido. Ele antigamente ele estava num diretório que estava todo mundo lá, feliz e contente. Aí você foi copiou. Ele jogou em outro lugar e ele estava perdido. Falou assim: eu não sei onde eu estou.
+
+179
+00:33:43.920 --> 00:33:52.560
+Elberth Moraes: E aí eu preciso que esse pacote aqui. Sempre que você cria uma classe, essa classe precisa ter um pacote.
+
+180
+00:33:52.610 --> 00:34:11.949
+Elberth Moraes: Por que não tinha antes? Porque a gente não estava usando. Ide. A gente estava usando ali por dentro. Cada classe era um projeto aqui, não. Aqui a gente está fazendo um projeto. E dentro desse projeto, a gente tem alguns arquivos, e esses arquivos no Java são classes, e a gente está criando as nossas classes. Então, se eu for na calculadora aqui
+
+181
+00:34:12.389 --> 00:34:17.160
+Elberth Moraes: e botar esse cara aqui em cima, tá no mesmo pacote. Salvei ele. E foi.
+
+182
+00:34:17.260 --> 00:34:21.980
+Elberth Moraes: Tem umas teclas boas. Por exemplo, botei aqui, mas ainda não salvei.
+
+183
+00:34:22.530 --> 00:34:25.139
+Elberth Moraes: Botei aqui, mas ainda não salvei.
+
+184
+00:34:25.429 --> 00:34:30.479
+Elberth Moraes: Observe que o erro continua naquele vermelhinho ali do lado. Tá vendo? Botei aqui, mas não salvei.
+
+185
+00:34:30.810 --> 00:34:43.949
+Elberth Moraes: Botei aqui. Mas não salvei. Tem um Control Shift s que ele salva todas as classes que tiverem. Não salva. Está vendo? Aqui? Ó não, Salvo, não salva, não salva, não salva. Vocês têm que começar a olhar para a ideia para entender.
+
+186
+00:34:43.949 --> 00:34:52.699
+Elberth Moraes: Então, quando as suas caixinhas aqui, quando as suas abinhas não têm um asterisco. Ela está salva. Quando tem um asterisco, significa que ela não foi salva.
+
+187
+00:34:52.699 --> 00:35:07.919
+Elberth Moraes: Se você entrar aqui e der um Ctrl s você salva e o erro some. Mas você vai ter que fazer isso para cada abinha. Mas se você der um control shift S. Ele salva todo mundo tem uma amarelinho aqui também. Ah, provavelmente eu não usei
+
+188
+00:35:07.950 --> 00:35:13.519
+Elberth Moraes: aí. A ideia já começa a te dar uns bisousus já começa a falar assim. Ó,
+
+189
+00:35:13.850 --> 00:35:17.830
+Elberth Moraes: esse carinha que você usou aí ele não está sendo usado.
+
+190
+00:35:18.100 --> 00:35:21.509
+Elberth Moraes: Então a ideia o objetivo dela é facilitar a sua vida.
+
+191
+00:35:21.650 --> 00:35:29.340
+Elberth Moraes: A gente realmente não usou esse cara. A gente vai usar hoje, então ele deixa um amarelinho do tipo assim não é um erro, ok,
+
+192
+00:35:29.340 --> 00:35:42.879
+Elberth Moraes: mas a gente vai ter que resolver isso daí, porque senão essa amarelinho vai ficar abrida inteira. E aí ele começa a trabalhar com cores, trabalhar daquele jeito. Que a gente já estava brincando bastante. Então o objetivo aqui,
+
+193
+00:35:42.900 --> 00:35:55.020
+Elberth Moraes: pacote para organizar essas classes classes que estão relacionadas para a gente evitar que essas classes fiquem soltas no projeto. A gente consegue, dentro de um pacote,
+
+194
+00:35:55.020 --> 00:36:04.299
+Elberth Moraes: ter uma classe e na outra pacote, ter uma classe com o mesmo nome. Isso pode você pode ter classes com o mesmo nome se ela estiver em pacotes diferentes,
+
+195
+00:36:04.300 --> 00:36:16.710
+Elberth Moraes: então isso ajuda essa organização e pacotes ajuda a evitar esse conflito. E você acaba preparando aqui o nosso ambiente para projetos maiores. Antes de
+
+196
+00:36:17.090 --> 00:36:30.900
+Elberth Moraes: de abrir aqui o projeto de vocês, eu estava no outro projeto. Vocês me dão um minuto só para eu abrir um Workspace novo aqui, de um outro projeto. Só para vocês verem que ele é um pouquinho maior do que o que a gente está fazendo. Mas eles começaram. Ele começou devagarinho. Posso mudar aqui rapidinho em dois minutos.
+
+197
+00:36:30.990 --> 00:36:36.339
+Elberth Moraes: Ele tem a possibilidade de você escolher um outro Workspace, então eu estou fazendo uma pós
+
+198
+00:36:36.400 --> 00:36:42.869
+Elberth Moraes: que começou aí tem três dias, tá gente. Três dias assim, três aulas que a gente deu ontem foi a terceira aula.
+
+199
+00:36:42.910 --> 00:36:59.939
+Elberth Moraes: E aí a gente acabou criando algumas classes. A gente acabou organizando em alguns pacotes, e aí essa organização, quando a gente está criando um projeto muito grande, que a gente começa a pensar numa arquitetura um pouquinho maior, uma aplicação
+
+200
+00:36:59.940 --> 00:37:11.109
+Elberth Moraes: que vai ter banco de dados onde a gente vai organizar, armazenar as informações e isso tudo. A gente precisa que essas aplicações tenham essa organização desde o início.
+
+201
+00:37:11.220 --> 00:37:21.270
+Elberth Moraes: Ah, mas se eu vou fazer essa organização depois isso vai prejudicar a gente. Não, mas só que você vai ter que ter aquele retrabalho
+
+202
+00:37:21.270 --> 00:37:29.559
+Elberth Moraes: de você voltar. Fazer igual a gente fez aqui, né? Eu tive que entrar em toda a classe definir lá que agora ela está no pacote tal
+
+203
+00:37:29.560 --> 00:37:42.530
+Elberth Moraes: que, inicialmente ela estava lá no diretório e agora ela mudou para um outro diretório. E aí eu vi que é o mesmo modelo da gente, o mesmo tipo de projeto. Só que esse projeto aqui é um projeto Web.
+
+204
+00:37:42.530 --> 00:37:57.979
+Elberth Moraes: E aqui dentro a gente tem a mesma classezinha, sócio, mesma pastinha, sócio tem outras, porque eu estou usando um framework diferente. E aí, aqui, dentro desse sócio, eu tenho a organização em alguns pacotes, tá vendo? E tem aqui quatro pacotes. Eu estou desenvolvendo
+
+205
+00:37:57.980 --> 00:38:10.720
+Elberth Moraes: uma Api aqui dentro do nosso infinit. Então eu tenho classe aqui. Eu tenho classes aqui. Eu tenho mais classes aqui. Eu tenho mais classes aqui aos pouquinhos, a gente vai criando classes,
+
+206
+00:38:10.780 --> 00:38:21.510
+Elberth Moraes: e aí todo tipo de classe vai ter alguma implementação ali dentro que vai fazer sentido para o nosso negócio. Projeto que a gente está fazendo.
+
+207
+00:38:21.630 --> 00:38:39.939
+Elberth Moraes: Então eles acabam organizando essas classes que se relacionam ali. Eu tinha a classe que era responsável por eu conseguir me conectar no banco de dados. Eu tinha classes que eu tinha, que eram importantes para eu me comunicar com o mundo externo, com o site e tal.
+
+208
+00:38:40.010 --> 00:38:46.410
+Elberth Moraes: Eu estava fazendo ali o backend. Eu estou fazendo um api para alguma tela usar. Então a gente começa
+
+209
+00:38:46.820 --> 00:39:02.470
+Elberth Moraes: a implementar essas classes para cada motivo. Então, por isso que a gente tem esse monte de classes, então não se assustem se daqui a pouquinho a gente sair de meia dúzia de classes para cinquenta classes.
+
+210
+00:39:02.560 --> 00:39:20.069
+Elberth Moraes: A gente vai estar dentro de um projeto. Claro que aqui, dentro dentro desse nosso carinha, eu vou colocar um monte de classes aqui. Essas classes avulsas que a gente está fazendo, mas já já eu vou criar um projeto onde cada um vai fazer o seu próprio projeto. Eu não sei se vocês já fofocaram aí pela.
+
+211
+00:39:20.310 --> 00:39:25.919
+Elberth Moraes: Pela rádio corredor que eu costumo fazer isso na hora da gente fazer lá a entrega do nosso At.
+
+212
+00:39:25.990 --> 00:39:41.459
+Elberth Moraes: Cada um vai pensar no seu projeto. Ah, eu gosto de fazer um sistema para a oficina do meu pai. Vou fazer um sistema pra mim que eu sou gamer. E aí eu vou fazer um sistema pra mim. Não, eu sou música. Eu adoro música. Eu vou fazer um sistema pra mim. E aí eu vou pedir para cada um escolher
+
+213
+00:39:41.460 --> 00:39:59.530
+Elberth Moraes: o seu contexto de negócios. Para a gente conseguir implementar os mesmos requisitos que eu pedi. Mas cada um no seu contexto, cada um no seu mundo. Imagine que eu chego assim e fale. Ó, eu quero que a gente faça um cadastro de alguma coisa nesse sistema. Aí cada um começa a olhar para o seu cadastro.
+
+214
+00:39:59.580 --> 00:40:04.520
+Elberth Moraes: Eu espero que nesse cadastro a gente tenha cinco campos. Cada um vai pensar os cinco campos.
+
+215
+00:40:04.650 --> 00:40:11.370
+Elberth Moraes: Eu quero que nesse seu cadastro a gente tenha quatro tipos de campos diferentes. Texto inteiro, real e lógico.
+
+216
+00:40:11.400 --> 00:40:29.310
+Elberth Moraes: Você vai ter que se virar para achar campus com esse cara. Ah, eu preciso que a gente tenha lá dentro um scanner para receber todas essas informações. Vocês vão lá e vão fazer o scanner para fazer. Vocês estão entendendo que essa pegada ela ajuda vocês a correrem um pouquinho mais atrás do projeto.
+
+217
+00:40:29.310 --> 00:40:33.249
+Elberth Moraes: Isso aí não é para quebrar vocês. Isso aí é para a gente conseguir chegar
+
+218
+00:40:33.250 --> 00:40:43.450
+Elberth Moraes: o mais rápido possível dentro de um possível portfólio de vocês que vocês consigam pegar esse trabalho, e vocês consigam divulgar que. Olha o que eu estou fazendo.
+
+219
+00:40:43.620 --> 00:40:46.199
+Elberth Moraes: E aí a gente no mundo
+
+220
+00:40:46.560 --> 00:40:52.000
+Elberth Moraes: do processo seletivo. As empresas não querem que vocês mostrem um projeto pronto.
+
+221
+00:40:52.220 --> 00:40:57.289
+Elberth Moraes: Elas querem ver qual é o processo de evolução da construção desse seu projeto.
+
+222
+00:40:57.450 --> 00:41:13.709
+Elberth Moraes: Então, se você, como aconteceu. E o aluno não foi selecionado porque ele tentou ser muito malandro. Ou ele até era uma boa pessoa, mas só que ele não tinha o cuidado de guardar os projetos dele de uma forma que depois ele pudesse compartilhar.
+
+223
+00:41:13.710 --> 00:41:29.939
+Elberth Moraes: Vocês já devem ter ouvido que existe por aí um negócio chamado Github, que a gente vai colocar todos os nossos projetos ali dentro. E esses projetos, quando uma equipe faz um processo seletivo. Começa a querer te entrevistar. Começa a querer te entender quem você é
+
+224
+00:41:29.940 --> 00:41:34.749
+Elberth Moraes: conhecer. Ela vai entrar nesse seu Github. E vai dar uma futucada ali
+
+225
+00:41:34.860 --> 00:41:39.830
+Elberth Moraes: naquele Github. Ele tem lá indicações do tipo. Esse cara passou por aqui hoje.
+
+226
+00:41:40.020 --> 00:41:44.929
+Elberth Moraes: Ele fez aqui algum comit? Ou seja, ele implementou alguma coisa e guardou.
+
+227
+00:41:45.370 --> 00:41:55.480
+Elberth Moraes: Ah, não. Ele costuma fazer isso uma vez por mês, só então ele não está programando todo dia. A gente quer um cara. Que programa? Todo dia a gente quer uma moça que fica o tempo inteiro programando.
+
+228
+00:41:55.520 --> 00:42:08.269
+Elberth Moraes: Ah, mas aí você vai ficar toda hora dando comite. Não, mas ele tem que ver que quando você clica num commit, o cara que está do lado de fora. Consegue ver o que você fez? O código estava assim. E agora está assim.
+
+229
+00:42:08.390 --> 00:42:16.879
+Elberth Moraes: E aí o pessoal do Rh começa a investigar como é o seu processo. Então, se você começando a faculdade, você não sabia fazer muita coisa,
+
+230
+00:42:16.890 --> 00:42:28.349
+Elberth Moraes: mas em um mês, você consegue fazer um projeto, eles olham e falam assim. Porra, essa pessoa aqui. Se a gente der uma atenção a ela. Se a gente treinar, ela se a gente apresentar, como é que faz
+
+231
+00:42:28.350 --> 00:42:40.349
+Elberth Moraes: em um ano? Ela está voando. Então essa daqui a gente pega para entrevistar. Então fiquem ligados nesse tipo de coisa. Esse cara que eu falei que não conseguiu ele. Quando soube que ia rolar esse processo seletivo.
+
+232
+00:42:40.350 --> 00:42:53.390
+Elberth Moraes: E quando ele soube que iam que pediram a ele o Github, Ele mais do que depressa foi lá criou o Github. Ele tinha vários projetos na máquina dele. Ele pegou todos os projetos e subiu para o Github naquele dia.
+
+233
+00:42:53.390 --> 00:43:10.179
+Elberth Moraes: Então as pessoas chegaram lá para ver o código dele. Ficaram na dúvida se aqueles projetos eram realmente dele, porque do nada, surgiram dez projetos no mesmo dia e não teve ali um reflexo da evolução do desenvolvimento dele. Aí começaram a desconfiar do cara. E o cara era bom.
+
+234
+00:43:10.300 --> 00:43:18.030
+Elberth Moraes: Ele só não tinha esse apoio. De como ele poderia fazer essa apresentação do portfólio dele.
+
+235
+00:43:18.500 --> 00:43:25.150
+Elberth Moraes: Isso aqui foi uma informação útil para vocês. Ou tudo que eu falei aqui é viagem total. E vocês não têm ideia do que eu estou falando.
+
+236
+00:43:25.390 --> 00:43:40.850
+Elberth Moraes: Não tenho ideia do que eu estou falando. Anota no papel aí para vocês entenderem o que é Github para vocês entenderem que o Github não é apenas um repositório. Depois eu posso dar uma palestrinha que eu dei lá no trabalho para os molequinhos, os menores aprendizes, explicando a ele
+
+237
+00:43:41.150 --> 00:43:54.550
+Elberth Moraes: a real necessidade daquilo ali que a gente fica assim. Ah, eu vou aprender já para escrever código, pô escrever código. Escrevo qualquer linguagem. Até ia escreve sem ter nenhum código. O que você está querendo fazer? E aí a galera começa a
+
+238
+00:43:54.550 --> 00:44:02.400
+Elberth Moraes: a implicar porque a gente está pensando só em código. Não é só código, não é só guardar código no Github. Aquilo ali tem um propósito.
+
+239
+00:44:02.460 --> 00:44:16.950
+Elberth Moraes: E como eu falei com vocês, eu trabalho junto com algumas pessoas de Rh, que eu sou o técnico, e elas são os soft skills que elas ficam olhando assim. Herbert, eu não entendo nada, mas essa pessoa aqui, ela tem o costume de toda segunda feira
+
+240
+00:44:17.350 --> 00:44:19.900
+Elberth Moraes: jogar alguma coisa aqui dentro do Github.
+
+241
+00:44:20.090 --> 00:44:36.620
+Elberth Moraes: Aí eu falo. Talvez ela esteja programando a semana toda ou programando o final de semana. E ela chega aqui, concluiu a tarefa dela. Ela posta lá. Guarda no Github. Legal. É uma estratégia. Vamos caminhar. Eu vou dar uma olhada aqui no primeiro carinha que a gente fez esse carinha daqui.
+
+242
+00:44:37.110 --> 00:44:48.509
+Elberth Moraes: Vocês estão ligados que esse nosso querido projeto? A gente está pressupondo aqui que o usuário sempre vai informar três argumentos.
+
+243
+00:44:48.590 --> 00:44:57.980
+Elberth Moraes: Vocês estão ligados com isso. Daqui a gente pegava lá por fora. Quando a gente fazia o Java fundamentos, a gente passava lá o nome, a profissão e a instituição.
+
+244
+00:44:58.190 --> 00:45:02.289
+Elberth Moraes: Essas informações, elas caíam aqui nesse nosso Arx.
+
+245
+00:45:02.370 --> 00:45:12.480
+Elberth Moraes: E aí esse Arx jogava cada posição para dentro dessas variáveis. E aí? Depois a gente imprimia essas variáveis. E aí eu falo assim. Caramba, como é que a gente faz isso
+
+246
+00:45:12.530 --> 00:45:22.140
+Elberth Moraes: aqui por dentro. Se a gente não tem acesso ao Cmd, não tem acesso à linha de comando. Observem que todas essas classes que a gente está trabalhando. Têm o método man.
+
+247
+00:45:22.190 --> 00:45:35.589
+Elberth Moraes: Então, quando eu clico em cima dela com o botão direito e peço para ela executar um Runass Java Application. Ela executa esse carinho. Então ela vai executar essa nossa classe. E aí é claro,
+
+248
+00:45:36.040 --> 00:45:45.259
+Elberth Moraes: que essa classe, do jeito que ela está hoje. Quando a gente manda executar, ela dá um erro. Acontece uma famosa exceção.
+
+249
+00:45:45.330 --> 00:46:03.060
+Elberth Moraes: E aí a ideia é legal, porque ela diz para a gente o que aconteceu? Ela diz para a gente em qual classe o erro aconteceu. E em qual linha aconteceu, então, o erro aconteceu na linha seis na classe, fundamento e Java dentro do método, bem no pacote.
+
+250
+00:46:03.140 --> 00:46:16.840
+Elberth Moraes: O erro foi esse aqui. Index zero outs of bounds for lend zero. E aí a gente tem aqui a exceção que estourou. Então, quando eu clico aqui, ele vê que fala assim. O erro aconteceu aqui dentro.
+
+251
+00:46:17.350 --> 00:46:23.450
+Elberth Moraes: Ah, legal. Mas eu sei porque o erro aconteceu. Essa informação aqui. Ela veio sem nada dentro
+
+252
+00:46:23.660 --> 00:46:29.090
+Elberth Moraes: e aí, por isso que quebrou. Depois a gente vai conversar sobre um negócio chamado Debug,
+
+253
+00:46:29.190 --> 00:46:37.649
+Elberth Moraes: que seria a gente passar linha por linha para ver como é o comportamento de cada uma dessas instruções. Até finalizar.
+
+254
+00:46:37.660 --> 00:46:56.619
+Elberth Moraes: Então executei o Main. Chegou nessa linha treze. Aqui acaba mas aqui por dentro da Ide. A gente também consegue simular a linha de comando lá de fora. Então, quando eu clico no botão direito aqui em cima, como se eu fosse executar, fazer um Runass Java Application. Eu consigo fazer um runass
+
+255
+00:46:56.650 --> 00:47:01.429
+Elberth Moraes: Run Configurations, ou seja, as configurações dessa minha execução.
+
+256
+00:47:01.630 --> 00:47:08.720
+Elberth Moraes: Então, quando eu clico aqui nesse Run configurations aqui dentro, a gente tem um monte de carinhas do lado de cá.
+
+257
+00:47:09.020 --> 00:47:22.899
+Elberth Moraes: Deixa eu ampliar para cá para ver se vocês vão ser melhor aqui um monte de carinhas do lado de cá. Inclusive eu. Estou executando justamente aquele fundamentos. Tá vendo? E aqui embaixo, aqui embaixo. Não aqui no meio. Eu tenho um monte de abinhas.
+
+258
+00:47:23.130 --> 00:47:26.360
+Elberth Moraes: E aí, dentre as abinhas. Eu tenho aqui argumentos.
+
+259
+00:47:26.560 --> 00:47:39.000
+Elberth Moraes: Então, quando eu chego aqui e eu tenho esse espacinho aqui. Os argumentos do programa. Eu consigo chegar aqui e falar assim. Ah, o primeiro argumento se chama Elbert.
+
+260
+00:47:39.340 --> 00:47:45.259
+Elberth Moraes: Aí eu vou aqui, faço um aply, meio que um salvar, e eu mando rodar
+
+261
+00:47:45.850 --> 00:47:58.470
+Elberth Moraes: aí quando eu mando rodar, que é tipo java aplicação, ele começa a reclamar agora de uma outra linha, do mesmo erro falando que é o Index. Um Out of Bounds com tamanho um. Ele tem um lenf um.
+
+262
+00:47:58.580 --> 00:48:10.970
+Elberth Moraes: Ou seja, eu estava esperando um outro argumento, mas só veio o primeiro. O primeiro funcionou, mas só que os outros não funcionaram. Ah, entendi. Então deixa eu dar um pulo lá de novo. Vim aqui,
+
+263
+00:48:11.740 --> 00:48:14.539
+Elberth Moraes: Run as run Configuration.
+
+264
+00:48:14.820 --> 00:48:28.029
+Elberth Moraes: Aí eu venho e abro aquela nossa abinha. Continua aqui já o aplicação fundamentos. Aí eu venho aqui em argumentos, e esse carinha daqui, ele entende. Basta eu separar por espaço
+
+265
+00:48:28.260 --> 00:48:34.420
+Elberth Moraes: que ele vai entender que o primeiro cara é um argumento. O segundo é outro argumento. E o terceiro é outro argumento.
+
+266
+00:48:34.550 --> 00:48:38.010
+Elberth Moraes: Eu não sei. Por exemplo, esqueci qual é o nome dos campos. Ele é
+
+267
+00:48:38.300 --> 00:48:47.259
+Elberth Moraes: nome, profissão e instituição. Então o nome é Albert profissão, professor. Instituição Infinity.
+
+268
+00:48:47.680 --> 00:49:06.770
+Elberth Moraes: Apliquei quando eu faço esse run aqui, ele está fazendo um run do Java. Aplicação, né? E aí ele manda rodar e ele imprime aqui no meu console. Esse console aqui é como se fosse aquela telinha preta que a gente tinha lá naquele nosso outro momento legal. Então eu fiz isso daqui rodar.
+
+269
+00:49:06.800 --> 00:49:13.649
+Elberth Moraes: Se eu quiser realmente testar esses argumentos, botão direito, runas Ram Configuration.
+
+270
+00:49:13.970 --> 00:49:19.840
+Elberth Moraes: Observo. Se eu estou realmente no carinha, certo? Aqui do java prequeixo, venho em argumentos. Eu faço isso daqui.
+
+271
+00:49:20.440 --> 00:49:27.170
+Elberth Moraes: Ciente regrinha aqui para a gente conseguir testar esses projetos que recebam informações
+
+272
+00:49:27.800 --> 00:49:32.149
+Elberth Moraes: dos argumentos. É isso aí. Tá desse jeito, bonitão.
+
+273
+00:49:32.570 --> 00:49:44.690
+Elberth Moraes: Só que o papo da gente não é esse, né? O papo da gente é o seguinte, tá beleza. Eu entendi como é que é. Eu sei que foi um vacilo de quem quis usar a nossa classe. Fundamentos.
+
+274
+00:49:44.800 --> 00:50:02.929
+Elberth Moraes: E aí essa classe fundamentos, ela precisava desses argumentos. A gente começou a ver que quando a gente deixou de olhar aqueles argumentos, apareceu uma mensagenzinha lá. Falando de lenf. O tamanho do meu argumento é um é zero e tal. E aí a gente começa a perceber que,
+
+275
+00:50:03.130 --> 00:50:17.560
+Elberth Moraes: para essa nossa situação aqui acontecer sem erro, eu precisaria desses três argumentos. Então, para que isso aqui aconteça,
+
+276
+00:50:17.740 --> 00:50:20.970
+Elberth Moraes: qual deve ser o tamanho desse meu vetor aqui?
+
+277
+00:50:26.740 --> 00:50:35.920
+Elberth Moraes: Qual o tamanho desse meu vetor Args? Para que esse carinha aqui funciona? Essa dúvida é muito legal, né? Porque o Args, ele é o nosso vetor.
+
+278
+00:50:36.050 --> 00:50:41.470
+Elberth Moraes: Então, se eu tenho três coisas aqui dentro, tamanho um tamanho dois, tamanho três.
+
+279
+00:50:41.580 --> 00:50:46.869
+Elberth Moraes: Ah, mas aqui a posição não. A posição é zero um e dois, porque um vetor começa no zero.
+
+280
+00:50:46.940 --> 00:50:53.979
+Elberth Moraes: Então eu preciso de três informações. Então o Lenf é um, dois e três. Pergunta interessante. Aqui no chat,
+
+281
+00:50:53.980 --> 00:51:08.290
+Elberth Moraes: a gente criou essas classes lá naquele nosso diretório. A gente veio aqui, fez esse run as agora que a gente já configurou, eu posso rodar o java aplicação direto, e ele executa aquilo ali. Se a gente der um pulinho lá naquele nosso diretório.
+
+282
+00:51:08.740 --> 00:51:14.129
+Elberth Moraes: Agora, abri tanta pasta aqui que me quebrou dentro daquele nosso diretório.
+
+283
+00:51:15.630 --> 00:51:18.720
+Elberth Moraes: Deixar ele aberto aqui, que eu vou fechar as outras abinhas ali,
+
+284
+00:51:19.310 --> 00:51:26.429
+Elberth Moraes: senão toda hora. Eu vou voltar aqui. A gente vê que aqui dentro ele não tem mais aquele ponto class que a gente criou.
+
+285
+00:51:26.530 --> 00:51:30.699
+Elberth Moraes: Ele acabou fazendo a ideia. Meio que fez esse cara.
+
+286
+00:51:30.880 --> 00:51:42.250
+Elberth Moraes: Ele fez aquilo ali acontecer, rodou e tipo, assim, não preciso desse cara. Porque toda hora que eu vou rodar, eu vou fazer esse tipo de execução.
+
+287
+00:51:42.790 --> 00:51:45.580
+Elberth Moraes: Entendeu? Nobre nobre Prof.
+
+288
+00:51:45.720 --> 00:51:47.379
+Elberth Moraes: Pro final nove Julho.
+
+289
+00:51:50.690 --> 00:51:51.370
+Elberth Moraes: Tá?
+
+290
+00:51:51.750 --> 00:52:06.480
+Elberth Moraes: Outras perguntas aqui no chat, manda se as perguntas diretas. Não manda. Pergunta para todo mundo ver. Mas esse esquema aqui das classes. É isso, tá, ele meio que pega, compila, gera o class e executa. Ok,
+
+291
+00:52:06.570 --> 00:52:15.779
+Elberth Moraes: então é mais ou menos isso aqui. Esse cara daqui do jeito que a gente fez. A gente vai daqui a pouquinho explicar melhor. Mas aqui eu copiei as classes todas aqui para dentro.
+
+292
+00:52:15.910 --> 00:52:22.730
+Elberth Moraes: Se eu quisesse criar uma classe aqui dentro, eu clicaria com o botão direito. Aqui, New York classifica.
+
+293
+00:52:22.890 --> 00:52:28.360
+Elberth Moraes: E aí eu daria o nome da classe classe testa funcionário.
+
+294
+00:52:29.000 --> 00:52:31.090
+Elberth Moraes: E ele criaria aqui para a gente
+
+295
+00:52:31.170 --> 00:52:44.779
+Elberth Moraes: uma classe. E aí, aqui dentro dessa classe. Depois eu vou criar as instruções que eu preciso. Vou deletar isso aqui. Porque não faz parte do nosso escopo no momento. E daqui a pouco a gente volta. O que eu queria mostrar para vocês nesse carinha daqui
+
+296
+00:52:44.840 --> 00:52:58.360
+Elberth Moraes: é que se esse argues aqui, ele não tiver três tamanho três, eu tenho que falar para o cara assim. Aí deu ruim. Não tem como a gente fazer.
+
+297
+00:52:58.520 --> 00:53:12.040
+Elberth Moraes: E aí a gente começa a olhar como se fosse o próprio. Se que eu falei. A gente tem na programação um recurso muito conhecido, que é o famoso If. Já ouviram falar nesse cara para a galera que está começando agora
+
+298
+00:53:12.180 --> 00:53:14.120
+Elberth Moraes: existe o famoso If.
+
+299
+00:53:14.240 --> 00:53:27.699
+Elberth Moraes: E aí esse famoso If justamente vai fazer um teste. Se alguma condição é verdadeira, se essa condição for verdadeira, eu executo o que eu quiser. Se ela não for verdadeira, eu vou para um outro lado.
+
+300
+00:53:27.800 --> 00:53:32.529
+Elberth Moraes: E aí eu pergunto para vocês, isso tudo que está aqui,
+
+301
+00:53:32.800 --> 00:53:42.960
+Elberth Moraes: isso tudo que está aqui, eu preciso testar, ou eu preciso testar que eu estou falando assim. Esse If aqui ele vai ter uma condição aqui.
+
+302
+00:53:43.100 --> 00:53:45.259
+Elberth Moraes: E aí essa condição,
+
+303
+00:53:45.470 --> 00:53:56.940
+Elberth Moraes: estando verdadeira. Eu faço isso tudo aqui, ou eu faço apenas a parte de cima, ou eu faço apenas a parte de baixo. Isso tudo aqui está andando junto.
+
+304
+00:53:58.190 --> 00:54:02.349
+Elberth Moraes: Tipo, se eu não tiver nenhum argumento, eu vou imprimir esse cara aqui debaixo.
+
+305
+00:54:06.290 --> 00:54:14.879
+Elberth Moraes: Não, né? Então é como se isso daqui tudo fosse a mesma coisa. A gente só colocou invariável porque a gente quis. Porque eu poderia pegar isso daqui
+
+306
+00:54:15.180 --> 00:54:28.250
+Elberth Moraes: e jogar aqui. Nem precisaria da variável. A gente só fez a variável para dizer que o Arg Zero foi mais para o nosso entendimento que o Arg zero é o nome que o argum é. A profissão e tal.
+
+307
+00:54:28.330 --> 00:54:36.889
+Elberth Moraes: E aí eu vou chegar aqui e vou fazer uma organização. O if tem a sua
+
+308
+00:54:37.660 --> 00:54:53.009
+Elberth Moraes: definição de como se escreve, dependendo de linguagem, pode mudar. Mas aqui no Java, como eu falei para vocês, toda a linha termina com chave, abrindo chave, fechando ou ponto e vírgula. Então aqui eu vou botar dentro desses meus parentes uma condição:
+
+309
+00:54:53.100 --> 00:55:07.169
+Elberth Moraes: eu vou abrir uma chave aqui. Eu vou fechar essa chave aqui e significa aqui dentro. Vai acontecer alguma coisa se essa minha condição for verdadeira ou alguma coisa, se essa condição for falsa
+
+310
+00:55:07.290 --> 00:55:08.380
+Elberth Moraes: exemplo,
+
+311
+00:55:08.390 --> 00:55:19.459
+Elberth Moraes: imaginem que eu queira, aqui dentro exibir uma mensagem. Observem que eu botei uma tecla de atalho bonitona aqui S Y s O e dei um contra espaço.
+
+312
+00:55:19.460 --> 00:55:29.099
+Elberth Moraes: E aí dei um Enter e ele criou o sistema de Printline para a gente. Então a ideia é, você ganha um pouquinho de celeridade em coisas que você não precisa pensar
+
+313
+00:55:29.340 --> 00:55:47.500
+Elberth Moraes: no outro lá. Eu tinha que ficar system out aqui também. Mas eu posso ganhar muito tempo. Do tipo digitei Cis, dei um contra espaço. Ele já traz para mim aqui algumas possibilidades. Qual que você quer? Ah, eu quero se estende aqui, pau.
+
+314
+00:55:47.570 --> 00:56:06.950
+Elberth Moraes: Aí botei um ponto. Coloquei um ponto ele vai trazer um monte de opções. Qual que você quer? Ah, eu quero o Alt. Estou usando só eu não usei mouse tá? Desde que eu comecei a aula aqui. Eu só usei o Mouse para vir aqui fazer as execuções aqui, que depois tem tecla de atalho para também executar
+
+315
+00:56:06.990 --> 00:56:21.829
+Elberth Moraes: o programador acaba usando muito pouco o mouse. Então, beleza, esse System out. Aí eu dou um enter aqui. Aí eu boto um ponto de novo out. O quê? Printline, Opa, que maravilha é esse que eu quero.
+
+316
+00:56:21.960 --> 00:56:32.320
+Elberth Moraes: E aí aqui dentro eu escrevo qualquer coisa. Sei lá. Imagina que eu tenha colocado assim. Ó uso incorreto.
+
+317
+00:56:33.390 --> 00:56:37.830
+Elberth Moraes: Eu quero que aqui apareça a frase uso incorreto.
+
+318
+00:56:38.520 --> 00:56:40.870
+Elberth Moraes: A condição que eu vou colocar aqui,
+
+319
+00:56:41.200 --> 00:56:45.649
+Elberth Moraes: vai ter que se adaptar para aparecer essa minha mensagem. Ok,
+
+320
+00:56:46.460 --> 00:56:53.390
+Elberth Moraes: que condição vocês acham que eu poderia colocar aqui para aparecer essa mensagem. Uso incorreto.
+
+321
+00:56:58.560 --> 00:57:02.030
+Elberth Moraes: Ou seja, isso aqui é o uso correto.
+
+322
+00:57:02.540 --> 00:57:09.470
+Elberth Moraes: Qual seria o uso incorreto? O uso incorreto é se esse meu carinha que está aqui,
+
+323
+00:57:09.890 --> 00:57:13.769
+Elberth Moraes: se ele for menor do que três,
+
+324
+00:57:14.040 --> 00:57:30.299
+Elberth Moraes: se ele for três. Ah, se ele for três, ele vai executar. Bem, eu não estou nem entrando no mérito. Se o cara colocou lá, tipo diferente, botou o número. Não interessa. Para mim, é todo texto. Eu vou exibir ali na ordem que veio. Não vou testar, mas será que o primeiro é nome mesmo?
+
+325
+00:57:30.300 --> 00:57:34.569
+Elberth Moraes: Será que o segundo, que é o nome, o primeiro e a profissão. Não, eu vou definir para o cara.
+
+326
+00:57:34.580 --> 00:57:42.939
+Elberth Moraes: O primeiro argumento é o nome. O segundo é profissão. E o terceiro é o tal. É a instituição. Se ele me mandar errado, a culpa é dele. Simples assim.
+
+327
+00:57:42.990 --> 00:57:46.390
+Elberth Moraes: E aí eu vou chegar aqui e vou fazer um teste. Eu vou pegar esse Arx.
+
+328
+00:57:47.410 --> 00:57:50.619
+Elberth Moraes: Observe que o Arx está sendo utilizado ali.
+
+329
+00:57:50.650 --> 00:57:57.759
+Elberth Moraes: E aí, quando eu boto um pontinho aqui, ele traz tudo que eu posso usar desse Arx.
+
+330
+00:57:57.770 --> 00:58:15.030
+Elberth Moraes: E aí, quando a gente começa a olhar aqui para a gente entender o que está escrito. Observem que aqui na lateral direita, a lateral direita não, assim, a última palavra é sempre a classe onde esse cara está implementado. Então essa funcionalidade aqui, ecos está na classe object
+
+331
+00:58:15.030 --> 00:58:25.079
+Elberth Moraes: clone está na classe String Get Class está na classe Object Hash Code está na classe Object. Observem que tem muita classe object aqui
+
+332
+00:58:25.140 --> 00:58:39.970
+Elberth Moraes: e não tem muita coisa da nossa classe. Não tá vendo esse Argus que está ali? Que é um vetor de String? Ele tem um monte de recursos dessa classe Object. A classe Object é a classe que todas as classes Java, herdam informação.
+
+333
+00:58:40.150 --> 00:58:51.839
+Elberth Moraes: Então ela vai sempre aparecer bastante aqui na nossa vida. E aí observem que aqui, dentro desse carinha a gente tem funcionalidades, ok? Sempre que tiver parênteses,
+
+334
+00:58:51.840 --> 00:59:03.210
+Elberth Moraes: a gente tem funcionalidades e a gente tem também cem funcionalidades para você ver que o sinalzinho aqui é todo um verde maior. E aqui embaixo, nesse cara, Lenf
+
+335
+00:59:03.320 --> 00:59:14.699
+Elberth Moraes: é aqui uma famosa propriedade. Esse cara daqui é um campo que eu tenho lá dentro. Onde ele guarda o tamanho desse nosso
+
+336
+00:59:15.160 --> 00:59:16.680
+Elberth Moraes: nesse nosso vetor.
+
+337
+00:59:16.830 --> 00:59:34.489
+Elberth Moraes: Então, quando eu chego aqui e faço assim, ele fala assim aqui em mãos. Eu tenho o tamanho desse meu vetor aqui. Jogaram três coisas lá dentro. O tamanho dele é três. Jogaram duas coisas lá dentro. O tamanho dele é dois. Não jogaram nada lá dentro. O tamanho dele é zero legal. Então o que eu tenho que fazer?
+
+338
+00:59:34.860 --> 00:59:39.440
+Elberth Moraes: Verificar se esse cara daqui se ele é menor do que três.
+
+339
+00:59:39.880 --> 00:59:51.570
+Elberth Moraes: Se for menor ou igual a três, não igual. Ele entra. Está certo. Não é incorreto. Se ele for igual a três, ele só é incorreto se ele for
+
+340
+00:59:51.570 --> 01:00:07.630
+Elberth Moraes: menor do que três, se ele for dois, se ele for um, se ele for zero, então a gente tem essa condiçãozinha aqui para a gente. Sinalzinho de menor veio lá da matemática legal. Então eu salvei. Está aqui sem salvar.
+
+341
+01:00:07.630 --> 01:00:21.140
+Elberth Moraes: Dei um control shift. S salvei todo mundo. Vim em cima da minha classe. Eu posso ver em cima de cada classe e mandar rodar um Java Aplickation. Ou eu posso vir em cima do projeto. O botão direito também.
+
+342
+01:00:21.140 --> 01:00:28.420
+Elberth Moraes: Mandar dar um Runass. E aí, quando eu mando dar um Runass Java aplickation. Ele não sabe qual classe eu vou rodar.
+
+343
+01:00:28.620 --> 01:00:36.660
+Elberth Moraes: E aí ele lista para mim. Aqui todas as classes que possuem o método Man. E aí sim, eu só posso executar essas classes.
+
+344
+01:00:36.910 --> 01:00:46.279
+Elberth Moraes: Por isso que ele trouxe aqui todas as nossas classes, porque todas as nossas classes têm meta também. Aí eu venho aqui, escolho essa e mando executar.
+
+345
+01:00:47.260 --> 01:00:58.269
+Elberth Moraes: Poxa, mas eu tava com o cara preenchido, por isso não apareceu a mensagem. Ah, legal. Então vamos lá para a gente limpar aquilo que está lá aí. Eu vim aqui no fundamentos
+
+346
+01:00:58.540 --> 01:01:01.310
+Elberth Moraes: run as run configuration.
+
+347
+01:01:02.270 --> 01:01:09.929
+Elberth Moraes: Sei que eu estou aqui em fundamentos. Vim no meu argumento. Vim aqui nesse carinha. Limpei todo mundo que está aqui. Limpei,
+
+348
+01:01:10.210 --> 01:01:30.149
+Elberth Moraes: fiz um aply. Eu posso por aqui. Ou eu posso fechar e lá fora testar. Ah, eu vou lá fora testar. Fechei aqui. Vim aqui em cima. Eu posso vir aqui em cima de qualquer parte. Tá? Que ele sempre vai habilitar um run as Java Aplications. Ele tem também esse verdinho aqui. Esse play aqui em cima.
+
+349
+01:01:30.160 --> 01:01:36.669
+Elberth Moraes: E aí, quando você clica aqui do lado, ele vem trazendo para você todos os históricos. Então esse cara já está aqui.
+
+350
+01:01:36.710 --> 01:01:41.700
+Elberth Moraes: Então, como ele está na posição principal? Quando você manda rodar o play aqui.
+
+351
+01:01:41.900 --> 01:01:44.549
+Elberth Moraes: Ele até aparece ali. Ó ram fundamentos
+
+352
+01:01:45.230 --> 01:01:54.249
+Elberth Moraes: aí quando você clica aqui, ele executa a nossa classe. Ele apresentou a nossa mensagem. Uso incorreto, mas continuou dando erro.
+
+353
+01:01:54.410 --> 01:01:59.759
+Elberth Moraes: O que eu posso ter feito de errado aqui? Que a gente esqueceu de implementar.
+
+354
+01:02:04.520 --> 01:02:10.669
+Elberth Moraes: Apareceu a mensagem de erro. Mas o negócio continuou, né?
+
+355
+01:02:14.470 --> 01:02:16.200
+Elberth Moraes: A galera sempre
+
+356
+01:02:16.530 --> 01:02:23.260
+Elberth Moraes: quando a gente está aprendendo a trabalhar com as estruturas condicionais. Primeiro, o que a gente está aprendendo é o Ifri.
+
+357
+01:02:23.680 --> 01:02:42.650
+Elberth Moraes: A gente sabe que esse If tem o lado positivo. O lado true o lado verdadeiro e tem o lado falso que é o lado Else, o lado. Se não. Se isso aqui acontecer. Se isso aqui for verdadeiro, eu entro aqui. Se não, eu faço outra coisa,
+
+358
+01:02:43.040 --> 01:02:46.569
+Elberth Moraes: então uma opção era eu falar assim. Ó,
+
+359
+01:02:46.730 --> 01:02:49.920
+Elberth Moraes: essa galera que está aqui embaixo.
+
+360
+01:02:50.170 --> 01:02:58.320
+Elberth Moraes: Se vocês perceberem. Se eu estivesse olhando assim para um lado positivo do tipo: eu quero criar uma condição
+
+361
+01:02:58.610 --> 01:03:01.160
+Elberth Moraes: para que isso aqui seja executado.
+
+362
+01:03:01.280 --> 01:03:03.419
+Elberth Moraes: Como é que seria essa minha condição.
+
+363
+01:03:05.000 --> 01:03:12.669
+Elberth Moraes: Eu quero que isso aqui seja executado. Apareça, e eu quero fazer um If que isso aqui
+
+364
+01:03:15.800 --> 01:03:29.130
+Elberth Moraes: aconteça. O que eu deveria colocar aqui dentro desse meu if ciúme args ponto leve por igual.
+
+365
+01:03:29.550 --> 01:03:37.460
+Elberth Moraes: Aqui no Java. Esse igual igual é uma comparação, e o igual. É uma atribuição.
+
+366
+01:03:37.640 --> 01:03:41.420
+Elberth Moraes: Então eu cheguei aqui. Se esse cara tiver tamanho três,
+
+367
+01:03:42.030 --> 01:03:49.469
+Elberth Moraes: ele está verdadeiro. Ele vai executar isso daqui. Observem que a gente acaba indo logo para o Else, né? Ah, Elcio.
+
+368
+01:03:49.620 --> 01:03:56.330
+Elberth Moraes: Mas isso daqui também funciona. Se eu mandar rodar isso daqui, ó run as java aplicação
+
+369
+01:03:56.770 --> 01:04:05.649
+Elberth Moraes: deu ali. Ó uso incorreto, mas só que vocês estão ligados. Que toda vez que você tem um Ifi aqui dentro, ele faz. Ele investe um tempinho fazendo esse teste.
+
+370
+01:04:05.880 --> 01:04:11.899
+Elberth Moraes: Aí ele fez esse teste. Mesmo sendo muito simples. E aí, se isso daqui for verdadeiro,
+
+371
+01:04:12.010 --> 01:04:15.000
+Elberth Moraes: ele entra e executa o que está dentro do If
+
+372
+01:04:15.230 --> 01:04:21.649
+Elberth Moraes: beleza, vamos que ele entrou aqui porque a gente viu que o lenfe dele era pequeno.
+
+373
+01:04:21.790 --> 01:04:36.429
+Elberth Moraes: E aí eu vim. Ele parou já aqui, aí. Na verdade, ele não parou. Ele imprimiu esse carinha daqui. Ele veio para a linha de baixo. Continuou executando. Parou aqui. E ele fez esse teste. Args é igual a três
+
+374
+01:04:37.140 --> 01:04:39.070
+Elberth Moraes: Args. Não é igual a três.
+
+375
+01:04:39.190 --> 01:04:57.720
+Elberth Moraes: Se ele é menor do que três, ele não pode ser igual a três, então eu estou fazendo um teste aqui. Que porra, nem precisava. Mas eu fiz esse teste Args realmente é igual a três, não? Então eu não fiz isso daqui porque essa informação aqui. Ela é falsa.
+
+376
+01:04:58.430 --> 01:05:01.890
+Elberth Moraes: Isso que eu falei aqui fez sentido. Para quem está começando agora?
+
+377
+01:05:09.910 --> 01:05:19.519
+Elberth Moraes: Beleza, perguntinha ali da galera. Cliquei esse cara daqui. Dei um Tab pra ir pra frente. Dei um shift Tab. Ele vem para trás. Ok,
+
+378
+01:05:19.970 --> 01:05:31.499
+Elberth Moraes: vamos. Que vamos então, beleza. A gente viu que eu consigo ter vários ifes, né mas poxa, nem precisava fazer esse teste aqui. E aí sim, a gente tem também o famoso Else.
+
+379
+01:05:31.710 --> 01:05:34.559
+Elberth Moraes: Porque se eu chego aqui e faço assim. Ó If,
+
+380
+01:05:34.880 --> 01:05:43.979
+Elberth Moraes: observem que eu botei só o else tipo. Caso contrário, ou seja, isso aqui é verdadeiro. Isso aqui é verdadeiro. Apareceu isso daqui,
+
+381
+01:05:44.520 --> 01:05:55.939
+Elberth Moraes: beleza, isso aqui não é verdadeiro. Então ele não entra nessa linha. Ele entra nessa linha. E essa linha? Ele faria o quê? Farinha isso aqui?
+
+382
+01:05:58.410 --> 01:06:02.359
+Elberth Moraes: Então observem que daí veio o famoso If Else
+
+383
+01:06:02.520 --> 01:06:11.550
+Elberth Moraes: e alguma coisa for verdadeira. Se isso daqui for verdadeiro, verdadeiro, entra aqui. Se não for verdadeiro, entra aqui.
+
+384
+01:06:11.600 --> 01:06:16.429
+Elberth Moraes: Depois a gente vai conhecer outras questões. A gente tem também um Else. If.
+
+385
+01:06:16.440 --> 01:06:24.729
+Elberth Moraes: Porque se eu tivesse menor do que três, maior do que cinquenta, entre quatro e quarenta e nove.
+
+386
+01:06:24.730 --> 01:06:39.229
+Elberth Moraes: Aí a gente poderia ter outras condições. Ah, até cinco é uma coisa de seis a dez é outra de tanto é tanto. É outra de tanto. Aí eu vou ter que usar outras estruturas. A gente vai conseguir implementar isso. Mas ele simplesmente chega aqui dentro
+
+387
+01:06:39.300 --> 01:06:43.009
+Elberth Moraes: e ele faz. Ele tem aqui o Else. If. Tá vendo?
+
+388
+01:06:43.110 --> 01:06:53.430
+Elberth Moraes: Else if. E aí ele abre uma outra condição. Tá, Pedro, cheguei aqui, deixei esse cara do jeito que está. Depois a gente volta. Existe também uma outra implementação
+
+389
+01:06:54.030 --> 01:07:05.380
+Elberth Moraes: que eu até não gosto muito, mas é válido a gente conhecer. Imaginem, tá, tem esse código aqui. Pronto, esse código aí a gente vai usar esse cara, mas eu chego aqui e faço assim. Eu pego exatamente o que está aqui.
+
+390
+01:07:07.850 --> 01:07:20.860
+Elberth Moraes: Bota esse cara aqui em cima. Ele tá desse jeito e tal. E aqui embaixo. Eu boto isso aqui a gente vai ver isso aqui em outros métodos, em outros métodos. Eu gosto do jeito que tá aqui. Eu não gosto. Tá?
+
+391
+01:07:21.160 --> 01:07:39.170
+Elberth Moraes: Imagine o seguinte. Eu tenho essa implementação aqui e aí eu começo. A gente vai conhecer. Daqui a pouco já já um negócio chamado Exception. A gente vai começar a tratar essas exceções de uma forma mais elegante. E aí hoje não. Hoje a gente está meio que fazendo de uma forma que a gente sabe fazer.
+
+392
+01:07:39.330 --> 01:07:47.279
+Elberth Moraes: E aí a gente acaba criando uma barreira antes do que tinha que acontecer, aconteça com o erro.
+
+393
+01:07:47.520 --> 01:07:52.109
+Elberth Moraes: Então, ou seja, eu não deixo passar em caso de derrota.
+
+394
+01:07:52.300 --> 01:07:56.150
+Elberth Moraes: Ah, identifiquei aqui a possibilidade de dar ruim, eu paro.
+
+395
+01:07:56.460 --> 01:08:11.340
+Elberth Moraes: Mas só que quando a gente está trabalhando com esse negócio chamado exceção, eu ia chegar aqui dentro. Vou fazer só um teste, tá? Galera abstraio esse comando aqui de baixo. Esse código todo que eu botei aqui, deixa eu selecionar tudo aqui. Acho que eu dei um Control shift C
+
+396
+01:08:11.750 --> 01:08:18.150
+Elberth Moraes: contra o shift D contra o Shift Uk. Mesmo que comenta, eu esqueci. E acho que eu apertei os caras errados aqui.
+
+397
+01:08:19.500 --> 01:08:20.900
+Elberth Moraes: Eu não lembro mais,
+
+398
+01:08:23.010 --> 01:08:28.630
+Elberth Moraes: sei lá, contra o Shift. Alguma coisa? Mas tem um comentário aqui também. De todo mundo que é assim
+
+399
+01:08:31.960 --> 01:08:49.489
+Elberth Moraes: que aí ele comenta todo mundo. Essas versões desconsideradas. E aí existe um negócio que a gente pode chegar aqui em cima e falar assim. Ah, se esse cara daqui vier negativo, vier menos do que três, eu posso chegar assim e falar assim. Olha só, lança uma exceção.
+
+400
+01:08:49.850 --> 01:08:57.209
+Elberth Moraes: Vou botar aqui um depois. Não inventa de entender isso. Agora não tá? E legal e
+
+401
+01:08:58.770 --> 01:09:07.930
+Elberth Moraes: ilegal isso, legal. Argumentos exception. Eu chego aqui e boto uso incorreto.
+
+402
+01:09:08.090 --> 01:09:09.310
+Elberth Moraes: Alguma coisa assim.
+
+403
+01:09:09.580 --> 01:09:21.400
+Elberth Moraes: Então quando eu faço isso? Daqui desse jeito, lá na frente, quando a gente for trabalhar, ele meio que vai falar assim. Ó, parou tudo aqui. Daqui para frente não anda?
+
+404
+01:09:21.649 --> 01:09:27.789
+Elberth Moraes: E aí a gente acaba trabalhando desse jeito. Do tipo, não está seguindo o nosso padrão. Eu paro a aplicação.
+
+405
+01:09:28.000 --> 01:09:42.199
+Elberth Moraes: Ou seja, alguém de fora está querendo usar e passou coisa errada. Eu paro. Eu não fico pensando muito em. Ah, vou mandar uma mensagenzinha para ele para que ele tente novamente. Mas eu vou mandar uma mensagem de forma mal criada
+
+406
+01:09:42.410 --> 01:09:52.800
+Elberth Moraes: desse tipo aqui, tá? Mas um dia a gente vai falar sobre isso. Mas existe uma outra coisa que eu não gosto é que se eu chegar aqui dentro e botar um simples Returney desse jeito aqui,
+
+407
+01:09:53.029 --> 01:10:00.479
+Elberth Moraes: o que acontece. Ele não tem nenhum argumento aqui dentro. Como a gente viu. Runners Java Configuration
+
+408
+01:10:02.050 --> 01:10:03.979
+Elberth Moraes: argumenta. Ele não tem nenhum.
+
+409
+01:10:04.110 --> 01:10:07.779
+Elberth Moraes: Então, se eu mandar rodar. Ele executa essa linha.
+
+410
+01:10:08.060 --> 01:10:21.289
+Elberth Moraes: O que estava acontecendo antes da gente botar esse else é que ele mandava a linha e depois ele dava o erro de novo. Mas porque a gente consegue chegar aqui e fazer esse runas Java aplicación. E ó, não apareceu de baixo.
+
+411
+01:10:21.370 --> 01:10:28.809
+Elberth Moraes: Por quê? Porque essa palavra aqui ela indica assim. Ó, se você entrou aqui e encontrou esse retorne.
+
+412
+01:10:29.170 --> 01:10:33.989
+Elberth Moraes: Sai fora desse meu método e aí. A gente não.
+
+413
+01:10:34.170 --> 01:10:37.409
+Elberth Moraes: Não executa nada que está depois desse cara.
+
+414
+01:10:37.730 --> 01:10:46.320
+Elberth Moraes: Eu falo que eu não gosto muito desse comando desse jeito, porque depois a gente vai aprender quando a gente começar a criar outros métodos nossos.
+
+415
+01:10:46.530 --> 01:11:05.009
+Elberth Moraes: Que esse cara daqui deve realmente retornar uma informação. Mas nesse caso, aqui, ele meio que está metendo o pé daqui, e a gente vai conhecer alguns outros. Tem o break tem o contínuo em outras estruturas que a gente vai trabalhar. Mas eu gosto da maneira como ela é organizada.
+
+416
+01:11:05.010 --> 01:11:17.400
+Elberth Moraes: Ou seja, eu crio uma barreira. Se ele cair aqui, eu paro e eu deixo aqui embaixo livre. O que eu deveria fazer? Porque ele está garantido que esse negócio não vai passar por aqui. Se estiver incorreto,
+
+417
+01:11:18.080 --> 01:11:24.240
+Elberth Moraes: estamos ligados nesse papo aqui. Galera que eu estou falando. Ainda está uma viagem muito normal. Está controlada ainda
+
+418
+01:11:26.670 --> 01:11:36.069
+Elberth Moraes: então eu vou deixar desse jeito aqui. Mas a gente tem esse jeito aqui também o Else. Ok, então, beleza. A gente está usando
+
+419
+01:11:36.560 --> 01:11:50.860
+Elberth Moraes: esse If para a gente realmente perguntar: a quantidade de argumentos é melhor do que três Beleza. E o programa mostra esse retorne aí, que é para meio que interromper esse nosso método, man.
+
+420
+01:11:50.860 --> 01:12:03.250
+Elberth Moraes: E essa implementação aqui acaba ensinando uma ideia muito importante, que é antes da gente utilizar um dado. A gente tem que verificar se ele existe. Vou deixar essas duas implementações aqui
+
+421
+01:12:03.250 --> 01:12:11.259
+Elberth Moraes: pra gente, ok? Vocês querem que eu colhe isso daqui no chat pra vocês terem depois anotados aí, ou vocês esperam. Depois eu colocar no
+
+422
+01:12:11.540 --> 01:12:13.519
+Elberth Moraes: no Github do nosso projeto.
+
+423
+01:12:15.360 --> 01:12:17.489
+Elberth Moraes: Tá? Deixa eu jogar aqui dentro. Então
+
+424
+01:12:20.960 --> 01:12:22.809
+Elberth Moraes: depois a gente melhora
+
+425
+01:12:22.970 --> 01:12:31.319
+Elberth Moraes: o compartilhamento desses fontes. Nós temos aqui vinte minutos. Vou trabalhar aqui num outro carinha. Vou trabalhar nesse daqui, no perfil
+
+426
+01:12:31.550 --> 01:12:40.480
+Elberth Moraes: formatado, ok, esse perfil formatado aí. Se a gente for analisar direitinho, a gente tem ali a variável professor
+
+427
+01:12:40.780 --> 01:12:50.740
+Elberth Moraes: que ela está armazenada. Mas ela não influencia em nada na saída do nosso programa. Eu falei no início da aula. Mas esse cara aqui, a gente vai trabalhar.
+
+428
+01:12:50.900 --> 01:12:58.130
+Elberth Moraes: E aí, aqui, dentro desse cara, a gente começa a trabalhar alguns conceitos, ou seja variável, boleana.
+
+429
+01:12:58.430 --> 01:13:01.449
+Elberth Moraes: A gente vai ter uma condição simples.
+
+430
+01:13:01.790 --> 01:13:05.349
+Elberth Moraes: A gente vai começar a trabalhar aqui. O famoso Ifiels
+
+431
+01:13:05.650 --> 01:13:13.089
+Elberth Moraes: e a gente vai trabalhar aqui num comportamento definido por um verdadeiro ou falso.
+
+432
+01:13:13.240 --> 01:13:15.359
+Elberth Moraes: Então a gente vai entender aqui direitinho.
+
+433
+01:13:15.600 --> 01:13:25.150
+Elberth Moraes: Então eu cheguei aqui, nesse nosso mega projeto. Essas informações estão todas fixas. Então, se eu rodar esse cara daqui
+
+434
+01:13:25.150 --> 01:13:36.799
+Elberth Moraes: run direito, runas java aplickation. Não tenho argumentos, né? Tudo está vindo aqui por dentro. Mandei rodar. Ele imprime ali. Meu nome é Albert Moraes. Sou programador. Tá tudo ali.
+
+435
+01:13:36.970 --> 01:13:43.249
+Elberth Moraes: Por quê? Porque a gente pegou todos os dados e fizemos aqui a emissão do nosso mega relatório.
+
+436
+01:13:43.910 --> 01:13:54.919
+Elberth Moraes: Vou fazer uma mudancinha aqui. Porque porra esse cara aqui não apareceu em nada, né? Cara, eu queria que aparecesse mais uma linha do nosso relatório. Eu queria que aparecesse mais uma linha
+
+437
+01:13:55.480 --> 01:14:06.530
+Elberth Moraes: assim. Ó System Out Printline. Sei lá, também ato como professor.
+
+438
+01:14:07.220 --> 01:14:16.610
+Elberth Moraes: Isso aqui é uma situação ou uma outra mensagem. Eu sei lá. Não atuo como professor.
+
+439
+01:14:16.740 --> 01:14:26.479
+Elberth Moraes: Botei só uma frase aqui diferente para vocês entenderem, mesmo que não faça muito sentido, mesmo que a gente tenha muitas implementações possíveis.
+
+440
+01:14:26.610 --> 01:14:31.230
+Elberth Moraes: Mas eu queria que se esse nosso professor aqui
+
+441
+01:14:31.770 --> 01:14:36.890
+Elberth Moraes: estiver verdadeiro, eu quero que esse carinha daqui apareça.
+
+442
+01:14:37.370 --> 01:14:43.340
+Elberth Moraes: Se aquele professor não estiver verdadeiro, eu quero que esse carinha daqui apareça.
+
+443
+01:14:43.640 --> 01:14:44.890
+Elberth Moraes: Entenderam a lógica?
+
+444
+01:14:50.760 --> 01:14:52.669
+Elberth Moraes: Sim, né? Perfeito.
+
+445
+01:14:52.840 --> 01:15:03.980
+Elberth Moraes: Então a gente vai começar aqui a trabalhar nesse nosso querido If. Vamos dar uma melhorada nele. Vamos aprender uma coisinha extra aqui. E a gente começa a se despedir
+
+446
+01:15:04.190 --> 01:15:07.060
+Elberth Moraes: para o nosso sono diário.
+
+447
+01:15:07.220 --> 01:15:10.670
+Elberth Moraes: Beleza. Eu vou chegar aqui e vou fazer um If
+
+448
+01:15:10.970 --> 01:15:14.349
+Elberth Moraes: para falar assim. Ó, esse cara daqui,
+
+449
+01:15:14.860 --> 01:15:26.030
+Elberth Moraes: ele vai acontecer. Ele vai imprimir para se juntar ao relatório aqui de cima, o relatório vai aparecer. Essa, essa, essa, essa e depois ou essa, ou essa.
+
+450
+01:15:26.250 --> 01:15:33.280
+Elberth Moraes: Então, se é uma ou outra. Eu preciso ter um If para definir quem é a verdadeira.
+
+451
+01:15:33.640 --> 01:15:38.709
+Elberth Moraes: E um Elsie para informar quem é a próxima?
+
+452
+01:15:39.310 --> 01:15:45.210
+Elberth Moraes: Tá aqui. Ó desse jeito. E desse jeito, desse jeito, aí, bonitona
+
+453
+01:15:45.420 --> 01:15:51.920
+Elberth Moraes: beleza. Aí eu tenho que trabalhar nessa minha condição aqui. O que eu poderia colocar nessa minha condição
+
+454
+01:15:52.250 --> 01:15:55.760
+Elberth Moraes: para parecer. Também atuo como professor.
+
+455
+01:15:58.590 --> 01:16:01.499
+Elberth Moraes: Eu tenho que testar a variável professor,
+
+456
+01:16:01.670 --> 01:16:10.850
+Elberth Moraes: observe que os nossos amigos veteranos aí os nossos amigos Maicon e Júlio. Eles botaram simplesmente a palavra professor,
+
+457
+01:16:11.370 --> 01:16:18.670
+Elberth Moraes: como a gente fez um teste lá no outro sinalzinho. Uma variável, um sinalzinho e um valor.
+
+458
+01:16:19.170 --> 01:16:29.969
+Elberth Moraes: Se eu chegasse aqui e quisesse testar, por exemplo. Imagine assim, se a altura for acima de dois metros. Vai imprimir esse cara daqui.
+
+459
+01:16:30.480 --> 01:16:36.910
+Elberth Moraes: Se a altura não é menor do que dois metros, vai imprimir esse daqui, aí eu teria que vir aqui
+
+460
+01:16:37.010 --> 01:16:39.409
+Elberth Moraes: botar a variável que eu quero testar.
+
+461
+01:16:39.710 --> 01:16:44.789
+Elberth Moraes: Botar o operador. Ah, se a altura for menor
+
+462
+01:16:44.950 --> 01:16:57.610
+Elberth Moraes: do que dois mil, ele vai entrar aqui, senão ele vai entrar aqui. Então observem que eu tenho três informações: a variável operador e o valor legal se a gente fosse fazer.
+
+463
+01:16:58.160 --> 01:17:13.670
+Elberth Moraes: Sei lá, o salário. Se o salário for maior do que duzentos, ele entra aqui, senão ele entra aqui, beleza, eu tenho a variável. Eu tenho a comparação aqui o operador e eu tenho valor. Ótimo.
+
+464
+01:17:13.810 --> 01:17:20.580
+Elberth Moraes: Se eu fosse fazer com o professor, se o professor for igual a True,
+
+465
+01:17:21.000 --> 01:17:27.120
+Elberth Moraes: eu tenho a variável. Eu tenho a comparação, o operadorzinho. E eu tenho o valor.
+
+466
+01:17:27.310 --> 01:17:42.319
+Elberth Moraes: Só que quando a gente está falando de buliano diferente de altura, diferente de salário diferente de cidade diferente de empresa que eu posso ter inúmeros valores incomparáveis valores.
+
+467
+01:17:42.330 --> 01:17:47.479
+Elberth Moraes: O professor só pode ter dois valores. Ou ele é True ou ele é falso.
+
+468
+01:17:47.600 --> 01:17:54.539
+Elberth Moraes: Então a programação definiu como uma boa prática, que quando ele é verdadeiro,
+
+469
+01:17:54.770 --> 01:18:04.669
+Elberth Moraes: a gente não coloca o sinal ao igual igual True. Então isso daqui ele entende que o cara é verdadeiro.
+
+470
+01:18:04.810 --> 01:18:13.419
+Elberth Moraes: Então, quando você chega aqui e fala, é professor. Se ele for professor, então ele está partindo do princípio. Se esse cara daqui for True.
+
+471
+01:18:13.750 --> 01:18:15.169
+Elberth Moraes: Ele vai entrar aqui.
+
+472
+01:18:15.390 --> 01:18:19.430
+Elberth Moraes: Mas beleza, eu cheguei aqui e fiz assim. Inverti.
+
+473
+01:18:22.270 --> 01:18:28.200
+Elberth Moraes: Como é que eu poderia fazer esse cara aqui de cima. Eu poderia chegar e falar assim. Ó, se ele
+
+474
+01:18:28.320 --> 01:18:30.210
+Elberth Moraes: não for professor,
+
+475
+01:18:30.990 --> 01:18:36.369
+Elberth Moraes: ele não atua como professor. Então, se isso daqui for verdadeiro, ou seja, professor, é igual a falso.
+
+476
+01:18:36.760 --> 01:18:46.980
+Elberth Moraes: Difícil, isso, né? Isso aqui é verdadeiro. O professor é igual a falso. Então, se o professor for igual a falso, significa que essa informação é uma informação verdadeira, professor igual a falso.
+
+477
+01:18:47.230 --> 01:18:51.979
+Elberth Moraes: Ah, entendi. Então, se aqui em cima o professor fosse falso
+
+478
+01:18:52.150 --> 01:19:08.760
+Elberth Moraes: e eu viesse aqui embaixo do testar, professor igual a falso. Aí você compara. Deixa eu ir lá ver. É então significa que esse é. Significa não está positivo. Está certinho. Pode entrar aí. Ele vai e entra e executa isso daqui. Mas só que na programação.
+
+479
+01:19:09.430 --> 01:19:12.960
+Elberth Moraes: Também decidimos que a gente não deve colocar o falso.
+
+480
+01:19:13.120 --> 01:19:25.460
+Elberth Moraes: E aí a gente pega. Desde o mundo lá da eletrônica, no mundo da matemática, onde a gente usa um sinal de exclamação aqui no início, para dizer que isso daqui é um não verdadeiro.
+
+481
+01:19:25.690 --> 01:19:41.160
+Elberth Moraes: Que loucura. Isso, hein? Ele meio que inverte. Ele é um famoso not das operações lógicas. Então, quando eu falo isso daqui, eu estou falando assim. Se esse professor aí for falso,
+
+482
+01:19:41.850 --> 01:19:53.110
+Elberth Moraes: ele vai entrar aqui. Ah, entendi. Então essa exclamação aí ele é um não verdadeiro. Exatamente para você ter uma ideia na matemática, a gente faz algo assim, né?
+
+483
+01:19:53.420 --> 01:19:54.300
+Elberth Moraes: Sei lá.
+
+484
+01:19:55.410 --> 01:20:04.360
+Elberth Moraes: Se um valor for diferente de mil, faça alguma coisa.
+
+485
+01:20:07.900 --> 01:20:11.190
+Elberth Moraes: Se não passa outra coisa.
+
+486
+01:20:11.670 --> 01:20:24.369
+Elberth Moraes: Esse diferente que eu botei ali, ele não é um código muito saudável. Vamos botar uma variável que exista. Vamos botar aqui o salário dele.
+
+487
+01:20:26.050 --> 01:20:37.880
+Elberth Moraes: Esse carinha daqui. Ele não é uma pessoa muito querida. Isso aqui a gente usa em algumas operações por aí. Algoritmo cálculo, sei lá. Mas aqui a gente não usa.
+
+488
+01:20:38.070 --> 01:20:41.099
+Elberth Moraes: O que seria o diferente na programação.
+
+489
+01:20:45.570 --> 01:20:54.849
+Elberth Moraes: Como é que é o diferente no mundo, Java. Em algumas linguagens, o diferente. Ele é assim.
+
+490
+01:20:55.370 --> 01:21:00.429
+Elberth Moraes: Agora que vocês entenderam o objetivo da exclamação, por que isso aqui significa diferente,
+
+491
+01:21:08.680 --> 01:21:11.340
+Elberth Moraes: porque ele não é igual.
+
+492
+01:21:11.620 --> 01:21:19.030
+Elberth Moraes: Então se você não é igual, ele é diferente. Então isso daqui é um símbolo que a gente usa dentro do Java o tempo inteiro.
+
+493
+01:21:19.450 --> 01:21:21.349
+Elberth Moraes: Ele é diferente.
+
+494
+01:21:21.960 --> 01:21:24.709
+Elberth Moraes: Perdi aqui a tela. Ele é diferente.
+
+495
+01:21:24.860 --> 01:21:44.270
+Elberth Moraes: Ah, cara, que loucura, hein? Que babado, como disseram ali, com muita entonação. Então esse exclamação aqui ele é o famoso note das operações lógicas que a gente tem por aí. Mas o nosso objetivo não era esse nosso objetivo. Foi só trocar uma ideia sobre esse assunto.
+
+496
+01:21:44.450 --> 01:21:53.300
+Elberth Moraes: Ficou legal. Esse assunto aí, do note igual do exclamação do porquê que o igual é assim? É assado, né?
+
+497
+01:21:53.560 --> 01:21:55.340
+Elberth Moraes: Ficou legal. Isso daí para vocês,
+
+498
+01:21:57.320 --> 01:22:01.180
+Elberth Moraes: maravilha. Então a gente tem esse.
+
+499
+01:22:01.680 --> 01:22:08.650
+Elberth Moraes: Esse código aí bonitinho, esse diferente desse jeito. Aí ele não aparece no Jabba, não tá meu nobre Júlio,
+
+500
+01:22:08.650 --> 01:22:22.859
+Elberth Moraes: ele aparece em outros ambientes. Beleza. Só que aqui dentro a gente tem que mudar. O Drew também atua como professor. O norte era esse daqui. E aí a gente chega aqui em cima e fala que se o cara for professor,
+
+501
+01:22:22.860 --> 01:22:30.319
+Elberth Moraes: a gente roda. Eu acho que se você der um F onze. Alguma coisa assim. Ele também executa a tela, ou você pode vir aqui
+
+502
+01:22:30.320 --> 01:22:40.139
+Elberth Moraes: e ele bota lá também atuo como professor. Ai se eu mudar aqui para false, vamos testar, né? Se eu mudo aqui para Fawc, ele fala lá que
+
+503
+01:22:40.160 --> 01:22:52.049
+Elberth Moraes: não atuo, botei, alto, né? Não atuo como professor. E aí a gente chega aqui. Muda direito que a gente não é burro. Não atuo como professor. Manda rodar
+
+504
+01:22:52.080 --> 01:22:58.489
+Elberth Moraes: a galera, printar de novo. Que está lindo, beleza. Mudei aqui os dois valores. Vocês estão vendo que eu sempre faço
+
+505
+01:22:58.900 --> 01:23:14.339
+Elberth Moraes: testes dos dois lados, né? Se a gente estivesse testando maior do que dois mil, eu botaria menor botaria igual. Botaria maior para a gente saber se todas as condições mais à frente, a gente vai trabalhar com testes unitários. E aí a gente vai ver esse cara aos montes.
+
+506
+01:23:14.590 --> 01:23:26.089
+Elberth Moraes: Fizemos isso daqui. A gente tem nove minutos. Vocês querem aprender um outro negócio muito legal sobre estrutura condicional aqui, que eu creio que vocês vão sair daqui chorando.
+
+507
+01:23:26.740 --> 01:23:27.750
+Elberth Moraes: Pode ser,
+
+508
+01:23:28.530 --> 01:23:43.289
+Elberth Moraes: garanto para vocês, prantos durante todos os últimos vinte minutos do seu dia. Observem que a gente tem aqui um cara bonitão ali que a gente já imprimiu. Deixa esse cara aqui. Vou botar esse cara aqui embaixo para eu não
+
+509
+01:23:43.490 --> 01:24:02.949
+Elberth Moraes: acabar com o nosso negócio. Vocês estão ligados que essa frase aí também atuo como professor e não atuo como professor. Elas estão muito parecidas, né? A única coisa que mudou é isso aqui. E a única coisa que mudou é isso aqui. O resto é igual. Atuo como professor, atuo como professor.
+
+510
+01:24:03.350 --> 01:24:14.980
+Elberth Moraes: A gente poderia pensar nisso aqui. De outra forma, a gente poderia pensar de uma maneira muito elegante, mas que muita gente não gosta, mas eu vou apresentar para vocês aqui. Eu poderia chegar aqui embaixo
+
+511
+01:24:15.460 --> 01:24:18.989
+Elberth Moraes: e fazer algo assim. 'cy Standout Print line.
+
+512
+01:24:19.210 --> 01:24:26.050
+Elberth Moraes: Aí eu vou chegar aqui dentro desse cara e boto assim atuo como professor.
+
+513
+01:24:26.810 --> 01:24:28.329
+Elberth Moraes: Só assim atua.
+
+514
+01:24:28.590 --> 01:24:33.560
+Elberth Moraes: E aí a gente tem duas possibilidades ou não. Ou também
+
+515
+01:24:34.040 --> 01:24:44.879
+Elberth Moraes: existe um negócio por aí. Vou dar o spoiler aqui para a galera já ficar nervosa e botar ali comentários que são os operadores ternários. Muito conhecido em algumas linguagens.
+
+516
+01:24:45.020 --> 01:24:49.949
+Elberth Moraes: Michael, antes de eu te falar que ele já está digitando que eu sei que o aluno é uma
+
+517
+01:24:50.370 --> 01:24:52.839
+Elberth Moraes: uma coisa de ansiedade absurda,
+
+518
+01:24:52.900 --> 01:25:12.250
+Elberth Moraes: mas é para isso que eu estou fazendo. E aí esses operadores ternários, eles servem mais ou menos assim. A gente conhece isso dos famosos editores aí, de essas planilhas, Excel que a gente tem no Excel, a gente tem assim tem o famoso C. Não sei se vocês lembram do Excel.
+
+519
+01:25:12.310 --> 01:25:15.640
+Elberth Moraes: Se aqui dentro, você tem uma condição.
+
+520
+01:25:16.960 --> 01:25:31.849
+Elberth Moraes: Aí ele tem aqui um resultado. Se for verdadeiro. E aqui o resultado se for falso, é assim que a gente tem uma condiçãozinha lá no nosso carinho aqui, dentro do Java. Imaginem, tá, eu criei aqui uma.
+
+521
+01:25:32.270 --> 01:25:38.590
+Elberth Moraes: Uma variável para eu guardar também, ou não
+
+522
+01:25:38.950 --> 01:25:46.839
+Elberth Moraes: vou criar uma variável chamada situação que ela pode ser também. Ou ela pode ser. Não
+
+523
+01:25:47.590 --> 01:25:51.759
+Elberth Moraes: um desses dois valores. Então ele está aqui também?
+
+524
+01:25:53.710 --> 01:25:54.500
+Elberth Moraes: Não,
+
+525
+01:25:54.920 --> 01:26:02.960
+Elberth Moraes: mas só que isso daqui vai aparecer quando o Professor Fortru. Isso aqui vai aparecer quando o professor for falso.
+
+526
+01:26:03.170 --> 01:26:06.820
+Elberth Moraes: Então, se eu chego aqui e faço assim. Olha que loucura.
+
+527
+01:26:07.000 --> 01:26:08.750
+Elberth Moraes: Professor.
+
+528
+01:26:09.090 --> 01:26:14.160
+Elberth Moraes: Interrogação, também dois pontos.
+
+529
+01:26:14.400 --> 01:26:23.220
+Elberth Moraes: Não, vocês acreditam que isso daqui é uma possível operação no Java,
+
+530
+01:26:23.400 --> 01:26:25.850
+Elberth Moraes: onde ele faz o seguinte. Olha só.
+
+531
+01:26:26.380 --> 01:26:39.730
+Elberth Moraes: Pega esse professor aqui. Esse cara aqui, a gente já viu que se ele está sozinho, ele é professor igual a True. Ok, se esse cara for Drew, pergunta: é verdadeiro? É
+
+532
+01:26:40.090 --> 01:26:44.189
+Elberth Moraes: esse cara daqui vai ser jogado para dentro de situação.
+
+533
+01:26:45.290 --> 01:26:51.400
+Elberth Moraes: É professor. Não, aí eu caio aqui nos dois pontos. E esse não é jogado para dentro de situação.
+
+534
+01:26:51.780 --> 01:26:55.349
+Elberth Moraes: Olha que maravilha! Aí eu pego essa situação.
+
+535
+01:26:55.590 --> 01:27:02.609
+Elberth Moraes: Concateno aqui e aí, na hora da gente imprimir esse cara,
+
+536
+01:27:03.830 --> 01:27:07.670
+Elberth Moraes: ele aparece lá. Também atuo como professor,
+
+537
+01:27:11.600 --> 01:27:23.090
+Elberth Moraes: não atuo como professor. Que espetáculo. Eu tenho certeza que vocês nesse momento não estão conseguindo ver a tela, porque as lágrimas estão atrapalhando.
+
+538
+01:27:23.310 --> 01:27:31.750
+Elberth Moraes: Mas isso daqui é o famoso operador ternário que a gente ama dentro da programação.
+
+539
+01:27:31.980 --> 01:27:35.560
+Elberth Moraes: Mas só que para todo amor que a gente tem,
+
+540
+01:27:35.820 --> 01:27:44.299
+Elberth Moraes: vem um aluno sem noção. E ele quer fazer isso aqui durante toda a vida.
+
+541
+01:27:44.570 --> 01:27:50.270
+Elberth Moraes: Vocês já foram isso. Quando vocês foram jovens que vocês viram que uma coisa funcionou.
+
+542
+01:27:50.430 --> 01:28:06.109
+Elberth Moraes: Aí vocês falam assim? Vou fazer isso daqui a vida inteira. Já não pensaram nisso? Eu fazia muito isso quando eu tinha alguns aninhos. Então eu começo a ver que isso pode atrapalhar,
+
+543
+01:28:06.310 --> 01:28:14.869
+Elberth Moraes: porque vocês estão ligados. Que esse cara daqui, assim como o C do Excel. Condição
+
+544
+01:28:14.990 --> 01:28:23.979
+Elberth Moraes: true pause. Vocês estão ligados aqui dentro do Excel. Eu consigo pegar essa condição aqui e jogar aqui.
+
+545
+01:28:24.370 --> 01:28:25.910
+Elberth Moraes: E aí. Eu tenho
+
+546
+01:28:26.030 --> 01:28:36.690
+Elberth Moraes: Tru aí, aqui. Eu tenho um outro cara que pode me retornar. True ou falso. E aqui eu posso botar um outro C. Vocês estão ligados. Que isso daqui é possível fazendo uma planilha eletrônica.
+
+547
+01:28:37.910 --> 01:28:42.150
+Elberth Moraes: A pessoa não tem uma alma muito querida quando ele faz isso daqui.
+
+548
+01:28:42.460 --> 01:28:46.030
+Elberth Moraes: Por que isso daqui fica muito difícil de você ler.
+
+549
+01:28:46.280 --> 01:28:49.140
+Elberth Moraes: E aí é melhor você fazer um if.
+
+550
+01:28:49.560 --> 01:29:08.530
+Elberth Moraes: Quando você está com uma condição desse tamanho aqui, cara. Porra, bota. Um Ifra não vai fazer isso. Então, na programação, vai ter um aluno que não tem certeza que não são vocês que vão fazer um ternário de um jeito que ninguém nunca mais vai entender. Nem ele.
+
+551
+01:29:08.730 --> 01:29:15.780
+Elberth Moraes: E aí a gente tem que ter muito cuidado quanto a isso. Então a gente tem essa possibilidade aqui,
+
+552
+01:29:15.930 --> 01:29:20.400
+Elberth Moraes: e a gente tem essa possibilidade aqui.
+
+553
+01:29:20.780 --> 01:29:22.150
+Elberth Moraes: Gostaram? Galera,
+
+554
+01:29:27.490 --> 01:29:30.340
+Elberth Moraes: pergunta ali. A nossa nome Jay
+
+555
+01:29:30.550 --> 01:29:35.639
+Elberth Moraes: aqui no Java. Você usa zero. Você usa True ou usa France? Ok,
+
+556
+01:29:36.540 --> 01:29:39.959
+Elberth Moraes: você não vai usar o um e o zero que ele vai entender que um e o zero.
+
+557
+01:29:40.130 --> 01:29:42.110
+Elberth Moraes: Eles são números inteiros.
+
+558
+01:29:42.260 --> 01:29:43.290
+Elberth Moraes: Beleza,
+
+559
+01:29:44.120 --> 01:29:52.990
+Elberth Moraes: é isso aí. O meu objetivo é que vocês tenham gostado demais da aula de hoje. E amanhã a gente vai voltar
+
+560
+01:29:53.350 --> 01:30:07.470
+Elberth Moraes: também com toda essa nossa empolgação para a gente continuar nas nossas estruturas condicionais, nos nossos queridos outros momentos aqui fantásticos, de estruturas de repetição
+
+561
+01:30:07.470 --> 01:30:16.200
+Elberth Moraes: de outros tipos modernos, de estruturas condicionais e repetição. E a gente vai ficar muito feliz nesse nosso assunto.
+
+562
+01:30:17.280 --> 01:30:20.309
+Elberth Moraes: Fechamos por hoje, galera. Foi bom pra vocês.
+
+563
+01:30:23.980 --> 01:30:28.480
+Elberth Moraes: Perfeito. Vocês estão gostando do nosso Java galera que nunca tinha visto.
+
+564
+01:30:32.800 --> 01:30:47.420
+Elberth Moraes: Maravilha, vocês aqui, dessa nossa galerinha. Vocês moram aqui pelo rio? Já perguntei isso. Por que eu estou perguntando isso. Vocês estão ligados ao que está rolando aqui no Rio de Janeiro. O querido e famoso rio Innovation Week.
+
+565
+01:30:47.880 --> 01:30:57.859
+Elberth Moraes: Evento muito legal. Amanhã é o último dia. Eu acho que pelo site, vocês ainda conseguem comprar. E ele está a um valor muito bom de zero,zero.
+
+566
+01:30:58.150 --> 01:31:09.849
+Elberth Moraes: Então vocês têm lá a possibilidade de comprar ingresso. Ainda eu fui nesse evento ontem. Achei muito legal. Fiquei muito na área de educação. Para entender
+
+567
+01:31:09.930 --> 01:31:21.050
+Elberth Moraes: como é que as escolas estão trabalhando agora com a Ia para facilitar o entendimento de alguns conceitos, para ver como é que os alunos estão se virando para estudar.
+
+568
+01:31:21.050 --> 01:31:30.609
+Elberth Moraes: E aí escutei muita coisa legal, mas tinha áreas de nerds lá. Áreas de programação, áreas de inteligência artificial, área de máquina de robô e tal.
+
+569
+01:31:30.670 --> 01:31:39.990
+Elberth Moraes: Então, para a galera que está pelo rio, para a galera que conhece alguém aqui no rio? Entrem no site do rio Innovation Week. E aí vocês vão ter
+
+570
+01:31:40.510 --> 01:31:44.080
+Elberth Moraes: um negócio muito legal. Rio Innovation Week
+
+571
+01:31:44.280 --> 01:31:58.969
+Elberth Moraes: muito bacana. Vale muito a pena. Eu adoro eventos. Eu adoro eventos, cara, porque a gente aprende como eu falei com vocês, eu gosto de aprender de forma diferente. Eu não gosto de ficar só sentado na sala de aula, estudando, porque eu acho
+
+572
+01:31:59.080 --> 01:32:01.109
+Elberth Moraes: professores muito chatos,
+
+573
+01:32:01.300 --> 01:32:10.970
+Elberth Moraes: tirando a gente aqui que não temos nem aluno chato nem professor chato. Todos os outros são muito chatos. Então a gente está rolando um evento muito legal
+
+574
+01:32:11.040 --> 01:32:22.000
+Elberth Moraes: que vale muito a pena. São muitos armazéns aqui do porto, aqui do rio. Muito legal. Tá galera que estiver por aqui e quiser
+
+575
+01:32:22.500 --> 01:32:29.110
+Elberth Moraes: tomar um chope comigo, pode me mandar um alô que a gente bate um papo. O ingresso era caro, mesmo
+
+576
+01:32:29.130 --> 01:32:38.000
+Elberth Moraes: mas tem assim opções de oitocentos também. Mas aí a galera meio que fugiu. Tinha um lance lá que muita gente comprou
+
+577
+01:32:38.010 --> 01:32:56.480
+Elberth Moraes: e eles estão recebendo a galera e falando lá, eu comprei o ingresso. Não tem como comprar. Como é que eu faço? E eles estão agilizando lá algumas coisas. Está muito legal. Um evento muito legal. Vejam aí se vocês conseguem comprar um ingresso barato. E aí a gente se encontra lá amanhã.
+
+578
+01:32:56.640 --> 01:33:06.319
+Elberth Moraes: Galera, beijo grande para vocês se cuidem. A gente se fala amanhã às 19h. Não, 8h30 fechou, beijo grande. Tchau Tchau.
+

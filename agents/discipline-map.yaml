@@ -1,0 +1,123 @@
+# Mapa downloads → discipline slug ISS (3º trimestre / bloco backend)
+version: 1
+trimester: 3
+
+disciplines:
+  fundamentos-csharp:
+    title: "Fundamentos de Desenvolvimento com C#"
+    professor: "Rafael Cruz / Luiz Paulo Maia"
+    download_dir: "downloads/Fundamentos_de_Desenvolvimento_com_C#"
+    documents_dir: "downloads/documents/Fundamentos_C#"
+    documents_extracted: "memory/t3-backend-lessons/extracted/csharp-*.txt"
+    content_dir: "content/fundamentos-csharp"
+    editorLanguage: "javascript" # Editor ISS: usar csharp nos exemplos; lab pode usar javascript se editor não tiver C#
+    lessons:
+      - order: 1
+        source: "Aula_01_-_20072026.bin"
+        slug: "introducao-csharp-dotnet-backend"
+        working_title: "Introdução a C#, .NET e o bloco de backend"
+        docs_context:
+          - "memory/t3-backend-lessons/extracted/csharp-ambiente.txt"
+      - order: 2
+        source: "Aula_02_-_21072026.bin"
+        slug: "primeiro-projeto-solucao-dotnet"
+        working_title: "Primeiro projeto e solução .NET no VS Code / Rider"
+        docs_context:
+          - "memory/t3-backend-lessons/extracted/csharp-ambiente.txt"
+          - "memory/t3-backend-lessons/extracted/csharp-lista.txt"
+      - order: 3
+        source: "Aula_03_-_27072026.bin"
+        slug: "strings-variaveis-operadores-csharp"
+        working_title: "Strings, variáveis e operadores em C#"
+        docs_context:
+          - "memory/t3-backend-lessons/extracted/csharp-lista.txt"
+          - "memory/t3-backend-lessons/extracted/csharp-gabarito.txt"
+      - order: 4
+        source: "Aula_04_-_28072026.bin"
+        slug: "pratica-lista-exercicios-console-csharp"
+        working_title: "Prática: lista de exercícios e console vs backend"
+        docs_context:
+          - "memory/t3-backend-lessons/extracted/csharp-lista.txt"
+          - "memory/t3-backend-lessons/extracted/csharp-gabarito.txt"
+      - order: 5
+        source: "Aula_05_-_03082026.bin"
+        slug: "revisao-fundamentos-csharp-transicao"
+        working_title: "Revisão de fundamentos C# (transição de professor)"
+        docs_context:
+          - "memory/t3-backend-lessons/extracted/csharp-ambiente.txt"
+          - "memory/t3-backend-lessons/extracted/csharp-lista.txt"
+      - order: 6
+        source: "Aula_06_-_04082026.bin"
+        slug: "datetime-manipulacao-csharp"
+        working_title: "DateTime e manipulação de data/hora em C#"
+        docs_context:
+          - "memory/t3-backend-lessons/extracted/csharp-ambiente.txt"
+
+  fundamentos-java:
+    title: "Fundamentos de Desenvolvimento com Java"
+    professor: "Elberth Moraes"
+    download_dir: "downloads/Fundamentos_de_Desenvolvimento_com_Java"
+    documents_dir: null  # sem pasta dedicada em downloads/documents
+    documents_note: "Usar apenas transcrição .bin; declarar lacuna de slides/PDF se necessário"
+    content_dir: "content/fundamentos-java"
+    editorLanguage: "javascript"
+    lessons:
+      - order: 1
+        source: "Aula_01_-_23072026.bin"
+        slug: "introducao-java-carreira-bloco-backend"
+        working_title: "Introdução a Java, carreira e o bloco de backend"
+        docs_context: []
+      - order: 2
+        source: "Aula_02_-_24072026.bin"
+        slug: "raciocinio-codigo-primeiro-contato-java"
+        working_title: "Raciocínio, código e primeiro contato prático com Java"
+        docs_context: []
+      - order: 3
+        source: "Aula_03_-_30072026.bin"
+        slug: "variaveis-tipos-entrada-saida-java"
+        working_title: "Variáveis, tipos, Scanner e saída no console"
+        docs_context: []
+      - order: 4
+        source: "Aula_04_-_31072026.bin"
+        slug: "classes-projetos-calculadora-media-java"
+        working_title: "Classes e projetos práticos (calculadora, média, perfil)"
+        docs_context: []
+      - order: 5
+        source: "Aula_05_-_06082026.bin"
+        slug: "controle-fluxo-if-java"
+        working_title: "Controle de fluxo com if e operadores lógicos"
+        docs_context: []
+      - order: 6
+        source: "Aula_06_-_07082026.bin"
+        slug: "condicionais-faixas-etarias-operador-ternario-java"
+        working_title: "Condicionais, faixas etárias e operador ternário"
+        docs_context: []
+
+  projeto-bloco-backend:
+    title: "Projeto de Bloco — Desenvolvimento Back-End"
+    professor: "Orlando Fonseca Guilarte"
+    download_dir: "downloads/Projeto_de_Bloco_Desenvolvimento_Back-End"
+    documents_dir: "downloads/documents/Projeto_Bloco_BK"
+    documents_extracted: "memory/t3-backend-lessons/extracted/pb-*.txt"
+    content_dir: "content/projeto-bloco-backend"
+    editorLanguage: "javascript"
+    lessons:
+      - order: 1
+        source: "Aula_01_-_22072026.bin"
+        slug: "combinado-projeto-bloco-backend"
+        working_title: "Combinado, execução e entregas do Projeto de Bloco Backend"
+        docs_context:
+          - "memory/t3-backend-lessons/extracted/pb-aula1.txt"
+      - order: 2
+        source: "Aula_02_-_29072026.bin"
+        slug: "ciclo-vida-requisitos-software"
+        working_title: "Ciclo de vida do software e etapa de requisitos"
+        docs_context:
+          - "memory/t3-backend-lessons/extracted/pb-aula1.txt"
+          - "memory/t3-backend-lessons/extracted/pb-aula2.txt"
+      - order: 3
+        source: "Aula_03_-_05082026.bin"
+        slug: "modelos-cascata-rup-agil"
+        working_title: "Modelos: cascata, RUP e abordagem ágil"
+        docs_context:
+          - "memory/t3-backend-lessons/extracted/pb-aula2.txt"
