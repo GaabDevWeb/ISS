@@ -1,0 +1,2782 @@
+WEBVTT
+
+1
+00:00:07.610 --> 00:00:09.000
+Orlando Fonseca: Boa noite, pessoal.
+
+2
+00:00:09.410 --> 00:00:13.500
+Orlando Fonseca: Desculpem a demora, tá, mas vou tentar recuperar seu telefone,
+
+3
+00:00:14.470 --> 00:00:20.740
+Orlando Fonseca: beleza. Boa noite. Mais uma vez, obrigado pela espera previstas aí acontecem mais
+
+4
+00:00:21.640 --> 00:00:26.949
+Orlando Fonseca: se não dá tempo nessa aula, a gente recupera na próxima, tá bom, boa noite.
+
+5
+00:00:28.930 --> 00:00:33.049
+Orlando Fonseca: Muito bom. Ainda bem que está tomando uma turma boa, né? Fica acordando aqui.
+
+6
+00:00:34.190 --> 00:00:36.010
+Orlando Fonseca: Então, meus queridos,
+
+7
+00:00:36.250 --> 00:00:44.369
+Orlando Fonseca: eu vou compartilhar já a minha tela porque a gente precisa conversar, né? Diminuto, solidário. Tá bom, então tá combinado, tá.
+
+8
+00:00:44.690 --> 00:00:55.830
+Orlando Fonseca: Dez minutos hoje. A próxima semana a gente compensa, mas você não perde nunca. Você nunca iria perder esse tempo, tá? Sempre vamos compensar nas próximas aulas. Enfim, mas pode ser perfeitamente dez minutinhos, dez minutinhos.
+
+9
+00:00:56.280 --> 00:01:02.119
+Orlando Fonseca: Assim na próxima. Tá bom, então vá. Vou compartilhar com vocês
+
+10
+00:01:02.290 --> 00:01:08.200
+Orlando Fonseca: a aula de hoje. Estamos na aula seis do projeto, de Bloco de Baquiembre,
+
+11
+00:01:08.700 --> 00:01:25.119
+Orlando Fonseca: e vocês estão ficando mais experientes, tá? No sentido que vocês já entendem o que seria uma especificação de requisitos, como fazer a modelagem pelo menos nessa primeira etapa, na etapa inicial de entender o copo do projeto. Oi,
+
+12
+00:01:27.170 --> 00:01:27.990
+Orlando Fonseca: alô.
+
+13
+00:01:33.340 --> 00:01:40.550
+Orlando Fonseca: Mas você entende já. Ah, tá, beleza tem essa primeira parte entendeu a Copa do projeto. A regra de negócio.
+
+14
+00:01:40.550 --> 00:01:47.320
+João Victor Gasparoto: Eu entendo. Sim, estava falando de outra pessoa. Aqui é que o áudio desligou sozinho.
+
+15
+00:01:47.320 --> 00:01:48.790
+Orlando Fonseca: Ah, tá bom, não tem problema. Não?
+
+16
+00:01:49.210 --> 00:02:00.369
+Orlando Fonseca: Então, só que assim vamos continuar tudo do caso de uso, tá? A gente foi lá. Entendimos essa parte da especificação e já falamos, o que seria um caso de uso, lembra? Agora, vamos lá,
+
+17
+00:02:00.640 --> 00:02:03.479
+Orlando Fonseca: porque a gente precisa formalizar isso,
+
+18
+00:02:05.100 --> 00:02:12.730
+Orlando Fonseca: porque. Tudo bem. Eu falei para vocês. Temos cenários, tá? Temos um passo a passo.
+
+19
+00:02:13.220 --> 00:02:20.059
+Orlando Fonseca: Temos também entender muito bem esse requisito funcional. E vocês já conseguem fazer uma narrativa
+
+20
+00:02:20.320 --> 00:02:26.340
+Orlando Fonseca: dessa funcionalidade que o usuário precisa, tá? Você consegue fazer isso? Só que
+
+21
+00:02:26.730 --> 00:02:37.150
+Orlando Fonseca: quando falo para vocês. O caso de uso está muito atrelado a essa narrativa. A esse passo a passo. Que vai acontecer para a gente entender o que é para ser implementado,
+
+22
+00:02:37.250 --> 00:02:47.259
+Orlando Fonseca: mas isso normalmente vem junto com um diagrama de casos de uso. E aí onde vem essa parte da Iml, a linguagem, o Ml, que vai ajudar muito,
+
+23
+00:02:47.430 --> 00:02:49.229
+Orlando Fonseca: porque ele tem esse.
+
+24
+00:02:50.520 --> 00:02:57.449
+Orlando Fonseca: É essa visual que vai ajudar a entender muito mais o que,
+
+25
+00:02:57.840 --> 00:03:02.840
+Orlando Fonseca: de repente, alguns textos, alguns parágrafos não conseguem nem explicar
+
+26
+00:03:03.070 --> 00:03:06.530
+Orlando Fonseca: da melhor forma. Principalmente, claro que é simplificar bastante, né?
+
+27
+00:03:06.890 --> 00:03:07.850
+Orlando Fonseca: Então,
+
+28
+00:03:16.900 --> 00:03:18.740
+Orlando Fonseca: pronto. Agora vocês estão compartilhando, né?
+
+29
+00:03:20.160 --> 00:03:23.220
+Orlando Fonseca: Então, pessoal, tanto
+
+30
+00:03:26.320 --> 00:03:31.550
+Orlando Fonseca: resumindo que eu falei aqui para vocês, temos um caso de uso. Temos o que funcionalidade do sistema
+
+31
+00:03:31.880 --> 00:03:45.669
+Orlando Fonseca: que ela é feita de uma forma que tem uma narrativa e da forma que tanto a pessoa que implementa como o dono do projeto, como o pessoal, que está de alguma forma envolvida no desenvolvimento do projeto todo,
+
+32
+00:03:45.840 --> 00:03:49.310
+Orlando Fonseca: entende essa funcionalidade,
+
+33
+00:03:49.560 --> 00:03:59.500
+Orlando Fonseca: e de alguma forma se a funcionaria, existe porque está no requisito e está no caso de uso, porque ele vai atender o nosso usuário. Beleza, esse é o primeiro,
+
+34
+00:04:00.350 --> 00:04:01.120
+Orlando Fonseca: tá bom?
+
+35
+00:04:01.610 --> 00:04:19.180
+Orlando Fonseca: Ou seja, ele não está falando nada de como que ele está sendo implementado. Ah, eu vou usar, sei lá com linguagem. Banco, arquitetura. De repente, esse padrão de desenho aqui seria melhor. Onde estaria a responsabilidade de cada entidade, não
+
+36
+00:04:19.550 --> 00:04:22.459
+Orlando Fonseca: o relacionamento entre classes. Nada a ver.
+
+37
+00:04:22.620 --> 00:04:29.829
+Orlando Fonseca: O caso de uso foca na funcionalidade que vai entregar um valor para o usuário, que na verdade é aquele requisito funcional.
+
+38
+00:04:30.830 --> 00:04:31.690
+Orlando Fonseca: Beleza.
+
+39
+00:04:31.890 --> 00:04:38.449
+Orlando Fonseca: Então o caso de uso representa uma ação ou um conjunto de ações que o usuário vai realizar com a ajuda do sistema.
+
+40
+00:04:39.080 --> 00:04:48.809
+Orlando Fonseca: Tá como registrar cliente, fazer login, emitir relatório que eu e eu.
+
+41
+00:04:49.820 --> 00:04:53.679
+Orlando Fonseca: Outra palavra pessoal. Quando fala de caça de uso, estou falando de
+
+42
+00:04:54.020 --> 00:05:01.870
+Orlando Fonseca: A Sound, tá? Sempre tem um verbo atrás. Por quê? Veja, registrar cliente,
+
+43
+00:05:02.140 --> 00:05:06.220
+Orlando Fonseca: fazer login, emitir relatório. São ações
+
+44
+00:05:06.470 --> 00:05:24.369
+Orlando Fonseca: que a Game podia ser usuário. Coloquei o usuário aqui, mas pode ser uma outra. Enfim, uma outra. Vamos chegar nessa definição. Também acho que eu já falei para vocês. Defini quem for que esteja interagindo com o nosso sistema.
+
+45
+00:05:25.250 --> 00:05:26.140
+Orlando Fonseca: Tá?
+
+46
+00:05:30.320 --> 00:05:35.939
+Orlando Fonseca: Então até aí, pessoal? Alguma dúvida? Não tô falando muito rápido.
+
+47
+00:05:38.160 --> 00:05:45.280
+Orlando Fonseca: Vamos continuar. Então os caças de uso são representados de forma gráfica e textual.
+
+48
+00:05:45.870 --> 00:05:47.669
+Orlando Fonseca: Então, veja
+
+49
+00:05:53.930 --> 00:05:57.970
+Orlando Fonseca: quando falam caça de urso, você tem que pensar
+
+50
+00:05:58.120 --> 00:06:03.799
+Orlando Fonseca: que vocês estariam colocando ali uma descrição do que é para fazer. E aquele é passo a passo.
+
+51
+00:06:03.910 --> 00:06:14.900
+Orlando Fonseca: Você foi até pensar em cenário, aquele cenário feliz, aquele outro alternativo e demais. Só que seria muito bom
+
+52
+00:06:15.140 --> 00:06:22.590
+Orlando Fonseca: que estivesse atrelado a essa narrativa e um uma imagem, uma figura
+
+53
+00:06:22.730 --> 00:06:26.340
+Orlando Fonseca: que complementem o que ali está sendo explicado.
+
+54
+00:06:27.250 --> 00:06:35.120
+Orlando Fonseca: Por isso que eu falo assim que eles são representados de forma gráfica textual porque tem a narrativa e tem o visual,
+
+55
+00:06:35.270 --> 00:06:36.160
+Orlando Fonseca: tá?
+
+56
+00:06:37.100 --> 00:06:38.880
+Orlando Fonseca: Como seria esse modelo?
+
+57
+00:06:39.620 --> 00:06:48.560
+Orlando Fonseca: Ele tem quatro pontos importantes. O primeiro dele, diagrama de casa de uso,
+
+58
+00:06:48.860 --> 00:06:52.239
+Orlando Fonseca: onde? Que o homem traz o maior. Aposte aqui
+
+59
+00:06:53.380 --> 00:06:58.379
+Orlando Fonseca: no caso de uso fazer esse diagrama. Que é esse desenho que vai mostrar
+
+60
+00:06:58.890 --> 00:07:11.669
+Orlando Fonseca: todos os atores envolvidos no sistema que interagem com o sistema e as funcionalidades tá como forma de descênio.
+
+61
+00:07:14.930 --> 00:07:18.499
+Orlando Fonseca: Dois: as descrições do câncer de uso
+
+62
+00:07:18.880 --> 00:07:28.140
+Orlando Fonseca: são as aplicações textuais de funcionalidade. Por quê? Porque na prática, é um tchau.
+
+63
+00:07:28.790 --> 00:07:33.049
+Orlando Fonseca: Na prática, quando você fala, Ah, eu tenho um diagrama de câncer de uso.
+
+64
+00:07:33.880 --> 00:07:39.720
+Orlando Fonseca: Se você apresenta só o diagrama, não vai jantar muito também. Não você tem que ter
+
+65
+00:07:40.100 --> 00:07:44.370
+Orlando Fonseca: uma explicação que você está desenhando aí, tá? Ou seja,
+
+66
+00:07:44.720 --> 00:07:48.189
+Orlando Fonseca: o decênio. Ele é complemento da narrativa.
+
+67
+00:07:49.000 --> 00:07:51.330
+Orlando Fonseca: Todo mundo entendeu isso. Tá?
+
+68
+00:07:52.410 --> 00:07:57.649
+Orlando Fonseca: Falamos de caça de uso. Nós vamos ter só uma narrativa sem um diagrama de caça de uso, porque um complementa o outro.
+
+69
+00:07:57.800 --> 00:07:59.630
+Orlando Fonseca: Os dois vêm de um time.
+
+70
+00:08:01.240 --> 00:08:15.340
+Orlando Fonseca: Então você precisa explicar textualmente como falou de narrativa. Cada funcionalidade simples também não é três para áreas explicando o que ele está fazendo ali? Por quê? Porque tem a parte visual que vai complementar.
+
+71
+00:08:15.410 --> 00:08:21.299
+Orlando Fonseca: Você nunca preencha muito nessa aplicação. Só deixa claro. E coloca o decênio para
+
+72
+00:08:23.040 --> 00:08:26.989
+Orlando Fonseca: para melhor orientação aí do que para ser feito.
+
+73
+00:08:27.190 --> 00:08:33.569
+Orlando Fonseca: Descrições dos auditórias. Quem são os usuários e o que fazem no sistema e os cenários.
+
+74
+00:08:35.039 --> 00:08:39.339
+Orlando Fonseca: Então veja se você já está pensando em fazer uma figura.
+
+75
+00:08:40.630 --> 00:08:47.020
+Orlando Fonseca: É o que vamos colocar melhor. Exatamente a funcionalidade
+
+76
+00:08:47.750 --> 00:09:01.819
+Orlando Fonseca: e os fatores. E a descrição tá, então você tem que ter em mente já toda essa pessoa que está interagindo com o sistema e a funcionalidade que cada um dele vai fazer. Tá? E o cenário? Você tem que entender o cenário para
+
+77
+00:09:01.970 --> 00:09:06.790
+Orlando Fonseca: conseguem identificar quais são as principais caixas de uso?
+
+78
+00:09:09.180 --> 00:09:15.140
+Orlando Fonseca: Você é sempre concreto de interação, tipo, Ah, eu tenho ali o.
+
+79
+00:09:15.640 --> 00:09:18.430
+Orlando Fonseca: O gerente
+
+80
+00:09:19.110 --> 00:09:29.150
+Orlando Fonseca: acessa o sistema e preenche os dados. Seleciona um cliente no sistema, atualiza as informações dele, preenche os dados. Vantagem, salva, entendeu?
+
+81
+00:09:29.280 --> 00:09:31.979
+Orlando Fonseca: Todo esse passo a passo, forma parte de um
+
+82
+00:09:32.270 --> 00:09:36.010
+Orlando Fonseca: Cassius Giul são geral que vai ser, por exemplo, atualizar cadastro.
+
+83
+00:09:36.640 --> 00:09:43.310
+Orlando Fonseca: Tá, beleza, beleza.
+
+84
+00:09:49.400 --> 00:09:59.170
+Orlando Fonseca: Tá bom diagrama de uso. A parte gráfica do modelo tem essa visão mais geral mais intuitiva, mais aplicativo.
+
+85
+00:09:59.770 --> 00:10:09.959
+Orlando Fonseca: E como eu falei para vocês, se acompanhou de descrições detalhadas. Não tem que ser tão detalhado, mas pelo menos algum parágrafo explicado.
+
+86
+00:10:12.080 --> 00:10:12.960
+Orlando Fonseca: Ok,
+
+87
+00:10:19.600 --> 00:10:20.950
+Orlando Fonseca: eu vou.
+
+88
+00:10:21.990 --> 00:10:23.020
+Orlando Fonseca: É um.
+
+89
+00:10:25.120 --> 00:10:27.979
+Orlando Fonseca: Vamos passar um exemplo antes de falar do derrama de Cassius.
+
+90
+00:10:30.850 --> 00:10:32.639
+Orlando Fonseca: Então é o seguinte, pessoal.
+
+91
+00:10:34.220 --> 00:10:36.919
+Orlando Fonseca: Se você está entendendo, eu já estou falando, aqui.
+
+92
+00:10:37.050 --> 00:10:37.850
+Orlando Fonseca: Tá bom?
+
+93
+00:10:38.430 --> 00:10:43.239
+Orlando Fonseca: Vamos pensar nessa situação que eu vou nessa situação que eu vou falar aqui para vocês.
+
+94
+00:10:44.140 --> 00:10:45.540
+Orlando Fonseca: Deixa eu pegar uma caneta aqui.
+
+95
+00:10:46.750 --> 00:10:47.630
+Orlando Fonseca: Tchau.
+
+96
+00:10:48.230 --> 00:10:52.310
+Orlando Fonseca: Veja na situação que a gente está trazendo aqui primeiro.
+
+97
+00:10:53.040 --> 00:10:55.650
+Orlando Fonseca: Eu falei que vem o.
+
+98
+00:10:56.300 --> 00:11:01.259
+Orlando Fonseca: Está bem, eu falei: ó vem um gerente, tá?
+
+99
+00:11:01.830 --> 00:11:07.670
+Orlando Fonseca: O gerente está acessando o sistema não é
+
+100
+00:11:08.320 --> 00:11:12.420
+Orlando Fonseca: acesso ao sistema. Aquele sistema, Will, por exemplo, dialogando de bicicleta.
+
+101
+00:11:13.140 --> 00:11:18.440
+Orlando Fonseca: Tá bom. O gerente está ressuscitama e ele vai informar
+
+102
+00:11:18.790 --> 00:11:22.789
+Orlando Fonseca: o usuário dele para acessar o sistema. Ele tem que acessar o usuário.
+
+103
+00:11:23.610 --> 00:11:31.100
+Orlando Fonseca: Beleza, todo mundo aqui, pensando com ele. E vai colocar a sainha, aperta o botão
+
+104
+00:11:31.430 --> 00:11:40.239
+Orlando Fonseca: de entrar e ele vai entrar na conta. Que tem a ver com o gerente dessa loja, Wills?
+
+105
+00:11:42.210 --> 00:11:45.230
+Orlando Fonseca: Qual seria o passo de urso aí.
+
+106
+00:11:51.640 --> 00:11:52.629
+Orlando Fonseca: Deixa eu ver aqui.
+
+107
+00:11:53.530 --> 00:11:56.129
+Orlando Fonseca: Lugar na kombi. Muito bom.
+
+108
+00:11:56.320 --> 00:12:01.830
+Orlando Fonseca: Tá muito bem, perfeito. Então tá todo mundo atendo do que eu estou falando? Eu sou importantíssimo.
+
+109
+00:12:02.140 --> 00:12:03.270
+Orlando Fonseca: Por quê?
+
+110
+00:12:03.670 --> 00:12:10.839
+Orlando Fonseca: Porque pense comigo. O Cássio. Eu falei para vocês os passos para ele entrou na conta.
+
+111
+00:12:11.100 --> 00:12:20.210
+Orlando Fonseca: Ah, isso aí vai. Na parte mais da narrativa. Explica como acontece.
+
+112
+00:12:20.550 --> 00:12:25.619
+Orlando Fonseca: Como essa funcionalidade é desenvolvida ali, no sentido de, ah, o que é meu. Primeiro.
+
+113
+00:12:26.260 --> 00:12:32.569
+Orlando Fonseca: O que passa vem primeiro. O que passa? Vem depois mas aí temos um lugar na conta. Na verdade, estamos fazendo login
+
+114
+00:12:32.860 --> 00:12:34.509
+Orlando Fonseca: para seu login, sei lá, né?
+
+115
+00:12:35.510 --> 00:12:42.949
+Orlando Fonseca: Tá informar o usuário, informar a senha. Ela formam parte de o fluxo.
+
+116
+00:12:44.230 --> 00:12:47.390
+Orlando Fonseca: Tá bom, beleza.
+
+117
+00:12:48.850 --> 00:12:50.380
+Orlando Fonseca: Muito bem, então vamos orar.
+
+118
+00:12:50.480 --> 00:12:52.910
+Orlando Fonseca: Vamos falar agora do degrau.
+
+119
+00:12:53.110 --> 00:12:57.409
+Orlando Fonseca: Os diagramas de caixa de uso, decreto, requerimento funcional, ponto.
+
+120
+00:12:58.050 --> 00:13:00.229
+Orlando Fonseca: A linguagem simples é por causa visual.
+
+121
+00:13:00.590 --> 00:13:07.749
+Orlando Fonseca: Crise, novidade é uma linguagem visual. Você vai ter só um bonequinho e alguns alguns tracinhos ali.
+
+122
+00:13:08.380 --> 00:13:10.200
+Orlando Fonseca: Visual totalmente visual.
+
+123
+00:13:11.060 --> 00:13:12.300
+Orlando Fonseca: Então
+
+124
+00:13:12.400 --> 00:13:19.639
+Orlando Fonseca: são requerimentos funcionais, porque a gente não representa nenhum não funcional. São caças de uso. Estão representando requisitos funcionais. Beleza
+
+125
+00:13:20.710 --> 00:13:22.989
+Orlando Fonseca: são independente do tempo,
+
+126
+00:13:23.470 --> 00:13:30.229
+Orlando Fonseca: o que significa que não registra na sequência de interação com os usuários nem as ações necessárias para executar as funções do sistema.
+
+127
+00:13:30.440 --> 00:13:38.610
+Orlando Fonseca: Quem disse: É isso. Vou ter um ator ali representado e ele vai ter um caso de uso ali atrelado a ele. Que vai ser exatamente o
+
+128
+00:13:38.850 --> 00:13:40.640
+Orlando Fonseca: fazer, login,
+
+129
+00:13:41.190 --> 00:13:47.970
+Orlando Fonseca: mas eu não vou explicar nesse diagrama de caixa de uso como que ele de fato vai fazer login. Esse é passo a passo,
+
+130
+00:13:48.460 --> 00:13:49.370
+Orlando Fonseca: tá?
+
+131
+00:13:50.150 --> 00:13:57.709
+Orlando Fonseca: Ou seja, o diagrama não vai precisar mostrar todos os passos.
+
+132
+00:13:58.750 --> 00:14:03.629
+Orlando Fonseca: Então só vai mostrar o ator e a interação com o sistema.
+
+133
+00:14:04.830 --> 00:14:05.790
+Orlando Fonseca: Tá bom.
+
+134
+00:14:07.720 --> 00:14:17.689
+Orlando Fonseca: Então a definição dessa ação, essa ordem que ocorre é responsabilidade da descrição do caso de uso. Então, para entender melhor, você vai lá. Você interpreta essa
+
+135
+00:14:18.130 --> 00:14:28.489
+Orlando Fonseca: essa imagem, você vê quais seriam as caixas de uso, os auditórias que estariam ali no sistema e faz assim. Ah, beleza. Agora eu preciso entender qual seria o fluxo. Você vai lá na narrativa e entende. Primeiro passo,
+
+136
+00:14:28.830 --> 00:14:40.190
+Orlando Fonseca: o gerente acessa o sistema Willis. Informo soaresen beleza, mas isso aí está na narrativa. Não estaria no the grama de caso de uso
+
+137
+00:14:41.610 --> 00:14:51.480
+Orlando Fonseca: tá e importantíssimo que, como esse passo a passo, não está no diagrama.
+
+138
+00:14:51.900 --> 00:14:58.510
+Orlando Fonseca: Não temos uma ordem ali. Quem quer ver? Primeiro? Vamos supor. Temos uma.
+
+139
+00:14:59.620 --> 00:15:14.489
+Orlando Fonseca: Temos um caso de uso que é fazer login e outro fazendo login e outro fazer um empréstimo.
+
+140
+00:15:16.360 --> 00:15:17.739
+Orlando Fonseca: Quem que é? Bem, primeiro
+
+141
+00:15:19.380 --> 00:15:25.459
+Orlando Fonseca: fazer login e depois precisa fazer um empréstimo. Então tem uma ordem. Nesse caso de uso.
+
+142
+00:15:27.010 --> 00:15:38.039
+Orlando Fonseca: Tem login, tá? Por quê? Porque você entendeu o sistema. Você entendeu a primeira parte da concessão do sistema que vai ser o restitutivo
+
+143
+00:15:38.630 --> 00:15:43.470
+Orlando Fonseca: sistemas. Mas em nenhum momento eu numero eu tenho uma.
+
+144
+00:15:43.840 --> 00:15:55.729
+Orlando Fonseca: Eu coloco um número ali nessa caixa de uso. Eu não falo assim no diagrama. Não falo. Esse aqui vai ser o primeiro. Esse aqui vai ser o segundo. Esse aqui vai ser certo, tá ele. Por isso eu falo que ele é independente do tempo.
+
+145
+00:15:55.920 --> 00:16:04.410
+Orlando Fonseca: A ordem no diagrama não é específico para você entender a ordem. Você tem que ler a descrição, hã?
+
+146
+00:16:04.510 --> 00:16:11.529
+Orlando Fonseca: Não tem uma ordem. O que vai fazer primeiro, o que vai fazer depois? Tanto faz. Às vezes ele pode fazer uma coisa primeiro. Alguma coisa, depois,
+
+147
+00:16:12.130 --> 00:16:18.509
+Orlando Fonseca: tá beleza até aí. Tranquilo, né? Tá bom.
+
+148
+00:16:21.960 --> 00:16:28.810
+Orlando Fonseca: Ok, então como vamos representar os agravos
+
+149
+00:16:32.680 --> 00:16:33.780
+Orlando Fonseca: também? Aqui Tchau.
+
+150
+00:16:34.510 --> 00:16:39.849
+Orlando Fonseca: O caça pode surgir depois e normal. É isso aí. Perfeito. Tá, tá bom.
+
+151
+00:16:43.090 --> 00:16:46.699
+Orlando Fonseca: Ok, como vamos representar isso?
+
+152
+00:16:48.170 --> 00:16:52.030
+Orlando Fonseca: Simples ou mais simples possível.
+
+153
+00:16:53.000 --> 00:16:55.130
+Orlando Fonseca: O câncer de urso. Ele é uma Lipse
+
+154
+00:16:55.270 --> 00:16:59.960
+Orlando Fonseca: com o nome dentro. Consegui fazer login. Aqui tem isso e o bike.
+
+155
+00:17:00.450 --> 00:17:11.869
+Orlando Fonseca: Mas a bicicleta, fazer o empréstimo, o que for só que assim foi. Afetamento a qualquer um que a gente tenha trabalhar. Qualquer caso de uso pode ter um nome do caixa de uso ali no meio. E um elipse.
+
+156
+00:17:12.250 --> 00:17:13.090
+Orlando Fonseca: Tá bom.
+
+157
+00:17:15.099 --> 00:17:24.609
+Orlando Fonseca: Pronto, acabou simples o ator. Como vamos representar? Como esse boneco palito, tá
+
+158
+00:17:25.780 --> 00:17:28.220
+Orlando Fonseca: que temos o nome, por exemplo,
+
+159
+00:17:29.230 --> 00:17:32.829
+Orlando Fonseca: vai ser o tipo ali recepcionista.
+
+160
+00:17:33.140 --> 00:17:39.569
+Orlando Fonseca: Então aquele usuário que tem esse papel de recepcionista, ele pode fazer? Essa funcionalidade que eu vou.
+
+161
+00:17:40.500 --> 00:17:51.069
+Orlando Fonseca: Que eu vou colocar no sistema e vou colocar ele como caixa de uso. E vai ter um diagrama para representar que toda a recepcionista pode, por exemplo, atualizar o cadastro do cliente.
+
+162
+00:17:51.350 --> 00:17:54.830
+Orlando Fonseca: Tá bom, hã?
+
+163
+00:17:55.300 --> 00:18:01.410
+Orlando Fonseca: E ó, como que eu vou mostrelar o.
+
+164
+00:18:03.360 --> 00:18:08.370
+Orlando Fonseca: Nunca vamos atrelar o ator com caça de uso com uma seta.
+
+165
+00:18:08.540 --> 00:18:19.889
+Orlando Fonseca: Não vamos até não vamos, né? Vamos, tracinho. Uma linha, gente, tá, beleza, recepcionista. A gente sabe que
+
+166
+00:18:20.660 --> 00:18:22.110
+Orlando Fonseca: ela pode.
+
+167
+00:18:22.290 --> 00:18:28.369
+Orlando Fonseca: Por exemplo, você vai alugar de uma bicicleta uma bicicleta ou ter as informações de bicicleta aprendendo.
+
+168
+00:18:29.340 --> 00:18:30.850
+Orlando Fonseca: É uma linha.
+
+169
+00:18:32.990 --> 00:18:34.250
+Jorge José Luiz Santos da Silva: Tá bom.
+
+170
+00:18:34.360 --> 00:18:35.190
+Orlando Fonseca: Oi.
+
+171
+00:18:35.590 --> 00:18:40.710
+Jorge José Luiz Santos da Silva: Mas aí, nesse caso, por exemplo, ele não indica o sentido.
+
+172
+00:18:41.160 --> 00:18:48.020
+Jorge José Luiz Santos da Silva: O caso está indo para a recepcionista. Se a recepcionista está fazendo uma ação para o caso.
+
+173
+00:18:49.120 --> 00:18:51.690
+Jorge José Luiz Santos da Silva: É assim mesmo.
+
+174
+00:18:51.690 --> 00:18:52.040
+Orlando Fonseca: A gente.
+
+175
+00:18:52.040 --> 00:18:53.150
+Jorge José Luiz Santos da Silva: Fiquei meio perdido.
+
+176
+00:18:53.150 --> 00:18:59.980
+Orlando Fonseca: Recepcionista, uma linha e o câncer de luxo. Na verdade, essa literatura,
+
+177
+00:19:00.450 --> 00:19:03.800
+Orlando Fonseca: esse livro, ele colocou o ator
+
+178
+00:19:04.480 --> 00:19:19.670
+Orlando Fonseca: e o caça de uso para a esquerda. Normalmente eu coloco para a direita, mas tudo bem, eu vou falar desse tamanho agora, tá? Eu coloco aqui. Recepcionista um tracinho e o caça de urso aqui, né? Do lado direito colocou sempre as auditores do lado esquerdo e o caça de uso na parte direita.
+
+179
+00:19:20.190 --> 00:19:20.850
+Jorge José Luiz Santos da Silva: Ah, não, beleza.
+
+180
+00:19:21.520 --> 00:19:27.550
+Orlando Fonseca: Mas sem setenta. É só um tracinho que a gente sabe que seria o câncer de uso atrelado a esse ator.
+
+181
+00:19:43.220 --> 00:19:45.470
+Orlando Fonseca: Então eu.
+
+182
+00:19:46.550 --> 00:19:53.070
+Orlando Fonseca: Ó, vai chegar aqui, por exemplo, essa representação que eu gosto e que eu vou sugerir para vocês
+
+183
+00:19:53.310 --> 00:19:56.209
+Orlando Fonseca: no momento de entregar um diagrama de caça de uso.
+
+184
+00:19:56.860 --> 00:19:57.700
+Orlando Fonseca: Tá
+
+185
+00:19:58.300 --> 00:20:06.769
+Orlando Fonseca: lado esquerda. Os atores que interagem com o sistema. Nesse caso, vai ter o administrador e o recepcionista. Estamos falando do sistema, Wils.
+
+186
+00:20:07.560 --> 00:20:10.759
+Orlando Fonseca: E o. A monitora, por exemplo. Vai.
+
+187
+00:20:11.060 --> 00:20:14.900
+Orlando Fonseca: Enfim, vai ter uma. Ali está ali
+
+188
+00:20:15.430 --> 00:20:28.749
+Orlando Fonseca: de bicicleta. Vai ter acesso a uma lista de usuários. A recepcionista também veja que esse aqui, esse caso de uso é compartilhado pelos dois, pelo monitor e pela recepcionista. Os dois podem fazer isso. Não tem problema nenhum,
+
+189
+00:20:28.950 --> 00:20:29.800
+Orlando Fonseca: tá?
+
+190
+00:20:30.880 --> 00:20:34.359
+Orlando Fonseca: Mas a recepcionista pode, por exemplo, né?
+
+191
+00:20:35.510 --> 00:20:38.199
+Orlando Fonseca: Tem três caças de urso aqui
+
+192
+00:20:38.480 --> 00:20:42.810
+Orlando Fonseca: que o monitorador não conseguiu fazer, tá?
+
+193
+00:20:43.480 --> 00:20:54.640
+Orlando Fonseca: Ah, aí, por exemplo, na revolução da bicicleta, só rececionista que pode fazer? Não consegue fazer isso. Então são casos de uso que a gente se relaciona com os fatores.
+
+194
+00:20:56.080 --> 00:21:04.040
+Orlando Fonseca: Realmente foge.
+
+195
+00:21:05.810 --> 00:21:10.999
+Orlando Fonseca: Hoje não é da funcionalidade que esse tipo de usuário pode fazer.
+
+196
+00:21:11.780 --> 00:21:14.980
+Orlando Fonseca: Então, não.
+
+197
+00:21:15.000 --> 00:21:20.030
+helio.oliveira: Vai ser a patroa de Gustavo.
+
+198
+00:21:21.120 --> 00:21:24.740
+Orlando Fonseca: Tá? Acredito que foi um auge ali.
+
+199
+00:21:25.110 --> 00:21:36.950
+Orlando Fonseca: Então, importantíssimo pessoal, o que eu vou sugerir para vocês? Veja, está simples. O desenho tá sempre, né?
+
+200
+00:21:38.360 --> 00:21:46.339
+Orlando Fonseca: O Iml traz esse formato. Beleza simples, muito simples. O Iml traz esse formato. Assim ó,
+
+201
+00:21:46.570 --> 00:21:58.909
+Orlando Fonseca: representa um bonequinho desse estilo. Colocamos um tracinhos, um elipse, um nome no meio. Essa aqui é a fronteira do sistema. O sistema Wilson, esse aqui. Porque podemos ter outro sistema também
+
+202
+00:21:59.720 --> 00:22:03.539
+Orlando Fonseca: tá interagindo. Mas nessa caixa de uso,
+
+203
+00:22:04.110 --> 00:22:07.890
+Orlando Fonseca: tem o estilo do We Make.
+
+204
+00:22:08.300 --> 00:22:09.160
+Orlando Fonseca: Tá?
+
+205
+00:22:10.110 --> 00:22:15.110
+Orlando Fonseca: E antes de falar desses animais.
+
+206
+00:22:16.800 --> 00:22:19.720
+Orlando Fonseca: O que eu vou pedir para vocês tá?
+
+207
+00:22:20.460 --> 00:22:23.550
+Orlando Fonseca: Que já tem acontecido numa execuções passadas.
+
+208
+00:22:24.650 --> 00:22:28.060
+Orlando Fonseca: Ah, é? Tem um pessoal mais criativo, né?
+
+209
+00:22:28.810 --> 00:22:34.809
+Orlando Fonseca: Muito mais criativo que não gosta desse boné com o palito e coloca de fato uma carinha.
+
+210
+00:22:34.960 --> 00:22:38.099
+Orlando Fonseca: Então esse é um boneco
+
+211
+00:22:39.280 --> 00:22:50.910
+Orlando Fonseca: cabeça de boneco. Enfim, uma coisa assim fica mais bonita visualmente, tá? Colocar uma certinha aqui pra evitar essa confusão do ator. Uma seta para
+
+212
+00:22:52.140 --> 00:22:58.359
+Orlando Fonseca: para o Cássio de uso esse aqui. Eu podia até colocar mais um outro jeito.
+
+213
+00:22:58.770 --> 00:23:01.580
+Orlando Fonseca: Tá bom, podem fazer.
+
+214
+00:23:02.360 --> 00:23:11.690
+Orlando Fonseca: Ok, é permitido. Estou permitindo você ir além da linguagem homélica. E você dar sintaxe. Não é a linguagem da sintaxe. Como Amélia está propondo para a gente
+
+215
+00:23:12.010 --> 00:23:16.980
+Orlando Fonseca: respeitar isso. Você pode fazer do jeito de vocês sem
+
+216
+00:23:17.690 --> 00:23:28.070
+Orlando Fonseca: sem que esse aí seja um conflito com outra representação. É que eu vou ensinar para vocês, por exemplo.
+
+217
+00:23:28.200 --> 00:23:37.100
+Orlando Fonseca: Ah, eu não gosto desse elipse aqui. E vou fazer uma elipse. É tracejada no poste, tá?
+
+218
+00:23:37.410 --> 00:23:39.410
+Orlando Fonseca: Essa cestinha aqui?
+
+219
+00:23:39.550 --> 00:23:40.840
+Orlando Fonseca: Ela é?
+
+220
+00:23:41.460 --> 00:23:43.120
+Orlando Fonseca: É
+
+221
+00:23:43.740 --> 00:23:55.030
+Orlando Fonseca: assim. Ó tá. A cestinha não tem uma linha reta? Não, eu quero fazer essa cestinha aqui tracejada também não, pode. Por quê? Porque eu vou definir isso aqui para vocês, tá?
+
+222
+00:23:55.130 --> 00:24:00.350
+Orlando Fonseca: Se o dissênio de vocês não entra em conflito com essa definição, está valendo.
+
+223
+00:24:01.110 --> 00:24:02.370
+Orlando Fonseca: Todo mundo entendeu.
+
+224
+00:24:03.480 --> 00:24:13.160
+Orlando Fonseca: O ator não entra em conflito com nenhuma outra representação. Você pode colocar aqui o que você quiser, tá? Para representar o ator pode ser um bonequinho. Pode ser. Enfim,
+
+225
+00:24:14.300 --> 00:24:15.180
+Orlando Fonseca: uma
+
+226
+00:24:16.560 --> 00:24:24.039
+Orlando Fonseca: um logo de uma pessoa que parece com recepcionista está valendo. Não tem problema para mim não tem problema nenhum. Eu quero que vocês entendam o conceito.
+
+227
+00:24:24.270 --> 00:24:36.250
+Orlando Fonseca: Só que veja se você coloca um caso de uso com essa sintaxia aqui tracejado inclui esse. Aí tem um significado. Se você colocou errado, vou penalizar
+
+228
+00:24:37.120 --> 00:24:38.150
+Orlando Fonseca: beleza.
+
+229
+00:24:38.880 --> 00:24:40.360
+Orlando Fonseca: Aceita.
+
+230
+00:24:40.510 --> 00:24:47.040
+Orlando Fonseca: Veja vamos lá. Ainda não vou explicar quem seria cada um desses passos aqui tá cada um desses
+
+231
+00:24:48.140 --> 00:24:52.790
+Orlando Fonseca: dessas situações. Uma vez vem aqui que eu coloquei uma seta, né?
+
+232
+00:24:53.440 --> 00:24:56.200
+Orlando Fonseca: Aberta aqui, né? Beleza? Tá vendo?
+
+233
+00:24:56.750 --> 00:25:04.189
+Orlando Fonseca: Se você colocar o aditor e querem colocar uma certinha aqui, ele não pode ser desse estilo. Não,
+
+234
+00:25:05.400 --> 00:25:08.879
+Orlando Fonseca: você pode colocar uma outra seta tá valendo
+
+235
+00:25:10.090 --> 00:25:21.560
+Orlando Fonseca: o ator. Você quer deixar claro que o ator tem uma seta parece caça de uso. Ele é recomendar uma linha. Mas se você quer colocar uma seta, tudo bem. Só que assim não pode ser assim. Ó,
+
+236
+00:25:22.790 --> 00:25:27.850
+Orlando Fonseca: porque isso aqui representa uma generalização.
+
+237
+00:25:28.460 --> 00:25:32.240
+Orlando Fonseca: Então entrou em conflito. Uma dessas definições estaria errado.
+
+238
+00:25:33.310 --> 00:25:37.759
+Orlando Fonseca: Tá bom, então, quando temos o aditório,
+
+239
+00:25:38.140 --> 00:25:40.700
+Orlando Fonseca: tá beleza conta aí o auditor e o caça de uso.
+
+240
+00:25:40.900 --> 00:25:49.170
+Orlando Fonseca: A gente coloca como só essa linha de associação, tá?
+
+241
+00:25:50.870 --> 00:25:55.669
+Orlando Fonseca: Quando tem essa aqui, né? Essa seta aqui mais aberta.
+
+242
+00:25:55.990 --> 00:26:01.199
+Orlando Fonseca: Ele não está preenchida porque eu chamo de aberto. Não está preenchido numa seta ali. Mais,
+
+243
+00:26:01.990 --> 00:26:04.219
+Orlando Fonseca: ele é chamado de generalização.
+
+244
+00:26:05.320 --> 00:26:09.229
+Orlando Fonseca: Okay, vou aplicar cada um deles.
+
+245
+00:26:09.530 --> 00:26:17.650
+Orlando Fonseca: Tá aqui quando está tracejado dessa forma aqui e aqui. Tá vendo? Está faltando?
+
+246
+00:26:17.960 --> 00:26:21.950
+Orlando Fonseca: Fechar o triângulo é um.
+
+247
+00:26:22.600 --> 00:26:26.960
+Orlando Fonseca: E tem aqui o leigo de Inclui. É chamado de inclusão
+
+248
+00:26:27.990 --> 00:26:35.889
+Orlando Fonseca: e do mesmo estilo. Só que é com o Labour Estenge. É chamado de extensão,
+
+249
+00:26:40.080 --> 00:26:40.980
+Orlando Fonseca: tá?
+
+250
+00:26:42.570 --> 00:26:48.249
+Orlando Fonseca: O que seria isso? Pessoal, esse aqui o adiantei para vocês. Deixa eu só ver aqui.
+
+251
+00:26:48.800 --> 00:26:50.340
+Orlando Fonseca: Obrigado. Tempo para vocês.
+
+252
+00:26:51.120 --> 00:26:56.599
+Orlando Fonseca: Algumas definições aqui no decênio, mas não vou entrar em detalhes, porque são conteúdo da próxima aula.
+
+253
+00:26:56.960 --> 00:27:11.739
+Orlando Fonseca: Uma associação que dou, claro, para vocês uma tem uma associação com o câncer de uso e representado por uma setinha generalização. Quando você tem aí uma hierarquia,
+
+254
+00:27:11.910 --> 00:27:18.930
+Orlando Fonseca: não sei, mais geral ou mais específico. Então vamos ver isso. Próxima aula e inclusão.
+
+255
+00:27:19.220 --> 00:27:26.350
+Orlando Fonseca: Pois é que um. Essa inclusão e extensão é porque dois
+
+256
+00:27:26.890 --> 00:27:32.430
+Orlando Fonseca: casos de uso. Eles podem ter relacionamentos entre eles.
+
+257
+00:27:33.520 --> 00:27:40.769
+Orlando Fonseca: Então veja aqui qual seria o relacionamento entre esse primeiro caso de uso e o segundo caso de uso do administrador.
+
+258
+00:27:41.430 --> 00:27:49.719
+Orlando Fonseca: Quem você colocou a primeira e segunda, vai estar na ordem de cima para baixo, mas não tem numeração nenhuma, tá? Não é que um você venha primeiro com o outro aqui na representação.
+
+259
+00:27:50.520 --> 00:27:54.889
+Orlando Fonseca: Esse primeiro e esse segundo tem alguma redação entre eles.
+
+260
+00:28:01.150 --> 00:28:05.760
+Orlando Fonseca: O senhor vai questionar. Não, não, né. Por que que assim
+
+261
+00:28:05.940 --> 00:28:08.370
+Orlando Fonseca: não tem relação? Ah, pode falar.
+
+262
+00:28:08.370 --> 00:28:12.929
+Jorge José Luiz Santos da Silva: Desculpa, por exemplo, é que eu vi a relação aqui. O administrador é o que mantém as listas.
+
+263
+00:28:13.300 --> 00:28:15.510
+Orlando Fonseca: Beleza. Mas entre eles não tem.
+
+264
+00:28:15.510 --> 00:28:16.120
+Jorge José Luiz Santos da Silva: Ah, tá, tá.
+
+265
+00:28:16.120 --> 00:28:21.339
+Orlando Fonseca: A gente sabe que existe uma associação entre o administradores e eles,
+
+266
+00:28:21.510 --> 00:28:26.899
+Orlando Fonseca: e esse caso de uso. Mas entre eles dois. Particularmente não tem relação nenhuma. Como que eu sei.
+
+267
+00:28:26.900 --> 00:28:27.630
+Jorge José Luiz Santos da Silva: E de.
+
+268
+00:28:27.630 --> 00:28:30.739
+Orlando Fonseca: Porque eu não tenho uma seta saindo de um e entrando no outro.
+
+269
+00:28:31.640 --> 00:28:41.849
+Orlando Fonseca: Então esses relacionamentos, a gente vai colocar nesse estilo aqui foi esse relacionamento de inclusão de extensão e até de generalização.
+
+270
+00:28:43.210 --> 00:28:49.860
+Orlando Fonseca: Tá, vamos entender isso na próxima. Isso aqui, um pouquinho mais complexo. Precisa mais tempo para explicar.
+
+271
+00:28:51.630 --> 00:28:53.040
+Orlando Fonseca: Tá bom, pessoal.
+
+272
+00:28:55.320 --> 00:29:03.000
+Orlando Fonseca: Ok, é alguns erros na modelagem.
+
+273
+00:29:03.220 --> 00:29:11.159
+Orlando Fonseca: Ficou simples. Vamos lá colocar o nome dos atores em plural. O nome próprio não pode.
+
+274
+00:29:11.520 --> 00:29:17.559
+Orlando Fonseca: Eu vou botar aqui atrás quando eu falo de erro, porque ele tem uma penalização, tá?
+
+275
+00:29:17.780 --> 00:29:19.959
+Orlando Fonseca: Por isso aqui na disciplina. Mas
+
+276
+00:29:21.220 --> 00:29:27.340
+Orlando Fonseca: não é costume eu fazer isso aqui. Ó tá,
+
+277
+00:29:28.330 --> 00:29:33.980
+Orlando Fonseca: por exemplo, nunca colocámos ninguém faz um decênio. Você entende o problema. Você não coloca
+
+278
+00:29:34.050 --> 00:29:48.680
+Orlando Fonseca: recepcionistas, nunca plural. Você coloca sempre recepcionista para representar o roll desse usuário que seria o autor interagindo com o sistema. Seria o recepcionista
+
+279
+00:29:49.240 --> 00:29:59.720
+Orlando Fonseca: singular, tá? Só que também nós colocamos a recepcionista Maria Recepcionista João. Colocamos o nome próprio
+
+280
+00:30:00.180 --> 00:30:03.280
+Orlando Fonseca: nesse setor. São atores de ponto sem nome.
+
+281
+00:30:04.950 --> 00:30:09.060
+Orlando Fonseca: Quem disse que se você colocasse aí, estaria errado.
+
+282
+00:30:09.460 --> 00:30:11.890
+Orlando Fonseca: A dor é repetindo no mesmo diagrama.
+
+283
+00:30:13.170 --> 00:30:14.050
+Orlando Fonseca: Tá
+
+284
+00:30:17.230 --> 00:30:28.690
+Orlando Fonseca: é bom, não imagina que você também não veja a necessidade de colocar dois administradores no sistema, tá?
+
+285
+00:30:28.850 --> 00:30:40.729
+Orlando Fonseca: Ah, porque vocês entrevistaram um gerente e falaram? Ah, olha o administrador João. Ele faz isso. E outro administrador faz aquele outro, né? Às vezes ele faz tarefas em comum.
+
+286
+00:30:41.560 --> 00:30:46.410
+Orlando Fonseca: Alguma funcionalidade é sem comum. Mas o João
+
+287
+00:30:46.690 --> 00:30:55.989
+Orlando Fonseca: já o ministrador. Ele vai toda segunda atualiza, faz uma conexão com o banco e atualiza o sistema.
+
+288
+00:30:56.850 --> 00:31:02.060
+Orlando Fonseca: Beleza soul. João faz aí você vem necessidade de colocar dois Sammy letradores no sistema.
+
+289
+00:31:03.180 --> 00:31:12.620
+Orlando Fonseca: Seria o mesmo ali do decênio colocar dois administradores, mas porque não conseguimos colocar o nome. Então ele vai representar um outro usuário. Um outro adutor.
+
+290
+00:31:13.970 --> 00:31:25.010
+Orlando Fonseca: Tá bom, esse aqui vai ser um monitrador plus. Tá entendendo? Não é exatamente o mesmo ator.
+
+291
+00:31:26.830 --> 00:31:28.000
+Orlando Fonseca: Entendido, né?
+
+292
+00:31:29.340 --> 00:31:36.069
+Orlando Fonseca: A Associação de Tradutores tá, é um.
+
+293
+00:31:36.670 --> 00:31:40.059
+Orlando Fonseca: O que eu disse isso.
+
+294
+00:31:41.180 --> 00:31:47.949
+Orlando Fonseca: Só você ter um tipo, né? Por exemplo, de administrador para recepcionista, não vai ter um.
+
+295
+00:31:48.670 --> 00:31:57.560
+Orlando Fonseca: Não vai ter um relacionamento direto entre eles pode ter só um, mas em geral,
+
+296
+00:31:57.840 --> 00:32:04.779
+Orlando Fonseca: não vamos aceitar sempre do sempre do ator para o caça de uso.
+
+297
+00:32:04.970 --> 00:32:18.069
+Orlando Fonseca: A associação entre eles uma generalização desse tipo, ok, relações representadas de forma incorreta.
+
+298
+00:32:18.600 --> 00:32:20.030
+Orlando Fonseca: Eu queria dizer isso.
+
+299
+00:32:22.290 --> 00:32:24.429
+Orlando Fonseca: A senhora se apresentar de forma incorreta.
+
+300
+00:32:26.510 --> 00:32:28.860
+Orlando Fonseca: Tá, eu.
+
+301
+00:32:33.630 --> 00:32:38.170
+Orlando Fonseca: Bom, primeiro, o que significa relação representada de forma incorreta? Alguém quer falar?
+
+302
+00:32:39.690 --> 00:32:45.909
+Orlando Fonseca: Seria o ponto de vista de você que seria uma uma relação de forma incorreta.
+
+303
+00:32:47.260 --> 00:32:52.949
+Orlando Fonseca: O que eu poderia ser? Vamos votar aqui atrás de forma incorreta.
+
+304
+00:32:53.800 --> 00:32:58.150
+Jorge José Luiz Santos da Silva: A um ator que não deveria ter acesso a alguma função.
+
+305
+00:32:58.530 --> 00:32:59.310
+Orlando Fonseca: E isso.
+
+306
+00:32:59.620 --> 00:33:01.380
+Orlando Fonseca: Beleza. Muito bom.
+
+307
+00:33:01.510 --> 00:33:02.450
+Orlando Fonseca: Isso aí
+
+308
+00:33:03.050 --> 00:33:13.830
+Orlando Fonseca: tem várias interpretações desse aqui. Tá, mas eu falei, Deixa eu ver. Mas vocês entenderam muito bem os dois que falaram aqui, estando certo,
+
+309
+00:33:14.620 --> 00:33:22.100
+Orlando Fonseca: muitos casos de uso, dificultando a compreensão do modelo visual. Então vamos lá em um modelo visual. Se ele tiver muitos
+
+310
+00:33:23.370 --> 00:33:24.380
+Orlando Fonseca: aqui,
+
+311
+00:33:25.840 --> 00:33:36.219
+Orlando Fonseca: vai atrapalhar também. Então imagina, você tem dois atores. Cada um faz um monte de Castro de uso. Você vai representar quem nessa figura? Um monte de elipse, um monte de bolinha concertinha
+
+312
+00:33:36.350 --> 00:33:38.519
+Orlando Fonseca: fica meio complicado também, para entender, né?
+
+313
+00:33:39.420 --> 00:33:44.439
+Orlando Fonseca: Então a gente vai selecionar ali, notar a troca de usos. Assim, pelo menos uma
+
+314
+00:33:44.960 --> 00:33:49.789
+Orlando Fonseca: vai dividir o sistema aqui. Casos de uso que tem a ver exatamente como essa.
+
+315
+00:33:49.880 --> 00:34:09.120
+Orlando Fonseca: Com a manipulação ali do dado específico da bicicleta. E você faz um drama de casa de uso, representando esse caso de uso mais importante, que tem a ver com esse cenário? Porque você não vai ser um monte aí popular. Vai poluir o seu desenho.
+
+316
+00:34:10.620 --> 00:34:13.169
+Orlando Fonseca: Então é isso, né? Se for um sistema enorme,
+
+317
+00:34:13.800 --> 00:34:19.220
+Orlando Fonseca: realmente enorme, o que você vai fazer? Vai representar tudo num diagrama só de caso de uso não né?
+
+318
+00:34:20.739 --> 00:34:21.610
+Orlando Fonseca: Tá?
+
+319
+00:34:22.409 --> 00:34:28.210
+Orlando Fonseca: Ou você só representa um ator, faz poupagem. Você representa nesse sistema só um ator
+
+320
+00:34:29.130 --> 00:34:35.839
+Orlando Fonseca: e o relacionamento e todos aqueles casos de uso atrelados a um só um só autor,
+
+321
+00:34:36.929 --> 00:34:42.959
+Orlando Fonseca: com aquele massa. Imputágio, enfim, pouco esse tipo, vários fatores aqui em vários casos de uso.
+
+322
+00:34:43.679 --> 00:34:47.440
+Orlando Fonseca: É, vai ser complicado entender, tá?
+
+323
+00:34:47.750 --> 00:34:52.239
+Orlando Fonseca: Assim como assim? Como,
+
+324
+00:34:52.719 --> 00:34:59.130
+Orlando Fonseca: Ah, caças de uso são muito pequenas. São muito grandes, porque às vezes o pessoal capricha demais no nome.
+
+325
+00:34:59.910 --> 00:35:03.349
+Orlando Fonseca: Por isso eu falei um verbo e pronto.
+
+326
+00:35:03.840 --> 00:35:10.500
+Orlando Fonseca: Corações de olhar e saber o que ele vai fazer. Efetuar login, beleza,
+
+327
+00:35:10.610 --> 00:35:14.129
+Orlando Fonseca: cadastra, a bicicleta, cadátrar o usuário,
+
+328
+00:35:14.580 --> 00:35:25.210
+Orlando Fonseca: fazer a devolução. Eu não quero cadastrar o usuário fazer uma explicação ali? Não. Quem vai atrapalhar o decênio? Um objetivo no nome. Também
+
+329
+00:35:25.950 --> 00:35:28.470
+Orlando Fonseca: não quero parar na folha nessas bolinhas. Não
+
+330
+00:35:30.780 --> 00:35:40.830
+Orlando Fonseca: má organização dos dramas e relacionamentos e incluir casos de uso não funcionar. Bom, caso o uso não funcionar, ficou claro. Não tem como colocar aqui. Ah, mas o
+
+331
+00:35:41.700 --> 00:35:48.140
+Orlando Fonseca: o administrador tem que fazer essa é
+
+332
+00:35:48.670 --> 00:35:57.790
+Orlando Fonseca: no momento que ele for visualizar essa imagem ou printar, fazendo lua desse aqui. Vou ter que fazer isso em dois segundos.
+
+333
+00:35:57.960 --> 00:36:02.989
+Orlando Fonseca: Vamos representar isso num diagrama de Castro de uso. Não seria um erro conceptual. Realmente,
+
+334
+00:36:03.850 --> 00:36:08.280
+Orlando Fonseca: hoje está na explicação. Pode estar na narrativa, mas não.
+
+335
+00:36:08.960 --> 00:36:18.980
+Orlando Fonseca: E essa parte aqui é uma organização dos dramas de relacionamento. Hum, o que seria isso aqui, por exemplo,
+
+336
+00:36:20.770 --> 00:36:29.010
+Orlando Fonseca: é, veja esse exemplo, que é muito simples. Temos só dois atores e cinco passos de uso.
+
+337
+00:36:29.320 --> 00:36:36.400
+Orlando Fonseca: Temos um. Caso de uso compartilhado. Mas o que aconteceria se esse caso de uso estivesse mais para cima ou não? Esse aqui,
+
+338
+00:36:37.000 --> 00:36:41.670
+Orlando Fonseca: no último no último lugar, tá esse aqui. Compartilhar o que aconteceu?
+
+339
+00:36:42.090 --> 00:36:46.540
+Orlando Fonseca: Imagine, eu estou puxando esse daqui.
+
+340
+00:36:46.660 --> 00:36:49.540
+Orlando Fonseca: E está colocando para o final.
+
+341
+00:36:51.820 --> 00:36:53.540
+Orlando Fonseca: O que ia acontecer com a seta.
+
+342
+00:36:54.100 --> 00:36:55.289
+Orlando Fonseca: Deixa eu pegar uma outra pessoa
+
+343
+00:37:19.610 --> 00:37:22.200
+Orlando Fonseca: ficaria confuso pra entender.
+
+344
+00:37:25.600 --> 00:37:28.569
+Orlando Fonseca: Ia ficar feio de velho. Então
+
+345
+00:37:29.280 --> 00:37:37.340
+Orlando Fonseca: é isso mesmo. Fica confuso, feio. Na verdade, não está incorreto, porque como ele não tem uma ordem,
+
+346
+00:37:38.570 --> 00:37:45.230
+Orlando Fonseca: não tem uma ordem. Ele não seria um erro de.
+
+347
+00:37:45.740 --> 00:37:50.060
+Orlando Fonseca: Do significado do que você quer
+
+348
+00:37:50.360 --> 00:37:58.290
+Orlando Fonseca: representar? Da lógica da funcionalidade. Não seria o mesmo. Só que ele está realmente numa posição que vai atrapalhar
+
+349
+00:37:59.650 --> 00:38:02.740
+Orlando Fonseca: tudo. Você olha essa imagem e fala. Cadê
+
+350
+00:38:03.370 --> 00:38:11.580
+Orlando Fonseca: por que essa seta está passando por cima dessa seta? Aí a mente vai fazer uma bagunça visual.
+
+351
+00:38:13.370 --> 00:38:24.010
+Orlando Fonseca: Beleza. Entendido, né? Então, vejam, tentem pensar na melhor forma de representar isso, para elas não terem ali colisão entre as setas.
+
+352
+00:38:24.120 --> 00:38:28.280
+Orlando Fonseca: Tá bom, se estiver o mínimo o mínimo aqui,
+
+353
+00:38:28.500 --> 00:38:35.889
+Orlando Fonseca: nesse caso, não tem coleção nenhuma. Ele está apontando para o mesmo caso de uso. Esse aqui também. E a seta não tem cruzamento
+
+354
+00:38:37.100 --> 00:38:39.940
+Orlando Fonseca: o mínimo possível. Vamos pensar assim,
+
+355
+00:38:43.150 --> 00:38:43.930
+Orlando Fonseca: tá?
+
+356
+00:38:45.160 --> 00:38:55.240
+Orlando Fonseca: Agora, antes de fazer, eu tenho para vocês. Vou fazer. Dois exercícios nessa aula, tá uma site de façanha.
+
+357
+00:38:55.710 --> 00:39:04.780
+Orlando Fonseca: Eu vou falar para vocês uma outra coisa relacionada ao desenho. Tudo bem. Que eu falei para vocês, que tem erro. Tem erros, né? Tem erros. Tem?
+
+358
+00:39:05.060 --> 00:39:23.740
+Orlando Fonseca: Tem a melhor forma de representar isso. Para dar uma melhor interpretação visual. O diagrama veio para ajudar a gente no caso de uso para estar atrelado à narrativa. Para simplificar. Tudo bem. Tudo isso é bonitinho. Só que ele segue um padrão. Segue uma sintaxe
+
+359
+00:39:23.760 --> 00:39:29.530
+Orlando Fonseca: que você teria que respeitar entre a arpa que vem da Oml, beleza,
+
+360
+00:39:30.930 --> 00:39:39.070
+Orlando Fonseca: onde que você vai desenhar esse caça de uso? Onde estou falando assim, numa ferramenta, num papel,
+
+361
+00:39:39.500 --> 00:39:42.269
+Orlando Fonseca: lembrando da primeira aula que eu tive com vocês.
+
+362
+00:39:42.430 --> 00:39:46.419
+Orlando Fonseca: O que eu falei? Olha lá nessa primeira aula
+
+363
+00:39:48.900 --> 00:39:51.830
+Orlando Fonseca: que você conseguia fazer isso de uma forma simples.
+
+364
+00:39:52.270 --> 00:39:58.859
+Orlando Fonseca: Se você gosta de fazer uma, é uma ferramenta paga
+
+365
+00:39:59.870 --> 00:40:05.430
+Orlando Fonseca: beleza. Se você recolher uma outra ferramenta livre também.
+
+366
+00:40:05.790 --> 00:40:10.050
+Orlando Fonseca: E se você queira fazer utilizando
+
+367
+00:40:10.470 --> 00:40:18.269
+Orlando Fonseca: algumas ferramentas que já faz para você se integrar. Uma pessoa específica também está valendo. Se você quer entregar,
+
+368
+00:40:19.150 --> 00:40:28.079
+Orlando Fonseca: passei um print de uma folha ali, onde você esteja. Uma caneta
+
+369
+00:40:28.220 --> 00:40:35.030
+Orlando Fonseca: desenhando o seu diagrama de caça de uso também está valendo certinho. Isso aí ficou claro?
+
+370
+00:40:35.650 --> 00:40:39.180
+Orlando Fonseca: Então eu vou aceitar qualquer uma dessas entregas. Qualquer uma.
+
+371
+00:40:40.430 --> 00:40:46.690
+Orlando Fonseca: Porque eu não vou citar que você tenha algum erro ali, conceptual ou um erro de desintegração.
+
+372
+00:40:48.800 --> 00:40:51.109
+Orlando Fonseca: Então vamos lá fazer o primeiro exercício.
+
+373
+00:40:55.330 --> 00:40:56.410
+Orlando Fonseca: Preparados?
+
+374
+00:40:59.200 --> 00:40:59.920
+Orlando Fonseca: Tchau.
+
+375
+00:41:02.930 --> 00:41:13.690
+Orlando Fonseca: Ok, um banco está desenvolvendo um sistema de internet banking para permitir que clientes façam operações bancárias pela Internet.
+
+376
+00:41:14.530 --> 00:41:19.810
+Orlando Fonseca: O sistema será utilizado por clientes, gerentes e a monitoradores do sistema.
+
+377
+00:41:20.300 --> 00:41:27.020
+Orlando Fonseca: Crie um diagrama de caça de uso que mostra as principais funcionalidades oferecidas a cada top
+
+378
+00:41:27.640 --> 00:41:32.340
+Orlando Fonseca: em caixa de uso simples. Aí você é um novo. Especifiquei realmente aqui.
+
+379
+00:41:33.740 --> 00:41:39.650
+Orlando Fonseca: Eu não especifiquei muitos desses
+
+380
+00:41:40.460 --> 00:41:45.409
+Orlando Fonseca: dessa funcionalidade. Não falei para você claramente. Eu só falei que era um sistema de internet banking.
+
+381
+00:41:46.030 --> 00:41:47.899
+Orlando Fonseca: O que vocês acham que seria?
+
+382
+00:41:48.430 --> 00:41:52.769
+Orlando Fonseca: Se você quer compartilhar a sua tela, a gente para de compartilhar aquilo.
+
+383
+00:41:53.750 --> 00:41:56.020
+Orlando Fonseca: Tem que ir à vontade.
+
+384
+00:41:58.990 --> 00:42:01.640
+Orlando Fonseca: Seja eu quero que vocês me falem logo.
+
+385
+00:42:02.090 --> 00:42:05.420
+Orlando Fonseca: Quem que seria o consultoras?
+
+386
+00:42:05.840 --> 00:42:09.260
+Orlando Fonseca: Tá ali, beleza.
+
+387
+00:42:09.860 --> 00:42:11.910
+Orlando Fonseca: Quais seriam as costas de uso?
+
+388
+00:42:15.630 --> 00:42:20.719
+Orlando Fonseca: E de repente, toda a caixa de uso, como vocês imaginam nesse cenário.
+
+389
+00:42:25.620 --> 00:42:27.230
+Orlando Fonseca: Alguém quer compartilhar a solteira?
+
+390
+00:42:33.170 --> 00:42:34.360
+Orlando Fonseca: Considera que ele está.
+
+391
+00:42:35.870 --> 00:42:37.190
+Orlando Fonseca: Ah, deixa eu ver. Aqui
+
+392
+00:42:39.210 --> 00:42:49.229
+Orlando Fonseca: é é que eu tirei, né? Você ia compartilhar. Não sei se dá para compartilhar Boatella no mesmo momento. Vou compartilhar de novo isso novo. Vou continuar.
+
+393
+00:42:50.360 --> 00:42:51.540
+Orlando Fonseca: E aí?
+
+394
+00:42:54.870 --> 00:42:55.660
+Orlando Fonseca: Tchau.
+
+395
+00:43:00.490 --> 00:43:09.960
+Orlando Fonseca: Olha, eu tenho esse problema de banco. Eu quero que você me fale. Qual seria o cliente ali? Quais seriam os autores desse.
+
+396
+00:43:09.960 --> 00:43:21.450
+Orlando Fonseca: Não quero com vocês.
+
+397
+00:43:21.640 --> 00:43:26.809
+Orlando Fonseca: Não é que falem aqui pelo sábio. Pensando: boa noite, também.
+
+398
+00:43:27.800 --> 00:43:29.300
+Orlando Fonseca: Oi, mandaquim. Tchau.
+
+399
+00:43:29.680 --> 00:43:33.000
+Orlando Fonseca: Quais seriam alguns dos casos de uso que teriam esse sistema.
+
+400
+00:43:33.330 --> 00:43:35.019
+Orlando Fonseca: E agora não gostar de calor, né?
+
+401
+00:43:35.950 --> 00:43:40.229
+Orlando Fonseca: Fazer login seria um caso comum aos três atores. Mas quais seriam os três atores?
+
+402
+00:43:41.900 --> 00:43:48.470
+Orlando Fonseca: Ah, cliente e gerente. É monitorar o nosso sistema, né, Top? Entendi isso.
+
+403
+00:43:50.130 --> 00:43:52.700
+Orlando Fonseca: Tá bom. O que mais e outros.
+
+404
+00:43:53.650 --> 00:43:54.919
+Orlando Fonseca: E outra questão de uso.
+
+405
+00:44:00.040 --> 00:44:08.060
+Orlando Fonseca: E aí consultando um saldo. Tá bom, beleza. Muito bom. O que mais?
+
+406
+00:44:09.860 --> 00:44:11.420
+Orlando Fonseca: O que mais foi aí o.
+
+407
+00:44:11.980 --> 00:44:18.070
+Orlando Fonseca: Você tem uma internet banking, não, vamos lá peraí. Calma, calma, calma, calma.
+
+408
+00:44:20.480 --> 00:44:26.440
+Orlando Fonseca: Olha, eu estou vendo aqui uma mistura de comentário no sentido que eu queria caso de uso.
+
+409
+00:44:26.830 --> 00:44:29.910
+Orlando Fonseca: Então façam um pix. Beleza.
+
+410
+00:44:30.430 --> 00:44:32.619
+Orlando Fonseca: Por quê? Porque tem um verbo
+
+411
+00:44:32.970 --> 00:44:41.200
+Orlando Fonseca: gerenciar? Conta isso aí. Sempre pense que estamos falando em caso de uso. Tem que colocar em ação
+
+412
+00:44:41.620 --> 00:44:49.589
+Orlando Fonseca: pedir empréstimo. É isso aí. Tá. Solicitar empréstimo. Ainda sempre falava de uma ação lembrando disso sempre tá ação.
+
+413
+00:44:52.670 --> 00:44:55.089
+Orlando Fonseca: Vamos lá, vamos começar um pouquinho.
+
+414
+00:44:57.430 --> 00:45:00.159
+Orlando Fonseca: Se a gente pode aprovar coisa,
+
+415
+00:45:00.570 --> 00:45:08.190
+Orlando Fonseca: então o cliente, né? Usuário do banco. Quem seria essas três dá dinheiro na caixinha.
+
+416
+00:45:09.070 --> 00:45:10.709
+Orlando Fonseca: Estamos na poupança, né?
+
+417
+00:45:12.810 --> 00:45:16.929
+Orlando Fonseca: Deixa eu ver. Aqui. E um principal de segurança no funcional, segurar
+
+418
+00:45:17.120 --> 00:45:26.219
+Orlando Fonseca: só que vejam que esse não funcional a gente não representa. No modelo. Estaria na narrativa, no modelo
+
+419
+00:45:27.170 --> 00:45:32.890
+Orlando Fonseca: unitário, poderia verificar se tem, mas muito bom, tá ó,
+
+420
+00:45:33.040 --> 00:45:35.670
+Orlando Fonseca: o que seria ser cliente direito e administrador?
+
+421
+00:45:36.650 --> 00:45:46.429
+Orlando Fonseca: Clientes fora do banco que acessa conta que cliente exclui conta isso aí. Opõe fazer uma solicitação de
+
+422
+00:45:46.790 --> 00:45:48.510
+Orlando Fonseca: de encerramento de conta.
+
+423
+00:45:48.830 --> 00:45:50.260
+Orlando Fonseca: Conhecer também isso aí.
+
+424
+00:45:54.000 --> 00:45:55.200
+Orlando Fonseca: Então
+
+425
+00:45:56.760 --> 00:46:06.480
+Orlando Fonseca: o usuário de banco que vai acessar a conta. Vai realizar operações financeiras para o cliente. O gerente vai analisar as solicitações do cliente.
+
+426
+00:46:06.590 --> 00:46:10.090
+Orlando Fonseca: Vai autorizar também algum por exemplo,
+
+427
+00:46:10.450 --> 00:46:13.870
+Orlando Fonseca: essa autorização ali de um empréstimo,
+
+428
+00:46:14.060 --> 00:46:29.220
+Orlando Fonseca: um crédito e o A monitor é responsável pela manutenção do sistema e gerenciamento do usuário. São três tipos diferentes. Aquele de ator que estaria ingredindo no sistema. E o principal caso de uso tem a ver com o sistema bancário.
+
+429
+00:46:29.450 --> 00:46:40.559
+Orlando Fonseca: O que eu consigo fazer. Criar conta bancária, efetuar login, consultar o site, começar a pagar, realizar transferência, pagar conta. Talvez nunca, sempre tenho ver aqui na frente.
+
+430
+00:46:40.840 --> 00:46:41.670
+Orlando Fonseca: Tá?
+
+431
+00:46:43.330 --> 00:46:55.519
+Orlando Fonseca: Solicitar empréstimo, autorizar empréstimo através do usuário. Encerrar conta o que vocês acham que seria encerrar a conta caso de uso. Qual seria a associação entre o autor e o caso de uso?
+
+432
+00:46:55.700 --> 00:47:03.130
+Orlando Fonseca: Seria do cliente do gerente, do administrador de todos eles. De algum deles esse encerrar contas.
+
+433
+00:47:05.490 --> 00:47:06.340
+Jorge José Luiz Santos da Silva: Frente.
+
+434
+00:47:07.860 --> 00:47:09.049
+Orlando Fonseca: O cliente, né?
+
+435
+00:47:12.140 --> 00:47:25.360
+Orlando Fonseca: Tá, beleza. Vamos deixar assim para fazer muito mais complexo, porque o que acontece, pessoal, a solicitação de encerramento de contas. Sim, a ver com bilhete. Mas
+
+436
+00:47:26.030 --> 00:47:38.630
+Orlando Fonseca: o gerente poderia também encerrar essa conta, né? Encerrar dele isso. Um cliente do banco também consegue. Você arruma conta, porque ele tem conta no banco.
+
+437
+00:47:40.380 --> 00:47:45.510
+Orlando Fonseca: Tem também. Já aconteceu comigo. Encerraram uma conta.
+
+438
+00:47:46.210 --> 00:47:51.059
+Orlando Fonseca: Não, assim avisaram para mim. Estamos encerrando a sua conta. Pronto, cheguei no apart.
+
+439
+00:47:52.320 --> 00:47:53.619
+Orlando Fonseca: Vai acontecer comigo. É isso.
+
+440
+00:47:55.710 --> 00:48:00.389
+Orlando Fonseca: O amor de troca faz isso, tá? E por isso é que precisa de um.
+
+441
+00:48:01.180 --> 00:48:04.560
+Orlando Fonseca: Pedir um tipo de aprovação para fazer tamanho. Alguma coisa?
+
+442
+00:48:05.160 --> 00:48:08.490
+Orlando Fonseca: Deixa eu pegar o dinheiro, tá?
+
+443
+00:48:09.460 --> 00:48:16.610
+Orlando Fonseca: É beleza, então.
+
+444
+00:48:17.220 --> 00:48:19.030
+Orlando Fonseca: Muito bom. Então vamos no dois.
+
+445
+00:48:20.700 --> 00:48:22.300
+Orlando Fonseca: Mundo celular. Não tem que sempre,
+
+446
+00:48:26.000 --> 00:48:30.650
+Orlando Fonseca: ok, é sempre dois.
+
+447
+00:48:31.140 --> 00:48:37.310
+Orlando Fonseca: Uma livraria online deseja modelar o comportamento do seu sistema.
+
+448
+00:48:37.420 --> 00:48:42.799
+Orlando Fonseca: O fluxo de interação a seguir descreveu essa etapa que um cliente pode realizar nele.
+
+449
+00:48:43.130 --> 00:48:46.950
+Orlando Fonseca: O cliente acessa o sistema e acolhe a opção criar conta.
+
+450
+00:48:48.170 --> 00:48:49.799
+Orlando Fonseca: Estão falando em uma livrai online.
+
+451
+00:48:50.140 --> 00:48:50.900
+Orlando Fonseca: Tá bom.
+
+452
+00:48:51.160 --> 00:49:03.050
+Orlando Fonseca: Após cadastrais, ele efetua login, o cliente utiliza a função pesquisar por autor para encontrar livros. De interesse hã?
+
+453
+00:49:05.390 --> 00:49:16.700
+Orlando Fonseca: Adiciona os livros desejados, o carrinho de compra. Quando finalizar a compra, então faz um check Out confere todos os livros. Eu tinha o pagamento. A entrega,
+
+454
+00:49:16.960 --> 00:49:17.810
+Orlando Fonseca: tá?
+
+455
+00:49:18.410 --> 00:49:21.789
+Orlando Fonseca: Se ele não fez login, então precisa se autenticar.
+
+456
+00:49:22.060 --> 00:49:31.540
+Orlando Fonseca: Comprou o cliente, comprou. Verifica o status. O cliente pode falar. Ó, ele está aprendendo, companheiro.
+
+457
+00:49:32.680 --> 00:49:37.670
+Orlando Fonseca: Rota ali ou enfim, pronto para ser enviado.
+
+458
+00:49:38.290 --> 00:49:39.150
+Orlando Fonseca: Tá bom.
+
+459
+00:49:40.660 --> 00:49:44.319
+Orlando Fonseca: Um trampoje polícia, sei lá. E também depois de cancelar,
+
+460
+00:49:44.720 --> 00:49:47.929
+Orlando Fonseca: não foi enviado ainda. Ponto cancelado.
+
+461
+00:49:49.180 --> 00:49:57.620
+Orlando Fonseca: Então, para vocês, identifiquem os auditórios envolvidos nesse sistema e quero que vocês descendem o diagrama de câncer de uso.
+
+462
+00:49:58.630 --> 00:50:00.240
+Orlando Fonseca: Vamos começar aqui. Ó
+
+463
+00:50:06.050 --> 00:50:10.810
+Orlando Fonseca: isso. Pense um pouquinho. Vamos com calma. Qual seria? Aqui.
+
+464
+00:50:16.390 --> 00:50:17.750
+Orlando Fonseca: Aham,
+
+465
+00:50:29.610 --> 00:50:31.319
+Orlando Fonseca: quais seriam as produtoras?
+
+466
+00:50:34.310 --> 00:50:47.029
+Orlando Fonseca: O caixa de uso seria o quê? Criar conta login e pesquisar. Tá, mas agora eu preciso que você defende de fato o diagrama de caixa de uso. Quer dizer, não uma lista de caixa de uso
+
+467
+00:50:47.800 --> 00:50:50.159
+Orlando Fonseca: de ter uma associação com a secção de uso.
+
+468
+00:50:54.610 --> 00:50:58.459
+Orlando Fonseca: Você já tem alguma ferramenta para fazer isso?
+
+469
+00:51:00.170 --> 00:51:02.789
+Orlando Fonseca: Por exemplo, o Drau e. Oh, pois é.
+
+470
+00:51:02.980 --> 00:51:05.180
+Orlando Fonseca: Ouça, queira fique à vontade.
+
+471
+00:51:05.500 --> 00:51:13.300
+Orlando Fonseca: Eu falo assim porque eu tenho alguma ferramenta que como elas são, já é
+
+472
+00:51:13.990 --> 00:51:24.860
+Orlando Fonseca: pré definida para o trabalho como ml: Já vem isso, certinho. Você não tem que desenhar essa linha passear porque já vem. Já vem. Incluso ali na modelagem. É só você, tipo, seleciona e coloca
+
+473
+00:51:25.100 --> 00:51:26.240
+Orlando Fonseca: no visual.
+
+474
+00:51:26.640 --> 00:51:30.019
+Orlando Fonseca: Não quer se preocupado? Sem aula ali, sem nem nada. E já está, prontinho.
+
+475
+00:51:36.590 --> 00:51:47.079
+Orlando Fonseca: Voltou aqui atrás. Você me fala. Estou aguardando vocês aqui para falar. Tem esse o ator. E esses são os relacionamentos. Câncer de uso,
+
+476
+00:51:47.630 --> 00:51:53.290
+Orlando Fonseca: que tem uma sensação com esse ator que tem engenharia atrelada a esse ator. É isso que eu quero que você fale.
+
+477
+00:52:10.670 --> 00:52:17.790
+Orlando Fonseca: Bom, achando um pouquinho, estamos pensando, ou quem que eu continuo. Ah, volta para o outro.
+
+478
+00:52:37.480 --> 00:52:44.030
+Orlando Fonseca: Ah, perdão. Alexandre não tinha falado aqui o cliente. E o caso de uso que tem a ver com o cliente. Ah, agora entendi. Alexandre.
+
+479
+00:52:45.690 --> 00:52:46.530
+Orlando Fonseca: Tá bom.
+
+480
+00:52:46.720 --> 00:52:47.850
+Orlando Fonseca: Muito bom.
+
+481
+00:52:50.630 --> 00:52:52.019
+Orlando Fonseca: Vamos ver
+
+482
+00:53:03.880 --> 00:53:05.890
+Orlando Fonseca: como gostaria, pessoal.
+
+483
+00:53:06.680 --> 00:53:09.350
+Orlando Fonseca: Nesse caso, eu só tenho um.
+
+484
+00:53:10.540 --> 00:53:17.540
+Orlando Fonseca: Um tipo de ator só para ser meu cliente de forma geral, porque o texto não está falando em mais ninguém,
+
+485
+00:53:18.340 --> 00:53:32.569
+Orlando Fonseca: e ele vai conseguir fazer a criação de conta, como o Alexandre falou, efetuar login, verificar. Está tudo perdido. Quando será pedido. Fixar o produtor e adicionar livro, carrinho, tá, veja, temos,
+
+486
+00:53:34.110 --> 00:53:43.740
+Orlando Fonseca: habitou e as autorizações como caças de uso. E nem essa imagem eu coloquei para consultar média a certinha
+
+487
+00:53:44.660 --> 00:53:48.139
+Orlando Fonseca: a Tom para o caça de uso para o Severin, que é.
+
+488
+00:53:48.300 --> 00:53:50.889
+Orlando Fonseca: É possível. Sim, também fazer desse jeito.
+
+489
+00:53:51.040 --> 00:53:56.890
+Orlando Fonseca: Só eu não posso colocar aqueles daquela seta, lembra
+
+490
+00:53:57.130 --> 00:54:02.140
+Orlando Fonseca: aquela demais, o triângulo ali sem preenchimento. O triângulo que está faltando
+
+491
+00:54:02.310 --> 00:54:08.910
+Orlando Fonseca: nessa linha tracejada. Tá desse jeito aqui hoje. Se vocês acham que fica mais claro, pode fazer assim.
+
+492
+00:54:11.610 --> 00:54:12.550
+Orlando Fonseca: Tá bom.
+
+493
+00:54:17.300 --> 00:54:19.100
+Orlando Fonseca: Tá dúvida, pessoal.
+
+494
+00:54:19.770 --> 00:54:21.270
+Orlando Fonseca: Vamos fazer mais um.
+
+495
+00:54:21.560 --> 00:54:22.600
+Jorge José Luiz Santos da Silva: Ô professor.
+
+496
+00:54:22.850 --> 00:54:23.480
+Orlando Fonseca: Oi.
+
+497
+00:54:23.480 --> 00:54:30.230
+Jorge José Luiz Santos da Silva: Só confirmar o ator. Sempre vai ser uma pessoa. Nunca. Por exemplo, pode ser um sistema. Por exemplo.
+
+498
+00:54:30.230 --> 00:54:32.230
+Orlando Fonseca: Pode fazer. Sim, pode Sim.
+
+499
+00:54:32.780 --> 00:54:33.389
+Jorge José Luiz Santos da Silva: Se você tem uma parte.
+
+500
+00:54:33.390 --> 00:54:36.720
+Orlando Fonseca: Pode ser um ator. Também pode. Interage com o sistema
+
+501
+00:54:36.880 --> 00:54:45.120
+Orlando Fonseca: com o nosso sistema, né? Hoje tá beleza.
+
+502
+00:54:45.120 --> 00:54:46.040
+Jorge José Luiz Santos da Silva: Beleza.
+
+503
+00:54:51.260 --> 00:54:57.870
+Orlando Fonseca: Ok, então vou parar aqui, compartilhar a tela, e deixa eu ver se eu.
+
+504
+00:54:58.340 --> 00:55:02.520
+Orlando Fonseca: Eu falei para você do cenário do México
+
+505
+00:55:03.680 --> 00:55:06.630
+Orlando Fonseca: naquele médico que deixa eu ver se eu acho.
+
+506
+00:55:07.320 --> 00:55:09.639
+Orlando Fonseca: Acho que eu perguntei para você na luta anterior, não foi?
+
+507
+00:55:10.670 --> 00:55:14.039
+Orlando Fonseca: Que era o cenário que eu estava tendo
+
+508
+00:55:14.230 --> 00:55:19.310
+Orlando Fonseca: queria. Na verdade, era uma segunda opção de colocar como projeto
+
+509
+00:55:19.460 --> 00:55:23.439
+Orlando Fonseca: de bloco para você. Se você não tem um tema. Você poderia sair por ele.
+
+510
+00:55:23.820 --> 00:55:27.250
+Orlando Fonseca: Evolução média. É isso. Então acho que. Pronta cheque?
+
+511
+00:55:29.060 --> 00:55:29.910
+Orlando Fonseca: Sim,
+
+512
+00:55:45.520 --> 00:55:47.210
+Orlando Fonseca: só um minuto.
+
+513
+00:55:47.340 --> 00:55:55.430
+Orlando Fonseca: Pronto, essa opinião dá pra ver que eu faço no som. Eu não faço no som, né?
+
+514
+00:55:57.400 --> 00:55:58.549
+Orlando Fonseca: Aí tá bom.
+
+515
+00:56:02.490 --> 00:56:03.280
+Orlando Fonseca: Tchau.
+
+516
+00:56:05.660 --> 00:56:07.110
+Orlando Fonseca: Então, bora lá.
+
+517
+00:56:07.250 --> 00:56:11.490
+Orlando Fonseca: Eu quero que você me fale é,
+
+518
+00:56:11.750 --> 00:56:15.580
+Orlando Fonseca: quero que você se identifiquem aí, pelo menos alguma caça de uso.
+
+519
+00:56:16.060 --> 00:56:21.050
+Orlando Fonseca: Quais são os produtores desse desse sistema?
+
+520
+00:56:22.720 --> 00:56:24.800
+Orlando Fonseca: Coisa no caso de uso.
+
+521
+00:56:25.350 --> 00:56:26.200
+Orlando Fonseca: Tá bom,
+
+522
+00:56:29.780 --> 00:56:30.739
+Orlando Fonseca: tem que falar.
+
+523
+00:56:34.350 --> 00:56:36.089
+Orlando Fonseca: Ninguém seria o adutor principal.
+
+524
+00:56:40.340 --> 00:56:41.210
+Jorge José Luiz Santos da Silva: Médico.
+
+525
+00:56:42.070 --> 00:56:43.350
+Jorge José Luiz Santos da Silva: Muito bom.
+
+526
+00:56:43.350 --> 00:56:48.910
+Orlando Fonseca: Não é isso, tá, o paciente entraria aqui.
+
+527
+00:56:50.010 --> 00:56:52.499
+Orlando Fonseca: Quais seriam o câncer de uso do paciente, por exemplo,
+
+528
+00:56:54.720 --> 00:56:57.289
+Orlando Fonseca: como que o paciente interage com o sistema.
+
+529
+00:56:59.970 --> 00:57:02.970
+Jorge José Luiz Santos da Silva: Ele nem interage, né? O médico na verdade faz evolução, né?
+
+530
+00:57:03.340 --> 00:57:05.670
+Orlando Fonseca: Tá? Então, se não interage a gente nem coloca
+
+531
+00:57:05.830 --> 00:57:09.460
+Orlando Fonseca: só aquela que eu tenho interação, hã?
+
+532
+00:57:10.580 --> 00:57:21.320
+Orlando Fonseca: Então, beleza, isso ali sai pra aflição. Tudo bem. Mas não é
+
+533
+00:57:24.570 --> 00:57:33.789
+Orlando Fonseca: assim. Eu não colocaria isso um mexe que eu assim tô chutando. Repete por isso que acontece assim, tá,
+
+534
+00:57:34.250 --> 00:57:36.290
+Orlando Fonseca: mas você não vi. Não sei.
+
+535
+00:57:37.030 --> 00:57:46.219
+Orlando Fonseca: Pelo menos um médico ali na consulta onde fomos, passei uma consulta. Fala para o paciente. Ó, senta aqui e olha o sistema e visualiza se. Está certo
+
+536
+00:57:46.980 --> 00:57:53.100
+Orlando Fonseca: ou entra ali como se o usuário de paciente vê, não tem certo.
+
+537
+00:57:53.360 --> 00:58:03.900
+Orlando Fonseca: O máximo que eu dei fazer é fazer o Print desse documento e dar zoar para o cliente. Sei lá, para o paciente. Tá ver, ficar com cessado.
+
+538
+00:58:04.100 --> 00:58:07.240
+Orlando Fonseca: Mas quem interagiu com o sistema foi.
+
+539
+00:58:07.400 --> 00:58:14.290
+Orlando Fonseca: Interage com o sistema. Foi um médico, tá
+
+540
+00:58:18.740 --> 00:58:27.069
+Orlando Fonseca: o sistema. Quais sistema primeiro fica alergia sem medicamento do paciente. Qual esse tema tímica?
+
+541
+00:58:30.330 --> 00:58:40.090
+Orlando Fonseca: Tudo bem. O sistema tem uma inteligência por trás onde o médico vai lá e coloca, tá?
+
+542
+00:58:40.880 --> 00:58:49.049
+Orlando Fonseca: E coloca aí. Enfim, ela está cuidando do paciente. Você está tomando o quê? Ah, você está tomando?
+
+543
+00:58:49.830 --> 00:58:58.850
+Orlando Fonseca: Sei lá se pirou qualquer um, qualquer remédio. Aí vai se você. E agora não vou passar para vocês
+
+544
+00:58:59.560 --> 00:59:04.660
+Orlando Fonseca: outro remédio que tenha algum tipo de interação medicamentosa com aquele outro.
+
+545
+00:59:04.780 --> 00:59:16.360
+Orlando Fonseca: É o sistema que eu tenho essa inteligência. Mas uma vez é que o sistema não está interagindo com ele mesmo. Não tem um caso de uso atrelado ao sistema e não tem um sistema externo para me dar essa informação.
+
+546
+00:59:17.300 --> 00:59:20.649
+Orlando Fonseca: Deixa eu ver aqui, então várias consultas.
+
+547
+00:59:20.990 --> 00:59:32.689
+Orlando Fonseca: Acho que o sistema totalmente tá bom, beleza. Não sei do que o Alexandre falou aqui. Tá bom,
+
+548
+00:59:32.850 --> 00:59:41.410
+Orlando Fonseca: mas você tem um aplicativo professor onde o médico é atrelado ao paciente atrelado. O paciente.
+
+549
+00:59:41.720 --> 00:59:43.990
+Orlando Fonseca: O paciente não poderia ser um ator também,
+
+550
+00:59:45.110 --> 00:59:50.249
+Orlando Fonseca: porque não sei como que o médico estaria atrelando o paciente. Aí
+
+551
+00:59:52.260 --> 00:59:54.410
+Orlando Fonseca: quase seria o câncer de uso do médico
+
+552
+00:59:55.650 --> 01:00:06.730
+Orlando Fonseca: registrar a prescrição do medicamento, como queria interagir ali com o paciente no aplicativo abra ele no aplicativo. Colocar,
+
+553
+01:00:07.750 --> 01:00:12.859
+Orlando Fonseca: por exemplo, a principal alergia que eu tenho são issso
+
+554
+01:00:16.070 --> 01:00:20.090
+Orlando Fonseca: para mim.
+
+555
+01:00:20.200 --> 01:00:28.459
+Jorge José Luiz Santos da Silva: O que eu penso que, por exemplo, o médico faria uma consulta com o paciente, pegaria essas informações e ficariam salvas no banco de dados do sistema.
+
+556
+01:00:28.460 --> 01:00:30.760
+Orlando Fonseca: Isso, Marcelo, o médico, informações.
+
+557
+01:00:30.760 --> 01:00:31.420
+Jorge José Luiz Santos da Silva: Uhum.
+
+558
+01:00:31.810 --> 01:00:35.280
+Orlando Fonseca: Não é o paciência
+
+559
+01:00:36.410 --> 01:00:45.629
+Orlando Fonseca: paciente. Tá pensando mais que ó tipo my futurista? Sei lá. Nunca vi um caça assim, por isso. Eu não sei. Tipo, assim
+
+560
+01:00:45.870 --> 01:00:54.060
+Orlando Fonseca: você como paciente, pode, antes de ir na consulta já fazer um pré questionário, palavra na sua alergias.
+
+561
+01:00:54.890 --> 01:01:06.390
+Orlando Fonseca: Então você entraria nesse ambiente como paciente para colocar essa alergia. O medicamento que você está tomando de forma que, quando entra de fato na consulta. O médico olha
+
+562
+01:01:07.210 --> 01:01:11.260
+Orlando Fonseca: a interação que você teve que esse presente teve ali
+
+563
+01:01:11.380 --> 01:01:24.220
+Orlando Fonseca: dois dias atrás, antes da consulta. Aí sim, tem mais sentido, tá, isso, né? Isso é.
+
+564
+01:01:25.390 --> 01:01:34.869
+Orlando Fonseca: Já vai preparado na sua primeira consulta? Pois é aí Sim, é interessante,
+
+565
+01:01:36.130 --> 01:01:37.959
+Orlando Fonseca: mas só aliado. Não parece arquivo.
+
+566
+01:01:39.100 --> 01:01:40.610
+Orlando Fonseca: E um
+
+567
+01:01:43.280 --> 01:01:51.449
+Orlando Fonseca: onde que está a parte de log? Ah, eu coloquei o log como sendo um requisito não funcional, né? Então, se ele não funcionar,
+
+568
+01:01:52.620 --> 01:01:57.739
+Orlando Fonseca: ele não está no Castro de uso. Não está nem no programa de Castro de uso. Então, Se Nicolor,
+
+569
+01:01:59.370 --> 01:02:00.190
+Orlando Fonseca: certo?
+
+570
+01:02:00.610 --> 01:02:03.089
+Orlando Fonseca: Não colocaria. Eu não colocaria essa batida no longo.
+
+571
+01:02:04.600 --> 01:02:10.579
+Orlando Fonseca: Então vamos lá então ficarmos com o México e sistema.
+
+572
+01:02:12.270 --> 01:02:21.890
+Orlando Fonseca: Ah, olha que importância isso aqui. As informações médicas dos pacientes devem ser acessíveis somente a usuários autorizados
+
+573
+01:02:23.000 --> 01:02:28.690
+Orlando Fonseca: está falando. De uma segurança aqui. Beleza, só que, como falou. Usuários roteirizados.
+
+574
+01:02:29.490 --> 01:02:30.940
+Orlando Fonseca: Pensem comigo.
+
+575
+01:02:31.050 --> 01:02:32.430
+Orlando Fonseca: E é um.
+
+576
+01:02:35.750 --> 01:02:37.340
+Orlando Fonseca: Então eu mexe.
+
+577
+01:02:37.950 --> 01:02:45.320
+Orlando Fonseca: Pessoal autorizado, um médico. Se um médico está resolvido, se o médico, só temos uma pessoa interagindo com o sistema, que é o mesmo médico.
+
+578
+01:02:45.820 --> 01:02:55.560
+Orlando Fonseca: Mas se não for o médico, por exemplo, fosse o pessoal autorizado aqui for uma enfermeira, por exemplo, hã?
+
+579
+01:02:56.480 --> 01:03:01.390
+Orlando Fonseca: Então aí teria dois autores. Teria o suado principal. Seria
+
+580
+01:03:02.220 --> 01:03:13.409
+Orlando Fonseca: o ator principal. Seria um médico e poderemos ter como usuário autorizado. Poderia ser, por exemplo, um outro ator que vai representar as enfermeiras.
+
+581
+01:03:14.250 --> 01:03:23.320
+Orlando Fonseca: O pessoal que trabalha com Uti, que não é médico nem enfermeiro, mas tem acesso também. Pois é.
+
+582
+01:03:23.900 --> 01:03:28.180
+Orlando Fonseca: Cerca do médico, tá?
+
+583
+01:03:28.870 --> 01:03:32.379
+Orlando Fonseca: A equipe de saúde, enfim, tem alguns outros que eu poderia
+
+584
+01:03:32.540 --> 01:03:37.200
+Orlando Fonseca: ser ali colocado nesse livro de
+
+585
+01:03:37.460 --> 01:03:40.600
+Orlando Fonseca: O usuário autorizado. Tá, poderia ser
+
+586
+01:03:40.670 --> 01:03:43.240
+Orlando Fonseca: lembrando que esse aqui, esse cenário
+
+587
+01:03:43.260 --> 01:04:01.370
+Orlando Fonseca: é um bom exercício. Porque estou fazendo com vocês? Estamos pensando juntos. Mas se ele não está bonitinho para você, não é muito evidente o caso de uso aqui novo. A gente tem que construir, porque temos muito pouco texto para entender esse sistema,
+
+588
+01:04:02.140 --> 01:04:02.990
+Orlando Fonseca: hã?
+
+589
+01:04:06.110 --> 01:04:18.079
+Orlando Fonseca: Então qual seria? Por causa de uso simples, né? O médico hoje registrou a prescrição.
+
+590
+01:04:19.440 --> 01:04:23.590
+Orlando Fonseca: E aí vê o dado clínico ali do paciente?
+
+591
+01:04:24.140 --> 01:04:29.370
+Orlando Fonseca: Ele pode verificar alergia.
+
+592
+01:04:29.740 --> 01:04:36.800
+Orlando Fonseca: Venha reunificar as interações medicamentosas desse paciente.
+
+593
+01:04:37.050 --> 01:04:37.980
+Orlando Fonseca: Eu tenho.
+
+594
+01:04:38.280 --> 01:04:41.830
+Orlando Fonseca: Ele tem que fazer um registro.
+
+595
+01:04:42.450 --> 01:04:45.039
+Orlando Fonseca: Terá que lidar do poder fazer também.
+
+596
+01:04:45.930 --> 01:04:57.169
+Orlando Fonseca: Ele pode. Não poderá se confirmar se uma justificativa médica. Quer dizer isso. Ele tem que fazer isso. Se tiver interação medicamentosa, ele tem que
+
+597
+01:04:57.640 --> 01:05:04.779
+Orlando Fonseca: tentar explicar porque ele está recomendando esse remédio? Que tenha uma interação com o outro que o paciente está tomando.
+
+598
+01:05:04.920 --> 01:05:13.510
+Orlando Fonseca: Então como seria o costa de urso? Aí pode ser registrar
+
+599
+01:05:14.280 --> 01:05:24.380
+Orlando Fonseca: a um, registrar uma justificativa médica. Por isso eu. Não passa de um tá beleza.
+
+600
+01:05:27.440 --> 01:05:31.959
+Orlando Fonseca: Informar a doce certa seria um caça News.
+
+601
+01:05:41.740 --> 01:05:42.830
+Orlando Fonseca: O que vocês acham?
+
+602
+01:05:51.540 --> 01:05:58.970
+Orlando Fonseca: Vamos chegar ali. Sabe se essa notificação ou não? Vamos chegar ali no parisiense. Tá bom.
+
+603
+01:05:59.120 --> 01:06:02.850
+Orlando Fonseca: Ou seja, informadoce não parece um caixa de uso, porque
+
+604
+01:06:04.000 --> 01:06:08.840
+Orlando Fonseca: ela está no passo a passo de um desses caçodinos gerais,
+
+605
+01:06:10.980 --> 01:06:20.459
+Orlando Fonseca: assim como, por exemplo, selecionar o paciente antes de ver a Celestia dele selecionar o paciente que está dentro.
+
+606
+01:06:21.020 --> 01:06:28.220
+Orlando Fonseca: Tá beleza, beleza.
+
+607
+01:06:29.800 --> 01:06:31.160
+Orlando Fonseca: E é um.
+
+608
+01:06:33.120 --> 01:06:34.580
+Orlando Fonseca: Resumindo
+
+609
+01:06:35.960 --> 01:06:47.510
+Orlando Fonseca: os detalhes ali, esse passo a passo. Essa ordem vai ficar na descrição do caso de uso. E no diagrama. Tá isso aí. Acho que ficou claro.
+
+610
+01:06:48.070 --> 01:06:48.900
+Orlando Fonseca: Tá bom.
+
+611
+01:06:51.130 --> 01:06:59.770
+Orlando Fonseca: Vamos finalizar agora com com essa motivação do Alexandre, a justificativa é uma inclusão.
+
+612
+01:07:02.080 --> 01:07:05.759
+Orlando Fonseca: Vou deixar para vocês pensarem: vou colocar um caso parecido.
+
+613
+01:07:05.870 --> 01:07:09.309
+Orlando Fonseca: Porque você tem mais. Fica na próxima aula. Mas já vou motivar vocês.
+
+614
+01:07:10.030 --> 01:07:18.829
+Orlando Fonseca: Ó, por exemplo, antes de aqui estou lendo aqui antes de confirmar a prescrição.
+
+615
+01:07:20.090 --> 01:07:24.620
+Orlando Fonseca: Vamos verificar as alergias, tá?
+
+616
+01:07:27.460 --> 01:07:31.970
+Orlando Fonseca: Antes de confirmar essa aplicação, vamos modificar a legislação.
+
+617
+01:07:32.590 --> 01:07:38.970
+Orlando Fonseca: O que acontece pessoal, esse aqui. Eu acho que seria um.
+
+618
+01:07:39.330 --> 01:07:48.729
+Orlando Fonseca: Deixa eu pensar. Eu acho que seria um plus, tá, eu acho que teria um relacionamento de inclusão com se é um caso de uso, estaria incluído no outro.
+
+619
+01:07:49.730 --> 01:07:50.610
+Orlando Fonseca: Tá bom.
+
+620
+01:07:53.450 --> 01:07:55.290
+Orlando Fonseca: Conseguem chegar a isso?
+
+621
+01:08:00.310 --> 01:08:02.340
+Orlando Fonseca: Tá ok.
+
+622
+01:08:04.020 --> 01:08:13.060
+Orlando Fonseca: Ou seja, verificar a alergia. Ele faz parte do processo, hã?
+
+623
+01:08:14.280 --> 01:08:17.590
+Orlando Fonseca: Se ele é parte do processo, a gente pode incluir
+
+624
+01:08:19.359 --> 01:08:22.120
+Orlando Fonseca: confirmado. Depende de consultar as alergias.
+
+625
+01:08:23.460 --> 01:08:26.420
+Orlando Fonseca: É sempre assim, sabe, primeiro, né?
+
+626
+01:08:27.000 --> 01:08:30.410
+Orlando Fonseca: Verificar a energia e depois fazer a confirmação.
+
+627
+01:08:31.390 --> 01:08:32.739
+Orlando Fonseca: Nem sabe que isso aí
+
+628
+01:08:35.930 --> 01:08:38.760
+Orlando Fonseca: é. Talvez seja uma prática do médico, tá?
+
+629
+01:08:39.350 --> 01:08:46.159
+Orlando Fonseca: Então, para finalizar, quero deixar claro aqui para vocês as peças.
+
+630
+01:08:47.029 --> 01:08:54.890
+Orlando Fonseca: A gente tem um caça de uso que está contido no outro, tá isso
+
+631
+01:08:55.229 --> 01:08:57.019
+Orlando Fonseca: para não aplicar qualquer custo, tá?
+
+632
+01:08:57.189 --> 01:08:58.720
+Orlando Fonseca: E às vezes
+
+633
+01:08:59.010 --> 01:09:09.620
+Orlando Fonseca: conhecer que caso? Se você tem uma condição, caso essa condição seja verdadeira, aí a gente faz um outro caso de uso.
+
+634
+01:09:12.220 --> 01:09:13.160
+Orlando Fonseca: Beleza.
+
+635
+01:09:13.700 --> 01:09:17.499
+Orlando Fonseca: De ali vem a parte dos relacionamentos do câncer de uso.
+
+636
+01:09:18.020 --> 01:09:20.170
+Orlando Fonseca: A gente pôde também.
+
+637
+01:09:20.710 --> 01:09:38.760
+Orlando Fonseca: Tipo falar. Veja que esse trecho aqui vou falar um pouquinho mais esse trecho aqui, esse fluxo. Ele é repetitivo em vários casos de uso. A gente está no ponto de solar. Falei beleza. Toda vez que a gente precisa fazer isso, a gente vai incluir esse cacho de uso no outro.
+
+638
+01:09:39.600 --> 01:09:44.359
+Orlando Fonseca: Tá bom, então pronto. Tem uma ideia que a gente vai falar da procuram.
+
+639
+01:09:45.029 --> 01:09:53.600
+Orlando Fonseca: Tá bom, então, pessoal, você parou de compartilhar é,
+
+640
+01:09:57.240 --> 01:09:58.570
+Orlando Fonseca: sabe, aqui
+
+641
+01:10:04.030 --> 01:10:09.699
+Orlando Fonseca: na na próxima aula,
+
+642
+01:10:09.960 --> 01:10:21.440
+Orlando Fonseca: vamos então trabalhar. Relacionamento entre casos de uso e o relacionamento entre atores também pode existir. Sim, alguns exemplos, que seria
+
+643
+01:10:21.650 --> 01:10:26.500
+Orlando Fonseca: um relacionamento de extensão, um de inclusão e um de generalização.
+
+644
+01:10:27.170 --> 01:10:31.480
+Orlando Fonseca: Tá bom, beleza. E continuava fazendo exercício,
+
+645
+01:10:33.530 --> 01:10:36.990
+Orlando Fonseca: pessoal, dúvida. Essa aula de hoje
+
+646
+01:10:37.560 --> 01:10:40.680
+Orlando Fonseca: ficou claro? Ficou tudo certo. Tudo entendido.
+
+647
+01:10:40.810 --> 01:10:46.900
+Orlando Fonseca: Procura que vocês me falem agora. Como foi a entrega do Tapew foi puxado,
+
+648
+01:10:47.210 --> 01:10:52.859
+Orlando Fonseca: não foi? Eu ainda não tive tempo de olhar nenhuma entregar de vocês.
+
+649
+01:10:53.470 --> 01:10:59.170
+Orlando Fonseca: Então não sei se ficou claro para vocês ficou mais puxado.
+
+650
+01:10:59.450 --> 01:11:05.340
+Orlando Fonseca: Não deu problema. Não vem tranquilo, então
+
+651
+01:11:05.880 --> 01:11:13.910
+Orlando Fonseca: eu não sei o projeto que vocês.
+
+652
+01:11:14.790 --> 01:11:17.770
+Orlando Fonseca: Vocês colheram, né? Não sei.
+
+653
+01:11:18.870 --> 01:11:27.270
+Orlando Fonseca: E você vai me explicar? Vai me convencer que o projeto de você tem? Sim, no objetivo. E tem uma importância ali para o cliente.
+
+654
+01:11:27.460 --> 01:11:31.640
+Orlando Fonseca: E quando seria a complexidade dele.
+
+655
+01:11:32.250 --> 01:11:37.280
+Orlando Fonseca: É isso que você tem que convencer. Mas eu acho que está tranquilo. Você que está falando?
+
+656
+01:11:38.500 --> 01:11:40.090
+Orlando Fonseca: Deixa eu ver aqui agora.
+
+657
+01:11:41.570 --> 01:11:43.820
+Orlando Fonseca: Foi um recorrido beleza.
+
+658
+01:11:44.350 --> 01:11:50.240
+Orlando Fonseca: E assim comprei. Ah, também acontece isso tá, acontecem muito
+
+659
+01:11:50.600 --> 01:11:56.389
+Orlando Fonseca: você, quando faz a classificação do projeto, vê que fica difícil, ou fica realmente
+
+660
+01:11:57.870 --> 01:12:05.569
+Orlando Fonseca: mais complexo. E você também falar. Acho que é melhor mudar. E como eu deixei a fazer em grupo,
+
+661
+01:12:05.950 --> 01:12:13.089
+Orlando Fonseca: conhecer que um tenha mais familiaridade com um outro, com outro tipo de projeto. E falar entre vocês, conhecer mais,
+
+662
+01:12:13.960 --> 01:12:22.330
+Orlando Fonseca: chegar a um consenso chegar. Vamos fazer esse projeto em conjunto. É mais difícil também é um.
+
+663
+01:12:23.890 --> 01:12:29.210
+Orlando Fonseca: Você quer corrigir? Eu vou corrigir assim. Não sei porque como eu não comecei ainda.
+
+664
+01:12:29.440 --> 01:12:32.319
+Orlando Fonseca: Se o monitor já começou, acho que não.
+
+665
+01:12:32.760 --> 01:12:34.850
+Orlando Fonseca: Só se o monitor estiver corrigido,
+
+666
+01:12:35.210 --> 01:12:37.740
+Orlando Fonseca: eu não vou corrigir. Vou corrigir isso na sexta,
+
+667
+01:12:38.820 --> 01:12:43.600
+Orlando Fonseca: se amanhã também não vou corrigir novo na sexta e sábado. Provavelmente
+
+668
+01:12:44.020 --> 01:12:46.510
+Orlando Fonseca: eu vou ver o projeto de vocês.
+
+669
+01:12:47.440 --> 01:13:05.900
+Orlando Fonseca: Eu preciso da linguagem dos integrantes do time para planejar, porque essa primeira entrega muito importante, consigo planejar. Como vai ser a apresentação do projeto de bloco no final. Quantos dias eu preciso reservar para as apresentações?
+
+670
+01:13:05.900 --> 01:13:08.169
+Orlando Fonseca: Se todo mundo decidir fazer sozinho,
+
+671
+01:13:08.170 --> 01:13:11.170
+Orlando Fonseca: vamos ter pelo menos cinco dias de apresentações.
+
+672
+01:13:11.500 --> 01:13:16.280
+Orlando Fonseca: Porque tem um tempinho a mais. Eu preparo a sala
+
+673
+01:13:16.690 --> 01:13:21.470
+Orlando Fonseca: ali no sumo. Sempre vai. Comprar.
+
+674
+01:13:21.770 --> 01:13:24.880
+Orlando Fonseca: Podem falar de hoje do século.
+
+675
+01:13:24.880 --> 01:13:37.200
+Jorge José Luiz Santos da Silva: Eu só queria também só tirar uma dúvida em relação a isso. A partir do momento que o senhor corrigiu falar. Putz, olha, está tudo certo. A gente já pode começar. Ou vamos ter outros processos.
+
+676
+01:13:37.350 --> 01:13:40.499
+Orlando Fonseca: Pode começar hoje. Vai em frente.
+
+677
+01:13:40.500 --> 01:13:40.980
+Jorge José Luiz Santos da Silva: Perfeito.
+
+678
+01:13:40.980 --> 01:13:45.700
+Orlando Fonseca: Você está definindo tudo aqui. De acordo? Lembrando que a gente não vai implementar nada até a última.
+
+679
+01:13:45.980 --> 01:14:00.140
+Orlando Fonseca: Você vai começar fazendo parte de urso vai começar fazendo modelagem no sentido de grama de classe. Algumas interações ali vai fazer toda essa parte da pacificação. Muito bem. A implementação vai ser só no final.
+
+680
+01:14:00.630 --> 01:14:09.140
+Orlando Fonseca: Mas se você querem já adiantar e começar, já sei, mó na massa, pois só fiquem à vontade.
+
+681
+01:14:09.140 --> 01:14:10.899
+Jorge José Luiz Santos da Silva: É ansiedade, né?
+
+682
+01:14:10.900 --> 01:14:11.789
+Orlando Fonseca: A gente não sabe.
+
+683
+01:14:11.790 --> 01:14:12.610
+Jorge José Luiz Santos da Silva: E por.
+
+684
+01:14:12.610 --> 01:14:15.590
+Orlando Fonseca: Pode. Pode.
+
+685
+01:14:16.030 --> 01:14:21.530
+Orlando Fonseca: Melhor ainda. Melhor ainda, se você já começa aí, pode trazer mais dúvidas.
+
+686
+01:14:23.630 --> 01:14:26.310
+Orlando Fonseca: Então vamos, pessoal.
+
+687
+01:14:26.660 --> 01:14:29.930
+Orlando Fonseca: Só esse mais. Se você tem mais alguma dúvida,
+
+688
+01:14:31.690 --> 01:14:33.410
+Orlando Fonseca: deixa eu dar uma olhada aqui.
+
+689
+01:14:36.190 --> 01:14:38.849
+Orlando Fonseca: É questão aqui de uma turma Grounty, na verdade, né,
+
+690
+01:14:39.840 --> 01:14:44.960
+Orlando Fonseca: para corrigir, mas acredito que sim. Até no seu próximo encontro, até corrigido tudo.
+
+691
+01:14:45.420 --> 01:14:48.869
+Orlando Fonseca: Tá beleza fechou.
+
+692
+01:14:49.640 --> 01:14:56.839
+Orlando Fonseca: Então, pessoal, muito obrigado. E lembrando que vamos ter também. Eu vou começar um pouquinho.
+
+693
+01:14:58.090 --> 01:15:09.279
+Orlando Fonseca: Eu vou passar também um pouquinho de horário na próxima aula, tá? Vou começar um pouquinho antes. A gente vê pra recuperar mais esses dez minutos aí que a gente perde. Tá bom. Valeu, meu querido. Boa noite e até.
+
+694
+01:15:11.360 --> 01:15:12.920
+Jorge José Luiz Santos da Silva: Até boa noite.
+
+695
+01:15:12.920 --> 01:15:13.860
+Orlando Fonseca: Valeu!
+

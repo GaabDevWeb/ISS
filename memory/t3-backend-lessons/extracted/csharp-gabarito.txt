@@ -1,0 +1,169 @@
+Gabarito – Lista de Exercícios de C# Básico
+Exercício 1 – Apresentação Pessoal
+
+ Console.Write("Digite seu nome: ");
+ string nome = Console.ReadLine();
+
+
+ Console.Write("Digite sua idade: ");
+ int idade = Convert.ToInt32(Console.ReadLine());
+
+ Console.Write("Digite sua cidade: ");
+ string cidade = Console.ReadLine();
+
+ Console.WriteLine("\nDados informados:");
+ Console.WriteLine($"Nome: {nome}");
+ Console.WriteLine($"Idade: {idade} anos");
+ Console.WriteLine($"Cidade: {cidade}");
+
+
+
+
+Exercício 2 – Antecessor e Sucessor
+
+ Console.Write("Digite um número inteiro: ");
+ int numero = Convert.ToInt32(Console.ReadLine());
+
+ Console.WriteLine($"Número: {numero}");
+ Console.WriteLine($"Antecessor: {numero - 1}");
+ Console.WriteLine($"Sucessor: {numero + 1}");
+
+
+
+
+Exercício 3 – Operações Matemáticas
+
+ Console.Write("Digite o primeiro número: ");
+ double num1 = Convert.ToDouble(Console.ReadLine());
+
+ Console.Write("Digite o segundo número: ");
+ double num2 = Convert.ToDouble(Console.ReadLine());
+
+ Console.WriteLine($"Soma: {num1 + num2}");
+ Console.WriteLine($"Subtração: {num1 - num2}");
+ Console.WriteLine($"Multiplicação: {num1 * num2}");
+ Console.WriteLine($"Divisão: {num1 / num2}");
+
+
+
+
+                                         1
+Exercício 4 – Média de Três Notas
+
+ Console.Write("Nota 1: ");
+ double nota1 = Convert.ToDouble(Console.ReadLine());
+
+ Console.Write("Nota 2: ");
+ double nota2 = Convert.ToDouble(Console.ReadLine());
+
+
+ Console.Write("Nota 3: ");
+ double nota3 = Convert.ToDouble(Console.ReadLine());
+
+ double media = (nota1 + nota2 + nota3) / 3;
+
+ Console.WriteLine($"Média: {media:F2}");
+
+
+
+
+Exercício 5 – Conversão de Temperatura
+
+ Console.Write("Temperatura em Celsius: ");
+ double celsius = Convert.ToDouble(Console.ReadLine());
+
+ double fahrenheit = (celsius * 9 / 5) + 32;
+
+ Console.WriteLine($"Temperatura em Fahrenheit: {fahrenheit:F2}");
+
+
+
+
+Exercício 6 – Área e Perímetro de um Retângulo
+
+ Console.Write("Base: ");
+ double baseRetangulo = Convert.ToDouble(Console.ReadLine());
+
+ Console.Write("Altura: ");
+ double altura = Convert.ToDouble(Console.ReadLine());
+
+ double area = baseRetangulo * altura;
+ double perimetro = 2 * (baseRetangulo + altura);
+
+ Console.WriteLine($"Área: {area:F2}");
+ Console.WriteLine($"Perímetro: {perimetro:F2}");
+
+
+
+
+                                       2
+Exercício 7 – Conversor de Idade
+
+ Console.Write("Digite a idade em anos: ");
+ int anos = Convert.ToInt32(Console.ReadLine());
+
+ int meses = anos * 12;
+ int dias = anos * 365;
+
+
+ Console.WriteLine($"Meses: {meses}");
+ Console.WriteLine($"Dias: {dias}");
+
+
+
+
+Exercício 8 – Cálculo do Salário
+
+ Console.Write("Valor da hora: ");
+ double valorHora = Convert.ToDouble(Console.ReadLine());
+
+ Console.Write("Horas trabalhadas: ");
+ double horas = Convert.ToDouble(Console.ReadLine());
+
+ double salario = valorHora * horas;
+
+ Console.WriteLine($"Salário Bruto: R$ {salario:F2}");
+
+
+
+
+Exercício 9 – Consumo de Combustível
+
+ Console.Write("Distância percorrida (km): ");
+ double distancia = Convert.ToDouble(Console.ReadLine());
+
+ Console.Write("Litros consumidos: ");
+ double litros = Convert.ToDouble(Console.ReadLine());
+
+ double consumo = distancia / litros;
+
+ Console.WriteLine($"Consumo médio: {consumo:F2} km/l");
+
+
+
+
+Exercício 10 – Cálculo de Desconto
+
+ Console.Write("Valor do produto: ");
+ double valorProduto = Convert.ToDouble(Console.ReadLine());
+
+ Console.Write("Percentual de desconto: ");
+
+
+
+
+                                         3
+double percentual = Convert.ToDouble(Console.ReadLine());
+
+double valorDesconto = valorProduto * percentual / 100;
+double valorFinal = valorProduto - valorDesconto;
+
+
+Console.WriteLine($"Valor do desconto: R$ {valorDesconto:F2}");
+Console.WriteLine($"Valor final: R$ {valorFinal:F2}");
+
+
+
+
+                                      4
+

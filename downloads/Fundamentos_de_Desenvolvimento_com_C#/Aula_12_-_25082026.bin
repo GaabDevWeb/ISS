@@ -1,0 +1,2794 @@
+WEBVTT
+
+1
+00:04:17.260 --> 00:04:24.490
+Luiz Maia: Boa noite, pessoal. Dia vinte e cinco de Agosto, dois mil e vinte e seis.
+
+2
+00:04:25.740 --> 00:04:30.959
+Luiz Maia: Vamos lá para mais uma aula de C. Sharp
+
+3
+00:04:31.360 --> 00:04:34.139
+Luiz Maia: tentar lembrar aqui o que eu.
+
+4
+00:04:34.900 --> 00:04:40.840
+Luiz Maia: Aonde a gente terminou na aula passada, porque
+
+5
+00:04:42.420 --> 00:04:45.440
+Luiz Maia: a gente viu o encapsulamento ontem. Não foi?
+
+6
+00:04:48.870 --> 00:04:54.370
+Luiz Maia: A gente terminou com encapsulamento. Terminou.
+
+7
+00:05:01.040 --> 00:05:07.270
+Luiz Maia: A gente começou o quê? Na aula passada calculadora,
+
+8
+00:05:11.020 --> 00:05:14.350
+Luiz Maia: a gente começou a fazer um código da calculadora.
+
+9
+00:05:20.870 --> 00:05:25.020
+Luiz Maia: Deixa eu abrir esse código da calculadora para ver o que eu fiz aqui.
+
+10
+00:05:27.760 --> 00:05:29.010
+Luiz Maia: Não lembro.
+
+11
+00:05:31.700 --> 00:05:34.429
+Luiz Maia: A gente começou a calculadora.
+
+12
+00:05:37.920 --> 00:05:41.220
+Luiz Maia: O que eu fiz aqui. Agora, gente que doideira
+
+13
+00:05:47.350 --> 00:05:53.280
+Luiz Maia: tá calculadora. Calcula tchau.
+
+14
+00:05:54.800 --> 00:06:01.029
+Luiz Maia: Foi isso que a gente fez. Alguém pode me dar uma ajuda aí no.
+
+15
+00:06:07.400 --> 00:06:11.599
+Luiz Maia: Tá certo. Ok, beleza, vamos voltar para ela.
+
+16
+00:06:12.060 --> 00:06:16.740
+Luiz Maia: E vamos começar a consertar essa calculadora.
+
+17
+00:06:17.430 --> 00:06:23.710
+Luiz Maia: Eu criei uma solução chamada calculadora Oo.
+
+18
+00:06:24.120 --> 00:06:32.809
+Luiz Maia: E aí isso. A gente vai consertar essa calculadora. Deixa eu compartilhar aqui. Até lá com vocês.
+
+19
+00:06:33.090 --> 00:06:37.190
+Luiz Maia: Eu acho que eu botei essa calculadora lá no drive.
+
+20
+00:06:50.800 --> 00:06:53.209
+Luiz Maia: E que isso está parecendo aqui.
+
+21
+00:06:53.880 --> 00:06:56.359
+Luiz Maia: Vocês estão vendo a minha tela direitinho.
+
+22
+00:07:03.140 --> 00:07:03.940
+lucas.ssantos: Sim.
+
+23
+00:07:04.540 --> 00:07:05.370
+Luiz Maia: Beleza.
+
+24
+00:07:07.160 --> 00:07:09.540
+Luiz Maia: Ok, então vamos lá.
+
+25
+00:07:10.120 --> 00:07:19.650
+Luiz Maia: É, eu criei aqui um modus o calcula, tá, tá ok.
+
+26
+00:07:21.840 --> 00:07:25.349
+Luiz Maia: Para que o programa, basicamente, eu fiz o quê?
+
+27
+00:07:25.480 --> 00:07:27.710
+Luiz Maia: Eu estou criando aqui.
+
+28
+00:07:28.820 --> 00:07:33.240
+Luiz Maia: O objeto calcula a partir da classe. Calcula.
+
+29
+00:07:33.430 --> 00:07:38.570
+Luiz Maia: E aí eu faço somar, subtrair parará parará, não é?
+
+30
+00:07:39.490 --> 00:07:41.039
+Luiz Maia: Tá beleza?
+
+31
+00:07:42.720 --> 00:07:52.480
+Luiz Maia: Agora e aqui, praticamente o código ficou intacto. Percebam que ter feito essa mudança
+
+32
+00:07:52.820 --> 00:08:00.380
+Luiz Maia: não foi nada muito traumático no nosso código, porque o código estava todo muito bem organizado.
+
+33
+00:08:00.790 --> 00:08:03.569
+Luiz Maia: Isso é importante vocês perceberem isso.
+
+34
+00:08:04.270 --> 00:08:06.309
+Luiz Maia: Então eu ter trocado
+
+35
+00:08:07.590 --> 00:08:25.379
+Luiz Maia: um código que não era orientado a objeto para um código orientado a objeto. Não foi nada muito traumático. Ele está funcionando direitinho. Ele pode não estar perfeito. Mas ele está bem. Ok, está funcionando.
+
+36
+00:08:25.450 --> 00:08:28.880
+Luiz Maia: A gente conseguiu fazer isso de uma maneira tranquila.
+
+37
+00:08:31.090 --> 00:08:35.649
+Luiz Maia: Mas essa classe aqui, ela tem problemas.
+
+38
+00:08:38.370 --> 00:08:45.570
+Luiz Maia: Esse código que tem problemas. Alguém pode me ajudar a dizer quais são os problemas desse código dessa classe?
+
+39
+00:08:46.310 --> 00:08:49.449
+Luiz Maia: Eu vou criar aqui uma outra calculadora.
+
+40
+00:08:51.680 --> 00:08:54.619
+Luiz Maia: Vou criar aqui um outro,
+
+41
+00:08:54.750 --> 00:09:01.479
+Luiz Maia: um novo projeto. E vou copiar esse código para vocês terem o antes e o depois
+
+42
+00:09:04.750 --> 00:09:06.520
+Luiz Maia: calculadora.
+
+43
+00:09:09.640 --> 00:09:13.110
+Luiz Maia: Oh, ó ó ó ó ó ó ó ó oh dois
+
+44
+00:09:14.920 --> 00:09:20.130
+Luiz Maia: ficou esquisito, né? Parece dois, né? Mas é o o dois.
+
+45
+00:09:27.470 --> 00:09:32.670
+Luiz Maia: Vou copiar esse modus que está aqui para cá.
+
+46
+00:09:39.100 --> 00:09:43.899
+Luiz Maia: Eu preciso refaturar esse modus que está aqui porque ele está apontando
+
+47
+00:09:44.100 --> 00:09:53.029
+Luiz Maia: para a calculadora um. Aqui aqui. A gente vem aqui nesse projeto. Botão direito. Sync Name Space.
+
+48
+00:09:53.890 --> 00:10:00.729
+Luiz Maia: Aí ele já vai alterar para a gente pro. Olha aqui, ó o calcula agora tá bacana.
+
+49
+00:10:02.090 --> 00:10:03.620
+Luiz Maia: Deixa eu fechar isso aqui tudo
+
+50
+00:10:08.460 --> 00:10:14.359
+Luiz Maia: aí eu pergunto para vocês: quais são os problemas que eu tenho nessa
+
+51
+00:10:18.000 --> 00:10:22.250
+Luiz Maia: é nessa classe. Aqui,
+
+52
+00:10:28.320 --> 00:10:32.849
+Luiz Maia: Lucas, que validações que você quer que eu faça aqui?
+
+53
+00:10:37.310 --> 00:10:40.790
+Luiz Maia: Porque qualquer número é válido.
+
+54
+00:10:42.290 --> 00:10:43.150
+lucas.ssantos: Verdade.
+
+55
+00:10:43.470 --> 00:10:47.730
+Luiz Maia: Eu não tenho problemas de nome.
+
+56
+00:10:47.730 --> 00:10:50.239
+lucas.ssantos: Divisão por zero já validou.
+
+57
+00:10:51.130 --> 00:10:53.380
+Luiz Maia: Não. Olha só, gente.
+
+58
+00:10:54.160 --> 00:11:02.300
+Luiz Maia: O que eu falei para vocês. Vocês não podem esquecer essas coisas. Primeiro que a gente tem aqui atributos
+
+59
+00:11:02.790 --> 00:11:05.919
+Luiz Maia: que estão públicos.
+
+60
+00:11:06.310 --> 00:11:12.739
+Luiz Maia: Eles não estão sendo utilizados, mas eles são públicos aqui. Esse int operação
+
+61
+00:11:12.900 --> 00:11:17.210
+Luiz Maia: está perdido. Eu não preciso dele dentro da minha classe.
+
+62
+00:11:17.430 --> 00:11:20.390
+Luiz Maia: Então esse cara aqui, ele morre.
+
+63
+00:11:20.550 --> 00:11:21.970
+Luiz Maia: Primeira coisa.
+
+64
+00:11:23.110 --> 00:11:25.100
+Luiz Maia: Então esse cara aqui morreu.
+
+65
+00:11:26.390 --> 00:11:38.229
+Luiz Maia: Se eu precisar desses atributos, eu posso fazer eles como propriedades automáticas. Ok, beleza, Gabriel. Muito bom
+
+66
+00:11:38.740 --> 00:11:43.600
+Luiz Maia: aqui. Eu faço public double.
+
+67
+00:11:45.610 --> 00:11:53.770
+Luiz Maia: Eu não estou usando esse op1 e op2 no meu corpo, mas eu vou usar mais para frente.
+
+68
+00:11:54.490 --> 00:11:58.359
+Luiz Maia: Então eu estou só agora corrigindo.
+
+69
+00:11:58.900 --> 00:12:07.290
+Luiz Maia: É aqui. Eu vou fazer Get sete do Op1
+
+70
+00:12:07.840 --> 00:12:16.819
+Luiz Maia: e também o gadget do Ap2 mas isso é para frente. Eu não vou usar o Ap2 para nada.
+
+71
+00:12:17.180 --> 00:12:19.779
+Luiz Maia: Eles não estão sendo utilizados.
+
+72
+00:12:20.940 --> 00:12:30.020
+Luiz Maia: Mas tem um monte de coisa aqui esquisita nessa nessa classe.
+
+73
+00:12:32.330 --> 00:12:37.080
+Luiz Maia: Já consertei algumas coisas, mas aqui tem um monte de coisa errada.
+
+74
+00:12:38.030 --> 00:12:46.410
+Luiz Maia: Os guidentes e setes estão aqui. Mas eu estou passando os parâmetros para o somar,
+
+75
+00:12:46.560 --> 00:12:53.630
+Luiz Maia: subtrair os outros métodos que são métodos da classe. Calcula
+
+76
+00:12:54.490 --> 00:12:56.530
+Luiz Maia: o que eles estão fazendo de errado.
+
+77
+00:12:57.400 --> 00:12:58.920
+Jorge José Luiz Santos da Silva: A classe está pública.
+
+78
+00:12:59.850 --> 00:13:02.719
+Luiz Maia: Não, a classe tem que ser pública.
+
+79
+00:13:03.920 --> 00:13:07.729
+Luiz Maia: Estão imprimindo coisas na tela. Acoplamento.
+
+80
+00:13:07.730 --> 00:13:08.450
+Jorge José Luiz Santos da Silva: É verdade.
+
+81
+00:13:09.630 --> 00:13:11.890
+Luiz Maia: Então eu tenho um acompanhamento aqui, gente,
+
+82
+00:13:13.590 --> 00:13:21.400
+Luiz Maia: ele deveria retornar alguma coisa para o programa principal que aí vai imprimir. O que tem que ser impresso.
+
+83
+00:13:24.670 --> 00:13:27.440
+Luiz Maia: Estão totalmente errados.
+
+84
+00:13:28.640 --> 00:13:35.749
+Luiz Maia: Classe, não imprime na tela classe. Ela retorna a alguma coisa que vai fazer o que quiser com aquilo.
+
+85
+00:13:35.880 --> 00:13:44.149
+Luiz Maia: Vai jogar na tela. Vai jogar no log. Vai jogar na rede? Não sei, mas eu não posso ter Wright line dentro da classe.
+
+86
+00:13:45.110 --> 00:13:50.570
+Luiz Maia: Aí foi o que o Gabriel colocou. Acoplamento.
+
+87
+00:13:51.760 --> 00:13:53.780
+Luiz Maia: Tem acoplamento demais aqui.
+
+88
+00:13:54.550 --> 00:13:57.229
+Luiz Maia: Então vamos começar a consertar essas coisas.
+
+89
+00:13:58.750 --> 00:14:01.600
+Luiz Maia: Então, o somar. O que ele vai fazer?
+
+90
+00:14:02.690 --> 00:14:06.169
+Luiz Maia: Ele vai retornar um Double.
+
+91
+00:14:06.780 --> 00:14:08.100
+Luiz Maia: Isso, gente.
+
+92
+00:14:58.150 --> 00:14:59.550
+Luiz Maia: Vocês estão me ouvindo?
+
+93
+00:15:01.110 --> 00:15:02.389
+Jorge José Luiz Santos da Silva: Agora. Sim. Brasília.
+
+94
+00:15:02.750 --> 00:15:08.180
+Luiz Maia: Caiu a conexão. Gente deu uma travada aqui caiu.
+
+95
+00:15:08.490 --> 00:15:12.410
+Luiz Maia: Eu provavelmente vou ter que compartilhar até lá de novo.
+
+96
+00:15:13.370 --> 00:15:15.660
+Luiz Maia: Certo, compartilhei.
+
+97
+00:15:16.050 --> 00:15:21.019
+Luiz Maia: Teve uma queda aqui. Não sei o que aconteceu. Pode ser minha internet.
+
+98
+00:15:24.690 --> 00:15:33.529
+Luiz Maia: Eu peguei só para repetir. Eu peguei esse código todo que está aqui. E vou jogar para cá.
+
+99
+00:15:35.910 --> 00:15:43.779
+Luiz Maia: Veio uma chave a mais, ok, ele perdeu a formatação toda.
+
+100
+00:15:44.410 --> 00:15:49.730
+Luiz Maia: Esse calcula. Ele não sabe quem é. Eu vou fazer um importe dele.
+
+101
+00:15:50.630 --> 00:15:54.190
+Luiz Maia: Pronto, aqui eu vou fazer.
+
+102
+00:15:56.180 --> 00:16:00.840
+Luiz Maia: Vou arrumar esse código. Eu não sei por que ele está fazendo isso.
+
+103
+00:16:04.770 --> 00:16:07.760
+Luiz Maia: Ele está bagunçando o código todo.
+
+104
+00:16:21.070 --> 00:16:28.400
+Luiz Maia: Pronto, agora está arrumado aqui nesse calculo. Aqui é.
+
+105
+00:16:28.700 --> 00:16:31.979
+Luiz Maia: Cadê o print? Acho que eu perdi o Print.
+
+106
+00:16:34.350 --> 00:16:41.100
+Luiz Maia: Deixa eu ver se eu dou um Ctrl Z. Ok, agora ficou. Eu consegui pegar aqui no programa.
+
+107
+00:16:41.390 --> 00:16:46.380
+Luiz Maia: Ele vai fazer o quê vai fazer
+
+108
+00:16:52.010 --> 00:17:08.359
+Luiz Maia: esse resulte, não tem aqui. Ok, Double, insulte aqui o resulte, recebe a soma.
+
+109
+00:17:08.710 --> 00:17:10.399
+Luiz Maia: Aí ficou direitinho.
+
+110
+00:17:11.180 --> 00:17:13.660
+Luiz Maia: Então a nossa classe. Agora
+
+111
+00:17:13.930 --> 00:17:21.460
+Luiz Maia: ela tem que fazer o que aqui ela tem que retornar ao resultado. Uma dúvida que todos os alunos têm
+
+112
+00:17:22.900 --> 00:17:26.820
+Luiz Maia: é o seguinte: esse resulte que está aqui.
+
+113
+00:17:28.710 --> 00:17:34.529
+Luiz Maia: É o mesmo resultado. Professor, poderia explicar, por favor, essa ideia de acoplamento?
+
+114
+00:17:34.730 --> 00:17:37.139
+Luiz Maia: Claro, Pedro não tem nenhum problema
+
+115
+00:17:37.720 --> 00:17:47.120
+Luiz Maia: quando você faz com que a classe em prima na tela, você está amarrando.
+
+116
+00:17:47.650 --> 00:17:51.480
+Luiz Maia: Você está acoplando a classe ao terminal.
+
+117
+00:17:53.510 --> 00:17:59.659
+Luiz Maia: Se em algum momento eu quiser fazer com que
+
+118
+00:17:59.950 --> 00:18:11.180
+Luiz Maia: essa saída não seja na tela, seja num arquivo, seja enviada por uma Api.
+
+119
+00:18:11.580 --> 00:18:14.280
+Luiz Maia: Seja gravada num banco de dados.
+
+120
+00:18:15.560 --> 00:18:17.459
+Luiz Maia: Eu vou ter que mexer na classe.
+
+121
+00:18:19.570 --> 00:18:21.650
+Luiz Maia: A gente não quer mexer na classe.
+
+122
+00:18:23.900 --> 00:18:25.339
+Luiz Maia: A classe.
+
+123
+00:18:26.120 --> 00:18:30.999
+Luiz Maia: A gente tem que fazer o máximo possível que ela não seja alterada.
+
+124
+00:18:31.240 --> 00:18:37.989
+Luiz Maia: Caso contrário, isso vai gerar uma série de consequências. No restante do código
+
+125
+00:18:38.870 --> 00:18:42.679
+Luiz Maia: todo mundo que usar a classe calcula.
+
+126
+00:18:42.830 --> 00:18:54.519
+Luiz Maia: Vai ter problema de acoplamento, porque eu estou associando a minha classe ao terminal. A tela,
+
+127
+00:18:55.600 --> 00:18:58.440
+Luiz Maia: do jeito que eu estou fazendo aqui com o Somar?
+
+128
+00:18:58.620 --> 00:19:00.939
+Luiz Maia: Eu não estou amarrando nada.
+
+129
+00:19:01.550 --> 00:19:08.740
+Luiz Maia: Quem está amarrando é meu programa principal. É esse cara aqui. Ele está jogando para a tela. Poderia jogar para qualquer lugar.
+
+130
+00:19:09.250 --> 00:19:10.800
+Luiz Maia: Você entendeu, Pedro?
+
+131
+00:19:11.000 --> 00:19:13.340
+Luiz Maia: Qual é a ideia disso?
+
+132
+00:19:13.900 --> 00:19:16.340
+Luiz Maia: A gente não amarrar a nossa classe.
+
+133
+00:19:16.570 --> 00:19:19.950
+Luiz Maia: Há um dispositivo específico.
+
+134
+00:19:24.260 --> 00:19:29.610
+Luiz Maia: Uma dúvida que muito aluno tem esse resulte que está aqui.
+
+135
+00:19:30.940 --> 00:19:36.260
+Luiz Maia: E esse resulte que está aqui, é o mesmo, resulte.
+
+136
+00:19:40.260 --> 00:19:42.110
+Luiz Maia: É a mesma variável.
+
+137
+00:19:44.370 --> 00:19:49.629
+Luiz Maia: Não, por quê esse resulte.
+
+138
+00:19:49.910 --> 00:19:52.099
+Luiz Maia: Ele está dentro de somar.
+
+139
+00:19:52.730 --> 00:19:56.269
+Luiz Maia: Então ele só existe dentro do somar.
+
+140
+00:19:56.610 --> 00:20:02.329
+Luiz Maia: Quando ele acabou de executar o método. Somar,
+
+141
+00:20:02.540 --> 00:20:06.460
+Luiz Maia: ele simplesmente apaga. E se resulte,
+
+142
+00:20:06.650 --> 00:20:11.870
+Luiz Maia: esse resulte que está aqui, ele só existe dentro do calcular
+
+143
+00:20:12.190 --> 00:20:17.599
+Luiz Maia: na hora que ele acabou de executar esse método, calcular
+
+144
+00:20:18.090 --> 00:20:27.980
+Luiz Maia: tanto o calcula que o objeto como essa variável, elas somem, ela desaparecem.
+
+145
+00:20:28.250 --> 00:20:34.019
+Luiz Maia: Então, apesar de terem o mesmo nome. Elas têm escopos diferentes. Como falou o José?
+
+146
+00:20:35.370 --> 00:20:43.780
+Luiz Maia: Essa variável tem um escopo local ao calcular. E essa aqui tem um escopo local ao método somar.
+
+147
+00:20:47.880 --> 00:20:49.900
+Luiz Maia: Se vocês quiserem.
+
+148
+00:20:50.410 --> 00:21:05.179
+Luiz Maia: A gente pode eliminar essa variável. Resulte aqui. Olha só como eu poderia fazer isso? Eu vou fazer isso. Nos subtrair para vocês verem como é que eu posso eliminar essa variável? Primeiro, eu vou tirar esse console. Printline daqui
+
+149
+00:21:05.880 --> 00:21:07.330
+Luiz Maia: esse White Line.
+
+150
+00:21:07.710 --> 00:21:11.659
+Luiz Maia: Tiro daqui e morro para o nosso programa.
+
+151
+00:21:14.180 --> 00:21:15.289
+Luiz Maia: Vem para cá.
+
+152
+00:21:18.880 --> 00:21:21.160
+Luiz Maia: Ele não sabe quem é. Resulte.
+
+153
+00:21:25.020 --> 00:21:28.549
+Luiz Maia: Pronto, agora ele tá bacaninha.
+
+154
+00:21:28.710 --> 00:21:38.880
+Luiz Maia: A gente volta para o Calcula. O retorno dele não é mais Void. É Double.
+
+155
+00:21:39.470 --> 00:21:49.519
+Luiz Maia: O que eu posso fazer aqui? Eu posso eliminar essa variável. Resulte e fazer assim retorne
+
+156
+00:21:52.980 --> 00:22:01.419
+Luiz Maia: op1 menos op2 não preciso ter essa variável temporária aqui, no meio do caminho, o que é melhor?
+
+157
+00:22:01.550 --> 00:22:05.050
+Luiz Maia: Bom, melhor. Depende de cada um.
+
+158
+00:22:05.360 --> 00:22:10.419
+Luiz Maia: Aqui eu estou economizando uma variável,
+
+159
+00:22:10.980 --> 00:22:25.560
+Luiz Maia: uma linha de código. Se para você isso aqui for muito difícil de absorver. Ok, você não faz. Você mantenha o que está aqui em cima. Eu prefiro desse jeito.
+
+160
+00:22:28.540 --> 00:22:30.600
+Luiz Maia: É menos código.
+
+161
+00:22:31.200 --> 00:22:39.240
+Luiz Maia: Funciona do mesmo jeito. Não vejo nenhum problema de retirar essa variável. Resulte
+
+162
+00:22:39.500 --> 00:22:43.749
+Luiz Maia: do nosso código. Não vejo nenhuma necessidade de manter isso.
+
+163
+00:22:44.090 --> 00:22:49.510
+Luiz Maia: Tá multiplicar.
+
+164
+00:22:49.950 --> 00:22:51.540
+Luiz Maia: É a mesma coisa.
+
+165
+00:22:52.320 --> 00:22:54.000
+Luiz Maia: Tira daqui.
+
+166
+00:22:55.710 --> 00:22:57.539
+Luiz Maia: Coloca pra cá.
+
+167
+00:23:02.130 --> 00:23:03.140
+Luiz Maia: Aqui.
+
+168
+00:23:03.310 --> 00:23:05.560
+Luiz Maia: Eu chamo resulte.
+
+169
+00:23:07.410 --> 00:23:15.190
+Luiz Maia: Ele continua reclamando porque aqui está como Voide Double.
+
+170
+00:23:17.530 --> 00:23:25.280
+Luiz Maia: Aqui eu posso fazer o que eu fiz anteriormente. Returne op1 op2
+
+171
+00:23:26.600 --> 00:23:32.810
+Luiz Maia: você decide se você acha melhor desse jeito aqui, ok,
+
+172
+00:23:32.930 --> 00:23:38.389
+Luiz Maia: se você acha que isso. Aqui está. Ok para você. Beleza pode fazer. Não tem nenhum problema.
+
+173
+00:23:42.480 --> 00:23:47.769
+Luiz Maia: Bom, o dividir já é um pouco mais complicado de a gente tratar
+
+174
+00:23:50.990 --> 00:23:54.730
+Luiz Maia: bom, aqui. Se tudo der certo,
+
+175
+00:23:55.240 --> 00:24:02.959
+Luiz Maia: não tem problema nenhum. A gente pode fazer o seguinte, ó, tirar esse cara daqui,
+
+176
+00:24:05.010 --> 00:24:09.590
+Luiz Maia: jogar para cá como a gente fez com os outros.
+
+177
+00:24:14.660 --> 00:24:16.400
+Luiz Maia: O resulte.
+
+178
+00:24:16.560 --> 00:24:18.459
+Luiz Maia: A gente faz assim.
+
+179
+00:24:21.810 --> 00:24:30.660
+Luiz Maia: Ele está reclamando que o retorno aqui é Void. O retorno agora é Double. Então o erro acabou de sumir
+
+180
+00:24:31.880 --> 00:24:32.880
+Luiz Maia: ou não?
+
+181
+00:24:34.910 --> 00:24:37.890
+Luiz Maia: Ok, é que eu não estou fazendo o returne aqui,
+
+182
+00:24:43.770 --> 00:24:45.350
+Luiz Maia: mas a gente tem um problema.
+
+183
+00:24:48.400 --> 00:24:51.019
+Luiz Maia: Tem um problema, que é
+
+184
+00:24:52.430 --> 00:24:59.260
+Luiz Maia: se a Divisão for igual a zero, eu não posso manter esse comando aqui dentro.
+
+185
+00:25:02.110 --> 00:25:04.409
+Luiz Maia: Não dá para manter esse cara aqui.
+
+186
+00:25:05.310 --> 00:25:08.470
+Luiz Maia: O que eu tenho que fazer é lançar uma exceção.
+
+187
+00:25:09.690 --> 00:25:14.910
+Luiz Maia: E aí, como eu já fiz o Returne dentro do If. O que eu posso fazer,
+
+188
+00:25:22.660 --> 00:25:23.810
+Luiz Maia: fro
+
+189
+00:25:27.700 --> 00:25:38.709
+Luiz Maia: new é divide by zero, divisão por zero.
+
+190
+00:25:40.640 --> 00:25:44.000
+Luiz Maia: E aí muito aluno fica perguntando, mas
+
+191
+00:25:44.150 --> 00:25:47.380
+Luiz Maia: pô, você vai lançar uma exceção
+
+192
+00:25:47.750 --> 00:25:53.590
+Luiz Maia: caso dê certo. Não, ele primeiro vai fazer o hitane, se tiver. Ok?
+
+193
+00:25:53.720 --> 00:25:56.240
+Luiz Maia: Ele só vai executar o Flow
+
+194
+00:25:56.450 --> 00:26:10.219
+Luiz Maia: se o Op2 for igual a zero, então ele só vai executar essa instrução se ele não entrar dentro do if. Se ele entrar dentro do If, o que ele vai fazer? Ele vai retornar ao resultado.
+
+195
+00:26:11.570 --> 00:26:15.419
+Luiz Maia: Agora nossa classe ficou super limpa.
+
+196
+00:26:17.700 --> 00:26:24.310
+Luiz Maia: A gente está com a classe agora. Super limpinha. O que eu tenho que fazer agora aqui. Ó, nesse caso,
+
+197
+00:26:25.410 --> 00:26:31.289
+Luiz Maia: eu vou ter que fazer um Try-catch vai ficar meio feio, mas não tem jeito
+
+198
+00:26:35.050 --> 00:26:36.879
+Luiz Maia: aqui. Eu tenho que fazer o quê?
+
+199
+00:26:44.510 --> 00:26:52.380
+Luiz Maia: Nossa, por que ele tá fazendo isso, cara tá jogando tudo para a esquerda, Ketch.
+
+200
+00:26:53.620 --> 00:27:04.509
+Luiz Maia: E aqui eu vou pegar exatamente a exceção que eu gerei lá em cima. Divide by zero exception X.
+
+201
+00:27:06.330 --> 00:27:09.999
+Luiz Maia: Como eu falei para vocês, a gente tenta manter
+
+202
+00:27:14.710 --> 00:27:20.100
+Luiz Maia: a exceção mais próxima do que aconteceu de verdade.
+
+203
+00:27:21.070 --> 00:27:25.960
+Luiz Maia: Ficou meio feio esse código aqui. Mas é o que deu para fazer até agora.
+
+204
+00:27:29.340 --> 00:27:40.049
+Luiz Maia: Então, se eu fizer uma divisão por zero, ele vai gerar essa mensagem, professor, dúvida o get de opium. Tudo bem ser público. Mas e o set não deveria ser privado?
+
+205
+00:27:40.210 --> 00:27:43.520
+Luiz Maia: Por que ele seria privado? Gabriel,
+
+206
+00:27:47.020 --> 00:27:49.300
+Luiz Maia: você não pode alterar os operandos.
+
+207
+00:27:56.620 --> 00:27:59.000
+Luiz Maia: Você não poderia alterar os operandos.
+
+208
+00:28:00.960 --> 00:28:11.299
+Luiz Maia: Eu poderia. Daqui a pouco eu vou fazer isso. Eu não fiz ainda. Mas vou fazer para vocês verem como é que faz isso? Porque, na verdade, eu não estou usando nem o P1
+
+209
+00:28:11.390 --> 00:28:28.009
+Luiz Maia: e Op2 que são propriedades automáticas do C. Sharp. No meu código. Eu estou usando parâmetros que estão sendo passados nos métodos. Então esse cara aqui. E esse cara? Se eu comentar isso aqui, por exemplo,
+
+210
+00:28:28.180 --> 00:28:39.380
+Luiz Maia: deixa eu comentar isso aqui e comentar esse cara aqui, eles não impactam nada.
+
+211
+00:28:42.160 --> 00:28:59.199
+Luiz Maia: Não, eles continuariam públicos. Não tem nada de privado aqui. Eles continuariam públicos. Na verdade, o que acontece aqui, gente, é que vocês olham para isso e acham que Op1 é um atributo da classe, não é?
+
+212
+00:28:59.340 --> 00:29:08.710
+Luiz Maia: Eu falei isso para vocês na aula passada. Isso aqui é um método público por trás dos panos.
+
+213
+00:29:08.850 --> 00:29:16.340
+Luiz Maia: Tem o Op1 e o Op2 privados. Dentro do código que o compilador gera.
+
+214
+00:29:18.730 --> 00:29:24.590
+Luiz Maia: Se você olhar os códigos de encapsulamento que eu fiz. Eu mostrei uma evolução do código.
+
+215
+00:29:24.700 --> 00:29:30.490
+Luiz Maia: Eu mostrei como você faz em Java, e depois eu mostrei como se faz esse Sharp.
+
+216
+00:29:33.110 --> 00:29:40.620
+Luiz Maia: Então esses dois caras aqui, esses dois caras não são atributos. São métodos.
+
+217
+00:29:43.160 --> 00:29:46.499
+Luiz Maia: Sim, o Gabriel falou aqui.
+
+218
+00:29:46.730 --> 00:29:56.569
+Luiz Maia: Private double underscore op1 seria o atributo privado exatamente por trás dos panos.
+
+219
+00:29:57.460 --> 00:30:07.459
+Luiz Maia: Então ele gera um código aqui dentro, onde você não vê esse atributo privado.
+
+220
+00:30:07.870 --> 00:30:14.170
+Luiz Maia: Mas ele existe. Você tem que aceitar isso, cara. Eu não tenho o que fazer.
+
+221
+00:30:15.040 --> 00:30:17.840
+Luiz Maia: É C Sharp, gente,
+
+222
+00:30:18.330 --> 00:30:33.719
+Luiz Maia: você pode não gostar disso. Mas é o C Sharp. Não dá para a gente ignorar isso. Se você for para uma entrevista de emprego de estágio e não souber o que está acontecendo aqui,
+
+223
+00:30:33.950 --> 00:30:38.109
+Luiz Maia: provavelmente você vai ter problema de arrumar um estágio nessa área,
+
+224
+00:30:38.320 --> 00:30:44.459
+Luiz Maia: e eu falo para os meus alunos de C. Sharp. Olha só se tem uma área que tem emprego.
+
+225
+00:30:44.660 --> 00:30:47.789
+Luiz Maia: É na área de C. Sharp Dotnet.
+
+226
+00:30:48.440 --> 00:30:53.099
+Luiz Maia: Tem muita vaga de emprego. Ainda não sei até quando,
+
+227
+00:30:53.250 --> 00:30:56.610
+Luiz Maia: mas tem muita vaga de emprego para isso.
+
+228
+00:30:57.340 --> 00:30:59.289
+Luiz Maia: Se eu fosse vocês,
+
+229
+00:30:59.670 --> 00:31:13.759
+Luiz Maia: eu tentaria aprender bem, esse Sharp Dotnet para tentar uma vaga nessa área. Ela tem menos concorrência. Ela paga melhor do que Java e Python, principalmente,
+
+230
+00:31:14.870 --> 00:31:19.320
+Luiz Maia: e tem pouca mão de obra especializada nessa área.
+
+231
+00:31:19.620 --> 00:31:26.390
+Luiz Maia: Se eu fosse vocês, eu investiria em C. Sharp e Dotnet.
+
+232
+00:31:27.490 --> 00:31:31.399
+Luiz Maia: Pronto, o nosso código agora está bacana. Olha só.
+
+233
+00:31:34.770 --> 00:31:36.999
+Luiz Maia: Dá pra fazer tudo, cara.
+
+234
+00:31:37.440 --> 00:31:38.420
+pedro.yamato: Professor.
+
+235
+00:31:39.280 --> 00:31:39.840
+Luiz Maia: E a.
+
+236
+00:31:40.800 --> 00:31:52.020
+pedro.yamato: Só fazendo um comentário em cima da tua resposta para o Gabriel. Inclusive eu. Acho que era algo que estava confundindo ele que também estava me confundindo no começo,
+
+237
+00:31:52.340 --> 00:31:57.000
+pedro.yamato: justamente aquele último exemplo, se não me engano, que o senhor deu na aula passada,
+
+238
+00:31:57.420 --> 00:32:12.810
+pedro.yamato: que naquele método automático que tem o Get, o set. O senhor deixou o set privado e deixou com que os métodos que o senhor mesmo criou ali fossem alterar. Acho que um.
+
+239
+00:32:13.270 --> 00:32:13.750
+Luiz Maia: São da.
+
+240
+00:32:13.750 --> 00:32:15.010
+pedro.yamato: Classe, tal e.
+
+241
+00:32:15.010 --> 00:32:15.470
+Luiz Maia: É só.
+
+242
+00:32:15.470 --> 00:32:16.020
+pedro.yamato: All the.
+
+243
+00:32:16.400 --> 00:32:16.890
+Luiz Maia: Isso.
+
+244
+00:32:16.890 --> 00:32:20.950
+pedro.yamato: Eu acho que era isso que estava deixando a gente meio confuso.
+
+245
+00:32:21.100 --> 00:32:21.690
+pedro.yamato: E aí, por isso.
+
+246
+00:32:21.690 --> 00:32:22.160
+Luiz Maia: Que foi?
+
+247
+00:32:22.160 --> 00:32:32.560
+pedro.yamato: Que eu refleti. Eu acredito que cada método da calculadora não impacta no operando.
+
+248
+00:32:34.470 --> 00:32:44.139
+Luiz Maia: Está certo. É isso mesmo. Naquele exemplo que eu dei, o saldo só poderia ser alterado pelos métodos, creditar e debitar.
+
+249
+00:32:44.350 --> 00:32:50.579
+Luiz Maia: Mas isso eu vou fazer um Adendo mais para frente. Quando eu entrar com construtor ainda hoje,
+
+250
+00:32:50.920 --> 00:32:59.500
+Luiz Maia: aí vocês vão entender porque tem uma pergunta que uma aluna me fez hoje é o seguinte. Lp: Como é que eu inicializo o saldo
+
+251
+00:32:59.730 --> 00:33:05.270
+Luiz Maia: se eu não tenho um método sete para o saldo.
+
+252
+00:33:05.570 --> 00:33:08.140
+Luiz Maia: Aí vai entrar a ideia de construtor.
+
+253
+00:33:08.300 --> 00:33:13.690
+Luiz Maia: E aí você vai conseguir entender por que eu posso ter
+
+254
+00:33:13.800 --> 00:33:28.440
+Luiz Maia: o set do saldo privado. E mesmo assim eu consigo inicializar o saldo. Mas isso vai demorar alguns minutos. Ainda daqui a pouco você vai ver isso acontecer.
+
+255
+00:33:30.440 --> 00:33:32.110
+Luiz Maia: Usando o construtor.
+
+256
+00:33:33.420 --> 00:33:34.500
+pedro.yamato: Tranquilo produzido.
+
+257
+00:33:34.500 --> 00:33:45.559
+Luiz Maia: A calculadora não precisa ter nenhuma restrição de acesso aos operantes, apesar de eu não estar utilizando eles.
+
+258
+00:33:46.120 --> 00:34:00.209
+Luiz Maia: Mas isso vai ser. Eu vou evoluir essa calculadora para poder ter a opção de usar essas propriedades automáticas
+
+259
+00:34:00.630 --> 00:34:18.920
+Luiz Maia: em vez de usar a passagem de parâmetros. Como está aqui. Mas isso eu vou precisar um pouco mais de tempo para vocês verem que eu posso usar tanto dessa maneira como usar também os atributos da classe
+
+260
+00:34:19.000 --> 00:34:21.639
+Luiz Maia: usando as propriedades automáticas.
+
+261
+00:34:21.750 --> 00:34:24.730
+Luiz Maia: Mas é assim. É um passo de cada vez.
+
+262
+00:34:24.870 --> 00:34:32.370
+Luiz Maia: O que nós fizemos aqui foi dar uma limpada na classe, tirar todos os acoplamentos que tinham
+
+263
+00:34:32.630 --> 00:34:36.429
+Luiz Maia: gerar esse tratamento de exceção aqui
+
+264
+00:34:38.219 --> 00:34:41.499
+Luiz Maia: e agora, a gente vai poder evoluir para a calculadora
+
+265
+00:34:41.840 --> 00:34:47.219
+Luiz Maia: em um novo estágio. Mas não agora. Primeiro, agora a gente vai fazer o quê?
+
+266
+00:34:47.330 --> 00:34:51.310
+Luiz Maia: A gente vai primeiro entender o que são os construtores.
+
+267
+00:34:52.250 --> 00:34:53.389
+Luiz Maia: Tá certo.
+
+268
+00:34:53.870 --> 00:34:57.230
+Luiz Maia: Nesse caso, tanto faz.
+
+269
+00:35:04.710 --> 00:35:13.259
+Luiz Maia: Na verdade, Gabriel, você mexer nesses operandos que estão aqui
+
+270
+00:35:13.580 --> 00:35:17.269
+Luiz Maia: não vai fazer nenhum efeito nos métodos,
+
+271
+00:35:17.500 --> 00:35:22.220
+Luiz Maia: porque os métodos estão utilizando esses parâmetros aqui.
+
+272
+00:35:23.350 --> 00:35:25.239
+Luiz Maia: Então, se você mexer
+
+273
+00:35:25.780 --> 00:35:34.490
+Luiz Maia: em Op1 e Op2 não vai fazer a menor diferença no somar. Quer ver? Eu posso fazer um exemplo aqui para você.
+
+274
+00:35:36.250 --> 00:35:38.290
+Luiz Maia: Como é que eu vou fazer isso, gente?
+
+275
+00:35:38.660 --> 00:35:41.819
+Luiz Maia: Porque o Ap1 e o Ap2 estão vindo aqui.
+
+276
+00:35:42.230 --> 00:35:45.010
+Luiz Maia: Eu posso fazer assim. Ó, olha só,
+
+277
+00:35:45.590 --> 00:35:50.509
+Luiz Maia: eu vou fazer isso aqui só para você ver que não vai ter efeito nenhum.
+
+278
+00:35:54.130 --> 00:36:06.090
+Luiz Maia: Calcula, calcula ponto Op1 recebe um
+
+279
+00:36:08.060 --> 00:36:17.210
+Luiz Maia: calcula, recebe dois. Não vai ter o menor impacto no resultado, porque eu não estou passando.
+
+280
+00:36:19.580 --> 00:36:37.180
+Luiz Maia: Eu não estou usando o op1 o op2 maiúsculo dentro da classe. Eu estou passando o op1 e o op2 que são os parâmetros que estão chegando aqui. Para mim, isso não vai fazer a menor diferença. Quer? Ver vou rodar o código para você ver que não vai ter a menor diferença.
+
+281
+00:36:37.740 --> 00:36:39.229
+Luiz Maia: Vou fazer uma soma.
+
+282
+00:36:40.380 --> 00:36:43.540
+Luiz Maia: Um, mais um, dois.
+
+283
+00:36:48.810 --> 00:36:49.970
+Luiz Maia: Olha só.
+
+284
+00:36:50.740 --> 00:36:58.500
+Luiz Maia: Esses caras foram ignorados. Eles não têm o menor sentido. Não fazem a menor diferença na soma.
+
+285
+00:36:58.630 --> 00:37:01.850
+Luiz Maia: Caso contrário, daria três e não dois.
+
+286
+00:37:02.970 --> 00:37:10.280
+Luiz Maia: Mas para que você está definindo esses atributos
+
+287
+00:37:10.870 --> 00:37:18.989
+Luiz Maia: dentro da classe. Se você não está utilizando, eu não estou utilizando ainda, mas eu vou usar daqui a pouco,
+
+288
+00:37:20.510 --> 00:37:25.640
+Luiz Maia: e vocês vão entender por que eu estou usando.
+
+289
+00:37:26.840 --> 00:37:39.650
+Luiz Maia: Só peço um pouco de paciência para eu poder evoluir com vocês para ter continuação do código.
+
+290
+00:37:41.070 --> 00:37:55.399
+Luiz Maia: Isso aqui ficou meio feio, né? Esse Troy aqui o negócio ficou meio grande. A gente pode de repente, pensar numa maneira de refaturar esse código. Mas o mais importante, o mais importante que vocês percebam
+
+291
+00:37:55.730 --> 00:38:01.649
+Luiz Maia: que a classe. Ela não tem nenhum acoplamento com a tela.
+
+292
+00:38:02.550 --> 00:38:07.709
+Luiz Maia: Tudo que tinha de acoplamento foi tirado, inclusive com a mensagem de erro.
+
+293
+00:38:08.740 --> 00:38:12.420
+Luiz Maia: Então, se eu tentar fazer uma divisão por zero, olha só o que acontece?
+
+294
+00:38:13.600 --> 00:38:19.760
+Luiz Maia: Dividir quatro um por zero. Erro, divisão por zero.
+
+295
+00:38:20.550 --> 00:38:29.780
+Luiz Maia: O nosso código continua funcionando normalmente. Eu precisei mexer muito pouco no código para ele funcionar muito pouco.
+
+296
+00:38:30.790 --> 00:38:38.810
+Luiz Maia: Se você olhar o tamanho dessa calculadora, ela está com cento e oito linhas. De código fora a classe.
+
+297
+00:38:40.530 --> 00:38:45.370
+Luiz Maia: O que eu mudei aqui foi. Eu não mudei quase nada.
+
+298
+00:38:45.540 --> 00:38:58.179
+Luiz Maia: Olha os métodos. Como estão os mesmos? O problema principal continua o mesmo entrar inteiro. Entrar. Opção: entrar operando. Eu só mudei. O quê? O calcular.
+
+299
+00:38:58.400 --> 00:39:02.850
+Luiz Maia: E aí a classe calcula mais nada.
+
+300
+00:39:03.250 --> 00:39:06.030
+Luiz Maia: O resto do código não foi alterado.
+
+301
+00:39:07.030 --> 00:39:15.669
+Luiz Maia: Tá exatamente como estava inicialmente. O que está faltando explicar é quando que eu vou usar isso aqui.
+
+302
+00:39:17.030 --> 00:39:23.620
+Luiz Maia: Essa é a grande questão que daqui a pouco vai aparecer o uso disso.
+
+303
+00:39:23.930 --> 00:39:28.499
+Luiz Maia: E aí vai aparecer mais conceitos de orientação objeto para vocês.
+
+304
+00:39:29.190 --> 00:39:32.830
+Luiz Maia: O que a gente vai ver agora são os construtores.
+
+305
+00:39:34.510 --> 00:39:35.719
+Luiz Maia: Tá certo.
+
+306
+00:39:36.060 --> 00:39:39.360
+Luiz Maia: E entender como o construtor funciona.
+
+307
+00:39:39.730 --> 00:39:45.239
+Luiz Maia: É muito parecido com o Java. Gente não tem muita diferença não
+
+308
+00:39:46.510 --> 00:39:54.569
+Luiz Maia: fazer um pequeno intervalo para tomar uma água aqui. E aí a gente volta para falar sobre construtores, e aí. Depois
+
+309
+00:39:54.710 --> 00:39:59.929
+Luiz Maia: a gente volta para falar de calculadora de novo.
+
+310
+00:40:00.320 --> 00:40:02.770
+Luiz Maia: Ele vai ter uma nova versão
+
+311
+00:40:03.060 --> 00:40:19.860
+Luiz Maia: usando construtores nessa calculadora nova. Depois esse código todo. Sobe para o drive e vocês ficam com esse código guardado para vocês poderem brincar, estudar, etc. Já volto. Cinco minutos. Eu estou de volta.
+
+312
+00:45:03.440 --> 00:45:13.660
+Luiz Maia: Estamos de volta, pessoal. Vamos então agora entender. Vou fechar essa calculadora que está aqui.
+
+313
+00:45:14.120 --> 00:45:19.290
+Luiz Maia: E vou começar um projeto novo com vocês é,
+
+314
+00:45:24.990 --> 00:45:28.640
+Luiz Maia: deixa eu ver o que eu vou fazer aqui agora. Espera aí.
+
+315
+00:45:30.660 --> 00:45:33.309
+Luiz Maia: Começar um novo projeto com vocês
+
+316
+00:45:38.890 --> 00:45:42.970
+Luiz Maia: chamado Construtores.
+
+317
+00:45:45.440 --> 00:45:58.349
+Luiz Maia: Esse cara. Vai ser o construtor um aí, Caramba, construo tour um.
+
+318
+00:45:59.620 --> 00:46:02.880
+Luiz Maia: O nome da solução vai ser construtores.
+
+319
+00:46:06.700 --> 00:46:12.150
+Luiz Maia: Construtor, construtor, tá certo. O nome tá, né? Tá, tá ok.
+
+320
+00:46:14.830 --> 00:46:19.850
+Luiz Maia: Vai criar aqui um projeto para a gente, é
+
+321
+00:46:22.650 --> 00:46:25.559
+Luiz Maia: ok, o que eu tenho que fazer aqui, gente?
+
+322
+00:47:04.980 --> 00:47:06.530
+Luiz Maia: Bom, vamos lá.
+
+323
+00:47:07.540 --> 00:47:14.340
+Luiz Maia: É, eu não sei por que ele está fazendo isso, cara,
+
+324
+00:47:15.510 --> 00:47:22.150
+Luiz Maia: não está pegando a definição correta dos dos meus templentes. Agora
+
+325
+00:47:22.900 --> 00:47:25.840
+Luiz Maia: vamos lá. O que é um construtor?
+
+326
+00:47:26.930 --> 00:47:33.040
+Luiz Maia: Bom, como o nome está dizendo, o construtor constrói, tá.
+
+327
+00:47:34.410 --> 00:47:40.410
+Luiz Maia: O que ele faz dentro da classe? Entendam. Isso é bem simples, tá?
+
+328
+00:47:41.140 --> 00:47:53.820
+Luiz Maia: Não precisa muita coisa para entender. Construtor. O construtor executado quando a classe é instanciada.
+
+329
+00:47:55.050 --> 00:48:00.460
+Luiz Maia: Está certo e aí ele. Ele.
+
+330
+00:48:01.510 --> 00:48:03.199
+Luiz Maia: O consultor. É um método.
+
+331
+00:48:03.390 --> 00:48:07.590
+Luiz Maia: Só que ele é um método diferente.
+
+332
+00:48:08.220 --> 00:48:11.320
+Luiz Maia: Primeiro, ele não retorna a nada.
+
+333
+00:48:11.480 --> 00:48:14.949
+Luiz Maia: Ele não tem retorno.
+
+334
+00:48:15.530 --> 00:48:19.469
+Luiz Maia: Não tem Void, não tem Double não tem nada.
+
+335
+00:48:19.780 --> 00:48:22.370
+Luiz Maia: Diferentemente do somar,
+
+336
+00:48:22.890 --> 00:48:31.029
+Luiz Maia: subtrair que tem um retorno no método. O construtor é um método que não retorna a nada. É a primeira coisa.
+
+337
+00:48:31.890 --> 00:48:38.740
+Luiz Maia: Segundo o construtor, ele é executado apenas uma vez.
+
+338
+00:48:39.350 --> 00:48:42.510
+Luiz Maia: Quando você instância a classe,
+
+339
+00:48:43.070 --> 00:48:48.970
+Luiz Maia: você não chama o construtor. Ele é chamado na hora que você cria a classe.
+
+340
+00:48:49.370 --> 00:48:51.759
+Luiz Maia: Ele não entendi nada.
+
+341
+00:48:52.200 --> 00:48:54.710
+Luiz Maia: Ok, tranquilo.
+
+342
+00:48:55.340 --> 00:48:57.779
+Luiz Maia: Vamos fazer aqui um exemplo.
+
+343
+00:49:03.060 --> 00:49:10.190
+Luiz Maia: Vou criar aqui aquela nossa famosa models
+
+344
+00:49:10.690 --> 00:49:13.370
+Luiz Maia: aqui dentro. Eu vou criar uma classe
+
+345
+00:49:14.940 --> 00:49:19.089
+Luiz Maia: no New exatamente Jorge, na hora que você faz o New.
+
+346
+00:49:19.310 --> 00:49:24.189
+Luiz Maia: Você chama o construtor automaticamente nessa hora
+
+347
+00:49:24.530 --> 00:49:28.140
+Luiz Maia: aqui eu vou adicionar uma classe. Cadê classe?
+
+348
+00:49:30.410 --> 00:49:31.889
+Luiz Maia: Vou chamar de conta
+
+349
+00:49:35.420 --> 00:49:37.110
+Luiz Maia: aqui. A conta
+
+350
+00:49:44.110 --> 00:49:48.159
+Luiz Maia: é aquela conta que nós usamos nas aulas anteriores.
+
+351
+00:49:48.530 --> 00:50:00.130
+Luiz Maia: Vai ter um pub que intim ai de get set.
+
+352
+00:50:00.300 --> 00:50:05.810
+Luiz Maia: O nome e o saldo.
+
+353
+00:50:21.100 --> 00:50:28.199
+Luiz Maia: Pronto, está aqui os nossos nossas propriedades automáticas, né?
+
+354
+00:50:28.650 --> 00:50:31.720
+Luiz Maia: O C. Sharp não chama isso de atributos.
+
+355
+00:50:32.060 --> 00:50:43.730
+Luiz Maia: Chama isso de propriedades automáticas? Porque o Id, o nome e o saldo. Na verdade, são métodos. E por trás dos panos, você tem lá
+
+356
+00:50:44.390 --> 00:50:53.510
+Luiz Maia: os atributos privados da classe que estão sendo gerados pelo compilador. Você não mexe com isso.
+
+357
+00:50:59.390 --> 00:51:11.900
+Luiz Maia: Quando você estancia a classe aqui, olha só conta conta.
+
+358
+00:51:12.180 --> 00:51:13.530
+Luiz Maia: New, conta
+
+359
+00:51:17.440 --> 00:51:19.389
+Luiz Maia: aí. Você faz o seguinte.
+
+360
+00:51:24.520 --> 00:51:27.610
+Luiz Maia: Console Wrightline.
+
+361
+00:51:29.110 --> 00:51:30.620
+Luiz Maia: Ai de
+
+362
+00:51:38.990 --> 00:51:40.380
+Luiz Maia: conta.
+
+363
+00:51:40.640 --> 00:51:44.630
+Luiz Maia: Ponto aí de.
+
+364
+00:51:52.300 --> 00:51:58.160
+Luiz Maia: Estou printando os valores dos atributos da classe
+
+365
+00:52:02.170 --> 00:52:03.440
+Luiz Maia: enorme,
+
+366
+00:52:06.810 --> 00:52:16.610
+Luiz Maia: mas conta se vocês quiserem, eu posso fazer interpolação aqui também. Não tem problema nenhum nome.
+
+367
+00:52:18.820 --> 00:52:20.190
+Luiz Maia: O saldo.
+
+368
+00:52:33.480 --> 00:52:35.360
+Luiz Maia: O que ele vai brincar aqui?
+
+369
+00:52:37.320 --> 00:52:46.040
+Luiz Maia: Vocês estão vendo alguma coisa sendo atribuído a Id nome Saldo não,
+
+370
+00:52:46.270 --> 00:52:50.360
+Luiz Maia: não tem nada sendo atribuído a esses caras aqui
+
+371
+00:52:50.490 --> 00:52:54.839
+Luiz Maia: você não está vendo nenhum get nenhum set. Nada disso.
+
+372
+00:52:55.580 --> 00:52:58.230
+Luiz Maia: O que vai acontecer aqui é o seguinte.
+
+373
+00:52:58.880 --> 00:53:01.469
+Luiz Maia: Olha só. Vou executar o Programa
+
+374
+00:53:10.260 --> 00:53:15.850
+Luiz Maia: Zero nome não tem nada saldo zero.
+
+375
+00:53:16.590 --> 00:53:21.970
+Luiz Maia: Quem atribuiu esses valores iniciais
+
+376
+00:53:26.470 --> 00:53:36.630
+Luiz Maia: para esses atributos que estão escondidos aqui dentro da minha classe, não é quem botou
+
+377
+00:53:37.280 --> 00:53:42.970
+Luiz Maia: zero no Id? Quem botou zero no saldo? Quem inicializou o nome?
+
+378
+00:53:43.360 --> 00:53:44.649
+Luiz Maia: Quem fez isso?
+
+379
+00:53:45.850 --> 00:53:47.270
+Luiz Maia: O construtor.
+
+380
+00:53:48.290 --> 00:53:50.890
+Luiz Maia: Mas cadê o construtor?
+
+381
+00:53:53.860 --> 00:54:00.889
+Luiz Maia: O construtor está escondido aqui dentro da classe. Ele não aparece aqui dentro,
+
+382
+00:54:01.210 --> 00:54:11.930
+Luiz Maia: mas o Compilador automaticamente gera um construtor chamado construtor padrão ou construtor default,
+
+383
+00:54:14.240 --> 00:54:20.119
+Luiz Maia: que ele inicializa essas variáveis. É como se estivesse aqui dentro.
+
+384
+00:54:22.160 --> 00:54:26.349
+Luiz Maia: É como se estivesse aqui dentro. Um método assim. Ó,
+
+385
+00:54:30.290 --> 00:54:31.780
+Luiz Maia: algo do tipo,
+
+386
+00:54:37.210 --> 00:54:38.580
+Luiz Maia: é.
+
+387
+00:54:56.010 --> 00:54:57.799
+Luiz Maia: É como se fosse isso aqui.
+
+388
+00:55:02.550 --> 00:55:09.520
+Luiz Maia: Só que você não precisa declarar esse construtor,
+
+389
+00:55:09.910 --> 00:55:15.939
+Luiz Maia: porque ele é automaticamente gerado pelo compilador.
+
+390
+00:55:22.010 --> 00:55:27.220
+Luiz Maia: Então, quando você compila o teu programa.
+
+391
+00:55:27.370 --> 00:55:34.490
+Luiz Maia: Ele gera esse construtor de forma automática, percebam? Ele não tem retorno,
+
+392
+00:55:36.560 --> 00:55:39.899
+Luiz Maia: não tem Void não tem Double não tem nada.
+
+393
+00:55:41.600 --> 00:55:50.460
+Luiz Maia: Segundo, eu não preciso declarar esse cara, porque ele já é declarado automaticamente por padrão.
+
+394
+00:55:51.520 --> 00:55:55.500
+Luiz Maia: E aí acontece exatamente o que vocês estão vendo aqui.
+
+395
+00:55:56.000 --> 00:56:08.000
+Luiz Maia: Eu poderia fazer aqui? Por exemplo, se conta, ponto o nome
+
+396
+00:56:11.510 --> 00:56:13.159
+Luiz Maia: igual a nulo.
+
+397
+00:56:14.560 --> 00:56:20.390
+Luiz Maia: O que eu poderia fazer aqui com nome
+
+398
+00:56:27.720 --> 00:56:28.780
+Luiz Maia: nu.
+
+399
+00:56:31.900 --> 00:56:34.950
+Luiz Maia: Vamos ver se funciona. Vamos rodar pra vocês verem.
+
+400
+00:56:37.290 --> 00:56:39.170
+Luiz Maia: Tá lá? O nome é nulo.
+
+401
+00:56:42.000 --> 00:56:48.229
+Luiz Maia: Então o construtor atribuiu nulo ao nome automaticamente.
+
+402
+00:56:50.530 --> 00:56:51.650
+Luiz Maia: Tá certo,
+
+403
+00:56:58.140 --> 00:57:08.019
+Luiz Maia: agora eu posso. E aí que é interessante vocês perceberem é que eu posso criar os meus próprios construtores.
+
+404
+00:57:08.590 --> 00:57:12.039
+Luiz Maia: Esse construtor é o construtor padrão
+
+405
+00:57:12.210 --> 00:57:16.169
+Luiz Maia: que é criado pelo próprio compilador.
+
+406
+00:57:16.580 --> 00:57:22.670
+Luiz Maia: Nada me impede que eu crie construtores meus próprios.
+
+407
+00:57:23.090 --> 00:57:32.830
+Luiz Maia: E aí eu posso inicializar as variáveis na hora que eu crio as variáveis, não os atributos da classe. Na hora que eu crio a classe conta.
+
+408
+00:57:33.380 --> 00:57:34.359
+Luiz Maia: Vamos lá.
+
+409
+00:57:35.200 --> 00:57:43.730
+Luiz Maia: É, vou criar aqui um outro construtor, um outro projeto.
+
+410
+00:57:43.960 --> 00:57:54.570
+Luiz Maia: New Project console Construtor dois.
+
+411
+00:57:58.700 --> 00:58:15.189
+Luiz Maia: Vou pegar esse cara aqui, copiar, colar, vou fazer um um Sync no Memespace.
+
+412
+00:58:15.600 --> 00:58:25.860
+Luiz Maia: Ok, agora eu posso fazer o que nessa classe eu posso especificar um construtor meu.
+
+413
+00:58:26.770 --> 00:58:32.370
+Luiz Maia: Assim ó Public conta
+
+414
+00:58:40.710 --> 00:58:41.890
+Luiz Maia: Double.
+
+415
+00:58:42.770 --> 00:58:51.769
+Luiz Maia: E aí que vem aquela história que nós falamos na aula passada.
+
+416
+00:58:54.880 --> 00:59:13.120
+Luiz Maia: Vocês se lembram que eu defini o saldo com sete privado aqui, assim, ou seja, eu não conseguiria
+
+417
+00:59:13.890 --> 00:59:27.160
+Luiz Maia: alterar o saldo. E realmente não faz sentido eu alterar o saldo diretamente na conta, porque eu teria que passar pelos métodos de creditar e debitar.
+
+418
+00:59:27.640 --> 00:59:33.100
+Luiz Maia: Só que agora eu tenho a possibilidade de inicializar o saldo.
+
+419
+00:59:36.010 --> 00:59:36.880
+Luiz Maia: E aí?
+
+420
+00:59:39.540 --> 00:59:46.739
+Luiz Maia: E agora, quando eu fizer a criação da minha conta.
+
+421
+00:59:52.290 --> 01:00:02.900
+Luiz Maia: Conta classe, conta, conta. Recebe New
+
+422
+01:00:03.790 --> 01:00:07.310
+Luiz Maia: conta. E aqui eu posso passar para ela.
+
+423
+01:00:15.950 --> 01:00:17.870
+Luiz Maia: Estou inicializando a conta.
+
+424
+01:00:19.920 --> 01:00:22.230
+Luiz Maia: Vou pegar aqui do meu programa.
+
+425
+01:00:22.600 --> 01:00:28.420
+Luiz Maia: Esse cara aqui, ó, vou copiar esse cara daqui.
+
+426
+01:00:29.370 --> 01:00:31.829
+Luiz Maia: Jogar aqui para dentro
+
+427
+01:00:38.530 --> 01:00:40.010
+Luiz Maia: é Elcio.
+
+428
+01:00:43.010 --> 01:00:44.520
+Luiz Maia: Nome.
+
+429
+01:00:52.280 --> 01:00:57.040
+Luiz Maia: Conta um nome.
+
+430
+01:01:08.910 --> 01:01:10.830
+Luiz Maia: Vamos ver o que acontece agora,
+
+431
+01:01:23.290 --> 01:01:23.990
+Luiz Maia: tá?
+
+432
+01:01:25.990 --> 01:01:31.689
+Luiz Maia: Por que aconteceu isso? Porque esse cara aqui não é o nosso projeto default.
+
+433
+01:01:33.940 --> 01:01:34.840
+Luiz Maia: Pronto,
+
+434
+01:01:41.100 --> 01:01:44.570
+Luiz Maia: tchau. Lá funcionou direitinho.
+
+435
+01:01:47.400 --> 01:01:57.590
+Luiz Maia: Quando você declara um construtor como esse, o construtor padrão, ele some
+
+436
+01:01:57.790 --> 01:02:01.679
+Luiz Maia: o compilador não gera mais aquele construtor
+
+437
+01:02:05.760 --> 01:02:07.350
+Luiz Maia: automático.
+
+438
+01:02:08.030 --> 01:02:11.809
+Luiz Maia: Esse aqui, ele vai gerar um construtor automático
+
+439
+01:02:12.540 --> 01:02:18.890
+Luiz Maia: para inicializar os atributos da classe aqui. Ele não vai fazer isso mais.
+
+440
+01:02:19.120 --> 01:02:26.300
+Luiz Maia: Ele vai te obrigar. Se eu tentar criar uma conta. Olha, só.
+
+441
+01:02:28.580 --> 01:02:29.780
+Luiz Maia: Conta.
+
+442
+01:02:31.250 --> 01:02:38.750
+Luiz Maia: Conta dois mil conta.
+
+443
+01:02:40.320 --> 01:02:42.010
+Luiz Maia: Ele não vai aceitar mais.
+
+444
+01:02:44.300 --> 01:02:51.339
+Luiz Maia: Eu não consigo mais criar uma conta sem passar os parâmetros,
+
+445
+01:02:59.430 --> 01:03:00.749
+Luiz Maia: mas é de Pa.
+
+446
+01:03:01.220 --> 01:03:04.560
+Luiz Maia: Eu não poderia ter os dois construtores.
+
+447
+01:03:09.310 --> 01:03:10.680
+Luiz Maia: Poderia?
+
+448
+01:03:11.980 --> 01:03:13.580
+Luiz Maia: Claro que eu poderia.
+
+449
+01:03:14.200 --> 01:03:16.240
+Luiz Maia: E aí eu posso fazer assim. Ó,
+
+450
+01:03:23.580 --> 01:03:25.899
+Luiz Maia: deixa eu ver o que eu fiz aqui.
+
+451
+01:03:35.270 --> 01:03:36.999
+Luiz Maia: Eu posso fazer assim.
+
+452
+01:03:38.930 --> 01:03:46.940
+Luiz Maia: Eu tenho esse construtor aqui. E também tenho o construtor padrão.
+
+453
+01:03:52.880 --> 01:03:56.030
+Luiz Maia: Pronto, agora ele vai aceitar.
+
+454
+01:03:56.270 --> 01:03:58.730
+Luiz Maia: Ele vai aceitar isso aqui.
+
+455
+01:04:00.750 --> 01:04:05.330
+Luiz Maia: Então eu tenho dois construtores na minha classe.
+
+456
+01:04:06.100 --> 01:04:11.119
+Luiz Maia: O construtor padrão e o construtor que eu criei
+
+457
+01:04:12.440 --> 01:04:20.670
+Luiz Maia: isso aqui, gente. Professor, você consegue deixar um valor de for para um parâmetro da classe do tipo
+
+458
+01:04:20.900 --> 01:04:26.249
+Luiz Maia: saldo inicial. Se não passar ao estanciar ser sempre cem.
+
+459
+01:04:32.830 --> 01:04:34.969
+Luiz Maia: Aham, posso fazer sim.
+
+460
+01:04:36.340 --> 01:04:38.979
+Luiz Maia: Posso fazer alguma coisa desse tipo? Sim,
+
+461
+01:04:40.540 --> 01:04:46.660
+Luiz Maia: se você quiser deixar um valor específico para algum atributo.
+
+462
+01:04:46.810 --> 01:04:49.280
+Luiz Maia: Dá para você fazer isso no construtor?
+
+463
+01:04:51.300 --> 01:04:56.840
+Luiz Maia: Daqui a pouco, a gente pode tentar fazer um exemplo para você, especificamente
+
+464
+01:04:57.000 --> 01:04:59.090
+Luiz Maia: o que eu quero que vocês vejam aqui.
+
+465
+01:04:59.210 --> 01:05:05.280
+Luiz Maia: Que eu tenho dois construtores diferentes
+
+466
+01:05:05.930 --> 01:05:12.149
+Luiz Maia: que podem ser utilizados para instanciar um objeto da classe conta.
+
+467
+01:05:12.710 --> 01:05:13.900
+Luiz Maia: Tá certo.
+
+468
+01:05:14.640 --> 01:05:22.550
+Luiz Maia: Isso aqui que vocês estão vendo é um exemplo de poliomorfismo.
+
+469
+01:05:28.480 --> 01:05:34.940
+Luiz Maia: Isso aqui é um exemplo de polimorfismo chamado polimorfismo estático.
+
+470
+01:05:39.450 --> 01:05:45.869
+Luiz Maia: Mais especificamente, isso aqui é uma sobrecarga
+
+471
+01:05:51.150 --> 01:05:52.560
+Luiz Maia: de método
+
+472
+01:05:55.910 --> 01:05:59.559
+Luiz Maia: ou sobrecarga de construtores.
+
+473
+01:06:05.470 --> 01:06:12.360
+Luiz Maia: Então isso aqui que vocês estão vendo é polimorfismo estático.
+
+474
+01:06:13.040 --> 01:06:14.659
+Luiz Maia: Por que é estático?
+
+475
+01:06:15.720 --> 01:06:18.730
+Luiz Maia: Porque ele é resolvido em tempo de compilação.
+
+476
+01:06:19.530 --> 01:06:28.930
+Luiz Maia: E ele tem um nome mais específico. É um polimorfismo estático do tipo sobrecarga de métodos ou construtores.
+
+477
+01:06:31.970 --> 01:06:34.710
+Luiz Maia: Isso é importante vocês entenderem gente.
+
+478
+01:06:35.020 --> 01:06:38.240
+Luiz Maia: Tudo tem nome.
+
+479
+01:06:39.750 --> 01:06:42.340
+Luiz Maia: Tudo tem conceito por trás.
+
+480
+01:06:42.480 --> 01:06:46.540
+Luiz Maia: Você vai para uma entrevista de estágio. Uma entrevista de emprego.
+
+481
+01:06:46.750 --> 01:06:53.959
+Luiz Maia: O entrevistador pode te perguntar: vem cá. Você pode me explicar o que está acontecendo nesse código aqui.
+
+482
+01:06:54.310 --> 01:06:59.489
+Luiz Maia: E aí você vai ficar assim. Perdidão não vai saber o que está acontecendo.
+
+483
+01:06:59.870 --> 01:07:02.180
+Luiz Maia: Você precisa saber se os nomes.
+
+484
+01:07:06.350 --> 01:07:15.090
+Luiz Maia: Pouca gente, poucos programadores sabem explicar o que está acontecendo aqui.
+
+485
+01:07:17.230 --> 01:07:21.829
+Luiz Maia: E essa frase pequenininha que está aqui explica tudo.
+
+486
+01:07:23.130 --> 01:07:24.900
+Luiz Maia: Tá certo.
+
+487
+01:07:25.750 --> 01:07:31.750
+Luiz Maia: Eu posso ter outros construtores além do
+
+488
+01:07:33.070 --> 01:07:37.489
+Luiz Maia: padrão, eu poderia ter um outro construtor, do tipo
+
+489
+01:07:44.670 --> 01:07:48.010
+Luiz Maia: onde você entra com o nome.
+
+490
+01:07:50.530 --> 01:07:55.860
+Luiz Maia: Vou botar aqui, por exemplo, o Id
+
+491
+01:07:56.990 --> 01:07:59.299
+Luiz Maia: e vou tirar o saldo, por exemplo.
+
+492
+01:08:01.370 --> 01:08:05.350
+Luiz Maia: Não, eu não vou tirar o saldo para vocês verem que vai dar erro.
+
+493
+01:08:15.150 --> 01:08:19.109
+Luiz Maia: Eu não posso ter dois construtores.
+
+494
+01:08:20.000 --> 01:08:25.140
+Luiz Maia: E aí vem um outro conceito importante: assinatura do método.
+
+495
+01:08:26.939 --> 01:08:32.260
+Luiz Maia: Olha a quantidade de conceito que tem por trás de uma aula simples como essa.
+
+496
+01:08:33.420 --> 01:08:39.210
+Luiz Maia: Polimorfismo estático, sobrecarga de construtor.
+
+497
+01:08:39.500 --> 01:08:42.470
+Luiz Maia: Olha a quantidade de conceito que tem nisso.
+
+498
+01:08:43.160 --> 01:08:48.920
+Luiz Maia: E aqui você tem um outro conceito: importante assinatura do método.
+
+499
+01:08:49.140 --> 01:08:56.699
+Luiz Maia: Eu não posso ter dois construtores com a mesma assinatura. O que é assinatura de um construtor.
+
+500
+01:08:56.800 --> 01:09:01.060
+Luiz Maia: Os parâmetros que estão sendo passados para o construtor
+
+501
+01:09:01.609 --> 01:09:06.079
+Luiz Maia: aqui. Nesse caso, aqui em cima tem Id, nome e saldo.
+
+502
+01:09:06.660 --> 01:09:14.769
+Luiz Maia: Aqui tem Id, nome, saldo, ou seja, a assinatura do construtor é igual do outro. Eu não posso ter
+
+503
+01:09:15.109 --> 01:09:21.659
+Luiz Maia: esse conto aqui. Não tem nenhum parâmetro. Então a assinatura dele é diferente dos outros.
+
+504
+01:09:22.450 --> 01:09:26.950
+Luiz Maia: Como é que eu posso ter três construtores aqui, assim?
+
+505
+01:09:28.890 --> 01:09:33.900
+Luiz Maia: E aí talvez eu tenha respondido ao Gabriel,
+
+506
+01:09:35.580 --> 01:09:45.010
+Luiz Maia: onde eu posso atribuir um valor específico default para o saldo,
+
+507
+01:09:45.590 --> 01:09:50.709
+Luiz Maia: caso eu não especifique nada no saldo. O valor vai ser zero.
+
+508
+01:09:57.840 --> 01:09:58.869
+Luiz Maia: E aí
+
+509
+01:10:03.780 --> 01:10:14.590
+Luiz Maia: não tem prioridade aqui, Gabriel, olha só o que determina qual construtor será executado.
+
+510
+01:10:14.750 --> 01:10:16.279
+Luiz Maia: É isso aqui. Ó,
+
+511
+01:10:38.210 --> 01:10:40.679
+Luiz Maia: é isso aqui que define a prioridade
+
+512
+01:10:41.970 --> 01:10:46.320
+Luiz Maia: na hora que você cria o objeto daquela classe.
+
+513
+01:10:46.630 --> 01:10:48.810
+Luiz Maia: Você passa os parâmetros.
+
+514
+01:10:49.210 --> 01:10:59.560
+Luiz Maia: E aí ele sabe, de maneira polifórmica, que é o termo que a gente gosta de usar.
+
+515
+01:10:59.780 --> 01:11:02.840
+Luiz Maia: Ele vai usar esse construtor aqui.
+
+516
+01:11:04.110 --> 01:11:06.190
+Luiz Maia: Então não tem prioridade.
+
+517
+01:11:11.240 --> 01:11:13.090
+Luiz Maia: Exatamente.
+
+518
+01:11:13.280 --> 01:11:21.990
+Luiz Maia: Você pode usar um construtor numa hora ou do construtor em outro momento.
+
+519
+01:11:22.270 --> 01:11:23.510
+Luiz Maia: Está certo.
+
+520
+01:11:24.040 --> 01:11:41.619
+Luiz Maia: O que define a execução do construtor é o que você está passando como parâmetro do construtor. Nesse caso, eu estou usando esse construtor aqui porque a assinatura do método tem dois parâmetros.
+
+521
+01:11:41.900 --> 01:11:49.880
+Luiz Maia: Se eu passar três, ele vai executar esse. Se eu não passar parâmetro nenhum, ele vai executar esse.
+
+522
+01:11:50.600 --> 01:11:56.170
+Luiz Maia: Eu só não posso ter dois construtores com a mesma assinatura.
+
+523
+01:11:56.810 --> 01:12:00.870
+Luiz Maia: Isso não tem nada de loucura, cara, isso faz todo sentido.
+
+524
+01:12:01.160 --> 01:12:06.610
+Luiz Maia: Você pode querer instanciar um objeto de maneiras diferentes.
+
+525
+01:12:08.000 --> 01:12:13.980
+Luiz Maia: Não tem loucura nisso. Isso é normal. Não tem nenhum problema com isso.
+
+526
+01:12:19.560 --> 01:12:26.710
+Luiz Maia: É uma facilidade que a orientação objeto te dá para fazer isso?
+
+527
+01:12:29.880 --> 01:12:36.290
+Luiz Maia: Eu só não posso ter dois construtores com a mesma assinatura.
+
+528
+01:12:44.770 --> 01:12:49.729
+Luiz Maia: Agora, o que a gente pode fazer? A gente pode fazer o seguinte.
+
+529
+01:12:50.310 --> 01:12:56.849
+Luiz Maia: Vamos voltar lá para o nosso código que a gente fez na aula de ontem.
+
+530
+01:13:07.310 --> 01:13:18.330
+Luiz Maia: Ah, sim, é outro nível de controle, cara, você está numa linguagem fortemente tipada, fortemente orientada. A objeto
+
+531
+01:13:18.480 --> 01:13:29.169
+Luiz Maia: não se compara a Python, nem Javascript. Nada disso, gente, você está num outro nível de outro patamar de linguagem.
+
+532
+01:13:30.380 --> 01:13:36.490
+Luiz Maia: Vamos pegar aquele exemplo de que a gente usou na aula passada.
+
+533
+01:13:36.640 --> 01:13:40.850
+Luiz Maia: Vamos criar aqui um outro. Eu vou copiar e colar,
+
+534
+01:13:41.170 --> 01:13:46.740
+Luiz Maia: porque você já tem esse código para vocês entenderem o que a gente está fazendo aqui.
+
+535
+01:13:46.840 --> 01:13:52.170
+Luiz Maia: Vou criar um novo projeto chamado Construtor três.
+
+536
+01:13:57.670 --> 01:14:04.570
+Luiz Maia: Tá aqui a gente vai pegar esse. Vamos criar aqui um.
+
+537
+01:14:05.430 --> 01:14:08.980
+Luiz Maia: Eu vou criar na mão, mesmo Models
+
+538
+01:14:09.130 --> 01:14:12.570
+Luiz Maia: lembrando que isso aqui é um padrão do Dotnet.
+
+539
+01:14:12.790 --> 01:14:31.810
+Luiz Maia: Vamos criar aqui uma conta. Uma nova classe conta, conta. Cadê conta legal é essa classe conta.
+
+540
+01:14:31.960 --> 01:14:33.290
+Luiz Maia: Eu vou pegar.
+
+541
+01:14:36.840 --> 01:14:38.730
+Luiz Maia: Deixa eu ver o que eu vou fazer aqui?
+
+542
+01:14:43.690 --> 01:14:46.209
+Luiz Maia: Se eu vou fazer isso aqui mesmo,
+
+543
+01:15:01.740 --> 01:15:06.690
+Luiz Maia: estou pegando nossa, fiz besteira aqui.
+
+544
+01:15:14.920 --> 01:15:17.290
+Luiz Maia: Deixa eu apagar isso aqui em cima.
+
+545
+01:15:20.020 --> 01:15:30.400
+Luiz Maia: A gente tem aqui o Id, o nome sendo validado, o saldo como privado. A gente tem
+
+546
+01:15:30.680 --> 01:15:32.850
+Luiz Maia: esse cara aqui.
+
+547
+01:15:32.980 --> 01:15:39.340
+Luiz Maia: Esse cara aqui e outro construtor. Temos três construtores aqui dentro:
+
+548
+01:15:39.900 --> 01:15:44.179
+Luiz Maia: a validação do Id, a validação do nome,
+
+549
+01:15:44.680 --> 01:15:51.729
+Luiz Maia: e tenho creditar e debitar. Aí vem aquela pergunta. Lp: Como é que a gente inicializa o saldo?
+
+550
+01:15:51.930 --> 01:15:54.740
+Luiz Maia: Tá aqui o saldo
+
+551
+01:15:55.270 --> 01:16:03.630
+Luiz Maia: ou a gente coloca ele com um zero quando não passo nada. E aqui eu tenho como passar o saldo nesse construtor.
+
+552
+01:16:05.020 --> 01:16:08.829
+Luiz Maia: Então esse código aqui foi retirado da aula passada.
+
+553
+01:16:09.520 --> 01:16:14.060
+Luiz Maia: Tá certo. Aqui, eu estou validando o Id e o nome.
+
+554
+01:16:14.590 --> 01:16:20.000
+Luiz Maia: Agora eu tenho que me preocupar com o quê? Olha só o que eu vou fazer aqui. Ó,
+
+555
+01:16:20.610 --> 01:16:21.980
+Luiz Maia: olha que legal.
+
+556
+01:16:24.970 --> 01:16:29.920
+Luiz Maia: Eu vou usar esses métodos que estão aqui
+
+557
+01:16:30.240 --> 01:16:34.819
+Luiz Maia: para validar os dados que estão sendo passados no construtor.
+
+558
+01:16:36.200 --> 01:16:40.020
+Luiz Maia: Veja bem, olha só.
+
+559
+01:16:40.330 --> 01:16:47.270
+Luiz Maia: Eu vou estar utilizando esses sets que estão aqui
+
+560
+01:16:47.700 --> 01:16:51.319
+Luiz Maia: para o nome e para o Id para validar
+
+561
+01:16:51.470 --> 01:16:55.510
+Luiz Maia: os dados que estão sendo passados no construtor.
+
+562
+01:16:55.990 --> 01:16:57.180
+Luiz Maia: Olha, só.
+
+563
+01:16:57.450 --> 01:16:58.760
+Luiz Maia: Presta atenção.
+
+564
+01:17:00.260 --> 01:17:05.259
+Luiz Maia: Vou usar esse construtor aqui para vocês verem como vai acontecer.
+
+565
+01:17:10.870 --> 01:17:12.120
+Luiz Maia: Conta
+
+566
+01:17:15.800 --> 01:17:30.180
+Luiz Maia: conta, New, conta aqui. Eu vou passar o seguinte. Zero e vou passar. Um nome.
+
+567
+01:17:30.910 --> 01:17:34.100
+Luiz Maia: É L, por exemplo.
+
+568
+01:17:35.230 --> 01:17:43.089
+Luiz Maia: A princípio está tudo bem. Não tem nenhum problema de erro aqui. Ele não deu erro de compilação nenhum
+
+569
+01:17:43.320 --> 01:17:47.089
+Luiz Maia: na hora que eu for executar esse código. Olha o que vai acontecer.
+
+570
+01:17:53.860 --> 01:17:54.880
+Luiz Maia: Opa.
+
+571
+01:17:55.190 --> 01:18:01.880
+Luiz Maia: Não troquei aqui o meu código como startup. Ok, agora vai.
+
+572
+01:18:04.320 --> 01:18:05.760
+Luiz Maia: Olha só. Que legal.
+
+573
+01:18:06.790 --> 01:18:08.499
+Luiz Maia: Ele está pegando.
+
+574
+01:18:10.980 --> 01:18:12.519
+Luiz Maia: Olha que bacana
+
+575
+01:18:12.830 --> 01:18:22.169
+Luiz Maia: ele está pegando quando você faz id receber Id. O que ele está fazendo? Ele está executando esse método aqui.
+
+576
+01:18:22.430 --> 01:18:25.330
+Luiz Maia: E aí, o que ele gera uma exceção.
+
+577
+01:18:28.200 --> 01:18:33.550
+Luiz Maia: Então, aqui na hora que está criando a conta, você tem que fazer o quê, Try?
+
+578
+01:18:37.380 --> 01:18:41.680
+Luiz Maia: Para criar a conta. Olha só, ketch
+
+579
+01:18:45.230 --> 01:18:47.299
+Luiz Maia: Argumente Exception.
+
+580
+01:18:54.180 --> 01:18:55.820
+Luiz Maia: Exatamente.
+
+581
+01:18:56.330 --> 01:19:01.379
+Luiz Maia: Ele só vai dar erro na hora que você mandar executar o código.
+
+582
+01:19:02.150 --> 01:19:03.590
+Luiz Maia: Olha que legal!
+
+583
+01:19:05.690 --> 01:19:15.640
+Luiz Maia: Pronto, agora, quando você executar o código. Ele vai dar o quê? Erro valor de Higien inválido, beleza.
+
+584
+01:19:15.870 --> 01:19:20.360
+Luiz Maia: Aí você troca o Id para um Id válido um
+
+585
+01:19:20.670 --> 01:19:28.069
+Luiz Maia: o L é um nome que tem menos de dois caracteres. Olha só. Como é que está a conta.
+
+586
+01:19:29.820 --> 01:19:35.340
+Luiz Maia: Olha aqui. O nome tem que ter mais de dois caracteres.
+
+587
+01:19:36.320 --> 01:19:40.549
+Luiz Maia: Ele vai dar erro de novo.
+
+588
+01:19:42.440 --> 01:19:45.489
+Luiz Maia: Olha lá. Valor do nome inválido.
+
+589
+01:19:46.480 --> 01:19:50.950
+Luiz Maia: Aí você fica se perguntando: Lp
+
+590
+01:19:52.310 --> 01:19:59.150
+Luiz Maia: mas a gente não poderia fazer a validação. Isso é uma pergunta que todo aluno faz para mim.
+
+591
+01:19:59.560 --> 01:20:03.110
+Luiz Maia: Se você não está fazendo, é porque tem alguma coisa errada.
+
+592
+01:20:04.170 --> 01:20:12.449
+Luiz Maia: A pergunta que todo mundo faz para mim. Lp: Mas se na camada do usuário da interface com o usuário.
+
+593
+01:20:12.810 --> 01:20:15.389
+Luiz Maia: A gente fizer as validaço.
+
+594
+01:20:16.770 --> 01:20:20.439
+Luiz Maia: Não interessa. Não importa.
+
+595
+01:20:21.550 --> 01:20:31.939
+Luiz Maia: A classe tem que ser autônoma. Ela não pode estar associada a validações que estão fora da classe.
+
+596
+01:20:32.750 --> 01:20:44.800
+Luiz Maia: Se você tem uma interface gráfica, uma interface Web que valida os dados de entrada da classe. Beleza. Parabéns, mas isso não
+
+597
+01:20:45.020 --> 01:20:50.430
+Luiz Maia: impede de você criar as regras de negócio dentro da classe.
+
+598
+01:20:51.690 --> 01:21:04.000
+Luiz Maia: A classe não pode depender das camadas que estão acima dela, porque qualquer pessoa, qualquer programador pode fazer uso da classe conta.
+
+599
+01:21:05.330 --> 01:21:09.900
+Luiz Maia: Então você não pode esperar
+
+600
+01:21:10.180 --> 01:21:17.360
+Luiz Maia: que os dados que estão sendo colocados na classe já! Venham corretos. Você não pode pensar dessa maneira.
+
+601
+01:21:19.160 --> 01:21:24.109
+Luiz Maia: Agora, se eu acertar o nome aqui, beleza, olha,
+
+602
+01:21:27.150 --> 01:21:30.580
+Luiz Maia: funcionou, tá bacana.
+
+603
+01:21:31.360 --> 01:21:36.249
+Luiz Maia: E aí o que o colega? Eu não sei. Acho que foi o Gabriel que perguntou.
+
+604
+01:21:36.970 --> 01:21:46.509
+Luiz Maia: É você atribuir algum valor automático? Está aqui o valor automático. O saldo começa com zero.
+
+605
+01:21:48.940 --> 01:21:55.110
+Luiz Maia: Mas se eu fizer um saldo negativo aqui, por exemplo,
+
+606
+01:21:55.250 --> 01:21:59.330
+Luiz Maia: como é que eu resolvo isso para esse construtor.
+
+607
+01:21:59.640 --> 01:22:03.279
+Luiz Maia: Se por acaso eu faço isso aqui. Ó, olha só.
+
+608
+01:22:03.540 --> 01:22:10.379
+Luiz Maia: Eu venho aqui no programa e faço um saldo negativo.
+
+609
+01:22:11.610 --> 01:22:14.949
+Luiz Maia: Menos cem, por exemplo vai passar.
+
+610
+01:22:17.720 --> 01:22:19.479
+Luiz Maia: Vai passar, passou.
+
+611
+01:22:19.870 --> 01:22:21.839
+Luiz Maia: Como é que você abre uma conta?
+
+612
+01:22:22.120 --> 01:22:24.800
+Luiz Maia: Como é que você cria uma conta com saldo negativo?
+
+613
+01:22:25.440 --> 01:22:26.720
+Luiz Maia: Não pode, né?
+
+614
+01:22:35.410 --> 01:22:36.810
+Luiz Maia: Você pode fazer
+
+615
+01:22:40.280 --> 01:22:53.740
+Luiz Maia: se saldo menor que zero. O que você faz, cara?
+
+616
+01:22:53.930 --> 01:22:55.580
+Luiz Maia: Lança exceção.
+
+617
+01:22:56.770 --> 01:23:12.939
+Luiz Maia: Fromil argumente exception, erro, valor do saldo inválido. Olha que beleza.
+
+618
+01:23:14.010 --> 01:23:17.369
+Luiz Maia: O nosso código ficou super completo agora,
+
+619
+01:23:18.040 --> 01:23:21.570
+Luiz Maia: porque agora eu estou tratando o erro de saldo também.
+
+620
+01:23:21.790 --> 01:23:29.620
+Luiz Maia: Só que esse tratamento de erro é apenas na hora do construtor. Você continua com saldo privado.
+
+621
+01:23:30.020 --> 01:23:34.360
+Luiz Maia: Você não altera ele usando get satter,
+
+622
+01:23:34.670 --> 01:23:52.289
+Luiz Maia: especialmente o Ceter. Você pode consultar, mas alterar você não pode. E aqui, quando você está construindo o objeto, conta se o saldo vier negativo, você dá um erro. Vamos ver. Vamos ver agora como é que funciona aqui. Ó
+
+623
+01:23:53.030 --> 01:23:54.120
+Luiz Maia: vamos rodar.
+
+624
+01:23:57.380 --> 01:24:00.440
+Luiz Maia: Pronto, olha que espetáculo!
+
+625
+01:24:01.580 --> 01:24:07.250
+Luiz Maia: O código está todo arrumado. Aonde você testa
+
+626
+01:24:07.610 --> 01:24:11.429
+Luiz Maia: tudo que tem que ser testado. Você testa
+
+627
+01:24:11.560 --> 01:24:24.270
+Luiz Maia: o Id, o nome, o saldo no lugar correto. Você tem a sobrecarga dos construtores. Você pode criar o objeto de maneiras diferentes.
+
+628
+01:24:24.440 --> 01:24:40.380
+Luiz Maia: Você está validando o Id e o nome tanto aqui quanto nesse outro construtor. Eu estou validando o saldo, caso eu passe esse construtor que eu execute esse construtor. Cara, isso é. Demais.
+
+629
+01:24:41.740 --> 01:24:43.950
+Luiz Maia: É super bacana.
+
+630
+01:24:44.190 --> 01:24:45.060
+Luiz Maia: E aí
+
+631
+01:24:58.730 --> 01:25:00.469
+Luiz Maia: o que eu fiz aqui, cara.
+
+632
+01:25:04.250 --> 01:25:09.409
+Luiz Maia: Não, isso aqui não era para ter feito esse código. Está bem melhor.
+
+633
+01:25:12.680 --> 01:25:15.600
+Luiz Maia: Vocês entenderam essa loucura. Toda gente
+
+634
+01:25:17.030 --> 01:25:26.739
+Luiz Maia: repare que a aula é cheia de conteúdo, cheia de. Eu vou subir esse código lá para o drive, para vocês terem esse código
+
+635
+01:25:27.380 --> 01:25:33.099
+Luiz Maia: para vocês verem como não é fácil. O negócio é complexo, mesmo
+
+636
+01:25:35.120 --> 01:25:46.179
+Luiz Maia: o que eu recomendo para vocês, gente, recomendo que vocês façam o código do zero.
+
+637
+01:25:46.440 --> 01:25:53.250
+Luiz Maia: Peguem esses exemplos e refaçam o código. Ou seja, é
+
+638
+01:25:54.660 --> 01:26:04.570
+Luiz Maia: usa como cola, usa como template e vai fazendo o código do zero até você conseguir fazer tudo sozinho.
+
+639
+01:26:05.520 --> 01:26:12.120
+Luiz Maia: Você não vai aprender programação C Sharp Assistindo Aula
+
+640
+01:26:12.290 --> 01:26:22.350
+Luiz Maia: Assistindo Vídeo ou Aula Lendo O livro. Você só vai aprender esse Sharp fazendo código sozinho. Não tem jeito.
+
+641
+01:26:22.710 --> 01:26:33.890
+Luiz Maia: C I A não usa Ia para no início. Depois que você souber tudo que tem que saber, você faz o quê usa Ia. Pode usar. Não tem problema.
+
+642
+01:26:34.490 --> 01:26:38.830
+Luiz Maia: Eu uso ia todo dia, mas eu sei
+
+643
+01:26:39.450 --> 01:26:53.319
+Luiz Maia: o que a Ia me responde. Eu entendo que ela responde. Eu tenho senso crítico para avaliar Ia. Enquanto você não conseguir fazer esse código sozinho. Você não pode usar. Ia
+
+644
+01:26:54.740 --> 01:26:58.079
+Luiz Maia: entender tudo que está sendo feito aqui, cara.
+
+645
+01:26:58.960 --> 01:27:01.580
+Luiz Maia: Eu vou subir esse código para vocês.
+
+646
+01:27:02.150 --> 01:27:05.740
+Luiz Maia: É agora.
+
+647
+01:27:06.790 --> 01:27:08.919
+Luiz Maia: Deixa eu ver o que eu fiz aqui.
+
+648
+01:27:09.690 --> 01:27:13.329
+Luiz Maia: Eu não sei porque eu fiz isso aqui, cara. Um monte de
+
+649
+01:27:14.830 --> 01:27:18.440
+Luiz Maia: ficou muito mais complexo do que eu queria fazer,
+
+650
+01:27:19.500 --> 01:27:30.119
+Luiz Maia: mas ficou legal, cara, eu achei legal. Isso aqui resolveu o teu problema. Aquela pergunta que você me fez em relação a um valor default
+
+651
+01:27:30.560 --> 01:27:33.499
+Luiz Maia: para o saldo? Eu respondi isso.
+
+652
+01:27:33.830 --> 01:27:36.890
+Luiz Maia: Não sei se foi o Gabriel que perguntou. Foi
+
+653
+01:27:42.860 --> 01:27:47.800
+Luiz Maia: gente, isso aqui é igual. Java
+
+654
+01:27:49.280 --> 01:27:54.540
+Luiz Maia: pode mudar assim, tá? Se pode mudar uma coisa aqui, outra ali.
+
+655
+01:27:54.620 --> 01:28:09.519
+Luiz Maia: Mas esse código é muito igual a Java. Os conceitos são os mesmos. Se você não aprendeu isso em Java, você pode pegar tudo isso que eu ensinei e aplicar em Java.
+
+656
+01:28:10.000 --> 01:28:11.130
+Luiz Maia: Tá certo.
+
+657
+01:28:11.720 --> 01:28:14.050
+Luiz Maia: É claro que você não tem
+
+658
+01:28:14.180 --> 01:28:23.509
+Luiz Maia: esse tipo de coisa. Em Java. As propriedades automáticas. Elas só existem no C. Sharp. Não tem no Java,
+
+659
+01:28:24.200 --> 01:28:31.650
+Luiz Maia: mas o restante da lógica toda, você pode pegar esse código e implementar em Java
+
+660
+01:28:31.820 --> 01:28:51.670
+Luiz Maia: esses construtores, esses testes aqui vão ser métodos sete, por exemplo, que fazem a mesma coisa, o creditar, o debitar o lançamento das exceções. Você pode fazer esse código exatamente em Java. Não tem nenhum problema.
+
+661
+01:28:52.180 --> 01:28:57.410
+Luiz Maia: É isso, gente. Uma boa noite para vocês. Nos vemos na próxima semana.
+
+662
+01:28:57.700 --> 01:29:04.750
+Luiz Maia: Vou adiantar para vocês a próxima aula. A próxima aula é sobre herança, tá bom?
+
+663
+01:29:05.560 --> 01:29:08.989
+Luiz Maia: A gente vai entrar no terceiro pilar
+
+664
+01:29:09.480 --> 01:29:17.110
+Luiz Maia: da programação orientada a objetos. O primeiro é a abstração, classes e objetos.
+
+665
+01:29:17.590 --> 01:29:26.070
+Luiz Maia: Segundo, encapsulamento, terceiro, herança e quatro. Polimorfismo.
+
+666
+01:29:26.430 --> 01:29:31.240
+Luiz Maia: Então, na semana que vem, a gente vai terminar a programação orientada do objeto.
+
+667
+01:29:33.010 --> 01:29:38.259
+Luiz Maia: Tá certo. Na segunda feira, eu vou ensinar a herança.
+
+668
+01:29:39.870 --> 01:29:44.689
+Luiz Maia: E provavelmente na terça eu já começo com polimorfismo. Se não der tempo,
+
+669
+01:29:45.120 --> 01:29:48.949
+Luiz Maia: a gente usa a outra semana para continuar esse assunto.
+
+670
+01:29:49.320 --> 01:29:56.550
+Luiz Maia: Mas enquanto vocês tiverem dúvidas, eu não vou seguir em frente,
+
+671
+01:29:56.790 --> 01:30:14.250
+Luiz Maia: porque assim é um conteúdo acumulativo. Ou seja, você vai aprendendo coisas novas que vão acumulando para a próxima aula. Se você perdeu as aulas anteriores. Provavelmente você não vai conseguir seguir nas aulas posteriores. Você vai ficar
+
+672
+01:30:14.380 --> 01:30:15.510
+Luiz Maia: perdido.
+
+673
+01:30:16.350 --> 01:30:22.150
+Luiz Maia: É normal. Isso não tem jeito. Programação. É uma coisa que vai acumulando conhecimento.
+
+674
+01:30:22.360 --> 01:30:27.130
+Luiz Maia: Então, se você não está acompanhando as aulas, é
+
+675
+01:30:27.430 --> 01:30:30.400
+Luiz Maia: no dia a dia. Você vai ter dificuldade
+
+676
+01:30:30.540 --> 01:30:35.629
+Luiz Maia: para conseguir entender os próximos códigos, porque eles vão ficando cada vez mais complicados.
+
+677
+01:30:35.880 --> 01:30:37.609
+Luiz Maia: Não tem como não ficar.
+
+678
+01:30:37.960 --> 01:30:45.510
+Luiz Maia: Então a próxima aula é herança, e aí depois. Polimorfismo
+
+679
+01:30:45.960 --> 01:30:55.610
+Luiz Maia: terminado. Esses dois assuntos. Quando foi a primeira orientação, objeto? Queria pegar para rever. Cara, não faço a menor ideia.
+
+680
+01:30:56.030 --> 01:30:59.499
+Luiz Maia: Você tem que pegar lá as aulas que estão gravadas e
+
+681
+01:30:59.760 --> 01:31:03.189
+Luiz Maia: assistir todas? Não sei. Não faço a menor ideia.
+
+682
+01:31:04.440 --> 01:31:09.039
+Luiz Maia: Talvez há duas, três semanas atrás? Não sei. Não me lembro.
+
+683
+01:31:10.160 --> 01:31:17.020
+Luiz Maia: Não tenho cara. Eu dou aula. Eu dou aula pra muitas turmas. Cara, eu acho que eu tenho seis turmas hoje
+
+684
+01:31:19.310 --> 01:31:20.600
+Luiz Maia: diferentes.
+
+685
+01:31:21.250 --> 01:31:26.969
+Luiz Maia: Eu tenho aula de. Eu dou aula de Python. Dou aula de C Sharp. Dou aula de
+
+686
+01:31:28.120 --> 01:31:34.390
+Luiz Maia: cara de um monte de coisa então assim não tem como te dizer quando foi. Tem que olhar.
+
+687
+01:31:34.630 --> 01:31:37.540
+Luiz Maia: Obrigado, pessoal.
+
+688
+01:31:38.510 --> 01:31:49.180
+Luiz Maia: Dá uma olhada lá. Se você não encontrar. Você me fala, mas tá tudo lá, cara. Gravado com os exemplos, cara. Assim eu tentei fazer os exemplos
+
+689
+01:31:49.500 --> 01:32:02.560
+Luiz Maia: super evolutivos reutilizando os códigos anteriores. Ah, tem sim. A gente precisa fazer a calculadora usando construtores.
+
+690
+01:32:03.670 --> 01:32:04.770
+Luiz Maia: Tá certo.
+
+691
+01:32:05.250 --> 01:32:17.119
+Luiz Maia: Então, na próxima aula, eu começo a aula. Para eu começo a próxima aula.
+
+692
+01:32:22.300 --> 01:32:26.080
+Luiz Maia: A gente vai voltar para a calculadora. Tá certo.
+
+693
+01:32:26.650 --> 01:32:31.590
+Luiz Maia: Para olhar construtor na calculadora. Então a calculadora vai dar uma evoluída.
+
+694
+01:32:31.700 --> 01:32:40.069
+Luiz Maia: A gente vai ter uma nova versão da calculadora, orientando objeto. Me lembrem disso, usando o construtor.
+
+695
+01:32:40.260 --> 01:32:51.560
+Luiz Maia: E aí vai ficar bacana. A calculadora vai ficar bem arrumadinha ela. Pessoal, já são dez horas. Boa noite para vocês. Uma boa semana. Nos vemos na próxima segunda feira.
+
+696
+01:32:51.980 --> 01:32:54.710
+Luiz Maia: Abraço a todos. Tchau, tchau.
+
+697
+01:32:55.130 --> 01:32:57.770
+Luiz Maia: Abraço segunda feira. Tchau, tchau.
+
+698
+01:32:58.030 --> 01:32:58.570
+Jorge José Luiz Santos da Silva: Tchau, Tchau.
+

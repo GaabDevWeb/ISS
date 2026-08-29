@@ -1,0 +1,2930 @@
+WEBVTT
+
+1
+00:02:18.090 --> 00:02:24.110
+Orlando Fonseca: Beleza, pessoal. Boa noite. Tudo bem, tudo certo.
+
+2
+00:02:27.410 --> 00:02:30.870
+Orlando Fonseca: Bom, pessoal, beleza. Boa noite.
+
+3
+00:02:30.980 --> 00:02:36.190
+Orlando Fonseca: Bem vindos a mais uma aula do projeto de bloco de magnitude.
+
+4
+00:02:36.580 --> 00:02:47.529
+Orlando Fonseca: E vamos dar continuidade desse movimento do projeto. Olhando mais para a orientação do projeto, olhando mais para
+
+5
+00:02:47.910 --> 00:03:04.219
+Orlando Fonseca: o ciclo de vida para os modelos que eu ensino para vocês. E essa aula de hoje, eu acho bem interessante, no sentido que a gente vai estudar cenários. Vamos entender o problema, lembrando que vamos trabalhar o projeto de bloco todo
+
+6
+00:03:04.460 --> 00:03:23.600
+Orlando Fonseca: olhando para as diferentes fases, tanto faz o modelo que vocês escolhem que você escolhe, né? Tanto faz. O modelo interativo se cascata ou se na metodologia age. Você tem que fazer uma engenharia de requisitos. E essa aqui seria a primeira aula para fazer isso.
+
+7
+00:03:24.620 --> 00:03:29.740
+Orlando Fonseca: Então já vou compartilhar a minha tela com vocês.
+
+8
+00:03:49.820 --> 00:03:51.200
+Orlando Fonseca: Não, não. Quatro, né?
+
+9
+00:03:52.560 --> 00:03:54.560
+Orlando Fonseca: Compartilhando aí,
+
+10
+00:04:03.660 --> 00:04:08.089
+Orlando Fonseca: considerando. Certo, som tá bom concertinho.
+
+11
+00:04:08.090 --> 00:04:09.020
+Jorge José Luiz Santos da Silva: Tudo certinho.
+
+12
+00:04:09.190 --> 00:04:10.200
+Orlando Fonseca: Beleza.
+
+13
+00:04:10.460 --> 00:04:17.350
+Orlando Fonseca: Tá bom, então é isso, pessoal? Bom, vamos relembrar, tá?
+
+14
+00:04:18.670 --> 00:04:23.160
+Orlando Fonseca: Não existe o projeto a ser implementado.
+
+15
+00:04:23.750 --> 00:04:29.760
+Orlando Fonseca: Se não tem uma análise prévia do que o cliente precisa.
+
+16
+00:04:29.930 --> 00:04:34.860
+Orlando Fonseca: Sua primeira confirmação que eu vou colocar aí para vocês.
+
+17
+00:04:35.210 --> 00:04:39.580
+Orlando Fonseca: É preciso entender o que é para ser feito.
+
+18
+00:04:39.990 --> 00:04:40.940
+Orlando Fonseca: Tá bom.
+
+19
+00:04:41.130 --> 00:04:42.270
+Orlando Fonseca: Então
+
+20
+00:04:42.560 --> 00:04:57.979
+Orlando Fonseca: toda essa análise de requisitos, entre outros conceitos, entre outros pontos, é chamado de análise de requisitos. São engenharia de requisitos. E especificamente, hoje vamos estudar quando eu coloco aqui estudo de caso,
+
+21
+00:04:58.270 --> 00:05:03.149
+Orlando Fonseca: porque eu vou trazer para essa aula um problema das duas.
+
+22
+00:05:03.580 --> 00:05:08.779
+Orlando Fonseca: Mas esse aqui não é o Willis. O sistema de aluguel de bicicletas
+
+23
+00:05:09.810 --> 00:05:15.299
+Orlando Fonseca: é um sistema que a gente vai trabalhar bastante nesse projeto de bloco. Por quê? Porque é um projeto padron,
+
+24
+00:05:15.750 --> 00:05:27.279
+Orlando Fonseca: tá, que você pode modificar. Ele que dizer, entende a teoria? Vamos fazer bastante modelagem nele entender requisitos.
+
+25
+00:05:27.520 --> 00:05:38.570
+Orlando Fonseca: E você pode aplicar esse conhecimento para problemas similares. Aqui pode ser um projeto de bicicleta, mas é facilmente.
+
+26
+00:05:38.920 --> 00:05:54.100
+Orlando Fonseca: A gente foi expandir esse conhecimento para fazer um sistema de biblioteca onde o usuário não estaria alugando uma bicicleta e sim fazendo um empréstimo de livros. Entendido, pessoal. Então quero que você faça uma analogia.
+
+27
+00:05:54.470 --> 00:05:59.050
+Orlando Fonseca: E bom com esse problema aqui, principalmente com o sistema Witch. Vamos ver outro também.
+
+28
+00:05:59.460 --> 00:06:09.349
+Orlando Fonseca: E tentem aqui. Entenda que a aula, né? Você faça as perguntas que você quer e já coloquem a mão na massa no projeto de vocês. Tá bom
+
+29
+00:06:12.370 --> 00:06:14.249
+Orlando Fonseca: para o final da aula.
+
+30
+00:06:14.720 --> 00:06:18.449
+Orlando Fonseca: Eu vou falar com vocês. Uma coisinha do Top um
+
+31
+00:06:18.820 --> 00:06:27.310
+Orlando Fonseca: e já vamos definir. Quero escutar você. Como está indo essa organização para o projeto de bloco lembrando que tem que ser definido já. Já
+
+32
+00:06:27.650 --> 00:06:33.809
+Orlando Fonseca: tá bom, mas vamos lá. Vamos fazer essa aula adiante. Então, pessoal, o que é ser distribuir o sistema Wips?
+
+33
+00:06:36.240 --> 00:06:40.300
+Orlando Fonseca: Ah, deixa eu ver aqui o chat e a
+
+34
+00:06:41.800 --> 00:06:48.420
+Orlando Fonseca: qual a metodologia a que você prefera. Tá é livre. Escolha, beleza.
+
+35
+00:06:48.540 --> 00:06:52.339
+Orlando Fonseca: Só que você vai ter que justificar muito bem o que você está fazendo
+
+36
+00:06:52.500 --> 00:07:01.600
+Orlando Fonseca: então? Assim eu fiz uma cacata qualquer que você está aplicando essa metodologia. Só isso. Se for uma metodologia age se for Hope, se for interativo, você tem que
+
+37
+00:07:03.210 --> 00:07:05.300
+Orlando Fonseca: não. Meu Deus, não no projeto de broca.
+
+38
+00:07:05.620 --> 00:07:17.059
+Orlando Fonseca: Então vejam que hoje vamos entender o projeto. Vamos fazer uma estrutura de caça. Vamos fazer uma engenharia de requisito nessa aula. E a próxima, então
+
+39
+00:07:17.530 --> 00:07:21.159
+Orlando Fonseca: tanto faz, tá? Eu não vou falar que isso aqui tá na mitologia
+
+40
+00:07:21.600 --> 00:07:25.999
+Orlando Fonseca: X ou Y, porque toda a série, da mesma forma tem que passar por esse processo.
+
+41
+00:07:26.750 --> 00:07:27.740
+Orlando Fonseca: Tá bom,
+
+42
+00:07:31.640 --> 00:07:39.170
+Orlando Fonseca: então o que seria o sistema Gullies? Primeiro, esse aqui é o título do projeto. Eu sou para identificar ele
+
+43
+00:07:40.160 --> 00:07:41.540
+Orlando Fonseca: o que ele faz?
+
+44
+00:07:41.920 --> 00:07:49.669
+Orlando Fonseca: Bom, precisam implementar um software que permita fazer um aluguer de bicicleta.
+
+45
+00:07:50.060 --> 00:08:05.399
+Orlando Fonseca: Beleza, o que seria o segundo bom. Quais seriam as operações que eu preciso que o sistema precisa ter, quais seriam essas operações. Mas isso aqui é o aluguel. E, claro, de bicicletas,
+
+46
+00:08:05.760 --> 00:08:11.389
+Orlando Fonseca: a devolução de uma bicicleta, o gerenciamento de estoque,
+
+47
+00:08:11.730 --> 00:08:15.579
+Orlando Fonseca: clientes, fazer um cadastro de cliente e tal
+
+48
+00:08:15.710 --> 00:08:27.530
+Orlando Fonseca: fazer o cálculo certinho do valor que tem que ser pago para esse aluguer de bicicleta, ok? E também analisar algumas situações ali excepcionais, por exemplo, o que acontece se
+
+49
+00:08:27.740 --> 00:08:33.000
+Orlando Fonseca: teve uma perda de cartões de bicicleta. Então vamos pensar que
+
+50
+00:08:33.940 --> 00:08:43.550
+Orlando Fonseca: que a Game para alugar a bicicleta. Eu coloquei cartões aqui porque está na literatura de vocês. Mas imagina que a gente vá lá, né? E a gente recebe ali um ticket
+
+51
+00:08:43.900 --> 00:08:53.919
+Orlando Fonseca: ou uma identificação que você realmente alugou essa bicicleta? Você pode perder esse ticket ou esse identificativo da bicicleta, ou esse comprovante ali,
+
+52
+00:08:54.230 --> 00:09:01.270
+Orlando Fonseca: que você tem a biblioteca, você pode perder o cadastro e pode até perder a bicicleta, beleza
+
+53
+00:09:02.630 --> 00:09:12.489
+Orlando Fonseca: ou a traçar. Você faz um aluguel, você pode traçar beleza. Então o sistema tem que se adaptar para todas essas situações. Se o cliente pedir.
+
+54
+00:09:12.950 --> 00:09:13.740
+Orlando Fonseca: Ok,
+
+55
+00:09:17.280 --> 00:09:20.420
+Orlando Fonseca: muito bem, então quais seriam essas etapas?
+
+56
+00:09:20.530 --> 00:09:23.679
+Orlando Fonseca: Eu entendi. Aqui a gente entendeu aqui, né?
+
+57
+00:09:23.870 --> 00:09:30.179
+Orlando Fonseca: Juntos, já vimos quais seria ali o intuito de fazer projeto. Vamos fazer uma aluguer de bicicleta, tá? Isso aí fica claro.
+
+58
+00:09:31.510 --> 00:09:39.240
+Orlando Fonseca: Primeiro, esse texto aqui é suficiente para a gente já começar a implementar.
+
+59
+00:09:40.960 --> 00:09:42.119
+Orlando Fonseca: O que vocês acha?
+
+60
+00:09:46.360 --> 00:09:49.070
+Orlando Fonseca: Eu defini aqui algumas operações mão na massa?
+
+61
+00:09:50.770 --> 00:09:52.420
+Orlando Fonseca: Não, por que não?
+
+62
+00:09:52.840 --> 00:10:07.290
+Orlando Fonseca: Olha vocês.
+
+63
+00:10:07.470 --> 00:10:14.810
+Orlando Fonseca: Vamos supor, né? Vocês sabem, implementar um projeto ali de aluguel de bicicleta
+
+64
+00:10:15.230 --> 00:10:20.310
+Orlando Fonseca: primeiro é esse. E o time trabalha com isso. Seu primeiro.
+
+65
+00:10:20.520 --> 00:10:30.150
+Orlando Fonseca: Você entende? Vocês poderiam fazer para a gente um aluno de bicicleta. Você entra em contato. Eu preciso rir e dá alguns detalhes simples.
+
+66
+00:10:30.150 --> 00:10:41.869
+Orlando Fonseca: Por exemplo, define um pouquinho mais. O que seria isso nesse primeiro parágrafo? Ah, vai ter isso. Isso só para ter uma ideia bem superficial do que seria esse projeto a partir dali, a gente faz
+
+67
+00:10:42.020 --> 00:10:42.869
+Orlando Fonseca: bom dia.
+
+68
+00:10:43.090 --> 00:10:52.180
+Orlando Fonseca: Tipo assim. A gente fez sistemas parecido desse. Da bicicleta ou especificamente, a gente fez um já ganhou de bicicleta, outro
+
+69
+00:10:52.740 --> 00:10:59.310
+Orlando Fonseca: a gente tem competência. Mesmo a gente não tem trabalhar com isso. A gente tem competência para fazer esse.
+
+70
+00:10:59.440 --> 00:11:02.810
+Orlando Fonseca: Então beleza a partir dali que a gente dá. O Siri.
+
+71
+00:11:03.020 --> 00:11:13.780
+Orlando Fonseca: Não é que vamos colocar a mão na massa. Vai implementando, já que vai ter uma luz de bicicleta. Não, primeira parte vai ser que entender o usuário está pedindo quais seriam essas etapas?
+
+72
+00:11:15.280 --> 00:11:17.779
+Orlando Fonseca: É licitação. Quem disse? É isso.
+
+73
+00:11:18.340 --> 00:11:23.910
+Orlando Fonseca: Vamos ter uma coleta de informações sobre a necessidade desse problema, porque esse parágrafo aqui fica muito enxuto.
+
+74
+00:11:24.140 --> 00:11:29.160
+Orlando Fonseca: Mesmo trabalhando na metodologia ágil, vamos implementando. E depois ele vai
+
+75
+00:11:29.680 --> 00:11:40.180
+Orlando Fonseca: refinado. O que ele? Quer a gente precisa ter pelo menos uma guia. Pelo menos, não um simples texto, senão vamos ter trabalho que também é ruim,
+
+76
+00:11:40.300 --> 00:11:42.369
+Orlando Fonseca: seja qual for a metodologia.
+
+77
+00:11:42.900 --> 00:11:43.780
+Orlando Fonseca: Tá bom.
+
+78
+00:11:44.650 --> 00:11:57.920
+Orlando Fonseca: Então vamos fazer uma coleta de informações. Etapa de licitação. Vamos ter a etapa de especificação e quando temos um registro formal mais estruturado, essas informações são coletadas
+
+79
+00:11:58.650 --> 00:12:00.170
+Orlando Fonseca: e,
+
+80
+00:12:01.310 --> 00:12:13.759
+Orlando Fonseca: e a validação, que é a verificação de que esses requisitos que foram documentados estão atendendo as necessidades do cliente do usuário. Quando eu coloco aqui formal,
+
+81
+00:12:14.760 --> 00:12:32.959
+Orlando Fonseca: estruturado e formal na especificação, ele diz: se você trabalha, estou fazendo uma analogia. Interesse se você trabalha na metodologia ágil que olha o que eu estou colocando aqui é uma linguagem que o cliente entende. Não é
+
+82
+00:12:33.570 --> 00:12:50.950
+Orlando Fonseca: um texto vago assim, beleza. Enfim, aí a gente entendeu quais seriam essas operações. Que o sistema vai ter. Por isso que eu coloquei aqui formal. E se a gente trabalha numa outra metodologia que tem uma documentação abrangente, então seria muito mais formal, bem mais estruturado se de repente, se for Rup ou não
+
+83
+00:12:50.980 --> 00:12:57.689
+Orlando Fonseca: beleza. Mas todas essas mitologia passa por essa parte de especificação não tem como fugir dela, senão você vai
+
+84
+00:12:58.370 --> 00:13:02.729
+Orlando Fonseca: entregar para o cliente uma coisa que não tem nada a ver com o que ele pediu. Ficou claro, né?
+
+85
+00:13:04.940 --> 00:13:07.799
+Orlando Fonseca: Ok, primeira paz. O que eu amo fazer
+
+86
+00:13:08.480 --> 00:13:15.700
+Orlando Fonseca: nessa parte da licitação. Vamos coletar ao máximo as informações.
+
+87
+00:13:16.220 --> 00:13:24.819
+Orlando Fonseca: Tá sombra que precisa ser feito. Em outras palavras, que dizer que o cliente e usuário vai precisar.
+
+88
+00:13:25.820 --> 00:13:28.279
+Orlando Fonseca: Como que eu vou fazer isso.
+
+89
+00:13:28.540 --> 00:13:33.960
+Orlando Fonseca: Entrevistas, questionário. Vamos estudar documentos,
+
+90
+00:13:34.090 --> 00:13:39.209
+Orlando Fonseca: observação de tarefas diárias das pessoas e a avaliação do sistema computacional existente. Se houver,
+
+91
+00:13:39.330 --> 00:13:41.990
+Orlando Fonseca: vamos falar um pouquinho. Vamos fazer um parêntese aqui.
+
+92
+00:13:42.470 --> 00:13:45.680
+Orlando Fonseca: Acho que eu falei na aula anterior para retraçá la.
+
+93
+00:13:46.230 --> 00:13:48.250
+Orlando Fonseca: Entrevista a gente faz muitas
+
+94
+00:13:48.600 --> 00:13:55.740
+Orlando Fonseca: para começar o projeto. Pelo menos começamos bastante com ele. Um, duas, três. Pelo menos
+
+95
+00:13:56.700 --> 00:14:03.320
+Orlando Fonseca: nessa entrevista. Aqui, eles não são mutuamente excluentes. O que dizem isso nessa entrevista. Estou falando.
+
+96
+00:14:03.530 --> 00:14:05.219
+Orlando Fonseca: Fala pra mim, por favor.
+
+97
+00:14:05.350 --> 00:14:07.819
+Orlando Fonseca: Essa operação que você quer implementar,
+
+98
+00:14:08.110 --> 00:14:14.070
+Orlando Fonseca: pelo menos especifica um pouquinho melhor. Qual seria o surgir a dia para fazer um empréstimo.
+
+99
+00:14:14.410 --> 00:14:20.070
+Orlando Fonseca: Seria o dia a dia de vocês. O que você espera que ele faça em linguagem natural?
+
+100
+00:14:20.240 --> 00:14:21.730
+Orlando Fonseca: Linguagem natural.
+
+101
+00:14:21.870 --> 00:14:25.920
+Orlando Fonseca: Pode ser que o
+
+102
+00:14:27.170 --> 00:14:33.940
+Orlando Fonseca: vamos supor, né? Está representando um projeto. A gente tem um documento que o acessório tem que preencher. Bom, Cadê o documento?
+
+103
+00:14:34.350 --> 00:14:50.500
+Orlando Fonseca: Deixa entender o documento que ele tem que preencher. Às vezes ele fala. Ah, eu sei que tem uma secretaria ou tem um pessoal lá que preenche esses dados aqui também. Que ele faz na mão. Mas a gente precisa colocar no sistema que deixa eu ver esse documento.
+
+104
+00:14:51.070 --> 00:14:58.410
+Orlando Fonseca: Beleza, tudo que você tem ali, fisicamente ou não entendido.
+
+105
+00:15:00.520 --> 00:15:15.080
+Orlando Fonseca: Próximo passo. Eu quero observar essa tarefa diária de você. Porque se a gente quer automatizar alguma coisa e otimizar esse fluxo, eles vão conhecer o que ele faz. Então, de repente, a gente vai lá e fala. Deixa eu ver como seria o fluxo. Na verdade, você explica onde a gente observa,
+
+106
+00:15:15.790 --> 00:15:16.650
+Orlando Fonseca: tá?
+
+107
+00:15:17.570 --> 00:15:20.240
+Orlando Fonseca: E muitos casos.
+
+108
+00:15:21.040 --> 00:15:24.670
+Orlando Fonseca: Já assiste um sistema parecido
+
+109
+00:15:25.140 --> 00:15:29.150
+Orlando Fonseca: do que a gente está querendo implementar. Só que não tem a funcionalidade que ele quer.
+
+110
+00:15:29.800 --> 00:15:39.129
+Orlando Fonseca: Então as beijas Lps para modificar esse sistema. Enfim, uma exceção da equipe. Ou talvez a gente trai nossa solução.
+
+111
+00:15:39.890 --> 00:15:46.480
+Orlando Fonseca: Sai mandato para ele. A gente dá melhor sustentação, como é nosso completamente. Mas de repente
+
+112
+00:15:46.880 --> 00:15:59.070
+Orlando Fonseca: ele fala assim. Veja que esse sistema aqui ele me atende. O sistema que eu tenho implementado será a conversa do cliente. O sistema que eu tenho implementado. Ele está me atendendo nesse ponto nesse ponto e nesse ponto, mas
+
+113
+00:15:59.910 --> 00:16:09.040
+Orlando Fonseca: não aci para fazer. Por exemplo, o cliente perdeu a bicicleta. Enfim, não foi implementado na época, pensando nessa funcionalidade.
+
+114
+00:16:09.950 --> 00:16:12.470
+Orlando Fonseca: Ok, você consegue.
+
+115
+00:16:12.980 --> 00:16:14.350
+Orlando Fonseca: É?
+
+116
+00:16:14.550 --> 00:16:17.490
+Orlando Fonseca: Você consegue implementar isso?
+
+117
+00:16:17.640 --> 00:16:18.869
+Orlando Fonseca: O que seriam?
+
+118
+00:16:19.140 --> 00:16:28.669
+Orlando Fonseca: Uma boa prática para a gente? Me deixa ver o sistema. Me explica o que o sistema tem por quê? Porque muitas das vezes o usuário
+
+119
+00:16:28.940 --> 00:16:48.269
+Orlando Fonseca: tem galifico na cabeça que a gente vai replicar essas funções do sistema dele, que já funciona muito bem, que a gente está acostumado no novo sistema. Então a gente precisa também ver se é possível. Mostra aí o sistema que você tem. Quero ver o que você gosta dele, o que não gosta dele. E a partir dali, temos nossas conclusões também.
+
+120
+00:16:48.980 --> 00:16:56.699
+Orlando Fonseca: Ok, então veja um estudo que não é simples, não é? Vamos bater um papo. Você precisa. Não tem muito mais envolvido ali.
+
+121
+00:16:56.860 --> 00:17:00.090
+Orlando Fonseca: Tem questionário também. Aí você não costuma fazer isso.
+
+122
+00:17:00.230 --> 00:17:05.380
+Orlando Fonseca: Essa parte do questionário. Mas tem. Enfim, é,
+
+123
+00:17:05.619 --> 00:17:13.810
+Orlando Fonseca: você pode sim, fazer um questionário com vários desses usuários finais, o que eles precisam, o que deveria melhorar? E também
+
+124
+00:17:14.180 --> 00:17:16.020
+Orlando Fonseca: boa tarde.
+
+125
+00:17:16.520 --> 00:17:17.250
+Orlando Fonseca: E aí?
+
+126
+00:17:19.040 --> 00:17:23.929
+Orlando Fonseca: Ok, então, voltando para o sistema Willians.
+
+127
+00:17:24.319 --> 00:17:28.560
+Orlando Fonseca: Esse é o lugar de bicicleta. O que eu vou fazer? Desenvolvedor um time.
+
+128
+00:17:28.810 --> 00:17:32.209
+Orlando Fonseca: Qualquer um desses times. Nesse momento,
+
+129
+00:17:32.480 --> 00:17:37.400
+Orlando Fonseca: está ali no dia a dia para atender o cliente.
+
+130
+00:17:38.250 --> 00:17:42.819
+Orlando Fonseca: O que vai fazer? Vamos entrevistar o proprietário, o dono,
+
+131
+00:17:45.400 --> 00:17:57.960
+Orlando Fonseca: essa loja. Enfim, alguns desses mecânicos, o gerente ali, e vamos ter a visão de cada um desses tipos de usuários.
+
+132
+00:17:58.630 --> 00:17:59.460
+Orlando Fonseca: Tá?
+
+133
+00:17:59.600 --> 00:18:08.660
+Orlando Fonseca: A minha entrevista foi esquecer especificamente para o gerente, a visão do gerente é uma visão totalmente diferente da pessoa que está ali.
+
+134
+00:18:08.990 --> 00:18:21.120
+Orlando Fonseca: É então ali vamos supor na porteria dessa loja, falando diretamente com o cliente. Vamos chamar de secretaria hã?
+
+135
+00:18:21.250 --> 00:18:26.820
+Orlando Fonseca: É uma lição totalmente diferente do sistema. O gerente, de repente, tipo, hoje, é
+
+136
+00:18:27.150 --> 00:18:35.799
+Orlando Fonseca: autorizar algum tipo de empréstimo, mas a pessoa que está ali, ou a pessoa que quer alugar a bicicleta. De repente, ela pode fazer um cadastro,
+
+137
+00:18:36.290 --> 00:18:47.079
+Orlando Fonseca: dar uma olhada no histórico. Veja que são funções diferentes para cada tipo de usuário que está interagindo com o sistema.
+
+138
+00:18:47.500 --> 00:18:56.379
+Orlando Fonseca: Tá até aí, certinho. Vamos chamar esse tipo de papéis. Atores roll de Soares.
+
+139
+00:18:58.070 --> 00:18:59.010
+Orlando Fonseca: Tchau.
+
+140
+00:18:59.590 --> 00:19:02.289
+Orlando Fonseca: Então é isso, pessoal, o que vamos.
+
+141
+00:19:02.770 --> 00:19:09.520
+Orlando Fonseca: O que seria o incentivo dessa primeira fase. Vamos entender o que ele quer fazendo entrevistas.
+
+142
+00:19:09.670 --> 00:19:10.710
+Orlando Fonseca: Vá no
+
+143
+00:19:10.860 --> 00:19:27.279
+Orlando Fonseca: entender o funcionamento do negócio, porque de bicicleta não é o mesmo para todas as lojas que alugam bicicleta. Cada um tem uma lógica de negócio ali diferente. Tem alguns pontos em comum, mas cada loja tem a sua particularidade.
+
+144
+00:19:27.710 --> 00:19:28.620
+Orlando Fonseca: Tá bom?
+
+145
+00:19:29.720 --> 00:19:33.530
+Orlando Fonseca: E identificar o problema que ele tem. E a possível melhoria também.
+
+146
+00:19:34.720 --> 00:19:37.709
+Orlando Fonseca: Certinho até aí, pessoal.
+
+147
+00:19:40.500 --> 00:19:41.240
+Orlando Fonseca: Beleza.
+
+148
+00:19:43.690 --> 00:19:50.390
+Orlando Fonseca: E é um, por exemplo, tranquilo. Por exemplo, o desenvolvedor.
+
+149
+00:19:52.420 --> 00:19:59.520
+Orlando Fonseca: Vamos ver se essa. Você até terminou uma conversa entre o desenvolvedor e o gerente, por exemplo, e outros
+
+150
+00:20:00.230 --> 00:20:02.440
+Orlando Fonseca: tipo ali de usuário. Enfim,
+
+151
+00:20:03.400 --> 00:20:18.309
+Orlando Fonseca: bom, nesse momento, eu falo o seguinte: você poderia me contar o que normalmente acontece quando alguém quer alugar uma bicicleta. São alguns tipos de perguntas que você poderia estar fazendo. Eu quero que você me explique. Passo a passo e passo a passo. É uma chave nessa conversa. Por quê?
+
+152
+00:20:18.650 --> 00:20:24.580
+Orlando Fonseca: Porque o usuário sem querer, né? Assim já está quase que,
+
+153
+00:20:25.030 --> 00:20:30.729
+Orlando Fonseca: colocando para a gente a ideia do que vai ser. No final, o algoritmo
+
+154
+00:20:31.420 --> 00:20:39.010
+Orlando Fonseca: vai ter os pontos para a gente especificar esse requisito para fazer a modelagem. E, finalmente, para implementar. Então você fala passo a passo,
+
+155
+00:20:39.500 --> 00:20:43.449
+Orlando Fonseca: mas detalhadamente, por exemplo, veja o que o gerente fala.
+
+156
+00:20:43.650 --> 00:20:49.279
+Orlando Fonseca: Digamos que alguém entra e diz que quer alugar uma bicicleta. Ele começou, chegou um usuário e
+
+157
+00:20:49.660 --> 00:20:57.319
+Orlando Fonseca: quero uma bicicleta para aquela tarde. Eu pergunto se a pessoa já sabe que tipo quer. E assim continua,
+
+158
+00:20:57.830 --> 00:20:58.680
+Orlando Fonseca: tá,
+
+159
+00:20:59.140 --> 00:21:06.189
+Orlando Fonseca: beleza. O que está no passo a passo? Engenhou o cliente. O que vai fazer? Ah, eu verifico se ele está em cadastro ou não.
+
+160
+00:21:07.040 --> 00:21:17.650
+Orlando Fonseca: A gente toma nota. Ah, beleza. Tem uma verificação antes. Se ele tem cadastro ou não para bicicleta, aí eu sei. O gerente, né? Vê se
+
+161
+00:21:18.330 --> 00:21:28.220
+Orlando Fonseca: o histórico dele. Se um cliente de Vip, por exemplo, tem um passo a passo e a gente vai entendendo assim numa conversa,
+
+162
+00:21:28.490 --> 00:21:30.079
+Orlando Fonseca: qual seria a regra do negócio?
+
+163
+00:21:31.100 --> 00:21:40.240
+Orlando Fonseca: Tá bom, ok, tem essa entrevista?
+
+164
+00:21:41.800 --> 00:21:48.529
+Orlando Fonseca: O desenvolvedor vai, percebe? Problemas operacionais, por exemplo.
+
+165
+00:21:49.030 --> 00:21:54.860
+Orlando Fonseca: Consulta sobre disponibilidade e preço. Demora muito. Como que eles sabem isso?
+
+166
+00:21:59.890 --> 00:22:01.610
+Orlando Fonseca: Como que elas chegou nessa informação?
+
+167
+00:22:02.230 --> 00:22:07.219
+Orlando Fonseca: Primeiro, o gerente foi falar com ele. Olha, não faço uma consulta
+
+168
+00:22:07.910 --> 00:22:14.950
+Orlando Fonseca: aqui nesse sistema. Tá demorando beleza, ou até pode ser uma informação, o que é implícito
+
+169
+00:22:15.820 --> 00:22:25.120
+Orlando Fonseca: a gente, mesmo testando a gente. Vendo aí a gente fala Ih, mas isso aqui demora? Normalmente, ele demora. Assim demora um minuto para testar foto.
+
+170
+00:22:25.290 --> 00:22:29.839
+Orlando Fonseca: A gente tem ali. A gente identificou um ponto de melhoria e ele me falou
+
+171
+00:22:29.990 --> 00:22:38.950
+Orlando Fonseca: porque pra ele normal é normal. Aguarda um minutinho. Aguarda um minuto que ele vai atualizar. Agora o preço a gente fica uma melhoria,
+
+172
+00:22:39.390 --> 00:22:40.220
+Orlando Fonseca: ok?
+
+173
+00:22:41.270 --> 00:22:46.049
+Orlando Fonseca: A única forma de saber se uma bicicleta está disponível é olhar no salão. Veja só.
+
+174
+00:22:46.500 --> 00:22:52.130
+Orlando Fonseca: Não tem um cadastro de estoque. Não tem esse gerenciamento de estoque, não tem?
+
+175
+00:22:52.360 --> 00:22:55.080
+Orlando Fonseca: Então, o que a funcionária faz?
+
+176
+00:22:55.260 --> 00:23:03.929
+Orlando Fonseca: Provavelmente ele faz. Aguarda um minutinho. Aí vai lá. Olha, deixa eu ver se essa bicicleta tá aqui. Ainda tá aqui? Tá aqui no par. Tá aqui no salão, então beleza liberado.
+
+177
+00:23:04.500 --> 00:23:05.390
+Orlando Fonseca: Está vendo?
+
+178
+00:23:06.020 --> 00:23:10.129
+Orlando Fonseca: Os catorze são organizados por números. Precisam saber o número antes da busca.
+
+179
+00:23:10.540 --> 00:23:12.860
+Orlando Fonseca: Enfim, essa deixa eu ver aqui.
+
+180
+00:23:14.040 --> 00:23:31.549
+Orlando Fonseca: Isso aí. O famoso peraí que eu vou ver. Mas às vezes é tão natural. Pessoal assim o trabalho por anos. Nesse caso, tá um exemplo, que é claro, mas em outro está natural. Tipo assim. Sempre a gente fez cinco anos trabalhando assim. E ninguém chega depois de ser valorado.
+
+181
+00:23:32.070 --> 00:23:32.860
+Orlando Fonseca: Não.
+
+182
+00:23:33.910 --> 00:23:38.269
+Orlando Fonseca: Não há registro do cliente nem locações anteriores. Isso aqui é crítica
+
+183
+00:23:39.300 --> 00:23:43.750
+Orlando Fonseca: a gente. Bom, muito a gente lembra
+
+184
+00:23:45.040 --> 00:23:49.559
+Orlando Fonseca: só lembrar, senão vamos a lugar e a gente faz um cadastro.
+
+185
+00:23:50.770 --> 00:23:51.980
+Orlando Fonseca: É,
+
+186
+00:23:53.010 --> 00:24:07.949
+Orlando Fonseca: a gente precisa de um outro sistema. Tem um sistema logo de bicicleta. Beleza que não está atendendo a alguns pontos, mas para a pessoa que está atendendo, tem um registro. A parte pode ser uma agenda. Pode ser lá um outro sistema
+
+187
+00:24:08.510 --> 00:24:17.630
+Orlando Fonseca: que ela coloca aqui. Ah, sei, né? O Paulo usou essa bicicleta e atrasou. Então por que precisa ter dois sistemas. Um paralelo.
+
+188
+00:24:18.080 --> 00:24:25.760
+Orlando Fonseca: O pessoal onde vai colocar nossas informações aqui? Até podem ser sensíveis. Que está fora do sistema. Por que ela precisa fazer isso,
+
+189
+00:24:26.230 --> 00:24:37.430
+Orlando Fonseca: porque o sistema principal não está atendendo vocês. Para fazer ali um registro decente que tem um histórico de todas as locações desses usuários
+
+190
+00:24:38.220 --> 00:24:40.749
+Orlando Fonseca: que tenha todas as informações dele,
+
+191
+00:24:41.300 --> 00:24:44.439
+Orlando Fonseca: porque você precisa ter um sistema parte para fazer isso, então.
+
+192
+00:24:46.900 --> 00:24:58.610
+Orlando Fonseca: Ok, então eu levei, por exemplo, que o processo de evolução em demorado para, enfim, qualquer
+
+193
+00:24:59.910 --> 00:25:07.410
+Orlando Fonseca: informações sobre bicicletas especiais precisam ser anotadas, tá muito bem
+
+194
+00:25:10.870 --> 00:25:17.470
+Orlando Fonseca: aí o que acontece, pessoal, se você também tem, é um trade off no sentido que
+
+195
+00:25:17.960 --> 00:25:25.099
+Orlando Fonseca: se imagina. Agora a gente falou com quem? Com o gerente, tá de repente com a pessoa que está ali,
+
+196
+00:25:25.630 --> 00:25:29.410
+Orlando Fonseca: tramos usuário feito. Fez aí com
+
+197
+00:25:30.030 --> 00:25:39.129
+Orlando Fonseca: os usuários do não, os clientes que estariam alugando bicicleta. De repente, tem um outro trabalhador. Que é
+
+198
+00:25:39.960 --> 00:25:42.649
+Orlando Fonseca: que tem algum outro roller nesse sistema,
+
+199
+00:25:43.190 --> 00:26:01.240
+Orlando Fonseca: mas podemos, sim, também ouvir as opiniões de usuários reais. Aquela pessoa que quer alugar a bicicleta. Também podemos entrevistar ele assim. Ou não, você aguarda ali e conversa com uma, duas pessoas. Três
+
+200
+00:26:01.860 --> 00:26:03.630
+Orlando Fonseca: e.
+
+201
+00:26:03.780 --> 00:26:08.970
+Orlando Fonseca: E fala: ó, o que você sente falta desse aqui? Quando você chega numa bicicleta?
+
+202
+00:26:09.280 --> 00:26:18.859
+Orlando Fonseca: Na verdade, ele estaria num usuário do sistema, senão que ele estaria num usuário da loja. Entendido, pessoal. Ele quer alugar bicicleta, mas ele também sofre com
+
+203
+00:26:19.280 --> 00:26:27.320
+Orlando Fonseca: o sistema de forma indireta. Pode ser que seja demorado. Aguarda aí, por favor. Até o sistema liberado
+
+204
+00:26:27.850 --> 00:26:35.509
+Orlando Fonseca: está demorando aqui. Está demorando o funcionário. Demora para fazer uma busca para liberar para mim. A gente pode escutar ele também.
+
+205
+00:26:35.800 --> 00:26:39.589
+Orlando Fonseca: Só que assim onde que tem um trade off, eu falo
+
+206
+00:26:39.860 --> 00:26:44.110
+Orlando Fonseca: porque assim, em teoria, quanto mais informação você tem, melhor para o sistema.
+
+207
+00:26:44.610 --> 00:26:47.700
+Orlando Fonseca: Mas quantas pessoas você vai entrevistar
+
+208
+00:26:48.970 --> 00:26:51.939
+Orlando Fonseca: todo mundo? Cinquenta, cem. Quais seria o número máximo.
+
+209
+00:26:59.370 --> 00:27:00.449
+Orlando Fonseca: O que você sabe?
+
+210
+00:27:02.220 --> 00:27:03.590
+Orlando Fonseca: Depende do sistema.
+
+211
+00:27:05.980 --> 00:27:10.960
+Orlando Fonseca: Qual é sentido, por exemplo, em que sentido vai depender
+
+212
+00:27:13.390 --> 00:27:17.630
+Orlando Fonseca: no sistema de alugar de bicicleta pode ser um lugar de qualquer coisa, mas nesse caso, eu sou bicicleta.
+
+213
+00:27:18.060 --> 00:27:25.820
+Orlando Fonseca: Então, quantas pessoas eu vou ouvir? Quantas precisaram? Mas quantas que na verdade eu preciso é
+
+214
+00:27:26.740 --> 00:27:29.920
+Orlando Fonseca: o máximo das pessoas
+
+215
+00:27:30.370 --> 00:27:36.389
+Orlando Fonseca: participarem. Eu vou ouvir todo mundo. Pois é só que assim, às vezes eu vou atravessar cem
+
+216
+00:27:36.840 --> 00:27:43.940
+Orlando Fonseca: a partir dali. Eu vou ouvir todo mundo. E de repente tem algumas ideias ali, que é.
+
+217
+00:27:45.290 --> 00:27:52.379
+Orlando Fonseca: Seria um detalhe do detalhe muito específico. E não vale a pena mais
+
+218
+00:27:52.780 --> 00:28:00.370
+Orlando Fonseca: beleza. O objetivo é você ouvir ali a opinião do uma quantidade
+
+219
+00:28:00.730 --> 00:28:09.919
+Orlando Fonseca: boa de pessoas. Porque eu não vou falar para vocês. O número trinta com trinta pessoas. A gente entende o que está acontecendo no sistema. Não sei. Não tenho mais receita para isso.
+
+220
+00:28:10.100 --> 00:28:10.870
+Orlando Fonseca: Tá?
+
+221
+00:28:11.910 --> 00:28:19.880
+Orlando Fonseca: Mas é de repente fazendo um filtro. Tem formulário também online, tá?
+
+222
+00:28:19.990 --> 00:28:32.369
+Orlando Fonseca: Tem muitos formulários online. Você não tem que ir lá com um lápis papel fazendo esse questionário. Essas entrevistas, esse online também não tem problema. Envia o link, até para ele. A lília da loja.
+
+223
+00:28:33.140 --> 00:28:34.560
+Orlando Fonseca: Bagunça, soares, né?
+
+224
+00:28:35.460 --> 00:28:37.560
+Orlando Fonseca: Pesquisa de satisfação
+
+225
+00:28:38.070 --> 00:28:46.360
+Orlando Fonseca: e colocado alguma sugerência, por isso também, tá ou algumas perguntas muito curtas, muito curtas ali. Ó,
+
+226
+00:28:47.410 --> 00:28:49.409
+Orlando Fonseca: e a gente está olhando para
+
+227
+00:28:49.960 --> 00:28:52.449
+Orlando Fonseca: para cadastro. Você fala assim? Ó
+
+228
+00:28:52.690 --> 00:28:58.850
+Orlando Fonseca: essa parte do carro, você está atendendo marca de um até cinco. Se você está realmente satisfeito ali
+
+229
+00:29:00.090 --> 00:29:07.599
+Orlando Fonseca: algum, por exemplo, com a devolução, você faz a devolução. Você não fala de um até cinco. Você
+
+230
+00:29:08.160 --> 00:29:10.240
+Orlando Fonseca: se está atendendo a você se tem,
+
+231
+00:29:10.700 --> 00:29:20.749
+Orlando Fonseca: funciona também. Tá boa, Júlio. Pois é também por isso eu falei. Qual seria o número
+
+232
+00:29:20.920 --> 00:29:27.970
+Orlando Fonseca: para a gente falar? Olha, a gente entrevistou a gente. Tem aqui a resposta do questionário de cinquenta pessoas de cem pessoas.
+
+233
+00:29:28.080 --> 00:29:29.250
+Orlando Fonseca: Qual seria o número?
+
+234
+00:29:29.750 --> 00:29:38.189
+Orlando Fonseca: Não sei. Primeiro, que você vai garantir que você está escutando a pessoa que representa o cliente, ou
+
+235
+00:29:38.500 --> 00:29:45.299
+Orlando Fonseca: você vai lá nesse sistema de bicicleta, você vai lá e fala com as principais que interagem com o sistema. Vão ser nessas principais,
+
+236
+00:29:45.750 --> 00:29:54.600
+Orlando Fonseca: o gerente, a pessoa que está na porta, de repente, uma terceira persona, uma terceira pessoa e é um
+
+237
+00:29:55.540 --> 00:30:06.289
+Orlando Fonseca: e alguns Usuários finais. Só então, a partir dali, se vier mais informação, a gente vai adaptar no nosso sistema, então, massas principais
+
+238
+00:30:07.810 --> 00:30:15.110
+Orlando Fonseca: eles estariam ali, nessas primeiras entrevistas, naturalmente principais dificuldades.
+
+239
+00:30:16.030 --> 00:30:21.879
+Orlando Fonseca: Mas é isso muito bom até aí, pessoal. Tranquilo, né?
+
+240
+00:30:22.990 --> 00:30:25.780
+Orlando Fonseca: Então, vamos lá. O que seria o cenário?
+
+241
+00:30:27.620 --> 00:30:37.019
+Orlando Fonseca: Tá cenário e uma sequência de interações entre um usuário e o sistema. Um usuário
+
+242
+00:30:38.100 --> 00:30:44.000
+Orlando Fonseca: realizar para alcançar um objetivo específico é,
+
+243
+00:30:44.460 --> 00:30:49.839
+Orlando Fonseca: por exemplo, devolução de uma bicicleta cujo cartão de registro está perdido.
+
+244
+00:30:53.500 --> 00:30:59.249
+Orlando Fonseca: Não estou lembrando que nesse sistema mais antigo, a pessoa quando foi fazer o
+
+245
+00:30:59.690 --> 00:31:02.140
+Orlando Fonseca: o pai. Só não aguento bicicleta. Ela dá,
+
+246
+00:31:02.620 --> 00:31:08.920
+Orlando Fonseca: dá um cartão, sei lá. E na hora de fazer a devolução. Tem que entregar esse cartão, tá bom.
+
+247
+00:31:10.740 --> 00:31:21.620
+Orlando Fonseca: Então o cenário, o que vai ajuda a lembrar descrever processos do sistema, identificar exceções, visualizar requisitos futuros. Por exemplo,
+
+248
+00:31:23.530 --> 00:31:26.570
+Orlando Fonseca: o cenário, imagine como sendo uma situação,
+
+249
+00:31:26.760 --> 00:31:31.410
+Orlando Fonseca: uma situação muito específica que está acontecendo com um cliente e uma bicicleta.
+
+250
+00:31:31.650 --> 00:31:36.499
+Orlando Fonseca: Quer dizer, um cliente e o sistema interação entre um cliente e o sistema.
+
+251
+00:31:37.030 --> 00:31:38.920
+Orlando Fonseca: Situação normal.
+
+252
+00:31:39.240 --> 00:31:43.019
+Orlando Fonseca: Colocar normal, porque vai ter uma situação que é atípica.
+
+253
+00:31:43.830 --> 00:31:46.430
+Orlando Fonseca: A situação normal veio aqui, ó
+
+254
+00:31:47.010 --> 00:31:52.210
+Orlando Fonseca: um cliente retorna a bicicleta e o sistema calcula automaticamente o valor devido,
+
+255
+00:31:55.230 --> 00:31:56.050
+Orlando Fonseca: tá,
+
+256
+00:31:59.270 --> 00:32:07.840
+Orlando Fonseca: quando for no mar, porque eu o habitual tem aquele caminho que todo mundo tá, né?
+
+257
+00:32:08.080 --> 00:32:10.309
+Orlando Fonseca: É esperado. O que acontece?
+
+258
+00:32:12.320 --> 00:32:14.620
+Orlando Fonseca: Ok, vamos supor.
+
+259
+00:32:16.180 --> 00:32:19.319
+Orlando Fonseca: Cliente foi lá, fez uma devolução da bicicleta
+
+260
+00:32:20.010 --> 00:32:31.490
+Orlando Fonseca: e pronto. Foi calculado ali. O valor tá certinho. Deixa eu ver. Quantos dias você esteve com essa bicicleta? Dois dias. Então agora você tem que pagar esse aqui. E pronto. Fechou
+
+261
+00:32:32.170 --> 00:32:33.980
+Orlando Fonseca: feliz
+
+262
+00:32:35.680 --> 00:32:43.350
+Orlando Fonseca: o cálculo do valor ao cliente. Descubra no final, depende do sistema. Ninguém falou disso. Por quê? Porque eu, por exemplo, eu
+
+263
+00:32:43.620 --> 00:32:53.990
+Orlando Fonseca: pense nesse sistema como a gente indo lá alugar uma bicicleta pagando um sinal e a gente paga o restante lá na devolução da bicicleta,
+
+264
+00:32:54.230 --> 00:32:55.070
+Orlando Fonseca: tá?
+
+265
+00:32:55.920 --> 00:32:58.620
+Orlando Fonseca: Ou por isso é tipo por hora, porque que acontece
+
+266
+00:32:58.770 --> 00:33:08.719
+Orlando Fonseca: e eu não posso pagar tudo. Porque se eu, por exemplo, eu vou alugar a bicicleta duas horas. Mas se eu quiser estender isso aí para três, cinco horas,
+
+267
+00:33:09.110 --> 00:33:15.870
+Orlando Fonseca: eu não posso pagar ali. Então você vai lá, chega, faz a devolução e acerta o valor, faltando
+
+268
+00:33:18.870 --> 00:33:28.250
+Orlando Fonseca: saber o valor total de início, pode ser, né? De repente, quanto você vai fechar? Três horas aí, três horas. Você vai pagar tanto por essa bicicleta.
+
+269
+00:33:28.650 --> 00:33:33.659
+Orlando Fonseca: Parece chipam de bicicleta, tá, passou. Você tem que acertar o valor.
+
+270
+00:33:34.900 --> 00:33:38.570
+Orlando Fonseca: Isso aí dá uma estimativa de valor por hora e por tipo de bicicleta também.
+
+271
+00:33:39.760 --> 00:33:44.030
+Orlando Fonseca: Então temos cacetar, tá? Vamos cacetar a Varó.
+
+272
+00:33:45.500 --> 00:33:47.219
+Orlando Fonseca: Então veja, né?
+
+273
+00:33:47.360 --> 00:33:56.379
+Orlando Fonseca: Entendo. Nesse caso, como o cliente retornou ali com a bicicleta e o sistema fala, ó, deixa alguém aqui? Olha, não tem que pagar nada,
+
+274
+00:33:57.220 --> 00:34:01.269
+Orlando Fonseca: tá bom? Por quê? Porque você não compra três horas, tá no tempo ali
+
+275
+00:34:02.400 --> 00:34:05.870
+Orlando Fonseca: e de boa. Só faz a devolução. E pronto.
+
+276
+00:34:06.350 --> 00:34:10.130
+Orlando Fonseca: Então não tem que pagar nada, tá?
+
+277
+00:34:10.280 --> 00:34:13.319
+Orlando Fonseca: Tem um outro caso que eu não sei se coloquei aqui, que é o seguinte.
+
+278
+00:34:13.730 --> 00:34:18.059
+Orlando Fonseca: Ele está dentro do prazo. Foram três horas que ele alugou.
+
+279
+00:34:18.560 --> 00:34:25.110
+Orlando Fonseca: Chegou com uma bicicleta ali duas horas e cinquenta minutos. Foi lá e fez a devolução. Só que assim a bicicleta chegou. Quebrada.
+
+280
+00:34:25.739 --> 00:34:28.120
+Orlando Fonseca: Velho quebrado. A gente faz o quê?
+
+281
+00:34:28.650 --> 00:34:32.239
+Orlando Fonseca: Você não quer cobrar dele, não é?
+
+282
+00:34:32.370 --> 00:34:37.630
+Orlando Fonseca: Então são situações em que o sistema tem que calcular o valor devido. Se estiver,
+
+283
+00:34:40.190 --> 00:34:46.729
+Orlando Fonseca: então esse seria um caminhão. Bom, porque seria uma situação excepcional.
+
+284
+00:34:47.889 --> 00:34:54.400
+Orlando Fonseca: Eu coloquei aqui o cartão da bicicleta. Está pedido, tá uma inveja. Ó
+
+285
+00:34:54.620 --> 00:34:59.580
+Orlando Fonseca: pôde perder o cartão. Pude perder a bicicleta. A bicicleta pode vir quebrada.
+
+286
+00:34:59.720 --> 00:35:00.979
+Orlando Fonseca: O que eu vou fazer?
+
+287
+00:35:01.100 --> 00:35:03.280
+Orlando Fonseca: O que seria o cenário, como resolver isso.
+
+288
+00:35:04.010 --> 00:35:10.490
+Orlando Fonseca: Bom, primeiro, vou alertar o funcionário sobre a situação, o que seria um alerta para o funcionário.
+
+289
+00:35:10.980 --> 00:35:16.139
+Orlando Fonseca: Aqui está em uma linguagem natural. Ela está o funcionário. Mas olhando para o sistema, o que seria isso?
+
+290
+00:35:17.980 --> 00:35:23.700
+Orlando Fonseca: Vamos supor que o cliente chegou lá e a bicicleta toda quebrada. Transferi um alerta para ele
+
+291
+00:35:25.590 --> 00:35:30.580
+Orlando Fonseca: agora pensar no requisito do sistema. O que eu vou fazer para colocasse o alerta.
+
+292
+00:35:31.600 --> 00:35:37.220
+Orlando Fonseca: Alguém fala narra multa, né?
+
+293
+00:35:37.700 --> 00:35:45.450
+Orlando Fonseca: Pois é uma notificação. Um contrato gerou beleza. São opções, tá? Quem que vai definir isso
+
+294
+00:35:45.600 --> 00:35:52.360
+Orlando Fonseca: de novo, né? Com a percentagem do Projeto Dono do Projeto Pô, isso é uma multa. Pois, porque não assim? Na verdade, né,
+
+295
+00:35:52.700 --> 00:35:58.610
+Orlando Fonseca: foi uma multa. É porque chegou quebrada. Vou ter que calcular ali. Ó tá bom.
+
+296
+00:36:00.240 --> 00:36:02.459
+Orlando Fonseca: Tem um impacto ali, né?
+
+297
+00:36:02.970 --> 00:36:06.869
+Orlando Fonseca: Que deu nessa bicicleta. E o valor que o cliente está devendo
+
+298
+00:36:07.120 --> 00:36:18.899
+Orlando Fonseca: uma notificação que seria uma notificação assim eu estou entendendo como não uma notificação no celular dele. Olha, você quebrou a bicicleta. Ele até entregou a bicicleta quebrada. Ele sabe
+
+299
+00:36:19.140 --> 00:36:23.860
+Orlando Fonseca: se não mais como uma notificação.
+
+300
+00:36:24.700 --> 00:36:33.919
+Orlando Fonseca: Uma notificação de alguma forma a gente sinalizar num sistema que esse usuário já entregou uma bicicleta quebrada.
+
+301
+00:36:35.070 --> 00:36:43.020
+Orlando Fonseca: Beleza. A gente tem que deixar isso de alguma forma anotadinho no sistema. Então precisa ter uma funcionalidade para isso.
+
+302
+00:36:43.470 --> 00:36:45.550
+Orlando Fonseca: Tá, tá bom.
+
+303
+00:36:46.320 --> 00:36:57.330
+Orlando Fonseca: E ou um contrato no terceiro lugar. O que eu estou entendendo aqui? Isso ficou com o teatro sujo, beleza. O que eu estou entendendo? Um contrato no terceiro lugar,
+
+304
+00:36:57.410 --> 00:37:11.210
+Orlando Fonseca: que é o seguinte: se ele já colocado sujo, se ele vai de novo. Tem que quando for lugar para ele. De repente, o sistema pode alertar para mim. Olha, cuidado,
+
+305
+00:37:11.580 --> 00:37:12.540
+Orlando Fonseca: tá?
+
+306
+00:37:13.240 --> 00:37:22.409
+Orlando Fonseca: Então, antes dele ele fazer o contrato. Um novo empréstimo ou um novo lugar de bicicleta. Já o sistema está me sinalizando.
+
+307
+00:37:22.810 --> 00:37:26.770
+Orlando Fonseca: Cuidado com ele, porque teve um incidente,
+
+308
+00:37:27.480 --> 00:37:34.109
+Orlando Fonseca: o dia e enfim, estava necessitado. Beleza
+
+309
+00:37:41.320 --> 00:37:46.899
+Orlando Fonseca: ou não deixar nunca mais. Só que assim é muito. Se ele é muito reincidente, pode ser, né?
+
+310
+00:37:47.380 --> 00:37:49.730
+Orlando Fonseca: Tá, pois é.
+
+311
+00:37:51.570 --> 00:38:00.400
+Orlando Fonseca: De repente eu podia cobrar mais caro. Tem algumas ali. Alguma paralidade, por isso está proibido.
+
+312
+00:38:01.510 --> 00:38:04.610
+Orlando Fonseca: Foi dizer: então é um.
+
+313
+00:38:07.400 --> 00:38:13.359
+Orlando Fonseca: Veja aqui, ó, um cliente, não é o nome. Aqui chega longe. É com uma bicicleta para devolver.
+
+314
+00:38:14.050 --> 00:38:19.689
+Orlando Fonseca: E aí o Annie entra em contato com os mecânicos para pedir que alguém venha verificar a bicicleta.
+
+315
+00:38:20.040 --> 00:38:22.950
+Orlando Fonseca: Veja, aqui temos um outro tipo de usuário.
+
+316
+00:38:23.950 --> 00:38:25.430
+Orlando Fonseca: Tá? Nem carne.
+
+317
+00:38:25.960 --> 00:38:30.880
+Orlando Fonseca: O mecânico vai interagir de alguma forma, como o sistema. Não sei. Até poderia,
+
+318
+00:38:31.400 --> 00:38:40.760
+Orlando Fonseca: porque de repente, ele poderia entrar no sistema e colocar as peças que precisam ser compradas.
+
+319
+00:38:41.590 --> 00:38:47.279
+Orlando Fonseca: Pode ser. De repente, eu cheguei nesse assunto. Me considero ela interagindo com o sistema. De fato.
+
+320
+00:38:47.820 --> 00:38:53.459
+Orlando Fonseca: Peguei o número de bicicleta. Consulta o cartão correspondente. Verifico o nome endereço dele
+
+321
+00:38:53.850 --> 00:38:58.109
+Orlando Fonseca: desse cliente que ele chegou ali para eu vendo a bicicleta.
+
+322
+00:38:58.530 --> 00:39:06.689
+Orlando Fonseca: Tem que ver se a bicicleta que ele está devolvendo se a mesma que ele alugou. Também tem isso. Podia fazer uma troca de bicicleta.
+
+323
+00:39:09.950 --> 00:39:10.890
+Orlando Fonseca: Ok,
+
+324
+00:39:14.400 --> 00:39:20.060
+Orlando Fonseca: então. Bom, a devolução está sendo feita dentro do prazo, hã?
+
+325
+00:39:21.520 --> 00:39:28.490
+Orlando Fonseca: O mecânico impressiona e ver que foi devolvido em boa condição. Então, pronto. Ah, veja,
+
+326
+00:39:28.830 --> 00:39:33.200
+Orlando Fonseca: podia ter depósito. Até agora ninguém falou disso. Mas podemos fazer um depósito
+
+327
+00:39:33.530 --> 00:39:44.499
+Orlando Fonseca: caso aconteça alguma coisa. Você precisa deixar um depósito aqui. Tá? Se veio quebrado, você perde nesse guiné. Pois é.
+
+328
+00:39:44.960 --> 00:39:52.249
+Orlando Fonseca: Não aconteceu nada. Foi tudo certo. A gente devolve pra você, né? Ou deixa como um crédito para o próximo aluguel conhecer também.
+
+329
+00:39:55.920 --> 00:39:56.800
+Orlando Fonseca: Tá
+
+330
+00:40:00.820 --> 00:40:03.040
+Orlando Fonseca: beleza? Então,
+
+331
+00:40:06.600 --> 00:40:11.400
+Orlando Fonseca: beleza, também é importante que o desenvolvedor descubra o que acontece com um objetivo não atendido.
+
+332
+00:40:12.790 --> 00:40:15.710
+Orlando Fonseca: Tá bom,
+
+333
+00:40:16.600 --> 00:40:28.330
+Orlando Fonseca: vamos atender essa situação. Agora que falaram para quem pensa o movimento, um cliente. Pode ir ao Willis que disser ao sistema de bicicleta. Pode falar, Jorge.
+
+334
+00:40:28.660 --> 00:40:30.139
+Orlando Fonseca: Boa noite para você.
+
+335
+00:40:30.140 --> 00:40:32.440
+Jorge José Luiz Santos da Silva: Desculpa aí interromper.
+
+336
+00:40:32.440 --> 00:40:33.820
+Orlando Fonseca: A vontade.
+
+337
+00:40:34.120 --> 00:40:50.799
+Jorge José Luiz Santos da Silva: Queria só tirar uma dúvida. Nesse caso, por exemplo, eu sei que a gente está focando no cliente, mas também seria perdão focando na pessoa que precisa do aplicativo. Mas nesse caso, também seria interessante focar nos clientes da pessoa, porque, por exemplo,
+
+338
+00:40:50.800 --> 00:41:07.850
+Jorge José Luiz Santos da Silva: no caso que você passou, a bicicleta veio quebrada. Mas assim como eu garanti que a bicicleta estava funcionando ou que a pessoa também tenha segurança. Então não teria que ser um sistema de mão dupla, tanto para o cliente quanto para a pessoa que está administrando no sistema.
+
+339
+00:41:09.810 --> 00:41:19.030
+Orlando Fonseca: Só que assim não beleza. Entendi, né? Só que veja que a gente tá fazendo um sistema para a loja de aluguel de bicicleta. Tá certo.
+
+340
+00:41:19.160 --> 00:41:25.940
+Orlando Fonseca: O usuário final. Ele não interage com a bicicleta. Ele, né? Enfim, ela é.
+
+341
+00:41:26.370 --> 00:41:32.759
+Orlando Fonseca: Acho excelente quando o sistema desse tipo de loja funciona. E quando não, ele sofre com isso,
+
+342
+00:41:32.890 --> 00:41:41.790
+Orlando Fonseca: Marcelino, ele não vai diretamente. E fala aí, deixa eu abrir o sistema e vou colocar aqui mais dados, né? Eu vou falar que não,
+
+343
+00:41:42.410 --> 00:41:48.829
+Orlando Fonseca: entendido. Ele fala com alguém que interage diretamente com o sistema que a gente quer implementar.
+
+344
+00:41:49.840 --> 00:41:56.729
+Jorge José Luiz Santos da Silva: Entendi. É que eu já tava já pensando já no caso de um app. Alguma coisa do tipo. Mas desculpa, foi cabeça que foi longe.
+
+345
+00:41:57.070 --> 00:41:58.180
+Orlando Fonseca: Não, mano.
+
+346
+00:41:58.940 --> 00:42:11.640
+Orlando Fonseca: Até poderia ser, né? A gente poderia ter um aplicativo. Aí teríamos um sistema do lado do usuário final onde ele pode também ali, sei lá.
+
+347
+00:42:12.440 --> 00:42:23.519
+Orlando Fonseca: Nesse caso, ela podia notificar para a noite. Olha, quebrei a bicicleta, por isso, é, hã? Pois é.
+
+348
+00:42:24.850 --> 00:42:25.860
+Jorge José Luiz Santos da Silva: Obrigado.
+
+349
+00:42:27.310 --> 00:42:31.499
+Orlando Fonseca: Então vamos lá. O cliente pede
+
+350
+00:42:31.850 --> 00:42:35.180
+Orlando Fonseca: quando eu vou ver a bicicleta. Mas
+
+351
+00:42:35.910 --> 00:42:39.020
+Orlando Fonseca: o cartão da bicicleta tá faltando beleza, né?
+
+352
+00:42:41.350 --> 00:43:01.160
+Orlando Fonseca: Olha o que aconteceu aqui. Veja, algum problema? A gente viu, entendeu quando o Sahara está fazendo a abolição da bicicleta. O que eles fazem para a gente implementar, né? Tem que implementar isso de alguma forma até que ficar bonitinho. O cadastro do preço, o valor que ele deve, né? Uma parte para o mecânico colocar assim vai colocar, né?
+
+353
+00:43:01.670 --> 00:43:07.220
+Orlando Fonseca: O alguém vai colocar por ele. Mas exatamente qual foi o custo
+
+354
+00:43:08.230 --> 00:43:11.080
+Orlando Fonseca: de quebrar essa bicicleta. Eu custo para
+
+355
+00:43:11.340 --> 00:43:14.430
+Orlando Fonseca: para a loja. Normalmente é que a gente identifica um problema.
+
+356
+00:43:14.720 --> 00:43:20.760
+Orlando Fonseca: O sistema atual gera recibos unificados. Quando um cliente aluga várias bicicletas. Aí, o que acontece
+
+357
+00:43:20.990 --> 00:43:24.210
+Orlando Fonseca: até agora? O caso simples é que
+
+358
+00:43:24.800 --> 00:43:35.590
+Orlando Fonseca: até nas entrevistas, porque ele não pôde, tipo, a necessidade dele estava sendo atendida no sentido que ele falar. Ó, sempre que chega um cliente, a gente atende, ele
+
+359
+00:43:35.730 --> 00:43:38.939
+Orlando Fonseca: levo uma bicicleta e vai embora.
+
+360
+00:43:39.210 --> 00:43:42.129
+Orlando Fonseca: Não é isso. Uma aluguer de bicicleta. Só que eu vejo nesse caso. Aqui.
+
+361
+00:43:42.540 --> 00:43:44.919
+Orlando Fonseca: Ah, então, toda vez que ele
+
+362
+00:43:45.070 --> 00:43:47.110
+Orlando Fonseca: levou a bicicleta e encheram um recibo.
+
+363
+00:43:47.950 --> 00:43:57.269
+Orlando Fonseca: Você levou essa bicicleta. O valor que foi pago, beleza. Só que assim. E se a pessoa quiser alugar
+
+364
+00:43:57.630 --> 00:43:59.080
+Orlando Fonseca: duas bicicletas.
+
+365
+00:43:59.670 --> 00:44:08.350
+Orlando Fonseca: O que acontece aí? Ele fala. Sabe o que já aconteceu? Não é muito
+
+366
+00:44:08.610 --> 00:44:13.779
+Orlando Fonseca: habitual, mas já aconteceu que é o lugar de uma bicicleta.
+
+367
+00:44:14.170 --> 00:44:21.599
+Orlando Fonseca: Tem sentido isso para vocês chegar lá um cliente e falar. Ah, mas dá de uma bicicleta.
+
+368
+00:44:25.180 --> 00:44:29.559
+Orlando Fonseca: Isso aí permitiria apenas uma, né?
+
+369
+00:44:30.430 --> 00:44:31.340
+Orlando Fonseca: Pois é.
+
+370
+00:44:31.470 --> 00:44:36.879
+Orlando Fonseca: Tá. Com o namorado ou amigo, assim usar conta cometeria apenas uma, ou até mais. Pode ser, né?
+
+371
+00:44:37.500 --> 00:44:41.369
+Orlando Fonseca: Mas se ele quiser alugado de uma bicicleta, você vai prevenir.
+
+372
+00:44:42.290 --> 00:44:45.319
+Orlando Fonseca: Tem algumas noites que falam opa você suponha, igual a uma.
+
+373
+00:44:45.450 --> 00:44:52.160
+Orlando Fonseca: Então, se precisa alugar para outra pessoa, outra pessoa tem que fazer o cadastro. Por isso que sem uma regra, a gente vai
+
+374
+00:44:52.470 --> 00:45:02.250
+Orlando Fonseca: se. Eu quero. Nesse caso, ele permite. Sim, por quê? Vamos supor porque ele tem bicicletas para adultos. E tem também alguma bicicleta para criança.
+
+375
+00:45:02.570 --> 00:45:04.679
+Orlando Fonseca: A gente quer dar um passeio em uma família.
+
+376
+00:45:05.520 --> 00:45:25.210
+Orlando Fonseca: Tá bom. Então é uma pessoa que vai lá e fala. Ó me dá uma bicicleta que para adulto. E eu quero ser outra bicicleta para criança. A gente quer dar um passo a ele. Aí o que acontece? Você vai, né? O que vai ser? Cadastro? O pai. Confim o que for, né? Vai ter que fazer um novo cadastro ali para alugar a bicicleta do filho ou fazer.
+
+377
+00:45:25.430 --> 00:45:27.439
+Orlando Fonseca: Não é o que vocês acham.
+
+378
+00:45:27.710 --> 00:45:32.779
+Orlando Fonseca: E ainda assim, se ele conseguir fazer isso, ele vai ter que dois recibos
+
+379
+00:45:33.050 --> 00:45:40.750
+Orlando Fonseca: separado teve que fazer ali dois registros, dois aluguéis ali, diferente no mesmo momento. Dá para unificar isso?
+
+380
+00:45:41.600 --> 00:45:56.250
+Orlando Fonseca: Daria para uma mesma pessoa. Quero duas bicicletas ali no mesmo sistema, assim, de bicicleta. E quando ela printa, por exemplo, ela vai gerar um recibo só com esse valor, representando essas duas bicicletas.
+
+381
+00:45:57.720 --> 00:45:59.110
+Orlando Fonseca: Ah, deixa eu ver. Aqui
+
+382
+00:46:00.390 --> 00:46:07.869
+Orlando Fonseca: tinha implementar. Começou a pegar várias bicicletas, mas colocar registro das outras pessoas. Ah, e essa pessoa? Isso
+
+383
+00:46:09.110 --> 00:46:12.720
+Orlando Fonseca: então, beleza, pé não tem setor errado,
+
+384
+00:46:13.310 --> 00:46:19.809
+Orlando Fonseca: não tem? Quem que vai falar o certo ou não, aqui, dono do
+
+385
+00:46:20.280 --> 00:46:24.309
+Orlando Fonseca: O projeto. Ele vai falar. Olha, eu aceito. Sim, nesse caso,
+
+386
+00:46:24.430 --> 00:46:27.030
+Orlando Fonseca: a gente viu fazendo essa entrevista
+
+387
+00:46:27.180 --> 00:46:46.179
+Orlando Fonseca: que ele estava fazendo isso. Ele aceita que ele leva duas bicicleta. Então dá uma solução melhor. Ó para levar duas bicicletas. O que você faz? Ah, não. A gente finaliza uma até o final e depois para alugar a outra. Ele tem que preencher de novo todos os dados. Gera um recibo, faz tudo de novo. Olha que chato.
+
+388
+00:46:47.120 --> 00:46:54.080
+Orlando Fonseca: E aí tá, então, se ele permitir isso, vamos melhorar o processo.
+
+389
+00:46:54.570 --> 00:47:02.019
+Orlando Fonseca: Se ele fala. Olha, é proibido beleza. A gente não mexe. A gente não retrabalha a gente não faz sugerir.
+
+390
+00:47:02.810 --> 00:47:16.550
+Orlando Fonseca: Você gostaria? Você já tem esse caso aqui. Você fala. Não permitimos isso. Acabou. A conversa não permite. Não permite. A gente vai ter que colocar uma crítica no sistema que não vai permitir. De jeito nenhum, elevar de uma bicicleta.
+
+391
+00:47:16.860 --> 00:47:20.630
+Orlando Fonseca: A gente faz o que é para ser feito.
+
+392
+00:47:20.850 --> 00:47:21.799
+Orlando Fonseca: Se ele fala.
+
+393
+00:47:22.940 --> 00:47:30.039
+Orlando Fonseca: Sim, eu tenho esse caso. Então a gente vê uma forma de melhorar como que está sendo resolvido. Então vamos melhorar o processo.
+
+394
+00:47:30.600 --> 00:47:36.120
+Orlando Fonseca: Então, se ele fala com aceita essa responsável,
+
+395
+00:47:39.030 --> 00:47:43.709
+Orlando Fonseca: tá o caso responsável já cadastrar no sistema e criaria um vínculo, né? Então
+
+396
+00:47:43.870 --> 00:47:48.360
+Orlando Fonseca: e como talvez a pessoa responsável? Então vamos lá. Nem preciso criar o vínculo.
+
+397
+00:47:48.750 --> 00:47:54.930
+Orlando Fonseca: Eu estou habilitando a opção de levar a tua bicicleta. Não preciso falar que é para meu filho para meu primo, para quem for.
+
+398
+00:47:55.270 --> 00:48:04.210
+Orlando Fonseca: Se eu quero ir ao lugar duas. E acabou assim como uma pessoa, né? Vai lá e pode até
+
+399
+00:48:04.700 --> 00:48:09.669
+Orlando Fonseca: fingir, né? Dois sanduíches. Ninguém vai falar. É pra você. E pra quem não você quer, né?
+
+400
+00:48:09.780 --> 00:48:12.700
+Orlando Fonseca: Como os dois. Beleza, tá?
+
+401
+00:48:12.980 --> 00:48:18.659
+Orlando Fonseca: Se você quer andar primeiro um trechinho com uma bicicleta e depois um trechinho com a outra também.
+
+402
+00:48:18.790 --> 00:48:20.019
+Orlando Fonseca: Você está pagando.
+
+403
+00:48:22.980 --> 00:48:32.319
+Orlando Fonseca: Aham, deixa eu ver aqui o pé, não é? Lá no metrô tem um prêmio parecido. Serviço do cliente. E aí, quando o cara leva o filho, tem que fazer cadátrico no filho. É, pois é beleza
+
+404
+00:48:32.600 --> 00:48:39.320
+Orlando Fonseca: falar que é filho de alguém sobre como vai. Também tem isso muito longe. Dissem, né?
+
+405
+00:48:40.180 --> 00:48:41.310
+Orlando Fonseca: Muito bom.
+
+406
+00:48:42.670 --> 00:48:50.350
+Orlando Fonseca: É, pois é. O que aconteceu também. Então, a gente tem que pensar muito bem. Ouvir é um
+
+407
+00:48:50.480 --> 00:48:58.530
+Orlando Fonseca: acrescentado o dono do projeto e sugerir melhorias e mapear muito bem esse processo todo.
+
+408
+00:48:59.080 --> 00:48:59.940
+Orlando Fonseca: Tá,
+
+409
+00:49:03.150 --> 00:49:10.660
+Orlando Fonseca: deixa eu ver aqui, ó, tá. Uma vez que o requisitos tenha formalmente documentado. Então vamos fazer uma inspeção. O que quer dizer inspeção?
+
+410
+00:49:11.090 --> 00:49:13.380
+Orlando Fonseca: Que a.
+
+411
+00:49:14.590 --> 00:49:21.370
+Orlando Fonseca: Enfim, vamos ver se realmente a gente colocou tudo que era para ser colocado. Se não tem nenhuma missão, se não tem erros,
+
+412
+00:49:22.380 --> 00:49:23.260
+Orlando Fonseca: tá?
+
+413
+00:49:25.520 --> 00:49:37.820
+Orlando Fonseca: E a lista de requisitos é que. Bom, a gente fez um monte de entrevista. Analisou o caso. Temos todo esse estudo. Primeiro, vamos fazer então os requisitos que precisamos implementar.
+
+414
+00:49:38.690 --> 00:49:47.069
+Orlando Fonseca: Você viria como base para esse movimento orientado ao jeito do sistema Wings, o requisito. Se eu estou colocando ele como sendo R1 até Rn:
+
+415
+00:49:48.460 --> 00:49:49.320
+Orlando Fonseca: tá?
+
+416
+00:49:49.850 --> 00:49:52.319
+Orlando Fonseca: Ou seja, o primeiro requisito que eu identifiquei aqui.
+
+417
+00:49:55.960 --> 00:49:59.430
+Orlando Fonseca: Isso em definição da regra de negócio. Muito bom.
+
+418
+00:50:00.670 --> 00:50:12.620
+Orlando Fonseca: Então veja o que eu vou fazer o primeiro requisito aqui. Manter uma lista completa de todas as bicicletas e seus detalhes, incluindo números, tipo tamanho, marca, modelo, tarifa diária e aposta. O que dizer isso
+
+419
+00:50:13.760 --> 00:50:21.300
+Orlando Fonseca: tá que eu preciso ter algumas informações que identifiquem a bicicleta que a pessoa está alugando.
+
+420
+00:50:22.400 --> 00:50:26.889
+Orlando Fonseca: Quais seriam essas características que identificam uma bicicleta
+
+421
+00:50:28.470 --> 00:50:36.979
+Orlando Fonseca: número ali, né? Tipo, conheci uma marca, só que veio esse requisito aqui. Já existe no sistema que ele tem.
+
+422
+00:50:39.100 --> 00:50:45.239
+Orlando Fonseca: A gente tem uma legado. Já tem isso. Então a gente vê de novo como melhorar.
+
+423
+00:50:45.800 --> 00:50:46.750
+Orlando Fonseca: Ó,
+
+424
+00:50:47.010 --> 00:50:58.579
+Orlando Fonseca: vemos o que ele tem e colocamos de volta. Olha essas características da bicicleta são suficientes. A gente deixa do jeito que ele está com essa característica aqui, né?
+
+425
+00:50:59.410 --> 00:51:04.469
+Orlando Fonseca: Por exemplo, aqui não tem cor da bicicleta.
+
+426
+00:51:05.130 --> 00:51:13.390
+Orlando Fonseca: Poderia ter. Poderia ter me. Colocamos porque não precisa. Tá nesse exemplo. Nem preciso.
+
+427
+00:51:15.270 --> 00:51:24.770
+Orlando Fonseca: Por isso é que, se a regra do negócio, a co fo fofo impotar, por exemplo, as bicicletas
+
+428
+00:51:25.380 --> 00:51:34.710
+Orlando Fonseca: verde branca, ela tem um custo. De repente maior que as outras. Então ali temos que colocar a informação de cor.
+
+429
+00:51:34.910 --> 00:51:36.929
+Orlando Fonseca: Tá nessa Lita.
+
+430
+00:51:38.100 --> 00:51:44.200
+Orlando Fonseca: Ok, o dois, né? Pode falar pra ele.
+
+431
+00:51:46.000 --> 00:51:48.740
+pedro.yamato: Doutor. Boa noite. Me ouve bem aí.
+
+432
+00:51:49.590 --> 00:51:50.180
+Orlando Fonseca: Sim.
+
+433
+00:51:50.590 --> 00:51:57.870
+pedro.yamato: Só uma dúvida para um sistema de agendamento de serviços. Por exemplo,
+
+434
+00:51:58.260 --> 00:52:04.240
+pedro.yamato: um crude. As especificações do crude em si seriam requisitos.
+
+435
+00:52:04.700 --> 00:52:12.049
+pedro.yamato: Por exemplo, um cliente pode fazer o seu agendamento. O cliente pode editar o seu agendamento.
+
+436
+00:52:12.050 --> 00:52:13.099
+Orlando Fonseca: Isso aí.
+
+437
+00:52:13.100 --> 00:52:13.940
+pedro.yamato: Zoom.
+
+438
+00:52:14.260 --> 00:52:15.130
+Orlando Fonseca: Isso aí.
+
+439
+00:52:15.570 --> 00:52:23.119
+Orlando Fonseca: Você fala, Cruz. Estamos falando de uma pi. Nenhum serviço. A gente está pensando aqui. Um sistema mais
+
+440
+00:52:23.490 --> 00:52:26.389
+Orlando Fonseca: já com anteface, com tudo.
+
+441
+00:52:26.550 --> 00:52:27.410
+Orlando Fonseca: E se você quer.
+
+442
+00:52:27.410 --> 00:52:28.710
+pedro.yamato: Seria então, tipo.
+
+443
+00:52:29.120 --> 00:52:29.810
+Orlando Fonseca: Uhum.
+
+444
+00:52:30.730 --> 00:52:33.510
+pedro.yamato: Poderia resumir tudo num requisito. Então, tipo.
+
+445
+00:52:33.510 --> 00:52:33.970
+Orlando Fonseca: Não.
+
+446
+00:52:33.970 --> 00:52:38.589
+pedro.yamato: Pode tanto agendar quanto editar, etc.
+
+447
+00:52:38.590 --> 00:52:58.569
+Orlando Fonseca: Eu quero obter a lista de todas as bicicletas
+
+448
+00:52:58.610 --> 00:53:00.930
+Orlando Fonseca: que o tênio ali no estoque.
+
+449
+00:53:01.050 --> 00:53:02.650
+Orlando Fonseca: Essa é uma função.
+
+450
+00:53:03.030 --> 00:53:06.340
+Orlando Fonseca: Agora eu quero é
+
+451
+00:53:06.480 --> 00:53:17.110
+Orlando Fonseca: cadastrar uma nova que chegou ali, né? Comprei a loja, comprou uma e quero cadastrar. E uma outra função, certo? A gente não coloca tudo junto.
+
+452
+00:53:17.410 --> 00:53:24.250
+Orlando Fonseca: Vamos fazer a listagem. A adição de uma bicicleta no estoque. Vamos tirar uma bicicleta no estoque. Vamos, enfim,
+
+453
+00:53:24.550 --> 00:53:25.739
+Orlando Fonseca: a gente não faz isso.
+
+454
+00:53:26.220 --> 00:53:33.780
+Orlando Fonseca: Sempre deixa separado para entender. Se você mistura todos os requisitos, aí fica mais difícil na dívida.
+
+455
+00:53:33.780 --> 00:53:34.520
+pedro.yamato: Perfeito.
+
+456
+00:53:34.840 --> 00:53:36.859
+pedro.yamato: Entendido, professor. Obrigado.
+
+457
+00:53:37.110 --> 00:53:44.869
+Orlando Fonseca: Então, beleza, mantendo o registro todos os clientes de suas transações de aluguéis anteriores
+
+458
+00:53:45.180 --> 00:53:50.639
+Orlando Fonseca: aqui. Eu coloquei. Como manter o registro de todos os clientes e suas transações.
+
+459
+00:53:52.270 --> 00:53:59.409
+Orlando Fonseca: Por quê? Porque, vejam aqui, eu posso identificar o que seria aqui o como identificar um cliente
+
+460
+00:54:00.430 --> 00:54:02.200
+Orlando Fonseca: primeiro. Como é diferente? Um cliente?
+
+461
+00:54:03.050 --> 00:54:10.710
+Orlando Fonseca: Nome, né? Nome, idade, endereço, Cpf. De repente, não, é?
+
+462
+00:54:11.870 --> 00:54:25.310
+Orlando Fonseca: E a transações. Eu sei. Que esse cliente tem um identificador que podia ser perfeitamente Cpf e o tenho atrelado todas as vezes que ele alugou uma bicicleta a esse Cpf.
+
+463
+00:54:27.060 --> 00:54:28.060
+Orlando Fonseca: Tá bom.
+
+464
+00:54:29.720 --> 00:54:30.670
+Orlando Fonseca: Então
+
+465
+00:54:30.890 --> 00:54:37.550
+Orlando Fonseca: isso aí. Quando eu falo assim, mantendo o registro a todos os clientes. Na verdade, seria melhor, né, ó listar,
+
+466
+00:54:38.650 --> 00:54:49.399
+Orlando Fonseca: conhecer uma variante desse requisita. Eu quero listar todos os aluguer de um determinado cliente de bicicleta a um determinado cliente
+
+467
+00:54:49.900 --> 00:54:51.579
+Orlando Fonseca: consigo. Eu faço é Sim,
+
+468
+00:54:51.830 --> 00:54:56.630
+Orlando Fonseca: por quê? Porque eu tenho já identificar essa pessoa no sistema. Eu tenho que identificar as
+
+469
+00:54:57.020 --> 00:55:00.620
+Orlando Fonseca: traça ações de alguma forma, né? O oceano gays dele.
+
+470
+00:55:01.610 --> 00:55:19.329
+Orlando Fonseca: Eu vejo o histórico dele.
+
+471
+00:55:19.960 --> 00:55:20.820
+Orlando Fonseca: Tchau.
+
+472
+00:55:22.060 --> 00:55:30.289
+Orlando Fonseca: Alugar automaticamente. Quanto custará alugar uma bicicleta por um número de dias. Enfim,
+
+473
+00:55:32.310 --> 00:55:35.860
+Orlando Fonseca: você aluga aqui. Coloquei dia, né? Ora, tanto faz.
+
+474
+00:55:36.330 --> 00:55:37.870
+Orlando Fonseca: Se você aluga
+
+475
+00:55:38.480 --> 00:55:43.289
+Orlando Fonseca: três dias ou quatro dias, parecia que ia ser mais barato. Mais caro aí ainda tem que fazer a conta.
+
+476
+00:55:44.510 --> 00:55:47.050
+Orlando Fonseca: Ele traz detalhes de uma transação de aluguel,
+
+477
+00:55:47.460 --> 00:55:54.819
+Orlando Fonseca: por exemplo. Início, duração prevista. O cliente, a bicicleta, tudo que tem a ver com essa transação? Precisa registrar,
+
+478
+00:55:57.270 --> 00:56:00.709
+Orlando Fonseca: não é, Chrome? Esses requisitos. Sim,
+
+479
+00:56:01.270 --> 00:56:03.950
+Orlando Fonseca: só que tem uma carinha diferente.
+
+480
+00:56:04.190 --> 00:56:10.289
+Orlando Fonseca: Eu não chamaria isso aqui de história de usuário ainda, mas ideia por trás. É isso.
+
+481
+00:56:10.420 --> 00:56:13.480
+Orlando Fonseca: Eu não vou falar de três. Usuário. Só se for.
+
+482
+00:56:14.150 --> 00:56:16.640
+Orlando Fonseca: Enfim, vamos, velho. Vamos ver se eu falo disso.
+
+483
+00:56:17.780 --> 00:56:19.410
+Orlando Fonseca: Mas eu.
+
+484
+00:56:20.440 --> 00:56:22.100
+Orlando Fonseca: Eu quero.
+
+485
+00:56:22.290 --> 00:56:29.330
+Orlando Fonseca: Na verdade, a gente está falando aqui de casos de uso. Vamos chegar lá, fazer um diagrama de casos de uso, porque está sendo cobrado nessa disciplina.
+
+486
+00:56:30.300 --> 00:56:33.850
+Orlando Fonseca: Mas vai representar seus requisitos funcionais
+
+487
+00:56:34.420 --> 00:56:38.360
+Orlando Fonseca: usuário. É isso é exatamente o que o usuário quer
+
+488
+00:56:39.790 --> 00:56:45.040
+Orlando Fonseca: que seja implementado. A gente analisa o rol desse usuário.
+
+489
+00:56:45.200 --> 00:56:50.019
+Orlando Fonseca: Qual seria o objetivo dele e o que é esperado do sistema.
+
+490
+00:56:51.530 --> 00:56:55.250
+Orlando Fonseca: Ok, vamos revelar a diferença entre um e outro
+
+491
+00:56:57.310 --> 00:57:10.369
+Orlando Fonseca: beleza controlar quantas bicicletas um cliente está alugando de forma que ele recebe um recibo único e não um por bicicleta. Foi permitir alugar mais de uma cada uma por períodos diferentes. Olha só.
+
+492
+00:57:10.930 --> 00:57:14.760
+Orlando Fonseca: A gente não tinha falado. Isso não está ligado. Duas.
+
+493
+00:57:14.900 --> 00:57:20.480
+Orlando Fonseca: As duas bicicletas têm que ser exatamente no mesmo período mudou. Complicou ainda mais.
+
+494
+00:57:20.870 --> 00:57:28.399
+Orlando Fonseca: Você pode alugar uma pessoa. Só pode alugar duas bicicletas. A primeira pô um dia e a outra por três.
+
+495
+00:57:31.320 --> 00:57:32.220
+Orlando Fonseca: Tá
+
+496
+00:57:34.320 --> 00:57:42.609
+Orlando Fonseca: calcular automaticamente no momento da evolução. Quanto tempo a ver? Está fuçada? Quantos dias foram pagos quanto devido a mais? Já falei disso, né?
+
+497
+00:57:42.780 --> 00:57:45.270
+Orlando Fonseca: Registrar o valor devido beleza.
+
+498
+00:57:45.520 --> 00:57:48.960
+Orlando Fonseca: Imprime o recibo para cada cliente. Veja quantos requisitos eu tenho aqui.
+
+499
+00:57:50.460 --> 00:57:51.260
+Orlando Fonseca: Tá bom?
+
+500
+00:57:54.180 --> 00:57:55.540
+Orlando Fonseca: Do meu pessoal,
+
+501
+00:57:57.920 --> 00:58:02.769
+Orlando Fonseca: esse sistema Willys, a gente vai trabalhar. Boa tarde. Como eu falei. Vamos fazer a modelagem dele.
+
+502
+00:58:03.040 --> 00:58:11.500
+Orlando Fonseca: Vou fazer a diagrama de classes e por aí vem e implementar.
+
+503
+00:58:15.890 --> 00:58:21.040
+Orlando Fonseca: Bom, é tudo de caso da estação ferroviária.
+
+504
+00:58:21.270 --> 00:58:23.699
+Orlando Fonseca: O que seria esse sistema?
+
+505
+00:58:23.810 --> 00:58:28.879
+Orlando Fonseca: Um projeto tem como objetivo gerenciamento operacional de uma estação ferroviária.
+
+506
+00:58:29.510 --> 00:58:38.150
+Orlando Fonseca: Cada estação é composta por uma linhas ferroviária na qual eles podem estar estacionados diversos recursos como vagões locomotivas e trens. Veja aqui, só
+
+507
+00:58:38.480 --> 00:58:40.400
+Orlando Fonseca: primeiro. Estou falando de recursos.
+
+508
+00:58:41.940 --> 00:58:48.150
+Orlando Fonseca: Esse é o primeiro texto que vai falar exatamente daqui a trata do projeto, mas já está colocar em algumas
+
+509
+00:58:48.330 --> 00:58:54.660
+Orlando Fonseca: palavras que a gente vai deixar no dicionário de dados. O que eu disse? Isso é uma palavra que todo mundo tem que
+
+510
+00:58:55.180 --> 00:58:59.420
+Orlando Fonseca: que entender, tá? Quer seria um vagão, o que seria uma locomotiva.
+
+511
+00:58:59.620 --> 00:59:05.120
+Orlando Fonseca: Um trem é formado pela composição de vagões e locomotivas.
+
+512
+00:59:06.490 --> 00:59:13.169
+Orlando Fonseca: No entanto, também podem existir vagões e locomotivas estacionados individualmente em uma linha. O que eu estou falando aqui, pessoal
+
+513
+00:59:13.310 --> 00:59:21.610
+Orlando Fonseca: de uma regra de negócio, estou dando a definição ali, um conceito, o que seria um trem por
+
+514
+00:59:22.400 --> 00:59:24.859
+Orlando Fonseca: ela está formada por isso, e por isso,
+
+515
+00:59:25.680 --> 00:59:28.959
+Orlando Fonseca: sem pertencer a nenhuma formação de trem no momento.
+
+516
+00:59:29.150 --> 00:59:29.930
+Orlando Fonseca: Ok,
+
+517
+00:59:32.930 --> 00:59:39.320
+Orlando Fonseca: olha, assim. Agora, como identificar cada estação ferroviária, vai ter uma sigla
+
+518
+00:59:40.620 --> 00:59:44.589
+Orlando Fonseca: para a gente ficar. Vai ter uma descrição que é opcional.
+
+519
+00:59:44.730 --> 00:59:52.490
+Orlando Fonseca: Então, veja, já estou pensando que agora já praticamente no requisito, será que eu preciso
+
+520
+00:59:52.840 --> 01:00:01.870
+Orlando Fonseca: ter, por exemplo, uma busca aqui pela sigla para identificar o que seria uma estação ferroviária? Depende, provavelmente sim.
+
+521
+01:00:03.660 --> 01:00:14.680
+Orlando Fonseca: Cada linha ferroviária identificada por um número único dentro da estação. Temos identificado também dessa linha ferroviária. Está vendo como com esse texto a gente vai obtendo informações que vão ajudar.
+
+522
+01:00:16.300 --> 01:00:18.980
+Orlando Fonseca: Primeiro, identificar essa entidade.
+
+523
+01:00:19.480 --> 01:00:31.079
+Orlando Fonseca: Os vagões são caracterizados por número de série, tipo capacidade de carga. O que seriam essas características? Os identificadores dos vagões, assim como da bicicleta,
+
+524
+01:00:32.290 --> 01:00:33.230
+Orlando Fonseca: ok?
+
+525
+01:00:34.930 --> 01:00:53.720
+Orlando Fonseca: As locomotivas possuem número de série, capacidade de atração. Os trens são identificados por um prefixo. Por exemplo, vejam aqui o formato que também é importante e entender. Tá, mas essa sigla é o quê? É um número. Qual complemento desse número? Ah, nossa. O número de letra, beleza. A gente precisa entender tudo. Muito bem,
+
+526
+01:00:54.010 --> 01:00:56.380
+Orlando Fonseca: data e hora de informação.
+
+527
+01:00:57.970 --> 01:01:03.139
+Orlando Fonseca: Entendido, pessoal. Aqui tem todo o teto, todo estudo dessa. Enfim,
+
+528
+01:01:03.740 --> 01:01:10.729
+Orlando Fonseca: primeiro, qual seria o objetivo do sistema gerenciar e controlar de forma eficiente esse recurso ferroviário.
+
+529
+01:01:12.270 --> 01:01:13.200
+Orlando Fonseca: Ok,
+
+530
+01:01:13.490 --> 01:01:24.039
+Orlando Fonseca: eu quero também o que falou o dono do projeto. Eu quero consultar informações. Dessas estações. Dessas linhas desses vagões, as locomotivas, o trem.
+
+531
+01:01:24.890 --> 01:01:25.810
+Orlando Fonseca: Ok,
+
+532
+01:01:28.840 --> 01:01:32.129
+Orlando Fonseca: muito bem, então finalidade do sistema
+
+533
+01:01:34.990 --> 01:01:42.979
+Orlando Fonseca: garantir que a movimentação e a composição do trem ocorram dentro dos parâmetros estabelecidos pela gestão ferroviária.
+
+534
+01:01:43.610 --> 01:01:50.560
+Orlando Fonseca: Eu quero que eu sou operadora. Hoje é todo ferroviário. E a gente. Fiquei dois tipos de usuário, dois
+
+535
+01:01:50.880 --> 01:01:52.389
+Orlando Fonseca: papéis ali, né?
+
+536
+01:01:53.920 --> 01:02:02.269
+Orlando Fonseca: Que estaria interagindo em algum sistema. Por quê? Porque planejar essas formações dos trens das estações.
+
+537
+01:02:02.730 --> 01:02:03.990
+Orlando Fonseca: Então veja
+
+538
+01:02:04.780 --> 01:02:13.599
+Orlando Fonseca: o que eu tenho aqui. Que é uma entidade principal. Qual seria a entidade principal. O trem. Por quê? Porque o nosso principal jeito de controle,
+
+539
+01:02:14.600 --> 01:02:19.120
+Orlando Fonseca: quais seria a entidade principal do sistema? Wils,
+
+540
+01:02:23.640 --> 01:02:24.869
+Orlando Fonseca: pergunta para vocês.
+
+541
+01:02:29.100 --> 01:02:32.630
+Orlando Fonseca: Qual seria a entidade principal bicicleta? Muito bem. A bicicleta.
+
+542
+01:02:33.010 --> 01:02:41.690
+Orlando Fonseca: Principais atributos do trem, prefixo, data, hora de informação, estação de origem, estação de destino. Quem que falou isso para a gente?
+
+543
+01:02:42.960 --> 01:02:46.279
+Orlando Fonseca: Sussuário, né? Quer dizer, o representante do projeto?
+
+544
+01:02:47.040 --> 01:02:50.110
+Orlando Fonseca: Quanto é locomotiva total de recursos?
+
+545
+01:02:51.090 --> 01:02:52.080
+Orlando Fonseca: Tá bom.
+
+546
+01:02:52.580 --> 01:03:00.149
+Orlando Fonseca: Quais seriam uma entidade relacionada? Temos uma entidade principal, que seria, nesse caso, o trem e as relacionadas, quais seriam
+
+547
+01:03:00.870 --> 01:03:03.270
+Orlando Fonseca: uma estação ferroviária.
+
+548
+01:03:03.620 --> 01:03:06.590
+Orlando Fonseca: Ele teria uma relação com o trem.
+
+549
+01:03:07.590 --> 01:03:08.520
+Orlando Fonseca: Tá?
+
+550
+01:03:09.780 --> 01:03:11.759
+Orlando Fonseca: Todo mundo entendeu essa palavra aí,
+
+551
+01:03:11.940 --> 01:03:19.500
+Orlando Fonseca: ferrovia vai ter uma relação com trem. Por exemplo, ela é uma entidade relacionada, aquela entidade principal.
+
+552
+01:03:19.900 --> 01:03:21.100
+Orlando Fonseca: Então, temos o quê?
+
+553
+01:03:21.860 --> 01:03:39.280
+Orlando Fonseca: Sim, beleza, sigla, descrição, linha ferroviária. Estou identificando aqui uma entidade e há característica dela. Os atributos dessa entidade. A linha ferroviária que tem tem um número, tem uma extensão metro. Tem uma descrição também ela é opcional, mas existe.
+
+554
+01:03:39.450 --> 01:03:45.350
+Orlando Fonseca: Esse é um campo que a gente pode colocar nessa linha ferroviária como sendo uma Entidade
+
+555
+01:03:46.260 --> 01:03:50.160
+Orlando Fonseca: recurso Estacionado Muito bom. Tem o vagão também
+
+556
+01:03:50.680 --> 01:03:55.720
+Orlando Fonseca: é uma entidade relacionada. Vamos ver se o valor estaria relacionado à linha ferroviária
+
+557
+01:03:57.100 --> 01:04:02.110
+Orlando Fonseca: locomotiva, com as suas características recurso ferroviário.
+
+558
+01:04:03.150 --> 01:04:06.700
+Orlando Fonseca: Enfim, com o tipo etado.
+
+559
+01:04:07.180 --> 01:04:13.269
+Orlando Fonseca: Muito bem, quem que vai interagir com o sistema,
+
+560
+01:04:14.440 --> 01:04:20.480
+Orlando Fonseca: assim como o sistema Wils, que eu não coloquei assim tão detalhado, mas vai ter um gerente. A pessoa ali
+
+561
+01:04:21.440 --> 01:04:22.280
+Orlando Fonseca: é.
+
+562
+01:04:22.650 --> 01:04:25.740
+Orlando Fonseca: Vamos supor que tem um administrador. Pois é que tenho ali.
+
+563
+01:04:26.210 --> 01:04:39.510
+Orlando Fonseca: É caro. Todo mundo que estaria interagindo agora aqui já está bem definido. Vai ser um operador ferroviário. Vai registrar. Vai atualizar. Vai consultar essas informações. Vai ser o chefe da estação.
+
+564
+01:04:39.810 --> 01:04:46.359
+Orlando Fonseca: Vai supervisionar a movimentação e a formação dos trem. Veja que essa aqui não está falando do extremo que ele vai fazer,
+
+565
+01:04:46.550 --> 01:04:49.650
+Orlando Fonseca: mas é um usuários que provavelmente vai interagir com o sistema.
+
+566
+01:04:50.280 --> 01:04:51.170
+Orlando Fonseca: Tá,
+
+567
+01:04:51.660 --> 01:04:59.399
+Orlando Fonseca: por exemplo, eu falo aqui. Operador ferroviário responsável por registrar, atualizar e consultar informações de estações, linhas e recursos.
+
+568
+01:05:00.450 --> 01:05:08.740
+Orlando Fonseca: Eu não falei que seria no sistema, mas a gente vai implementar. É porque estamos pensando propriamente numa tela onde ele entra com esse tipo, né?
+
+569
+01:05:09.240 --> 01:05:17.460
+Orlando Fonseca: De usuário ali no sistema, que vai ter uma permissão para registrar tudo o que tem a ver com as linhas.
+
+570
+01:05:18.010 --> 01:05:19.580
+Orlando Fonseca: Nasce estações.
+
+571
+01:05:20.670 --> 01:05:24.129
+Orlando Fonseca: Seriam os tipos de usuário ali ferroviário.
+
+572
+01:05:24.360 --> 01:05:32.930
+Orlando Fonseca: Tem professor, opera ferroviário que tem o poder. Tem a permissão de fazer um registro.
+
+573
+01:05:33.640 --> 01:05:35.860
+Orlando Fonseca: Dieta só Angelinha, tá.
+
+574
+01:05:37.070 --> 01:05:41.230
+Orlando Fonseca: O gestor de operações também vai analisar relatórios, indicadores.
+
+575
+01:05:41.570 --> 01:05:45.549
+Orlando Fonseca: Por isso é que o operador ferroviário não tem acesso aos relatórios.
+
+576
+01:05:47.390 --> 01:05:52.770
+Orlando Fonseca: O técnico atualiza o status de recursos de manutenção disponível.
+
+577
+01:05:53.240 --> 01:05:54.160
+Orlando Fonseca: Tá bom,
+
+578
+01:05:58.990 --> 01:06:00.110
+Orlando Fonseca: beleza.
+
+579
+01:06:00.320 --> 01:06:04.019
+Orlando Fonseca: Então, pessoal, é importantíssimo, né?
+
+580
+01:06:11.920 --> 01:06:16.349
+Orlando Fonseca: Quando eu falei para vocês aqui, vamos voltar aqui um pouquinho. Operador ferroviário,
+
+581
+01:06:17.150 --> 01:06:22.590
+Orlando Fonseca: chefe de gestação. Enfim, o que eu estou falando aqui. Quando a gente fez aquelas entrevistas,
+
+582
+01:06:22.940 --> 01:06:40.370
+Orlando Fonseca: eles falaram. A pessoa que faz isso, que faz o registro é o operador ferroviário. Mas isso não quer dizer que já existe um sistema onde tenha um registro ali automatizado. Eu não tenho um sistema que faz o registro. O registro pode ser um outro sistema,
+
+583
+01:06:41.640 --> 01:06:42.670
+Orlando Fonseca: beleza.
+
+584
+01:06:43.160 --> 01:06:49.460
+Orlando Fonseca: Então, aqui já a gente está colocando os atores e papéis envolvidos
+
+585
+01:06:49.460 --> 01:07:03.270
+Orlando Fonseca: são realmente os que vão interagir com o sistema. Cada um com seu nível de acesso, operador ferroviário. Agora é quem vai cadastrar e atualizar informações das estações, linhas e locomotivas. Agora, se olhando para o sistema,
+
+586
+01:07:03.400 --> 01:07:06.680
+Orlando Fonseca: a pessoa quer dizer que provavelmente vai ter um requisito que vai ser. Ó,
+
+587
+01:07:07.830 --> 01:07:13.979
+Orlando Fonseca: o usuário vai ter a opção de
+
+588
+01:07:14.270 --> 01:07:18.259
+Orlando Fonseca: acessar uma telha para fazer o cadastro das aceitações.
+
+589
+01:07:18.390 --> 01:07:26.870
+Orlando Fonseca: Tem o seguinte campo: só se o usuário. Que está fazendo esse cadastro for um operador ferroviário.
+
+590
+01:07:28.520 --> 01:07:32.540
+Orlando Fonseca: Tá bom. Agora sim, estamos olhando para o sistema aqui nessa Live,
+
+591
+01:07:32.990 --> 01:07:41.880
+Orlando Fonseca: o chefe da estação vai aprovar formações e monitorar trens em operação. Mas olhando para o sistema como que a gente traduz isso aqui agora, para computação,
+
+592
+01:07:42.800 --> 01:07:47.269
+Orlando Fonseca: o que significa aprovar uma formação e monitorar trens em operação. O que significa isso?
+
+593
+01:07:48.610 --> 01:07:54.080
+Orlando Fonseca: Que os sistemas vão ter de alguma forma que faça esse monitoramento.
+
+594
+01:07:54.430 --> 01:07:59.309
+Orlando Fonseca: Ah, vai ter uma lista de trens em operações, tá?
+
+595
+01:07:59.480 --> 01:08:05.400
+Orlando Fonseca: Então ele, como tinha feito estação, ele podia ter um botão ali ou ver ali uma lista. Eu quero ver a lista.
+
+596
+01:08:06.080 --> 01:08:10.390
+Orlando Fonseca: Então se você treina meu coração onde tá certinho?
+
+597
+01:08:11.830 --> 01:08:22.859
+Orlando Fonseca: O técnico de manutenção. Vai atualizar o status do recursos de manutenção. Também vai ter uma opção no sistema para ele atualizar essa data. Ele vai visualizar o status e depois mudar.
+
+598
+01:08:23.029 --> 01:08:25.369
+Orlando Fonseca: Olha, manutenção ou.
+
+599
+01:08:26.120 --> 01:08:31.430
+Orlando Fonseca: E aí o que seria outra palavra, né? Manutenção no pronto,
+
+600
+01:08:32.760 --> 01:08:35.020
+Orlando Fonseca: tá bom. Pronto para uso, não sei.
+
+601
+01:08:36.880 --> 01:08:51.689
+Orlando Fonseca: Regra de negócio: a gente trai a partir desse texto inicial, ou a partir dessa entrevista da sua análise que a gente fez, por exemplo, um trem precisa de pelo menos uma locomotiva e um vagão. O que falou isso exatamente? Nessa análise inicial?
+
+602
+01:08:52.450 --> 01:08:55.659
+Orlando Fonseca: A cada quarenta vagões devolver uma locomotiva adicional.
+
+603
+01:08:55.800 --> 01:09:01.879
+Orlando Fonseca: E, a partir dali, extraímos todas as carreira de negócio que precisamos nesse primeiro momento,
+
+604
+01:09:02.640 --> 01:09:05.400
+Orlando Fonseca: Presidência de todas depende do modelo.
+
+605
+01:09:06.510 --> 01:09:10.599
+Orlando Fonseca: Ali diz esse movimento que você esteja do frango óculo.
+
+606
+01:09:11.399 --> 01:09:19.219
+Orlando Fonseca: Você tem aplicado pelo menos seis. Aqui são fundamentais. São a principais. Se surgir uma outra, a gente vai lá e modifica. E continua,
+
+607
+01:09:19.850 --> 01:09:20.710
+Orlando Fonseca: tá?
+
+608
+01:09:21.050 --> 01:09:25.889
+Orlando Fonseca: Se não for catarata, tá bom.
+
+609
+01:09:27.340 --> 01:09:40.420
+Orlando Fonseca: Você não era o principado aqui no seleciona locomotiva formação.
+
+610
+01:09:42.859 --> 01:09:43.770
+Orlando Fonseca: Tá,
+
+611
+01:09:44.470 --> 01:09:51.520
+Orlando Fonseca: envia do trem. O rejeitou com firma partida. Rejeita o trem como origem. Destino são cenários comuns, os principais
+
+612
+01:09:55.490 --> 01:09:56.949
+Orlando Fonseca: beleza pessoal.
+
+613
+01:10:00.320 --> 01:10:04.199
+Orlando Fonseca: Eu seria um caça, tá? Agora pergunta pra vocês só pra pensar, né?
+
+614
+01:10:04.880 --> 01:10:11.179
+Orlando Fonseca: Eu falei aqui cenários principais, como aquele outro cliente igualado, uma bicicleta e é cobrado um balão devido. Pronto,
+
+615
+01:10:11.380 --> 01:10:12.960
+Orlando Fonseca: seria um cenário.
+
+616
+01:10:13.620 --> 01:10:33.000
+Orlando Fonseca: O fluxo que o cliente está vendo, a bicicleta. Mas se perdeu o cartão, perdeu a bicicleta, passou alguma coisa? Quebrou a bicicleta. Seria um fluxo ali. Um cenário alternativo. Aquele fluxo alternativo que a gente vai ter que preparar o sistema para isso. Qual seria um cenário alternativo para esse sistema de trem
+
+617
+01:10:33.360 --> 01:10:35.100
+Orlando Fonseca: estação ferroviária e demais.
+
+618
+01:10:35.760 --> 01:10:37.530
+Orlando Fonseca: Qual que é sério aí
+
+619
+01:10:42.560 --> 01:10:44.980
+Orlando Fonseca: perdeu o valor,
+
+620
+01:11:02.380 --> 01:11:03.450
+Orlando Fonseca: beleza.
+
+621
+01:11:03.570 --> 01:11:05.600
+Orlando Fonseca: Então, pessoal.
+
+622
+01:11:07.020 --> 01:11:10.340
+Jorge José Luiz Santos da Silva: O trem quebrou. Sei lá. Tipo, descarrilou no.
+
+623
+01:11:10.340 --> 01:11:15.199
+Orlando Fonseca: Aí. Agora eu não tenho formação.
+
+624
+01:11:15.830 --> 01:11:25.119
+Orlando Fonseca: É um seleciona locomotiva disponível e registra a formação. Mas se não tiver, tem muitas situações que podem acontecer.
+
+625
+01:11:25.220 --> 01:11:29.170
+Orlando Fonseca: Então, então, pessoal.
+
+626
+01:11:29.970 --> 01:11:31.140
+Orlando Fonseca: Muito bom.
+
+627
+01:11:31.910 --> 01:11:38.269
+Orlando Fonseca: Tamanho, não, né? Aí é demais. Mas podia acontecer tamanho pode ser.
+
+628
+01:11:39.050 --> 01:11:43.760
+Orlando Fonseca: Tá, então, pessoal para finalizar essa aula.
+
+629
+01:11:43.930 --> 01:11:48.770
+Orlando Fonseca: Deixa a sua dama conferida. Quando seria a primeira entrega de vocês no Tp um?
+
+630
+01:11:49.640 --> 01:11:55.549
+Orlando Fonseca: Deixa eu ver, para te compartilhar aqui, não ficar
+
+631
+01:11:56.400 --> 01:12:00.329
+Orlando Fonseca: para não ficar na próxima aula.
+
+632
+01:12:00.640 --> 01:12:02.890
+Orlando Fonseca: E vai. É muito acima, né?
+
+633
+01:12:03.290 --> 01:12:04.900
+Orlando Fonseca: Do tempo. Deixa eu ver aqui
+
+634
+01:12:05.380 --> 01:12:08.069
+Orlando Fonseca: você conseguir acessar de repente o mais rápido que eu, né?
+
+635
+01:12:09.300 --> 01:12:11.149
+Orlando Fonseca: Deixa eu ver aqui.
+
+636
+01:12:11.270 --> 01:12:12.050
+Orlando Fonseca: Isso é um
+
+637
+01:12:16.410 --> 01:12:18.540
+Orlando Fonseca: o Tp1 de vocês.
+
+638
+01:12:20.560 --> 01:12:23.009
+Orlando Fonseca: Ele é vinte e quatro de Agosto, né?
+
+639
+01:12:23.140 --> 01:12:27.180
+Orlando Fonseca: Então a gente teria a próxima? Sim, só tem mais uma aula.
+
+640
+01:12:28.030 --> 01:12:29.440
+Orlando Fonseca: Só mais uma aula.
+
+641
+01:12:30.250 --> 01:12:39.330
+Orlando Fonseca: Ó eu acho válido fazer a leitura já hoje. Porque tem perguntas simples, tá? Vamos lá.
+
+642
+01:12:42.860 --> 01:12:47.079
+Orlando Fonseca: Tá, ó o que eu quero. Pessoal, vamos fazer a leitura,
+
+643
+01:12:47.190 --> 01:12:53.400
+Orlando Fonseca: por isso é individual também tá pedir para vocês? Podem fazer sozinho. Não tem problema. Não,
+
+644
+01:12:53.790 --> 01:12:57.140
+Orlando Fonseca: eu ia fazer dois integrais e três,
+
+645
+01:12:57.580 --> 01:13:01.580
+Orlando Fonseca: mas você querem fazer individual também não tem problema. Não?
+
+646
+01:13:02.250 --> 01:13:05.969
+Orlando Fonseca: Então e vamos lá.
+
+647
+01:13:06.380 --> 01:13:09.970
+Orlando Fonseca: O aluno escreveu isso aqui não.
+
+648
+01:13:11.510 --> 01:13:16.300
+Orlando Fonseca: E aí, aqui, ó,
+
+649
+01:13:16.820 --> 01:13:22.669
+Orlando Fonseca: a escolha da temática feita pelo professor terá aumentado em um contexto corporativo. Dentro do seguinte cenário:
+
+650
+01:13:23.260 --> 01:13:32.729
+Orlando Fonseca: enfrentamos uma demanda urgente por parte do cliente que necessita do seu movimento, sistema específico. Inicialmente, fomos num prazo de cinco meses para a realização do projeto.
+
+651
+01:13:33.110 --> 01:13:35.790
+Orlando Fonseca: Inicialmente, podia gerar preocupação no cliente, né?
+
+652
+01:13:36.540 --> 01:13:42.490
+Orlando Fonseca: Enfim, todo um textão aqui, né? Pra
+
+653
+01:13:43.120 --> 01:13:51.430
+Orlando Fonseca: para falar, que precisam desenvolver, formalizar requisitos do sistema por meios de casos de uso.
+
+654
+01:13:51.900 --> 01:14:00.390
+Orlando Fonseca: Tá, este processo está inserido no contexto do método Hoop desse movimento, situando se na fase de iniciação.
+
+655
+01:14:02.630 --> 01:14:13.320
+Orlando Fonseca: O aluno irá elaborar um resumo de uma página sobre os requisitos do programa documento deve seguir o modelo de estruturação de requisitos, começando com um parágrafo que sintetiza a intenção do sistema ser desenvolvido.
+
+656
+01:14:14.660 --> 01:14:19.249
+Orlando Fonseca: Beleza, requisitos funcional do sistema. Requisitos técnicos. Tá bom. Agora eu vou.
+
+657
+01:14:19.250 --> 01:14:21.620
+gabriel.diniz: Professor. Vamos dar um compartilhando até lá.
+
+658
+01:14:22.470 --> 01:14:25.330
+Orlando Fonseca: Cara. Eu tô compartilhando. Não, eu vou lá.
+
+659
+01:14:27.700 --> 01:14:28.600
+Orlando Fonseca: Boa,
+
+660
+01:14:31.370 --> 01:14:37.570
+Orlando Fonseca: é o seguinte, pessoal. Pessoal. Tô vendo aqui, né? Esse seria outra pergunta de vocês tem alguma competência aqui embaixo?
+
+661
+01:14:38.990 --> 01:14:42.770
+Orlando Fonseca: O aluno escreveu um resumo de pelo menos uma página sobre os requisitos do programa.
+
+662
+01:14:42.960 --> 01:14:52.460
+Orlando Fonseca: O aluno escreveu um parágrafo sintetizando o objetivo do sistema que será desenvolvido. O aluno enumera o requisito funcional do sistema, e o documento produzido seguiu
+
+663
+01:14:54.160 --> 01:14:56.660
+Orlando Fonseca: porque, bom, tem um probleminha.
+
+664
+01:14:57.280 --> 01:15:03.330
+Orlando Fonseca: Seguem o modelo de estruturação de requisitos. O que eu quero que vocês entreguem e prestem atenção, tá primeiro
+
+665
+01:15:03.550 --> 01:15:05.569
+Orlando Fonseca: ali, já você tem que ter.
+
+666
+01:15:06.070 --> 01:15:10.120
+Orlando Fonseca: Tem? Que bom. Deixa eu ver aqui. Ó tá.
+
+667
+01:15:10.650 --> 01:15:14.569
+Orlando Fonseca: E já tem dois alunos que entregaram o senhor fala, mas tudo bem.
+
+668
+01:15:16.720 --> 01:15:20.049
+Orlando Fonseca: Tá beleza. Ó pessoal, o que eu quero?
+
+669
+01:15:20.950 --> 01:15:23.290
+Orlando Fonseca: Primeiro que você coloque nessa entrega.
+
+670
+01:15:24.290 --> 01:15:32.260
+Orlando Fonseca: Os integrantes do time são importantíssimos. Olha, pessoal, eu vou fazer o projeto contra
+
+671
+01:15:34.380 --> 01:15:42.269
+Orlando Fonseca: três pessoas. Você é sozinho. Eu quero que você fique claro, em nome de todos integrantes do projeto. Primeiro.
+
+672
+01:15:44.140 --> 01:15:51.420
+Orlando Fonseca: Pois é, tá, nós estamos subindo a tela, não?
+
+673
+01:15:54.060 --> 01:15:55.490
+Orlando Fonseca: Então, né? Tá.
+
+674
+01:15:55.940 --> 01:15:57.200
+Orlando Fonseca: É.
+
+675
+01:15:58.340 --> 01:16:01.740
+Orlando Fonseca: Segundo, você tem que já colocar
+
+676
+01:16:02.760 --> 01:16:10.880
+Orlando Fonseca: a linguagem de implementação na Ctp. Um tá beleza?
+
+677
+01:16:11.080 --> 01:16:12.080
+Orlando Fonseca: Então
+
+678
+01:16:13.360 --> 01:16:22.899
+Orlando Fonseca: façam um estudo. Vejam o que seria melhor para vocês. E coloquem, né? Eu só vou trabalhar. Projeto vai ser desenvolvido com C. Sharp. Vai ser desenvolvido em Java.
+
+679
+01:16:24.190 --> 01:16:27.009
+Orlando Fonseca: Tá bom esse aqui, já para o Tp1
+
+680
+01:16:28.080 --> 01:16:32.479
+Orlando Fonseca: veja que você tem até o dia vinte e quatro. Se você por acaso coloca
+
+681
+01:16:34.050 --> 01:16:41.830
+Orlando Fonseca: o projeto, vai ser desenvolvido com dois integrantes. Põe separado, depois. Tá mas o que não pode acontecer é trocar de linguagem.
+
+682
+01:16:43.320 --> 01:16:52.029
+Orlando Fonseca: Tá bom do tema e vou falar disso agora, tá? Eu falei
+
+683
+01:16:52.270 --> 01:17:01.740
+Orlando Fonseca: que eu ia dar a liberdade para vocês colherem o tema e a metodologia. Aqui está escrito especificamente hoop. Tá,
+
+684
+01:17:01.950 --> 01:17:05.079
+Orlando Fonseca: mas eu vou entender como um processo interativo.
+
+685
+01:17:05.890 --> 01:17:09.130
+Orlando Fonseca: Porque aí, se você quiser,
+
+686
+01:17:09.590 --> 01:17:20.859
+Orlando Fonseca: no tempo que seguir aquelas quatro fases e disciplinas que tem um hoop, especificamente, você fala que estaria numa abordagem interativa, só que justifica muito bem. Não agora. No Ctp um.
+
+687
+01:17:21.130 --> 01:17:25.789
+Orlando Fonseca: Vai para frente, tá na entrega final, mas já você pode ir pensando
+
+688
+01:17:26.420 --> 01:17:33.980
+Orlando Fonseca: ou cascata como tu faz. Tá para essa entrega do Tp? Eu não só quero o nome de vocês.
+
+689
+01:17:34.620 --> 01:17:43.089
+Orlando Fonseca: A linguagem que vocês queriam trabalhar, tá? Eu quero o tema. O título desse
+
+690
+01:17:43.680 --> 01:17:46.040
+Orlando Fonseca: desse projeto, que vocês estariam desenvolvendo
+
+691
+01:17:46.280 --> 01:17:55.210
+Orlando Fonseca: beleza. Se você querem colocar uma metodologia. É bacana, tá? Tipo assim. Você tem metodologia. Você querem, mas não é obrigatório,
+
+692
+01:17:55.380 --> 01:17:56.280
+Orlando Fonseca: tá?
+
+693
+01:17:56.720 --> 01:17:57.780
+Orlando Fonseca: E eu
+
+694
+01:17:58.190 --> 01:18:12.749
+Orlando Fonseca: extremamente importante. Me explique de que vai o seu projeto. E isso vai ser traduzido no requisito tipo assim, professor, o sistema que eu quero implementar tem a ver com aluguer de bicicleta, tá, o nome é ruim,
+
+695
+01:18:14.040 --> 01:18:26.670
+Orlando Fonseca: acontece isso. Isso requisito. Vai ter esse primeiro requisito. O usuário vai. Eu vou permitir listar todos os usuários cadastral no sistema.
+
+696
+01:18:27.680 --> 01:18:31.329
+Orlando Fonseca: Tá bom, segundo, eu quero fazer isso. Isso e isso.
+
+697
+01:18:31.900 --> 01:18:37.649
+Orlando Fonseca: Esse é o que eu quero. Somente para essa entrega. Nada de código
+
+698
+01:18:38.660 --> 01:18:46.120
+Orlando Fonseca: e nada muito elaborado. Só quero que vocês especifiquem muito bem os integrantes, a linguagem e
+
+699
+01:18:47.650 --> 01:18:57.039
+Orlando Fonseca: enfim, o seu ejetivo do seu projeto. Requisitos do seu projeto. Para eu entender por quê? Porque eu vou falar para vocês. Olha isso aqui não dá para implementar.
+
+700
+01:18:57.950 --> 01:18:58.860
+Orlando Fonseca: Tá bom?
+
+701
+01:18:59.160 --> 01:19:09.310
+Orlando Fonseca: Ou isso aqui. Eu acho que você pode melhorar esse projeto ainda mais, né? E colocar mais complexo, tá
+
+702
+01:19:10.030 --> 01:19:16.300
+Orlando Fonseca: beleza, então. Entendido, pessoal. Além disso, eu tenho
+
+703
+01:19:16.530 --> 01:19:22.520
+Orlando Fonseca: uma sugerência de projeto para vocês, tá?
+
+704
+01:19:23.030 --> 01:19:28.670
+Orlando Fonseca: Quem não tiver tema, eu vou colocar essa sugerência com esse cenário.
+
+705
+01:19:29.470 --> 01:19:33.670
+Orlando Fonseca: Eu vou colocar lá no infinity online.
+
+706
+01:19:35.210 --> 01:19:40.330
+Orlando Fonseca: Tá bom. Se você querendo dar uma olhada nessa sugerência de tema, pode fazer também.
+
+707
+01:19:41.560 --> 01:19:42.520
+Orlando Fonseca: Tá bom.
+
+708
+01:19:43.430 --> 01:19:49.820
+Orlando Fonseca: Se vocês querem também lá no chat do infinito online, você envia professor. Eu vou trabalhar nesse projeto. Esse é o projeto.
+
+709
+01:19:50.290 --> 01:19:51.210
+Orlando Fonseca: Tá
+
+710
+01:19:51.680 --> 01:19:56.790
+Orlando Fonseca: aí, eu falo. Ah, pode ser. Não pode ser. Se você querem fazer isso antes da entrega, também pode ser.
+
+711
+01:19:57.380 --> 01:20:08.320
+Orlando Fonseca: É excelente, ele perfeito. Eu ficaria, tipo assim, extremamente, né?
+
+712
+01:20:08.800 --> 01:20:12.990
+Orlando Fonseca: Algo nosso aí, se enfim, extremamente feliz
+
+713
+01:20:13.430 --> 01:20:29.730
+Orlando Fonseca: de vocês conseguirem aplicar um projeto real na sua empresa, ou um projeto que você tenha familiaridade, enfim, desenvolver um projeto, um que você tenha interesse, de fato, não fazer nada por obrigação. Um projeto que você saibam aqui e ajudar mais para frente. Tá pronto?
+
+714
+01:20:31.730 --> 01:20:36.979
+Orlando Fonseca: Então será que o professor fará quais são monitoras? Então
+
+715
+01:20:38.130 --> 01:20:43.780
+Orlando Fonseca: eu tenho monitor para essa disciplina. Eu gosto de fazer a correção nos meus trabalhos, tá?
+
+716
+01:20:44.350 --> 01:20:51.210
+Orlando Fonseca: Só se eu demorar um pouquinho, por isso que o monitor corrige antes, então não tenho certeza se você é eu ou você é ele
+
+717
+01:20:51.390 --> 01:20:57.000
+Orlando Fonseca: tá bom, mas eu vou fazer o possível por
+
+718
+01:20:57.370 --> 01:21:05.449
+Orlando Fonseca: fazer a correção, pelo menos nessa primeira página. Nesse Tp1 no Tp2 eu quero fazer a correção, porque eu quero entender o projeto de vocês.
+
+719
+01:21:06.730 --> 01:21:15.239
+Orlando Fonseca: E o final, o projeto de bloco é totalmente o meu e a aguição oral. Você tem que fazer comigo um para um
+
+720
+01:21:17.870 --> 01:21:19.010
+Orlando Fonseca: beleza.
+
+721
+01:21:19.320 --> 01:21:24.119
+Orlando Fonseca: É dúvida pessoal dessa entrega.
+
+722
+01:21:24.860 --> 01:21:31.259
+Orlando Fonseca: Tem pergunta muito simples. Vou terminar de hoje. Eu só preciso que vocês conversem entre vocês, tá, fomem o time,
+
+723
+01:21:32.590 --> 01:21:42.140
+Orlando Fonseca: decidam o que seria o melhor tema. Se você não quer o tema que eu estou propondo que vou colocar já. Obviamente, hoje à noite vou selecionar um dos temas
+
+724
+01:21:42.590 --> 01:21:48.639
+Orlando Fonseca: que eu tenho aqui. Provavelmente vai ser um que tem a ver com filmes que realmente. Mas eu gosto.
+
+725
+01:21:50.300 --> 01:21:58.360
+Orlando Fonseca: Provavelmente vocês, se não, o senhor apresenta um de vocês, não tem problema. Não, beleza.
+
+726
+01:21:58.620 --> 01:22:00.049
+Orlando Fonseca: Tchau, Tchau, pessoal.
+
+727
+01:22:00.320 --> 01:22:02.239
+Orlando Fonseca: Billy, eu tô tranquilo, tá bom?
+
+728
+01:22:02.720 --> 01:22:18.220
+Orlando Fonseca: Vamos, queridos. Boa noite para vocês e vamos falar. Então, na próxima aula, temos ainda a próxima aula antes de fazer a entrega. Então aproveitem já para adiantar e perguntar dúvidas se você quer na próxima quarta feira. Tá bom, valeu abraço.
+
+729
+01:22:18.410 --> 01:22:19.840
+Jorge José Luiz Santos da Silva: Valeu, professor. Boa noite.
+
+730
+01:22:20.150 --> 01:22:21.140
+gabriel.diniz: A pessoa.
+
+731
+01:22:23.390 --> 01:22:24.770
+José Antonio: Boa noite. Obrigado.
+
+732
+01:22:25.190 --> 01:22:26.310
+Orlando Fonseca: Boa noite.
+

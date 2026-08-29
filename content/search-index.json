@@ -358,5 +358,75 @@
     "discipline": "projeto-bloco-backend",
     "slug": "modelos-cascata-rup-agil",
     "excerpt": "Comparar cascata, modelo incremental, RUP e abordagem ágil para escolher e combinar processos no projeto de bloco backend. Conceitos: modelo em cascata, modelo incremental, RUP / Processo Unificado, metodologia ágil, MVP, manifesto ágil, UML."
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "desvio-condicional-if-else-switch-csharp",
+    "excerpt": "Comandos de decisão em C#: if, if-else, if-else if-else e switch; menu de calculadora, break/default e início de refatoração DRY/SRP. Conceitos: comandos de decisão / desvio, if simples, if-else, if-else if-else, switch, case, break (obrigatório no switch C#), default, igualdade vs comparações relacionais, Console.ReadLine e int.Parse / double.Parse, FormatException (introdução), solution com v…"
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "calculadora-refatoracao-dry-srp-switch",
+    "excerpt": "Evolução da calculadora console: refatoração com switch, extração de métodos, DRY, SRP, escopo e try/catch com FormatException. Conceitos: refatoração, DRY (Don't Repeat Yourself), SRP (Single Responsibility Principle), switch, extração de métodos, public static void, parâmetros vs argumentos, escopo de variáveis, PascalCase em métodos C#, Main enxuto / código autoexplicativo, try / catch, Form…"
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "loops-while-for-foreach-break-continue-csharp",
+    "excerpt": "Comandos de repetição em C#: while, do-while, for, foreach (visão), break/continue, const, casting e calculadora com validação e SRP. Conceitos: while, do-while, for, foreach, break, continue, flag / condição de saída, variável de controle, escopo local no for, const, casting explícito e implícito, DRY."
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "introducao-orientacao-objetos-csharp",
+    "excerpt": "Classe vs objeto, pilares da OOP, pasta Models, atributos públicos vs privados, getters/setters estilo Java, this, ArgumentException e propriedades automáticas em C#. Conceitos: orientação a objetos, paradigma, abstração, encapsulamento, herança, polimorfismo, classe, objeto, instância, atributo, método, pasta Models."
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "encapsulamento-getters-setters-validacao-csharp",
+    "excerpt": "Propriedades automáticas em C#, expansão do compilador, setters com regras de negócio, ArgumentException e métodos Creditar/Debitar. Conceitos: encapsulamento, propriedades automáticas, get e set, backing field privado, convenção underscore, regras de negócio, ArgumentException, string.IsNullOrEmpty, try/catch específico, classe de negócio sem Console, private set, Creditar e Debitar."
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "oop-calculadora-acoplamento-retorno-metodos",
+    "excerpt": "Refatorar a classe Calcula: remover acoplamento ao console, retornar double, lançar DivideByZeroException; escopo local; construtores, sobrecarga e classe autónoma. Conceitos: acoplamento, responsabilidades da classe, retorno de métodos (double vs void), Console.WriteLine fora da classe de domínio, propriedades automáticas, escopo local de variáveis, return direto sem variável temporária, Divid…"
+  },
+  {
+    "discipline": "fundamentos-java",
+    "slug": "switch-menu-do-while-calculadora-java",
+    "excerpt": "Transformar a calculadora em menu interativo com do-while, validar opções, refatorar leitura duplicada e substituir cadeias if/else if por switch/case/break; introdução a for e foreach. Conceitos: menu interativo, do-while, switch / case / break / default, fall-through controlado, validação de opção (&& em intervalo), escopo de variável no loop, DRY (mover leitura comum), System.out.printf, Sca…"
+  },
+  {
+    "discipline": "fundamentos-java",
+    "slug": "constantes-string-printf-random-java",
+    "excerpt": "Fechar lacunas da etapa inicial: final/constantes, System.out.printf, métodos de String, while vs do-while e java.util.Random. Conceitos: constantes final, SCREAMING_SNAKE_CASE, System.out.printf, especificadores %s %d %f, String.length, toUpperCase / toLowerCase, equals / equalsIgnoreCase, NullPointerException em equals, String.split, String.trim, isBlank / isEmpty, while."
+  },
+  {
+    "discipline": "fundamentos-java",
+    "slug": "introducao-oop-classe-objeto-java",
+    "excerpt": "Do código procedural com variáveis soltas à modelagem com classe Filme, objetos, estado (atributos) e comportamento (métodos). Conceitos: programação orientada a objetos, classe, objeto / instância, atributos / campos, estado, comportamento, métodos, new, referência, estado inicial (null, 0, 0.0), método sem main vs classe de execução, void (introdução)."
+  },
+  {
+    "discipline": "fundamentos-java",
+    "slug": "estado-comportamento-metodos-parametros-java",
+    "excerpt": "Objetos com estado e comportamento: métodos void, parâmetros vs argumentos, alteração de estado, debug e refatoração de código procedural para classes (Filme, Aluno, Profissional). Conceitos: estado do objeto, comportamento / métodos, anatomia de método (void, nome, parâmetros), parâmetro vs argumento, alteração de estado via método, encapsulamento (introdução), valores padrão de atributos, ord…"
+  },
+  {
+    "discipline": "fundamentos-java",
+    "slug": "metodos-com-retorno-void-vs-resultado-java",
+    "excerpt": "Distinguir métodos void que executam ação de métodos que devolvem resultado com return; refatorar Filme e Aluno para calcular sob demanda. Conceitos: métodos com retorno, void vs tipo de retorno, return, múltiplos return, método chamando método, responsabilidade única, calcular sob demanda vs atributo, parâmetros e combinações de assinatura."
+  },
+  {
+    "discipline": "projeto-bloco-backend",
+    "slug": "engenharia-requisitos-estudo-caso-bike",
+    "excerpt": "Elicitação, especificação e validação de requisitos com o estudo de caso de aluguel de bicicletas (e analogia ferroviária), rumo ao TP1. Conceitos: engenharia de requisitos, elicitação, especificação de requisitos, validação de requisitos, atores e papéis, cenários (fluxo normal e alternativo), requisitos funcionais, regras de negócio, estudo de caso Wheels / aluguel de bicicletas."
+  },
+  {
+    "discipline": "projeto-bloco-backend",
+    "slug": "requisitos-funcionais-nao-funcionais",
+    "excerpt": "Classificar, especificar e mensurar requisitos funcionais e não funcionais; atores e ponte para casos de uso no Projeto de Bloco Backend. Conceitos: requisitos funcionais, requisitos não funcionais, atributos de qualidade, especificação de requisitos, engenharia de requisitos, métricas de cobertura de requisitos, atores (principal, suporte, bastidor), casos de uso (introdução), cenário feliz e …"
+  },
+  {
+    "discipline": "projeto-bloco-backend",
+    "slug": "casos-de-uso-formalizacao-narrativa",
+    "excerpt": "Formalizar requisitos funcionais em casos de uso: narrativa (fluxo/cenários) + diagrama UML (atores, elipses, associação), erros de modelagem e fronteira do sistema. Conceitos: caso de uso, narrativa de caso de uso, diagrama de casos de uso UML, ator e papel, associação ator–caso de uso, fronteira do sistema, cenário principal e alternativo, requisitos funcionais no diagrama, erros de modelagem…"
   }
 ]

@@ -1,0 +1,2802 @@
+WEBVTT
+
+1
+00:00:07.450 --> 00:00:11.969
+Luiz Maia: Boa noite, pessoal. Dia dezoito de Agosto de dois mil e vinte e seis.
+
+2
+00:00:12.300 --> 00:00:17.160
+Luiz Maia: Vamos para a nossa primeira aula de orientação a objetos.
+
+3
+00:00:22.380 --> 00:00:28.439
+Luiz Maia: Deixa eu pegar aqui o slide. Esse aqui. Deixa eu ver.
+
+4
+00:00:29.610 --> 00:00:30.940
+Luiz Maia: É esse mesmo,
+
+5
+00:00:34.880 --> 00:00:35.690
+Luiz Maia: não é?
+
+6
+00:00:37.310 --> 00:00:40.570
+Luiz Maia: Esses slides estão todos lá no
+
+7
+00:00:40.800 --> 00:00:45.460
+Luiz Maia: no drive para vocês baixarem, consultarem, etc.
+
+8
+00:00:48.000 --> 00:00:55.300
+Luiz Maia: É alguma dúvida? Alguma pergunta? Alguma coisa a ser esclarecida?
+
+9
+00:00:56.170 --> 00:00:58.750
+Luiz Maia: Caso contrário, a gente segue aqui. A nossa aula
+
+10
+00:01:08.670 --> 00:01:10.280
+Luiz Maia: valeu, José.
+
+11
+00:01:12.040 --> 00:01:21.149
+Luiz Maia: A gente vai estudar aqui um monte de coisa sobre orientação. Objeto essas aulas provavelmente durarão algumas semanas,
+
+12
+00:01:21.260 --> 00:01:27.569
+Luiz Maia: pelo menos duas, três semanas aí de orientação, objeto, talvez até mais. Não sei.
+
+13
+00:01:31.530 --> 00:01:33.169
+Luiz Maia: Aqui tem um histórico
+
+14
+00:01:34.690 --> 00:01:48.970
+Luiz Maia: da orientação, objeto. Ou seja, eu não vou ficar lendo isso aqui para vocês. Mas isso aqui, para dar uma ideia para vocês. Como a orientação objeto é uma coisa antiga. Na década de sessenta, já tinha
+
+15
+00:01:49.230 --> 00:01:53.120
+Luiz Maia: surgindo o conceito de classes e objetos.
+
+16
+00:01:53.340 --> 00:01:58.369
+Luiz Maia: Na década de setenta, ele se consolida.
+
+17
+00:01:58.700 --> 00:01:59.680
+Luiz Maia: Não é?
+
+18
+00:01:59.870 --> 00:02:04.089
+Luiz Maia: Aí surge uma linguagem. Isso é mais mágica, super conhecida,
+
+19
+00:02:04.300 --> 00:02:09.889
+Luiz Maia: que pega C e transforma orientado. Objeto.
+
+20
+00:02:10.370 --> 00:02:12.340
+Luiz Maia: Depois surge Java.
+
+21
+00:02:12.840 --> 00:02:18.649
+Luiz Maia: Na década de noventa, o Dotnet e o C Sharp em dois mil.
+
+22
+00:02:18.770 --> 00:02:22.690
+Luiz Maia: E Python também utiliza a orientação, objeto.
+
+23
+00:02:23.040 --> 00:02:32.849
+Luiz Maia: E aí só para alertar vocês Python é uma linguagem orientada a objetos.
+
+24
+00:02:32.980 --> 00:02:42.029
+Luiz Maia: Porém, ela tem várias restrições em relação à orientação. Objeto, isso não é para desprezar,
+
+25
+00:02:42.660 --> 00:02:51.920
+Luiz Maia: falar mal do Python, mas o Python realmente tem sérios problemas de implementação de conceitos da orientação. Objeto
+
+26
+00:02:52.060 --> 00:02:55.929
+Luiz Maia: que você tem que saber. Não tem jeito
+
+27
+00:03:00.440 --> 00:03:02.059
+Luiz Maia: se você considerar.
+
+28
+00:03:02.270 --> 00:03:05.769
+Luiz Maia: Se você comparar Python com o C Sharp e Java
+
+29
+00:03:05.930 --> 00:03:13.549
+Luiz Maia: Sea Sharp e Java são muito mais orientadas ao objeto do que o Python está certo.
+
+30
+00:03:13.810 --> 00:03:24.250
+Luiz Maia: Novamente, isso não é dizer que Python é pior. Não é? Isso é diferente. Está certo.
+
+31
+00:03:25.230 --> 00:03:25.890
+Luiz Maia: E aí?
+
+32
+00:03:29.920 --> 00:03:35.139
+Luiz Maia: Antes da programação orientada, objetos que a gente chama de Po.
+
+33
+00:03:35.470 --> 00:03:39.969
+Luiz Maia: O foco era na estrutura e na modulação do código
+
+34
+00:03:41.360 --> 00:03:46.409
+Luiz Maia: cara. Assim eu vivi isso na pele. Eu nasci.
+
+35
+00:03:46.730 --> 00:03:47.660
+Luiz Maia: É isso aí.
+
+36
+00:03:47.770 --> 00:03:50.339
+Luiz Maia: Eu fui educado.
+
+37
+00:03:50.700 --> 00:03:54.810
+Luiz Maia: Eu cursei a faculdade na década de oitenta,
+
+38
+00:03:55.180 --> 00:04:01.469
+Luiz Maia: ninguém falava sobre programação orientada. Objeto a gente programava
+
+39
+00:04:01.770 --> 00:04:08.630
+Luiz Maia: usando a estrutura do código e o foco na modalização.
+
+40
+00:04:09.190 --> 00:04:10.550
+Luiz Maia: Isso mudou.
+
+41
+00:04:10.670 --> 00:04:13.880
+Luiz Maia: E eu fui descobrir isso muito tempo depois.
+
+42
+00:04:14.280 --> 00:04:17.730
+Luiz Maia: Só no final da década de noventa, que eu fui descobrir isso.
+
+43
+00:04:18.420 --> 00:04:31.660
+Luiz Maia: E aí eu tive um problema sério, porque a minha cabeça toda estava construída para programar de um jeito. Aí eu tinha que programar de outro.
+
+44
+00:04:32.120 --> 00:04:41.170
+Luiz Maia: Então assim eu sofri muito para aprender a programar o orientador objeto hoje, para mim é super tranquilo.
+
+45
+00:04:41.310 --> 00:04:50.670
+Luiz Maia: E eu acho até que foi bom eu ter passado por esse processo, porque eu consigo entender exatamente a dificuldade de vocês.
+
+46
+00:04:51.260 --> 00:04:54.310
+Luiz Maia: Vocês não vão passar por esse processo que eu passei.
+
+47
+00:04:54.910 --> 00:05:03.020
+Luiz Maia: Então a coisa é mais fácil para vocês. Vocês vão achar uma coisa mais natural. Uma coisa mais normal para mim foi um trauma,
+
+48
+00:05:03.350 --> 00:05:04.180
+Luiz Maia: né?
+
+49
+00:05:04.810 --> 00:05:09.549
+Luiz Maia: Aquela frase mudança de paradigma.
+
+50
+00:05:09.680 --> 00:05:19.019
+Luiz Maia: Para mim, foi uma mudança absurda. Minha cabeça funcionava de um jeito. E aí, num belo dia, eu tive que mudar a forma de eu pensar
+
+51
+00:05:19.570 --> 00:05:22.500
+Luiz Maia: isso me gerou vários problemas.
+
+52
+00:05:22.860 --> 00:05:27.640
+Luiz Maia: E eu estudei muito isso. Gente, não é muito. Mesmo
+
+53
+00:05:30.000 --> 00:05:38.769
+Luiz Maia: com a Po. Além da estrutura e remuneração, o software é organizado em objetos que agrupam dados e comportamentos relacionados.
+
+54
+00:05:39.080 --> 00:05:40.310
+Luiz Maia: É,
+
+55
+00:05:45.190 --> 00:05:49.519
+Luiz Maia: muitas dessas frases vão ficar meio soltas para vocês,
+
+56
+00:05:49.690 --> 00:05:57.770
+Luiz Maia: porque elas são muito abstratas. Como é a orientação. Objeto a orientação. Objeto é algo extremamente abstrato.
+
+57
+00:05:58.500 --> 00:06:06.200
+Luiz Maia: Então muitas dessas frases não vão fazer sentido para vocês, como não fizeram para mim também. Tá certo.
+
+58
+00:06:06.540 --> 00:06:11.569
+Luiz Maia: Então essa ideia de objeto de classe é tudo muito abstrato.
+
+59
+00:06:12.620 --> 00:06:25.740
+Luiz Maia: Programar com Po é pensar num sistema como um conjunto de objetos que possuem estados, dados e comportamento. Operações também não quer dizer nada. Se você não sabe o que é Po,
+
+60
+00:06:29.000 --> 00:06:35.849
+Luiz Maia: o que eu posso dizer para vocês é o seguinte: que a programação na entrada de objetos tem quatro pilares:
+
+61
+00:06:36.570 --> 00:06:48.359
+Luiz Maia: abstração, encapsulamento, herança e polimorfismo. Esses são os quatro pilares, e nós abordaremos esses quatro pilares nas próximas aulas.
+
+62
+00:06:56.950 --> 00:07:10.840
+Luiz Maia: O primeiro pilar é a abstração, ou seja, é você modelar o sistema representando
+
+63
+00:07:11.100 --> 00:07:14.770
+Luiz Maia: entidades em conceitos dentro do teu software.
+
+64
+00:07:14.880 --> 00:07:18.050
+Luiz Maia: Isso é extremamente abstrato.
+
+65
+00:07:18.260 --> 00:07:25.159
+Luiz Maia: Você, por exemplo, representar um aluno, um livro, um produto, uma figura geométrica. A planta de uma casa
+
+66
+00:07:25.620 --> 00:07:29.250
+Luiz Maia: dentro do software é extremamente abstrato.
+
+67
+00:07:32.050 --> 00:07:40.769
+Luiz Maia: O objeto é uma instância de uma classe ou seja, a materialização da classe em algo concreta
+
+68
+00:07:41.970 --> 00:07:45.470
+Luiz Maia: novamente, é uma frase que para vocês,
+
+69
+00:07:47.010 --> 00:07:49.319
+Luiz Maia: e aí eu estou falando para o público
+
+70
+00:07:51.520 --> 00:07:55.330
+Luiz Maia: que não sabe nada de programação orientada a objetos.
+
+71
+00:07:56.600 --> 00:08:00.020
+Luiz Maia: Se você já sabe, beleza, parabéns.
+
+72
+00:08:00.690 --> 00:08:09.079
+Luiz Maia: Se você não sabe nada, é você que eu quero falar o curso. A princípio,
+
+73
+00:08:09.500 --> 00:08:22.209
+Luiz Maia: quer atingir quem não sabe nada de programação orientada do objeto. Se você sabe alguma coisa, preste atenção para aprender mais. É isso que eu posso falar para vocês.
+
+74
+00:08:23.200 --> 00:08:27.770
+Luiz Maia: Assim, para mim, a melhor analogia que existe
+
+75
+00:08:28.050 --> 00:08:33.210
+Luiz Maia: dessa abstração de classe e objeto é essa das casas
+
+76
+00:08:33.960 --> 00:08:37.299
+Luiz Maia: que é pra mim. Assim, a que mais me?
+
+77
+00:08:38.280 --> 00:08:44.750
+Luiz Maia: O que mais me faz entender essa analogia entre a diferença entre casa
+
+78
+00:08:45.580 --> 00:08:49.460
+Luiz Maia: e a classe casa e o objeto casa.
+
+79
+00:08:50.210 --> 00:08:55.270
+Luiz Maia: E aí, aqui eu tenho essa planta
+
+80
+00:08:56.000 --> 00:09:00.580
+Luiz Maia: que foi feita por um arquiteto, por um engenheiro
+
+81
+00:09:00.780 --> 00:09:04.340
+Luiz Maia: que é um desenho da casa.
+
+82
+00:09:04.640 --> 00:09:05.780
+Luiz Maia: Tá certo.
+
+83
+00:09:05.950 --> 00:09:07.850
+Luiz Maia: Isso aqui é a classe.
+
+84
+00:09:08.250 --> 00:09:17.479
+Luiz Maia: Você não mora numa classe. Você não tem porta na classe. Você não tem água na classe.
+
+85
+00:09:17.700 --> 00:09:19.070
+Luiz Maia: Luz.
+
+86
+00:09:19.180 --> 00:09:28.020
+Luiz Maia: A classe é uma coisa abstrata. Uma coisa que é um molde extremamente abstrato.
+
+87
+00:09:28.520 --> 00:09:29.690
+Luiz Maia: Tá certo.
+
+88
+00:09:30.010 --> 00:09:36.799
+Luiz Maia: E aí os objetos são construídos a partir desse molde.
+
+89
+00:09:37.890 --> 00:09:42.889
+Luiz Maia: Aí a casa tem cor e ela tem endereços.
+
+90
+00:09:43.980 --> 00:09:51.659
+Luiz Maia: Então os objetos são criados a partir de uma classe. A classe é algo abstrata,
+
+91
+00:09:51.990 --> 00:09:57.700
+Luiz Maia: estática que não tem valores a casa. Ela tem.
+
+92
+00:09:57.800 --> 00:10:17.790
+Luiz Maia: Ela é real. Ela existe na memória do computador. Tá certo. Aqui. Nesse caso, a casa existe fisicamente construída. Repare que as casinhas são todas iguais. Só muda a cor e o endereço delas. Mas elas são idênticas.
+
+93
+00:10:17.870 --> 00:10:23.670
+Luiz Maia: O objeto é uma instância dessa classe,
+
+94
+00:10:25.080 --> 00:10:30.729
+Luiz Maia: e você pode ter inúmeras casas do mês, da mesma classe.
+
+95
+00:10:31.150 --> 00:10:50.790
+Luiz Maia: Uma, duas mil, dez mil objetos a partir. Você imagina, por exemplo, um condomínio, minha casa, minha vida, por exemplo, se eu estiver errado, vocês podem me corrigir. Minha casa é minha vida. Você constrói um monte de casas igualzinha para todo mundo.
+
+96
+00:10:51.180 --> 00:10:58.870
+Luiz Maia: Você pegou aquela planta e replicou aquilo várias vezes. As casas são os objetos, e a planta é a classe.
+
+97
+00:11:02.300 --> 00:11:07.779
+Luiz Maia: É isso é uma abstração absurda é muito abstrato.
+
+98
+00:11:08.160 --> 00:11:16.040
+Luiz Maia: Essa, para mim, é a melhor maneira de definir a diferença entre classe e objeto. Para mim, é melhor.
+
+99
+00:11:16.760 --> 00:11:25.259
+Luiz Maia: Já pensei em várias outras formas de fazer isso usando carro, avião. Mas a casa, eu acho que fica próximo de vocês.
+
+100
+00:11:25.540 --> 00:11:26.630
+Luiz Maia: Tá certo
+
+101
+00:11:27.430 --> 00:11:32.940
+Luiz Maia: de qualquer pessoa que tenha a compreensão do que é uma casa, do que é uma planta baixa,
+
+102
+00:11:33.230 --> 00:11:37.880
+Luiz Maia: que esse desenho aqui e aí
+
+103
+00:11:41.790 --> 00:11:47.549
+Luiz Maia: então a classe. Ela define os dados também chamados de atributos.
+
+104
+00:11:48.540 --> 00:11:52.560
+Luiz Maia: Gente, tudo tem nome, tá certo.
+
+105
+00:11:52.880 --> 00:12:03.960
+Luiz Maia: Então tudo tem nome na computação. Se você souber esses nomes é importante. Numa entrevista numa entrevista para.
+
+106
+00:12:04.100 --> 00:12:07.309
+Luiz Maia: Para estágio. Uma entrevista para emprego.
+
+107
+00:12:07.520 --> 00:12:09.320
+Luiz Maia: Tudo tem nome, gente.
+
+108
+00:12:12.770 --> 00:12:17.380
+Luiz Maia: Saber esses nomes é importante.
+
+109
+00:12:17.480 --> 00:12:24.229
+Luiz Maia: Então a classe define os dados, que são os atributos e os comportamentos, que são os métodos
+
+110
+00:12:24.670 --> 00:12:30.980
+Luiz Maia: que os objetos daquele tipo terão, por exemplo,
+
+111
+00:12:31.100 --> 00:12:35.519
+Luiz Maia: classe aluno. Possui os atributos, nome, matrícula e curso
+
+112
+00:12:35.640 --> 00:12:44.060
+Luiz Maia: e os seus métodos, como consultar nome e alterar nome, o que acontecia aqui
+
+113
+00:12:44.350 --> 00:12:50.839
+Luiz Maia: antes da programação na entrada do objeto. É que o foco era em cima dos comandos.
+
+114
+00:12:51.810 --> 00:13:01.670
+Luiz Maia: Ou seja, você pensava primeiro no código e depois nos dados com a programação. O O.
+
+115
+00:13:01.810 --> 00:13:12.060
+Luiz Maia: Você mudou a forma de pensar. Você primeiro pensa nos dados, depois no código, e eu sofri
+
+116
+00:13:12.260 --> 00:13:14.530
+Luiz Maia: demais para entender isso.
+
+117
+00:13:15.300 --> 00:13:16.490
+Luiz Maia: Tá certo.
+
+118
+00:13:16.590 --> 00:13:22.539
+Luiz Maia: Vocês talvez não passem ou não venham passar pelo que eu passei.
+
+119
+00:13:23.400 --> 00:13:29.440
+Luiz Maia: Eu fui descobrir no final de dois mil, que a minha tese de mestrado tinha que ser orientada a objeto.
+
+120
+00:13:29.710 --> 00:13:35.090
+Luiz Maia: E aí, gente, eu não sabia nada sobre esse assunto. Nada zero.
+
+121
+00:13:35.550 --> 00:13:47.039
+Luiz Maia: E naquela época, eu tive que aprender orientação, objeto para poder fazer minha tese de mestrado que eu apresentei em dois mil e um.
+
+122
+00:13:47.300 --> 00:13:50.000
+Luiz Maia: Então foi assim foi um desespero.
+
+123
+00:13:50.160 --> 00:13:54.610
+Luiz Maia: Eu aprendi programação orientada do objeto da pior maneira que você pode imaginar
+
+124
+00:13:57.350 --> 00:14:00.829
+Luiz Maia: a partir da classe aluno, que é esse cara? Aqui?
+
+125
+00:14:01.510 --> 00:14:08.020
+Luiz Maia: A gente pode criar vários objetos com atributos diferentes.
+
+126
+00:14:08.810 --> 00:14:11.630
+Luiz Maia: Então eu tenho o aluno um, que é o João.
+
+127
+00:14:11.970 --> 00:14:13.569
+Luiz Maia: Com a.
+
+128
+00:14:13.840 --> 00:14:20.149
+Luiz Maia: O curso de computação, a matrícula cento e um, o aluno dois e o aluno três.
+
+129
+00:14:20.330 --> 00:14:34.010
+Luiz Maia: Eu não vou usar esse exemplo do aluno. Eu vou usar um outro exemplo para fazer essa demonstração. Para vocês, gente, vai ter muito código para fazer muito código mesmo.
+
+130
+00:14:34.500 --> 00:14:45.840
+Luiz Maia: Então se você quer programar comigo, se prepare para poder fazer código. Se você não quiser programar comigo, eu vou colocar o código todo lá no drive para você baixar.
+
+131
+00:14:49.380 --> 00:14:56.520
+Luiz Maia: Pedro, eu peço para você esperar, porque isso vai aparecer na aula.
+
+132
+00:14:56.920 --> 00:14:59.939
+Luiz Maia: Agora. Não dá para fazer essa diferenciação.
+
+133
+00:15:00.450 --> 00:15:10.249
+Luiz Maia: Peço que você tenha paciência, mas eu vou falar sobre a diferença entre método e construtor. Eu posso te adiantar o seguinte. O construtor é um método,
+
+134
+00:15:10.510 --> 00:15:12.409
+Luiz Maia: só que é um método especial.
+
+135
+00:15:20.170 --> 00:15:27.470
+Luiz Maia: Então, o construtor é um método, só que ele é especial. Depois vai ter uma aula só sobre o Construtor, gente,
+
+136
+00:15:27.790 --> 00:15:33.570
+Luiz Maia: então você vai entender tudo de construtor. Eu vou explicar tudinho para vocês. Fica tranquilo.
+
+137
+00:15:34.320 --> 00:15:38.600
+Luiz Maia: E aí, mosquito?
+
+138
+00:15:40.050 --> 00:15:41.780
+Luiz Maia: Oh, coisa horrível.
+
+139
+00:15:42.370 --> 00:15:46.679
+Luiz Maia: Então, calor aqui no rio. Gente, você não tem noção? Parece verão.
+
+140
+00:15:47.290 --> 00:15:49.979
+Luiz Maia: Parece que o Verão já chegou aqui no rio.
+
+141
+00:15:56.270 --> 00:15:58.510
+Luiz Maia: É. Deve ser o Raul Ninho.
+
+142
+00:15:59.600 --> 00:16:08.869
+Luiz Maia: A gente falou então da abstração. Eu não vou dar nenhum exemplo agora sobre abstração, porque eu preciso primeiro falar sobre encapsulamento,
+
+143
+00:16:09.190 --> 00:16:16.830
+Luiz Maia: encapsulamento. É você controlar o acesso aos atributos da classe,
+
+144
+00:16:18.780 --> 00:16:27.299
+Luiz Maia: e aí a gente vai poder definir como esses atributos serão alterados e consultados.
+
+145
+00:16:27.660 --> 00:16:28.800
+Luiz Maia: Tá certo.
+
+146
+00:16:30.320 --> 00:16:35.459
+Luiz Maia: Eu sei que novamente, essa frase aqui para vocês não representa nada,
+
+147
+00:16:35.590 --> 00:16:41.119
+Luiz Maia: mas é a definição correta de encapsulamento. Tá certo.
+
+148
+00:16:43.470 --> 00:16:51.799
+Luiz Maia: Uma forma de implementar o encapsulamento é usar atributos privados. Também vocês não fazem a menor noção do que seja isso,
+
+149
+00:16:52.080 --> 00:16:59.979
+Luiz Maia: evitando que esses atributos sejam alterados, modificados por outras classes.
+
+150
+00:17:01.440 --> 00:17:11.080
+Luiz Maia: O atributo public quando você define um atributo como público. Ele permite o acesso por outras classes.
+
+151
+00:17:11.310 --> 00:17:22.630
+Luiz Maia: Então a gente vai sempre tratar isso. É uma pergunta que todo mundo faz. Lp na classe. Os atributos são privados ou públicos, sempre privados.
+
+152
+00:17:25.310 --> 00:17:29.650
+Luiz Maia: O encapsulamento não é só esconder atributos,
+
+153
+00:17:29.840 --> 00:17:41.410
+Luiz Maia: também significa proteger e controlar as operações que podem modificá lo. Então, assim esse slide para vocês. Se vocês estão lendo isso aqui,
+
+154
+00:17:41.410 --> 00:17:50.860
+Luiz Maia: não tem o menor sentido. Eles estão perdidos aqui dentro não tem significado algum. Por quê? Porque é muito abstrato.
+
+155
+00:17:51.190 --> 00:17:57.449
+Luiz Maia: Você só vai entender isso com exemplo. Então vamos lá, vamos começar aqui.
+
+156
+00:17:57.760 --> 00:18:01.900
+Luiz Maia: Vamos pegar aqui o nosso C. Sharp e começar a programar.
+
+157
+00:18:02.380 --> 00:18:03.960
+Luiz Maia: E aí
+
+158
+00:18:06.930 --> 00:18:13.570
+Luiz Maia: criar um novo projeto. Professor, qual é o ganho de pensar primeiro nos dados e depois no código?
+
+159
+00:18:18.540 --> 00:18:19.989
+Luiz Maia: Boa pergunta.
+
+160
+00:18:24.730 --> 00:18:26.579
+Luiz Maia: O que é mais importante?
+
+161
+00:18:26.980 --> 00:18:32.020
+Luiz Maia: Os dados ou o código? Gabriel,
+
+162
+00:18:33.580 --> 00:18:39.620
+Luiz Maia: na sua opinião, o que é o mais importante, você manipular os dados,
+
+163
+00:18:39.780 --> 00:18:44.440
+Luiz Maia: ou você dá uma ênfase nos dados para depois serem manipulados
+
+164
+00:18:45.660 --> 00:18:48.770
+Luiz Maia: ou você manipular os dados e depois
+
+165
+00:18:48.960 --> 00:18:53.779
+Luiz Maia: olhar para os dados depois. O que você acha mais importante, os dados
+
+166
+00:18:53.990 --> 00:18:56.930
+Luiz Maia: ou os comandos que vão operar os dados?
+
+167
+00:18:57.470 --> 00:19:00.430
+Luiz Maia: Essa é a pergunta que eu posso te fazer para você pensar.
+
+168
+00:19:03.060 --> 00:19:08.840
+Luiz Maia: Na minha opinião, hoje os dados são mais importantes que os comandos,
+
+169
+00:19:14.030 --> 00:19:17.160
+Luiz Maia: tá, Gabriel. Mas vamos pensar.
+
+170
+00:19:17.460 --> 00:19:23.150
+Luiz Maia: Se você olhar primeiro para os dados,
+
+171
+00:19:23.330 --> 00:19:35.929
+Luiz Maia: você vai saber as regras de negócio, as regras de validação para aqueles dados. Se você faz primeiro o código, você não sabe essas regras ainda.
+
+172
+00:19:41.730 --> 00:19:46.810
+Luiz Maia: Então, por exemplo, vou te dar um exemplo. Supõe uma classe de conta corrente.
+
+173
+00:19:47.250 --> 00:19:52.379
+Luiz Maia: Você tem lá o Id da conta, que é o nome da conta, o nome do correntista
+
+174
+00:19:52.650 --> 00:19:59.060
+Luiz Maia: e o saldo da conta. Um exemplo bem simples que eu vou tratar com vocês aqui durante a aula de hoje.
+
+175
+00:20:00.350 --> 00:20:07.200
+Luiz Maia: Bom, quais são as regras de validação para essa classe. Bom,
+
+176
+00:20:07.460 --> 00:20:13.530
+Luiz Maia: eu não posso ter uma conta com Id menor igual a zero.
+
+177
+00:20:13.930 --> 00:20:16.349
+Luiz Maia: Tá errado. Tem algum problema?
+
+178
+00:20:16.720 --> 00:20:19.180
+Luiz Maia: O nome não pode ser nulo.
+
+179
+00:20:20.730 --> 00:20:23.690
+Luiz Maia: O saldo não pode ser negativo.
+
+180
+00:20:24.650 --> 00:20:31.240
+Luiz Maia: Então você começa a pensar primeiro nos dados, para depois implementar o código.
+
+181
+00:20:31.540 --> 00:20:34.990
+Luiz Maia: Você conseguiu entender, Gabriel? A diferença
+
+182
+00:20:35.680 --> 00:20:42.630
+Luiz Maia: de você primeiro, pensar no código e depois nos dados, porque os dados definem o que o código vai fazer?
+
+183
+00:20:48.650 --> 00:20:58.630
+Luiz Maia: Tá claro pra ti, cara. Fala aí pra mim, cara. Se ficou legal, dá um joinha aí em capixulamento.
+
+184
+00:20:58.770 --> 00:21:00.960
+Luiz Maia: Não, isso aqui é o nome do
+
+185
+00:21:01.870 --> 00:21:03.910
+Luiz Maia: deixa eu pegar esse cara aqui.
+
+186
+00:21:05.450 --> 00:21:16.090
+Luiz Maia: Esse cara vai ser encapsulamento um, eu vou criar uma solução. Sim, Professor. Já adianta como será a modelagem do banco.
+
+187
+00:21:16.210 --> 00:21:28.779
+Luiz Maia: Sem dúvida. Vai ajudar bastante. Mas pode também explicar as vantagens de usar a O. Eu nunca entendi muito bem o sentido de usar ao invés da programação normal.
+
+188
+00:21:31.260 --> 00:21:38.060
+Luiz Maia: Então, Jorge, eu já expliquei isso. Sim, a vantagem de você usar
+
+189
+00:21:38.700 --> 00:21:44.869
+Luiz Maia: é que o foco é em cima dos dados e não em cima do. Código.
+
+190
+00:21:45.430 --> 00:21:47.849
+Luiz Maia: O código vem depois dos dados.
+
+191
+00:21:48.220 --> 00:21:50.729
+Luiz Maia: Então, por exemplo, a conta corrente
+
+192
+00:21:50.890 --> 00:22:08.539
+Luiz Maia: a Id da conta. Nome do cliente, saldo. Você olha para isso. Você vai fazer o que eu vou fazer com esses dados. Ok, a Id não pode ser menor. Igual a zero nome não pode ser nulo. Saldo não pode ser negativo.
+
+193
+00:22:09.140 --> 00:22:14.980
+Luiz Maia: Então você primeiro pensa nos dados para depois você criar o código disso.
+
+194
+00:22:15.460 --> 00:22:20.309
+Luiz Maia: Essa vantagem é uma mudança de visão, de como programar.
+
+195
+00:22:20.420 --> 00:22:22.660
+Luiz Maia: Primeiro, você pensa nos dados
+
+196
+00:22:23.050 --> 00:22:40.820
+Luiz Maia: as regras de negócio, o que eu penso de o não é necessariamente melhor que outros paradigmas. A principal vantagem parece que quando o programa cresce, precisamos organizar complexidade, responsabilidades e mudanças também. Muito boa, José. Muito bom,
+
+197
+00:22:50.240 --> 00:22:55.649
+Luiz Maia: muito bom. A Saf. Muito boa. A tua. O teu.
+
+198
+00:22:56.430 --> 00:23:00.769
+Luiz Maia: A comparação com a casa.
+
+199
+00:23:00.920 --> 00:23:12.329
+Luiz Maia: Muito bom mesmo. Primeiro você tem que ter a planta da casa para depois construir a casa. Se você construir a casa sem uma planta, provavelmente vai dar problema.
+
+200
+00:23:14.850 --> 00:23:26.830
+Luiz Maia: Então aqui, eu vou criar uma solução chamada encapsulamento. E aqui o primeiro cara vai ser encapsulamento. Um vai ter dois, três, quatro, cinco, seis. Um monte deles.
+
+201
+00:23:27.190 --> 00:23:29.229
+Luiz Maia: O código vai ser evolutivo.
+
+202
+00:23:33.060 --> 00:23:34.900
+Luiz Maia: Primeiro, eu vou programar.
+
+203
+00:23:35.610 --> 00:23:41.709
+Luiz Maia: Acho que o segredo também é separar dados de comportamento. Sim, claro que sim. Muito bom.
+
+204
+00:23:47.600 --> 00:23:52.909
+Luiz Maia: É então, esse encapsulamento? Um aqui.
+
+205
+00:23:53.160 --> 00:23:57.250
+Luiz Maia: Primeiro, eu vou programar esse Sharp como se estivesse programando em Java.
+
+206
+00:23:58.390 --> 00:23:59.180
+Luiz Maia: Tá,
+
+207
+00:24:00.240 --> 00:24:18.070
+Luiz Maia: então assim a gente vai começar a programar com orientação e objeto, como se fosse com Java. E aí eu vou fazer a migração para Sichar. Porque não é exatamente a mesma coisa. Os conceitos são o mesmo. A sinta se muda.
+
+208
+00:24:18.230 --> 00:24:19.480
+Luiz Maia: Está certo?
+
+209
+00:24:20.000 --> 00:24:24.170
+Luiz Maia: Não, mas a sentar se, vai mudar um pouquinho.
+
+210
+00:24:25.570 --> 00:24:28.929
+Luiz Maia: Um pouquinho não vai mudar bastante.
+
+211
+00:24:29.250 --> 00:24:31.010
+Luiz Maia: E aí.
+
+212
+00:24:35.780 --> 00:24:36.730
+Luiz Maia: Cadê
+
+213
+00:24:41.250 --> 00:24:45.670
+Luiz Maia: Cadê o meu código que eu fiz aqui?
+
+214
+00:24:49.530 --> 00:24:50.670
+Luiz Maia: Eu, hein?
+
+215
+00:24:57.630 --> 00:25:01.069
+Luiz Maia: Ah, tá. Eu que vacilei aqui.
+
+216
+00:25:03.650 --> 00:25:05.120
+Luiz Maia: Ah, certo.
+
+217
+00:25:21.610 --> 00:25:24.830
+Luiz Maia: Então o nosso primeiro código.
+
+218
+00:25:24.950 --> 00:25:28.360
+Luiz Maia: Ele basicamente vai definir uma classe
+
+219
+00:25:28.490 --> 00:25:37.959
+Luiz Maia: e vai fazer essa classe com atributos públicos. Está certo. É basicamente isso que a gente vai fazer.
+
+220
+00:25:39.390 --> 00:25:48.950
+Luiz Maia: E aí depois a gente vai evoluindo para vocês entenderem a diferença entre atributos públicos e atributos privados. Está certo.
+
+221
+00:25:55.460 --> 00:26:02.750
+Luiz Maia: Então aqui a gente vai primeiro criar uma classe conta.
+
+222
+00:26:03.340 --> 00:26:15.660
+Luiz Maia: Bom, no Dotnet é com certeza. Gabriel vai ter Dway aí. Com certeza,
+
+223
+00:26:18.610 --> 00:26:26.140
+Luiz Maia: exatamente, José. Exatamente isso. Fazer o mapeamento de coisas do mundo real
+
+224
+00:26:26.420 --> 00:26:29.819
+Luiz Maia: para dentro do nosso código também. Tá certo.
+
+225
+00:26:33.790 --> 00:26:42.359
+Luiz Maia: No Dotnet, a gente vai fazer o seguinte: todas as classes são
+
+226
+00:26:42.650 --> 00:26:55.070
+Luiz Maia: é indicado. Você pode não fazer isso, mas é indicado que você crie todas as classes do seu projeto dentro de um diretório de uma pasta chamada Models.
+
+227
+00:26:55.290 --> 00:27:02.640
+Luiz Maia: Então aqui, eu vou fazer o seguinte: ó botão direito, adicionar, folder.
+
+228
+00:27:03.140 --> 00:27:05.419
+Luiz Maia: E vou chamar esse cara de models.
+
+229
+00:27:05.980 --> 00:27:08.720
+Luiz Maia: O Java não tem essa
+
+230
+00:27:09.810 --> 00:27:21.410
+Luiz Maia: essa obrigação. Não, o Java pode chamar de models. Pode chamar de Doming. Pode chamar de entities, pode chamar de um monte de coisa,
+
+231
+00:27:21.410 --> 00:27:33.009
+Luiz Maia: mas no C Sharp, a coisa é um pouco mais rígida se você não quiser seguir esse padrão. Ok, mas é o padrão que o C Sharp e o Dotnet utilizam.
+
+232
+00:27:33.330 --> 00:27:41.010
+Luiz Maia: O Java é mais flexível, mas vai ter lá um pacote de classes.
+
+233
+00:27:43.810 --> 00:27:47.669
+Luiz Maia: Não viu botão direito em cima do projeto.
+
+234
+00:27:49.180 --> 00:27:53.550
+Luiz Maia: Botão direito, ad New Folder.
+
+235
+00:27:58.490 --> 00:28:07.600
+Luiz Maia: E aí você escreve models aqui, ó New Folder. Você escreve models?
+
+236
+00:28:07.960 --> 00:28:10.340
+Luiz Maia: Vou apagar esse cara porque eu não preciso dele.
+
+237
+00:28:11.660 --> 00:28:13.770
+Luiz Maia: Beleza, entendeu?
+
+238
+00:28:15.790 --> 00:28:18.810
+Luiz Maia: Agora eu vou criar a classe botão direito.
+
+239
+00:28:20.970 --> 00:28:24.120
+Luiz Maia: Age Class.
+
+240
+00:28:25.100 --> 00:28:29.179
+Luiz Maia: Vou adicionar uma classe na pasta de Models
+
+241
+00:28:33.240 --> 00:28:44.420
+Luiz Maia: aparecer um monte de templates. Você vai selecionar classe e você vai especificar aqui o nome da classe conta
+
+242
+00:28:46.000 --> 00:28:48.600
+Luiz Maia: que é o nome da classe que eu vou criar.
+
+243
+00:28:50.960 --> 00:28:52.569
+Luiz Maia: Pronto, criou a classe.
+
+244
+00:28:53.610 --> 00:28:56.230
+Luiz Maia: Aí ele vai trazer um monte de porcaria.
+
+245
+00:28:56.690 --> 00:29:01.500
+Luiz Maia: É o template da classe do C. Sharp.
+
+246
+00:29:01.790 --> 00:29:06.339
+Luiz Maia: Tá certo. Esse é um monte de template que está aí. Eu não vou usar.
+
+247
+00:29:07.780 --> 00:29:14.390
+Luiz Maia: Não vou usar esse monte de Using. O using é o importe do Java no C. Sharp.
+
+248
+00:29:14.990 --> 00:29:19.980
+Luiz Maia: Eu não vou usar nada disso. Então eu posso fazer o quê? Eu posso apagar isso
+
+249
+00:29:21.350 --> 00:29:26.330
+Luiz Maia: aqui também. Eu posso fazer com que a classe seja pública.
+
+250
+00:29:26.560 --> 00:29:33.710
+Luiz Maia: Pronto, eu estou programando como se estivesse programando em Java.
+
+251
+00:29:34.670 --> 00:29:35.800
+Luiz Maia: Tá certo.
+
+252
+00:29:35.920 --> 00:29:52.770
+Luiz Maia: Vou fazer os atributos da classe, todos públicos. Intim aí de publicado String
+
+253
+00:29:53.430 --> 00:30:03.800
+Luiz Maia: nome: estou programando como se estivesse programando em Java Public Double Saldo.
+
+254
+00:30:04.150 --> 00:30:09.919
+Luiz Maia: Pronto, está aqui a minha classe conta com esses atributos públicos.
+
+255
+00:30:10.740 --> 00:30:11.900
+Luiz Maia: Tá certo.
+
+256
+00:30:18.240 --> 00:30:28.349
+Luiz Maia: E agora, o que eu vou fazer? Vou fazer aqui o meu programa. Acessar a classe. Bom, a primeira coisa eu tenho que fazer eu tenho que instanciar a classe contra.
+
+257
+00:30:28.740 --> 00:30:35.440
+Luiz Maia: Para criar um objeto desse tipo. Isso aqui ele não existe dentro do meu. Código.
+
+258
+00:30:35.670 --> 00:30:44.390
+Luiz Maia: Tá certo. Eu tenho que fazer. O quê? Eu tenho que instanciar um objeto desse tipo do tipo conta?
+
+259
+00:30:44.540 --> 00:30:47.060
+Luiz Maia: Então, para fazer isso, eu faço o quê?
+
+260
+00:30:47.610 --> 00:30:57.300
+Luiz Maia: Conta conta um New conta?
+
+261
+00:31:02.460 --> 00:31:03.650
+Luiz Maia: Não sei.
+
+262
+00:31:06.060 --> 00:31:09.560
+Luiz Maia: Não faço ideia do cadeado.
+
+263
+00:31:10.930 --> 00:31:13.679
+Luiz Maia: Não faço ideia. Nunca vi isso antes.
+
+264
+00:31:14.520 --> 00:31:19.979
+Luiz Maia: Tenta continuar fazendo o código para depois tentar entender o que é isso. Eu nunca vi isso.
+
+265
+00:31:22.620 --> 00:31:24.889
+Luiz Maia: Eu nunca vi esse tipo de problema.
+
+266
+00:31:25.510 --> 00:31:37.890
+Luiz Maia: Se tem um cadeado, é provavelmente que ele tenha criado essa classe num diretório onde você não tem acesso. Talvez não sei onde você criou o teu projeto.
+
+267
+00:31:39.310 --> 00:31:43.169
+Luiz Maia: Agora que a gente vai fazer o quê? Vamos atribuir
+
+268
+00:31:43.640 --> 00:31:52.000
+Luiz Maia: valores aos atributos da classe. Esses caras aqui são os atributos da classe Id, nome e saldo
+
+269
+00:31:52.290 --> 00:32:01.239
+Luiz Maia: como eles são públicos, eu posso acessá los diretamente de uma outra classe que classe program. Então conta um
+
+270
+00:32:02.660 --> 00:32:15.760
+Luiz Maia: ponto Id recebe um conta um ponto. Nome. Recebe.
+
+271
+00:32:17.370 --> 00:32:18.460
+Luiz Maia: Pedro,
+
+272
+00:32:21.710 --> 00:32:23.190
+Luiz Maia: conta um.
+
+273
+00:32:23.670 --> 00:32:34.200
+Luiz Maia: Você está inicializando os valores do atributo do objeto do tipo conta saldo.
+
+274
+00:32:38.690 --> 00:32:42.630
+Luiz Maia: Ok, mil.
+
+275
+00:32:43.540 --> 00:32:44.890
+Luiz Maia: Tá bom aqui, né?
+
+276
+00:32:46.010 --> 00:32:48.770
+Luiz Maia: E aí a gente pode imprimir esses dados.
+
+277
+00:32:49.290 --> 00:32:53.500
+Luiz Maia: A gente pode vir aqui, por exemplo, e fazer é
+
+278
+00:33:03.400 --> 00:33:21.530
+Luiz Maia: conta um ponto Id conta um ponto. Nome conta um ponto saldo.
+
+279
+00:33:22.810 --> 00:33:27.209
+Luiz Maia: Daí eu estou criando um objeto. Conta
+
+280
+00:33:28.370 --> 00:33:34.449
+Luiz Maia: a partir da classe conta. Estou inicializando os atributos da classe.
+
+281
+00:33:35.060 --> 00:33:40.239
+Luiz Maia: E depois estou imprimindo esses valores. Vamos rodar para ver se funciona.
+
+282
+00:33:40.360 --> 00:33:41.160
+Luiz Maia: E aí
+
+283
+00:33:54.210 --> 00:34:05.459
+Luiz Maia: um Pedro mil, eu posso criar um outro objeto a partir da mesma classe, igual a casa.
+
+284
+00:34:06.440 --> 00:34:08.650
+Luiz Maia: Então aqui eu tenho conta dois
+
+285
+00:34:10.350 --> 00:34:14.239
+Luiz Maia: a que o usuário pode ser o.
+
+286
+00:34:16.949 --> 00:34:25.500
+Luiz Maia: O Id vai ser dois aqui. O nome do cliente vai ser José.
+
+287
+00:34:26.400 --> 00:34:30.950
+Luiz Maia: Aqui vai ser dois mil. O saldo.
+
+288
+00:34:31.110 --> 00:34:35.740
+Luiz Maia: E aqui eu mando printar os dados desse objeto.
+
+289
+00:34:37.929 --> 00:34:42.979
+Luiz Maia: A classe não tem valores. Quem tem valores é o objeto.
+
+290
+00:34:43.290 --> 00:34:46.479
+Luiz Maia: Vamos rodar e ver para vocês verem como é que há?
+
+291
+00:34:47.210 --> 00:34:49.439
+Luiz Maia: Opa deu ruim aqui.
+
+292
+00:34:50.600 --> 00:34:55.529
+Luiz Maia: Conta dois. Conta aí. Dia tem que alterar esse cara.
+
+293
+00:34:56.030 --> 00:34:58.690
+Luiz Maia: Dois dois.
+
+294
+00:34:59.130 --> 00:35:15.040
+Luiz Maia: Pronto, vamos pular uma linha. Aqui vamos, console, ponto, console Wrightline
+
+295
+00:35:15.320 --> 00:35:18.450
+Luiz Maia: só para pular uma linhazinha aqui para ficar mais bonitinho.
+
+296
+00:35:19.500 --> 00:35:23.710
+Luiz Maia: Pronto, lá, Pedro e José. Tá tudo arrumadinho direitinho.
+
+297
+00:35:40.690 --> 00:35:45.950
+Luiz Maia: Então, aqui a gente criou uma classe com três atributos.
+
+298
+00:35:46.440 --> 00:35:54.389
+Luiz Maia: Essa classe. Para poder existir. Você precisa instanciar essa classe. Estou instanciando ela aqui,
+
+299
+00:35:54.640 --> 00:36:00.899
+Luiz Maia: atribuindo valores aos atributos, exibindo esses valores,
+
+300
+00:36:00.900 --> 00:36:14.850
+Luiz Maia: criando um outro objeto do mesmo tipo de conta, atribuindo valores diferentes. Eu posso criar dezenas, centenas de objetos do mesmo tipo.
+
+301
+00:36:16.360 --> 00:36:21.000
+Luiz Maia: Mas essa é a maneira correta de programar, não, não é?
+
+302
+00:36:21.740 --> 00:36:22.920
+Luiz Maia: Por quê?
+
+303
+00:36:23.070 --> 00:36:30.610
+Luiz Maia: Porque a classe program está acessando diretamente os atributos da classe conta.
+
+304
+00:36:30.840 --> 00:36:36.160
+Luiz Maia: Então, isso não está legal. Isso fere o princípio do encapsulamento.
+
+305
+00:36:36.540 --> 00:36:42.909
+Luiz Maia: O encapsulamento não permite que uma outra classe, que é a classe program.
+
+306
+00:36:43.130 --> 00:36:56.529
+Luiz Maia: Acesse os atributos da outra classe. Conta diretamente. Tem que passar por métodos dentro da classe conta para acessar os atributos
+
+307
+00:36:57.220 --> 00:36:58.640
+Luiz Maia: do objeto.
+
+308
+00:36:59.160 --> 00:37:20.140
+Luiz Maia: Então vamos passar para a versão dois A Adi, novo projeto console em capixulamento dois: isso vai evoluindo etapas.
+
+309
+00:37:20.790 --> 00:37:25.000
+Luiz Maia: Vou pegar aqui. Esse cara aqui é.
+
+310
+00:37:25.160 --> 00:37:33.069
+Luiz Maia: Vou, na verdade, para vocês poderem me acompanhar. Eu vou fazer de novo aqui. Ó botão direito
+
+311
+00:37:33.360 --> 00:37:38.060
+Luiz Maia: é a de New Folder Modals
+
+312
+00:37:38.370 --> 00:37:41.739
+Luiz Maia: até vocês poderem vocês pegarem isso.
+
+313
+00:37:41.990 --> 00:37:49.320
+Luiz Maia: Depois. Botão direito é a de class conta.
+
+314
+00:37:50.710 --> 00:37:51.940
+Luiz Maia: Beleza.
+
+315
+00:37:52.070 --> 00:38:09.250
+Luiz Maia: Isso aqui a gente tira fora, porque ele está gerando a partir do template. Esse interno aqui também. A gente pode botar public beleza. Agora a gente vai fazer o seguinte. A gente vai criar os atributos da classe como privados private
+
+316
+00:38:10.140 --> 00:38:11.410
+Luiz Maia: intim
+
+317
+00:38:12.150 --> 00:38:21.260
+Luiz Maia: aí de. Olha, a diferença entre esse código que está aqui. E esse código que está aqui no primeiro, é tudo público.
+
+318
+00:38:21.380 --> 00:38:32.300
+Luiz Maia: Agora o nome também é privado, e o saldo também é privado. Double
+
+319
+00:38:35.740 --> 00:38:39.930
+Luiz Maia: Double Salvo.
+
+320
+00:38:40.450 --> 00:38:47.740
+Luiz Maia: Agora a gente vai lá para o programa principal. Eu vou pegar o programa principal que a gente fez aqui. Tá ele, aqui, ó ó,
+
+321
+00:38:48.230 --> 00:38:52.840
+Luiz Maia: vou pegar esse código principal que está aqui. Copiar e jogar para cá.
+
+322
+00:38:56.580 --> 00:39:01.650
+Luiz Maia: Olha só o que acontece. Bom, a primeira coisa que ele fala é que não encontra a conta.
+
+323
+00:39:01.810 --> 00:39:09.589
+Luiz Maia: Tudo bem, eu preciso dizer aonde está essa conta. Ela está dentro de models. Você vem aqui
+
+324
+00:39:10.250 --> 00:39:14.170
+Luiz Maia: e usem encapsulamento dois, conta.
+
+325
+00:39:14.570 --> 00:39:19.890
+Luiz Maia: Ele colocou essa linha a mais aqui. Ou seja, ele está importando para dentro do meu projeto.
+
+326
+00:39:20.150 --> 00:39:26.740
+Luiz Maia: Dentro do meu projeto, esse models. E aí ele encontra a conta.
+
+327
+00:39:27.390 --> 00:39:29.260
+Luiz Maia: Você pode escrever isso
+
+328
+00:39:30.000 --> 00:39:47.239
+Luiz Maia: no teclado, ou você pode fazer que ele use a deixa eu fazer de novo para vocês verem. Se você clicar aqui, vai aparecer um botão vermelho aqui. Ó você vem aqui e usa em pronto, ele já pegou. Onde está aquela classe
+
+329
+00:39:49.140 --> 00:39:52.280
+Luiz Maia: agora você olha para cá e vê se um monte de erro.
+
+330
+00:39:54.670 --> 00:40:04.090
+Luiz Maia: Eu não tenho mais acesso aos atributos da classe. Por quê? Porque a classe definiu os atributos como privados.
+
+331
+00:40:04.240 --> 00:40:18.879
+Luiz Maia: Então eu não tenho mais acesso direto aos atributos da classe. Isso é encapsulamento. O encapsulamento não permite que outras classes acessem diretamente
+
+332
+00:40:19.070 --> 00:40:25.110
+Luiz Maia: o os atributos de uma outra classe. Não pode.
+
+333
+00:40:25.570 --> 00:40:27.779
+Luiz Maia: Isso é encapsulamento, gente.
+
+334
+00:40:28.550 --> 00:40:40.670
+Luiz Maia: Eu vou ter que inventar alguma maneira de fazer com que o meu programa. Essa classe aqui Program, acesse os atributos da classe conta.
+
+335
+00:40:41.000 --> 00:40:43.090
+Luiz Maia: E como é que eu vou fazer isso?
+
+336
+00:40:45.820 --> 00:40:49.159
+Luiz Maia: Intervalo na volta, eu explico como
+
+337
+00:44:34.510 --> 00:44:40.090
+Luiz Maia: estamos de volta. Como é que a gente faz. Então,
+
+338
+00:44:47.800 --> 00:44:53.359
+Luiz Maia: para fazer o acesso aos atributos privados de uma classe usando métodos,
+
+339
+00:44:53.960 --> 00:45:06.099
+Luiz Maia: tá certo. Aqueles famosos métodos Get insetos. Tá certo que permita que você acesse os atributos da classe
+
+340
+00:45:08.900 --> 00:45:12.469
+Luiz Maia: passando por métodos e não acessando diretamente
+
+341
+00:45:12.740 --> 00:45:21.109
+Luiz Maia: os atributos da classe. Então eu estou programando como se estivesse em Java. Depois eu vou mostrar para vocês como é que faz isso em C. Sharp.
+
+342
+00:45:21.430 --> 00:45:24.610
+Luiz Maia: Tá certo. Então aqui já faz o seguinte. Ó,
+
+343
+00:45:24.720 --> 00:45:31.620
+Luiz Maia: os métodos que fazem acesso aos atributos são públicos para poderem ser acessados
+
+344
+00:45:31.970 --> 00:45:36.350
+Luiz Maia: pela outra classe, senão eles também não serão acessados.
+
+345
+00:45:36.470 --> 00:45:42.770
+Luiz Maia: Eu tenho métodos públicos e privados. Os métodos privados só são usados dentro da classe.
+
+346
+00:45:43.370 --> 00:45:54.719
+Luiz Maia: Métodos públicos são acessados de fora da classe. Então aqui, por exemplo, eu vou setá o Id
+
+347
+00:45:55.160 --> 00:46:02.950
+Luiz Maia: por padrão. Os métodos esse Sharp começam com letra maiúscula. Então aqui eu vou fazer sete.
+
+348
+00:46:03.300 --> 00:46:06.660
+Luiz Maia: O nome do cara
+
+349
+00:46:13.180 --> 00:46:21.300
+Luiz Maia: e aqui eu vou fazer o get do Id, só que aqui é com letra maiúscula. Não é com letra minúscula.
+
+350
+00:46:21.650 --> 00:46:31.730
+Luiz Maia: Get Id retorna. Repara que aqui no set, o retorno é void não retorna a nada aqui no Gets,
+
+351
+00:46:31.900 --> 00:46:44.439
+Luiz Maia: Professor. Então, no encapsulamento, todas as igrejas tem que ser privados dos métodos. Não necessariamente perfeito. Os getstes podem ou não. Geralmente o set é público,
+
+352
+00:46:45.630 --> 00:46:54.669
+Luiz Maia: é, geralmente os Gets são públicos, os sets podem ou não ser públicos.
+
+353
+00:46:55.190 --> 00:46:58.280
+Luiz Maia: Vai depender. Eu vou mostrar um exemplo para vocês. Isso
+
+354
+00:47:00.690 --> 00:47:02.610
+Luiz Maia: não. Isso aqui é um padrão.
+
+355
+00:47:02.950 --> 00:47:04.670
+Luiz Maia: O padrão da linguagem.
+
+356
+00:47:05.340 --> 00:47:06.020
+Luiz Maia: E aí
+
+357
+00:47:08.440 --> 00:47:18.620
+Luiz Maia: isso aqui é um padrão da linguagem igual. Java, Java. Os métodos começam com letra minúscula em si, Sharp. Os métodos começam com letra maiúscula.
+
+358
+00:47:19.330 --> 00:47:30.019
+Luiz Maia: Isso é uma definição é um padrão da linguagem. Se você usar o padrão do Java no C. Sharp, vai funcionar também. Só que você está quebrando o padrão.
+
+359
+00:47:31.310 --> 00:47:35.039
+Luiz Maia: Então todos os métodos começam com letra maiúscula.
+
+360
+00:47:39.570 --> 00:47:41.229
+Luiz Maia: Isso é um erro comum
+
+361
+00:47:42.550 --> 00:47:47.659
+Luiz Maia: de vários programadores Java, que vão trabalhar com C Sharp, achando que é a mesma
+
+362
+00:47:47.920 --> 00:47:56.040
+Luiz Maia: nomenclatura. Mas não é. Os métodos em C. Sharp começam com letras maiúsculas. Não tem jeito
+
+363
+00:47:56.260 --> 00:47:58.789
+Luiz Maia: se você botar minúscula funciona.
+
+364
+00:47:59.870 --> 00:48:02.410
+Luiz Maia: E esse diz aqui: o que ele faz
+
+365
+00:48:05.200 --> 00:48:11.320
+Luiz Maia: aí? Eu tirei. Aqui o diz porque ele não é necessário aqui. Ele é necessário. Por quê?
+
+366
+00:48:11.490 --> 00:48:18.160
+Luiz Maia: Porque esse jeans aqui, você repara o seguinte: que esse Id aqui, ele é branco.
+
+367
+00:48:18.770 --> 00:48:20.979
+Luiz Maia: É esse cara que está aqui em cima.
+
+368
+00:48:21.210 --> 00:48:25.960
+Luiz Maia: Esse aí dia aqui está com azul. Ou seja, é esse aí dia aqui.
+
+369
+00:48:26.320 --> 00:48:34.250
+Luiz Maia: Ou seja, eu tenho o atributo e o parâmetro do método com o mesmo nome Id.
+
+370
+00:48:34.460 --> 00:48:40.290
+Luiz Maia: Como é que eu diferencio esse cara desse cara usando o, diz
+
+371
+00:48:41.030 --> 00:48:52.179
+Luiz Maia: o Dig está dizendo o seguinte: olha só, você está pegando esse Id, que é o Id que veio como parâmetro e atribuindo ao atributo Id. Que é esse cara aqui.
+
+372
+00:48:52.370 --> 00:48:56.060
+Luiz Maia: E aí que é o branquinho?
+
+373
+00:48:57.320 --> 00:49:00.590
+Luiz Maia: Então o branquinho é o atributo da classe.
+
+374
+00:49:01.030 --> 00:49:06.339
+Luiz Maia: O Id em azul é o parâmetro do comando sete Id
+
+375
+00:49:06.540 --> 00:49:12.170
+Luiz Maia: para diferenciar um do outro. A gente tem esse. Diz aqui, Tá certo.
+
+376
+00:49:12.610 --> 00:49:17.829
+Luiz Maia: Aqui como eu não tenho esse tipo de confusão.
+
+377
+00:49:18.740 --> 00:49:23.219
+Luiz Maia: Saber qual é a Id que eu estou manipulando. Eu não preciso botar o diz.
+
+378
+00:49:23.540 --> 00:49:29.270
+Luiz Maia: Você pode optar em colocar ou não colocar uma opção sua. Eu, por exemplo, não coloco
+
+379
+00:49:29.630 --> 00:49:32.990
+Luiz Maia: só que logo diz, em situações como essa.
+
+380
+00:49:33.660 --> 00:49:37.289
+Luiz Maia: E aí eu posso fazer a mesma coisa para os próximos.
+
+381
+00:49:37.750 --> 00:49:41.210
+Luiz Maia: É o Gatiname.
+
+382
+00:49:42.860 --> 00:49:50.860
+Luiz Maia: Retorna o nome, o setname publicado.
+
+383
+00:49:51.180 --> 00:50:00.589
+Luiz Maia: E aí Void sete, nome aqui. Ele botou name, né?
+
+384
+00:50:00.920 --> 00:50:06.930
+Luiz Maia: Deixa eu corrigir isso aqui para nove sete. Nome: String.
+
+385
+00:50:08.120 --> 00:50:12.419
+Luiz Maia: Nome novamente. A gente tem uma situação de confusão aqui,
+
+386
+00:50:12.740 --> 00:50:19.969
+Luiz Maia: porque o nome que está aqui no parâmetro. É igual o nome do atributo. Então eu tenho que fazer o quê? Diz
+
+387
+00:50:21.100 --> 00:50:26.160
+Luiz Maia: ponto name. Ok, está errado. Aqui
+
+388
+00:50:27.010 --> 00:50:29.860
+Luiz Maia: aqui não é Name. Aqui é nome.
+
+389
+00:50:30.560 --> 00:50:33.299
+Luiz Maia: Tá certo. Diz nome
+
+390
+00:50:33.480 --> 00:50:44.180
+Luiz Maia: recebe nome, que é o atributo que veio aqui aqui também está errado. É nome? Pronto, bacaninha. Está resolvido.
+
+391
+00:50:44.580 --> 00:50:51.470
+Luiz Maia: Agora falta fazer o quê? O saldo e tani saldo.
+
+392
+00:50:52.360 --> 00:51:05.750
+Luiz Maia: Tá ok, agora falta fazer o quê? O sete, Saldo Public Void sete Saldo.
+
+393
+00:51:06.480 --> 00:51:14.160
+Luiz Maia: É Double Saldo novamente.
+
+394
+00:51:14.300 --> 00:51:23.910
+Luiz Maia: Diz ponto saldo recebe saldo. Pronto, está resolvido o problema.
+
+395
+00:51:24.390 --> 00:51:33.720
+Luiz Maia: Então o acesso aos atributos da classe agora são feitos através de métodos guetes insetis.
+
+396
+00:51:33.870 --> 00:51:40.219
+Luiz Maia: Agora eu tenho que mudar o meu programa principal para fazer o uso disso.
+
+397
+00:51:40.550 --> 00:51:49.310
+Luiz Maia: Então aqui. Ó não é Id? É sete aí dia
+
+398
+00:51:55.060 --> 00:51:56.580
+Luiz Maia: sete nomes,
+
+399
+00:52:05.410 --> 00:52:07.090
+Luiz Maia: sete Saldo.
+
+400
+00:52:08.090 --> 00:52:16.810
+Luiz Maia: Por que usar um método ao invés de alterar diretamente a propriedade. Você vai entender daqui a pouco. Isso, Lucas. Só um minutinho, cara. Só um minutinho.
+
+401
+00:52:17.440 --> 00:52:21.119
+Luiz Maia: Você vai entender daqui a pouco eu juro para você.
+
+402
+00:52:21.490 --> 00:52:24.589
+Luiz Maia: Espera um pouquinho. Só que você vai entender isso.
+
+403
+00:52:27.000 --> 00:52:29.350
+Luiz Maia: Sete saldo.
+
+404
+00:52:29.810 --> 00:52:39.830
+Luiz Maia: E aí aqui eu vou fazer o quê? Um get aí de
+
+405
+00:52:41.110 --> 00:52:46.830
+Luiz Maia: aqui. Eu vou fazer um get. Nome Getty.
+
+406
+00:52:47.220 --> 00:52:48.610
+Luiz Maia: Nome.
+
+407
+00:52:49.590 --> 00:52:57.530
+Luiz Maia: E aqui é um Gets Saldo Getty Saldo.
+
+408
+00:52:57.910 --> 00:52:59.640
+Luiz Maia: Pronto, tá resolvido.
+
+409
+00:53:00.040 --> 00:53:07.910
+Luiz Maia: Sentei os atributos da classe e busquei os atributos da classe, passando pelos métodos
+
+410
+00:53:08.080 --> 00:53:13.379
+Luiz Maia: da classe, sem acessar diretamente os atributos.
+
+411
+00:53:13.820 --> 00:53:19.080
+Luiz Maia: Aqui é a mesma coisa. Tá certo. Fazer a mesma coisa aqui para esse cara
+
+412
+00:53:19.340 --> 00:53:22.829
+Luiz Maia: para conta dois sete aí de
+
+413
+00:53:26.630 --> 00:53:35.699
+Luiz Maia: dois é sete nomes, mesma coisa, sete nomes.
+
+414
+00:53:49.500 --> 00:53:51.780
+Luiz Maia: Sete saldo.
+
+415
+00:53:59.430 --> 00:54:01.230
+Luiz Maia: A mesma coisa aqui, ó,
+
+416
+00:54:01.560 --> 00:54:11.609
+Luiz Maia: vou copiar e colar isso aqui e alterar só o nome do objeto. Aqui é conta dois, conta dois,
+
+417
+00:54:12.450 --> 00:54:13.810
+Luiz Maia: conta dois.
+
+418
+00:54:15.490 --> 00:54:22.510
+Luiz Maia: Pronto, vamos rodar para ver se funciona. Eu tenho que dizer aqui qual é o projeto que eu quero executar.
+
+419
+00:54:23.300 --> 00:54:33.690
+Luiz Maia: Pronto, agora vai rodar e vai mostrar os valores que foram citados nessa história. Aqui
+
+420
+00:54:35.830 --> 00:54:38.700
+Luiz Maia: está lá. Pedro e José.
+
+421
+00:54:40.560 --> 00:54:43.210
+Luiz Maia: Zero problema, não é.
+
+422
+00:54:43.640 --> 00:54:47.020
+Luiz Maia: Está tudo legal. Agora vamos responder a pergunta
+
+423
+00:54:47.590 --> 00:54:53.509
+Luiz Maia: do Lucas: por que usar um método ao invés de alterar diretamente a propriedade,
+
+424
+00:54:53.850 --> 00:55:01.360
+Luiz Maia: beleza? E aí a gente vai voltar para essa transparência. Aqui.
+
+425
+00:55:05.710 --> 00:55:23.210
+Luiz Maia: Encapsulamento não significa simplesmente esconder atributos. Significa proteger o estado do objeto e controlar as operações que podem modificá lo. Essa frase para vocês, como todo o resto que está aqui não quer dizer nada.
+
+426
+00:55:23.960 --> 00:55:29.249
+Luiz Maia: Você olha para isso aqui. Você lê esse troço aqui. Isso aqui são conceitos.
+
+427
+00:55:29.710 --> 00:55:31.779
+Luiz Maia: São definições.
+
+428
+00:55:31.990 --> 00:55:38.929
+Luiz Maia: Mas na prática, você lê um troço desse, e você não entende. Você só vai entender isso quando você olhar o código.
+
+429
+00:55:39.390 --> 00:55:44.400
+Luiz Maia: Foi assim que eu aprendi. Eu primeiro usava
+
+430
+00:55:46.040 --> 00:55:58.789
+Luiz Maia: o código para depois entender o conceito. Foi assim que eu aprendi esse troço. Então essa frase que está aqui, você vai entender. Ela agora foi justamente a pergunta do nosso colega Lucas
+
+431
+00:55:59.520 --> 00:56:01.739
+Luiz Maia: para isso. O que eu vou fazer?
+
+432
+00:56:05.570 --> 00:56:07.370
+Luiz Maia: Vou criar um outro projeto.
+
+433
+00:56:08.980 --> 00:56:28.050
+Luiz Maia: Had Project console em capixulamento três está certo, isso, tá
+
+434
+00:56:28.760 --> 00:56:33.169
+Luiz Maia: beleza. Como é que ficou o código da classe?
+
+435
+00:56:34.430 --> 00:56:42.470
+Luiz Maia: Tá aqui Ctrl A, Ctrl C Ctrl V.
+
+436
+00:56:42.890 --> 00:56:44.970
+Luiz Maia: Está aí o código da classe.
+
+437
+00:56:55.420 --> 00:56:57.539
+Luiz Maia: Agora, eu vou fazer o seguinte. Olha só,
+
+438
+00:56:58.730 --> 00:57:01.119
+Luiz Maia: eu vou pegar esse modus que está aqui
+
+439
+00:57:01.940 --> 00:57:04.959
+Luiz Maia: e vou copiar ele para dentro desse cara aqui.
+
+440
+00:57:06.890 --> 00:57:14.620
+Luiz Maia: Aí eu faço assim. Ó Copy, venho no encapsulamento três peixe.
+
+441
+00:57:16.200 --> 00:57:18.989
+Luiz Maia: Só que a gente tem um problema.
+
+442
+00:57:20.360 --> 00:57:29.450
+Luiz Maia: O que acontece? Esse cara que está aqui. Ele veio com o nome do projeto que nós copiamos.
+
+443
+00:57:31.260 --> 00:57:35.229
+Luiz Maia: Tá certo. Eu estou no encapsulamento três.
+
+444
+00:57:35.550 --> 00:57:39.210
+Luiz Maia: Vou definir ele como nosso projeto de startup.
+
+445
+00:57:39.570 --> 00:57:45.299
+Luiz Maia: Só que ele está colocando aqui encapsulamento dois, porque ele copiou e colou.
+
+446
+00:57:45.570 --> 00:57:48.020
+Luiz Maia: O que a gente faz para resolver esse problema.
+
+447
+00:57:48.190 --> 00:57:49.750
+Luiz Maia: Você vem aqui.
+
+448
+00:57:49.980 --> 00:57:56.800
+Luiz Maia: Encapsulamento três, botão direito, cinco memespaces.
+
+449
+00:57:58.500 --> 00:58:06.990
+Luiz Maia: E aí ele vai alterar aquele Memespace para o Namespace Do encapsulamento três.
+
+450
+00:58:07.490 --> 00:58:10.530
+Luiz Maia: Olha lá, aply.
+
+451
+00:58:11.000 --> 00:58:17.570
+Luiz Maia: Pronto, agora a conta já está apontando para dentro do encapsulamento três.
+
+452
+00:58:18.410 --> 00:58:35.110
+Luiz Maia: Isso é uma forma boa de você resolver esse tipo de problema, você copiar e colar e ter problema de Namespace. Eu sei que eu não expliquei para vocês muito bem, memespace depois eu explico isso com mais detalhes para vocês. Tá certo.
+
+453
+00:58:35.370 --> 00:58:41.079
+Luiz Maia: Mas o Namespace é algo semelhante ao pacote do Java.
+
+454
+00:58:41.330 --> 00:58:42.840
+Luiz Maia: Tá certo.
+
+455
+00:58:43.130 --> 00:58:45.519
+Luiz Maia: Depois a gente fala mais sobre isso.
+
+456
+00:58:46.570 --> 00:58:50.960
+Luiz Maia: Legal, vou pegar esse programa que está aqui.
+
+457
+00:58:51.070 --> 00:58:53.219
+Luiz Maia: E aí vou copiar
+
+458
+00:58:55.600 --> 00:59:02.470
+Luiz Maia: e colar aqui também. Não vou ficar digitando esse monte de código se eu não preciso.
+
+459
+00:59:02.800 --> 00:59:03.760
+Luiz Maia: Pronto,
+
+460
+00:59:03.930 --> 00:59:10.879
+Luiz Maia: ele não sabe quem é a conta. Por quê? Porque conta está dentro de Models. A gente vem aqui nessa.
+
+461
+00:59:11.220 --> 00:59:16.409
+Luiz Maia: Não sei como é que eu chamo isso aqui, mas é botar um Using
+
+462
+00:59:16.620 --> 00:59:19.730
+Luiz Maia: para ele resolver. Bom, ele aceitou.
+
+463
+00:59:22.110 --> 00:59:29.260
+Luiz Maia: E aí eu volto para a pergunta do colega que perguntou: quem foi que perguntou?
+
+464
+00:59:33.110 --> 00:59:34.400
+Luiz Maia: O Lucas?
+
+465
+00:59:35.910 --> 00:59:48.020
+Luiz Maia: O Lucas perguntou por que eu não uso diretamente os atributos públicos. E eu tenho que passar por esses
+
+466
+00:59:48.450 --> 00:59:52.790
+Luiz Maia: Guets e Satters aqui que não fazem nada.
+
+467
+00:59:53.100 --> 00:59:57.090
+Luiz Maia: Bom, agora vocês vão entender. Essa frase.
+
+468
+01:00:02.140 --> 01:00:08.959
+Luiz Maia: Encapsulamento não significa simplesmente esconder atributos. Foi o que eu fiz.
+
+469
+01:00:09.510 --> 01:00:13.449
+Luiz Maia: Coloquei como privados. Eu escondi os atributos.
+
+470
+01:00:13.600 --> 01:00:19.579
+Luiz Maia: Significa proteger o estado do objeto e controlar as operações que podem modificá lo.
+
+471
+01:00:19.750 --> 01:00:25.060
+Luiz Maia: Não entendi nada. Lp: Ok, não tem problema. Você vai entender agora.
+
+472
+01:00:26.200 --> 01:00:32.869
+Luiz Maia: Bom, quais são as regras de negócio para essa classe? Aqui conta.
+
+473
+01:00:33.190 --> 01:00:41.040
+Luiz Maia: Você acha que pode ter um Id menor igual a zero. Você já viu alguma conta corrente menor igual a zero?
+
+474
+01:00:42.660 --> 01:00:46.680
+Luiz Maia: Não, não tem.
+
+475
+01:00:47.420 --> 01:00:52.830
+Luiz Maia: Você já viu alguma conta com ele sem nome, também não.
+
+476
+01:00:53.730 --> 01:00:57.859
+Luiz Maia: Você já viu alguém abrir uma conta no banco com um saldo? Negativo?
+
+477
+01:00:58.800 --> 01:01:00.060
+Luiz Maia: Também não.
+
+478
+01:01:02.700 --> 01:01:08.080
+Luiz Maia: Então assim. Tem alguma coisa errada aqui, então eu posso fazer
+
+479
+01:01:09.420 --> 01:01:19.030
+Luiz Maia: agora? Eu posso fazer o quê? Um controle do que está sendo colocado dentro dos atributos, dentro dos métodos de sete
+
+480
+01:01:19.110 --> 01:01:32.559
+Luiz Maia: a Lpi e os Gets. Eu também posso usar os Gets para fazer alguma coisa. Por exemplo, aqui, em relação ao nome, eu posso, por exemplo, retornar o nome em maiúsculo, por exemplo,
+
+481
+01:01:32.870 --> 01:01:36.009
+Luiz Maia: em vez de retornar o nome como está na.
+
+482
+01:01:36.400 --> 01:01:40.089
+Luiz Maia: Como ele foi digitado, posso trazer tudo em maiúsculo.
+
+483
+01:01:40.390 --> 01:01:51.509
+Luiz Maia: Eu posso fazer, por exemplo, no get, inverter o sobrenome com o nome, aparece primeiro o sobrenome e depois o nome também poderia fazer.
+
+484
+01:01:51.870 --> 01:01:55.180
+Luiz Maia: Mas o set é muito mais fácil de entender.
+
+485
+01:01:57.550 --> 01:02:10.590
+Luiz Maia: Aqui, por exemplo, se se o Id for menor, igual a zero, o que eu faço.
+
+486
+01:02:14.830 --> 01:02:16.430
+Luiz Maia: Console
+
+487
+01:02:20.260 --> 01:02:23.290
+Luiz Maia: ponto, Wrightline.
+
+488
+01:02:24.530 --> 01:02:25.620
+Luiz Maia: Erro
+
+489
+01:02:31.010 --> 01:02:39.770
+Luiz Maia: valor do Haiti em válido.
+
+490
+01:02:43.230 --> 01:02:45.899
+Luiz Maia: Tá certo. E o que eu faço aqui
+
+491
+01:02:47.710 --> 01:02:52.869
+Luiz Maia: não tem como atribuir esse valor. Eu faço aqui um um e Turney,
+
+492
+01:02:55.260 --> 01:03:00.460
+Luiz Maia: vamos tentar acessar. Olha só, vamos fazer aqui. Vamos rodar o código agora.
+
+493
+01:03:01.030 --> 01:03:06.169
+Luiz Maia: Aqui. Ó, você está a Id com um valor zero.
+
+494
+01:03:07.470 --> 01:03:09.879
+Luiz Maia: Olha o que acontece.
+
+495
+01:03:13.610 --> 01:03:16.380
+Luiz Maia: Erro valor do Id inválido.
+
+496
+01:03:17.280 --> 01:03:20.640
+Luiz Maia: Só que ele continuou seguindo.
+
+497
+01:03:25.180 --> 01:03:29.510
+Luiz Maia: Não, não, Gabriel. A coisa é mais séria do que essa.
+
+498
+01:03:31.610 --> 01:03:37.579
+Luiz Maia: O que acontece? Gente é uma classe de negócios
+
+499
+01:03:38.130 --> 01:03:44.569
+Luiz Maia: como conta aluno, livro, produto. Ela não pode
+
+500
+01:03:45.000 --> 01:03:48.249
+Luiz Maia: enviar mensagens de erro como essa.
+
+501
+01:03:50.220 --> 01:04:01.609
+Luiz Maia: Por quê isso gera acoplamento, o que é acoplamento? Gente, acoplamento a Co.
+
+502
+01:04:01.860 --> 01:04:07.390
+Luiz Maia: Lamento, o acoplamento é a pior coisa que a gente quer em software.
+
+503
+01:04:07.760 --> 01:04:13.700
+Luiz Maia: Eu estou amarrando a minha classe num dispositivo de saída. Ou seja, a tela.
+
+504
+01:04:14.960 --> 01:04:16.840
+Luiz Maia: Eu não posso fazer isso.
+
+505
+01:04:18.990 --> 01:04:28.970
+Luiz Maia: Eu tenho que fazer com que a minha classe seja desacoplada. Ela não pode nem fazer entrada de dados e nem saída de dados.
+
+506
+01:04:29.100 --> 01:04:31.140
+Luiz Maia: Ela só pode fazer o quê?
+
+507
+01:04:33.030 --> 01:04:46.829
+Luiz Maia: Ou mandar mensagem. Tipo assim poderia fazer isso aqui. Ó, mudaria esse cara para String e fazia assim: ó
+
+508
+01:04:46.960 --> 01:04:48.590
+Luiz Maia: Ritane,
+
+509
+01:04:55.220 --> 01:04:58.309
+Luiz Maia: retorne. Faria isso aqui. Ó,
+
+510
+01:05:06.440 --> 01:05:15.570
+Luiz Maia: ele está reclamando porque lá no programa principal, ele é voide.
+
+511
+01:05:15.940 --> 01:05:20.909
+Luiz Maia: Então a gente está reclamando sobre o programa principal. Essa é a melhor solução, não, não é?
+
+512
+01:05:22.590 --> 01:05:24.179
+Luiz Maia: Qual é a melhor solução?
+
+513
+01:05:24.820 --> 01:05:27.260
+Luiz Maia: Esse cara retornando, Void.
+
+514
+01:05:27.630 --> 01:05:28.800
+Luiz Maia: Tá certo.
+
+515
+01:05:29.170 --> 01:05:32.770
+Luiz Maia: E o que ele vai fazer aqui agora ele vai fazer o quê?
+
+516
+01:05:33.050 --> 01:05:35.209
+Luiz Maia: Alguém tem ideia do que eu vou fazer aqui?
+
+517
+01:05:41.330 --> 01:05:48.350
+Luiz Maia: Não, o Tri Cat não vai entrar aqui. Eu só vou fazer o quê? Eu vou lançar uma exceção. Fro
+
+518
+01:05:51.170 --> 01:06:04.469
+Luiz Maia: mil Invalide não argumente Exception.
+
+519
+01:06:04.990 --> 01:06:06.319
+Luiz Maia: E esse cara aqui.
+
+520
+01:06:09.030 --> 01:06:10.859
+Luiz Maia: É isso que eu tenho que fazer.
+
+521
+01:06:11.290 --> 01:06:14.499
+Luiz Maia: A minha classe. Ela não tem que tratar o erro.
+
+522
+01:06:14.700 --> 01:06:26.360
+Luiz Maia: A minha classe tem que fazer o quê? Ela tem que simplesmente lançar a exceção e a camada de cima que chama a classe vai tratar o erro se ela quiser.
+
+523
+01:06:26.500 --> 01:06:29.599
+Luiz Maia: Se ela não quiser. Azar o dela.
+
+524
+01:06:30.160 --> 01:06:33.240
+Luiz Maia: Mas a minha classe não pode imprimir nada
+
+525
+01:06:33.520 --> 01:06:43.990
+Luiz Maia: na tela. Simplesmente ela lança uma exceção e meu programa principal. Esse cara aqui trata ou não a exceção. Vamos ver o que acontece.
+
+526
+01:06:44.110 --> 01:06:47.470
+Luiz Maia: Ele não está tratando de exceção. Olha lá, o que acontece?
+
+527
+01:06:49.830 --> 01:06:51.310
+Luiz Maia: Quebrou o código.
+
+528
+01:06:51.710 --> 01:06:53.670
+Luiz Maia: Se eu fizer isso aqui, agora
+
+529
+01:06:56.840 --> 01:06:58.080
+Luiz Maia: vem.
+
+530
+01:07:14.850 --> 01:07:20.220
+Luiz Maia: Ah, Lp: Eu uso exception. Aqui é,
+
+531
+01:07:21.150 --> 01:07:31.779
+Luiz Maia: eu vou usar excepcion aqui. Não, você não vai usar excepcion você vai fazer o quê? Você vai tratar a exceção que foi lançada lá na classe.
+
+532
+01:07:32.020 --> 01:07:36.680
+Luiz Maia: Então aqui não é excepcion. É argument exception.
+
+533
+01:07:37.850 --> 01:07:56.449
+Luiz Maia: Por quê? Porque o código limpo fala. Olha, você tem que tratar as exceções que são lançadas pela classe ou por qualquer outro método. Você tem que tratar exatamente aquele tipo de erro. Você não vai tratar qualquer tipo de erro. Você vai tratar um erro específico.
+
+534
+01:07:56.600 --> 01:08:01.280
+Luiz Maia: Aqui vai ser argument exception. Esse é o erro que você vai tratar.
+
+535
+01:08:03.760 --> 01:08:07.499
+Luiz Maia: Está errado. Usar excepcion não, não está errado.
+
+536
+01:08:07.760 --> 01:08:17.560
+Luiz Maia: Mas não é a melhor prática. A melhor prática é você tratar o erro que você gerou e não qualquer erro aleatório.
+
+537
+01:08:17.700 --> 01:08:25.450
+Luiz Maia: Não é rolê aleatório igual o Ronaldinho. Gaúcho, você tratar o erro que você quer tratar,
+
+538
+01:08:25.960 --> 01:08:34.639
+Luiz Maia: tá certo? Ah, mas se tiver mais de um erro, você coloca outros catches para tratar os erros.
+
+539
+01:08:35.580 --> 01:08:39.350
+Luiz Maia: Agora, se eu rodar o meu código, olha o que acontece.
+
+540
+01:08:39.859 --> 01:08:42.939
+Luiz Maia: Erro valor do Aid inválido.
+
+541
+01:08:43.600 --> 01:08:53.510
+Luiz Maia: Então eu nem poderia ter feito esse print aqui. Só poderia ter feito esse Print caso o meu.
+
+542
+01:08:53.830 --> 01:08:58.360
+Luiz Maia: Os meus sets funcionassem. Então aqui eu
+
+543
+01:08:58.700 --> 01:09:01.600
+Luiz Maia: tiro esse cara. Coloquei dentro do Try.
+
+544
+01:09:01.950 --> 01:09:10.189
+Luiz Maia: Pronto, erro. O valor do Adin é inválido. Ele não executa mais nada e passa para o próximo. E aqui funcionou direitinho.
+
+545
+01:09:12.210 --> 01:09:25.399
+Luiz Maia: A mesma coisa. Eu posso fazer. Para quem, por exemplo, sete nomes Eiffel String, ponto
+
+546
+01:09:25.810 --> 01:09:31.740
+Luiz Maia: Snu ou Empty do número do nome, ou.
+
+547
+01:09:38.870 --> 01:09:42.689
+Luiz Maia: Ou é
+
+548
+01:09:47.700 --> 01:09:48.970
+Luiz Maia: nome?
+
+549
+01:09:49.149 --> 01:09:50.819
+Luiz Maia: Ponto Lenf
+
+550
+01:09:54.490 --> 01:10:02.249
+Luiz Maia: Lenfe menor que dois, ou seja. Eu não quero que não entre nenhum nome que seja menor do que dois.
+
+551
+01:10:02.350 --> 01:10:10.420
+Luiz Maia: Ele vai mandar esse cara aqui. Uma exceção. Erro, valor
+
+552
+01:10:10.800 --> 01:10:16.509
+Luiz Maia: do nome. Agora vocês estão entendendo por que eu estou usando
+
+553
+01:10:16.680 --> 01:10:21.030
+Luiz Maia: esses métodos? Eu estou protegendo os atributos da classe.
+
+554
+01:10:22.780 --> 01:10:35.219
+Luiz Maia: Ou seja, se o nome é nulo ou vazio, ou se o nome tem um tamanho menor do que dois. Ele vai fazer isso aqui. Vamos testar para ver se funciona.
+
+555
+01:10:45.680 --> 01:10:55.450
+Luiz Maia: Gabriel, a gente poderia ir escalar isso para testar se a String é String ou não. Eu estou tentando
+
+556
+01:10:55.610 --> 01:11:04.130
+Luiz Maia: simplificar a explicação para não ficar um negócio muito complexo, senão a gente não vai terminar nunca isso.
+
+557
+01:11:08.120 --> 01:11:15.679
+Luiz Maia: Então, assim a gente está fazendo de um. O troço já é complicado.
+
+558
+01:11:15.980 --> 01:11:29.330
+Luiz Maia: Se eu complicar mais, vai ficar mais difícil de vocês entenderem a programação na entrada do objeto mas Sim, você tem razão. Eu poderia fazer um teste aqui antes para saber se a String é String mesmo.
+
+559
+01:11:29.730 --> 01:11:30.889
+Luiz Maia: Tá certo.
+
+560
+01:11:31.040 --> 01:11:38.230
+Luiz Maia: Mas no C. Sharp. Se eu tentar passar alguma coisa que não seja String vai dar erro de compilação.
+
+561
+01:11:38.550 --> 01:11:42.900
+Luiz Maia: Olha só aqui. Ó,
+
+562
+01:11:50.720 --> 01:11:57.920
+Luiz Maia: se eu não passar uma string aqui. Você está vendo? Aqui está em vermelho.
+
+563
+01:11:58.970 --> 01:12:05.960
+Luiz Maia: Isso aqui não é Python, gente. Python passaria isso. Mas em si, Sharp e Java não passa
+
+564
+01:12:06.320 --> 01:12:08.130
+Luiz Maia: daí o de compilação.
+
+565
+01:12:09.290 --> 01:12:11.959
+Luiz Maia: O programa nem executa.
+
+566
+01:12:12.900 --> 01:12:28.929
+Luiz Maia: Por quê? Porque o tipo passado, o argumento que é mil, não é igual. O parâmetro que é String. Ele não aceita, dá erro de compilação. Então esse tipo de erro em si, Sharp Java.
+
+567
+01:12:29.160 --> 01:12:30.359
+Luiz Maia: Ele não é
+
+568
+01:12:30.480 --> 01:12:40.760
+Luiz Maia: tão importante quanto em Python, em Python. Realmente é. Você pode passar qualquer porcaria como argumento que ele vai aceitar.
+
+569
+01:12:41.320 --> 01:12:42.010
+Luiz Maia: E aí
+
+570
+01:12:45.480 --> 01:12:53.540
+Luiz Maia: vamos fazer o negócio dar errado. Aqui. Vamos pegar. Por exemplo, aqui vamos fazer aqui, por exemplo,
+
+571
+01:12:54.700 --> 01:12:58.540
+Luiz Maia: vamos botar um nome, um nome vazio.
+
+572
+01:12:58.910 --> 01:13:02.819
+Luiz Maia: Assim vamos rodar e ver o que vai acontecer.
+
+573
+01:13:03.410 --> 01:13:14.089
+Luiz Maia: Quebrou o código aqui foi da primeira conta. Esse erro é da segunda conta.
+
+574
+01:13:14.540 --> 01:13:19.640
+Luiz Maia: É erro. Daqui. Aí eu teria que fazer o quê? Try
+
+575
+01:13:34.500 --> 01:13:35.960
+Luiz Maia: Kiete.
+
+576
+01:13:36.220 --> 01:13:40.500
+Luiz Maia: Argumente Exception mensagem
+
+577
+01:13:44.000 --> 01:13:47.329
+Luiz Maia: pronto, agora tá legal. Vamos ver o que acontece.
+
+578
+01:13:56.820 --> 01:14:02.690
+Luiz Maia: Erro. O valor do Ag. Inválido. Esse Ag: aqui é esse cara aqui.
+
+579
+01:14:03.040 --> 01:14:10.689
+Luiz Maia: Tá certo. A outra mensagem de erro. Nome inválido. Tá vindo aqui, ó desse cara aqui.
+
+580
+01:14:11.960 --> 01:14:20.100
+Luiz Maia: Se eu passar, por exemplo. Agora um nome válido é,
+
+581
+01:14:20.690 --> 01:14:24.770
+Luiz Maia: por exemplo, Lp: Aqui, por exemplo, ele vai passar.
+
+582
+01:14:30.250 --> 01:14:33.690
+Luiz Maia: Meu Deus do céu. Meu Deus do céu!
+
+583
+01:14:34.880 --> 01:14:36.499
+Luiz Maia: Pronto, agora vai passar.
+
+584
+01:14:41.310 --> 01:14:43.309
+Luiz Maia: O Id vai dar problema.
+
+585
+01:14:48.790 --> 01:14:52.040
+Luiz Maia: E aqui ele passou tranquilo.
+
+586
+01:14:52.680 --> 01:14:57.009
+Luiz Maia: A gente pode gerar um outro problema. Vamos lá para a classe de novo.
+
+587
+01:14:57.380 --> 01:15:06.430
+Luiz Maia: Aqui o sete saldo, por exemplo. Eu não posso criar uma conta com um saldo menor do que zero.
+
+588
+01:15:06.620 --> 01:15:13.600
+Luiz Maia: Caso contrário, tem que fazer o que professor mostra como faz para aceitar só nome e sobrenome.
+
+589
+01:15:14.000 --> 01:15:16.529
+Luiz Maia: Ok, eu posso fazer
+
+590
+01:15:20.090 --> 01:15:23.079
+Luiz Maia: aqui? Eu vou fazer o quê?
+
+591
+01:15:23.770 --> 01:15:34.930
+Luiz Maia: Fro flow new argument. Excepcion
+
+592
+01:15:38.500 --> 01:15:50.230
+Luiz Maia: erro, valor valor do saldo é,
+
+593
+01:15:53.130 --> 01:15:56.130
+Luiz Maia: mas o Lp tem dois. Não é menor
+
+594
+01:15:56.530 --> 01:16:06.600
+Luiz Maia: que dois. É igual a dois. Ele aceita o valor do saldo inválido menor que dois,
+
+595
+01:16:06.840 --> 01:16:13.910
+Luiz Maia: não é menor igual a dois com dois. Ele aceita, entendeu, Gabriel,
+
+596
+01:16:15.900 --> 01:16:21.559
+Luiz Maia: isso aqui é menor do que dois com dois. Ele aceita
+
+597
+01:16:21.990 --> 01:16:25.040
+Luiz Maia: o cara. Sei lá. O cara chama Lu.
+
+598
+01:16:25.620 --> 01:16:27.539
+Luiz Maia: O cara chama Xi.
+
+599
+01:16:28.610 --> 01:16:32.940
+Luiz Maia: Tem nomes muito esquisitos que começam com duas letras.
+
+600
+01:16:33.200 --> 01:16:38.090
+Luiz Maia: Agora, o colega aí quer que eu faça para poder. O nome?
+
+601
+01:16:38.200 --> 01:16:47.220
+Luiz Maia: Não sei. Apenas ele quer mais uma regra de negócio. Tem que ter nome e sobrenome.
+
+602
+01:16:49.690 --> 01:16:53.430
+Luiz Maia: Eu vou deixar vocês pensarem sobre isso.
+
+603
+01:16:54.600 --> 01:17:09.989
+Luiz Maia: E aí eu acho que vocês conseguem resolver isso sozinhos. Deixa eu continuar minha aula, senão eu não termino o que eu tenho que falar com vocês hoje, mas é fácil fazer isso. Não tem muita dificuldade. Não, você tem um comando chamado Split,
+
+604
+01:17:10.760 --> 01:17:22.960
+Luiz Maia: que quebra o nome em pedaços. Aí você consegue saber se tem nome e sobrenome split o nome do cara. Isso aqui, ó, faz assim, ó
+
+605
+01:17:27.890 --> 01:17:34.990
+Luiz Maia: String assim, ó, distingue
+
+606
+01:17:39.260 --> 01:17:40.490
+Luiz Maia: nomes
+
+607
+01:17:46.960 --> 01:17:50.980
+Luiz Maia: Split nome.
+
+608
+01:17:54.390 --> 01:17:56.690
+Luiz Maia: Aí você tem os dois nomes.
+
+609
+01:17:57.370 --> 01:18:05.630
+Luiz Maia: Na verdade, você vai ter vários nomes se tiver quatro nomes, que é o meu caso. Por exemplo, ele vai quebrar em quatro nomes.
+
+610
+01:18:06.230 --> 01:18:17.180
+Luiz Maia: O que define o Split é o espaço em branco entre o que define a separação aqui é o espaço em branco.
+
+611
+01:18:17.350 --> 01:18:24.180
+Luiz Maia: Então, se eu tiver, por exemplo, Lp: Maia, ele vai quebrar. Lp E Maia está certo.
+
+612
+01:18:24.390 --> 01:18:28.240
+Luiz Maia: Aí você pode testar individualmente os nomes.
+
+613
+01:18:28.450 --> 01:18:35.179
+Luiz Maia: Então esse cara aqui seria a forma de você testar. Eu só vou deixar aqui para vocês
+
+614
+01:18:36.070 --> 01:18:39.230
+Luiz Maia: é. Vai virar. Vai virar uma.
+
+615
+01:18:40.170 --> 01:18:42.270
+Luiz Maia: Na verdade, vai virar um arrei.
+
+616
+01:18:42.540 --> 01:18:46.809
+Luiz Maia: Não é uma lista, é uma rei. É diferente. Não é lista.
+
+617
+01:18:48.180 --> 01:18:49.350
+Luiz Maia: É um arrei.
+
+618
+01:18:49.480 --> 01:18:58.709
+Luiz Maia: É uma rede Strings, tá aí? Vocês depois fazem um. É um arrei tá bom.
+
+619
+01:18:58.860 --> 01:19:06.469
+Luiz Maia: Depois vocês fazem o teste aí e verifiquem se funciona. Eu já fiz isso. Funciona normalmente, tá?
+
+620
+01:19:07.900 --> 01:19:11.920
+Luiz Maia: Então vocês viram a pergunta do Lucas,
+
+621
+01:19:12.270 --> 01:19:17.110
+Luiz Maia: dizendo o seguinte: qual é a diferença desse código que está aqui
+
+622
+01:19:17.780 --> 01:19:23.510
+Luiz Maia: para esse código que está aqui a validação das entradas.
+
+623
+01:19:23.920 --> 01:19:30.990
+Luiz Maia: Eu estou validando as regras de negócio, ou seja, nada que não seja permitido.
+
+624
+01:19:31.110 --> 01:19:37.250
+Luiz Maia: Está ok nesse código. Tá certo,
+
+625
+01:19:45.270 --> 01:19:48.650
+Luiz Maia: tá? E agora, como é que eu faço isso? Em C. Sharp.
+
+626
+01:19:49.220 --> 01:19:51.629
+Luiz Maia: A gente viu isso como em Java.
+
+627
+01:19:52.020 --> 01:19:56.670
+Luiz Maia: Isso aqui é Java. Se Sharp não faz exatamente dessa maneira.
+
+628
+01:19:56.950 --> 01:19:58.120
+Luiz Maia: Tá certo.
+
+629
+01:19:58.280 --> 01:20:00.280
+Luiz Maia: É em.
+
+630
+01:20:00.710 --> 01:20:13.810
+Luiz Maia: Em Java. Você faz em C. Sharp. Você faz assim. Ó botão direito, adicionar novo projeto, hein?
+
+631
+01:20:14.050 --> 01:20:18.170
+Luiz Maia: Capsulamento quatro.
+
+632
+01:20:25.140 --> 01:20:33.370
+Luiz Maia: Muda muita coisa. Gente muda muita coisa. Eu vou encerrar a aula com esse código para vocês pensarem
+
+633
+01:20:33.710 --> 01:20:37.620
+Luiz Maia: na diferença. Olha só a diferença.
+
+634
+01:20:38.040 --> 01:20:41.839
+Luiz Maia: Vou colocar aqui o folder models.
+
+635
+01:20:43.340 --> 01:20:49.630
+Luiz Maia: Vou criar a classe conta.
+
+636
+01:20:53.430 --> 01:20:56.360
+Luiz Maia: Vou apagar esse monte de porcaria aqui.
+
+637
+01:20:59.510 --> 01:21:08.129
+Luiz Maia: Isso aí, gente em Python. Eu também faço isso. Eu crio uma pasta chamada Models. Com todas as classes.
+
+638
+01:21:08.570 --> 01:21:25.230
+Luiz Maia: Eu faço isso em Java. Faço isso em Python. Faço isso. C. Sharp pode ser modals. Pode ser domin. Pode ser. Entities em C. Sharp. É models ponto em Python e Java. O nome pode mudar
+
+639
+01:21:26.070 --> 01:21:29.509
+Luiz Maia: em C. Sharp. Olha só. Que maluquice.
+
+640
+01:21:30.130 --> 01:21:40.559
+Luiz Maia: Public vinte Id Gatset Public. Nome:
+
+641
+01:21:44.240 --> 01:21:46.309
+Luiz Maia: Public Saldo.
+
+642
+01:21:46.960 --> 01:21:52.320
+Luiz Maia: Olha que loucura publicado.
+
+643
+01:21:53.730 --> 01:21:59.040
+Luiz Maia: Double Saldo Get Set.
+
+644
+01:22:01.390 --> 01:22:03.029
+Luiz Maia: Pronto, é isso.
+
+645
+01:22:05.430 --> 01:22:07.870
+Luiz Maia: E aqui no nosso programa principal.
+
+646
+01:22:08.280 --> 01:22:09.730
+Luiz Maia: O que a gente vai fazer?
+
+647
+01:22:10.190 --> 01:22:19.940
+Luiz Maia: A gente vai fazer praticamente o que nós fizemos aqui nesse código. Aqui, eu vou copiar e colar.
+
+648
+01:22:21.420 --> 01:22:23.140
+Luiz Maia: Olha só. Que loucura.
+
+649
+01:22:27.240 --> 01:22:29.249
+Luiz Maia: Ele não sabe quem é a conta,
+
+650
+01:22:30.970 --> 01:22:34.119
+Luiz Maia: ok? Eu vou fazer um using dele.
+
+651
+01:22:35.220 --> 01:22:46.350
+Luiz Maia: Pronto, ele não sabe. Aqui. Agora é só substituir Id, nome, saldo,
+
+652
+01:22:52.990 --> 01:23:04.090
+Luiz Maia: cara. Então o C. Sharp trabalha com atributos públicos. É isso que você está me dizendo. Não, não é isso.
+
+653
+01:23:04.810 --> 01:23:13.410
+Luiz Maia: Essa é uma sinntese diferente daquilo que vocês já viram em Java
+
+654
+01:23:13.610 --> 01:23:19.590
+Luiz Maia: o Verão. Não sei como é que vocês estão em programação em Java?
+
+655
+01:23:20.720 --> 01:23:23.560
+Luiz Maia: Isso aqui quer dizer o seguinte. Olha só, gente.
+
+656
+01:23:24.360 --> 01:23:30.290
+Luiz Maia: Esse Id aqui não é um atributo, é um método.
+
+657
+01:23:33.160 --> 01:23:43.730
+Luiz Maia: Você está dizendo o seguinte: que existe um método get Id set Id que está escondido aqui dentro.
+
+658
+01:23:44.800 --> 01:23:45.980
+Luiz Maia: Está certo.
+
+659
+01:23:46.280 --> 01:23:52.450
+Luiz Maia: O compilador. O que ele? Faz ele gera um Id privado.
+
+660
+01:23:53.630 --> 01:24:03.920
+Luiz Maia: Tá certo que não é esse Id. Esse aqui é o Id que é o nome do método não é o id atributo. Esse aqui é o nome de um método
+
+661
+01:24:04.380 --> 01:24:06.710
+Luiz Maia: que é o Gets e o Set.
+
+662
+01:24:07.730 --> 01:24:15.170
+Luiz Maia: Esse nome que está aqui, não é o atributo. Nome. É o nome do método que faz Get e Set.
+
+663
+01:24:15.660 --> 01:24:31.869
+Luiz Maia: E esse aqui é o atributo não é um atributo. É um método. Saldo que faz Get e Set o compilador por trás dos panos. O que ele faz. Ele cria atributos privados para cada um desses atributos,
+
+664
+01:24:32.580 --> 01:24:44.009
+Luiz Maia: e implementa tudo isso que você viu aqui. Ó, não, não, isso isso aqui. Ó, isso. É feito automaticamente
+
+665
+01:24:44.310 --> 01:24:53.069
+Luiz Maia: pelo compilador Alp. Eu posso alterar o comportamento desses métodos. Posso?
+
+666
+01:24:53.430 --> 01:24:59.450
+Luiz Maia: Na próxima aula eu vou ensinar para vocês como vocês fazem para
+
+667
+01:24:59.570 --> 01:25:12.799
+Luiz Maia: alterar o comportamento desses métodos. Porque isso aqui não é atributo. Isso aqui é método. O atributo está escondido por trás do compilador.
+
+668
+01:25:17.090 --> 01:25:23.250
+Luiz Maia: Eu sei que é super esquisito, e eu penei com isso. Gente, boa hora. Eu vou falar com vocês
+
+669
+01:25:23.560 --> 01:25:28.030
+Luiz Maia: porque eu aprendi. Se Sharp é
+
+670
+01:25:28.140 --> 01:25:31.619
+Luiz Maia: a partir de Java. Java não tem isso.
+
+671
+01:25:32.020 --> 01:25:35.080
+Luiz Maia: Então assim é um negócio muito doido.
+
+672
+01:25:35.720 --> 01:25:46.100
+Luiz Maia: Então esse cara aqui esconde a criação de um atributo privado e a criação desses métodos que estão aqui.
+
+673
+01:25:47.770 --> 01:26:06.289
+Luiz Maia: Esse set Id Get Id. Tudo isso aqui é gerado automaticamente pelo compilador. Você simplesmente não faz nada. Mas, Lp: se eu quiser fazer isso. Que você está fazendo aqui, aí? Eu tenho que mudar o comportamento da classe.
+
+674
+01:26:06.390 --> 01:26:10.780
+Luiz Maia: Não posso mais usar o que está sendo feito ali.
+
+675
+01:26:10.910 --> 01:26:20.199
+Luiz Maia: Eu vou ter que mudar isso. É o que nós veremos na nossa próxima aula na segunda feira. Como que eu transporto esse código,
+
+676
+01:26:20.420 --> 01:26:29.290
+Luiz Maia: que é um código praticamente java para dentro dessa conta e vou fazer os tratamentos de erro
+
+677
+01:26:29.390 --> 01:26:32.309
+Luiz Maia: dos atributos da classe.
+
+678
+01:26:32.950 --> 01:26:35.500
+Luiz Maia: Tá certo. Só para terminar,
+
+679
+01:26:35.830 --> 01:26:44.080
+Luiz Maia: eu vou pegar aqui e vou executar esse encapsulamento quatro para vocês verem que ele funciona.
+
+680
+01:26:44.710 --> 01:26:50.039
+Luiz Maia: Rodar aqui só para vocês verem que ele funciona na boa, sem nenhum problema.
+
+681
+01:26:50.540 --> 01:26:54.579
+Luiz Maia: E aí, tá aí, ó funciona direitinho,
+
+682
+01:26:56.900 --> 01:27:04.969
+Luiz Maia: gente, eu não estou aqui para achar ser melhor ser pior gente, eu estou aqui para ensinar para vocês. Se Sharp,
+
+683
+01:27:05.340 --> 01:27:15.120
+Luiz Maia: se você gostar ou não, não vai fazer diferença. Porque se você for trabalhar com o C. Sharp, todo mundo vai usar essa regra aqui.
+
+684
+01:27:15.630 --> 01:27:19.850
+Luiz Maia: Você não pode programar esse Sharp como se programa em Java.
+
+685
+01:27:20.360 --> 01:27:21.380
+Luiz Maia: Não dá.
+
+686
+01:27:22.050 --> 01:27:23.210
+Luiz Maia: Tá certo,
+
+687
+01:27:23.330 --> 01:27:33.350
+Luiz Maia: C. Sharp, não é Java Java, não é C. Sharp? Então você vai ter que aprender. Se você quer arrumar um emprego que eu acho inclusive uma boa ideia.
+
+688
+01:27:33.470 --> 01:27:37.600
+Luiz Maia: Eu, por exemplo, estou muito interessado em arrumar um emprego nesse Sharp.
+
+689
+01:27:38.270 --> 01:27:40.660
+Luiz Maia: Tem que saber isso. Não tem jeito.
+
+690
+01:27:41.240 --> 01:27:47.129
+Luiz Maia: Não é questão de querer ou não querer. Se você quer aprender esse Sharp, você tem que aprender isso, cara.
+
+691
+01:27:47.710 --> 01:27:48.450
+Luiz Maia: E aí?
+
+692
+01:27:49.000 --> 01:27:57.870
+Luiz Maia: E aí a gente tem os códigos todos para vocês, cara. Para vocês poderem estudar esses códigos já estão lá no drive para vocês estudarem,
+
+693
+01:27:58.420 --> 01:28:02.409
+Luiz Maia: caso você tenha perdido a aula de hoje.
+
+694
+01:28:02.600 --> 01:28:03.800
+Luiz Maia: Tá certo.
+
+695
+01:28:04.080 --> 01:28:08.280
+Luiz Maia: Na próxima aula, a gente continua essa.
+
+696
+01:28:11.330 --> 01:28:18.630
+Luiz Maia: Esse conteúdo de encapsulamento tem muita coisa para ver. Ainda gente. Muita coisa mesmo. Tá bom.
+
+697
+01:28:19.150 --> 01:28:29.050
+Luiz Maia: Até a próxima segunda feira na mesma. Bateh no mesmo. Bate canal.
+
+698
+01:28:30.390 --> 01:28:32.990
+Jorge José Luiz Santos da Silva: Ele já falou. Obrigado pela aula, hein?
+
+699
+01:28:33.280 --> 01:28:41.910
+Luiz Maia: Que isso, cara, não tem que agradecer a nada. Não, eu tô aqui pra isso. Pra dar a melhor aula do mundo. Para os melhores programadores do mundo.
+
+700
+01:28:42.030 --> 01:28:43.630
+Luiz Maia: Bateu.
+

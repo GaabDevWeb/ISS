@@ -1,0 +1,2658 @@
+WEBVTT
+
+1
+00:05:03.600 --> 00:05:08.309
+Luiz Maia: Boa noite, pessoal. Dia onze de Agosto de dois mil e vinte e seis.
+
+2
+00:05:08.460 --> 00:05:10.990
+Luiz Maia: Continuando a nossa aula de ontem,
+
+3
+00:05:11.490 --> 00:05:23.599
+Luiz Maia: a gente vai fazer o quê? A gente vai continuar naquele código do no código da calculadora.
+
+4
+00:05:23.920 --> 00:05:32.809
+Luiz Maia: Então vamos abrir aqui o corte da calculadora e ver aonde a gente parou.
+
+5
+00:05:33.200 --> 00:05:42.170
+Luiz Maia: Na próxima semana. A gente vai fazer o quê? A gente vai foi aos comandos de repetição.
+
+6
+00:05:44.870 --> 00:05:50.010
+Luiz Maia: Então eu vou compartilhar aqui a tela com vocês para ver aonde a gente parou.
+
+7
+00:05:52.090 --> 00:06:03.890
+Luiz Maia: Deixa eu ver se eu estou fazendo a coisa certa aqui. Eu acho que a gente parou. Vocês me digam se eu estou com o código correto aqui porque eu tenho código pra Caramba,
+
+8
+00:06:04.360 --> 00:06:09.700
+Luiz Maia: na minha máquina. Aqui posso ter trocado.
+
+9
+00:06:12.900 --> 00:06:13.570
+Luiz Maia: E aí
+
+10
+00:06:15.830 --> 00:06:23.010
+Luiz Maia: queria saber se primeiro tem alguma dúvida. Se vocês têm alguma dúvida. Está tudo bem. Está tudo tranquilo.
+
+11
+00:06:23.610 --> 00:06:26.360
+Luiz Maia: Tudo caminhando dentro dos conformes.
+
+12
+00:06:27.630 --> 00:06:38.850
+Luiz Maia: Ou tem alguma alguma dúvida para ser esclarecido em relação a esse código?
+
+13
+00:06:39.870 --> 00:06:42.670
+Luiz Maia: Bom, a versão um da calculadora.
+
+14
+00:06:43.830 --> 00:06:47.730
+Luiz Maia: A gente começou assim. Tinha um menuzinho.
+
+15
+00:06:48.350 --> 00:06:51.650
+Luiz Maia: Entrava a opção que ele queria.
+
+16
+00:06:52.020 --> 00:06:54.600
+Luiz Maia: Aí entrava com os operandos.
+
+17
+00:06:55.150 --> 00:07:05.489
+Luiz Maia: Aí eu fazia um If ao Sif para fazer as operações em cima da calculadora. Somar,
+
+18
+00:07:05.870 --> 00:07:18.580
+Luiz Maia: subtrair, multiplicar e dividir. E aqui a opção é inválida. A primeira refaturação que nós fizemos. E refaturação para quem não estava na aula,
+
+19
+00:07:19.840 --> 00:07:27.250
+Luiz Maia: a gente vai alterar esse código, melhorar o código sem alterar
+
+20
+00:07:27.870 --> 00:07:37.510
+Luiz Maia: o resultado dele. O funcionamento do código. Então, refaturação é você melhorar a qualidade do código sem alterar
+
+21
+00:07:38.460 --> 00:07:46.619
+Luiz Maia: como ele funciona. Então, a versão dois dele está aqui. Onde eu troquei o If. É o Cif por um suíte.
+
+22
+00:07:47.340 --> 00:07:50.069
+Luiz Maia: O resto continua a mesma coisa
+
+23
+00:07:50.590 --> 00:07:54.650
+Luiz Maia: na versão três. Eu já comecei a mexer mais no código.
+
+24
+00:07:57.280 --> 00:08:02.490
+Luiz Maia: O intra opção virou um método que é esse cara aqui,
+
+25
+00:08:03.100 --> 00:08:09.250
+Luiz Maia: que chamam outro método, que é para exibir o menu.
+
+26
+00:08:09.490 --> 00:08:17.229
+Luiz Maia: Eu falei de dois conceitos importantes para vocês. O drive e o Srp
+
+27
+00:08:20.110 --> 00:08:24.709
+Luiz Maia: dois conceitos de código limpo e refaturação.
+
+28
+00:08:25.220 --> 00:08:32.250
+Luiz Maia: O Dry é Don T. Repete yourself, ou seja, não repetir código foi exatamente o que eu fiz aqui.
+
+29
+00:08:33.539 --> 00:08:41.969
+Luiz Maia: Esse central operando agora ele serve tanto para entrar operando um quanto operando dois.
+
+30
+00:08:42.350 --> 00:08:47.000
+Luiz Maia: Então eu fiz uma refaturação onde eu não repeti código.
+
+31
+00:08:48.180 --> 00:08:51.689
+Luiz Maia: Então eu estou usando aqui a técnica de Dry
+
+32
+00:08:51.840 --> 00:09:05.410
+Luiz Maia: Don T. Repete yourself não repetir você mesmo o código não pode repetir códigos que são repetidos, duplicados, beleza.
+
+33
+00:09:06.980 --> 00:09:25.510
+Luiz Maia: Depois a gente falou sobre. Foi até um colega de vocês. Não sei. Me desculpem aí se eu não sei o nome do colega. Ele falou que esse entrar, opção tinha duas responsabilidades. Ele estava antes esse exibir menu estava aqui dentro,
+
+34
+00:09:25.890 --> 00:09:29.280
+Luiz Maia: e depois eu tirei esse menu para fora dele.
+
+35
+00:09:29.490 --> 00:09:33.339
+Luiz Maia: Agora ele tem uma responsabilidade. Só quer entrar a opção.
+
+36
+00:09:33.660 --> 00:09:35.100
+Luiz Maia: Esse cara aqui.
+
+37
+00:09:35.550 --> 00:09:38.179
+Luiz Maia: E aí vai entrar no Srp
+
+38
+00:09:38.450 --> 00:09:46.380
+Luiz Maia: single, responsibility principle o princípio da responsabilidade única, ou seja, um método.
+
+39
+00:09:46.600 --> 00:09:48.760
+Luiz Maia: Ele só faz uma coisa.
+
+40
+00:09:49.190 --> 00:09:56.719
+Luiz Maia: Ele só retorna um dado. Ele não retorna mais nada. Ele recebe
+
+41
+00:09:56.820 --> 00:10:02.050
+Luiz Maia: alguns parâmetros e retorna apenas uma informação, né?
+
+42
+00:10:03.170 --> 00:10:06.370
+Luiz Maia: Então, aqui a gente separou as responsabilidades.
+
+43
+00:10:06.690 --> 00:10:19.590
+Luiz Maia: O exibir menu está aqui em cima. E esse código vai evoluir bastante gente. Vocês vão ver na aula de hoje que a gente vai continuar refaturando esse código todo. Está certo.
+
+44
+00:10:20.600 --> 00:10:23.400
+Luiz Maia: Queria saber de vocês.
+
+45
+00:10:23.500 --> 00:10:26.750
+Luiz Maia: Se vocês têm alguma dúvida em relação a esse código.
+
+46
+00:10:27.290 --> 00:10:30.000
+Luiz Maia: Se tiver, pode perguntar agora
+
+47
+00:10:39.400 --> 00:10:42.629
+Luiz Maia: essa técnica de Dry e Srp.
+
+48
+00:10:43.160 --> 00:10:48.980
+Luiz Maia: Ela vale para qualquer linguagem. Vale, papai. Então, para Java, para qualquer linguagem.
+
+49
+00:10:49.180 --> 00:10:54.999
+Luiz Maia: Isso não é C. Sharp? Isso aqui é técnica de programação
+
+50
+00:10:55.430 --> 00:11:00.260
+Luiz Maia: de código limpo e refaturação. É isso que a gente está fazendo.
+
+51
+00:11:02.680 --> 00:11:16.449
+Luiz Maia: Então, assim, a disciplina é de C Sharp, mas eu estou introduzindo para vocês conceitos que fogem da linguagem. É uma linguagem só esses conceitos valem para qualquer linguagem.
+
+52
+00:11:17.010 --> 00:11:21.049
+Luiz Maia: Elas são agnósticas, ou seja, pode ser qualquer linguagem.
+
+53
+00:11:21.790 --> 00:11:24.480
+Luiz Maia: A gente tem alguns problemas nesse código.
+
+54
+00:11:24.790 --> 00:11:30.720
+Luiz Maia: Ele continua bastante problema.
+
+55
+00:11:31.490 --> 00:11:35.380
+Luiz Maia: Por exemplo, se eu entrar aqui um operando
+
+56
+00:11:35.630 --> 00:11:40.820
+Luiz Maia: uma opção, por exemplo, que seja uma letra, ele quebra.
+
+57
+00:11:42.360 --> 00:11:46.480
+Luiz Maia: Se eu entrar um operando que seja uma letra, ele quebra.
+
+58
+00:11:47.580 --> 00:11:52.670
+Luiz Maia: Se eu entrar, fizer uma divisão por zero, ele quebra.
+
+59
+00:11:54.160 --> 00:12:03.279
+Luiz Maia: Então tem um monte de problema nesse código aqui, ainda que a gente precisa resolver e melhorar. Mas antes de resolver todos esses problemas, a gente vai resolvendo aos poucos.
+
+60
+00:12:04.120 --> 00:12:08.580
+Luiz Maia: A primeira coisa que eu vou, esse código aqui tinha
+
+61
+00:12:08.710 --> 00:12:20.180
+Luiz Maia: quarenta e tantas linhas, quase cinquenta linhas. O nosso Main. Esse método do Main aqui, que é o método principal. Ele tinha quase cinquenta linhas. Ele está com trinta e dois linhas de código,
+
+62
+00:12:20.350 --> 00:12:25.629
+Luiz Maia: trinta e um linhas. Não, na verdade, um pouco menos, não é?
+
+63
+00:12:26.350 --> 00:12:35.519
+Luiz Maia: Mas continua muito grande. O que eu vou fazer esses caras aqui, ó, vão virar métodos
+
+64
+00:12:37.060 --> 00:12:44.320
+Luiz Maia: para ficar mais simples ainda, o nosso Switch. Eu vou limpando o código e vou testando
+
+65
+00:12:44.800 --> 00:12:55.229
+Luiz Maia: para ver se está funcionando. A refaturação é toda em cima de teste. Você refatória. Um pedaço de código. Testa refatória. Um outro pedaço testa
+
+66
+00:12:55.360 --> 00:13:00.210
+Luiz Maia: relatório. Um outro pedaço testa é toda baseada em testes.
+
+67
+00:13:03.460 --> 00:13:06.789
+Luiz Maia: Então, refaturação e teste caminham juntos.
+
+68
+00:13:07.280 --> 00:13:16.170
+Luiz Maia: Toda vez que você alterar o código, você testa e o resultado tem que ser sempre o mesmo antes e depois da refaturação.
+
+69
+00:13:16.590 --> 00:13:19.409
+Luiz Maia: Isso é o mais importante que vocês entenderem.
+
+70
+00:13:20.180 --> 00:13:23.599
+Luiz Maia: Então aqui, por exemplo, eu tenho aqui a soma.
+
+71
+00:13:23.790 --> 00:13:29.910
+Luiz Maia: Bom, o que eu vou fazer agora? Vou criar um método de soma public.
+
+72
+00:13:30.090 --> 00:13:31.519
+Luiz Maia: O que é public?
+
+73
+00:13:31.890 --> 00:13:40.080
+Luiz Maia: Que esse método é público, ou seja, ele vai ser visto enxergado por outras classes. Ele é estático.
+
+74
+00:13:40.260 --> 00:13:48.600
+Luiz Maia: Ou seja, eu não preciso instanciar a classe para acessar esse método. Vocês vão entender o Public Stat
+
+75
+00:13:49.240 --> 00:13:52.940
+Luiz Maia: na hora que eu ensinar a orientação objeto para vocês.
+
+76
+00:13:53.210 --> 00:13:55.200
+Luiz Maia: Por enquanto. Confia em mim,
+
+77
+00:13:55.730 --> 00:14:05.160
+Luiz Maia: que aí depois eu mostro para vocês exatamente o que é public. E o que é estático. Vocês vão entender exatamente o que vai acontecer
+
+78
+00:14:05.870 --> 00:14:10.050
+Luiz Maia: aqui é o retorno do método. Ele não retorna a nada.
+
+79
+00:14:11.530 --> 00:14:12.550
+Luiz Maia: Somar.
+
+80
+00:14:13.150 --> 00:14:15.059
+Luiz Maia: Ele vai fazer o quê?
+
+81
+00:14:16.230 --> 00:14:24.310
+Luiz Maia: Ele vai receber o Op1 e o Op2
+
+82
+00:14:26.160 --> 00:14:28.660
+Luiz Maia: não dá para colocar na mesma linha
+
+83
+00:14:29.490 --> 00:14:33.540
+Luiz Maia: uma coisa que eu até gostaria que ele fizesse
+
+84
+00:14:33.710 --> 00:14:41.029
+Luiz Maia: que eu pudesse fazer Dublob1 P2 mas não, isso não funciona. Não existe.
+
+85
+00:14:41.150 --> 00:14:42.990
+Luiz Maia: Vou pegar esse cara aqui.
+
+86
+00:14:44.190 --> 00:14:47.670
+Luiz Maia: Esse código está aqui. Vou tirar daqui.
+
+87
+00:14:47.960 --> 00:14:49.550
+Luiz Maia: Colocar aqui dentro.
+
+88
+00:14:50.470 --> 00:14:53.649
+Luiz Maia: Aqui o Result não existe ainda.
+
+89
+00:14:53.750 --> 00:14:55.570
+Luiz Maia: Pronto, Double.
+
+90
+00:14:56.650 --> 00:14:59.290
+Luiz Maia: Pronto, está refaturado.
+
+91
+00:14:59.640 --> 00:15:06.299
+Luiz Maia: Já joguei isso aqui para dentro do somar. Repara que o S do Somar é maiúsculo. Em C Sharp,
+
+92
+00:15:06.450 --> 00:15:14.859
+Luiz Maia: os métodos começam com letra maiúscula em Java. Eles começam com letra minúscula.
+
+93
+00:15:15.320 --> 00:15:22.880
+Luiz Maia: Então é diferente a nomeação de métodos do C Sharp para o Java.
+
+94
+00:15:23.000 --> 00:15:32.399
+Luiz Maia: Se fosse Java, você colocaria assim somar não vai dar nenhum erro aqui dentro do C Sharp, nada. Ele não vai reclamar nada disso.
+
+95
+00:15:32.820 --> 00:15:35.629
+Luiz Maia: Mas se você for para uma entrevista de emprego
+
+96
+00:15:35.900 --> 00:15:43.780
+Luiz Maia: ou de estágio. Isso pode fazer diferença. E aqui a gente faz o que chama somar, somar,
+
+97
+00:15:43.980 --> 00:15:47.850
+Luiz Maia: passando a P1 e passando a P2
+
+98
+00:15:49.910 --> 00:16:00.369
+Luiz Maia: tanto no C. Sharp quanto no Java. Os argumentos que são esses caras aqui na chamada, eles têm que ser do mesmo tipo
+
+99
+00:16:02.580 --> 00:16:06.580
+Luiz Maia: Double, e está na mesma ordem.
+
+100
+00:16:07.650 --> 00:16:14.490
+Luiz Maia: Ou seja, isso aqui importa? Isso também vale para o Java. Então Op1 e o Op2 que estão aqui,
+
+101
+00:16:15.200 --> 00:16:17.539
+Luiz Maia: mas não precisam ter o mesmo nome.
+
+102
+00:16:17.890 --> 00:16:30.479
+Luiz Maia: O argumento pode ter um nome e o parâmetro que está aqui. O parâmetro é na declaração do método. Eles podem ter nomes diferentes aqui. Eu poderia fazer operum
+
+103
+00:16:31.560 --> 00:16:34.330
+Luiz Maia: e óper dois não teria nenhum problema.
+
+104
+00:16:35.200 --> 00:16:43.040
+Luiz Maia: Os nomes dos argumentos não precisam ser iguais aos nomes dos parâmetros. Argumento
+
+105
+00:16:43.500 --> 00:16:48.050
+Luiz Maia: na definição clássica de computação está na chamada.
+
+106
+00:16:48.190 --> 00:16:54.040
+Luiz Maia: Os parâmetros estão na definição do método.
+
+107
+00:16:54.530 --> 00:16:59.579
+Luiz Maia: Obrigado, Python. É um pouco diferente disso.
+
+108
+00:17:00.330 --> 00:17:09.430
+Luiz Maia: Ele é a linguagem fracamente tipada. Eu não preciso especificar exatamente a ordem dos parâmetros, nem o tipo deles.
+
+109
+00:17:10.420 --> 00:17:18.600
+Luiz Maia: Então aqui eu posso usar nomes diferentes ou usar os mesmos nomes. Eu vou usar os mesmos nomes para simplificar a minha vida.
+
+110
+00:17:19.339 --> 00:17:21.479
+Luiz Maia: Vamos testar para ver se funciona.
+
+111
+00:17:23.720 --> 00:17:31.799
+Luiz Maia: Repara que, como eu falei para vocês, a refaturação altera o código, mas não altera o resultado. Um,
+
+112
+00:17:32.410 --> 00:17:35.760
+Luiz Maia: um mais um som igual a dois.
+
+113
+00:17:35.900 --> 00:17:37.120
+Luiz Maia: E aí?
+
+114
+00:17:37.390 --> 00:17:41.530
+Luiz Maia: Então funciona perfeitamente. Sem nenhum problema.
+
+115
+00:17:42.010 --> 00:17:49.190
+Luiz Maia: Vou fazer a mesma coisa para todos os outros códigos estão aqui dentro. Subtrair.
+
+116
+00:17:49.580 --> 00:17:51.390
+Luiz Maia: Vou pegar esse cara aqui,
+
+117
+00:17:55.390 --> 00:18:04.720
+Luiz Maia: tirar daqui, subtrair o P1 op2
+
+118
+00:18:05.060 --> 00:18:09.790
+Luiz Maia: ele não sabe quem a subtrair.
+
+119
+00:18:10.130 --> 00:18:29.370
+Luiz Maia: Ok, a gente vai criar agora publicado estática Void subtraído, passando Op1 e op2
+
+120
+00:18:31.990 --> 00:18:35.320
+Luiz Maia: aqui dentro, a gente coloca o código.
+
+121
+00:18:36.030 --> 00:18:38.910
+Luiz Maia: Ah, e não sabe quem resulte, beleza.
+
+122
+00:18:40.790 --> 00:18:54.150
+Luiz Maia: Muitos alunos me perguntam: Lp: Esse resulte. Que está dentro desse método. Subtrair é o mesmo. Resulte que está aqui. Não, não é igual. Não são iguais.
+
+123
+00:18:54.760 --> 00:19:12.760
+Luiz Maia: Esse resulte só existe dentro do Main. Esse resulte que está aqui no somar, só existe em somar esse resulte que está dentro de subtrair. Só existe em subtrair. Isso se chama escopo de variáveis.
+
+124
+00:19:14.400 --> 00:19:24.729
+Luiz Maia: Apesar de terem o mesmo nome. Eles têm espaços diferentes. Ou seja, esse resulte. Não é o mesmo. Resulte de somar e nem o mesmo resulte de.
+
+125
+00:19:24.950 --> 00:19:26.010
+Luiz Maia: Do meio.
+
+126
+00:19:30.890 --> 00:19:32.620
+Luiz Maia: São resultados diferentes.
+
+127
+00:19:33.680 --> 00:19:41.550
+Luiz Maia: Esse resulte que está aqui. Ele só existe quando você executa. Subtrair esse resulte aqui só existe quando você
+
+128
+00:19:41.750 --> 00:19:47.219
+Luiz Maia: faz o somar esse resulte que está aqui só existe enquanto você está executando o Meng.
+
+129
+00:19:48.950 --> 00:19:51.749
+Luiz Maia: Vou fazer a mesma coisa agora por multiplicar.
+
+130
+00:19:52.590 --> 00:19:53.670
+Jorge José Luiz Santos da Silva: Professor.
+
+131
+00:19:53.880 --> 00:19:54.570
+Luiz Maia: Boa.
+
+132
+00:19:56.170 --> 00:19:59.150
+Jorge José Luiz Santos da Silva: Só queria tirar uma dúvida. Mesmo você.
+
+133
+00:19:59.360 --> 00:20:03.390
+Luiz Maia: Pô. Tá tranquilo, cara. Uma só. Tá tranquilo.
+
+134
+00:20:05.150 --> 00:20:16.879
+Jorge José Luiz Santos da Silva: Ah, beleza. Eu só queria só entender. Mesmo você fazendo os métodos e funções embaixo. O programa consegue entender, mesmo sem fazer importe delas.
+
+135
+00:20:17.750 --> 00:20:21.000
+Jorge José Luiz Santos da Silva: Ele faz, tipo um içamento das funções. Alguma coisa assim.
+
+136
+00:20:22.620 --> 00:20:28.559
+Luiz Maia: Como esse código está dentro dessa classe.
+
+137
+00:20:29.280 --> 00:20:36.020
+Luiz Maia: Eu não preciso referenciar os métodos. Se ele estivesse em outra classe,
+
+138
+00:20:36.400 --> 00:20:49.789
+Luiz Maia: uma classe diferente da classe program. Eu precisaria referenciar a classe. Mas como todos esses métodos estão dentro da mesma classe, eu não preciso especificar o nome da classe.
+
+139
+00:20:50.620 --> 00:20:52.239
+Jorge José Luiz Santos da Silva: Ah, beleza, não, perfeito.
+
+140
+00:20:54.020 --> 00:20:55.270
+Luiz Maia: Ele entende isso.
+
+141
+00:20:56.190 --> 00:21:06.329
+Jorge José Luiz Santos da Silva: Eu sei que, em parte, por exemplo, a gente vai começar a fazer muita referência, até para deixar o código mais limpo. Então aí eu estava pensando se teria que fazer a mesma coisa. Mas agora eu consegui entender.
+
+142
+00:21:06.950 --> 00:21:08.910
+Luiz Maia: Sim, é.
+
+143
+00:21:09.270 --> 00:21:15.659
+Luiz Maia: É diferente. O conceito Python não tem um conceito de Memespace. Como tem aqui no
+
+144
+00:21:16.270 --> 00:21:24.349
+Luiz Maia: no C Sharp. O Java tem um conceito de pacote. Quando você importa alguma coisa,
+
+145
+00:21:24.580 --> 00:21:43.930
+Luiz Maia: a gente também tem esse conceito de importe aqui. Só que, nesse caso específico, como eu tenho os métodos dentro da mesma classe. Eu não preciso fazer importe de nada, mas eventualmente, quando tiver duas ou mais classes. Eu posso precisar fazer algum tipo de importe. Deixa eu tentar.
+
+146
+00:21:45.640 --> 00:22:01.249
+Luiz Maia: Não, isso não vai, porque tem algumas classes que já são importadas automaticamente. Então isso não vai funcionar. Eu pensei em usar a classe Meph para te mostrar um exemplo disso, mas não vai funcionar,
+
+147
+00:22:01.700 --> 00:22:05.830
+Luiz Maia: multiplicar.
+
+148
+00:22:06.350 --> 00:22:08.330
+Luiz Maia: Não quer ver?
+
+149
+00:22:08.650 --> 00:22:10.810
+Luiz Maia: Eu acho que sim.
+
+150
+00:22:11.880 --> 00:22:17.610
+Luiz Maia: Deixa eu fazer uma coisa aqui. Deixa eu fazer um teste para tentar te elucidar.
+
+151
+00:22:18.130 --> 00:22:18.930
+Jorge José Luiz Santos da Silva: Beleza.
+
+152
+00:22:19.510 --> 00:22:25.970
+Luiz Maia: Deixa eu ver. Deixa eu ver se funciona aqui. Eu vou botar Dumble.
+
+153
+00:22:28.470 --> 00:22:35.659
+Luiz Maia: Pronto, aqui ficou faltando uma chave para ele poder fechar. Deixa eu ver se eu consigo.
+
+154
+00:22:39.720 --> 00:22:41.130
+Luiz Maia: É,
+
+155
+00:22:56.040 --> 00:22:59.260
+Luiz Maia: deixa eu ver se eu consigo pensar alguma coisa aqui. Cara, peraí.
+
+156
+00:24:17.440 --> 00:24:27.620
+Luiz Maia: Está vendo? Aqui. Ó, eu estou chamando mef skrt skrt. Ele não conhece quem é raiz quadrada?
+
+157
+00:24:28.550 --> 00:24:36.370
+Luiz Maia: Eu estou referenciando uma classe que não está dentro da minha classe.
+
+158
+00:24:36.830 --> 00:24:41.180
+Luiz Maia: Eu estou chamando um método. Isso aqui é um método skrt
+
+159
+00:24:41.500 --> 00:24:47.280
+Luiz Maia: que está dentro da classe Mef. A classe Mef. Se você for aqui dentro dela,
+
+160
+00:24:47.450 --> 00:24:51.110
+Luiz Maia: você vai ver aqui um monte de coisas. Olha lá,
+
+161
+00:24:54.740 --> 00:24:57.730
+Luiz Maia: isso aqui é a classe Nef.
+
+162
+00:25:01.880 --> 00:25:04.539
+Jorge José Luiz Santos da Silva: Aí. Nesse caso, a gente precisaria referenciar ela, né.
+
+163
+00:25:04.540 --> 00:25:06.930
+Luiz Maia: Exatamente eu estou fazendo isso aqui. Ó.
+
+164
+00:25:06.930 --> 00:25:07.550
+Jorge José Luiz Santos da Silva: E aí?
+
+165
+00:25:09.010 --> 00:25:10.320
+Luiz Maia: Exatamente isso.
+
+166
+00:25:10.480 --> 00:25:20.270
+Luiz Maia: Eu estou referenciando uma classe que não está dentro da minha classe. Ou seja, é uma classe externa. Aí. Eu preciso referenciar parecido com o Python.
+
+167
+00:25:20.670 --> 00:25:22.760
+Luiz Maia: Você faz um importe.
+
+168
+00:25:22.760 --> 00:25:23.480
+Jorge José Luiz Santos da Silva: Uhum.
+
+169
+00:25:24.020 --> 00:25:25.429
+Luiz Maia: É parecido.
+
+170
+00:25:25.430 --> 00:25:26.020
+Jorge José Luiz Santos da Silva: Sim.
+
+171
+00:25:27.080 --> 00:25:30.210
+Luiz Maia: Espero que eu tenha conseguido te ajudar a entender isso.
+
+172
+00:25:30.210 --> 00:25:32.570
+Jorge José Luiz Santos da Silva: Conseguiu. Sim, ficou bem fácil. Obrigado, professor.
+
+173
+00:25:32.570 --> 00:25:37.090
+Luiz Maia: Que não agradece, cara. Pô isso aí é obrigação minha.
+
+174
+00:25:40.740 --> 00:25:43.860
+Luiz Maia: Você sempre vem com perguntas inteligentes.
+
+175
+00:25:44.340 --> 00:25:46.520
+Jorge José Luiz Santos da Silva: Eu gosto mesmo.
+
+176
+00:25:46.940 --> 00:25:55.890
+Luiz Maia: Não, eu gosto disso, cara. Eu gosto de inteligente. Que pergunta que tem interesse. Que quer? Caramba, ele cagou todo o meu código aqui.
+
+177
+00:25:56.230 --> 00:26:01.230
+Luiz Maia: Não sei porquê. O que eu fiz aqui acabou toda a minha inditação
+
+178
+00:26:04.560 --> 00:26:14.109
+Luiz Maia: que é multiplicar, multiplicar. Ele não entende, porra tem que desenhar para ele.
+
+179
+00:26:15.480 --> 00:26:20.810
+Luiz Maia: Caramba, olha, burrinho, hein? Até que enfim, beleza.
+
+180
+00:26:21.040 --> 00:26:23.119
+Luiz Maia: Agora vamos fazer o dividir.
+
+181
+00:26:24.890 --> 00:26:33.130
+Luiz Maia: Agora eu posso fazer um tratamento de erro por dividir. Quer dizer, eu poderia fazer aqui também poderia fazer assim. Olha, só.
+
+182
+00:26:36.320 --> 00:26:44.050
+Luiz Maia: Poderia fazer isso aqui, só que ia ficar mais feio ainda. O nosso Main. Eu posso fazer assim se
+
+183
+00:26:45.660 --> 00:26:57.830
+Luiz Maia: op2 diferente de zero, o que eu faço aí? Eu faço a divisão aqui
+
+184
+00:27:01.210 --> 00:27:12.720
+Luiz Maia: se não else erro console. Nossa Senhora, me ajuda. Aí vai.
+
+185
+00:27:12.980 --> 00:27:16.089
+Luiz Maia: Console, Wrightline.
+
+186
+00:27:16.300 --> 00:27:25.390
+Luiz Maia: Erro ficaria assim. Ó divisão boa Zero.
+
+187
+00:27:26.850 --> 00:27:31.060
+Luiz Maia: Pô olha só imagina aquele monte de código que estava aqui antes.
+
+188
+00:27:31.300 --> 00:27:43.750
+Luiz Maia: Aqui, se você olhar, por exemplo, aqui no nosso programa dois, imagina esse código aqui dentro está com quarenta e um linhas de código. Ia ficar com, sei lá, cinquenta linhas de código.
+
+189
+00:27:44.080 --> 00:27:45.700
+Luiz Maia: O que eu posso fazer?
+
+190
+00:27:46.530 --> 00:27:50.529
+Luiz Maia: Posso fazer isso aqui. Ó, é Public.
+
+191
+00:27:50.840 --> 00:27:59.280
+Luiz Maia: Está a tiki voy de dividir op1 op2
+
+192
+00:28:04.950 --> 00:28:11.949
+Luiz Maia: pega aquele código todo que está lá em cima. Olha que beleza. Ó, olha só que espetáculo
+
+193
+00:28:13.050 --> 00:28:14.639
+Luiz Maia: tiro isso daqui.
+
+194
+00:28:15.390 --> 00:28:23.700
+Luiz Maia: Jogo para cá esse cara aqui. Ele não conhece quem é o resulte. Eu poderia fazer
+
+195
+00:28:25.890 --> 00:28:29.620
+Luiz Maia: Double aqui dentro, por exemplo, resulte.
+
+196
+00:28:29.770 --> 00:28:34.989
+Luiz Maia: Ou eu poderia fazer assim também. Você decide o que você acha melhor.
+
+197
+00:28:35.460 --> 00:28:40.719
+Luiz Maia: Eu prefiro fazer desse jeito, Double, resulte
+
+198
+00:28:43.030 --> 00:28:45.830
+Luiz Maia: assim. Eu prefiro fazer desse jeito.
+
+199
+00:28:46.220 --> 00:28:52.730
+Luiz Maia: Pronto, olha como é que ficou mais limpo o código. E agora eu venho aqui no código principal e faço o quê?
+
+200
+00:28:53.110 --> 00:29:04.000
+Luiz Maia: Dividir, dividir o P1 Op2 olha só. O código está com vinte e sete linhas. Agora
+
+201
+00:29:05.050 --> 00:29:14.709
+Luiz Maia: ficou um espetáculo, né? Cara, o negócio refaturado. E ele funciona exatamente como funciona a versão um.
+
+202
+00:29:15.230 --> 00:29:25.840
+Luiz Maia: Essa versão feiosa aqui, de trinta e nove linhas e depois a versão de quarenta e um. Agora o meu Main tem o quê,
+
+203
+00:29:26.380 --> 00:29:33.800
+Luiz Maia: vinte e sete linhas? Ah, mas o código total ficou maior nosso código. Agora está com oitenta linhas,
+
+204
+00:29:34.550 --> 00:29:42.149
+Luiz Maia: mas o código está mais organizado, mais fácil de ler, mais fácil de manter mais fácil de alterar
+
+205
+00:29:42.220 --> 00:29:55.720
+Luiz Maia: tudo isso. Vocês vão ver agora que daqui a pouco, a versão quatro, eu vou fazer algumas alterações no código que são pontuais e não vai afetar o código inteiro. Vai afetar só esses métodos que a gente está usando aqui. Vamos testar
+
+206
+00:29:56.130 --> 00:29:58.029
+Luiz Maia: sem teste não funciona.
+
+207
+00:29:58.510 --> 00:30:03.840
+Luiz Maia: Refaturação, anda junto com o teste o tempo todo.
+
+208
+00:30:05.740 --> 00:30:15.600
+Luiz Maia: A soma já testou. Vamos testar a subtração. Um menos um zero, beleza, multiplicação três,
+
+209
+00:30:16.310 --> 00:30:23.750
+Luiz Maia: dois vezes três, seis. Beleza. Funcionou. Divisão três,
+
+210
+00:30:25.140 --> 00:30:28.289
+Luiz Maia: não, a Divisão lê isso. Espera aí. Está errado.
+
+211
+00:30:28.990 --> 00:30:34.419
+Luiz Maia: A divisão é quatro dividia quatro, dividia quatro,
+
+212
+00:30:34.580 --> 00:30:43.430
+Luiz Maia: três por dois, um,cinco. Beleza funcionou. Vamos testar agora a divisão por zero três.
+
+213
+00:30:44.040 --> 00:30:59.389
+Luiz Maia: Não, não é isso. Quatro, divisão três por zero. Divisão por zero. Funcionou tudo direitinho. Nosso código está um espetáculo.
+
+214
+00:31:03.880 --> 00:31:11.590
+Luiz Maia: Então o código agora está todo separadinho em funções. Só falta agora fazer esse.
+
+215
+00:31:12.050 --> 00:31:15.629
+Luiz Maia: Esse suíte ficar mais simples.
+
+216
+00:31:16.000 --> 00:31:20.610
+Luiz Maia: Então agora, aqui, deixa eu arrumar isso aqui.
+
+217
+00:31:20.730 --> 00:31:23.789
+Luiz Maia: Pronto, agora. Ficou arrumadinho.
+
+218
+00:31:24.230 --> 00:31:29.420
+Luiz Maia: Só falta agora a gente fazer a refaturação desse suíte aqui.
+
+219
+00:31:29.620 --> 00:31:31.439
+Luiz Maia: Como é que eu vou fazer isso?
+
+220
+00:31:32.900 --> 00:31:40.620
+Luiz Maia: Não precisa. Olha só. Eu estou botando sempre no final, mas não precisa ser no final. Pode ser aqui, no início, por exemplo,
+
+221
+00:31:40.850 --> 00:31:51.510
+Luiz Maia: só para vocês verem, eu posso botar esse método aqui mesmo. Public start. Que voz de calcular.
+
+222
+00:31:53.010 --> 00:32:00.640
+Luiz Maia: Ele recebe o Op1 o Ap2
+
+223
+00:32:02.190 --> 00:32:05.739
+Luiz Maia: e recebe a opção que é o inteiro.
+
+224
+00:32:06.690 --> 00:32:08.570
+Luiz Maia: Esses são os parâmetros.
+
+225
+00:32:09.430 --> 00:32:14.920
+Luiz Maia: O que eu vou fazer agora? Olha só esse suíte inteiro.
+
+226
+00:32:16.910 --> 00:32:19.610
+Luiz Maia: Ele sai daqui e vem para cá.
+
+227
+00:32:21.700 --> 00:32:24.039
+Luiz Maia: Não sei porque está fazendo isso?
+
+228
+00:32:24.170 --> 00:32:33.910
+Luiz Maia: Depois que eu atualizei a versão, eu fiz um upgrade de versão do Visual Studio. Ele não está mais fazendo as coisas direitinho.
+
+229
+00:32:34.290 --> 00:32:35.670
+Luiz Maia: Não sei porquê.
+
+230
+00:32:36.930 --> 00:32:40.010
+Luiz Maia: Agora eu tenho que ficar arrumando o código todo.
+
+231
+00:32:40.410 --> 00:32:45.069
+Luiz Maia: Porque ele não faz mais o copy peixe direito.
+
+232
+00:32:45.190 --> 00:32:49.440
+Luiz Maia: E agora, olha só que bacana calcular.
+
+233
+00:32:50.720 --> 00:33:00.549
+Luiz Maia: Eu passo a P1 passo, Op2 e passa a opção. E pronto, acabou. Olha só,
+
+234
+00:33:00.830 --> 00:33:02.869
+Luiz Maia: olha o meu programa principal.
+
+235
+00:33:03.200 --> 00:33:04.710
+Luiz Maia: Olha a versão um.
+
+236
+00:33:05.620 --> 00:33:07.130
+Luiz Maia: Olha o tamanho dela.
+
+237
+00:33:08.320 --> 00:33:12.190
+Luiz Maia: Trinta e nove linhas, versão dois
+
+238
+00:33:12.840 --> 00:33:20.590
+Luiz Maia: quarenta e tantas linhas. Versão três, onze linhas de código no programa principal,
+
+239
+00:33:23.370 --> 00:33:25.480
+Luiz Maia: mas o teu programa ficou muito maior.
+
+240
+00:33:25.750 --> 00:33:35.299
+Luiz Maia: Está com oitenta e cinco linhas. Ficou maior mesmo. Mas ele está muito mais fácil de você ler. Muito mais fácil de você alterar
+
+241
+00:33:36.390 --> 00:33:38.650
+Luiz Maia: do que o código anterior.
+
+242
+00:33:38.760 --> 00:33:44.739
+Luiz Maia: Repara, meu programa principal praticamente virou o enunciado da calculadora.
+
+243
+00:33:45.800 --> 00:33:47.880
+Luiz Maia: Olha só o que eu vou falar para vocês.
+
+244
+00:33:49.520 --> 00:33:53.460
+Luiz Maia: Faça um programa que entre uma opção
+
+245
+00:33:56.000 --> 00:33:59.639
+Luiz Maia: que faça as operações de uma calculadora
+
+246
+00:34:00.360 --> 00:34:03.810
+Luiz Maia: de soma, subtração, multiplicação e divisão.
+
+247
+00:34:04.510 --> 00:34:10.280
+Luiz Maia: Depois entre operando um, depois entre operando dois.
+
+248
+00:34:11.080 --> 00:34:18.530
+Luiz Maia: E na sequência, você calcula a operação desejada, olha só como o meu programa principal
+
+249
+00:34:19.300 --> 00:34:23.110
+Luiz Maia: virou o enunciado do problema.
+
+250
+00:34:24.420 --> 00:34:31.009
+Luiz Maia: Qualquer pessoa que entrar, olhar para esse código, falar assim, entrar a opção. Aí o cara vem
+
+251
+00:34:31.210 --> 00:34:32.730
+Luiz Maia: entrar. A opção.
+
+252
+00:34:33.020 --> 00:34:43.740
+Luiz Maia: Ah, tem um menu beleza, esse menu é uma calculadora que tem quatro opções. Ok, entra operando. Entra operando. Calcula o quê?
+
+253
+00:34:44.850 --> 00:34:53.539
+Luiz Maia: Ah, soma subtração, multiplicação. Como é que isso é feito aí? O cara vem aqui dentro. Olha para cada um desses métodos.
+
+254
+00:34:53.739 --> 00:35:00.640
+Luiz Maia: Pronto, ele sabe exatamente. Repara que não tem uma linha de comentário nesse código. Uma linha
+
+255
+00:35:01.060 --> 00:35:04.310
+Luiz Maia: aí os alunos perguntam: Lp.
+
+256
+00:35:05.580 --> 00:35:07.920
+Luiz Maia: Você é contra comentário?
+
+257
+00:35:09.090 --> 00:35:11.310
+Luiz Maia: Não, não sou contra comentário.
+
+258
+00:35:11.640 --> 00:35:26.299
+Luiz Maia: O primeiro, que comentário é o seguinte: comentários necessários. Ele só torna o teu código sujo. O teu código não fica limpo baseado no Clean Code.
+
+259
+00:35:26.710 --> 00:35:32.989
+Luiz Maia: Então, se você ficar escrevendo aqui, por exemplo,
+
+260
+00:35:33.330 --> 00:35:37.070
+Luiz Maia: botar um comentário aqui, por exemplo, entrar
+
+261
+00:35:37.940 --> 00:35:49.030
+Luiz Maia: opção da calculadora. Cara, esse comentário vai fazer o que para melhorar a legibilidade desse código zero.
+
+262
+00:35:49.630 --> 00:35:51.429
+Luiz Maia: Nenhuma melhoria.
+
+263
+00:35:52.820 --> 00:35:56.770
+Luiz Maia: Eu vou botar um comentário aqui. Entrar operando
+
+264
+00:35:57.450 --> 00:36:08.990
+Luiz Maia: aqui, entrar operando aqui, calcular a Operação Gente. O código já está autoexplicativo. Professor, no caso da ideia de Dps é passar esses outros.
+
+265
+00:36:10.180 --> 00:36:12.959
+Luiz Maia: Desculpa, Gabriel. Não entendi o que você falou, cara.
+
+266
+00:36:14.160 --> 00:36:22.079
+Luiz Maia: No caso. A ideia é passar para outros arquivos. Não, não necessariamente.
+
+267
+00:36:22.250 --> 00:36:25.330
+Luiz Maia: Eu não tenho. Por que criar outros arquivos
+
+268
+00:36:25.440 --> 00:36:33.489
+Luiz Maia: para passar esses métodos? Não, eles fazem parte desse problema. Não tem por que eu criar outros arquivos.
+
+269
+00:36:35.570 --> 00:36:37.919
+Luiz Maia: Exatamente como o Python também.
+
+270
+00:36:38.160 --> 00:36:49.250
+Luiz Maia: Eu não precisava criar outros arquivos em Python. Para resolver essa questão, não precisaria. Poderia estar tudo dentro do mesmo arquivo.
+
+271
+00:36:49.800 --> 00:36:55.490
+Luiz Maia: Eu só vou separar arquivo quando as responsabilidades forem diferentes
+
+272
+00:36:55.760 --> 00:37:09.679
+Luiz Maia: aqui, eu estou tratando de uma calculadora. Tudo que está aqui dentro tem a ver com a calculadora. Se em algum momento eu fizer alguma coisa que não tem a ver com a calculadora, eu criaria um novo arquivo separado.
+
+273
+00:37:10.740 --> 00:37:11.960
+Luiz Maia: Com certeza.
+
+274
+00:37:14.570 --> 00:37:20.730
+Luiz Maia: Por exemplo, vou pegar aqui um código meu de Python,
+
+275
+00:37:21.620 --> 00:37:23.610
+Luiz Maia: para você entender o que eu estou falando.
+
+276
+00:37:25.500 --> 00:37:30.329
+Luiz Maia: Vou pegar um código meu aqui em Python para você entender o que eu estou querendo dizer.
+
+277
+00:37:30.890 --> 00:37:32.340
+Luiz Maia: Não vai? Não, filho.
+
+278
+00:37:33.480 --> 00:37:36.070
+Luiz Maia: Vamos lá. Tá cansado, né?
+
+279
+00:37:39.570 --> 00:37:40.930
+Luiz Maia: Tá cansadinho.
+
+280
+00:37:42.180 --> 00:37:43.880
+Luiz Maia: Vai, abre.
+
+281
+00:37:44.830 --> 00:37:55.280
+Luiz Maia: Eu trabalho com o Python. Com o Vs. Code abriu. Oh, meu Deus. Minha máquina está lenta mesmo. Eu tenho que trocar de máquina.
+
+282
+00:37:55.550 --> 00:37:58.319
+Luiz Maia: Se eu contar pra vocês, cara,
+
+283
+00:37:58.490 --> 00:38:01.569
+Luiz Maia: eu tenho uma máquina na caixa
+
+284
+00:38:03.030 --> 00:38:06.479
+Luiz Maia: nova desde Novembro. Vocês vão acreditar.
+
+285
+00:38:07.110 --> 00:38:11.509
+Luiz Maia: Uma máquina novinha que eu comprei. Ela está na caixa aqui do meu lado.
+
+286
+00:38:11.880 --> 00:38:13.550
+Luiz Maia: Nunca usei a máquina.
+
+287
+00:38:14.300 --> 00:38:15.529
+Luiz Maia: Nunca usei.
+
+288
+00:38:18.830 --> 00:38:20.680
+Luiz Maia: Não tenho tempo para fazer isso.
+
+289
+00:38:21.850 --> 00:38:30.140
+Luiz Maia: Não tenho tempo, cara. Preparando aula. Olha só isso. Aqui é um código gigantesco em Python.
+
+290
+00:38:31.930 --> 00:38:35.830
+Luiz Maia: Não, eu tenho. Está tudo mapeado. Eu não tenho tempo mesmo.
+
+291
+00:38:35.980 --> 00:38:48.749
+Luiz Maia: Olha só aqui. Eu tenho um banco de dados em Python trabalhando com um Skl Alckmin. Aí, eu tenho aqui vários arquivos. Olha só. Aqui é o programa principal.
+
+292
+00:38:49.290 --> 00:38:51.270
+Luiz Maia: Aqui é a conexão com o banco.
+
+293
+00:38:51.720 --> 00:38:54.030
+Luiz Maia: Aqui são as constantes.
+
+294
+00:38:54.280 --> 00:38:56.709
+Luiz Maia: Aqui é a interface com usuário.
+
+295
+00:38:56.930 --> 00:38:58.530
+Luiz Maia: Aqui são os menus.
+
+296
+00:38:58.850 --> 00:39:16.619
+Luiz Maia: Aqui. São as classes do meu problema aqui eu tenho o repositório que é acesso ao banco. Aqui é a camada de serviço que faz a interface entre o usuário e o banco de dados. Aqui, eu tenho uma camada de teste. E aqui eu tenho os utilitários.
+
+297
+00:39:17.720 --> 00:39:22.540
+Luiz Maia: Repara que cada arquivo desse tem uma função específica.
+
+298
+00:39:22.730 --> 00:39:30.530
+Luiz Maia: Eu tive que dividir esse código em vários arquivos. Por quê? Porque cada arquivo tem uma função diferente.
+
+299
+00:39:33.940 --> 00:39:40.190
+Luiz Maia: Isso aqui é um código que trabalha com Skely, Alckmin e Python.
+
+300
+00:39:41.310 --> 00:39:45.650
+Luiz Maia: Tá certo. É uma aplicação bancária, tá?
+
+301
+00:39:45.840 --> 00:39:53.250
+Luiz Maia: E aí eu tenho vários arquivos separados. Por quê? Cada arquivo tem uma função diferente.
+
+302
+00:39:53.430 --> 00:40:05.340
+Luiz Maia: Então, aqui o repositório trabalha apenas com o banco. A camada de serviço faz a intermediação entre o banco e a camada de acesso do usuário.
+
+303
+00:40:06.280 --> 00:40:15.370
+Luiz Maia: E aí eu tenho várias camadas no meu projeto, com vários arquivos. Esse código deve ter, sei lá, quinhentos, seiscentos linhas de código.
+
+304
+00:40:16.460 --> 00:40:18.629
+Luiz Maia: Eu acabei de dar aula sobre isso
+
+305
+00:40:18.860 --> 00:40:24.379
+Luiz Maia: às sete horas para a minha turma de projeto de bloco de fundamento de dados.
+
+306
+00:40:24.790 --> 00:40:26.589
+Luiz Maia: Um projeto grandão.
+
+307
+00:40:26.760 --> 00:40:33.480
+Luiz Maia: O Tp deles, o grande bloco deles deve ficar entre um.quinhentos linhas de código.
+
+308
+00:40:35.280 --> 00:40:40.880
+Luiz Maia: O projeto de bloco deles deve ficar entre um.quinhentos linhas de código
+
+309
+00:40:41.350 --> 00:40:43.910
+Luiz Maia: para vocês terem noção do tamanho do projeto.
+
+310
+00:40:44.550 --> 00:40:52.810
+Luiz Maia: Então, nesse caso específico, aqui, eu estou trabalhando com a calculadora. Não tem. Porquê eu criar um outro arquivo
+
+311
+00:40:53.160 --> 00:40:56.510
+Luiz Maia: separado? Diferente, né?
+
+312
+00:40:58.820 --> 00:41:01.189
+Luiz Maia: Em qual semestre? O que é isso? Gente?
+
+313
+00:41:02.820 --> 00:41:03.900
+Luiz Maia: Como assim?
+
+314
+00:41:04.080 --> 00:41:08.499
+Luiz Maia: O bloco fundamento de dados já fizeram o fundamento de dados ou não?
+
+315
+00:41:14.330 --> 00:41:15.190
+Luiz Maia: Então,
+
+316
+00:41:28.160 --> 00:41:32.510
+Luiz Maia: ah, beleza. Ok, então vocês viram esse projeto todo?
+
+317
+00:41:34.690 --> 00:41:42.370
+Luiz Maia: Vocês viram esse projeto todo o projeto do supermercado, aquele projeto,
+
+318
+00:41:43.730 --> 00:41:51.539
+Luiz Maia: o Brother, do supermercado do caixa do supermercado foi para vocês conseguirem entender não só Python mas também.
+
+319
+00:41:51.570 --> 00:42:05.019
+Luiz Maia: Todas as camadas de software que você tem dentro do projeto. É um projeto gigantesco. Foi um projeto enorme. Eu sei que deu um trabalho enorme para vocês. Mas vocês saíram
+
+320
+00:42:05.210 --> 00:42:11.679
+Luiz Maia: sabendo não só Python e Skl, mas também sabendo
+
+321
+00:42:11.900 --> 00:42:21.689
+Luiz Maia: a arquitetura de sistemas, que é o mais importante é o que eu estou tentando fazer aqui em C. Sharp é não só ensinar C Sharp, mas também mostrar para vocês
+
+322
+00:42:21.830 --> 00:42:31.359
+Luiz Maia: boas práticas, refaturação. E aí vocês ganharem experiência para conseguir um estágio, conseguir um emprego.
+
+323
+00:42:31.850 --> 00:42:37.139
+Luiz Maia: Essa versão aqui terminou a próxima versão que eu vou fazer com vocês?
+
+324
+00:42:37.250 --> 00:42:41.740
+Luiz Maia: Vai tratar a parte de erro, tá? É
+
+325
+00:42:41.990 --> 00:42:56.189
+Luiz Maia: uma coisa que a gente não viu ainda. Então eu vou fazer um pequeno intervalo e a gente vai voltar para fazer tratamento de erro, que é um problema que esse código tem essa versão três, ela está cheia de problemas de erro.
+
+326
+00:43:00.320 --> 00:43:07.080
+Luiz Maia: É se você teve problemas no início, tem que correr atrás, cara. O momento é agora,
+
+327
+00:43:08.010 --> 00:43:11.610
+Luiz Maia: e se você precisar de ajuda, você fala comigo para te ajudar.
+
+328
+00:43:13.570 --> 00:43:20.410
+Luiz Maia: Esse erro da Divisão está resolvido. Mas o problema aqui da entrada da opção
+
+329
+00:43:20.590 --> 00:43:39.880
+Luiz Maia: você ter um dado entrado errado aqui e no operando são problemas sérios. Eu preciso tratar esses erros. Então a gente agora vai fazer a versão quatro com tratamento de erro. Um tratamento de erro bem simples não é o tratamento de erro
+
+330
+00:43:40.160 --> 00:43:45.160
+Luiz Maia: completo. A gente vai continuar vendo esse tratamento de erro,
+
+331
+00:43:45.300 --> 00:43:54.899
+Luiz Maia: depois que nós olharmos os comandos de repetição, e aí vocês vão ter uma coisa mais concreta, mais bem
+
+332
+00:43:55.270 --> 00:44:02.590
+Luiz Maia: feita em relação a tratamento de erro, especialmente de dados de entrada.
+
+333
+00:44:02.990 --> 00:44:09.830
+Luiz Maia: Então, fazer um pequeno intervalo e a gente já volta para fazer tratamento de erro daqui a pouco eu volto.
+
+334
+00:50:33.180 --> 00:50:40.480
+Luiz Maia: Estamos de volta, pessoal. Vamos lá. Tratamento de erro, tratamento de erro. Gente. Ninguém gosta de fazer
+
+335
+00:50:41.080 --> 00:50:47.250
+Luiz Maia: isso. É normal. As pessoas acham que o código vai funcionar.
+
+336
+00:50:48.220 --> 00:50:59.810
+Luiz Maia: Perfeito. Sempre foi. No bloco passado, teve uma apresentação de um aluno que ele pegou um código que ele,
+
+337
+00:50:59.920 --> 00:51:08.280
+Luiz Maia: um Pdf dele e apresentou o Pdf dele para mim. Aí eu falei: Vem cá, Cadê o código pra ver se funciona.
+
+338
+00:51:08.710 --> 00:51:15.330
+Luiz Maia: Aí ele falou assim: não precisa o código. Ele funciona. Não tem problema. Não,
+
+339
+00:51:15.570 --> 00:51:17.690
+Luiz Maia: mas como é que você pode me
+
+340
+00:51:18.160 --> 00:51:27.930
+Luiz Maia: garantir que o código funciona se você não tem o código? Ah, não, não preciso. O código funciona. Pô se você não tem o código para testar.
+
+341
+00:51:28.490 --> 00:51:38.290
+Luiz Maia: Como é que você vai garantir que o código funciona? Já é difícil você fazer um código com teste que funcione corretamente. Imagina um código que você nunca testou. Nunca executou.
+
+342
+00:51:38.540 --> 00:51:43.970
+Luiz Maia: Aí eu falei pra ele, cara, desculpa, mas não dá pra aceitar um trabalho como esse.
+
+343
+00:51:47.870 --> 00:51:52.390
+Luiz Maia: Ele correu atrás, fez o código direitinho. Mostrou para mim funcionando.
+
+344
+00:51:52.900 --> 00:51:54.090
+Luiz Maia: Tá, beleza.
+
+345
+00:51:54.630 --> 00:52:00.549
+Luiz Maia: Quais são os problemas que nós temos aqui para resolver. Bom, primeiro, eu vou criar uma nova solução.
+
+346
+00:52:00.870 --> 00:52:06.550
+Luiz Maia: Perdão, um novo projeto dentro da Solução Had.
+
+347
+00:52:07.550 --> 00:52:14.190
+Luiz Maia: Novo projeto vai ser console App.
+
+348
+00:52:17.240 --> 00:52:26.069
+Luiz Maia: É o cara. É Tchau, o ladora, quatro.
+
+349
+00:52:26.260 --> 00:52:31.640
+Luiz Maia: Olha só. A gente está com a quarta versão da calculadora e vai ter
+
+350
+00:52:31.750 --> 00:52:37.919
+Luiz Maia: a versão cinco, a versão seis. A versão sete vai ter um monte de versão gente.
+
+351
+00:52:39.160 --> 00:52:42.279
+Luiz Maia: E aí vocês vão ter tudo dentro da mesma solução.
+
+352
+00:52:42.730 --> 00:52:54.140
+Luiz Maia: Então você vai vendo uma evolução do código à medida que você vai aprendendo coisas novas. Então, quando a gente for aprender na semana que vem. Na segunda feira,
+
+353
+00:52:54.350 --> 00:53:04.340
+Luiz Maia: os comandos de repetição vai entrar na calculadora. Depois, na outra semana, a gente vai ver orientação, objeto vai entrar a calculadora de novo,
+
+354
+00:53:05.350 --> 00:53:12.520
+Luiz Maia: junto com outros projetos. Fiquem tranquilos, que não vai ser só calculadora, não tá?
+
+355
+00:53:12.720 --> 00:53:30.750
+Luiz Maia: Vai ter outros códigos. Tá certo. Eu estou usando a calculadora agora, porque ela é simples. Ela tem várias vantagens. Pedagogicamente falando, ela ajuda a gente a fazer coisas simples
+
+356
+00:53:30.860 --> 00:53:33.859
+Luiz Maia: e ao mesmo tempo complexas.
+
+357
+00:53:34.160 --> 00:53:45.170
+Luiz Maia: Dá para introduzir o drive. Dá para introduzir o Srp. Dá para introduzir orientação objeto. Dá para mostrar a sobrecarga de.
+
+358
+00:53:45.830 --> 00:54:01.889
+Luiz Maia: De construtor. Dá para mostrar sobrecarga de métodos. Tudo isso. A calculadora ajuda a gente a fazer. Então, ao mesmo tempo que ela é simples. Ela é muito didática,
+
+359
+00:54:02.540 --> 00:54:06.549
+Luiz Maia: como agora que eu vou usar, por exemplo, para fazer isso com vocês,
+
+360
+00:54:06.710 --> 00:54:11.119
+Luiz Maia: então eu vou usar aqui. Vou pegar o código anterior
+
+361
+00:54:12.780 --> 00:54:16.500
+Luiz Maia: primeiro. Eu vou botar ela. Como é
+
+362
+00:54:16.960 --> 00:54:23.849
+Luiz Maia: startup Project aqui? Para poder. Quando executar esse cara. Vou pegar esse código que está aqui. Todo
+
+363
+00:54:24.860 --> 00:54:31.140
+Luiz Maia: esse código, esse aqui da calculadora três. Vou copiar tudo isso aqui,
+
+364
+00:54:32.490 --> 00:54:39.150
+Luiz Maia: code de hoje vai subir. Vai, vai! Claro que vai,
+
+365
+00:54:39.470 --> 00:54:41.819
+Luiz Maia: vai pro drive tudo. Vai pro drive. Gente.
+
+366
+00:54:42.290 --> 00:54:45.729
+Luiz Maia: Pode ter certeza. Vai estar tudo lá para vocês.
+
+367
+00:54:48.490 --> 00:54:51.900
+Luiz Maia: Opa, vem uma chave a mais aqui. Eu tirei
+
+368
+00:54:52.450 --> 00:54:55.470
+Luiz Maia: todo o código. Vai ficar disponível para vocês.
+
+369
+00:54:55.940 --> 00:54:58.109
+Luiz Maia: Vai ficar na Ola três. Esse código,
+
+370
+00:54:58.700 --> 00:55:02.450
+Luiz Maia: esse código tem alguns problemas ainda muito sérios.
+
+371
+00:55:02.630 --> 00:55:12.100
+Luiz Maia: Vários problemas. A gente vai começar a resolver esses problemas. A gente já resolveu, por exemplo, a Divisão por zero.
+
+372
+00:55:12.720 --> 00:55:21.740
+Luiz Maia: Agora a gente vai resolver outros problemas também complicados, como por exemplo, é
+
+373
+00:55:25.190 --> 00:55:26.610
+Luiz Maia: entra a opção.
+
+374
+00:55:27.440 --> 00:55:29.570
+Luiz Maia: Eu tenho que digitar um número aqui.
+
+375
+00:55:29.800 --> 00:55:35.300
+Luiz Maia: Se eu agitar uma letra, o código quebra, ele gera uma exceção.
+
+376
+00:55:35.680 --> 00:55:37.280
+Luiz Maia: Que exceção é essa?
+
+377
+00:55:37.600 --> 00:55:39.370
+Luiz Maia: Format Exception.
+
+378
+00:55:40.600 --> 00:55:48.690
+Luiz Maia: E ele explica aqui, o que é exceção e dá um Trace
+
+379
+00:55:48.900 --> 00:55:56.320
+Luiz Maia: da onde foi gerada a exceção. Ela começou na linha sete e terminou na linha quarenta e seis.
+
+380
+00:55:57.720 --> 00:55:59.680
+Luiz Maia: É isso que ele está mostrando aqui.
+
+381
+00:56:00.060 --> 00:56:08.030
+Luiz Maia: Eu acho engraçado que muitos alunos entram em pânico quando vem um erro desse,
+
+382
+00:56:08.360 --> 00:56:11.459
+Luiz Maia: e eles nem leem a mensagem de erro.
+
+383
+00:56:11.620 --> 00:56:15.369
+Luiz Maia: Eu estou falando isso porque eu já vi isso várias vezes de aluno.
+
+384
+00:56:15.630 --> 00:56:28.690
+Luiz Maia: Então você tem a mensagem de erro aqui, explicando qual o erro que aconteceu. A linha onde aconteceu? Ele está falando. Aqui linha quarenta e seis. Vamos lá na linha quarenta e seis,
+
+385
+00:56:29.510 --> 00:56:31.969
+Luiz Maia: linha quarenta e seis.
+
+386
+00:56:33.140 --> 00:56:36.609
+Luiz Maia: Tá aqui, ó linha quarenta e seis.
+
+387
+00:56:37.440 --> 00:56:41.589
+Luiz Maia: Ele está dizendo também que o erro começou na linha sete.
+
+388
+00:56:42.040 --> 00:56:50.009
+Luiz Maia: Então, na linha sete, você chamou. Entra a opção na linha quarenta e seis.
+
+389
+00:56:50.170 --> 00:56:53.240
+Luiz Maia: Você fez esse passe aqui
+
+390
+00:56:53.440 --> 00:57:00.259
+Luiz Maia: quando ele tentou fazer o passe do A. Ele quebrou o código. Então a mensagem de erro está bem clara.
+
+391
+00:57:00.460 --> 00:57:01.710
+Luiz Maia: Que aconteceu?
+
+392
+00:57:02.000 --> 00:57:05.469
+Luiz Maia: Ele está dizendo o seguinte format exception.
+
+393
+00:57:06.380 --> 00:57:19.079
+Luiz Maia: A string de entrada. A não foi no formato, correto. Ele não aceita letra para fazer a conversão de letra para número. Ele não consegue para fazer isso.
+
+394
+00:57:19.320 --> 00:57:23.860
+Luiz Maia: Outro erro também que a gente tem aqui é os operandos.
+
+395
+00:57:24.240 --> 00:57:30.590
+Luiz Maia: Eu posso entrar com a operação correta. Mas se eu colocar um A no operando, ele quebra o código
+
+396
+00:57:30.800 --> 00:57:38.159
+Luiz Maia: exatamente como antes. Ele desalinha e o aluno entra em desespero.
+
+397
+00:57:38.680 --> 00:57:49.289
+Luiz Maia: Ele vai para o chat. Gpt. Vai para o Gemini para descobrir o erro. O erro está na tua cara. Está na tua frente. Você não quer ver, mas está aí na tua frente.
+
+398
+00:57:49.750 --> 00:57:54.880
+Luiz Maia: Ele está falando aqui. System Double Parse String.
+
+399
+00:57:55.110 --> 00:58:09.359
+Luiz Maia: Aí está dizendo a linha onde deu o erro, a linha que chamou, onde começou o processo de erro. E está tudo aqui explicado. Você não vê porque não quer.
+
+400
+00:58:10.440 --> 00:58:12.640
+Luiz Maia: Então é muito engraçado isso
+
+401
+00:58:12.760 --> 00:58:24.690
+Luiz Maia: ver vocês desesperados para resolver problemas que estão escritos na sua frente. E aí você vai para o Chat Gpt para resolver um problema ridículo como esse
+
+402
+00:58:30.200 --> 00:58:32.680
+Luiz Maia: tenta olhar a mensagem de erro
+
+403
+00:58:33.240 --> 00:58:36.430
+Luiz Maia: tem mensagens de erros que são indecifráveis
+
+404
+00:58:37.590 --> 00:58:41.159
+Luiz Maia: e você não consegue saber aonde está o problema.
+
+405
+00:58:41.300 --> 00:58:47.500
+Luiz Maia: E aí não tem nenhum problema. Você ir para Ia não tem nenhum problema. Eu faço isso.
+
+406
+00:58:48.570 --> 00:58:55.580
+Luiz Maia: Se eu olho uma mensagem de erro. Eu não consigo decifrar o que aquela mensagem de erro está me dizendo
+
+407
+00:58:56.000 --> 00:59:02.380
+Luiz Maia: aí eu vou correr atrás de alguém pra me ajudar, pô a Ia, por exemplo.
+
+408
+00:59:03.060 --> 00:59:09.199
+Luiz Maia: Mas se a mensagem é clara o suficiente, eu não preciso me preocupar com o Ia para resolver o problema.
+
+409
+00:59:10.480 --> 00:59:12.490
+Luiz Maia: Então eu tenho dois problemas aqui.
+
+410
+00:59:13.070 --> 00:59:17.129
+Luiz Maia: A entrada da opção e a entrada do operando.
+
+411
+00:59:17.490 --> 00:59:22.349
+Luiz Maia: Bom, esses erros são erros inesperados.
+
+412
+00:59:22.660 --> 00:59:32.820
+Luiz Maia: Você não tem como prever o que o usuário vai entrar de dado nessa operação aqui. Nesse console Readline,
+
+413
+00:59:33.020 --> 00:59:41.240
+Luiz Maia: ele pode entrar com um número ou pode entrar com uma letra, um carácter especial. Não importa.
+
+414
+00:59:41.810 --> 00:59:49.030
+Luiz Maia: Vai dar problema vocês aprenderem Python, o tal do Tri Execution.
+
+415
+00:59:50.250 --> 00:59:56.619
+Luiz Maia: E aqui a gente tem alguma coisa muito próxima, muito parecida, praticamente igual. A ideia é a mesma
+
+416
+00:59:56.860 --> 01:00:02.119
+Luiz Maia: do Tri Catch, ou seja, o tratamento de exceção,
+
+417
+01:00:02.410 --> 01:00:06.730
+Luiz Maia: o que é uma exceção. Exceção? É um erro que você não tem como controlar.
+
+418
+01:00:08.660 --> 01:00:11.660
+Luiz Maia: Então é o que acontece inesperado.
+
+419
+01:00:11.920 --> 01:00:24.909
+Luiz Maia: Por exemplo, você vai tentar abrir um arquivo que não existe. Você vai tentar acessar um diretório que não existe. Você vai tentar gravar num arquivo que você não tem permissão de gravar.
+
+420
+01:00:25.510 --> 01:00:32.380
+Luiz Maia: Você vai tentar remover um arquivo
+
+421
+01:00:32.560 --> 01:00:35.519
+Luiz Maia: que você não tem permissão de remoção.
+
+422
+01:00:35.950 --> 01:00:40.519
+Luiz Maia: Você vai acessar um banco de dados que você não tem privilégio para acessar.
+
+423
+01:00:40.740 --> 01:00:56.369
+Luiz Maia: Você vai acessar uma tabela no banco que não existe. Você vai acessar um registro, uma coluna de uma tabela do banco que não existe. Tudo isso é exceção. Por quê você não tem como saber de um animal.
+
+424
+01:00:59.010 --> 01:01:05.649
+Luiz Maia: Vou te dar um exemplo de uma situação onde eu posso evitar o tratamento de exceção.
+
+425
+01:01:05.960 --> 01:01:07.500
+Luiz Maia: A divisão por zero.
+
+426
+01:01:08.960 --> 01:01:18.929
+Luiz Maia: Eu poderia, por exemplo, usar um Tri Cat em Python seria um Triaccept para tratar esse erro aqui,
+
+427
+01:01:19.280 --> 01:01:20.829
+Luiz Maia: mas eu não preciso.
+
+428
+01:01:21.850 --> 01:01:22.950
+Luiz Maia: Por quê?
+
+429
+01:01:23.220 --> 01:01:25.559
+Luiz Maia: Porque eu posso tratar isso com If.
+
+430
+01:01:25.940 --> 01:01:40.840
+Luiz Maia: Se o Op2 é igual a zero, é uma divisão por zero. Eu não preciso usar um Tri Exact, um Tri Cat para resolver esse problema, porque eu sei que ele pode acontecer.
+
+431
+01:01:41.190 --> 01:01:42.399
+Luiz Maia: John Tim Mall.
+
+432
+01:01:43.100 --> 01:01:46.410
+Luiz Maia: Então você só vai usar o Tri Cat
+
+433
+01:01:47.170 --> 01:02:04.109
+Luiz Maia: no C Sharp no Java ou o Tri Act no Python. Quando são situações que são completamente inesperadas. Você não espera que aconteça aquele erro. Mas se acontecer, você vai tratar. É exatamente a situação que a gente tem aqui.
+
+434
+01:02:04.310 --> 01:02:06.169
+Luiz Maia: Esse entrar, opção.
+
+435
+01:02:06.450 --> 01:02:15.880
+Luiz Maia: Ele pode acontecer? De entrar um dado inválido. Então eu vou ter que fazer o quê? Um tratamento de erro
+
+436
+01:02:18.830 --> 01:02:20.709
+Luiz Maia: é assim, é,
+
+437
+01:02:20.990 --> 01:02:32.140
+Luiz Maia: eu não quero agora entrar em detalhes sobre isso, até porque a gente vai falar mais sobre esse assunto mais para frente. Mas
+
+438
+01:02:32.480 --> 01:02:38.740
+Luiz Maia: C Sharp excepcion isso aqui é igual para todas as linguagens, gente,
+
+439
+01:02:39.090 --> 01:02:45.279
+Luiz Maia: isso é igual para a Java. É igual para a C. Sharp. Para Python.
+
+440
+01:02:45.550 --> 01:02:47.609
+Luiz Maia: Somos tratadores de exceção.
+
+441
+01:02:47.760 --> 01:02:48.940
+Luiz Maia: Tá certo.
+
+442
+01:02:51.270 --> 01:02:56.679
+Luiz Maia: Deixa eu pegar aqui uma imagem, tentar pegar aqui uma imagem.
+
+443
+01:03:01.250 --> 01:03:06.020
+Luiz Maia: Então isso aqui é uma estrutura
+
+444
+01:03:06.690 --> 01:03:11.369
+Luiz Maia: de tratamento de exceção do C Sharp.
+
+445
+01:03:11.820 --> 01:03:20.009
+Luiz Maia: Isso aqui é baseado em classes. Vocês não sabem o que é classe. Vocês não sabem o que é orientação. Objeto. Mas
+
+446
+01:03:20.190 --> 01:03:32.080
+Luiz Maia: é interessante perceber que a estrutura de tratamento de exceção é baseada numa árvore de classes
+
+447
+01:03:32.350 --> 01:03:36.640
+Luiz Maia: onde você tem o objeto a exceção.
+
+448
+01:03:37.020 --> 01:03:45.999
+Luiz Maia: Aqui eu tenho System excepcion. E aí você tem vários tipos de exceção.
+
+449
+01:03:46.900 --> 01:03:48.090
+Luiz Maia: Vários tipos.
+
+450
+01:03:48.430 --> 01:03:49.540
+Luiz Maia: Tá certo?
+
+451
+01:03:49.910 --> 01:03:59.710
+Luiz Maia: E aí é e aí o que é o mais importante vocês entenderem. Nesse caso,
+
+452
+01:03:59.880 --> 01:04:09.690
+Luiz Maia: tentar tratar a exceção o mais pontual possível, ou seja, tratar a exceção que realmente vai acontecer,
+
+453
+01:04:09.840 --> 01:04:21.689
+Luiz Maia: não é usar o exception, que é uma forma geral de tratamento de erro, é tentar usar a exceção
+
+454
+01:04:22.130 --> 01:04:32.469
+Luiz Maia: da forma mais específica, tentando pegar o erro mais específico. Eu vejo o código de aluno que assim o cara coloca Try
+
+455
+01:04:33.420 --> 01:04:38.089
+Luiz Maia: aí ele coloca duzentos linhas de código dentro do Try e coloca lá.
+
+456
+01:04:39.010 --> 01:04:42.520
+Luiz Maia: É excepcion erro.
+
+457
+01:04:43.450 --> 01:04:51.669
+Luiz Maia: Ou seja, ele está tratando qualquer tipo de erro que aconteça naquelas duzentas linhas de código. Isso é péssimo.
+
+458
+01:04:51.840 --> 01:04:54.130
+Luiz Maia: Isso vai contra o código Limpo.
+
+459
+01:04:54.350 --> 01:04:58.320
+Luiz Maia: O código Limpo diz o seguinte: para você você tem que tratar
+
+460
+01:04:58.530 --> 01:05:12.160
+Luiz Maia: as exceções de maneira individual particular. Não de forma genérica. É claro que existem exceções para isso. Você está lidando com um banco de dados.
+
+461
+01:05:12.290 --> 01:05:25.229
+Luiz Maia: Pode acontecer um monte de coisa. O banco pode estar corrompido. Você pode não ter acesso ao banco. Você pode ter um problema de rede para acessar o banco. E aí sim, cabe você
+
+462
+01:05:25.280 --> 01:05:38.179
+Luiz Maia: usar uma exceção mais genérica. Mas quando você sabe qual é o tipo de exceção que vai acontecer. Você tem que tratar aquele tipo de exceção, como é o nosso caso aqui.
+
+463
+01:05:38.930 --> 01:05:42.619
+Luiz Maia: Então o caso de format exception.
+
+464
+01:05:42.930 --> 01:05:45.459
+Luiz Maia: Não tem por que usar excepcion
+
+465
+01:05:45.900 --> 01:05:52.790
+Luiz Maia: generalista? Eu vou usar uma exceção que vai tratar um problema de formatação.
+
+466
+01:05:54.060 --> 01:06:03.490
+Luiz Maia: Essa árvore é muito maior do que essa. E aqui. Eu não sei. Se eu. Consigo pegar alguma coisa melhor do que isso aqui,
+
+467
+01:06:04.610 --> 01:06:09.920
+Luiz Maia: eu talvez tivesse que fazer. Excepcion Handless C Sharp,
+
+468
+01:06:11.140 --> 01:06:19.300
+Luiz Maia: Globo Exception Handling. Deixa eu ver se isso aqui já vai ajudar. Não, não é isso. Também bom,
+
+469
+01:06:20.090 --> 01:06:27.679
+Luiz Maia: eu acho que vocês entenderam a ideia do que eu quis passar para vocês. Existe uma série de tipos de exceção,
+
+470
+01:06:28.630 --> 01:06:33.830
+Luiz Maia: um número enorme de exceções. Isso aqui é uma árvore. É uma.
+
+471
+01:06:34.040 --> 01:06:35.420
+Luiz Maia: Uma herança.
+
+472
+01:06:36.260 --> 01:06:44.299
+Luiz Maia: Vocês vão aprender a herança sem ser na semana que vem, na outra semana na semana do dia
+
+473
+01:06:44.670 --> 01:06:47.510
+Luiz Maia: vinte e quatro.
+
+474
+01:06:47.730 --> 01:06:50.239
+Luiz Maia: Tá, eu vou ensinar para vocês
+
+475
+01:06:50.370 --> 01:07:05.930
+Luiz Maia: os pilares da orientação. Objeto, quais são os três pilares da orientação. Objeto, só para começar, para vocês poderem estudar para frente, se vocês quiserem acompanhar as aulas, encapsulamento,
+
+476
+01:07:07.890 --> 01:07:20.290
+Luiz Maia: encapsulamento, herança e polimorfismo, olha ali.
+
+477
+01:07:21.020 --> 01:07:22.900
+Luiz Maia: Morfismo.
+
+478
+01:07:23.420 --> 01:07:30.559
+Luiz Maia: Esses são os três pilares da utensão. Objeto. Se quiser estudar isso já de antemão, é bom para você,
+
+479
+01:07:31.010 --> 01:07:34.260
+Luiz Maia: porque isso é difícil pra caramba, tá?
+
+480
+01:07:38.160 --> 01:07:44.129
+Luiz Maia: Vamos voltar para o nosso problema aqui. Então eu tenho aqui que tratar um erro. Então vamos lá.
+
+481
+01:07:45.330 --> 01:07:57.850
+Luiz Maia: É tri assentasse. É bem simples. É muito parecido com o que você fez lá no meu paiton.
+
+482
+01:08:00.950 --> 01:08:06.089
+Luiz Maia: Aqui abriu e fechou o Try. Então ele vai mostrar. Esse cara aqui
+
+483
+01:08:06.300 --> 01:08:17.620
+Luiz Maia: vai tentar fazer o passe. Se der problema, eu tenho o Cat. O Cat. Gente é igual o Exception do Python. Tá?
+
+484
+01:08:17.700 --> 01:08:27.370
+Luiz Maia: E aqui. Eu vou especificar qual é a exceção. Eu vou botar excepcion não, não vou botar excepcion vou Botar format exception.
+
+485
+01:08:30.630 --> 01:08:44.729
+Luiz Maia: E aqui eu vou fazer o seguinte erro, erro, opção e válida.
+
+486
+01:08:48.170 --> 01:08:57.470
+Luiz Maia: E vou fazer um complemento. Vou explicar para vocês exatamente o que ele está fazendo aqui aqui? Ele está dizendo o seguinte: que essa opção
+
+487
+01:08:57.740 --> 01:09:02.580
+Luiz Maia: ela está voltando com ela pode voltar com um valor sem valor.
+
+488
+01:09:02.680 --> 01:09:05.860
+Luiz Maia: Porque se houver um erro aqui no passe,
+
+489
+01:09:06.859 --> 01:09:11.620
+Luiz Maia: vamos fazer um passo a passo, tá?
+
+490
+01:09:11.859 --> 01:09:16.419
+Luiz Maia: Eu suponho que eu estivesse executando o Debugger.
+
+491
+01:09:17.180 --> 01:09:19.369
+Luiz Maia: Ele vai mostrar essa linha aqui.
+
+492
+01:09:19.470 --> 01:09:24.479
+Luiz Maia: E aí ele vai tentar fazer o passe do que você digitou.
+
+493
+01:09:24.590 --> 01:09:31.479
+Luiz Maia: Se funcionar, beleza, ele pula o Cat e vai retornar a opção. Tá beleza.
+
+494
+01:09:32.520 --> 01:09:41.689
+Luiz Maia: Mas se houver um erro aqui, o que ele faz, ele pula para o Cat e não atribui nada.
+
+495
+01:09:46.689 --> 01:09:47.960
+Luiz Maia: Poderia.
+
+496
+01:09:48.410 --> 01:09:52.210
+Luiz Maia: Eu poderia fazer esse cara aqui. Pode ser.
+
+497
+01:09:55.050 --> 01:09:57.390
+Luiz Maia: Pode ser isso. Pode ser isso também
+
+498
+01:09:57.650 --> 01:10:00.190
+Luiz Maia: eu poderia botar o retorno aqui dentro.
+
+499
+01:10:00.650 --> 01:10:09.470
+Luiz Maia: Ele só vai executar o Returne se não der erro no passe. Pode ser? O problema é que ele está aqui reclamando.
+
+500
+01:10:10.510 --> 01:10:17.949
+Luiz Maia: Ele está esperando um Returney que pode nunca acontecer. Se houver um erro aqui, não tem. Returney
+
+501
+01:10:21.060 --> 01:10:23.590
+Luiz Maia: percebe isso olha aqui, a mensagem.
+
+502
+01:10:26.970 --> 01:10:37.689
+Luiz Maia: Not all. Olha a mensagem de erro. Not all code Paths, Britânia Valley. Ou seja, nem todos os caminhos do programa retornam valor.
+
+503
+01:10:38.030 --> 01:10:43.530
+Luiz Maia: Princípio, isso em Python funcionaria, mas esse Sharp não funciona.
+
+504
+01:10:44.510 --> 01:10:48.260
+Luiz Maia: Eu preciso fazer isso. Eu preciso desfazer isso aqui.
+
+505
+01:10:49.060 --> 01:10:50.420
+Luiz Maia: E fazer o quê?
+
+506
+01:10:50.710 --> 01:10:58.430
+Luiz Maia: Caso de erro. A opção retorna. O quê? Retorna zero. Aí ele resolve. Ele fica bem.
+
+507
+01:10:59.730 --> 01:11:04.170
+Luiz Maia: Então, se houver um erro aqui, ele vai retornar zero
+
+508
+01:11:04.590 --> 01:11:14.919
+Luiz Maia: e vai mostrar essa mensagem se ele entrar. Um dado válido. Ok, ele vai retornar à opção que você digitou. Vamos testar para ver se funciona
+
+509
+01:11:15.660 --> 01:11:22.050
+Luiz Maia: o importante. Olha só uma coisa importante. Olha só. O mais importante de tudo,
+
+510
+01:11:33.560 --> 01:11:40.420
+Luiz Maia: o mais importante de tudo. Se houver erro. Ele nunca vai executar essa instrução. Nunca.
+
+511
+01:11:41.190 --> 01:11:48.879
+Luiz Maia: Essa é a coisa. É engraçada que muitos alunos não entendem isso.
+
+512
+01:11:49.260 --> 01:11:56.790
+Luiz Maia: Que é a coisa mais importante do Tri Catcept. É a mesma coisa para Python e para C Sharp Java.
+
+513
+01:12:01.390 --> 01:12:06.450
+Luiz Maia: Quando acontece o erro, ele não executa mais nada do Try.
+
+514
+01:12:07.530 --> 01:12:09.790
+Luiz Maia: Vamos ver como isso aqui é verdade.
+
+515
+01:12:11.920 --> 01:12:22.779
+Luiz Maia: Então essa mensagem de erro que está aqui. Ela não vai aparecer quando acontecer o erro. Ela só vai aparecer quando você digitar um valor válido. Olha só.
+
+516
+01:12:24.310 --> 01:12:25.730
+Luiz Maia: Olha que loucura.
+
+517
+01:12:26.610 --> 01:12:28.319
+Luiz Maia: É engraçado que.
+
+518
+01:12:28.570 --> 01:12:32.320
+Luiz Maia: Olha só, eu vou entrar com uma opção válida.
+
+519
+01:12:33.890 --> 01:12:35.270
+Luiz Maia: Olha lá, erro.
+
+520
+01:12:38.540 --> 01:12:43.100
+Luiz Maia: Ele executou o comando que veio depois do passe.
+
+521
+01:12:44.290 --> 01:12:45.959
+Luiz Maia: Vamos executar de novo.
+
+522
+01:12:47.560 --> 01:12:50.769
+Luiz Maia: Agora, com um erro. Ele não vai mostrar.
+
+523
+01:12:51.640 --> 01:12:52.490
+Luiz Maia: Olha lá.
+
+524
+01:12:52.810 --> 01:12:54.570
+Luiz Maia: Errupção inválida.
+
+525
+01:12:54.760 --> 01:12:59.730
+Luiz Maia: O input string A. Não foi um formato correto
+
+526
+01:13:01.430 --> 01:13:09.220
+Luiz Maia: aqui. Ele continua dando erro. Olha lá. Pronto, o código está quebrando. Antes o código não quebrou.
+
+527
+01:13:09.440 --> 01:13:12.179
+Luiz Maia: O código quebra quando ele faz isso aqui.
+
+528
+01:13:12.450 --> 01:13:15.490
+Luiz Maia: Aqui? Ele não quebrou. Ele deu uma mensagem de erro.
+
+529
+01:13:17.360 --> 01:13:26.309
+Luiz Maia: Então esse cara aqui, ele nunca vai ser executado. Quando houver um erro.
+
+530
+01:13:26.670 --> 01:13:29.910
+Luiz Maia: Espero que vocês tenham entendido isso.
+
+531
+01:13:31.990 --> 01:13:39.710
+Luiz Maia: Essa questão que o colega, o professor, trata se de exceções visando ajudar outros programadores. Ainda não pensamos no usuários. Nesse ponto.
+
+532
+01:13:40.190 --> 01:13:42.259
+Luiz Maia: Claro que a gente pensa no usuário.
+
+533
+01:13:42.940 --> 01:13:47.160
+Luiz Maia: Nesse caso, aqui a mensagem de erro é para o usuário.
+
+534
+01:13:47.470 --> 01:13:49.849
+Luiz Maia: Não é para outro programador. Não.
+
+535
+01:13:51.410 --> 01:13:52.329
+Jorge José Luiz Santos da Silva: Ah, eu sei que.
+
+536
+01:13:52.330 --> 01:13:53.109
+Luiz Maia: Olha só.
+
+537
+01:13:53.110 --> 01:13:56.460
+Jorge José Luiz Santos da Silva: Porque a gente está usando o console. Ele não vai ter acesso ao console.
+
+538
+01:13:56.610 --> 01:14:00.620
+Luiz Maia: Aqui. Ó, essa mensagem é para o usuário.
+
+539
+01:14:00.940 --> 01:14:02.809
+Luiz Maia: Não é para outro programador.
+
+540
+01:14:03.280 --> 01:14:09.790
+Luiz Maia: E se fosse uma interface gráfica? Uma Interface Web. A mensagem de eu também ia ajudar. O usuário
+
+541
+01:14:10.760 --> 01:14:16.889
+Luiz Maia: não é outro programador. Você está? Jorge. Desculpa, mas você não está captando a mensagem.
+
+542
+01:14:17.160 --> 01:14:19.269
+Luiz Maia: Isso aqui é para o usuário.
+
+543
+01:14:19.780 --> 01:14:24.679
+Luiz Maia: O usuário que recebe mensagem de erro. Ele que tem que ter o
+
+544
+01:14:25.040 --> 01:14:31.439
+Luiz Maia: para exceção, usado sempre Tri Cat. Ou existe caso que fazem sentido usar simples. Uiff, acabei de falar sobre isso.
+
+545
+01:14:31.920 --> 01:14:36.470
+Luiz Maia: Acabei de falar sobre isso. Olha aqui, olha o exemplo aqui.
+
+546
+01:14:37.180 --> 01:14:39.680
+Luiz Maia: Acabei de explicar isso, Gabriel.
+
+547
+01:14:41.590 --> 01:14:43.310
+Luiz Maia: A Divisão por zero.
+
+548
+01:14:44.240 --> 01:14:46.600
+Luiz Maia: Eu poderia usar um Troycatch aqui
+
+549
+01:14:47.140 --> 01:14:49.930
+Luiz Maia: e não usei. Usei o if!
+
+550
+01:14:50.310 --> 01:14:53.920
+Luiz Maia: Olha que exemplo. A calculadora é ótima para mostrar essas coisas.
+
+551
+01:14:55.750 --> 01:15:01.799
+Luiz Maia: Não precisei fazer troikat, porque gente, o Tri Cat consome recurso da máquina.
+
+552
+01:15:02.480 --> 01:15:11.590
+Luiz Maia: Ele não é de graça. O Tri Cat exige recurso de memória e processador. Esse If é muito mais simples do que um Try Cat,
+
+553
+01:15:12.440 --> 01:15:18.510
+Luiz Maia: vamos resolver agora o problema do operando, porque a opção está resolvida.
+
+554
+01:15:19.750 --> 01:15:27.650
+Luiz Maia: E aí, ah, deixa eu explicar para vocês o que está acontecendo aqui? Antes de mais nada, Gabriel, você entendeu a diferença do Tri Cat With?
+
+555
+01:15:27.950 --> 01:15:33.769
+Luiz Maia: Tá bem claro aqui. Ó, olha só aqui. Eu estou usando um If sem usar.
+
+556
+01:15:36.550 --> 01:15:39.279
+Luiz Maia: Sim, o Tri Cat é sempre mais custoso.
+
+557
+01:15:39.740 --> 01:15:42.690
+Luiz Maia: Ele vai usar mais recursos. Por quê?
+
+558
+01:15:43.070 --> 01:15:48.460
+Luiz Maia: Olha só aqui. Ó, ele tá aqui. Isso aqui é uma classe
+
+559
+01:15:48.780 --> 01:16:07.300
+Luiz Maia: format exception. É uma classe é X. É um objeto criado a partir dessa classe. Então ele vai criar um objeto. Eu sei que vocês não sabem nada de orientação, objeto, mas eu vou falar assim mesmo. Isso aqui é uma classe.
+
+560
+01:16:07.400 --> 01:16:16.089
+Luiz Maia: Isso aqui é um objeto. Então, aqui, nesse comando, ele está criando um objeto X de exceção
+
+561
+01:16:16.250 --> 01:16:25.100
+Luiz Maia: a partir dessa classe e aqui. Eu estou usando um método desse objeto X para complementar a mensagem de erro.
+
+562
+01:16:25.330 --> 01:16:27.569
+Luiz Maia: Isso aqui tem um custo, gente.
+
+563
+01:16:27.980 --> 01:16:35.999
+Luiz Maia: Ok, hoje em dia, isso aqui não vale nada. Mas tem um custo. Se eu puder fazer esse mesmo trabalho,
+
+564
+01:16:36.180 --> 01:16:39.749
+Luiz Maia: assim é menos custoso.
+
+565
+01:16:40.470 --> 01:16:46.189
+Luiz Maia: Então, exceção. Você vai tratar quando você não sabe tratar de outra maneira.
+
+566
+01:16:49.900 --> 01:16:56.170
+Luiz Maia: São erros inesperados aqui. É um erro esperado
+
+567
+01:16:57.470 --> 01:17:00.619
+Luiz Maia: operando. Vamos fazer a mesma coisa aqui.
+
+568
+01:17:01.430 --> 01:17:06.420
+Luiz Maia: Troy Try
+
+569
+01:17:10.280 --> 01:17:12.599
+Luiz Maia: vai mandar aqui a mensagem.
+
+570
+01:17:15.870 --> 01:17:18.060
+Luiz Maia: Vamos fechar aqui o Try.
+
+571
+01:17:18.200 --> 01:17:29.020
+Luiz Maia: Vamos pegar aqui o Cat Format Exception beleza Wright, erro. Olha só a mensagem de erro.
+
+572
+01:17:30.570 --> 01:17:34.410
+Luiz Maia: Ok, obrigado. Erro operando.
+
+573
+01:17:35.310 --> 01:17:41.960
+Luiz Maia: Olha a mensagem de erro. Como ela é precisa operando em
+
+574
+01:17:42.210 --> 01:17:48.979
+Luiz Maia: válido a mensagem de erro. Gente tem que ser uma coisa precisa. Ela não pode ser erro.
+
+575
+01:17:49.380 --> 01:17:50.760
+Luiz Maia: Erros de quê?
+
+576
+01:17:51.090 --> 01:17:52.700
+Luiz Maia: É X,
+
+577
+01:17:52.780 --> 01:18:10.470
+Luiz Maia: ponto message para poder ficar uma coisa mais robusta em matéria de erro. Repara que o nosso operando ele fica sem valor definido, caso haja um erro. O que eu faço aqui?
+
+578
+01:18:10.500 --> 01:18:25.270
+Luiz Maia: Coloca um zero nele. E aí o problema acabou. Isso aí, gente, é linguagem fortemente tipada. Ele não deixa retornar nada que não tenha valor. Isso vai acontecer em Java também
+
+579
+01:18:26.130 --> 01:18:29.170
+Luiz Maia: não sei se vai acontecer. Não lembro. Não tenho certeza,
+
+580
+01:18:29.700 --> 01:18:32.830
+Luiz Maia: mas eu acho que sim. Vocês podem testar em Java.
+
+581
+01:18:33.250 --> 01:18:41.339
+Luiz Maia: Eu até recomendo que vocês façam esse código todo em Python e façam esse mesmo código todo em Java
+
+582
+01:18:41.780 --> 01:18:52.289
+Luiz Maia: para fazer teste para você consolidar as três linguagens na cabeça de vocês. Eu falei para a minha turma hoje de manhã, gente
+
+583
+01:18:52.930 --> 01:18:54.840
+Luiz Maia: tem uma frase que eu adoro.
+
+584
+01:18:55.260 --> 01:18:58.809
+Luiz Maia: Repetição leva à perfeição.
+
+585
+01:18:59.830 --> 01:19:09.930
+Luiz Maia: Você só vai ser um bom programador se você repetir, repetir, repetir na minha turma da manhã. Eu falei para eles o seguinte: olha só.
+
+586
+01:19:10.180 --> 01:19:14.629
+Luiz Maia: Você pega o meu código, abre numa tela, numa janela,
+
+587
+01:19:15.160 --> 01:19:19.870
+Luiz Maia: e aí você começa a programar do zero, começa a calculadora do zero,
+
+588
+01:19:19.990 --> 01:19:34.629
+Luiz Maia: fazendo sozinho. Ah, eu estou com uma dúvida. Aí você vai lá no meu código. Dá uma olhada aí. Continua fazendo a calculadora. Estou com dúvida. Vai no código do Lp. Olha lá, como é que ele fez. Aí? Vai para a calculadora e faz o código.
+
+589
+01:19:34.630 --> 01:19:40.850
+Luiz Maia: Ah, tô com dúvida, beleza. Acabou a calculadora. O que você faz? Apaga tudo que você fez
+
+590
+01:19:41.060 --> 01:19:42.760
+Luiz Maia: e começa do zero.
+
+591
+01:19:44.180 --> 01:19:57.849
+Luiz Maia: Ah, estou com dúvida. Vai lá no código do Lp Cola. Aí eu copiei lá, parará. Continuei, tô com dúvida. Vai lá. Ok, terminou. Apaga tudo. Começa de novo. Do zero
+
+592
+01:19:58.500 --> 01:20:03.719
+Luiz Maia: até você fazer o código inteiro sem olhar o meu.
+
+593
+01:20:03.960 --> 01:20:05.920
+Luiz Maia: É assim que você vai aprender.
+
+594
+01:20:06.680 --> 01:20:08.200
+Luiz Maia: Vou repetir a frase.
+
+595
+01:20:08.800 --> 01:20:11.700
+Luiz Maia: A repetição leva à perfeição.
+
+596
+01:20:13.320 --> 01:20:16.099
+Luiz Maia: Outra frase importante. Do Lp: também.
+
+597
+01:20:16.370 --> 01:20:24.029
+Luiz Maia: Ele pede, diz: você aprende mais com seus erros do que com seus acertos.
+
+598
+01:20:24.630 --> 01:20:32.000
+Luiz Maia: Então pega o teu espelho do banheiro e escreve isso lá.
+
+599
+01:20:32.100 --> 01:20:36.139
+Luiz Maia: Eu aprendo mais com meus erros do que os meus acertos.
+
+600
+01:20:36.340 --> 01:20:49.670
+Luiz Maia: A repetição leva à perfeição. Escreve isso no teu braço com caneta. Coloca uma tatuagem, pega um pedaço de papel, coloca esse pendurado no teu quarto. Faz o que você quiser.
+
+601
+01:20:49.670 --> 01:20:57.679
+Luiz Maia: Mas essas frases, cara, apesar de fazerem efeito, elas fazem um efeito na cabeça da gente.
+
+602
+01:20:57.880 --> 01:21:00.950
+Luiz Maia: Então é repetição.
+
+603
+01:21:01.070 --> 01:21:09.960
+Luiz Maia: Vocês acham que eu aprendi a programar desse jeito por conta do Divino Espírito Santo
+
+604
+01:21:10.070 --> 01:21:13.650
+Luiz Maia: pô são anos e anos fazendo código.
+
+605
+01:21:13.880 --> 01:21:19.389
+Luiz Maia: Pode o que eu faço de olhos fechados. Eu não preciso de cola para fazer código.
+
+606
+01:21:19.780 --> 01:21:28.100
+Luiz Maia: Eu faço isso naturalmente. Por quê? Porque eu fiz isso dezenas de vezes. Centenas de vezes.
+
+607
+01:21:28.250 --> 01:21:29.999
+Luiz Maia: Você não vai
+
+608
+01:21:30.260 --> 01:21:39.050
+Luiz Maia: conseguir programar se você não programar, porra! Alguém aprendeu a andar de bicicleta olhando um vídeo no Youtube.
+
+609
+01:21:39.540 --> 01:21:41.810
+Luiz Maia: Alguém fala pra mim?
+
+610
+01:21:42.560 --> 01:21:51.699
+Luiz Maia: Alguém aprendeu a jogar futebol jogando Playstation, o Fifa ou outro jogo qualquer de futebol. Não,
+
+611
+01:21:52.270 --> 01:21:59.740
+Luiz Maia: você tem que fazer o que para aprender a jogar futebol, jogar futebol. Você quer aprender a andar de bicicleta. Você tem que andar de bicicleta, pô.
+
+612
+01:21:59.880 --> 01:22:07.089
+Luiz Maia: Você quer aprender a jogar vôlei? Você tem que jogar vôlei. Não vai ser um jogo de vôlei que você vai aprender a fazer alguma coisa.
+
+613
+01:22:08.040 --> 01:22:10.540
+Luiz Maia: A programação é a mesma coisa. Gente,
+
+614
+01:22:10.680 --> 01:22:21.099
+Luiz Maia: você tem que programar, programar, programar, programar, programar, programar, programar. Tem um monte de desafios na internet. Para você fazer.
+
+615
+01:22:22.100 --> 01:22:28.469
+Luiz Maia: Você tem que fazer listas de exercícios. Você tem que fazer desafios. E isso tem que fazer, cara.
+
+616
+01:22:29.830 --> 01:22:37.779
+Luiz Maia: Você não vai aprender a programar com as minhas aulas. Só eu ajudo e ajudo bastante
+
+617
+01:22:38.520 --> 01:22:49.139
+Luiz Maia: com a experiência que eu tenho. Eu ajudo muito, mas não é o suficiente. Eu preciso que você dedique horas do seu dia
+
+618
+01:22:49.380 --> 01:22:58.080
+Luiz Maia: programando final de semana. Esquece a brincadeira do final de semana final de semana. Eu trabalho, gente,
+
+619
+01:22:58.200 --> 01:23:00.710
+Luiz Maia: porra, trabalha também, cara.
+
+620
+01:23:02.130 --> 01:23:07.429
+Luiz Maia: Ok, deixa lá um espaço lá para teu lazer. Mas tem que programar gente.
+
+621
+01:23:07.940 --> 01:23:13.489
+Luiz Maia: Refaz esse código do zero. Vamos ver se funciona. Que é o mais importante.
+
+622
+01:23:13.810 --> 01:23:18.520
+Luiz Maia: Como eu falei para vocês, eu aprendo mais com meus erros do que com meus acertos.
+
+623
+01:23:18.890 --> 01:23:24.809
+Luiz Maia: Bom, agora o nosso código não quebra mais se eu entrar com a opção a aqui.
+
+624
+01:23:25.380 --> 01:23:31.259
+Luiz Maia: Olha lá, não quebrou o código. Ele pede o operando um. Se eu botar a.
+
+625
+01:23:31.780 --> 01:23:35.350
+Luiz Maia: Ele também não quebra se eu botar.
+
+626
+01:23:36.020 --> 01:23:38.380
+Luiz Maia: Ah, de novo, também não quebra.
+
+627
+01:23:39.460 --> 01:23:41.780
+Luiz Maia: Ele dá opção inválida.
+
+628
+01:23:41.980 --> 01:23:47.310
+Luiz Maia: Mas o código não quebrou o programa. Continuou seguindo.
+
+629
+01:23:47.800 --> 01:23:48.910
+Luiz Maia: Tá certo.
+
+630
+01:23:51.360 --> 01:23:54.759
+Luiz Maia: Na próxima aula, a gente vai ver.
+
+631
+01:23:55.850 --> 01:24:02.669
+Luiz Maia: Vou pegar esse código aqui e colocar para vocês lá no drive.
+
+632
+01:24:04.030 --> 01:24:06.700
+Luiz Maia: Eu acho que ele já está lá.
+
+633
+01:24:09.780 --> 01:24:14.130
+Luiz Maia: Já está lá. Inclusive vou colocar agora de novo peraí.
+
+634
+01:24:14.950 --> 01:24:17.509
+Luiz Maia: Deixa eu pegar ele aqui.
+
+635
+01:24:18.800 --> 01:24:27.570
+Luiz Maia: Cadê área de. Não, não é isso. Espera aí. Documentos calculadora, tá tá bonito,
+
+636
+01:24:28.630 --> 01:24:40.780
+Luiz Maia: cara. Esse quadriculador é maravilhoso, porque ele mostra uma série de conceitos importantes para vocês. Tá aqui, ó calculadora.
+
+637
+01:24:41.830 --> 01:24:46.799
+Luiz Maia: Estou botando lá para vocês. Aí até a versão quatro,
+
+638
+01:24:46.940 --> 01:24:52.580
+Luiz Maia: já estamos na versão quatro, hein? Vai ter cinco, seis, sete, oito. Talvez até mais. Eu não sei.
+
+639
+01:24:53.640 --> 01:25:00.040
+Luiz Maia: A aula quatro já está disponível para vocês para semana que vem. O que você tem que fazer, pô
+
+640
+01:25:00.200 --> 01:25:15.360
+Luiz Maia: se você é um aluno proativo, o que você tem que fazer? Você tem que fazer o quê? Você tem que olhar a aula quatro e falar. Pô Lp vai fazer o quê? Comando de repetição, olhar. O que está fazendo aqui? Ó, olha lá
+
+641
+01:25:15.610 --> 01:25:22.199
+Luiz Maia: olhar esse código, essas transparências aqui, pelo menos para saber e ter ideia do que vai ser na próxima aula,
+
+642
+01:25:22.430 --> 01:25:23.180
+Luiz Maia: tá?
+
+643
+01:25:23.780 --> 01:25:33.219
+Luiz Maia: É isso aí, gente. Uma boa noite para vocês. Se tiverem alguma dúvida, é só perguntar. Eu estou à disposição de vocês.
+
+644
+01:25:34.120 --> 01:25:38.170
+Luiz Maia: Que loucura isso, gente! Meu Deus do céu! É muita coisa.
+
+645
+01:25:39.460 --> 01:25:42.720
+Luiz Maia: Bebê aula doze. Ok, isso aqui já foi.
+
+646
+01:25:45.910 --> 01:25:50.890
+Luiz Maia: Boa noite, gente. Se vocês quiserem perguntar alguma coisa, eu ainda estou vivo.
+
+647
+01:25:51.080 --> 01:25:55.850
+Luiz Maia: É, é, não sei até quando, mas eu estou.
+
+648
+01:25:56.710 --> 01:25:57.050
+Jorge José Luiz Santos da Silva: Obrigado.
+
+649
+01:25:57.050 --> 01:25:58.270
+Luiz Maia: É bom demais.
+
+650
+01:25:58.270 --> 01:25:58.930
+Jorge José Luiz Santos da Silva: E aí?
+
+651
+01:25:59.590 --> 01:26:05.450
+Luiz Maia: Eu não sei até quando, cara que eu vou estar vivo, cara. Mas eu continuo aqui.
+
+652
+01:26:05.450 --> 01:26:07.280
+Jorge José Luiz Santos da Silva: Vai dar muita aula ainda, professor, fica tranquilo.
+
+653
+01:26:07.280 --> 01:26:12.259
+Luiz Maia: Eu ainda estou aqui. Como o filme lá do
+
+654
+01:26:16.080 --> 01:26:17.669
+Luiz Maia: do Walter Sales.
+
+655
+01:26:19.800 --> 01:26:22.910
+Luiz Maia: Ai ai foi uma aula gostosa. Gostei.
+
+656
+01:26:22.910 --> 01:26:24.680
+Jorge José Luiz Santos da Silva: Foi sim. Ótima aula, Professor.
+
+657
+01:26:24.680 --> 01:26:28.930
+Luiz Maia: Que isso, cara, foi vocês que me dão esse.
+
+658
+01:26:29.130 --> 01:26:34.829
+Luiz Maia: Essa inspiração para a aula. Vocês que me dão essa inspiração. As perguntas de vocês são muito boas.
+
+659
+01:26:34.990 --> 01:26:41.630
+Luiz Maia: Tô adorando dar aula pra vocês. Ainda bem que o Rafael foi embora.
+
+660
+01:26:42.650 --> 01:26:45.789
+Luiz Maia: Ele não me ouça.
+
+661
+01:26:45.790 --> 01:26:46.450
+Jorge José Luiz Santos da Silva: E aí?
+
+662
+01:26:46.450 --> 01:27:03.509
+Luiz Maia: O Rafael é excelente professor. Excelente profissional. Mas eu fiquei feliz dele ter saído eu. Muito bons boas perguntas. Boas ideias. Uma boa noite para vocês. Porque amanhã eu dou aula às sete da manhã. Boa noite.
+
+663
+01:27:03.510 --> 01:27:05.219
+Jorge José Luiz Santos da Silva: Descanso. Professor, falou. Galera.
+
+664
+01:27:05.220 --> 01:27:07.749
+Luiz Maia: Obrigado. Eu vou tentar.
+
