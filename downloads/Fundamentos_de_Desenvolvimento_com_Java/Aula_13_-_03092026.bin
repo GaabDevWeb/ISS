@@ -1,0 +1,2678 @@
+WEBVTT
+
+1
+00:00:31.880 --> 00:00:32.560
+Audio shared by Elberth Moraes: E aí?
+
+2
+00:00:44.080 --> 00:00:44.790
+Audio shared by Elberth Moraes: E aí?
+
+3
+00:00:53.540 --> 00:00:54.230
+Audio shared by Elberth Moraes: Obrigada.
+
+4
+00:01:36.200 --> 00:01:36.950
+Audio shared by Elberth Moraes: E aí?
+
+5
+00:01:37.380 --> 00:01:38.590
+Audio shared by Elberth Moraes: Você.
+
+6
+00:01:39.490 --> 00:01:40.190
+Audio shared by Elberth Moraes: E aí?
+
+7
+00:01:45.250 --> 00:01:46.420
+Audio shared by Elberth Moraes: Não.
+
+8
+00:04:48.760 --> 00:04:50.190
+Elberth Moraes: Salve, salve, galera!
+
+9
+00:04:52.450 --> 00:04:53.560
+Elberth Moraes: Bora lá!
+
+10
+00:04:56.400 --> 00:04:57.620
+Elberth Moraes: Todo mundo aí!
+
+11
+00:05:08.680 --> 00:05:09.760
+Elberth Moraes: Boa!
+
+12
+00:05:10.490 --> 00:05:15.030
+Elberth Moraes: Consegue ouvir bem. Tela já aparece para vocês. Podemos começar?
+
+13
+00:05:17.400 --> 00:05:18.670
+Elberth Moraes: Vamos com tudo.
+
+14
+00:05:26.120 --> 00:05:29.320
+Elberth Moraes: Tá bom esperar vocês darem um joinha, pelo menos.
+
+15
+00:05:31.120 --> 00:05:31.870
+Elberth Moraes: Tchau.
+
+16
+00:05:32.260 --> 00:05:37.819
+Elberth Moraes: E aí, bora lá, galera presenteia. Aqui trouxe. Comecei o nosso papo de hoje
+
+17
+00:05:38.460 --> 00:05:51.639
+Elberth Moraes: com essa nossa tela, porque antes da gente começar a nossa etapa de hoje, eu queria olhar mais uma vez aqui para esse caminho que a gente está percorrendo em direção ao nosso
+
+18
+00:05:51.640 --> 00:06:04.439
+Elberth Moraes: Tp3 observem que a gente está seguindo realmente direitinho esse nosso caminho para a gente chegar amanhã, amanhã já seria já um papo de integração, já da nossa,
+
+19
+00:06:04.620 --> 00:06:22.989
+Elberth Moraes: do nosso projeto. E aí a gente começou há muito tempo atrás, lá na aula zero aqui e aí, essa aula zero. A gente fez uma mudança importante na forma que a gente pensava: já até aquele momento, a gente estava acostumado a resolver tudo dentro do Mei.
+
+20
+00:06:23.100 --> 00:06:38.749
+Elberth Moraes: E aí a primeira mudança que tivemos foi a gente perceber que a gente pode olhar para um problema, identificar aquilo que existe naquele contexto e começar a representá lo através de classes, através de objetos,
+
+21
+00:06:38.940 --> 00:06:49.389
+Elberth Moraes: e é aí que a gente começou a ver que apareceram conceitos que hoje já estão ficando familiares. Estamos já familiarizados,
+
+22
+00:06:49.530 --> 00:07:04.189
+Elberth Moraes: que são os termos, classes, objetos, atributos, métodos. E aí a gente começou a entender que uma classe funciona como uma definição, enquanto a gente pode criar diferentes objetos a partir dela.
+
+23
+00:07:04.430 --> 00:07:22.599
+Elberth Moraes: Quando a gente veio aqui para essa segunda aula, a gente avançou nessa ideia, e a gente percebeu que os objetos não existem apenas para guardar informações. Eles possuem um Estado formado pelos valores dos seus atributos, mas também possuem comportamentos.
+
+24
+00:07:22.610 --> 00:07:31.669
+Elberth Moraes: E foi aí que a gente começou a tirar algumas responsabilidades de fora do objeto. E colocá lo dentro do objeto.
+
+25
+00:07:31.670 --> 00:07:43.180
+Elberth Moraes: E aí o objeto passou não apenas a possuir informações, mas também a saber, realizar algumas ações relacionadas com essas informações.
+
+26
+00:07:43.340 --> 00:07:44.810
+Elberth Moraes: Na aula dois,
+
+27
+00:07:45.350 --> 00:08:03.209
+Elberth Moraes: a gente aprofundou justamente nesses comportamentos. A gente percebeu que o método pode precisar receber informações para conseguir realizar seu trabalho. E também ele pode precisar devolver uma informação depois de realizar algum processamento.
+
+28
+00:08:03.270 --> 00:08:17.379
+Elberth Moraes: Então a gente começou a enxergar um método, quase como uma pequena unidade de trabalho. Tipo, ele pode receber dados, processá los, dependendo da sua responsabilidade. Ele produz um resultado.
+
+29
+00:08:17.500 --> 00:08:24.789
+Elberth Moraes: Beleza. A gente também percebeu que os métodos podem colaborar entre si. Um comportamento do objeto
+
+30
+00:08:24.860 --> 00:08:37.640
+Elberth Moraes: pode utilizar outro comportamento para cumprir ali uma responsabilidade maior. E aí a gente chegou na aula três, quando surgiu uma preocupação um pouco diferente.
+
+31
+00:08:37.750 --> 00:08:53.050
+Elberth Moraes: Então, até aquele momento, os nossos objetos já possuíam um Estado e já possuíam um comportamento. Mas a gente começou a perceber que não era interessante a gente deixar os seus dados completamente expostos.
+
+32
+00:08:53.140 --> 00:09:02.709
+Elberth Moraes: Que a gente permitisse que qualquer parte do programa alterasse qualquer informação de qualquer maneira. E aí? Foi quando a gente entrou
+
+33
+00:09:02.760 --> 00:09:07.120
+Elberth Moraes: no papo de encapsulamento. Esse carinha daqui da aula três,
+
+34
+00:09:07.160 --> 00:09:15.049
+Elberth Moraes: a gente começou a pensar não apenas em guardar informações, mas também em protegê las.
+
+35
+00:09:15.060 --> 00:09:27.709
+Elberth Moraes: A gente começou a controlar a maneira como essas informações eram consultadas como que elas eram modificadas. E aí os Getters e os Setters apareceram
+
+36
+00:09:27.710 --> 00:09:44.710
+Elberth Moraes: nesse nosso contexto. E mais importante do que a gente decorar esses nomes todos. A gente começou a perceber que o próprio objeto poderia estabelecer algumas regras para cuidar do seu estado e conseguir evitar algumas inconsistências.
+
+37
+00:09:44.790 --> 00:09:55.690
+Elberth Moraes: E agora a gente chega aqui na nossa quarta etapa. Quarta aula. Mas é a nossa quinta etapa que até aqui, a gente aprendeu a criar objetos.
+
+38
+00:09:55.890 --> 00:10:10.250
+Elberth Moraes: Entendemos que eles possuem estado e comportamento. A gente aprendeu como que esses comportamentos podem receber e devolver informações. E vimos como que a gente pode proteger e controlar o Estado.
+
+39
+00:10:10.530 --> 00:10:12.360
+Elberth Moraes: Hoje,
+
+40
+00:10:12.970 --> 00:10:25.320
+Elberth Moraes: a gente vai olhar outro momento muito importante dentro de um objeto, que é justamente a sua criação, o nascimento desse objeto.
+
+41
+00:10:25.460 --> 00:10:35.089
+Elberth Moraes: Quando o objeto é criado. Imagine assim, tá, quais informações que ele precisa possuir para fazer algum sentido.
+
+42
+00:10:35.250 --> 00:10:46.020
+Elberth Moraes: Observe que qualquer objeto do mundo real, qualquer um. Se eu disser que sim, se eu sei lá. Acabei de cadastrar o nosso contexto. Acabei de cadastrar um filme.
+
+43
+00:10:46.200 --> 00:10:53.300
+Elberth Moraes: Existem algumas informações que provavelmente a gente espera que esse filme já possua.
+
+44
+00:10:53.690 --> 00:10:56.370
+Elberth Moraes: Se a gente cadastrou, sei lá, um aluno,
+
+45
+00:10:56.470 --> 00:11:13.749
+Elberth Moraes: também existem informações que talvez sejam fundamentais desde o início da criação desse aluno. O mesmo aconteceria para funcionário, para veículo, para um pedido. Sei lá, qualquer outra coisa que a gente conseguir representar.
+
+46
+00:11:13.850 --> 00:11:29.799
+Elberth Moraes: Então, hoje a gente vai discutir como que a gente quer que os nossos objetos sejam criados. A gente vai perceber que existe uma diferença entre criar uma coisa completamente vazia e depois preenchê las aos pouquinhos,
+
+47
+00:11:29.860 --> 00:11:35.370
+Elberth Moraes: a criar alguma coisa que já nasce com determinadas informações.
+
+48
+00:11:35.460 --> 00:11:41.989
+Elberth Moraes: E aí isso nos leva a um outro conceito da nossa aula, que é o conceito de construtor.
+
+49
+00:11:42.060 --> 00:11:56.680
+Elberth Moraes: Mas eu queria que a gente pensasse no construtor primeiro pelo problema que ele resolve, não pela sintaxe dele. Um construtor ajuda muito a gente a definir um objeto
+
+50
+00:11:56.760 --> 00:12:11.829
+Elberth Moraes: e definir como que esse objeto começa a sua existência dentro do nosso mundo. Java, isso traz algumas questões importantes, algumas questões interessantes para a gente observar
+
+51
+00:12:11.920 --> 00:12:19.840
+Elberth Moraes: quando a gente está fazendo lá o uso de um construtor. A gente tem que ficar ligado em quais informações precisam ser obrigatórias.
+
+52
+00:12:19.950 --> 00:12:35.830
+Elberth Moraes: Todas as informações precisam existir desde o início. Talvez não. Algumas informações podem ser acrescentadas depois. Faz algum sentido isso. A gente pode ter maneiras diferentes
+
+53
+00:12:35.830 --> 00:12:50.280
+Elberth Moraes: de criar um objeto de uma mesma classe. Sim, a gente vai ver que a gente consegue. Existe um conceito da programação orientada para a gente usar nisso. Sei lá quem deve decidir o que é necessário
+
+54
+00:12:50.390 --> 00:12:53.209
+Elberth Moraes: para cada objeto fazer sentido.
+
+55
+00:12:53.420 --> 00:13:03.129
+Elberth Moraes: Essas perguntas, todas elas vão levar a gente, aos conceitos que aparecem aqui nesse nosso mapa
+
+56
+00:13:03.650 --> 00:13:19.309
+Elberth Moraes: como construtores, parâmetros. Estado inicial, referência do próprio objeto. Um conceito chamado sobrecarga, também, que a gente vai estudar. Então, para a gente resumir aqui, toda essa nossa
+
+57
+00:13:19.320 --> 00:13:33.069
+Elberth Moraes: caminhada. Até agora, a gente teve ali uma etapa que a gente aprendeu a criar objeto. Depois a gente aprendeu que eles possuem estado de comportamento. A gente entendeu melhor como os seus métodos recebem e produzem resultados.
+
+58
+00:13:33.210 --> 00:13:43.360
+Elberth Moraes: Depois a gente aprendeu a proteger e controlar o estado desses objetos. E hoje a gente vai aprender a pensar em como esses objetos devem nascer.
+
+59
+00:13:44.600 --> 00:13:55.289
+Elberth Moraes: Podemos começar galera. Usei aqui dez minutinhos pra gente dar uma bela contextualizada. E aí eu queria entrar lá no nosso código e já começar
+
+60
+00:13:56.060 --> 00:13:58.720
+Elberth Moraes: a pôr a mão na massa.
+
+61
+00:13:58.870 --> 00:14:05.600
+Elberth Moraes: O som está bom para vocês, né? Vocês não estão sentindo nenhum tipo de problema? A gente pode começar.
+
+62
+00:14:05.810 --> 00:14:09.830
+Elberth Moraes: Deixa eu fechar aqui essa minha mega figura
+
+63
+00:14:15.060 --> 00:14:18.219
+Elberth Moraes: tem muita dificuldade em fechar essa figura. Fechei aqui.
+
+64
+00:14:19.460 --> 00:14:23.299
+Elberth Moraes: Isso aqui. Eu estava usando na aula anterior. E a gente vai usar
+
+65
+00:14:23.640 --> 00:14:27.380
+Elberth Moraes: esse carinha daqui. O nosso querido
+
+66
+00:14:27.700 --> 00:14:41.090
+Elberth Moraes: Euclides eclipses perfeito galera, vamos começar aqui o nosso papo. A gente sempre começa o nosso papo falando: por que a gente vai estudar construtor?
+
+67
+00:14:41.260 --> 00:14:49.000
+Elberth Moraes: Como que a gente vai aprender. E o que a gente vai fazer hoje. Então a nossa aula começa
+
+68
+00:14:49.290 --> 00:14:54.899
+Elberth Moraes: justamente aqui, de onde a gente parou há muito tempo atrás, na semana passada.
+
+69
+00:14:55.290 --> 00:14:58.890
+Elberth Moraes: Até agora, a gente já conseguiu. Observem aqui
+
+70
+00:14:59.420 --> 00:15:09.170
+Elberth Moraes: criar classes, criar objetos, colocar atributos, criar as nossas,
+
+71
+00:15:10.210 --> 00:15:21.739
+Elberth Moraes: os nossos objetos, essas coisas todas, colocar lá os métodos de aprender a executar esses métodos sozinhos e por dentro de outros métodos. E aí, hoje o papo vai ser
+
+72
+00:15:22.470 --> 00:15:25.230
+Elberth Moraes: sobre esse tal surgimento de um objeto.
+
+73
+00:15:25.480 --> 00:15:37.300
+Elberth Moraes: Então, por que a gente tem que estudar esse tal de construtores? A gente já viu construtor galera um monte de vezes, mas a gente acabou nem conversando sobre isso.
+
+74
+00:15:37.420 --> 00:15:41.300
+Elberth Moraes: Quando a gente está dentro de uma classe de testes dessa.
+
+75
+00:15:41.400 --> 00:15:44.819
+Elberth Moraes: E a gente precisa fazer isso daqui. Isso aqui é um construtor.
+
+76
+00:15:44.970 --> 00:15:48.249
+Elberth Moraes: Isso aqui é a maneira que a gente está construindo um objeto.
+
+77
+00:15:48.270 --> 00:16:05.230
+Elberth Moraes: Então a gente está construindo objeto filme. A gente também construiu aqui objeto aluno. Então a gente constrói até o scanner está sendo criado de uma forma. Aqui existe esse carinha daqui sendo passado como parâmetro para o scanner
+
+78
+00:16:05.280 --> 00:16:11.650
+Elberth Moraes: ser criado. E aí a gente cai na primeira pergunta: por que a gente tem que estudar essa bagaça?
+
+79
+00:16:11.830 --> 00:16:18.120
+Elberth Moraes: O objetivo da gente? A gente tem que estudar isso porque a gente quer criar objetos
+
+80
+00:16:18.180 --> 00:16:23.550
+Elberth Moraes: que faça sentido desde o momento que eles existem.
+
+81
+00:16:23.590 --> 00:16:41.090
+Elberth Moraes: Então, quanto mais o sistema vai crescendo, menos espaço existe para os objetos incompletos, para os objetos inconsistentes. E como que a gente vai aprender esse negócio, a gente vai começar por essa nossa classe
+
+82
+00:16:41.720 --> 00:16:58.110
+Elberth Moraes: de filme, essa nossa classe. Aqui a gente aprende o fundamento da programação, orientar do objeto, e depois a gente parte para dentro do outro. Então a gente vai começar por essa classe, que a gente já conhece bastante. A gente vai encontrar um problema nela. A gente vai evoluí lo.
+
+83
+00:16:58.180 --> 00:17:06.630
+Elberth Moraes: E depois a gente vai fazer a mesma ideia. E um novo exemplo para a gente mostrar que esse conceito funciona para qualquer classe.
+
+84
+00:17:06.720 --> 00:17:15.529
+Elberth Moraes: E o que a gente vai fazer? A gente vai descobrir o problema de criar esses objetos vazios. A gente vai criar o nosso primeiro construtor.
+
+85
+00:17:15.640 --> 00:17:32.649
+Elberth Moraes: A gente vai entender um pouquinho mais sobre essa palavrinha. Diz que a gente continuou que a gente usou um dia desse. A gente já tinha algumas vezes usado aqui as palavrinhas, diz, mas a gente tem uma nova forma para ele. A gente vai criar diferentes formas de construir um objeto.
+
+86
+00:17:32.780 --> 00:17:38.570
+Elberth Moraes: E a gente vai tentar conectar isso tudo com o nosso Dp3
+
+87
+00:17:38.790 --> 00:17:41.580
+Elberth Moraes: Beleza. Deixa eu começar aqui por esse filme.
+
+88
+00:17:42.370 --> 00:17:47.379
+Elberth Moraes: E aí, sempre que a gente olha para o filme, a gente tem essas informações todas aí.
+
+89
+00:17:47.580 --> 00:17:52.189
+Elberth Moraes: Se eu disser assim? Acabei de criar um filme.
+
+90
+00:17:52.430 --> 00:17:57.680
+Elberth Moraes: Ok, quais informações que vocês esperam que esse filme tenha?
+
+91
+00:17:59.670 --> 00:18:05.350
+Elberth Moraes: Acabei de criar um filme. Que informações vocês acham que seria importante a gente ter?
+
+92
+00:18:10.830 --> 00:18:24.280
+Elberth Moraes: Eu olhando ali para os meus atributos, eu tenho ali título. Eu tenho ano. Eu tenho avaliação, mas a gente pode ter o gênero. A gente pode ter a sinopse. A gente pode ter a duração, o gênero,
+
+93
+00:18:24.460 --> 00:18:40.529
+Elberth Moraes: a avaliação. A gente tem ali. Está tudo aí. Tudo registrado. Então, hoje a gente vai descobrir quais dessas informações pertencem realmente ao nascimento de um objeto. E quais que a gente pode fazer depois? Ok,
+
+94
+00:18:40.530 --> 00:18:50.710
+Elberth Moraes: então a gente começa aqui batendo um papo cabeça em cima disso. Eu estou aqui dentro dessa nossa classe de filme. Mas eu tenho aqui essa nossa classe de teste de filme.
+
+95
+00:18:50.860 --> 00:18:55.289
+Elberth Moraes: A gente consegue chegar aqui em cima, como a gente já fez algumas vezes,
+
+96
+00:18:55.670 --> 00:19:02.820
+Elberth Moraes: e fazer isso daqui, né? Filme filme igual a New filme desse jeito aqui.
+
+97
+00:19:03.010 --> 00:19:06.869
+Elberth Moraes: E aí, quando eu chego aqui embaixo, eu boto filme impressão.
+
+98
+00:19:07.060 --> 00:19:09.070
+Elberth Moraes: Estou chamando um método de lá.
+
+99
+00:19:09.270 --> 00:19:15.700
+Elberth Moraes: Aqui existe um objeto nessas poucas linhas que eu criei.
+
+100
+00:19:15.910 --> 00:19:22.680
+Elberth Moraes: O Java criou lá um espaço, memória. E ele está reservado para a gente colocar um filme.
+
+101
+00:19:23.160 --> 00:19:24.050
+Elberth Moraes: Mas é
+
+102
+00:19:24.250 --> 00:19:35.270
+Elberth Moraes: o que é esse filme? Observem aqui comigo. Quando eu mando executar esse cara, tô olhando só para esse aqui de cima, ok? Essa galera toda daqui. Ó,
+
+103
+00:19:38.860 --> 00:19:41.380
+Elberth Moraes: tirei de circulação um pouquinho.
+
+104
+00:19:41.490 --> 00:19:44.210
+Elberth Moraes: Ok, vou rodar essa minha classe
+
+105
+00:19:51.090 --> 00:19:57.720
+Elberth Moraes: e observem que eu tenho essa saída. Aí. O título está nulo. O ano está zerado.
+
+106
+00:19:57.840 --> 00:20:10.249
+Elberth Moraes: A avaliação também está zerada. Isso aí acontece porque o Java atribui lá os seus valores padrões. A gente já viu que o String tem o valor inicial nu?
+
+107
+00:20:10.320 --> 00:20:27.179
+Elberth Moraes: O índe tem o valor zero. O Double tem o zero,zero. O Bullying tem o falso. E esses valores não significam. Assim que nós escolhemos. Essas informações significam apenas que o objeto existe está ali dentro,
+
+108
+00:20:27.250 --> 00:20:34.219
+Elberth Moraes: e aí existe uma diferença entre existir e entre. Está pronto.
+
+109
+00:20:34.600 --> 00:20:40.169
+Elberth Moraes: Então, a gente tem aqui o Java está satisfeito com o que rolou
+
+110
+00:20:40.180 --> 00:20:55.360
+Elberth Moraes: o nosso problema de negócio. Não está muito satisfeito. Esse objeto existe. Esse carinha daqui existe, mas ele ainda não representa um filme de verdade. E aí. O que a gente vai fazer
+
+111
+00:20:55.890 --> 00:20:59.519
+Elberth Moraes: quando a gente pega esse nosso filme daqui
+
+112
+00:20:59.710 --> 00:21:03.910
+Elberth Moraes: e começa a fazer um preenchimento nas informações dele,
+
+113
+00:21:04.080 --> 00:21:16.650
+Elberth Moraes: a gente começa a ver que esse cara começa a ficar um pouco mais completo. Então eu tenho aqui um filme. Esse filme não tem nenhuma informação preenchida. Aí eu vim aqui para baixo,
+
+114
+00:21:17.060 --> 00:21:21.569
+Elberth Moraes: botei esse filme e começo a fazer o preenchimento dos seus campos.
+
+115
+00:21:21.970 --> 00:21:30.030
+Elberth Moraes: Então eu tenho lá o preenchimento do campo ano e do campo.
+
+116
+00:21:33.560 --> 00:21:34.600
+Elberth Moraes: Título.
+
+117
+00:21:34.750 --> 00:21:38.010
+Elberth Moraes: Botei aqui título.
+
+118
+00:21:40.610 --> 00:21:42.160
+Elberth Moraes: Pronto, tá aqui dentro.
+
+119
+00:21:42.450 --> 00:21:47.780
+Elberth Moraes: E aí? Como é que é o esquema. Primeiro, a gente cria, depois a gente configura
+
+120
+00:21:47.900 --> 00:22:03.540
+Elberth Moraes: e depois a gente desenha aqui esse nosso filme. Ou seja, essa estratégia daqui funciona bem, não tem problema que a gente fez até agora. A gente fez isso o tempo inteiro, preenchendo um monte de campo,
+
+121
+00:22:03.770 --> 00:22:16.710
+Elberth Moraes: mas tem um probleminha que a gente pode ver entre a primeira linha e as outras linhas que a gente tem, porque esse objeto acaba ficando um pouco incompleto.
+
+122
+00:22:16.880 --> 00:22:22.030
+Elberth Moraes: Imagine o seguinte: imagine que a gente tenha dentro da nossa classe de filme.
+
+123
+00:22:22.170 --> 00:22:34.930
+Elberth Moraes: A gente tem essa galera toda. Aqui. Título, ano, avaliação, inclusive essa avaliação a gente até blindou ela para ela ser preenchida. Só através desse nosso método, avaliar
+
+124
+00:22:35.070 --> 00:22:39.209
+Elberth Moraes: esse método. Avaliar. Aqui, ele pega a avaliação,
+
+125
+00:22:39.230 --> 00:22:51.119
+Elberth Moraes: faz um teste para depois a gente jogar esse cara aqui para dentro. Legal, essa avaliação também está sendo usada aqui dentro de um método privado. Calcular nota em estrelas esse método aqui,
+
+126
+00:22:51.120 --> 00:23:02.689
+Elberth Moraes: ele é chamado aqui, dentro de outros dois. Então a gente não precisa se importar muito com ele. E aqui para baixo, a gente disponibilizou dois campos para serem preenchidos. O título e o ano.
+
+127
+00:23:02.810 --> 00:23:18.549
+Elberth Moraes: Ou seja, a gente começa a ver que título, ano e avaliação? Nem todos eles, nem todos esses três campos a gente precisa criar quando a gente define lá um objeto.
+
+128
+00:23:18.820 --> 00:23:23.839
+Elberth Moraes: Então a gente está vendo que, de cara em todos os carinhas ali que a gente preencheu.
+
+129
+00:23:24.000 --> 00:23:37.199
+Elberth Moraes: A gente tem os carinhas certinhos. A gente tem o título. A gente tem o ano, título ano, tá vendo? Todos eles. A gente tem título e ano. A gente não tem muita coisa além disso.
+
+130
+00:23:37.240 --> 00:23:47.589
+Elberth Moraes: Então como é que eu posso fazer? Eu posso chegar lá dentro daquela minha classe de filme aqui dentro. Essa classe. Hoje, se a gente reduzir aqui só as assinaturas dos métodos,
+
+131
+00:23:47.950 --> 00:23:52.079
+Elberth Moraes: você consegue ver que não tem nenhuma outra implementação
+
+132
+00:23:52.250 --> 00:23:56.309
+Elberth Moraes: que represente esse cara que está aqui. Esse construtor,
+
+133
+00:23:56.460 --> 00:24:03.089
+Elberth Moraes: sempre que você clica em alguma coisa aqui fora com o Control. Tipo assim, Control e vem em cima de impressão.
+
+134
+00:24:03.200 --> 00:24:05.299
+Elberth Moraes: Ele me leva para dentro do impressão
+
+135
+00:24:05.490 --> 00:24:12.870
+Elberth Moraes: contra sete títulos. Ele me leva para dentro dos sete títulos contra o sete anos. Ele me liga para dentro dos sete anos
+
+136
+00:24:12.970 --> 00:24:15.860
+Elberth Moraes: contra o filme. Ele me leva pra dentro de filme
+
+137
+00:24:16.090 --> 00:24:35.019
+Elberth Moraes: contra o construtor de filme. Ele vem para dentro da minha classe de filme também. Ele não vai para uma coisa específica ali dentro, porque ela parte do princípio que toda classe tem um construtor, mas que a gente não precisa implementar. A gente só precisa implementar se a gente quiser.
+
+138
+00:24:35.290 --> 00:24:40.499
+Elberth Moraes: Como é que a gente vai querer? Imaginem assim. Eu tenho esse cara daqui.
+
+139
+00:24:41.060 --> 00:24:43.890
+Elberth Moraes: Esse filme ele começou assim.
+
+140
+00:24:44.170 --> 00:24:51.839
+Elberth Moraes: E aí, quando a gente mandou rodar esse cara, vocês viram que no nosso console apareceu esse tipo de informação aqui
+
+141
+00:24:52.270 --> 00:25:06.060
+Elberth Moraes: legal. É normal. A gente viu que não tinha nenhuma informação. Mas imagine o seguinte. Imagine se, por algum motivo, o nosso chefe aqui, o responsável pelo filme falasse assim. Ó,
+
+142
+00:25:06.230 --> 00:25:12.580
+Elberth Moraes: quando um filme não tiver o seu título informado, coloca lá título não informado
+
+143
+00:25:12.950 --> 00:25:26.960
+Elberth Moraes: e quando o ano não tiver sido informado, coloca dois mil e vinte e seis, ok, ok. Como é que a gente faz isso? Aonde que a gente faz isso. As únicas duas funcionalidades que esse carinho daqui tem
+
+144
+00:25:27.130 --> 00:25:43.200
+Elberth Moraes: é o método de impressão e o construtor. Eu olho esses parâmetros aqui. Eu sei que isso daqui pode executar alguma coisa. Pode ser uma funcionalidade onde tem parâmetro, tirando as estruturas de repetição, ifes e tal a gente? É uma operação.
+
+145
+00:25:43.320 --> 00:25:47.850
+Elberth Moraes: Então, beleza. Eu não quero passar essas informações aqui dentro de impressão,
+
+146
+00:25:48.080 --> 00:25:57.810
+Elberth Moraes: mas eu poderia até passar. Passo o título aqui dentro e o ano. Não, não é isso que eu quero. Eu quero que continue sendo transparente para mim.
+
+147
+00:25:57.940 --> 00:26:00.350
+Elberth Moraes: Então eu vou chegar lá na minha classe. Filme.
+
+148
+00:26:00.800 --> 00:26:07.839
+Elberth Moraes: Vou chegar aqui abaixo dos meus atributos e eu vou dar um contra o espaço aqui, contra o barra de espaço.
+
+149
+00:26:07.950 --> 00:26:10.669
+Elberth Moraes: E ele traz para a gente ali, constructor.
+
+150
+00:26:11.010 --> 00:26:13.069
+Elberth Moraes: E aí, quando eu clico aqui, nesse constructor,
+
+151
+00:26:13.840 --> 00:26:19.720
+Elberth Moraes: ele traz para a gente. Justamente aquela implementação que a gente tem lá. Observem
+
+152
+00:26:19.940 --> 00:26:34.350
+Elberth Moraes: quando eu chego lá fora agora e clico aqui dentro de filme. Observem que ele não vai mais para cima da minha classe. Ele vem para dentro desse construtor. Então esse construtor aqui é sempre a primeira coisa que ele faz quando a gente quer criar esse objeto.
+
+153
+00:26:34.800 --> 00:26:54.250
+Elberth Moraes: Então tudo que eu colocar aqui dentro vai ser a primeira mudança de estado que esse nosso objeto vai ter. Por que primeira mudança de estado? Quando eu crio um carinha, ele vem com aqueles valores padrões. E aí. Aqui dentro. A gente consegue mudar esses valores padrões. Exemplo
+
+154
+00:26:54.410 --> 00:26:58.090
+Elberth Moraes: título: eu vou botar aqui
+
+155
+00:27:01.380 --> 00:27:02.599
+Elberth Moraes: não é formado.
+
+156
+00:27:03.170 --> 00:27:07.480
+Elberth Moraes: Eu vou colocar antes dois mil e vinte e seis.
+
+157
+00:27:08.010 --> 00:27:21.650
+Elberth Moraes: Notei aqui fixo. Poderia usar local date Time now with ponto, catcher alguma coisa assim.
+
+158
+00:27:21.790 --> 00:27:32.139
+Elberth Moraes: Esse cara daqui, ele me retorna um inteiro. Eu vou botar ali o dois mil e vinte e seis. Observe só o que mudou aqui. Quando eu mando rodar. A minha aplicação
+
+159
+00:27:33.180 --> 00:27:42.810
+Elberth Moraes: apareceu aqui. O filme não informado, lançado em dois mil e vinte e seis, não teve avaliação porque a gente não avaliou. Consequentemente, não teve estrela,
+
+160
+00:27:42.890 --> 00:27:56.630
+Elberth Moraes: mas a gente começou a ver que essas duas linhas aqui, esse objeto foi afetado porque dentro desse construtor. Aqui a gente colocou duas informações. Duas informações que pertencem ao objeto.
+
+161
+00:27:56.630 --> 00:28:03.539
+Elberth Moraes: Esse diz aqui. Não precisa colocar, tá? Eu só tô botando esse cara pra gente até ficar com algo muito parecido
+
+162
+00:28:03.620 --> 00:28:07.449
+Elberth Moraes: com aqueles nossos sets aqui debaixo. Tá vendo
+
+163
+00:28:07.610 --> 00:28:18.529
+Elberth Moraes: que ele tem um? Diz ano que é o meu atributo. E aqui um valor que eu estou atribuindo a esse campo. Mesma coisa. Aqui diz ano e um valor que eu estou atribuindo esse ano?
+
+164
+00:28:18.650 --> 00:28:25.680
+Elberth Moraes: A mesma coisa para o título diz título. Recebe um título. Aqui diz título, recebe um título
+
+165
+00:28:25.750 --> 00:28:34.040
+Elberth Moraes: aqui. Ele recebeu um texto. Isso aqui também é um texto, mas só que alguém lá de fora passou para a gente. E esse aqui, ninguém lá de fora passou para a gente.
+
+166
+00:28:34.070 --> 00:28:39.989
+Elberth Moraes: Ah, entendi. Então, beleza. Isso aqui é como se fosse um construtor que a gente chama de construtor padrão,
+
+167
+00:28:40.010 --> 00:28:54.930
+Elberth Moraes: um construtor que ele sempre vai ter. Você não precisa criar do jeito que a gente fez aqui. Mas quando você cria. Você consegue botar dentro dele um comportamento que vai acontecer sempre que você criar um objeto.
+
+168
+00:28:55.830 --> 00:28:58.559
+Elberth Moraes: Até aqui está de boa.
+
+169
+00:29:01.320 --> 00:29:04.020
+Elberth Moraes: Vou caminhar mais um pouquinho, tá?
+
+170
+00:29:04.240 --> 00:29:14.799
+Elberth Moraes: Eu vou chegar aqui dentro desse nosso trabalho. E eu queria fazer alguma coisa assim. O título e o ano são informações obrigatórias.
+
+171
+00:29:14.960 --> 00:29:22.610
+Elberth Moraes: Informações obrigatórias. Não tem como a gente criar um filme sem título e sem ano.
+
+172
+00:29:22.760 --> 00:29:28.059
+Elberth Moraes: Aí eu venho aqui fora e falo assim, galera, vamos voltar aqui ao serviço.
+
+173
+00:29:30.790 --> 00:29:36.759
+Elberth Moraes: Voltamos aqui. Ao serviço, tá? Vocês estão todos liberados. Deixa eu botar, só isso. Avaliar aqui também.
+
+174
+00:29:38.490 --> 00:29:48.429
+Elberth Moraes: Vocês estão vendo que esses dois carinhas aqui, eles fazem a mesma coisa, né? Não tem nada, nenhuma informação. Mas na hora que a gente manda rodar essa galera toda aqui.
+
+175
+00:29:50.900 --> 00:29:53.390
+Elberth Moraes: Ele imprime lá não informado.
+
+176
+00:29:53.580 --> 00:29:55.830
+Elberth Moraes: Esse aqui também não informado.
+
+177
+00:29:55.930 --> 00:30:01.250
+Elberth Moraes: Tá vendo esse aqui? Foi preenchido. Esse aqui foi preenchido. Então, quando a informação
+
+178
+00:30:01.480 --> 00:30:04.999
+Elberth Moraes: chega através dos métodos sete, a gente tem informação
+
+179
+00:30:05.280 --> 00:30:08.749
+Elberth Moraes: quando a gente não preencheu nada, a gente não tem informação,
+
+180
+00:30:08.980 --> 00:30:18.159
+Elberth Moraes: mas eu posso chegar na minha classe, filme. Imagine que funciona assim. Dentro de uma empresa de desenvolvimento. Imaginem que essa classe teste aqui.
+
+181
+00:30:18.280 --> 00:30:22.489
+Elberth Moraes: Seja alguém de outro departamento de outra equipe
+
+182
+00:30:22.720 --> 00:30:31.250
+Elberth Moraes: que esteja desenvolvendo lá um monte de coisa. Mas dessa vez, ele está desenvolvendo alguma coisa que tem relação com a classe que você implementou.
+
+183
+00:30:31.530 --> 00:30:36.440
+Elberth Moraes: Aí. Você está aqui, no quinto andar, e esse cara daqui está no sétimo andar.
+
+184
+00:30:36.620 --> 00:30:45.620
+Elberth Moraes: Aí chega um belo dia, e esse cara está o tempo inteiro usando uma informação sua. Então, como essa classe teste e filme aqui.
+
+185
+00:30:45.740 --> 00:30:48.899
+Elberth Moraes: Ele está usando você. Você está nesse pacote aqui.
+
+186
+00:30:49.020 --> 00:30:58.009
+Elberth Moraes: E ele está nesse pacote aqui, como se fosse o andar que eu falei ali. E aí você está aqui, no seu andar, conversando com o seu chefe. Seu chefe falou Helbert,
+
+187
+00:30:58.120 --> 00:31:04.549
+Elberth Moraes: a partir de agora não tem como a gente deixar criar um filme sem título e sem ano.
+
+188
+00:31:04.910 --> 00:31:18.319
+Elberth Moraes: Ah, legal. Pô beleza. E aonde que eu posso fazer essa validação, né? Pra gente. Eu conversando sozinho. Aonde que eu tenho que fazer essa validação, para que eu verifique
+
+189
+00:31:19.140 --> 00:31:29.760
+Elberth Moraes: que está sem título e ano. Porque o que o chefe está querendo é que a gente não deixe fazer nada dentro do nosso código. Se não tiver essa informação.
+
+190
+00:31:30.020 --> 00:31:41.509
+Elberth Moraes: E aí, quando a gente começa a olhar para o nosso código, a gente vai sempre olhar para as informações públicas sempre, porque as informações públicas são as informações que a gente pode ver lá fora.
+
+191
+00:31:41.640 --> 00:31:52.830
+Elberth Moraes: Então, construtor, beleza não é uma funcionalidade, é um cara que muda o comportamento. Mas não é uma funcionalidade, impressão exibir, avaliar
+
+192
+00:31:53.050 --> 00:31:58.160
+Elberth Moraes: e o preenchimento dessas duas informações, Caramba, mas se eu tivesse que validar
+
+193
+00:31:58.450 --> 00:32:06.270
+Elberth Moraes: todos os pontos onde a gente vai usar ano e título. Observem aqui. Eu vou usar ano e título.
+
+194
+00:32:06.480 --> 00:32:16.190
+Elberth Moraes: Mas se o cara não chamou esse cara? Não chamou lá fora como a gente não chamou aqui a gente não está chamando sete anos, sete títulos. Então esses dois aqui não tem como a gente testar,
+
+195
+00:32:16.390 --> 00:32:23.600
+Elberth Moraes: calcular nota privada. Não uso. Aí sobrou avaliar, exibir e impressão impressão.
+
+196
+00:32:24.380 --> 00:32:35.109
+Elberth Moraes: Eu tenho aqui. Ano e título realmente eu preciso validar. É como se eu chegasse aqui e fizesse se ano e título estiverem nulos
+
+197
+00:32:35.290 --> 00:32:41.230
+Elberth Moraes: ou vazios. Eu não posso fazer nada,
+
+198
+00:32:41.690 --> 00:32:47.129
+Elberth Moraes: beleza, não posso fazer nada daqui em diante. Beleza, aí eu pego essa implementação. Aqui,
+
+199
+00:32:48.470 --> 00:32:52.579
+Elberth Moraes: copio ela, faço a mesma implementação. E vou ver ela e no exibir. Resumo
+
+200
+00:32:52.850 --> 00:32:56.829
+Elberth Moraes: a exibir resumo tem ano e tem título: Ah, beleza. Então,
+
+201
+00:32:57.030 --> 00:33:04.689
+Elberth Moraes: se ano e título estiverem Nulos Botar que estiverem nulos. Beleza por mais um cara. Aí eu venho avaliar,
+
+202
+00:33:04.900 --> 00:33:22.620
+Elberth Moraes: avaliar não tem relação com o título. Então deixa quieto. Mas eu não posso avaliar. Se eu não tiver o título. Opa, beleza. Então eu vou chegar aqui igual a gente fez, né? A gente criou aqui essa regrinha. Eu ia ter que criar aí você vê, Caramba, estou fazendo isso em três pontos diferentes.
+
+203
+00:33:22.740 --> 00:33:35.500
+Elberth Moraes: Pô vou criar então um método privado para eu colocar ali dentro e aproveitar igual a gente fez aqui no calcular notas. Não, não precisa fazer isso. Você pode chegar aqui em cima
+
+204
+00:33:35.610 --> 00:33:45.010
+Elberth Moraes: e tornar o preenchimento desses dois campos obrigatórios. Como assim? Você vai chegar aqui nesse cara, criar um novo construtor.
+
+205
+00:33:45.210 --> 00:33:49.689
+Elberth Moraes: Eu não posso ter dois construtores com o mesmo nome. Observem que ele já reclama.
+
+206
+00:33:49.800 --> 00:33:52.440
+Elberth Moraes: Mas se eu chegar aqui dentro e falar assim. Ó,
+
+207
+00:33:52.580 --> 00:33:55.410
+Elberth Moraes: eu tenho os campos, título e ano,
+
+208
+00:33:56.260 --> 00:34:04.270
+Elberth Moraes: e eu quero que esses dois caras sejam preenchidos. Eu vou fazer igual a gente fez nos métodos sets. Você lembra aqui o método set. Como é que ele faz
+
+209
+00:34:04.460 --> 00:34:21.110
+Elberth Moraes: sete títulos. Ele recebe uma informação com parâmetro e joga para dentro do atributo. Sete anos, recebe uma informação com parâmetro e joga para dentro desse. Aquele meu construtor ali. É como se eu obrigasse o cara a me passar o título,
+
+210
+00:34:21.389 --> 00:34:27.750
+Elberth Moraes: obrigasse o cara a me passar o ano.
+
+211
+00:34:27.929 --> 00:34:37.870
+Elberth Moraes: E aí eu vou chegar aqui dentro e vou fazer exatamente a mesma atribuição. Joguei aqui, joguei aqui.
+
+212
+00:34:38.179 --> 00:34:43.990
+Elberth Moraes: Olha só isso. Daqui é um construtor. Ele é quase como se fosse uma junção de alguns sets.
+
+213
+00:34:44.190 --> 00:35:01.529
+Elberth Moraes: Então, se eu estou falando que a partir de agora, o objetivo é a gente preencher essas duas informações na criação aqui. Eu salvei esse cara. Eu não afeitei nada lá fora. Nenhuma coisa vermelhinha aconteceu.
+
+214
+00:35:01.930 --> 00:35:09.030
+Elberth Moraes: Mas se eu estou dizendo que esse cara daqui vai substituir esse preenchimento aqui dos sete títulos. Sete anos.
+
+215
+00:35:09.140 --> 00:35:11.789
+Elberth Moraes: Então significa que eu posso tirar esse cara daqui.
+
+216
+00:35:11.980 --> 00:35:17.340
+Elberth Moraes: Beleza. Se ele está substituindo, eu tiro esse cara daqui. Não preciso mais desses caras.
+
+217
+00:35:17.480 --> 00:35:22.730
+Elberth Moraes: Mas agora que eu salvei isso daqui, observe que apareceu um vermelhinho aqui no nosso teste.
+
+218
+00:35:22.950 --> 00:35:42.240
+Elberth Moraes: E quando a gente vai para dentro desse nosso teste, ver o que é? A gente não tem mais o sete ano e o sete títulos. É verdade. A gente não tem mais. Então, o que a gente tem que fazer? Vamos lá. Como é que eu resolvo esse problema daqui? Se o sete Títulos não existe mais. E o sete. Ano não existe mais.
+
+219
+00:35:42.340 --> 00:35:46.000
+Elberth Moraes: O que eu faço com esse valor. E o que eu faço com esse valor?
+
+220
+00:35:50.490 --> 00:35:53.609
+lucas.ssantos: Passa como argumento lá do construtor.
+
+221
+00:35:54.310 --> 00:36:00.559
+Elberth Moraes: Perfeito. Então eu sei que dentro da minha classe, filme, eu tenho um construtor.
+
+222
+00:36:00.730 --> 00:36:13.000
+Elberth Moraes: Esse construtor. Ele recebe. Ele aceita receber dois parâmetros e ele faz o preenchimento. Então eu chego aqui nesse cara. Pego o primeiro, né? Pego esse conteúdo daqui
+
+223
+00:36:14.690 --> 00:36:19.020
+Elberth Moraes: e vou usar o construtor com dois parâmetros. Observe, quando a gente chega aqui agora
+
+224
+00:36:19.210 --> 00:36:22.380
+Elberth Moraes: e digita filme e dá um contra o espaço.
+
+225
+00:36:22.600 --> 00:36:27.210
+Elberth Moraes: Ele disponibiliza para mim um filme e dois filmes. Ó dois construtores.
+
+226
+00:36:27.520 --> 00:36:33.710
+Elberth Moraes: Isso aqui é conhecido como sobrecarga de construtores. Quando você tem construtor com o mesmo nome
+
+227
+00:36:33.870 --> 00:36:46.330
+Elberth Moraes: e a quantidade de parâmetros ou tipos de parâmetros são diferentes. Então você consegue carregar. Você consegue criar de duas formas diferentes quando você escolhe o de baixo,
+
+228
+00:36:46.460 --> 00:36:52.199
+Elberth Moraes: ele abre para você aqui, me passe uma informação. String, que represente o título.
+
+229
+00:36:52.480 --> 00:37:01.199
+Elberth Moraes: Coloquei aqui dentro e a próxima informação me passe uma informação inteira que represente o ano. Aí eu chego aqui e boto dois mil.
+
+230
+00:37:01.930 --> 00:37:06.820
+Elberth Moraes: Quando eu faço isso daqui. Eu tiro esse título daqui,
+
+231
+00:37:09.420 --> 00:37:11.460
+Elberth Moraes: e eu tiro esse ano daqui.
+
+232
+00:37:12.000 --> 00:37:15.459
+Elberth Moraes: E aí a nossa implementação ficou desse jeito aqui.
+
+233
+00:37:15.830 --> 00:37:21.080
+Elberth Moraes: Mesma coisa aqui embaixo. Sete títulos. Sete anos não existem. Pego esse cara.
+
+234
+00:37:21.850 --> 00:37:29.429
+Elberth Moraes: Joga esse cara aqui dentro e bota o dois mil e catorze aqui. Então essas duas informações. Eu não preciso mais
+
+235
+00:37:29.750 --> 00:37:34.380
+Elberth Moraes: mesma coisa aqui embaixo. Mesma coisa aqui embaixo. Eu pego esse cara daqui.
+
+236
+00:37:35.490 --> 00:37:39.919
+Elberth Moraes: Jogo aqui. Pego dois mil e catorze. Jogo aqui.
+
+237
+00:37:40.180 --> 00:37:49.459
+Elberth Moraes: Então essas duas informações. Eu não preciso mais. E aí a gente vê que a gente resolveu todos os erros, fazendo a mudança para o construtor.
+
+238
+00:37:49.730 --> 00:38:01.039
+Elberth Moraes: Então a gente pensa que o construtor é uma maneira que a gente tem de conseguir criar objetos com valores logo no início da sua criação.
+
+239
+00:38:01.430 --> 00:38:02.320
+Elberth Moraes: Ok,
+
+240
+00:38:02.490 --> 00:38:08.080
+Elberth Moraes: então a gente tem que ficar de olho nesse objetivo. Quando a gente vem aqui para dentro da nossa classe.
+
+241
+00:38:09.150 --> 00:38:14.190
+Elberth Moraes: A gente tem agora dois construtores, tá? Só um minutinho. Galera,
+
+242
+00:38:30.180 --> 00:38:44.280
+Elberth Moraes: beleza. Voltei. Então eu estou aqui com esses dois construtores. Um construtor tem um papel. É fazer aquilo ali. E o outro construtor tem esse papel, que é pegar as informações de fora e jogar para dentro do mesmo carinho aqui dos mesmos campos.
+
+243
+00:38:44.500 --> 00:38:52.250
+Elberth Moraes: Então hoje eu ainda estou dando a possibilidade de você não informar nenhum valor
+
+244
+00:38:52.500 --> 00:38:57.289
+Elberth Moraes: e a gente ter um relatório acontecendo. Se eu mando rodar esse cara daqui,
+
+245
+00:38:59.470 --> 00:39:02.340
+Elberth Moraes: a gente consegue ver que o não informado. Está aqui
+
+246
+00:39:02.560 --> 00:39:06.610
+Elberth Moraes: que o não informado está aqui também. No segundo, né? No primeiro
+
+247
+00:39:07.520 --> 00:39:15.570
+Elberth Moraes: e no segundo, na impressão e no detalhe. Mas esses carinhas aqui de baixo que estão usando, imprimir e tal e tal. São os três últimos
+
+248
+00:39:15.790 --> 00:39:17.109
+Elberth Moraes: tá certinho
+
+249
+00:39:17.210 --> 00:39:37.070
+Elberth Moraes: interestelar, interestelar e Matrix. Então aquela mudança que a gente fez está funcionando de boa. Está ótimo. Só que agora a gente começa. O chefe falou assim: Elbert, vamos mudar um negócio aqui porque ainda está complicado para mim? Porque estão reclamando que o nosso relatório,
+
+250
+00:39:37.190 --> 00:39:41.230
+Elberth Moraes: ele está aparecendo lá com o não informado.
+
+251
+00:39:41.410 --> 00:39:51.259
+Elberth Moraes: E aí não é legal. Isso porque parece que é um lixo que está aparecendo na tela. Então as pessoas, a partir de agora, as pessoas que não têm a informação
+
+252
+00:39:51.410 --> 00:40:09.789
+Elberth Moraes: do título do filme do ano, elas precisam ser responsabilizadas pelo preenchimento dessas informações. Então, se aqui fora na sua tela. Você não passou o nome do filme e o ano de lançamento do filme.
+
+253
+00:40:09.890 --> 00:40:11.800
+Elberth Moraes: Você não pode criar um filme.
+
+254
+00:40:11.980 --> 00:40:19.119
+Elberth Moraes: Mas como é que a gente faz isso aqui dentro da sua classe? Você inicialmente não tinha nenhum construtor.
+
+255
+00:40:20.530 --> 00:40:27.209
+Elberth Moraes: Depois a gente encontrou aqui um construtor. E depois a gente criou o segundo construtor
+
+256
+00:40:27.610 --> 00:40:40.170
+Elberth Moraes: legal. Pode ter quantos construtores quiser. Pode cada um fazendo a sua coisa isso. Cada um fazendo a sua coisa. Mas a gente começa a ver que o chefe falou que isso daqui não vai ser mais aceito.
+
+257
+00:40:40.340 --> 00:40:41.880
+Elberth Moraes: Aí eu vou lá e tiro.
+
+258
+00:40:42.420 --> 00:40:43.330
+Elberth Moraes: Tirei.
+
+259
+00:40:43.660 --> 00:40:47.250
+Elberth Moraes: Deixa eu desimportar aquele local dele ali de cima.
+
+260
+00:40:48.320 --> 00:40:55.839
+Elberth Moraes: Beleza, tudo funcionando. Ok, esses comentários aqui, eu vou tirar porque a gente já implementou o construtor.
+
+261
+00:40:57.750 --> 00:41:04.060
+Elberth Moraes: Deixei aqui e aí por eu ter tirado aquele construtor. Esses dois caras aqui quebraram.
+
+262
+00:41:04.470 --> 00:41:16.099
+Elberth Moraes: Por que eles quebraram o que a partir de agora, eu não tenho mais um construtor que não aceite parâmetros. Eu só tenho um construtor. Então, se você quiser criar
+
+263
+00:41:16.350 --> 00:41:20.430
+Elberth Moraes: um construtor de filme que tenha dois campos, você pode utilizar.
+
+264
+00:41:20.630 --> 00:41:25.940
+Elberth Moraes: Você não pode mais deixar de passar as informações.
+
+265
+00:41:26.160 --> 00:41:30.820
+Elberth Moraes: E aí você chega aqui e fala. Ah, beleza. Eu vou passar aqui.
+
+266
+00:41:30.930 --> 00:41:32.540
+Elberth Moraes: Não sei.
+
+267
+00:41:33.300 --> 00:41:42.780
+Elberth Moraes: Piano dois mil, beleza. Se você passar isso daqui. A responsabilidade é sua. Na hora de apresentar essa impressão.
+
+268
+00:41:42.850 --> 00:41:56.000
+Elberth Moraes: Então você é o responsável. Eu só estou disponibilizando para você uma classe que você precisa passar duas informações e eu emito no relatório. Se você está passando informação errada, a responsabilidade do relatório é sua
+
+269
+00:41:56.110 --> 00:41:57.739
+Elberth Moraes: diferente de antes
+
+270
+00:41:57.760 --> 00:42:07.089
+Elberth Moraes: que eu não pedia para você passar nada. E eu era o responsável por colocar lá o não informado na tela ou o ano de dois mil e vinte e seis. Sempre o ano atual.
+
+271
+00:42:07.090 --> 00:42:18.840
+Elberth Moraes: Agora, eu passei a responsabilidade para quem vai usar a minha classe. E aí a pessoa chega lá e bota o que ela quiser. Ah, mas eu não quero preencher nada realmente beleza. Chega aqui, bota um nu. Chega aqui, bota um zero.
+
+272
+00:42:18.840 --> 00:42:25.439
+Elberth Moraes: A responsabilidade é sua. Sabe, a sua classe. Você está usando a minha classe
+
+273
+00:42:25.510 --> 00:42:38.320
+Elberth Moraes: para poder fazer a impressão do seu relatório. Vocês conseguem entender esse papo de responsabilidade que eu estou passando. Para quem vai utilizar a nossa classe. Do jeito que eu estou fazendo aqui, eu disponibilizo um construtor
+
+274
+00:42:38.320 --> 00:42:49.259
+Elberth Moraes: que recebe duas informações onde essas duas informações são muito importantes para o meu negócio. Eu sou responsável pela classe filme. Se vocês não passarem essa informação,
+
+275
+00:42:49.310 --> 00:43:02.149
+Elberth Moraes: eu vou ser prejudicado porque eu tenho um monte de coisa dentro da minha classe que depende dessas duas informações. Eu tenho relatório. Eu tenho cálculo. Então eu não posso deixar de receber essa informação.
+
+276
+00:43:02.170 --> 00:43:10.580
+Elberth Moraes: Então, se você não sabe o que passar, o problema é seu. Eu estou disponibilizando para você esse recurso para você utilizar.
+
+277
+00:43:10.690 --> 00:43:28.980
+Elberth Moraes: Esse é o papo da programação. A gente não pode ser o bonzinho da programação. A gente tem que saber assim o que eu preciso para que tudo funcione? Bem, isso. Isso beleza me passou. Eu funciono bem, não me passou. Eu não funciono. É simples assim.
+
+278
+00:43:28.980 --> 00:43:46.609
+Elberth Moraes: Eu quando comecei a programar, eu já falei isso para vocês. Eu era o programador bonzinho. Eu começava a tentar pensar em soluções caso a pessoa não preencha caso a pessoa preencha errado. Mas eu sei que aquilo ali é o certo e o começo a mexer e tal. Isso não pode acontecer. Você tem que barrar o processamento
+
+279
+00:43:46.610 --> 00:43:50.549
+Elberth Moraes: encerra e fala. Olha só o contrato. Era você me passar isso daqui
+
+280
+00:43:50.680 --> 00:43:55.629
+Elberth Moraes: se você não está me passando isso daqui. Um abraço? Mais ou menos assim.
+
+281
+00:43:55.840 --> 00:43:57.480
+Elberth Moraes: Isso para você está de boa
+
+282
+00:44:06.710 --> 00:44:15.869
+Elberth Moraes: maravilha. Isso aqui é um papo inicial aqui da gente começar a conversar. A gente ainda vai fazer muita coisa sobre isso, tá?
+
+283
+00:44:16.010 --> 00:44:27.869
+Elberth Moraes: Imaginem o seguinte. Eu estou aqui com essa parte. Eu vou deixar aqui, tá? Eu vou meio que encerrar o nosso conceito, e estou indo lá para o outro projeto para a gente aplicar
+
+284
+00:44:27.990 --> 00:44:34.020
+Elberth Moraes: esse conceito vai ficar guardado aqui porque quando a gente chegar aqui, na parte dos fundamentos, nessas classes todas aqui
+
+285
+00:44:34.130 --> 00:44:38.580
+Elberth Moraes: tem outros assuntos para a gente trabalhar. Beleza, deixa eu fechar isso daqui.
+
+286
+00:44:39.030 --> 00:44:50.280
+Elberth Moraes: E eu estou indo para esses nossos casos aqui para a gente testar. Então eu tenho aqui um aqui embaixo, nesse teste média. Aluno
+
+287
+00:44:50.430 --> 00:44:56.040
+Elberth Moraes: perfeito existe aqui dentro desse carinha?
+
+288
+00:44:56.580 --> 00:45:00.209
+Elberth Moraes: Sei lá. Imagina que a gente tem essas quatro informações aqui,
+
+289
+00:45:00.680 --> 00:45:15.669
+Elberth Moraes: dessas quatro informações aqui. Se eu chegar aqui e mandar rodar, vocês acham que alguma informação deveria ser mais importante obrigatória do que outra. O que vocês acham disso? Daqui?
+
+290
+00:45:15.880 --> 00:45:21.140
+Elberth Moraes: Eu poderia chegar aqui e não informar isso, não informar isso. Ele fica aqui paradão.
+
+291
+00:45:26.040 --> 00:45:29.789
+Elberth Moraes: Ele vai até o final e funciona.
+
+292
+00:45:30.050 --> 00:45:36.469
+Elberth Moraes: Mas o que vocês acham aqui? Que seriam informações obrigatórias para a gente trabalhar
+
+293
+00:45:36.600 --> 00:45:39.550
+Elberth Moraes: no cálculo da média de um certo aluno.
+
+294
+00:45:50.710 --> 00:45:54.639
+Elberth Moraes: A nota é importante, porque o objetivo da gente
+
+295
+00:45:54.750 --> 00:46:03.440
+Elberth Moraes: é justamente a gente fazer uma impressão. E dentro dessa nossa impressão, a gente chama o cálculo da média.
+
+296
+00:46:03.950 --> 00:46:11.619
+Elberth Moraes: De acordo com o cálculo da média, a gente define a situação. E aí sai o nosso relatório.
+
+297
+00:46:11.750 --> 00:46:14.320
+Elberth Moraes: Então é muito importante para a gente
+
+298
+00:46:14.480 --> 00:46:21.770
+Elberth Moraes: que observem nesse cara todo. Aqui a gente tem o nome, a média e a situação são as três informações que saem.
+
+299
+00:46:22.060 --> 00:46:41.510
+Elberth Moraes: Então eu acho que se a gente passar as notas meio zoadas em algum lugar aqui. A gente deveria verificar essas notas para saber se realmente está certo ou não. Porque não adianta a gente calcular média, sei lá, com notas negativas.
+
+300
+00:46:41.620 --> 00:46:50.319
+Elberth Moraes: Sei lá, notas acima de dez. Então, em algum lugar, a gente vai ter que fazer um tipo de validação.
+
+301
+00:46:50.430 --> 00:46:52.600
+Elberth Moraes: Porque esse imprimir aqui,
+
+302
+00:46:52.840 --> 00:47:06.219
+Elberth Moraes: ele pode ser chamado lá por fora, como ele chamou aqui? Tá vendo? Mas ele pode chegar na hora de imprimir com um monte de doideira que eu passei aqui dentro. Talvez o nome do aluno. Eu nem tenha tanta,
+
+303
+00:47:06.330 --> 00:47:17.200
+Elberth Moraes: tanto assim como mudar o nome do aluno. É uma informação importante. É uma informação importante, porque eu preciso colocar lá o nome no relatório.
+
+304
+00:47:17.360 --> 00:47:22.499
+Elberth Moraes: E aí. Como é que você vai associar a média a quem você vai associar
+
+305
+00:47:22.620 --> 00:47:37.250
+Elberth Moraes: beleza? Então eu tenho aqui dentro algumas informações, mas como a gente sempre faz. A gente sempre implementa em etapas. A gente faz uma implementação para se sentir menos.
+
+306
+00:47:37.250 --> 00:47:49.829
+Elberth Moraes: Aí. Depois a gente avisa para a pessoa que está usando a nossa classe. Ó, vou fazer essa mudança aqui. Ok, ok, vamos fazer essas mudanças aos pouquinhos aqui. Eu vou chegar aqui dentro
+
+307
+00:47:49.910 --> 00:47:53.649
+Elberth Moraes: nesse meu sistema. Eu não tenho um construtor aqui ainda.
+
+308
+00:47:53.900 --> 00:47:59.919
+Elberth Moraes: Eu vou criar um construtor que esse meu construtor vai quebrar o nosso código. De início,
+
+309
+00:48:00.220 --> 00:48:04.929
+Elberth Moraes: vou criar um construtor aqui. Inicialmente, eu crio o construtor padrão,
+
+310
+00:48:05.600 --> 00:48:09.230
+Elberth Moraes: e eu vou criar a primeira coisa que eu vou falar assim é, ó
+
+311
+00:48:10.060 --> 00:48:13.900
+Elberth Moraes: não tem como criar um aluno sem o nome do aluno.
+
+312
+00:48:14.310 --> 00:48:21.820
+Elberth Moraes: Primeira coisa que eu faço. Beleza. Anota beleza, anota se o cara não preencher. Eu vou dar. Zero. Fechou, fechou. Aí ele veio aqui.
+
+313
+00:48:22.660 --> 00:48:25.560
+Elberth Moraes: Diz Ponta o nome, recebe nome.
+
+314
+00:48:25.950 --> 00:48:34.129
+Elberth Moraes: Fiz esse tipo de trabalho aqui. Se vocês estão ligados, que esse trabalho que eu estou fazendo aqui, ele é muito parecido
+
+315
+00:48:34.340 --> 00:48:36.270
+Elberth Moraes: com o nosso método.
+
+316
+00:48:36.520 --> 00:48:40.530
+Elberth Moraes: Sete aqui embaixo. Ó sete nomes. Tá vendo
+
+317
+00:48:40.700 --> 00:48:50.279
+Elberth Moraes: esse cara daqui veio para cá. Só que esse cara daqui faz depois do objeto criado. E esse cara faz aqui, no processo de criação do objeto.
+
+318
+00:48:50.490 --> 00:48:55.119
+Elberth Moraes: Ah, então, já que você está definindo esse cara aqui, vou tirar esse cara daqui,
+
+319
+00:48:56.290 --> 00:49:05.509
+Elberth Moraes: beleza, tirei esse sete nomes dali de baixo. Perfeito. Tirei os sete nomes dali de baixo. O que aconteceu aqui em cima
+
+320
+00:49:05.730 --> 00:49:09.530
+Elberth Moraes: quebrou ali em dois pontos.
+
+321
+00:49:09.720 --> 00:49:14.659
+Elberth Moraes: O primeiro ponto quebrou, porque eu não posso mais criar um objeto aluno sem nome.
+
+322
+00:49:14.960 --> 00:49:20.429
+Elberth Moraes: E o segundo ponto aqui quebrou porque não existe mais o nosso método. Sete9
+
+323
+00:49:20.640 --> 00:49:32.279
+Elberth Moraes: Ah, legal. Então vamos pensar aqui como é que a gente vai fazer? A gente está esperto que esse cara daqui é o responsável por
+
+324
+00:49:32.870 --> 00:49:40.379
+Elberth Moraes: criar objeto. Esse cria objeto e esse carinha daqui de baixo. Preenche o nome do objeto.
+
+325
+00:49:40.570 --> 00:49:56.649
+Elberth Moraes: Então, o que eu vou fazer aqui? Eu posso fazer de algumas formas, mas eu vou fazer. Da seguinte maneira. Eu vou chegar a esse aluno. Aqui. A gente já aprendeu que isso daqui é uma divisão entre duas instruções, essa daqui
+
+326
+00:49:58.250 --> 00:50:05.000
+Elberth Moraes: e essa daqui, essa que a gente faz. Então esse cara daqui, inicialmente ele anula.
+
+327
+00:50:05.830 --> 00:50:10.200
+Elberth Moraes: E depois esse cara daqui, ele cria e joga para dentro dele.
+
+328
+00:50:10.370 --> 00:50:17.419
+Elberth Moraes: Como o nome passou a ser uma informação obrigatória. Eu vou fazer assim, ver se vocês conseguem entender o que eu estou fazendo?
+
+329
+00:50:17.600 --> 00:50:19.110
+Elberth Moraes: Pego essa linha.
+
+330
+00:50:19.470 --> 00:50:21.010
+Elberth Moraes: Trago aqui para baixo
+
+331
+00:50:22.320 --> 00:50:29.090
+Elberth Moraes: essa informação aqui que o cara está digitando o nome. Eu estava jogando para dentro do Método sete nome.
+
+332
+00:50:29.200 --> 00:50:40.909
+Elberth Moraes: Vocês lembram que o Método sete nome. Eles recebiam uma informação de fora e jogavam para dentro daquele meu atributo. O nome. A mesma coisa que o construtor está fazendo.
+
+333
+00:50:41.050 --> 00:50:48.030
+Elberth Moraes: E aí eu vou. Pego esse conteúdo aqui e jogo aqui dentro.
+
+334
+00:50:48.660 --> 00:50:51.069
+Elberth Moraes: Vocês conseguiram entender o que eu fiz aqui.
+
+335
+00:51:01.530 --> 00:51:08.409
+Elberth Moraes: Então eu troquei uma coisa que eu tinha por uma nova coisa que eu estou implementando.
+
+336
+00:51:09.360 --> 00:51:18.729
+Elberth Moraes: Esse trabalho que a gente está fazendo aqui? A gente está meio que fazendo um factory do nosso código para a gente se adaptar. Imagine que eu
+
+337
+00:51:18.900 --> 00:51:37.220
+Elberth Moraes: que sou o cara da média aluna ali. Estou usando uma implementação que vocês fizeram na classe aluno: fui avisado. Vai rolar isso. Vocês têm que mexer lá na forma de criar. E aí eu fiz essa minha implementação.
+
+338
+00:51:37.360 --> 00:51:43.380
+Elberth Moraes: Então a gente começa a a se adaptar
+
+339
+00:51:43.540 --> 00:51:48.400
+Elberth Moraes: ao trabalho que uma outra equipe três.
+
+340
+00:51:48.810 --> 00:51:53.169
+Elberth Moraes: Então a gente tem que ficar muito ligado nisso, beleza, resolvemos o problema.
+
+341
+00:51:53.350 --> 00:51:55.979
+Elberth Moraes: Vamos ver se isso daqui, funciona né? Porque senão não.
+
+342
+00:51:56.550 --> 00:51:58.309
+Elberth Moraes: Não vai adiantar de nada.
+
+343
+00:51:59.270 --> 00:52:01.149
+Elberth Moraes: Botei aqui, bonitão.
+
+344
+00:52:01.620 --> 00:52:03.880
+Elberth Moraes: Mandei rodar essa minha aplicação.
+
+345
+00:52:04.320 --> 00:52:06.420
+Elberth Moraes: Java aplicação
+
+346
+00:52:07.120 --> 00:52:21.769
+Elberth Moraes: deu erro porque tem o primeiro scanner ali. Tá vendo esse cara daqui? É lá numa outra classe. Mas depois a gente vai lá. Aqui. Ele não está dando erro. Não? Então botei aqui. Albert. Nota dez, nota oito, nota seis.
+
+347
+00:52:22.280 --> 00:52:39.149
+Elberth Moraes: E aí aparece ali. Elbert Média oito. Tudo resolvido. Perfeito. Então está de boa. A gente está conseguindo fazer o que a gente estava fazendo antes, mas agora, com a necessidade de você ter um objeto com o nome.
+
+348
+00:52:39.170 --> 00:52:45.400
+Elberth Moraes: Você não consegue criar um objeto sem o nome. Ah, legal. Fizemos essa implementação.
+
+349
+00:52:45.800 --> 00:52:54.550
+Elberth Moraes: Aí. Agora, a gente começa a pensar em outra coisa. Vamos pensar que tem a possibilidade de você criar
+
+350
+00:52:55.030 --> 00:53:00.429
+Elberth Moraes: um aluno sem nota, mas não pode criar um aluno sem nome
+
+351
+00:53:00.880 --> 00:53:13.279
+Elberth Moraes: está resolvido isso tá? Então você tem a possibilidade de usar um construtor ali? Não tem construtor padrão. Se a gente chegar aqui fora e fizer um aluno igual a New Aluno,
+
+352
+00:53:13.290 --> 00:53:21.159
+Elberth Moraes: só aparece esse construtor aqui que espera receber o nome. Não tem outro construtor perfeito. Deixa quieto.
+
+353
+00:53:21.300 --> 00:53:23.149
+Elberth Moraes: A gente deixa do jeito que está.
+
+354
+00:53:23.280 --> 00:53:38.320
+Elberth Moraes: Mas eu vou pensar agora aqui numa outra implementação. Olha como é que eu vou fazer. E aí a gente repensa novamente esse nosso carinho. O aluno está aqui. Vou botar esse aluno mais para cima para ficar assim.
+
+355
+00:53:41.720 --> 00:53:49.260
+Elberth Moraes: Criei aqui o aluno ali embaixo. Eu preenchi. Criei o aluno na linha dezasseis. Preenchi as notas nos outros.
+
+356
+00:53:49.590 --> 00:53:51.939
+Elberth Moraes: Vou chegar aqui e vou falar assim. Ó,
+
+357
+00:53:52.050 --> 00:54:00.859
+Elberth Moraes: realmente eu não estou muito ligado para as notas, as notas. A gente vai. Se eu chegasse e quisesse fazer assim. Ó
+
+358
+00:54:01.010 --> 00:54:07.810
+Elberth Moraes: a pessoa. A única forma dele passar uma nota para mim é através desse meu set.
+
+359
+00:54:08.140 --> 00:54:11.099
+Elberth Moraes: Então eu poderia chegar aqui dentro e fazer um teste.
+
+360
+00:54:11.380 --> 00:54:19.400
+Elberth Moraes: Algo assim. Ó se anota tp1 for menor do que zero, sai fora, deu ruim.
+
+361
+00:54:19.550 --> 00:54:23.260
+Elberth Moraes: Então a gente vai botar uma exceção aqui dentro.
+
+362
+00:54:23.900 --> 00:54:29.159
+Elberth Moraes: E aí, beleza? A gente vai barrar aqui dentro esse tipo de regra,
+
+363
+00:54:29.190 --> 00:54:48.049
+Elberth Moraes: a gente vai ter que chegar no nota dois e fazer a mesma coisa. A gente vai ter que chegar no nota três e fazer a mesma coisa. Beleza é onde entra a nota. Então é por aqui que eu tenho que trabalhar. Chegou beleza. Então cheguei aqui e fiz uma validação. Cheguei ali, fiz outra validação. Cheguei aqui e fiz outra validação. Tudo resolvido.
+
+364
+00:54:48.060 --> 00:54:49.769
+Elberth Moraes: Tudo feliz e contente.
+
+365
+00:54:49.900 --> 00:55:05.640
+Elberth Moraes: Mas o grande barato que a gente começa a olhar agora é o seguinte. Imaginem que o nosso chefe começou a ver que estavam vindo. Não estavam preenchendo notas. Imagine se eu chego aqui e faço isso daqui.
+
+366
+00:55:09.830 --> 00:55:12.000
+Elberth Moraes: Eu mando rodar a nossa aplicação.
+
+367
+00:55:14.310 --> 00:55:17.749
+Elberth Moraes: Só que é por causa do outro lá que eu falei. Informa o meu nome.
+
+368
+00:55:18.140 --> 00:55:21.020
+Elberth Moraes: Ninguém preenche nada e tô ali. Nota zero.
+
+369
+00:55:21.400 --> 00:55:23.560
+Elberth Moraes: Ah, mas ninguém preencheu nada. Não,
+
+370
+00:55:23.770 --> 00:55:38.270
+Elberth Moraes: eu não consigo brigar as pessoas, porque esse trabalho que está acontecendo aqui é em outro ambiente. O cara que criou essa interface bonitinha e tal. Eu só sou responsável pela classe aluno. Só sou responsável pela criação desse objeto aluno.
+
+371
+00:55:38.480 --> 00:55:42.670
+Elberth Moraes: Se essa pessoa só preencher o nome, jogou para dentro da minha classe e mandou executar.
+
+372
+00:55:43.120 --> 00:55:45.220
+Elberth Moraes: Não pode me responsabilizar,
+
+373
+00:55:45.400 --> 00:55:57.620
+Elberth Moraes: mas só que acontece muito de você estar criando alguma coisa sua, algum serviço seu. E quando dá o erro, as pessoas chegam para você e falam assim. Elba está dando erro
+
+374
+00:55:57.790 --> 00:55:59.470
+Elberth Moraes: na classe de aluno.
+
+375
+00:55:59.970 --> 00:56:15.879
+Elberth Moraes: Aí eu falei: Não, não tem como daí eu na classe de aluno. Não testei pra caramba. Segui todos os passos lá do roteiro de teste. Validamos tudo. Está tudo certinho. Não tem como ter erro. Não, não está dando erro. Sim, porque o.
+
+376
+00:56:16.520 --> 00:56:24.660
+Elberth Moraes: A impressão lá do nosso relatório está vindo com nota zero, mas às vezes o aluno passou a nota zero.
+
+377
+00:56:24.760 --> 00:56:30.209
+Elberth Moraes: Não, não. Ele tem notas altas. A gente só não está fazendo zero no cálculo.
+
+378
+00:56:30.320 --> 00:56:42.349
+Elberth Moraes: Aí vem eu para dentro do método de impressão aqui. Entender o que tem de erro aqui dentro. Mas calcular a média, ele pega uma nota com a outra com a nota divide por três.
+
+379
+00:56:42.490 --> 00:56:51.080
+Elberth Moraes: Pô só tem como isso aqui dar zero. Se esses valores aqui tiverem zero ou tiver alguma combinação aqui de valores positivos com negativos
+
+380
+00:56:51.210 --> 00:56:54.770
+Elberth Moraes: que, dividido por três D0 é assim.
+
+381
+00:56:55.080 --> 00:57:11.190
+Elberth Moraes: Então tem um erro aqui dentro. Consequentemente, esse zero vai ser refletido aqui na situação, e o relatório sai zoado. Aí eu falo assim. Beleza. Vou fazer. O seguinte, tá? Eu vou chegar aqui dentro da minha classe. Aluna, vou precisar fazer uma mudança. Está a galera que usa
+
+382
+00:57:11.220 --> 00:57:17.570
+Elberth Moraes: a classe aluno. Eu vou fazer que a partir de agora, a galera que está usando
+
+383
+00:57:17.740 --> 00:57:21.269
+Elberth Moraes: esse tipo de construtor aqui pode continuar usando.
+
+384
+00:57:21.420 --> 00:57:23.950
+Elberth Moraes: Pode continuar. Não tem problema nenhum,
+
+385
+00:57:24.100 --> 00:57:26.720
+Elberth Moraes: mas eu vou criar um outro construtor aqui dentro.
+
+386
+00:57:28.660 --> 00:57:30.860
+Elberth Moraes: Outro construtor que eu vou criar.
+
+387
+00:57:31.440 --> 00:57:39.240
+Elberth Moraes: Eu vou pedir algumas informações. É aqui que informações eu vou pedir o nome.
+
+388
+00:57:40.020 --> 00:57:47.819
+Elberth Moraes: Ah, mas o nome. Você já pede ali em cima, Herbert. Falei Sim, sim. Vou pedir o nome, mas eu vou pedir também a nota
+
+389
+00:57:48.490 --> 00:57:57.650
+Elberth Moraes: do Tp1 eu vou pedir a nota do Tp2 e vou pedir a nota do Tp3
+
+390
+00:57:58.940 --> 00:58:08.129
+Elberth Moraes: Ah, então você está pedindo os quatro parâmetros aí Sim, e esse outro aqui. Não, esse outro aqui. Eu vou deixar desse jeito aí. Pode deixar desse jeito,
+
+391
+00:58:08.280 --> 00:58:17.459
+Elberth Moraes: porque eu vou fazer um teste depois. Eu estou ainda num momento de transição aqui. Então, por enquanto, eu vou fazer assim.
+
+392
+00:58:17.530 --> 00:58:30.520
+Elberth Moraes: Depois eu tento tirar esse cara de circulação. Ah, tá, ótimo. Então vamos deixar desse jeito a galera que está funcionando deixa funcionando. E os novos carinhas vão ter que passar essas três aqui para a gente maravilha.
+
+393
+00:58:30.600 --> 00:58:38.129
+Elberth Moraes: Essas quatro informações para a gente maravilha aí eu vou chegar aqui embaixo e vou fazer aquela tradicional atribuição.
+
+394
+00:58:38.220 --> 00:58:40.319
+Elberth Moraes: É como se isso aqui tudo
+
+395
+00:58:40.860 --> 00:58:54.640
+Elberth Moraes: fossem os nossos quatro sets que eu tenho, né, sete sete e o sete nome que a gente já tirou. Beleza. Então vou chegar aqui dentro e vou falar. Ó diz ponto, nome, recebe nome.
+
+396
+00:58:54.790 --> 00:59:12.820
+Elberth Moraes: Diz nota Tp1 recebe nota. Tp1 diz Notatp2 recebe nota. Tp2 diz Notatp3 Recebe nota Tp3
+
+397
+00:59:13.030 --> 00:59:15.729
+Elberth Moraes: legal. Estou com essa galerinha aí
+
+398
+00:59:16.060 --> 00:59:18.290
+Elberth Moraes: toda prontinha para a gente usar
+
+399
+00:59:18.470 --> 00:59:22.070
+Elberth Moraes: beleza. O que eu faço agora para isso aqui ser utilizado.
+
+400
+00:59:22.200 --> 00:59:23.749
+Elberth Moraes: Eu venho aqui fora.
+
+401
+00:59:24.520 --> 00:59:27.249
+Elberth Moraes: Observe que isso tudo aqui é como se fosse
+
+402
+00:59:27.400 --> 00:59:31.029
+Elberth Moraes: um único aluno. Ok, isso aqui é um aluno.
+
+403
+00:59:31.490 --> 00:59:34.839
+Elberth Moraes: Então isso aqui tudo. Deixa eu copiar aqui para vocês verem.
+
+404
+00:59:39.370 --> 00:59:43.750
+Elberth Moraes: Deixa eu tirar esse cara daqui, porque eu vou aproveitar o mesmo scanner. Porque eu não sou bobo nem nada.
+
+405
+00:59:44.150 --> 00:59:46.980
+Elberth Moraes: Então isso daqui. É um aluno.
+
+406
+00:59:47.260 --> 00:59:52.070
+Elberth Moraes: Ah botar aqui, ó, tudo é um aluno.
+
+407
+00:59:52.220 --> 00:59:59.670
+Elberth Moraes: Vou tirar esse cara daqui. Vou fazer só uma troca. Aqui, sagaz. Eu tenho um aluno. Eu vou criar aqui. Outshift r
+
+408
+00:59:59.890 --> 01:00:05.110
+Elberth Moraes: botar, aluno um, esse aqui é o aluno um.
+
+409
+01:00:05.330 --> 01:00:07.780
+Elberth Moraes: Vou pegar essa galera toda que está. Aqui.
+
+410
+01:00:09.230 --> 01:00:14.250
+Elberth Moraes: Vou botar aqui e vou criar o aluno. Dois, vem aqui.
+
+411
+01:00:15.020 --> 01:00:18.030
+Elberth Moraes: Outshift. R aluno dois:
+
+412
+01:00:18.400 --> 01:00:25.760
+Elberth Moraes: então eu tenho dois objetos aqui. Esse objeto de cima usa um construtor que recebe o nome.
+
+413
+01:00:25.930 --> 01:00:37.190
+Elberth Moraes: E esse objeto aqui de baixo. Eu vou usar o construtor que recebe todas as informações. Nossa, que loucura, hein? É porque esse cara aqui de baixo
+
+414
+01:00:37.310 --> 01:00:39.070
+Elberth Moraes: não vai ter chance
+
+415
+01:00:39.420 --> 01:00:49.840
+Elberth Moraes: dele deixar de preencher as notas. Se ele passar lá, o resultado vai dar zero. E a responsabilidade é de quem formou o zero
+
+416
+01:00:50.120 --> 01:00:50.870
+Elberth Moraes: show.
+
+417
+01:00:51.050 --> 01:00:54.369
+Elberth Moraes: Então vou chegar aqui dentro e vou fazer algumas trocas.
+
+418
+01:00:54.540 --> 01:00:57.149
+Elberth Moraes: Claro que vai ficar muito esquisito.
+
+419
+01:00:57.270 --> 01:01:03.840
+Elberth Moraes: Se eu pegasse todos esses meus Sc nexus, alguma coisa e trouxesse aqui para dentro.
+
+420
+01:01:03.950 --> 01:01:11.120
+Elberth Moraes: Imaginem. Tp1 Ah, tp1 a nota do Tp1 é isso aqui. Chego aqui dentro. Boto nota do Tp1
+
+421
+01:01:11.370 --> 01:01:21.900
+Elberth Moraes: Tp2 aqui nota do tp2 Aí eu boto aqui. Tp3 Ah, tá aqui. Ó,
+
+422
+01:01:23.450 --> 01:01:26.290
+Elberth Moraes: olha só como vai começar a funcionar agora
+
+423
+01:01:29.330 --> 01:01:30.580
+Elberth Moraes: está funcionando.
+
+424
+01:01:30.880 --> 01:01:46.490
+Elberth Moraes: Mas isso aqui ficou muito esquisito. Por que isso aqui ficou muito esquisito. Só porque tem quatro informações aqui dentro. Não porque esse recurso aqui, Next Double Next Double, ele aparece aquele cursor na tela para você digitar.
+
+425
+01:01:46.830 --> 01:01:50.679
+Elberth Moraes: Então, se eu mandar rodar esse cara aqui, o primeiro funciona.
+
+426
+01:01:58.390 --> 01:02:02.930
+Elberth Moraes: Phelbit dezoito e seis
+
+427
+01:02:03.290 --> 01:02:09.080
+Elberth Moraes: e o segundo está ali, né? O próximo que eu vou digitar. Informe o nome João
+
+428
+01:02:09.780 --> 01:02:25.290
+Elberth Moraes: e pô acabou tudo. Bugou tudo o que bugou tudo. Bugou, cara. Você não utilizou lá todas as informações. Você não pegou. Deu algum problema aí que a gente precisa resolver, tá? Vamos tentar resolver. Então,
+
+429
+01:02:25.450 --> 01:02:27.309
+Elberth Moraes: de uma maneira mais simpática,
+
+430
+01:02:27.570 --> 01:02:43.619
+Elberth Moraes: observem que eu preciso mudar essa nossa implementação aqui. Deixa eu botar ele mais separadinho, porque está bem. Tudo junto. Aqui a gente está perdido. Esqueçam lá o cara de cima. O cara de cima. A gente já testou. Eu preciso agora criar um aluno,
+
+431
+01:02:43.720 --> 01:02:49.260
+Elberth Moraes: ok? Um aluno com as quatro informações vou fazer assim, tá? Olha, como é que eu vou fazer
+
+432
+01:02:49.480 --> 01:02:52.250
+Elberth Moraes: string enorme. Vai receber
+
+433
+01:02:56.610 --> 01:02:59.680
+Elberth Moraes: no ano legal. Deixa esse cara ali.
+
+434
+01:02:59.900 --> 01:03:02.939
+Elberth Moraes: É aqui. É Damo, né?
+
+435
+01:03:03.720 --> 01:03:10.300
+Elberth Moraes: Double. Nota Tp1 vai receber isso aqui.
+
+436
+01:03:11.020 --> 01:03:13.679
+Elberth Moraes: Beleza. Deixa esses caras todos aí
+
+437
+01:03:13.910 --> 01:03:18.420
+Elberth Moraes: aqui embaixo. É nota Tp dois: beleza. Vou chegar aqui
+
+438
+01:03:28.650 --> 01:03:30.329
+Elberth Moraes: e esse cara aqui embaixo.
+
+439
+01:03:38.010 --> 01:03:39.030
+Elberth Moraes: Pp3
+
+440
+01:03:39.270 --> 01:03:48.180
+Elberth Moraes: por que você fez isso, Herbert? Esses caras que eu estou fazendo aqui, eu estou guardando essas informações dentro de variáveis. Legal
+
+441
+01:03:48.510 --> 01:03:58.999
+Elberth Moraes: aqui. Eu estou guardando dentro de uma variável aqui. Eu estou guardando dentro. Então se eu estou fazendo a mesma coisa aqui com aqui, esse cara de baixo, eu não preciso
+
+442
+01:03:59.460 --> 01:04:06.669
+Elberth Moraes: legal aqui em cima. Tô pegando o Tp2 estou fazendo a mesma coisa aqui e aqui. Esse daqui. Eu não preciso
+
+443
+01:04:06.990 --> 01:04:10.630
+Elberth Moraes: nota três. Estou fazendo alguma coisa. A mesma coisa aqui,
+
+444
+01:04:11.170 --> 01:04:12.900
+Elberth Moraes: vê se aqui. Eu não preciso.
+
+445
+01:04:13.060 --> 01:04:15.050
+Elberth Moraes: Observe que eu resolvo um monte de erro,
+
+446
+01:04:15.240 --> 01:04:24.599
+Elberth Moraes: mas ele está questionando outras coisas ali. Você criou quatro variáveis. Não está usando essa variável em lugar nenhum. Deixa eu fazer a limpeza aqui do meu cara.
+
+447
+01:04:24.710 --> 01:04:27.990
+Elberth Moraes: Esse texto estava sendo jogado para dentro de um campo.
+
+448
+01:04:28.110 --> 01:04:40.450
+Elberth Moraes: Esse texto, esse valor para dentro de outro, esse valor para dentro de outro. E o grande objetivo da gente é que a gente continue recuperando as informações de fora.
+
+449
+01:04:40.560 --> 01:04:51.200
+Elberth Moraes: O nome, a nota da primeira prova. A nota da segunda prova, a nota da terceira prova. E depois que a gente tem essas quatro informações na mão,
+
+450
+01:04:51.300 --> 01:04:55.230
+Elberth Moraes: a gente joga essa informação para dentro do nosso construtor.
+
+451
+01:04:55.390 --> 01:05:08.239
+Elberth Moraes: A gente tem dois construtores, um que chama só o nome e outro que chama os Quatro Informações. Esse cara daqui a gente pediu para a galera que está implementando lá usar esse construtor para a gente testar. Aí a gente. Foi lá
+
+452
+01:05:08.610 --> 01:05:15.869
+Elberth Moraes: preciso passar aqui. Nome, nota: nota: nota beleza. Criei aqui um objeto
+
+453
+01:05:16.920 --> 01:05:20.310
+Elberth Moraes: com as quatro informações, fazendo a impressão,
+
+454
+01:05:20.540 --> 01:05:26.509
+Elberth Moraes: observem que tudo que a gente fez aqui em cima, acreditem, isso aqui é tudo um trabalho visual.
+
+455
+01:05:26.690 --> 01:05:43.630
+Elberth Moraes: Alguém que está fazendo um front End lá precisa se preocupar com isso. A gente responsável pela classe aluno. A gente não precisa ficar preocupado, por isso, daqui isso aqui é coisa de tela. É coisa que alguém faz para testar aquela nossa classe. Aluno,
+
+456
+01:05:43.720 --> 01:05:48.230
+Elberth Moraes: o que a gente tem que pensar na nossa classe aluno. A gente chegou aqui embaixo.
+
+457
+01:05:49.640 --> 01:05:53.399
+Elberth Moraes: Criamos um objeto chamado Aluno dois.
+
+458
+01:05:53.640 --> 01:06:08.049
+Elberth Moraes: Esse objeto chamado Aluno dois recebeu o nome nota Nota E nota. Tudo que foi obtido ali antes mandou imprimir esse cara. Então, quando você chega aqui e manda rodar, esse é o nosso segundo relatório.
+
+459
+01:06:09.550 --> 01:06:11.509
+Elberth Moraes: Vou parar o de cima ali um pouquinho.
+
+460
+01:06:12.310 --> 01:06:22.129
+Elberth Moraes: O segundo relatório faz a mesma coisa. Solicita o nome. Eu digito o nome. Solicita a nota. Digito a nota. Digito outra nota. Digito outra nota
+
+461
+01:06:22.350 --> 01:06:35.189
+Elberth Moraes: e continua funcionando. Então a gente vê assim. Ah, agora, porra legal. Então, o que você fez aqui. Então eu criei um construtor que eu obrigatoriamente coloco todos os alunos,
+
+462
+01:06:35.560 --> 01:06:46.819
+Elberth Moraes: todas as informações do aluno, no momento de criação do objeto legal. Isso porque aí você deixa tudo num único local. Que é esse construtor aqui.
+
+463
+01:06:47.040 --> 01:07:00.490
+Elberth Moraes: Se você quisesse fazer qualquer validação aqui dentro. Se o nome estiver com menos de três letras, se a nota um, nota dois ou nota três estiverem negativas já para aqui. Nem vai adiante.
+
+464
+01:07:00.550 --> 01:07:16.630
+Elberth Moraes: Então, nem a impressão ia acontecer. E se a impressão não acontecer? Não é essa. Mas essa. O cálculo não vai acontecer. O obter situação não vai acontecer e nem a impressão vai acontecer. Então a gente consegue blindar aqui dentro.
+
+465
+01:07:16.890 --> 01:07:24.189
+Elberth Moraes: Legal, a gente tem. A gente pode ter quantos construtores você quiserem. E aí a gente começa. O chefe gostou muito
+
+466
+01:07:24.300 --> 01:07:30.189
+Elberth Moraes: dessa implementação aqui e resolveu fazer assim. Ah, Elt, vamos deixar as duas.
+
+467
+01:07:30.320 --> 01:07:46.429
+Elberth Moraes: A gente deixa a galera que está usando o método de preenchimento do nome depois das notas e a gente deixa também esse de preenchimento de todo mundo. Pode ser assim. Pode? Está tudo resolvido. Não tem problema nenhum e tal.
+
+468
+01:07:46.610 --> 01:08:05.209
+Elberth Moraes: E aí a gente começa a ver que se a gente deixar esses dois carinhas aqui implementados, a gente tem alguma duplicidade de código aqui dentro. E muito mais do que isso. A gente tem dois comportamentos diferentes. Imagine se eu tivesse aqui dentro uma validação,
+
+469
+01:08:06.050 --> 01:08:11.559
+Elberth Moraes: uma validação. Simples assim igual. A gente botou no outro lá, né? System erro
+
+470
+01:08:13.590 --> 01:08:17.400
+Elberth Moraes: Sister Erro Printline. Aqui embaixo a gente botou um retorne
+
+471
+01:08:18.830 --> 01:08:21.460
+Elberth Moraes: e aqui a gente fez assim.
+
+472
+01:08:22.439 --> 01:08:32.789
+Elberth Moraes: Sim, nome, plenfe for menor do que três, não pode.
+
+473
+01:08:32.960 --> 01:08:37.179
+Elberth Moraes: Ok, então é meio que. Ó você.
+
+474
+01:08:37.500 --> 01:08:42.880
+Elberth Moraes: O nome precisa ter pelo menos três caracteres, três letras,
+
+475
+01:08:43.750 --> 01:08:53.979
+Elberth Moraes: beleza. Criamos uma regrinha aqui, tá? Criamos essa regrinha aqui dentro. Depois a gente vai pensar em métodos que a gente vai criar para validações. E por aí vai. Mas hoje a gente está trabalhando aqui.
+
+476
+01:08:54.260 --> 01:08:57.129
+Elberth Moraes: Legal, então aqui eu recebo o nome.
+
+477
+01:08:57.689 --> 01:09:01.200
+Elberth Moraes: E ali em cima. Eu também recebo o nome. Aí eu venho aqui para cima
+
+478
+01:09:02.910 --> 01:09:05.359
+Elberth Moraes: e faço essa regrinha aqui.
+
+479
+01:09:05.460 --> 01:09:08.630
+Elberth Moraes: Legal pô. Ficou legal. Vamos fazer aqui um teste aqui fora.
+
+480
+01:09:08.870 --> 01:09:10.240
+Elberth Moraes: Mandei rodar.
+
+481
+01:09:10.340 --> 01:09:12.250
+Elberth Moraes: Estou rodando aqui embaixo. Tá? Primeiro
+
+482
+01:09:12.479 --> 01:09:16.880
+Elberth Moraes: mandei rodar o de todos os parâmetros. Aí cheguei ali
+
+483
+01:09:17.000 --> 01:09:20.499
+Elberth Moraes: e chamei o nosso amigo. Que faz The Livre.
+
+484
+01:09:20.700 --> 01:09:31.420
+Elberth Moraes: Botei aqui a nota. Botei outra nota. Botei outra nota e ele reclamou o nome. Precisa ter pelo menos três letras. Claro que isso aqui, quando a gente for trabalhar com exceção
+
+485
+01:09:31.500 --> 01:09:44.420
+Elberth Moraes: de verdade, tudo abaixo dele. Vai ser paralisado ali. Não vai rolar esse carinha daqui. Beleza, tá, isso aqui foi só para a gente testar. Que aconteceu? Um erro, tá aqui. Aconteceu um erro.
+
+486
+01:09:44.630 --> 01:09:49.160
+Elberth Moraes: Ah, legal. Vamos testar esse cara aqui de cima também. Então vou testar esse cara aqui de cima.
+
+487
+01:09:49.399 --> 01:09:53.430
+Elberth Moraes: Fechei esse cara daqui contra o Barrinha.
+
+488
+01:09:54.590 --> 01:10:01.040
+Elberth Moraes: Voltei aqui, descomentei, mandei rodar esse cara.
+
+489
+01:10:06.330 --> 01:10:08.530
+Elberth Moraes: Botei ali o rapaz do Delivery.
+
+490
+01:10:08.730 --> 01:10:19.080
+Elberth Moraes: O nome três letras barrou? Já barrou logo de cara? Porque esse cara, daí era o construtor, né? Você lembra que a gente está trabalhando dentro do construtor. Ele ainda está pedindo nota aqui,
+
+491
+01:10:20.620 --> 01:10:24.120
+Elberth Moraes: mas deu erro perfeito. Então a gente está
+
+492
+01:10:24.190 --> 01:10:39.350
+Elberth Moraes: com tudo lindo aqui. Tudo resolvido. Só que a gente começa. Vocês estão reparando que a gente começou agora a ter umas duplicidade de código aqui eu tenho esse tratamento do nome
+
+493
+01:10:39.400 --> 01:10:45.110
+Elberth Moraes: aqui. Eu também tenho o tratamento do nome que está encolhido aqui. Mas ele está aqui dentro
+
+494
+01:10:45.220 --> 01:10:48.270
+Elberth Moraes: e a gente começa a ver que a gente pode trabalhar
+
+495
+01:10:48.440 --> 01:10:53.179
+Elberth Moraes: na reutilização dessas informações, dessa nossa validação.
+
+496
+01:10:53.370 --> 01:10:59.970
+Elberth Moraes: E aí, do mesmo jeito que há muito tempo atrás, a gente chamou um método dentro do outro,
+
+497
+01:11:00.160 --> 01:11:03.910
+Elberth Moraes: a gente consegue fazer. Um construtor chamar o outro
+
+498
+01:11:04.050 --> 01:11:10.760
+Elberth Moraes: muito louco. Isso, né? Porque vocês não estão reparando que não é só isso daqui
+
+499
+01:11:10.900 --> 01:11:13.039
+Elberth Moraes: que é igual ao de baixo.
+
+500
+01:11:13.180 --> 01:11:17.190
+Elberth Moraes: O que mais que você acha que é igual entre o de cima e entre o de baixo,
+
+501
+01:11:27.840 --> 01:11:32.500
+Elberth Moraes: o que está assim igual o nome, então, na verdade,
+
+502
+01:11:32.720 --> 01:11:36.440
+Elberth Moraes: todo o conteúdo do construtor de cima
+
+503
+01:11:36.640 --> 01:11:39.969
+Elberth Moraes: é igual a essa parte do construtor de baixo.
+
+504
+01:11:40.290 --> 01:11:43.700
+Elberth Moraes: Aí você começa a fazer assim. Eu não estou de bobeira.
+
+505
+01:11:44.110 --> 01:11:53.760
+Elberth Moraes: Se o cara de cima está prontinho, se é exatamente isso aqui que eu preciso fazer. A validação de um nome e o preenchimento dele. Se der tudo certo,
+
+506
+01:11:54.000 --> 01:11:56.220
+Elberth Moraes: eu vou chamar o cara de cima.
+
+507
+01:11:56.510 --> 01:12:07.760
+Elberth Moraes: Então vocês lembram que um dia desse, a gente criou métodos que a gente chamou um por dentro do outro construtor. A gente tem uma forma também interessante de fazer isso. Observem,
+
+508
+01:12:07.890 --> 01:12:10.469
+Elberth Moraes: eu posso tirar esse cara todo daqui.
+
+509
+01:12:11.910 --> 01:12:12.890
+Elberth Moraes: Tirei.
+
+510
+01:12:13.080 --> 01:12:19.879
+Elberth Moraes: E na primeira linha desse construtor de baixo. Eu consigo fazer uma chamada para o construtor de cima.
+
+511
+01:12:20.290 --> 01:12:30.339
+Elberth Moraes: A gente já está ligado. Que essa palavrinha diz. Ela representa justamente a relação com o objeto.
+
+512
+01:12:30.770 --> 01:12:34.640
+Elberth Moraes: Então eu estou falando do meu objeto. Qualquer objeto do tipo aluno.
+
+513
+01:12:34.900 --> 01:12:40.660
+Elberth Moraes: Quando eu chego nessa primeira linha aqui. E coloco esse diz parêntese.
+
+514
+01:12:40.870 --> 01:12:50.010
+Elberth Moraes: Ele está falando assim. Ó, você está buscando dentro da sua classe algum construtor padrão, algum construtor sem parâmetro.
+
+515
+01:12:50.170 --> 01:12:54.659
+Elberth Moraes: Eu tenho dentro dessa classe algum construtor padrão
+
+516
+01:12:57.680 --> 01:13:00.869
+Elberth Moraes: construtor padrão. É um construtor que não receba parâmetro.
+
+517
+01:13:01.630 --> 01:13:06.929
+Elberth Moraes: Eu não tenho. Eu só tenho dois construtores. Um construtor que recebe o nome
+
+518
+01:13:07.040 --> 01:13:13.040
+Elberth Moraes: e um construtor que recebe quatro informações. Beleza. Então, como é que eu faço
+
+519
+01:13:13.140 --> 01:13:20.700
+Elberth Moraes: para chamar esse construtor daqui. Sabendo que isso aqui é a forma de você chamar um outro construtor.
+
+520
+01:13:21.040 --> 01:13:27.810
+Elberth Moraes: Mas como o construtor de cima está esperando receber uma string como parâmetro.
+
+521
+01:13:28.020 --> 01:13:32.440
+Elberth Moraes: O que eu tenho que fazer nessa linha daqui para que aquele construtor de cima seja chamado
+
+522
+01:13:38.700 --> 01:13:42.259
+Elberth Moraes: bem avançado. Isso tá? Tô falando assim porque
+
+523
+01:13:42.770 --> 01:13:57.490
+Elberth Moraes: a galera está animada. Eu preciso passar aqui, dentro desse parâmetro dentro desses parênteses. Uma informação que combine com essa informação daqui de cima. Tem alguma informação aqui debaixo que combine com a informação de cima.
+
+524
+01:13:57.590 --> 01:14:04.549
+Elberth Moraes: Tem justamente o nome. Então, se eu pegar esse nome daqui e jogar aqui dentro,
+
+525
+01:14:04.740 --> 01:14:07.389
+Elberth Moraes: ele faz assim. Ó, imaginem, tá,
+
+526
+01:14:07.560 --> 01:14:19.540
+Elberth Moraes: estamos fazendo a validação. Alguém lá fora usou esse construtor daqui, Beleza. Ele vai pegar o nome, fez a validação, deu erro. Preencheu esse cara. Daqui. Acabou. Segue adiante.
+
+527
+01:14:19.660 --> 01:14:24.520
+Elberth Moraes: Beleza, esse cara daqui. Vamos. Que esse cara daqui seja executado
+
+528
+01:14:25.360 --> 01:14:30.010
+Elberth Moraes: aqui. Aí ele entrou, chamou o construtor aí. Veio para cá, caiu aqui.
+
+529
+01:14:30.340 --> 01:14:34.010
+Elberth Moraes: A primeira coisa que ele faz. Pega as quatro informações,
+
+530
+01:14:34.200 --> 01:14:38.400
+Elberth Moraes: pegou as quatro informações. Pega essa informação, joga para cá
+
+531
+01:14:38.670 --> 01:14:42.949
+Elberth Moraes: quando ele joga para cá. Quando eu clico aqui. Ele vem aqui para cima.
+
+532
+01:14:43.260 --> 01:14:51.029
+Elberth Moraes: Pega um nome que eu chamei aqui, que eu passei. Faz a validação, retorna a erro ou não
+
+533
+01:14:51.170 --> 01:14:59.729
+Elberth Moraes: faz o preenchimento no atributo. Acabou de fazer isso. Daqui. Volta para essa linha executa. Volta para essa linha executa. Volta para essa linha executa.
+
+534
+01:15:00.070 --> 01:15:04.150
+Elberth Moraes: Então, sempre que você quiser chamar um construtor
+
+535
+01:15:04.440 --> 01:15:10.599
+Elberth Moraes: que você tenha na sua classe, você vai usar o diz parêntese.
+
+536
+01:15:11.070 --> 01:15:17.860
+Elberth Moraes: E o que vai diferenciar um construtor de outro? É o tipo da informação que você está passando aqui dentro.
+
+537
+01:15:18.630 --> 01:15:21.210
+Elberth Moraes: Na teoria, vocês entenderam o que eu falei.
+
+538
+01:15:21.700 --> 01:15:28.409
+Elberth Moraes: Posso fazer uma questão aqui só para a gente tirar essa dúvida e ver se vocês realmente entenderam. Exemplo:
+
+539
+01:15:28.680 --> 01:15:30.230
+Elberth Moraes: eu tenho aqui embaixo.
+
+540
+01:15:30.970 --> 01:15:33.680
+Elberth Moraes: Um outro construtor de aluno.
+
+541
+01:15:33.940 --> 01:15:46.549
+Elberth Moraes: E esse construtor vai receber nota. Dp um, nota Tp dois e o nota Pp3
+
+542
+01:15:46.730 --> 01:15:50.150
+Elberth Moraes: tem essas três informações aqui aqui embaixo.
+
+543
+01:15:52.380 --> 01:16:04.020
+Elberth Moraes: Nota: Tp1 vai receber nota. Tp1 nota Tp dois vai receber nota. Tp2 em nota
+
+544
+01:16:04.530 --> 01:16:10.330
+Elberth Moraes: Tp3 vai receber nota Tp3 desse jeito aqui.
+
+545
+01:16:10.890 --> 01:16:15.739
+Elberth Moraes: Então a gente tem esse cara aqui em si, vocês conseguem ver
+
+546
+01:16:15.880 --> 01:16:18.590
+Elberth Moraes: que esse cara aqui de cima.
+
+547
+01:16:19.020 --> 01:16:22.719
+Elberth Moraes: Ele tem três carinhas desse.
+
+548
+01:16:23.040 --> 01:16:26.320
+Elberth Moraes: Ok, três campos, três instruções ali dentro.
+
+549
+01:16:26.760 --> 01:16:29.180
+Elberth Moraes: A gente está ligado também.
+
+550
+01:16:29.290 --> 01:16:34.600
+Elberth Moraes: Imaginem, tá, que esse cara aqui de baixo também tem essas informações.
+
+551
+01:16:35.370 --> 01:16:41.239
+Elberth Moraes: Mas eu falei para vocês que sempre que a gente quiser chamar um outro construtor,
+
+552
+01:16:41.370 --> 01:16:46.149
+Elberth Moraes: a gente precisa usar a primeira linha.
+
+553
+01:16:46.540 --> 01:16:47.220
+Elberth Moraes: Tá?
+
+554
+01:16:47.480 --> 01:16:52.589
+Elberth Moraes: Imagine o seguinte. Aqui embaixo eu estou assim. Diz ponto, nome.
+
+555
+01:16:53.490 --> 01:16:55.870
+Elberth Moraes: Isso é só um exemplo. Tá no ar.
+
+556
+01:16:56.440 --> 01:17:02.260
+Elberth Moraes: Como é que eu faço para esse construtor daqui esse construtor da linha vinte e quatro
+
+557
+01:17:02.540 --> 01:17:04.900
+Elberth Moraes: chamar o construtor da linha dezoito.
+
+558
+01:17:06.610 --> 01:17:14.840
+Elberth Moraes: Como é que eu faço para o construtor com quatro parâmetros. Chamar o construtor com três parâmetros.
+
+559
+01:17:16.130 --> 01:17:25.050
+lucas.ssantos: Acho que tem que fazer parecido com o que fez passando. Diz e o nome. Mas agora diz: passando nota. Tp um, Tp dois e Tp3.
+
+560
+01:17:25.290 --> 01:17:31.170
+Elberth Moraes: Eu chego nesse cara daqui, coloco, coloco o. Diz
+
+561
+01:17:31.440 --> 01:17:40.980
+Elberth Moraes: quando eu coloco esse, diz ele até traz para mim aqui. Você quer chamar? Qual construtor? Ah, eu quero chamar esse construtor daqui. Eu dei um. Diz e dei um contra o espaço.
+
+562
+01:17:41.100 --> 01:17:49.860
+Elberth Moraes: Aí eu dou esse cara daqui. Escolho aí. Eu vou passar aqui dentro. Nota. Dp1 nota Dp dois,
+
+563
+01:17:51.170 --> 01:17:57.269
+Elberth Moraes: em nota Tp três: observe que ele está funcionando.
+
+564
+01:17:57.610 --> 01:17:59.650
+Elberth Moraes: Uma vez que eu fiz isso daqui.
+
+565
+01:18:00.660 --> 01:18:07.699
+Elberth Moraes: Se alguém entrar nesse cara daqui com quatro parâmetros, ele vai entrar aqui e vem para cá.
+
+566
+01:18:08.130 --> 01:18:19.110
+Elberth Moraes: Aí ele recebe as três informações que você passou. Essas três informações param aqui. Ele faz o preenchimento dos meus atributos, e aí, consequentemente, isso aqui não precisa.
+
+567
+01:18:19.470 --> 01:18:24.030
+Elberth Moraes: Por quê? Se alguém chamar esse cara, daqui lá fora, ele vai preencher a nota.
+
+568
+01:18:25.520 --> 01:18:41.170
+Elberth Moraes: Se alguém chamar esse cara aqui, lá fora vai preencher nome e as três notas como o preenchimento das três notas. Já tenho aqui a responsabilidade de preenchimento. Eu faço a chamada do construtor de cima. Aí ele vai lá, faz o preenchimento,
+
+569
+01:18:41.360 --> 01:18:45.650
+Elberth Moraes: volta para cá, preencha o nome e acabou a construção.
+
+570
+01:18:45.920 --> 01:18:50.480
+Elberth Moraes: Então existe muito isso. Isso tudo que a gente está fazendo aqui é sobrecarga
+
+571
+01:18:50.730 --> 01:18:57.590
+Elberth Moraes: de construtores, construtor com o mesmo nome, mas parâmetros diferentes.
+
+572
+01:18:57.730 --> 01:19:04.509
+Elberth Moraes: E esse diz aqui, a gente está fazendo para chamar um outro construtor que a gente tenha na nossa classe.
+
+573
+01:19:04.670 --> 01:19:08.210
+Elberth Moraes: Claro, que esse cara daqui. Foi um código que a gente implementou
+
+574
+01:19:08.370 --> 01:19:14.370
+Elberth Moraes: agora para a gente testar. Ok, eu vou deixar esse código aqui do nome
+
+575
+01:19:14.910 --> 01:19:18.299
+Elberth Moraes: para a gente deixar ele mais próximo do nosso mundo aqui.
+
+576
+01:19:18.420 --> 01:19:27.619
+Elberth Moraes: Entender essa parada aí do diz, Chamando um outro construtor. A gente está reaproveitando o código. E às vezes você tem um comportamento dentro de um construtor.
+
+577
+01:19:27.760 --> 01:19:35.329
+Elberth Moraes: Porque se você tiver que repetir nos dois construtores, fica muito ruim, você acaba colocando o comportamento em um
+
+578
+01:19:35.670 --> 01:19:38.860
+Elberth Moraes: e chamando o outro construtor através do diz:
+
+579
+01:19:39.050 --> 01:19:50.779
+Elberth Moraes: então o desnome significa: eu estou chamando algum construtor que receba uma String como parâmetro. Opa construtor que recebe uma streaming como parâmetro. Só pode ter um.
+
+580
+01:19:50.930 --> 01:19:53.870
+Elberth Moraes: Eu não posso ter um outro construtor aqui
+
+581
+01:19:54.850 --> 01:20:05.290
+Elberth Moraes: que receba uma string como parâmetro. Mesmo que essa String seja sobrenome, não interessa o nome que você coloca aqui, o que interessa é o tipo.
+
+582
+01:20:05.650 --> 01:20:10.039
+Elberth Moraes: Então esse cara daqui é igual a esse cara daqui. Por isso que está dando erro.
+
+583
+01:20:10.140 --> 01:20:16.410
+Elberth Moraes: Então o construtor nunca vai se repetir dentro de uma classe, combinando o nome
+
+584
+01:20:16.660 --> 01:20:21.939
+Elberth Moraes: com os parâmetros. Isso está de boa para vocês, galera. Ainda estamos felizes
+
+585
+01:20:27.170 --> 01:20:37.039
+Elberth Moraes: então, aqui dentro, a gente tem esse construtor aqui que faz a criação com um nome. E a gente tem esse construtor aqui
+
+586
+01:20:41.450 --> 01:20:44.790
+Elberth Moraes: que faz a criação com quatro informações.
+
+587
+01:20:44.950 --> 01:20:46.549
+Elberth Moraes: Então, se a gente for debugar
+
+588
+01:20:46.660 --> 01:20:50.059
+Elberth Moraes: aqui em cima, não. Aqui embaixo. Entrou no construtor.
+
+589
+01:20:50.600 --> 01:20:54.190
+Elberth Moraes: Recebi nome as três notas.
+
+590
+01:20:54.450 --> 01:20:57.280
+Elberth Moraes: Pegou esse nome, jogou pra dentro do construtor de cima.
+
+591
+01:20:57.560 --> 01:21:03.270
+Elberth Moraes: O construtor de cima recebeu. Verificou o tamanho dele. Viu que é maior do que três.
+
+592
+01:21:03.480 --> 01:21:07.780
+Elberth Moraes: Pegou o nome e preencheu no meu atributo o que eu tenho que preencher no meu atributo,
+
+593
+01:21:08.000 --> 01:21:11.450
+Elberth Moraes: porque todo o meu código aqui para baixo. Usa o meu atributo.
+
+594
+01:21:11.620 --> 01:21:12.590
+Elberth Moraes: Tá vendo?
+
+595
+01:21:12.770 --> 01:21:23.020
+Elberth Moraes: Usa o atributo. Então não faz sentido a gente deixar essa informação presa aqui dentro. Eu tenho que jogar para o meu atributo para outros métodos utilizarem. É a regra da programação orientada do objeto
+
+596
+01:21:23.150 --> 01:21:23.950
+Elberth Moraes: show.
+
+597
+01:21:24.140 --> 01:21:39.070
+Elberth Moraes: Pegou aqui. Fez o preenchimento. Acabou de fazer lá o que tem que fazer. Volta para a próxima linha. Preencheu nota, preencheu nota, preencheu nota acabou aqui. Volta para cá para a gente chamar o método de imprimir o método de imprimir. Vem aqui,
+
+598
+01:21:39.320 --> 01:21:49.189
+Elberth Moraes: faz o cálculo das notas. Observe que ele vai lá pegar os atributos que eu tenho que. A gente acabou de preencher. Fez esse cálculo, retornou para cá,
+
+599
+01:21:49.310 --> 01:22:08.069
+Elberth Moraes: passou para a situação. A situação recuperou essa nota. Essa média definiu ali ser aprovado. Recuperação reprovado. Guardou aqui dentro e emitiu o relatório, então esse trabalho que a gente fez aqui. É o trabalho que eu queria passar para vocês um pouquinho sobre o construtor.
+
+600
+01:22:08.310 --> 01:22:15.859
+Elberth Moraes: Então o construtor é uma maneira de você criar o seu objeto já com informações logo no seu início,
+
+601
+01:22:15.990 --> 01:22:20.109
+Elberth Moraes: você também pode usar para obrigar o preenchimento de um objeto.
+
+602
+01:22:20.200 --> 01:22:31.070
+Elberth Moraes: Você consegue ter quantos construtores você quiser dentro da sua classe. O conceito de sobrecarga de construtores, que também pode ser o mesmo conceito de sobrecarga de métodos.
+
+603
+01:22:31.070 --> 01:22:40.819
+Elberth Moraes: Ou seja, você tem o mesmo nome do construtor ou o mesmo nome do método. E o que diferencia um do outro. É justamente os parâmetros, aqueles argumentos que a gente tem ali do lado.
+
+604
+01:22:40.890 --> 01:22:46.119
+Elberth Moraes: Então você pode ter a mesma quantidade de argumentos, mas eles precisam ser do mesmo tipo.
+
+605
+01:22:46.330 --> 01:22:54.079
+Elberth Moraes: Então você começa a ter, Ah, eu posso ter um construtor com padrão sem argumento e outro com dois pode.
+
+606
+01:22:54.080 --> 01:23:07.050
+Elberth Moraes: Você pode ter dois construtores com dois documentos. Pode, mas os tipos precisam ser diferentes. Se acontecer, isso e aí o construtor serve para você logo no primeiro passo, que é a criação do seu objeto.
+
+607
+01:23:07.600 --> 01:23:19.690
+Elberth Moraes: Você já definisse isso. Daqui vem se as pessoas de fora estão usando de forma correta, ou se você já responsabiliza ele, porque se passou a informação errada.
+
+608
+01:23:19.940 --> 01:23:21.430
+Elberth Moraes: A culpa é sua.
+
+609
+01:23:22.870 --> 01:23:24.280
+Elberth Moraes: De boa galera.
+
+610
+01:23:25.040 --> 01:23:30.149
+Elberth Moraes: Vamos ver que esse erro aqui. O que houve? Se a gente consegue resolver o que está rolando nesse erro. Aí
+
+611
+01:23:49.200 --> 01:23:50.719
+Elberth Moraes: está rolando um erro aqui, ó,
+
+612
+01:23:53.010 --> 01:23:56.189
+Elberth Moraes: o construtor aluno não está definido.
+
+613
+01:23:56.490 --> 01:24:01.269
+Elberth Moraes: Por quê? Porque lá dentro da minha classe de aluno, eu não tenho um construtor padrão.
+
+614
+01:24:01.560 --> 01:24:05.609
+Elberth Moraes: E aqui ele está usando o construtor padrão sem parâmetro.
+
+615
+01:24:05.870 --> 01:24:11.760
+Elberth Moraes: Como é que eu posso melhorar isso daqui vocês lembram que lá dentro eu tenho dois métodos de imprimir.
+
+616
+01:24:11.840 --> 01:24:28.510
+Elberth Moraes: Eu tenho imprimir que recebe parâmetro, e eu tenho imprimir que não recebe parâmetro. Observe aqui. Imprimir e imprimir. Então eu tenho aqui a sobrecarga de método. Esse imprimir aqui de cima é mais simples. O imprimir aqui de baixo é mais
+
+617
+01:24:28.550 --> 01:24:32.619
+Elberth Moraes: complexo, porque ele precisa de média e tal. Aquelas coisas todas.
+
+618
+01:24:32.700 --> 01:24:38.259
+Elberth Moraes: E aí a gente vê aqui, nesse nosso o primeiro scanner
+
+619
+01:24:38.430 --> 01:24:44.260
+Elberth Moraes: que para que isso aqui funcione direitinho. Eu posso chegar aqui dentro e passar o nome
+
+620
+01:24:44.750 --> 01:24:53.130
+Elberth Moraes: posso chegar aqui e passar o nome eu poderia fazer desse jeito aqui que resolveria.
+
+621
+01:24:53.540 --> 01:24:56.710
+Elberth Moraes: E eu poderia passar desse jeito aqui.
+
+622
+01:24:58.250 --> 01:24:59.980
+Elberth Moraes: Que também resolveria.
+
+623
+01:25:00.350 --> 01:25:03.429
+Elberth Moraes: Mas só que o que eu teria de problema aqui embaixo.
+
+624
+01:25:15.840 --> 01:25:23.519
+Elberth Moraes: Esse cara daqui não tem problema, porque eu estou chamando justamente um método de imprimir que não usa as notas para nada.
+
+625
+01:25:24.140 --> 01:25:26.350
+Elberth Moraes: Observe, nada com a nota.
+
+626
+01:25:26.720 --> 01:25:31.849
+Elberth Moraes: E aí, como o nobre Lucas falou. Esse cara aqui de baixo está indo para dentro do imprimir.
+
+627
+01:25:32.430 --> 01:25:41.139
+Elberth Moraes: Que faz o cálculo das notas da média como eu não preenchi nota um, nota dois e nota três. Esse cara aqui vai estar zero.
+
+628
+01:25:41.250 --> 01:25:50.100
+Elberth Moraes: Consequentemente, obter situação vai estar reprovado. Então a gente tem que ficar ligado em como a gente vai fazer isso, cara. Então eu vou deixar
+
+629
+01:25:50.310 --> 01:25:52.229
+Elberth Moraes: desse jeito aqui.
+
+630
+01:25:52.490 --> 01:25:57.430
+Elberth Moraes: Vocês entenderam por que eu tô deixando desse jeito aqui? Porque na hora que eu mandar rodar esse cara da
+
+631
+01:25:57.950 --> 01:26:00.009
+Elberth Moraes: desse carinha daqui.
+
+632
+01:26:00.180 --> 01:26:01.770
+Elberth Moraes: Botei ali o meu nome.
+
+633
+01:26:02.150 --> 01:26:05.269
+Elberth Moraes: Maravilha. Bom te receber, Kelbert.
+
+634
+01:26:05.540 --> 01:26:10.720
+Elberth Moraes: Perfeito. Se eu botasse do jeito, assim
+
+635
+01:26:10.990 --> 01:26:14.409
+Elberth Moraes: funcionaria. Observe, mas eu chegaria aqui. Ó,
+
+636
+01:26:15.850 --> 01:26:17.719
+Elberth Moraes: qual é o seu nome? Elbert,
+
+637
+01:26:18.170 --> 01:26:21.339
+Elberth Moraes: média do aluno Élber. Chega igual a zero e o aluno está reprovado.
+
+638
+01:26:21.450 --> 01:26:26.860
+Elberth Moraes: Isso podia causar um problema muito grande na faculdade, ali,
+
+639
+01:26:26.930 --> 01:26:46.610
+Elberth Moraes: por isso que a gente está usando desse jeito, porque a gente acabou resolvendo um erro que a gente tinha aqui. Depois que a gente mexeu no nosso construtor, a gente começou a afetar alguns arquivos. É o que acontece. A gente tinha que ter um mapeamento lá dentro. De aluno do tipo beleza manual que a gente chama de gestão de configuração.
+
+640
+01:26:46.680 --> 01:26:49.010
+Elberth Moraes: Quem depende de mim?
+
+641
+01:26:49.430 --> 01:26:57.189
+Elberth Moraes: Você às vezes pode ter controle. Às vezes você não tem controle. É interessante que as pessoas informem que estão te usando.
+
+642
+01:26:57.340 --> 01:27:13.539
+Elberth Moraes: Que aí, quando você muda qualquer coisa, você acaba lembrando aí. Vou mexer. Vou mexer. Vou mexer. Vocês são os meus clientes. Eu crio um grupo lá dos meus clientes e mando uma mensagem. Vou mexer a partir de agora, para a gente criar um aluno. Eu preciso passar ou o nome ou nome notas.
+
+643
+01:27:13.590 --> 01:27:21.820
+Elberth Moraes: Beleza como esse cara daqui estava largado e ninguém conhecia. Deixa quebrar. E aí ele corre atrás do aluno e avisa aluno
+
+644
+01:27:21.950 --> 01:27:35.879
+Elberth Moraes: o que houve aí? Aluno quebrou meu código aqui. Aí o aluno. Eu nem sabia que você existia. Você. Em momento algum me avisou que você usava os meus serviços. Então eu mudei lá e não consegui te avisar, porque eu não tinha você aqui no meu
+
+645
+01:27:35.900 --> 01:27:50.549
+Elberth Moraes: catálogo de clientes. E aí quebrou. Mas agora que eu já sei que você é meu cliente. Vou te cadastrar aqui no meu sistema. E sempre que eu tiver uma alteração, você vai receber um alô para informar que tipo de alteração é essa? Resolvido?
+
+646
+01:27:50.600 --> 01:28:03.699
+Elberth Moraes: Começamos a fazer a nossa gestão de configuração sempre que eu tiver qualquer aluno, qualquer operação de aluno alterado. Esse nosso carinha vai receber esse tipo de aluno
+
+647
+01:28:05.000 --> 01:28:06.050
+Elberth Moraes: galera.
+
+648
+01:28:06.940 --> 01:28:19.510
+Elberth Moraes: Gostaram. Hoje a gente está levantando o nível do nosso trabalho. Os conceitos vão surgindo. Eu sempre vou tentar trazer alguma coisa do nosso mundo corporativo para cá, para a gente não ver que isso aqui é uma.
+
+649
+01:28:19.550 --> 01:28:38.820
+Elberth Moraes: É simplesmente um cursinho. A gente está fazendo aqui. A gente está dentro de uma universidade. Então a gente tem que ter esse mundo do mercado, trazendo para cá para vocês verem a necessidade. Claro que a gente vai programar muito, programar muito, programar muito isso aqui vai entrar na veia. Não precisa se estressar com isso. Daqui não,
+
+650
+01:28:38.870 --> 01:28:54.159
+Elberth Moraes: porque o papo do construtor tem a ver com segurança. Tem a ver com organização. Tem a ver com facilitar se a leitura de você ter menos esquecimentos. Mas é uma questão de você praticar.
+
+651
+01:28:54.200 --> 01:29:08.609
+Elberth Moraes: Cria a sua classe, cria um construtor, use a sua classe, cria a sua classe, cria um outro construtor. Use lá a sua classe altera. Faz um construtor chamar o outro vai lá e influencia. Isso é prática, tá? Se não praticar,
+
+652
+01:29:08.990 --> 01:29:18.240
+Elberth Moraes: una bra, tá, deixa eu finalizar aqui o nosso pagode de hoje, quinta feira. Amanhã eu venho aqui para a gente dar uma geral no nosso
+
+653
+01:29:19.000 --> 01:29:22.739
+Elberth Moraes: Tp. E aí a gente já começa a olhar
+
+654
+01:29:23.140 --> 01:29:26.019
+Elberth Moraes: mais pra frente um pouquinho, tá? Deixa eu
+
+655
+01:29:26.150 --> 01:29:30.109
+Elberth Moraes: comentar aqui o nosso trabalho. Deixa eu ver o que temos para fazer
+
+656
+01:29:45.110 --> 01:29:52.979
+Elberth Moraes: primeiro scanner no aluno no médio aluno, no filme, no testa. Filme perfeito. Botar aqui, adicionar todo mundo
+
+657
+01:29:53.320 --> 01:29:59.590
+Elberth Moraes: vai ter aqui um get stuck novamente. Ninguits, status get now.
+
+658
+01:30:00.450 --> 01:30:09.619
+Elberth Moraes: Então tem esses quatro carinhas aí. Vou fazer aqui um geitcomit falando que a gente trabalhou com construtores desse jeito aqui.
+
+659
+01:30:10.030 --> 01:30:14.350
+Elberth Moraes: Construtores de sobrecarga desse jeito.
+
+660
+01:30:33.570 --> 01:30:48.169
+Elberth Moraes: Depois eu vou até bater um papo com vocês sobre esse comentário que a nossa amiga Jay fez de usar esses prefixos. Essas informações tem muita gente utilizando. Não estou usando ainda aqui com vocês. Não,
+
+661
+01:30:48.320 --> 01:30:56.689
+Elberth Moraes: mas se você for numa Iá da vida, a Iá vai te indicar. Se você for nos seus coleguinhas mais modernos, eles vão te indicar.
+
+662
+01:30:56.880 --> 01:31:04.799
+Elberth Moraes: E aí é uma forma de você saber que tipo de trabalho você fez naquele commited.
+
+663
+01:31:05.200 --> 01:31:20.180
+Elberth Moraes: E aí, às vezes você consegue fazer vários tipos de ação dentro do seu comitê, e você acaba poluindo um pouco mais esse nosso trabalho. Então, inicialmente, eu não vou utilizar,
+
+664
+01:31:20.400 --> 01:31:25.019
+Elberth Moraes: mas daqui a pouquinho. A gente pode ver a necessidade. E aí a gente usa.
+
+665
+01:31:25.310 --> 01:31:26.839
+Elberth Moraes: Tudo bem, menina Jay?
+
+666
+01:31:27.180 --> 01:31:29.220
+Elberth Moraes: Maravilha, tá, então
+
+667
+01:31:29.450 --> 01:31:46.930
+Elberth Moraes: finalizamos aqui o nosso papo por hoje. Está lá no nosso Git. Qualquer novidade, vocês me gritem amanhã mesmo horário. A gente está aqui para dar uma finalizada nesse nosso Tp3 e aí a gente começa a olhar para o nosso At. E a gente tem um mês aí de At que ele já deve estar disponível já já para vocês.
+
+668
+01:31:47.300 --> 01:31:53.160
+Elberth Moraes: Beijo grande para vocês. Se cuidem e a gente se fala amanhã às vinte e trinta.
+
+669
+01:31:53.310 --> 01:31:55.000
+Elberth Moraes: Até mais. Tchau.
+

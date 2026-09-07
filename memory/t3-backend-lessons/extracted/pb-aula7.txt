@@ -1,0 +1,270 @@
+    Projeto de Bloco:
+Desenvolvimento Backend
+    Prof. Orlando Fonseca Guilarte
+ orlando.guilarte@prof.infnet.edu.br
+Sumário Aula 7
+
+
+
+- Relacionamento entre Casos de Uso
+- Relacionamento entre Atores
+
+
+
+
+                                      1
+Relacionamentos
+Casos de uso não precisam ser totalmente independentes. Quando dois ou mais casos de
+uso compartilham comportamentos, ou quando algumas funcionalidades ocorrem
+apenas em condições específicas, podemos usarmos relacionamentos estruturados.
+Os relacionamentos ajudam a evitar duplicação e deixam explícitas as dependências entre
+funcionalidades.
+Tipos:
+- Include (Inclusão)
+- Extend (Extensão)
+- Generalization (Especialização)
+
+                                                                                          2
+Relacionamentos
+
+
+- Inclusão («include»)
+A relação de inclusão ocorre quando um caso de uso depende obrigatoriamente de outro.
+O caso de uso base só é executado por completo se o caso de uso incluído também for
+executado (comportamento obrigatório).
+Ex: Para fazer A, sempre é preciso fazer B.
+
+
+
+
+                                                                                        3
+Relacionamentos
+
+O caso de uso incluído é sempre incondicional. Ele sempre acontecerá quando o caso
+base for iniciado.
+Ex:
+Caso Base: Realizar Pagamento
+Caso Incluído: Verificar Saldo
+O cliente não pode realizar um pagamento sem antes verificar se possui saldo -> Verificar
+Saldo é incluído no comportamento de Realizar Pagamento.
+
+
+
+                                                                                            4
+Relacionamentos
+
+
+- Extensão («extend»)
+A relação de extensão representa comportamentos opcionais, condicionais.
+Diferentemente da inclusão, a extensão não é obrigatória. Ela ocorre apenas se uma
+condição específica for atendida.
+EX: As vezes, durante a realização de A, também é possível realizar B, se necessário.
+
+
+
+
+                                                                                        5
+Relacionamentos
+
+
+A extensão permite modelar funcionalidades opcionais sem poluir o fluxo principal.
+Ex:
+Caso Base: Gerar Relatório de Vendas
+Caso de Extensão: Enviar Relatório por E-mail (quando solicitado)
+Esta funcionalidade adicional só deve ocorrer caso o usuário marque a opção Enviar por
+e-mail.
+
+
+
+
+                                                                                         6
+Relacionamentos
+
+
+A especialização funciona como a herança. O caso de uso pai representa um
+comportamento mais genérico, enquanto os casos de uso filhos representam versões
+especializadas.
+Ex:
+B é um tipo específico de A.
+
+
+
+
+                                                                                   7
+Relacionamentos
+Quando um caso de uso especializado é executado, ele herda todo o comportamento
+básico, podendo adicionar etapas, modificar regras, ou complementar com detalhes
+próprios.
+Ex:
+Caso Genérico: Realizar Pagamento
+Casos Específicos:
+- Realizar Pagamento com Cartão de Crédito
+- Realizar Pagamento com Boleto
+Ambos representam formas de pagamento, mas cada um possui particularidades
+(validação de CVV, geração de código de barras).
+                                                                                   8
+Relacionamentos
+
+
+Identificar casos de uso estendidos e inclusivos pela narrativa
+Inclusão:
+- Quando há uma parte do comportamento que é similar em outro(s) caso(s) de uso
+- Obrigatório
+- O caso de uso base não pode ser executado sem a inclusão
+
+
+
+
+                                                                                  9
+Relacionamentos
+
+
+
+Extensão:
+- Quando um caso de uso tem os mesmos passos de outro mas contém passos a mais
+- Sempre existe uma condição
+
+
+
+
+                                                                                 10
+Relacionamentos
+
+
+
+
+                  11
+Relacionamentos
+
+Os atores também podem ter relações de generalização: quando dois atores
+compartilham comportamentos ou quando um ator mais específico realiza tudo que o
+ator genérico faz, mas também possui atribuições adicionais.
+Ex:
+Ator B é um tipo especializado de ator A, portanto herda todos os casos de uso dele
+Essa relação evita duplicação de setas no diagrama e expressa claramente hierarquias de
+papéis.
+
+
+
+                                                                                          12
+Relacionamentos
+Ex:
+Ator Genérico: Cliente
+Atores Específicos:
+- Cliente Premium
+- Cliente Comum
+Ambos podem fazer login, visualizar saldo e fazer pagamentos, mas o Cliente Premium
+pode realizar pagamentos internacionais e transferências ilimitadas.
+Não precisamos ligar Cliente Premium a todos os casos de uso do cliente comum, pois ele
+automaticamente herda.
+
+                                                                                          13
+Relacionamentos
+
+
+
+Um Gerente pode fazer tudo que um Funcionário faz (como registrar vendas), mas
+também aprova reembolsos e gerencia estoque.
+Gerente herda automaticamente todos os casos de uso do Funcionário.
+
+
+
+
+                                                                                 14
+Relacionamentos
+
+
+
+
+                  15
+Relacionamentos
+
+Exercício 1.
+Estabeleça relações entre os seguintes casos de uso:
+Fazer Transferência
+Fazer Pagamento
+Verificar Saldo
+Pagar da Conta Corrente
+Pagar da Conta Poupança
+
+
+                                                       16
+Relacionamentos
+
+
+Identifique corretamente quando ocorre:
+Inclusão
+Extensão
+Especialização
+
+
+
+
+                                          17
+Relacionamentos
+
+
+
+Tanto Fazer Pagamento quanto Fazer Transferência exigem verificar saldo para evitar
+operações inválidas.
+Portanto, Verificar Saldo deve ser incluído em outros casos.
+
+
+
+
+                                                                                      18
+Relacionamentos
+
+
+
+Pagar da Conta Corrente e Pagar da Conta Poupança são especializações de Fazer
+Pagamento.
+Não há relação de extensão nos casos de uso. Um pagamento pode ter extensões
+opcionais, como imprimir o comprovante e enviar SMS.
+
+
+
+
+                                                                                 19
+Relacionamentos
+
+Exercício 2.
+A empresa Wheels administra uma rede de aluguel de bicicletas urbanas e deseja
+implantar um sistema de apoio às operações diárias. A empresa possui dois atores
+internos: Gerente e Recepcionista.
+Desenhe o diagrama de casos de uso completo do Sistema Wheels, contendo:
+- Os atores e seus relacionamentos
+- Todos os casos de uso listados.
+- Relacionamentos entre casos de uso
+
+
+                                                                                   20
+Relacionamentos
+
+              ID    Caso de Uso
+             UC01   Cadastrar Bicicleta
+             UC02   Alterar Bicicleta
+             UC03   Excluir Bicicleta
+             UC04   Visualizar Lista de Bicicletas
+             UC05   Visualizar Detalhes da Bicicleta
+             UC06   Cadastrar Usuário
+             UC07   Autenticar Usuário
+             UC08   Visualizar Lista de Usuários
+
+
+                                                       21
+Relacionamentos
+
+              ID    Caso de Uso
+             UC09   Visualizar Detalhes de Usuário
+             UC10   Atualizar Usuário
+             UC11   Excluir Usuário
+             UC12   Visualizar Histórico de Locações
+             UC13   Registrar Aluguel
+             UC14   Registrar Devolução
+             UC15   Imprimir Recibo
+             UC16   Notificar Cliente da Devolução
+
+
+                                                       22
+

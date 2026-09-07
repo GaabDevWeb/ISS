@@ -1,0 +1,2350 @@
+WEBVTT
+
+1
+00:00:25.720 --> 00:00:27.450
+Luiz Maia: Boa noite, pessoal.
+
+2
+00:00:27.750 --> 00:00:30.469
+Luiz Maia: Dia primeiro de Setembro de dois mil e vinte e seis.
+
+3
+00:00:30.910 --> 00:00:36.180
+Luiz Maia: Desculpem o atraso aí, mas acontece.
+
+4
+00:00:36.940 --> 00:00:37.990
+Luiz Maia: É?
+
+5
+00:00:42.130 --> 00:00:45.300
+Luiz Maia: Vamos lá para não perder tempo.
+
+6
+00:00:46.410 --> 00:00:48.330
+Luiz Maia: Na aula passada,
+
+7
+00:00:51.690 --> 00:00:54.860
+Luiz Maia: a gente está fazendo uma herança.
+
+8
+00:01:14.360 --> 00:01:24.430
+Luiz Maia: Vou compartilhar até lá com vocês. Esse código está lá no drive, tá gente? Quem não tem o link do drive pode pedir para mim que eu coloco no chat?
+
+9
+00:01:55.320 --> 00:01:57.650
+Luiz Maia: Boa noite, pessoal de novo.
+
+10
+00:01:58.560 --> 00:02:00.159
+Luiz Maia: A gente fez um exemplo.
+
+11
+00:02:00.580 --> 00:02:07.240
+Luiz Maia: A gente tinha três classes. Aluno, funcionários, Funcionário e professor.
+
+12
+00:02:07.520 --> 00:02:09.849
+Luiz Maia: Eles repetiu um monte de coisa.
+
+13
+00:02:12.270 --> 00:02:17.399
+Luiz Maia: Vocês decidiram que isso aqui ia virar uma herança.
+
+14
+00:02:18.390 --> 00:02:28.380
+Luiz Maia: Onde teria pessoa com uma a superclasse aluno funcionário
+
+15
+00:02:28.890 --> 00:02:35.420
+Luiz Maia: e professor, como subclasses dessa superclasse pessoa, né?
+
+16
+00:02:37.770 --> 00:02:48.219
+Luiz Maia: Então a pessoa tem ai de nome, endereço, telefone. A gente valida aqui no construtor. Esses dados.
+
+17
+00:02:49.050 --> 00:02:53.319
+Luiz Maia: O aluno tem, além dessas informações. O curso do aluno.
+
+18
+00:02:53.990 --> 00:02:56.509
+Luiz Maia: O funcionário tem o cargo dele.
+
+19
+00:02:57.820 --> 00:03:02.170
+Luiz Maia: O professor tem a titulação dele. A quem está usando
+
+20
+00:03:02.400 --> 00:03:08.870
+Luiz Maia: um esquema? Onde está chamando o construtor da superclasse.
+
+21
+00:03:10.440 --> 00:03:17.080
+Luiz Maia: Ou seja, ficou muito mais limpo o nosso código, se você comparar esse código que está aqui
+
+22
+00:03:17.540 --> 00:03:20.399
+Luiz Maia: do herança. Um com herança dois.
+
+23
+00:03:20.520 --> 00:03:24.080
+Luiz Maia: Veja como ele ficou bem mais simples.
+
+24
+00:03:24.590 --> 00:03:30.659
+Luiz Maia: Se eu criar uma nova classe aqui, uma nova subclasse, eu posso herdar de pessoa.
+
+25
+00:03:37.080 --> 00:03:43.050
+Luiz Maia: Ou se quiser criar uma subclasse de funcionário, por exemplo, eu também posso.
+
+26
+00:03:43.550 --> 00:03:45.980
+Luiz Maia: Fica um esquema bem mais organizado.
+
+27
+00:03:47.720 --> 00:03:51.649
+Luiz Maia: O que ficou faltando mostrar para vocês.
+
+28
+00:03:52.070 --> 00:03:57.279
+Luiz Maia: Nesse exemplo, esse exemplo está lá no drive. Para vocês olharem
+
+29
+00:03:59.110 --> 00:04:01.679
+Luiz Maia: aqui, eu tenho a criação de um aluno
+
+30
+00:04:01.980 --> 00:04:05.230
+Luiz Maia: de um funcionário e de um professor.
+
+31
+00:04:06.700 --> 00:04:16.829
+Luiz Maia: Não é com os tratamentos possíveis, tratamentos de erro que possam acontecer na criação desses objetos.
+
+32
+00:04:18.320 --> 00:04:20.860
+Luiz Maia: Júlio Ciro Lp,
+
+33
+00:04:32.860 --> 00:04:35.970
+Luiz Maia: o que ficou faltando? A gente colher aqui.
+
+34
+00:04:37.310 --> 00:04:42.960
+Luiz Maia: E aí aí a gente vem falando.
+
+35
+00:04:43.550 --> 00:04:47.310
+Luiz Maia: Não antes de falar de polimorfismo,
+
+36
+00:04:49.090 --> 00:04:52.370
+Luiz Maia: eu queria que alguém da turma
+
+37
+00:04:53.180 --> 00:04:56.830
+Luiz Maia: me dissesse colocasse a sua opinião.
+
+38
+00:04:57.580 --> 00:04:59.580
+Luiz Maia: Qualquer um de vocês.
+
+39
+00:05:01.060 --> 00:05:06.549
+Luiz Maia: Faz sentido instanciar um objeto da classe pessoa.
+
+40
+00:05:07.220 --> 00:05:08.370
+Luiz Maia: Ou seja.
+
+41
+00:05:10.850 --> 00:05:13.030
+Luiz Maia: Faz sentido eu fazer isso aqui
+
+42
+00:05:41.360 --> 00:05:46.470
+Luiz Maia: é nome aí de nome, rua.
+
+43
+00:05:48.280 --> 00:05:56.420
+Luiz Maia: Alguém acha que faz sentido criar um objeto da classe pessoa?
+
+44
+00:06:11.340 --> 00:06:15.350
+Luiz Maia: A classe pessoal é uma classe jornalista.
+
+45
+00:06:16.420 --> 00:06:19.559
+Luiz Maia: Ela não é uma classe específica
+
+46
+00:06:20.100 --> 00:06:27.040
+Luiz Maia: específico. É funcionário, professor, aluno, a classe pessoa.
+
+47
+00:06:27.460 --> 00:06:33.540
+Luiz Maia: Ela não faz sentido a gente criar um objeto em relação a ela, porque ela não é
+
+48
+00:06:33.950 --> 00:06:38.140
+Luiz Maia: o objetivo do nosso código, do nosso sistema,
+
+49
+00:06:38.260 --> 00:06:44.559
+Luiz Maia: da nossa aplicação. Ela só serve para fazer o quê? Herança, mais nada.
+
+50
+00:06:51.600 --> 00:06:54.059
+Luiz Maia: É o nome não é esse.
+
+51
+00:06:54.620 --> 00:06:59.650
+Luiz Maia: Quando você tem uma classe que ela não vai ser instanciada
+
+52
+00:07:00.000 --> 00:07:04.179
+Luiz Maia: porque ela só serve para herança. Ela vira uma classe abstrata.
+
+53
+00:07:09.870 --> 00:07:17.330
+Luiz Maia: E aí, se eu tentar criar um objeto a partir dessa classe, ele vai reclamar
+
+54
+00:07:24.570 --> 00:07:26.509
+Luiz Maia: aqui. Ó, não aceita mais,
+
+55
+00:07:36.260 --> 00:07:37.330
+Luiz Maia: José.
+
+56
+00:07:39.150 --> 00:07:40.410
+Luiz Maia: É.
+
+57
+00:07:41.220 --> 00:07:44.610
+Luiz Maia: Pode ser realidade em outro sistema.
+
+58
+00:07:45.160 --> 00:07:52.089
+Luiz Maia: Nesse sistema. Aqui, pessoa não é uma realidade.
+
+59
+00:07:54.630 --> 00:08:03.880
+Luiz Maia: Talvez em outro sistema a pessoa possa ser um objeto, mas nesse sistema, aqui
+
+60
+00:08:04.560 --> 00:08:12.410
+Luiz Maia: não faz o menor sentido existir pessoa como objeto, apenas como classe abstrata,
+
+61
+00:08:15.860 --> 00:08:21.290
+Luiz Maia: talvez em outro sistema, numa outra realidade. Numa outra situação,
+
+62
+00:08:21.430 --> 00:08:32.789
+Luiz Maia: você possa ter a pessoa como um objeto, mas nesse caso, aqui, o que importa é que a gente vai ter aluno, funcionário e professor pessoa
+
+63
+00:08:33.010 --> 00:08:34.959
+Luiz Maia: é simplesmente o quê?
+
+64
+00:08:37.110 --> 00:08:41.259
+Luiz Maia: Uma classe para implementar a herança. Então isso aqui vai dar erro.
+
+65
+00:08:42.740 --> 00:08:44.559
+Luiz Maia: Não posso fazer isso.
+
+66
+00:08:45.400 --> 00:08:47.380
+Luiz Maia: Então a classe abstrata,
+
+67
+00:08:50.790 --> 00:08:52.369
+Luiz Maia: uma classe
+
+68
+00:08:57.080 --> 00:09:03.510
+Luiz Maia: abstrata não pode ser instanciada.
+
+69
+00:09:08.540 --> 00:09:23.700
+Luiz Maia: Apenas servir como classe para a herança.
+
+70
+00:09:42.070 --> 00:09:43.860
+Luiz Maia: Para implementar
+
+71
+00:09:47.720 --> 00:09:48.870
+Luiz Maia: a herança.
+
+72
+00:09:52.600 --> 00:09:59.540
+Luiz Maia: É isso que seria uma classe abstrata. Na Oml. Ela aparece em itálico.
+
+73
+00:10:00.610 --> 00:10:08.010
+Luiz Maia: Essa classe, quando é abstrata na Iml, aparece em itálico no diagrama de classes.
+
+74
+00:10:08.350 --> 00:10:09.080
+Luiz Maia: Tá?
+
+75
+00:10:09.730 --> 00:10:12.259
+Luiz Maia: Para você ver como é importante isso.
+
+76
+00:10:18.780 --> 00:10:20.319
+Luiz Maia: Se vocês quiserem.
+
+77
+00:10:20.570 --> 00:10:24.979
+Luiz Maia: Eu posso fazer um diagrama de classes desse exemplo para vocês.
+
+78
+00:10:26.950 --> 00:10:30.560
+Luiz Maia: A gente vai perder um tempo razoável nisso, mas eu posso.
+
+79
+00:10:32.670 --> 00:10:39.920
+Luiz Maia: Então a gente aprendeu mais uma coisa. O conceito de classe abstrata. Isso também é programação orientada, objeto.
+
+80
+00:10:41.710 --> 00:10:44.399
+Luiz Maia: Essa classe não pode ser instanciada.
+
+81
+00:10:44.700 --> 00:10:48.119
+Luiz Maia: Então ela só serve para implementar a herança, mais nada.
+
+82
+00:10:49.500 --> 00:10:54.820
+Luiz Maia: Se eu tentar instanciar essa classe dá erro.
+
+83
+00:11:01.530 --> 00:11:04.120
+Luiz Maia: Isso é igual em Java. Tá gente mesma coisa.
+
+84
+00:11:08.440 --> 00:11:14.520
+Luiz Maia: Se a classe vai ser abstrata ou não. Vai depender da situação.
+
+85
+00:11:15.820 --> 00:11:18.409
+Luiz Maia: Eu posso dar um exemplo calculadora.
+
+86
+00:11:22.620 --> 00:11:32.560
+Luiz Maia: Daqui a pouco eu vou mostrar para vocês um exemplo de quando uma classe que é super classe não é abstrata.
+
+87
+00:11:32.830 --> 00:11:34.250
+Luiz Maia: A calculadora
+
+88
+00:11:37.310 --> 00:11:42.240
+Luiz Maia: é um exemplo legal disso daqui a pouco, eu mostro o exemplo da calculadora para vocês.
+
+89
+00:11:42.690 --> 00:11:48.440
+Luiz Maia: Mas por enquanto, a gente fica nesse exemplo aqui. Terminando esse exemplo, aqui a gente vai para a calculadora.
+
+90
+00:11:48.770 --> 00:11:53.499
+Luiz Maia: Aí vocês vão ver que nem sempre a superclasse. É abstrata.
+
+91
+00:11:54.320 --> 00:11:57.159
+Luiz Maia: Tem vezes que ela não é abstrata.
+
+92
+00:11:59.420 --> 00:12:01.280
+Luiz Maia: Depende do contexto.
+
+93
+00:12:03.790 --> 00:12:07.309
+Luiz Maia: Uma outra coisa que eu queria levantar com vocês aqui.
+
+94
+00:12:30.630 --> 00:12:32.100
+Luiz Maia: As classes.
+
+95
+00:12:34.420 --> 00:12:44.920
+Luiz Maia: Elas têm os atributos, os métodos, e aparece um monte de coisa aqui esquisita.
+
+96
+00:12:47.360 --> 00:12:55.910
+Luiz Maia: Ícos Get hash Code Gattype to string.
+
+97
+00:12:57.170 --> 00:13:01.810
+Luiz Maia: O que é isso? Gente, alguém tem ideia do que é isso.
+
+98
+00:13:15.540 --> 00:13:23.530
+Luiz Maia: Métodos errados herdados. A melhor resposta do Michael herdando de quem? Maico
+
+99
+00:13:34.310 --> 00:13:36.370
+Luiz Maia: da classe Object.
+
+100
+00:13:38.940 --> 00:13:42.249
+Luiz Maia: Se você olhar lá, os slides que eu fiz.
+
+101
+00:13:42.430 --> 00:13:48.699
+Luiz Maia: Está escrito todas as classes herdam da classe
+
+102
+00:13:49.160 --> 00:13:53.139
+Luiz Maia: Object. Está lá no slide da aula passada.
+
+103
+00:13:54.600 --> 00:13:55.970
+Luiz Maia: R do quê?
+
+104
+00:13:56.350 --> 00:14:02.630
+Luiz Maia: Esses métodos aqui, ó inclusive o Two String.
+
+105
+00:14:04.800 --> 00:14:07.589
+Luiz Maia: Você não tem a opção de não herdar.
+
+106
+00:14:08.040 --> 00:14:10.409
+Luiz Maia: Isso é feito de forma automática.
+
+107
+00:14:10.510 --> 00:14:16.220
+Luiz Maia: Quando você cria uma classe automaticamente, ele está herdando tudo da classe Object.
+
+108
+00:14:16.790 --> 00:14:21.230
+Luiz Maia: Você pode usar ou não usar, mas você está herdando.
+
+109
+00:14:26.310 --> 00:14:37.340
+Luiz Maia: Então esse método aqui ele está sendo herdado da Superclasse Object. Então, assim a classe pessoa
+
+110
+00:14:37.990 --> 00:14:48.980
+Luiz Maia: ela herda o object automaticamente a classe aluno
+
+111
+00:14:50.060 --> 00:14:54.629
+Luiz Maia: herda tudo que vem de pessoa e de object.
+
+112
+00:14:55.370 --> 00:15:03.080
+Luiz Maia: Não está escrito aqui mas ele está herdando. É como se estivesse aqui do lado object.
+
+113
+00:15:05.650 --> 00:15:07.920
+Luiz Maia: Ele está herdando de duas classes.
+
+114
+00:15:11.620 --> 00:15:14.930
+Luiz Maia: Você não precisa dizer isso, porque isso é feito automaticamente.
+
+115
+00:15:17.810 --> 00:15:21.179
+Luiz Maia: Deixa eu só ver que mensagem de erro ele deu aqui.
+
+116
+00:15:34.180 --> 00:15:39.640
+Luiz Maia: Ele está dizendo que aluno não pode ter múltiplas classes base. Ok, deu para entender,
+
+117
+00:15:41.130 --> 00:15:47.400
+Luiz Maia: mas ele está recebendo os atributos e métodos da classe Object que existirem.
+
+118
+00:15:48.520 --> 00:15:51.760
+Luiz Maia: Onde você quer chegar com essa conversa fiada? Lp:
+
+119
+00:15:52.990 --> 00:15:58.410
+Luiz Maia: Bom, eu quero mostrar para vocês como esse streaming funciona.
+
+120
+00:15:59.380 --> 00:16:01.510
+Luiz Maia: Eu queria que vocês vissem.
+
+121
+00:16:05.420 --> 00:16:06.130
+Luiz Maia: E aí
+
+122
+00:16:23.670 --> 00:16:28.209
+Luiz Maia: todas as subclasses têm o streaming. Vamos ver o que ele vai mostrar.
+
+123
+00:16:39.580 --> 00:16:47.430
+Luiz Maia: Ele me mostra o Memespace o diretório e a classe.
+
+124
+00:16:48.310 --> 00:16:49.780
+Luiz Maia: A mesma coisa.
+
+125
+00:16:52.900 --> 00:16:56.040
+Luiz Maia: Esse é o default do Three String.
+
+126
+00:16:57.600 --> 00:17:01.929
+Luiz Maia: Mas para que serve isso? O que eu posso fazer com isso?
+
+127
+00:17:02.250 --> 00:17:05.179
+Luiz Maia: Por que eu posso melhorar isso?
+
+128
+00:17:11.900 --> 00:17:16.670
+Luiz Maia: Você pode implementar uma coisa chamada sob escrita,
+
+129
+00:17:19.910 --> 00:17:23.640
+Luiz Maia: que é um tipo de polimorfismo dinâmico.
+
+130
+00:17:27.460 --> 00:17:30.369
+Luiz Maia: A gente falou sobre polimorfismo estático.
+
+131
+00:17:30.640 --> 00:17:40.030
+Luiz Maia: Três tipos: sobrecarga de operador, sobrecarga de construtor,
+
+132
+00:17:40.490 --> 00:17:49.369
+Luiz Maia: sobrecarga de métodos. Vimos esses três tipos de sobrecargas também chamado de Overload
+
+133
+00:17:50.110 --> 00:17:53.879
+Luiz Maia: agora a gente vai ver um quarto tipo de polimorfismo
+
+134
+00:17:54.670 --> 00:17:59.450
+Luiz Maia: que é chamado polimorfismo dinâmico, que é a sobrescrita
+
+135
+00:18:02.870 --> 00:18:07.560
+Luiz Maia: sobre escrita
+
+136
+00:18:10.560 --> 00:18:12.630
+Luiz Maia: polimorfismo
+
+137
+00:18:16.400 --> 00:18:20.730
+Luiz Maia: dinâmico, por que dinâmico,
+
+138
+00:18:20.940 --> 00:18:26.629
+Luiz Maia: porque ele é resolvido em tempo de execução e não em tempo de compilação, como o polimorfismo estático.
+
+139
+00:18:30.250 --> 00:18:33.610
+Luiz Maia: Como é que a gente implementa esse polimorfismo
+
+140
+00:18:39.020 --> 00:18:40.120
+Luiz Maia: aqui, ó
+
+141
+00:18:43.510 --> 00:18:55.510
+Luiz Maia: Public override e String Three string
+
+142
+00:19:08.680 --> 00:19:13.339
+Luiz Maia: na classe pessoa a gente vai fazer assim: ó
+
+143
+00:19:21.030 --> 00:19:24.620
+Luiz Maia: isso aí de
+
+144
+00:19:31.350 --> 00:19:32.740
+Luiz Maia: nome.
+
+145
+00:19:33.450 --> 00:19:34.700
+Luiz Maia: E aí?
+
+146
+00:19:38.230 --> 00:19:39.890
+Luiz Maia: Endereço,
+
+147
+00:19:48.760 --> 00:19:50.040
+Luiz Maia: telefone
+
+148
+00:19:55.700 --> 00:20:02.749
+Luiz Maia: das subclasses. O que a gente pode fazer? Fazer referência a esse cara aqui.
+
+149
+00:20:03.790 --> 00:20:08.490
+Luiz Maia: Então ele está sobrescrevendo o streaming que veio da classe Object.
+
+150
+00:20:10.370 --> 00:20:18.449
+Luiz Maia: Então aquela mensagem que ele estava exibindo não vai ser mais exibida. Mas eu não posso rodar esse código, porque essa classe é abstrata.
+
+151
+00:20:18.870 --> 00:20:20.999
+Luiz Maia: Então eu vou ter que fazer o que com ela
+
+152
+00:20:21.250 --> 00:20:24.000
+Luiz Maia: aqui no aluno. Olha só o que eu vou fazer?
+
+153
+00:20:24.230 --> 00:20:28.500
+Luiz Maia: Eu vou fazer umas sobre escritas sobre a sobrescrita.
+
+154
+00:21:04.210 --> 00:21:05.830
+Luiz Maia: O que ele está fazendo aqui?
+
+155
+00:21:06.270 --> 00:21:14.619
+Luiz Maia: Ele está pegando o True String da superclasse pessoa. Que é esse cara. E está juntando
+
+156
+00:21:14.910 --> 00:21:17.200
+Luiz Maia: com o curso do aluno.
+
+157
+00:21:17.900 --> 00:21:21.349
+Luiz Maia: Então agora, quando eu mandar rodar. Olha só o que acontece.
+
+158
+00:21:24.280 --> 00:21:29.200
+Luiz Maia: Ó aluno, tinha String. Olha o que acontece.
+
+159
+00:21:32.210 --> 00:21:34.419
+lucas.ssantos: Voltou a fechar as chaves lá no método.
+
+160
+00:21:46.750 --> 00:21:49.150
+Luiz Maia: Ah, faltou para fechar a chave aqui.
+
+161
+00:21:54.710 --> 00:22:02.380
+Luiz Maia: Aqui, ó, tudo que eu imprimia está direitinho agora.
+
+162
+00:22:06.050 --> 00:22:15.259
+Luiz Maia: Ele já mudou até as outras classes. Vamos consertar as outras classes para resolver isso. E vamos apagar aqui
+
+163
+00:22:15.520 --> 00:22:23.960
+Luiz Maia: esse monte de coisa aqui que está sendo impressa. Ó esse cara aqui. Apaga esse cara aqui. Apaga
+
+164
+00:22:24.990 --> 00:22:27.000
+Luiz Maia: esse cara aqui. Apaga.
+
+165
+00:22:35.610 --> 00:22:36.770
+Luiz Maia: Vamos ver.
+
+166
+00:22:37.450 --> 00:22:40.480
+Luiz Maia: Funcionário
+
+167
+00:22:45.620 --> 00:22:47.020
+Luiz Maia: publicado.
+
+168
+00:22:48.560 --> 00:22:55.590
+Luiz Maia: Overwride string to string retorne
+
+169
+00:23:00.720 --> 00:23:04.939
+Luiz Maia: baseie tá pegando o t shring da superclasse.
+
+170
+00:23:06.630 --> 00:23:09.459
+Luiz Maia: Além disso, está pegando também. O quê?
+
+171
+00:23:10.820 --> 00:23:12.110
+Luiz Maia: O cargo
+
+172
+00:23:17.940 --> 00:23:24.429
+Luiz Maia: resolvido, professor, a mesma coisa.
+
+173
+00:23:46.970 --> 00:23:50.140
+Luiz Maia: Waze streaming.
+
+174
+00:24:11.370 --> 00:24:13.050
+Luiz Maia: Pronto, agora ele está
+
+175
+00:24:17.540 --> 00:24:22.180
+Luiz Maia: buscando na superclasse pessoa.
+
+176
+00:24:22.980 --> 00:24:29.559
+Luiz Maia: Este String que veio da superclasse object. E está sobrescrevendo isso.
+
+177
+00:24:29.690 --> 00:24:37.410
+Luiz Maia: Isso gente chama se sobre
+
+178
+00:24:40.720 --> 00:24:43.140
+Luiz Maia: escrita
+
+179
+00:24:47.410 --> 00:24:52.510
+Luiz Maia: e é um tipo de polimorfismo
+
+180
+00:24:58.090 --> 00:24:59.350
+Luiz Maia: dinâmico.
+
+181
+00:25:10.710 --> 00:25:15.550
+Luiz Maia: Então isso aqui é sobre escrita de método,
+
+182
+00:25:17.690 --> 00:25:20.290
+Luiz Maia: que é um tipo de polinorfismo dinâmico.
+
+183
+00:25:24.150 --> 00:25:30.039
+Luiz Maia: Esse Over Ride aqui em inglês. É sobre a escrita.
+
+184
+00:25:30.180 --> 00:25:34.210
+Luiz Maia: É sobre escrever override.
+
+185
+00:25:37.900 --> 00:25:40.930
+Luiz Maia: Então a gente tem vários tipos de polimorfismo.
+
+186
+00:25:41.060 --> 00:25:45.449
+Luiz Maia: Nós já vimos três tipos estáticos.
+
+187
+00:25:45.860 --> 00:25:49.340
+Luiz Maia: E agora estamos vendo esse primeiro tipo dinâmico aqui.
+
+188
+00:25:52.000 --> 00:25:57.140
+Luiz Maia: Provavelmente a nossa próxima aula será sob polimorfismo.
+
+189
+00:25:58.690 --> 00:26:03.030
+Luiz Maia: Mas eu já apresentei vários exemplos de poliomorfismo
+
+190
+00:26:03.440 --> 00:26:18.210
+Luiz Maia: durante as aulas, para não ficar uma única aula só sobre polimorfismo. Vocês estão vendo o polimorfismo em vários momentos diferentes do curso para não ficar concentrado numa única aula e você pirar,
+
+191
+00:26:18.850 --> 00:26:22.329
+Luiz Maia: porque é um conceito difícil, muito difícil.
+
+192
+00:26:23.780 --> 00:26:25.740
+Luiz Maia: Vendo em pedacinhos,
+
+193
+00:26:26.280 --> 00:26:43.619
+Luiz Maia: sobrecarga de operador, sobrecarga de construtor. Sobrecarga de método sobre escrita de método. A coisa fica mais diluída. E eu imagino que seja mais fácil de você engolir de você aceitar isso aí,
+
+194
+00:26:44.430 --> 00:26:49.499
+Luiz Maia: porque é difícil mesmo eu demorei muito tempo para entender isso tudo.
+
+195
+00:26:56.800 --> 00:26:58.039
+Luiz Maia: Vamos ver se funciona
+
+196
+00:27:01.250 --> 00:27:08.840
+Luiz Maia: aí, ó o polimorfino funcionando em tempo de execução.
+
+197
+00:27:09.330 --> 00:27:12.470
+Luiz Maia: Ele sabe qual o método que ele vai executar.
+
+198
+00:27:14.450 --> 00:27:18.660
+Luiz Maia: Não é em tempo de compilação. É em tempo de execução.
+
+199
+00:27:18.890 --> 00:27:19.940
+Luiz Maia: Tá certo,
+
+200
+00:27:31.460 --> 00:27:36.109
+Luiz Maia: pode, Gabriel. Você pode fazer polimorfismo nos seus próprios métodos.
+
+201
+00:27:37.510 --> 00:27:40.010
+Luiz Maia: Não tem nada que te impeça de fazer
+
+202
+00:27:40.730 --> 00:27:45.790
+Luiz Maia: o polimorfismo nos seus próprios métodos. Não tem nenhum problema.
+
+203
+00:27:48.670 --> 00:27:50.140
+Luiz Maia: Calma, Gabriel.
+
+204
+00:27:50.370 --> 00:27:54.530
+Luiz Maia: Não é agora, cara, não é a hora. Ainda
+
+205
+00:27:55.110 --> 00:28:02.640
+Luiz Maia: vai chegar a hora de eu ensinar mais detalhes para vocês é aos poucos é igual remédio. Gente,
+
+206
+00:28:03.190 --> 00:28:07.160
+Luiz Maia: se você passar da conta, vira veneno.
+
+207
+00:28:07.580 --> 00:28:12.530
+Luiz Maia: Se você der menos remédio mata.
+
+208
+00:28:13.010 --> 00:28:17.679
+Luiz Maia: Então assim você tem que passar o conteúdo devagarzinho.
+
+209
+00:28:18.380 --> 00:28:21.460
+Luiz Maia: Primeiro, você aceita isso aqui,
+
+210
+00:28:22.660 --> 00:28:29.350
+Luiz Maia: e aí eu te respondi: isso pode ser feito, inclusive para métodos que você criar nas suas classes.
+
+211
+00:28:29.630 --> 00:28:32.109
+Luiz Maia: Agora, exemplo: agora não cabe.
+
+212
+00:28:32.840 --> 00:28:39.660
+Luiz Maia: Não é a hora ainda, senão eu vou desviar da minha
+
+213
+00:28:39.850 --> 00:28:47.340
+Luiz Maia: dar aula. E posso criar um problema enorme para os colegas de vocês, dos seus colegas,
+
+214
+00:28:47.830 --> 00:28:54.700
+Luiz Maia: porque o assunto é complexo. Não dá para desviar o foco. Não tem que seguir uma didática
+
+215
+00:28:54.910 --> 00:29:00.890
+Luiz Maia: para conseguir chegar no final do túnel. Se não vai ficar difícil,
+
+216
+00:29:02.170 --> 00:29:09.460
+Luiz Maia: darei exemplos mais para frente, mas, por enquanto, é um exemplo real de polimorfismo dinâmico.
+
+217
+00:29:13.750 --> 00:29:17.800
+Luiz Maia: Tá, esse exemplo está encerrado.
+
+218
+00:29:18.010 --> 00:29:28.480
+Luiz Maia: Tá certo, vamos ver agora o exemplo de herança
+
+219
+00:29:28.690 --> 00:29:31.880
+Luiz Maia: da calculadora. Eu não vou fazer esse exemplo
+
+220
+00:29:32.520 --> 00:29:37.960
+Luiz Maia: do zero. Eu vou pegar ele. Pronto, é
+
+221
+00:29:49.120 --> 00:29:55.640
+Luiz Maia: primeiro mostrar para vocês. O diagrama de classes dele.
+
+222
+00:29:56.390 --> 00:29:58.410
+Luiz Maia: Você tem aqui
+
+223
+00:30:07.280 --> 00:30:16.290
+Luiz Maia: o calcula que a superclasse tem aqui os operandos seus atributos da classe.
+
+224
+00:30:16.730 --> 00:30:21.640
+Luiz Maia: Você tem aqui o somar que é a sobrecarga de método.
+
+225
+00:30:22.090 --> 00:30:26.300
+Luiz Maia: A gente não costuma colocar no diagrama de classe os construtores.
+
+226
+00:30:26.910 --> 00:30:35.679
+Luiz Maia: Não é normal colocar aqui. Eu tenho a calculadora científica e a de programação.
+
+227
+00:30:37.410 --> 00:30:46.370
+Luiz Maia: Elas estão estendendo a superclasse. Calcula essa setinha aqui. Não sei se vocês já estudaram isso para de bloco.
+
+228
+00:30:46.620 --> 00:30:49.060
+Luiz Maia: É o símbolo de herança.
+
+229
+00:30:52.040 --> 00:30:59.060
+Luiz Maia: Então a calculadora científica herda de calcula também em programação.
+
+230
+00:30:59.520 --> 00:31:02.470
+Luiz Maia: Só que a colocadura científica. Ela traz
+
+231
+00:31:02.670 --> 00:31:08.680
+Luiz Maia: novos métodos, potência e reis. Quadrada em conta de programação.
+
+232
+00:31:09.080 --> 00:31:13.760
+Luiz Maia: Tem a conversão de decimal para binário e de decimal para hexa
+
+233
+00:31:17.150 --> 00:31:18.680
+Luiz Maia: semelhante
+
+234
+00:31:24.500 --> 00:31:27.190
+Luiz Maia: a calculadora do Windows.
+
+235
+00:31:27.880 --> 00:31:32.359
+Luiz Maia: Você tem a galera padrão, tem a cultura científica
+
+236
+00:31:32.850 --> 00:31:35.029
+Luiz Maia: e tem a calculadora de programação.
+
+237
+00:31:36.500 --> 00:31:38.729
+Luiz Maia: É mais ou menos isso que eu estou fazendo aqui.
+
+238
+00:31:44.570 --> 00:31:47.810
+Luiz Maia: E aí, dito isso.
+
+239
+00:31:47.980 --> 00:31:51.800
+Luiz Maia: Então isso aqui é o geograma de classe da calculadora.
+
+240
+00:31:56.100 --> 00:32:00.089
+Luiz Maia: Vou pegar aqui a calculadora o vou baixar.
+
+241
+00:32:01.480 --> 00:32:08.060
+Luiz Maia: Vou mostrar para vocês o código disso. Porque não vai dar tempo de a gente
+
+242
+00:32:12.500 --> 00:32:13.960
+Luiz Maia: fazer o código.
+
+243
+00:32:15.370 --> 00:32:18.210
+Luiz Maia: Infelizmente, a gente tem pouquíssimo tempo
+
+244
+00:32:19.050 --> 00:32:28.860
+Luiz Maia: lembrando que na próxima segunda é feriado. Então vocês não vão ter é aula na próxima segunda feira,
+
+245
+00:32:29.370 --> 00:32:31.329
+Luiz Maia: que é um problema para a gente
+
+246
+00:32:59.060 --> 00:33:00.100
+Luiz Maia: aqui. Ó,
+
+247
+00:33:01.770 --> 00:33:09.210
+Luiz Maia: você tem a classe. Calcula isso. Está lá no drive, tá gente? Então você pode baixar lá direitinho
+
+248
+00:33:10.140 --> 00:33:18.020
+Luiz Maia: aqui. Exemplo de sobrecarga de construtor. Sobrecarga de método bonitinho.
+
+249
+00:33:21.050 --> 00:33:33.980
+Luiz Maia: E aí você vem com a quadro científica tem aqui os construtores da calculadora científica, potência e raiz quadrada.
+
+250
+00:33:35.760 --> 00:33:44.959
+Luiz Maia: Você está estendendo a classe calcula então a valadora científica também tem as operações básicas da calculadora.
+
+251
+00:33:48.930 --> 00:33:55.670
+Luiz Maia: A de programação estende a calculadora, calcula
+
+252
+00:33:56.190 --> 00:34:02.379
+Luiz Maia: e tem os seus próprios métodos, ou seja, converter para a binária e converter para hexa.
+
+253
+00:34:04.080 --> 00:34:09.059
+Luiz Maia: Aqui tem o programa principal, que mostra justamente isso.
+
+254
+00:34:10.880 --> 00:34:18.810
+Luiz Maia: Ele cria que o calcula o somar com parâmetro e o somar sem parâmetro,
+
+255
+00:34:19.690 --> 00:34:29.409
+Luiz Maia: calculadora científica, somar com parâmetro. Somar sem parâmetro a potência e a raiz.
+
+256
+00:34:30.260 --> 00:34:38.300
+Luiz Maia: A programação, o somar com parâmetro, o somar sem parâmetro, que estão na superclasse converter
+
+257
+00:34:38.550 --> 00:34:42.419
+Luiz Maia: dez para binário e converter dez para hexa.
+
+258
+00:34:45.440 --> 00:34:50.909
+Luiz Maia: Então está aí o exemplo de herança na calculadora.
+
+259
+00:34:58.590 --> 00:35:01.239
+Luiz Maia: Se alguém tiver algum problema
+
+260
+00:35:01.870 --> 00:35:12.789
+Luiz Maia: de entender esse código. Me procura. Me fala para eu explicar porque a gente não vai ter tempo de escrever o código do zero.
+
+261
+00:35:13.620 --> 00:35:15.859
+Luiz Maia: As aulas são muito curtinhas.
+
+262
+00:35:16.140 --> 00:35:23.209
+Luiz Maia: Uma hora e meia de aula passa bastante rápido. Então não tem muito tempo até porque eu cheguei atrasado hoje. Desculpem,
+
+263
+00:35:24.300 --> 00:35:29.850
+Luiz Maia: mas mesmo assim eu não conseguiria fazer essa calculadora com vocês durante a aula.
+
+264
+00:35:30.060 --> 00:35:37.379
+Luiz Maia: Eu coloquei disponível para vocês no drive. Se vocês tiverem alguma dúvida, vocês me procurem.
+
+265
+00:35:37.550 --> 00:35:40.400
+Luiz Maia: Aqui tem o código todo para executar.
+
+266
+00:35:40.650 --> 00:35:44.670
+Luiz Maia: Se você quiser executar esse código, você vem aqui,
+
+267
+00:35:44.800 --> 00:35:48.209
+Luiz Maia: manda rodar. Ele vai executar direitinho.
+
+268
+00:35:51.700 --> 00:35:54.349
+Luiz Maia: Aqui é a calculadora.
+
+269
+00:35:54.930 --> 00:36:01.740
+Luiz Maia: Aqui é a calculadora científica. E aqui é a calculadora de Programação.
+
+270
+00:36:05.920 --> 00:36:10.430
+Luiz Maia: Ele está pegando um0 e conversando para binário, que é um-zero, um.zero,
+
+271
+00:36:10.690 --> 00:36:14.279
+Luiz Maia: e está convertendo dez para a hexadecimal, que é a.
+
+272
+00:36:16.980 --> 00:36:20.430
+Luiz Maia: O hexa vai de zero até F.
+
+273
+00:36:21.550 --> 00:36:22.630
+Luiz Maia: Tá certo.
+
+274
+00:36:23.850 --> 00:36:28.599
+Luiz Maia: Eu sei que vocês não estudaram nada de organização de computadores.
+
+275
+00:36:29.010 --> 00:36:33.350
+Luiz Maia: Se vocês quiserem estudar mais a fundo, esse assunto
+
+276
+00:36:33.770 --> 00:36:36.850
+Luiz Maia: que eu acho importante, pelo menos para mim foi, né?
+
+277
+00:36:37.640 --> 00:36:39.500
+Luiz Maia: Eu acho.
+
+278
+00:36:41.780 --> 00:36:47.500
+Luiz Maia: Eu recomendo esse livro aqui, caso você queira estudar a organização dos computadores.
+
+279
+00:37:15.410 --> 00:37:18.999
+Luiz Maia: Esse livro aqui, ó do Mário Monteiro.
+
+280
+00:37:19.130 --> 00:37:22.880
+Luiz Maia: Mário Monteiro foi meu professor na Puc.
+
+281
+00:37:24.400 --> 00:37:27.319
+Luiz Maia: Eu conheço ele desde a década de oitenta.
+
+282
+00:37:27.950 --> 00:37:29.689
+Luiz Maia: Nem sei se ele está vivo.
+
+283
+00:37:31.590 --> 00:37:41.090
+Luiz Maia: Dá para encontrar esse livro em Cebo, na deve ter ele também na online.
+
+284
+00:37:41.460 --> 00:37:45.559
+Luiz Maia: O infinete deve ter esse livro lá para vocês estudarem.
+
+285
+00:37:49.800 --> 00:37:55.610
+Luiz Maia: É um livro clássico, muito famoso. Estudei muito em cima desse livro.
+
+286
+00:37:56.000 --> 00:38:01.059
+Luiz Maia: Eu até tinha esse livro. Acabei me desfazendo dele por conta de espaço. Mas
+
+287
+00:38:01.710 --> 00:38:08.150
+Luiz Maia: minha biblioteca era gigantesca. Eu tinha livros muito bons. Pena que eu tive que me desfazer deles.
+
+288
+00:38:09.800 --> 00:38:18.289
+Luiz Maia: Introdução de computadores Mário monteiro. Esse é o livro que vocês têm que se você quiser
+
+289
+00:38:18.400 --> 00:38:23.310
+Luiz Maia: saber mais sobre computação, esse é o livro
+
+290
+00:38:27.320 --> 00:38:32.419
+Luiz Maia: também tem um outro livro importante. Se você quiser saber mais, por exemplo, sobre sistemas operacionais,
+
+291
+00:38:37.840 --> 00:38:39.270
+Luiz Maia: por exemplo,
+
+292
+00:38:46.550 --> 00:38:48.199
+Luiz Maia: amigo do machado.
+
+293
+00:38:56.200 --> 00:38:58.920
+Luiz Maia: Essa aqui é a versão antiga.
+
+294
+00:39:29.640 --> 00:39:35.170
+Luiz Maia: Impressionante, cara. Como é que é difícil? Tem um Pdf aqui? Ó,
+
+295
+00:39:38.040 --> 00:39:40.290
+Luiz Maia: você pode até baixar para estudar.
+
+296
+00:39:45.860 --> 00:39:49.529
+Luiz Maia: Deixa eu botar aqui. Deixa eu ver se consigo com esse nome. Aqui fica melhor
+
+297
+00:39:59.350 --> 00:40:06.719
+Luiz Maia: esse livro aqui. Ó, se quiser ajudar. Ação dos senhores operacionais. Esse é o livro? Tá?
+
+298
+00:40:13.610 --> 00:40:16.700
+Luiz Maia: Se quiserem outras indicações de livro, me falem.
+
+299
+00:40:17.600 --> 00:40:25.129
+Luiz Maia: Disse Sharp, cara. O único livro que eu poderia recomendar para vocês é do Datel.
+
+300
+00:40:33.200 --> 00:40:34.830
+Luiz Maia: Esse livro aqui. Ó,
+
+301
+00:40:43.660 --> 00:40:47.440
+Luiz Maia: não sei se isso aqui é a última versão, tá? Não tenho certeza.
+
+302
+00:40:47.730 --> 00:40:52.590
+Luiz Maia: Eu estudei esse Sharp por esse livro do Daytel.
+
+303
+00:40:57.470 --> 00:41:01.050
+Luiz Maia: Vamos ver se tem alguma coisa diferente em relação a isso.
+
+304
+00:41:07.460 --> 00:41:11.100
+Luiz Maia: Você quer o site deles. É o site de verdade.
+
+305
+00:41:12.370 --> 00:41:14.630
+Luiz Maia: Esse aqui é a última versão do livro
+
+306
+00:41:19.750 --> 00:41:24.090
+Luiz Maia: aqui. Ó Sexta edição do livro. Imagino que seja a última
+
+307
+00:41:24.210 --> 00:41:27.400
+Luiz Maia: peraí. Deixa eu ver aqui a data.
+
+308
+00:41:28.650 --> 00:41:33.549
+Luiz Maia: Coloca a data. Isso é incrível. Isso, cara. Eu não acredito nisso.
+
+309
+00:41:44.100 --> 00:41:50.610
+Luiz Maia: Esse foi o livro que eu usei. Não, esse não essa edição. Eu tenho uma edição muito antiga dele
+
+310
+00:41:50.810 --> 00:41:57.170
+Luiz Maia: o resto da C. Sharp fazer um pequeno intervalo.
+
+311
+00:41:58.410 --> 00:42:02.919
+Luiz Maia: Se você tiver alguma pergunta sobre a calculadora. Vocês me falem.
+
+312
+00:42:03.960 --> 00:42:10.910
+Luiz Maia: E aí eu explico porque agora eu vou começar um outro projeto com vocês de herança.
+
+313
+00:42:12.030 --> 00:42:18.109
+Luiz Maia: Então a calculadora ficou como brinde para vocês aí, para vocês darem uma olhada nela.
+
+314
+00:42:18.320 --> 00:42:29.640
+Luiz Maia: Se tiver dúvida, me pergunta que eu tiro dúvida sobre a calculadora não tem problema. Mas agora eu vou começar uma outra jornada com vocês. Um outro exemplo.
+
+315
+00:49:33.040 --> 00:49:36.040
+Luiz Maia: Estamos de volta a.
+
+316
+00:49:37.170 --> 00:49:47.229
+Luiz Maia: A gente vai continuar com o código da herança que a gente
+
+317
+00:49:53.020 --> 00:49:54.720
+Luiz Maia: nesse código aqui.
+
+318
+00:50:45.600 --> 00:50:53.790
+Luiz Maia: Você tem essa situação aqui. Ó, eu tenho conta comum conta corrente de um banco.
+
+319
+00:51:01.430 --> 00:51:04.609
+Luiz Maia: Tem idi nome e saldo.
+
+320
+00:51:06.350 --> 00:51:15.149
+Luiz Maia: Tem um construtor da conta comum, o creditar e o debitar
+
+321
+00:51:16.200 --> 00:51:24.130
+Luiz Maia: onde estão sendo feitos algumas regras de negócio. O valor não pode ser menor, igual a zero. Não creditar
+
+322
+00:51:24.660 --> 00:51:29.040
+Luiz Maia: o valor não pode ser maior que o saldo no debitar.
+
+323
+00:51:30.640 --> 00:51:32.170
+Luiz Maia: Você quer conta comum.
+
+324
+00:51:37.000 --> 00:51:44.310
+Luiz Maia: A conta especial, além do id nome saldo tem o cheque especial
+
+325
+00:51:44.700 --> 00:51:53.910
+Luiz Maia: também validado na conta especial. Tem um creditar e um debitar diferente, onde o
+
+326
+00:51:54.460 --> 00:51:58.600
+Luiz Maia: o saldo é o saldo. Mas o cheque especial.
+
+327
+00:52:00.850 --> 00:52:11.609
+Luiz Maia: E aqui eu já tenho já tudo já implementando sobre a escrita do Three String, compansa.
+
+328
+00:52:12.490 --> 00:52:15.580
+Luiz Maia: Além do id nome saldo, tem taxa.
+
+329
+00:52:17.240 --> 00:52:19.810
+Luiz Maia: Tudo isso aqui é validado no construtor.
+
+330
+00:52:21.820 --> 00:52:35.480
+Luiz Maia: Tem aqui o creditar tem o debitar, calcular o saldo e realizar a impressão dos dados.
+
+331
+00:52:35.950 --> 00:52:36.840
+Luiz Maia: E aí,
+
+332
+00:52:41.090 --> 00:52:42.990
+Luiz Maia: porque faltou alguma coisa?
+
+333
+00:52:45.590 --> 00:52:51.039
+Luiz Maia: Não faltou nada. Não Id, nome, o saldo e a taxa
+
+334
+00:52:52.160 --> 00:52:56.009
+Luiz Maia: aqui. Acho que faltou aqui botar um percentual.
+
+335
+00:52:56.970 --> 00:53:00.800
+Luiz Maia: Aqui tem o programa principal que faz a
+
+336
+00:53:08.400 --> 00:53:11.680
+Luiz Maia: a criação das contas. Conta comum,
+
+337
+00:53:12.400 --> 00:53:17.609
+Luiz Maia: conta especial e conta poupança. Vamos rodar para ver se funciona
+
+338
+00:53:29.450 --> 00:53:32.499
+Luiz Maia: essa taxa aqui tá meio alta essa taxa aqui, né?
+
+339
+00:53:36.470 --> 00:53:45.610
+Luiz Maia: Que tem mil. Aqui. Dois mil. Mais duzentos, que é o cheque especial. E aqui está essa taxa absurda
+
+340
+00:53:45.730 --> 00:53:47.260
+Luiz Maia: que é espetacular.
+
+341
+00:53:48.110 --> 00:53:50.329
+Luiz Maia: A gente pode corrigir isso aqui. Agora,
+
+342
+00:53:51.280 --> 00:53:58.059
+Luiz Maia: em vez de ser zero,dois, pode ser, sei lá, zerozero,um.
+
+343
+00:54:03.900 --> 00:54:12.150
+Luiz Maia: Pronto, ficou mais o importante é perguntar para vocês. Vocês entenderam
+
+344
+00:54:13.000 --> 00:54:15.560
+Luiz Maia: o que cada uma dessas classes está fazendo
+
+345
+00:54:17.440 --> 00:54:19.880
+Luiz Maia: ou não quer que eu explique melhor
+
+346
+00:54:33.400 --> 00:54:35.020
+Luiz Maia: a conta comum?
+
+347
+00:54:37.490 --> 00:54:44.019
+Luiz Maia: Ela tem Id nome e saldo aqui. Eu estou validando
+
+348
+00:54:45.050 --> 00:54:51.159
+Luiz Maia: os dados no construtor para quando criar o objeto da classe. Conta comum,
+
+349
+00:54:51.650 --> 00:54:55.330
+Luiz Maia: eles estejam dentro das regras de negócio.
+
+350
+00:54:55.460 --> 00:55:06.869
+Luiz Maia: Valor válido. O nome válido, saldo, válido, o creditar que é você. Colocar dinheiro na conta e o debitar,
+
+351
+00:55:07.460 --> 00:55:10.040
+Luiz Maia: o debitar. Não pode ultrapassar o saldo.
+
+352
+00:55:13.610 --> 00:55:15.460
+Luiz Maia: A conta especial.
+
+353
+00:55:15.920 --> 00:55:21.149
+Luiz Maia: Além de ter o id nome e saldo, ela tem um cheque especial
+
+354
+00:55:22.040 --> 00:55:30.300
+Luiz Maia: aqui. Estou validando todos os dados para a criação de uma conta especial, o creditar e o debitar.
+
+355
+00:55:30.550 --> 00:55:37.810
+Luiz Maia: O debitar não é igual ao da conta comum. Porque aqui eu tenho um cheque especial.
+
+356
+00:55:44.110 --> 00:55:49.830
+Luiz Maia: Então ele pode ir além do que ele tem na conta.
+
+357
+00:55:50.890 --> 00:55:54.899
+Luiz Maia: O saldo dele é o saldo mais do cheque especial.
+
+358
+00:55:57.570 --> 00:55:59.919
+Luiz Maia: Não tem herança aqui ainda, Gabriel.
+
+359
+00:56:04.720 --> 00:56:10.969
+Luiz Maia: São três contas separadas. Elas não têm herança aqui ainda.
+
+360
+00:56:15.570 --> 00:56:22.950
+Luiz Maia: A poupança o debitar é igual aos outros. O creditar também é.
+
+361
+00:56:23.550 --> 00:56:30.770
+Luiz Maia: A única diferença é que calcular o saldo é diferente. O saldo é o saldo mais
+
+362
+00:56:30.960 --> 00:56:33.009
+Luiz Maia: um saldo vezes. A taxa
+
+363
+00:56:41.630 --> 00:56:45.319
+Luiz Maia: deu para entender o que cada uma dessas classes está fazendo
+
+364
+00:56:46.910 --> 00:56:55.349
+Luiz Maia: aqui pelo programa principal. Você tem aqui a execução de cada uma dessas desses objetos.
+
+365
+00:56:57.870 --> 00:57:00.559
+Luiz Maia: A primeira classe.
+
+366
+00:57:00.920 --> 00:57:02.730
+Luiz Maia: Eu posso até escrever aqui.
+
+367
+00:57:04.150 --> 00:57:06.250
+Luiz Maia: Posso até escrever aqui, ó
+
+368
+00:57:12.430 --> 00:57:16.610
+Luiz Maia: conta como um
+
+369
+00:57:26.280 --> 00:57:27.870
+Luiz Maia: ponto especial.
+
+370
+00:57:37.300 --> 00:57:38.860
+Luiz Maia: Quanto à poupança,
+
+371
+00:57:50.220 --> 00:57:56.020
+Luiz Maia: ele já faz isso aqui. Ó, esse maizinho que está aqui é. Põe o mofismo
+
+372
+00:57:57.070 --> 00:58:00.830
+Luiz Maia: polimorfino estático. É uma sobrecarga de operador.
+
+373
+00:58:01.080 --> 00:58:04.000
+Luiz Maia: Ele está concatenando Strings.
+
+374
+00:58:05.340 --> 00:58:06.260
+Luiz Maia: E aí?
+
+375
+00:58:09.150 --> 00:58:11.840
+Luiz Maia: Então isso aqui já é um tipo de poliomborfismo.
+
+376
+00:58:13.510 --> 00:58:16.140
+Luiz Maia: Vamos rodar e ver como é que funciona agora?
+
+377
+00:58:16.980 --> 00:58:18.450
+Luiz Maia: Conta comum.
+
+378
+00:58:18.830 --> 00:58:20.610
+Luiz Maia: Não ficou muito bonito. Não
+
+379
+00:58:28.080 --> 00:58:36.520
+Luiz Maia: conta comum, barraene conto especial.
+
+380
+00:58:36.800 --> 00:58:39.770
+Luiz Maia: Vai soltar de linha, tá barra n.
+
+381
+00:58:41.560 --> 00:58:46.499
+Luiz Maia: Conta poupança barra n para ele pular de linha.
+
+382
+00:58:51.340 --> 00:58:55.789
+Luiz Maia: Aí ficou assim. Ó conta com um conta especial. Conta poupança
+
+383
+00:59:07.030 --> 00:59:10.670
+Luiz Maia: deu para entender o que eu estou fazendo aqui, ou não?
+
+384
+00:59:20.270 --> 00:59:25.999
+Luiz Maia: São três classes separadas, como a gente fez aqui no Herança um
+
+385
+00:59:27.300 --> 00:59:33.030
+Luiz Maia: o Herança, um. Ele tinha aluno, funcionário e professor
+
+386
+00:59:33.440 --> 00:59:47.359
+Luiz Maia: aluno com um monte de coisa funcionário também. E a mesma coisa para o Professor Herança dois que a gente fez. A gente fez pessoa e aglutinou as informações dentro das subclasses.
+
+387
+00:59:48.060 --> 00:59:52.280
+Luiz Maia: A mesma ideia que eu estou querendo fazer agora com vocês.
+
+388
+00:59:52.720 --> 00:59:57.460
+Luiz Maia: Mas primeiro vocês precisam me dizer, entendeu?
+
+389
+00:59:58.630 --> 01:00:04.789
+Luiz Maia: A conta comum, a especial e a conta de poupança.
+
+390
+01:00:05.070 --> 01:00:08.239
+Luiz Maia: Se entendeu beleza. Senão eu explico de novo.
+
+391
+01:00:27.980 --> 01:00:29.500
+Luiz Maia: Se entenderam?
+
+392
+01:00:30.570 --> 01:00:41.230
+Luiz Maia: Eu pergunto para vocês o que eu tenho que fazer para implementar herança nessas três classes aqui?
+
+393
+01:00:42.720 --> 01:00:44.250
+Luiz Maia: O que eu tenho que fazer,
+
+394
+01:01:13.870 --> 01:01:15.809
+Luiz Maia: tá, mas como é que eu faço isso?
+
+395
+01:01:37.120 --> 01:01:43.840
+Luiz Maia: Criar uma classe conta com os atributos e métodos que são compartilhados em diferentes contas. Está ótimo.
+
+396
+01:01:44.570 --> 01:01:46.249
+Luiz Maia: Então vamos pegar isso aqui.
+
+397
+01:01:46.610 --> 01:01:49.569
+Luiz Maia: Criei aqui um outro projeto. Herança quatro.
+
+398
+01:01:50.050 --> 01:01:53.810
+Luiz Maia: A gente vem aqui, copia esse cara.
+
+399
+01:01:54.340 --> 01:01:55.820
+Luiz Maia: Traz para cá
+
+400
+01:01:58.890 --> 01:02:04.760
+Luiz Maia: refatora o Namespace, que vem com três. Aqui
+
+401
+01:02:11.030 --> 01:02:12.870
+Luiz Maia: está refaturado.
+
+402
+01:02:14.330 --> 01:02:16.169
+Luiz Maia: Sentar esse cara aqui para
+
+403
+01:02:20.900 --> 01:02:22.400
+Luiz Maia: startup.
+
+404
+01:02:23.720 --> 01:02:32.390
+Luiz Maia: Então a sugestão do Júlio é criar uma classe, uma superclasse conta.
+
+405
+01:02:47.750 --> 01:02:49.970
+Luiz Maia: Vamos olhar para as subclasses.
+
+406
+01:02:50.850 --> 01:02:53.019
+Luiz Maia: Ele vê que tem em comum nelas.
+
+407
+01:02:55.690 --> 01:02:58.129
+Luiz Maia: Quais são os atributos comuns?
+
+408
+01:02:59.970 --> 01:03:01.569
+Luiz Maia: Vai subir classes
+
+409
+01:03:12.350 --> 01:03:15.049
+Luiz Maia: ai de não me saldo.
+
+410
+01:03:15.680 --> 01:03:17.210
+Luiz Maia: Então, a gente vem aqui.
+
+411
+01:03:20.310 --> 01:03:21.790
+Luiz Maia: Conta comum.
+
+412
+01:03:26.380 --> 01:03:27.999
+Luiz Maia: Vai para a conta.
+
+413
+01:03:35.150 --> 01:03:43.709
+Luiz Maia: Nome de nome, Saldo, beleza e a conta comum. Agora não tem mais nada.
+
+414
+01:03:44.920 --> 01:03:49.729
+Luiz Maia: O construtor da conta, basicamente, vai ser o quê?
+
+415
+01:03:50.430 --> 01:03:51.900
+Luiz Maia: Vê esse cara aqui.
+
+416
+01:04:05.080 --> 01:04:07.390
+Luiz Maia: Pronto, tá bonito.
+
+417
+01:04:09.130 --> 01:04:10.379
+Luiz Maia: O que mais
+
+418
+01:04:15.280 --> 01:04:19.099
+Luiz Maia: acreditar e debitar é igual em todas as classes.
+
+419
+01:04:26.010 --> 01:04:31.250
+Luiz Maia: Então a conta poupança não vai ter mais esses caras aqui.
+
+420
+01:04:32.010 --> 01:04:36.190
+Luiz Maia: A conta especial também não vai ter mais esses caras aqui,
+
+421
+01:04:40.850 --> 01:04:44.450
+Luiz Maia: ok? A conta comum também não vai ter nada disso aqui.
+
+422
+01:04:45.230 --> 01:04:48.159
+Luiz Maia: O creditar e o debitar são iguais.
+
+423
+01:04:48.340 --> 01:04:49.420
+Luiz Maia: Vamos olhar.
+
+424
+01:04:49.780 --> 01:04:59.580
+Luiz Maia: Conta comum, creditar, acreditar, acreditar é igual.
+
+425
+01:05:00.120 --> 01:05:03.720
+Luiz Maia: O que a gente vai fazer aqui. Vai tirar o creditar
+
+426
+01:05:04.470 --> 01:05:07.530
+Luiz Maia: daqui e jogar para a classe conta.
+
+427
+01:05:13.270 --> 01:05:15.680
+Luiz Maia: Ele é comum a todas as classes.
+
+428
+01:05:17.730 --> 01:05:21.800
+Luiz Maia: Então, aqui na comum, eu posso apagar ou creditar
+
+429
+01:05:28.700 --> 01:05:32.769
+Luiz Maia: na classe especial, também possa pagar ou creditar
+
+430
+01:05:36.660 --> 01:05:42.219
+Luiz Maia: na classe de poupança, o creditar também pode ser apagado. Já foi apagado.
+
+431
+01:05:44.370 --> 01:05:48.200
+Luiz Maia: Beleza, o debitar não é igual.
+
+432
+01:05:48.820 --> 01:05:50.520
+Luiz Maia: Então eu vou deixar eu debitar.
+
+433
+01:05:51.500 --> 01:05:52.840
+Luiz Maia: É
+
+434
+01:05:54.070 --> 01:06:08.150
+Luiz Maia: em cada uma das classes. E depois eu vejo como eu faço isso. Esse calcular saldo também é da poupança da especial. A conta comum não tem calcular saldo.
+
+435
+01:06:11.760 --> 01:06:20.880
+Luiz Maia: Bom, conta. Aqui. Vai ter um True String. Provavelmente esse two strings aqui, ó,
+
+436
+01:06:38.310 --> 01:06:40.209
+Luiz Maia: e não vai ser conta comum.
+
+437
+01:06:40.330 --> 01:06:41.900
+Luiz Maia: Vai ser só
+
+438
+01:06:49.510 --> 01:06:50.879
+Luiz Maia: esse cara aqui.
+
+439
+01:06:54.300 --> 01:07:01.949
+Luiz Maia: E os outros vão fazer uma sobre escrita em cima desse cara aqui, que é a nossa conta, que é a nossa super classe.
+
+440
+01:07:04.200 --> 01:07:12.850
+Luiz Maia: Então a superclasse está pronta ou quase pronta? Não sei. Ainda aqui.
+
+441
+01:07:13.130 --> 01:07:14.509
+Luiz Maia: O que eu vou fazer?
+
+442
+01:07:14.890 --> 01:07:21.390
+Luiz Maia: E aí a classe comum vai herdar da classe conta.
+
+443
+01:07:31.040 --> 01:07:36.550
+Luiz Maia: Ok, é
+
+444
+01:07:41.510 --> 01:07:42.890
+Luiz Maia: publicado.
+
+445
+01:07:48.310 --> 01:07:49.920
+Luiz Maia: Conta comum.
+
+446
+01:07:52.890 --> 01:07:54.490
+Luiz Maia: Perfeito.
+
+447
+01:07:55.190 --> 01:07:56.439
+Luiz Maia: É isso aí.
+
+448
+01:07:57.670 --> 01:08:03.039
+Luiz Maia: Esse é o. Ele está usando o construtor da superclasse.
+
+449
+01:08:13.010 --> 01:08:14.080
+Luiz Maia: Tá legal.
+
+450
+01:08:16.330 --> 01:08:18.700
+Luiz Maia: Vamos olhar agora a conta especial
+
+451
+01:08:22.140 --> 01:08:23.969
+Luiz Maia: está estendendo conta
+
+452
+01:08:31.479 --> 01:08:33.360
+Luiz Maia: conta especial.
+
+453
+01:08:33.620 --> 01:08:36.859
+Luiz Maia: Esse cara aqui some praticamente todo
+
+454
+01:08:40.370 --> 01:08:42.559
+Luiz Maia: aqui. Eu vou referenciar o quê?
+
+455
+01:08:52.520 --> 01:08:56.170
+Luiz Maia: Vou chamar superclasse, agir.
+
+456
+01:08:56.870 --> 01:09:00.890
+Luiz Maia: O nome saldo.
+
+457
+01:09:02.630 --> 01:09:06.009
+Luiz Maia: O cheque especial é validado por fora.
+
+458
+01:09:06.399 --> 01:09:08.520
+Luiz Maia: Aqui a gente pode fazer o que
+
+459
+01:09:10.960 --> 01:09:18.639
+Luiz Maia: a gente pode chamar aqui. Agora o Super para fazer a impressão.
+
+460
+01:09:23.899 --> 01:09:25.279
+Luiz Maia: Base.
+
+461
+01:09:25.529 --> 01:09:31.100
+Luiz Maia: Ponto Tchau, String.
+
+462
+01:09:31.330 --> 01:09:37.699
+Luiz Maia: Pronto, agora está a conta especial. Estou referenciando. O streaming da superclasse.
+
+463
+01:09:43.640 --> 01:09:46.820
+Luiz Maia: A conta comum podia fazer a mesma coisa.
+
+464
+01:09:51.130 --> 01:09:56.760
+Luiz Maia: Base Two String.
+
+465
+01:09:58.830 --> 01:10:00.680
+Luiz Maia: Pronto, está resolvido.
+
+466
+01:10:03.410 --> 01:10:13.229
+Luiz Maia: Quanta poupança esse construtor aqui pode sumir ou quase isso.
+
+467
+01:10:16.790 --> 01:10:19.210
+Luiz Maia: Esse monte de coisa vai embora.
+
+468
+01:10:20.570 --> 01:10:24.950
+Luiz Maia: Fica só a taxa aqui. Base
+
+469
+01:10:32.470 --> 01:10:38.310
+Luiz Maia: aí de o nome Saulo.
+
+470
+01:10:39.530 --> 01:10:41.819
+Luiz Maia: Pronto, olha que espetáculo, gente
+
+471
+01:10:45.520 --> 01:10:55.850
+Luiz Maia: aqui está errado. Aqui não é especial o valor da taxa inválida.
+
+472
+01:10:58.630 --> 01:11:04.290
+Luiz Maia: Isso veio de onde provavelmente veio. Daqui
+
+473
+01:11:05.510 --> 01:11:08.289
+Luiz Maia: é copiar e colar. É terrível.
+
+474
+01:11:08.650 --> 01:11:14.360
+Luiz Maia: Valor da taxa e inválida.
+
+475
+01:11:18.340 --> 01:11:19.719
+Luiz Maia: Eu ia lá de cima.
+
+476
+01:11:21.700 --> 01:11:29.910
+Luiz Maia: A gente tem uma conta que agregou tudo que tem nas subclasses.
+
+477
+01:11:31.320 --> 01:11:41.280
+Luiz Maia: E aí deixou para as subclasses apenas o que era pertinente, restrito às subclasses no caso aqui o debitar
+
+478
+01:11:41.990 --> 01:11:46.079
+Luiz Maia: um método específico para essa subclasse.
+
+479
+01:11:46.380 --> 01:11:50.180
+Luiz Maia: Esse debitar também específico para conta especial,
+
+480
+01:11:51.020 --> 01:11:54.049
+Luiz Maia: e esse aqui é parecido com o da conta comum.
+
+481
+01:12:00.650 --> 01:12:08.860
+Luiz Maia: A pergunta primeiro, vocês entenderam, é
+
+482
+01:12:09.220 --> 01:12:10.880
+Luiz Maia: o que eu acabei de fazer.
+
+483
+01:12:14.010 --> 01:12:17.729
+Luiz Maia: Isso é importante. Se você não entendeu essa transformação
+
+484
+01:12:18.030 --> 01:12:20.749
+Luiz Maia: do herança três do Herança quatro.
+
+485
+01:12:21.410 --> 01:12:23.030
+Luiz Maia: Temos um problema.
+
+486
+01:12:29.040 --> 01:12:35.959
+Luiz Maia: É difícil, é por que é difícil? Porque é muito abstrato.
+
+487
+01:12:40.700 --> 01:12:43.639
+Luiz Maia: Isso aqui é abstração. Pura gente
+
+488
+01:12:44.200 --> 01:12:48.040
+Luiz Maia: não tem nada de fácil aqui. Tudo aqui é abstrato.
+
+489
+01:12:49.040 --> 01:12:51.439
+Luiz Maia: É por isso que é difícil de entender. Mesmo
+
+490
+01:12:51.950 --> 01:12:56.979
+Luiz Maia: só com muito trabalho, muito exercício, muita explicação,
+
+491
+01:12:57.150 --> 01:13:00.699
+Luiz Maia: muita dedicação que você vai entender um troço desse.
+
+492
+01:13:01.650 --> 01:13:03.619
+Luiz Maia: Isso aqui é difícil pra caramba.
+
+493
+01:13:09.330 --> 01:13:11.610
+Luiz Maia: Essa é uma boa pergunta, Gabriel.
+
+494
+01:13:12.440 --> 01:13:17.619
+Luiz Maia: A classe conta é uma classe abstrata ou é uma classe concreta?
+
+495
+01:13:19.710 --> 01:13:23.900
+Luiz Maia: Faz sentido distanciar a classe conta ou não
+
+496
+01:13:33.590 --> 01:13:41.720
+Luiz Maia: na minha. Assim como eu falei para vocês. No caso da calculadora que a gente viu,
+
+497
+01:13:43.180 --> 01:13:48.010
+Luiz Maia: a classe calcula. Não era abstrata,
+
+498
+01:13:48.590 --> 01:13:56.019
+Luiz Maia: porque eu poderia estanciar a classe calcula para fazer a matemática básica.
+
+499
+01:13:58.490 --> 01:14:05.700
+Luiz Maia: Nesse caso, aqui, eu acho que, tendo a concordar com os colegas da turma,
+
+500
+01:14:05.810 --> 01:14:11.400
+Luiz Maia: não faz muito sentido a gente estanciar uma classe conta.
+
+501
+01:14:11.720 --> 01:14:13.650
+Luiz Maia: Então ela pode ser. Muito bem.
+
+502
+01:14:18.170 --> 01:14:20.210
+Luiz Maia: Ela poderia ser abstrata.
+
+503
+01:14:25.000 --> 01:14:28.290
+Luiz Maia: Ou seja, se eu tentar distanciar essa classe.
+
+504
+01:14:29.010 --> 01:14:39.689
+Luiz Maia: Aqui conta, conta mil. Conta.
+
+505
+01:14:40.480 --> 01:14:46.819
+Luiz Maia: A gente pode especificar aqui o nome e o saldo.
+
+506
+01:14:47.670 --> 01:14:49.030
+Luiz Maia: Ele não vai aceitar.
+
+507
+01:14:55.290 --> 01:15:02.059
+Luiz Maia: Então não aceita agora uma conta comum.
+
+508
+01:15:02.180 --> 01:15:16.740
+Luiz Maia: Ele aceita conta comum comum, New conta comum.
+
+509
+01:15:28.920 --> 01:15:33.900
+Luiz Maia: Mas eu posso até mandar printar a conta aqui. Ó comum,
+
+510
+01:15:34.400 --> 01:15:37.730
+Luiz Maia: ele vai utilizar o streaming automaticamente.
+
+511
+01:15:44.760 --> 01:15:49.620
+Luiz Maia: Olha lá, conta comum show
+
+512
+01:15:50.180 --> 01:15:55.179
+Luiz Maia: daria para ser uma classe concreta se a cota comum fosse a superclasse das outras.
+
+513
+01:15:56.460 --> 01:15:59.060
+Luiz Maia: Gabriel? Essa é uma boa pergunta.
+
+514
+01:16:00.600 --> 01:16:07.289
+Luiz Maia: O que acontece é a coisa que a gente menos quer.
+
+515
+01:16:08.520 --> 01:16:10.539
+Luiz Maia: Quando a gente cria uma herança
+
+516
+01:16:12.260 --> 01:16:14.439
+Luiz Maia: é ter que alterar a superclasse.
+
+517
+01:16:17.730 --> 01:16:22.300
+Luiz Maia: E aí vem o princípio do o segundo princípio do sólide.
+
+518
+01:16:23.660 --> 01:16:33.810
+Luiz Maia: Só eles são cinco princípios S o D I d sólide.
+
+519
+01:16:34.490 --> 01:16:40.210
+Luiz Maia: O primeiro princípio é o s single responsibility principle.
+
+520
+01:16:40.930 --> 01:16:45.860
+Luiz Maia: O princípio da responsabilidade única, que nós já falamos algumas vezes
+
+521
+01:16:45.970 --> 01:16:55.320
+Luiz Maia: uma classe, um método, uma função tem que ter apenas um objetivo, uma responsabilidade.
+
+522
+01:16:57.010 --> 01:17:05.590
+Luiz Maia: O ó do sólide é o open close principle, o princípio do aberto fechado.
+
+523
+01:17:07.610 --> 01:17:09.950
+Luiz Maia: O que quer dizer esse princípio?
+
+524
+01:17:11.410 --> 01:17:16.500
+Luiz Maia: Uma classe deve estar aberta a extensões
+
+525
+01:17:16.620 --> 01:17:20.869
+Luiz Maia: e deve estar fechada para modificações.
+
+526
+01:17:22.870 --> 01:17:27.569
+Luiz Maia: Então, a última coisa que a gente quer dentro de um projeto de software
+
+527
+01:17:27.930 --> 01:17:30.219
+Luiz Maia: é ter que alterar uma superclasse.
+
+528
+01:17:30.870 --> 01:17:37.210
+Luiz Maia: Isso vai gerar uma dor de cabeça enorme dentro do projeto.
+
+529
+01:17:37.950 --> 01:17:45.600
+Luiz Maia: O que a gente quer fazer é o seguinte. Sempre que a gente precisar de alguma coisa nova. A gente faz o quê? A gente estende
+
+530
+01:17:46.410 --> 01:17:50.289
+Luiz Maia: a partir de subclasses a superclasse.
+
+531
+01:17:51.560 --> 01:18:04.779
+Luiz Maia: Nesse caso, aqui essa conta comum eu estou tentando minimizar justamente esse princípio.
+
+532
+01:18:05.540 --> 01:18:13.259
+Luiz Maia: Se por acaso eu botar essa conta comum com a conta super conta
+
+533
+01:18:14.190 --> 01:18:20.619
+Luiz Maia: na hora que eu alterasse a conta comum, eu teria que fazer mexidas em todas as outras subclasses
+
+534
+01:18:21.070 --> 01:18:24.120
+Luiz Maia: desse jeito. Que eu construí a estrutura,
+
+535
+01:18:24.460 --> 01:18:33.350
+Luiz Maia: a conta comum se eu precisar mexer nela. Eu não mexo na conta. Você está entendendo o que eu estou dizendo para você? Eu sei que é difícil.
+
+536
+01:18:34.730 --> 01:18:39.300
+Luiz Maia: Eu sei. Que é difícil, cara. Não é fácil entender isso que eu tô falando.
+
+537
+01:18:40.170 --> 01:18:41.870
+Luiz Maia: Isso é gerente de software.
+
+538
+01:18:42.630 --> 01:18:46.389
+Luiz Maia: Não é programação. Isso. Isso é engenharia de software.
+
+539
+01:18:48.250 --> 01:18:49.549
+Luiz Maia: A conta.
+
+540
+01:18:49.720 --> 01:18:53.350
+Luiz Maia: Ela está desacoplada das subclasses.
+
+541
+01:18:54.420 --> 01:19:00.830
+Luiz Maia: Se eu precisar aqui criar uma pessoa jurídica, por exemplo,
+
+542
+01:19:00.980 --> 01:19:03.810
+Luiz Maia: eu provavelmente não precisaria mexer nessa conta.
+
+543
+01:19:07.730 --> 01:19:13.850
+Luiz Maia: Daria para ser uma classe concreta se a conta comum fosse a superclasse das outras.
+
+544
+01:19:14.550 --> 01:19:18.240
+Luiz Maia: Mas é exatamente isso que eu estou acabando de falar. Eu acabei de explicar.
+
+545
+01:19:23.910 --> 01:19:29.110
+Luiz Maia: Eu quero desacoplar a conta comum
+
+546
+01:19:29.600 --> 01:19:36.840
+Luiz Maia: do restante das outras contas. Eu não quero que ela seja super classe de ninguém, porque ela pode mudar.
+
+547
+01:19:37.960 --> 01:19:40.130
+Luiz Maia: E eu não preciso mudar a conta.
+
+548
+01:19:46.900 --> 01:19:55.939
+Luiz Maia: A conta não é alterada. Se por acaso eu precisar alterar a Conta comum, a conta não será alterada,
+
+549
+01:19:56.150 --> 01:19:59.550
+Luiz Maia: então a gente não tem esse problema. Mais de acoplamento.
+
+550
+01:20:02.540 --> 01:20:10.409
+Luiz Maia: Se, por exemplo, tiver alguma coisa especial, por exemplo, vamos imaginar.
+
+551
+01:20:10.760 --> 01:20:14.560
+Luiz Maia: A conta especial tem um valor especial.
+
+552
+01:20:15.570 --> 01:20:21.410
+Luiz Maia: Suponha, por exemplo, que a conta comum mude e ela tem um saldo.
+
+553
+01:20:21.780 --> 01:20:24.640
+Luiz Maia: Que é, sei lá, dez.
+
+554
+01:20:25.420 --> 01:20:30.539
+Luiz Maia: Ela tem um cheque especial que é dez do saldo da conta.
+
+555
+01:20:31.730 --> 01:20:34.790
+Luiz Maia: Nesse caso, como eu construí desse jeito.
+
+556
+01:20:34.920 --> 01:20:39.170
+Luiz Maia: Basta alterar a conta comum. A conta não vai ser alterada.
+
+557
+01:20:46.940 --> 01:20:52.399
+Luiz Maia: Esse exemplo, cara é assim. Ele é muito bom para essa discussão.
+
+558
+01:20:56.080 --> 01:21:01.460
+Luiz Maia: Ele é muito bom. E é para gerar essa discussão que a gente está tendo aqui agora,
+
+559
+01:21:02.720 --> 01:21:06.620
+Luiz Maia: porque dá vontade de você pegar a conta comum
+
+560
+01:21:06.790 --> 01:21:10.110
+Luiz Maia: e fazer com que ela seja a superclasse.
+
+561
+01:21:10.410 --> 01:21:14.360
+Luiz Maia: Só que isso para o futuro pode dar problema.
+
+562
+01:21:14.640 --> 01:21:20.000
+Luiz Maia: Você, quando programa. Você não programa para hoje. Você programa para o futuro.
+
+563
+01:21:20.260 --> 01:21:25.230
+Luiz Maia: O que pode dar errado? O que pode precisar no futuro.
+
+564
+01:21:25.650 --> 01:21:33.810
+Luiz Maia: E aí você programa já pensando nas possíveis alterações que podem ser pedidas lá na frente.
+
+565
+01:21:37.340 --> 01:21:38.990
+Luiz Maia: É mais ou menos isso.
+
+566
+01:21:39.950 --> 01:21:45.260
+Luiz Maia: E aí, isso é programa para dormir em paz no futuro.
+
+567
+01:21:46.760 --> 01:21:54.260
+Luiz Maia: É assim que eu programo. Eu não programo para resolver um problema agora. É claro que tem momentos e momentos.
+
+568
+01:21:55.150 --> 01:21:58.660
+Luiz Maia: Mas se eu puder resolver um problema
+
+569
+01:21:58.940 --> 01:22:03.489
+Luiz Maia: que não vá me dar trabalho mais para frente, é melhor
+
+570
+01:22:04.460 --> 01:22:07.110
+Luiz Maia: a ideia de criar essa conta
+
+571
+01:22:07.240 --> 01:22:13.690
+Luiz Maia: muito parecida com essa conta comum. É justamente se a conta comum for
+
+572
+01:22:13.850 --> 01:22:19.249
+Luiz Maia: eu preciso alterar essa conta comum. A conta não é mexida,
+
+573
+01:22:32.590 --> 01:22:34.410
+Luiz Maia: gente. Dez horas.
+
+574
+01:22:36.560 --> 01:22:43.260
+Luiz Maia: Acabou. Esse código não tem coisa a mais para a gente trabalhar em cima dele.
+
+575
+01:22:43.620 --> 01:22:49.030
+Luiz Maia: Vou colocar esse código lá no drive para vocês.
+
+576
+01:22:50.270 --> 01:22:55.599
+Luiz Maia: Ele já está lá, inclusive tá, já está lá para vocês.
+
+577
+01:22:56.280 --> 01:23:10.500
+Luiz Maia: Dá uma estudada nesse código e pensa como que eu posso melhorar essas exceções aqui, ó o debitar,
+
+578
+01:23:11.430 --> 01:23:19.830
+Luiz Maia: o debitar e esse debitar. Como é que a gente consegue melhorar isso? Pensa, pesquisa. Estuda
+
+579
+01:23:21.510 --> 01:23:28.990
+Luiz Maia: esse código. Já está lá para vocês. No aqui no herança. Zip, tá.
+
+580
+01:23:54.970 --> 01:23:57.999
+Luiz Maia: Está aí o link das aulas todas
+
+581
+01:24:02.890 --> 01:24:04.509
+Luiz Maia: a gente tomava seis.
+
+582
+01:24:06.000 --> 01:24:15.710
+Luiz Maia: Tem a calculadora, tem os slides da aula e tem a aula de hoje aqui, já para você usar
+
+583
+01:24:16.450 --> 01:24:17.630
+Luiz Maia: beleza.
+
+584
+01:24:19.960 --> 01:24:21.629
+Luiz Maia: Bom final de semana.
+
+585
+01:24:22.500 --> 01:24:27.269
+Luiz Maia: Boa semana. Bom feriado. Nos vemos na próxima terça.
+
+586
+01:24:29.430 --> 01:24:32.550
+Luiz Maia: Um abraço a todos. Uma boa noite.
+
+587
+01:24:34.570 --> 01:24:35.510
+Luiz Maia: Tchau, tchau.
+
