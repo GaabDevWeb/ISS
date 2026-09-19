@@ -6,6 +6,11 @@ on:
       - "content/**"
       - "content/lessons.json"
       - "content/search-index.json"
+  # O commit automático do resumidor leva "[skip ci]", por isso o `push` acima nunca dispara
+  # a partir dele. Encadear ao fim do resumidor garante lições novas no MySQL na mesma manhã.
+  workflow_run:
+    workflows: ["Resumir transcrições (Cursor SDK)"]
+    types: [completed]
   pull_request:
     paths:
       - "content/**"
@@ -49,7 +54,10 @@ jobs:
   # Secrets obrigatórios no repositório: KB_DB_HOST, KB_DB_PORT, KB_DB_USER, KB_DB_PASSWORD, KB_DB_NAME
   ingest:
     needs: validate
-    if: github.event_name != 'pull_request' && github.event.inputs.skip_ingest != '1'
+    if: |
+      github.event_name != 'pull_request' &&
+      github.event.inputs.skip_ingest != '1' &&
+      (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -194,17 +202,14 @@ jobs:
         if: always()
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          JOB_STATUS: ${{ (
-            needs.validate.result == 'failure' ||
-            needs.ingest.result == 'failure' ||
-            needs.reload.result == 'failure' ||
-            needs.verify.result == 'failure'
-          ) && 'failure' || (
-            needs.validate.result == 'cancelled' ||
-            needs.ingest.result == 'cancelled' ||
-            needs.reload.result == 'cancelled' ||
-            needs.verify.result == 'cancelled'
-          ) && 'cancelled' || 'success' }}
+          # Expressão em bloco dobrado (>-): em YAML, um escalar simples com `:` quebrado em
+          # várias linhas é inválido ("implicit keys need to be on a single line").
+          JOB_STATUS: >-
+            ${{ (needs.validate.result == 'failure' || needs.ingest.result == 'failure' ||
+                 needs.reload.result == 'failure' || needs.verify.result == 'failure') && 'failure'
+             || (needs.validate.result == 'cancelled' || needs.ingest.result == 'cancelled' ||
+                 needs.reload.result == 'cancelled' || needs.verify.result == 'cancelled') && 'cancelled'
+             || 'success' }}
           GITHUB_RUN_ID: ${{ github.run_id }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_SERVER_URL: ${{ github.server_url }}

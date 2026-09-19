@@ -19,9 +19,12 @@ import os, sys
 import pymysql
 import pymysql.cursors
 
+# Só lições: transcrições (slug transcricao__*) e calendário (discipline calendario)
+# são rows extra do ingest (knowledge_extras.py) e não constam de lessons.json.
 sql = (
     "SELECT COUNT(DISTINCT discipline, slug) AS n FROM knowledge "
-    "WHERE active = 1 AND content IS NOT NULL AND TRIM(content) <> ''"
+    "WHERE active = 1 AND content IS NOT NULL AND TRIM(content) <> '' "
+    "AND discipline <> 'calendario' AND slug NOT LIKE 'transcricao\\\\_\\\\_%'"
 )
 
 host = os.environ.get("DB_HOST", "").strip()
