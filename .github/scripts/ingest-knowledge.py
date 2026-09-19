@@ -21,6 +21,9 @@ from pathlib import Path
 
 import pymysql
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from knowledge_extras import build_extra_rows  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 LESSONS_PATH = ROOT / "content" / "lessons.json"
 JSONS_DIR = ROOT / "jsons"
@@ -265,6 +268,21 @@ def main() -> int:
 
     processed_keys.sort()
 
+    # Rows extra (transcrições brutas + calendário) entram no mesmo UPSERT e na mesma
+    # lista de "ativos", senão a desativação abaixo apagava-as a cada sync.
+    # `processed_keys` continua só com lições: é o que o verify compara com lessons.json.
+    extras_count = 0
+    if os.environ.get("KNOWLEDGE_EXTRAS", "1").strip().lower() not in {"0", "off", "false"}:
+        extra_rows, extra_warnings = build_extra_rows()
+        for warning in extra_warnings:
+            print(f"AVISO extras: {warning}", file=sys.stderr)
+        for extra in extra_rows:
+            if len(extra[4]) > MAX_CONTENT_CHARS:
+                print(f"AVISO extras: {extra[1]} excede {MAX_CONTENT_CHARS} chars — omitido", file=sys.stderr)
+                continue
+            rows.append(extra)
+            extras_count += 1
+
     try:
         conn = db_connect()
     except Exception as exc:
@@ -314,13 +332,14 @@ def main() -> int:
         "success": True,
         "upserted_count": upserted_count,
         "deactivated_count": deactivated_count,
+        "extras_count": extras_count,
         "errors": [],
         "processed_keys": processed_keys,
     }
     write_report(report)
     print(
-        f"Ingest OK: {upserted_count} upsert(s), "
-        f"{deactivated_count} desativado(s), {len(processed_keys)} chave(s)."
+        f"Ingest OK: {upserted_count} upsert(s) ({extras_count} extra(s): transcrições/calendário), "
+        f"{deactivated_count} desativado(s), {len(processed_keys)} chave(s) de lição."
     )
     return 0
 
