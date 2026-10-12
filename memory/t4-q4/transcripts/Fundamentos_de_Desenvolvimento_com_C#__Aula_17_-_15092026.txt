@@ -1,0 +1,639 @@
+Luiz Maia: Boa noite, pessoal. Dia quinze de Setembro de dois mil e vinte e seis. Bem vindo a mais uma aula de C. Sharp
+Luiz Maia: do bloco de backend.
+Luiz Maia: Bom ontem a gente encerrou a aula, mostrando polimorfismo
+Luiz Maia: dinâmico, utilizando interfaces. Eu queria perguntar para vocês se tem alguma dúvida em relação ao código que foi apresentado
+Luiz Maia: na aula passada,
+Luiz Maia: o que eu preciso terminar a matéria para vocês poderem entregar o At. O At já foi alterado para o dia vinte e oito de Setembro.
+Luiz Maia: Então já está com a data bem adiantada.
+Luiz Maia: Dá para a gente poder terminar a matéria na próxima segunda feira. Se for o caso
+Luiz Maia: que eu acho que vai ser o que vai acontecer.
+Luiz Maia: Queria saber se tem alguém com alguma dúvida. Alguma pergunta?
+Luiz Maia: Caso contrário, eu começo a aula.
+Luiz Maia: Qualquer dúvida é só falar que a gente tira as dúvidas necessárias.
+Luiz Maia: Bom, a gente está na aula, nove,
+Luiz Maia: ou seja, vetores e matrizes aqui. Eu fiz uma breve introdução sobre esse conceito de vetores e matrizes.
+Luiz Maia: É,
+Luiz Maia: eu sei que vocês vieram do mundo de Python. Então não é exatamente o mesmo mundo
+Luiz Maia: que vocês estão agora, que é o mundo de C. Sharp e Java, que tudo que eu vou falar aqui
+Luiz Maia: serve para jova também.
+Luiz Maia: Vetores e matrizes também chamados diarreis.
+Luiz Maia: São estruturas de dados chamados aqui. Acho que fica melhor. Chamadas estruturas de dados chamadas agregados homogêneos,
+Luiz Maia: ou seja, todos os tipos dos dados
+Luiz Maia: que você agrega dentro da estrutura de dados.
+Luiz Maia: É do mesmo tipo.
+Luiz Maia: Então, vetores e matrizes. Ele tem um tipo
+Luiz Maia: pode ser inteiro. Pode ser real. Pode ser em String. Pode ser um objeto, mas todos são do mesmo tipo.
+Luiz Maia: Isso conflita
+Luiz Maia: com o Python, o Python. As listas são heterogêneos. Você pode ter, tipo de qualquer coisa dentro de uma lista em Python
+Luiz Maia: você pode ter um elemento que é inteiro. Outro real. Outro String aqui não.
+Luiz Maia: Todos os elementos do vetor ou da matriz é do mesmo tipo
+Luiz Maia: os vetores e matrizes em si, Sharp Java.
+Luiz Maia: Eles têm um tamanho definido, aquele tamanho que se define em tempo de compilação. Ou seja, se você quiser alterar
+Luiz Maia: o tamanho do vetor ou da matriz, você vai ter que recompilar o código
+Luiz Maia: também. Conflita com Python Python. As listas são dinâmicas.
+Luiz Maia: Você pode aumentar, diminuir, remover, incluir sem nenhum problema.
+Luiz Maia: É só pra deixar mais claro para vocês.
+Luiz Maia: O Python tem um pacote. Uma biblioteca específica para manipulação de arreis e matrizes
+Luiz Maia: chamado um pacote chamado num Pai
+Luiz Maia: o Non. Pai. Ele implementa exatamente essas funções de vetores e matrizes
+Luiz Maia: do C. Sharp que o Java já tem incorporado naturalmente na linguagem dentro do
+Luiz Maia: do Python, você tem que importar uma biblioteca, um pacote para poder implementar vetores e matrizes.
+Luiz Maia: Por que isso?
+Luiz Maia: Porque as listas do Python são extremamente lentas
+Luiz Maia: em matéria de processamento e também consumo de memória. As listas consomem um absurdo de processamento e muita memória.
+Luiz Maia: Então, se você vai fazer uma aplicação em Python que precisa utilizar
+Luiz Maia: um grande volume de dados. Uma quantidade de dados muito grande.
+Luiz Maia: Certamente você não vai usar a lista.
+Luiz Maia: Você vai usar o non pai em cima de um pai.
+Luiz Maia: Tem uma biblioteca chamada Pandas.
+Luiz Maia: O Pandas. Para quem não sabe, é aquela biblioteca que você utiliza para a ciência de dados.
+Luiz Maia: Onde você pega os dados? Limpa dados, sumariza dados.
+Luiz Maia: Você faz um monte de processamento em cima dos dados, mas os dados são todos feitos usando vetores e matrizes.
+Luiz Maia: Você não vai utilizar a lista para isso,
+Luiz Maia: porque lista em Python é muito lenta. Muito lenta mesmo.
+Luiz Maia: Então, se você vai fazer alguma aplicação
+Luiz Maia: voltado para dados para ciência de dados, você vai usar o num pai? Com certeza. E em cima do num pai tem o pandas.
+Luiz Maia: O pandas foi feito para trabalhar como um pai.
+Luiz Maia: Você não vai ver nenhum pacote
+Luiz Maia: de manipulação de dados usando listas
+Luiz Maia: por conta de serem muito lentas e consumirem muita memória,
+Luiz Maia: tanto no C Sharp quanto em Java, vetores e matrizes são objetos.
+Luiz Maia: E o acesso aos elementos dessa estrutura de dados é feito através de índices,
+Luiz Maia: como vocês fizeram também lá em Python. Tá certo.
+Luiz Maia: E aí?
+Luiz Maia: E aí?
+Luiz Maia: Aqui você tem um exemplo de um vetor
+Luiz Maia: que tem apenas uma única dimensão.
+Luiz Maia: E aí, aqui eu tenho um vetor de quatro dimensões. Perdão, é um vetor que tem seis elementos
+Luiz Maia: de zero a cinco.
+Luiz Maia: O primeiro elemento é sempre zero.
+Luiz Maia: O último elemento é o tamanho do arrei ou do vetor menos um
+Luiz Maia: é sempre assim. E você acessa os elementos do Arrei ou do vetor
+Luiz Maia: usando esse índice que está aqui embaixo.
+Luiz Maia: Se você definir no seu programa, um vetor de um tamanho, sei lá, dez.
+Luiz Maia: E você precisar aumentar o tamanho desse vetor, você vai ter que criar um outro vetor,
+Luiz Maia: copiar tudo que está no vetor antigo para o vetor novo.
+Luiz Maia: Não tem como você alterar o tamanho de um vetor em tempo de execução. Não tem? Isso aqui não é lista,
+Luiz Maia: tá certo.
+Luiz Maia: Os elementos do vetor na memória estão todos sequencialmente dispostos. Ou seja,
+Luiz Maia: o um vem depois do zero o dois vem depois do um. O três vem depois dos dois, assim por diante, ou seja, na memória principal do computador,
+Luiz Maia: o vetor. Os elementos são todos contígues.
+Luiz Maia: Eles estão todos próximos numa lista. Isso não é verdade.
+Luiz Maia: Os elementos podem estar dispersos na memória principal,
+Luiz Maia: e isso gera um custo de processamento e um custo de memória.
+Luiz Maia: Vamos ver como a gente cria vetores
+Luiz Maia: dentro do C. Sharp. É muito parecido com o Java. Não tem nada muito diferente.
+Luiz Maia: É bem parecido.
+Luiz Maia: Muda um pouquinho a sintace apenas.
+Luiz Maia: Então a gente vai vir aqui e vai criar um novo projeto.
+Luiz Maia: E aí
+Luiz Maia: eu vou colocar esses códigos todos dentro da mesma solução
+Luiz Maia: para não ficar o negócio espalhado. Então o nome desse projeto aqui vai ser Vetor um.
+Luiz Maia: E o nome da solução vai ser vetores e matrizes.
+Luiz Maia: Então, dentro de vetores e matrizes vão estar todos os códigos que você precisa para entender essa aula de hoje.
+Luiz Maia: Bom para você declarar um vetor.
+Luiz Maia: Você tem que primeiro especificar
+Luiz Maia: o tipo do vetor. O tipo do elemento que vai fazer parte do vetor. O vetor.
+Luiz Maia: Ele só pode ter um único tipo de dado.
+Luiz Maia: Eu não posso ter vetores que misturam
+Luiz Maia: String com número. Não existe isso.
+Luiz Maia: O vetor é de um tipo de dado. Isso é completamente diferente de Python, tá,
+Luiz Maia: você faz assim, ó Int. É o tipo do dado que vai estar armazenado no vetor. Isso diz que é um vetor.
+Luiz Maia: O abre e fecha a colchente.
+Luiz Maia: Aqui é o nome do vetor.
+Luiz Maia: Só existe essa bagunça no javascript de uma rei poder ser vários tipos de dados.
+Luiz Maia: Ué Lucas, o Python também.
+Luiz Maia: O Python também. Você pode criar no Python uma lista com dados com tipos de dados completamente diferentes. Pedro,
+Luiz Maia: lista, fila, pilha. São estruturas de dados.
+Luiz Maia: Eu posso implementar essas estrutura de dados
+Luiz Maia: usando listas em Python ou usando
+Luiz Maia: o non pai do Python? Depende de como você quer implementar essas estruturas. E já existem classes prontas para isso.
+Luiz Maia: Se você quer usar, também existe Pedro também já existe tudo pronto. Já em C. Sharp e também em Java.
+Luiz Maia: Você tem uma classe pilha. Você tem uma classe lista. Você tem uma classe.
+Luiz Maia: Você tem tudo pronto já nas linguagens. Você não tem que criar nada. Eu, por exemplo, quando comecei a programar, eu não tinha nada disso. Pronto, eu tinha que fazer isso na mão.
+Luiz Maia: Então é você tem tudo isso pronto em Python, C. Sharp. Java,
+Luiz Maia: você tem a classe Stack. Você tem a classe Q
+Luiz Maia: a classe List que você pode fazer tudo isso automático para você. Você não tem que fazer nada
+Luiz Maia: aqui. Como eu falei para vocês, vetores e matrizes são objetos. Então eu preciso criar o objeto inteiro e especificar o tamanho dele.
+Luiz Maia: Por exemplo, dez.
+Luiz Maia: Então eu estou criando um vetor de inteiros de dez posições.
+Luiz Maia: Criação
+Luiz Maia: de um vitor.
+Luiz Maia: Genteiros de dez posições.
+Luiz Maia: Se a gente quiser melhorar um pouco essa syntasse aqui para ficar um pouco mais bonitinho. A gente pode pegar esse dez aqui e colocar como uma constante
+Luiz Maia: um tamanho, por exemplo, constante é aquela variável que não muda o valor dela conste.
+Luiz Maia: Intim tamanho igual a dez.
+Luiz Maia: Só para ficar mais bonitinho. O código.
+Luiz Maia: Bom, agora eu vou fazer o seguinte. Eu vou mostrar o conteúdo desse vetor.
+Luiz Maia: Para isso, eu vou usar o comando de repetição for
+Luiz Maia: eu posso usar o for normal
+Luiz Maia: que mostra os valores
+Luiz Maia: do vetor.
+Luiz Maia: E aí eu uso o índice para mostrar cada posição do elemento do vetor.
+Luiz Maia: Aí eu vou executar isso aqui
+Luiz Maia: tudo zero.
+Luiz Maia: Alguém pode me explicar por que esses.
+Luiz Maia: Esse vetor, todos os valores do vetor apareceram com zero?
+Luiz Maia: Por que ele foi criado com os valores zero. Alguém tem alguma noção disso?
+Luiz Maia: Por que foi zero?
+Luiz Maia: Não, ele não assume o valor do I. Não
+Luiz Maia: o i aqui. Ele cresce de zero até nove.
+Luiz Maia: Ele não pegou o valor de I. Não, isso aqui é uma referência à posição
+Luiz Maia: do vetor. O I não tem nada a ver. Não tem nenhuma atribuição aqui dentro dizendo que o I
+Luiz Maia: vai ser atribuído ao vetor.
+Luiz Maia: Tá, mas eu queria que alguém me desse uma explicação melhor do que essa.
+Luiz Maia: Não foi especificado. Nada na criação do vetor da onde veio isso?
+Luiz Maia: Julho. Quase.
+Luiz Maia: Está bem próximo.
+Luiz Maia: A pergunta é: de onde vieram os valores zero atribuídos aos elementos do vetor.
+Luiz Maia: Vou dar uma dica.
+Luiz Maia: O vetor.
+Luiz Maia: O vetor não é um objeto.
+Luiz Maia: Não tem nada de lixo aqui, gente, isso aqui não é uma lista.
+Luiz Maia: Isso aqui é um vetor.
+Luiz Maia: Isso, José. Muito bem.
+Luiz Maia: O construtor padrão coloca zero
+Luiz Maia: na criação do vetor. Gente, vocês querem que eu mostre a diferença de lista para vetor para vocês.
+Luiz Maia: Então vocês não terem dúvida da diferença de uma coisa para outra.
+Luiz Maia: Eu posso desenhar para vocês.
+Luiz Maia: Vocês querem que eu desenhe para vocês. Como é a diferença de lista para vetor? É isso.
+Luiz Maia: Ok, vamos lá.
+Luiz Maia: O vetor é isso aqui. Ó,
+Luiz Maia: aqui é a posição zero.
+Luiz Maia: Aqui vai ser a posição um.
+Luiz Maia: Isso você não tem como mexer gente. Isso aqui é definido pela linguagem.
+Luiz Maia: Ele começa sempre no zero e vai até a posição do tamanho do vetor. Menos um.
+Luiz Maia: Bom, eu vou.
+Luiz Maia: Eu vou simplificar isso aqui.
+Luiz Maia: Aqui eu tenho. Um, dois, três, quatro, cinco, seis, sete, oito. Então, a última posição é a posição sete
+Luiz Maia: aqui. Vou fazer o seguinte. Vou fazer um pontinho pontinho.
+Luiz Maia: Pois, é assim. Ó,
+Luiz Maia: esse cara aqui é o vetor.
+Luiz Maia: Deixa eu chegar isso aqui para para cá.
+Luiz Maia: Esse cara aqui é o vetor.
+Luiz Maia: Esse é o vetor.
+Luiz Maia: São posições, contínguas de memória, onde você tem o início e o fim bem definidos e todos os tipos, todos os elementos são do mesmo tipo.
+Luiz Maia: A lista é diferente.
+Luiz Maia: A lista é assim. Ó,
+Luiz Maia: não sei se eu consigo fazer a lista, caber nesse nesse quadrado aqui.
+Luiz Maia: Conseguir para ficar exatamente igual.
+Luiz Maia: Esse cara aqui.
+Luiz Maia: Eu vou pegar aqui.
+Luiz Maia: Isso aqui é a lista aqui.
+Luiz Maia: Agora eu tenho que fazer as setas.
+Luiz Maia: Normalmente as listas, elas são duplamente encadeadas. Você tem o próximo elemento da lista e o elemento anterior.
+Luiz Maia: Assim,
+Luiz Maia: estão vendo a diferença?
+Luiz Maia: Está vendo a diferença?
+Luiz Maia: A lista, os elementos. Eles juntam os sequenciais.
+Luiz Maia: Eles são apontados
+Luiz Maia: através de um ponteiro na memória principal para o próximo elemento e o elemento próximo a ponta para o anterior.
+Luiz Maia: É por isso que isso aqui é chamado de uma lista duplamente encadeada, onde você tem o próximo elemento, e o próximo elemento tem o elemento anterior a ele.
+Luiz Maia: É por isso que a lista é muito mais flexível, porque eu posso incluir
+Luiz Maia: aqui no meio da lista. Eu posso excluir no meio da lista. Eu posso adicionar um novo elemento na lista. Sem nenhum problema.
+Luiz Maia: É tudo muito fácil.
+Luiz Maia: A lista é muito mais flexível
+Luiz Maia: do que o vetor. O problema da lista é que ela é muito lenta,
+Luiz Maia: justamente por conta desse monte de ponteiro que tem aí.
+Luiz Maia: Então o vetor não tem como inserir
+Luiz Maia: o vetor. Não tem como excluir o vetor. Não tem como aumentar
+Luiz Maia: a lista. Não, a lista tem todas essas facilidades, eu posso incluir onde eu quiser, excluir de onde eu quiser, aumentar o tamanho da lista zero. Problema.
+Luiz Maia: A grande questão é o seguinte:
+Luiz Maia: o vetor tem limitações, porém, ele é muito mais rápido do que a lista em matéria de processamento.
+Luiz Maia: E aí não sei se eu consegui mostrar para vocês visualmente
+Luiz Maia: a diferença entre a lista e o vetor.
+Luiz Maia: Se eu não conseguir me falar aí para eu tentar fazer alguma outra coisa? Não sei o que eu posso fazer aqui.
+Luiz Maia: E fala aí pra eu tentar.
+Luiz Maia: Consegue, consegue, sim. Você consegue pegar pelo índice, e aí fica mais caro ainda. Por quê?
+Luiz Maia: Porque além da lista, olha só a complicação que você acabou de perguntar para você entender.
+Luiz Maia: Você vai ter que ter aqui em cima
+Luiz Maia: algum tipo de estrutura de dados.
+Luiz Maia: E aí eu não sei exatamente como isso é feito
+Luiz Maia: em C. Sharp Python. Java, eu não sei como exatamente é feito, mas alguma coisa do tipo assim. Olha só,
+Luiz Maia: é mais ou menos. Isso.
+Luiz Maia: Vai tornar o negócio mais complexo ainda.
+Luiz Maia: O negócio já era complicado. Ficou pior ainda.
+Luiz Maia: Você vai ter que ter uma outra estrutura de dados para armazenar os índices. Porque a lista não tem índice.
+Luiz Maia: Por definição, não tem índice na lista.
+Luiz Maia: Você vai ter que criar uma outra estrutura de dados
+Luiz Maia: onde você vai ter. E aí eu não sei exatamente qual a estrutura de dados que esses caras usam para fazer isso aqui?
+Luiz Maia: O que eu estou fazendo aqui com vocês? Aqui, ó
+Luiz Maia: aqui não o índice já está incorporado
+Luiz Maia: dentro do vetor. Aqui. Não, os índices estão fora da estrutura de dados. Eles não estão dentro da estrutura de dados.
+Luiz Maia: Ficou um negócio bem doido. Mesmo bem esquisito.
+Luiz Maia: Poderia pegar isso aqui? Não sei se vai ficar melhor ou pior.
+Luiz Maia: Pronto, assim. Ó, ficou bonitão. Agora lá
+Luiz Maia: pode. Você pode criar a lista de vetores.
+Luiz Maia: Você pode criar vetor de lista.
+Luiz Maia: Você pode fazer tudo isso.
+Luiz Maia: Você pode fazer
+Luiz Maia: um vetor de lista. Uma lista de vetor. Você pode fazer tudo isso. Que você está pensando? Você pode fazer?
+Luiz Maia: Depende da aplicação.
+Luiz Maia: Agora. Ficou bonito.
+Luiz Maia: Agora ficou bonitão lá.
+Luiz Maia: Eu sou péssimo desenhista, mas hoje eu consegui me superar
+Luiz Maia: dessa maneira. Você consegue ver que realmente, apesar de serem parecidos.
+Luiz Maia: A lista e aqui está errado. Aqui é três, não é quatro está errado.
+Luiz Maia: Eu posso copiar esses dois caras aqui
+Luiz Maia: não peraí. Copiar esses dois caras aqui para ficar o negócio certinho.
+Luiz Maia: Aqui é o quatro.
+Luiz Maia: Vamos, filho.
+Luiz Maia: Quatro. E aqui os cinco ficou bonitão, hein?
+Luiz Maia: Então eu tenho uma estrutura de dados completamente. Ela é muito complexa,
+Luiz Maia: apesar. Quer dizer, a grande vantagem da lista é a facilidade que você tem de incluir, excluir, aumentar, diminuir. O vetor não tem isso. Porém, o vetor é muito mais rápido
+Luiz Maia: em matéria de processamento e consumo de memória.
+Luiz Maia: É que eu não tenho tempo para mostrar para vocês benchmark, né? Para mostrar a comparação desses caras. Mas
+Luiz Maia: eu acho que olhando para isso aqui, você tem uma ideia
+Luiz Maia: de como é que isso aqui é montado?
+Luiz Maia: Deixa eu salvar isso aqui?
+Luiz Maia: Cadê como é que eu vou salvar isso? Aqui
+Luiz Maia: é
+Luiz Maia: pretores,
+Luiz Maia: listas.
+Luiz Maia: Pronto, tá lá no drive para vocês. Esse material aqui. Vetores, listas, tá aí, ó tá bonitinho.
+Luiz Maia: Tá aí, bacaninha?
+Luiz Maia: Voltando aqui para o nosso código, porque eu não posso perder muito tempo. Não, senão o aluno respondeu: Correto. Não sei. Acho que foi José não tem que ir na programação. Quando mais aumenta a participidade, menor será a performance.
+Luiz Maia: É só Julio Jorge. Vocês dois.
+Luiz Maia: Quanto mais abstração você tem, mais você se distancia do hardware.
+Luiz Maia: Ou seja, menos performance você tem.
+Luiz Maia: Então, assim, quanto mais facilidade. Vou pegar um exemplo.
+Luiz Maia: Todo mundo aqui fez fundamento de dados, não fez ou não.
+Luiz Maia: Então vamos pensar. Olha só. Vamos falar sobre o Sql Alckmin.
+Luiz Maia: O Sql Alckmin é fantástico.
+Luiz Maia: Você coloca uma camada de software que pega o banco e transforma
+Luiz Maia: objeto em tabela e tabela em objeto.
+Luiz Maia: É maravilhoso. Lindo, espetacular, porra!
+Luiz Maia: Só que você colocou uma camada de software enorme entre o banco e a aplicação
+Luiz Maia: vai ter custo. Vai ter problema de performance de repente, é
+Luiz Maia: dependendo da aplicação que você está fazendo.
+Luiz Maia: O Sql Alckmin, ele vai gerar um problema de desempenho tão grande que você não vai poder utilizá lo.
+Luiz Maia: Então é uma troca. Gente. Você ganha praticidade e perde desempenho.
+Luiz Maia: Não tem como você ganhar desempenho e ganhar praticidade, cara, não tem?
+Luiz Maia: Você quer desempenho? Você vai usar sky puro.
+Luiz Maia: Eu quero facilidade.
+Luiz Maia: Eu quero simplificar o código.
+Luiz Maia: Você vai usar o Skely Alckmin e vai perder desempenho.
+Luiz Maia: É tudo um trade off tem aplicações que aceitam
+Luiz Maia: essa perda de desempenho. Outras não aceitam
+Luiz Maia: a mesma coisa em C. Sharp, em Java. Tem aplicações Java C. Sharp que usam Sql puro. Não usam hibernate entity framework usam Skl puro. Por quê? Porque o desempenho é melhor.
+Luiz Maia: Você pode construir as suas próprias consultas. Na mão
+Luiz Maia: você não precisa passar por uma camada enorme para gerar a consulta para você.
+Luiz Maia: A mesma coisa aqui.
+Luiz Maia: O que está fazendo esse pietash aqui, cara,
+Luiz Maia: isso aqui não era para estar aqui, eu, hein?
+Luiz Maia: Eu estava dando aula de Python antes. Então aí eu estava ensinando para os meus alunos como fazer teste unitário com Pytest.
+Luiz Maia: Então esse vetor aqui, gente, ele não tem como você incluir. Não tem como excluir. Não tem como mudar o tamanho. Ele é todo travado. Porém, o desempenho dele é muito melhor que qualquer lista.
+Luiz Maia: Tá certo.
+Luiz Maia: Aqui a gente pode dar uma melhorada nessa apresentação aqui é,
+Luiz Maia: eu vou fazer com que o vetor tenha valores.
+Luiz Maia: Então aqui eu vou fazer o seguinte aqui, eu vou fazer uma
+Luiz Maia: que ele imprima na mesma linha, separado por brancos, e vou atribuir um valor
+Luiz Maia: a esse vetor aqui e vetor de I recebe I mais um.
+Luiz Maia: Agora eu estou alterando o conteúdo do vetor. Estou pegando esse I que está aqui somando um e atribuindo no vetor. Olha só o que acontece.
+Luiz Maia: Vai parecer o vetor de um a um0 tá lá, bonitinho.
+Luiz Maia: Vou pegar esse cara aqui. E vou transformar esse cara num método para vocês verem como eu posso também
+Luiz Maia: transformar esse código public static voz De exibir, exibir.
+Luiz Maia: Vetor recebe o vetor. Eu tenho que passar aqui que ele é um vetor desse tipo
+Luiz Maia: inteiro. Eu tenho que passar, que é um vetor de inteiros.
+Luiz Maia: E aqui eu posso simplesmente pegar esse código que está aqui, tirar daqui, jogar para cá
+Luiz Maia: e chamar esse cara, exibir, exibir Vetor passando Vetor. Ele não sabe quem é tamanho.
+Luiz Maia: Que tamanho é uma variável local do Main.
+Luiz Maia: Eu posso fazer o que aqui.
+Luiz Maia: Você pode fazer assim, Vetor.
+Luiz Maia: Ponto, lenfe.
+Luiz Maia: Ele pega o tamanho do vetor.
+Luiz Maia: Eu acho que no Java é Vetor ponto Size.
+Luiz Maia: Não tenho certeza, mas é muito parecido. Gente é muito parecido.
+Luiz Maia: E na verdade, isso aqui é muito parecido com C.
+Luiz Maia: Não é que o C Sharp inventou. O Jav inventou? Não, eles copiaram do C e implementaram com uma syntase um pouquinho diferente, mas é tudo C.
+Luiz Maia: Tá certo, intervalo rápido para eu poder tomar uma água e a gente voltar para continuar esse código.
+Luiz Maia: Dúvidas e perguntas.
+Luiz Maia: Cinco minutos.
+Luiz Maia: Estamos de volta.
+Luiz Maia: A gente pode usar aqui também para imprimir o vetor.
+Luiz Maia: Em vez de usar esse comando,
+Luiz Maia: o Ford tradicional, a gente pode usar o Forith
+Luiz Maia: que a gente não viu ainda.
+Luiz Maia: Na verdade, gente viu. Sim, gente viu lá no polimorfismo o fornite rodando,
+Luiz Maia: a gente pode pegar esse vetor e exibir
+Luiz Maia: assim. Ó exibir. Vetor dois.
+Luiz Maia: Vou copiar e colar esse cara aqui
+Luiz Maia: vai ficar assim, ó
+Luiz Maia: vinte e número um vetor.
+Luiz Maia: A gente imprime o número.
+Luiz Maia: Isso é igualzinho. Java. Só muda. Sintaça muda nada. Não, a mesma lógica aqui é Fournit. Em é assim.
+Luiz Maia: Esse Pierre.
+Luiz Maia: Diretor dois, roda aqui. Vai ver que vai mostrar a mesma coisa. Opa, ele botou todo mundo junto ali,
+Luiz Maia: aqui. Era só fazer um pular linha aqui console
+Luiz Maia: Wright Line só para pular a linha.
+Luiz Maia: Pronto, bonitinho.
+Luiz Maia: A gente pode somar os elementos desse vetor, por exemplo.
+Luiz Maia: Então aqui a gente pode fazer o quê?
+Luiz Maia: Vou comentar essa linha aqui só para ficar.
+Luiz Maia: Vamos fazer a soma dos elementos do vetor.
+Luiz Maia: Vou criar um método para fazer isso. Somar vetor.
+Luiz Maia: Passando o vetor aqui,
+Luiz Maia: eu tenho que declarar o tipo do vetor. Não tem como não fazer isso. Isso aqui não é, Python? Não, gente.
+Luiz Maia: Isso aqui é diferente mesmo.
+Luiz Maia: Eu posso fazer um forte aqui para fazer isso. Não tem nenhum problema.
+Luiz Maia: Eu posso pegar esse comando. Que está aqui
+Luiz Maia: fazer isso ó
+Luiz Maia: soma mais igual número retorno.
+Luiz Maia: A soma é que eu posso imprimir a soma.
+Luiz Maia: Pronto, vamos ver se funciona.
+Luiz Maia: Soma cinquenta e cinco.
+Luiz Maia: Posso calcular a média dos elementos do vetor
+Luiz Maia: vai ser a soma. Divididos pelo número de elementos. Eu posso usar o tamanho, o Tam ou eu posso usar, por exemplo, o lenf
+Luiz Maia: também. Funciona.
+Luiz Maia: A média deu cinco.
+Luiz Maia: Não era para dar cinco.cinco. Gente, o que houve aqui?
+Luiz Maia: Se é cinquenta, e cinco dígitos por dez é porque é inteiro, né?
+Luiz Maia: Eu tenho que fazer o que aqui
+Luiz Maia: o que eu faço aqui? Gente para resolver isso? Um cast para Double.
+Luiz Maia: Pronto, tá resolvido.
+Luiz Maia: Cinco,cinco.
+Luiz Maia: Esse double que está aqui. Gente. É um poliomorfismo estático.
+Luiz Maia: É mais um tipo de polimorfismo. A gente falou sobre sobrecarga de operador, sobrecarga de método. Sobrecarga de construtor.
+Luiz Maia: Esse Cast aí também é uma sobrecarga. É um polimorfismo estático.
+Luiz Maia: Beleza. Então a gente pode fazer um troço diferente. Aqui.
+Luiz Maia: A gente pode fazer a entrada dos dados. Por exemplo,
+Luiz Maia: a gente pode pegar dados do teclado e colocar dentro do vetor, por exemplo, fazer um fora. Aqui
+Luiz Maia: é vetor indexado de I
+Luiz Maia: recebe int ponto, passe console
+Luiz Maia: ponto. Ridgeline,
+Luiz Maia: estou lendo do teclado e colocando dentro do vetor.
+Luiz Maia: E aí
+Luiz Maia: posso pegar isso aqui e transformar num método publicado.
+Luiz Maia: Start que roge ler.
+Luiz Maia: Vetor
+Luiz Maia: tem que passar o tipo aqui, senão ela não aceita.
+Luiz Maia: Eu posso pegar esse cara aqui, tirar daqui,
+Luiz Maia: jogar para cá.
+Luiz Maia: Ele não sabe quem é tamanho não tem problema, vetor lenf.
+Luiz Maia: E aqui a gente faz assim. Ó ler.
+Luiz Maia: Vetor passando vetor.
+Luiz Maia: Eu não botei.
+Luiz Maia: Eu não botei um prompt para entrar com os dados, né?
+Luiz Maia: E aí é só chegar aqui e fazer o seguinte:
+Luiz Maia: entre.
+Luiz Maia: Bom, um inteiro.
+Luiz Maia: Pronto, agora ficou arrumadinho.
+Luiz Maia: Entre, ih. Não, não ficou legal. Não,
+Luiz Maia: deixa eu arrumar isso aqui.
+Luiz Maia: Aqui é Wright, não é White Line.
+Luiz Maia: Um, dois, três, quatro, cinco, seis, sete, oito, nove, um0 pronto,
+Luiz Maia: tá super arrumadão. Tá super bacana.
+Luiz Maia: Está aqui o código do nosso diretor. Um
+Luiz Maia: está manipulando de
+Luiz Maia: de várias maneiras. Queria saber se alguém tem alguma dúvida. Alguma pergunta? Gostaria de fazer alguma coisa diferente. Alguma coisa para
+Luiz Maia: mexer com esse cara.
+Luiz Maia: Vamos fazer o vetor dois.
+Luiz Maia: E aí,
+Luiz Maia: vetor dois,
+Luiz Maia: botar esse cara aqui como sendo o nosso projeto padrão.
+Luiz Maia: Bom, você pode declarar o vetor
+Luiz Maia: sem nenhum elemento dentro dele. E você inicializar ele,
+Luiz Maia: ou pela console, ou a partir de um arquivo, etc. Ou você pode inicializar o vetor antes.
+Luiz Maia: Na hora que você declara. Ele não é algo do tipo intim
+Luiz Maia: vetor.
+Luiz Maia: E você atribui a ele os valores que você quer
+Luiz Maia: inicialmente. Aí você não precisa instanciar o compilador. Já vai fazer isso para você.
+Luiz Maia: E ele já vai definir o tamanho do vetor automaticamente pelo número de elementos que você inicializar o vetor.
+Luiz Maia: Então aqui, por exemplo, é,
+Luiz Maia: eu estou inicializando o vetor com esses valores aqui,
+Luiz Maia: eu não preciso instanciar. Não preciso colocar um mil
+Luiz Maia: para criar o vetor, porque ele já vai fazer isso por trás dos panos. O compilador vai fazer isso para você. O tamanho do vetor também vai ser definido em tempo de compilação. Eu tenho dez. Números aqui. Ele vai criar um vetor de dez posições.
+Luiz Maia: Tá certo.
+Luiz Maia: Então, se eu fizer aqui um for
+Luiz Maia: um For it da vida aqui.
+Luiz Maia: Ele vai pegar isso aqui e vai fazer exatamente o que eu fiz aqui. Você declarou um vetor de dez posições.
+Luiz Maia: Ele está fazendo a mesma coisa. Só que inicializando o vetor. Quando você rodar esse cara aqui, ele vai mostrar
+Luiz Maia: o vetor bonitinho.
+Luiz Maia: Suponha que eu tenha dois vetores.
+Luiz Maia: E eu quero somar esses dois vetores. Como é que a gente faria isso?
+Luiz Maia: Bom, se eu sei os valores do vetor. Eu posso fazer assim. Vetor um tem esses elementos.
+Luiz Maia: O vetor dois vai ter esses elementos aqui.
+Luiz Maia: Eu posso botar os mesmos valores ou botar valores diferentes.
+Luiz Maia: Sei lá.
+Luiz Maia: Vou botar aqui. Dez, vinte, trinta, quarenta, cinquenta, sessenta, setenta, oitenta, noventa, cem.
+Luiz Maia: Eu quero somar esses dois vetores.
+Luiz Maia: Bom, eu vou ter que botar um vetor destino que vai ser o vetor.
+Luiz Maia: Posso chamar de Soma ou vetor três, por exemplo,
+Luiz Maia: eu vou chamar de Soma.
+Luiz Maia: Esse vetor Soma.
+Luiz Maia: Eu vou ter que especificar o tamanho dele,
+Luiz Maia: porque eu não sei ainda quais são os valores que ele vai ter.
+Luiz Maia: Então eu vou ter que fazer aqui um.0 aí eu posso pegar um dos vetores que já estão definidos. Posso pegar o vetor um ou o vetor dois e pegar o tamanho dele para definir o tamanho desse vetor de soma.
+Luiz Maia: Bom para somar esses dois vetores. Esse fórum funciona.
+Luiz Maia: Esse for hit não vai funcionar para mim.
+Luiz Maia: Eu vou ter que fazer o Ford tradicional
+Luiz Maia: então aqui. Eu vou ter que mexer nesse cara aqui.
+Luiz Maia: Ford Inti vetor um.
+Luiz Maia: O que eu vou fazer? Vou pegar o vetor soma na posição I.
+Luiz Maia: Vou pegar o vetor um na posição. I
+Luiz Maia: somar com o vetor dois na posição I.
+Luiz Maia: Pronto, tá aí,
+Luiz Maia: peguei o vetor na posição I somei com o vetor dois na posição I e botei na posição I do vetor soma,
+Luiz Maia: como é que eu posso mostrar isso. Eu posso usar o forte agora.
+Luiz Maia: Agora eu posso usar o for it four it in it número soma número.
+Luiz Maia: Pronto, está aí nosso exemplo de vetor de soma de vetores
+Luiz Maia: não ficou bonitinho?
+Luiz Maia: Vamos arrumar isso aqui.
+Luiz Maia: Eu sou chato pra caramba, cara. Olha,
+Luiz Maia: sou muito chato com essas coisas.
+Luiz Maia: Tá lá? Onze, vinte e dois, trinta e três, quarenta e quatro e assim por diante.
+Luiz Maia: Então é a soma dos elementos do vetor.
+Luiz Maia: Poderia fazer isso usando métodos.
+Luiz Maia: Vai ficar um pouquinho mais complicado, mas é legal vocês verem como é a passagem de parâmetro para vocês fazerem isso,
+Luiz Maia: não é?
+Luiz Maia: E se os vetores forem de tamanhos diferentes? Aí você tem um problema.
+Luiz Maia: Como é que você vai somar dois vetores de tamanhos diferentes?
+Luiz Maia: Você vai somar o de você vai pegar o menor vetor. Bom, você vai ter. Que bom. Uma coisa que você tem uma. Bom, antes, Gabriel. Antes de mais nada,
+Luiz Maia: olha só o que eu vou fazer aqui.
+Luiz Maia: Não, não, não, não, não. Tem que fazer um for dentro de outro. Não vai dar problema.
+Luiz Maia: Como é que você pode colocar um vetor maior
+Luiz Maia: dentro de um vetor menor. Não dá para você fazer isso, gente,
+Luiz Maia: olha só o desenho que a gente fez aqui. Olha só. Olha o desenho.
+Luiz Maia: Olha aqui.
+Luiz Maia: Eu tenho um vetor de oito posições. Como é que você vai colocar um vetor de oito posições num vetor de quatro.
+Luiz Maia: Não dá, cara. Vai quebrar.
+Luiz Maia: Quer ver como é que quebra o código? Olha só.
+Luiz Maia: Veja bem, vou fazer assim. Ó console, isso aqui é muito importante para vocês entenderem. Console Wrightline.
+Luiz Maia: Vou pegar o vetor um vetor um
+Luiz Maia: e vou mandar printar a posição um0 do vetor um.
+Luiz Maia: O que vai acontecer aqui, gente?
+Luiz Maia: Eu estou mandando printar a posição dez não é o elemento dez
+Luiz Maia: é a posição dez. Vai dar o quê?
+Luiz Maia: Não, erro é uma coisa. Isso aqui é outra. Qual é o nome disso? Gente começa com e
+Luiz Maia: é erro. Mas tem um nome mais específico? Exceção.
+Luiz Maia: Uma excepcion olha só. Excepcional que vai rolar aqui. Aqui.
+Luiz Maia: Index out of Range Exception index was outside the bounds of the Rei é uma exceção.
+Luiz Maia: Então, se você não sabe o tamanho do vetor, se você vai colocar em alguma posição que você acha que pode dar errado? Você vai ter que fazer um tri Cat.
+Luiz Maia: Então isso aqui se você quer somar vetores de tamanhos diferentes?
+Luiz Maia: É um problema.
+Luiz Maia: Você vai acessar, sei lá. Você tem um vetor de quatro posições
+Luiz Maia: aí. Um vetor de dez posições. Como é que você vai colocar dez posições dentro de quatro? Vai dar erro.
+Luiz Maia: Vai dar erro. Não tem jeito.
+Luiz Maia: Então não dá para você trabalhar com vetores de tamanhos diferentes. Ele tem que trabalhar com vetores do mesmo tamanho.
+Luiz Maia: E isso não é só em relação a vetor. Não
+Luiz Maia: se eu tenho uma lista que tem dez elementos,
+Luiz Maia: uma outra lista que tem quatro elementos. Como é que você vai somar uma lista de dez com uma lista de quatro. Vai dar o mesmo problema.
+Luiz Maia: Não dá para somar listas e vetores de tamanhos diferentes. Não dá. Isso não existe.
+Luiz Maia: Isso não é um problema de vetor. É um problema que vai acontecer,
+Luiz Maia: independente do tipo de estudo de idade você está manipulando.
+Luiz Maia: Mas Jorge, isso vai acontecer para a lista também.
+Luiz Maia: Você tem uma lista que tem dez elementos. Uma lista que tem quatro. Como é que você vai somar uma lista de dez com quatro. Cara, não vai rolar. Vai dar, Bo
+Luiz Maia: vai dar problema. Não tem jeito.
+Luiz Maia: Isso não é um problema da estrutura de dados. Isso é um problema de lógica de programação.
+Luiz Maia: Vamos pegar esses caras aqui e fazer esses caras virarem métodos para vocês verem como o código fica mais organizado, mais limpo, mais bonitinho.
+Luiz Maia: Então aqui eu estou fazendo o somar. Então aqui public start que void somar vetores.
+Luiz Maia: Eu tenho que passar os vetores todos que eu vou estar trabalhando. Infelizmente, gente, isso aqui não é Python.
+Luiz Maia: Tem que pegar aqui. O nome do vetor pode ser diferente para juntar os dois vetores, ou caso que ele excluís os valores iguais e fazer um novo só com os diferentes. Ah, João, pô
+Luiz Maia: aí, cara, olha só. Como é que eu vou saber o tamanho do vetor final
+Luiz Maia: se eu não sei quais são os valores iguais e diferentes. Ô João,
+Luiz Maia: você tem dois vetores com números que você não sabe quais são.
+Luiz Maia: Aí. Você quer juntar os dois vetores aí? Você quer fazer o seguinte. Você quer excluir os valores iguais?
+Luiz Maia: Quantos valores iguais tem no vetor?
+Luiz Maia: Quantos valores tem diferentes no vetor destino?
+Luiz Maia: Você não sabe isso daria para fazer com lista, mas não com vetor.
+Luiz Maia: Isso não dá para fazer com o vetor.
+Luiz Maia: Dá dá pra fazer, mas vai ficar feio demais.
+Luiz Maia: Isso com lista dá para fazer
+Luiz Maia: aqui? Eu estou fazendo o vetor dois.
+Luiz Maia: Como é que você vai fazer a distinção dos valores. Se você não sabe de antemão, qual é o tamanho do vetor destino?
+Luiz Maia: Você sabe quantos iguais tem? Quantos diferentes tem? Não sabe qual é o tamanho desse vetor? Destino, lista. Dá para fazer isso?
+Luiz Maia: Eu poderia fazer isso com lista,
+Luiz Maia: porque a lista tem um tamanho dinâmico. Aí eu poderia fazer isso.
+Luiz Maia: E aí.
+Luiz Maia: Mas com vetor não dá pra fazer. Não
+Luiz Maia: aqui. Eu tenho que declarar tudo. Olha só gente. Como é que é chato isso aqui não é Python.
+Luiz Maia: Eu tenho que declarar tudo que está entrando e saindo da minha estrutura. Eu tenho que fazer o quê? Pegar esse cara, tirar daqui e colocar aqui.
+Luiz Maia: Ele não sabe. Eu mudei o nome do eu mudei o nome dos parâmetros para vocês verem que eu não preciso
+Luiz Maia: somar vetores. Eu não preciso usar os mesmos nomes.
+Luiz Maia: Vetor um, vetor dois.
+Luiz Maia: O Soma. Eu não preciso declarar com os mesmos nomes. Então aqui vai ser.
+Luiz Maia: Vete um,
+Luiz Maia: vete um,
+Luiz Maia: vete dois.
+Luiz Maia: Pronto, está resolvido o problema.
+Luiz Maia: Vamos ver se funciona.
+Luiz Maia: Funcionou.
+Luiz Maia: Também posso fazer esse exibir aqui. Ó exibir vetor.
+Luiz Maia: Posso pegar esse cara daqui, fazer um public
+Luiz Maia: para ficar organizado o código para ficar tudo arrumadinho. Void exibir
+Luiz Maia: soma ou exibir vetor. Não sei. Você pode escolher o nome que você quiser exibir, Vetor, eu tenho que passar o tipo do vetor
+Luiz Maia: quenteiro e o nome dele.
+Luiz Maia: Vete, sei lá o nome que você quiser.
+Luiz Maia: Aqui não vai ser soma. Vai ser verte o bom disso aqui que eu posso imprimir. Qualquer vetor.
+Luiz Maia: Eu posso imprimir o vetor um, o Vetor dois e o Soma
+Luiz Maia: é só chamar esse cara aqui. Ó, quer ver? Olha só.
+Luiz Maia: Antes quer ver? Deixa eu apagar esse cara aqui e aí, ó
+Luiz Maia: exibir exibir. Vetor vetor um.
+Luiz Maia: Aí eu vou exibir o vetor um
+Luiz Maia: aí depois eu vou exibir o vetor dois.
+Luiz Maia: Aí eu estou reaproveitando o código Drive.
+Luiz Maia: Depois eu vou fazer o quê? Exibir o vetor de soma? Olha que bacana.
+Luiz Maia: Aproveitei código pra caramba aqui o mesmo exibir vetor serviu para exibir todos os vetores. Olha que legal!
+Luiz Maia: Ih, caramba!
+Luiz Maia: Console ponto wrightline para pular de linha Copy
+Luiz Maia: Top. Pronto, agora vai ficar bonitão.
+Luiz Maia: Ó que beleza.
+Luiz Maia: Opa, tem alguma coisa errada? Ah, não, tá certinho.
+Luiz Maia: O vetor dois é dez, dois0 o outro é onze vinte e dois. Está certo, funcionou, bacana.
+Luiz Maia: É
+Luiz Maia: gente.
+Luiz Maia: Alguma dúvida em relação a isso? Aqui gente fala aí, cara. Pode falar.
+Luiz Maia: Pode falar mesmo. Não tem problema nenhum, não
+Luiz Maia: tiver alguma dúvida, fala. Isso aqui é difícil pra caramba, gente. Isso aqui não é fácil. Não parece fácil,
+Luiz Maia: mas não é tão simples assim.
+Jorge José Luiz Santos da Silva: Por enquanto. O professor ainda está de boa.
+Luiz Maia: Ai, ai, gente!
+Jorge José Luiz Santos da Silva: Eu sempre me arrependo, porque depois eu sei que pode piorar, mas por enquanto, tá tranquilo.
+Luiz Maia: É?
+Luiz Maia: E se colocar o Wright Line dentro do método vetor funciona.
+Luiz Maia: Se você colocar dentro do exibir o Wright line. Ele vai pular.
+Luiz Maia: É,
+Luiz Maia: ele vai pular a linha direto. E aí ele não fica na mesma linha.
+Luiz Maia: Não dá para colocar aqui dentro. Eu poderia colocar aqui. Ó, eu poderia fazer isso aqui.
+Luiz Maia: Aí vai funcionar.
+Luiz Maia: No final da impressão, ele pula de linha. Aí funciona que funcionou,
+Luiz Maia: tá? Eu vou mostrar para vocês uma outra maneira de vocês fazerem esse cálculo aqui do somar vetores de uma maneira diferente,
+Luiz Maia: esse somar vetores. Ele está fazendo de um jeito onde você está retornando no parâmetro à soma.
+Luiz Maia: Eu vou fazer esse mesmo método de uma maneira diferente
+Luiz Maia: para vocês verem que vai dar no mesmo, tá?
+Luiz Maia: Eu vou chamar esse cara aqui de somar vetores um
+Luiz Maia: está certo.
+Luiz Maia: E vou criar um outro método chamado Somar Vetores dois.
+Luiz Maia: Um pouco diferente disso aqui.
+Luiz Maia: Essa chamada aqui é a chamada do soma vetores um.
+Luiz Maia: Vou colocar em comentário.
+Luiz Maia: Agora eu vou fazer um método que em vez de você retornar no parâmetro a soma, você vai retornar no nome do método. É uma abordagem mais acadêmica. É uma abordagem mais conceitual. É uma abordagem mais limpa, digamos.
+Luiz Maia: Tá certo, tanto faz. Você pode usar uma ou outra
+Luiz Maia: aqui. Eu não vou retornar à soma desse jeito.
+Luiz Maia: Eu vou retornar à soma de outra maneira.
+Luiz Maia: Dá mais trabalho dá, mas na minha opinião, é mais.
+Luiz Maia: É.
+Luiz Maia: É mais correto, tá certo. Da maneira acadêmica,
+Luiz Maia: se você quiser fazer, você faz do jeito que você quiser. Você não tem que fazer do meu jeito. Não,
+Luiz Maia: eu faço desse jeito aqui do somar vetores dois.
+Luiz Maia: Tá certo, eu vou fazer assim vinte.
+Luiz Maia: Esse cara vai retornar um vetor de inteiros.
+Luiz Maia: Está certo.
+Luiz Maia: Ele recebe dois vetores, vai somar os dois vetores
+Luiz Maia: e vai retornar um vetor de inteiros.
+Luiz Maia: Esse vetor de inteiros, ele é isso aqui.
+Luiz Maia: Soma New anti.
+Luiz Maia: Qual é o tamanho dele? O tamanho de um dos vetores, o Vet1 Lenf.
+Luiz Maia: E aqui tem um retorno dele.
+Luiz Maia: Aqui vai ficar assim. Ó Soma recebe somar vetores, dois.
+Luiz Maia: Vetor um, vírgula vetor dois.
+Luiz Maia: É uma mudança sintática e semântica.
+Luiz Maia: Por quê? Aqui eu, estou. Querendo dizer o seguinte: eu recebo,
+Luiz Maia: vete um e vete dois. E retorno soma como um parâmetro do método.
+Luiz Maia: Aqui eu estou recebendo Vet um e Vet dois como parâmetro, e retornando soma no nome do método. Semanticamente, é diferente.
+Luiz Maia: Funciona do mesmo jeito. Gente, olha só. Eu vou executar o código e vai dar a mesma coisa.
+Luiz Maia: Não me dá nada.
+Luiz Maia: A diferença é que se você pegar os livros de código limpo
+Luiz Maia: do Robert Martin, por exemplo, ele diz o seguinte:
+Luiz Maia: um método tem que devolver apenas um resultado
+Luiz Maia: no nome do método. Exatamente o que eu estou fazendo aqui quando você faz int
+Luiz Maia: aqui em vez de voz somar. Vetor dois:
+Luiz Maia: está dizendo o seguinte: que o nome do método vai retornar um vetor de inteiros
+Luiz Maia: aqui. Você está dizendo o seguinte: que somar vetores um vai retornar. Void, não retornar nada, ou seja,
+Luiz Maia: mas ele retorna.
+Luiz Maia: Só que ele retorna aqui. Ó, isso conceitualmente não tá legal.
+Luiz Maia: Funciona na prática. Está tudo bem. Mas isso conceitualmente está errado,
+Luiz Maia: porque se esse método retorna a alguma coisa. Ele tem que retornar no nome do método e não dentro de um parâmetro.
+Luiz Maia: Lp: Isso é um preciosismo seu,
+Luiz Maia: ok? É um preciosismo meu. Eu sou um cara que é.
+Luiz Maia: Gosto de tudo. Muito bem explicadinho.
+Luiz Maia: Está certo.
+Luiz Maia: Se você vai fazer desse jeito ou desse jeito. Não importa.
+Luiz Maia: Os dois estão corretos. Essa maneira que eu estou fazendo aqui é a maneira conceitualmente mais correta.
+Luiz Maia: Por quê? Porque você retorna alguma coisa no nome do método e não no parâmetro.
+Luiz Maia: Agora, se você perguntar para qualquer programador
+Luiz Maia: que está no mercado. O cara vai falar que isso aqui é o mais correto.
+Luiz Maia: E vai falar que isso aqui é perder tempo.
+Luiz Maia: Tá certo,
+Luiz Maia: mas gente, assim eu estou aqui para mostrar para vocês tudo que eu posso ensinar em matéria de programação.
+Luiz Maia: Então, na minha opinião, essa solução aqui é a mais correta. Se você quiser usar essa aqui, tudo bem. Eu na verdade, se eu estou com muita pressa, eu uso esse cara aqui.
+Luiz Maia: Se eu tenho tempo para pensar se eu estou com tempo para fazer um código limpo, eu vou fazer esse cara aqui.
+Luiz Maia: Eu não vou também ser.
+Luiz Maia: Queria bancar aqui para vocês, que eu sou o dono da verdade. Não
+Luiz Maia: depende do tempo. Deu tempo para fazer o troço. Assim é igual. Refraturar código
+Luiz Maia: deu tempo para refaturar refatória, não deu? Vai assim mesmo. Sabe, funcionou. Manda para a produção.
+Luiz Maia: Seja o que Deus quiser.
+Luiz Maia: Tem tempo para fazer teste? Tem tempo para depurar? Tem tempo para você fazer refaturação? Você faz. Não deu tempo. Você entrega do jeito que está
+Luiz Maia: gente. A gente terminou a parte de vetori de vetor. Na próxima aula, a gente vai falar sobre matrizes,
+Luiz Maia: que é bem rápido. É bem tranquilo, tá certo?
+Luiz Maia: Praticamente quem já estudou Sql já viu o que é uma tabela.
+Luiz Maia: Você tem lá linhas e colunas.
+Luiz Maia: A matriz é basicamente isso. Você tem linhas e colunas
+Luiz Maia: e a gente vai trabalhar em cima da matriz tá para fechar a
+Luiz Maia: o curso de C. Sharp. A gente precisa falar sobre arquivo.
+Luiz Maia: E aí vou mostrar para vocês como você vai ler um arquivo Csv e como gravar um arquivo Csv e terminou a matéria.
+Luiz Maia: Se eu não terminar a matéria na segunda, eu termino na terça.
+Luiz Maia: Aí está fechado.
+Luiz Maia: É isso. Boa noite para vocês. Boa semana. Nos vemos na próxima segunda feira. Tchau, tchau.
+Jorge José Luiz Santos da Silva: Alô, Professor. Boa noite.
+Luiz Maia: Valeu!

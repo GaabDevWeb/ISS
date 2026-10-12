@@ -1,0 +1,2558 @@
+WEBVTT
+
+1
+00:01:43.180 --> 00:01:51.829
+Luiz Maia: Boa noite, pessoal. Dia quinze de Setembro de dois mil e vinte e seis. Bem vindo a mais uma aula de C. Sharp
+
+2
+00:01:52.610 --> 00:01:55.200
+Luiz Maia: do bloco de backend.
+
+3
+00:01:55.690 --> 00:02:02.230
+Luiz Maia: Bom ontem a gente encerrou a aula, mostrando polimorfismo
+
+4
+00:02:03.860 --> 00:02:13.450
+Luiz Maia: dinâmico, utilizando interfaces. Eu queria perguntar para vocês se tem alguma dúvida em relação ao código que foi apresentado
+
+5
+00:02:13.860 --> 00:02:15.710
+Luiz Maia: na aula passada,
+
+6
+00:02:16.900 --> 00:02:27.839
+Luiz Maia: o que eu preciso terminar a matéria para vocês poderem entregar o At. O At já foi alterado para o dia vinte e oito de Setembro.
+
+7
+00:02:28.450 --> 00:02:31.529
+Luiz Maia: Então já está com a data bem adiantada.
+
+8
+00:02:32.290 --> 00:02:37.520
+Luiz Maia: Dá para a gente poder terminar a matéria na próxima segunda feira. Se for o caso
+
+9
+00:02:37.950 --> 00:02:41.430
+Luiz Maia: que eu acho que vai ser o que vai acontecer.
+
+10
+00:02:44.300 --> 00:02:48.209
+Luiz Maia: Queria saber se tem alguém com alguma dúvida. Alguma pergunta?
+
+11
+00:02:50.010 --> 00:02:52.250
+Luiz Maia: Caso contrário, eu começo a aula.
+
+12
+00:02:56.130 --> 00:03:03.939
+Luiz Maia: Qualquer dúvida é só falar que a gente tira as dúvidas necessárias.
+
+13
+00:03:08.210 --> 00:03:12.689
+Luiz Maia: Bom, a gente está na aula, nove,
+
+14
+00:03:18.520 --> 00:03:31.790
+Luiz Maia: ou seja, vetores e matrizes aqui. Eu fiz uma breve introdução sobre esse conceito de vetores e matrizes.
+
+15
+00:03:32.760 --> 00:03:34.080
+Luiz Maia: É,
+
+16
+00:03:45.780 --> 00:03:54.660
+Luiz Maia: eu sei que vocês vieram do mundo de Python. Então não é exatamente o mesmo mundo
+
+17
+00:03:55.740 --> 00:04:04.560
+Luiz Maia: que vocês estão agora, que é o mundo de C. Sharp e Java, que tudo que eu vou falar aqui
+
+18
+00:04:04.780 --> 00:04:07.520
+Luiz Maia: serve para jova também.
+
+19
+00:04:10.700 --> 00:04:15.019
+Luiz Maia: Vetores e matrizes também chamados diarreis.
+
+20
+00:04:16.350 --> 00:04:30.149
+Luiz Maia: São estruturas de dados chamados aqui. Acho que fica melhor. Chamadas estruturas de dados chamadas agregados homogêneos,
+
+21
+00:04:30.760 --> 00:04:33.810
+Luiz Maia: ou seja, todos os tipos dos dados
+
+22
+00:04:33.930 --> 00:04:37.580
+Luiz Maia: que você agrega dentro da estrutura de dados.
+
+23
+00:04:37.770 --> 00:04:39.420
+Luiz Maia: É do mesmo tipo.
+
+24
+00:04:39.810 --> 00:04:44.110
+Luiz Maia: Então, vetores e matrizes. Ele tem um tipo
+
+25
+00:04:44.530 --> 00:04:52.360
+Luiz Maia: pode ser inteiro. Pode ser real. Pode ser em String. Pode ser um objeto, mas todos são do mesmo tipo.
+
+26
+00:04:53.170 --> 00:04:55.010
+Luiz Maia: Isso conflita
+
+27
+00:04:55.340 --> 00:05:05.690
+Luiz Maia: com o Python, o Python. As listas são heterogêneos. Você pode ter, tipo de qualquer coisa dentro de uma lista em Python
+
+28
+00:05:06.560 --> 00:05:16.720
+Luiz Maia: você pode ter um elemento que é inteiro. Outro real. Outro String aqui não.
+
+29
+00:05:17.460 --> 00:05:22.739
+Luiz Maia: Todos os elementos do vetor ou da matriz é do mesmo tipo
+
+30
+00:05:29.630 --> 00:05:33.740
+Luiz Maia: os vetores e matrizes em si, Sharp Java.
+
+31
+00:05:33.920 --> 00:05:41.829
+Luiz Maia: Eles têm um tamanho definido, aquele tamanho que se define em tempo de compilação. Ou seja, se você quiser alterar
+
+32
+00:05:42.000 --> 00:05:46.700
+Luiz Maia: o tamanho do vetor ou da matriz, você vai ter que recompilar o código
+
+33
+00:05:47.020 --> 00:05:51.530
+Luiz Maia: também. Conflita com Python Python. As listas são dinâmicas.
+
+34
+00:05:52.210 --> 00:05:58.880
+Luiz Maia: Você pode aumentar, diminuir, remover, incluir sem nenhum problema.
+
+35
+00:06:01.760 --> 00:06:07.810
+Luiz Maia: É só pra deixar mais claro para vocês.
+
+36
+00:06:08.850 --> 00:06:17.519
+Luiz Maia: O Python tem um pacote. Uma biblioteca específica para manipulação de arreis e matrizes
+
+37
+00:06:17.750 --> 00:06:21.949
+Luiz Maia: chamado um pacote chamado num Pai
+
+38
+00:06:22.980 --> 00:06:32.039
+Luiz Maia: o Non. Pai. Ele implementa exatamente essas funções de vetores e matrizes
+
+39
+00:06:32.310 --> 00:06:44.310
+Luiz Maia: do C. Sharp que o Java já tem incorporado naturalmente na linguagem dentro do
+
+40
+00:06:44.670 --> 00:06:52.579
+Luiz Maia: do Python, você tem que importar uma biblioteca, um pacote para poder implementar vetores e matrizes.
+
+41
+00:06:55.350 --> 00:06:56.840
+Luiz Maia: Por que isso?
+
+42
+00:06:58.230 --> 00:07:04.849
+Luiz Maia: Porque as listas do Python são extremamente lentas
+
+43
+00:07:05.250 --> 00:07:16.370
+Luiz Maia: em matéria de processamento e também consumo de memória. As listas consomem um absurdo de processamento e muita memória.
+
+44
+00:07:18.030 --> 00:07:25.020
+Luiz Maia: Então, se você vai fazer uma aplicação em Python que precisa utilizar
+
+45
+00:07:25.140 --> 00:07:30.610
+Luiz Maia: um grande volume de dados. Uma quantidade de dados muito grande.
+
+46
+00:07:31.990 --> 00:07:35.190
+Luiz Maia: Certamente você não vai usar a lista.
+
+47
+00:07:35.360 --> 00:07:39.629
+Luiz Maia: Você vai usar o non pai em cima de um pai.
+
+48
+00:07:39.750 --> 00:07:42.790
+Luiz Maia: Tem uma biblioteca chamada Pandas.
+
+49
+00:07:43.640 --> 00:07:50.199
+Luiz Maia: O Pandas. Para quem não sabe, é aquela biblioteca que você utiliza para a ciência de dados.
+
+50
+00:07:50.400 --> 00:08:02.290
+Luiz Maia: Onde você pega os dados? Limpa dados, sumariza dados.
+
+51
+00:08:02.520 --> 00:08:10.329
+Luiz Maia: Você faz um monte de processamento em cima dos dados, mas os dados são todos feitos usando vetores e matrizes.
+
+52
+00:08:10.660 --> 00:08:13.339
+Luiz Maia: Você não vai utilizar a lista para isso,
+
+53
+00:08:14.120 --> 00:08:19.459
+Luiz Maia: porque lista em Python é muito lenta. Muito lenta mesmo.
+
+54
+00:08:20.160 --> 00:08:22.860
+Luiz Maia: Então, se você vai fazer alguma aplicação
+
+55
+00:08:23.330 --> 00:08:33.510
+Luiz Maia: voltado para dados para ciência de dados, você vai usar o num pai? Com certeza. E em cima do num pai tem o pandas.
+
+56
+00:08:33.730 --> 00:08:36.910
+Luiz Maia: O pandas foi feito para trabalhar como um pai.
+
+57
+00:08:38.400 --> 00:08:40.719
+Luiz Maia: Você não vai ver nenhum pacote
+
+58
+00:08:40.860 --> 00:08:45.390
+Luiz Maia: de manipulação de dados usando listas
+
+59
+00:08:46.210 --> 00:08:51.939
+Luiz Maia: por conta de serem muito lentas e consumirem muita memória,
+
+60
+00:08:55.550 --> 00:09:01.989
+Luiz Maia: tanto no C Sharp quanto em Java, vetores e matrizes são objetos.
+
+61
+00:09:03.020 --> 00:09:14.470
+Luiz Maia: E o acesso aos elementos dessa estrutura de dados é feito através de índices,
+
+62
+00:09:15.220 --> 00:09:19.229
+Luiz Maia: como vocês fizeram também lá em Python. Tá certo.
+
+63
+00:09:19.670 --> 00:09:20.920
+Luiz Maia: E aí?
+
+64
+00:09:21.820 --> 00:09:23.110
+Luiz Maia: E aí?
+
+65
+00:09:25.600 --> 00:09:31.839
+Luiz Maia: Aqui você tem um exemplo de um vetor
+
+66
+00:09:34.670 --> 00:09:37.660
+Luiz Maia: que tem apenas uma única dimensão.
+
+67
+00:09:39.600 --> 00:09:49.910
+Luiz Maia: E aí, aqui eu tenho um vetor de quatro dimensões. Perdão, é um vetor que tem seis elementos
+
+68
+00:09:51.000 --> 00:09:53.150
+Luiz Maia: de zero a cinco.
+
+69
+00:09:54.560 --> 00:09:56.829
+Luiz Maia: O primeiro elemento é sempre zero.
+
+70
+00:09:57.140 --> 00:10:02.620
+Luiz Maia: O último elemento é o tamanho do arrei ou do vetor menos um
+
+71
+00:10:03.920 --> 00:10:09.500
+Luiz Maia: é sempre assim. E você acessa os elementos do Arrei ou do vetor
+
+72
+00:10:09.900 --> 00:10:13.910
+Luiz Maia: usando esse índice que está aqui embaixo.
+
+73
+00:10:16.560 --> 00:10:24.990
+Luiz Maia: Se você definir no seu programa, um vetor de um tamanho, sei lá, dez.
+
+74
+00:10:25.350 --> 00:10:30.940
+Luiz Maia: E você precisar aumentar o tamanho desse vetor, você vai ter que criar um outro vetor,
+
+75
+00:10:31.220 --> 00:10:35.250
+Luiz Maia: copiar tudo que está no vetor antigo para o vetor novo.
+
+76
+00:10:37.560 --> 00:10:44.780
+Luiz Maia: Não tem como você alterar o tamanho de um vetor em tempo de execução. Não tem? Isso aqui não é lista,
+
+77
+00:10:46.050 --> 00:10:47.180
+Luiz Maia: tá certo.
+
+78
+00:10:47.560 --> 00:10:56.810
+Luiz Maia: Os elementos do vetor na memória estão todos sequencialmente dispostos. Ou seja,
+
+79
+00:10:57.000 --> 00:11:08.290
+Luiz Maia: o um vem depois do zero o dois vem depois do um. O três vem depois dos dois, assim por diante, ou seja, na memória principal do computador,
+
+80
+00:11:08.440 --> 00:11:12.049
+Luiz Maia: o vetor. Os elementos são todos contígues.
+
+81
+00:11:12.170 --> 00:11:16.459
+Luiz Maia: Eles estão todos próximos numa lista. Isso não é verdade.
+
+82
+00:11:16.670 --> 00:11:20.369
+Luiz Maia: Os elementos podem estar dispersos na memória principal,
+
+83
+00:11:20.510 --> 00:11:25.420
+Luiz Maia: e isso gera um custo de processamento e um custo de memória.
+
+84
+00:11:29.910 --> 00:11:34.219
+Luiz Maia: Vamos ver como a gente cria vetores
+
+85
+00:11:35.090 --> 00:11:43.070
+Luiz Maia: dentro do C. Sharp. É muito parecido com o Java. Não tem nada muito diferente.
+
+86
+00:11:43.320 --> 00:11:45.779
+Luiz Maia: É bem parecido.
+
+87
+00:11:46.570 --> 00:11:50.750
+Luiz Maia: Muda um pouquinho a sintace apenas.
+
+88
+00:11:51.090 --> 00:11:54.870
+Luiz Maia: Então a gente vai vir aqui e vai criar um novo projeto.
+
+89
+00:11:55.110 --> 00:11:55.930
+Luiz Maia: E aí
+
+90
+00:12:05.800 --> 00:12:12.130
+Luiz Maia: eu vou colocar esses códigos todos dentro da mesma solução
+
+91
+00:12:12.390 --> 00:12:17.750
+Luiz Maia: para não ficar o negócio espalhado. Então o nome desse projeto aqui vai ser Vetor um.
+
+92
+00:12:20.020 --> 00:12:23.879
+Luiz Maia: E o nome da solução vai ser vetores e matrizes.
+
+93
+00:12:29.850 --> 00:12:37.890
+Luiz Maia: Então, dentro de vetores e matrizes vão estar todos os códigos que você precisa para entender essa aula de hoje.
+
+94
+00:13:07.580 --> 00:13:11.019
+Luiz Maia: Bom para você declarar um vetor.
+
+95
+00:13:11.830 --> 00:13:14.099
+Luiz Maia: Você tem que primeiro especificar
+
+96
+00:13:14.250 --> 00:13:20.690
+Luiz Maia: o tipo do vetor. O tipo do elemento que vai fazer parte do vetor. O vetor.
+
+97
+00:13:20.840 --> 00:13:24.909
+Luiz Maia: Ele só pode ter um único tipo de dado.
+
+98
+00:13:25.660 --> 00:13:29.090
+Luiz Maia: Eu não posso ter vetores que misturam
+
+99
+00:13:29.370 --> 00:13:32.760
+Luiz Maia: String com número. Não existe isso.
+
+100
+00:13:34.100 --> 00:13:40.000
+Luiz Maia: O vetor é de um tipo de dado. Isso é completamente diferente de Python, tá,
+
+101
+00:13:40.220 --> 00:13:48.919
+Luiz Maia: você faz assim, ó Int. É o tipo do dado que vai estar armazenado no vetor. Isso diz que é um vetor.
+
+102
+00:13:49.080 --> 00:13:51.050
+Luiz Maia: O abre e fecha a colchente.
+
+103
+00:13:51.520 --> 00:13:55.120
+Luiz Maia: Aqui é o nome do vetor.
+
+104
+00:13:56.740 --> 00:14:02.379
+Luiz Maia: Só existe essa bagunça no javascript de uma rei poder ser vários tipos de dados.
+
+105
+00:14:05.540 --> 00:14:09.670
+Luiz Maia: Ué Lucas, o Python também.
+
+106
+00:14:17.960 --> 00:14:27.549
+Luiz Maia: O Python também. Você pode criar no Python uma lista com dados com tipos de dados completamente diferentes. Pedro,
+
+107
+00:14:28.780 --> 00:14:33.229
+Luiz Maia: lista, fila, pilha. São estruturas de dados.
+
+108
+00:14:33.760 --> 00:14:36.690
+Luiz Maia: Eu posso implementar essas estrutura de dados
+
+109
+00:14:36.860 --> 00:14:41.100
+Luiz Maia: usando listas em Python ou usando
+
+110
+00:14:41.200 --> 00:14:51.160
+Luiz Maia: o non pai do Python? Depende de como você quer implementar essas estruturas. E já existem classes prontas para isso.
+
+111
+00:14:51.230 --> 00:15:01.619
+Luiz Maia: Se você quer usar, também existe Pedro também já existe tudo pronto. Já em C. Sharp e também em Java.
+
+112
+00:15:01.990 --> 00:15:08.659
+Luiz Maia: Você tem uma classe pilha. Você tem uma classe lista. Você tem uma classe.
+
+113
+00:15:09.930 --> 00:15:22.060
+Luiz Maia: Você tem tudo pronto já nas linguagens. Você não tem que criar nada. Eu, por exemplo, quando comecei a programar, eu não tinha nada disso. Pronto, eu tinha que fazer isso na mão.
+
+114
+00:15:22.470 --> 00:15:28.770
+Luiz Maia: Então é você tem tudo isso pronto em Python, C. Sharp. Java,
+
+115
+00:15:29.120 --> 00:15:33.250
+Luiz Maia: você tem a classe Stack. Você tem a classe Q
+
+116
+00:15:33.830 --> 00:15:40.389
+Luiz Maia: a classe List que você pode fazer tudo isso automático para você. Você não tem que fazer nada
+
+117
+00:15:41.670 --> 00:15:54.929
+Luiz Maia: aqui. Como eu falei para vocês, vetores e matrizes são objetos. Então eu preciso criar o objeto inteiro e especificar o tamanho dele.
+
+118
+00:15:56.850 --> 00:15:58.430
+Luiz Maia: Por exemplo, dez.
+
+119
+00:15:59.410 --> 00:16:07.929
+Luiz Maia: Então eu estou criando um vetor de inteiros de dez posições.
+
+120
+00:16:11.090 --> 00:16:12.790
+Luiz Maia: Criação
+
+121
+00:16:16.100 --> 00:16:19.440
+Luiz Maia: de um vitor.
+
+122
+00:16:20.450 --> 00:16:26.950
+Luiz Maia: Genteiros de dez posições.
+
+123
+00:16:32.030 --> 00:16:42.030
+Luiz Maia: Se a gente quiser melhorar um pouco essa syntasse aqui para ficar um pouco mais bonitinho. A gente pode pegar esse dez aqui e colocar como uma constante
+
+124
+00:16:42.180 --> 00:16:49.710
+Luiz Maia: um tamanho, por exemplo, constante é aquela variável que não muda o valor dela conste.
+
+125
+00:16:50.430 --> 00:16:56.110
+Luiz Maia: Intim tamanho igual a dez.
+
+126
+00:16:57.250 --> 00:16:59.970
+Luiz Maia: Só para ficar mais bonitinho. O código.
+
+127
+00:17:03.670 --> 00:17:09.160
+Luiz Maia: Bom, agora eu vou fazer o seguinte. Eu vou mostrar o conteúdo desse vetor.
+
+128
+00:17:09.430 --> 00:17:14.149
+Luiz Maia: Para isso, eu vou usar o comando de repetição for
+
+129
+00:17:14.650 --> 00:17:17.179
+Luiz Maia: eu posso usar o for normal
+
+130
+00:17:23.069 --> 00:17:25.899
+Luiz Maia: que mostra os valores
+
+131
+00:17:31.440 --> 00:17:32.860
+Luiz Maia: do vetor.
+
+132
+00:17:34.470 --> 00:17:43.720
+Luiz Maia: E aí eu uso o índice para mostrar cada posição do elemento do vetor.
+
+133
+00:17:46.850 --> 00:17:49.020
+Luiz Maia: Aí eu vou executar isso aqui
+
+134
+00:18:00.390 --> 00:18:01.730
+Luiz Maia: tudo zero.
+
+135
+00:18:01.880 --> 00:18:08.189
+Luiz Maia: Alguém pode me explicar por que esses.
+
+136
+00:18:08.510 --> 00:18:15.599
+Luiz Maia: Esse vetor, todos os valores do vetor apareceram com zero?
+
+137
+00:18:16.220 --> 00:18:21.089
+Luiz Maia: Por que ele foi criado com os valores zero. Alguém tem alguma noção disso?
+
+138
+00:18:28.220 --> 00:18:29.930
+Luiz Maia: Por que foi zero?
+
+139
+00:18:39.920 --> 00:18:42.489
+Luiz Maia: Não, ele não assume o valor do I. Não
+
+140
+00:18:42.780 --> 00:18:47.489
+Luiz Maia: o i aqui. Ele cresce de zero até nove.
+
+141
+00:18:49.700 --> 00:18:55.980
+Luiz Maia: Ele não pegou o valor de I. Não, isso aqui é uma referência à posição
+
+142
+00:18:56.430 --> 00:19:02.869
+Luiz Maia: do vetor. O I não tem nada a ver. Não tem nenhuma atribuição aqui dentro dizendo que o I
+
+143
+00:19:03.120 --> 00:19:05.149
+Luiz Maia: vai ser atribuído ao vetor.
+
+144
+00:19:08.690 --> 00:19:14.030
+Luiz Maia: Tá, mas eu queria que alguém me desse uma explicação melhor do que essa.
+
+145
+00:19:17.240 --> 00:19:22.370
+Luiz Maia: Não foi especificado. Nada na criação do vetor da onde veio isso?
+
+146
+00:19:24.150 --> 00:19:25.790
+Luiz Maia: Julho. Quase.
+
+147
+00:19:26.170 --> 00:19:27.870
+Luiz Maia: Está bem próximo.
+
+148
+00:19:29.520 --> 00:19:38.880
+Luiz Maia: A pergunta é: de onde vieram os valores zero atribuídos aos elementos do vetor.
+
+149
+00:19:43.400 --> 00:19:44.850
+Luiz Maia: Vou dar uma dica.
+
+150
+00:19:47.130 --> 00:19:48.460
+Luiz Maia: O vetor.
+
+151
+00:19:50.100 --> 00:19:54.549
+Luiz Maia: O vetor não é um objeto.
+
+152
+00:19:58.280 --> 00:20:02.060
+Luiz Maia: Não tem nada de lixo aqui, gente, isso aqui não é uma lista.
+
+153
+00:20:02.460 --> 00:20:03.909
+Luiz Maia: Isso aqui é um vetor.
+
+154
+00:20:05.030 --> 00:20:08.660
+Luiz Maia: Isso, José. Muito bem.
+
+155
+00:20:08.780 --> 00:20:11.850
+Luiz Maia: O construtor padrão coloca zero
+
+156
+00:20:12.340 --> 00:20:20.779
+Luiz Maia: na criação do vetor. Gente, vocês querem que eu mostre a diferença de lista para vetor para vocês.
+
+157
+00:20:20.970 --> 00:20:25.049
+Luiz Maia: Então vocês não terem dúvida da diferença de uma coisa para outra.
+
+158
+00:20:25.260 --> 00:20:27.370
+Luiz Maia: Eu posso desenhar para vocês.
+
+159
+00:20:30.270 --> 00:20:34.879
+Luiz Maia: Vocês querem que eu desenhe para vocês. Como é a diferença de lista para vetor? É isso.
+
+160
+00:20:35.170 --> 00:20:36.710
+Luiz Maia: Ok, vamos lá.
+
+161
+00:21:10.150 --> 00:21:12.360
+Luiz Maia: O vetor é isso aqui. Ó,
+
+162
+00:22:07.010 --> 00:22:10.350
+Luiz Maia: aqui é a posição zero.
+
+163
+00:22:27.170 --> 00:22:31.559
+Luiz Maia: Aqui vai ser a posição um.
+
+164
+00:22:33.020 --> 00:22:37.579
+Luiz Maia: Isso você não tem como mexer gente. Isso aqui é definido pela linguagem.
+
+165
+00:22:38.560 --> 00:22:44.780
+Luiz Maia: Ele começa sempre no zero e vai até a posição do tamanho do vetor. Menos um.
+
+166
+00:22:47.030 --> 00:22:48.819
+Luiz Maia: Bom, eu vou.
+
+167
+00:22:51.310 --> 00:22:53.400
+Luiz Maia: Eu vou simplificar isso aqui.
+
+168
+00:22:54.290 --> 00:23:01.729
+Luiz Maia: Aqui eu tenho. Um, dois, três, quatro, cinco, seis, sete, oito. Então, a última posição é a posição sete
+
+169
+00:23:05.120 --> 00:23:08.650
+Luiz Maia: aqui. Vou fazer o seguinte. Vou fazer um pontinho pontinho.
+
+170
+00:23:13.550 --> 00:23:14.970
+Luiz Maia: Pois, é assim. Ó,
+
+171
+00:23:18.040 --> 00:23:19.910
+Luiz Maia: esse cara aqui é o vetor.
+
+172
+00:23:20.180 --> 00:23:24.230
+Luiz Maia: Deixa eu chegar isso aqui para para cá.
+
+173
+00:23:26.370 --> 00:23:28.180
+Luiz Maia: Esse cara aqui é o vetor.
+
+174
+00:23:42.720 --> 00:23:44.169
+Luiz Maia: Esse é o vetor.
+
+175
+00:23:45.500 --> 00:23:56.619
+Luiz Maia: São posições, contínguas de memória, onde você tem o início e o fim bem definidos e todos os tipos, todos os elementos são do mesmo tipo.
+
+176
+00:23:56.950 --> 00:23:58.780
+Luiz Maia: A lista é diferente.
+
+177
+00:23:58.940 --> 00:24:00.549
+Luiz Maia: A lista é assim. Ó,
+
+178
+00:24:15.030 --> 00:24:21.730
+Luiz Maia: não sei se eu consigo fazer a lista, caber nesse nesse quadrado aqui.
+
+179
+00:24:22.920 --> 00:24:26.680
+Luiz Maia: Conseguir para ficar exatamente igual.
+
+180
+00:24:27.610 --> 00:24:29.149
+Luiz Maia: Esse cara aqui.
+
+181
+00:24:29.690 --> 00:24:31.630
+Luiz Maia: Eu vou pegar aqui.
+
+182
+00:24:33.270 --> 00:24:38.550
+Luiz Maia: Isso aqui é a lista aqui.
+
+183
+00:24:42.720 --> 00:24:48.650
+Luiz Maia: Agora eu tenho que fazer as setas.
+
+184
+00:25:05.640 --> 00:25:16.950
+Luiz Maia: Normalmente as listas, elas são duplamente encadeadas. Você tem o próximo elemento da lista e o elemento anterior.
+
+185
+00:25:18.660 --> 00:25:19.680
+Luiz Maia: Assim,
+
+186
+00:26:08.250 --> 00:26:09.859
+Luiz Maia: estão vendo a diferença?
+
+187
+00:26:23.460 --> 00:26:25.010
+Luiz Maia: Está vendo a diferença?
+
+188
+00:26:27.180 --> 00:26:31.809
+Luiz Maia: A lista, os elementos. Eles juntam os sequenciais.
+
+189
+00:26:31.920 --> 00:26:33.930
+Luiz Maia: Eles são apontados
+
+190
+00:26:34.470 --> 00:26:43.059
+Luiz Maia: através de um ponteiro na memória principal para o próximo elemento e o elemento próximo a ponta para o anterior.
+
+191
+00:26:43.340 --> 00:26:53.520
+Luiz Maia: É por isso que isso aqui é chamado de uma lista duplamente encadeada, onde você tem o próximo elemento, e o próximo elemento tem o elemento anterior a ele.
+
+192
+00:26:54.190 --> 00:26:58.449
+Luiz Maia: É por isso que a lista é muito mais flexível, porque eu posso incluir
+
+193
+00:26:58.880 --> 00:27:09.730
+Luiz Maia: aqui no meio da lista. Eu posso excluir no meio da lista. Eu posso adicionar um novo elemento na lista. Sem nenhum problema.
+
+194
+00:27:10.340 --> 00:27:12.140
+Luiz Maia: É tudo muito fácil.
+
+195
+00:27:19.100 --> 00:27:21.930
+Luiz Maia: A lista é muito mais flexível
+
+196
+00:27:22.060 --> 00:27:27.219
+Luiz Maia: do que o vetor. O problema da lista é que ela é muito lenta,
+
+197
+00:27:28.170 --> 00:27:31.449
+Luiz Maia: justamente por conta desse monte de ponteiro que tem aí.
+
+198
+00:27:32.350 --> 00:27:36.649
+Luiz Maia: Então o vetor não tem como inserir
+
+199
+00:27:36.870 --> 00:27:41.080
+Luiz Maia: o vetor. Não tem como excluir o vetor. Não tem como aumentar
+
+200
+00:27:41.330 --> 00:27:50.859
+Luiz Maia: a lista. Não, a lista tem todas essas facilidades, eu posso incluir onde eu quiser, excluir de onde eu quiser, aumentar o tamanho da lista zero. Problema.
+
+201
+00:27:51.080 --> 00:27:53.589
+Luiz Maia: A grande questão é o seguinte:
+
+202
+00:27:54.490 --> 00:28:05.080
+Luiz Maia: o vetor tem limitações, porém, ele é muito mais rápido do que a lista em matéria de processamento.
+
+203
+00:28:11.290 --> 00:28:18.649
+Luiz Maia: E aí não sei se eu consegui mostrar para vocês visualmente
+
+204
+00:28:18.860 --> 00:28:23.179
+Luiz Maia: a diferença entre a lista e o vetor.
+
+205
+00:28:23.560 --> 00:28:29.259
+Luiz Maia: Se eu não conseguir me falar aí para eu tentar fazer alguma outra coisa? Não sei o que eu posso fazer aqui.
+
+206
+00:28:31.570 --> 00:28:33.280
+Luiz Maia: E fala aí pra eu tentar.
+
+207
+00:28:36.260 --> 00:28:48.100
+Luiz Maia: Consegue, consegue, sim. Você consegue pegar pelo índice, e aí fica mais caro ainda. Por quê?
+
+208
+00:28:48.630 --> 00:28:57.379
+Luiz Maia: Porque além da lista, olha só a complicação que você acabou de perguntar para você entender.
+
+209
+00:28:58.270 --> 00:29:00.589
+Luiz Maia: Você vai ter que ter aqui em cima
+
+210
+00:29:01.080 --> 00:29:03.849
+Luiz Maia: algum tipo de estrutura de dados.
+
+211
+00:29:04.040 --> 00:29:07.249
+Luiz Maia: E aí eu não sei exatamente como isso é feito
+
+212
+00:29:07.650 --> 00:29:16.160
+Luiz Maia: em C. Sharp Python. Java, eu não sei como exatamente é feito, mas alguma coisa do tipo assim. Olha só,
+
+213
+00:29:30.980 --> 00:29:32.700
+Luiz Maia: é mais ou menos. Isso.
+
+214
+00:29:33.770 --> 00:29:36.820
+Luiz Maia: Vai tornar o negócio mais complexo ainda.
+
+215
+00:30:00.800 --> 00:30:05.580
+Luiz Maia: O negócio já era complicado. Ficou pior ainda.
+
+216
+00:30:07.600 --> 00:30:14.919
+Luiz Maia: Você vai ter que ter uma outra estrutura de dados para armazenar os índices. Porque a lista não tem índice.
+
+217
+00:30:17.520 --> 00:30:20.719
+Luiz Maia: Por definição, não tem índice na lista.
+
+218
+00:30:20.830 --> 00:30:23.739
+Luiz Maia: Você vai ter que criar uma outra estrutura de dados
+
+219
+00:30:23.970 --> 00:30:31.660
+Luiz Maia: onde você vai ter. E aí eu não sei exatamente qual a estrutura de dados que esses caras usam para fazer isso aqui?
+
+220
+00:30:35.030 --> 00:30:37.269
+Luiz Maia: O que eu estou fazendo aqui com vocês? Aqui, ó
+
+221
+00:30:38.170 --> 00:30:43.979
+Luiz Maia: aqui não o índice já está incorporado
+
+222
+00:30:44.270 --> 00:30:55.329
+Luiz Maia: dentro do vetor. Aqui. Não, os índices estão fora da estrutura de dados. Eles não estão dentro da estrutura de dados.
+
+223
+00:31:01.210 --> 00:31:04.540
+Luiz Maia: Ficou um negócio bem doido. Mesmo bem esquisito.
+
+224
+00:31:06.400 --> 00:31:10.340
+Luiz Maia: Poderia pegar isso aqui? Não sei se vai ficar melhor ou pior.
+
+225
+00:31:12.070 --> 00:31:17.060
+Luiz Maia: Pronto, assim. Ó, ficou bonitão. Agora lá
+
+226
+00:31:21.510 --> 00:31:24.610
+Luiz Maia: pode. Você pode criar a lista de vetores.
+
+227
+00:31:25.570 --> 00:31:28.259
+Luiz Maia: Você pode criar vetor de lista.
+
+228
+00:31:28.580 --> 00:31:30.519
+Luiz Maia: Você pode fazer tudo isso.
+
+229
+00:31:32.430 --> 00:31:34.369
+Luiz Maia: Você pode fazer
+
+230
+00:31:34.750 --> 00:31:40.789
+Luiz Maia: um vetor de lista. Uma lista de vetor. Você pode fazer tudo isso. Que você está pensando? Você pode fazer?
+
+231
+00:31:41.670 --> 00:31:43.379
+Luiz Maia: Depende da aplicação.
+
+232
+00:31:47.050 --> 00:31:48.550
+Luiz Maia: Agora. Ficou bonito.
+
+233
+00:31:49.880 --> 00:31:51.739
+Luiz Maia: Agora ficou bonitão lá.
+
+234
+00:31:53.840 --> 00:31:58.740
+Luiz Maia: Eu sou péssimo desenhista, mas hoje eu consegui me superar
+
+235
+00:32:07.550 --> 00:32:14.720
+Luiz Maia: dessa maneira. Você consegue ver que realmente, apesar de serem parecidos.
+
+236
+00:32:15.070 --> 00:32:21.320
+Luiz Maia: A lista e aqui está errado. Aqui é três, não é quatro está errado.
+
+237
+00:32:21.860 --> 00:32:25.070
+Luiz Maia: Eu posso copiar esses dois caras aqui
+
+238
+00:32:25.750 --> 00:32:33.249
+Luiz Maia: não peraí. Copiar esses dois caras aqui para ficar o negócio certinho.
+
+239
+00:32:34.380 --> 00:32:36.170
+Luiz Maia: Aqui é o quatro.
+
+240
+00:32:38.080 --> 00:32:39.380
+Luiz Maia: Vamos, filho.
+
+241
+00:32:40.190 --> 00:32:45.700
+Luiz Maia: Quatro. E aqui os cinco ficou bonitão, hein?
+
+242
+00:32:47.560 --> 00:32:53.430
+Luiz Maia: Então eu tenho uma estrutura de dados completamente. Ela é muito complexa,
+
+243
+00:32:54.130 --> 00:33:08.690
+Luiz Maia: apesar. Quer dizer, a grande vantagem da lista é a facilidade que você tem de incluir, excluir, aumentar, diminuir. O vetor não tem isso. Porém, o vetor é muito mais rápido
+
+244
+00:33:11.100 --> 00:33:14.230
+Luiz Maia: em matéria de processamento e consumo de memória.
+
+245
+00:33:16.000 --> 00:33:24.459
+Luiz Maia: É que eu não tenho tempo para mostrar para vocês benchmark, né? Para mostrar a comparação desses caras. Mas
+
+246
+00:33:25.230 --> 00:33:29.620
+Luiz Maia: eu acho que olhando para isso aqui, você tem uma ideia
+
+247
+00:33:30.160 --> 00:33:32.270
+Luiz Maia: de como é que isso aqui é montado?
+
+248
+00:33:33.900 --> 00:33:35.820
+Luiz Maia: Deixa eu salvar isso aqui?
+
+249
+00:33:36.560 --> 00:33:40.000
+Luiz Maia: Cadê como é que eu vou salvar isso? Aqui
+
+250
+00:33:43.600 --> 00:33:44.890
+Luiz Maia: é
+
+251
+00:33:48.090 --> 00:33:49.670
+Luiz Maia: pretores,
+
+252
+00:33:53.100 --> 00:33:54.370
+Luiz Maia: listas.
+
+253
+00:33:56.540 --> 00:34:02.920
+Luiz Maia: Pronto, tá lá no drive para vocês. Esse material aqui. Vetores, listas, tá aí, ó tá bonitinho.
+
+254
+00:34:05.050 --> 00:34:06.430
+Luiz Maia: Tá aí, bacaninha?
+
+255
+00:34:09.580 --> 00:34:22.900
+Luiz Maia: Voltando aqui para o nosso código, porque eu não posso perder muito tempo. Não, senão o aluno respondeu: Correto. Não sei. Acho que foi José não tem que ir na programação. Quando mais aumenta a participidade, menor será a performance.
+
+256
+00:34:28.230 --> 00:34:33.000
+Luiz Maia: É só Julio Jorge. Vocês dois.
+
+257
+00:34:33.530 --> 00:34:39.969
+Luiz Maia: Quanto mais abstração você tem, mais você se distancia do hardware.
+
+258
+00:34:40.080 --> 00:34:43.710
+Luiz Maia: Ou seja, menos performance você tem.
+
+259
+00:34:43.830 --> 00:34:47.930
+Luiz Maia: Então, assim, quanto mais facilidade. Vou pegar um exemplo.
+
+260
+00:34:48.360 --> 00:34:52.800
+Luiz Maia: Todo mundo aqui fez fundamento de dados, não fez ou não.
+
+261
+00:34:58.940 --> 00:35:05.590
+Luiz Maia: Então vamos pensar. Olha só. Vamos falar sobre o Sql Alckmin.
+
+262
+00:35:06.100 --> 00:35:09.410
+Luiz Maia: O Sql Alckmin é fantástico.
+
+263
+00:35:09.910 --> 00:35:16.580
+Luiz Maia: Você coloca uma camada de software que pega o banco e transforma
+
+264
+00:35:16.780 --> 00:35:21.270
+Luiz Maia: objeto em tabela e tabela em objeto.
+
+265
+00:35:21.430 --> 00:35:26.150
+Luiz Maia: É maravilhoso. Lindo, espetacular, porra!
+
+266
+00:35:26.360 --> 00:35:32.120
+Luiz Maia: Só que você colocou uma camada de software enorme entre o banco e a aplicação
+
+267
+00:35:32.730 --> 00:35:39.740
+Luiz Maia: vai ter custo. Vai ter problema de performance de repente, é
+
+268
+00:35:40.560 --> 00:35:43.429
+Luiz Maia: dependendo da aplicação que você está fazendo.
+
+269
+00:35:43.890 --> 00:35:51.699
+Luiz Maia: O Sql Alckmin, ele vai gerar um problema de desempenho tão grande que você não vai poder utilizá lo.
+
+270
+00:35:53.120 --> 00:36:00.740
+Luiz Maia: Então é uma troca. Gente. Você ganha praticidade e perde desempenho.
+
+271
+00:36:01.160 --> 00:36:05.789
+Luiz Maia: Não tem como você ganhar desempenho e ganhar praticidade, cara, não tem?
+
+272
+00:36:06.420 --> 00:36:10.050
+Luiz Maia: Você quer desempenho? Você vai usar sky puro.
+
+273
+00:36:10.320 --> 00:36:12.679
+Luiz Maia: Eu quero facilidade.
+
+274
+00:36:13.050 --> 00:36:16.049
+Luiz Maia: Eu quero simplificar o código.
+
+275
+00:36:16.270 --> 00:36:20.000
+Luiz Maia: Você vai usar o Skely Alckmin e vai perder desempenho.
+
+276
+00:36:20.580 --> 00:36:27.449
+Luiz Maia: É tudo um trade off tem aplicações que aceitam
+
+277
+00:36:27.900 --> 00:36:31.460
+Luiz Maia: essa perda de desempenho. Outras não aceitam
+
+278
+00:36:31.930 --> 00:36:48.840
+Luiz Maia: a mesma coisa em C. Sharp, em Java. Tem aplicações Java C. Sharp que usam Sql puro. Não usam hibernate entity framework usam Skl puro. Por quê? Porque o desempenho é melhor.
+
+279
+00:36:49.980 --> 00:36:54.149
+Luiz Maia: Você pode construir as suas próprias consultas. Na mão
+
+280
+00:36:54.980 --> 00:37:03.350
+Luiz Maia: você não precisa passar por uma camada enorme para gerar a consulta para você.
+
+281
+00:37:04.270 --> 00:37:05.999
+Luiz Maia: A mesma coisa aqui.
+
+282
+00:37:07.310 --> 00:37:10.949
+Luiz Maia: O que está fazendo esse pietash aqui, cara,
+
+283
+00:37:12.510 --> 00:37:16.150
+Luiz Maia: isso aqui não era para estar aqui, eu, hein?
+
+284
+00:37:20.130 --> 00:37:28.119
+Luiz Maia: Eu estava dando aula de Python antes. Então aí eu estava ensinando para os meus alunos como fazer teste unitário com Pytest.
+
+285
+00:37:30.800 --> 00:37:45.310
+Luiz Maia: Então esse vetor aqui, gente, ele não tem como você incluir. Não tem como excluir. Não tem como mudar o tamanho. Ele é todo travado. Porém, o desempenho dele é muito melhor que qualquer lista.
+
+286
+00:37:47.330 --> 00:37:48.490
+Luiz Maia: Tá certo.
+
+287
+00:37:48.830 --> 00:37:54.360
+Luiz Maia: Aqui a gente pode dar uma melhorada nessa apresentação aqui é,
+
+288
+00:37:54.640 --> 00:37:58.529
+Luiz Maia: eu vou fazer com que o vetor tenha valores.
+
+289
+00:37:59.240 --> 00:38:05.829
+Luiz Maia: Então aqui eu vou fazer o seguinte aqui, eu vou fazer uma
+
+290
+00:38:06.610 --> 00:38:13.879
+Luiz Maia: que ele imprima na mesma linha, separado por brancos, e vou atribuir um valor
+
+291
+00:38:14.280 --> 00:38:20.739
+Luiz Maia: a esse vetor aqui e vetor de I recebe I mais um.
+
+292
+00:38:24.620 --> 00:38:33.520
+Luiz Maia: Agora eu estou alterando o conteúdo do vetor. Estou pegando esse I que está aqui somando um e atribuindo no vetor. Olha só o que acontece.
+
+293
+00:38:34.230 --> 00:38:42.760
+Luiz Maia: Vai parecer o vetor de um a um0 tá lá, bonitinho.
+
+294
+00:38:51.330 --> 00:38:56.860
+Luiz Maia: Vou pegar esse cara aqui. E vou transformar esse cara num método para vocês verem como eu posso também
+
+295
+00:38:57.090 --> 00:39:14.010
+Luiz Maia: transformar esse código public static voz De exibir, exibir.
+
+296
+00:39:14.690 --> 00:39:23.429
+Luiz Maia: Vetor recebe o vetor. Eu tenho que passar aqui que ele é um vetor desse tipo
+
+297
+00:39:23.950 --> 00:39:27.910
+Luiz Maia: inteiro. Eu tenho que passar, que é um vetor de inteiros.
+
+298
+00:39:28.690 --> 00:39:36.570
+Luiz Maia: E aqui eu posso simplesmente pegar esse código que está aqui, tirar daqui, jogar para cá
+
+299
+00:39:37.320 --> 00:39:50.100
+Luiz Maia: e chamar esse cara, exibir, exibir Vetor passando Vetor. Ele não sabe quem é tamanho.
+
+300
+00:39:50.930 --> 00:39:53.930
+Luiz Maia: Que tamanho é uma variável local do Main.
+
+301
+00:39:54.300 --> 00:39:56.279
+Luiz Maia: Eu posso fazer o que aqui.
+
+302
+00:39:57.350 --> 00:39:59.930
+Luiz Maia: Você pode fazer assim, Vetor.
+
+303
+00:40:00.090 --> 00:40:03.170
+Luiz Maia: Ponto, lenfe.
+
+304
+00:40:03.630 --> 00:40:05.600
+Luiz Maia: Ele pega o tamanho do vetor.
+
+305
+00:40:06.860 --> 00:40:10.429
+Luiz Maia: Eu acho que no Java é Vetor ponto Size.
+
+306
+00:40:10.720 --> 00:40:15.910
+Luiz Maia: Não tenho certeza, mas é muito parecido. Gente é muito parecido.
+
+307
+00:40:17.410 --> 00:40:21.170
+Luiz Maia: E na verdade, isso aqui é muito parecido com C.
+
+308
+00:40:23.430 --> 00:40:37.779
+Luiz Maia: Não é que o C Sharp inventou. O Jav inventou? Não, eles copiaram do C e implementaram com uma syntase um pouquinho diferente, mas é tudo C.
+
+309
+00:40:39.050 --> 00:40:45.650
+Luiz Maia: Tá certo, intervalo rápido para eu poder tomar uma água e a gente voltar para continuar esse código.
+
+310
+00:40:46.480 --> 00:40:48.230
+Luiz Maia: Dúvidas e perguntas.
+
+311
+00:40:48.920 --> 00:40:50.059
+Luiz Maia: Cinco minutos.
+
+312
+00:46:48.690 --> 00:46:50.749
+Luiz Maia: Estamos de volta.
+
+313
+00:46:50.940 --> 00:46:55.470
+Luiz Maia: A gente pode usar aqui também para imprimir o vetor.
+
+314
+00:46:55.880 --> 00:46:58.110
+Luiz Maia: Em vez de usar esse comando,
+
+315
+00:47:00.800 --> 00:47:03.809
+Luiz Maia: o Ford tradicional, a gente pode usar o Forith
+
+316
+00:47:04.220 --> 00:47:05.940
+Luiz Maia: que a gente não viu ainda.
+
+317
+00:47:06.670 --> 00:47:12.210
+Luiz Maia: Na verdade, gente viu. Sim, gente viu lá no polimorfismo o fornite rodando,
+
+318
+00:47:13.070 --> 00:47:15.930
+Luiz Maia: a gente pode pegar esse vetor e exibir
+
+319
+00:47:19.220 --> 00:47:23.739
+Luiz Maia: assim. Ó exibir. Vetor dois.
+
+320
+00:47:31.090 --> 00:47:32.969
+Luiz Maia: Vou copiar e colar esse cara aqui
+
+321
+00:47:53.110 --> 00:47:54.620
+Luiz Maia: vai ficar assim, ó
+
+322
+00:48:00.000 --> 00:48:07.950
+Luiz Maia: vinte e número um vetor.
+
+323
+00:48:09.850 --> 00:48:11.499
+Luiz Maia: A gente imprime o número.
+
+324
+00:48:16.030 --> 00:48:31.250
+Luiz Maia: Isso é igualzinho. Java. Só muda. Sintaça muda nada. Não, a mesma lógica aqui é Fournit. Em é assim.
+
+325
+00:48:35.890 --> 00:48:38.460
+Luiz Maia: Esse Pierre.
+
+326
+00:48:40.150 --> 00:48:51.170
+Luiz Maia: Diretor dois, roda aqui. Vai ver que vai mostrar a mesma coisa. Opa, ele botou todo mundo junto ali,
+
+327
+00:48:51.680 --> 00:48:56.769
+Luiz Maia: aqui. Era só fazer um pular linha aqui console
+
+328
+00:49:01.060 --> 00:49:05.109
+Luiz Maia: Wright Line só para pular a linha.
+
+329
+00:49:07.210 --> 00:49:10.180
+Luiz Maia: Pronto, bonitinho.
+
+330
+00:49:13.550 --> 00:49:19.250
+Luiz Maia: A gente pode somar os elementos desse vetor, por exemplo.
+
+331
+00:49:19.570 --> 00:49:22.000
+Luiz Maia: Então aqui a gente pode fazer o quê?
+
+332
+00:49:25.540 --> 00:49:27.979
+Luiz Maia: Vou comentar essa linha aqui só para ficar.
+
+333
+00:49:30.920 --> 00:49:34.050
+Luiz Maia: Vamos fazer a soma dos elementos do vetor.
+
+334
+00:49:42.410 --> 00:49:45.739
+Luiz Maia: Vou criar um método para fazer isso. Somar vetor.
+
+335
+00:49:47.610 --> 00:49:49.589
+Luiz Maia: Passando o vetor aqui,
+
+336
+00:50:11.500 --> 00:50:18.059
+Luiz Maia: eu tenho que declarar o tipo do vetor. Não tem como não fazer isso. Isso aqui não é, Python? Não, gente.
+
+337
+00:50:18.300 --> 00:50:19.920
+Luiz Maia: Isso aqui é diferente mesmo.
+
+338
+00:50:30.830 --> 00:50:35.259
+Luiz Maia: Eu posso fazer um forte aqui para fazer isso. Não tem nenhum problema.
+
+339
+00:50:35.580 --> 00:50:37.999
+Luiz Maia: Eu posso pegar esse comando. Que está aqui
+
+340
+00:50:44.270 --> 00:50:45.780
+Luiz Maia: fazer isso ó
+
+341
+00:50:49.320 --> 00:50:56.730
+Luiz Maia: soma mais igual número retorno.
+
+342
+00:50:56.890 --> 00:51:02.079
+Luiz Maia: A soma é que eu posso imprimir a soma.
+
+343
+00:51:13.430 --> 00:51:16.620
+Luiz Maia: Pronto, vamos ver se funciona.
+
+344
+00:51:19.460 --> 00:51:21.109
+Luiz Maia: Soma cinquenta e cinco.
+
+345
+00:51:26.000 --> 00:51:31.320
+Luiz Maia: Posso calcular a média dos elementos do vetor
+
+346
+00:51:40.800 --> 00:51:51.069
+Luiz Maia: vai ser a soma. Divididos pelo número de elementos. Eu posso usar o tamanho, o Tam ou eu posso usar, por exemplo, o lenf
+
+347
+00:51:53.710 --> 00:51:55.279
+Luiz Maia: também. Funciona.
+
+348
+00:52:19.880 --> 00:52:22.189
+Luiz Maia: A média deu cinco.
+
+349
+00:52:25.910 --> 00:52:29.580
+Luiz Maia: Não era para dar cinco.cinco. Gente, o que houve aqui?
+
+350
+00:52:33.860 --> 00:52:39.920
+Luiz Maia: Se é cinquenta, e cinco dígitos por dez é porque é inteiro, né?
+
+351
+00:52:40.570 --> 00:52:42.430
+Luiz Maia: Eu tenho que fazer o que aqui
+
+352
+00:52:49.030 --> 00:52:53.059
+Luiz Maia: o que eu faço aqui? Gente para resolver isso? Um cast para Double.
+
+353
+00:52:57.470 --> 00:52:59.220
+Luiz Maia: Pronto, tá resolvido.
+
+354
+00:53:02.190 --> 00:53:03.880
+Luiz Maia: Cinco,cinco.
+
+355
+00:53:07.720 --> 00:53:12.980
+Luiz Maia: Esse double que está aqui. Gente. É um poliomorfismo estático.
+
+356
+00:53:14.510 --> 00:53:24.039
+Luiz Maia: É mais um tipo de polimorfismo. A gente falou sobre sobrecarga de operador, sobrecarga de método. Sobrecarga de construtor.
+
+357
+00:53:24.250 --> 00:53:30.180
+Luiz Maia: Esse Cast aí também é uma sobrecarga. É um polimorfismo estático.
+
+358
+00:53:35.080 --> 00:53:41.740
+Luiz Maia: Beleza. Então a gente pode fazer um troço diferente. Aqui.
+
+359
+00:53:44.020 --> 00:53:47.249
+Luiz Maia: A gente pode fazer a entrada dos dados. Por exemplo,
+
+360
+00:53:48.390 --> 00:54:00.860
+Luiz Maia: a gente pode pegar dados do teclado e colocar dentro do vetor, por exemplo, fazer um fora. Aqui
+
+361
+00:54:07.330 --> 00:54:13.269
+Luiz Maia: é vetor indexado de I
+
+362
+00:54:17.890 --> 00:54:27.740
+Luiz Maia: recebe int ponto, passe console
+
+363
+00:54:31.090 --> 00:54:33.110
+Luiz Maia: ponto. Ridgeline,
+
+364
+00:54:39.550 --> 00:54:43.030
+Luiz Maia: estou lendo do teclado e colocando dentro do vetor.
+
+365
+00:54:44.170 --> 00:54:45.130
+Luiz Maia: E aí
+
+366
+00:54:48.440 --> 00:54:55.730
+Luiz Maia: posso pegar isso aqui e transformar num método publicado.
+
+367
+00:54:58.540 --> 00:55:03.590
+Luiz Maia: Start que roge ler.
+
+368
+00:55:04.230 --> 00:55:05.440
+Luiz Maia: Vetor
+
+369
+00:55:08.810 --> 00:55:11.760
+Luiz Maia: tem que passar o tipo aqui, senão ela não aceita.
+
+370
+00:55:16.780 --> 00:55:20.289
+Luiz Maia: Eu posso pegar esse cara aqui, tirar daqui,
+
+371
+00:55:23.420 --> 00:55:24.749
+Luiz Maia: jogar para cá.
+
+372
+00:55:25.790 --> 00:55:31.099
+Luiz Maia: Ele não sabe quem é tamanho não tem problema, vetor lenf.
+
+373
+00:55:33.130 --> 00:55:37.140
+Luiz Maia: E aqui a gente faz assim. Ó ler.
+
+374
+00:55:37.700 --> 00:55:41.930
+Luiz Maia: Vetor passando vetor.
+
+375
+00:55:50.980 --> 00:55:53.410
+Luiz Maia: Eu não botei.
+
+376
+00:55:57.750 --> 00:56:00.799
+Luiz Maia: Eu não botei um prompt para entrar com os dados, né?
+
+377
+00:56:03.920 --> 00:56:08.229
+Luiz Maia: E aí é só chegar aqui e fazer o seguinte:
+
+378
+00:56:14.750 --> 00:56:16.260
+Luiz Maia: entre.
+
+379
+00:56:16.640 --> 00:56:20.650
+Luiz Maia: Bom, um inteiro.
+
+380
+00:56:23.470 --> 00:56:25.549
+Luiz Maia: Pronto, agora ficou arrumadinho.
+
+381
+00:56:28.220 --> 00:56:30.589
+Luiz Maia: Entre, ih. Não, não ficou legal. Não,
+
+382
+00:56:36.380 --> 00:56:37.920
+Luiz Maia: deixa eu arrumar isso aqui.
+
+383
+00:56:38.090 --> 00:56:40.600
+Luiz Maia: Aqui é Wright, não é White Line.
+
+384
+00:56:43.270 --> 00:56:52.330
+Luiz Maia: Um, dois, três, quatro, cinco, seis, sete, oito, nove, um0 pronto,
+
+385
+00:56:52.830 --> 00:56:56.979
+Luiz Maia: tá super arrumadão. Tá super bacana.
+
+386
+00:57:03.610 --> 00:57:08.649
+Luiz Maia: Está aqui o código do nosso diretor. Um
+
+387
+00:57:12.240 --> 00:57:14.159
+Luiz Maia: está manipulando de
+
+388
+00:57:14.840 --> 00:57:24.540
+Luiz Maia: de várias maneiras. Queria saber se alguém tem alguma dúvida. Alguma pergunta? Gostaria de fazer alguma coisa diferente. Alguma coisa para
+
+389
+00:57:24.890 --> 00:57:26.689
+Luiz Maia: mexer com esse cara.
+
+390
+00:57:38.500 --> 00:57:40.310
+Luiz Maia: Vamos fazer o vetor dois.
+
+391
+00:57:40.650 --> 00:57:41.920
+Luiz Maia: E aí,
+
+392
+00:57:49.670 --> 00:57:51.219
+Luiz Maia: vetor dois,
+
+393
+00:57:58.780 --> 00:58:06.710
+Luiz Maia: botar esse cara aqui como sendo o nosso projeto padrão.
+
+394
+00:58:07.460 --> 00:58:11.649
+Luiz Maia: Bom, você pode declarar o vetor
+
+395
+00:58:12.190 --> 00:58:16.780
+Luiz Maia: sem nenhum elemento dentro dele. E você inicializar ele,
+
+396
+00:58:17.350 --> 00:58:24.999
+Luiz Maia: ou pela console, ou a partir de um arquivo, etc. Ou você pode inicializar o vetor antes.
+
+397
+00:58:25.250 --> 00:58:34.840
+Luiz Maia: Na hora que você declara. Ele não é algo do tipo intim
+
+398
+00:58:41.220 --> 00:58:42.570
+Luiz Maia: vetor.
+
+399
+00:58:43.560 --> 00:58:47.850
+Luiz Maia: E você atribui a ele os valores que você quer
+
+400
+00:58:48.490 --> 00:58:54.030
+Luiz Maia: inicialmente. Aí você não precisa instanciar o compilador. Já vai fazer isso para você.
+
+401
+00:58:54.350 --> 00:59:02.299
+Luiz Maia: E ele já vai definir o tamanho do vetor automaticamente pelo número de elementos que você inicializar o vetor.
+
+402
+00:59:03.340 --> 00:59:06.520
+Luiz Maia: Então aqui, por exemplo, é,
+
+403
+00:59:12.800 --> 00:59:16.200
+Luiz Maia: eu estou inicializando o vetor com esses valores aqui,
+
+404
+00:59:21.030 --> 00:59:24.570
+Luiz Maia: eu não preciso instanciar. Não preciso colocar um mil
+
+405
+00:59:25.040 --> 00:59:41.149
+Luiz Maia: para criar o vetor, porque ele já vai fazer isso por trás dos panos. O compilador vai fazer isso para você. O tamanho do vetor também vai ser definido em tempo de compilação. Eu tenho dez. Números aqui. Ele vai criar um vetor de dez posições.
+
+406
+00:59:42.640 --> 00:59:43.740
+Luiz Maia: Tá certo.
+
+407
+00:59:44.520 --> 00:59:46.960
+Luiz Maia: Então, se eu fizer aqui um for
+
+408
+00:59:51.260 --> 00:59:53.959
+Luiz Maia: um For it da vida aqui.
+
+409
+01:00:18.750 --> 01:00:27.850
+Luiz Maia: Ele vai pegar isso aqui e vai fazer exatamente o que eu fiz aqui. Você declarou um vetor de dez posições.
+
+410
+01:00:28.240 --> 01:00:35.930
+Luiz Maia: Ele está fazendo a mesma coisa. Só que inicializando o vetor. Quando você rodar esse cara aqui, ele vai mostrar
+
+411
+01:00:36.940 --> 01:00:41.070
+Luiz Maia: o vetor bonitinho.
+
+412
+01:00:46.280 --> 01:00:49.560
+Luiz Maia: Suponha que eu tenha dois vetores.
+
+413
+01:00:50.290 --> 01:00:54.640
+Luiz Maia: E eu quero somar esses dois vetores. Como é que a gente faria isso?
+
+414
+01:00:55.730 --> 01:01:03.609
+Luiz Maia: Bom, se eu sei os valores do vetor. Eu posso fazer assim. Vetor um tem esses elementos.
+
+415
+01:01:04.530 --> 01:01:09.779
+Luiz Maia: O vetor dois vai ter esses elementos aqui.
+
+416
+01:01:10.960 --> 01:01:16.439
+Luiz Maia: Eu posso botar os mesmos valores ou botar valores diferentes.
+
+417
+01:01:16.590 --> 01:01:17.440
+Luiz Maia: Sei lá.
+
+418
+01:01:17.750 --> 01:01:29.180
+Luiz Maia: Vou botar aqui. Dez, vinte, trinta, quarenta, cinquenta, sessenta, setenta, oitenta, noventa, cem.
+
+419
+01:01:30.270 --> 01:01:32.619
+Luiz Maia: Eu quero somar esses dois vetores.
+
+420
+01:01:35.520 --> 01:01:40.990
+Luiz Maia: Bom, eu vou ter que botar um vetor destino que vai ser o vetor.
+
+421
+01:01:41.270 --> 01:01:45.929
+Luiz Maia: Posso chamar de Soma ou vetor três, por exemplo,
+
+422
+01:01:48.950 --> 01:01:50.519
+Luiz Maia: eu vou chamar de Soma.
+
+423
+01:01:53.780 --> 01:01:55.720
+Luiz Maia: Esse vetor Soma.
+
+424
+01:01:56.340 --> 01:02:00.160
+Luiz Maia: Eu vou ter que especificar o tamanho dele,
+
+425
+01:02:01.530 --> 01:02:06.269
+Luiz Maia: porque eu não sei ainda quais são os valores que ele vai ter.
+
+426
+01:02:06.830 --> 01:02:21.679
+Luiz Maia: Então eu vou ter que fazer aqui um.0 aí eu posso pegar um dos vetores que já estão definidos. Posso pegar o vetor um ou o vetor dois e pegar o tamanho dele para definir o tamanho desse vetor de soma.
+
+427
+01:02:30.900 --> 01:02:36.319
+Luiz Maia: Bom para somar esses dois vetores. Esse fórum funciona.
+
+428
+01:02:36.570 --> 01:02:38.919
+Luiz Maia: Esse for hit não vai funcionar para mim.
+
+429
+01:02:39.380 --> 01:02:42.790
+Luiz Maia: Eu vou ter que fazer o Ford tradicional
+
+430
+01:02:43.880 --> 01:02:46.480
+Luiz Maia: então aqui. Eu vou ter que mexer nesse cara aqui.
+
+431
+01:02:48.440 --> 01:02:53.659
+Luiz Maia: Ford Inti vetor um.
+
+432
+01:02:55.080 --> 01:03:00.619
+Luiz Maia: O que eu vou fazer? Vou pegar o vetor soma na posição I.
+
+433
+01:03:01.880 --> 01:03:05.350
+Luiz Maia: Vou pegar o vetor um na posição. I
+
+434
+01:03:05.840 --> 01:03:09.459
+Luiz Maia: somar com o vetor dois na posição I.
+
+435
+01:03:15.600 --> 01:03:18.290
+Luiz Maia: Pronto, tá aí,
+
+436
+01:03:19.070 --> 01:03:28.060
+Luiz Maia: peguei o vetor na posição I somei com o vetor dois na posição I e botei na posição I do vetor soma,
+
+437
+01:03:29.880 --> 01:03:34.660
+Luiz Maia: como é que eu posso mostrar isso. Eu posso usar o forte agora.
+
+438
+01:03:34.780 --> 01:03:46.140
+Luiz Maia: Agora eu posso usar o for it four it in it número soma número.
+
+439
+01:03:47.110 --> 01:03:52.940
+Luiz Maia: Pronto, está aí nosso exemplo de vetor de soma de vetores
+
+440
+01:03:58.600 --> 01:04:00.650
+Luiz Maia: não ficou bonitinho?
+
+441
+01:04:01.070 --> 01:04:02.869
+Luiz Maia: Vamos arrumar isso aqui.
+
+442
+01:04:04.940 --> 01:04:07.740
+Luiz Maia: Eu sou chato pra caramba, cara. Olha,
+
+443
+01:04:08.920 --> 01:04:10.939
+Luiz Maia: sou muito chato com essas coisas.
+
+444
+01:04:13.660 --> 01:04:18.229
+Luiz Maia: Tá lá? Onze, vinte e dois, trinta e três, quarenta e quatro e assim por diante.
+
+445
+01:04:18.890 --> 01:04:21.739
+Luiz Maia: Então é a soma dos elementos do vetor.
+
+446
+01:04:24.540 --> 01:04:30.229
+Luiz Maia: Poderia fazer isso usando métodos.
+
+447
+01:04:31.440 --> 01:04:40.400
+Luiz Maia: Vai ficar um pouquinho mais complicado, mas é legal vocês verem como é a passagem de parâmetro para vocês fazerem isso,
+
+448
+01:04:40.740 --> 01:04:41.630
+Luiz Maia: não é?
+
+449
+01:04:41.920 --> 01:04:45.619
+Luiz Maia: E se os vetores forem de tamanhos diferentes? Aí você tem um problema.
+
+450
+01:04:48.170 --> 01:04:52.030
+Luiz Maia: Como é que você vai somar dois vetores de tamanhos diferentes?
+
+451
+01:04:52.600 --> 01:05:03.010
+Luiz Maia: Você vai somar o de você vai pegar o menor vetor. Bom, você vai ter. Que bom. Uma coisa que você tem uma. Bom, antes, Gabriel. Antes de mais nada,
+
+452
+01:05:03.270 --> 01:05:05.069
+Luiz Maia: olha só o que eu vou fazer aqui.
+
+453
+01:05:09.970 --> 01:05:16.090
+Luiz Maia: Não, não, não, não, não. Tem que fazer um for dentro de outro. Não vai dar problema.
+
+454
+01:05:17.450 --> 01:05:21.070
+Luiz Maia: Como é que você pode colocar um vetor maior
+
+455
+01:05:22.180 --> 01:05:25.880
+Luiz Maia: dentro de um vetor menor. Não dá para você fazer isso, gente,
+
+456
+01:05:27.440 --> 01:05:32.190
+Luiz Maia: olha só o desenho que a gente fez aqui. Olha só. Olha o desenho.
+
+457
+01:05:34.700 --> 01:05:35.790
+Luiz Maia: Olha aqui.
+
+458
+01:05:36.200 --> 01:05:43.699
+Luiz Maia: Eu tenho um vetor de oito posições. Como é que você vai colocar um vetor de oito posições num vetor de quatro.
+
+459
+01:05:44.270 --> 01:05:46.429
+Luiz Maia: Não dá, cara. Vai quebrar.
+
+460
+01:05:50.290 --> 01:05:53.539
+Luiz Maia: Quer ver como é que quebra o código? Olha só.
+
+461
+01:05:53.830 --> 01:06:02.620
+Luiz Maia: Veja bem, vou fazer assim. Ó console, isso aqui é muito importante para vocês entenderem. Console Wrightline.
+
+462
+01:06:02.960 --> 01:06:06.780
+Luiz Maia: Vou pegar o vetor um vetor um
+
+463
+01:06:07.730 --> 01:06:12.350
+Luiz Maia: e vou mandar printar a posição um0 do vetor um.
+
+464
+01:06:12.970 --> 01:06:15.109
+Luiz Maia: O que vai acontecer aqui, gente?
+
+465
+01:06:21.810 --> 01:06:27.180
+Luiz Maia: Eu estou mandando printar a posição dez não é o elemento dez
+
+466
+01:06:27.470 --> 01:06:30.019
+Luiz Maia: é a posição dez. Vai dar o quê?
+
+467
+01:06:30.480 --> 01:06:37.940
+Luiz Maia: Não, erro é uma coisa. Isso aqui é outra. Qual é o nome disso? Gente começa com e
+
+468
+01:06:41.670 --> 01:06:45.710
+Luiz Maia: é erro. Mas tem um nome mais específico? Exceção.
+
+469
+01:06:46.210 --> 01:06:51.150
+Luiz Maia: Uma excepcion olha só. Excepcional que vai rolar aqui. Aqui.
+
+470
+01:06:52.010 --> 01:07:04.130
+Luiz Maia: Index out of Range Exception index was outside the bounds of the Rei é uma exceção.
+
+471
+01:07:04.650 --> 01:07:13.959
+Luiz Maia: Então, se você não sabe o tamanho do vetor, se você vai colocar em alguma posição que você acha que pode dar errado? Você vai ter que fazer um tri Cat.
+
+472
+01:07:14.470 --> 01:07:19.640
+Luiz Maia: Então isso aqui se você quer somar vetores de tamanhos diferentes?
+
+473
+01:07:19.810 --> 01:07:21.280
+Luiz Maia: É um problema.
+
+474
+01:07:21.820 --> 01:07:25.890
+Luiz Maia: Você vai acessar, sei lá. Você tem um vetor de quatro posições
+
+475
+01:07:26.070 --> 01:07:32.900
+Luiz Maia: aí. Um vetor de dez posições. Como é que você vai colocar dez posições dentro de quatro? Vai dar erro.
+
+476
+01:07:42.590 --> 01:07:44.619
+Luiz Maia: Vai dar erro. Não tem jeito.
+
+477
+01:07:46.140 --> 01:07:52.209
+Luiz Maia: Então não dá para você trabalhar com vetores de tamanhos diferentes. Ele tem que trabalhar com vetores do mesmo tamanho.
+
+478
+01:07:52.680 --> 01:07:56.599
+Luiz Maia: E isso não é só em relação a vetor. Não
+
+479
+01:07:56.870 --> 01:07:59.620
+Luiz Maia: se eu tenho uma lista que tem dez elementos,
+
+480
+01:07:59.730 --> 01:08:08.110
+Luiz Maia: uma outra lista que tem quatro elementos. Como é que você vai somar uma lista de dez com uma lista de quatro. Vai dar o mesmo problema.
+
+481
+01:08:10.280 --> 01:08:16.080
+Luiz Maia: Não dá para somar listas e vetores de tamanhos diferentes. Não dá. Isso não existe.
+
+482
+01:08:17.260 --> 01:08:21.620
+Luiz Maia: Isso não é um problema de vetor. É um problema que vai acontecer,
+
+483
+01:08:22.170 --> 01:08:26.129
+Luiz Maia: independente do tipo de estudo de idade você está manipulando.
+
+484
+01:08:28.640 --> 01:08:32.929
+Luiz Maia: Mas Jorge, isso vai acontecer para a lista também.
+
+485
+01:08:33.370 --> 01:08:43.399
+Luiz Maia: Você tem uma lista que tem dez elementos. Uma lista que tem quatro. Como é que você vai somar uma lista de dez com quatro. Cara, não vai rolar. Vai dar, Bo
+
+486
+01:08:45.560 --> 01:08:47.859
+Luiz Maia: vai dar problema. Não tem jeito.
+
+487
+01:08:48.760 --> 01:08:54.270
+Luiz Maia: Isso não é um problema da estrutura de dados. Isso é um problema de lógica de programação.
+
+488
+01:08:57.479 --> 01:09:08.499
+Luiz Maia: Vamos pegar esses caras aqui e fazer esses caras virarem métodos para vocês verem como o código fica mais organizado, mais limpo, mais bonitinho.
+
+489
+01:09:08.620 --> 01:09:26.290
+Luiz Maia: Então aqui eu estou fazendo o somar. Então aqui public start que void somar vetores.
+
+490
+01:09:26.880 --> 01:09:34.850
+Luiz Maia: Eu tenho que passar os vetores todos que eu vou estar trabalhando. Infelizmente, gente, isso aqui não é Python.
+
+491
+01:09:35.529 --> 01:09:47.980
+Luiz Maia: Tem que pegar aqui. O nome do vetor pode ser diferente para juntar os dois vetores, ou caso que ele excluís os valores iguais e fazer um novo só com os diferentes. Ah, João, pô
+
+492
+01:09:49.050 --> 01:09:56.419
+Luiz Maia: aí, cara, olha só. Como é que eu vou saber o tamanho do vetor final
+
+493
+01:09:56.640 --> 01:10:01.179
+Luiz Maia: se eu não sei quais são os valores iguais e diferentes. Ô João,
+
+494
+01:10:06.040 --> 01:10:11.489
+Luiz Maia: você tem dois vetores com números que você não sabe quais são.
+
+495
+01:10:13.120 --> 01:10:20.469
+Luiz Maia: Aí. Você quer juntar os dois vetores aí? Você quer fazer o seguinte. Você quer excluir os valores iguais?
+
+496
+01:10:21.500 --> 01:10:23.879
+Luiz Maia: Quantos valores iguais tem no vetor?
+
+497
+01:10:25.970 --> 01:10:29.270
+Luiz Maia: Quantos valores tem diferentes no vetor destino?
+
+498
+01:10:29.560 --> 01:10:36.760
+Luiz Maia: Você não sabe isso daria para fazer com lista, mas não com vetor.
+
+499
+01:10:38.970 --> 01:10:41.770
+Luiz Maia: Isso não dá para fazer com o vetor.
+
+500
+01:10:42.610 --> 01:10:46.609
+Luiz Maia: Dá dá pra fazer, mas vai ficar feio demais.
+
+501
+01:10:47.370 --> 01:10:49.360
+Luiz Maia: Isso com lista dá para fazer
+
+502
+01:10:50.480 --> 01:10:53.590
+Luiz Maia: aqui? Eu estou fazendo o vetor dois.
+
+503
+01:10:54.890 --> 01:11:02.639
+Luiz Maia: Como é que você vai fazer a distinção dos valores. Se você não sabe de antemão, qual é o tamanho do vetor destino?
+
+504
+01:11:03.630 --> 01:11:11.439
+Luiz Maia: Você sabe quantos iguais tem? Quantos diferentes tem? Não sabe qual é o tamanho desse vetor? Destino, lista. Dá para fazer isso?
+
+505
+01:11:11.910 --> 01:11:13.950
+Luiz Maia: Eu poderia fazer isso com lista,
+
+506
+01:11:14.320 --> 01:11:18.250
+Luiz Maia: porque a lista tem um tamanho dinâmico. Aí eu poderia fazer isso.
+
+507
+01:11:18.700 --> 01:11:20.000
+Luiz Maia: E aí.
+
+508
+01:11:20.190 --> 01:11:22.770
+Luiz Maia: Mas com vetor não dá pra fazer. Não
+
+509
+01:11:24.900 --> 01:11:32.969
+Luiz Maia: aqui. Eu tenho que declarar tudo. Olha só gente. Como é que é chato isso aqui não é Python.
+
+510
+01:11:34.560 --> 01:11:44.799
+Luiz Maia: Eu tenho que declarar tudo que está entrando e saindo da minha estrutura. Eu tenho que fazer o quê? Pegar esse cara, tirar daqui e colocar aqui.
+
+511
+01:11:46.350 --> 01:11:55.300
+Luiz Maia: Ele não sabe. Eu mudei o nome do eu mudei o nome dos parâmetros para vocês verem que eu não preciso
+
+512
+01:11:57.350 --> 01:12:03.940
+Luiz Maia: somar vetores. Eu não preciso usar os mesmos nomes.
+
+513
+01:12:04.090 --> 01:12:08.470
+Luiz Maia: Vetor um, vetor dois.
+
+514
+01:12:09.760 --> 01:12:15.610
+Luiz Maia: O Soma. Eu não preciso declarar com os mesmos nomes. Então aqui vai ser.
+
+515
+01:12:16.480 --> 01:12:18.040
+Luiz Maia: Vete um,
+
+516
+01:12:22.100 --> 01:12:23.750
+Luiz Maia: vete um,
+
+517
+01:12:27.170 --> 01:12:28.690
+Luiz Maia: vete dois.
+
+518
+01:12:30.230 --> 01:12:33.050
+Luiz Maia: Pronto, está resolvido o problema.
+
+519
+01:12:35.440 --> 01:12:36.969
+Luiz Maia: Vamos ver se funciona.
+
+520
+01:12:41.100 --> 01:12:42.160
+Luiz Maia: Funcionou.
+
+521
+01:12:43.360 --> 01:12:48.650
+Luiz Maia: Também posso fazer esse exibir aqui. Ó exibir vetor.
+
+522
+01:12:49.610 --> 01:12:55.029
+Luiz Maia: Posso pegar esse cara daqui, fazer um public
+
+523
+01:12:55.150 --> 01:13:03.180
+Luiz Maia: para ficar organizado o código para ficar tudo arrumadinho. Void exibir
+
+524
+01:13:03.810 --> 01:13:13.209
+Luiz Maia: soma ou exibir vetor. Não sei. Você pode escolher o nome que você quiser exibir, Vetor, eu tenho que passar o tipo do vetor
+
+525
+01:13:13.510 --> 01:13:16.719
+Luiz Maia: quenteiro e o nome dele.
+
+526
+01:13:17.090 --> 01:13:19.560
+Luiz Maia: Vete, sei lá o nome que você quiser.
+
+527
+01:13:21.640 --> 01:13:27.549
+Luiz Maia: Aqui não vai ser soma. Vai ser verte o bom disso aqui que eu posso imprimir. Qualquer vetor.
+
+528
+01:13:27.780 --> 01:13:31.690
+Luiz Maia: Eu posso imprimir o vetor um, o Vetor dois e o Soma
+
+529
+01:13:32.410 --> 01:13:36.569
+Luiz Maia: é só chamar esse cara aqui. Ó, quer ver? Olha só.
+
+530
+01:13:37.540 --> 01:13:44.520
+Luiz Maia: Antes quer ver? Deixa eu apagar esse cara aqui e aí, ó
+
+531
+01:13:49.450 --> 01:13:57.570
+Luiz Maia: exibir exibir. Vetor vetor um.
+
+532
+01:13:57.920 --> 01:13:59.730
+Luiz Maia: Aí eu vou exibir o vetor um
+
+533
+01:14:00.100 --> 01:14:04.119
+Luiz Maia: aí depois eu vou exibir o vetor dois.
+
+534
+01:14:05.080 --> 01:14:07.819
+Luiz Maia: Aí eu estou reaproveitando o código Drive.
+
+535
+01:14:08.500 --> 01:14:16.789
+Luiz Maia: Depois eu vou fazer o quê? Exibir o vetor de soma? Olha que bacana.
+
+536
+01:14:17.650 --> 01:14:27.769
+Luiz Maia: Aproveitei código pra caramba aqui o mesmo exibir vetor serviu para exibir todos os vetores. Olha que legal!
+
+537
+01:14:30.760 --> 01:14:32.539
+Luiz Maia: Ih, caramba!
+
+538
+01:14:36.680 --> 01:14:46.280
+Luiz Maia: Console ponto wrightline para pular de linha Copy
+
+539
+01:14:47.420 --> 01:14:50.619
+Luiz Maia: Top. Pronto, agora vai ficar bonitão.
+
+540
+01:14:51.660 --> 01:14:53.380
+Luiz Maia: Ó que beleza.
+
+541
+01:14:53.930 --> 01:14:57.880
+Luiz Maia: Opa, tem alguma coisa errada? Ah, não, tá certinho.
+
+542
+01:14:58.090 --> 01:15:04.790
+Luiz Maia: O vetor dois é dez, dois0 o outro é onze vinte e dois. Está certo, funcionou, bacana.
+
+543
+01:15:24.400 --> 01:15:25.850
+Luiz Maia: É
+
+544
+01:15:29.490 --> 01:15:30.480
+Luiz Maia: gente.
+
+545
+01:15:34.140 --> 01:15:38.880
+Luiz Maia: Alguma dúvida em relação a isso? Aqui gente fala aí, cara. Pode falar.
+
+546
+01:15:39.830 --> 01:15:42.490
+Luiz Maia: Pode falar mesmo. Não tem problema nenhum, não
+
+547
+01:15:44.400 --> 01:15:51.949
+Luiz Maia: tiver alguma dúvida, fala. Isso aqui é difícil pra caramba, gente. Isso aqui não é fácil. Não parece fácil,
+
+548
+01:15:52.860 --> 01:15:56.540
+Luiz Maia: mas não é tão simples assim.
+
+549
+01:16:03.410 --> 01:16:06.170
+Jorge José Luiz Santos da Silva: Por enquanto. O professor ainda está de boa.
+
+550
+01:16:06.800 --> 01:16:12.979
+Luiz Maia: Ai, ai, gente!
+
+551
+01:16:12.980 --> 01:16:17.509
+Jorge José Luiz Santos da Silva: Eu sempre me arrependo, porque depois eu sei que pode piorar, mas por enquanto, tá tranquilo.
+
+552
+01:16:19.120 --> 01:16:20.090
+Luiz Maia: É?
+
+553
+01:16:20.660 --> 01:16:28.820
+Luiz Maia: E se colocar o Wright Line dentro do método vetor funciona.
+
+554
+01:16:32.570 --> 01:16:38.349
+Luiz Maia: Se você colocar dentro do exibir o Wright line. Ele vai pular.
+
+555
+01:16:38.950 --> 01:16:40.320
+Luiz Maia: É,
+
+556
+01:16:43.610 --> 01:16:48.579
+Luiz Maia: ele vai pular a linha direto. E aí ele não fica na mesma linha.
+
+557
+01:16:49.230 --> 01:16:57.110
+Luiz Maia: Não dá para colocar aqui dentro. Eu poderia colocar aqui. Ó, eu poderia fazer isso aqui.
+
+558
+01:16:58.050 --> 01:16:59.409
+Luiz Maia: Aí vai funcionar.
+
+559
+01:17:00.470 --> 01:17:08.660
+Luiz Maia: No final da impressão, ele pula de linha. Aí funciona que funcionou,
+
+560
+01:17:33.480 --> 01:17:43.489
+Luiz Maia: tá? Eu vou mostrar para vocês uma outra maneira de vocês fazerem esse cálculo aqui do somar vetores de uma maneira diferente,
+
+561
+01:17:49.240 --> 01:17:58.179
+Luiz Maia: esse somar vetores. Ele está fazendo de um jeito onde você está retornando no parâmetro à soma.
+
+562
+01:17:58.490 --> 01:18:02.510
+Luiz Maia: Eu vou fazer esse mesmo método de uma maneira diferente
+
+563
+01:18:03.050 --> 01:18:09.550
+Luiz Maia: para vocês verem que vai dar no mesmo, tá?
+
+564
+01:18:10.330 --> 01:18:14.810
+Luiz Maia: Eu vou chamar esse cara aqui de somar vetores um
+
+565
+01:18:17.880 --> 01:18:19.020
+Luiz Maia: está certo.
+
+566
+01:18:19.640 --> 01:18:25.500
+Luiz Maia: E vou criar um outro método chamado Somar Vetores dois.
+
+567
+01:18:32.300 --> 01:18:34.620
+Luiz Maia: Um pouco diferente disso aqui.
+
+568
+01:18:35.350 --> 01:18:42.010
+Luiz Maia: Essa chamada aqui é a chamada do soma vetores um.
+
+569
+01:18:43.080 --> 01:18:44.749
+Luiz Maia: Vou colocar em comentário.
+
+570
+01:18:47.370 --> 01:19:07.180
+Luiz Maia: Agora eu vou fazer um método que em vez de você retornar no parâmetro a soma, você vai retornar no nome do método. É uma abordagem mais acadêmica. É uma abordagem mais conceitual. É uma abordagem mais limpa, digamos.
+
+571
+01:19:07.590 --> 01:19:13.010
+Luiz Maia: Tá certo, tanto faz. Você pode usar uma ou outra
+
+572
+01:19:13.930 --> 01:19:18.230
+Luiz Maia: aqui. Eu não vou retornar à soma desse jeito.
+
+573
+01:19:18.740 --> 01:19:21.199
+Luiz Maia: Eu vou retornar à soma de outra maneira.
+
+574
+01:19:21.390 --> 01:19:26.310
+Luiz Maia: Dá mais trabalho dá, mas na minha opinião, é mais.
+
+575
+01:19:26.770 --> 01:19:28.110
+Luiz Maia: É.
+
+576
+01:19:32.130 --> 01:19:37.569
+Luiz Maia: É mais correto, tá certo. Da maneira acadêmica,
+
+577
+01:19:38.120 --> 01:19:44.599
+Luiz Maia: se você quiser fazer, você faz do jeito que você quiser. Você não tem que fazer do meu jeito. Não,
+
+578
+01:19:45.020 --> 01:19:49.790
+Luiz Maia: eu faço desse jeito aqui do somar vetores dois.
+
+579
+01:19:50.300 --> 01:19:54.410
+Luiz Maia: Tá certo, eu vou fazer assim vinte.
+
+580
+01:19:56.800 --> 01:20:01.240
+Luiz Maia: Esse cara vai retornar um vetor de inteiros.
+
+581
+01:20:02.660 --> 01:20:03.700
+Luiz Maia: Está certo.
+
+582
+01:20:04.090 --> 01:20:09.070
+Luiz Maia: Ele recebe dois vetores, vai somar os dois vetores
+
+583
+01:20:09.180 --> 01:20:12.010
+Luiz Maia: e vai retornar um vetor de inteiros.
+
+584
+01:20:12.310 --> 01:20:17.330
+Luiz Maia: Esse vetor de inteiros, ele é isso aqui.
+
+585
+01:20:18.600 --> 01:20:25.130
+Luiz Maia: Soma New anti.
+
+586
+01:20:25.830 --> 01:20:32.460
+Luiz Maia: Qual é o tamanho dele? O tamanho de um dos vetores, o Vet1 Lenf.
+
+587
+01:20:36.170 --> 01:20:39.079
+Luiz Maia: E aqui tem um retorno dele.
+
+588
+01:20:41.280 --> 01:20:51.290
+Luiz Maia: Aqui vai ficar assim. Ó Soma recebe somar vetores, dois.
+
+589
+01:20:52.730 --> 01:20:57.829
+Luiz Maia: Vetor um, vírgula vetor dois.
+
+590
+01:21:03.900 --> 01:21:09.640
+Luiz Maia: É uma mudança sintática e semântica.
+
+591
+01:21:09.970 --> 01:21:15.180
+Luiz Maia: Por quê? Aqui eu, estou. Querendo dizer o seguinte: eu recebo,
+
+592
+01:21:15.790 --> 01:21:22.330
+Luiz Maia: vete um e vete dois. E retorno soma como um parâmetro do método.
+
+593
+01:21:23.140 --> 01:21:33.880
+Luiz Maia: Aqui eu estou recebendo Vet um e Vet dois como parâmetro, e retornando soma no nome do método. Semanticamente, é diferente.
+
+594
+01:21:34.290 --> 01:21:41.510
+Luiz Maia: Funciona do mesmo jeito. Gente, olha só. Eu vou executar o código e vai dar a mesma coisa.
+
+595
+01:21:41.770 --> 01:21:43.020
+Luiz Maia: Não me dá nada.
+
+596
+01:21:44.640 --> 01:21:50.840
+Luiz Maia: A diferença é que se você pegar os livros de código limpo
+
+597
+01:21:51.070 --> 01:21:55.169
+Luiz Maia: do Robert Martin, por exemplo, ele diz o seguinte:
+
+598
+01:21:55.430 --> 01:22:00.440
+Luiz Maia: um método tem que devolver apenas um resultado
+
+599
+01:22:01.850 --> 01:22:09.399
+Luiz Maia: no nome do método. Exatamente o que eu estou fazendo aqui quando você faz int
+
+600
+01:22:10.880 --> 01:22:15.390
+Luiz Maia: aqui em vez de voz somar. Vetor dois:
+
+601
+01:22:15.620 --> 01:22:20.520
+Luiz Maia: está dizendo o seguinte: que o nome do método vai retornar um vetor de inteiros
+
+602
+01:22:20.860 --> 01:22:28.280
+Luiz Maia: aqui. Você está dizendo o seguinte: que somar vetores um vai retornar. Void, não retornar nada, ou seja,
+
+603
+01:22:29.160 --> 01:22:31.050
+Luiz Maia: mas ele retorna.
+
+604
+01:22:31.740 --> 01:22:40.690
+Luiz Maia: Só que ele retorna aqui. Ó, isso conceitualmente não tá legal.
+
+605
+01:22:41.050 --> 01:22:46.359
+Luiz Maia: Funciona na prática. Está tudo bem. Mas isso conceitualmente está errado,
+
+606
+01:22:46.630 --> 01:22:54.590
+Luiz Maia: porque se esse método retorna a alguma coisa. Ele tem que retornar no nome do método e não dentro de um parâmetro.
+
+607
+01:22:55.620 --> 01:22:58.540
+Luiz Maia: Lp: Isso é um preciosismo seu,
+
+608
+01:22:58.680 --> 01:23:04.570
+Luiz Maia: ok? É um preciosismo meu. Eu sou um cara que é.
+
+609
+01:23:05.250 --> 01:23:08.539
+Luiz Maia: Gosto de tudo. Muito bem explicadinho.
+
+610
+01:23:09.070 --> 01:23:10.049
+Luiz Maia: Está certo.
+
+611
+01:23:10.560 --> 01:23:17.660
+Luiz Maia: Se você vai fazer desse jeito ou desse jeito. Não importa.
+
+612
+01:23:17.840 --> 01:23:26.640
+Luiz Maia: Os dois estão corretos. Essa maneira que eu estou fazendo aqui é a maneira conceitualmente mais correta.
+
+613
+01:23:27.010 --> 01:23:35.619
+Luiz Maia: Por quê? Porque você retorna alguma coisa no nome do método e não no parâmetro.
+
+614
+01:23:39.550 --> 01:23:42.909
+Luiz Maia: Agora, se você perguntar para qualquer programador
+
+615
+01:23:43.450 --> 01:23:49.090
+Luiz Maia: que está no mercado. O cara vai falar que isso aqui é o mais correto.
+
+616
+01:23:49.690 --> 01:23:52.109
+Luiz Maia: E vai falar que isso aqui é perder tempo.
+
+617
+01:23:53.090 --> 01:23:54.180
+Luiz Maia: Tá certo,
+
+618
+01:23:54.940 --> 01:24:02.690
+Luiz Maia: mas gente, assim eu estou aqui para mostrar para vocês tudo que eu posso ensinar em matéria de programação.
+
+619
+01:24:04.390 --> 01:24:18.589
+Luiz Maia: Então, na minha opinião, essa solução aqui é a mais correta. Se você quiser usar essa aqui, tudo bem. Eu na verdade, se eu estou com muita pressa, eu uso esse cara aqui.
+
+620
+01:24:19.300 --> 01:24:26.060
+Luiz Maia: Se eu tenho tempo para pensar se eu estou com tempo para fazer um código limpo, eu vou fazer esse cara aqui.
+
+621
+01:24:26.590 --> 01:24:28.499
+Luiz Maia: Eu não vou também ser.
+
+622
+01:24:29.170 --> 01:24:34.089
+Luiz Maia: Queria bancar aqui para vocês, que eu sou o dono da verdade. Não
+
+623
+01:24:34.560 --> 01:24:39.730
+Luiz Maia: depende do tempo. Deu tempo para fazer o troço. Assim é igual. Refraturar código
+
+624
+01:24:39.970 --> 01:24:48.970
+Luiz Maia: deu tempo para refaturar refatória, não deu? Vai assim mesmo. Sabe, funcionou. Manda para a produção.
+
+625
+01:24:49.110 --> 01:24:50.650
+Luiz Maia: Seja o que Deus quiser.
+
+626
+01:24:51.350 --> 01:24:59.860
+Luiz Maia: Tem tempo para fazer teste? Tem tempo para depurar? Tem tempo para você fazer refaturação? Você faz. Não deu tempo. Você entrega do jeito que está
+
+627
+01:25:02.870 --> 01:25:11.900
+Luiz Maia: gente. A gente terminou a parte de vetori de vetor. Na próxima aula, a gente vai falar sobre matrizes,
+
+628
+01:25:12.100 --> 01:25:16.220
+Luiz Maia: que é bem rápido. É bem tranquilo, tá certo?
+
+629
+01:25:16.770 --> 01:25:22.450
+Luiz Maia: Praticamente quem já estudou Sql já viu o que é uma tabela.
+
+630
+01:25:22.820 --> 01:25:24.970
+Luiz Maia: Você tem lá linhas e colunas.
+
+631
+01:25:25.090 --> 01:25:29.849
+Luiz Maia: A matriz é basicamente isso. Você tem linhas e colunas
+
+632
+01:25:30.050 --> 01:25:35.880
+Luiz Maia: e a gente vai trabalhar em cima da matriz tá para fechar a
+
+633
+01:25:36.050 --> 01:25:39.580
+Luiz Maia: o curso de C. Sharp. A gente precisa falar sobre arquivo.
+
+634
+01:25:40.060 --> 01:25:48.069
+Luiz Maia: E aí vou mostrar para vocês como você vai ler um arquivo Csv e como gravar um arquivo Csv e terminou a matéria.
+
+635
+01:25:48.850 --> 01:25:52.469
+Luiz Maia: Se eu não terminar a matéria na segunda, eu termino na terça.
+
+636
+01:25:52.700 --> 01:25:54.350
+Luiz Maia: Aí está fechado.
+
+637
+01:26:04.210 --> 01:26:10.159
+Luiz Maia: É isso. Boa noite para vocês. Boa semana. Nos vemos na próxima segunda feira. Tchau, tchau.
+
+638
+01:26:11.640 --> 01:26:13.050
+Jorge José Luiz Santos da Silva: Alô, Professor. Boa noite.
+
+639
+01:26:13.370 --> 01:26:14.320
+Luiz Maia: Valeu!
+

@@ -1,0 +1,361 @@
+                                 Sistema Wheels
+                               Identificação de classes.
+
+
+
+Técnica 1 – Identificação inicial de substantivos
+
+Substantivos e grupos nominais nos textos dos casos de uso para encontrar:
+
+       candidatos a classes de domínio
+       possíveis atributos dessas classes
+       sinônimos/variações que na verdade se referem à mesma coisa.
+
+Listando substantivos relevantes do UC01
+
+Sem filtrar:
+
+       sistema Wheels
+       gerente
+       ator
+       nova bicicleta
+       aluguel
+       sistema
+       bicicleta disponível
+       opção para cadastrar nova bicicleta
+       formulário
+       informações da bicicleta
+       número da bicicleta
+       marca
+       modelo
+       cor
+       tipo
+       tamanho
+       valor da diária
+       valor do depósito
+       opção para salvar a bicicleta
+       dados
+       sucesso
+       número de bicicleta já cadastrado
+       novo número
+
+Substantivos relevantes do UC02
+
+       recepcionista
+       ator
+       bicicleta
+       cliente
+       sistema
+       bicicleta cadastrada
+       bicicleta indisponível
+       registro de aluguel
+       opção para iniciar registro de aluguel
+       número da bicicleta
+      dados da bicicleta
+      CPF do cliente
+      dados do cliente
+      número de diárias
+      valor total do contrato de aluguel
+      contrato de aluguel
+      aceite do cliente
+      sucesso
+      bicicleta não cadastrada
+      bicicleta indisponível para aluguel
+      cliente não cadastrado
+      opção para cadastrar novo cliente
+
+Normalização: singular, remoção de artigos, aproximação de sinônimos
+
+      deixar tudo no singular,
+      tirar palavras genéricas como artigos (a,o),
+      juntar formas equivalentes.
+
+Agrupando termos relacionados a Bicicleta
+
+      bicicleta,
+      nova bicicleta,
+      bicicleta disponível,
+      bicicleta cadastrada,
+      bicicleta consultada,
+      bicicleta indisponível,
+      número da bicicleta / número de bicicleta.
+
+Normalização:
+
+      Classe candidata: Bicicleta
+      Atributo principal: número (número da bicicleta)
+      Outros atributos: marca, modelo, cor, tipo, tamanho, valorDiária, valorDepósito
+      Atributo de estado: situação (disponível / indisponível)
+
+Termos relacionados a Cliente
+
+      cliente
+      CPF do cliente
+      dados do cliente
+      cliente não cadastrado
+      novo cliente
+
+Normalização:
+
+      Classe candidata: Cliente
+      Atributos candidatos:
+           o cpf
+           o outros dados do cliente (nome, endereço etc., não aparecem mas
+               podem existir)
+           o statusCadastro (cadastrado / não cadastrado)
+
+Termos relacionados a Usuário do sistema / Papéis
+      gerente
+      recepcionista
+      ator
+      usuário (aparece indiretamente na autenticação)
+      credenciais (do usuário, nas pré-condições de outros casos de uso)
+
+Normalização:
+
+      Classe candidata genérica: UsuárioDoSistema
+           o subclasses/papéis: Gerente, Recepcionista
+      Atributos candidatos de UsuárioDoSistema:
+           o login
+           o senha
+           o tipoUsuário (gerente, recepcionista)
+
+Termos relacionados a Aluguel / Contrato
+
+      aluguel (registro de aluguel)
+      contrato de aluguel
+      valor total do contrato de aluguel
+      número de diárias
+      aluguel realizado com sucesso
+
+Normalização:
+
+      Classe candidata: Aluguel (ou ContratoDeAluguel)
+      Atributos candidatos:
+           o numeroDiarias
+           o valorTotal
+           o provavelmente também dataInício, dataFim (não apareçam
+               explicitamente)
+           o statusContrato (ativo, concluído)
+
+Termos relacionados a Sistema / Interface
+
+      sistema
+      formulário
+      opção para cadastrar nova bicicleta
+      opção para salvar bicicleta
+      opção para iniciar registro de aluguel
+      opção para cadastrar novo cliente
+      mensagem de sucesso
+      mensagem de erro (Ex cliente não cadastrado)
+
+Normalização:
+
+      Sistema é um ator/software, não uma classe de domínio de negócio.
+      Formulário e opção de menu geralmente fazem parte da camada de interface,
+       não do modelo de domínio.
+      mensagem de sucesso/erro é comportamento do sistema, não entidade de
+       domínio.
+
+Lista resumida de termos após limpeza
+Candidatos a classes de domínio:
+
+      Bicicleta
+      Cliente
+      Aluguel (ContratoDeAluguel)
+      UsuárioDoSistema
+           o Gerente
+           o Recepcionista
+
+Candidatos a atributos (primeira versão):
+
+      Bicicleta
+           o número
+           o marca
+           o modelo
+           o cor
+           o tipo
+           o tamanho
+           o valorDiária
+           o valorDepósito
+           o situação (disponível / indisponível)
+      Cliente
+           o cpf
+           o (outros dados do cliente: nome, telefone etc)
+      UsuárioDoSistema
+           o login
+           o senha
+           o tipoUsuário (gerente, recepcionista)
+      Aluguel / ContratoDeAluguel
+           o numeroDiarias
+           o valorTotal
+           o (datas, status do contrato – inferidos)
+
+
+
+
+Técnica 2 – Análise de responsabilidades
+
+Verificando responsabilidades no UC01
+
+Principais verbos / ações:
+
+      seleciona a opção para cadastrar nova bicicleta
+      apresenta formulário solicitando informações
+      preenche as informações solicitadas
+      salvar a bicicleta
+      informa que a bicicleta foi salva com sucesso
+      informa que o número já está cadastrado
+      solicita novo número
+
+Responsabilidades do Gerente / UsuárioDoSistema
+
+      Iniciar o processo de cadastro de bicicleta.
+      Fornecer os dados da bicicleta.
+      Corrigir o número da bicicleta quando o sistema indicar duplicidade.
+Responsabilidades do Sistema
+
+      Exibir o formulário de cadastro.
+      Validar se o número da bicicleta já existe.
+      Gravar os dados da bicicleta.
+      Exibir mensagens de sucesso ou erro.
+
+Responsabilidades associadas à classe Bicicleta
+
+      Identificar-se por um número único (número é chave da bicicleta).
+      Manter seus próprios dados (marca, modelo, cor, tipo, tamanho, valorDiária,
+       valorDepósito).
+      Oferecer informação de disponibilidade (situação: disponível para aluguel).
+      Possível responsabilidade de validar dados básicos (Ex: valor da diária > 0).
+
+Verificando responsabilidades no UC02
+
+      iniciar registro de aluguel
+      solicita número da bicicleta
+      informa número da bicicleta
+      apresenta dados da bicicleta consultada
+      confirma dados da bicicleta
+      solicita CPF do cliente
+      apresenta dados do cliente
+      confirma dados do cliente
+      solicita número de diárias
+      informa número de diárias
+      apresenta valor total do contrato de aluguel
+      confirma contrato de aluguel
+      informa que contrato foi realizado com sucesso
+      Fluxos alternativos:
+            o informa que número não corresponde a bicicleta cadastrada
+            o informa que bicicleta está indisponível
+            o informa que cliente não está cadastrado
+            o solicita confirmação para cadastro de cliente
+
+Responsabilidades do Recepcionista / UsuárioDoSistema
+
+      Iniciar o processo de aluguel.
+      Informar o número da bicicleta e o CPF do cliente.
+      Conferir e confirmar os dados da bicicleta e do cliente.
+      Informar o número de diárias.
+      Confirmar o contrato com base no aceite do cliente.
+
+Responsabilidades do Sistema
+
+      Buscar bicicleta pelo número.
+      Validar se a bicicleta existe.
+      Verificar se a bicicleta está disponível para aluguel.
+      Buscar cliente pelo CPF.
+      Validar se o cliente está cadastrado.
+      Calcular o valor total do contrato a partir do número de diárias e do valor da
+       diária.
+      Registrar o contrato de aluguel.
+       Alterar o status da bicicleta para indisponível.
+       Exibir mensagens de sucesso/erro.
+
+Responsabilidades da classe Bicicleta (refinadas)
+
+A partir do UC02:
+
+       Indicar se está disponível para aluguel.
+       Ser associada a um contrato de aluguel.
+       Mudar de estado (de disponível para indisponível) quando um aluguel é criado.
+
+Responsabilidades da classe Cliente
+
+       Identificar-se pelo CPF (CPF é chave).
+       Ser associado a aluguéis.
+       Possuir dados cadastrais usados para exibição/validação.
+       Possível regra: não permitir aluguel se cliente não estiver cadastrado.
+
+Responsabilidades da classe Aluguel / ContratoDeAluguel
+
+       Registrar o vínculo entre um Cliente e uma Bicicleta.
+       Armazenar o número de diárias.
+       Calcular o valor total (pelo menos manter um valorTotal, calculado a partir de
+        númeroDeDiarias × valorDiária da bicicleta).
+       Manter o status do contrato (ativo, finalizado etc.).
+       Registrar a data/hora de início (possivelmente também de término).
+
+
+
+Resultado final das duas técnicas
+
+Classes de domínio identificadas
+
+   1.   Bicicleta
+   2.   Cliente
+   3.   Aluguel (ou ContratoDeAluguel)
+   4.   UsuárioDoSistema
+            o Gerente (papel)
+            o Recepcionista (papel)
+
+Atributos mais prováveis por classe
+
+Bicicleta
+
+       número
+       marca
+       modelo
+       cor
+       tipo
+       tamanho
+       valorDiária
+       valorDepósito
+       situação (disponível / indisponível)
+Cliente
+
+         cpf
+         (demais dados)
+
+UsuárioDoSistema
+
+         login
+         senha
+         tipoUsuário (gerente, recepcionista)
+
+Aluguel / ContratoDeAluguel
+
+         numeroDiarias
+         valorTotal
+         dataInício
+         dataFim (opcional/inferida)
+         statusContrato (ativo, concluído)
+
+Sinônimos e variações unificadas
+
+                      Expressões                           Forma unificada
+nova bicicleta, bicicleta cadastrada, bicicleta
+                                                   Bicicleta
+consultada
+número da bicicleta, número de bicicleta           Bicicleta.número
+bicicleta disponível para aluguel                  Bicicleta.situação = disponível
+bicicleta indisponível para aluguel                Bicicleta.situação = indisponível
+                                                   conjunto de atributos de
+dados da bicicleta
+                                                   Bicicleta
+dados do cliente                                   conjunto de atributos de Cliente
+CPF do cliente                                     Cliente.cpf
+registro de aluguel, contrato de aluguel           Aluguel (ContratoDeAluguel)
+valor total do contrato de aluguel                 Aluguel.valorTotal
+número de diárias do aluguel                       Aluguel.numeroDiarias
+ator autenticado no sistema, usuário autenticado   UsuárioDoSistema logado
+mensagem de sucesso/erro                           comportamento do Sistema
+

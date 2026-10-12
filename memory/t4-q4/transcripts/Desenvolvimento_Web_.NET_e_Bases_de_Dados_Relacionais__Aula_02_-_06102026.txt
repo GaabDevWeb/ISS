@@ -1,0 +1,694 @@
+Luiz Maia: Boa noite, pessoal. Dia seis de Outubro, dois mil e vinte e seis.
+Luiz Maia: Bem vindos a mais uma aula de de backend com Dotnet.
+Luiz Maia: Vamos continuar vendo o delegate.
+Luiz Maia: E talvez agora, com alguns exemplos que eu
+Luiz Maia: introduzir na na aula. Talvez fique mais fácil de vocês entenderem o uso do delegate
+Luiz Maia: ou compartilhar a tela para a gente poder tentar terminar isso
+Luiz Maia: hoje, ainda na próxima aula, que vai ser na próxima terça? Porque segunda feira é feriado.
+Luiz Maia: É dia doze de outubro, feriado. Então a gente vai ter. Não tem aula. Segunda,
+Luiz Maia: então eu gostaria de terminar essa matéria ainda hoje,
+Luiz Maia: que é a matéria que é a parte da matéria do Tp1 de vocês que está publicado no moodle. Inclusive já está publicado.
+Luiz Maia: Começou a assistir a aula gravada de ontem, e você mencionou que ia mostrar como criar um sistema simples Fullstech.
+Luiz Maia: Henrique, até onde eu sei, o Razor não é muito utilizado pelo mercado. O pessoal utiliza outros fronts,
+Luiz Maia: mas eu não sei te dizer qual é o front mais utilizado.
+Luiz Maia: E aí no mercado, teria que fazer uma pesquisa para te responder isso. Não vou te dar uma resposta.
+Luiz Maia: É, posso pesquisar aqui agora para você, se você quiser.
+henrique.osilva: Professor. Boa noite. Está me ouvindo.
+Luiz Maia: Perfeitamente.
+henrique.osilva: Professor. Na verdade, eu tinha outras duas dúvidas que tem mais a ver com a aula.
+henrique.osilva: Uma das minhas dúvidas era em relação ao Var para declarar variáveis, porque eu, por exemplo, até agora, eu sempre estava declarando a variável com um tipo.
+henrique.osilva: Aí você mostrou que o Var é usado quando você não pretende declarar o tipo da variável e já é atribuído sozinho.
+henrique.osilva: Aí, eu queria saber se a partir de agora, em todo caso, que eu for declarar uma variável, eu posso estar usando o Var ou se chega a algum ponto em que ele chega a ser uma prática tipo algum cenário em que não é recomendado usar o Var na hora de declarar uma variável.
+Luiz Maia: É?
+Luiz Maia: Estou pensando a resposta para você.
+Luiz Maia: Não sei. Eu tenho que pesquisar.
+Luiz Maia: Não sei se tem algum cenário que
+Luiz Maia: você não pode usar o Var. Não deve usar o Var. Vou ter que pesquisar. Não tenho essa resposta para você agora. Não.
+henrique.osilva: Não beleza, professor, eu acho que via de regra. Então, a princípio, na maioria dos cenários, é de boa usar o Var, né? Para declarar uma variável sem precisar especificar o tipo.
+Luiz Maia: Eu entendo o Var como uma forma de economizar código de você escrever menos código.
+Luiz Maia: Eu vejo basicamente isso, porque o compilador. Na verdade, quando você compila o código, ele transforma aquele var
+Luiz Maia: no tipo da variável
+Luiz Maia: que você está utilizando, porque quando você faz, na verdade, uma atribuição. Ou cria uma classe.
+Luiz Maia: Você está dizendo qual é o tipo daquele dado?
+Luiz Maia: E aí ele automaticamente consegue fazer a a transposição na hora da compilação.
+Luiz Maia: Então assim é, basicamente, na minha opinião, uma forma mais simples de escrever código.
+Luiz Maia: Agora, se existe alguma limitação, eu teria que pesquisar. Eu não tenho essa informação. Estou tentando aqui responder ao outro colega.
+Luiz Maia: É,
+Luiz Maia: estou fazendo uma pesquisa aqui.
+Luiz Maia: A resposta não veio o que eu imaginava.
+Luiz Maia: Até lá,
+Luiz Maia: não consegui uma resposta muito boa aqui, não.
+Luiz Maia: Então eu vou ficar devendo essa resposta para vocês.
+henrique.osilva: De boa, professor. Eu fiquei com dúvida em relação à função lambda também. Por exemplo, vou te mandar um código aqui para você olhar no chat
+henrique.osilva: esse usando o método find. Eu fiquei com dúvida a respeito do uso da função lambda, sendo usado como argumento dentro de um método. No caso, não teria que usar algum parêntese em algum lugar para indicar que é uma função
+henrique.osilva: ou na função âmbida. Não precisa.
+Luiz Maia: Na verdade, acabei não explicando isso para vocês ontem. Mas quando você coloca uma lâmbida dentro de uma, como está passando um parâmetro.
+Luiz Maia: Na verdade, isso aí vira um delegate um funk, delegate
+Luiz Maia: o compilador, transforma essa lâmpida num delegate, e aí é como se fosse você passar
+Luiz Maia: para dentro dessa função. Find é uma outra função.
+Luiz Maia: Então é mais complicado do que parece.
+Luiz Maia: Então essa lambida aí vai virar um delegate que está sendo passado para dentro do Find.
+henrique.osilva: Professor. Será que teria como você mostrar no código? Como que ficaria isso de forma explícita? Só para poder visualizar melhor.
+Luiz Maia: Cara por trás dos panos. Tem muita coisa por trás disso.
+Luiz Maia: Eu posso tentar trazer isso na próxima aula para você.
+Luiz Maia: Porque não? É simples.
+Luiz Maia: Ele vai criar um monte de coisa por trás disso.
+Luiz Maia: Eu já olhei. Como é que ele faz isso? Não é uma coisa simples de entender.
+henrique.osilva: Entendi. Não, tranquilo. Qualquer coisa. Eu pesquiso na inteligência artificial também.
+Luiz Maia: Tem muita abstração por trás de tudo isso.
+Luiz Maia: Tem muita abstração.
+Luiz Maia: As tuas perguntas são muito pertinentes. Não vejo nenhum problema nas suas perguntas.
+Luiz Maia: Mas essa, toda a lâmpida vira um. Delegate
+Luiz Maia: isso aí. Você pode pesquisar fácil na Internet agora, como
+Luiz Maia: explicitar isso? Escrever o código que ele gera por trás dos panos que o compilador gera. É bem mais complicado de explicar muito mais você pode até procurar. Você vai encontrar a explicação sobre isso.
+Luiz Maia: E você vai ver que não é simples, não é?
+Luiz Maia: Se fosse simples, eu explicaria agora. Mas não é simples.
+henrique.osilva: Ah, entendi.
+henrique.osilva: Só uma última dúvida. Então, Professor,
+henrique.osilva: a função lambda pode ser usada em qualquer contexto que necessite de um retorno. Por exemplo, no caso desse código que eu enviei pelo chat, o Find precisa de um valor, ou seja, precisa de algo retornado
+henrique.osilva: para poder exercer o método. O método. Então a lâmbida pode ser usada em qualquer contexto como esse, que precise de um retorno.
+Luiz Maia: É um funk delegation, cara, é um funk. Delegate
+Luiz Maia: onde você precisa de um retorno. Nesse caso, aí ele vai retornar, True ou false.
+Luiz Maia: Ele precisa de um retorno.
+henrique.osilva: Acho que eu não entendi direito. O professor.
+Luiz Maia: Ele está perguntando. Eu estou passando uma conta.
+Luiz Maia: Ele está testando conta Id igual a três. Isso aqui é verdadeiro ou falso,
+Luiz Maia: ele vai retornar. True ou falso em relação a essa comparação. Aqui.
+henrique.osilva: Ah, entendi. Agora. Então ele está.
+henrique.osilva: Ele vai buscar o valor que seja true nessa comparação.
+Luiz Maia: Se ele encontrar contra Jay G3 ele retorna a True. Se ele não encontrar, ele vai retornar fawse
+Luiz Maia: então vai ter um retorno. Sim.
+henrique.osilva: Entendi, beleza. Então, professor, valeu.
+Luiz Maia: Você perguntou sobre Var? Você perguntou sobre
+Luiz Maia: essa lâmpida? Se perguntou sobre como é que isso é implementado por trás dos Panos.
+Luiz Maia: Vou tentar responder essas perguntas todas na próxima aula para vocês. E o colega ali perguntou também sobre o front end mais usado
+Luiz Maia: insistir.
+henrique.osilva: Na verdade, fui eu também, professor.
+henrique.osilva: É que eu vejo.
+Luiz Maia: Descobrir isso para vocês, não tem.
+henrique.osilva: Eu vejo só.
+Luiz Maia: This is.
+henrique.osilva: Eu vejo só as aulas gravadas aí depois eu anoto o que eu fico com dúvida pra perguntar depois.
+Luiz Maia: Eu adoro. Perguntas, gente. E quando? Eu não sei, eu falo que não sei. Eu não enrolo vocês não, cara, eu não tenho essa coragem
+Luiz Maia: de enrolar meus alunos. Se eu não sei, eu falo que não sei. Vou pesquisar.
+Luiz Maia: Não tem a obrigação de saber tudo é,
+Luiz Maia: mas eu vou correr atrás de dar um retorno para vocês.
+Luiz Maia: Vamos voltar para o nosso código para eu tentar terminar essa parte da aula, vou compartilhar aqui a tela com vocês.
+Luiz Maia: E aí.
+Luiz Maia: Agora, talvez fique mais claro, o uso do delegate
+Luiz Maia: nos códigos nos próximos exemplos, eu até incluí um exemplo novo para vocês.
+Luiz Maia: Esse exemplo cinco não existia. Eu incluí ele hoje,
+Luiz Maia: para tentar fazer com que esse conceito de delegate fique mais claro para vocês.
+Luiz Maia: Mas antes, eu vou apresentar um exemplo que eu acho muito bom de delegate.
+Luiz Maia: Tem esse exemplo aqui.
+Luiz Maia: Um exemplo bem simples.
+Luiz Maia: Esse exemplo aqui ele tem um vetor
+Luiz Maia: de três posições com dois, três e quatro.
+Luiz Maia: Tá aí? Ele vai fazer o quê? Ele vai pegar esse vetor.
+Luiz Maia: Vai elevar o vetor ao quadrado e vai exibir o vetor.
+Luiz Maia: Depois ele vai elevar o vetor ao cubo e vai exibir o vetor
+Luiz Maia: e vai exibir o vetor
+Luiz Maia: aqui. Eu tenho os métodos que fazem a elevação ao quadrado e a elevação ao cubo do vetor.
+Luiz Maia: E aqui eu tenho. Exibir vetor.
+Luiz Maia: É um código bem simples. Não tem muita.
+Luiz Maia: Não tem muita complexidade nesse código.
+Luiz Maia: É bem simples.
+Luiz Maia: Queria primeiro saber se vocês entenderam
+Luiz Maia: esse código sem delegate sem nada.
+Luiz Maia: É um código bem simples.
+Luiz Maia: Onde você está pegando o vetor, elevando os elementos ao quadrado e elevando os elementos ao cubo. Vamos rodar ele para vocês verem como é que ele funciona.
+Luiz Maia: O vetor elevado ao quadrado vetor elevador cubo.
+Luiz Maia: Está aí o.
+Luiz Maia: A execução do código.
+Luiz Maia: Alguém tem alguma dúvida em relação a isso?
+Luiz Maia: Tranquilo, não entendeu o código. Fala para mim. Pode falar.
+Jorge José Luiz Santos da Silva: Por enquanto. Está tranquilo, professor da minha parte. Pelo.
+Luiz Maia: Bom, o que acontece, gente? Olha só.
+Luiz Maia: Elevar ao quadrado e elevar o cubo. É muito parecido. Você percorre o vetor.
+Luiz Maia: Posição a posição
+Luiz Maia: aqui. Você está fazendo a elevação ao quadrado. E aqui você está fazendo a elevação ao cubo.
+Luiz Maia: Poderia usar uma função matemática para fazer isso. Mas isso não é o mais importante.
+Luiz Maia: O mais importante é que elevar ao quadrado e elevar o cubo. Eles são muito parecidos.
+Luiz Maia: Na versão seguinte, o que eu faço?
+Luiz Maia: Delegate. E aí, na minha opinião, talvez seja.
+Luiz Maia: É a coisa mais poderosa que a gente tem no delegate é poder passar funções como parâmetro
+Luiz Maia: de uma outra função de um outro método.
+Luiz Maia: Então aqui eu tenho um delegate que é alterar número.
+Luiz Maia: Eu tenho uma função, que é um método que é
+Luiz Maia: elevar o quadrado, uma outra função, que é elevar.
+Luiz Maia: Olha o cubo.
+Luiz Maia: E aqui eu estou criando um alterar vetor
+Luiz Maia: onde eu passo o vetor e estou passando aqui. Um delegate que é alterar número.
+Luiz Maia: Eu estou passando um método para dentro de outro método.
+Luiz Maia: Isso aqui é chamado de callback síncronomo.
+Luiz Maia: Quando você passa um método. Para outro método. Isso é um callback.
+Luiz Maia: Por que ele é síncrono? Porque ele vai executar continuamente. Ele não vai parar a execução para executar outra coisa. Daqui a pouco eu vou mostrar para vocês um callback assínono.
+Luiz Maia: Uma coisa nova que eu fiz para a aula de hoje,
+Luiz Maia: que vai ajudar vocês a entenderem um pouco mais. Talvez o delegate.
+Luiz Maia: Então, agora eu estou passando para dentro de um método, um outro método.
+Luiz Maia: Que é esse cara aqui, o exibir inventor não muda nada.
+Luiz Maia: O que vai acontecer aqui é o seguinte.
+Luiz Maia: Agora eu estou passando para dentro do alterar, vetor. Um método que é o método quadrado
+Luiz Maia: vai fazer o quê?
+Luiz Maia: Alterar número?
+Luiz Maia: Então ele vai pegar o quadrado.
+Luiz Maia: Quando você passar o quadrado aqui, ele vai fazer alterar número que é fazer o quê?
+Luiz Maia: O número vezes ele mesmo.
+Luiz Maia: Quando você passar o alterar.
+Luiz Maia: Vetor com o Cubo, ele vai fazer o quê?
+Luiz Maia: Ele vai receber Cubo aqui
+Luiz Maia: e na hora de fazer alterar número. Ele vai executar quem ele vai executar. Isso aqui. Eu poderia fazer, por exemplo, sei lá,
+Luiz Maia: qualquer coisa que fosse, do tipo que fosse alterar um número,
+Luiz Maia: calcular o dobro, calcular o resto.
+Luiz Maia: Qualquer coisa nesse sentido.
+Luiz Maia: Ou seja, eu tenho o mesmo código
+Luiz Maia: onde eu vou alterar o elemento do vetor. E aqui eu digo como eu vou fazer isso.
+Luiz Maia: Para mim, um dos melhores exemplos que a gente tem de de delegate
+Luiz Maia: isso aqui toda vez que você passa como parâmetro
+Luiz Maia: um método. Isso é chamado de callback.
+Luiz Maia: Nesse caso, é um callback síncronomo
+Luiz Maia: em breve eu vou mostrar para vocês um exemplo de Calback Asyncrono.
+Luiz Maia: Vamos ver se funciona.
+Luiz Maia: Depois eu subo esse código para vocês. Lá, tá, vamos ver se ele funciona.
+Luiz Maia: Esse aqui é o B.
+Luiz Maia: O vetor levado ao quadrado e o vetor levado ao cubo funcionou perfeitamente.
+Luiz Maia: Isso, não é?
+Luiz Maia: Repara, lembra lá na aula de ontem, eu falei para vocês que o delegate. É um objeto que aponta para um método. É exatamente o que eu estou fazendo aqui. Eu estou apontando.
+Luiz Maia: Eu estou passando o endereço desse método para dentro do método, alterar Vetor.
+Luiz Maia: E aqui dentro, ele está resolvendo isso.
+Luiz Maia: Então, alterar método. Alterar número pode ser quadrado ou cubo.
+Luiz Maia: Isso é muito poderoso.
+Luiz Maia: Vocês conseguiram entender isso.
+Luiz Maia: Essa matéria é difícil, gente. Não é simples.
+Luiz Maia: Não tenha dúvida disso. Se você não entendeu,
+Luiz Maia: você pode falar que eu vou tentar ajudar vocês aí a entender esse troço, porque é difícil. Mesmo.
+Luiz Maia: Não tem nada simples aqui.
+Luiz Maia: Isso aqui é programação avançada.
+Luiz Maia: Não é só C Sharp, não em qualquer linguagem. Você trabalhar com esse tipo de linha vinte e nove
+Luiz Maia: aqui, ó, aliás, vinte e nove, ela é praticamente igual.
+Luiz Maia: Se você olhar aqui. Ó
+Luiz Maia: aqui. Eu fiz o quê?
+Luiz Maia: Elevar o quadrado. Eu passei o vetor. Elevaram o cubo. Eu passei o vetor e fiz a operação em cima dele.
+Luiz Maia: Agora eu estou fazendo o quê? Vou alterar Vetor.
+Luiz Maia: Além de receber o vetor. Ele recebe um método para alterar os elementos do vetor.
+Luiz Maia: Se você passar o quadrado,
+Luiz Maia: ele vai elevar os elementos do vetor ao quadrado. Por quê quadrado é essa função aqui? Esse método.
+Luiz Maia: Se você passar cubo,
+Luiz Maia: ele vai fazer o quê? Executar esse método recebendo o método cubo que vai fazer o quê? Elevar o cubo os elementos do vetor.
+Luiz Maia: Ele está recebendo um vetor e está retornando um vetor de inteiros.
+Luiz Maia: O que você não entendeu?
+Luiz Maia: O segundo: alterar número é uma declaração de variável.
+Luiz Maia: Aonde?
+Luiz Maia: Em que linha?
+Luiz Maia: Nessa linha, aqui?
+Luiz Maia: O que você não entendeu nessa linha?
+Luiz Maia: Porque eu tenho dois intes. É isso. O Int aqui e o Int aqui. É isso ou não, é isso?
+Luiz Maia: Para eu poder entender isso. Aqui é o método que eu estou passando para dentro do método.
+Luiz Maia: Eu estou passando a alterar número para dentro de alterar. Vetor.
+Luiz Maia: Alterar número é um delegate que é um método
+Luiz Maia: que pode ser quadrado ou cubo.
+Luiz Maia: Então eu estou passando para dentro do vetor. Um outro método.
+Luiz Maia: É isso que eu estou fazendo aqui.
+Luiz Maia: É super estranho. É super esquisito, super diferente,
+Luiz Maia: mas é o que nós temos.
+Luiz Maia: Isso é um callback síncrono.
+Luiz Maia: Se você não entender, eu vou respeitar, porque é difícil mesmo gente, isso aqui não é fácil.
+Luiz Maia: Isso aqui não é programação básica.
+Luiz Maia: Isso aqui é programação avançada.
+Luiz Maia: Esse é um dos melhores exemplos que a gente tem de delegate
+Luiz Maia: quando você passa um método com o parâmetro de outro método,
+Luiz Maia: essa é a melhor para mim. A melhor explicação de delegate
+Luiz Maia: ficar confuso com esse código. É a coisa mais normal do mundo.
+Luiz Maia: Eu acho que é difícil você olhar para um código desse e ficar confortável com isso.
+Luiz Maia: O professor é um código simples.
+João Victor Gasparoto: Mestre. É. Tchau.
+Luiz Maia: Pode falar.
+pedro.yamato: Pode ser permanente ou.
+João Victor Gasparoto: Pode falar.
+pedro.yamato: Beleza, Professor. Então, só para confirmar o que um delegate espera é que os métodos que vão ser guardados dentro deles tenham a mesma assinatura que ele tem.
+Luiz Maia: Olha só alterar número. Ele recebe quem?
+Luiz Maia: Um número.
+Luiz Maia: Então, se eu tentar fazer alguma coisa diferente disso, provavelmente vai dar problema. Olha só. Vamos fazer.
+Luiz Maia: Vou fazer isso aqui. Ó,
+Luiz Maia: fazer isso aqui, ó passar dois parâmetros para ele.
+Luiz Maia: Ele não vai aceitar.
+Luiz Maia: Ele vai falar que alterar número. Ele não tem dois parâmetros. Ele não vai aceitar. De jeito nenhum.
+pedro.yamato: Ele já acusa, né?
+Luiz Maia: Não precisa nem compilar. Ele dá erro na própria ide. Eu tenho que ter a mesma assinatura.
+pedro.yamato: E é a questão por, tipo, também, né? Se eu tentar jogar uma String, aí ele já vai acusar na hora também, né?
+Luiz Maia: Com certeza
+Luiz Maia: já deu problema lá. Ó, não vou aceitar.
+pedro.yamato: Show, beleza.
+Luiz Maia: Teve uma pergunta ontem sobre sobrecarga de delegate. Eu acabei esquecendo de pesquisar sobre isso. Mas assim, pensando muito sobre esse assunto. Eu acho que não existe sobrecarga de delegate.
+Luiz Maia: Eu não fiz o teste, mas eu acho que é muito pouco provável que funcione justamente por lembrei disso. Por conta das perguntas que foram feitas. Agora,
+Luiz Maia: o delegate tem uma assinatura e a assinatura tem que ser respeitada. Então eu não consigo imaginar um delegate com sobrecarga.
+Luiz Maia: Eu não fiz uma pesquisa específica sobre isso, mas eu acho que não funciona. Eu não testei,
+Luiz Maia: até porque eu esqueci da pergunta. Mas essa pergunta do colega, agora, da assinatura, me fez me lembrar da pergunta de ontem. Se eu tenho sobrecarga de delegate,
+Luiz Maia: eu imagino que não. Justamente por conta disso, ele tem uma assinatura e a assinatura tem que ser respeitada.
+Luiz Maia: Isso aqui, na minha opinião, é um dos melhores exemplos de delegate
+Luiz Maia: o lambida que nós vimos ontem.
+Luiz Maia: Toda a lâmpida
+Luiz Maia: e eu acabei. Não, eu deveria ter falado isso com vocês. Acabei não falando, mas toda a lâmbida isso aqui, se você for olhar o código gerado pelo compilador.
+Luiz Maia: Isso aqui vai virar um funk.
+Luiz Maia: Um funk delegate.
+Luiz Maia: Ele vai gerar por trás dos panos. Um funk delegate então toda a lâmpida toda
+Luiz Maia: vai virar por trás dos panos.
+Luiz Maia: Tem até como ver isso. Gente tem uma ferramenta do C Sharp que eu nunca usei.
+Luiz Maia: Mas eu cheguei a olhar alguma coisa sobre essa ferramenta
+Luiz Maia: que permite que você consiga olhar o código depois de compilado.
+Luiz Maia: É, eu achei assim muito, muito baixo nível para vocês, para a gente entrar nesse nível.
+Luiz Maia: Mas o que eu li é basicamente isso. Quando você tem uma lâmpada dessa? Ele vai transformar numa funk. Delegate
+Luiz Maia: tanto essa aqui quanto essa aqui. Ele vai transformar tudo isso aqui em Funk Delegate.
+Luiz Maia: Aqui também.
+Luiz Maia: Todas essas lâmpadas que estão aqui vão se transformar em funk delegante
+Luiz Maia: por trás dos panos. Vamos olhar. Agora. Bom, eu poderia parar aqui,
+Luiz Maia: Gabriel, isso aí é um problema, cara.
+Luiz Maia: Eu já pensei assim também.
+Luiz Maia: Mas primeiro delegate. Não tem herança.
+Luiz Maia: Não tem hierarquia nenhuma.
+Luiz Maia: O que você pode tentar pensar
+Luiz Maia: é que o delegate. Tem alguma coisa a ver com interface.
+Luiz Maia: Pelo que eu andei estudando e consultando.
+Luiz Maia: Não é exatamente a mesma coisa.
+Luiz Maia: Parece muito com interface, muito menos com herança, mas muito com interface. Mas não é exatamente o conceito de interface,
+Luiz Maia: tá?
+Luiz Maia: Muitas coisas que nós podemos fazer.
+Luiz Maia: Um delegate gente pode fazer com interface,
+Luiz Maia: mas, por exemplo, esse tipo de coisa. Esse callback aí que eu fiz. Eu acho que não dá para fazer com interface.
+Luiz Maia: Eu teria que pesquisar.
+Luiz Maia: Você teria como eu fazer essa passagem de parâmetro aqui
+Luiz Maia: usando interface. Eu nunca testei isso a princípio, sem fazer nenhuma pesquisa.
+Luiz Maia: Eu acho que não,
+Luiz Maia: mas eu não tenho certeza. Eu teria que pesquisar para dizer para vocês. Se dá para fazer isso com interface ou não,
+Luiz Maia: teria que pesquisar gente teria que pesquisar
+Luiz Maia: se isso aqui poderia ser implementado via interface, tentar pensar rápido.
+Luiz Maia: Uma interface, alterar número.
+Luiz Maia: O problema da interface é que você tem que implementar a interface.
+Luiz Maia: Então eu não teria como fazer a interface.
+Luiz Maia: Olhando para esse exemplo aqui, se eu declarar uma interface, alterar número, e aí
+Luiz Maia: ela teria que ser implementada de alguma maneira.
+Luiz Maia: E aí eu não teria como implementar de duas formas diferentes essa interface, o quadrado e o cubo.
+Luiz Maia: Então, assim, pensando nesse código especificamente, eu acho que eu não consigo implementar isso com interface.
+Luiz Maia: Mas novamente, eu teria que pesquisar,
+Luiz Maia: porque a interface é implementada em algum momento,
+Luiz Maia: e ela vai ter uma implementação. Só
+Luiz Maia: eu não posso ter a mesma interface implementada duas vezes.
+Luiz Maia: A não ser que seja uma sobrecarga.
+Luiz Maia: Estou pensando, gente,
+Luiz Maia: você fala que tem uma interface.
+Luiz Maia: Mas eu teria que ter um único nome para a interface.
+Luiz Maia: Como é que eu vou fazer isso?
+Luiz Maia: Eu tenho duas implementações diferentes,
+Luiz Maia: mas eu não estou passando aqui. Olha só, eu não estou passando aqui.
+Luiz Maia: Objetos de uma classe. Eu estou passando aqui métodos,
+Luiz Maia: então provavelmente isso não vai dar certo, eu estou pensando aqui, gente.
+Luiz Maia: As perguntas estão bem alto nível, obrigado. Parabéns aí pelas perguntas.
+Luiz Maia: Então isso aqui não é uma classe. Isso aqui é um método.
+Luiz Maia: Passar um objeto para dentro de um método é uma coisa tranquila,
+Luiz Maia: mas isso não é Power Back, isso não é? Delegate isso é outra coisa.
+Luiz Maia: Por exemplo, esse vetor aqui, ele está sendo passado como um objeto para dentro desse método.
+Luiz Maia: Ok,
+Luiz Maia: mas aqui eu estou passando um método para dentro de um outro método. É uma outra coisa é diferente.
+Luiz Maia: Então acho que interface não resolve isso. Mas novamente, eu tenho que pesquisar.
+Luiz Maia: Eu poderia parar esse exemplo aqui, mas aí eu fui adiante.
+Luiz Maia: Eu fiz assim. Ó, eu tirei o delegate tá certo.
+Luiz Maia: E criei aqui dentro dele. Em vez de passar
+Luiz Maia: o delegate, eu passei um funk delegate
+Luiz Maia: que na verdade é a mesma coisa.
+Luiz Maia: Eu estou fazendo uma substituição. Eu estou pegando o delegate e declarando ele dentro do método.
+Luiz Maia: É basicamente o que eu estou fazendo aqui aqui na versão B.
+Luiz Maia: Você tem aqui esse cara aqui. Eu transformei esse delegate num funk, delegate que recebe dois inteiros
+Luiz Maia: e altera o número que aqui no caso. É esse cara aqui.
+Luiz Maia: Eu comentei esse cara e declarei o funk delegante dentro
+Luiz Maia: da mesma forma que eu defini aqui o Inch
+Luiz Maia: para o vetor. Eu defini que alterar número é um funk. Delegate desse jeito.
+Luiz Maia: É uma versão mais
+Luiz Maia: onde eu simplesmente não preciso declarar o delegate. Por quê? Porque o Funk é um tipo genérico do delegate.
+Luiz Maia: Poderia usar um action aqui.
+Luiz Maia: Agora é minha vez de perguntar. Eu poderia usar um action aqui ou não.
+Luiz Maia: E aí não.
+Luiz Maia: Não posso.
+Luiz Maia: O que o Action não retorna a nada
+Luiz Maia: enquanto o funk retorna. Alguma coisa
+Luiz Maia: retorna aqui nesse íntia aqui dentro.
+Luiz Maia: Então eu estou passando um int para ele e retorno a um outro Inch aqui dentro.
+Luiz Maia: E assim eu consigo fazer o quadrado e o cubo
+Luiz Maia: nesse intit. Eu estou passando o número que eu quero que ele altere. E aqui vem o número alterado.
+Luiz Maia: É por isso que eu não posso usar Action. Nesse caso.
+Luiz Maia: Aí tem mais um exemplo para fechar esses.
+Luiz Maia: Essa parte que eu acho que é a parte mais interessante em relação à delegate que é a passagem de método como parâmetro.
+Luiz Maia: Pode falar, Pedro? À vontade.
+Luiz Maia: Podemos trocar int por streaming aonde?
+Luiz Maia: Aqui, nesse cara, aqui, String, na hora que você passar. Quando você chamar alterar número,
+Luiz Maia: ele vai retornar. O quê?
+Luiz Maia: Ele vai fazer o quê? Alterar número vai fazer o quê? Vai pegar esse cara aqui?
+Luiz Maia: Vai fazer ele ao quadrado. Se você retornar aqui um string, ele vai dar problema.
+Luiz Maia: Alterar número retorna. O quê? Um Inch e não uma String. Ele vai reclamar na mesma hora.
+Luiz Maia: A assinatura é diferente.
+Luiz Maia: Ele não vai aceitar isso. Nunca
+Luiz Maia: aqui entra um Int e retorna um Inch.
+Luiz Maia: Ah, mas se eu botar aqui um Dumble, por exemplo, será que ele aceita vamos ver se ele vai fazer conversão implícita.
+Luiz Maia: Também não.
+Luiz Maia: Ele não aceitou. Não, a conversão implícita.
+Luiz Maia: Deixa eu ver. Se eu alterar aqui para Double.
+Luiz Maia: Eu acho que talvez também aqui ele não aceite.
+Luiz Maia: Também não, aqui está com retorne.
+Luiz Maia: Double.
+Luiz Maia: Ele está aceitando o Double.
+Luiz Maia: Ele está fazendo alguma conversão implícita.
+Luiz Maia: Esse Cast que ele está fazendo é um cast implícito.
+Luiz Maia: Provavelmente ele está aceitando aqui.
+Luiz Maia: Não sei se vai dar erro de. Deixa eu testar aqui. Deixa eu ver se vai dar erro de execução.
+Luiz Maia: Ele está convertendo esse double para int. Só pode ser.
+Luiz Maia: Não, ele já deu erro aqui. Ó,
+Luiz Maia: olha lá, já deu o erro.
+Luiz Maia: Então a assinatura tem que ser exatamente a mesma.
+Luiz Maia: Ele não está aceitando nada? Não,
+Luiz Maia: o último exemplo dessa continuação é o Zalâmbida.
+Luiz Maia: Em vez de eu ter aqui
+Luiz Maia: o método quadrado e o método cubo. Eu posso fazer o quê? Passar para dentro do método?
+Luiz Maia: Eu mantenho aqui a minha função,
+Luiz Maia: o funk delegate e passo na chamada. O quê? Uma lâmbida.
+Luiz Maia: E aí ele se encaixa exatamente nesse cara aqui?
+Luiz Maia: Porra, que pergunta é essa gente?
+Luiz Maia: O Funk lida bem com o If, por exemplo, se der true, não
+Luiz Maia: true no Sea Sharp. O True é uma coisa, é um tipo
+Luiz Maia: e o int é outro tipo.
+Jorge José Luiz Santos da Silva: Não isso assim, professor, o que eu queria entender é se, por exemplo, se você colocar algum tipo de variável onde? Sei lá, não é possível
+Jorge José Luiz Santos da Silva: elevar número por zero, por exemplo, ou elevar o zero, ele vai mostrar alguma mensagem de erro. Então, se, por exemplo, essa mensagem for Wells,
+Jorge José Luiz Santos da Silva: ele mostra essa mensagem de erro, ou ele só vai só sempre retornar o Wind.
+Jorge José Luiz Santos da Silva: Não sei se ficou muito claro.
+Luiz Maia: A gente vai testar agora. Se você quer levar
+Luiz Maia: a zero, a gente pode fazer um teste aqui e vê o que acontece,
+Luiz Maia: não importa qual é o exemplo, qualquer um deles.
+Luiz Maia: O problema vai ser igual para todos eles.
+Luiz Maia: É, não deu erro nenhum.
+Luiz Maia: Elevou o quadrado zero deu zero. Não sei se na matemática isso está ok.
+Luiz Maia: Isso é um erro.
+Luiz Maia: E aí.
+Jorge José Luiz Santos da Silva: Não é que eu estava pensando. Por exemplo, assim, como é que ele vai lidar com diferentes casos? Então, por exemplo, se ele vê que tem um número como zero, por exemplo, e ele tiver que mostrar uma mensagem de erro. Quando esse número aparecer, o funk vai conseguir retornar a isso.
+Jorge José Luiz Santos da Silva: Como ele sempre vai retornar a mesma assinatura. Então eu acredito que não, mas ele não vai conseguir mostrar uma mensagem.
+Luiz Maia: Não, não vai. Porque o retorno dele é sempre inteiro.
+Jorge José Luiz Santos da Silva: Beleza.
+Luiz Maia: Nesse caso, não vai conseguir mandar uma mensagem de erro.
+Luiz Maia: Você vai ter que fazer um Tri Cat dentro do teu código para poder fazer algum tratamento de erro aqui dentro.
+Jorge José Luiz Santos da Silva: Beleza.
+Luiz Maia: Eu não consigo. Se eu Botar String aqui
+Luiz Maia: não tem como dizer que aqui pode retornar um inteiro ou uma streaming. A assinatura do delegate é aquela assinatura que foi definida e ponto. Não tem como brincar com isso. Não tem como a gente fazer alteração nisso.
+Jorge José Luiz Santos da Silva: Perfeito, beleza. Obrigado, professor.
+Luiz Maia: Que isso deixa eu mudar isso aqui? Porque eu não sei
+Luiz Maia: elevar zero ao quadrado é erro ou não.
+Jorge José Luiz Santos da Silva: Não, eu acredito que qualquer número elevado a zero é um. Eu não estou enganado. Se eu não estou enganado,
+Jorge José Luiz Santos da Silva: acho.
+Luiz Maia: Não estou falando zero elevado. Alguma coisa?
+Luiz Maia: Zero vezes zero é zero. Então é isso? Não vai dar erro
+Luiz Maia: zero elevado ao cubo é zero vezes zero vezes zero que é zero. Então não vai dar erro aqui. Não tem essa questão.
+Luiz Maia: O que você poderia pensar
+Luiz Maia: de repente? Não sei, uma raiz quadrada, alguma coisa do tipo. Se der erro aqui dentro, gerar um flow,
+Luiz Maia: fazer um Try Cat e lançar uma exceção. Não é possível fazer esse tipo de.
+Luiz Maia: É qualquer número elevado. A zero é um. Isso aí. Eu sei,
+Luiz Maia: mas zero elevado a algum número? É zero, porque é zero vezes. Zero.
+Luiz Maia: Então não vai dar problema.
+Luiz Maia: É, é normal isso, gente.
+Luiz Maia: Então aqui eu fiz uma sequência de exemplos. Mas assim, o exemplo que eu mais gosto
+Luiz Maia: é esse exemplo aqui, cara, é você passar um método como parâmetro de outro método.
+Luiz Maia: Esse refinamento que eu fiz aqui
+Luiz Maia: é só para mostrar para vocês que a gente consegue implementar é
+Luiz Maia: o delegate de uma outra maneira, usando o Funk.
+Luiz Maia: E aqui novamente. E você pode ter certeza, quando você passa uma lâmbida como essa. Ele vai transformar isso aqui nisso aqui.
+Luiz Maia: Não tenha dúvida.
+Luiz Maia: Se eu tiver tempo, eu vou pegar um código e traduzir
+Luiz Maia: o que ele gera como compilado para vocês.
+Luiz Maia: Mas gente assim. A gente tem muito mais coisa importante para ver do que isso.
+Luiz Maia: O assunto é interessante, mas ele não é fundamental na formação de vocês.
+Luiz Maia: Próximo exemplo: então aqui é um exemplo que eu acho muito bacana de delegate
+Luiz Maia: quando você faz o callback, ou seja, você passa um método como parâmetro de outro método.
+Luiz Maia: Aqui tem um outro exemplo. Talvez não tão bacana. Mas é interessante que é o Multishash delegate
+Luiz Maia: que é esse cara aqui?
+Luiz Maia: O que é um Multishash delegate.
+Luiz Maia: Você atribui ao delegate.
+Luiz Maia: Pode ser o action. Normalmente é um action. Não é um funk porque o funk retorna a alguma coisa.
+Luiz Maia: Você atribui a esse objeto esse delegate vários métodos usando o mais igual.
+Luiz Maia: Então aqui eu estou atribuindo somar a esse objeto,
+Luiz Maia: o subtrair, o multiplicar e o dividir.
+Luiz Maia: E aí eu mando executar o Multishash. Delegate
+Luiz Maia: o que ele faz. Ele vai executar as quatro funções.
+Luiz Maia: Seguidamente, como elas foram declaradas aqui,
+Luiz Maia: então ele vai fazer a soma o subtrair, o multiplicar e dividir na sequência. Aqui eu estou tirando do Multicast delegate o multiplicar. Então ele vai fazer? Só a soma, a subtração e a Divisão
+Luiz Maia: aqui é a forma deixa eu botar aqui.
+Luiz Maia: Forma explícita.
+Luiz Maia: E aqui é a forma simplificada.
+Luiz Maia: Eu acho que vocês nunca viram isso na vida de vocês. Você chamar um um,
+Luiz Maia: um método, uma função, e ela executar várias funções.
+Luiz Maia: A não ser que você crie um método para fazer isso para você. Aqui eu estou fazendo é continuamente.
+Luiz Maia: Você pode perguntar, por exemplo, se isso aqui é parecido com uma fila
+Luiz Maia: onde você coloca dentro de uma fila uma série de métodos para serem executados. É semelhante a uma fila.
+Luiz Maia: Uma Fifo, né?
+Luiz Maia: Ele vai executar a primeira soma, o subtrair, o multiplicar e o dividir. Depois eu retiro dessa lista. Dessa fila o multiplicar. Que ele vai fazer? Ele vai executar tudo, menos o multiplicar. Vamos ver se funciona
+Luiz Maia: tá aqui. Ó, ele executou as quatro operações. E aqui ele executou três operações, menos a de multiplicação.
+Luiz Maia: Isso é chamado de Multicast delegate
+Luiz Maia: esse termo. Multishast gente vem da área de redes tá?
+Luiz Maia: E na verdade, eu não acho esse nome muito apropriado. Não, eu acho. O nome ruim é,
+Luiz Maia: mas é o nome que o C. Sharp inventou para isso.
+Luiz Maia: Só estou falando sobre isso porque no Tp, um de vocês tem uma questão sobre Multishash delegate, porque senão eu nem falaria sobre isso.
+Luiz Maia: A questão mais interessante, na minha opinião, até aqui, além da questão do delegate três, que eu acho ótima
+Luiz Maia: para mostrar qual back.
+Luiz Maia: Só que aqui confundiu. O quê?
+Luiz Maia: Fala comigo aí que eu tento desconfundir.
+Jorge José Luiz Santos da Silva: Não, professor, desculpa. Era em relação ao número elevado de zero a zero-zero. Será.
+Luiz Maia: Tá ok, beleza. Está tranquilo.
+Luiz Maia: Um mosquito.
+Luiz Maia: Eu tentei fazer agora. Eu fiz isso aqui hoje à tarde, gente
+Luiz Maia: para tentar dar uma resposta para vocês em relação ao
+Luiz Maia: a utilização prática do delegate. Eu acho que isso aqui é um bom exemplo. Na minha opinião,
+Luiz Maia: você passar um método para dentro de outro método. Isso é um callback. Isso aqui é um callback síncrono.
+Luiz Maia: Ele pega o que é síncrono. O que é a síncrono? Agora você vai entender.
+Luiz Maia: Aqui, eu fiz um código
+Luiz Maia: bem simples gente, isso aqui não é a programação asíncrona, como normalmente eu ensinaria. Eu tentei fazer um exemplo bem simples para vocês.
+Luiz Maia: De como seria programação acínprona, onde callbacks e logo delegates seriam bem vindos. Está certo.
+Luiz Maia: É esse primeiro exemplo. É o exemplo. Sem delegate,
+Luiz Maia: sem Callback asíncono. E aí vocês vão entender a diferença entre callback, síncrono e call back asyncrono.
+Luiz Maia: Eu vou rodar primeiro esse código aqui para vocês verem.
+Luiz Maia: Ele não tem nada demais.
+Luiz Maia: Ele vai simular o download de um arquivo.
+Luiz Maia: Ele vai baixar o arquivo quando terminar. Ele vai dizer que o arquivo foi baixado.
+Luiz Maia: O que acontece aqui dentro.
+Luiz Maia: Esse programa principal ficou parado aqui nesse timeslip aqui, que foi a simulação de baixar o arquivo.
+Luiz Maia: Então ele ficou cinco segundos baixando o arquivo programa principal ficou parado nessa linha aqui durante cinco segundos.
+Luiz Maia: Então ele chamou o baixar arquivo,
+Luiz Maia: dormiu por cinco segundos. Esse thread slip aqui, cinco mil. Ele está parado. Cinco segundos. É um temporizador.
+Luiz Maia: Então o programa principal ficou parado
+Luiz Maia: nesse thread slip ali durante cinco segundos. Se eu aumentar isso aqui, vocês vão ver que ele vai ficar mais tempo. Vamos botar dez
+Luiz Maia: dez mil,
+Luiz Maia: porque aqui é milissegundo. Tá gente? E aí vira dez segundos. Ele vai ficar aqui. Um tempão parado esperando. Pode contar. Um, dois, três, quatro, cinco,
+Luiz Maia: seis, sete, oito, nove, dez. Pronto em dez segundos. Ele fez o download do arquivo, tá?
+Luiz Maia: Agora ele vai fazer o quê?
+Luiz Maia: A gente vai fazer essa versão de código, a síncrona.
+Luiz Maia: E aí vocês vão ver a diferença do callback síncron e do Assimcrono
+Luiz Maia: não é a implementação mais perfeita do mundo.
+Luiz Maia: Não é uma aula de programação a cinco, né? Mas pelo menos eu tentei trazer para vocês alguma coisa mais palpável. Alguma coisa mais fácil de vocês entenderem?
+Luiz Maia: Vou fazer um breve intervalo e eu já volto para mostrar para vocês
+Luiz Maia: essa versão aqui. Ó, vou deixar a versão aqui na tela para vocês.
+Luiz Maia: Deixa eu ver se eu consigo mostrar tudo.
+Luiz Maia: Aqui está todo o código
+Luiz Maia: a síncrono. Dá uma olhada nele antes que eu vou explicar para vocês. Depois cada um desses pedacinhos de código para vocês verem como é o callback, como é que ele funciona? E aí entra o conceito de novo, de delegate.
+Luiz Maia: Mas aí, na vida real, mesmo na vida prática mesmo. Tá certo.
+Luiz Maia: E aí
+Luiz Maia: estamos de volta.
+Luiz Maia: Bom, o que a gente tem aqui nesse código?
+Luiz Maia: Eu acho que vocês provavelmente nunca viram um código desse na vida.
+Luiz Maia: Cada linguagem tem sua maneira de implementar execução de código asíncrono.
+Luiz Maia: Java tem um jeito. Python tem outro C. Sharp tem outro. Mas a ideia da programação assimcrona é você poder executar dois ou mais pedaços de códigos
+Luiz Maia: de códigos ao mesmo tempo.
+Luiz Maia: Então a gente tem aqui o nosso meio.
+Luiz Maia: Tá certo que chama e aqui que está o coração da história, o download concluído.
+Luiz Maia: Eu estou passando um método para dentro de outro método.
+Luiz Maia: Então aqui a gente tem um delegate, tá certo
+Luiz Maia: que é tradicionalmente chamado também de callback.
+Luiz Maia: Tá tanto no exemplo três como nesse exemplo, cinco:
+Luiz Maia: essa passagem de método para dentro de outro método é chamado de callback.
+Luiz Maia: A diferença do três para o cinco
+Luiz Maia: é que no três é síncrono. Aqui é as síncrono.
+Luiz Maia: Bom, como é que você vai entender a diferença. Olhando a execução dos códigos.
+Luiz Maia: Então acontece o seguinte. Esse cara aqui, ele vai chamar esse método. Baixar arquivo. Eu estou simulando o download de um arquivo, tá gente, isso aqui não é um download de verdade.
+Luiz Maia: Aí ele vem para cá e recebe como
+Luiz Maia: método, um callback, que é um action,
+Luiz Maia: porque ele não retorna a nada.
+Luiz Maia: Então é um callback que ele vai receber, que é esse método aqui, dizendo que o download foi concluído.
+Luiz Maia: Enquanto e dentro desse baixar arquivo, ele vai disparar uma rotina síncrona.
+Luiz Maia: Então essa rotina aqui. Ela vai executar concorrentemente
+Luiz Maia: a essa rotina do Man. Então eu vou ter o man rodando
+Luiz Maia: junto com esse método. Baixar arquivo. Os dois vão rodar ao mesmo tempo.
+Luiz Maia: Está certo.
+Luiz Maia: E vocês vão ver ele executando ao mesmo tempo. Vai ter mensagem de um nesse fora aqui
+Luiz Maia: e vai ter aqui uma outra mensagem desse fora aqui, baixando o arquivo. Eles vão executar ao mesmo tempo.
+Luiz Maia: Ou seja assim cronamente, vocês talvez nunca tenham programado de forma síncrona na vida de vocês.
+Luiz Maia: Tudo foi síncrono. Ou seja, você chamava um método para continuar a execução da próxima instrução. Aquele método tinha que terminar para você executar a próxima instrução.
+Luiz Maia: É o que eu fiz. No três.
+Luiz Maia: Nesse caso, aqui. Quando ele desvia para cá, ele começa a rodar um outro pedaço de código independente do Main, que é um método.
+Luiz Maia: Tá certo.
+Luiz Maia: Olha o que vai acontecer.
+Luiz Maia: E aí,
+Luiz Maia: primeiro que as tarefas e o download, eles não estão sincronizados.
+Luiz Maia: Logo as tarefas, esses dois métodos, o Main e o baixar arquivo. Eles são assim, Cronos. Então ele começa.
+Luiz Maia: Início daqui.
+Luiz Maia: Download iniciado. Está aqui. Aí ele começa a executar a tarefa um.
+Luiz Maia: Depois, ele executa um quinto do baixar o arquivo.
+Luiz Maia: Depois ele executa uma segunda etapa do baixar o arquivo que é o dois de cinco.
+Luiz Maia: Depois ele executa uma tarefa do Man, que é a tarefa dois.
+Luiz Maia: Depois ele executa três, de cinco do baixar arquivo.
+Luiz Maia: Depois ele executa três do Main.
+Luiz Maia: Depois ele executa dois. Baixar arquivos, quatro, barra cinco, cinco, barra cinco. Executa uma tarefa. Quatro do Main.
+Luiz Maia: Ele termina o download. E nessa hora, quando ele termina o download, o que ele faz? Ele chama o callback,
+Luiz Maia: que essa é a rotina que foi passada para dentro do baixar arquivo.
+Luiz Maia: Aí ele ainda executa uma última tarefa do Man e termina isso é uma execução. Assim,
+Luiz Maia: se eu executar de novo, pode ser que aconteça a sequência não seja a mesma.
+Luiz Maia: Eu não tenho como guardar isso aqui,
+Luiz Maia: mas a gente pode tentar aqui. Se eu mudar esses tempos de slip de tempo, isso aqui pode mudar.
+Luiz Maia: Vamos ver se a gente consegue se ele vai mudar muita coisa aqui,
+Luiz Maia: parece que mudou.
+Luiz Maia: Ele executou duas do baixar arquivo uma depois duas de novo.
+Luiz Maia: Não parece que deu no mesmo, não é?
+Luiz Maia: Repare, se eu fizer isso aqui, ó, é provavelmente isso que vai mudar.
+Luiz Maia: Eu vou fazer o slips de mil aqui. E o mil aqui. Vamos ver o que vai acontecer. Vai mudar a saída.
+Luiz Maia: Por que ficou desse jeito?
+Luiz Maia: Porque ele. Espera um segundo aqui e um segundo aqui.
+Luiz Maia: Então ficou sequencial o negócio, né?
+Luiz Maia: Olha lá. Um, dois, três, quatro, cinco. Porque estão esperando o mesmo tempo.
+Luiz Maia: Vamos fazer aqui, por exemplo, para diminuir esse tempo aqui de mil pro novecentos
+Luiz Maia: não deu muita diferença.
+Luiz Maia: Mas repare o seguinte.
+Luiz Maia: Ele não exibiu o download concluído. Por quê?
+Luiz Maia: Alguém sabe me dizer por que ele não mostrou o download concluído?
+Luiz Maia: É difícil? Gente essa pergunta aqui é pra.
+Luiz Maia: É para poucos.
+Luiz Maia: Se alguém conseguir responder isso aí é dificílimo.
+Luiz Maia: Por que ele não chamou o Callback? Por que ele não fez o Callback.
+Luiz Maia: Se ninguém responder, tá tudo bem, cara. Porque isso aqui é difícil mesmo.
+Luiz Maia: Olha só o tempo que eu coloquei de slip
+Luiz Maia: no Main novecentos milissegundos. O tempo dentro do baixar arquivo é de mil.
+Luiz Maia: Ele vai executar isso aqui cinco. Vezes.
+Luiz Maia: Isso aqui vai ser menor do que
+Luiz Maia: cinco mil. Logo o Main vai terminar antes do baixar arquivo. Então ele não vai conseguir terminar a execução do baixar arquivo.
+Luiz Maia: Se eu aumentar esse tempo aqui para
+Luiz Maia: como estava para um.um0 ele vai executar o callback. Ó,
+Luiz Maia: porque o tempo de execução do Main é maior do que o tempo de execução do baixar arquivo.
+Luiz Maia: Então dá tempo do baixar. Arquivo terminar.
+Luiz Maia: Se eu botar um tempo menor do que o tempo que está aqui dentro, que são cinco segundos, o Mei termina e logo esse cara aqui não é executado até o fim.
+Luiz Maia: Essa é a forma correta de implementar isso. Não, não é a gente.
+Luiz Maia: Eu tentei trazer para vocês um exemplo
+Luiz Maia: mais próximo da realidade para justificar o uso de delegate.
+Luiz Maia: Por isso que eu tentei fazer.
+Luiz Maia: Não sei se eu consegui, mas eu tentei
+Luiz Maia: a programação assimcrona é bem mais complicada do que isso.
+Luiz Maia: Mas eu tentei pegar um exemplo bem simples para mostrar para vocês um outro exemplo muito. Vocês entenderam o que eu fiz aqui? Gente ou não
+Luiz Maia: ficou claro para vocês a versão síncrona. Isso aqui é síncrono.
+Luiz Maia: Isso aqui é a síncrono.
+Luiz Maia: Ou seja, eu tenho o baixar arquivo e o man rodando em paralelo.
+Luiz Maia: Tá certo.
+Luiz Maia: Obrigado.
+Luiz Maia: E aí você entende agora a diferença entre o callback a síncrono.
+Luiz Maia: Então deixa eu escrever isso aqui.
+Luiz Maia: Callback, assícrono do Callback síncrono
+Luiz Maia: por que aqui é síncrono, porque quando ele chama essa função, alterar vetor
+Luiz Maia: o Men para e espera o resultado. Ele não continua a execução dele aqui. Ele não para a execução do Man. O Men continua executando enquanto o baixar. Arquivo também continua executando.
+Luiz Maia: São dois exemplos de callback.
+Luiz Maia: E aí o Callback é um exemplo clássico de delegate tá certo.
+Luiz Maia: Um outro exemplo muito bom,
+Luiz Maia: que eu gosto muito para encerrar a aula de hoje e encerrar esse assunto. Porque a aula que vem é Dotnet. Eu não vou mais falar sobre delegate com vocês, porque eu acho que vocês também não aguentam mais.
+Luiz Maia: É evento
+Luiz Maia: professor. Tem uma dúvida na sínc ou Callback pode receber algum valor do Man como parâmetro. O callback aguarda um valor do Man para ser executado. Sim, é possível você passar parâmetros para o callback.
+Luiz Maia: Eu não coloquei nesse exemplo. Mas aqui, no exemplo, no 3b, eu estou passando.
+Luiz Maia: Cadê
+Luiz Maia: aqui? Eu estou passando parâmetros para o callback nesse funk aqui. Ó,
+Luiz Maia: então é possível, Sim, você passar parâmetros por Calbeck?
+Luiz Maia: É possível aqui. Eu estou passando parâmetros para o Calbeck,
+Luiz Maia: então é possível, Sim, você passar parâmetros para o callback.
+Luiz Maia: Eu programei com isso gente há muito tempo.
+Luiz Maia: Mesmo assimcrono você tem como passar parâmetro? Sim, na hora que você dispara o código assícrono. Você tem como passar parâmetro para ele?
+Luiz Maia: Não depois que eu saiba.
+Luiz Maia: Quando você dispara esse baixar arquivo aqui, você pode passar parâmetro para o Callback depois eu acho que não. Eu não me lembro
+Luiz Maia: se tem como passar durante a execução do baixar arquivo. Eu acho que não.
+Luiz Maia: Depois que ele está executando. Você não tem mais como passar parâmetro. Mas antes da execução do baixar arquivo. Eu tenho como passar parâmetro. Sim,
+Luiz Maia: posso até pensar numa maneira de fazer isso para vocês.
+Luiz Maia: Eu posso pensar assim.
+Luiz Maia: Passar uma mensagem para dentro do do Callback, é,
+Luiz Maia: eu não faço agora isso porque senão eu não vou conseguir terminar a aula.
+Luiz Maia: Eu tenho até uma ideia na minha cabeça aqui, que eu posso até pensar tentar fazer.
+Luiz Maia: Eu posso passar essa mensagem aqui
+Luiz Maia: de download concluído dentro como parâmetro do callback?
+Luiz Maia: Não, eu acho que não tem como você alterar, passar parâmetro. Depois que ativou a rotina que passou o Callback. Não vejo isso possível. Eu posso pesquisar isso para vocês.
+Luiz Maia: Um outro exemplo muito bom de delegate.
+Luiz Maia: É esse exemplo aqui tá aqui. Eu tenho uma conta
+Luiz Maia: uma conta corrente que tem a Genome Saldo, o consultor da conta. E aqui eu tenho um
+Luiz Maia: um tratador de evento.
+Luiz Maia: Um invent Handler, não é?
+Luiz Maia: Toda vez que a conta é alterada, ele manda um evento, ele gera um evento, e quem tiver
+Luiz Maia: ouvindo esse evento, vai poder fazer alguma coisa com ele. Gerar um log, jogar na tela,
+Luiz Maia: gravar num banco de dados.
+Luiz Maia: Então isso aqui também é um exemplo, de delegate eventos.
+Luiz Maia: Então, aqui no meu programa principal, quando eu faço alterar saldo, tratar, alterar saldo.
+Luiz Maia: Esse cara aqui, ele vai ser executado toda vez que eu for alterar o saldo.
+Luiz Maia: Olha só. Que bacana.
+Luiz Maia: Isso aqui é bem legal, cara. Eu acho bem legal
+Luiz Maia: olha lá. Saldo alterado, saldo, alterado.
+Luiz Maia: Ou seja, eu posso fazer como se fosse eu ficar escutando eventos
+Luiz Maia: externos que estão fora do meu alcance, e eu só vou tratar aqueles eventos relacionados à alteração de saldo.
+Luiz Maia: Isso é um uso de delegate.
+Luiz Maia: Olha, que coisa simples que eu fiz aqui.
+Luiz Maia: Inventless é um tipo de evento
+Luiz Maia: aqui. Eu chamo um Invoc. Esse cara aqui. Essa interrogação aqui está na frente. É para evitar problemas de nulo
+Luiz Maia: dele. Não está registrado e não dá problema esse eventis
+Luiz Maia: nargues. Ele vai aparecer para vocês.
+Luiz Maia: É aqui no evento dois nesse evento dois. Ela é uma evolução do evento um.
+Luiz Maia: E aí,
+Luiz Maia: aqui eu estou passando além do Event Handler, ou seja, o manipulador de eventos. Eu estou passando também argumentos, parâmetros para esse manipulador de eventos.
+Luiz Maia: Tá certo.
+Luiz Maia: Então, além de você avisar que aconteceu alguma coisa,
+Luiz Maia: você gerar um evento, você passa parâmetros para ele, como por exemplo, aqui eu estou passando
+Luiz Maia: um pouco mais de informação. Crédito que foi feito débito que foi feito e conta negativa.
+Luiz Maia: Então é uma evolução do código anterior.
+Luiz Maia: Só que para isso, eu preciso declarar uma classe.
+Luiz Maia: É para passar esses parâmetros.
+Luiz Maia: Que é essa classe? Even argues
+Luiz Maia: aonde vai ser passado os parâmetros do Event Handler.
+Luiz Maia: Que é esse cara aqui. Ó,
+Luiz Maia: repara que eu estou passando. Aqui. Um objeto com os parâmetros
+Luiz Maia: do evento, que é o quê? A mensagem.
+Luiz Maia: Então, agora a gente vai ter além. Aqui. Nesse exemplo, primeiro exemplo, você vê que ele não tem a mensagem. É uma mensagem muito simples. É a mensagem que está vindo aqui
+Luiz Maia: não tem mensagem nenhuma. Na verdade, ele simplesmente está mostrando o saldo alterado. Mais nada.
+Luiz Maia: Aonde que está escrito o solo alterado.
+Luiz Maia: Onde é que está escrito isso aqui? Saldo alterado. Não tem parâmetro nenhum. Sendo passado.
+Luiz Maia: Agora a gente vai ter o quê?
+Luiz Maia: A gente vai receber esses parâmetros
+Luiz Maia: do evento e vai poder printar as mensagens.
+Luiz Maia: É uma versão um pouquinho melhor do que foi feita anteriormente.
+Luiz Maia: É um excelente exemplo de delegate tá lá ó
+Luiz Maia: crédito de cem crédito de cento e cinquenta conta negativa.
+Luiz Maia: Além de eu poder tratar o evento, eu também posso passar parâmetros
+Luiz Maia: junto com esse tratamento de evento.
+Luiz Maia: Se vocês quiserem mandar uma lista de perguntas para mim, para eu tentar esclarecer todas as dúvidas que vocês tiverem. Eu agradeceria,
+Luiz Maia: porque eu já não consigo lembrar todas as dúvidas que vocês me perguntaram aí, e eu acabei não anotando.
+Luiz Maia: Eu encerrei a matéria de delegate com vocês. Meu objetivo era esse.
+Luiz Maia: Usar duas aulas para mostrar tudo o que
+Luiz Maia: quase tudo que existe de delegate para vocês.
+Luiz Maia: E até muito mais, né? Eu fui um pouco além do que eu deveria, mas eu consegui
+Luiz Maia: dentro das duas aulas. Próxima aula, Dotnet, finalmente. Tá certo.
+Luiz Maia: Vocês vão ter uma aula de Dotnet na próxima terça feira.
+Luiz Maia: O que vocês têm de conteúdo aqui dá para fazer os Tps e o At de vocês tem muito, muito conteúdo, guarda essas aulas porque de repente, um dia você pode precisar disso.
+Luiz Maia: Eu acho pouco provável gente. Sinceramente,
+Luiz Maia: eu acho pouco provável que um dia. Vocês utilizem
+Luiz Maia: esses recursos todos do C. Sharp.
+Luiz Maia: Mas sabe lá, né, não é?
+Luiz Maia: As perguntas que não foram respondidas. Manda para mim pelo infinite online, para eu poder fazer os testes aqui e tratar cada pergunta. Aliás, as perguntas que vocês fizeram são muito boas, muito boas. Mesmo
+Luiz Maia: muito boas perguntas, turma top excelente.
+Luiz Maia: Perguntas muito legais, muito relacionadas à disciplina.
+Luiz Maia: Assim, eu estou muito impressionado com a pergunta de vocês. Muito mesmo.
+Luiz Maia: Sim, fico muito feliz de ter alunos tão interessados. E
+Luiz Maia: olhando o conteúdo da disciplina como vocês estão fazendo. Muito bom, mesmo.
+Luiz Maia: Parabéns a todos aí que participaram das aulas de uma maneira super produtiva.
+Luiz Maia: Bom boa semana. Para vocês. Bom feriado, segunda feira, Terça feira, Dotnet, beleza.
+Luiz Maia: Um abraço a todos.
+Luiz Maia: Tchau, Tchau, gente.
+Jorge José Luiz Santos da Silva: Valeu, professor. Tchau, Tchau.
+Luiz Maia: Valeu, Jorge. Um abraço.

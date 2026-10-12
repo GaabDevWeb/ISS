@@ -1,0 +1,2902 @@
+WEBVTT
+
+1
+00:05:23.490 --> 00:05:25.190
+Luiz Maia: Boa noite, pessoal.
+
+2
+00:05:25.770 --> 00:05:29.100
+Luiz Maia: Dia vinte e um de Setembro,
+
+3
+00:05:29.490 --> 00:05:32.279
+Luiz Maia: dois mil e vinte e seis.
+
+4
+00:05:34.240 --> 00:05:41.600
+Luiz Maia: A gente vai continuar. Agora é aula passada.
+
+5
+00:05:42.240 --> 00:05:44.570
+Luiz Maia: Ao menos começou a falar sobre vetor.
+
+6
+00:05:47.460 --> 00:05:52.900
+Luiz Maia: Eu não sei se a gente conseguiu terminar
+
+7
+00:05:54.260 --> 00:06:00.499
+Luiz Maia: exatamente aonde que a gente parou em relação a vetores e matrizes.
+
+8
+00:06:01.240 --> 00:06:04.859
+Luiz Maia: Mas a gente viu a criação do vetor
+
+9
+00:06:08.410 --> 00:06:12.749
+Luiz Maia: de duas formas diferentes. Quando você entra com os dados,
+
+10
+00:06:13.440 --> 00:06:20.000
+Luiz Maia: e uma outra versão onde você define os valores?
+
+11
+00:06:22.270 --> 00:06:24.329
+Luiz Maia: Na declaração do vetor.
+
+12
+00:06:24.810 --> 00:06:30.289
+Luiz Maia: Vocês têm esse código, gente só para eu entender. Se vocês estão na mesma página que eu.
+
+13
+00:06:34.330 --> 00:06:36.830
+Luiz Maia: Se vocês não souberem, tudo bem.
+
+14
+00:06:42.820 --> 00:06:44.950
+Luiz Maia: É, parece que vocês não sabem.
+
+15
+00:06:45.180 --> 00:06:47.680
+Luiz Maia: Ok, não tem problema.
+
+16
+00:06:47.860 --> 00:06:51.010
+Luiz Maia: A gente continua do ponto que nós paramos.
+
+17
+00:06:58.350 --> 00:07:00.560
+Luiz Maia: Bom, eu vou dar uma recapitulada para
+
+18
+00:07:00.730 --> 00:07:05.100
+Luiz Maia: ajudar vocês aí a relembrar o que nós vimos na hora passada.
+
+19
+00:07:06.980 --> 00:07:10.789
+Luiz Maia: Deixa eu abrir aqui o código.
+
+20
+00:07:12.460 --> 00:07:19.079
+Luiz Maia: Infelizmente, eu não vou fazer código ao vivo com vocês, porque isso não tem tempo.
+
+21
+00:07:19.250 --> 00:07:22.520
+Luiz Maia: A gente vai ter que terminar a matéria até amanhã.
+
+22
+00:07:22.760 --> 00:07:30.539
+Luiz Maia: Então vai dar para fazer live code com vocês nessas duas aulas.
+
+23
+00:07:30.810 --> 00:07:43.109
+Luiz Maia: A gente perdeu uma aula no feriado de sete de Setembro, e tivemos a troca de professor, etc. Então a gente não tem muito tempo para terminar a matéria.
+
+24
+00:07:47.910 --> 00:07:50.589
+Luiz Maia: E eu preciso terminar a matéria para poder
+
+25
+00:07:51.430 --> 00:07:55.160
+Luiz Maia: garantir que vocês façam o ateio de vocês.
+
+26
+00:07:59.420 --> 00:08:01.190
+Luiz Maia: E aí
+
+27
+00:08:09.790 --> 00:08:12.199
+Luiz Maia: então assim eu não tenho como
+
+28
+00:08:12.700 --> 00:08:16.550
+Luiz Maia: fazer live code com vocês hoje e nem amanhã.
+
+29
+00:08:16.780 --> 00:08:21.210
+Luiz Maia: Eu vou só compartilhar o código com vocês que estão lá no drive.
+
+30
+00:08:24.720 --> 00:08:25.559
+Luiz Maia: E aí.
+
+31
+00:08:25.750 --> 00:08:26.710
+Luiz Maia: E aí
+
+32
+00:08:37.549 --> 00:08:42.409
+Luiz Maia: qualquer dúvida, vocês me perguntem. Não tem nenhum problema. Não,
+
+33
+00:08:43.630 --> 00:08:49.110
+Luiz Maia: não é porque a gente está com pouco tempo que eu não vou tirar dúvida de vocês.
+
+34
+00:08:49.270 --> 00:08:56.790
+Luiz Maia: Qualquer dúvida. Você levanta o braço, aí interrompe e a gente continua.
+
+35
+00:08:57.660 --> 00:08:59.620
+Luiz Maia: Vocês estão me ouvindo?
+
+36
+00:08:59.980 --> 00:09:02.419
+Luiz Maia: Porque assim não teve nenhuma.
+
+37
+00:09:02.750 --> 00:09:06.810
+Luiz Maia: Nenhum boa noite. Nada disso. Vocês estão me ouvindo?
+
+38
+00:09:07.670 --> 00:09:09.370
+Luiz Maia: Ok, obrigado.
+
+39
+00:09:11.190 --> 00:09:13.860
+Luiz Maia: Aí fica mais fácil para gente poder tocar.
+
+40
+00:09:16.160 --> 00:09:20.179
+Luiz Maia: É a aula.
+
+41
+00:09:22.710 --> 00:09:28.580
+Luiz Maia: O código que nós fizemos em relação a vetor.
+
+42
+00:09:29.100 --> 00:09:31.360
+Luiz Maia: A gente tem aqui um.
+
+43
+00:09:32.950 --> 00:09:36.489
+Luiz Maia: A gente fez aqui a leitura de um vetor.
+
+44
+00:09:39.060 --> 00:09:40.810
+Luiz Maia: Ela console.
+
+45
+00:09:41.030 --> 00:09:45.309
+Luiz Maia: Aqui tem a versão um e a versão dois desse vetor.
+
+46
+00:09:47.700 --> 00:09:51.050
+Luiz Maia: Deixa eu tentar entender porque eu fiz duas versões aqui?
+
+47
+00:09:58.010 --> 00:09:59.330
+Luiz Maia: Boa pergunta.
+
+48
+00:10:04.390 --> 00:10:09.879
+Luiz Maia: Ah, sim, isso é importante vocês entenderem.
+
+49
+00:10:10.040 --> 00:10:13.360
+Luiz Maia: É um método.
+
+50
+00:10:13.780 --> 00:10:16.900
+Luiz Maia: Ele pode retornar um vetor.
+
+51
+00:10:18.660 --> 00:10:22.619
+Luiz Maia: Nesse caso, aqui ele está retornando
+
+52
+00:10:25.110 --> 00:10:27.780
+Luiz Maia: o conteúdo do vetor que foi lido.
+
+53
+00:10:29.170 --> 00:10:34.630
+Luiz Maia: E aqui em cima você faz a chamada do método
+
+54
+00:10:34.760 --> 00:10:39.619
+Luiz Maia: e ele retorna ao vetor com os valores já preenchidos
+
+55
+00:10:40.140 --> 00:10:43.170
+Luiz Maia: aqui. A gente tem uma outra forma de fazer isso.
+
+56
+00:10:43.450 --> 00:10:47.240
+Luiz Maia: Usando o vetor como um parâmetro.
+
+57
+00:10:48.400 --> 00:10:50.019
+Luiz Maia: Que é esse cara aqui?
+
+58
+00:10:52.880 --> 00:10:57.870
+Luiz Maia: Vetores, listas, matrizes.
+
+59
+00:10:58.510 --> 00:11:09.779
+Luiz Maia: Eles são passados por referência. Ou seja, qualquer alteração que você faça num vetor numa lista, ele retorna para quem chamou.
+
+60
+00:11:10.590 --> 00:11:14.889
+Luiz Maia: Você não precisa fazer exatamente isso que eu fiz aqui.
+
+61
+00:11:18.480 --> 00:11:24.139
+Luiz Maia: Vocês entendem o que é passagem por referência
+
+62
+00:11:24.470 --> 00:11:27.090
+Luiz Maia: e passagem por valor ou não,
+
+63
+00:11:37.790 --> 00:11:39.389
+Luiz Maia: não sabem o que é isso?
+
+64
+00:11:41.260 --> 00:11:44.420
+Luiz Maia: É só você, Maicon. Tem mais gente que não sabe.
+
+65
+00:11:48.080 --> 00:11:51.350
+Luiz Maia: Pois bem, então vamos ter que explicar isso para vocês
+
+66
+00:11:56.580 --> 00:12:01.329
+Luiz Maia: aqui. Nesse exemplo, eu tenho a.
+
+67
+00:12:02.320 --> 00:12:08.249
+Luiz Maia: Eu tenho um programa onde você tem o I igual a zero.
+
+68
+00:12:09.950 --> 00:12:12.220
+Luiz Maia: Aí você manda alterar o I.
+
+69
+00:12:14.020 --> 00:12:15.110
+Luiz Maia: Tá certo.
+
+70
+00:12:18.020 --> 00:12:24.490
+Luiz Maia: Eu acho que o melhor exemplo é esse aqui. Deixa eu tentar mostrar para vocês
+
+71
+00:12:28.210 --> 00:12:29.720
+Luiz Maia: alterar o I.
+
+72
+00:12:39.430 --> 00:12:42.770
+Luiz Maia: Você tem aqui o I está com zero.
+
+73
+00:12:44.260 --> 00:12:48.000
+Luiz Maia: Aí. Eu chamo é
+
+74
+00:12:52.250 --> 00:12:57.560
+Luiz Maia: alterar e alterar um.
+
+75
+00:12:57.780 --> 00:12:59.300
+Luiz Maia: Esse cara aqui.
+
+76
+00:13:01.190 --> 00:13:04.709
+Luiz Maia: Eu te pergunto o que ele vai retornar.
+
+77
+00:13:05.600 --> 00:13:09.570
+Luiz Maia: Ele está pegando o I que está sendo passado como parâmetro.
+
+78
+00:13:10.870 --> 00:13:12.910
+Luiz Maia: E está somando um.
+
+79
+00:13:13.240 --> 00:13:14.969
+Luiz Maia: O que ele vai mostrar aqui?
+
+80
+00:13:16.040 --> 00:13:17.699
+Luiz Maia: O I igual a dois.
+
+81
+00:13:17.950 --> 00:13:21.189
+Luiz Maia: Perdão, o I igual a um ou igual a zero.
+
+82
+00:13:26.490 --> 00:13:33.169
+Luiz Maia: Essa é a explicação da diferença entre passagem por valor e para o parâmetro.
+
+83
+00:13:36.530 --> 00:13:40.820
+Luiz Maia: Perdão, a passagem por valor e referência.
+
+84
+00:13:50.700 --> 00:13:55.449
+Luiz Maia: Então, Maicon, você acha que ele vai alterar o valor do I. É isso?
+
+85
+00:13:57.070 --> 00:13:59.779
+Luiz Maia: Quando ele chama essa rotina aqui?
+
+86
+00:13:59.950 --> 00:14:02.059
+Luiz Maia: Alterar valor dois.
+
+87
+00:14:03.420 --> 00:14:08.419
+Luiz Maia: Ele vai alterar o valor do I. É isso que você acha? Olha só o que acontece
+
+88
+00:14:19.500 --> 00:14:20.400
+Luiz Maia: e aí
+
+89
+00:14:25.090 --> 00:14:26.960
+Luiz Maia: ele não alterou o rolo do rio.
+
+90
+00:14:38.790 --> 00:14:39.889
+Luiz Maia: Por quê?
+
+91
+00:14:40.400 --> 00:14:42.450
+Luiz Maia: Ele não alterou o valor do I.
+
+92
+00:14:44.140 --> 00:14:46.729
+Luiz Maia: Você passou o I como parâmetro.
+
+93
+00:14:48.660 --> 00:14:54.260
+Luiz Maia: Aí. Você incrementou o valor do I e retornou o. I não
+
+94
+00:14:54.760 --> 00:14:58.229
+Luiz Maia: peraí. Isso aqui é a primeira solução.
+
+95
+00:14:59.370 --> 00:15:03.500
+Luiz Maia: Que é esse cara aqui? Ó alterar dois.
+
+96
+00:15:04.100 --> 00:15:12.260
+Luiz Maia: Eu vou melhorar isso aqui. Peraí. Deixa eu fazer assim. Alterar valor dois:
+
+97
+00:15:19.590 --> 00:15:22.850
+Luiz Maia: alterar valor um.
+
+98
+00:15:38.900 --> 00:15:40.850
+Luiz Maia: Exatamente, Júlio.
+
+99
+00:15:41.250 --> 00:15:45.460
+Luiz Maia: É exatamente isso o que acontece aqui
+
+100
+00:15:49.070 --> 00:15:57.880
+Luiz Maia: é que ele está pegando o valor de ir passado, copiando para o parâmetro.
+
+101
+00:15:58.060 --> 00:15:59.760
+Luiz Maia: O argumento I
+
+102
+00:15:59.950 --> 00:16:12.490
+Luiz Maia: está sendo jogado para o parâmetro. E quando você faz essa soma aqui, ele só existe dentro do método. Ele não aparece. Ele não é alterado
+
+103
+00:16:15.190 --> 00:16:16.590
+Luiz Maia: na chamada.
+
+104
+00:16:17.940 --> 00:16:20.739
+Luiz Maia: Eu acho estranho vocês não saberem isso.
+
+105
+00:16:21.520 --> 00:16:25.540
+Luiz Maia: Isso é a coisa mais básica de programação que existe.
+
+106
+00:16:29.600 --> 00:16:39.450
+Luiz Maia: Passagem por valor e referência, os tipos primitivos do Java.
+
+107
+00:16:39.900 --> 00:16:52.480
+Luiz Maia: Até mesmo o Python é, eles passam tipos primitivos como valor. Ou seja,
+
+108
+00:16:52.710 --> 00:17:00.690
+Luiz Maia: nesse caso, aqui ele está chamando alterar valor dois e está passando o I.
+
+109
+00:17:01.210 --> 00:17:06.239
+Luiz Maia: O I é igual a zero. Esse I recebe I mais um.
+
+110
+00:17:06.450 --> 00:17:11.309
+Luiz Maia: Ele não tem a menor influência no parâmetro que está passando aqui.
+
+111
+00:17:12.420 --> 00:17:15.630
+Luiz Maia: Ou seja, o I continua com zero
+
+112
+00:17:18.720 --> 00:17:28.170
+Luiz Maia: porque ele é um tipo primitivo, inti double bullying e outros tipos.
+
+113
+00:17:37.060 --> 00:17:42.160
+Luiz Maia: Se vocês quiserem, eu posso entrar mais fundo nesse assunto.
+
+114
+00:17:42.370 --> 00:17:45.539
+Luiz Maia: Mas assim, essa.
+
+115
+00:17:46.420 --> 00:17:49.899
+Luiz Maia: Esse conceito é básico em programação.
+
+116
+00:17:51.210 --> 00:17:56.450
+Luiz Maia: Tipos primitivos são passados por valor e não por referência. Ou seja,
+
+117
+00:17:56.700 --> 00:18:08.250
+Luiz Maia: se você alterar o valor do argumento, se você alterar o valor do parâmetro, você não vai alterar o argumento aqui. Ó,
+
+118
+00:18:10.530 --> 00:18:13.650
+Luiz Maia: vou fazer uma alteração nesse código aqui. Ó,
+
+119
+00:18:19.930 --> 00:18:26.330
+Luiz Maia: não. Eu vou deixar como estava alterar valor um,
+
+120
+00:18:31.060 --> 00:18:37.800
+Luiz Maia: alterar valor um. Ele está não alterar valor dois.
+
+121
+00:18:41.300 --> 00:18:44.300
+Luiz Maia: Aí eu mando printar o I.
+
+122
+00:18:48.060 --> 00:18:49.779
+Luiz Maia: Ele fica zero-zero.
+
+123
+00:18:50.960 --> 00:18:56.630
+Luiz Maia: Ele foi alterado dentro desse método aqui.
+
+124
+00:18:57.650 --> 00:19:00.569
+Luiz Maia: Tá certo. Se você olhar aqui, o valor do I
+
+125
+00:19:04.540 --> 00:19:06.830
+Luiz Maia: não é por valor também.
+
+126
+00:19:10.540 --> 00:19:14.370
+Luiz Maia: Qualquer coisa que você altera na String, vai ficar a mesma coisa
+
+127
+00:19:16.570 --> 00:19:19.779
+Luiz Maia: aqui. Se eu mandar printar o valor do I,
+
+128
+00:19:20.780 --> 00:19:24.260
+Luiz Maia: ele vai mostrar que mudou o valor do Ia,
+
+129
+00:19:31.040 --> 00:19:34.619
+Luiz Maia: mas dentro da função do método.
+
+130
+00:19:35.380 --> 00:19:39.200
+Luiz Maia: Ele não vai alterar o retorno.
+
+131
+00:19:40.420 --> 00:19:48.410
+Luiz Maia: Então, se a gente mandar fazer aqui executar esse código aqui, ele mostra para você que ele mudou
+
+132
+00:19:49.630 --> 00:19:53.199
+Luiz Maia: de zero para um, mas dentro do método.
+
+133
+00:19:53.580 --> 00:19:58.039
+Luiz Maia: Mas ele não mandou esse valor. Para quem chamou.
+
+134
+00:19:59.310 --> 00:20:01.700
+Luiz Maia: Posso até melhorar isso aqui para vocês.
+
+135
+00:20:01.940 --> 00:20:04.480
+Luiz Maia: Deixa eu dar uma melhorada.
+
+136
+00:20:04.910 --> 00:20:05.840
+Luiz Maia: É um
+
+137
+00:20:09.100 --> 00:20:13.070
+Luiz Maia: valor de
+
+138
+00:20:33.330 --> 00:20:38.569
+Luiz Maia: você. Vai ver que ele vai mudar o valor do I. Mas ele só vale aqui dentro.
+
+139
+00:20:38.670 --> 00:20:43.720
+Luiz Maia: Ele não vale para quem chamou isso é passagem por
+
+140
+00:20:44.330 --> 00:20:54.539
+Luiz Maia: o valor. Ele pega o valor de I coloca dentro do método. O que for feito naquele método não vai afetar quem chamou
+
+141
+00:20:56.160 --> 00:20:59.780
+Luiz Maia: isso. É a passagem é
+
+142
+00:21:05.840 --> 00:21:08.050
+Luiz Maia: chamada passagem por valor
+
+143
+00:21:08.160 --> 00:21:14.930
+Luiz Maia: para você poder alterar o valor do I. Você tem que fazer uma chamada por referência.
+
+144
+00:21:15.770 --> 00:21:19.239
+Luiz Maia: Que é isso aqui, ó e aí?
+
+145
+00:21:28.100 --> 00:21:32.990
+Luiz Maia: Agora Sim, eu estou passando o I por valor.
+
+146
+00:21:33.180 --> 00:21:37.849
+Luiz Maia: Estou alterando o I e estou retornando ele no nome do método.
+
+147
+00:21:38.210 --> 00:21:42.450
+Luiz Maia: Agora. Sim, ele vai fazer a
+
+148
+00:21:43.060 --> 00:21:48.499
+Luiz Maia: alteração no valor. Olha lá, fonologia igual a zero. Valor de igual a um
+
+149
+00:21:51.050 --> 00:21:57.120
+Luiz Maia: gente. A maioria das linguagens trabalha com isso. Com isso. Java Python.
+
+150
+00:21:57.270 --> 00:21:59.030
+Luiz Maia: Isso é uma coisa normal.
+
+151
+00:22:14.120 --> 00:22:18.140
+Luiz Maia: Sim, é isso mesmo. O Void aqui
+
+152
+00:22:18.270 --> 00:22:22.519
+Luiz Maia: ele não faz nenhuma alteração no valor do I,
+
+153
+00:22:23.580 --> 00:22:31.299
+Luiz Maia: mas nem sempre Void significa que você não vai alterar o argumento.
+
+154
+00:22:31.550 --> 00:22:34.149
+Luiz Maia: Depende do tipo de dado.
+
+155
+00:22:34.520 --> 00:22:37.490
+Luiz Maia: É complicado, gente, isso não é simples
+
+156
+00:22:37.830 --> 00:22:41.920
+Luiz Maia: depende do tipo de dado que você está passando para dentro.
+
+157
+00:22:42.160 --> 00:22:44.180
+Luiz Maia: É do método.
+
+158
+00:22:44.530 --> 00:22:49.309
+Luiz Maia: Tipos primitivos como int double
+
+159
+00:22:49.440 --> 00:23:00.030
+Luiz Maia: string. Esses caras não são alterados. Mas dependendo do tipo do dado que você está trabalhando, eles podem ser alterados.
+
+160
+00:23:01.340 --> 00:23:03.130
+Luiz Maia: Vamos ver um exemplo aqui. Ó,
+
+161
+00:23:04.580 --> 00:23:07.200
+Luiz Maia: deixa eu pegar aqui um exemplo.
+
+162
+00:23:13.220 --> 00:23:18.670
+Luiz Maia: Aqui, ó aqui vetou?
+
+163
+00:23:19.770 --> 00:23:21.930
+Luiz Maia: Eu estou passando esse vetor.
+
+164
+00:23:23.930 --> 00:23:31.740
+Luiz Maia: Quando você passa a vetor como parâmetro de uma chamada de método.
+
+165
+00:23:32.340 --> 00:23:36.710
+Luiz Maia: Ele é sempre por referência, sempre.
+
+166
+00:23:37.860 --> 00:23:46.799
+Luiz Maia: Ou seja, se você alterar o vetor aqui mesmo com Void, ele vai alterar o vetor
+
+167
+00:23:49.560 --> 00:23:58.320
+Luiz Maia: aqui. Eu estou forçando. Eu prefiro fazer desse jeito aqui.
+
+168
+00:23:59.310 --> 00:24:06.710
+Luiz Maia: Ou seja, eu estou dizendo, olha só, eu estou alterando o vetor que eu recebi,
+
+169
+00:24:06.940 --> 00:24:09.860
+Luiz Maia: e estou retornando. Ele alterado.
+
+170
+00:24:10.360 --> 00:24:15.980
+Luiz Maia: Aqui? Não, ele vai retornar o valor alterado no parâmetro.
+
+171
+00:24:19.320 --> 00:24:20.540
+Luiz Maia: Por quê?
+
+172
+00:24:21.190 --> 00:24:27.410
+Luiz Maia: Vetores são passados por referência por padrão.
+
+173
+00:24:29.820 --> 00:24:32.869
+Luiz Maia: Alguém sabe me explicar por quê?
+
+174
+00:24:34.490 --> 00:24:38.890
+Luiz Maia: Por que os vetores são passados por referência e não por valor.
+
+175
+00:24:45.300 --> 00:24:50.240
+Luiz Maia: Bom, é uma boa justificativa.
+
+176
+00:24:52.040 --> 00:25:02.619
+Luiz Maia: Não é primitivo, mas tem coisas mais importantes do que essa. E aí, cara, vocês não têm o conhecimento
+
+177
+00:25:03.890 --> 00:25:11.410
+Luiz Maia: de como funciona a linguagem por trás dos panos, né?
+
+178
+00:25:12.450 --> 00:25:19.090
+Luiz Maia: Essa é uma coisa que eu acho que falta
+
+179
+00:25:20.000 --> 00:25:22.859
+Luiz Maia: para vocês. Vocês não têm o conhecimento
+
+180
+00:25:23.820 --> 00:25:28.539
+Luiz Maia: de como realmente as coisas acontecem por trás dos pobres.
+
+181
+00:25:31.360 --> 00:25:35.950
+Luiz Maia: Alguém tem alguma ideia? Júlio, você que é o cara top da turma?
+
+182
+00:25:36.130 --> 00:25:39.460
+Luiz Maia: Você pode me dar uma explicação
+
+183
+00:25:39.820 --> 00:25:47.409
+Luiz Maia: por que vetores não são passados por valor e sempre por referência,
+
+184
+00:25:56.770 --> 00:25:58.240
+Luiz Maia: tá, Julho.
+
+185
+00:25:59.130 --> 00:26:04.500
+Luiz Maia: Imagina se ele não passasse o endereço do vetor o que aconteceria?
+
+186
+00:26:06.860 --> 00:26:08.749
+Luiz Maia: Vamos ver se você consegue.
+
+187
+00:26:09.430 --> 00:26:11.700
+Luiz Maia: E além do que está pensando,
+
+188
+00:26:14.270 --> 00:26:24.239
+Luiz Maia: o que aconteceria se você não passasse o endereço do vetor. O que ele faria na passagem por valor?
+
+189
+00:26:26.600 --> 00:26:28.740
+Luiz Maia: É uma pergunta difícil, gente.
+
+190
+00:26:32.300 --> 00:26:38.599
+Luiz Maia: E aí essa é quase uma resposta.
+
+191
+00:26:42.830 --> 00:26:45.919
+Luiz Maia: Está no caminho certo, mas não é a resposta.
+
+192
+00:26:48.810 --> 00:26:57.660
+Luiz Maia: Por que a gente não passa exatamente, Júlio, você pegar um vetor.
+
+193
+00:26:58.190 --> 00:27:03.110
+Luiz Maia: E aqui eu não estou falando de um vetor de dez posições.
+
+194
+00:27:03.210 --> 00:27:06.460
+Luiz Maia: Eu estou falando de um vetor de mil.
+
+195
+00:27:06.750 --> 00:27:11.860
+Luiz Maia: Dez mil. Cem mil. Um milhão de posições.
+
+196
+00:27:12.190 --> 00:27:14.419
+Luiz Maia: Se você passar um vetor
+
+197
+00:27:14.830 --> 00:27:24.589
+Luiz Maia: por valor para dentro de um método. O que vai acontecer? Ele vai copiar esse vetor inteiro para dentro do método.
+
+198
+00:27:27.170 --> 00:27:35.690
+Luiz Maia: Isso vai tomar um tempo absurdo de computação de Cpu e um tempo absurdo de memória.
+
+199
+00:27:36.540 --> 00:27:43.260
+Luiz Maia: É por isso que as linguagens sempre passam
+
+200
+00:27:43.870 --> 00:27:47.979
+Luiz Maia: vetores e matrizes e outras listas
+
+201
+00:27:48.160 --> 00:27:53.340
+Luiz Maia: sempre por referência. Caso contrário, você ia passar
+
+202
+00:27:53.760 --> 00:27:59.320
+Luiz Maia: no caso do I aqui que a gente viu. Cadê o I. Deixa eu ver. Aqui onde é que está o I
+
+203
+00:28:01.700 --> 00:28:05.370
+Luiz Maia: aqui o I. Cadê o I? Não,
+
+204
+00:28:09.790 --> 00:28:15.090
+Luiz Maia: Cadê o ir também não.
+
+205
+00:28:16.370 --> 00:28:17.750
+Luiz Maia: Onde é que está isso?
+
+206
+00:28:21.870 --> 00:28:26.719
+Luiz Maia: Também não sei aonde foi parar isso.
+
+207
+00:28:34.140 --> 00:28:37.370
+Luiz Maia: A gente viu na hora passada. O vetor um.
+
+208
+00:28:38.870 --> 00:28:40.279
+Luiz Maia: Eu acho que está aqui.
+
+209
+00:28:41.340 --> 00:28:46.790
+Luiz Maia: Aonde a gente está passando o vetor.
+
+210
+00:28:47.280 --> 00:28:51.690
+Luiz Maia: A gente não está passando. O I, que é o.
+
+211
+00:28:54.210 --> 00:28:58.010
+Luiz Maia: Eu acho que eu estou confundindo aqui. Acho que é isso aqui mesmo.
+
+212
+00:28:58.530 --> 00:29:06.680
+Luiz Maia: Passar esse I como valor. Isso tem pouco impacto dentro da máquina.
+
+213
+00:29:06.840 --> 00:29:12.760
+Luiz Maia: Agora, quando você passa um vetor de dez milhões de posições por valor.
+
+214
+00:29:13.090 --> 00:29:16.159
+Luiz Maia: Você vai parar a máquina. A máquina vai parar.
+
+215
+00:29:16.290 --> 00:29:24.620
+Luiz Maia: É por isso que todas as linguagens utilizam passagem por referência.
+
+216
+00:29:25.770 --> 00:29:31.370
+Luiz Maia: Se você não entendeu, fala comigo pra eu poder explicar melhor isso pra vocês, porque isso é básico.
+
+217
+00:29:32.610 --> 00:29:39.589
+Luiz Maia: Isso não é C Sharp, não é Java, não é, Python? Isso é básico em computação.
+
+218
+00:29:40.420 --> 00:29:49.380
+Luiz Maia: Saber a diferença entre passagem de parâmetro por valor e referência. Se você não entendeu, você fala comigo, que eu vou desenhar.
+
+219
+00:29:49.710 --> 00:29:52.110
+Luiz Maia: Não sei como é que eu vou fazer isso,
+
+220
+00:29:57.440 --> 00:30:09.039
+Luiz Maia: beleza. A gente fez aqui um programa que tinha a leitura de um vetor.
+
+221
+00:30:09.500 --> 00:30:12.930
+Luiz Maia: A soma dos elementos do vetor,
+
+222
+00:30:13.220 --> 00:30:24.319
+Luiz Maia: passando como parâmetro vetor, exibir o vetor. Aqui a gente tem duas formas de exibir o vetor usando o forite e o for.
+
+223
+00:30:24.930 --> 00:30:28.760
+Luiz Maia: Se você tiver alguma dúvida, você me fala.
+
+224
+00:30:30.000 --> 00:30:39.410
+Luiz Maia: Aqui a gente tem os vetores sendo criados na verdade inicializados na declaração.
+
+225
+00:30:39.820 --> 00:30:42.210
+Luiz Maia: E a gente faz um somar vetores.
+
+226
+00:30:43.320 --> 00:30:48.210
+Luiz Maia: A gente soma um vetor um com o vetor dois vai estar um vetor três.
+
+227
+00:30:50.020 --> 00:31:00.250
+Luiz Maia: Aí eu tenho duas versões onde o vetor três é passado como retorno
+
+228
+00:31:00.510 --> 00:31:08.790
+Luiz Maia: do método. E o outro, eu não passo no método. Ele retorna aqui como um parâmetro.
+
+229
+00:31:11.130 --> 00:31:15.130
+Luiz Maia: Assim. Olha só, é.
+
+230
+00:31:15.460 --> 00:31:20.129
+Luiz Maia: Eu prefiro eu prefiro desse jeito,
+
+231
+00:31:22.840 --> 00:31:29.199
+Luiz Maia: porque a definição de método, a definição de função é o seguinte:
+
+232
+00:31:29.430 --> 00:31:35.359
+Luiz Maia: você recebe parâmetros e retorna apenas um valor,
+
+233
+00:31:35.540 --> 00:31:40.660
+Luiz Maia: um cálculo. Alguma coisa? Você não retorna mais do que isso.
+
+234
+00:31:40.840 --> 00:31:50.320
+Luiz Maia: Essa definição de somar vetores, ela é mais próxima do código limpo do que essa?
+
+235
+00:31:50.530 --> 00:31:59.580
+Luiz Maia: Porque aqui eu estou passando, vetor um vetor dois. E estou retornando dentro do parâmetro. Soma o resultado.
+
+236
+00:32:00.740 --> 00:32:05.019
+Luiz Maia: A Lp está errado. Isso aqui. Não, não está errado.
+
+237
+00:32:05.280 --> 00:32:07.190
+Luiz Maia: Não tem nada de errado nisso.
+
+238
+00:32:07.970 --> 00:32:16.599
+Luiz Maia: Todos estão sendo passados por referência. Qualquer alteração em Vete um vete dois e Soma vai ser enxergado
+
+239
+00:32:17.140 --> 00:32:23.340
+Luiz Maia: na chamada do método no programa principal.
+
+240
+00:32:23.640 --> 00:32:28.100
+Luiz Maia: Eu prefiro isso aqui, porque isso aqui fica mais próximo do código limpo.
+
+241
+00:32:29.450 --> 00:32:33.189
+Luiz Maia: Ou seja, eu estou passando o Vete um e vete dois
+
+242
+00:32:33.520 --> 00:32:38.360
+Luiz Maia: a princípio ivete dois não serão alterados.
+
+243
+00:32:40.150 --> 00:32:45.940
+Luiz Maia: Quem será alterado. É soma. Eu retorno. Soma no nome do método.
+
+244
+00:32:48.700 --> 00:32:52.539
+Luiz Maia: Eu prefiro isso. Mas isso aqui é uma questão, minha gente.
+
+245
+00:32:52.920 --> 00:33:06.659
+Luiz Maia: É uma questão de Academia de código limpo. Sim, não é para vocês ficarem tensos em relação a isso.
+
+246
+00:33:07.620 --> 00:33:18.289
+Luiz Maia: Então essas duas formas de fazer o retorno da soma são válidos. Eu prefiro essa forma
+
+247
+00:33:19.560 --> 00:33:27.130
+Luiz Maia: porque fica mais próximo do código limpo. Mas isso aqui não está errado, não tá?
+
+248
+00:33:29.220 --> 00:33:38.749
+Luiz Maia: Porque Soma está sendo retornado como um parâmetro do método. Aqui não. Ele está sendo retornado como
+
+249
+00:33:40.060 --> 00:33:42.400
+Luiz Maia: no nome do método.
+
+250
+00:33:42.520 --> 00:33:46.850
+Luiz Maia: O nome do método somar vetor está retornando inteiro.
+
+251
+00:33:47.410 --> 00:33:50.730
+Luiz Maia: É justamente isso que o método tem que fazer.
+
+252
+00:33:51.170 --> 00:33:53.989
+Luiz Maia: Mas eu não vou.
+
+253
+00:33:54.820 --> 00:33:58.959
+Luiz Maia: Eu não vou encher o saco de vocês com isso. Não, não vou mesmo.
+
+254
+00:33:59.660 --> 00:34:03.230
+Luiz Maia: Isso é muito acadêmico. É muito pessoal.
+
+255
+00:34:04.110 --> 00:34:17.939
+Luiz Maia: O importante dessa história toda é vocês entenderem a diferença de passagem de parâmetro por valor e por referência, essa é a parte mais importante.
+
+256
+00:34:18.100 --> 00:34:25.789
+Luiz Maia: Se você entendeu isso, graças a Deus para mim, tá super bem,
+
+257
+00:34:29.230 --> 00:34:35.070
+Luiz Maia: se você não entendeu, você fala comigo, que eu vou correr atrás de tentar melhorar a explicação. Gente,
+
+258
+00:34:35.909 --> 00:34:37.450
+Luiz Maia: isso não é fácil.
+
+259
+00:34:38.090 --> 00:34:41.330
+Luiz Maia: Levei um tempão para entender isso.
+
+260
+00:34:42.489 --> 00:34:48.170
+Luiz Maia: O C Sharp inclusive tem formas diferentes de retornar
+
+261
+00:34:48.610 --> 00:34:56.370
+Luiz Maia: os parâmetros. Eu não vou ensinar isso para vocês, senão vocês vão pirar. Vocês vão ficar perdidos.
+
+262
+00:34:57.920 --> 00:34:59.410
+Luiz Maia: Tem o
+
+263
+00:34:59.920 --> 00:35:10.569
+Luiz Maia: o C. Sharp é muito poderoso de frente do Java. Ele é muito mais poderoso que o Java no retorno de parâmetros.
+
+264
+00:35:11.470 --> 00:35:14.769
+Luiz Maia: Eu não vou alongar
+
+265
+00:35:14.980 --> 00:35:20.030
+Luiz Maia: a aula porque a gente tem pouco tempo, gente, ou preciso terminar a matéria até amanhã
+
+266
+00:35:20.710 --> 00:35:24.840
+Luiz Maia: por todos os problemas que nós tivemos.
+
+267
+00:35:25.670 --> 00:35:31.979
+Luiz Maia: Aliás, eu queria saber se vocês querem que eu continue com vocês no próximo trimestre,
+
+268
+00:35:32.460 --> 00:35:36.910
+Luiz Maia: porque eu não estava escalado para dar a próxima disciplina.
+
+269
+00:35:37.220 --> 00:35:43.070
+Luiz Maia: Se vocês não quiserem. Na boa. Assim na boa gente,
+
+270
+00:35:43.180 --> 00:35:53.300
+Luiz Maia: se vocês não quiserem que eu fique na disciplina, não tem problema nenhum. Eu saio. Eles vão arrumar outro professor para vocês. Não tem problema nenhum.
+
+271
+00:35:54.180 --> 00:35:55.390
+Luiz Maia: E aí.
+
+272
+00:35:57.410 --> 00:35:59.059
+Luiz Maia: Não tem problema nenhum.
+
+273
+00:35:59.870 --> 00:36:09.910
+Luiz Maia: Eu não estava escalado para essa disciplina. Eu apareci do nada. Me colocaram aqui de paraquedas.
+
+274
+00:36:10.100 --> 00:36:17.120
+Luiz Maia: Se você não quiser que eu continue, você fala comigo, que eu saio fora. Não tem problema. Não, tá gente.
+
+275
+00:36:17.250 --> 00:36:20.089
+Luiz Maia: Eu não vou ficar magoado com ninguém.
+
+276
+00:36:20.350 --> 00:36:23.049
+Luiz Maia: Zero problema pra mim, zero.
+
+277
+00:36:23.750 --> 00:36:35.219
+Luiz Maia: Mas o importante é que vocês tenham ficado felizes com as aulas. Com o que eu fiz. Se você não está feliz. Pede para trocar, porque não tem problema. Para mim não, cara,
+
+278
+00:36:35.510 --> 00:36:37.190
+Luiz Maia: é zero problema.
+
+279
+00:36:37.830 --> 00:36:39.270
+Luiz Maia: E aí?
+
+280
+00:36:45.570 --> 00:36:47.010
+Luiz Maia: Obrigado, gente.
+
+281
+00:36:51.680 --> 00:37:01.440
+Luiz Maia: Tá bom, gente tranquilo. Então eu continuo. Não tem problema, não é?
+
+282
+00:37:02.830 --> 00:37:11.889
+Luiz Maia: Vamos falar sobre matrizes, gente. Eu botei lá nas transparências,
+
+283
+00:37:12.080 --> 00:37:31.520
+Luiz Maia: a explicação de vetores e matrizes, mas eu quero adiantar um pouco a aula para não ficar preso na parte conceitual. Você vai lá, dá uma olhada no que está no material lá que eu botei. Se você não entender, quiser tirar alguma dúvida,
+
+284
+00:37:31.750 --> 00:37:34.359
+Luiz Maia: tá? Ok, vetores,
+
+285
+00:37:35.010 --> 00:37:48.460
+Luiz Maia: a gente chama de arreis unidimensionais, ou seja, o vetor é aquela tripa onde você vai de zero até o tamanho menos um do vetor.
+
+286
+00:37:48.990 --> 00:37:52.090
+Luiz Maia: Tá certo, é assim que funciona.
+
+287
+00:37:53.370 --> 00:37:57.870
+Luiz Maia: E aí é uma surgidas homogênea.
+
+288
+00:37:58.180 --> 00:38:00.460
+Luiz Maia: Aí eu fiz um desenho
+
+289
+00:38:00.820 --> 00:38:05.260
+Luiz Maia: que eu queria que vocês dessem. Eu não sei se eu mostrei isso pra vocês na aula passada.
+
+290
+00:38:06.060 --> 00:38:07.450
+Luiz Maia: É,
+
+291
+00:38:12.360 --> 00:38:18.760
+Luiz Maia: não sei se eu mostrei esse desenho para vocês. A diferença entre vetores e listas.
+
+292
+00:38:20.390 --> 00:38:26.960
+Luiz Maia: Não sei se vocês viram isso aqui, eu mostrei isso pra vocês. Eu não sei. Não lembro, tá?
+
+293
+00:38:27.290 --> 00:38:32.810
+Luiz Maia: É o que acontece, gente só para recapitular vetores
+
+294
+00:38:33.930 --> 00:38:37.409
+Luiz Maia: forma de armazenamento deles na memória
+
+295
+00:38:37.530 --> 00:38:55.080
+Luiz Maia: é muito mais eficiente do que listas. As listas são encadeadas. Tem um monte de problema de ponteiro. E aí para você indexar essa lista, o vetor não tem problema nenhum. O vetor é um negócio super tranquilo.
+
+296
+00:38:55.220 --> 00:38:59.720
+Luiz Maia: Porém, o vetor. Ele tem um tamanho fixo.
+
+297
+00:39:00.010 --> 00:39:02.850
+Luiz Maia: Você não pode mudar o tamanho do vetor.
+
+298
+00:39:03.200 --> 00:39:15.380
+Luiz Maia: Os tipos, os elementos do vetor são sempre iguais. Não dá para você ter real inteiro buliano
+
+299
+00:39:15.570 --> 00:39:21.370
+Luiz Maia: String dentro. Isso é completamente o Python. Ele quebra tudo isso.
+
+300
+00:39:22.210 --> 00:39:28.229
+Luiz Maia: Uma das vantagens do Python é você ter listas de elementos heterogêneos.
+
+301
+00:39:28.700 --> 00:39:36.520
+Luiz Maia: Eu não acho isso uma vantagem. Muito pelo contrário. Eu acho isso aí um crime. Mas tudo bem.
+
+302
+00:39:38.100 --> 00:39:42.259
+Luiz Maia: É como é que é uma atriz, gente?
+
+303
+00:39:44.020 --> 00:39:49.419
+Luiz Maia: A matriz é uma rei de várias dimensões.
+
+304
+00:39:49.940 --> 00:39:54.430
+Luiz Maia: Onde você especifica quantas dimensões você quer?
+
+305
+00:39:54.990 --> 00:39:59.469
+Luiz Maia: Bom, normalmente, uma matriz.
+
+306
+00:39:59.680 --> 00:40:03.869
+Luiz Maia: Ela tem linhas e colunas igual. Uma tabela do Skl.
+
+307
+00:40:04.060 --> 00:40:04.960
+Luiz Maia: Tá certo.
+
+308
+00:40:05.900 --> 00:40:17.610
+Luiz Maia: É, mas em si, Sharp pinjava em Python. A matriz pode ter várias dimensões.
+
+309
+00:40:18.150 --> 00:40:28.619
+Luiz Maia: Três, quatro, cinco em si, Sharp. Uma matriz pode ter até duzentos e cinquenta e seis dimensões.
+
+310
+00:40:29.540 --> 00:40:33.859
+Luiz Maia: Lp: quando é que você vai usar isso? Não sei.
+
+311
+00:40:35.040 --> 00:40:37.410
+Luiz Maia: Não sei dizer para vocês. Não sei.
+
+312
+00:40:38.740 --> 00:40:43.169
+Luiz Maia: Eu até posso explicar três dimensões,
+
+313
+00:40:43.890 --> 00:40:49.130
+Luiz Maia: mas depois de três dimensões. Eu não tenho muito como explicar para vocês
+
+314
+00:40:49.750 --> 00:41:02.790
+Luiz Maia: duas dimensões. Você tem linha e coluna. Beleza é tranquilo. É uma matriz que todo mundo. Uma tabela? Não sei. Linha e coluna. Todo mundo sabe
+
+315
+00:41:03.650 --> 00:41:05.360
+Luiz Maia: três dimensões.
+
+316
+00:41:05.710 --> 00:41:12.389
+Luiz Maia: Você tem linha, coluna e profundidade.
+
+317
+00:41:13.290 --> 00:41:20.090
+Luiz Maia: Seria mais ou menos largura, altura e profundidade. Como se fosse um cubo,
+
+318
+00:41:20.940 --> 00:41:30.079
+Luiz Maia: lembra? Você pega aquele cubo mágico que você fica trocando as peças até encontrar todas as peças. É mais ou menos isso.
+
+319
+00:41:30.360 --> 00:41:36.809
+Luiz Maia: Você tem um cubo mágico onde você tem três dimensões. Agora passou de três dimensões.
+
+320
+00:41:37.740 --> 00:41:44.289
+Luiz Maia: O troço, sei lá vai pra física, tempo, espaço,
+
+321
+00:41:44.920 --> 00:41:50.690
+Luiz Maia: potência, gente. Eu não tenho formação na área de física
+
+322
+00:41:51.660 --> 00:41:56.040
+Luiz Maia: e nem matemática para poder avançar nesse assunto.
+
+323
+00:41:57.050 --> 00:42:08.590
+Luiz Maia: Então, assim eu vou ficar em duas dimensões. E tá bom. Três dimensões. Eu até consigo fazer alguma coisa. Mas a partir de três dimensões. Eu
+
+324
+00:42:08.900 --> 00:42:11.699
+Luiz Maia: eu desisto. Não Rola.
+
+325
+00:42:14.580 --> 00:42:20.700
+Luiz Maia: Eu não consigo passar de três dimensões. Altura, largura e profundidade, ponto.
+
+326
+00:42:23.040 --> 00:42:26.310
+Luiz Maia: O acesso aos elementos da matriz
+
+327
+00:42:27.190 --> 00:42:33.900
+Luiz Maia: é semelhante aos elementos de um vetor. Está certo.
+
+328
+00:42:34.340 --> 00:42:40.830
+Luiz Maia: Aqui, por exemplo, eu vou pegar aqui uma seta. Por exemplo, aqui uma seta.
+
+329
+00:42:41.790 --> 00:42:46.000
+Luiz Maia: Peguei aqui uma seta aqui.
+
+330
+00:42:48.300 --> 00:42:51.580
+Luiz Maia: Vamos ver se eu consigo botar essa seta aqui no meio.
+
+331
+00:42:51.940 --> 00:42:53.910
+Luiz Maia: Não, não consigo.
+
+332
+00:42:54.120 --> 00:42:59.799
+Luiz Maia: Ok, esse drive, eu. Aqui tem as suas limitações.
+
+333
+00:43:00.210 --> 00:43:10.909
+Luiz Maia: Deve ter uma maneira de fazer isso, mas não consegui. Eu quero acessar essa posição dentro da matriz. Como é que eu faço isso.
+
+334
+00:43:11.280 --> 00:43:16.710
+Luiz Maia: Você vai fazer o quê? Você vai acessar a matriz
+
+335
+00:43:20.200 --> 00:43:21.940
+Luiz Maia: indexada.
+
+336
+00:43:22.290 --> 00:43:24.429
+Luiz Maia: Qual é a coluna um?
+
+337
+00:43:24.740 --> 00:43:26.499
+Luiz Maia: Qual é a
+
+338
+00:43:27.710 --> 00:43:35.639
+Luiz Maia: aqui? Não fui muito feliz. Não é? Coluna um, linha um, coluna um. Vamos mudar isso aqui.
+
+339
+00:43:36.000 --> 00:43:39.409
+Luiz Maia: Deixa eu tentar mudar isso aqui. Deixa eu mudar isso aqui.
+
+340
+00:43:39.590 --> 00:43:48.750
+Luiz Maia: Opa, vamos. Aqui. Eu sou muito ruim para desenhar, gente, olha, é triste aqui. Eu estou pegando a linha um.
+
+341
+00:43:49.870 --> 00:43:51.490
+Luiz Maia: A coluna dois.
+
+342
+00:43:55.000 --> 00:43:58.200
+Luiz Maia: É isso, não é?
+
+343
+00:43:59.670 --> 00:44:02.260
+Luiz Maia: Tentar juntar esse troço aqui. Peraí
+
+344
+00:44:05.300 --> 00:44:06.160
+Luiz Maia: foi?
+
+345
+00:44:06.920 --> 00:44:08.140
+Luiz Maia: Não, não. Foi.
+
+346
+00:44:08.350 --> 00:44:13.030
+Luiz Maia: Bom, pelo menos agora ela conseguiu. Eu consegui melhorar isso aqui.
+
+347
+00:44:13.440 --> 00:44:18.939
+Luiz Maia: Deixa eu pegar isso aqui e agora. Vamos ver se vai.
+
+348
+00:44:19.420 --> 00:44:20.929
+Luiz Maia: Ah, agora foi.
+
+349
+00:44:21.110 --> 00:44:25.200
+Luiz Maia: Pegou a linha um. A coluna três está aí.
+
+350
+00:44:25.870 --> 00:44:31.120
+Luiz Maia: Deixa eu aumentar isso aqui pra vocês verem. Ó, olha que bonitinho.
+
+351
+00:44:31.230 --> 00:44:32.739
+Luiz Maia: Agora ficou bonito.
+
+352
+00:44:35.620 --> 00:44:45.659
+Luiz Maia: Vetores e matrizes, gente em C. Sharp, Java Python são objetos, gente.
+
+353
+00:44:46.110 --> 00:44:48.739
+Luiz Maia: Tudo isso é objeto.
+
+354
+00:44:49.220 --> 00:44:52.760
+Luiz Maia: Eles não são estruturas de dados como em C, por exemplo,
+
+355
+00:44:53.130 --> 00:44:57.780
+Luiz Maia: em C. Vetores e matrizes não são objetos.
+
+356
+00:44:58.460 --> 00:44:59.630
+Luiz Maia: Tá certo.
+
+357
+00:44:59.740 --> 00:45:06.490
+Luiz Maia: É diferente. O tratamento não é a mesma coisa. Não dá para a gente poder agora parar para explicar isso.
+
+358
+00:45:06.850 --> 00:45:15.120
+Luiz Maia: Então, aqui eu tenho um. É a linha dois. É a coluna. Ele vai acessar essa posição aqui.
+
+359
+00:45:17.800 --> 00:45:21.690
+Luiz Maia: Beleza, vamos ver. Código.
+
+360
+00:45:22.250 --> 00:45:30.820
+Luiz Maia: Vamos ver código, gente. Cadê o código? Onde é que está o código matriz?
+
+361
+00:45:33.320 --> 00:45:42.410
+Luiz Maia: Aqui eu tenho uma matriz de três linhas e quatro colunas em se Sharp. A definição
+
+362
+00:45:43.160 --> 00:45:54.009
+Luiz Maia: é assim. Eu botei esses caras como constantes, porque é uma boa prática. Ah, mas eu não quero colocar como constante. Ok, não coloca problema seu
+
+363
+00:45:59.670 --> 00:46:09.190
+Luiz Maia: para percorrer essa matriz. Eu tenho que percorrer as linhas depois as colunas.
+
+364
+00:46:10.800 --> 00:46:20.550
+Luiz Maia: Mas como é que eu vou saber quantas linhas tem. Quantas colunas tem o C. Sharp tem isso aqui. O Get lennfe
+
+365
+00:46:20.700 --> 00:46:27.649
+Luiz Maia: zero, o gatilé. Eu botei como um comentário aqui, gente, porque todo mundo fica perdido nessa hora.
+
+366
+00:46:28.280 --> 00:46:35.909
+Luiz Maia: O gatilife zero por default pega o número de linhas, porque zero é linhas.
+
+367
+00:46:36.710 --> 00:46:40.550
+Luiz Maia: O Gathlaf um é o número de colunas.
+
+368
+00:46:40.830 --> 00:46:46.829
+Luiz Maia: Se eu pegasse o Gatilenf dois, seria a profundidade
+
+369
+00:46:47.170 --> 00:46:52.009
+Luiz Maia: se eu pegasse o Gatilenf quatro. Eu não sei como é que eu vou explicar isso para vocês.
+
+370
+00:46:53.390 --> 00:46:55.580
+Luiz Maia: Tempo espaço.
+
+371
+00:46:56.130 --> 00:46:58.240
+Luiz Maia: Não sei. Não sei explicar
+
+372
+00:47:00.360 --> 00:47:08.320
+Luiz Maia: novamente. Isso aí vai para além da programação. Isso aí vai para a matemática, para a física.
+
+373
+00:47:08.860 --> 00:47:15.989
+Luiz Maia: Eu era muito bom em matemática e física. Mas hoje eu me sinto um completo burro
+
+374
+00:47:16.390 --> 00:47:18.060
+Luiz Maia: em relação a isso.
+
+375
+00:47:20.280 --> 00:47:28.129
+Luiz Maia: Depois de ser reprovado em física e tal como na engenharia, eu me sinto um verdadeiro burro
+
+376
+00:47:28.280 --> 00:47:31.009
+Luiz Maia: em relação a matemática e física.
+
+377
+00:47:33.850 --> 00:47:37.960
+Luiz Maia: Eu era muito bom em matemática e física. Mas olha,
+
+378
+00:47:38.280 --> 00:47:45.880
+Luiz Maia: quando eu cheguei na Engenharia na Puc, eu me senti um idiota, um ignorante completo.
+
+379
+00:47:47.220 --> 00:47:52.349
+Luiz Maia: Então eu não vou tentar explicar para vocês o que eu não consigo explicar para mim mesmo.
+
+380
+00:47:55.380 --> 00:48:02.550
+Luiz Maia: Então esse Get lenf zero pega o número de linhas. Esse cara aqui pega o número de colunas
+
+381
+00:48:03.440 --> 00:48:08.149
+Luiz Maia: aqui. Eu estou fazendo o quê? Eu estou pegando a matriz Ij.
+
+382
+00:48:08.470 --> 00:48:14.310
+Luiz Maia: E aí, zero aqui? Ele vai fazer o quê, zero,
+
+383
+00:48:15.220 --> 00:48:23.519
+Luiz Maia: ele vai percorrer a linha zero as colunas de zero até o tamanho das colunas.
+
+384
+00:48:24.030 --> 00:48:31.860
+Luiz Maia: Depois ele incrementa o I para a segunda linha, que é um e varre todas as colunas
+
+385
+00:48:32.870 --> 00:48:39.870
+Luiz Maia: lembrando gente. As matrizes não têm linhas de tamanhos diferentes. Tá certo.
+
+386
+00:48:40.740 --> 00:48:46.570
+Luiz Maia: As linhas são todas do mesmo tamanho. As colunas também são do mesmo tamanho, tá?
+
+387
+00:48:47.690 --> 00:48:51.690
+Luiz Maia: Isso é definido em tempo de compilação. Está aqui. Ó,
+
+388
+00:48:52.180 --> 00:48:55.889
+Luiz Maia: você compilou o teu código. A matriz tem
+
+389
+00:48:56.430 --> 00:49:00.369
+Luiz Maia: três linhas e quatro colunas, ponto final.
+
+390
+00:49:01.100 --> 00:49:13.950
+Luiz Maia: Ah, mas eu quero mudar isso. Você vai ter que criar outra matriz. Copiar a matriz original para dentro da matriz nova. E vai ser um trabalho absurdo.
+
+391
+00:49:14.690 --> 00:49:21.750
+Luiz Maia: Isso aqui não é lista, gente. Tá certo. Isso aqui é estruturas estáticas.
+
+392
+00:49:22.770 --> 00:49:27.910
+Luiz Maia: Ah, então o Python é melhor do que o C Sharp, não, gente.
+
+393
+00:49:28.660 --> 00:49:39.690
+Luiz Maia: Se você olhar o Python, o Python pandas que manipula dados dentro do Python.
+
+394
+00:49:39.910 --> 00:49:41.569
+Luiz Maia: Ele trabalha com
+
+395
+00:49:41.870 --> 00:49:49.110
+Luiz Maia: num pai. O num pai é vetores e matrizes no Python. Ele não trabalha com lista. Gente,
+
+396
+00:49:49.290 --> 00:49:55.850
+Luiz Maia: listas em Python são extremamente lentas. Extremamente lentas.
+
+397
+00:50:02.280 --> 00:50:07.790
+Luiz Maia: Então, se Sharp Java tem já nativo
+
+398
+00:50:09.480 --> 00:50:18.290
+Luiz Maia: vetores e matrizes no Python, você tem que importar uma biblioteca chamada num pai para fazer a mesma coisa.
+
+399
+00:50:19.900 --> 00:50:29.430
+Luiz Maia: E a diferença de desempenho assim é. Eu não tenho tempo para mostrar isso para vocês. Eu tenho esses benchmarks todos aqui na minha máquina. Mas eu não tenho tempo para mostrar isso para vocês.
+
+400
+00:50:30.900 --> 00:50:43.129
+Luiz Maia: Ele está pegando aqui Ij. E colocando dentro da matriz. Esse cara aqui é para formatar a matriz de uma maneira mais bonitinha.
+
+401
+00:50:43.350 --> 00:50:49.550
+Luiz Maia: Vai ficar todo mundo organizado. Sabe aquela questão de
+
+402
+00:50:51.610 --> 00:50:53.490
+Luiz Maia: o que vocês vão ver. Agora.
+
+403
+00:50:54.080 --> 00:50:56.189
+Luiz Maia: Deixa eu botar isso aqui para funcionar.
+
+404
+00:50:57.040 --> 00:50:58.779
+Luiz Maia: Uma atriz, um aqui,
+
+405
+00:50:59.080 --> 00:51:10.669
+Luiz Maia: vocês verem esse código está lá no drive para vocês baixarem. Não tem problema nenhum. Vocês podem testar, brincar com ele. Não tem nenhum problema. É para ficar desse jeito aqui.
+
+406
+00:51:11.150 --> 00:51:16.770
+Luiz Maia: Um, dois, três. Um, dois, três, quatro, duzentos e trinta e quatro, cinco.
+
+407
+00:51:17.700 --> 00:51:20.500
+Luiz Maia: Assim. Olha só.
+
+408
+00:51:20.620 --> 00:51:26.729
+Luiz Maia: Eu vou fazer um intervalo e vou deixar isso aqui na tela para vocês.
+
+409
+00:51:26.930 --> 00:51:37.850
+Luiz Maia: Eu queria saber de vocês. Se vocês conseguem entender a lógica desse código, por quê
+
+410
+00:51:38.320 --> 00:51:45.490
+Luiz Maia: que ele construiu essa matriz desse jeito, somando I e J.
+
+411
+00:51:45.710 --> 00:51:53.270
+Luiz Maia: Se você não entender, você fala para mim pra eu poder explicar passo a passo para você pra entender.
+
+412
+00:51:53.810 --> 00:52:00.820
+Luiz Maia: Mas isso, gente é lógica de programação. Isso. Vocês já deveriam ter visto em Python, mas não tem problema
+
+413
+00:52:01.000 --> 00:52:06.020
+Luiz Maia: se não viu em Python, o Lp ensina intervalo.
+
+414
+00:52:06.310 --> 00:52:13.189
+Luiz Maia: Aguardo o retorno de vocês. Se não entendeu o resultado dessa matriz me fala,
+
+415
+00:57:25.230 --> 00:57:26.619
+Luiz Maia: estamos de volta.
+
+416
+00:57:50.240 --> 00:57:51.979
+Luiz Maia: É isso mesmo, gente.
+
+417
+00:57:52.900 --> 00:57:56.540
+Luiz Maia: O Júlio explicou muito bem. Ele primeiro
+
+418
+00:57:57.090 --> 00:58:04.170
+Luiz Maia: entra primeiro pegando a primeira linha, a linha zero
+
+419
+00:58:04.580 --> 00:58:08.809
+Luiz Maia: aí vai passando pelas colunas da
+
+420
+00:58:09.150 --> 00:58:15.709
+Luiz Maia: da primeira linha e repete o ciclo a cada uma das linhas. É isso que ele está fazendo.
+
+421
+00:58:16.310 --> 00:58:24.119
+Luiz Maia: Nada mais do que isso se você quiser usar o Debug Lucas. Ok,
+
+422
+00:58:24.620 --> 00:58:28.149
+Luiz Maia: eu acho que não precisa para esse caso.
+
+423
+00:58:40.140 --> 00:58:47.190
+Luiz Maia: Bom, se vocês não têm dúvida em relação a isso. Aqui a gente pode passar para o próximo exemplo.
+
+424
+00:58:49.560 --> 00:59:00.960
+Luiz Maia: Isso aqui que eu fiz foi exemplos de vetor e matrizes.
+
+425
+00:59:05.610 --> 00:59:12.849
+Luiz Maia: Eu não sei se eu passei por esse exemplo aqui, mas basicamente aqui. Eu estou definindo a matriz
+
+426
+00:59:13.170 --> 00:59:16.299
+Luiz Maia: em tempo de declaração da matriz,
+
+427
+00:59:17.530 --> 00:59:25.710
+Luiz Maia: uma matriz 3x4 três linhas e quatro colunas. Alguém tem alguma dúvida em relação a isso aqui?
+
+428
+00:59:27.880 --> 00:59:33.039
+Luiz Maia: Se tiver, fala comigo para eu poder ajudar a entender.
+
+429
+00:59:38.230 --> 00:59:40.329
+Luiz Maia: Vou rodar aqui para vocês verem.
+
+430
+00:59:48.240 --> 00:59:50.059
+Luiz Maia: A gente está somando.
+
+431
+00:59:51.340 --> 00:59:54.770
+Luiz Maia: Vamos ver aqui. Olha só,
+
+432
+00:59:58.590 --> 01:00:02.020
+Luiz Maia: ele está pegando.
+
+433
+01:00:02.130 --> 01:00:06.009
+Luiz Maia: Está imprimindo a matriz, só isso. Mais nada. Não está somando nada.
+
+434
+01:00:06.840 --> 01:00:09.860
+Luiz Maia: Está pegando a matriz e exibindo a matriz.
+
+435
+01:00:10.230 --> 01:00:20.319
+Luiz Maia: Esse cara aqui é basicamente para ficar formatado de um jeito bonitinho, mais nada
+
+436
+01:00:22.110 --> 01:00:26.709
+Luiz Maia: para ficar todo mundo com as colunas certinhas.
+
+437
+01:00:27.140 --> 01:00:30.400
+Luiz Maia: Senão se eu fizer. Assim,
+
+438
+01:00:46.570 --> 01:00:59.490
+Luiz Maia: como é que você sabe, se, em tempo de compilação, o tempo de execução matrizes são sempre resolvidas
+
+439
+01:00:59.610 --> 01:01:08.460
+Luiz Maia: em tempo de compilação. Listas são sempre resolvidas em tempo de execução,
+
+440
+01:01:12.290 --> 01:01:13.370
+Luiz Maia: sempre.
+
+441
+01:01:14.530 --> 01:01:19.209
+Luiz Maia: Eu não tenho aqui nenhum exemplo de lista. Vai aparecer.
+
+442
+01:01:20.370 --> 01:01:28.879
+Luiz Maia: Vai aparecer daqui a pouco para vocês? Não, hoje, na próxima aula amanhã. Eu vou mexer com lista com vocês.
+
+443
+01:01:29.210 --> 01:01:35.569
+Luiz Maia: Vou fazer um exemplo com vetor e com lista.
+
+444
+01:01:35.720 --> 01:01:41.429
+Luiz Maia: Aí você vai entender exatamente isso. Essa formatação aqui
+
+445
+01:01:42.260 --> 01:01:46.260
+Luiz Maia: é basicamente para não deixar ficar desse jeito aqui. Ó
+
+446
+01:01:50.670 --> 01:01:52.100
+Luiz Maia: bagunçado
+
+447
+01:02:01.440 --> 01:02:11.369
+Luiz Maia: é a ô Júlio, eu não vou afirmar isso para você? Porque eu não tenho. Certeza.
+
+448
+01:02:11.760 --> 01:02:14.310
+Luiz Maia: Eu posso pesquisar isso para você.
+
+449
+01:02:14.890 --> 01:02:19.729
+Luiz Maia: É, na minha opinião, sim.
+
+450
+01:02:21.230 --> 01:02:24.650
+Luiz Maia: Mas eu não tenho certeza absoluta disso,
+
+451
+01:02:26.710 --> 01:02:35.180
+Luiz Maia: eu teria que dar uma pesquisada para poder te afirmar isso com cem de acerto.
+
+452
+01:02:36.310 --> 01:02:42.519
+Luiz Maia: Eu nunca fiz essa pesquisa, mas a princípio, eu acho que sim.
+
+453
+01:02:42.970 --> 01:02:49.369
+Luiz Maia: Mas eu não posso te dizer que é cem correta
+
+454
+01:02:49.730 --> 01:02:53.469
+Luiz Maia: a tua afirmação. Eu acho que sim. Mas eu tenho que pesquisar.
+
+455
+01:02:55.250 --> 01:03:00.110
+Luiz Maia: Eu vou tentar descobrir isso para a próxima aula de amanhã.
+
+456
+01:03:02.960 --> 01:03:09.460
+Luiz Maia: Então vocês viram que aqui ele mostrou o a matriz toda bagunçada.
+
+457
+01:03:10.450 --> 01:03:13.600
+Luiz Maia: Se você botar desse jeito aqui
+
+458
+01:03:14.200 --> 01:03:17.449
+Luiz Maia: ela vai mostrar a matriz arrumadinha.
+
+459
+01:03:21.980 --> 01:03:26.220
+Luiz Maia: É basicamente a diferença de um comando para o outro.
+
+460
+01:03:26.730 --> 01:03:30.049
+Luiz Maia: Faz diferença, né? Fica mais arrumado.
+
+461
+01:03:32.020 --> 01:03:35.409
+Luiz Maia: É formatação isso aqui, gente. Isso aqui é
+
+462
+01:03:37.400 --> 01:03:44.950
+Luiz Maia: agora. Eu queria pegar essa parte final da aula para vocês e mostrar para vocês
+
+463
+01:03:45.640 --> 01:04:06.219
+Luiz Maia: como eu aprendi. Orientação, objeto é, na minha opinião, essa parte de matrizes e vetores deveriam vir antes
+
+464
+01:04:06.430 --> 01:04:14.100
+Luiz Maia: de Whatsapp, mas o plano de ensino é diferente.
+
+465
+01:04:14.210 --> 01:04:19.070
+Luiz Maia: Ele primeiro ensina a orientação. Objeto, depois vem para vetores e matrizes.
+
+466
+01:04:20.340 --> 01:04:31.910
+Luiz Maia: Mas eu queria mostrar para vocês. Um exemplo de um código que me ajudou muito a entender é
+
+467
+01:04:35.190 --> 01:04:36.969
+Luiz Maia: por que gente olha só.
+
+468
+01:04:37.620 --> 01:04:48.359
+Luiz Maia: Durante a década de oitenta e noventa, eu programava orientado a procedimentos e a estrutura de dados.
+
+469
+01:04:48.770 --> 01:04:54.450
+Luiz Maia: Eu não estava programando orientado a dados
+
+470
+01:04:57.980 --> 01:05:05.410
+Luiz Maia: a classes, então eu vou dar um exemplo para vocês. Um exemplo que para mim
+
+471
+01:05:05.680 --> 01:05:09.480
+Luiz Maia: foi muito importante para entender.
+
+472
+01:05:09.810 --> 01:05:16.279
+Luiz Maia: Eu sei que é meio tarde para isso. Eu sei disso. Mas é o que eu posso fazer.
+
+473
+01:05:17.290 --> 01:05:22.430
+Luiz Maia: Mostrar para vocês a diferença da programação,
+
+474
+01:05:22.720 --> 01:05:30.500
+Luiz Maia: que era feita na década de oitenta e noventa, para depois da orientação objeto.
+
+475
+01:05:33.790 --> 01:05:38.350
+Luiz Maia: E aí é um exemplo muito simples.
+
+476
+01:05:38.600 --> 01:05:44.860
+Luiz Maia: Não tem nada de muito complexo, mas me fez entender.
+
+477
+01:05:45.530 --> 01:05:54.399
+Luiz Maia: E eu acho que vai ajudar muito a vocês também tiverem esse interesse.
+
+478
+01:05:54.610 --> 01:05:57.320
+Luiz Maia: De abrir a cabeça de vocês.
+
+479
+01:05:57.610 --> 01:06:01.140
+Luiz Maia: Para entender como
+
+480
+01:06:02.330 --> 01:06:14.819
+Luiz Maia: a orientação objeto foi uma mudança de paradigma. Essa frase é muito forte, né? Mudança de paradigma. Mas foi.
+
+481
+01:06:14.980 --> 01:06:20.290
+Luiz Maia: Não tem como usar outra palavra.
+
+482
+01:06:21.090 --> 01:06:26.939
+Luiz Maia: Da maneira que eu pensava, para a maneira nova que eu tinha que pensar.
+
+483
+01:06:27.320 --> 01:06:29.530
+Luiz Maia: E isso foi um choque para mim.
+
+484
+01:06:31.950 --> 01:06:33.679
+Luiz Maia: Para vocês talvez não.
+
+485
+01:06:34.380 --> 01:06:41.120
+Luiz Maia: Vocês vão olhar esse exemplo que eu vou dar para vocês agora. E vocês vão achar que isso é banal
+
+486
+01:06:41.560 --> 01:06:48.570
+Luiz Maia: para mim, foi uma mudança de pensamento e esse exemplo,
+
+487
+01:06:48.740 --> 01:06:58.880
+Luiz Maia: ele me ajudou muito a entender a diferença da programação procedural
+
+488
+01:06:59.150 --> 01:07:04.209
+Luiz Maia: estruturada para a programação, orientando objeto.
+
+489
+01:07:05.370 --> 01:07:16.110
+Luiz Maia: Espero que isso, de alguma forma, ajude vocês a entenderem o processo que eu passei,
+
+490
+01:07:17.460 --> 01:07:22.830
+Luiz Maia: que provavelmente não é o processo que vocês estão passando, mas eu passei por isso.
+
+491
+01:07:26.380 --> 01:07:31.590
+Luiz Maia: Olha só, eu tenho um problema.
+
+492
+01:07:33.020 --> 01:07:42.090
+Luiz Maia: Eu quero calcular as médias dos alunos
+
+493
+01:07:44.150 --> 01:07:47.890
+Luiz Maia: com nome. Nota um, nota dois.
+
+494
+01:07:48.750 --> 01:07:54.300
+Luiz Maia: Eu quero saber se esse aluno está aprovado em prova final.
+
+495
+01:07:55.110 --> 01:08:05.770
+Luiz Maia: Se ele está acima da média ou não está, eu quero fazer um processamento. Eu botei aqui uma descrição
+
+496
+01:08:06.000 --> 01:08:11.769
+Luiz Maia: bem longa sobre o problema. É um problema bem simples.
+
+497
+01:08:12.040 --> 01:08:15.709
+Luiz Maia: Você vai processar alunos até encontrar o fim.
+
+498
+01:08:16.689 --> 01:08:29.919
+Luiz Maia: E você vai pegar as notas, calcular a média e dizer se ele está aprovado em prova final? E se ele tem uma nota maior do que a média da turma.
+
+499
+01:08:32.609 --> 01:08:40.910
+Luiz Maia: Esse código não está orientado ao objeto, apesar dele estar sendo chamado de P o O1
+
+500
+01:08:41.260 --> 01:08:50.500
+Luiz Maia: ele não está orientado ao objeto. Tá aqui, ó, era assim que eu programava.
+
+501
+01:08:51.310 --> 01:08:56.200
+Luiz Maia: É na década de oitenta noventa.
+
+502
+01:08:57.100 --> 01:09:01.460
+Luiz Maia: O que eu fazia, eu pensava, Bom,
+
+503
+01:09:01.740 --> 01:09:06.740
+Luiz Maia: eu tenho que armazenar os dados do aluno.
+
+504
+01:09:06.960 --> 01:09:10.009
+Luiz Maia: Então eu tenho aqui um
+
+505
+01:09:13.850 --> 01:09:15.609
+Luiz Maia: número de alunos.
+
+506
+01:09:15.880 --> 01:09:18.290
+Luiz Maia: E aqui eu tenho um número de notas
+
+507
+01:09:19.540 --> 01:09:22.859
+Luiz Maia: aqui. Eu tenho uma lista de alunos.
+
+508
+01:09:23.890 --> 01:09:31.590
+Luiz Maia: E aqui eu tenho uma lista de notas onde eu tenho três linhas
+
+509
+01:09:32.680 --> 01:09:36.070
+Luiz Maia: que são as notas e cinquenta colunas,
+
+510
+01:09:36.890 --> 01:09:44.510
+Luiz Maia: que na verdade são as notas de cada aluno.
+
+511
+01:09:45.149 --> 01:09:49.700
+Luiz Maia: Então eu tenho duas estruturas de dados diferentes.
+
+512
+01:09:49.810 --> 01:09:53.860
+Luiz Maia: Eu tenho os nomes e tem as notas.
+
+513
+01:09:54.310 --> 01:10:00.490
+Luiz Maia: O que liga o nome do aluno com a nota, o índice.
+
+514
+01:10:02.070 --> 01:10:06.780
+Luiz Maia: O Aluno um tem a nota um,
+
+515
+01:10:08.310 --> 01:10:14.810
+Luiz Maia: a nota dois e a nota três, a nota três. O que é? É a média do aluno.
+
+516
+01:10:16.100 --> 01:10:20.080
+Luiz Maia: Se você quiser que eu desenhe, eu desenho não tem nenhum problema.
+
+517
+01:10:20.300 --> 01:10:21.210
+Luiz Maia: Tá certo.
+
+518
+01:10:25.910 --> 01:10:32.070
+Luiz Maia: O que acontece aqui é o vetor.
+
+519
+01:10:32.170 --> 01:10:37.010
+Luiz Maia: Quando você cria um vetor ou uma matriz, ele tem um tamanho estático.
+
+520
+01:10:38.030 --> 01:10:44.929
+Luiz Maia: Porém você pode usar ou não todos aqueles elementos.
+
+521
+01:10:45.830 --> 01:10:51.869
+Luiz Maia: Então o vetor, a matriz tem um tamanho físico e um tamanho lógico.
+
+522
+01:10:52.240 --> 01:10:55.929
+Luiz Maia: O tamanho físico é o que está culpando na memória.
+
+523
+01:10:56.060 --> 01:11:02.580
+Luiz Maia: O tamanho lógico é que você está usando de forma real
+
+524
+01:11:02.710 --> 01:11:06.170
+Luiz Maia: naquela estrutura de dados. Por exemplo,
+
+525
+01:11:06.940 --> 01:11:18.359
+Luiz Maia: você tem um vetor de alunos de cinquenta posições, por exemplo, aqui. Ó, vou fazer aqui cinquenta alunos.
+
+526
+01:11:20.670 --> 01:11:22.969
+Luiz Maia: É o tamanho físico do vetor.
+
+527
+01:11:23.460 --> 01:11:26.690
+Luiz Maia: Mas eu posso não ter cinquenta alunos,
+
+528
+01:11:27.520 --> 01:11:31.219
+Luiz Maia: ou eu posso ter mais de cinquenta alunos.
+
+529
+01:11:32.100 --> 01:11:34.080
+Luiz Maia: Como é que eu lido com isso.
+
+530
+01:11:35.140 --> 01:11:37.080
+Luiz Maia: Esse é o tamanho físico.
+
+531
+01:11:37.560 --> 01:11:47.140
+Luiz Maia: O vetor não aumenta de tamanho durante a execução do programa. A não ser que você crie uma nova estrutura.
+
+532
+01:11:47.260 --> 01:11:52.019
+Luiz Maia: Copie os dados do vetor anterior para o vetor novo.
+
+533
+01:11:54.000 --> 01:12:04.749
+Luiz Maia: Então eu posso ter três alunos na turma. Dez, vinte, trinta, cinquenta sessenta. Eu tenho que é controlar isso.
+
+534
+01:12:06.550 --> 01:12:13.170
+Luiz Maia: Eu vou colocar três aqui para simplificar os testes,
+
+535
+01:12:13.380 --> 01:12:19.080
+Luiz Maia: porque eu não vou ficar digitando cinquenta alunos para saber se deu certo ou não.
+
+536
+01:12:20.000 --> 01:12:25.600
+Luiz Maia: Então, a nossa turma tem três alunos e tem três notas:
+
+537
+01:12:25.770 --> 01:12:32.990
+Luiz Maia: a nota um, a nota dois, e a média, que é a soma
+
+538
+01:12:33.170 --> 01:12:38.109
+Luiz Maia: da nota um com a nota dois, dividida por dois, que vai dar a média
+
+539
+01:12:40.930 --> 01:12:44.840
+Luiz Maia: essa matriz de números e notas.
+
+540
+01:12:44.980 --> 01:12:47.650
+Luiz Maia: Ela pode ser
+
+541
+01:12:47.940 --> 01:12:56.779
+Luiz Maia: número, notas, número de alunos, ou pode ser número de alunos e número de notas. Não tem nenhum problema.
+
+542
+01:12:57.140 --> 01:13:00.360
+Luiz Maia: Isso você vai definir. Mas percebam
+
+543
+01:13:01.120 --> 01:13:10.890
+Luiz Maia: que a solução desse problema está toda baseada na estrutura de dados toda.
+
+544
+01:13:11.430 --> 01:13:20.220
+Luiz Maia: Eu não estou preocupado com o nome do aluno. A nota do aluno. Eu quero armazenar isso em alguma coisa em algum lugar.
+
+545
+01:13:21.320 --> 01:13:24.619
+Luiz Maia: E aí eu uso vetores e matrizes para fazer isso.
+
+546
+01:13:26.810 --> 01:13:29.189
+Luiz Maia: Esse tamanho lógico aqui
+
+547
+01:13:29.840 --> 01:13:47.659
+Luiz Maia: é o tamanho que eu entrei de dados. Se eu entrei com dois alunos. Tamanho lógico, igual a dois. Se eu entrei com dez alunos, o tamanho lógico é igual a dez. É o tamanho dos dados que eu entrei. Então eu posso ter um vetor de mil posições
+
+548
+01:13:47.660 --> 01:13:56.520
+Luiz Maia: com dez posições ocupadas. O resto está todo livre.
+
+549
+01:13:57.350 --> 01:14:00.709
+Luiz Maia: Vetor não é dinâmico. É listático.
+
+550
+01:14:09.110 --> 01:14:11.139
+Luiz Maia: Aqui eu tenho um. Ler alunos.
+
+551
+01:14:13.920 --> 01:14:14.920
+Luiz Maia: Tá certo.
+
+552
+01:14:15.870 --> 01:14:17.420
+Luiz Maia: Ler alunos.
+
+553
+01:14:19.050 --> 01:14:20.390
+Luiz Maia: O que ele faz,
+
+554
+01:14:20.900 --> 01:14:28.970
+Luiz Maia: o enunciado do problema. Fala ler alunos até encontrar o nome do aluno igual a fim.
+
+555
+01:14:29.080 --> 01:14:32.669
+Luiz Maia: Está aqui o anunciado no início, beleza,
+
+556
+01:14:33.620 --> 01:14:41.060
+Luiz Maia: se o nome do aluno for igual a fim ele para e retorna o contador.
+
+557
+01:14:41.750 --> 01:14:44.720
+Luiz Maia: Caso contrário, ele pega.
+
+558
+01:14:47.520 --> 01:14:48.200
+Luiz Maia: E aí
+
+559
+01:14:51.520 --> 01:14:55.380
+Luiz Maia: peraí. Deixa eu lembrar o que eu fiz aqui. Nome:
+
+560
+01:14:58.480 --> 01:15:01.120
+Luiz Maia: o contador tá com zero.
+
+561
+01:15:01.650 --> 01:15:07.750
+Luiz Maia: Ele está botando o primeiro nome na posição zero do vetor de nomes.
+
+562
+01:15:10.110 --> 01:15:16.829
+Luiz Maia: Meu nome, cara, tá errado. Isso aqui não, não tá certo
+
+563
+01:15:16.940 --> 01:15:21.059
+Luiz Maia: ler nome. Ele lê o nome aqui.
+
+564
+01:15:21.340 --> 01:15:31.069
+Luiz Maia: Pegou o nome, colocou na posição zero. Pegou a nota um, colocou na posição zero da matriz de notas.
+
+565
+01:15:31.480 --> 01:15:35.330
+Luiz Maia: Se você não entender, eu desenho. Não tem nenhum problema.
+
+566
+01:15:37.900 --> 01:15:49.250
+Luiz Maia: Depois ele pega a nota dois, coloca na posição um de notas. Conte incremento o contador
+
+567
+01:15:49.710 --> 01:15:54.249
+Luiz Maia: e verifica se o contador estourou o tamanho do vetor.
+
+568
+01:15:57.720 --> 01:16:04.900
+Luiz Maia: Eu não posso colocar mais alunos do que cinquenta, senão vai dar exceção no código.
+
+569
+01:16:05.430 --> 01:16:17.990
+Luiz Maia: Então, se eu alcancei cinquenta no caso aqui, eu botei três alunos para facilitar o Debug.
+
+570
+01:16:18.670 --> 01:16:22.800
+Luiz Maia: Então ele vai botar três alunos no máximo aqui dentro.
+
+571
+01:16:22.980 --> 01:16:27.779
+Luiz Maia: Então eu tenho um vetor de nomes e uma matriz de notas
+
+572
+01:16:29.570 --> 01:16:35.329
+Luiz Maia: aqui. Eu tenho o ler. Nome que é esse cara aqui? Ler nota
+
+573
+01:16:35.910 --> 01:16:39.350
+Luiz Maia: isso aqui está invertido, né? É, está invertido.
+
+574
+01:16:39.670 --> 01:16:46.120
+Luiz Maia: Deixa eu trocar isso aqui pra ficar mais organizado.
+
+575
+01:16:48.290 --> 01:16:50.010
+Luiz Maia: Ler nome.
+
+576
+01:16:50.260 --> 01:16:52.100
+Luiz Maia: Lê a nota.
+
+577
+01:16:58.720 --> 01:17:07.620
+Luiz Maia: Ele leu o nome do aluno. Podia fazer alguma regra de negócio aqui. O nome tem que ter mais dois caracteres. Ok, esquece isso.
+
+578
+01:17:08.050 --> 01:17:17.569
+Luiz Maia: Leu o nome é diferente de fim. Colocou o nome dentro do vetor de nomes. Pegou as notas, colocou dentro da Matriz
+
+579
+01:17:18.410 --> 01:17:29.740
+Luiz Maia: de notas. A matriz é uma atriz. Olha só. É uma matriz três por cinquenta, tá certo?
+
+580
+01:17:30.980 --> 01:17:34.450
+Luiz Maia: Nesse caso, aqui vai ser uma matriz 3x3
+
+581
+01:17:34.660 --> 01:17:40.569
+Luiz Maia: porque eu mudei aqui como uma constante. Se você não entender, eu desenho
+
+582
+01:17:40.730 --> 01:17:58.520
+Luiz Maia: e desenhar não é um problema para mim. Quer dizer, é um problema, mas eu consigo. Leu o nome, leu a nota? Pode minimizar esse cara aqui. Deixa eu pegar aqui. Puff puff
+
+583
+01:18:00.810 --> 01:18:02.510
+Luiz Maia: calcular média.
+
+584
+01:18:02.750 --> 01:18:06.480
+Luiz Maia: Ele vai pegar a nota do aluno
+
+585
+01:18:06.670 --> 01:18:09.920
+Luiz Maia: de todos os alunos na matriz de notas.
+
+586
+01:18:10.120 --> 01:18:17.299
+Luiz Maia: Vai pegar a posição zero. A posição um e vai jogar na posição dois,
+
+587
+01:18:18.180 --> 01:18:21.799
+Luiz Maia: ou seja, a nota um está na posição zero.
+
+588
+01:18:22.030 --> 01:18:28.130
+Luiz Maia: A nota dois está na posição um. A média vai ficar onde? Na posição dois.
+
+589
+01:18:29.170 --> 01:18:33.310
+Luiz Maia: Se quiser. Eu desenho isso para vocês. Não tem nenhum problema.
+
+590
+01:18:33.930 --> 01:18:36.620
+Luiz Maia: Aí ele vem. Mostra as médias.
+
+591
+01:18:39.210 --> 01:18:44.660
+Luiz Maia: Ele calcula a média da turma. Ou seja, ele preenche
+
+592
+01:18:47.010 --> 01:18:51.220
+Luiz Maia: aquela posição dois, que é a média do aluno
+
+593
+01:18:54.290 --> 01:19:01.500
+Luiz Maia: e verifica a aprovação do aluno. Se a nota for maior que a aprovação,
+
+594
+01:19:01.700 --> 01:19:04.380
+Luiz Maia: ele passa. A aprovação é uma constante.
+
+595
+01:19:04.850 --> 01:19:08.410
+Luiz Maia: Cadê ela tá aqui em cima.
+
+596
+01:19:11.220 --> 01:19:15.460
+Luiz Maia: Repara que ela está fora dos métodos. Já está dentro da classe.
+
+597
+01:19:16.080 --> 01:19:18.070
+Luiz Maia: Ela vale para todo mundo.
+
+598
+01:19:19.140 --> 01:19:23.340
+Luiz Maia: É um outro ponto importante nesse exemplo, aqui,
+
+599
+01:19:24.760 --> 01:19:29.790
+Luiz Maia: aí, ele mostra quem passou, quem não passou, ou seja, quem tem prova final.
+
+600
+01:19:30.150 --> 01:19:36.190
+Luiz Maia: Depois ele mostra aos alunos que têm nota acima da média.
+
+601
+01:19:37.000 --> 01:19:38.060
+Luiz Maia: Tá certo.
+
+602
+01:19:39.520 --> 01:19:48.349
+Luiz Maia: É tudo baseado na estrutura de dados, ou seja, no vetor de nomes e na matriz de notas.
+
+603
+01:19:48.530 --> 01:19:54.530
+Luiz Maia: Repara que eu não tenho nada associado a aluno.
+
+604
+01:19:54.670 --> 01:19:58.670
+Luiz Maia: Não existe nada ligado ao aluno.
+
+605
+01:19:59.280 --> 01:20:12.760
+Luiz Maia: Os dados estão perdidos, distribuídos dentro da estrutura didática, ou seja, o meu foco aqui, quando eu programava,
+
+606
+01:20:13.590 --> 01:20:24.830
+Luiz Maia: e aí, para vocês verem a dificuldade, para mim, de sair de um mundo totalmente voltado
+
+607
+01:20:24.990 --> 01:20:34.439
+Luiz Maia: para a estrutura de dados e comandos que trabalham com essas estruturas para a orientação. Objeto
+
+608
+01:20:35.870 --> 01:20:39.480
+Luiz Maia: aqui não tem nada de orientação. Objeto nada. Zero.
+
+609
+01:20:41.140 --> 01:20:45.450
+Luiz Maia: Vamos ver rodar. Scott, vamos ver aqui.
+
+610
+01:20:46.610 --> 01:20:50.940
+Luiz Maia: Vamos pegar esse código aqui. Vamos rodar para vocês verem.
+
+611
+01:20:51.280 --> 01:20:54.420
+Luiz Maia: Se você não tiver tempo de
+
+612
+01:20:55.420 --> 01:21:02.939
+Luiz Maia: de estudar o código. Agora você fala comigo amanhã. Amanhã eu vou estar aqui de novo com vocês.
+
+613
+01:21:06.770 --> 01:21:22.650
+Luiz Maia: Lp cinco, quatro Fm seis e sete.
+
+614
+01:21:22.760 --> 01:21:30.969
+Luiz Maia: Se eu botar mais um aluno, ele vai parar de entrar. Aluno: porque você chegou no limite máximo do vetor.
+
+615
+01:21:31.800 --> 01:21:36.080
+Luiz Maia: Então aqui, por exemplo, cinco, seis.
+
+616
+01:21:37.320 --> 01:21:40.570
+Luiz Maia: Eu acabei botando o nome do aluno de cinco.
+
+617
+01:21:41.260 --> 01:21:46.839
+Luiz Maia: Ok, aí vem número máximo de alunos alcançados.
+
+618
+01:21:47.090 --> 01:21:55.110
+Luiz Maia: Ele mostra a média dos alunos. Mostra a média da turma. Mostra quem está em prova final
+
+619
+01:21:55.300 --> 01:22:02.509
+Luiz Maia: e quem está aprovado e mostra os alunos que estão acima da média.
+
+620
+01:22:03.300 --> 01:22:04.590
+Luiz Maia: Isso aqui tá errado.
+
+621
+01:22:07.130 --> 01:22:08.330
+Luiz Maia: Isso aqui está errado.
+
+622
+01:22:12.180 --> 01:22:16.889
+Luiz Maia: Cinco,cinco não é acima da média.
+
+623
+01:22:17.060 --> 01:22:19.030
+Luiz Maia: Tem alguma coisa errada aqui.
+
+624
+01:22:19.420 --> 01:22:23.729
+Luiz Maia: Ok, amanhã eu vou pensar e resolver isso.
+
+625
+01:22:23.870 --> 01:22:26.420
+Luiz Maia: Eu acho que tem uma coisa errada aqui.
+
+626
+01:22:31.280 --> 01:22:34.340
+Luiz Maia: Deixa eu ver aqui o que eu botei a média. Seis,
+
+627
+01:22:34.700 --> 01:22:39.649
+Luiz Maia: cinco,cinco, não é a média. Está alguma coisa errada aqui dentro?
+
+628
+01:22:43.630 --> 01:22:45.670
+Luiz Maia: Tem alguma coisa errada aqui?
+
+629
+01:22:56.590 --> 01:23:06.310
+Luiz Maia: Nomes, notas médias, da turma tem alguma coisa errada, gente, não sei o que é.
+
+630
+01:23:07.040 --> 01:23:09.680
+Luiz Maia: Não vou perder tempo com isso.
+
+631
+01:23:10.900 --> 01:23:13.570
+Luiz Maia: O que eu quero mostrar para vocês
+
+632
+01:23:14.080 --> 01:23:18.290
+Luiz Maia: amanhã. Eu resolvo isso. Fica tranquilo amanhã. Eu trago a solução.
+
+633
+01:23:18.620 --> 01:23:22.529
+Luiz Maia: Eu quero mostrar para vocês a mudança de paradigma
+
+634
+01:23:23.170 --> 01:23:30.680
+Luiz Maia: de você sair de uma programação estruturada e modular e entrar em orientação. Objeto: olha só a diferença.
+
+635
+01:23:33.920 --> 01:23:44.119
+Luiz Maia: Aluno aluno tem nome? Nota um, nota dois: o calcular média é feito em tempo de execução.
+
+636
+01:23:45.860 --> 01:23:49.009
+Luiz Maia: Olha só a diferença do programa.
+
+637
+01:23:55.060 --> 01:23:56.570
+Luiz Maia: A mesma coisa.
+
+638
+01:23:57.380 --> 01:23:59.049
+Luiz Maia: É tudo com vetor.
+
+639
+01:23:59.250 --> 01:24:02.110
+Luiz Maia: Não tem nenhum problema de usar a viatura aqui, não
+
+640
+01:24:04.440 --> 01:24:08.430
+Luiz Maia: ler alunos. Ele vai lendo aluno até chegar no fim.
+
+641
+01:24:08.700 --> 01:24:14.800
+Luiz Maia: Vai pegando o aluno criando objetos da classe aluno jogando para dentro do vetor.
+
+642
+01:24:16.010 --> 01:24:20.150
+Luiz Maia: Aqui tem, mulher. Nota, beleza.
+
+643
+01:24:20.990 --> 01:24:28.089
+Luiz Maia: Deixa eu pagar. Deixa eu economizar esse código aqui. Mostrar as médias dos alunos.
+
+644
+01:24:28.320 --> 01:24:32.610
+Luiz Maia: Calcular a média da turma. Verificar a aprovação
+
+645
+01:24:32.940 --> 01:24:37.540
+Luiz Maia: é completamente diferente do código que a gente fez antes.
+
+646
+01:24:38.360 --> 01:24:41.180
+Luiz Maia: O foco aqui é no aluno
+
+647
+01:24:41.470 --> 01:24:50.280
+Luiz Maia: e não na estrutura de dados. Reparem aqui. Eu tenho uma estrutura de dados. Que é alunos
+
+648
+01:24:50.870 --> 01:24:58.860
+Luiz Maia: dizendo Quantos alunos eu tenho? Eu não tenho nome. Eu não tenho notas. Eu não tenho médias.
+
+649
+01:25:01.890 --> 01:25:06.320
+Luiz Maia: Ou seja, o foco saiu
+
+650
+01:25:06.540 --> 01:25:21.840
+Luiz Maia: da estrutura de dados. Aí eu botei esse comentário aqui para vocês verem. O foco saiu da estrutura de dados e dos comandos que manipulam essas estruturas de dados. Para o quê? Para os dados.
+
+651
+01:25:22.420 --> 01:25:25.820
+Luiz Maia: Então eu tenho um vetor de alunos. Tá certo.
+
+652
+01:25:26.310 --> 01:25:32.760
+Luiz Maia: Aonde eu pego os dados do aluno e coloco num vetor de alunos.
+
+653
+01:25:34.270 --> 01:25:38.549
+Luiz Maia: Aqui eu estou retornando o tamanho desse vetor.
+
+654
+01:25:41.250 --> 01:25:49.499
+Luiz Maia: Estou pegando as médias e exibindo as médias dos alunos. Depois eu calculo a média da turma.
+
+655
+01:25:49.810 --> 01:25:52.209
+Luiz Maia: Depois eu verifico a aprovação.
+
+656
+01:25:52.330 --> 01:25:55.110
+Luiz Maia: Repara que é tudo muito mais simples.
+
+657
+01:25:57.430 --> 01:25:59.820
+Luiz Maia: Eu acho que aqui não, não, posso
+
+658
+01:26:01.420 --> 01:26:04.179
+Luiz Maia: olha só. Olha a diferença do código.
+
+659
+01:26:04.520 --> 01:26:11.559
+Luiz Maia: Vamos rodar esse cara aqui para vocês verem a diferença de foco.
+
+660
+01:26:13.280 --> 01:26:26.650
+Luiz Maia: Então eu tenho o aluno. Lp nota um três, quatro, Fm seis e sete.
+
+661
+01:26:27.930 --> 01:26:34.420
+Luiz Maia: É Ml oito e nove.
+
+662
+01:26:34.540 --> 01:26:45.370
+Luiz Maia: Ele chegou no máximo do tamanho do vetor. O vetor tem no máximo três alunos. Aí ele mostra as notas dos alunos. Mostra a média.
+
+663
+01:26:45.710 --> 01:26:53.829
+Luiz Maia: Mostra quem está aprovado. Quem está em prova final? E os alunos que têm uma nota maior, igual a média.
+
+664
+01:26:55.930 --> 01:27:10.210
+Luiz Maia: Ou seja, eu estou tentando mostrar para vocês algo que eu passei, que é essa programação
+
+665
+01:27:11.270 --> 01:27:15.699
+Luiz Maia: totalmente orientada a estrutura de dados
+
+666
+01:27:16.770 --> 01:27:28.109
+Luiz Maia: e comandos que manipulam essas estruturas para uma outra programação, uma programação orientada a dados, ou seja, o aluno.
+
+667
+01:27:29.260 --> 01:27:35.220
+Luiz Maia: Isso é uma virada para mim. Foi assim absurda, é,
+
+668
+01:27:37.070 --> 01:27:40.939
+Luiz Maia: vocês estão tentando entender o erro que aconteceu antes, né?
+
+669
+01:27:41.770 --> 01:27:46.710
+Luiz Maia: Esse erro aqui, né? Vocês estão mais preocupados em entender o que aconteceu de errado aqui.
+
+670
+01:27:47.810 --> 01:27:49.409
+Luiz Maia: Deixa eu ver.
+
+671
+01:27:50.000 --> 01:27:53.620
+Luiz Maia: Mostrar médias, calcular médias da turma.
+
+672
+01:27:58.430 --> 01:28:03.250
+Luiz Maia: Vocês querem descobrir o problema, né?
+
+673
+01:28:03.640 --> 01:28:06.439
+Luiz Maia: Vocês são igual a mim, cara. Eu também sou assim.
+
+674
+01:28:07.060 --> 01:28:20.259
+Luiz Maia: Eu só fico lp quatro, cinco, Fm seis e sete.
+
+675
+01:28:20.690 --> 01:28:23.389
+Luiz Maia: Se eu botar fim aqui, ele termina
+
+676
+01:28:23.870 --> 01:28:30.999
+Luiz Maia: aí. Ele dá aqui quatro,cinco média aprovado alunos. Com nota final igual a média
+
+677
+01:28:31.270 --> 01:28:35.330
+Luiz Maia: aqui deu certo. Não sei o que deu errado antes.
+
+678
+01:28:38.150 --> 01:28:42.480
+Luiz Maia: Eu não me lembro exatamente o que eu entrei de dados.
+
+679
+01:28:44.910 --> 01:28:47.549
+Luiz Maia: Será que eu errei?
+
+680
+01:28:55.490 --> 01:29:01.750
+Luiz Maia: Mateus, senhor, está no céu, cara. Pelo amor de Deus, aonde que está isso?
+
+681
+01:29:03.990 --> 01:29:08.510
+Luiz Maia: Aonde que tá isso? Me fala aí, cara, pra eu poder tentar resolver isso agora.
+
+682
+01:29:10.250 --> 01:29:25.849
+Jorge José Luiz Santos da Silva: Ô professor. Então eu acho que, na verdade, o que aconteceu é que, pelo menos na frase que o senhor deixa o aluno que passa é aquele que tem uma média igual. Acho que a média final, certo? Ou ele tem que ser maior ou igual à média final.
+
+683
+01:29:25.850 --> 01:29:26.200
+Luiz Maia: Com os três.
+
+684
+01:29:26.200 --> 01:29:35.239
+Jorge José Luiz Santos da Silva: Valores que o senhor tinha dado tinha passado. Perdão, senhor. Desculpa, não, mas os três valores que o senhor que você tinha passado.
+
+685
+01:29:35.400 --> 01:29:39.900
+Jorge José Luiz Santos da Silva: Tinha dado cinco,cinco ou cinco,cinco. Então o aluno passou.
+
+686
+01:29:40.250 --> 01:29:41.979
+Jorge José Luiz Santos da Silva: Acho que foi isso, mais ou menos.
+
+687
+01:29:43.010 --> 01:29:46.130
+Luiz Maia: Será mais cinco.cinco, não é seis.
+
+688
+01:29:47.960 --> 01:29:49.630
+Jorge José Luiz Santos da Silva: É porque tem o ou né.
+
+689
+01:29:51.550 --> 01:29:59.480
+Luiz Maia: Deixa eu ver. Aqui. Lp cinco seis.
+
+690
+01:30:04.080 --> 01:30:05.840
+Luiz Maia: É, tá errado. Isso.
+
+691
+01:30:09.320 --> 01:30:13.349
+Jorge José Luiz Santos da Silva: Aí. Acho que foi aí que estava o problema que ele tem. Seo igual a média.
+
+692
+01:30:14.760 --> 01:30:16.469
+Luiz Maia: Aonde que está isso, gente?
+
+693
+01:30:19.940 --> 01:30:21.930
+lucas.ssantos: Na cento e vinte e dois.
+
+694
+01:30:23.160 --> 01:30:27.039
+lucas.ssantos: Acho que ali, ao invés de média da turma, devia ser a aprovação ou não.
+
+695
+01:30:34.460 --> 01:30:35.970
+Luiz Maia: Pronto, achou?
+
+696
+01:30:38.210 --> 01:30:39.460
+Luiz Maia: É isso mesmo.
+
+697
+01:30:48.330 --> 01:30:49.410
+Luiz Maia: Estava errado,
+
+698
+01:30:54.080 --> 01:30:55.170
+Luiz Maia: logo errado.
+
+699
+01:30:55.410 --> 01:31:01.729
+Luiz Maia: Olha, esse código. Passou vários anos rodando.
+
+700
+01:31:02.480 --> 01:31:05.069
+Luiz Maia: Eu nunca tinha visto esse erro.
+
+701
+01:31:06.400 --> 01:31:07.530
+Luiz Maia: Nunca.
+
+702
+01:31:09.320 --> 01:31:12.449
+Luiz Maia: Eu nunca tinha visto. Obrigado vocês aí pela
+
+703
+01:31:13.190 --> 01:31:16.710
+Luiz Maia: pela ajuda. Vou pegar esse código.
+
+704
+01:31:18.400 --> 01:31:21.290
+Luiz Maia: Vou colocar lá no drive para vocês.
+
+705
+01:31:25.450 --> 01:31:35.729
+Luiz Maia: Realmente esse aí. Isso aí passou durante muito tempo sem eu ter visto esse erro
+
+706
+01:31:36.800 --> 01:31:39.770
+Luiz Maia: pra você ver como é. Que programação é ingrato, né, cara?
+
+707
+01:31:41.350 --> 01:31:47.240
+Luiz Maia: Você passa durante anos fazendo a mesma coisa. E você não consegue ver o erro.
+
+708
+01:31:51.200 --> 01:31:59.950
+Luiz Maia: Bom, dez horas terminamos vetores e matrizes. Se amanhã você tiver alguma dúvida
+
+709
+01:32:00.050 --> 01:32:07.089
+Luiz Maia: para tirar, amanhã é o dia. Amanhã eu encerro a matéria usando arquivos.
+
+710
+01:32:07.730 --> 01:32:09.090
+Luiz Maia: Quem quiser.
+
+711
+01:32:10.270 --> 01:32:12.360
+Luiz Maia: Eu sei que ninguém vai fazer isso.
+
+712
+01:32:14.860 --> 01:32:17.310
+Luiz Maia: A matéria está aqui.
+
+713
+01:32:19.340 --> 01:32:20.480
+Luiz Maia: Já arquivo.
+
+714
+01:32:20.850 --> 01:32:30.680
+Luiz Maia: Se você quiser baixar esse código, estudar esse código antes, eu recomendo. Mas você sabe como é que é, né?
+
+715
+01:32:31.490 --> 01:32:34.010
+Luiz Maia: Cada um tem seu time para fazer isso.
+
+716
+01:32:44.300 --> 01:32:46.659
+Luiz Maia: Amanhã termina a matéria, gente.
+
+717
+01:32:46.810 --> 01:32:50.820
+Luiz Maia: E aí é a entrega. Dos os hotéis.
+
+718
+01:32:51.600 --> 01:32:58.959
+Luiz Maia: Se tiver dúvida no ater, você pode vir aqui e perguntar. Não tem nenhum problema. Não, eu respondo. Não tem nenhum problema.
+
+719
+01:32:59.820 --> 01:33:04.589
+Luiz Maia: Mas eu acho que vocês estão muito preparados para esse aterro. Muito mais,
+
+720
+01:33:05.030 --> 01:33:11.250
+Luiz Maia: na minha opinião, o que eu ensinei para vocês é muito além do ater. Muito além.
+
+721
+01:33:12.440 --> 01:33:17.490
+Luiz Maia: Eu acho que vocês vão tirar esse ate assim fácil.
+
+722
+01:33:18.990 --> 01:33:27.610
+Luiz Maia: Uma boa semana. Uma boa noite para vocês. Tudo de bom. Foi uma delícia essa aula. Um grande abraço a todos.
+
+723
+01:33:28.260 --> 01:33:29.340
+Luiz Maia: Tchau, tchau.
+
+724
+01:33:30.230 --> 01:33:31.689
+Jorge José Luiz Santos da Silva: Alô, Professor. Boa noite.
+
+725
+01:33:32.120 --> 01:33:33.380
+Luiz Maia: Valeu!
+

@@ -1,0 +1,523 @@
+Orlando Fonseca: Boa noite, pessoal.
+Orlando Fonseca: Tá certo, começar nossa aula. Projeto de bloco aquiemg
+Orlando Fonseca: e já a gente está na aula. Número doze.
+Orlando Fonseca: E aí?
+Orlando Fonseca: Então vamos lá, meu querido. Boa noite.
+Orlando Fonseca: Estou abrindo aqui para compartilhar a tela com vocês.
+Orlando Fonseca: Bom, pessoal, hoje nossa aula é
+Orlando Fonseca: referente ao dicionário de dados e diagrama de classes Tchau.
+Orlando Fonseca: O que é o dicionário de dados, mesmo tendo falado algo das anteriores que você precisa
+Orlando Fonseca: documentar no sentido de estruturar, de deixar claro que as palavras chaves que fazem parte do nosso projeto da linguagem do nosso projeto.
+Orlando Fonseca: Agora, nessa aula, eu vou definir o que seria um dicionário de dados. Veja que eu estou definindo ele como sendo um artefacto, onde vamos ter uma descrição
+Orlando Fonseca: com prescrição dessas palavras. Significado o que é?
+Orlando Fonseca: Vejam que ele seria uma representação ali, semântica do sistema, no sentido que a linguagem,
+Orlando Fonseca: a palavra que a gente coloca ali tem que ser limpa, o que é ser limpas, que ela seja bem representativa do nosso projeto. Está ilegível.
+Orlando Fonseca: Então a construção de um dicionário de dados precisa equilibrar em dois objetivos. Primeiro, ele tem que ser preciso tecnicamente e legibilidade, o que é de ser precisão técnica.
+Orlando Fonseca: O dicionário de dados deve ser suficientemente rigoroso para permitir que analistas, movidores arquitetos compreendem exatamente o quê?
+Orlando Fonseca: Quais são os dados que temos um problema? Quais são os formatos de dados permitidos ali? Quais são os valores válidos ou inválidos. E as restrições ali na regra de negócio. Ok, é lembrado. A gente quer
+Orlando Fonseca: a gente quer com esse dicionário de dados, descrever com precisão o significado, restrição de cada elemento, palavra, cada entidade que a gente colocar ali nesse dicionário de dados.
+Orlando Fonseca: Então ele tem que ser bem legível, bem limpo, prático, intensivo. Todo mundo vai entender o que está ali.
+Orlando Fonseca: O que é disso é isso. Eu não tenho uma interpretação divergente na hora de implementar na hora de fazer o teste de fazer uma manutenção no sistema e legibilidade
+Orlando Fonseca: deve ser compreensível para usuários do negócio demais. Stakeholders. Todo mundo que está envolvido nesse movimento do projeto,
+Orlando Fonseca: a ele tem que entender o dicionário de dados. As definições têm que ser claras, objetivas. Uma linguagem acessível.
+Orlando Fonseca: Ok, ele também entra na abordagem colaborativa. Por quê?
+Orlando Fonseca: Interativa também
+Orlando Fonseca: no sentido que temos que discutir. Temos que validar e refinar o que estamos colocando no dicionário de dados,
+Orlando Fonseca: hã?
+Orlando Fonseca: Anotação, concatenação. Esse é, mais, ele indica a possessão de elementos.
+Orlando Fonseca: A repetição aqui representada por chaves vai indicar que um elemento pode ocorrer várias vezes.
+Orlando Fonseca: Opcionalidade parêntese indica que um elemento opcional, seleção alternativa tem um representar aqui por esse indicador.
+Orlando Fonseca: Por esse elemento. Aqui entre Kochen,
+Orlando Fonseca: são umas escolhas possíveis entre alternativas.
+Orlando Fonseca: E algum comentário que você queira colocar aparecendo numa manchinha itálica, hã?
+Orlando Fonseca: Tudo bem, vamos então tentar pensar isso no nosso projeto de bicicleta, sistema de aluguel de bicicleta. O conjunto de graça que representa os conceitos centrais do domínio do sistema seriam o quê?
+Orlando Fonseca: Aluguel, bicicleta, cliente e usuário. Essa classe de aluguel. Aqui vamos discutir no final, porque eu estou colocando como sendo um conceito, uma classe, representativa Ali. Do nosso negócio de bicicleta no sistema Wils. Bicicleta, o ativo, o cliente e o indivíduo
+Orlando Fonseca: que tem tenha a
+Orlando Fonseca: a função ali de fazer o aluguel desse ativo. Nesse caso da bicicleta. E o usuário é aquele indivíduo que está cadastral no sistema com um perfil, conhecer o gerente da loja. O atendente
+Orlando Fonseca: tá,
+Orlando Fonseca: então, o aluguel é empréstimo de uma bicicleta para o cliente. Por que foi preciso separar isso em uma classe aluguel.
+Orlando Fonseca: Vou analisar isso também nessa aula.
+Orlando Fonseca: Uma vez que temos para esse sistema, temos um conjunto de classes para que for, temos um conjunto de classes bem identificados.
+Orlando Fonseca: Essa classe. Vocês sabem que era. Foram de forma arbitrária.
+Orlando Fonseca: Elas emergem diretamente da linguagem utilizada pelo negócio. Vocês entendem essa sentença aqui,
+Orlando Fonseca: realmente diretamente da linguagem. Por quê? Porque tem uma narrativa no momento que olhamos o escopo do projeto que fazemos. A análise a partir dali. Temos duas técnica para identificar quais seriam essas possíveis classes candidatas,
+Orlando Fonseca: certo?
+Orlando Fonseca: Bom dar se comportamentos relacionados devem coercit na mesma classe.
+Orlando Fonseca: Ok, então
+Orlando Fonseca: vamos para a nossa entidade principal, a bicicleta. Ele vai concentrar regras relacionadas ao bem físico e ao depósito.
+Orlando Fonseca: O cliente vai representar o Adock contrata o serviço, o usuário, o ator interno que opera o sistema e o aluguel é que tem aquelas regras contratuais e financeiras.
+Orlando Fonseca: É um
+Orlando Fonseca: então, tá bom. Vamos deixar assim por enquanto. Mas podemos ter alguma outra classe. Por exemplo, a classe de pagamento.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: Então agora vamos pensar no dicionário de dados, na Sinntese, que eu falei para vocês aqui anteriormente,
+Orlando Fonseca: concatenarmos elementos. Quando repetimos opcionalidade, o ar condicional.
+Orlando Fonseca: Então, dado que temos uma definição dessas classes,
+Orlando Fonseca: o aluguel vai concentrar toda essa regra. Contrato financeira. Enfim, um que contrata o serviço, o cliente, a bicicleta. Veja como seria a classe de aluguel
+Orlando Fonseca: aqui já estou falando do dicionário de dados na hora de você definir um dicionário de dados. Você começa assim: classe aluguel.
+Orlando Fonseca: O que tem nessa classe? Aluguel, contrato de empréstimo de uma ou mais bicicletas da loja para um cliente cadastrar
+Orlando Fonseca: por um número determinado de diárias. Veja que nessa primeira sentença ou explicação de que vai ser classe de Deus. Ele já está colocando implicitamente alguns relacionamentos.
+Orlando Fonseca: Porque você que essa classe Nbr, ela tem relação com quem? Com bicicleta e cliente.
+Orlando Fonseca: E eu.
+Orlando Fonseca: Tem alguns atributos de interesse, por exemplo, número de áreas.
+Orlando Fonseca: Tá,
+Orlando Fonseca: então vamos lá aluguel. O que vai ter essa classe? Cliente mais bicicleta. Esse mais bem, porque vem da sintaxe ali do dicionário de dados? Ela está fazendo uma concatenação de elementos, clientes, mais bicicleta, mais número de área, mais data de retivação
+Orlando Fonseca: tá atributos ou seriam os atributos a zele
+Orlando Fonseca: cliente. O dicionário de dados não vem para. Não temos que definir a lei. Vou votar aqui atrás para lembrar
+Orlando Fonseca: aqui quais formatos são permitidos, quais valores são permitidos, quais restrições? A gente aplica cada elemento. Agora, vamos votar aqui na aplicação. O cliente. Qual seria o tipo do cliente
+Orlando Fonseca: é dessa classe aqui. Cliente, atributo a bicicleta. É desse tipo bicicleta. O número de diárias é um inteiro. E o que quer dizer que é a quantidade de dias do contrato
+Orlando Fonseca: e a data de ativação realmente é uma data.
+Orlando Fonseca: Ok, eu coloquei que data, eu ia ter que colocar o Dt. Efetivação, mas você pode colocar o nome você queira, mas sempre especificar no tipo ali para ser bonito.
+Orlando Fonseca: Tá, ok, então, seguidamente colocamos as responsabilidades dessa classe. Informar o valor total do contrato, gerar recibo do contrato,
+Orlando Fonseca: calcular o valor da multa e as colaborações.
+Orlando Fonseca: Quais seriam as colaborações? Eu não falei que ela tem um relacionamento já com a bicicleta. Então, quem conhece o valor da diária é a bicicleta. Então ela tem que solicitar esse valor da diária, a classe, a bicicleta.
+Orlando Fonseca: Ok,
+Orlando Fonseca: ah, agora eu preciso. O valor do depósito está sendo devolvido. Quem que vai saber isso? É a bicicleta.
+Orlando Fonseca: Se essa classe for responsável por esse atributos.
+Orlando Fonseca: Tá bom. Boa situação manugada manugada, hã?
+Orlando Fonseca: A classe bicicleta. Veja agora se você consegue entender como seria essa definição aqui. Olhando para o dicionário de dados.
+Orlando Fonseca: Ela tem todos esses atributos aqui só com caderno, como mais.
+Orlando Fonseca: E os atributos, o número inteiro, o liquidificador único da bicicleta, a cor.
+Orlando Fonseca: Ela é um texto.
+Orlando Fonseca: A marca também. Esse não é trilingue, não é? Um
+Orlando Fonseca: eu vou pedir. No final, vamos falar do top três da aproximação três no dicionário de dados. Vou deixar vocês serem um pouquinho mais flexíveis. Você pode colocar, por exemplo,
+Orlando Fonseca: String, ou vai achar se você tem uma familiaridade com Sql. Eu quero que você deixe explicito que você está trabalhando ali com uma cadeia de caracteres.
+Orlando Fonseca: E o modelo seria que testa também.
+Orlando Fonseca: Palavra que você queira colocar deixa em claro que é texto, tipo de dado tamanho, também o tipo. Agora, o varão da diária é o varão monetário
+Orlando Fonseca: e o valor do depósito monetário também
+Orlando Fonseca: certinho. Qual seria a responsabilidades?
+Orlando Fonseca: Vai informar o varão da diária. Vai informar o valor do depósito. Vai calcular o valor do depósito. Está sendo devolvido
+Orlando Fonseca: e as colaboração que ela tem seria com o aluguel.
+Orlando Fonseca: Então por quê?
+Orlando Fonseca: Tipo, quem que vai saber esses valores do depósito? O que foi feito é realmente a classe aluguel.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: Avalia o tal da devolução para cálculo do depósito.
+Orlando Fonseca: E para finalizar o cliente nessa esse horário de dados
+Orlando Fonseca: até aí, pessoal, tranquilo, classe cliente. Vai ter. O quê?
+Orlando Fonseca: Ele é um indivíduo cadastrado no sistema que pode alugar uma bicicleta.
+Orlando Fonseca: Os atributos são o quê? Nome, Cpf, endereço, telefone, e mail,
+Orlando Fonseca: atributo. Vem aqui. Cpf. Aqui digitou onze. Está em nome. Tem Cpf. Tem um documento de identificador pode ter endereço, telefone, e mail. Esses atributos que eu estou colocando aqui, eles vêm do texto,
+Orlando Fonseca: então a responsabilidade manter seu dado atrás, associar se a contratação de aluguel e a classe usuário bem parecido.
+Orlando Fonseca: Um indivíduo aqui, quem pode alugar a bicicleta, mas é classe usuário do indivíduo que pode executar algumas funções nesse sistema
+Orlando Fonseca: com Los Cpf, assim como cliente. Só que diferencia ela que vai ter um perfil
+Orlando Fonseca: aqui. Como é um nome? Ele é policial, gerente e o concepcionista, hã?
+Orlando Fonseca: E a responsabilidade vai autenticar o acesso ao sistema. Tirar informações do perfil, executar operações conforme o perfil.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: Beleza, pessoal. Até aí tranquilo.
+Orlando Fonseca: Deixa eu ver. Aqui já
+Orlando Fonseca: fundo,
+Orlando Fonseca: beleza.
+Orlando Fonseca: Tá bom,
+Orlando Fonseca: tranquilo. Isso aí. Diagrama de classe. Quero que você preste muita atenção nesse conceito nesse tipo de diagramação específica para isso.
+Orlando Fonseca: Só que agora
+Orlando Fonseca: veja, eu preciso fazer um relacionamento entre ela tudo bem que eu tenho alguma colaboração no dicionário de dados que dá para entuar o aluguel.
+Orlando Fonseca: Ela precisa da colaboração com bicicleta porque a bicicleta. Quem vai dar água no
+Orlando Fonseca: um valor que precisa do aluguel?
+Orlando Fonseca: O pagamento, porque vai dar um valor para a gente. São colaborações do cliente também.
+Orlando Fonseca: Só que olha, a gente precisa especificar realmente os relacionamentos entre essas classes, porque ela pode ter um relacionamento de herança. Podem ser relacionamento de independência. A gente precisa especificar isso. Muito bem,
+Orlando Fonseca: então o diagrama de classes representa a estrutura estática do sistema.
+Orlando Fonseca: Você lembra porque estágica quando eu falo que está?
+Orlando Fonseca: Deixa eu ver. Aqui no chat,
+Orlando Fonseca: não.
+Orlando Fonseca: Alguém lembra a diferença entre a tática e dinâmico?
+Orlando Fonseca: Foi o que eu falo.
+Orlando Fonseca: É tudo bem lembrado. A estágico é como uma foto. A gente sabe.
+Orlando Fonseca: A gente sabe tudo bem. Que tem essas
+Orlando Fonseca: funcionalidade que temos essa classe no sistema. Que tem esse relacionamento que tem essas sensações, mas não sabemos a ordem
+Orlando Fonseca: quando que isso acontece. Não temos a noção do tempo.
+Orlando Fonseca: Então a tática é isso, uma foto ali no sistema, sabendo que existe. Mas quando que ele acontece.
+Orlando Fonseca: Então, então veja, o drama de classe vai identificar que as principais classes. Conhecer as atrações do domínio.
+Orlando Fonseca: Seus atributos são dados que essa classe armazena os métodos que são comportamentos associados e a relacionamentos entre eles,
+Orlando Fonseca: mesmo que a gente está fazendo. A
+Orlando Fonseca: a gente está fazendo agora de uma forma mais informal. Quando falamos, esse aqui seria a entidade do domínio, lembra? Agora é um momento especificar. Olhando para classes, para diagrama de classes. Quer dizer, especificamos primeiro a classe, vemos o relacionamento entre eles
+Orlando Fonseca: e deixamos bem explícito quais seriam os atributos e os métodos dessa classe
+Orlando Fonseca: lá na modelagem, não era obrigatório. Vocês especificaram esse.
+Orlando Fonseca: Olha essa funcionalidade aqui.
+Orlando Fonseca: Alugar pertence ao cliente. Tem uma função que recebe um parâmetro. E o retorno é Y
+Orlando Fonseca: agora, no programa de classe. Por isso é interessante ter essa informação.
+Orlando Fonseca: Tchau,
+Orlando Fonseca: beleza.
+Orlando Fonseca: Então, pessoal, lembrando,
+Orlando Fonseca: eu estou encerrando para vocês essa parte da modelagem da pacificação dos requisitos animais. Ele tem um viés um pouquinho mais teórico,
+Orlando Fonseca: mas
+Orlando Fonseca: veja que ele é uma ajuda importantíssima para a implementação, porque quando eu falo em implementação, você está colocando mão na massa, certo? Você vai implementar. Vai testar, vai validar e vai colocar em produção.
+Orlando Fonseca: Tá bom. Esse aí vai plantar o sistema. Implantação Sok em torveja,
+Orlando Fonseca: para que a gente faz uma modalidade entre classe, coloca um nome numa função. Colocamos atributos. Isso aí. Não vai virar
+Orlando Fonseca: a gente não vai aproveitar isso. Então a gente está falando aqui até o momento, o diagrama de uso,
+Orlando Fonseca: o dicionário de dados, especificamente o diagrama de classes é para ser utilizado no futuro, então ele tem que servir de base
+Orlando Fonseca: tanto para a implementação quanto para a comunicação entre os membros da equipe.
+Orlando Fonseca: Só ficou claro aí, então esse diagrama não vai ser construído geradamente.
+Orlando Fonseca: Por quê? Porque ele é uma evolução natural das caças de uso.
+Orlando Fonseca: E ele complementa também. Tipo assim, não chamaria uma evolução. Enfim, um complementa o outro.
+Orlando Fonseca: Ou seja, podemos começar com caça de uso caça de uso. Vai trazer ali alguns pontos. Aqui. A gente tem que colocar. Se identificarmos um requisito funcional
+Orlando Fonseca: lá no câncer de uso, de repente, isso aí pode ser que vire. Enfim, vai virar um método nesse diagrama de classe.
+Orlando Fonseca: Ou pode ser que isso aí impacta o drama de interação, hã?
+Orlando Fonseca: Fazendo um refinamento do requisito, ele vai impactar o caso de uso. Vai impactar também o diagrama de classes e agir o negócio como um todo.
+Orlando Fonseca: Ok, então, à medida que esses diagrama de interação, a gente vai ver aqui
+Orlando Fonseca: era uma interação de atividades e demais.
+Orlando Fonseca: À medida que esses.
+Orlando Fonseca: Esses diagramas, esses conceitos, essas regras, elas são refinadas.
+Orlando Fonseca: A gente precisa também refinar o dicionário de dados.
+Orlando Fonseca: Por quê? Porque é ali que está claro. Quais são os tipos? Tem o nosso atributo? Quais seriam a nossa classe? Então,
+Orlando Fonseca: tá, é.
+Orlando Fonseca: Então, vejam, pessoal, o diagrama de classes. O foco realmente é deixar muito bem claro a classes existentes no sistema e a interação entre elas. Alguns outros detalhes de interesse, colocamos no dicionário de dados.
+Orlando Fonseca: Alguma restrição vai no dicionário de dados?
+Orlando Fonseca: Tá bom aqui. Sem comprometer a clareza visual do diagrama de classe
+Orlando Fonseca: então, para fazer o diagrama de classe.
+Orlando Fonseca: Vamos utilizar a linguagem Ml: Porque ela padroniza atributos, relacionamento entre classe, tá? Então
+Orlando Fonseca: vamos entender como o e ml faz isso.
+Orlando Fonseca: Mas de novo, já falei no diagrama de calça de uso. Eu deixo vocês livres de. A gente tem que respeitar
+Orlando Fonseca: tamanho pessoal.
+Orlando Fonseca: Então é, eu estava falando. Ah, é o seguinte. Eu deixo vocês.
+Orlando Fonseca: É um vamos falar assim. Modificar bom senso.
+Orlando Fonseca: O que o Ml está propondo
+Orlando Fonseca: ali, olhando o programa de classe
+Orlando Fonseca: no sentido aqui, uma classe é representada um retângulo dividido em compatimento. Se você quer colocar esse retângulo com uma borda colorida? Vamos suportar com um preenchimento. Tudo bem, eu vou aceitar isso.
+Orlando Fonseca: Tá certo. Eu não fico muito ligado. Você tem que ser estritamente na sentença do Ml.
+Orlando Fonseca: O nome da classe tem que ser obrigatório. Agora é assim você. Não vai ter um diagrama de classe. Seja um momento espetáculo no que diz é que você vai colocar uma bolinha.
+Orlando Fonseca: Então você vai pelo menos respeitar esse retângulo aí
+Orlando Fonseca: e vai ter que ter um nome da classe ali obrigatório.
+Orlando Fonseca: Os atributos são opcionais na análise inicial, porque ela está sendo construída aos poucos.
+Orlando Fonseca: E essa operação, esse método seriam as responsabilidades da classe.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: Então temos o nome da classe, atributos e operação hermética,
+Orlando Fonseca: por exemplo. Vejam o exemplo de uma classe representada ali nesse diagrama de classe, porque nesse caso, só tem uma classe seguindo o padrão da Uml.
+Orlando Fonseca: Ele é um quadradinho que tem o nome da classe, que é o cliente e tem alguns. Nesse caso, tem os atributos e tem,
+Orlando Fonseca: e tem a responsabilidade que essa é a função que vai procurar, por exemplo, no cliente, tá,
+Orlando Fonseca: esse diagrama de classes.
+Orlando Fonseca: Ele não é tipo, tudo bem. A gente vai aproveitar esse nome para a implementação, como eu falei,
+Orlando Fonseca: mas excita um drama de graça que a gente.
+Orlando Fonseca: A gente coloca como sendo. Quase que
+Orlando Fonseca: imagina. A gente pensa quase na implementação que estamos colocando ali no diagrama, o tipo do parámetro, o retorno a essa função. A gente faz alguma coisa ali. Mais de implementação no diagrama.
+Orlando Fonseca: Vamos pensar nessa classe bem simplificada só com o nome, os parâmetros e a responsabilidade.
+Orlando Fonseca: Eu coloquei aqui o um parênteses.
+Orlando Fonseca: Mas se você colocar essa linha aqui. Esse separador, é porque
+Orlando Fonseca: estamos falando que essa última aqui é uma
+Orlando Fonseca: função. Você poderia ter colocado no parênteses, mas pelo menos delimitem ele como uma linha ou uma chave aqui. Esses aqui seriam os seus métodos, entendido?
+Orlando Fonseca: Para não ter confusão, fica claro, pessoal.
+Orlando Fonseca: Então, na implementação, por exemplo, pode ser que eu não tenha esses atributos. Mesmo eu tenho esse name como sendo uma função. Me dá o nome. Então o Name não recebe parâmetro e devolve. Você retorna
+Orlando Fonseca: o nome.
+Orlando Fonseca: Tá?
+Orlando Fonseca: Mas conceitualmente no programa de classe. Ele é um atributo, não uma função.
+Orlando Fonseca: Tá claro, pessoal. Dá para entender. Aí.
+Jorge José Luiz Santos da Silva: Deu. Sim, professor.
+Orlando Fonseca: Tá beleza. Muito bom. Tá aí, traz uma confusão.
+Orlando Fonseca: Então as operações são os métodos. Vão representar comportamento.
+Orlando Fonseca: Seriam o quê?
+Orlando Fonseca: Regra do domínio serviços Internos, globalização e mudança de Estado.
+Orlando Fonseca: Então, numa classe aluguel, faz sentido existir,
+Orlando Fonseca: calcular valor total que era recibo, calculava multa. Se ele coloquei aqui, como
+Orlando Fonseca: coloquei como tipo de função para deixar claro que ele é um método, uma operação
+Orlando Fonseca: em bicicleta. Faz sentido assistir a Gat valor de área. Ter o valor da diária, calcular o valor do depósito.
+Orlando Fonseca: Então, gente, estou colocando o nome da função.
+Orlando Fonseca: Eu acho que é literalmente para não ter confusão nenhuma aqui em seguinte, coloquei em inglês
+Orlando Fonseca: por costume. Você poderia ter colocado ou ter varão diário.
+Orlando Fonseca: E o parâmetro?
+Orlando Fonseca: Essa aqui parecia até um flag bom estado ou não para calcular esse depósito vai ser devolvido.
+Orlando Fonseca: Tá, então veja, pessoal, até o momento, temos que o dicionário de dados construídos para cada uma das classes.
+Orlando Fonseca: Outra coisa que representa cada classe. Quais seriam os principais atributos, instrumentos, as funções deles, o tipo
+Orlando Fonseca: e cada um deles.
+Orlando Fonseca: E o diagrama de classe. Nesse exemplo, que está bem simples. Ele só tem o quê?
+Orlando Fonseca: Só vai ter nesse exemplo
+Orlando Fonseca: as classes sem relacionamento entre elas, porque ainda não fiz. Essa é uma primeira versão do diagrama de classes.
+Orlando Fonseca: Mas aí o seu nome, e sem os atributos de cada um, tá
+Orlando Fonseca: sertinho.
+Orlando Fonseca: Então é importante aqui. Não tem método. Está vendo que eu deixe lembrar?
+Orlando Fonseca: Tá esse aqui?
+Orlando Fonseca: Acho que eu não coloquei nessa aula,
+Orlando Fonseca: mas você tem como colocar se esses atributos. Eles são, por exemplo, recebem nulos ou não. Se eles são opcionais ou não,
+Orlando Fonseca: então temos algum recurso para fazer isso.
+Orlando Fonseca: Ok, então, por enquanto, eu vou vamos ver nesse.
+Orlando Fonseca: Queria padronizar isso. Vamos padronizar isso de repente, eu vou trazer para vocês quando eu colocar aqui ali o hastag ou aquele.
+Orlando Fonseca: Enfim, aquele outro símbolo que agora não lembro. Como bom, alguns outros símbolos para representar essa personalidade, o nulo.
+Orlando Fonseca: Então, beleza. Degrauamos de classe, como evitar classes erradas.
+Orlando Fonseca: Um não confundir atributo com classe, por exemplo,
+Orlando Fonseca: o valor da diária não deve virar classe.
+Orlando Fonseca: Por quê? A gente falou. Já na aula anterior. Quando identificamos a classe candidata, se
+Orlando Fonseca: vemos que a bicicleta que tem a responsabilidade de saber o valor da diária, então é porque ele é um atributo. O valor da diária e o atributo da bicicleta,
+Orlando Fonseca: evitar redundâncias.
+Orlando Fonseca: Bom número de dias, duração decimada,
+Orlando Fonseca: tempo do aluguel pode ser a mesma ideia representada por temas diferentes, aonde que a gente colocar isso. Análise sinal de dados também.
+Orlando Fonseca: Ok,
+Orlando Fonseca: então evitar uma redundância. Selecionamos só uma. A gente coloca lá no dicionário, deixamos claro para todo mundo. Vai ser número de dias, não mais duração estimada.
+Orlando Fonseca: Recibo numa classe do domínio. Um documento derivado da alça assistente.
+Orlando Fonseca: Quero ter esse recibo ali do aluguel. E demais.
+Orlando Fonseca: Era um documento.
+Orlando Fonseca: Ela é preenchida com algum dado e assinado claramente,
+Orlando Fonseca: e aluguel é a relação entre clientes e bicicleta.
+Orlando Fonseca: Mas quando tem dado próprio aluguel, é um relacionamento.
+Orlando Fonseca: É cliente de bicicleta.
+Orlando Fonseca: Eles têm dados próprios datas diárias. Multa recibo. Então precisa ser tratado como entidade. E isso aqui. Deixa eu ver.
+Orlando Fonseca: Por quê? Porque cliente e bicicleta eu vou falar aqui um conceito. Vamos ver na próxima hora também. Eles têm um relacionamento de muitos para muitos. Então você está
+Orlando Fonseca: tem estudado aqui no alfinete. Tem familiaridade com.
+Orlando Fonseca: Com esse tipo de relacionamento?
+Orlando Fonseca: Com linguagem, com um modelo relacional.
+Orlando Fonseca: Isso. Ah, muito bom. Então, excelente.
+Orlando Fonseca: Então vamos lá, pessoal, vamos pensar nesse primeiro exercício.
+Orlando Fonseca: Vou trazer dois exercícios nessa aula e vamos falar do Tap três, tá?
+Orlando Fonseca: É um tá beijo. Aqui, e aí, exercício é um
+Orlando Fonseca: considera um sistema, deixa eu me puxar.
+Orlando Fonseca: Ah, vou botar um ideia esse aqui, né? Tá, não, nada
+Orlando Fonseca: tá certinho.
+Orlando Fonseca: Ah, mas eu.
+Orlando Fonseca: Esse aqui conhece o diagrama de classe sem relacionamento. Ainda não temos ali
+Orlando Fonseca: a cardinalidade desse relacionamento, o neo relacionamento e.
+Orlando Fonseca: E essas lives aqui show.
+Orlando Fonseca: Tchau.
+Orlando Fonseca: Então, primeiro você decide. Vamos lá. Considerando um sistema de informação para uma loja de aluguel de bicicleta.
+Orlando Fonseca: Os requisitos incluem.
+Orlando Fonseca: Eu sempre trabalho com aluguel de bicicleta para não trocar a regra de negócios. Vou ter que explicar toda a aula.
+Orlando Fonseca: O projeto se é uma agência de turismo, se é uma
+Orlando Fonseca: no sistema para a biblioteca, então vamos focar realmente no organismo de bicicleta que é mais simples. Vamos ter que voltar atrás. Então, requisitos inclui um cliente. Pode alugar uma ou mais bicicleta. Cada bicicleta pode ser alugada várias vezes ao longo do tempo.
+Orlando Fonseca: Para cada aluguel, devem ser registradas datas de início, número de área valor pago antecipadamente. Possível desconto no depósito, atraso ou dano.
+Orlando Fonseca: Ah, lembrando que eu faço um depósito. Ah,
+Orlando Fonseca: tá, isso aí. A gente faz um depósito aí, se tiver algum tipo de dado de atraso, vai descontar esse depósito ou ele pede inteiro. O valor. O sistema deve manter a tua pergunta
+Orlando Fonseca: é onde armazenar as informações do aluguel.
+Orlando Fonseca: Tendo em conta que o sistema deve manter o histórico de alugueis. Onde vamos ensinar essa informação?
+Orlando Fonseca: Outra palavra.
+Orlando Fonseca: Sim, mas cuidado. Mas quando eu pergunto ali, onde quer dizer, né?
+Orlando Fonseca: Que é ele seria. Primeiro, ele seria uma classe. Ele seria um atributo de alguma classe,
+Orlando Fonseca: entendido? Então, para onde a gente coloca essa responsabilidade?
+Orlando Fonseca: Às vezes, para bicicleta, é quem vai ter esse histórico de aluguel. Ou realmente tem sentido ela ser uma entidade separada.
+Orlando Fonseca: Tchau.
+Orlando Fonseca: Então, pessoal, vamos pensar aqui.
+Orlando Fonseca: Vou conversar com. Vocês, Sim, ver a
+Orlando Fonseca: Sim, ver a repórter que eu coloquei aqui no próximo slide.
+Orlando Fonseca: Tá pensando como você é um pergunta? Tá tudo mais bom,
+Orlando Fonseca: vocês acham que aluguel precisa virar uma classe
+Orlando Fonseca: primeiro? Eu acho que assim, né?
+Orlando Fonseca: Porque eu coloquei até aluguel como sendo uma classe no dicionário de dados.
+Orlando Fonseca: Tá tudo bem. Mas por quê?
+Orlando Fonseca: Por que ela deve virar uma classe intuitivamente? Tudo bem. Que você faz uma análise aí de classe candidata faz uma análise.
+Orlando Fonseca: Os sinônimos, a técnica para essa.
+Orlando Fonseca: Para ver essa responsabilidade. Mas pensem comigo: se você vem que uma entidade tem
+Orlando Fonseca: dados próprios dessa entidade que ela tem. Vida como eu falo, tem um significado. Então não é mais um atributo, e ele vai virar uma classe.
+Orlando Fonseca: Isso tem atributo médico? Tá, então, então e
+Orlando Fonseca: então? Tá bom. Quais seriam os atributos desse
+Orlando Fonseca: dessa classe, né? Dessa classe. Ah, vai ter uma data de início,
+Orlando Fonseca: tá bom? Vai ter o relacionamento entre clientes e bicicleta que são que realmente identificam o aluguel e vai ter o número de área do aluguel.
+Orlando Fonseca: Tá bom, então esses herdado. Tudo bem que uma classe. Mas vamos justificar que ele realmente repete uma classe.
+Orlando Fonseca: Esses dados que eu falei. Agora ele pertencem. Vai pertencer a bicicleta ou a clientes?
+Orlando Fonseca: O que eu vou fazer de agora para frente. Eu vou colocar
+Orlando Fonseca: esses atributos que vocês sabem que pertencem à classe aluguel. Eu vou colocar na bicicleta ou no cliente. Vamos ver o que acontece,
+Orlando Fonseca: ok? Porque, pessoal, isso aqui parece um exercício. Meio
+Orlando Fonseca: é simples, mas na real, acontece assim. Às vezes a gente fica na dúvida. Esse aqui é o que um atributo. Então coloca coloca como um atributo, e vê uma situação.
+Orlando Fonseca: Ele é só assim vai falar, não tem? Como vou ter que colocar ele como sendo uma classe?
+Orlando Fonseca: Ok, tentativa. Um armazenar os dados do aluguel diretamente
+Orlando Fonseca: na classe cliente. Aí, o que acontece
+Orlando Fonseca: aí? Vou ter uma classe cliente
+Orlando Fonseca: que ele tem um nome, tem um Cpf. Tem data de início, tem número de diária.
+Orlando Fonseca: O que acontece aí, pessoal?
+Orlando Fonseca: Assim, em princípio, o cliente pode ter
+Orlando Fonseca: o número de diárias ali. Tem algum problema? Em princípio parece que funciona,
+Orlando Fonseca: mas tem um problema. Qual seria o problema que ali na pacificação desse projeto vergonha de bicicleta está falando assim? O cliente podia ter vários aluguéis,
+Orlando Fonseca: hã?
+Orlando Fonseca: Então, onde que a gente vai aguardar a segunda data? Nós temos colocado uma data de início, um número de diária onde que colocamos a segunda? Se ele fez o segundo aluguel,
+Orlando Fonseca: tá a data de início, ele vai guardar uma data só está claro, beleza.
+Orlando Fonseca: O número de diária vai guardar o número desse primeiro lugar. Data, foi, por exemplo, dia sete de outubro. E o número de área vai ser por três dias.
+Orlando Fonseca: E agora, quando muda e seleciona tributos da classe cliente, quando mudou.
+Orlando Fonseca: E aí então
+Orlando Fonseca: realmente não faz sentido almacenar em cliente. Então o único atributo data, início não é suficiente, e o único atributo no número de diárias não é suficiente.
+Orlando Fonseca: Então não excite essa correspondência antes de falar da tentativa dois.
+Orlando Fonseca: Na verdade, a gente pôde fazer um truque.
+Orlando Fonseca: Só que assim é muito ruim.
+Orlando Fonseca: Mas você pode impressão também.
+Orlando Fonseca: E se eu faço isso aqui, vou colocar no chat.
+Orlando Fonseca: Se eu faço uma coisa assim? Dt: Início
+Orlando Fonseca: eu vou colocar um negócio simples aqui. Tipo subutivo, culpado, tá, Cef e Youtube.
+Orlando Fonseca: Isso não oito.
+Orlando Fonseca: Eu estou.
+Orlando Fonseca: E se colocasse?
+Orlando Fonseca: E se eu colocar como você numa lista, continua tendo sentido.
+Orlando Fonseca: Agora eu posso aguardar várias datas, mas no mesmo atributo. Uma lista. Uma data,
+Orlando Fonseca: então não seria data de início. Seria uma lista de datas de início,
+Orlando Fonseca: e aí tem uma interpretação diferente seria um atributo. O retorno seria um malito.
+Orlando Fonseca: Faz sentido. Mais ou menos. Por quê? Ah, porque agora?
+Orlando Fonseca: O número de diária já não seria só um valor.
+Orlando Fonseca: Vai ter que ser também uma lista, hã?
+Orlando Fonseca: E quando eu quiser, aguentou perguntar, Ah, mas
+Orlando Fonseca: no dia oito de outubro. Qual foi o número de diárias desse aluguel?
+Orlando Fonseca: É, ou, por exemplo, no dia oito de outubro, essa bicicleta X, como você vê, isso
+Orlando Fonseca: complicou, né? Tá vendo o que eu estou falando? A data de início é seguir uma listagem a outra. Vamos supor que agora o número de diária
+Orlando Fonseca: vai ser também uma lista.
+Orlando Fonseca: Vai ter, por exemplo, três, cinco, seis. Todo mundo de área. Tá vendo aí.
+Orlando Fonseca: Só que agora tudo bem. Qual é o número de área que estaria atrelado a essa data? De início? Dia sete e dia oito
+Orlando Fonseca: conseguem fazer atrelar entre um e outro. De repente, poderíamos, pelo índice da lista que está na primeira posição nessa lista. Número de diárias.
+Orlando Fonseca: Se trocar de ter início, pode ter aluguel, mas então, né?
+Orlando Fonseca: Mas aí, como seria então, data de início, então e de aluguel seria o quê? Você está pensando em aluguel como o aluguel separado,
+Orlando Fonseca: como sendo outra entidade. E a gente tem ali um identificador que de alguma forma, referencia esse lugar então fazendo uma referência. Então pode esquecer que está virando uma classe.
+Orlando Fonseca: Está virando. Uma classe. Então, nessa rodagem que eu coloquei aqui.
+Orlando Fonseca: É isso aí. Nessa rodagem que eu coloquei está aqui. Ah, porque eu não sabia se a bicicleta y a bicicleta,
+Orlando Fonseca: o Centro Caloi, né? Uma marca se dentro da bicicleta três.
+Orlando Fonseca: Então, como você vê que tem uma data de início no dia oito. Então fica muito estranho. Então não tem como se está ficando? Muito atranho. Beleza, nós vamos trocar.
+Orlando Fonseca: Acho que a classe cliente não mais sindical para colocar o número de diálise. Qual seria a tentativa? Dois
+Orlando Fonseca: armazenar os dados do aluguer diretamente na classe de bicicleta?
+Orlando Fonseca: Só que. Veja, hummm se temos uma bicicleta.
+Orlando Fonseca: Ela mesma foi alugada várias vezes.
+Orlando Fonseca: Tá bom, então colocar essa data de início
+Orlando Fonseca: como sendo um atributo ali na bicicleta não resolve também, né, hã?
+Orlando Fonseca: Então, de alguma forma,
+Orlando Fonseca: na verdade, ele aí é uma tentativa forçada de solução, mas não é nenhuma solução realmente,
+Orlando Fonseca: porque vai ter muita trava. Depois Uhum uma homenagem ruim.
+Orlando Fonseca: Então o aluguel pessoal precisa se relacionar
+Orlando Fonseca: com um cliente e com bicicleta.
+Orlando Fonseca: Melhor fazer classe amanhã, tá?
+Orlando Fonseca: Então, como seria esse relacionamento entre clientes e bicicleta? Tem dados próprios
+Orlando Fonseca: e precisa ser registrado historicamente. Ai. Precisamos do histórico importantíssimo. Estamos histórico. Cada instância da classe aluguel vai ter um cliente específico, uma bicicleta específica, um período específico
+Orlando Fonseca: e um conjunto de valores financeiro.
+Orlando Fonseca: Hum, valor financeiro. Eu não falei, né? Ah, não. A grana
+Orlando Fonseca: voltando no relacionamento, eu não coloquei aqui nessa idade. Mas quero que você pense comigo.
+Orlando Fonseca: Temos o cliente num relacionamento com aluguel
+Orlando Fonseca: e aluguel um relacionamento também com a bicicleta.
+Orlando Fonseca: Ou seja, quais seriam o tipo de relacionamento.
+Orlando Fonseca: O cliente vai ter vários alugueis e uma bicicleta depois de depois de
+Orlando Fonseca: tem vários aluguéis depois de aparecer em vários aluguéis. Entendido, pessoal.
+Orlando Fonseca: Então, já estou. Já estou.
+Orlando Fonseca: Estou trazendo aqui esse conceito de cabralidade, mas de um para muitos. De um para muitos do cliente, para ganho de bicicleta para o ganho. Então, na verdade, a gente olha só para cliente de bicicleta, relacionamento de muito para muito.
+Orlando Fonseca: E eu beleza. E a maior forma de fazer
+Orlando Fonseca: utilizar aluguel como sendo uma classe tá exercício dois.
+Orlando Fonseca: Não há requisitos.
+Orlando Fonseca: O sistema deve permitir que o cliente pare antecipadamente pelos realizados
+Orlando Fonseca: e gerar um único recibo para um cliente que alugue várias bicicletas simultaneamente.
+Orlando Fonseca: Hummm.
+Orlando Fonseca: Então você pode alugar vários e vai gerar um recibo. Só você não precisa. Vai alugar. Três eu quero um recibo. Só eu quero três recibos.
+Orlando Fonseca: Registrar
+Orlando Fonseca: a data em que cada pagamento foi efetuado, o valor efetivamente pago o valor do depósito devolvido ou final do aluguel.
+Orlando Fonseca: Manter histórico financeiro completo.
+Orlando Fonseca: Então, até aqui, até aí, claro. Enfim, o que está acontecendo está acontecendo? Que o pagamento. Tá
+Orlando Fonseca: tá comprando vida, né?
+Orlando Fonseca: Ok, então podemos introduzir ela como sendo uma classe num diagrama de classes
+Orlando Fonseca: para representar melhor agora o modelo com o novo requisitos que tem a ver com pagamento com registro, data,
+Orlando Fonseca: valores ali, efetivamente pagos.
+Orlando Fonseca: Ok, tá, vamos pensar de novo aqui ouro.
+Orlando Fonseca: Por que não colocar todas essas informações financeiras dentro do aluguel?
+Orlando Fonseca: Eu queria falar aqui. Explique porque a introdução de democracia específica pagamento representa a melhor alternativa à modelagem. Você pode falar. Ah, beleza, se não for uma classe, porque eu vou colocar dentro do aluguel e vamos ver o que acontece.
+Orlando Fonseca: Então, o que seria?
+Orlando Fonseca: O que está identificando o pagamento. Vamos supor. Vai ser o recibo de pagamento e a data de pagamento, valores. Enfim, por que não colocamos todos esses atributos dentro do aluguel?
+Orlando Fonseca: Então por quê?
+Orlando Fonseca: Olá, pessoal.
+Orlando Fonseca: Tá, por quê?
+Orlando Fonseca: Porque o pagamento é independente. Ele tem seu proprietário. Você não tem Professor tributos e tem um histórico. O histórico é importantíssimo.
+Orlando Fonseca: E responsabilidades distintas do contrato do cliente. Porque eu falo que o histórico é importantíssimo, porque veja se você faz um aluguel e você
+Orlando Fonseca: para vamos supor duzentos reais dos cento reais tá aí
+Orlando Fonseca: na classe aluguel. Tendo essa informação, o valor pago, por exemplo, o valor pago por esse aluguel é trezentos reais. Mas se você precisa fazer o histórico, você pode ter ó
+Orlando Fonseca: que através da classe de pagamento você pode fazer ali.
+Orlando Fonseca: Você pode deixar explícito no sentido que você vai ter o primeiro pagamento com valor de R duzentos reais. O segundo pagamento com valor de R. Cem a gente sabe que o valor pago foi trezentos, mas ele foi feito em duas
+Orlando Fonseca: em dois pagamentos.
+Orlando Fonseca: Sabe aquele chá.
+Orlando Fonseca: Isto então o pagamento seria uma outra classe.
+Orlando Fonseca: Seria uma outra classe, hã?
+Orlando Fonseca: Cada instância do pagamento representa um evento financeiro real, uma data específica associada a um aluguel específico com valores efetivamente registrados. Então já temos uma colaboração. Como que seria relacionamento entre
+Orlando Fonseca: é pagamento agora com aluguel e.
+Orlando Fonseca: E o cliente e a bicicleta,
+Orlando Fonseca: hã palma de tamanho. É isso tá bom, pessoal, tá bom,
+Orlando Fonseca: dúvidas dessa aula próxima aula. Vamos continuar trabalhando essa aula. E a próxima, eu acho, ou na próxima só
+Orlando Fonseca: eu vou trazer o diagrama de classe mais completo, já com uma central mais completa.
+Orlando Fonseca: E com os relacionamentos entre classe e a cadernalidade entre eles, hã?
+Orlando Fonseca: Dúvidas tranquilo, tudo certo, tudo bem, beleza.
+Orlando Fonseca: Então agora pra limpar o suco. Tá bom.
+Orlando Fonseca: Agora vou parar de compartilhar
+Orlando Fonseca: para compartilhar o tempo e três.
+Orlando Fonseca: Eu não fiz a leitura. Ainda estou atrás com você.
+Orlando Fonseca: Vamos orar.
+Orlando Fonseca: E aí?
+Orlando Fonseca: Certo, né? Vou patinar Nutella.
+Orlando Fonseca: Então o primeiro.
+Orlando Fonseca: Ela está marcada com o sinal vermelho.
+Orlando Fonseca: Você quer dizer isso é como você está realmente começando? Primeira segunda rodada.
+Orlando Fonseca: Eu quero que vocês de fato procurem
+Orlando Fonseca: face aos diagramas e muita ajuda de a generativa. É só isso.
+Orlando Fonseca: Mas isso não tira que eventualmente você queira procurar lá.
+Orlando Fonseca: É alguma informação você consigam.
+Orlando Fonseca: Vocês podem fazer isso de uma forma ali, eventual, comprando sem uso.
+Orlando Fonseca: Tudo bem, esse aqui só para falar do modelo Huck. Então eu vou pular essa parte.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: Ok, e então
+Orlando Fonseca: a linguagem? Vocês sabem que o projeto é de vocês mas tem que ser implementado em Java, ou seja, App.
+Orlando Fonseca: E o que eu quero que você se entregue
+Orlando Fonseca: primeiro. Identificação de classes e matriz de associação
+Orlando Fonseca: A partir do estudo de classe apresentado na última entrega, os alunos deverão elaborar uma lista de classes de candidatas.
+Orlando Fonseca: Essa etapa tem como foco a análise das entidades presentes no caso de uso fundamental para a estruturação do projeto.
+Orlando Fonseca: É que eu disser isso. Pessoal, você vai ter que identificar
+Orlando Fonseca: qual seria essa classe candidata. Qual seria a Matriz? A sensação não precisa, tá? Qual seria a classe candidata que você vai representar depois, no drama de classe.
+Orlando Fonseca: Eu também não vou precisar que vocês entreiem essa primeira parte, tá? Por quê?
+Orlando Fonseca: Porque eu vou olhar diretamente o dicionário de dados e o diagrama de classe de vocês.
+Orlando Fonseca: Se algum dele tiver, por acaso tem alguma parte errada, esse aqui vai ser penalizado.
+Orlando Fonseca: Mas você não precisa fazer nenhuma análise para colher essa classe candidata. Como você chegou ali?
+Orlando Fonseca: Ok,
+Orlando Fonseca: fazendo uma análise de palavras aqui, porque esse atributo queria colocar como atributo e não deu. Eu quero colocar como uma classe essa análise.
+Orlando Fonseca: Você não precisa entregar quem quiser fazer fazer essa primeira questão aqui, essa primeira Diretriz. Beleza, tudo bem, né? Melhor ainda. Mas quem não quiser fazer tudo bem, eu vou olhar só para essa entrega. Adicionalidade, derrame de classe. E vamos falar desse último também.
+Orlando Fonseca: Tá certo. Ficou claro?
+Orlando Fonseca: Então o que é interessa. Ah, pode falar.
+Jorge José Luiz Santos da Silva: Só que. Está claro.
+Orlando Fonseca: Isso. Tá bom. O que interessa para mim, o dicionário de dados,
+Orlando Fonseca: então será necessário preparar um dicionário de dados que inclua definições de toda essa classe. Aí sim, aí vou olhar,
+Orlando Fonseca: tá? Que fui eu que eu fiz hoje.
+Orlando Fonseca: Atributos e associações identificados. Ela é a referência para compreender e futuramente implementar o sistema. Olhando para o dicionário de dados, esse aqui eu vou olhar com atenção.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: Então você entrega do Tp dois do Tp3 vai ser analisados.
+Orlando Fonseca: E é claro que o degrama de classe utilizado a anotação Ml. Você tem que desenvolver um diagrama de classe para tudo de classe.
+Orlando Fonseca: O diagrama deve refletir todos os atributos significativos e as relações entre a classe, incluindo a multiplicidade apropriada.
+Orlando Fonseca: Então veja, é um mais uma vez, sejam criativos,
+Orlando Fonseca: porque você não tem um final que implementar tudo que você colocou aqui. Se você colocar dez classes de relacionamento entre dez e classes no final, você vai apresentando só a classe cliente. Pagamento, tá? Cliente, bicicleta de pagamento. Está pronto para mim. O aluguel está pronto para mim. São três, três, quatro
+Orlando Fonseca: ali. Fundamental. Já está bom para mim agora. No drama de classe, você pode caprichar. Você está aprendendo agora. Então, passa complexo mesmo. Vou dar um feedback. Aí vou falar. Sim, tem sentido. Isso aqui foi melhorar ou não?
+Orlando Fonseca: Então o que eu quero, Face?
+Orlando Fonseca: Deixando muito bem claro o nome da classe. Tudo bem que está no dicionário de dado. Mas aqui tem que respeitar o diagrama com o nome com os atributos. Se você quer fazer jamais voltado para a implementação como tipo, melhor ainda,
+Orlando Fonseca: tá?
+Orlando Fonseca: Os métodos desse drama e o relacionamento entre casa. Como que vai ser
+Orlando Fonseca: isso aqui? Claro, ainda. Você não sabe teoria porque vamos falar disso, tá bom,
+Orlando Fonseca: vamos falar agora da implementação. Alguma dúvida aqui do dicionário de dados do programa de classe. Não, né? Isso. Qualquer
+Orlando Fonseca: derrama de closela podem utilizar como vocês.
+Orlando Fonseca: Alguma ferramenta que tem a linguagem, o Ml livre ou paga, ou você ali.
+Orlando Fonseca: Se você queira entregar. Mas eu preciso degrau.
+Orlando Fonseca: No tempero anterior, tem um aluno que fez
+Orlando Fonseca: toda a especificação muito bem feita e não colocou diagrama de casos de uso para mim.
+Orlando Fonseca: Enfim, foi uma penalização grande, porque ele não entrou com o degrau. Muito caso de hoje.
+Orlando Fonseca: A área só fez a análise
+Orlando Fonseca: e teve o pessoal que também colocou o diagrama sem fazer,
+Orlando Fonseca: sem colocar nada. Só o diagrama. Sem narrativa. Também foi paralisado
+Orlando Fonseca: aqui. Nesse caso, vai ser o dicionário de dados, que é quase que tem uma aplicação ali. A referência no drama de classe e atribulado a ele o diagrama de classe
+Orlando Fonseca: Dr. Brown. E o funciona bem, tá bom, perfeito, Dr. Brown. E o funciona perfeito. Na próxima aula, eu vou ensinar para vocês uma ferramenta,
+Orlando Fonseca: e vocês conseguem representar o diagrama utilizando.
+Orlando Fonseca: Vamos. Prontos? Tá bom.
+Orlando Fonseca: Alguma função? Essa lei já vai sentindo para você, irmão. Boa noite. Outra coisa nova.
+Orlando Fonseca: Ok,
+Orlando Fonseca: e implementação. O que acontece? Você lembra do Huck que nessa fase da inauguração mesmo, pode ser que a gente implemente alguma coisa,
+Orlando Fonseca: o que seria alguma coisa. Eu falo assim. Muito genérico. Por que a gente precisa implementar alguma coisa nesse momento na elaboração?
+Orlando Fonseca: É por isso que bom isso aqui se identificar como um risco. Isso aqui tem um risco de não ser feito por conta que não temos o manual. Não temos a integração.
+Orlando Fonseca: Ah, então vamos fazer.
+Orlando Fonseca: A gente faz. Olha, o projeto é viável. Por quê? Porque eu fiz a integração. Dá para fazer. Não tenho manual. Tem ali. Eu tenho contigo, fonte. O que a gente precisa.
+Orlando Fonseca: Às vezes é preciso implementar muito pouco, mas para demonstrar que o projeto pode ir adianto nessa fase de elaboração.
+Orlando Fonseca: Então, para a gente, vai avançar.
+Orlando Fonseca: Então, para isso, tem uma questão aqui de implementação
+Orlando Fonseca: como base da aplicação prática do conceitual apreendido, o salão organizará a implementação de um software de leitura de escrita, que você se vê.
+Orlando Fonseca: Então, para vocês demonstrarem que já estão começando nessa parte de implementação do projeto,
+Orlando Fonseca: você pode fazer uma leitura, uma escrita no que você se vê que tem a ver com o seu trabalho, seria o dado. Seria a parte da importação do dado.
+Orlando Fonseca: Tchau.
+Orlando Fonseca: Como que você vai colocar isso no trabalho? Você pode colocar um print do código ou dessa função. Só um print
+Orlando Fonseca: não era o meio suficiente.
+Orlando Fonseca: Você me vieram um vídeo me ver se realmente está escrevendo ali está lindo aqui. Já começamos a implementação,
+Orlando Fonseca: tá bom?
+Orlando Fonseca: E, é claro, como tentem dar uma interpretação nisso. Relacionada ao seu projeto. Por exemplo, tem um projeto de filme obra cerveja que eu fiz aí já a carga do filme para o banco,
+Orlando Fonseca: beleza, ou veja que eu estou lendo esse aqui vou firmo e estou colocando na interface. Tudo bem.
+Orlando Fonseca: Pelo menos tentar fazer alguma coisa relacionada ao tema de vocês como implementação. E o mais fácil para implementar é leitura e acreditar aqui
+Orlando Fonseca: é simples, muito simples. Quero uma implementação muito simples. Duas, três linhas de coaching. Só quero ver que beleza. Tá avançando no projeto de complementação. A primeira entrega foi isso,
+Orlando Fonseca: tá, então acesso sobre produtos,
+Orlando Fonseca: beleza.
+Orlando Fonseca: A entrega do projeto é para o dia desse nome. Quer dizer que temos mais um aproximado? É feriado? Não de catorze.
+Orlando Fonseca: Bom dia, quinze. Deixa eu ver aqui o calendário
+Orlando Fonseca: é segunda feira. Mas é pra ter um dia do professor, né?
+Orlando Fonseca: Tá, então não, acho que não é.
+Orlando Fonseca: Depois eu confirmo com vocês agora eu fiquei perdido. Aí. Dia quinze. É isso é dia quinze.
+Orlando Fonseca: Então, dia catorze, temos a aula. Temos essa aula aqui agora, né? E a próxima aula, dia catorze para finalizar essa parte do programa de classe. E você estaria prontos para fazer a entrega de desse novo. Eu acho que a data vamos manter,
+Orlando Fonseca: porque está sempre está muito difícil, não, você põe pensando já no diagrama de classes.
+Orlando Fonseca: Tá bom, pessoal. Alguma dúvida?
+Orlando Fonseca: A gente finaliza essa aula aqui um pouquinho mais cedo.
+Orlando Fonseca: Se você não tiver mais dúvida.
+Orlando Fonseca: Tranquilo, fechou. Dá para andar então, muito para três.
+Orlando Fonseca: Dá para andar na primeira página no projeto.
+Orlando Fonseca: Tá bom, beleza, pessoal.
+Orlando Fonseca: Então aguardo você na próxima aula para continuar falando do drama de graça, vamos ter mais uma ou duas aulas
+Orlando Fonseca: e vamos avançando. Vamos ter diagrama de interação, diagrama de atividade. E finalmente vamos tocar ali na implementação. Que você me apresente também. Que vocês estão trabalhando. Vamos ver como essa dinâmica até a entrega do projeto de bloco, tá bom.
+Orlando Fonseca: Boa noite, meu querido. Até a próxima aula. Valeu.
+Jorge José Luiz Santos da Silva: Alô, Professor. Boa noite.
+Orlando Fonseca: Boa noite.

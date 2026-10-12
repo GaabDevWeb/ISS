@@ -46,6 +46,7 @@ function initHome() {
   const trimesterBtn1 = document.getElementById('iss-trimester-1');
   const trimesterBtn2 = document.getElementById('iss-trimester-2');
   const trimesterBtn3 = document.getElementById('iss-trimester-3');
+  const trimesterBtn4 = document.getElementById('iss-trimester-4');
   const trimesterBtnBoth = document.getElementById('iss-trimester-both');
   const mainEl = document.querySelector('main');
   if (!grid) return;
@@ -106,16 +107,20 @@ function initHome() {
   const TRIMESTER_STORAGE_KEY = 'iss_home_trimester';
   const BOTH_VALUE = 'both';
 
+  function isTrimesterNumber(n) {
+    return n === 1 || n === 2 || n === 3 || n === 4;
+  }
+
   function normalizeTrimesterNumber(n) {
     const v = Number(n);
-    if (v === 1 || v === 2 || v === 3) return v;
+    if (isTrimesterNumber(v)) return v;
     return 3;
   }
 
   function getDisciplineTrimesters(discipline) {
     const t = discipline && discipline.trimester;
     if (Array.isArray(t)) {
-      const out = t.map((x) => Number(x)).filter((n) => n === 1 || n === 2 || n === 3);
+      const out = t.map((x) => Number(x)).filter(isTrimesterNumber);
       return out.length > 0 ? out : [3];
     }
     return [normalizeTrimesterNumber(t)];
@@ -127,7 +132,7 @@ function initHome() {
     })();
     if (raw === BOTH_VALUE) return BOTH_VALUE;
     const n = Number(raw);
-    if (n === 1 || n === 2 || n === 3) return n;
+    if (isTrimesterNumber(n)) return n;
     return 3;
   }
 
@@ -144,6 +149,7 @@ function initHome() {
       [trimesterBtn1, 1],
       [trimesterBtn2, 2],
       [trimesterBtn3, 3],
+      [trimesterBtn4, 4],
       [trimesterBtnBoth, BOTH_VALUE],
     ].forEach(function (pair) {
       const btn = pair[0];
@@ -477,6 +483,7 @@ function initHome() {
       bindTrimester(trimesterBtn1);
       bindTrimester(trimesterBtn2);
       bindTrimester(trimesterBtn3);
+      bindTrimester(trimesterBtn4);
       bindTrimester(trimesterBtnBoth);
     })
     .catch((err) => {

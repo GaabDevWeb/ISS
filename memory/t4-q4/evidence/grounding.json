@@ -1,0 +1,22 @@
+{
+  "verdict": "conditional",
+  "confidence": "medium",
+  "knowledge_grounding": "applied",
+  "retrieve": "ground.sh search",
+  "vault": null,
+  "pack": null,
+  "sources": [
+    "content/disciplines.json",
+    "agents/documentation.md",
+    "public/js/app.js",
+    "agents/content-summary-agent.md",
+    "agents/content-summary-style-guide.md"
+  ],
+  "gaps": [
+    "WIKI_ROOT e RAG_REPO_ROOT não estão definidos em ~/.cursor/agents.env (linhas comentadas). ground.sh recusou retrieve. Contratos lidos no repositório ISS, que é a fonte verificada.",
+    "PDF Etapa-01-1-Desenvolvimento-de-Servicos-Web-e-Testes-com-Java.pdf não tem camada de texto (pdftotext devolve só form-feeds). Lacuna de slides para serviços web Java."
+  ],
+  "submitted_at": "2026-10-12T11:10:00Z",
+  "cycle_id": "t4-q4-c1",
+  "command": "bash ~/.cursor/skills/wiki/scripts/ground.sh search \"ISS lições trimestre disciplinas content lessons\" iss"
+}

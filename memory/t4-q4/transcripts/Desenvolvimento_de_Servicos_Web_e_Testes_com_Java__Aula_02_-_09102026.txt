@@ -1,0 +1,635 @@
+Vamos pegar.
+E aí, Legacy?
+Você
+Você acha para mim no Spotify?
+E aí, eu acho, já é
+daquelukounmphsimprudencefalia.
+E aí você legenda Adriana Zanotto: e aí para a mãe, a mãe toca você
+e aí coração.
+Eu acho
+uma não personagem.
+Você.
+E aí para mim não há edições acelerar vocês dezasseis.
+Você me dezasseis, você você.
+você de uma.
+E aí para a Mãearbas.
+é só legenda: Adriana Zanotto:
+vocês.
+Hashtag, você está
+já você
+dezassete h, não há edições às doze, h e às treze h. Horários e duzentos e quarta feira, das oito h às dezoito h. Não há edições às doze h e às treze h,
+A música para.
+cantora? Só a gente,
+você.
+Legenda: Adriana Zanotto: você e a.
+E aí, gente?
+Elberth Moraes: Bora lá, galera.
+Elberth Moraes: Excelente noite.
+Elberth Moraes: Tudo bem por aí?
+Elberth Moraes: Tchau,
+Elberth Moraes: me ouvem perfeitamente. Está tudo em ordem.
+Elberth Moraes: Bora lá, então, galera Tamo, junto. Excelente noite para vocês.
+Elberth Moraes: Vamos começar aqui o nosso papo.
+Elberth Moraes: Ontem, a gente começou aqui uma nova jornada,
+Elberth Moraes: que é com o nosso papo sobre testes automatizados como a gente tem aqui no nosso
+Elberth Moraes: querido eclipse. E aí a gente recuperou um projeto que a gente já conhecia que a gente criou no trimestre passado.
+Elberth Moraes: A gente fez essa configuração do dia. Unit no eclipse uma configuração básica, vendo no Bildpf, adicionando uma Live. E aí a gente implementou aqui três testes para a gente verificar o comportamento da nossa classe de evento.
+Elberth Moraes: E aí, hoje, antes da gente acrescentar algumas novas funcionalidades, eu queria recuperar aqui alguns conceitos e a gente conseguir também conversar sobre uma questão que eu considero
+Elberth Moraes: bem importante nesse trabalho, porque a gente sempre tem aquela dúvida. Se vocês forem na literatura, no que a gente já separou de livros. Sempre rola aquele papo do porquê que a gente tem que gastar tempo mais tempo ainda
+Elberth Moraes: descrevendo o teste. Se a gente já conseguiu executar todos os nossos programas e verificar que está tudo funcionando.
+Elberth Moraes: A gente tem aqui essa nossa classe que tem o método, man.
+Elberth Moraes: A gente fez aqui a execução dele e tal. Deu tudo certo. A gente viu que tudo estava funcionando. Escrevemos, verificamos a funçãozinha aqui. O método de tem vaga e tal. E aí, beleza?
+Elberth Moraes: Conseguiu fazer esse negócio funcionar. Mas mesmo assim, imaginem que a gente está desenvolvendo
+Elberth Moraes: um sistema, e aí a gente quer realmente fazer essa organização de eventos. A nossa aplicação possui uma regra aqui muito simples
+Elberth Moraes: que, se um evento tem capacidade, por exemplo, para dez pessoas, para dez participantes, a gente não pode permitir que onze pessoas sejam escritas. E aí nós implementamos essa regra. A gente tem aqui dentro da nossa regra de.
+Elberth Moraes: De evento,
+Elberth Moraes: a possibilidade de usar esses atributos, e aí, na nossa classe de teste, a gente implementou aqui essa regrinha. A gente executou o programa e a gente verificou que tudo funciona até aqui. Aparentemente, a gente não tem
+Elberth Moraes: nenhum tipo de problema. Mas agora imagine que essa nossa mega aplicação continua evoluindo como todo sistema. E aí outros desenvolvedores começam a trabalhar nesse mesmo projeto. Novas funcionalidades vão ser adicionadas.
+Elberth Moraes: E aí, em algum determinado e próximo momento, alguém modifica, sei lá, a condição aqui responsável
+Elberth Moraes: por verificar se ainda existem vagas justamente aqui, nesse nosso mundinho, aqui, debaixo da inscrição, é
+Elberth Moraes: claro, uma alteração de tirar alguma coisa daqui de dentro. Adicionar uma condição. Tirar tal. Acreditem que isso pode fazer que o seu sistema permita que esse nosso sistema aqui permita que a gente faça uma inscrição além da capacidade.
+Elberth Moraes: Talvez ninguém vai perceber imediatamente que isso aconteceu. O programa continua compilando. Ele continua executando. Mas nenhuma mensagem de erro aparece aqui no nosso console.
+Elberth Moraes: Mas a regra de negócio deixou de ser respeitada. Imagine se eu tirasse essa condição daqui. Ou essa condição daqui. Algo que estivesse afetando esse processo.
+Elberth Moraes: Beleza. E aí a gente começa a ver
+Elberth Moraes: que a gente percebe que a aplicação,
+Elberth Moraes: ela vai executar sem nenhum problema, sem nenhum erro. Mas não necessariamente significa que ela esteja funcionando corretamente. E esse é o grande barato desse trabalho que a gente está fazendo aqui. Agora, pensem aqui numa situação real, não que essa não seja uma situação real.
+Elberth Moraes: Imaginem que esse mesmo problema aconteça lá num sistema bancário,
+Elberth Moraes: sei lá, em algum serviço que tem relação com cálculo de benefício ou com alguma aplicação de processamento de pagamentos e tal, então, uma alteração aparentemente pequena pode realmente provocar algumas consequências um pouco maiores do que essa.
+Elberth Moraes: E aí é aqui que os testes automatizados começam a demonstrar realmente o seu valor.
+Elberth Moraes: Quando a gente escreve um teste. A gente está registrando aqui em código através da nossa linguagem de programação. Uma expectativa sobre o que a gente espera do nosso sistema sobre o comportamento dele. A gente está dizendo, por exemplo, quando o evento atinge
+Elberth Moraes: a sua capacidade máxima,
+Elberth Moraes: que ele não vai deixar apresentar novas vagas disponíveis. E sempre que a gente executa esse teste, o J Unit, nossa ferramenta aqui vai poder verificar de forma automática
+Elberth Moraes: se essa expectativa continua sendo atendida. O mais interessante é que a gente pode executar esse mesmo teste amanhã, na próxima semana.
+Elberth Moraes: E depois de dezenas de alterações no sistema, que ela vai continuar sem a gente ter que fazer nada manual, passando por todos os passos que a gente realizou até hoje e executando
+Elberth Moraes: o nosso teste. Então, um teste automatizado. Ele transforma se uma expectativa de comportamento
+Elberth Moraes: em uma verificação que a gente pode repetir quando a gente sentir necessidade. Mas eu quero deixar aqui uma coisa interessante. Até que eu conversei escutando depois a gravação de ontem, e percebendo a situação de vocês, olhando para a aula e tal
+Elberth Moraes: é,
+Elberth Moraes: a gente vai olhar aqui para os nossos primeiros testes. E aí a gente vai começar a tentar entender realmente
+Elberth Moraes: tudo que a gente conseguiu fazer ontem ontem foi algo mais passado. Levei para vocês, mas a gente não conseguiu detalhar muito. E eu percebi que dá para a gente evoluir ainda mais esse conceito
+Elberth Moraes: e, principalmente, tentar passar para vocês. Não sei se ontem eu consegui a importância de a gente ter os testes unitários no nosso mundo do desenvolvimento.
+Elberth Moraes: Então observem que a gente tem aqui. Esse nosso deve possuir vagas
+Elberth Moraes: quando não há inscritos. Esse nosso carinho daqui. Nesse teste, a gente está criando aqui um evento. Observem nosso carinho. A gente definiu ali a capacidade para dez pessoas.
+Elberth Moraes: Depois a gente executou o nosso método. Tem vaga. A gente verifica se o resultado era verdadeiro.
+Elberth Moraes: E aí a gente percebe. Assim que a gente não está simplesmente igual. A gente fez em outra classe a classe que tem o método Man? Essa daqui, a gente não está simplesmente imprimindo alguma informação no console.
+Elberth Moraes: A gente está descrevendo uma condição inicial. A gente está executando esse nosso comportamento e a gente verifica se o resultado corresponde ou não corresponde ao que a gente esperava.
+Elberth Moraes: E essa organização que a gente fez aqui ontem,
+Elberth Moraes: que eu até falei para vocês. Aceitem essa organização, esse carinha daqui. Ele tem uma.
+Elberth Moraes: Ele é muito importante. Essa convenção. Claro que não. Está escrito que é uma coisa obrigatória, mas é interessante você implementar de um jeito que depois outras pessoas também conheçam essa convenção.
+Elberth Moraes: E aí a gente acaba escrevendo desse jeito esses carinhas daqui. Eu estou botando esses nomes de setápica como se fosse uma configuração.
+Elberth Moraes: Esse carinha daqui, que é a nossa execução. Esse cara daqui, que são todos os nossos acertos, todos os testes que a gente tem que fazer. Mas ele tem na literatura. Estava dando uma olhada como se fosse uma letra a
+Elberth Moraes: aqui. Uma letra A aqui. E uma letra A. Aqui, esse a aqui de baixo ficou muito fácil, que é o nosso. Acerte então, aqui dentro a gente tem o nosso. Acerte esse a que ele bota aqui na literatura. É o nosso. A de ação é o famoso
+Elberth Moraes: Act. Então a gente tem desse jeito. E esse cara daqui de cima. Esse a eles chamam a literatura
+Elberth Moraes: de arrend desse jeito aqui. Claro que o nome não tem muita coisa diferente do que a gente estava falando ontem. O Gcma é meio como se fosse o setup. Mesmo a preparação de tudo aqui embaixo, a execução da principal funcionalidade que você quer testar. E aqui embaixo, o teste propriamente dito, já pegando
+Elberth Moraes: os seus resultados. E aí é interessante a gente ficar ligado nisso,
+Elberth Moraes: porque essas três fases de teste são necessárias porque, como eu falei, facilitam quando outra pessoa vier fazer algum tipo de trabalho. Então, por exemplo, a gente, olhando para essa primeira parte, que a gente pode chamar assim. Essa primeira
+Elberth Moraes: fase de um teste aqui é justamente o momento que a gente organiza.
+Elberth Moraes: Tudo que a gente precisa para realizar a verificação.
+Elberth Moraes: No nosso exemplo, aqui, a gente criou um objeto do tipo evento e a gente informou ali dentro alguns atributos, inclusive um atributo importante para a gente, que é a capacidade que a gente botou ali dentro. Dez participantes. Depois a gente entra aqui na parte na segunda fase,
+Elberth Moraes: na parte da ação da execução que a gente chama. Esse método tem vaga, e esse método aqui representa um comportamento que a gente quer realmente verificar.
+Elberth Moraes: E esse cara aqui de baixo. Observem que ele pega o resultado da etapa anterior.
+Elberth Moraes: Ele pega ali o.
+Elberth Moraes: Esse possui vaga que tem aqui. E aí ele faz um tipo de comparação aqui dentro para saber como esse cara aqui é Boleano. A gente conseguiu usar esse acerte True. E aí nesse momento. Aqui o Jay Unit faz a comparação do resultado obtido com aquilo que a gente esperava.
+Elberth Moraes: E aí, beleza? Então a gente está como a gente botou aqui um True.
+Elberth Moraes: A gente está esperando que esse cara aqui seja True. Então ele sendo True, o teste passa ele não sendo true a gente para essa mensagem. Então percebam que cada parte do nosso teste, ele responde a uma pergunta: o que a gente precisa. Preparar.
+Elberth Moraes: O outro aqui é qual comportamento que a gente vai executar. E aqui embaixo, qual o resultado que a gente espera encontrar.
+Elberth Moraes: Então a gente tem essa organização bonitinha. Essa separação acaba tornando esse nosso teste mais simples de compreender e facilita bastante a identificação, justamente a identificação de problemas. Quando alguma verificação falha.
+Elberth Moraes: Então, claro que, quando aparece esse erro, essa falha, a gente não precisa também decorar esse monte de coisa que eu botei aqui de inglês e tal, mas é interessante que a gente consiga ver através do próprio nome que você deu para o seu,
+Elberth Moraes: para o seu método. E a parte do display que a gente também colocou aqui dentro. Isso tudo te ajuda a identificar onde esse problema aconteceu.
+Elberth Moraes: Falando ainda desses métodos que a gente acabou falando ontem, que a gente ia trocar uma ideia.
+Elberth Moraes: Observem que esses métodos acabam sendo
+Elberth Moraes: métodos bem grandes, então, claro que a gente no dia a dia. Talvez a gente. Não use esses caras que são bem longos. Mas esse nosso primeiro aí de deve possuir vagas total. Ele poderia ser chamado simplesmente de, sei lá, teste, um, teste, dois e teste três e estaria resolvido.
+Elberth Moraes: Mas não é interessante a gente fazer isso, porque um teste precisa realmente comunicar para quem está trabalhando nisso daqui. O comportamento que ele está verificando.
+Elberth Moraes: Então imagine que a gente está trabalhando em um projeto que tenha centenas de testes. Isso não é um chute, não um projeto grande. Ele pode realmente ter centenas de testes. E se um deles falhar e aparecer uma mensagem lá. Teste setenta e três, pô. Como é que a gente vai conseguir saber
+Elberth Moraes: o que aconteceu nesse teste. Mas se o teste se chamar, por exemplo, não deve possuir vagas quando o evento está lotado, que é o segundo teste da gente aqui. A gente já consegue compreender imediatamente qual comportamento que pode estar sendo afetado, que foi comprometido,
+Elberth Moraes: e é por isso que a gente utiliza uma conversão, uma convenção bastante simples, mesmo que seja um pouquinho diferente do que a gente já fazia. Mas é um tipo de convenção que ajuda bastante.
+Elberth Moraes: E aí, primeiro, a gente descreve o comportamento esperado e depois a gente informa a condição em que esse comportamento deve acontecer.
+Elberth Moraes: Claro que isso daqui não é uma obrigação imposta pelo G Unit. É apenas uma boa prática de escrita, uma boa prática de comunicação. Isso aí tem relação
+Elberth Moraes: com algo que a gente discutiu no trimestre passado,
+Elberth Moraes: que o código não é escrito apenas para ser executado lá pelo computador.
+Elberth Moraes: O código também é escrito para ser lido e para ser compreendido por outras pessoas, inclusive a gente mesmo lá na frente. Porque às vezes você passa um tempo sem mexer no sistema.
+Elberth Moraes: E você precisa de alguma documentação. Não tem nada melhor do que a documentação, ser o seu próprio código. Porque senão você precisaria ir em uma documentação externa para entender o que está lá para depois você voltar no nosso código.
+Elberth Moraes: Antigamente era assim. Então, antigamente, você não tinha nem tanta memória para você documentar, escrever o nome do método tão grande ou de alguma variável. Mas hoje a gente não tem esse tipo de problema. Então a documentação acaba sendo
+Elberth Moraes: o nome do seu método, o nome da sua classe, o nome dos seus atributos, além dos pequenos comentários que você faz dentro do seu código beleza. Vamos
+Elberth Moraes: trabalhar um pouquinho mais
+Elberth Moraes: numa parte que eu acho interessante, que é o interesse da gente pelos testes quando você está dentro de uma empresa. E claro que quando você chega para o programador
+Elberth Moraes: e quer trocar uma ideia com ele sobre camarada, você precisa fazer aí os testes unitários desse projeto, que está chegando e tal. Às vezes isso não é uma
+Elberth Moraes: uma ação muito legal para algumas pessoas. Mas o profissional que realmente atua naquilo ali ele está esperto. Ele está interessado. Ele está antenado na melhor forma de fazer aquilo.
+Elberth Moraes: Mas a gente, mesmo o programador ou os líderes dos seus projetos. A gente precisa realmente entender que esse carinha
+Elberth Moraes: é importante. Então vamos dar uma
+Elberth Moraes: uma passada aqui em alguns pontos que a gente escreveu, que a gente fez e o que a gente comentou também ontem. E aí vamos dar uma. Vamos bater um papo rápido aqui.
+Elberth Moraes: Sobre essa parte. A gente já deu uma geral aqui tá, galera. Foi só uma contextualizada, uma retrospectiva do que a gente fez nesses dias. Nesse dia de ontem, de vinte minutinhos.
+Elberth Moraes: E aí agora a gente começa já a pensar na nossa aula. Até porque hoje a gente vai ter mais pelo menos três testes para implementarmos aqui três especificações prontas aqui no meu bloco de notas. E aí mais conceitos ali dentro. Os conceitos eles vão
+Elberth Moraes: surgindo. Eles vão evoluindo.
+Elberth Moraes: E não digo que sejam mais complexos. Não, mas a gente acaba apresentando mais uns métodos daquele do Ja Unit, que contemplam outras situações. E aí o grande papo que eu estava até pesquisando hoje, até na documentação
+Elberth Moraes: da empresa. Lá, sobre essa parte de qualidade de software e tal. E aí eu estava até lendo uma parte lá que eu até separei a pergunta: por que a gente deve investir tempo escrevendo teste igual. Eu falei com vocês. Se a gente já executou tudo, a gente já verificou o resultado. Isso aí eu peguei de um livro. Depois eu peguei.
+Elberth Moraes: Alguém usou também num documento lá. E essa pergunta é muito importante,
+Elberth Moraes: porque quando a gente está desenvolvendo uma funcionalidade, já tem bastante trabalho para entender
+Elberth Moraes: o problema. Para escrever o código, para corrigir erro, para fazer tudo funcionar. E aí a gente ainda tem que adicionar mais uma atividade no nosso processo de desenvolvimento. Então a gente, dependendo
+Elberth Moraes: de uma situação, a gente vale muito mais a pena. Os casos de teste e talvez para outras não. Mas dependendo da empresa que você está, você realmente precisa disso até para você liberar as suas versões, mas beleza, vamos imaginar aqui uma situação
+Elberth Moraes: que eu trouxe para a gente bater um papo. Imagina que vocês façam parte de uma equipe responsável por um sistema grande
+Elberth Moraes: que vai ser utilizado num evento desses de tecnologia. Numa conferência dessa, esse evento possui vagas, limitadas igual o sistema que a gente está
+Elberth Moraes: fazendo aqui, semelhante a essa classe evento. E aí o sistema precisa realmente impedir novas inscrições. É uma regra bastante simples, que nós também já implementamos aqui tudo de boa. Mas imagine que essa aplicação está funcionando. Há alguns meses,
+Elberth Moraes: milhares de pessoas utilizam o sistema e vários desenvolvedores acabam trabalhando nele constantemente em novas funcionalidades
+Elberth Moraes: que vão surgindo, e aí, em algum determinado momento dessa vida de programador. Alguém precisa modificar, sei lá, uma parte do nosso código. Imaginem aqui essa nossa classe,
+Elberth Moraes: porque, sei lá, uma pequena alteração. Talvez essa alteração seja para, sei lá, corrigir um problema ou para melhorar o desempenho ou para atender algum novo requisito que surgiu. Mas durante essa alteração,
+Elberth Moraes: o desenvolvedor acaba modificando, mesmo sem perceber uma situação, uma condição que estava funcionando corretamente,
+Elberth Moraes: e aí será que essa mudança. No nosso caso. Aqui, por exemplo, esse carinha que eu vou dar uma olhadinha nesse nosso método tem vaga.
+Elberth Moraes: Então imaginem que será que uma mudança de apenas um carácter
+Elberth Moraes: poderia realmente provocar um problema importante nesse sistema? Tipo, eu colocar um igual aqui nesse cara?
+Elberth Moraes: E aí a gente viu. A gente está dentro desse nosso método. Tem vaga. Ele possui uma responsabilidade muito específica, que é informar, já que ele é um método boliano.
+Elberth Moraes: Devolver para a gente um trua falso, informando se ainda existem vagas disponíveis, ou se realmente lotou para dentro desse objeto. Dentro desse evento,
+Elberth Moraes: a condição que a gente utiliza aqui dentro, a gente compara dois campos: a quantidade de escritos
+Elberth Moraes: com a capacidade máxima.
+Elberth Moraes: E aí, enquanto essa quantidade de inscritos,
+Elberth Moraes: por menor que a capacidade, essa atualização foi feita agora, menor do que a capacidade,
+Elberth Moraes: o método retorna verdadeiro, porque é justamente o If que a gente está fazendo ali.
+Elberth Moraes: E aí, quando as duas quantidades forem iguais, significa que o evento atingiu o seu limite e ele não possui mais vagas. Até aqui, tudo beleza. A gente fez ali uma
+Elberth Moraes: uma possível alteração. Imaginem que esse cara, essa classe de evento. Aí ela não era para ter sido alterada, mas, sei lá, o cara. O desenvolvedor olhou para aquilo ali e falou: Pô, não, isso aqui não faz sentido. Pô, não tem como a quantidade de inscritos precisa ser menor ou igual, né?
+Elberth Moraes: Eu tenho ali dez vagas. Poxa, eu poderia ter dez inscritos, mas a gente usa esse nosso tem vaga para justamente saber se vai fazer uma próxima ou não.
+Elberth Moraes: E aí, enquanto a gente tiver uma vaga a menos, a gente tem chance de inscrever um novo. Mas se tiver a mesma quantidade de vagas de inscritos com capacidade, a gente não tem sentido a gente fazer. Então esse cara daqui pode ter algum problema.
+Elberth Moraes: Observe que foi uma substituição bem curtinha. A gente trocou ali um sinal de menor por um sinal de menor ou igual. E aí, beleza? Fiz aqui a alteração. Coloquei ali mais um caracté.
+Elberth Moraes: E aí a gente sabe que esse código daqui. Ele funciona. Ele compila. Normalmente, a gente sabe que ele compila. Ele não tem nenhum tipo de erro dentro dele.
+Elberth Moraes: A gente tem que ver também esse programa vai conseguir executar se eu chegar por aqui,
+Elberth Moraes: que fizer a execução da aplicação, por exemplo,
+Elberth Moraes: que é o nosso evento app
+Elberth Moraes: deixa, ele vai aparecer aí no nosso mega console.
+Elberth Moraes: Tá vendo? Ele aparece. Ele está rodando. Está executando,
+Elberth Moraes: mas aqui a gente tem uma pergunta bem importante para a gente ver, que é justamente em cima do comportamento da nossa aplicação. Esse comportamento não está correto.
+Elberth Moraes: Vamos imaginar um evento com capacidade para duas pessoas. E aí a primeira pessoa se escreve tudo certinho. A segunda pessoa se inscreve também tudo certo.
+Elberth Moraes: Agora o evento está lotado, mas com essa alteração que está aí, quando a gente consultar se ainda existe vaga, a condição passa a considerar verdadeiro, porque dois é menor ou igual a dois, ou seja, o sistema informa que ainda existe uma vaga
+Elberth Moraes: e mesmo com o evento lotado, esse cara vai me retornar. Um True
+Elberth Moraes: que possibilita a inclusão de um novo carinho.
+Elberth Moraes: Percebam que o nosso código continua compilando a aplicação, executando, e talvez nenhuma exceção seja apresentada nesse nosso carinho. Mas a regra de negócio ontem, a gente comentou sobre isso a importância
+Elberth Moraes: da regra de negócio. Ela deixou de funcionar corretamente. E aí vem a parte mais interessante. Ontem,
+Elberth Moraes: a gente escreveu aqueles testes e um deles verifica justamente o comportamento de um evento lotado. Vamos dar um pulinho aqui na nossa classe de teste
+Elberth Moraes: nesse carinha daqui.
+Elberth Moraes: Quando a gente não vou acessar aqui nada para a gente fazer. Agora não, mas observem esse teste dois aqui,
+Elberth Moraes: que é justamente um esquema de lotação que ele verifica se um evento está lotado,
+Elberth Moraes: ou seja, não possui vaga, disponível e ele vai apresentar uma falha. E por que ele vai falhar? Porque o resultado observado foi diferente daquele que a gente havia definido como esperado.
+Elberth Moraes: Então observem que esse cara daqui, a gente colocou que ele retornaria falso
+Elberth Moraes: no nosso teste. A gente esperava que esse método retornasse falso, mas a implementação foi modificada e a gente sabe que ela vai retornar verdadeiro. Porque se eu tenho dois aqui, e se eu fiz duas inscrições, eles ficarem a ideia menor ou igual. Então ele vai me retornar lá verdadeiro.
+Elberth Moraes: E eu queria que vocês percebessem uma coisa. Nesse momento. Aqui o teste falhar
+Elberth Moraes: é uma boa notícia para a gente. Claro que quando eu comecei a olhar para esse mundo de testes, como eu já falei com vocês também. Eu ficava muito incomodado em falhas dentro de um sistema.
+Elberth Moraes: É claro que isso pode aparecer. Muito estranho falar isso. Mas Palhar é muito importante
+Elberth Moraes: para a qualidade do nosso software. Normalmente, quando a gente vê alguma coisa vermelha na tela, a gente pensa logo que aconteceu alguma coisa ruim. Mas nesse nosso caso, aqui
+Elberth Moraes: o teste está cumprindo justamente essa função. Ele está avisando para a gente que um comportamento que deveria ser preservado foi comprometido por uma alteração no código. Imagine se esse problema fosse identificado somente depois que o sistema já estivesse funcionando em produção,
+Elberth Moraes: a gente poderia ter muitas reclamações dos usuários. A gente poderia ter um monte de inscrição indevida. A gente poderia ter uns problemas operacionais. Sei lá, uma equipe tentando descobrir o que aconteceu. Criar lá. Uma sala de crise para resolver a questão. E aqui a gente conseguiu identificar
+Elberth Moraes: o problema durante o desenvolvimento.
+Elberth Moraes: Então, aqui, dentro da nossa classe
+Elberth Moraes: de evento, ainda não rodei. Deixa eu rodar aqui o dia. Unit Rolex G. Units.
+Elberth Moraes: Observem que o nosso
+Elberth Moraes: carinha daqui o dois e o três. Eles estão justamente quebrando evento lotado não deve possuir vagas. E esse outro aqui. Evento com capacidade zero, não possui. Então ele deu dois tipos de dois erros aqui para a gente. E aí eu vim aqui. Alterei esse carinha de novo. Salvei esse carinha.
+Elberth Moraes: Deixa eu rodar de novo aqui. Esse cara
+Elberth Moraes: beleza. Nosso teste está de boa. Então observem que os três testes
+Elberth Moraes: passaram. Isso mostra algo muito importante para a gente que nós modificamos o código. A gente verificou que um comportamento deixou de funcionar.
+Elberth Moraes: A gente corrigiu a implementação. A gente executou novamente o teste. E com isso, a gente conseguiu confirmar que os cenários continuam sendo atendidos.
+Elberth Moraes: E esse é um dos grandes benefícios do teste unitário. Eles nos ajudam muito a identificar o que a gente chama de regressão, que são aquelas situações em que uma alteração compromete o comportamento
+Elberth Moraes: que estava funcionando anteriormente. Então a gente fez essa parte aqui desse trabalho de regressão.
+Elberth Moraes: Hoje, essa nossa aplicação possui poucos métodos, e a gente está executando apenas três testes,
+Elberth Moraes: mas, sei lá, alguém aí pense. Pô. Mas, Professor, eu poderia identificar esse problema manualmente. Tranquilo. Isso aí é verdade, você poderia de boa.
+Elberth Moraes: Mas imaginem mais uma vez, uma aplicação com centenas de classes, com milhares de métodos e muitas pessoas trabalhando ao mesmo tempo, que é um problema. Quando a gente está trabalhando sozinho, que não é o normal dentro de uma equipe,
+Elberth Moraes: você tem um controle maior de tudo que você faz. Mas quando você tem um monte de gente trabalhando junto, e essa pessoa pode, às vezes sem querer mexer no seu código. Aí o bicho pega. Mas imaginem também que a cada alteração
+Elberth Moraes: que você fizesse fosse necessário você executar manualmente dezenas ou centenas de verificações. Quanto tempo que você levaria fazendo isso? E o mais importante, como que a gente garantiria,
+Elberth Moraes: sei lá que ninguém esqueceu de verificar algum comportamento e tal. E aí, nesse cenário, os testes automatizados, eles passam
+Elberth Moraes: a oferecer benefícios e um benefício muito maior, porque eles permitem que a gente execute novamente de uma maneira mais consistente.
+Elberth Moraes: E as verificações que a gente construiu ao longo do desenvolvimento, elas estão sempre sendo utilizadas. E aqui existe uma mudança de pensamento. Vocês devem ter percebido isso. Que quando a gente escreve um teste.
+Elberth Moraes: A gente não está apenas criando mais um código que eu já escutei isso. De profissionais de alunos profissionais que eu digo, pessoas que trabalham comigo, alunos. Quando eu digo aqui dentro da sala de aula, a gente não está apenas escrevendo mais código. A gente está registrando
+Elberth Moraes: uma expectativa sobre o funcionamento do nosso sistema e o nosso teste. Está dizendo que, independente das alterações que a gente fizer aí, no futuro, um evento lotado não deverá apresentar vagas disponíveis,
+Elberth Moraes: e aí, enquanto essa regra continuar sendo válida
+Elberth Moraes: para o negócio, esse teste vai poder nos ajudar a verificar se ela está sendo respeitada e tal. Isso também muda muito a nossa relação com a própria manutenção de software. Muitas vezes, um desenvolvedor tem muito receio
+Elberth Moraes: de modificar um código que já está funcionando, porque ele não sabe quais outras funcionalidades poderão ser afetadas. E aí, quando nós temos bons testes automatizados, a gente consegue realizar essas mudanças com mais confiança.
+Elberth Moraes: Claro que nenhum conjunto de testes garante que a aplicação esteja completamente livre de defeitos. Os testes só conseguem verificar os comportamentos que a gente conseguiu pensar e contemplar.
+Elberth Moraes: Mas eles podem, claro, reduzir muito esses riscos de mudança, e tornar realmente o nosso processo de desenvolvimento um pouquinho mais seguro. E aí eu queria
+Elberth Moraes: passar aqui para uma próxima experiência, tentando fazer uma provocação aqui para vocês. Imaginem que amanhã vocês recebam
+Elberth Moraes: a responsabilidade de vocês modificarem um sistema importante,
+Elberth Moraes: um sistema que foi desenvolvido por uma outra equipe. Vou fazer uma pergunta. Eu sei que tem algumas mensagens aqui no chat
+Elberth Moraes: para eu responder.
+Elberth Moraes: Acho que não. Já responderam ali, mas eu queria perguntar para vocês. Assim vocês teriam mais confiança em trabalhar em uma aplicação
+Elberth Moraes: sem nenhum teste automatizado ou numa aplicação que possui alguma boa suíte de testes, capaz de verificar os principais comportamentos dessa sua aplicação,
+Elberth Moraes: vocês ainda deixariam de investir nos testes unitários depois desse nosso papo aqui, ou consegui convencer vocês
+Elberth Moraes: que a gente precisa realmente investir nesses caras. E aí essa confiança que a gente está tendo de falar, que a gente tem que usar
+Elberth Moraes: os testes e tal que eu queria que a gente passar para vocês aqui. Dessa necessidade da gente aprender a construir, porque no desenvolvimento
+Elberth Moraes: profissional diferente do que a gente faz aqui num ambiente controlado. A gente não precisa apenas fazer uma funcionalidade funcionar. Hoje,
+Elberth Moraes: como falei com vocês, eu estava falando com a turma que eu comecei essa semana, também. De fundamentos do Java,
+Elberth Moraes: que a gente precisa pensar também
+Elberth Moraes: em como que essa funcionalidade vai poder ser corrigida. Vai poder ser modificada. Vai poder ser evoluída. E esse aí. É por isso que eu gostaria que vocês começassem a enxergar o teste, não como uma obrigação adicional,
+Elberth Moraes: mas como uma ferramenta realmente que ajuda a gente a desenvolver, a evoluir o nosso software um pouquinho mais de segurança.
+Elberth Moraes: É, usei aqui meia hora para a gente bater esse papo. Ok, vamos começar. Aqui.
+Elberth Moraes: A gente ia fazer alguma parte mais prática desse nosso trabalho. Esse papo foi bom para vocês, galera, conseguimos passar uma mensagem boa desse negócio
+Elberth Moraes: maravilha. Fiquem ligados aí em vagas. Até quando vocês forem buscar na Internet. No Linkedin da vida, é interessante vocês darem uma olhada também lá. Às vezes não busca só para um desenvolvedor, não busca por analista de qualidade. Eu acho que é uma profissão muito maneira.
+Elberth Moraes: E é uma profissão que você entra para trabalhar com software.
+Elberth Moraes: Mas só que você não precisa ter uma experiência tão grande de construção, de desenvolvimento de software. E aí você, claro, você tem mais chance de você evoluir na sua profissão no seu trabalho,
+Elberth Moraes: porque você acaba conhecendo programação. Você está sabendo aqui da faculdade? Você ainda não tem experiência profissional. Mas quando você entra numa empresa para você trabalhar com qualidade de software.
+Elberth Moraes: Você vê muito o código e você acaba querendo, claro, se metendo ali na vida do programador.
+Elberth Moraes: E aí isso é muito legal que você consegue fazer esses testes unitários que a gente está fazendo. E existem muitas frentes dentro desse mundo da qualidade de software. Então busque essa área também. Que é uma área que eu conheço. Tanta gente que entrou
+Elberth Moraes: para ser programador de uma empresa por essa área que eu liguei o alerta. Assim,
+Elberth Moraes: acho que tem uns dois meses que eu participei de um processo seletivo,
+Elberth Moraes: como Hard Skills da equipe lá, com outras duas amigas, que era justamente uma vaga para um cargo de analista de qualidade.
+Elberth Moraes: E aí, quando a gente começou a ver a galera que estava se qualificando ali, se qualificando, não se interessando pela vaga.
+Elberth Moraes: Muitas pessoas ali eram programadores e programadoras,
+Elberth Moraes: mas não tinham tanta experiência em projetos completos de você construir todo um projeto. Tinha conhecimento de toda uma estrutura de programação. Consegui ler um código, sabe, vocês verem quando a gente fez esse carinha daqui.
+Elberth Moraes: Isso aqui. Você não precisa conhecer tanta coisa de programação. A gente conhece um processo. Distanciar. A gente consegue conhecer construtores chamada de método. Então, isso aqui, tudo isso. Aqui, a gente conheceu na disciplina passada,
+Elberth Moraes: e aí. A gente tem essa possibilidade de evoluir aqui na nossa mega área.
+Elberth Moraes: É, deixa eu ler aqui um pouquinho,
+Elberth Moraes: pô, não sei, cara, não sei te dizer
+Elberth Moraes: se tem essas normas todas. Por exemplo, lá na empresa, a própria equipe de qualidade que tem lá, que são muitas pessoas.
+Elberth Moraes: Elas definem para a gente. Claro que existem coisas por fora. Existem certificações, coisas que a gente tem que seguir, mas eles pegam aquilo ali, e eles acabam adaptando a empresa.
+Elberth Moraes: Lá eles têm, por exemplo, um site lá, um site interno, uma intranet lá que eles têm lá o Dtp de data prévia e processos.
+Elberth Moraes: E aí ali dentro, eles leem toda uma literatura que tem no mercado para isso. E com certeza tem algumas normas que aí eles trazem para a gente para não ter que usar todas as normas, sei lá, do jeito que está lá. Sem a gente fazer nenhuma adaptação ao nosso mundo.
+Elberth Moraes: Eles pegam aquilo lá e fazem uma adaptação. E aí a gente acaba utilizando, seguindo o padrão
+Elberth Moraes: que é definido por nós, por nós, não pelo governo e o mercado. E aí a gente cria a nossa documentação, citando
+Elberth Moraes: a documentação externa. Mas a gente pode buscar também isso. Daí a gente pode fazer uma pesquisa, mas não é a mesma coisa que tem numa indústria. Mas a gente tem alguns selos de qualidade que a gente tem que acompanhar. Não sei se foi isso que você perguntou. Meu brother
+Elberth Moraes: beleza. Tamo aí.
+Elberth Moraes: Isso aqui foi o que a gente fez ontem trouxe para cá. Agora esse carinha. Esse carinha foi o número um que a gente fez. Aí depois a gente fez esse número dois. Uma outra especificação.
+Elberth Moraes: A terceira especificação foi a especificação que a gente parou, que é justamente essa daqui. E aí eu vou trabalhar com vocês sei lá, investindo alguns minutinhos. Eu tenho três aqui. Eu vou investir aí uns quinze minutinhos em cada um
+Elberth Moraes: deles. Para a gente dar uma passada geral, conhecer um pouquinho.
+Elberth Moraes: Vamos fazer algumas mudanças na nossa classe de evento para contemplar outras regrinhas. Mas, por exemplo, esse primeiro carinha que a gente vai ver aqui nove e dez da noite.
+Elberth Moraes: A especificação quatro.
+Elberth Moraes: Uma inscrição deve aumentar a quantidade de participantes. Uma inscrição deve aumentar.
+Elberth Moraes: O sistema deverá permitir consultar a quantidade de participantes inscritos em um evento.
+Elberth Moraes: Cada inscrição realizada com sucesso deverá incrementar essa quantidade em uma unidade entenda que isso aqui é o seu requisito funcional.
+Elberth Moraes: Então, sempre que a gente está fazendo um teste, sempre que a gente está trabalhando numa especificação. A gente tem que estar olhando para um requisito, porque esse cara daqui está sendo usado
+Elberth Moraes: pelo programador Backend pelo programador front end pelo cara de banco de dados, pelo carinha da arquitetura e também pelo analista de qualidade, pelo cara de testes
+Elberth Moraes: pelo programador de testes. Então a gente tem em comum a leitura desse requisito. E aí esse teste aqui acaba sendo modelado
+Elberth Moraes: de acordo com o requisito de acordo com o conhecimento que a gente tem do negócio.
+Elberth Moraes: Então esse primeiro carinha que está aqui. Vamos ler mais um pouquinho, dado que existe um evento de Capacidade para dez participantes e que nenhuma inscrição foi realizada quando uma inscrição for realizada, então a quantidade de inscritos deverá ser um.
+Elberth Moraes: Vamos testar aqui o método escrever. Observe que a gente vai testar um método que a gente ainda não tem o resultado esperado. Já que a gente vai estar fazendo uma inscrição, vai ser um e a gente vai conhecer aqui um outro carinha,
+Elberth Moraes: que é o Acerte Equals. Então, só para a gente começar, aqui
+Elberth Moraes: a gente está utilizando muito o acerte, Tools. E o acerte falso,
+Elberth Moraes: porque o método tem vaga. Ele retorna justamente um valor boleano.
+Elberth Moraes: Mas agora a gente vai pensar em uma necessidade um pouquinho diferente.
+Elberth Moraes: Imagine assim que a organização de um evento como o moço está dizendo aqui,
+Elberth Moraes: queira consultar quantas pessoas já estão inscritas essa informação?
+Elberth Moraes: A gente não tem hoje, aqui, dentro da nossa classe de evento,
+Elberth Moraes: a gente tem apenas um indicativo de que existe vaga ou não existe vaga. Então a organização precisa saber dessas quantas pessoas existem.
+Elberth Moraes: E aí hoje a gente sabe que para realizar inscrição na nossa classe, não possui esse método específico que o moço deu até um spoiler ali, que o objetivo dele é justamente, consultar essa quantidade.
+Elberth Moraes: E aí aqui surge uma questão muito interessante. Como que a gente pode escrever um teste
+Elberth Moraes: para verificar uma informação que a nossa classe ainda nem disponibiliza esse carinho ainda.
+Elberth Moraes: Então a gente vai transformar essa necessidade em um requisito funcional. A gente quer que quando a gente realize uma inscrição em um evento, um evento que inicialmente está vazio. A quantidade de inscrição passa de zero para um.
+Elberth Moraes: Então percebam que agora a gente não quer verificar simplesmente se uma condição é verdadeira ou falsa. A gente quer comparar um valor numérico obtido com o valor que a gente está definindo aqui como um esperado. Então a gente tem sempre essa parte do esperado e do
+Elberth Moraes: do que a gente está colocando o nosso valor. O valor que vem com o valor que a gente está definindo. E aí para isso, a gente vai conhecer um outro carinha, que é o Acerte Equals.
+Elberth Moraes: E ao mesmo tempo, a gente vai precisar dar um pulinho lá na nossa classe de evento nessa daqui para a gente conseguir fazer a implementação
+Elberth Moraes: desse nosso método. Então eu vou chegar aqui dentro dessa nossa classe de teste.
+Elberth Moraes: Deixa eu pegar o meu coisa aqui que eu já perdi. Ele
+Elberth Moraes: isso aqui, tudo já está escrito. Vou levar tudo, porque eu vou esquecer mesmo. Vou botar isso aqui. Aqui dentro. A gente já fez um já fez o dois já fez o três. Vou botar esse cara
+Elberth Moraes: aqui dentro
+Elberth Moraes: e vamos trabalhar nesse nosso carinha daqui de baixo.
+Elberth Moraes: É, também acho. Pamela Pamela ali fez uma manifestação muito importante.
+Elberth Moraes: Vou criar um método aqui. Um método Void.
+Elberth Moraes: Esse método void aqui. Eu vou falar que esse cara olhando aqui para o nosso carinho aqui de cima.
+Elberth Moraes: Eu vou chamá lo de sei lá, deve
+Elberth Moraes: incrementar. Eu achei a sua momento ideal para você fazer esse comentário deve incrementar a quantidade de inscritos.
+Elberth Moraes: Sei lá, uma coisa assim. Então criei um método aqui, bonitão, porque o objetivo da gente é justamente a gente ver esse cara acontecer. Então vamos lá vou botar aqui aquele arroba famoso arroba test
+Elberth Moraes: aqui dentro. E depois a gente pensa num nome bonitinho para esse display display name.
+Elberth Moraes: Sei lá. Esse display name. A gente sabe que ele é o nosso
+Elberth Moraes: extraterrestre quatro. Aqui. Daqui a pouco, a gente pensa num texto aqui para ele.
+Elberth Moraes: Vamos pegar esse cara aqui de cima, né? Que já tá
+Elberth Moraes: bonitão. Aqui. Uma inscrição deve aumentar a quantidade de participantes.
+Elberth Moraes: Vou ter que aproveitei esse cara para ficar bonitinho,
+Elberth Moraes: legal. A gente já está esperto aqui dentro que a gente tem a nossa organização igual ao ensino.
+Elberth Moraes: A gente está esperto também, que esse carinha daqui. Esse evento, ele é um evento que a gente tem
+Elberth Moraes: zero carinha. Então a gente não vai botar esse. Mas a gente vai botar um carinha aqui dentro. Vai botar como se tivesse vaga. E aí a gente vai para a nossa parte de execução.
+Elberth Moraes: Mas diferente do que o moço está usando nesse terceiro teste esse cara aqui de baixo, o quarto, teste. A gente está tentando testar a inscrição. E está testando também aquela quantidade de inscritos.
+Elberth Moraes: Então esses carinhas todos, a gente manda executar naquele grupo do execução do segundo
+Elberth Moraes: que a gente botou ali no Act. E aí a gente pega esses valores e testa lá embaixo. Então vamos trazer alguma coisa daqui pra lá, pra gente ver o que a gente precisa mudar e o que a gente precisa
+Elberth Moraes: deixar. Então trouxe para cá um evento. Estamos usando o mesmo evento. Eu só vou botar esse evento aqui com mais gente. Eu acho que o primeiro que a gente botou lá
+Elberth Moraes: tinha um dez. Tá vendo? Ali o primeiro tinha um dez. Então vou botar isso aqui com dez também. Dentro. Aqui desse carinho. Eu já não preciso mais colocar nem os comentários, esses set ups e tal. Nem preciso aos pouquinhos. Eu vou tirando.
+Elberth Moraes: Mas o ideal não é que você tenha realmente esse grupo ali dentro. Esse comentário. Esse comentário ajuda ajuda porque a galera está vendo que aqui eu estou colocando toda a parte de configuração, criação dos objetos e tal.
+Elberth Moraes: Ali no meio. Eu estou fazendo justamente a execução. E lá embaixo, fazendo os testes. Essa execução. Aqui
+Elberth Moraes: a gente não está de olho no tem vaga. Então, esse cara daqui
+Elberth Moraes: um abraço. E, consequentemente, a gente não está muito afim de usar esse acerte falso, muito menos com essa possui vaga. Então a gente deixou esse carinha vazio aqui dentro da nossa execução. Eu preciso fazer o processo de inscrição. Então eu estou usando o meu evento e vou fazer uma
+Elberth Moraes: inscrição, tá?
+Elberth Moraes: Eu também não gosto de comentários. Não, cara, eu. Você vê o meu código. No mundo real, as pessoas até brigam comigo. Pô, as pessoas são um comentário. É professor. Pô, você não comenta nada.
+Elberth Moraes: Falei pô, mas eu não preciso comentar, cara. Tem horas que não precisa, né? Pô,
+Elberth Moraes: antigamente você, porra! Eu peguei um aluno cara que eu peguei um ranço dele foi no meu primeiro ano de professor. Assim
+Elberth Moraes: eu era um programador muito mais nerd assim, sabe, aqueles programadores, aqueles professores que eram bons programadores, mas que não eram bons professores, sabia programar para Caraca, mas para passar um conteúdo, era difícil. Então estou melhorando aos pouquinhos.
+Elberth Moraes: Mas ele criou uma variável lá. O nome da variável era. Não sei se ele botou em inglês ou se ele botou em português, mas era aranha.
+Elberth Moraes: Eu falei assim: Caraca, como é que eu me boto o nome de uma variável de aranha para guardar um valor qualquer. Lá isso aí é de verdade. Não estou inventando aqui. Não, não é papo de Tiktok. Não.
+Elberth Moraes: E aí. Eu falei para ele, meu filho, por que que você já com uma paciência? Eu tinha uma paciência. Zero,
+Elberth Moraes: meu filho. Por que você botou o nome de uma variável aranha. Se em todos os livros do planeta. Eles dizem que a gente tem que ter na variável.
+Elberth Moraes: O nome que realmente represente aquilo ali. E aí ele chegava lá no código, lá. Sei lá, metia se um aranha,
+Elberth Moraes: alguma coisa assim. Fazia uma atribuição qualquer dentro dela e chegava aqui, do lado dessa aranha. E colocava um comentário tipo essa variável.
+Elberth Moraes: Tá certo, variável é utilizada em todos os métodos da classe tal
+Elberth Moraes: aí eu falei: Porra legal. Ele é aranha. Então porque ela anda pelo código todo? Ele teve que ser reprovado porque ele era muito criativo.
+Elberth Moraes: Eu pedi para ele procurar outro curso, ou então o cara botava lá uma variável Int. A dois mil e vinte e seis.
+Elberth Moraes: Aí chegava aqui do lado. Colocava ano atual, tal tal tal tal
+Elberth Moraes: falei: meu filho, por que você não bota o nome da variável como ano atual. E tira o comentário aí ele
+Elberth Moraes: aí eu comecei a pegar ranço de comentário aí de lá pra cá.
+Elberth Moraes: Eu não uso mais comentário, mas tem a galera
+Elberth Moraes: que antigamente. Talvez bem, antes que eu comecei a programar, que eles tinham uma necessidade de ter variáveis com tamanho menor.
+Elberth Moraes: Então, se você tivesse, sei lá, é como se você tivesse tocans assim. Ah, você pode usar não sei quantos bytes.
+Elberth Moraes: E aí, porra? Se uma palavra tivesse cinco letras, ela teria cinco bytes. E aí, porra! Você vai gastar realmente cinco bytes na declaração de uma variável.
+Elberth Moraes: E aí você começava a reduzir as suas variáveis, o tamanho dela e seja o que Deus quiser. E aí você tinha depois uma documentação externa, a aplicação,
+Elberth Moraes: dizendo a variável a do arquivo. Tal significa o nome do funcionário. Papapá tinha muito isso. Um dos primeiros projetos que eu trabalhei na minha vida
+Elberth Moraes: foi de transformar uma aplicação em Kobol.
+Elberth Moraes: Uma linguagem da época em Delphi. Uma linguagem também muito querida por mim.
+Elberth Moraes: E aí, porra, imagina você. Antigamente existia um negócio. Eu não sei se aqui dentro dessa sala tem.
+Elberth Moraes: Tem algum velho assim da minha idade,
+Elberth Moraes: mas eu não sou velho. Não, antigamente tinha uma impressora que a gente chamava de impressora matricial. Vocês já escutaram isso em alguém aqui já tem um pai que seja velho. Vocês têm todo cara que tem vinte anos. A impressora matricial era uma impressora grande. Assim larga que elas tinham umas folhas muito grandes.
+Elberth Moraes: E aí essas folhas iam imprimindo, assim como se fosse um carrinho girando. E ela no final, voltava.
+Elberth Moraes: E aí a gente pegar. As pessoas imprimiam os fontes ali dentro
+Elberth Moraes: e passavam para mim. E aí eu ficava preso lá num cativeiro, tentando entender o que estava escrito ali dentro. Não conhecia nada de Kobol. Eu lembro que depois, até na faculdade, eu tive uma disciplina de Kobol
+Elberth Moraes: que também não ajudou muito. Não, porque já tinha passado. E aí eles me deram um monte de canetas coloridas. Pô, achei o máximo. Aquilo parecia aqueles nerds que ficam presos num quarto assim, numa sala, pensando: eu ficava lá colorindo um monte de papel. E aí eu era muito organizado. Então acho que por isso que eles botaram isso era muito
+Elberth Moraes: cheio de mania de organização. Então eu comecei a marcar tudo que era a funcionalidade de uma cor, tudo que era variável de outra cor, tudo que era constante, tudo que era isso, tudo, que era comentário e tal.
+Elberth Moraes: E aí aquelas folhas tinham, sei lá, uns cinquenta centímetros de largura por uns vinte e cinco de altura, e elas vinham todas juntas, mas elas tinham um corte que a gente poderia destacar.
+Elberth Moraes: E aí aquelas folhas, eu meio que ia lendo uma por uma. Eram dezenas de folhas por cada programa. Eram muitos textos, e era uma programação que a gente chamava de programação estruturada. Você não tem hoje igual a programação orientada do objeto
+Elberth Moraes: que você tem um arquivo para representar o evento. Você tem um outro arquivo para você representar o teste de execução da aplicação.
+Elberth Moraes: Ou você tem um outro arquivo para executar para a parte de testes unitários. Lá? Não, lá era um único arquivão, no máximo. Você tinha uns dois ou três arquivos externos. E aí você.
+Elberth Moraes: Você sabia que aquilo ali era quase uma sequência. O projeto começava no início e terminava no fim.
+Elberth Moraes: Então você sabia qual era o fluxo. Ah, se a pessoa entrar com isso aqui, e aí eles tinham dentro do Cobol? Não lembro muito bem. Não depois. Até no semestre passado, que eu dei um curso de Java. Justamente esse passar cobol para Java. Eu acho que eu tenho até no Youtube. Isso
+Elberth Moraes: se vocês quiserem. Depois eu passo o link para vocês. Aí tinha lá envirement Division data Division. Não sei o que lá Division, que eram divisões dentro do seu código. Tipo esses comentários que a gente estava fazendo aqui.
+Elberth Moraes: Que ele representava aqui dentro do Data Division tem todas as informações do banco de dados dentro do investimento. Division tem todas as informações do ambiente e dentro do. Não sei o que lá Division tinham as nossas funcionalidades, então eu não sei por que eu estou falando isso? Não,
+Elberth Moraes: mas foi uma experiência bem interessante
+Elberth Moraes: pra gente. Vamos lá, vamos voltar para cá. Aí, beleza.
+Elberth Moraes: A gente criou esse nosso carinha daqui. Esse nosso método de inscrever. Ele está sendo chamado. E observem que aqui embaixo,
+Elberth Moraes: nesse carinha daqui, a Session.
+Elberth Moraes: A gente tem que justamente, fazer um teste. Então o nosso objetivo todo é o seguinte: eu botei um monte de inscrições aqui. Dez inscrições estou fazendo aqui? Quer dizer, capacidade dez. Estou fazendo aqui a inscrição. Então eu sei
+Elberth Moraes: que a gente tem um valor que a gente espera. Então, se a gente fosse botar, poderia chegar aqui em cima nessa parte de setup e botar aqui um ente, sei lá quantidade
+Elberth Moraes: esperada.
+Elberth Moraes: E aí, nessa quantidade esperada, eu coloco um valor ali. Eu sei que vai ter um
+Elberth Moraes: aqui embaixo, nessa nossa execução.
+Elberth Moraes: Eu vou precisar igual. O moço está falando aqui.
+Elberth Moraes: Criar um método get quantidade de inscritos.
+Elberth Moraes: Essa minha funçãozinha get quantidade de inscritos como a gente está vendo a nossa classe de evento, e a nossa classe de evento tem um atributo chamado Get. É chamado quantidade de inscritos. A gente pode criar um método get para isso, cara. Então basta a gente chegar aqui embaixo ou pode ser em qualquer lugar. Tá?
+Elberth Moraes: Vim aqui no menu sorce. Pedi para gerar os getters, et cetros. De todos os atributos. A gente identificou aqui a quantidade de inscritos. A gente pega só o método Get. E ele gera para a gente
+Elberth Moraes: esse método que ele realmente traz o atributo como esse atributo era privado. Ele é privado. A gente não consegue pegar de lugar nenhum.
+Elberth Moraes: Por isso que a gente está usando o nosso método get para salvar a gente. Esse nosso método get aqui,
+Elberth Moraes: ele justamente traz essa quantidade de inscritos. Então eu posso chegar aqui na nossa classe de teste.
+Elberth Moraes: Criar uma variável aqui em ti. Quantidade de inscritos.
+Elberth Moraes: E aqui dentro, eu faço o nosso evento chamar o método Get quantidade de inscritos que está aqui.
+Elberth Moraes: Então a gente tem esse método sendo chamado. Tá aqui.
+Elberth Moraes: Por que eu estou colocando isso dentro de variáveis. Porque aqui embaixo, quando a gente for fazer o nosso teste de igualdade, basta a gente chegar aqui e fazer um acerte
+Elberth Moraes: o. Acerte que a gente vai usar aqui. É um novo que a gente está usando, que é o acerte Equals.
+Elberth Moraes: Esse acerte Equals aqui. Ele sempre tem um Spectre. Está vendo ali um esperado e um atual.
+Elberth Moraes: Então a gente colocou ali em cima a quantidade esperada que é o nosso expectativas. É o que a gente está esperando. Então a gente está esperando a quantidade esperada.
+Elberth Moraes: Ah, mas você poderia colocar um aqui. Não poderia, Professor? Poderia, mas não é interessante largar esses números mágicos por aí. Então por isso que a gente colocou ele dentro de uma variável para a gente entender que aquele um
+Elberth Moraes: vai que a gente precise colocar ali um comentário. Esse um aqui é a quantidade esperada e bota a variável com a ou bota, nem bota variável nenhuma. Então não criar a variável é de graça, e a gente está comparando a quantidade esperada
+Elberth Moraes: com a quantidade de inscritos que também foi uma variável, que a gente criou, porque se a gente não cria essa variável. Para colocar aqui. Para comparar esses dois carinhas. A gente poderia escrever desse jeito aqui,
+Elberth Moraes: ou desse jeito aqui, claro que esse jeito aqui e esse jeito aqui, a gente pode fazer uma votação aqui e vai ter gente que vai gostar de um e vai ter gente que vai gostar de outro. Vocês gostaram mais do A ou vocês gostaram mais do B?
+Elberth Moraes: Chute rápido, alguém fala B, aí porque eu falei que alguém ia escolher B:
+Elberth Moraes: obrigado, Vitor. Obrigado, menina de Aids. Então, existem essas duas possibilidades. Então eu sou um cara mais
+Elberth Moraes: mais chato. Eu coloco assim
+Elberth Moraes: porque depois eu posso malandramente eu posso aproveitar esse cara aqui de baixo, copiar ele para qualquer outro lugar e mudar apenas o valor da minha variável e tal. Então a gente pode trabalhar assim também. Que é bom,
+Elberth Moraes: é
+Elberth Moraes: beleza. Fizemos aqui essa nossa mega implementação. Esse método aqui é Cert Equals. Ele também tem uma assinatura. Também tem um método que aqui dentro. A gente consegue botar uma mensagem em caso de falha. Então eu posso chegar aqui e posso, sei lá, botar assim.
+Elberth Moraes: Uma inscrição deve aumentar o total
+Elberth Moraes: para um. Sei lá, uma mensagem qualquer aqui dentro. Ok, poderia usar a variável aqui dentro também.
+Elberth Moraes: Esqueçam isso. Perfeito. Então a gente fez aqui o nosso Teste quatro.
+Elberth Moraes: Pelo menos implementamos esse carinho.
+Elberth Moraes: Vamos ver se esse carinha daqui
+Elberth Moraes: está funcionando. Observem que a gente precisou.
+Elberth Moraes: Depois que esse teste aqui surgiu. Alterar a nossa classe.
+Elberth Moraes: E aí é uma negociação, né? Isso aqui é um caso diferente, porque a gente precisou dar um pulinho ali na equipe de desenvolvimento
+Elberth Moraes: conversar com eles. Que ó o requisito que a gente tem aqui o requisito quatro.
+Elberth Moraes: Ele espera que a classe disponibilize para a gente a quantidade de inscritos.
+Elberth Moraes: Só que, você como tem esse atributo como privado. Esse cara não aparece para a gente.
+Elberth Moraes: Então a gente vai ter que criar
+Elberth Moraes: um carinha bonitão. Aí chamado get quantidade de inscritos pra gente conseguir fazer esse cara. Pode ser? Pode ser. Aí ele cria lá e automaticamente ele aparece aqui,
+Elberth Moraes: aqui, não
+Elberth Moraes: aqui, para a gente conseguir ter acesso a esse valor. Vamos rodar esse cara daqui. A gente agora tem quatro casos de teste,
+Elberth Moraes: beleza. Então, aqui dentro. A gente tem o nosso quarto carinha funcionando. Observem que se lá por fora, ou se essa inscrição aqui não tivesse acontecido, esse cara daqui.
+Elberth Moraes: Se esse meio aqui desse miolo aqui não funcionasse, porra, todos os meus testes iam quebrar.
+Elberth Moraes: Então a gente tem que ficar ligado nisso. Porque se ele quebrar a partir de agora, significa que alguma cagada aconteceu. E aí a gente começa a entrar em contato com as outras equipes para a gente trabalhar mais um pouquinho nisso.
+Elberth Moraes: Vamos aqui para o próximo.
+Elberth Moraes: Peguei aqui o nosso quinto carinho.
+Elberth Moraes: Vim aqui para baixo,
+Elberth Moraes: beleza, criei aqui esse nosso quinto teste.
+Elberth Moraes: E aí o moço está dizendo: ali o sistema deverá impedir que a quantidade de participantes inscritos ultrapasse a quantidade definida.
+Elberth Moraes: Aí, ele trouxe um teste ali, para a gente que a gente vai testar o método de inscrever o de inscrição. A gente espera dois carinhas
+Elberth Moraes: desse jeito. E aí a gente começa a implementar esse nosso amiguinho. De acordo com o que ele está pedindo.
+Elberth Moraes: Observem que agora a gente vai trabalhar num cenário um pouco mais interessante. Imaginem, sei lá, um evento.
+Elberth Moraes: Esse evento possui apenas duas vagas.
+Elberth Moraes: E aí a gente realizou a primeira inscrição e depois a gente realizou a segunda.
+Elberth Moraes: E aí, nesse momento, o evento está lotado.
+Elberth Moraes: Mas o que acontece se alguém tentar realizar uma terceira inscrição?
+Elberth Moraes: O nosso sistema precisa garantir que a quantidade de participantes não ultrapasse o limite estabelecido.
+Elberth Moraes: E aí, ontem a gente verificou se um evento lotado. Se ele estava continuando, informando que não havia vagas.
+Elberth Moraes: E agora a gente vai ter que verificar algo diferente. Se a quantidade de inscritos realmente permanece dentro daquele limite, mesmo depois de uma tentativa de inscrição. A gente tem que ficar de olho nessa situação. Então percebam que a gente está
+Elberth Moraes: testando um outro aspecto da mesma regra de negócio. E essa é a característica importante desses nossos queridos testes. Porque uma funcionalidade pode precisar de diferentes cenários
+Elberth Moraes: para que a gente tenha realmente confiança, que esse negócio está funcionando.
+Elberth Moraes: Então vamos criar um teste aqui, que o objetivo é que não deve ultrapassar essa quantidade máxima que a gente definiu. Então eu vou criar um método aqui, Void. Vou aproveitar essa frase que eu botei aqui. Não deve
+Elberth Moraes: ultrapassar capacidade, mas criei um método. Cheguei aqui em cima, botei o arroba
+Elberth Moraes: teste, arroba teste. Coloquei aqui o display name.
+Elberth Moraes: Vou pegar esse cara aqui em cima. Não tem aqui um evento. Não deve ultrapassar a capacidade máxima.
+Elberth Moraes: Botei aqui dentro tudo resolvido.
+Elberth Moraes: Vamos trabalhar aqui mais uma vez em cima de.
+Elberth Moraes: Deixa eu pegar aqui em cima esses nossos amiguinhos.
+Elberth Moraes: Botei aqui o nosso setup. Então esse setup aqui
+Elberth Moraes: a gente vai criar um evento com dois carinhos. Observem que ali em cima, na nossa regra, está ali. Então a quantidade de inscritos deverá permanecer com dois, porque aqui em cima
+Elberth Moraes: existe um evento com capacidade para dois participantes. Então a gente fez esse cara. Duas inscrições foram realizadas. Aí a gente vem aqui para a nossa execução.
+Elberth Moraes: A gente tem uma inscrição,
+Elberth Moraes: duas inscrições. Tá? Botei aqui na nossa execução desse jeito. Aqui ele ocupa todas as vagas que estão disponíveis. O que eu estou pensando aqui, porque a gente não testou ali em cima. E se eu chegar aqui
+Elberth Moraes: e fizer isso aqui, uma terceira inscrição,
+Elberth Moraes: então essa execução aqui, essa chamada desse método tenta executar uma terceira inscrição.
+Elberth Moraes: E aí, aqui embaixo, nesse nosso acerte Equals. A gente tem a mesma proposta do de cima. Olha só como é que ficou mais fácil para a gente. Eu chego aqui nessa minha quantidade esperada. Eu sei que se eu fizer
+Elberth Moraes: três inscrições, quantas inscrições eu vou ter dentro do meu sistema. Somente duas. Por quê? Porque a minha capacidade aqui em cima
+Elberth Moraes: está como duas. Tá vendo?
+Elberth Moraes: Então esse dois que está aqui. É justamente essa capacidade esperada que está aqui.
+Elberth Moraes: Ah, então você pode fazer como a gente pode chegar aqui em cima
+Elberth Moraes: botar essa variável em vez de quantidade esperada.
+Elberth Moraes: Vou dar aqui um out shift R. Vou mudar para capacidade
+Elberth Moraes: capacidade esperada.
+Elberth Moraes: Essa capacidade aqui vai ser dois.
+Elberth Moraes: Para que você botou isso aí? Porque eu pego esse cara daqui.
+Elberth Moraes: Bota esse cara aqui também.
+Elberth Moraes: Querendo ou não com o tempo.
+Elberth Moraes: O que é o dois aí? Eu teria que passar o Mouse aqui em cima do evento
+Elberth Moraes: para saber que o meu terceiro parâmetro era a capacidade. Mas eu olhando aqui, eu já sei que eu tenho um texto. Eu tenho um texto, e eu tenho aqui a capacidade
+Elberth Moraes: esperada, a capacidade máxima que o carinha tem beleza. Fiz uma inscrição, fiz duas inscrições. Chamei aqui o nosso quantidade de inscritos. E aquele quantidade de inscritos está ali, bonitão. Aí a gente vem aqui para baixo. E mais uma vez, a gente testa
+Elberth Moraes: capacidade esperada com a nossa quantidade de inscritos. E a mensagem aqui é muito,
+Elberth Moraes: muito normal, também, né? A gente pode botar aqui, sei lá, a quantidade de inscritos não pode
+Elberth Moraes: pra passar dois. Esse dois aqui. Eu poderia pegar lá de cima aquela variável e tal
+Elberth Moraes: abstraiam isso. Mas observem que todas as minhas execuções aqui
+Elberth Moraes: eu coloquei como chamadas de métodos.
+Elberth Moraes: E aí o meu teste aqui, eu poderia ter chamado de método aqui dentro. Poderia? Não é uma coisa obrigatória você fazer essa organização.
+Elberth Moraes: Mas como a gente é bem mandado
+Elberth Moraes: aqui em cima. A gente está definindo algumas configurações iniciais. Aqui. A gente está fazendo as ações, e aqui embaixo a gente está fazendo os testes. Perfeito.
+Elberth Moraes: Então, beleza. Vamos ver se isso daqui funciona. Viemos aqui o nosso carinho.
+Elberth Moraes: Oi, tá vendo? Esqueci de botar um carinho aqui. Vamos botar o quinto extraterrestre.
+Elberth Moraes: Tá aí tudo, bonitão.
+Elberth Moraes: Está naquela ordem ali. Porque às vezes ele se enrola mesmo. Ele vai pegando tudo que tem na frente aí e vai executando. Perfeito. Então a gente fez aqui mais uma,
+Elberth Moraes: mais um teste. Observem, não sei se vocês entenderam esse teste aqui?
+Elberth Moraes: Porque independente de quantas vezes eu chamar o método de inscrição?
+Elberth Moraes: O nosso código está tão bem organizado que ele não vai deixar fazer essa terceira. Ele não vai. Claro que a gente pode pensar depois em outras soluções. Dar um feedback, dar um retorno do tipo: Aí tem como você. Incluir mais nada. Aqui? Não
+Elberth Moraes: tá? Mas a gente está fazendo esse trabalho direitinho, porque esse nosso evento
+Elberth Moraes: tem essa proposta aqui. De ver essa nossa quantidade de vagas
+Elberth Moraes: e tal. Mas vamos fazer uma demonstração. Aqui. A gente testou ver o que funcionou. E aí eu vou modificar temporariamente esse nosso inscrever que está aqui. Eu vou tirar esse carinha daqui,
+Elberth Moraes: e eu vou falar assim. Sempre que inscrever
+Elberth Moraes: aquele meu quantidade de inscritos vai ser incrementado. Ok, então tirei a
+Elberth Moraes: a barreira ali. Aí eu venho aqui.
+Elberth Moraes: Observem que esse nosso quinto carinha daqui.
+Elberth Moraes: Ele quebrou e apareceu justamente a mensagem. A quantidade de inscritos não pode ultrapassar
+Elberth Moraes: dois. E aí ele aparece ali para a gente. A nossa expectativa era dois, mas apareceram três.
+Elberth Moraes: Então, a gente executou os testes novamente. O cinco falhou. Falhou porque a quantidade de inscritos passou a ser três.
+Elberth Moraes: E aí, claro, vamos voltar aqui porque esse nosso carinho daqui, essa nossa implementação aqui, ela é necessária para que o nosso sistema funcione. E aqui a gente consegue demonstrar
+Elberth Moraes: que os testes podem verificar aspectos diferentes de uma mesma regra aqui. Esse cara tem na regra dois e tem na regra cinco, mas uma parou e a outra não parou. Então esse cara daqui
+Elberth Moraes: volta para cá e esse cara daqui
+Elberth Moraes: volta para cá. E aí, quando a gente executa de novo
+Elberth Moraes: o nosso teste aparece redondinho.
+Elberth Moraes: Então a gente fez aqui o nosso quinto teste.
+Elberth Moraes: Vamos para o sexto sexto. A gente precisa desses quinze minutinhos para a gente bater um papo,
+Elberth Moraes: galera. Até aqui a gente está ainda vivo. Estamos juntos.
+Elberth Moraes: Maravilha como botei aqui o nosso sexto camaradinha
+Elberth Moraes: está aí dentro e vamos trabalhar aqui,
+Elberth Moraes: na escrita desse método. Isso, então esse exercício aqui, eu posso dizer que ele é o mais importante de hoje,
+Elberth Moraes: porque ele representa uma mudança na maneira que a gente desenvolve, porque até agora a gente estava verificando regras que existem,
+Elberth Moraes: e agora a gente vai introduzir uma nova regra. Observem que ele tem ali parte de exceções e tal.
+Elberth Moraes: Até aqui, quando a gente estava conversando sobre comportamentos. A gente viu que existia aqui na nossa classe evento, alguns métodos, algumas coisinhas. Mas a gente
+Elberth Moraes: recebeu uma nova solicitação da nossa equipe
+Elberth Moraes: dos responsáveis pelo sistema. E, a partir de agora, não será mais. Observem ali no texto. Já estou lendo o texto, por isso que eu estou falando. Aqui. Não será mais permitido que a gente crie eventos com capacidade zero
+Elberth Moraes: ou com capacidade negativa.
+Elberth Moraes: E aí eu quero trocar uma ideia com vocês.
+Elberth Moraes: O que deveria acontecer se alguém tentasse criar um evento com a capacidade igual,
+Elberth Moraes: sei lá, a menos cinco, que é o exemplo que a gente está dando aqui.
+Elberth Moraes: O que vocês acham?
+Elberth Moraes: A gente poderia fazer o quê? Que a gente poderia ignorar o erro, e a outra seria a gente criar um evento com a capacidade zero.
+Elberth Moraes: E aí também a gente pode definir uma regra mais rigorosa, tipo o nosso amigo Michael,
+Elberth Moraes: onde o sistema deveria rejeitar essa operação, informando que o valor recebido é um valor inválido.
+Elberth Moraes: E aí, no Java, a gente pode representar esse comportamento, lançando uma exceção.
+Elberth Moraes: E aí agora vem a parte interessante. Antes da gente alterar essa nossa classe. Evento. Vamos escrever um teste que descreva realmente essa nossa regra. Vou mostrar para vocês umas implementações bem diferentes. E inicialmente, o teste não deverá passar.
+Elberth Moraes: E aí? Tudo bem. A gente está fazendo aqui uma simulação. O teste vai estar meio que expressando um comportamento que a gente ainda precisa implementar.
+Elberth Moraes: E aí depois a gente volta. Modifica a nossa classe. Isso vai atender o requisito e a gente executa novamente os testes. Tá? Esse exercício aqui é muito interessante, porque ele vai ajudar a gente a compreender uma ideia bem interessante
+Elberth Moraes: é que os testes também podem orientar a evolução do nosso software. E a gente daqui a pouquinho vai entrar no mundo do Tdd que o nosso amigo Michael
+Elberth Moraes: comentou. Mas os testes realmente orientam a evolução do nosso querido código. Então vou pegar esse cara daqui. Vou criar um método bonitão.
+Elberth Moraes: Esse método aqui, pelo que está escrito aqui, deixa eu até pegar o texto.
+Elberth Moraes: Um evento não poderá ser criado com capacidade em inválida.
+Elberth Moraes: Esse cara vai ser rejeitado. Então ele deve rejeitar capacidade botar por enquanto negativa. Ok, botei aqui, deu.
+Elberth Moraes: Vou botar o nosso arroba teste.
+Elberth Moraes: Vou botar o nosso display name.
+Elberth Moraes: É o nosso display name. Esse cara é o extraterrestre seis e tá aqui.
+Elberth Moraes: Perfeito.
+Elberth Moraes: É,
+Elberth Moraes: já ia perguntar. Vocês acreditam o Et. Mas esquece esse assunto. Depois a gente toma um show para conversar sobre extraterrestre. E aí vou pegar ali em cima a minha estrutura padrão
+Elberth Moraes: para a gente aproveitar, né? Porque a gente não é bobo
+Elberth Moraes: nem nada de bom. A gente só tem a cara
+Elberth Moraes: aí. Eu vim aqui, criei essa nossa estrutura toda. E aí a gente começa a falar assim, tá? A gente tem que botar a capacidade que a gente vai colocar aqui vai ser o menos cinco.
+Elberth Moraes: Exatamente essa nossa especificação aqui de teste
+Elberth Moraes: significa Et. Por causa disso, que é de outro mundo.
+Elberth Moraes: E aí, beleza? A gente criou aqui um evento, um evento negativo, tá?
+Elberth Moraes: E aí, diferente dos testes que a gente fez,
+Elberth Moraes: a gente não tem aqui. Dentro desses caras que tratam exceções, a gente não vai precisar fazer inscrição. A gente não vai precisar pegar nenhuma quantidade, porque o objetivo dele é justamente dar erro. Então a gente. Até o Setup.
+Elberth Moraes: Ele é diferente. Porque esse cara, aqui, vocês vão ver que a gente vai fazer tudo como se fosse num pacote. Só
+Elberth Moraes: engraçado isso, né? A gente vai ter
+Elberth Moraes: o teste junto com esse processo. A execução, junto com esse processo de teste aqui dentro. A gente vai fazer isso aqui junto. E o setup não vai acontecer. Olha, como é que a gente vai fazer esse cara, esse nosso acerte ícone que está aqui. Eu vou detonar ele
+Elberth Moraes: e eu vou apresentar para vocês. O acerte.
+Elberth Moraes: Trouxe.
+Elberth Moraes: Escrevi tudo errado.
+Elberth Moraes: Acerte, Drew sai. Mas apareceu esse cara.
+Elberth Moraes: Observem que ele tem aqui dois parâmetros, mas todos eles têm. Também pode ter também um terceiro parâmetro, que é justamente a mensagem. Então eles meio que vão trazer aí para a gente. Mas só que essa mensagem aqui, daqui a pouco, a gente pensa. Como é que a gente vai fazer
+Elberth Moraes: o moço aqui em cima? Ele trouxe para a gente. Olha como é engraçado isso ele trouxe, como resultado esperado, uma ilegal argument exception
+Elberth Moraes: se liga o argumentos excepcion o próprio nome já diz ali de argumento. É que alguma informação de fora
+Elberth Moraes: veio zoada e que está afetando diretamente o meu projeto.
+Elberth Moraes: E aí a gente tem essas exceções que a gente pode chegar em qualquer lugar lá. Do nosso código de fazer um troll New Illegal Argument, excepcion
+Elberth Moraes: e aqui dentro escrevi alguma coisa. Então eu estou lançando isso aqui é o lançamento de uma exceção
+Elberth Moraes: lá na nossa classe. A gente vai ter que fazer isso aqui em algum lugar,
+Elberth Moraes: a gente vai ter que definir lá dentro de alguma forma que, sei lá,
+Elberth Moraes: capacidade deve ser maior que zero.
+Elberth Moraes: Uma coisa assim. Então eu vou estar fazendo um lançamento de exceção em algum lugar na nossa classe de eventos. Daqui a pouco, a gente volta lá
+Elberth Moraes: para fazer isso daqui e aí, quando a gente for testar, como vai rolar essa exceção lá dentro? Esse nosso acerte. Tools, funciona da seguinte maneira.
+Elberth Moraes: Eu vou chegar aqui nesse primeiro parâmetro. E vou colocar justamente a exceção que eu quero tratar.
+Elberth Moraes: A exceção que eu quero tratar é o ilegal argument exceptional. Mas aqui dentro ele está aguardando a classe. Então eu boto aqui a palavrinha
+Elberth Moraes: clássico. Perfeito nesse segundo. Carinha daqui.
+Elberth Moraes: É como se ele estivesse fazendo. Ele usa um conceito que a gente vai até trocar uma ideia.
+Elberth Moraes: Depois uma programação mais funcional com os conceitos que a gente vai ver por aí chamado lambida. Não sei se vocês já ouviram falar nesses caras, a gente vai trocar uma ideia sobre isso com mais calma.
+Elberth Moraes: Mas é como se, dentro desse carinha daqui eu tivesse uma execução, como se fosse uma execução.
+Elberth Moraes: Então a gente tem esses carinhas aqui. Esses parênteses que a gente pode colocar alguma informação ali dentro. Se a gente quiser utilizar ou não. E ele tem uma organização assim, como se fosse uma setinha.
+Elberth Moraes: E por que eu estou fazendo aqui depois dessa setinha é o objetivo da gente nesse nosso teste aqui de rejeição.
+Elberth Moraes: Tem justamente a ver com esse nosso menos cinco. Esse nosso menos cinco aqui. Ele é justamente esse cara daqui. O menos cinco é a capacidade máxima. Estou tentando tirar a variável. Tá?
+Elberth Moraes: E aí, beleza. A gente criou esse objeto aqui. E esse objeto foi criado o evento porque justamente, ele estava sendo utilizado depois para fazer a inscrição para fazer. O tem vaga para fazer o get quantidade de inscritos
+Elberth Moraes: hoje. A gente não precisa desse evento para nada. A gente só precisa desse lado de cá, que é justamente onde a gente cria um objeto do tipo evento.
+Elberth Moraes: E aí, quando eu pego esse conteúdo. Daqui. Esse comando todo daqui significa assim, ó,
+Elberth Moraes: quando a gente for executar esse nosso assert tools da vida que a gente está querendo tratar o illegal Argument Exception. Esse cara aqui meio que define para a gente que vai rolar uma ação aqui dentro. E a ação que eu quero fazer aqui é justamente a criação de um objeto.
+Elberth Moraes: Nossa, que doideira. Então vai surgir aqui. Esse cara aqui vai ser executado. Isso aqui é quase um método, né? Mas só que o construtor do nosso objeto vai ser executado. E aí depois eu vou colocar uma mensagem aqui qualquer só para a gente ter um
+Elberth Moraes: um retorno em caso de derrota do tipo, sei lá, uma capacidade negativa. Deve ser rejeitada.
+Elberth Moraes: Alguma coisa assim. Deixa eu quebrar isso aqui em linhas
+Elberth Moraes: para a gente melhorar o nosso carinho. Então eu tenho três partes aqui. Eu tenho a parte da exceção. Eu tenho a parte aqui da execução, de onde eu quero que aconteça. A rejeição
+Elberth Moraes: e a nossa mensagem de erro? Eu tenho três partes
+Elberth Moraes: agrupadas aqui dentro desse nosso Acert Tools. Com isso, a gente não precisa mais do nosso setup. Então o nosso setup
+Elberth Moraes: tá até amarelinho aqui. Tá vendo que eu não estou utilizando? Então eu tiro daqui e deixo só assim.
+Elberth Moraes: Então a gente tem nesse nosso teste a execução e o teste acontecendo juntos. E aí isso fica muito legal.
+Elberth Moraes: Claro que quando a gente manda rodar esse cara,
+Elberth Moraes: observem que ele está aqui dentro, dando erro justamente ali.
+Elberth Moraes: Deixa eu aparecer aqui e trazer esse cara para cá.
+Elberth Moraes: Mexei em tudo. Agora, aqui é esse cara que eu queria.
+Elberth Moraes: Uma capacidade negativa. Deve ser rejeitada. E aí estava ali a expectativa receber.
+Elberth Moraes: Recebeu um illegal Argument exception.
+Elberth Moraes: E o que aconteceu? Nem sei se aparece ali. Eu cheguei para cá, mexi em tudo
+Elberth Moraes: na expectativa acontecer isso, mas nada foi troll. Nada foi lançado. Então, realmente a gente está preparado para receber uma exceção quando acontecer uma capacidade, menos uma capacidade de zero menos.
+Elberth Moraes: E lá por dentro do nosso fonte, a gente não retornou nada. Então o que a gente tem que fazer. E no fonte, fazer algum tipo de lançamento de exceção para essa nossa capacidade menor ou igual a zero. Então vamos lá
+Elberth Moraes: água. Bem, bebida.
+Elberth Moraes: Vou aproveitar essa linha. Já estou aqui com ela. Pronto,
+Elberth Moraes: vocês estão ligados. Que tudo acontece aqui dentro do meu construtor. Então vou entrar aqui
+Elberth Moraes: aqui dentro. Eu tenho que fazer alguma coisa
+Elberth Moraes: hoje. A gente tem esse carinha aqui, né? Se a capacidade for maior do que zero, eu faço. Então, inicialmente, se eu tivesse aqui um menos cinco,
+Elberth Moraes: ele passava direto, porque ele ia receber o valor padrão capacidade zero. Porque o valor padrão aqui de cima é zero. Então, se ele recebeu, sei lá, zero menos um, menos dois, menos três, menos quatro. Ele não entra aqui e a capacidade é igual a zero. Ele não vai conseguir
+Elberth Moraes: incluir ninguém. Só que agora mudou um pouquinho. A gente tem que fazer assim não, a gente vai deixar preencher
+Elberth Moraes: a capacidade.
+Elberth Moraes: Você vai ter que deixar preencher esses três campos aí vão ser preenchidos.
+Elberth Moraes: Porém, tem chance dessa exceção ser lançada aqui. True New Illegal argumentou,
+Elberth Moraes: mas essa exceção aqui vai ser lançada sempre. O que vocês acham?
+Elberth Moraes: Não.
+Elberth Moraes: Quando é que essa exceção aqui vai ser lançada?
+Elberth Moraes: Tem alguma situação, alguma condição que a gente
+Elberth Moraes: resolva isso. Ela vai ser lançada quando essa
+Elberth Moraes: capacidade que a gente tem aqui, ela for menor ou igual a zero.
+Elberth Moraes: Então vou chegar aqui e vou fazer assim. Ó,
+Elberth Moraes: se a minha capacidade for menor ou igual a zero,
+Elberth Moraes: eu lanço esse cara daqui e eu paro o processamento.
+Elberth Moraes: Parei, tá?
+Elberth Moraes: Então a gente vai fazer o teste ali. E essa minha exceção está sendo lançada. Quando a minha capacidade
+Elberth Moraes: for menor do que zero. Perfeito. Vamos fazer isso. Funciona aqui.
+Elberth Moraes: Deixa eu salvar tudo.
+Salvei.
+Elberth Moraes: Deixa, eu só mandar tudo aqui. Salvei, deixa eu rodar de novo.
+Elberth Moraes: Join Its, test.
+Elberth Moraes: Observem que aquele nosso seis resolveu. Observe aqui seis. Um evento não poderá ser criado. Capacidade inválida não está funcionando porque realmente lançou a exceção. Pô. Que maravilha, hein? Então estamos funcionando.
+Elberth Moraes: Em compensação, a gente criou agora uma regra aqui dentro que não aceita evento zerado.
+Elberth Moraes: E aí, quando a gente está nesses caras daqui. Ó
+Elberth Moraes: que a mensagem era justamente a capacidade deve ser maior do que zero.
+Elberth Moraes: Então esse teste daqui ele estava com zero.
+Elberth Moraes: E aí ferrou, né? O que a gente tem que fazer nesse cara daqui agora, nesse nosso teste três aqui,
+Elberth Moraes: essa capacidade aqui é uma capacidade válida. Ainda
+Elberth Moraes: não é mais. Então a gente realmente vai ter que mexer, ter que entrar em contato com o cliente, porque não devem mais permitir esse cara evento com capacidade zero. Não possui vaga.
+Elberth Moraes: Esse teste perdeu o sentido. Aí a gente vem aqui e muda tudo. Claro que a gente vai entrar em contato com o cliente antes e tal. Esse teste três vai ser aqui, sei lá.
+Elberth Moraes: Não deve permitir capacidade zerada, beleza. Ah, o nome do método também. O nome do método
+Elberth Moraes: deve. Não lembro o nome que eu dei aí embaixo
+Elberth Moraes: pra gente seguir um padrão, né?
+Elberth Moraes: Deve rejeitar a capacidade negativa.
+Elberth Moraes: Deve rejeitar a capacidade.
+Elberth Moraes: E isso? Essa é uma pergunta excelente os testes. Voltando aqui um pouquinho, os testes precisam evoluir. Precisam evoluir. Precisam acompanhar essa evolução. E aí, essa
+Elberth Moraes: pergunta que você fez sobre a redundância,
+Elberth Moraes: cada teste. Ele tem que fazer
+Elberth Moraes: uma única coisa. Vocês lembram que ontem eu mostrei na cobertura de testes um cara amarelo.
+Elberth Moraes: Por quê aquele cara amarelo tem. Como ele é um boliano buliano? Não, mas no nosso caso, aqui é até uma quantidade. Vamos botar. Assim ela pode ter menor do que zero. Ela pode ter zero e ela pode ter maior do que zero.
+Elberth Moraes: Então eu vou ter que fazer um teste para cada caso. Por isso que é um caso de teste. E o teste pode ser redundante. Não tem nenhum problema. A única coisa que vai mudar é que aqui embaixo
+Elberth Moraes: a gente colocou um acerte. Trouxe
+Elberth Moraes: com um cara menos um cara negativo. E aqui em cima, no nosso terceiro
+Elberth Moraes: testes, a gente vai colocar o mesmo carinha,
+Elberth Moraes: mas só que com o carinho daqui Zerado,
+Elberth Moraes: até para ser redundante mesmo, Arthur. Louco isso, né?
+Elberth Moraes: A gente criou um teste aqui. A gente está testando cada carinha. A proposta, depois a gente vai trazer essa teoria também.
+Elberth Moraes: Que cada teste faça apenas uma coisa. Assim como o método deve fazer apenas uma coisa assim como uma variável. Só pode guardar alguma coisa. Os casos de testes. Claro que daquilo depois eu poderia levar isso aqui lá para baixo. A gente consegue agrupar.
+Elberth Moraes: Depois eu vou mostrar para vocês como é que a gente agrupa testes aqui mais para frente. Mas hoje, do jeito que está aqui. Se a gente manda rodar esse carinha,
+Elberth Moraes: a gente conseguiu rodar. Agora todos os testes lindos como sempre
+Elberth Moraes: consegui te responder. Nobre Arthur Braz, farias
+Elberth Moraes: então a proposta do nosso papo de hoje era esse
+Elberth Moraes: extraterrestre número um. Especificação de teste um: a gente usou a Set True
+Elberth Moraes: nesse cara daqui. A gente usou o. Acerte falso nesse cara. Daqui. A gente usou o Acerte Throps nesse cara daqui. A gente usou o acerte Equals nesse quinto o acerte Equals. E no sexto a gente usou também
+Elberth Moraes: o acerte. Trouxe cara, isso aqui é muito legal.
+Elberth Moraes: Ainda estão gostando de casos de teste, galera? Ainda estamos em ordem.
+Elberth Moraes: Maravilha,
+Elberth Moraes: eu estou aqui. Vou fazer esse comitê logo. Eu fiz um convite da aula de ontem. Hoje só tenho aqui buscar o padrão que eu escrevi.
+Elberth Moraes: O Commits aqui. Botei etapa um tal. Então vou botar ali embaixo. Etapa um, aula dois.
+Elberth Moraes: É, deixa eu ver aqui. O que tem isso? A gente mexeu ali.
+Elberth Moraes: Tudo aí de volta.
+Elberth Moraes: Etapa um, aula dois.
+Elberth Moraes: Valeu. Só falei que eu botei a sete.
+Elberth Moraes: Sou direto. Acerte, True e acerte Falls. Hoje a gente já botou.
+Elberth Moraes: Ou acertos ícos e o acerto.
+Elberth Moraes: Ups!
+Elberth Moraes: E aí?
+Elberth Moraes: E aí,
+Elberth Moraes: galera forte abraço para vocês. Desculpem o quatro minutos
+Elberth Moraes: de atraso. Os fontes estão disponíveis lá no nosso querido
+Elberth Moraes: Github. E na próxima terça feira, eu faço um post
+Elberth Moraes: lá no nosso infinite online para falar. O que a gente conversou hoje? Excelente noite. Se cuidem. Beijo grande. Até mais.

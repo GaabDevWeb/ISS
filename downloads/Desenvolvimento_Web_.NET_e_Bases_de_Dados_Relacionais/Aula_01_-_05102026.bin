@@ -1,0 +1,2594 @@
+WEBVTT
+
+1
+00:07:20.700 --> 00:07:28.740
+Luiz Maia: Boa noite, pessoal. Dia cinco de Outubro, dois mil e vinte e seis. Bem vindos a mais uma aula
+
+2
+00:07:29.490 --> 00:07:33.900
+Luiz Maia: do bloco de backend, a disciplina de
+
+3
+00:07:39.340 --> 00:07:43.550
+Luiz Maia: desenvolvimento Web net, base de dados relacionais.
+
+4
+00:07:43.720 --> 00:07:52.419
+Luiz Maia: Bom, essas aulas iniciais, elas não são ainda Dotnet. Elas são C. Sharp.
+
+5
+00:07:53.570 --> 00:08:01.750
+Luiz Maia: É como semana que vem. A gente tem um feriado na segunda feira, dia doze.
+
+6
+00:08:03.930 --> 00:08:07.829
+Luiz Maia: Eu vou tentar terminar esse assunto.
+
+7
+00:08:09.800 --> 00:08:14.330
+Luiz Maia: É no máximo até amanhã.
+
+8
+00:08:15.710 --> 00:08:19.749
+Luiz Maia: Tá certo, então eu vou tentar condensar aqui.
+
+9
+00:08:19.950 --> 00:08:22.460
+Luiz Maia: E aí. Eu não vou fazer código
+
+10
+00:08:24.710 --> 00:08:31.179
+Luiz Maia: ao vivo com vocês. Eu vou pegar o código pronto e mostrar para vocês. Para acelerar um pouco
+
+11
+00:08:31.520 --> 00:08:42.370
+Luiz Maia: essa parte da matéria, para dar tempo da gente fazer o código ao vivo na parte de Dotnet mesmo,
+
+12
+00:08:44.120 --> 00:08:51.489
+Luiz Maia: tá, antes de começar a aula, eu queria postar para vocês aqui no infinite online.
+
+13
+00:08:52.800 --> 00:08:54.280
+Luiz Maia: É
+
+14
+00:08:57.440 --> 00:09:00.320
+Luiz Maia: não gabarito, né?
+
+15
+00:09:00.870 --> 00:09:06.789
+Luiz Maia: Do At. De C. Sharp, mas a minha solução para o
+
+16
+00:09:07.000 --> 00:09:14.500
+Luiz Maia: para o At. Eu não comecei a corrigir o at de vocês, gente, eu não tive tempo. Eu estou preparando aulas
+
+17
+00:09:14.960 --> 00:09:18.489
+Luiz Maia: para outras turmas.
+
+18
+00:09:18.730 --> 00:09:24.270
+Luiz Maia: Inclusive passei um dia revendo a aula de hoje para vocês.
+
+19
+00:09:24.500 --> 00:09:39.299
+Luiz Maia: Então, assim não tem nenhuma data para entregar as notas de vocês? Estou tentando conseguir uma ajuda para fazer a correção, mas eu vou colocar para vocês no infinite online. Aí vocês podem confirmar
+
+20
+00:09:39.870 --> 00:09:42.680
+Luiz Maia: se vocês é,
+
+21
+00:09:43.070 --> 00:09:49.460
+Luiz Maia: tem acesso a esse material. Eu vou colocar no infinite online, porque acho que fica mais fácil
+
+22
+00:09:50.510 --> 00:09:52.330
+Luiz Maia: para vocês acessarem.
+
+23
+00:10:01.460 --> 00:10:02.380
+Luiz Maia: E aí
+
+24
+00:10:12.260 --> 00:10:14.850
+Luiz Maia: eu fiz uma solução.
+
+25
+00:10:15.200 --> 00:10:19.119
+Luiz Maia: Onde, dentro dela tem todos os exercícios.
+
+26
+00:10:19.220 --> 00:10:28.129
+Luiz Maia: E eu comentei nos exercícios, o que era obrigatório e o que não era obrigatório, ou seja, o que era opcional.
+
+27
+00:10:28.810 --> 00:10:35.360
+Luiz Maia: Isso vai dar uma ideia para vocês. Mais ou menos do que eu da minha correção.
+
+28
+00:10:36.200 --> 00:10:44.179
+Luiz Maia: Eu não vou ter como ficar descrevendo os detalhes de cada
+
+29
+00:10:45.590 --> 00:10:52.850
+Luiz Maia: de cada solução de cada um de vocês são mais de quarenta trabalhos.
+
+30
+00:10:53.400 --> 00:11:00.600
+Luiz Maia: Então, assim a correção vai ser bem, é
+
+31
+00:11:01.460 --> 00:11:04.479
+Luiz Maia: vou tentar fazer a correção o mais rápida que eu puder.
+
+32
+00:11:04.740 --> 00:11:10.889
+Luiz Maia: Eu não tenho como precisar. Quando eu vou terminar a correção,
+
+33
+00:11:11.270 --> 00:11:13.400
+Luiz Maia: provavelmente eu vou levar, sei lá,
+
+34
+00:11:13.500 --> 00:11:17.019
+Luiz Maia: esse mês inteiro de outubro para fazer essa correção.
+
+35
+00:11:21.830 --> 00:11:24.000
+Luiz Maia: Mas vocês vão ter uma ideia
+
+36
+00:11:24.460 --> 00:11:27.909
+Luiz Maia: do que eu esperaria de vocês em relação
+
+37
+00:11:28.080 --> 00:11:32.239
+Luiz Maia: é o trabalho. Então você pode olhar a minha solução,
+
+38
+00:11:32.520 --> 00:11:37.049
+Luiz Maia: olhar de vocês e ver se bateu com a nota.
+
+39
+00:11:38.270 --> 00:11:44.490
+Luiz Maia: Se você não ficar satisfeito com a nota. Você pode me procurar para fazer uma revisão de nota? Não tem problema.
+
+40
+00:11:45.320 --> 00:11:51.160
+Luiz Maia: É, todo mundo pode errar, né?
+
+41
+00:11:56.750 --> 00:11:58.429
+Luiz Maia: Deixa eu ver aqui.
+
+42
+00:12:00.270 --> 00:12:02.920
+Luiz Maia: Como é que eu faço para subir esse material?
+
+43
+00:12:27.400 --> 00:12:38.790
+Luiz Maia: Eu estou aqui tentando entrar no infinite online para postar esse documento para vocês, mas está bem lento.
+
+44
+00:12:45.430 --> 00:12:52.110
+pedro.yamato: Professor. Boa noite. Desculpa, atrás aí que o site hoje da Internet está uma droga.
+
+45
+00:12:53.820 --> 00:12:55.959
+Luiz Maia: Não posso fazer comentários.
+
+46
+00:13:00.550 --> 00:13:05.300
+Luiz Maia: Não posso fazer comentário nenhum sobre esses problemas.
+
+47
+00:13:08.490 --> 00:13:10.320
+pedro.yamato: Ah, já peguei no ar. Já.
+
+48
+00:13:11.560 --> 00:13:12.220
+Luiz Maia: Tá?
+
+49
+00:13:15.100 --> 00:13:20.180
+Luiz Maia: Eu não consigo abrir aqui o site. Eu vou colocar. Então. Não sei.
+
+50
+00:13:20.430 --> 00:13:32.939
+Luiz Maia: Posso colocar no drive? Bom, vou deixar ele tentando aqui abrir aqui essa página, e a gente começa a aula. E depois eu coloco a minha solução aí do At para vocês.
+
+51
+00:13:33.220 --> 00:13:41.880
+Luiz Maia: E aí vocês vão ter um ponto, um ponto de partida em relação a a correção.
+
+52
+00:13:44.330 --> 00:13:47.580
+Luiz Maia: Bom, deixa eu começar aqui a nossa aula.
+
+53
+00:13:55.460 --> 00:13:59.210
+Luiz Maia: Deixa eu abrir aqui. Eu devia estar com isso aberto. Já
+
+54
+00:14:09.200 --> 00:14:17.370
+Luiz Maia: vou passar o link para vocês do drive. Aonde vão estar as aulas todas. Tá
+
+55
+00:14:25.880 --> 00:14:36.450
+Luiz Maia: aqui vão estar como o infinite online. Não é muito confiável. Eu estou passando o endereço do drive aí para vocês com as aulas
+
+56
+00:14:36.810 --> 00:14:39.409
+Luiz Maia: de Dotnet. Tá certo.
+
+57
+00:14:40.260 --> 00:14:48.639
+Luiz Maia: Se vocês quiserem, eu posso colocar nesse drive mesmo a solução do At para vocês. Não sei se vocês querem,
+
+58
+00:14:48.950 --> 00:14:52.369
+Luiz Maia: mas eu posso colocar aqui tranquilamente
+
+59
+00:14:52.810 --> 00:14:55.550
+Luiz Maia: para vocês. Aí fica mais fácil.
+
+60
+00:15:00.110 --> 00:15:01.570
+Luiz Maia: Vou colocar aqui
+
+61
+00:15:10.650 --> 00:15:16.570
+Luiz Maia: quem quiser quem tiver interesse, estiver ansioso para dar uma olhada no.
+
+62
+00:15:16.920 --> 00:15:24.180
+Luiz Maia: Na minha solução. Pode entrar no drive e conseguir depois eu coloco no em frente online.
+
+63
+00:15:24.890 --> 00:15:28.530
+Luiz Maia: Ele não abriu a página aqui ainda continua pensando.
+
+64
+00:15:43.180 --> 00:15:47.759
+Luiz Maia: Esse é o nome da disciplina aqui, as competências,
+
+65
+00:15:49.520 --> 00:15:56.289
+Luiz Maia: utilizar delegates e eventos em programas Sharp. Isso não tem nada a ver com
+
+66
+00:15:57.770 --> 00:16:03.660
+Luiz Maia: um Dotnet. É C. Sharp. Ainda aí. Depois disso,
+
+67
+00:16:04.340 --> 00:16:18.120
+Luiz Maia: a gente vai entrar na parte de interface com usuário web usando o Asp Net usando Razor Pages.
+
+68
+00:16:18.590 --> 00:16:21.570
+Luiz Maia: Vai ser o front end da gente.
+
+69
+00:16:22.950 --> 00:16:28.290
+Luiz Maia: Depois a gente vai usar a base de dados usando o antit Framework
+
+70
+00:16:29.560 --> 00:16:33.020
+Luiz Maia: sem Sql, o que é uma pena.
+
+71
+00:16:33.320 --> 00:16:41.009
+Luiz Maia: Se der tempo, gente, eu vou colocar o código sem o Entity Framework, que é um warme
+
+72
+00:16:41.410 --> 00:16:46.020
+Luiz Maia: que facilita muito o trabalho com o banco de dados.
+
+73
+00:16:46.270 --> 00:16:50.000
+Luiz Maia: Mas eu queria mostrar para vocês como fazer a mesma coisa sem
+
+74
+00:16:50.220 --> 00:16:54.760
+Luiz Maia: o Entity, usando a Scali puro.
+
+75
+00:16:55.490 --> 00:17:04.910
+Luiz Maia: Então vocês tenham uma ideia com e sem o anti de Framework,
+
+76
+00:17:05.099 --> 00:17:09.390
+Luiz Maia: e a gente. Depois vai fazer uma aplicação web completa,
+
+77
+00:17:09.780 --> 00:17:17.490
+Luiz Maia: acessando, usando o Aspinet, que é a o Front end
+
+78
+00:17:19.210 --> 00:17:22.670
+Luiz Maia: Do Dotnet com o banco de dados.
+
+79
+00:17:23.380 --> 00:17:26.570
+Luiz Maia: É muito poderoso. Tudo isso, gente,
+
+80
+00:17:26.800 --> 00:17:32.080
+Luiz Maia: eu posso falar isso porque eu já fiz código em Java, em Python.
+
+81
+00:17:32.600 --> 00:17:42.199
+Luiz Maia: É muito fácil você fazer uma aplicação simples usando o Dotnet.
+
+82
+00:17:43.010 --> 00:17:53.300
+Luiz Maia: Muito, muito simples, sei lá, em dez, vinte minutos, eu consigo fazer uma aplicação completa usando é
+
+83
+00:17:54.850 --> 00:18:02.760
+Luiz Maia: o Front End Web com banco de dados muito rapidamente.
+
+84
+00:18:03.720 --> 00:18:15.069
+Luiz Maia: Eu até começaria o curso. De repente, na próxima aula na semana que vem, talvez até faça um
+
+85
+00:18:15.340 --> 00:18:18.100
+Luiz Maia: um demo para vocês. Ou seja,
+
+86
+00:18:19.150 --> 00:18:26.129
+Luiz Maia: vou fazer um demo de como criar uma aplicação rapidamente, só para vocês terem uma noção do que eu estou falando
+
+87
+00:18:31.170 --> 00:18:37.740
+Luiz Maia: nesse ponto. Assim é muito rápido. Comparado
+
+88
+00:18:38.010 --> 00:18:44.279
+Luiz Maia: Al Java e ao Python, você tem tudo. Muita coisa pronta.
+
+89
+00:18:44.680 --> 00:18:45.880
+Luiz Maia: É
+
+90
+00:18:49.000 --> 00:18:55.180
+Luiz Maia: sim. É por isso que eu quero acelerar essa parte inicial.
+
+91
+00:18:55.550 --> 00:18:59.200
+Luiz Maia: Que é essa parte de delegate eventos que não tem?
+
+92
+00:18:59.890 --> 00:19:08.730
+Luiz Maia: É, não é Dotnet, é C Sharp. Tá certo, é.
+
+93
+00:19:09.730 --> 00:19:22.750
+Luiz Maia: Então eu vou tentar acelerar o máximo possível para a gente poder terminar essa primeira competência até amanhã.
+
+94
+00:19:23.160 --> 00:19:26.490
+Luiz Maia: É o meu objetivo, tá?
+
+95
+00:19:29.650 --> 00:19:39.459
+Luiz Maia: E aí eu vou usar código. Pronto, vou colocar o código disponível para vocês no drive, e vocês vão ter código para caramba lá. Para vocês poderem
+
+96
+00:19:39.980 --> 00:19:45.700
+Luiz Maia: utilizar para fazer o Tp de vocês o Tp1
+
+97
+00:19:45.850 --> 00:19:51.899
+Luiz Maia: porque tem bastante coisa no Tp1 sobre essa primeira competência aqui.
+
+98
+00:19:52.110 --> 00:19:53.580
+Luiz Maia: Tá certo. Então
+
+99
+00:19:53.890 --> 00:20:09.030
+Luiz Maia: todo o código vai ser voltado para vocês resolverem o At, o Tp1 de vocês. E claro, o At também vai ter delegates e eventos também no
+
+100
+00:20:10.040 --> 00:20:11.730
+Luiz Maia: para ser.
+
+101
+00:20:12.250 --> 00:20:16.800
+Luiz Maia: Aqui tem a bibliografia que eu peguei do plano de ensino.
+
+102
+00:20:17.340 --> 00:20:24.019
+Luiz Maia: Eu vou usar alguns dessas referências.
+
+103
+00:20:24.440 --> 00:20:31.299
+Luiz Maia: Mas eu pretendo que vocês não precisem acessar esses livros,
+
+104
+00:20:32.310 --> 00:20:39.429
+Luiz Maia: tentando mostrar para vocês, usando slides e códigos que eu estou fazendo
+
+105
+00:20:39.600 --> 00:20:46.079
+Luiz Maia: justamente para não precisar que vocês façam acesso a esses livros. Mas é sempre bom, né?
+
+106
+00:20:47.710 --> 00:20:50.290
+Luiz Maia: Você dá uma olhada nesses livros
+
+107
+00:20:50.780 --> 00:20:58.660
+Luiz Maia: se você tiver tempo, né? Esse que é o grande problema de todo mundo. Aqui é tempo tá
+
+108
+00:20:59.070 --> 00:21:05.110
+Luiz Maia: bom, essa aqui é aula zero. É aula de apresentação do curso, etc.
+
+109
+00:21:05.210 --> 00:21:11.180
+Luiz Maia: Onde, você sabe, as competências que serão cobradas, etc.
+
+110
+00:21:11.860 --> 00:21:13.690
+Luiz Maia: Aqui vão para a aula. Um.
+
+111
+00:21:14.570 --> 00:21:16.809
+Luiz Maia: Eu coloquei aqui na.
+
+112
+00:21:18.600 --> 00:21:28.050
+Luiz Maia: Eu copiei para dentro desse desse drive aqui a solução do At de C. Sharp.
+
+113
+00:21:28.380 --> 00:21:31.410
+Luiz Maia: Se por acaso ainda não abriu.
+
+114
+00:21:31.720 --> 00:21:34.179
+Luiz Maia: Está lá pensando, não foi?
+
+115
+00:21:34.770 --> 00:21:41.200
+Luiz Maia: Então é a maneira mais rápida de vocês terem acesso à solução.
+
+116
+00:21:42.880 --> 00:21:48.810
+Luiz Maia: E aí qualquer dúvida, vocês podem me procurar
+
+117
+00:21:50.140 --> 00:21:55.769
+Luiz Maia: para tirar dúvidas sobre essa solução que eu estou apresentando aqui para vocês.
+
+118
+00:21:56.780 --> 00:22:02.219
+Luiz Maia: Então vamos para a aula. Um que é aula sobre delegates
+
+119
+00:22:06.070 --> 00:22:16.140
+Luiz Maia: delegate expressão lâmpida Multishash, delegate e eventos novamente, gente, isso aqui é C. Sharp. Não tem nada a ver com Dotnet
+
+120
+00:22:16.770 --> 00:22:21.680
+Luiz Maia: é muito pouco que a gente vai ver aqui.
+
+121
+00:22:21.790 --> 00:22:29.290
+Luiz Maia: Vai ser usado no Docnet. Talvez a parte mais importante dessas aulas.
+
+122
+00:22:35.120 --> 00:22:38.880
+Luiz Maia: Eu não coloquei material nenhum na aula dez
+
+123
+00:22:39.190 --> 00:22:42.419
+Luiz Maia: é porque é sobre arquivos. Não é isso.
+
+124
+00:22:47.130 --> 00:22:49.490
+Luiz Maia: A aula dez é sobre arquivos. Não é
+
+125
+00:22:58.080 --> 00:22:58.880
+Luiz Maia: bom.
+
+126
+00:23:12.070 --> 00:23:23.829
+Luiz Maia: Então a parte de arquivos. Eu não coloquei nenhum slide porque eu achei desnecessário. Se vocês quiserem, eu posso preparar alguns slides para colocar lá, mas
+
+127
+00:23:23.990 --> 00:23:29.100
+Luiz Maia: o que eu acho que o mais importante em relação à parte de arquivos é a parte do código,
+
+128
+00:23:29.950 --> 00:23:45.609
+Luiz Maia: a parte de teoria. Eu não vejo muita necessidade de colocar, mas eu posso criar algumas transparências lá. Alguns slides não tem nenhum problema nessa parte do curso. O que eu acho mais importante é a parte de lâmide.
+
+129
+00:23:46.940 --> 00:23:50.319
+Luiz Maia: O que o Andy te usa? Muito lambida.
+
+130
+00:23:51.220 --> 00:23:55.810
+Luiz Maia: Ah, eu não sei o que é lâmbida. Ok, eu vou ensinar. Calma,
+
+131
+00:23:57.590 --> 00:24:01.240
+Luiz Maia: primeiro a gente vai entrar agora no que é delegate.
+
+132
+00:24:01.400 --> 00:24:08.210
+Luiz Maia: Tá certo, gente, isso aqui é programação avançada.
+
+133
+00:24:08.850 --> 00:24:18.770
+Luiz Maia: A programação para a gente que já está programando em si, Sharp, há algum tempo.
+
+134
+00:24:19.430 --> 00:24:22.960
+Luiz Maia: Eu vou usar muitos exemplos para tentar
+
+135
+00:24:24.440 --> 00:24:30.699
+Luiz Maia: explicar exatamente o que são delegates,
+
+136
+00:24:32.700 --> 00:24:39.950
+Luiz Maia: para começar. E eu acho que não vai ajudar muita coisa, porque vocês nunca programaram nem com C, nem com C mais
+
+137
+00:24:40.770 --> 00:24:51.030
+Luiz Maia: você ter ponteiros para funções ou métodos.
+
+138
+00:24:51.750 --> 00:24:58.879
+Luiz Maia: Então você vai ter um ponteiro, uma variável que aponta para um método,
+
+139
+00:25:00.100 --> 00:25:04.180
+Luiz Maia: e aí a gente vai poder é
+
+140
+00:25:05.050 --> 00:25:12.049
+Luiz Maia: fazer com que esse método execute funções diferentes durante a execução do código.
+
+141
+00:25:12.400 --> 00:25:14.560
+Luiz Maia: É muito específico.
+
+142
+00:25:15.270 --> 00:25:18.940
+Luiz Maia: Provavelmente vocês nunca verão isso de novo.
+
+143
+00:25:20.390 --> 00:25:22.760
+Luiz Maia: É muito específico.
+
+144
+00:25:25.690 --> 00:25:31.840
+Luiz Maia: E isso é retratado em tempo de execução. Ou seja, eu posso criar uma função,
+
+145
+00:25:32.300 --> 00:25:36.979
+Luiz Maia: uma variável que aponta uma função e ela pode
+
+146
+00:25:37.160 --> 00:25:42.990
+Luiz Maia: alterar a função que ela vai executar durante a execução do código.
+
+147
+00:25:44.420 --> 00:25:54.889
+Luiz Maia: Um negócio é meio complicado. Mesmo se você não entender, espera para ver os exemplos, para ver se melhora. Porque realmente, se você nunca trabalhou
+
+148
+00:25:55.200 --> 00:26:02.139
+Luiz Maia: com C, mais. Provavelmente você não vai entender essa parte teórica que está aqui.
+
+149
+00:26:03.490 --> 00:26:10.709
+Luiz Maia: E aí então o delegate. É um tipo que pode armazenar uma referência para um método.
+
+150
+00:26:12.260 --> 00:26:26.880
+Luiz Maia: E aí vem a questão da assinatura. A assinatura é aquilo que você sabe. O que é uma assinatura. A assinatura. É aquilo que vem depois do nome do método. São os parâmetros que você vai receber.
+
+151
+00:26:28.750 --> 00:26:36.830
+Luiz Maia: É esse tipo de de mecanismo.
+
+152
+00:26:37.380 --> 00:26:45.490
+Luiz Maia: O delegate é muito usado em programação. A síncrona e programação orientada a eventos,
+
+153
+00:26:45.760 --> 00:26:47.950
+Luiz Maia: coisa que a gente não vai trabalhar.
+
+154
+00:26:50.310 --> 00:26:58.730
+Luiz Maia: Então, assim eu sei que é meio estranho, gente, mas faz parte do conteúdo. Eu tenho que ensinar
+
+155
+00:26:58.980 --> 00:27:09.709
+Luiz Maia: e não dá para identificar aqui brigando em relação a isso.
+
+156
+00:27:10.270 --> 00:27:18.879
+Luiz Maia: Programação acíncrona e programação orientada a eventos são estilos de programação.
+
+157
+00:27:22.990 --> 00:27:29.080
+Luiz Maia: Bom, deixa eu ver aqui o que eu tenho aqui a mais aqui, tá
+
+158
+00:27:29.700 --> 00:27:34.960
+Luiz Maia: então eu vou abrir aqui o meu código para vocês.
+
+159
+00:27:35.720 --> 00:27:39.070
+Luiz Maia: Para vocês poderem entenderem.
+
+160
+00:27:54.080 --> 00:28:01.750
+Luiz Maia: Todo esse código vai estar disponível para vocês no drive.
+
+161
+00:28:02.990 --> 00:28:06.990
+Luiz Maia: E aí tem um monte de exemplos. Gente, um monte.
+
+162
+00:28:07.450 --> 00:28:11.930
+Luiz Maia: Eu acho que são catorze projetos que eu construí aqui dentro.
+
+163
+00:28:12.110 --> 00:28:16.110
+Luiz Maia: Não é para vocês terem noção
+
+164
+00:28:16.370 --> 00:28:21.160
+Luiz Maia: da quantidade de exemplos que eu construí, que eu desenvolvi
+
+165
+00:28:21.310 --> 00:28:25.159
+Luiz Maia: para vocês terem código. Para fazer isso.
+
+166
+00:28:33.830 --> 00:28:39.450
+Luiz Maia: Sem Jorge, você vai ver muito pouco de delegate na sua vida.
+
+167
+00:28:40.030 --> 00:28:44.179
+Luiz Maia: Provavelmente vai ser a primeira e última vez que você vai ver isso.
+
+168
+00:28:44.180 --> 00:28:45.070
+Jorge José Luiz Santos da Silva: Caramba!
+
+169
+00:28:47.020 --> 00:28:54.769
+Luiz Maia: É a gente. Não me perguntem por quê. Eu não tenho essas respostas
+
+170
+00:28:55.280 --> 00:28:59.700
+Luiz Maia: para vocês. Eu só posso ser muito sincero com vocês.
+
+171
+00:28:59.850 --> 00:29:04.650
+Luiz Maia: É um assunto que vocês vão ver agora. E provavelmente nunca verão depois.
+
+172
+00:29:06.230 --> 00:29:08.939
+Luiz Maia: Dificilmente você vai usar isso.
+
+173
+00:29:09.930 --> 00:29:11.250
+Luiz Maia: Então, assim.
+
+174
+00:29:11.520 --> 00:29:12.480
+Luiz Maia: E aí
+
+175
+00:29:13.150 --> 00:29:22.549
+Luiz Maia: é aquela coisa. A gente vai ver para fazer os Tps e o ate e vida que segue. Gente. Não vou ficar questionando aqui
+
+176
+00:29:22.720 --> 00:29:29.250
+Luiz Maia: quem fez a disciplina? Gente, eu não posso nem falar sobre isso, gente.
+
+177
+00:29:31.440 --> 00:29:36.610
+Luiz Maia: Senão eles vão me aborrecer com isso.
+
+178
+00:29:39.350 --> 00:29:41.960
+Luiz Maia: Vamos tentar entender aqui.
+
+179
+00:29:43.580 --> 00:29:45.020
+Luiz Maia: Esse código.
+
+180
+00:29:45.290 --> 00:29:47.360
+Luiz Maia: Isso aqui é um delegate ó
+
+181
+00:29:54.720 --> 00:29:58.180
+Luiz Maia: public delegate Dumble calcular.
+
+182
+00:29:58.460 --> 00:30:02.060
+Luiz Maia: Então eu estou especificando o que ele retorna
+
+183
+00:30:02.960 --> 00:30:06.999
+Luiz Maia: e os parâmetros que ele recebe. Repara que ele não tem corpo nenhum.
+
+184
+00:30:10.170 --> 00:30:19.119
+Luiz Maia: É, eu não gosto de fazer essa associação na minha cabeça.
+
+185
+00:30:19.290 --> 00:30:27.470
+Luiz Maia: Quando eu fui estudar esse assunto. Eu lembrei de interface, apesar de não ser interface,
+
+186
+00:30:27.700 --> 00:30:31.000
+Luiz Maia: mas eu lembrei de interface.
+
+187
+00:30:31.610 --> 00:30:42.990
+Luiz Maia: Professor, sei que já estamos em outra disciplina, mas gostaria de pedir uma orientação sobre a teia anterior. Como não tive mais retorno e tive aquele problema de conexão
+
+188
+00:30:43.670 --> 00:30:51.469
+Luiz Maia: que acabou me impedindo de enviar o trabalho. Fiquei sem saber como proceder. O senhor poderia me orientar sobre o que posso fazer nesse caso, depois oriento.
+
+189
+00:30:52.030 --> 00:30:59.129
+Luiz Maia: E aí, a princípio, eu não aceito nada fora do moodle.
+
+190
+00:30:59.520 --> 00:31:00.650
+Luiz Maia: Tá certo.
+
+191
+00:31:01.290 --> 00:31:14.939
+Luiz Maia: Você poderia muito bem ter entregue o trabalho antes do prazo de entrega. Então, a princípio, o seu trabalho não foi entregue e você provavelmente está reprovada.
+
+192
+00:31:18.780 --> 00:31:22.200
+Luiz Maia: Você teve muito tempo para entregar o seu aterro.
+
+193
+00:31:24.320 --> 00:31:30.200
+Luiz Maia: Então aqui. Ó, você tem uma.
+
+194
+00:31:32.040 --> 00:31:33.620
+Luiz Maia: Um método
+
+195
+00:31:34.130 --> 00:31:43.210
+Luiz Maia: que não define o corpo dele. Tá certo. Ele só diz o que entra e o que sai muito semelhante a uma interface. Mas
+
+196
+00:31:43.510 --> 00:31:47.730
+Luiz Maia: não é interface, tá certo.
+
+197
+00:31:48.640 --> 00:31:53.189
+Luiz Maia: Qualquer método que eu quiser associar, calcular precisa receber dois,
+
+198
+00:31:53.600 --> 00:31:58.400
+Luiz Maia: Double, retornar um Double. Isso é fundamental
+
+199
+00:31:58.580 --> 00:32:01.040
+Luiz Maia: para a gente implementar o delegate
+
+200
+00:32:01.180 --> 00:32:05.100
+Luiz Maia: lembrando, delegate, é um ponteiro para um método
+
+201
+00:32:07.310 --> 00:32:14.919
+Luiz Maia: bom. Eu tenho duas formas de fazer. Aí eu tenho aqui o somar, o subtrair, o multiplicar e o dividir.
+
+202
+00:32:15.250 --> 00:32:23.300
+Luiz Maia: Muito semelhante com a calculadora que nós fizemos no trimestre passado. Inclusive o At tinha uma questão.
+
+203
+00:32:24.060 --> 00:32:25.860
+Luiz Maia: É semelhante
+
+204
+00:32:31.620 --> 00:32:35.450
+Luiz Maia: uma forma deixa eu acertar isso aqui
+
+205
+00:32:36.360 --> 00:32:51.729
+Luiz Maia: implícita faltou o assento aqui implícita. Essa aqui é a forma implícita de você. Perdão a forma explícita de declarar ou calcular onde você passa para dentro de calcular
+
+206
+00:32:52.600 --> 00:32:55.190
+Luiz Maia: qual é o método que você quer executar.
+
+207
+00:32:56.530 --> 00:33:01.549
+Luiz Maia: Essa forma é a forma menos usual de você fazer
+
+208
+00:33:01.750 --> 00:33:07.100
+Luiz Maia: essa operação. Normalmente você faz assim. Ó, você faz
+
+209
+00:33:07.490 --> 00:33:20.760
+Luiz Maia: calcular que é o nome do delegate o nome do delegate e você atribui ao delegate a função, ou seja, o calcular aponta para somar.
+
+210
+00:33:21.910 --> 00:33:23.660
+Luiz Maia: E aí ele faz o quê?
+
+211
+00:33:23.910 --> 00:33:27.849
+Luiz Maia: Quando você manda executar o calcular, ele vai executar o quê?
+
+212
+00:33:28.010 --> 00:33:33.559
+Luiz Maia: O que está sendo apontado para o calcular. O que calcular, está apontando
+
+213
+00:33:33.700 --> 00:33:42.649
+Luiz Maia: o somar. Então ele vai executar quem ele vai executar esse método aqui. Então esse calcular é um ponteiro para um método.
+
+214
+00:33:43.720 --> 00:33:45.900
+Luiz Maia: É muito poderoso.
+
+215
+00:33:46.360 --> 00:33:53.119
+Luiz Maia: É um negócio assim, bem, fora do padrão de programação que vocês já viram,
+
+216
+00:33:53.750 --> 00:33:59.610
+Luiz Maia: mas isso é aplicado em situações muito específicas.
+
+217
+00:34:00.120 --> 00:34:04.399
+Luiz Maia: É como eu já comentei aqui anteriormente,
+
+218
+00:34:05.980 --> 00:34:13.519
+Luiz Maia: e é uma programação avançada. Não é uma programação básica. Não é para amadores.
+
+219
+00:34:13.730 --> 00:34:17.839
+Luiz Maia: Isso aqui é programação. Já para pleno. Para cima
+
+220
+00:34:18.889 --> 00:34:24.429
+Luiz Maia: aí, o que eu faço? Eu pego calcular e atribuo a ele subtrair.
+
+221
+00:34:24.900 --> 00:34:28.689
+Luiz Maia: Repara que subtrair não é uma variável. É um método.
+
+222
+00:34:29.290 --> 00:34:32.380
+Luiz Maia: Então calcular está apontando.
+
+223
+00:34:33.060 --> 00:34:39.090
+Luiz Maia: Se vocês quiserem, eu posso desenhar isso, gente, eu posso desenhar, tá?
+
+224
+00:34:39.860 --> 00:34:45.429
+Luiz Maia: É, mas o calcular é um ponteiro para um método.
+
+225
+00:34:46.159 --> 00:34:51.990
+Luiz Maia: Depois eu faço calcular, receber, multiplicar e depois dividir.
+
+226
+00:34:54.409 --> 00:35:06.139
+Luiz Maia: Então o calcular pode ter associado a ele quatro métodos diferentes, desde que a assinatura seja a mesma.
+
+227
+00:35:07.790 --> 00:35:14.630
+Luiz Maia: Então, somar, subtrair, multiplicar e dividir. Todos eles têm a mesma assinatura.
+
+228
+00:35:14.780 --> 00:35:19.009
+Luiz Maia: Todos eles recebem dois Dubbles e retornam. Double.
+
+229
+00:35:19.370 --> 00:35:22.990
+Luiz Maia: Se a gente mandar executar isso aqui, você vai ver o que acontece.
+
+230
+00:35:26.930 --> 00:35:38.549
+Luiz Maia: E aí eu tentei fazer uso de exemplos que vocês conhecem.
+
+231
+00:35:38.970 --> 00:35:44.839
+Luiz Maia: A calculadora foi um exemplo que nós fizemos. Sei lá.
+
+232
+00:35:46.100 --> 00:35:50.940
+Luiz Maia: Não sei. Dez, quinze projetos sobre a calculadora.
+
+233
+00:35:51.560 --> 00:35:58.040
+Luiz Maia: Tá certo. Então mais fácil o assunto é complexo.
+
+234
+00:35:58.420 --> 00:36:05.949
+Luiz Maia: O que eu tentei fazer é tentar fazer os exemplos o mais próximo da realidade de vocês.
+
+235
+00:36:10.490 --> 00:36:12.229
+Luiz Maia: Eu acho que não.
+
+236
+00:36:14.220 --> 00:36:15.699
+Luiz Maia: Eu acho que não.
+
+237
+00:36:17.570 --> 00:36:20.820
+Luiz Maia: Não tenho certeza posso fazer isso aqui. Agora?
+
+238
+00:36:35.160 --> 00:36:40.140
+Luiz Maia: Sim, os parâmetros estão sendo passados pelo usuário. Mateus, olha aqui. Cinco e dois.
+
+239
+00:36:42.930 --> 00:36:46.990
+Luiz Maia: Repara que eu não tenho um objeto aqui. Eu tenho métodos.
+
+240
+00:36:47.940 --> 00:36:50.910
+Luiz Maia: Não tem um objeto, calcula.
+
+241
+00:36:53.790 --> 00:36:55.330
+Luiz Maia: Eu tenho métodos.
+
+242
+00:36:55.560 --> 00:36:58.529
+Luiz Maia: E esse cara é um ponteiro para um método.
+
+243
+00:36:59.650 --> 00:37:06.440
+Luiz Maia: Eu acho que não tem sobrecarga para não atrasar a aula. Gabriel, eu vou te responder isso amanhã,
+
+244
+00:37:07.140 --> 00:37:14.209
+Luiz Maia: senão eu vou perder muito tempo aqui com tentativas. Eu não posso perder tempo com vocês, gente.
+
+245
+00:37:14.690 --> 00:37:19.219
+Luiz Maia: Eu tenho muita matéria para dar para vocês de Dotnet isso aqui é.
+
+246
+00:37:19.490 --> 00:37:22.320
+Luiz Maia: Tem que ser muito rápido. Você me cobra amanhã?
+
+247
+00:37:22.560 --> 00:37:26.120
+Luiz Maia: É uma resposta em relação a isso. Mas eu acho que não vai funcionar.
+
+248
+00:37:27.060 --> 00:37:31.429
+Luiz Maia: Eu não quero perder tempo, dar aula com isso agora.
+
+249
+00:37:33.640 --> 00:37:34.740
+Luiz Maia: E aí
+
+250
+00:37:35.870 --> 00:37:48.470
+Luiz Maia: eu quero ser bem pontual. Bem objetivo, gente, eu quero terminar isso o mais rápido possível para entrar em Dotnet com vocês, que é a parte mais importante do curso,
+
+251
+00:37:48.800 --> 00:37:51.980
+Luiz Maia: e também para a vida profissional de vocês,
+
+252
+00:37:52.290 --> 00:37:57.199
+Luiz Maia: porque provavelmente como eu falei, vocês não verão delegates
+
+253
+00:37:58.030 --> 00:38:02.450
+Luiz Maia: nunca mais. Muito provavelmente nunca mais.
+
+254
+00:38:09.800 --> 00:38:10.730
+Luiz Maia: Bom,
+
+255
+00:38:15.600 --> 00:38:26.920
+Luiz Maia: depois do delegate, o pessoal do Dotnet inventou delegates genéricos. Tá certo. Prontos?
+
+256
+00:38:28.110 --> 00:38:34.320
+Luiz Maia: Que são o Action e o funk?
+
+257
+00:38:34.720 --> 00:38:35.410
+Luiz Maia: Tá
+
+258
+00:38:38.770 --> 00:38:44.409
+Luiz Maia: tudo que você faz com action e funk, você faz com delegate.
+
+259
+00:38:49.050 --> 00:38:53.180
+Luiz Maia: Não, não teve nenhum áudio vazado aqui, não tá? Pelo menos eu não ouvi.
+
+260
+00:38:56.180 --> 00:39:06.339
+Luiz Maia: Mas o Dotnet criou esses delegates genéricos e o utp de vocês
+
+261
+00:39:06.770 --> 00:39:09.990
+Luiz Maia: pede isso, senão ela nem teria falado sobre isso.
+
+262
+00:39:10.350 --> 00:39:14.060
+Luiz Maia: Mas ele pede e eu tenho que ajudar vocês
+
+263
+00:39:14.200 --> 00:39:17.870
+Luiz Maia: a fazerem os Tps e o At tá certo.
+
+264
+00:39:20.350 --> 00:39:27.199
+Luiz Maia: Action e Funk possuem diferentes versões que permitem trabalhar com vários parâmetros.
+
+265
+00:39:27.390 --> 00:39:32.350
+Luiz Maia: E aí vem a grande diferença entre o funk e o action.
+
+266
+00:39:32.480 --> 00:39:35.569
+Luiz Maia: Então o funk in action são
+
+267
+00:39:35.800 --> 00:39:41.340
+Luiz Maia: tipos de delegates genéricos prontos para facilitar,
+
+268
+00:39:41.990 --> 00:39:49.150
+Luiz Maia: entre aspas a vida da gente na hora de programar com ponteiros para métodos
+
+269
+00:39:50.040 --> 00:39:58.530
+Luiz Maia: Funk pode receber até dezasseis parâmetros de entrada e aí isso é importante
+
+270
+00:39:58.870 --> 00:40:04.470
+Luiz Maia: e possui ainda um parâmetro adicional que representa o tipo de retorno.
+
+271
+00:40:06.200 --> 00:40:07.790
+Luiz Maia: Isso é importante.
+
+272
+00:40:08.500 --> 00:40:15.349
+Luiz Maia: Action pode receber dezasseis parâmetros de entrada até aí é igual ao Funk.
+
+273
+00:40:15.860 --> 00:40:18.170
+Luiz Maia: Só que ele não tem retorno.
+
+274
+00:40:18.670 --> 00:40:22.460
+Luiz Maia: Ele não faz retorno. O Action não tem Returney,
+
+275
+00:40:23.240 --> 00:40:29.769
+Luiz Maia: ou seja, o que ele processa ali dentro, vai ficar ali dentro. Ele não tem como voltar a nada.
+
+276
+00:40:29.910 --> 00:40:35.710
+Luiz Maia: É um negócio meio estranho, na minha opinião. Mas é o que nós temos aqui.
+
+277
+00:40:37.850 --> 00:40:46.310
+Luiz Maia: E aí o que nós fizemos nesse primeiro exemplo, aqui é um delegate personalizado,
+
+278
+00:40:46.780 --> 00:40:53.850
+Luiz Maia: ou seja, onde você especifica o delegate, etc, etc.
+
+279
+00:40:54.310 --> 00:41:00.940
+Luiz Maia: O que a gente vai ver agora é o uso do action e do fux.
+
+280
+00:41:01.310 --> 00:41:08.669
+Luiz Maia: É aonde elimina se a necessidade do delegate personalizado.
+
+281
+00:41:09.910 --> 00:41:12.590
+Luiz Maia: Deixa eu botar aqui no código.
+
+282
+00:41:17.150 --> 00:41:19.470
+Luiz Maia: Deixa eu botar aqui nesse código aqui
+
+283
+00:41:24.070 --> 00:41:24.940
+Luiz Maia: e aí.
+
+284
+00:41:28.310 --> 00:41:33.980
+Luiz Maia: Delegate personalizado.
+
+285
+00:41:42.830 --> 00:41:44.999
+Luiz Maia: Deixa eu ver se eu melhore isso aqui.
+
+286
+00:41:50.490 --> 00:41:51.460
+Luiz Maia: Pronto,
+
+287
+00:42:02.080 --> 00:42:06.719
+Luiz Maia: ok, agora eu vou mostrar para vocês.
+
+288
+00:42:08.250 --> 00:42:11.590
+Luiz Maia: Esse aqui é o delegate dois A.
+
+289
+00:42:12.960 --> 00:42:17.680
+Luiz Maia: É muito exemplo. Gente, eu tentei fazer o máximo de exemplos
+
+290
+00:42:18.060 --> 00:42:22.850
+Luiz Maia: possíveis para vocês entenderem essa confusão. Tá certo.
+
+291
+00:42:23.720 --> 00:42:28.739
+Luiz Maia: Aqui a gente tem a forma explícita de declarar
+
+292
+00:42:29.240 --> 00:42:34.589
+Luiz Maia: esse delegate tá certo? E a forma simplificada
+
+293
+00:42:35.520 --> 00:42:38.529
+Luiz Maia: repara que você começa com funk.
+
+294
+00:42:39.050 --> 00:42:47.059
+Luiz Maia: Os dois primeiros parâmetros são de entrada, e o último é o de saída.
+
+295
+00:42:47.850 --> 00:42:51.699
+Luiz Maia: E aqui eu criei uma variável
+
+296
+00:42:52.720 --> 00:42:55.749
+Luiz Maia: que é um ponteiro para esse método aqui.
+
+297
+00:42:57.000 --> 00:43:04.150
+Luiz Maia: Repare que aqui, em momento nenhum eu estou declarando um delegate
+
+298
+00:43:05.950 --> 00:43:08.420
+Luiz Maia: então esse cara aqui é uma
+
+299
+00:43:08.540 --> 00:43:13.650
+Luiz Maia: forma mais simples, mais simples de declarar o delegate
+
+300
+00:43:16.060 --> 00:43:19.659
+Luiz Maia: onde eu não preciso personalizar o delegate
+
+301
+00:43:20.450 --> 00:43:24.750
+Luiz Maia: é uma forma mais simples de você implementar a mesma coisa.
+
+302
+00:43:25.280 --> 00:43:30.259
+Luiz Maia: Então o delegate um. Ele implementou
+
+303
+00:43:30.630 --> 00:43:35.619
+Luiz Maia: um delegate personalizado aqui eu estou usando.
+
+304
+00:43:36.290 --> 00:43:38.429
+Luiz Maia: Não, ainda não é lambida.
+
+305
+00:43:38.650 --> 00:43:42.900
+Luiz Maia: Ainda não é lâmpida, lâmpida. Vai aparecer daqui a pouco
+
+306
+00:43:44.640 --> 00:43:52.020
+Luiz Maia: porque lâmpida junta com isso? Então assim é uma confusão. Grande não é?
+
+307
+00:43:52.670 --> 00:43:54.910
+Luiz Maia: Lâmpada. Vai aparecer daqui a pouco.
+
+308
+00:43:55.310 --> 00:44:00.099
+Luiz Maia: E lâmpida é a coisa mais importante dessa matéria.
+
+309
+00:44:00.290 --> 00:44:01.390
+Luiz Maia: Tá certo,
+
+310
+00:44:12.650 --> 00:44:17.780
+Luiz Maia: Gabriel, é normal você que você acabou de não ter nada de arrogante.
+
+311
+00:44:20.240 --> 00:44:21.680
+Luiz Maia: É
+
+312
+00:44:26.660 --> 00:44:32.810
+Luiz Maia: para eu poder justificar esse conteúdo.
+
+313
+00:44:33.710 --> 00:44:41.529
+Luiz Maia: Eu deveria trabalhar com programação assíncrona e programação orientada de eventos.
+
+314
+00:44:44.740 --> 00:44:50.930
+Luiz Maia: Cara, se eu for parar para fazer um exemplo real disso, ou seja,
+
+315
+00:44:51.610 --> 00:44:57.799
+Luiz Maia: programação a síncrona com programação orientada a eventos. Eu não vou terminar isso tão cedo.
+
+316
+00:44:58.860 --> 00:45:04.480
+Luiz Maia: Então, se vocês quiserem, eu posso
+
+317
+00:45:04.680 --> 00:45:16.010
+Luiz Maia: montar um exemplo real de uso disso. Só que isso vai consumir um monte de tempo de aula. Gente, eu tenho uma hora e meia de aula com vocês.
+
+318
+00:45:22.710 --> 00:45:26.750
+Luiz Maia: Não, Gabriel, você não vai usar isso aqui nunca,
+
+319
+00:45:27.530 --> 00:45:38.809
+Luiz Maia: nunca é uma palavra muito forte, gente. Mas assim a chance de você usar isso alguma vez na vida profissional de vocês é de um.
+
+320
+00:45:39.470 --> 00:45:41.199
+Luiz Maia: É muito raro, cara.
+
+321
+00:45:41.910 --> 00:45:44.450
+Luiz Maia: Tem que ser uma aplicação muito específica.
+
+322
+00:45:45.510 --> 00:45:53.350
+Luiz Maia: Então não é a má vontade da minha parte não querer entrar mais a fundo é porque isso aqui não é importante,
+
+323
+00:45:55.000 --> 00:45:58.420
+Luiz Maia: e eu quero avançar na matéria
+
+324
+00:45:59.250 --> 00:46:05.640
+Luiz Maia: para a parte importante e não ficar perdendo tempo com isso.
+
+325
+00:46:05.960 --> 00:46:12.020
+Luiz Maia: Porque senão, se eu pudesse escolher gente, eu nem estaria ensinando isso pra vocês,
+
+326
+00:46:12.210 --> 00:46:16.230
+Luiz Maia: eu já estaria começando. O Dotnet está certo.
+
+327
+00:46:18.530 --> 00:46:25.720
+Luiz Maia: Então aqui, ó, eu estou criando uma.
+
+328
+00:46:28.090 --> 00:46:39.929
+Luiz Maia: Um delegate do tipo funk onde ele recebe dois Doubles e retorna um double. Isso aqui é um padrão.
+
+329
+00:46:40.180 --> 00:46:44.560
+Luiz Maia: O último é sempre o retorno do funk.
+
+330
+00:46:45.130 --> 00:46:54.879
+Luiz Maia: E os anteriores são parâmetros de entrada. Você pode ter até dezasseis parâmetros de entrada aqui nesse funk.
+
+331
+00:46:55.600 --> 00:47:08.090
+Luiz Maia: E aí a ideia é a mesma coisa. Você atribui o nome do método à variável. E ela vai se comportar diferentemente de cada um
+
+332
+00:47:08.560 --> 00:47:14.589
+Luiz Maia: dos métodos associados. O importante aqui é você ver que não tem delegante nenhum aqui dentro.
+
+333
+00:47:16.150 --> 00:47:17.530
+Luiz Maia: Como aqui tem.
+
+334
+00:47:18.270 --> 00:47:25.490
+Luiz Maia: Ou seja, esse Delegate foi substituído por essa linha aqui. Ó,
+
+335
+00:47:27.400 --> 00:47:35.469
+Luiz Maia: essa linha que eu botei aqui comentada, é a forma de você declarar de forma explícita, explícita
+
+336
+00:47:35.720 --> 00:47:39.030
+Luiz Maia: o teu funk. Mas ninguém usa isso.
+
+337
+00:47:39.780 --> 00:47:43.949
+Luiz Maia: Eu só coloquei como informação para vocês, mas ninguém usa isso.
+
+338
+00:47:44.110 --> 00:47:50.990
+Luiz Maia: Todo mundo usa simples. Faltou aqui. Errado, simplificado,
+
+339
+00:47:52.240 --> 00:47:55.750
+Luiz Maia: forma simplificada. Ninguém faz isso aqui.
+
+340
+00:47:57.100 --> 00:48:15.749
+Luiz Maia: Mas eu deixei no código para vocês verem que também é possível você fazer uma instância do teu funk e passar para ele. Qual é o método associado a esse delegate? Isso aqui é delegate gente. Isso aqui é um delegate,
+
+341
+00:48:16.510 --> 00:48:20.950
+Luiz Maia: tá certo. Só que não é personalizado. É um delegate genérico.
+
+342
+00:48:21.660 --> 00:48:24.480
+Luiz Maia: Tá bom, execução dele.
+
+343
+00:48:24.600 --> 00:48:33.409
+Luiz Maia: Vocês podem ver. Vai funcionar direitinho, soma, subtração, multiplicação e divisão.
+
+344
+00:48:35.930 --> 00:48:37.319
+Luiz Maia: Esse é o funk.
+
+345
+00:48:37.500 --> 00:48:41.229
+Luiz Maia: Qual é a diferença do Funk Pro Action
+
+346
+00:48:41.530 --> 00:48:47.989
+Luiz Maia: o Funk retorna alguma coisa. O Action não retorna. Um delegate
+
+347
+00:48:48.130 --> 00:48:53.199
+Luiz Maia: que não retorna nada. Aonde é que está isso? Np: está aqui. Ó,
+
+348
+00:48:57.790 --> 00:48:59.720
+Luiz Maia: aqui. Eu especifiquei.
+
+349
+00:49:02.160 --> 00:49:06.700
+Luiz Maia: Deixa eu até pegar aqui e copiar aqui para a gente, só para ficar bem documentado.
+
+350
+00:49:09.320 --> 00:49:11.300
+Luiz Maia: Forma explícita.
+
+351
+00:49:12.640 --> 00:49:14.760
+Luiz Maia: Olha que eu passei o dia
+
+352
+00:49:14.890 --> 00:49:19.989
+Luiz Maia: refazendo essa aula para vocês, para ficar
+
+353
+00:49:20.160 --> 00:49:22.910
+Luiz Maia: melhor do que já estava, né?
+
+354
+00:49:23.960 --> 00:49:30.480
+Luiz Maia: Não é fácil dar essa aula. Não, gente pode ter certeza que para mim não é fácil dar essa aula.
+
+355
+00:49:32.210 --> 00:49:37.319
+Luiz Maia: Apesar de eu conhecer programação a Síncron, a programação orientada a eventos,
+
+356
+00:49:37.490 --> 00:49:41.179
+Luiz Maia: dar essa aula de uma forma que vocês
+
+357
+00:49:41.400 --> 00:49:46.709
+Luiz Maia: entendam alguma coisa. Porque se eu entrasse dentro de um código
+
+358
+00:49:47.000 --> 00:49:51.140
+Luiz Maia: real pesado, vocês iam ficar voando
+
+359
+00:49:52.760 --> 00:50:09.210
+Luiz Maia: e aí não tem justificativa para isso. Reparem que o Action só tem parâmetros de entrada double. Ele não tem parâmetro de saída. É o mesmo exemplo anterior.
+
+360
+00:50:09.320 --> 00:50:13.450
+Luiz Maia: Só que aqui ele não tem é
+
+361
+00:50:13.990 --> 00:50:19.750
+Luiz Maia: retorno. Eu mando printar dentro dos métodos. Eu não tenho como fazer um returney.
+
+362
+00:50:21.620 --> 00:50:26.840
+Luiz Maia: Essa é a única diferença do Funk pro action
+
+363
+00:50:27.610 --> 00:50:37.139
+Luiz Maia: funk. Retorna alguma coisa. Action não retorna a nada. Ou seja, esse código aqui é igualzinho a esse código aqui.
+
+364
+00:50:38.730 --> 00:50:45.369
+Luiz Maia: Com a diferença que o funk retorna a alguma coisa no último parâmetro. Isso é uma
+
+365
+00:50:45.510 --> 00:50:49.100
+Luiz Maia: definição do C Sharp não é minha.
+
+366
+00:50:49.410 --> 00:50:53.060
+Luiz Maia: E o Action não retorna a nada.
+
+367
+00:50:55.750 --> 00:50:59.039
+Luiz Maia: Eu ponho o Print dentro dos métodos.
+
+368
+00:50:59.150 --> 00:51:03.390
+Luiz Maia: Vou me executar para vocês verem como é que funciona, igualzinho.
+
+369
+00:51:07.460 --> 00:51:08.230
+Luiz Maia: E aí
+
+370
+00:51:17.860 --> 00:51:23.849
+Luiz Maia: vamos ver esse C aqui que eu já nem lembro mais do que eu fiz aqui dentro. Deixa eu ver o que eu fiz. Ah, bom.
+
+371
+00:51:24.210 --> 00:51:29.120
+Luiz Maia: Agora eu vou fazer um pequeno intervalo, tá certo,
+
+372
+00:51:29.340 --> 00:51:31.630
+Luiz Maia: porque agora eu vou começar a misturar.
+
+373
+00:51:32.250 --> 00:51:38.950
+Luiz Maia: Delegate com lambida Lp. Eu não sei nada de lambida.
+
+374
+00:51:39.370 --> 00:51:42.680
+Luiz Maia: Primeiro eu vou explicar a lâmbida
+
+375
+00:51:43.180 --> 00:51:50.710
+Luiz Maia: e depois eu volto para fazer a integração de lâmbida com delegate.
+
+376
+00:51:51.820 --> 00:52:01.730
+Luiz Maia: Tá aqui, ó expressão lâmpida uma expressão. Isso aqui, a princípio, é
+
+377
+00:52:03.090 --> 00:52:09.269
+Luiz Maia: a expressão lambda pode ser usada em vários contextos, em vários lugares do código
+
+378
+00:52:10.000 --> 00:52:19.309
+Luiz Maia: e, na minha opinião, essa expressão âmbida é a coisa mais importante dessa aula de delegate,
+
+379
+00:52:19.650 --> 00:52:27.070
+Luiz Maia: apesar da expressão lambida, não está associada exclusivamente à delegate
+
+380
+00:52:28.010 --> 00:52:33.280
+Luiz Maia: a expressão lamida é uma expressão anônima, ou seja, ela não tem nome,
+
+381
+00:52:33.730 --> 00:52:40.430
+Luiz Maia: e aí é muito parecido com o Arrow funchions do Javascript.
+
+382
+00:52:40.570 --> 00:52:41.260
+Luiz Maia: Tá?
+
+383
+00:52:41.730 --> 00:52:43.930
+Luiz Maia: E também semelhante ao Python.
+
+384
+00:52:44.540 --> 00:52:47.230
+Luiz Maia: Existem dois tipos de lambida.
+
+385
+00:52:47.660 --> 00:52:52.010
+Luiz Maia: Tem a Lambida Expression. E tem a Lambida Statement.
+
+386
+00:52:52.350 --> 00:52:53.380
+Luiz Maia: Está certo.
+
+387
+00:52:53.860 --> 00:53:10.890
+Luiz Maia: A Lambda S Expression só tem uma linha. É uma expressão com uma única linha que é normalmente o que a gente usa. Então, aqui o Lambda Expression normalmente é o que a gente usa de verdade.
+
+388
+00:53:11.060 --> 00:53:19.269
+Luiz Maia: E tem o Lambida Statement. Aonde você tem um bloco de comandos dentro da lâmpada. Está certo.
+
+389
+00:53:20.900 --> 00:53:25.429
+Luiz Maia: Não entendi nada. Lp: Ok, eu entendo.
+
+390
+00:53:26.210 --> 00:53:31.059
+Luiz Maia: Ele continua tentando carregar o infinite online sem sucesso.
+
+391
+00:53:34.120 --> 00:53:37.080
+Luiz Maia: Então, lambida é uma função anônima.
+
+392
+00:53:41.660 --> 00:53:44.970
+Luiz Maia: Vou tentar f5
+
+393
+00:53:49.200 --> 00:53:57.670
+Luiz Maia: eu vou pegar aqui e vou colocar o código para vocês de uma função lâmpida.
+
+394
+00:53:57.780 --> 00:53:58.890
+Luiz Maia: Tá certo.
+
+395
+00:54:00.090 --> 00:54:05.650
+Luiz Maia: O lambida Expression e o lambida statement.
+
+396
+00:54:05.980 --> 00:54:10.740
+Luiz Maia: Para vocês verem como é que é uma solução usando lambida.
+
+397
+00:54:11.610 --> 00:54:15.369
+Luiz Maia: O Antit Framework usa muito lâmpada.
+
+398
+00:54:16.300 --> 00:54:18.090
+Luiz Maia: Tá certo, muito.
+
+399
+00:54:18.590 --> 00:54:29.260
+Luiz Maia: É por isso que a gente precisa aprender lâmbida para poder entender. O ente de Framework. É por isso que essa é a parte mais importante dessa matéria.
+
+400
+00:54:29.760 --> 00:54:38.760
+Luiz Maia: Desses catorze projetos que estão aqui. Os dois mais importantes são o Lâmida um e o Lamda dois.
+
+401
+00:54:38.880 --> 00:54:47.299
+Luiz Maia: Por incrível que pareça, não tem nada a ver com o delegate. O delegate, pode ou não usar lâmpada,
+
+402
+00:54:48.260 --> 00:54:56.879
+Luiz Maia: mas o Andy usa a lâmpada para um monte de coisa. E eu vou mostrar dois exemplos bem legais
+
+403
+00:54:57.170 --> 00:55:02.729
+Luiz Maia: que vão ajudar vocês a entender como é que funciona. O Lambda
+
+404
+00:55:02.970 --> 00:55:08.940
+Luiz Maia: dá cinco minutinhos para tomar uma água e a gente volta para continuar essa loucura. Aqui
+
+405
+01:01:28.470 --> 01:01:33.929
+Luiz Maia: voltamos aqui, gente. Deixa eu ver se voltou aqui o infinite online?
+
+406
+01:01:34.130 --> 01:01:36.790
+Luiz Maia: Não, ele continua pensando.
+
+407
+01:01:37.320 --> 01:01:39.010
+Luiz Maia: Pf5
+
+408
+01:01:45.940 --> 01:01:51.329
+Luiz Maia: Vamos ver os exemplos que eu trouxe de lâmpada. Porque essa é a parte mais interessante.
+
+409
+01:01:51.610 --> 01:01:56.770
+Luiz Maia: É então
+
+410
+01:01:57.020 --> 01:02:02.459
+Luiz Maia: isso aqui tem muito a ver com programação funcional. Não sei se vocês já ouviram falar sobre isso.
+
+411
+01:02:03.140 --> 01:02:04.420
+Luiz Maia: É
+
+412
+01:02:07.730 --> 01:02:11.390
+Luiz Maia: também um assunto que não faz parte da disciplina,
+
+413
+01:02:14.240 --> 01:02:21.939
+Luiz Maia: mas tem algumas linguagens que são voltadas para a programação funcional.
+
+414
+01:02:22.890 --> 01:02:31.460
+Luiz Maia: Kotlin, por exemplo, é um exemplo de linguagem voltada para a programação funcional,
+
+415
+01:02:32.040 --> 01:02:38.250
+Luiz Maia: onde o uso de lâmbida é uma coisa muito comum, tá certo?
+
+416
+01:02:40.930 --> 01:02:46.090
+Luiz Maia: E lembra um pouco, não é exatamente igual
+
+417
+01:02:46.330 --> 01:02:51.210
+Luiz Maia: esse símbolo aqui, que é o chamado Arrow,
+
+418
+01:02:51.770 --> 01:02:59.240
+Luiz Maia: ou função de seta, como na tradução ao pé da letra.
+
+419
+01:03:01.310 --> 01:03:04.030
+Luiz Maia: Aqui eu tenho uma lambida expression,
+
+420
+01:03:04.690 --> 01:03:17.390
+Luiz Maia: que é uma expressão lambda, onde esse var aqui gente. Eu não sei se eu já comentei com vocês. O Var é simplesmente para você não declarar o tipo da variável de retorno
+
+421
+01:03:18.190 --> 01:03:25.820
+Luiz Maia: esse var. Quando você compila o código, ele.
+
+422
+01:03:26.110 --> 01:03:29.519
+Luiz Maia: Ele vai transformar esse cara aqui
+
+423
+01:03:29.630 --> 01:03:37.119
+Luiz Maia: num double. Ele vai declarar ele como um Double. O Var é simplesmente uma maneira mais simples de fazer isso.
+
+424
+01:03:37.490 --> 01:03:40.269
+Luiz Maia: Eu estou introduzindo isso para vocês.
+
+425
+01:03:40.590 --> 01:03:46.539
+Luiz Maia: É porque a gente vai ver muito isso no Dotnet
+
+426
+01:03:47.180 --> 01:03:52.040
+Luiz Maia: os templates que ele gera para a gente têm muito var.
+
+427
+01:03:52.660 --> 01:03:58.520
+Luiz Maia: Então o Var aqui é simplesmente para dizer o seguinte: olha, compilador
+
+428
+01:03:58.730 --> 01:04:03.549
+Luiz Maia: resolve esse tipo de variável para mim aqui,
+
+429
+01:04:04.000 --> 01:04:06.040
+Luiz Maia: porque isso aqui seria um Double.
+
+430
+01:04:07.710 --> 01:04:08.870
+Luiz Maia: Está certo.
+
+431
+01:04:10.160 --> 01:04:14.969
+Luiz Maia: E aqui a gente não precisa declarar qual é o tipo da variável.
+
+432
+01:04:17.870 --> 01:04:21.729
+Luiz Maia: A gente só declara como var e está tudo bem.
+
+433
+01:04:21.850 --> 01:04:25.300
+Luiz Maia: Ele retorna. Ele vai definir somar um
+
+434
+01:04:25.610 --> 01:04:28.779
+Luiz Maia: com esse tipo. E aí eu tenho aqui
+
+435
+01:04:30.390 --> 01:04:34.419
+Luiz Maia: os parâmetros que são passados para a lâmide
+
+436
+01:04:35.490 --> 01:04:43.220
+Luiz Maia: e a operação que será realizada, ele vai somar op1 com op2 ou para ter um espaço em branco aqui a mais.
+
+437
+01:04:43.830 --> 01:04:45.310
+Luiz Maia: Pronto, está corrigido.
+
+438
+01:04:45.460 --> 01:04:56.159
+Luiz Maia: E aí ele realiza a soma. Então você chama somar um, ele passa cinco para Op1 dois para op2 e realiza a soma.
+
+439
+01:04:58.580 --> 01:05:01.629
+Luiz Maia: Isso aqui é uma lambida Expression.
+
+440
+01:05:02.010 --> 01:05:06.440
+Luiz Maia: Ou seja, ela é uma linha. Só não tem corpo.
+
+441
+01:05:06.670 --> 01:05:12.360
+Luiz Maia: Ele não tem uma estrutura, não tem um. Não é uma
+
+442
+01:05:12.510 --> 01:05:20.619
+Luiz Maia: uma função. Um método como a gente costuma ver aqui. Ele é mais parecido com um método
+
+443
+01:05:21.360 --> 01:05:30.710
+Luiz Maia: onde somar dois, ele recebe o Apu, a P2 e o retorno tem um corpo.
+
+444
+01:05:31.180 --> 01:05:35.709
+Luiz Maia: Eu tenho aqui um abre chave e fecha a chave.
+
+445
+01:05:41.510 --> 01:05:49.730
+Luiz Maia: Eu não entendi, Leandro, o que esse A Z Z. Não entendi nada disso, cara. Desculpa
+
+446
+01:05:50.170 --> 01:05:53.350
+Luiz Maia: se você puder explicar depois para mim, eu agradeço.
+
+447
+01:06:00.330 --> 01:06:02.179
+Luiz Maia: Vamos ver rodando esse cara.
+
+448
+01:06:19.730 --> 01:06:22.090
+Luiz Maia: Soma sete, soma sete.
+
+449
+01:06:23.550 --> 01:06:25.430
+Luiz Maia: A gente podia botar aqui um.
+
+450
+01:06:26.140 --> 01:06:30.900
+Luiz Maia: Um salto de linha só para ficar mais bonitinho, né?
+
+451
+01:06:40.640 --> 01:06:42.710
+Luiz Maia: Vou botar um barra n aqui
+
+452
+01:06:47.380 --> 01:06:51.309
+Luiz Maia: soma sete, soma sete. Ou seja, ele faz a mesma coisa.
+
+453
+01:06:51.540 --> 01:06:56.730
+Luiz Maia: Só que existem esses dois.
+
+454
+01:06:56.840 --> 01:07:04.450
+Luiz Maia: Essas duas formas de você implementar essa função lâmpida.
+
+455
+01:07:04.840 --> 01:07:08.090
+Luiz Maia: Repara que ela não tem um nome, não é?
+
+456
+01:07:08.910 --> 01:07:15.279
+Luiz Maia: Eu não tenho um nome como se fosse um método. Não tenho o somar. O método, somar.
+
+457
+01:07:15.430 --> 01:07:18.119
+Luiz Maia: Tá certo. Ele simplesmente vai jogar
+
+458
+01:07:19.010 --> 01:07:24.710
+Luiz Maia: o resultado dessa função lambda nessa variável aqui.
+
+459
+01:07:25.930 --> 01:07:28.009
+Luiz Maia: A mesma coisa aqui.
+
+460
+01:07:32.920 --> 01:07:35.939
+Luiz Maia: Então assim é muito simples, né?
+
+461
+01:07:39.820 --> 01:07:44.890
+Luiz Maia: Eu vivi a vida inteira programando sem lâmpada.
+
+462
+01:07:45.000 --> 01:07:47.680
+Luiz Maia: Em um belo dia, surgiu lambida
+
+463
+01:07:47.910 --> 01:07:51.469
+Luiz Maia: na minha vida. Eu tive que começar a usar isso
+
+464
+01:07:56.180 --> 01:08:01.890
+Luiz Maia: simplifica o código bastante.
+
+465
+01:08:02.230 --> 01:08:13.089
+Luiz Maia: Então tudo que simplifica o código. Eu acho interessante da gente usar novamente gente lâmide vai ser usada
+
+466
+01:08:13.240 --> 01:08:19.410
+Luiz Maia: muito dentro do ângit Framework, que nós veremos
+
+467
+01:08:19.520 --> 01:08:32.569
+Luiz Maia: nas próximas aulas. Aqui, eu fiz um exemplo mais completo. Um exemplo mais interessante de lâmpada é,
+
+468
+01:08:34.200 --> 01:08:37.189
+Luiz Maia: eu queria aqui uma classe.
+
+469
+01:08:39.460 --> 01:08:42.830
+Luiz Maia: Conta Raid. Nome, saldo.
+
+470
+01:08:43.069 --> 01:08:45.660
+Luiz Maia: Nada de mais aqui, né?
+
+471
+01:08:47.470 --> 01:08:48.990
+Luiz Maia: Nada de
+
+472
+01:08:56.819 --> 01:08:58.830
+Luiz Maia: deixa. Eu só.
+
+473
+01:09:01.100 --> 01:09:07.860
+Luiz Maia: Deixa eu só melhorar isso aqui porque tem gente que não gosta de do mais, né?
+
+474
+01:09:11.399 --> 01:09:16.590
+Luiz Maia: E aí eu quero agradar os meus alunos.
+
+475
+01:09:22.660 --> 01:09:23.880
+Luiz Maia: É isso, né?
+
+476
+01:09:24.370 --> 01:09:26.070
+Luiz Maia: Aí de não me saldo.
+
+477
+01:09:36.609 --> 01:09:39.779
+Luiz Maia: Não sei se foi o caso de vocês.
+
+478
+01:09:40.069 --> 01:09:42.299
+Luiz Maia: Vou fazer um breve parênteses.
+
+479
+01:09:42.569 --> 01:09:52.700
+Luiz Maia: Muitos alunos não usaram essa pasta models para implementar as suas classes
+
+480
+01:09:53.210 --> 01:09:55.730
+Luiz Maia: no A T de C. Sharp.
+
+481
+01:09:56.320 --> 01:09:58.749
+Luiz Maia: Nesse caso, vai perder ponto.
+
+482
+01:09:59.220 --> 01:10:01.379
+Luiz Maia: Você pode ter certeza disso.
+
+483
+01:10:01.580 --> 01:10:03.440
+Luiz Maia: Eu ensinei que
+
+484
+01:10:03.650 --> 01:10:14.650
+Luiz Maia: no C Sharp no Dotnet. Essa pasta Models é um padrão. Se você não especificou essa pasta Models, você vai perder. Ponto
+
+485
+01:10:14.860 --> 01:10:16.550
+Luiz Maia: tá certo.
+
+486
+01:10:17.490 --> 01:10:19.869
+Luiz Maia: Onde você coloca as classes.
+
+487
+01:10:24.490 --> 01:10:27.579
+Luiz Maia: Então eu tenho a conta com a Edin Nomesaldo
+
+488
+01:10:27.720 --> 01:10:36.290
+Luiz Maia: tem um construtor aqui básico, etc. Um string para imprimir as informações da conta. Agora vem o Lambida.
+
+489
+01:10:38.670 --> 01:10:41.680
+Luiz Maia: Não preciso mais desse comentário aqui.
+
+490
+01:10:44.230 --> 01:10:46.600
+Luiz Maia: Aqui. Eu faço um. Criar contas
+
+491
+01:10:47.510 --> 01:10:53.679
+Luiz Maia: esse Var aqui. Basicamente está dizendo o seguinte: que isso aqui é uma lista de contas.
+
+492
+01:10:53.970 --> 01:11:02.339
+Luiz Maia: Então, se eu fizer assim, List, conta contas. É a mesma coisa.
+
+493
+01:11:03.130 --> 01:11:06.740
+Luiz Maia: Deixa eu fazer um comentário aqui. Deixa eu botar isso em comentário
+
+494
+01:11:10.480 --> 01:11:12.759
+Luiz Maia: para vocês verem que é a mesma coisa.
+
+495
+01:11:18.220 --> 01:11:23.720
+Luiz Maia: Eu vou usar isso porque eu vou precisar mais pra frente.
+
+496
+01:11:25.260 --> 01:11:30.269
+Luiz Maia: Então essa linha de código que está aqui em cima é igual a essa aqui embaixo.
+
+497
+01:11:30.590 --> 01:11:36.650
+Luiz Maia: Olha só o que eu estou fazendo contas. For it conta
+
+498
+01:11:37.510 --> 01:11:42.120
+Luiz Maia: para imprimir as contas. Eu estou fazendo um for it
+
+499
+01:11:42.800 --> 01:11:48.360
+Luiz Maia: em uma única linha. Eu não estou chamando nenhum método para fazer isso.
+
+500
+01:11:55.090 --> 01:11:58.670
+Luiz Maia: É depois.
+
+501
+01:11:58.770 --> 01:12:03.409
+Luiz Maia: Eu estou procurando a conta que tem o Id igual a três
+
+502
+01:12:03.740 --> 01:12:06.850
+Luiz Maia: aqui. Ó, eu tenho essa criação de contas.
+
+503
+01:12:08.030 --> 01:12:17.350
+Luiz Maia: Estou mocando a criação das contas. Eu tenho o Francisco, Guilherme Lucas Nati e Natália
+
+504
+01:12:18.830 --> 01:12:26.669
+Luiz Maia: aqui. Eu tenho consultar contas que está procurando por uma conta específica. E aqui o exibir contas
+
+505
+01:12:30.000 --> 01:12:33.869
+Luiz Maia: que é basicamente esse cara aqui, né?
+
+506
+01:12:35.320 --> 01:12:37.600
+Luiz Maia: Acho que eu nem preciso dele.
+
+507
+01:12:39.830 --> 01:12:43.880
+Luiz Maia: Não sei se eu ver se ele está sendo usado em algum lugar.
+
+508
+01:12:44.840 --> 01:12:52.329
+Luiz Maia: Não, não preciso dele. Não posso tirar esse cara daqui. Deixa eu ver se é isso mesmo.
+
+509
+01:12:52.820 --> 01:12:56.000
+Luiz Maia: Eu acho que isso aqui foi de uma versão antiga que eu fiz.
+
+510
+01:12:58.690 --> 01:13:01.089
+Luiz Maia: Eu não preciso exibir contas. Não,
+
+511
+01:13:12.240 --> 01:13:14.340
+Luiz Maia: eu acho que eu deixei esse código.
+
+512
+01:13:14.480 --> 01:13:22.480
+Luiz Maia: Não, eu já entendi. Eu deixei esse código aqui para mostrar que esse código aqui
+
+513
+01:13:23.270 --> 01:13:28.989
+Luiz Maia: é basicamente o exibir contas. Deixa eu fazer aqui um comentário.
+
+514
+01:13:53.320 --> 01:13:55.429
+Luiz Maia: Era exatamente isso que eu queria.
+
+515
+01:13:57.210 --> 01:14:07.529
+Luiz Maia: Aí depois você faz um conta, o que é var conta é conta desse jeito aqui.
+
+516
+01:14:10.600 --> 01:14:12.700
+Luiz Maia: Então aqui, eu coloco o Var
+
+517
+01:14:13.980 --> 01:14:18.569
+Luiz Maia: para não ter que declarar o tipo de conta. Aí. Ele vai procurar a conta
+
+518
+01:14:18.940 --> 01:14:26.140
+Luiz Maia: com Id. Igual a3 passando o quê? Passando uma lâmbida
+
+519
+01:14:30.530 --> 01:14:32.199
+Luiz Maia: para dentro do Find.
+
+520
+01:14:32.530 --> 01:14:39.600
+Luiz Maia: Se ele encontrar a conta, ele imprime a conta, caso contrário, ele não imprime a conta.
+
+521
+01:14:40.260 --> 01:14:49.770
+Luiz Maia: Depois ele procura contas que tenha o nome iniciando com N usando essa.
+
+522
+01:14:50.130 --> 01:15:00.710
+Luiz Maia: Esse we are aqui dentro. E isso aqui é muito parecido com o o Entity Framework. Muito parecido.
+
+523
+01:15:06.060 --> 01:15:09.810
+Luiz Maia: Só que eu estou trabalhando com listas, né?
+
+524
+01:15:10.810 --> 01:15:14.580
+Luiz Maia: Para que eu estou imprimindo as contas, né?
+
+525
+01:15:17.350 --> 01:15:28.399
+Luiz Maia: Esse consultar conta aqui também não está sendo usado em lugar nenhum, porque aqui seria basicamente isso aqui, ó
+
+526
+01:15:30.550 --> 01:15:44.599
+Luiz Maia: consultar contas passando contas e o quê? O Id da conta.
+
+527
+01:15:52.090 --> 01:15:58.809
+Luiz Maia: Então eu estou mostrando para você como é que faz com e sem
+
+528
+01:16:03.180 --> 01:16:04.460
+Luiz Maia: lâmpita.
+
+529
+01:16:06.190 --> 01:16:09.259
+Luiz Maia: É por isso que eu deixei esses códigos aqui embaixo.
+
+530
+01:16:09.420 --> 01:16:10.370
+Luiz Maia: Está certo.
+
+531
+01:16:13.800 --> 01:16:14.840
+Luiz Maia: E aí?
+
+532
+01:16:15.390 --> 01:16:21.949
+Luiz Maia: Aí ele me retorna. Se encontrou ou não a conta, ele vai encontrar porque a conta três está aqui. É do Lucas.
+
+533
+01:16:26.980 --> 01:16:29.420
+Luiz Maia: Depois eu faço um Order by
+
+534
+01:16:30.670 --> 01:16:33.799
+Luiz Maia: pelo nome. Quero ordenar pelo nome
+
+535
+01:16:34.620 --> 01:16:39.999
+Luiz Maia: e aí imprimo as contas ordenadas por nome.
+
+536
+01:16:40.280 --> 01:16:47.079
+Luiz Maia: E aí eu quero procurar, por exemplo, todas as contas que têm um saldo maior que duzentos.
+
+537
+01:16:47.700 --> 01:16:53.149
+Luiz Maia: Ele vai mostrar Lucas Nath e Natália.
+
+538
+01:16:54.310 --> 01:16:58.289
+Luiz Maia: Então isso aqui é só para mostrar o poder da lâmpida para vocês
+
+539
+01:16:59.550 --> 01:17:03.380
+Luiz Maia: simplifica muito o código. Muito mesmo.
+
+540
+01:17:03.580 --> 01:17:10.280
+Luiz Maia: E quando você for acessar um banco de dados, você vai ter essas lâmpidas disponíveis para você.
+
+541
+01:17:11.550 --> 01:17:16.419
+Luiz Maia: Então, a parte mais importante da aula é justamente
+
+542
+01:17:17.680 --> 01:17:23.249
+Luiz Maia: essa parte de lâmpada. Vamos executar o código para vocês verem que bacana
+
+543
+01:17:28.240 --> 01:17:30.539
+Luiz Maia: aqui. Ele me mostrou todas as contas.
+
+544
+01:17:31.080 --> 01:17:33.760
+Luiz Maia: Depois ele mostrou a conta do Lucas.
+
+545
+01:17:34.780 --> 01:17:41.399
+Luiz Maia: Poderia ter feito algo assim também aqui. Eu poderia fazer um outro.
+
+546
+01:17:42.040 --> 01:17:44.050
+Luiz Maia: Poderia fazer assim. Também
+
+547
+01:17:47.280 --> 01:17:53.530
+Luiz Maia: não sei se vai ficar mais complicado do que consultar contas.
+
+548
+01:17:54.970 --> 01:17:57.900
+Luiz Maia: É que eu não preciso declarar a conta.
+
+549
+01:17:58.340 --> 01:18:04.780
+Luiz Maia: Vou colocar aqui um Id que não existe. O Id dez, por exemplo,
+
+550
+01:18:11.720 --> 01:18:16.000
+Luiz Maia: aí de dez as de dez.
+
+551
+01:18:16.560 --> 01:18:18.190
+Luiz Maia: Vamos rolar para vocês verem.
+
+552
+01:18:21.080 --> 01:18:23.569
+Luiz Maia: Erro conta não encontrada.
+
+553
+01:18:24.600 --> 01:18:30.129
+Luiz Maia: A gente podia agrupar isso aqui. Depois ele mostra as contas que começam com N.
+
+554
+01:18:31.730 --> 01:18:34.469
+Luiz Maia: Depois ele mostra tudo de novo. É isso.
+
+555
+01:18:35.290 --> 01:18:36.249
+Luiz Maia: Deixa eu ver,
+
+556
+01:18:47.230 --> 01:18:48.500
+Luiz Maia: Annie.
+
+557
+01:18:49.580 --> 01:18:54.090
+Luiz Maia: Ah, não. Ele ordena por nome. Vamos rodar de novo
+
+558
+01:18:55.880 --> 01:19:05.240
+Luiz Maia: aqui. Ó Francisco Guilherme. Só que aí não mudou. Ah, não. Ele mudou aqui Ó Natália com Nath,
+
+559
+01:19:05.790 --> 01:19:07.810
+Luiz Maia: mas o resto ele manteve.
+
+560
+01:19:17.370 --> 01:19:20.280
+Luiz Maia: Posso melhorar isso aqui também.
+
+561
+01:19:24.790 --> 01:19:37.910
+Luiz Maia: Não vamos deixar como está gente. Eu não quero me perder tempo. Isso aqui não aqui. Ele está mostrando as contas que são maiores que duzentos. Vamos ver se funcionou. Sim, Lucas, Nath e Natália têm contas maiores que duzentos.
+
+562
+01:19:39.460 --> 01:19:45.630
+Luiz Maia: Se vocês quiserem que eu melhore saída, alguma coisa, vocês me falem.
+
+563
+01:19:48.980 --> 01:19:53.390
+Luiz Maia: Eu poderia aqui, por exemplo, é isso aí.
+
+564
+01:19:53.530 --> 01:20:04.730
+Luiz Maia: Mostrar contas que começam com com N, etc. Não sei se vocês entenderam assim, vocês conseguiram entender.
+
+565
+01:20:05.370 --> 01:20:10.900
+Luiz Maia: O objetivo disso aqui é da lâmbida
+
+566
+01:20:12.290 --> 01:20:16.209
+Luiz Maia: como ela simplifica muito o trabalho da gente.
+
+567
+01:20:16.710 --> 01:20:20.619
+Luiz Maia: A gente não precisou usar esses métodos aqui para nada.
+
+568
+01:20:20.810 --> 01:20:25.320
+Luiz Maia: Eles ficaram aqui só para ficar como comentário, mais nada.
+
+569
+01:20:25.880 --> 01:20:26.810
+Luiz Maia: Tá certo.
+
+570
+01:20:29.260 --> 01:20:34.789
+Luiz Maia: Essa é a parte mais importante da aula de hoje. Gente mais importante.
+
+571
+01:20:36.460 --> 01:20:40.860
+Luiz Maia: Bom, vamos voltar agora para o delegate
+
+572
+01:20:41.450 --> 01:20:53.029
+Luiz Maia: agora no delegate, a gente vai voltar aqui, ó, e vai misturar é lâmbida com funk
+
+573
+01:20:57.590 --> 01:21:04.139
+Luiz Maia: aqui. Eu tenho um funk. Delegate com Lambda Expression, que é o somar três.
+
+574
+01:21:04.690 --> 01:21:10.410
+Luiz Maia: E aqui eu tenho um funk delegate com lambida statement, que é o Somar dois.
+
+575
+01:21:10.590 --> 01:21:12.980
+Luiz Maia: Aí eu estou misturando as duas coisas.
+
+576
+01:21:15.030 --> 01:21:20.020
+Luiz Maia: Eu não preciso de lâmpada para implementar delegate tá certo
+
+577
+01:21:23.990 --> 01:21:32.759
+Luiz Maia: e lambida pode ser implementado em várias outras situações além de delegate.
+
+578
+01:21:33.180 --> 01:21:38.329
+Luiz Maia: Então aqui eu tenho o somar um que é um Lambida Statement.
+
+579
+01:21:40.200 --> 01:21:43.420
+Luiz Maia: E aí eu estou fazendo o quê?
+
+580
+01:21:46.160 --> 01:21:50.029
+Luiz Maia: O somar um usando lâmpida.
+
+581
+01:21:50.760 --> 01:21:56.399
+Luiz Maia: Depois eu tenho um funk onde eu estou usando o Somar dois,
+
+582
+01:21:56.660 --> 01:22:06.850
+Luiz Maia: que é um funk delegate com Lamb The Statement e o somar três. Reparem, esse cara aqui. Eu estou apontando
+
+583
+01:22:07.070 --> 01:22:10.850
+Luiz Maia: essa variável para esse método aqui.
+
+584
+01:22:13.060 --> 01:22:15.860
+Luiz Maia: Isso aqui não tem nada a ver com. Delegate
+
+585
+01:22:16.240 --> 01:22:24.630
+Luiz Maia: isso aqui é só um Lambda Statement, nada como nós fizemos anteriormente, como foi feito aqui. Nesse caso, aqui,
+
+586
+01:22:26.160 --> 01:22:35.530
+Luiz Maia: só para mostrar para vocês que lâmbida. Não necessariamente. Vai estar associado ao delegate. Não está aqui, não está?
+
+587
+01:22:45.370 --> 01:22:54.400
+Luiz Maia: E aqui eu tenho a implementação do delegate com funk usando o Lambda Statement e O Lambida Expression.
+
+588
+01:23:00.100 --> 01:23:15.110
+Luiz Maia: Ou seja calcular. Funk está apontando para esse método. Quem é esse método? É esse cara aqui que é um funk statement. O outro somar três. Está apontando para quem? Para um Lambida Expression.
+
+589
+01:23:15.580 --> 01:23:17.559
+Luiz Maia: Só para isso, mais nada.
+
+590
+01:23:20.530 --> 01:23:24.029
+Luiz Maia: Somar sete, somar sete. Soma sete.
+
+591
+01:23:25.130 --> 01:23:28.060
+Luiz Maia: Ou seja, ele consegue fazer isso.
+
+592
+01:23:28.450 --> 01:23:34.449
+Luiz Maia: É bonitinho aqui para terminar a aula de hoje,
+
+593
+01:23:34.700 --> 01:23:41.579
+Luiz Maia: para a gente poder terminar essa parte e começar o restante do Delegate
+
+594
+01:23:41.780 --> 01:23:48.770
+Luiz Maia: e eventos também está aqui dentro. A gente vai ver esse delegate 3d aqui.
+
+595
+01:24:00.000 --> 01:24:03.720
+Luiz Maia: Aqui. Eu estou fazendo o delegate com Action e Lambda.
+
+596
+01:24:04.340 --> 01:24:05.510
+Luiz Maia: Tá certo.
+
+597
+01:24:11.460 --> 01:24:14.870
+Luiz Maia: Isso aqui é um lambida statement.
+
+598
+01:24:15.670 --> 01:24:22.810
+Luiz Maia: Não tem nada a ver com delegate aqui. Eu tenho um action
+
+599
+01:24:23.550 --> 01:24:28.160
+Luiz Maia: onde eu tenho esse somar dois, que é um lambida. Statement.
+
+600
+01:24:28.510 --> 01:24:31.120
+Luiz Maia: Não é um Lambida Expression.
+
+601
+01:24:35.190 --> 01:24:36.720
+Luiz Maia: E aí
+
+602
+01:24:40.890 --> 01:24:44.900
+Luiz Maia: não. O Action não retorna a nada.
+
+603
+01:24:46.290 --> 01:24:47.839
+Luiz Maia: Ele não tem retorno.
+
+604
+01:24:51.590 --> 01:24:55.490
+Luiz Maia: É a única diferença entre o funk e o Action.
+
+605
+01:24:55.660 --> 01:25:02.549
+Luiz Maia: O funk retorna alguma coisa? O Action não retorna a nada. É a única diferença.
+
+606
+01:25:04.520 --> 01:25:11.250
+Luiz Maia: Isso aqui podia estar isso aqui. Podia sair daqui
+
+607
+01:25:11.520 --> 01:25:13.480
+Luiz Maia: e vim pra cá. Quer ver?
+
+608
+01:25:14.770 --> 01:25:16.810
+Luiz Maia: Deixa eu ver se é isso aqui.
+
+609
+01:25:19.060 --> 01:25:25.679
+Luiz Maia: Acho que é aqui que eu introduzo esse conceito de Var.
+
+610
+01:25:26.880 --> 01:25:29.000
+Luiz Maia: É isso. É aqui mesmo,
+
+611
+01:25:34.280 --> 01:25:35.770
+Luiz Maia: não é? Aqui
+
+612
+01:25:38.930 --> 01:25:41.429
+Luiz Maia: onde é que foi que eu coloquei isso, hein?
+
+613
+01:25:45.760 --> 01:25:47.990
+Luiz Maia: Não foi aqui também. Não,
+
+614
+01:25:53.110 --> 01:25:55.029
+Luiz Maia: não, não foi aqui.
+
+615
+01:25:56.310 --> 01:26:03.890
+Luiz Maia: Vá, vá, vá.
+
+616
+01:26:04.100 --> 01:26:05.360
+Luiz Maia: É aqui. Ó
+
+617
+01:26:15.950 --> 01:26:17.530
+Luiz Maia: agora ficou legal.
+
+618
+01:26:24.690 --> 01:26:30.230
+Luiz Maia: Vamos rodar esse cara aqui para ver como é que ele funciona. Esse é o nosso último exemplo de hoje.
+
+619
+01:26:36.660 --> 01:26:38.799
+Luiz Maia: Soma sete, soma sete.
+
+620
+01:26:40.250 --> 01:26:42.509
+Luiz Maia: O que a gente vai ver na próxima aula,
+
+621
+01:26:48.080 --> 01:26:53.689
+Luiz Maia: a gente vai ver que a gente pode usar delegate
+
+622
+01:26:56.170 --> 01:26:59.850
+Luiz Maia: para passar parâmetros para um método.
+
+623
+01:27:01.940 --> 01:27:03.780
+Luiz Maia: Isso é bem interessante.
+
+624
+01:27:04.220 --> 01:27:08.010
+Luiz Maia: Eu acho que é uma coisa muito interessante.
+
+625
+01:27:09.510 --> 01:27:15.620
+Luiz Maia: É muito interessante você passar um método como o parâmetro de um método.
+
+626
+01:27:16.250 --> 01:27:20.020
+Luiz Maia: Isso vocês nunca viram. E provavelmente nunca verão de novo.
+
+627
+01:27:21.920 --> 01:27:29.649
+Luiz Maia: É, depois eu vou evoluir com esse código.
+
+628
+01:27:30.020 --> 01:27:31.430
+Luiz Maia: É,
+
+629
+01:27:36.410 --> 01:27:43.199
+Luiz Maia: eu vou usar um funk para fazer isso. E depois? Não, o Funk vai estar aqui.
+
+630
+01:27:43.810 --> 01:27:44.620
+Luiz Maia: É,
+
+631
+01:27:46.990 --> 01:27:58.489
+Luiz Maia: eu não vou usar delegate. Vou usar uma forma genérica de implementar com funk. E depois eu vou fazer usando Lambda aqui. A confusão é completa.
+
+632
+01:28:02.580 --> 01:28:17.769
+Luiz Maia: Então, ano que vem eu termino amanhã. Eu termino toda essa parte de delegate evento funk Action e Lambda.
+
+633
+01:28:19.220 --> 01:28:30.410
+Luiz Maia: Bom, eu espero que eu tenha conseguido passar para vocês o conteúdo da matéria. Eu vou colocar esse conteúdo lá no drive para vocês.
+
+634
+01:28:31.340 --> 01:28:33.260
+Luiz Maia: Tá certo. Na aula um.
+
+635
+01:28:37.970 --> 01:28:40.310
+Luiz Maia: É Cadê? Onde é que ele está?
+
+636
+01:28:42.710 --> 01:28:47.810
+Luiz Maia: U. S. Sharp, é Dotnet delegate.
+
+637
+01:29:02.350 --> 01:29:20.549
+Luiz Maia: Pronto, tá. Todo o código que a gente viu e verá amanhã. Amanhã eu encervo essa matéria e a gente vai ficar livre para poder começar na próxima terça feira, porque segunda vai ser feriado. Começar a ver Dotnet. Gente, foi uma boa noite para vocês até amanhã.
+
+638
+01:29:20.650 --> 01:29:26.540
+Luiz Maia: E a gente se vê amanhã com mais. Delegate
+
+639
+01:29:26.920 --> 01:29:31.540
+Luiz Maia: e vamos encerrar isso aqui valeu qualquer coisa. Me procurem com dúvidas.
+
+640
+01:29:31.950 --> 01:29:36.219
+Luiz Maia: Deixa eu ver se apareceu aqui. A página apareceu. Documentos.
+
+641
+01:29:40.060 --> 01:29:42.689
+Luiz Maia: Isso aqui. Não fui eu que coloquei. Foi
+
+642
+01:29:55.180 --> 01:29:58.330
+Luiz Maia: isso aqui não é meu. Não, gente. Não, sei o que é isso aqui não.
+
+643
+01:30:03.150 --> 01:30:08.669
+Luiz Maia: Bom, vocês têm aqui o link com
+
+644
+01:30:10.600 --> 01:30:15.360
+Luiz Maia: isso. Aqui está com a solução. Eu vou passar de novo o link para vocês.
+
+645
+01:30:18.000 --> 01:30:19.919
+Luiz Maia: Para vocês poderem baixar
+
+646
+01:30:20.780 --> 01:30:29.029
+Luiz Maia: as aulas e acessar o que vocês quiserem. Aí, inclusive a solução do At de C. Sharp tá aqui. Ele tá
+
+647
+01:30:34.770 --> 01:30:40.430
+Luiz Maia: bom. Amanhã nos vemos novamente. Uma boa noite a todos. Bom descanso. Boa noite. Tchau, Tchau, gente.
+
+648
+01:30:40.430 --> 01:30:42.379
+Jorge José Luiz Santos da Silva: Falou, professor? Tchau, tchau. Boa noite.
+

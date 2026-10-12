@@ -458,5 +458,105 @@
     "discipline": "projeto-bloco-backend",
     "slug": "casos-de-uso-avancado-feedback-tp1",
     "excerpt": "Relacionamentos include, extend e generalização entre casos de uso e atores; leitura pela narrativa; feedback do TP1 e diferença em relação a histórias de usuário no TP2. Conceitos: relacionamento entre casos de uso, include (inclusão), extend (extensão), generalização / especialização de casos de uso, generalização de atores, reutilização de comportamento, dependência entre funcionalidades, di…"
+  },
+  {
+    "discipline": "servicos-web-java",
+    "slug": "teste-unitario-junit-tres-fases",
+    "excerpt": "Registrar um cenário de Evento.temVaga como teste JUnit: @Test, @DisplayName, assertTrue/assertFalse e as fases setup, execução e verificação. Conceitos: teste unitário automatizado, especificação de teste (dado / quando / então), JUnit no Build Path do Eclipse, anotação @Test, anotação @DisplayName, assertTrue e assertFalse, três fases (setup, execução, verificação), nome de método que descreve o comportamento, falh"
+  },
+  {
+    "discipline": "servicos-web-java",
+    "slug": "regressao-aaa-assertequals-assertthrows",
+    "excerpt": "Suite de Evento como expectativa repetível: Arrange-Act-Assert, regressão do operador de vaga, assertEquals no contador e assertThrows para capacidade inválida. Conceitos: expectativa de comportamento repetível, regressão, Arrange Act Assert, nome do teste como documentação, assertEquals (esperado, atual, mensagem), getter de atributo private, número mágico no assert, assertThrows, IllegalArgumentException no constru"
+  },
+  {
+    "discipline": "web-dotnet-relacional",
+    "slug": "delegate-func-action-lambda-csharp",
+    "excerpt": "Delegate personalizado, Func e Action, expressão e statement lambda, e consulta de List<Conta> sem método nomeado. Conceitos: delegate, assinatura, referência para método, forma explícita, atribuição direta, Func, Action, expressão lambda, lambda statement, var, List, Find"
+  },
+  {
+    "discipline": "web-dotnet-relacional",
+    "slug": "callback-multicast-delegate-eventos-csharp",
+    "excerpt": "Método passado como parâmetro, multicast com += e -=, download com callback e evento de saldo com EventArgs. Conceitos: callback síncrono, AlterarVetor, assinatura exata, Func como parâmetro, lambda como callback, multicast delegate, callback assíncrono, Thread.Sleep, event, EventHandler, Invoke, EventArgs"
+  },
+  {
+    "discipline": "projeto-bloco-backend",
+    "slug": "reserva-hotel-inclusao-extensao-narrativa",
+    "excerpt": "Aplicar include e extend ao sistema de reserva de hotel, escrever a narrativa completa do caso de uso e separar fluxo alternativo de fluxo de erro. Conceitos: include na reserva de hotel, extend condicional de SMS, direção da seta include e extend, narrativa de caso de uso, ator principal e ator secundário, pré-condição e pós-condição, fluxo principal, fluxo alternativo, fluxo de erro ou exceção, entrega do TP2"
+  },
+  {
+    "discipline": "projeto-bloco-backend",
+    "slug": "modelo-dominio-estatico-dinamico",
+    "excerpt": "Análise conceitual do domínio, diferença entre modelo estático e dinâmico, e as duas técnicas de identificação de classes: substantivos e responsabilidades. Conceitos: análise conceitual, modelo de domínio, classe conceitual, dicionário visual, modelo estático, modelo dinâmico, análise gramatical, substantivo candidato a classe, verbo candidato a responsabilidade, identificação de responsabilidades"
+  },
+  {
+    "discipline": "projeto-bloco-backend",
+    "slug": "substantivos-responsabilidades-wheels",
+    "excerpt": "Ler UC01 e UC02 do Sistema Wheels e aplicar análise gramatical e responsabilidades, com número como chave, situação da bicicleta e fluxos que não cadastram o que o ator não pode cadastrar. Conceitos: Sistema Wheels, UC01 cadastrar bicicleta, UC02 efetuar aluguel, pré-condição com valor, número como identificador da bicicleta, situação disponível ou indisponível, fluxo alternativo que retorna ao principal, substantivo"
+  },
+  {
+    "discipline": "projeto-bloco-backend",
+    "slug": "classes-candidatas-normalizadas-wheels",
+    "excerpt": "Solução escrita da identificação de classes do Wheels: normalizar substantivos, fechar atributos e responsabilidades, e não tratar associação como comportamento do Cliente. Conceitos: normalização de substantivos, sinónimo unificado, classe candidata, Bicicleta, Cliente, Aluguel ou ContratoDeAluguel, UsuárioDoSistema, atributo de estado, responsabilidade, associação não é responsabilidade"
+  },
+  {
+    "discipline": "projeto-bloco-backend",
+    "slug": "dicionario-dados-diagrama-classes",
+    "excerpt": "Notação do dicionário de dados do aluguel de bicicletas, compartimentos do diagrama de classes e por que Aluguel e Pagamento não cabem como atributo escalar. Conceitos: dicionário de dados, precisão técnica, legibilidade para o negócio, concatenação, repetição, opcionalidade, seleção alternativa, diagrama de classes, atributo versus classe, entidade Aluguel, classe Pagamento"
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "polimorfismo-dinamico-heranca-virtual-abstrato-csharp",
+    "excerpt": "Polimorfismo estático já visto versus dinâmico com herança: virtual opcional, abstract obrigatório, lista homogênea de Animal e Figura. Conceitos: polimorfismo, polimorfismo estático, polimorfismo dinâmico, sobrecarga, sobrescrita, virtual, abstract, override, lista homogênea, despacho em tempo de execução"
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "polimorfismo-notificacao-frete-interface-csharp",
+    "excerpt": "Do if por string à classe abstrata (notificação e frete) e ao contrato de interface, com SRP e Open/Closed. Conceitos: polimorfismo dinâmico, classe abstrata, interface, inicializador de lista, Open/Closed, responsabilidade única, mock, método virtual com várias assinaturas"
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "vetores-arrays-homogeneos-csharp",
+    "excerpt": "Array unidimensional em C#: tipo único, tamanho na compilação, índice a partir de zero, Length, soma e o cast que evita divisão inteira. Conceitos: vetor, array, índice, tamanho físico, Length, foreach, IndexOutOfRangeException, divisão inteira, cast"
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "matrizes-passagem-referencia-paradigma-csharp",
+    "excerpt": "int passa por valor; array passa por referência. Matriz retangular com GetLength e o contraste entre notas paralelas e um vetor de Aluno. Conceitos: passagem por valor, passagem por referência, matriz, GetLength, tamanho físico e lógico, programação procedural, objeto Aluno"
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "arquivos-texto-csv-stream-csharp",
+    "excerpt": "Ler e gravar TXT com vetor de tamanho fixo e CSV separado por ponto e vírgula numa List de Aluno, sempre com try/catch. Conceitos: StreamReader, StreamWriter, caminho absoluto, string verbatim, using, tamanho físico e lógico, CSV, Split, List de Aluno"
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "revisao-duvidas-at-cifrador-csharp",
+    "excerpt": "Sessão de dúvidas do AT: o que foi dito em público sobre o cifrador, o teto do array e a pasta Models. Sem o gabarito e sem o que ficou na sala privada. Conceitos: cifrador, deslocamento com volta ao alfabeto, tamanho do array, pasta Models, entrega sem bin e obj"
+  },
+  {
+    "discipline": "fundamentos-csharp",
+    "slug": "containers-docker-conceitos-csharp",
+    "excerpt": "Último encontro do trimestre: o que foi explicado sobre máquina virtual, container Docker e Kubernetes, sem comando e sem tutorial de carreira. Conceitos: máquina virtual, imagem, container, Docker, portabilidade, Kubernetes"
+  },
+  {
+    "discipline": "fundamentos-java",
+    "slug": "heranca-polimorfismo-veiculo-java",
+    "excerpt": "Quando carro e moto repetem placa, marca e ano, a modelagem é-um vira a classe Veiculo; extends, super, sobrescrita e um vetor de Veiculo despacham exibirResumo em tempo de execução. Conceitos: herança (é-um), superclasse e subclasse, extends, super no construtor e no método, sobrescrita (@Override), sobrecarga versus sobrescrita, polimorfismo com vetor, despacho pelo tipo real, for-each"
+  },
+  {
+    "discipline": "fundamentos-java",
+    "slug": "abstracao-interface-final-java",
+    "excerpt": "Veiculo vira classe abstrata com calcularCustoManutencao abstrato; final trava herança, sobrescrita ou atribuição; Revisto permite que Carro e Maquina compartilhem realizarRevisao sem serem da mesma família. Conceitos: classe abstrata, método abstrato, método concreto, polimorfismo com método abstrato, final em variável, método e classe, interface como capacidade, implements, herança é-um versus interface é-capaz-de"
+  },
+  {
+    "discipline": "fundamentos-java",
+    "slug": "excecoes-leitura-arquivo-java",
+    "excerpt": "O construtor de Veiculo rejeita ano fora de 1900–2026 com IllegalArgumentException; quem chama trata com try/catch sem parar o resto, e finally sempre corre. FileReader e BufferedReader leem veiculos.csv até readLine devolver null, com FileNotFoundException e IOException. Conceitos: requisito funcional, throw e IllegalArgumentException, try/catch específico, finally, pilha da exceção, RuntimeException e IOException, "
+  },
+  {
+    "discipline": "fundamentos-java",
+    "slug": "leitura-escrita-arquivo-polimorfismo-java",
+    "excerpt": "Cada linha de veiculos.csv vira Carro, Moto ou Caminhao via split e switch; linha inválida é registrada sem parar o laço; um Veiculo[] preenchido com contador evita NullPointerException; o relatório usa calcularCustoManutencao uma vez e grava com BufferedWriter. Conceitos: layout CSV e split, switch por tipo de veículo, Integer.valueOf e Double.valueOf, try/catch por linha, vetor com contador, for clássico versus for"
   }
 ]

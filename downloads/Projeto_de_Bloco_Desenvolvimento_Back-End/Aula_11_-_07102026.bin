@@ -1,0 +1,2094 @@
+WEBVTT
+
+1
+00:00:38.790 --> 00:00:40.439
+Orlando Fonseca: Boa noite, pessoal.
+
+2
+00:00:40.990 --> 00:00:48.580
+Orlando Fonseca: Tá certo, começar nossa aula. Projeto de bloco aquiemg
+
+3
+00:00:50.620 --> 00:00:53.770
+Orlando Fonseca: e já a gente está na aula. Número doze.
+
+4
+00:00:54.690 --> 00:00:55.520
+Orlando Fonseca: E aí?
+
+5
+00:00:56.270 --> 00:00:58.059
+Orlando Fonseca: Então vamos lá, meu querido. Boa noite.
+
+6
+00:01:01.530 --> 00:01:04.309
+Orlando Fonseca: Estou abrindo aqui para compartilhar a tela com vocês.
+
+7
+00:01:19.460 --> 00:01:24.030
+Orlando Fonseca: Bom, pessoal, hoje nossa aula é
+
+8
+00:01:25.020 --> 00:01:31.400
+Orlando Fonseca: referente ao dicionário de dados e diagrama de classes Tchau.
+
+9
+00:01:34.030 --> 00:01:41.039
+Orlando Fonseca: O que é o dicionário de dados, mesmo tendo falado algo das anteriores que você precisa
+
+10
+00:01:41.310 --> 00:01:53.809
+Orlando Fonseca: documentar no sentido de estruturar, de deixar claro que as palavras chaves que fazem parte do nosso projeto da linguagem do nosso projeto.
+
+11
+00:01:54.170 --> 00:02:06.749
+Orlando Fonseca: Agora, nessa aula, eu vou definir o que seria um dicionário de dados. Veja que eu estou definindo ele como sendo um artefacto, onde vamos ter uma descrição
+
+12
+00:02:07.450 --> 00:02:15.780
+Orlando Fonseca: com prescrição dessas palavras. Significado o que é?
+
+13
+00:02:16.630 --> 00:02:26.319
+Orlando Fonseca: Vejam que ele seria uma representação ali, semântica do sistema, no sentido que a linguagem,
+
+14
+00:02:26.550 --> 00:02:36.559
+Orlando Fonseca: a palavra que a gente coloca ali tem que ser limpa, o que é ser limpas, que ela seja bem representativa do nosso projeto. Está ilegível.
+
+15
+00:02:37.640 --> 00:02:49.129
+Orlando Fonseca: Então a construção de um dicionário de dados precisa equilibrar em dois objetivos. Primeiro, ele tem que ser preciso tecnicamente e legibilidade, o que é de ser precisão técnica.
+
+16
+00:02:50.210 --> 00:02:59.509
+Orlando Fonseca: O dicionário de dados deve ser suficientemente rigoroso para permitir que analistas, movidores arquitetos compreendem exatamente o quê?
+
+17
+00:02:59.790 --> 00:03:12.520
+Orlando Fonseca: Quais são os dados que temos um problema? Quais são os formatos de dados permitidos ali? Quais são os valores válidos ou inválidos. E as restrições ali na regra de negócio. Ok, é lembrado. A gente quer
+
+18
+00:03:13.650 --> 00:03:28.100
+Orlando Fonseca: a gente quer com esse dicionário de dados, descrever com precisão o significado, restrição de cada elemento, palavra, cada entidade que a gente colocar ali nesse dicionário de dados.
+
+19
+00:03:28.240 --> 00:03:41.949
+Orlando Fonseca: Então ele tem que ser bem legível, bem limpo, prático, intensivo. Todo mundo vai entender o que está ali.
+
+20
+00:03:42.070 --> 00:03:52.920
+Orlando Fonseca: O que é disso é isso. Eu não tenho uma interpretação divergente na hora de implementar na hora de fazer o teste de fazer uma manutenção no sistema e legibilidade
+
+21
+00:03:53.460 --> 00:04:02.750
+Orlando Fonseca: deve ser compreensível para usuários do negócio demais. Stakeholders. Todo mundo que está envolvido nesse movimento do projeto,
+
+22
+00:04:03.070 --> 00:04:12.540
+Orlando Fonseca: a ele tem que entender o dicionário de dados. As definições têm que ser claras, objetivas. Uma linguagem acessível.
+
+23
+00:04:12.800 --> 00:04:22.159
+Orlando Fonseca: Ok, ele também entra na abordagem colaborativa. Por quê?
+
+24
+00:04:22.810 --> 00:04:24.730
+Orlando Fonseca: Interativa também
+
+25
+00:04:25.220 --> 00:04:33.169
+Orlando Fonseca: no sentido que temos que discutir. Temos que validar e refinar o que estamos colocando no dicionário de dados,
+
+26
+00:04:33.770 --> 00:04:34.680
+Orlando Fonseca: hã?
+
+27
+00:04:36.420 --> 00:04:44.800
+Orlando Fonseca: Anotação, concatenação. Esse é, mais, ele indica a possessão de elementos.
+
+28
+00:04:45.400 --> 00:04:51.160
+Orlando Fonseca: A repetição aqui representada por chaves vai indicar que um elemento pode ocorrer várias vezes.
+
+29
+00:04:51.680 --> 00:05:01.780
+Orlando Fonseca: Opcionalidade parêntese indica que um elemento opcional, seleção alternativa tem um representar aqui por esse indicador.
+
+30
+00:05:02.040 --> 00:05:04.140
+Orlando Fonseca: Por esse elemento. Aqui entre Kochen,
+
+31
+00:05:04.470 --> 00:05:07.639
+Orlando Fonseca: são umas escolhas possíveis entre alternativas.
+
+32
+00:05:07.740 --> 00:05:13.610
+Orlando Fonseca: E algum comentário que você queira colocar aparecendo numa manchinha itálica, hã?
+
+33
+00:05:15.580 --> 00:05:26.679
+Orlando Fonseca: Tudo bem, vamos então tentar pensar isso no nosso projeto de bicicleta, sistema de aluguel de bicicleta. O conjunto de graça que representa os conceitos centrais do domínio do sistema seriam o quê?
+
+34
+00:05:26.870 --> 00:05:45.769
+Orlando Fonseca: Aluguel, bicicleta, cliente e usuário. Essa classe de aluguel. Aqui vamos discutir no final, porque eu estou colocando como sendo um conceito, uma classe, representativa Ali. Do nosso negócio de bicicleta no sistema Wils. Bicicleta, o ativo, o cliente e o indivíduo
+
+35
+00:05:46.100 --> 00:05:50.540
+Orlando Fonseca: que tem tenha a
+
+36
+00:05:50.690 --> 00:06:05.669
+Orlando Fonseca: a função ali de fazer o aluguel desse ativo. Nesse caso da bicicleta. E o usuário é aquele indivíduo que está cadastral no sistema com um perfil, conhecer o gerente da loja. O atendente
+
+37
+00:06:06.170 --> 00:06:06.950
+Orlando Fonseca: tá,
+
+38
+00:06:08.060 --> 00:06:14.000
+Orlando Fonseca: então, o aluguel é empréstimo de uma bicicleta para o cliente. Por que foi preciso separar isso em uma classe aluguel.
+
+39
+00:06:15.020 --> 00:06:16.780
+Orlando Fonseca: Vou analisar isso também nessa aula.
+
+40
+00:06:17.040 --> 00:06:23.900
+Orlando Fonseca: Uma vez que temos para esse sistema, temos um conjunto de classes para que for, temos um conjunto de classes bem identificados.
+
+41
+00:06:24.000 --> 00:06:27.600
+Orlando Fonseca: Essa classe. Vocês sabem que era. Foram de forma arbitrária.
+
+42
+00:06:27.970 --> 00:06:34.199
+Orlando Fonseca: Elas emergem diretamente da linguagem utilizada pelo negócio. Vocês entendem essa sentença aqui,
+
+43
+00:06:34.570 --> 00:06:51.919
+Orlando Fonseca: realmente diretamente da linguagem. Por quê? Porque tem uma narrativa no momento que olhamos o escopo do projeto que fazemos. A análise a partir dali. Temos duas técnica para identificar quais seriam essas possíveis classes candidatas,
+
+44
+00:06:52.170 --> 00:06:53.070
+Orlando Fonseca: certo?
+
+45
+00:06:55.300 --> 00:06:59.460
+Orlando Fonseca: Bom dar se comportamentos relacionados devem coercit na mesma classe.
+
+46
+00:07:00.530 --> 00:07:02.240
+Orlando Fonseca: Ok, então
+
+47
+00:07:02.550 --> 00:07:11.229
+Orlando Fonseca: vamos para a nossa entidade principal, a bicicleta. Ele vai concentrar regras relacionadas ao bem físico e ao depósito.
+
+48
+00:07:11.360 --> 00:07:21.160
+Orlando Fonseca: O cliente vai representar o Adock contrata o serviço, o usuário, o ator interno que opera o sistema e o aluguel é que tem aquelas regras contratuais e financeiras.
+
+49
+00:07:21.640 --> 00:07:22.659
+Orlando Fonseca: É um
+
+50
+00:07:22.950 --> 00:07:27.260
+Orlando Fonseca: então, tá bom. Vamos deixar assim por enquanto. Mas podemos ter alguma outra classe. Por exemplo, a classe de pagamento.
+
+51
+00:07:28.270 --> 00:07:29.069
+Orlando Fonseca: Tá bom.
+
+52
+00:07:30.290 --> 00:07:37.139
+Orlando Fonseca: Então agora vamos pensar no dicionário de dados, na Sinntese, que eu falei para vocês aqui anteriormente,
+
+53
+00:07:38.620 --> 00:07:46.189
+Orlando Fonseca: concatenarmos elementos. Quando repetimos opcionalidade, o ar condicional.
+
+54
+00:07:46.440 --> 00:07:50.879
+Orlando Fonseca: Então, dado que temos uma definição dessas classes,
+
+55
+00:07:52.620 --> 00:08:01.620
+Orlando Fonseca: o aluguel vai concentrar toda essa regra. Contrato financeira. Enfim, um que contrata o serviço, o cliente, a bicicleta. Veja como seria a classe de aluguel
+
+56
+00:08:03.970 --> 00:08:11.039
+Orlando Fonseca: aqui já estou falando do dicionário de dados na hora de você definir um dicionário de dados. Você começa assim: classe aluguel.
+
+57
+00:08:11.600 --> 00:08:17.990
+Orlando Fonseca: O que tem nessa classe? Aluguel, contrato de empréstimo de uma ou mais bicicletas da loja para um cliente cadastrar
+
+58
+00:08:18.100 --> 00:08:28.480
+Orlando Fonseca: por um número determinado de diárias. Veja que nessa primeira sentença ou explicação de que vai ser classe de Deus. Ele já está colocando implicitamente alguns relacionamentos.
+
+59
+00:08:29.710 --> 00:08:35.950
+Orlando Fonseca: Porque você que essa classe Nbr, ela tem relação com quem? Com bicicleta e cliente.
+
+60
+00:08:36.520 --> 00:08:38.480
+Orlando Fonseca: E eu.
+
+61
+00:08:38.770 --> 00:08:44.669
+Orlando Fonseca: Tem alguns atributos de interesse, por exemplo, número de áreas.
+
+62
+00:08:46.770 --> 00:08:47.670
+Orlando Fonseca: Tá,
+
+63
+00:08:49.490 --> 00:09:06.040
+Orlando Fonseca: então vamos lá aluguel. O que vai ter essa classe? Cliente mais bicicleta. Esse mais bem, porque vem da sintaxe ali do dicionário de dados? Ela está fazendo uma concatenação de elementos, clientes, mais bicicleta, mais número de área, mais data de retivação
+
+64
+00:09:08.810 --> 00:09:14.099
+Orlando Fonseca: tá atributos ou seriam os atributos a zele
+
+65
+00:09:14.560 --> 00:09:22.259
+Orlando Fonseca: cliente. O dicionário de dados não vem para. Não temos que definir a lei. Vou votar aqui atrás para lembrar
+
+66
+00:09:24.190 --> 00:09:35.830
+Orlando Fonseca: aqui quais formatos são permitidos, quais valores são permitidos, quais restrições? A gente aplica cada elemento. Agora, vamos votar aqui na aplicação. O cliente. Qual seria o tipo do cliente
+
+67
+00:09:36.380 --> 00:09:47.019
+Orlando Fonseca: é dessa classe aqui. Cliente, atributo a bicicleta. É desse tipo bicicleta. O número de diárias é um inteiro. E o que quer dizer que é a quantidade de dias do contrato
+
+68
+00:09:47.240 --> 00:09:50.139
+Orlando Fonseca: e a data de ativação realmente é uma data.
+
+69
+00:09:51.190 --> 00:10:01.259
+Orlando Fonseca: Ok, eu coloquei que data, eu ia ter que colocar o Dt. Efetivação, mas você pode colocar o nome você queira, mas sempre especificar no tipo ali para ser bonito.
+
+70
+00:10:02.650 --> 00:10:14.279
+Orlando Fonseca: Tá, ok, então, seguidamente colocamos as responsabilidades dessa classe. Informar o valor total do contrato, gerar recibo do contrato,
+
+71
+00:10:15.350 --> 00:10:19.909
+Orlando Fonseca: calcular o valor da multa e as colaborações.
+
+72
+00:10:21.650 --> 00:10:34.079
+Orlando Fonseca: Quais seriam as colaborações? Eu não falei que ela tem um relacionamento já com a bicicleta. Então, quem conhece o valor da diária é a bicicleta. Então ela tem que solicitar esse valor da diária, a classe, a bicicleta.
+
+73
+00:10:34.630 --> 00:10:35.640
+Orlando Fonseca: Ok,
+
+74
+00:10:36.370 --> 00:10:41.850
+Orlando Fonseca: ah, agora eu preciso. O valor do depósito está sendo devolvido. Quem que vai saber isso? É a bicicleta.
+
+75
+00:10:42.490 --> 00:10:46.340
+Orlando Fonseca: Se essa classe for responsável por esse atributos.
+
+76
+00:10:47.010 --> 00:10:51.610
+Orlando Fonseca: Tá bom. Boa situação manugada manugada, hã?
+
+77
+00:10:53.390 --> 00:10:59.869
+Orlando Fonseca: A classe bicicleta. Veja agora se você consegue entender como seria essa definição aqui. Olhando para o dicionário de dados.
+
+78
+00:11:00.390 --> 00:11:06.419
+Orlando Fonseca: Ela tem todos esses atributos aqui só com caderno, como mais.
+
+79
+00:11:07.090 --> 00:11:12.860
+Orlando Fonseca: E os atributos, o número inteiro, o liquidificador único da bicicleta, a cor.
+
+80
+00:11:13.250 --> 00:11:15.550
+Orlando Fonseca: Ela é um texto.
+
+81
+00:11:16.260 --> 00:11:26.590
+Orlando Fonseca: A marca também. Esse não é trilingue, não é? Um
+
+82
+00:11:27.510 --> 00:11:40.659
+Orlando Fonseca: eu vou pedir. No final, vamos falar do top três da aproximação três no dicionário de dados. Vou deixar vocês serem um pouquinho mais flexíveis. Você pode colocar, por exemplo,
+
+83
+00:11:40.660 --> 00:11:48.639
+Orlando Fonseca: String, ou vai achar se você tem uma familiaridade com Sql. Eu quero que você deixe explicito que você está trabalhando ali com uma cadeia de caracteres.
+
+84
+00:11:49.060 --> 00:11:52.740
+Orlando Fonseca: E o modelo seria que testa também.
+
+85
+00:11:52.910 --> 00:12:03.860
+Orlando Fonseca: Palavra que você queira colocar deixa em claro que é texto, tipo de dado tamanho, também o tipo. Agora, o varão da diária é o varão monetário
+
+86
+00:12:06.290 --> 00:12:09.519
+Orlando Fonseca: e o valor do depósito monetário também
+
+87
+00:12:14.440 --> 00:12:18.240
+Orlando Fonseca: certinho. Qual seria a responsabilidades?
+
+88
+00:12:20.650 --> 00:12:27.449
+Orlando Fonseca: Vai informar o varão da diária. Vai informar o valor do depósito. Vai calcular o valor do depósito. Está sendo devolvido
+
+89
+00:12:27.650 --> 00:12:30.470
+Orlando Fonseca: e as colaboração que ela tem seria com o aluguel.
+
+90
+00:12:31.740 --> 00:12:33.490
+Orlando Fonseca: Então por quê?
+
+91
+00:12:34.150 --> 00:12:42.689
+Orlando Fonseca: Tipo, quem que vai saber esses valores do depósito? O que foi feito é realmente a classe aluguel.
+
+92
+00:12:43.610 --> 00:12:44.580
+Orlando Fonseca: Tá bom.
+
+93
+00:12:45.630 --> 00:12:48.969
+Orlando Fonseca: Avalia o tal da devolução para cálculo do depósito.
+
+94
+00:12:52.020 --> 00:12:56.150
+Orlando Fonseca: E para finalizar o cliente nessa esse horário de dados
+
+95
+00:12:59.330 --> 00:13:02.970
+Orlando Fonseca: até aí, pessoal, tranquilo, classe cliente. Vai ter. O quê?
+
+96
+00:13:04.120 --> 00:13:09.079
+Orlando Fonseca: Ele é um indivíduo cadastrado no sistema que pode alugar uma bicicleta.
+
+97
+00:13:09.390 --> 00:13:13.959
+Orlando Fonseca: Os atributos são o quê? Nome, Cpf, endereço, telefone, e mail,
+
+98
+00:13:15.570 --> 00:13:27.210
+Orlando Fonseca: atributo. Vem aqui. Cpf. Aqui digitou onze. Está em nome. Tem Cpf. Tem um documento de identificador pode ter endereço, telefone, e mail. Esses atributos que eu estou colocando aqui, eles vêm do texto,
+
+99
+00:13:28.530 --> 00:13:38.039
+Orlando Fonseca: então a responsabilidade manter seu dado atrás, associar se a contratação de aluguel e a classe usuário bem parecido.
+
+100
+00:13:39.070 --> 00:13:47.189
+Orlando Fonseca: Um indivíduo aqui, quem pode alugar a bicicleta, mas é classe usuário do indivíduo que pode executar algumas funções nesse sistema
+
+101
+00:13:48.250 --> 00:13:58.580
+Orlando Fonseca: com Los Cpf, assim como cliente. Só que diferencia ela que vai ter um perfil
+
+102
+00:13:59.370 --> 00:14:08.440
+Orlando Fonseca: aqui. Como é um nome? Ele é policial, gerente e o concepcionista, hã?
+
+103
+00:14:08.970 --> 00:14:16.360
+Orlando Fonseca: E a responsabilidade vai autenticar o acesso ao sistema. Tirar informações do perfil, executar operações conforme o perfil.
+
+104
+00:14:17.010 --> 00:14:17.940
+Orlando Fonseca: Tá bom.
+
+105
+00:14:21.250 --> 00:14:24.049
+Orlando Fonseca: Beleza, pessoal. Até aí tranquilo.
+
+106
+00:14:24.270 --> 00:14:25.560
+Orlando Fonseca: Deixa eu ver. Aqui já
+
+107
+00:14:29.740 --> 00:14:32.160
+Orlando Fonseca: fundo,
+
+108
+00:14:36.420 --> 00:14:37.290
+Orlando Fonseca: beleza.
+
+109
+00:14:37.570 --> 00:14:38.610
+Orlando Fonseca: Tá bom,
+
+110
+00:14:41.330 --> 00:14:57.160
+Orlando Fonseca: tranquilo. Isso aí. Diagrama de classe. Quero que você preste muita atenção nesse conceito nesse tipo de diagramação específica para isso.
+
+111
+00:14:57.420 --> 00:14:58.790
+Orlando Fonseca: Só que agora
+
+112
+00:14:59.080 --> 00:15:10.830
+Orlando Fonseca: veja, eu preciso fazer um relacionamento entre ela tudo bem que eu tenho alguma colaboração no dicionário de dados que dá para entuar o aluguel.
+
+113
+00:15:11.020 --> 00:15:17.080
+Orlando Fonseca: Ela precisa da colaboração com bicicleta porque a bicicleta. Quem vai dar água no
+
+114
+00:15:17.990 --> 00:15:22.719
+Orlando Fonseca: um valor que precisa do aluguel?
+
+115
+00:15:23.100 --> 00:15:28.360
+Orlando Fonseca: O pagamento, porque vai dar um valor para a gente. São colaborações do cliente também.
+
+116
+00:15:28.880 --> 00:15:42.039
+Orlando Fonseca: Só que olha, a gente precisa especificar realmente os relacionamentos entre essas classes, porque ela pode ter um relacionamento de herança. Podem ser relacionamento de independência. A gente precisa especificar isso. Muito bem,
+
+117
+00:15:42.330 --> 00:15:48.750
+Orlando Fonseca: então o diagrama de classes representa a estrutura estática do sistema.
+
+118
+00:15:50.650 --> 00:15:56.769
+Orlando Fonseca: Você lembra porque estágica quando eu falo que está?
+
+119
+00:16:00.310 --> 00:16:01.460
+Orlando Fonseca: Deixa eu ver. Aqui no chat,
+
+120
+00:16:05.190 --> 00:16:06.220
+Orlando Fonseca: não.
+
+121
+00:16:06.710 --> 00:16:09.079
+Orlando Fonseca: Alguém lembra a diferença entre a tática e dinâmico?
+
+122
+00:16:11.190 --> 00:16:12.829
+Orlando Fonseca: Foi o que eu falo.
+
+123
+00:16:15.330 --> 00:16:21.410
+Orlando Fonseca: É tudo bem lembrado. A estágico é como uma foto. A gente sabe.
+
+124
+00:16:21.860 --> 00:16:26.089
+Orlando Fonseca: A gente sabe tudo bem. Que tem essas
+
+125
+00:16:26.520 --> 00:16:34.049
+Orlando Fonseca: funcionalidade que temos essa classe no sistema. Que tem esse relacionamento que tem essas sensações, mas não sabemos a ordem
+
+126
+00:16:34.320 --> 00:16:37.039
+Orlando Fonseca: quando que isso acontece. Não temos a noção do tempo.
+
+127
+00:16:37.650 --> 00:16:44.379
+Orlando Fonseca: Então a tática é isso, uma foto ali no sistema, sabendo que existe. Mas quando que ele acontece.
+
+128
+00:16:45.410 --> 00:16:56.160
+Orlando Fonseca: Então, então veja, o drama de classe vai identificar que as principais classes. Conhecer as atrações do domínio.
+
+129
+00:16:56.580 --> 00:17:05.349
+Orlando Fonseca: Seus atributos são dados que essa classe armazena os métodos que são comportamentos associados e a relacionamentos entre eles,
+
+130
+00:17:06.490 --> 00:17:09.349
+Orlando Fonseca: mesmo que a gente está fazendo. A
+
+131
+00:17:09.599 --> 00:17:23.230
+Orlando Fonseca: a gente está fazendo agora de uma forma mais informal. Quando falamos, esse aqui seria a entidade do domínio, lembra? Agora é um momento especificar. Olhando para classes, para diagrama de classes. Quer dizer, especificamos primeiro a classe, vemos o relacionamento entre eles
+
+132
+00:17:23.540 --> 00:17:30.070
+Orlando Fonseca: e deixamos bem explícito quais seriam os atributos e os métodos dessa classe
+
+133
+00:17:30.990 --> 00:17:39.309
+Orlando Fonseca: lá na modelagem, não era obrigatório. Vocês especificaram esse.
+
+134
+00:17:39.820 --> 00:17:43.450
+Orlando Fonseca: Olha essa funcionalidade aqui.
+
+135
+00:17:44.020 --> 00:17:50.490
+Orlando Fonseca: Alugar pertence ao cliente. Tem uma função que recebe um parâmetro. E o retorno é Y
+
+136
+00:17:51.630 --> 00:17:54.879
+Orlando Fonseca: agora, no programa de classe. Por isso é interessante ter essa informação.
+
+137
+00:17:55.690 --> 00:17:56.530
+Orlando Fonseca: Tchau,
+
+138
+00:18:01.000 --> 00:18:01.860
+Orlando Fonseca: beleza.
+
+139
+00:18:03.240 --> 00:18:04.989
+Orlando Fonseca: Então, pessoal, lembrando,
+
+140
+00:18:06.320 --> 00:18:14.319
+Orlando Fonseca: eu estou encerrando para vocês essa parte da modelagem da pacificação dos requisitos animais. Ele tem um viés um pouquinho mais teórico,
+
+141
+00:18:15.340 --> 00:18:16.470
+Orlando Fonseca: mas
+
+142
+00:18:16.650 --> 00:18:29.350
+Orlando Fonseca: veja que ele é uma ajuda importantíssima para a implementação, porque quando eu falo em implementação, você está colocando mão na massa, certo? Você vai implementar. Vai testar, vai validar e vai colocar em produção.
+
+143
+00:18:29.650 --> 00:18:35.859
+Orlando Fonseca: Tá bom. Esse aí vai plantar o sistema. Implantação Sok em torveja,
+
+144
+00:18:36.150 --> 00:18:42.519
+Orlando Fonseca: para que a gente faz uma modalidade entre classe, coloca um nome numa função. Colocamos atributos. Isso aí. Não vai virar
+
+145
+00:18:42.850 --> 00:18:50.140
+Orlando Fonseca: a gente não vai aproveitar isso. Então a gente está falando aqui até o momento, o diagrama de uso,
+
+146
+00:18:50.360 --> 00:18:59.329
+Orlando Fonseca: o dicionário de dados, especificamente o diagrama de classes é para ser utilizado no futuro, então ele tem que servir de base
+
+147
+00:19:00.210 --> 00:19:08.120
+Orlando Fonseca: tanto para a implementação quanto para a comunicação entre os membros da equipe.
+
+148
+00:19:08.570 --> 00:19:15.540
+Orlando Fonseca: Só ficou claro aí, então esse diagrama não vai ser construído geradamente.
+
+149
+00:19:15.940 --> 00:19:21.429
+Orlando Fonseca: Por quê? Porque ele é uma evolução natural das caças de uso.
+
+150
+00:19:21.620 --> 00:19:27.759
+Orlando Fonseca: E ele complementa também. Tipo assim, não chamaria uma evolução. Enfim, um complementa o outro.
+
+151
+00:19:28.880 --> 00:19:39.500
+Orlando Fonseca: Ou seja, podemos começar com caça de uso caça de uso. Vai trazer ali alguns pontos. Aqui. A gente tem que colocar. Se identificarmos um requisito funcional
+
+152
+00:19:39.650 --> 00:19:47.420
+Orlando Fonseca: lá no câncer de uso, de repente, isso aí pode ser que vire. Enfim, vai virar um método nesse diagrama de classe.
+
+153
+00:19:47.920 --> 00:19:54.230
+Orlando Fonseca: Ou pode ser que isso aí impacta o drama de interação, hã?
+
+154
+00:19:54.510 --> 00:20:03.959
+Orlando Fonseca: Fazendo um refinamento do requisito, ele vai impactar o caso de uso. Vai impactar também o diagrama de classes e agir o negócio como um todo.
+
+155
+00:20:04.300 --> 00:20:15.530
+Orlando Fonseca: Ok, então, à medida que esses diagrama de interação, a gente vai ver aqui
+
+156
+00:20:16.050 --> 00:20:19.470
+Orlando Fonseca: era uma interação de atividades e demais.
+
+157
+00:20:19.970 --> 00:20:22.249
+Orlando Fonseca: À medida que esses.
+
+158
+00:20:22.600 --> 00:20:30.069
+Orlando Fonseca: Esses diagramas, esses conceitos, essas regras, elas são refinadas.
+
+159
+00:20:30.350 --> 00:20:33.529
+Orlando Fonseca: A gente precisa também refinar o dicionário de dados.
+
+160
+00:20:34.710 --> 00:20:45.730
+Orlando Fonseca: Por quê? Porque é ali que está claro. Quais são os tipos? Tem o nosso atributo? Quais seriam a nossa classe? Então,
+
+161
+00:20:46.700 --> 00:20:49.320
+Orlando Fonseca: tá, é.
+
+162
+00:20:51.380 --> 00:21:09.200
+Orlando Fonseca: Então, vejam, pessoal, o diagrama de classes. O foco realmente é deixar muito bem claro a classes existentes no sistema e a interação entre elas. Alguns outros detalhes de interesse, colocamos no dicionário de dados.
+
+163
+00:21:10.170 --> 00:21:13.690
+Orlando Fonseca: Alguma restrição vai no dicionário de dados?
+
+164
+00:21:14.130 --> 00:21:21.329
+Orlando Fonseca: Tá bom aqui. Sem comprometer a clareza visual do diagrama de classe
+
+165
+00:21:25.700 --> 00:21:27.559
+Orlando Fonseca: então, para fazer o diagrama de classe.
+
+166
+00:21:28.810 --> 00:21:40.260
+Orlando Fonseca: Vamos utilizar a linguagem Ml: Porque ela padroniza atributos, relacionamento entre classe, tá? Então
+
+167
+00:21:40.630 --> 00:21:43.599
+Orlando Fonseca: vamos entender como o e ml faz isso.
+
+168
+00:21:43.950 --> 00:21:51.159
+Orlando Fonseca: Mas de novo, já falei no diagrama de calça de uso. Eu deixo vocês livres de. A gente tem que respeitar
+
+169
+00:21:57.520 --> 00:21:58.589
+Orlando Fonseca: tamanho pessoal.
+
+170
+00:22:09.080 --> 00:22:15.960
+Orlando Fonseca: Então é, eu estava falando. Ah, é o seguinte. Eu deixo vocês.
+
+171
+00:22:16.840 --> 00:22:24.690
+Orlando Fonseca: É um vamos falar assim. Modificar bom senso.
+
+172
+00:22:25.600 --> 00:22:29.650
+Orlando Fonseca: O que o Ml está propondo
+
+173
+00:22:29.850 --> 00:22:33.260
+Orlando Fonseca: ali, olhando o programa de classe
+
+174
+00:22:33.460 --> 00:22:46.690
+Orlando Fonseca: no sentido aqui, uma classe é representada um retângulo dividido em compatimento. Se você quer colocar esse retângulo com uma borda colorida? Vamos suportar com um preenchimento. Tudo bem, eu vou aceitar isso.
+
+175
+00:22:47.370 --> 00:22:52.969
+Orlando Fonseca: Tá certo. Eu não fico muito ligado. Você tem que ser estritamente na sentença do Ml.
+
+176
+00:22:53.430 --> 00:23:02.579
+Orlando Fonseca: O nome da classe tem que ser obrigatório. Agora é assim você. Não vai ter um diagrama de classe. Seja um momento espetáculo no que diz é que você vai colocar uma bolinha.
+
+177
+00:23:02.780 --> 00:23:06.779
+Orlando Fonseca: Então você vai pelo menos respeitar esse retângulo aí
+
+178
+00:23:08.300 --> 00:23:11.489
+Orlando Fonseca: e vai ter que ter um nome da classe ali obrigatório.
+
+179
+00:23:12.060 --> 00:23:18.569
+Orlando Fonseca: Os atributos são opcionais na análise inicial, porque ela está sendo construída aos poucos.
+
+180
+00:23:19.180 --> 00:23:23.259
+Orlando Fonseca: E essa operação, esse método seriam as responsabilidades da classe.
+
+181
+00:23:24.230 --> 00:23:25.250
+Orlando Fonseca: Tá bom.
+
+182
+00:23:26.380 --> 00:23:29.479
+Orlando Fonseca: Então temos o nome da classe, atributos e operação hermética,
+
+183
+00:23:30.290 --> 00:23:40.790
+Orlando Fonseca: por exemplo. Vejam o exemplo de uma classe representada ali nesse diagrama de classe, porque nesse caso, só tem uma classe seguindo o padrão da Uml.
+
+184
+00:23:41.410 --> 00:23:51.810
+Orlando Fonseca: Ele é um quadradinho que tem o nome da classe, que é o cliente e tem alguns. Nesse caso, tem os atributos e tem,
+
+185
+00:23:52.180 --> 00:24:00.490
+Orlando Fonseca: e tem a responsabilidade que essa é a função que vai procurar, por exemplo, no cliente, tá,
+
+186
+00:24:01.680 --> 00:24:03.890
+Orlando Fonseca: esse diagrama de classes.
+
+187
+00:24:04.640 --> 00:24:11.199
+Orlando Fonseca: Ele não é tipo, tudo bem. A gente vai aproveitar esse nome para a implementação, como eu falei,
+
+188
+00:24:11.370 --> 00:24:15.970
+Orlando Fonseca: mas excita um drama de graça que a gente.
+
+189
+00:24:16.540 --> 00:24:20.149
+Orlando Fonseca: A gente coloca como sendo. Quase que
+
+190
+00:24:20.800 --> 00:24:36.000
+Orlando Fonseca: imagina. A gente pensa quase na implementação que estamos colocando ali no diagrama, o tipo do parámetro, o retorno a essa função. A gente faz alguma coisa ali. Mais de implementação no diagrama.
+
+191
+00:24:36.450 --> 00:24:42.510
+Orlando Fonseca: Vamos pensar nessa classe bem simplificada só com o nome, os parâmetros e a responsabilidade.
+
+192
+00:24:43.460 --> 00:24:49.360
+Orlando Fonseca: Eu coloquei aqui o um parênteses.
+
+193
+00:24:50.080 --> 00:24:55.869
+Orlando Fonseca: Mas se você colocar essa linha aqui. Esse separador, é porque
+
+194
+00:24:56.210 --> 00:24:59.179
+Orlando Fonseca: estamos falando que essa última aqui é uma
+
+195
+00:24:59.720 --> 00:25:09.809
+Orlando Fonseca: função. Você poderia ter colocado no parênteses, mas pelo menos delimitem ele como uma linha ou uma chave aqui. Esses aqui seriam os seus métodos, entendido?
+
+196
+00:25:09.930 --> 00:25:15.660
+Orlando Fonseca: Para não ter confusão, fica claro, pessoal.
+
+197
+00:25:17.360 --> 00:25:31.659
+Orlando Fonseca: Então, na implementação, por exemplo, pode ser que eu não tenha esses atributos. Mesmo eu tenho esse name como sendo uma função. Me dá o nome. Então o Name não recebe parâmetro e devolve. Você retorna
+
+198
+00:25:32.180 --> 00:25:33.200
+Orlando Fonseca: o nome.
+
+199
+00:25:33.410 --> 00:25:34.250
+Orlando Fonseca: Tá?
+
+200
+00:25:34.670 --> 00:25:39.679
+Orlando Fonseca: Mas conceitualmente no programa de classe. Ele é um atributo, não uma função.
+
+201
+00:25:40.590 --> 00:25:43.379
+Orlando Fonseca: Tá claro, pessoal. Dá para entender. Aí.
+
+202
+00:25:45.910 --> 00:25:47.250
+Jorge José Luiz Santos da Silva: Deu. Sim, professor.
+
+203
+00:25:47.250 --> 00:25:51.319
+Orlando Fonseca: Tá beleza. Muito bom. Tá aí, traz uma confusão.
+
+204
+00:25:52.800 --> 00:25:56.719
+Orlando Fonseca: Então as operações são os métodos. Vão representar comportamento.
+
+205
+00:25:58.190 --> 00:25:59.640
+Orlando Fonseca: Seriam o quê?
+
+206
+00:26:00.390 --> 00:26:05.619
+Orlando Fonseca: Regra do domínio serviços Internos, globalização e mudança de Estado.
+
+207
+00:26:05.820 --> 00:26:09.680
+Orlando Fonseca: Então, numa classe aluguel, faz sentido existir,
+
+208
+00:26:10.070 --> 00:26:15.840
+Orlando Fonseca: calcular valor total que era recibo, calculava multa. Se ele coloquei aqui, como
+
+209
+00:26:16.150 --> 00:26:23.339
+Orlando Fonseca: coloquei como tipo de função para deixar claro que ele é um método, uma operação
+
+210
+00:26:24.130 --> 00:26:33.040
+Orlando Fonseca: em bicicleta. Faz sentido assistir a Gat valor de área. Ter o valor da diária, calcular o valor do depósito.
+
+211
+00:26:33.330 --> 00:26:36.700
+Orlando Fonseca: Então, gente, estou colocando o nome da função.
+
+212
+00:26:36.960 --> 00:26:42.029
+Orlando Fonseca: Eu acho que é literalmente para não ter confusão nenhuma aqui em seguinte, coloquei em inglês
+
+213
+00:26:42.370 --> 00:26:46.950
+Orlando Fonseca: por costume. Você poderia ter colocado ou ter varão diário.
+
+214
+00:26:47.210 --> 00:26:51.000
+Orlando Fonseca: E o parâmetro?
+
+215
+00:26:52.130 --> 00:27:00.150
+Orlando Fonseca: Essa aqui parecia até um flag bom estado ou não para calcular esse depósito vai ser devolvido.
+
+216
+00:27:00.940 --> 00:27:10.360
+Orlando Fonseca: Tá, então veja, pessoal, até o momento, temos que o dicionário de dados construídos para cada uma das classes.
+
+217
+00:27:11.060 --> 00:27:20.909
+Orlando Fonseca: Outra coisa que representa cada classe. Quais seriam os principais atributos, instrumentos, as funções deles, o tipo
+
+218
+00:27:21.250 --> 00:27:22.809
+Orlando Fonseca: e cada um deles.
+
+219
+00:27:23.350 --> 00:27:32.470
+Orlando Fonseca: E o diagrama de classe. Nesse exemplo, que está bem simples. Ele só tem o quê?
+
+220
+00:27:32.750 --> 00:27:34.779
+Orlando Fonseca: Só vai ter nesse exemplo
+
+221
+00:27:35.820 --> 00:27:45.419
+Orlando Fonseca: as classes sem relacionamento entre elas, porque ainda não fiz. Essa é uma primeira versão do diagrama de classes.
+
+222
+00:27:47.100 --> 00:27:51.870
+Orlando Fonseca: Mas aí o seu nome, e sem os atributos de cada um, tá
+
+223
+00:27:58.290 --> 00:27:59.310
+Orlando Fonseca: sertinho.
+
+224
+00:28:01.820 --> 00:28:09.059
+Orlando Fonseca: Então é importante aqui. Não tem método. Está vendo que eu deixe lembrar?
+
+225
+00:28:11.640 --> 00:28:14.110
+Orlando Fonseca: Tá esse aqui?
+
+226
+00:28:14.800 --> 00:28:17.109
+Orlando Fonseca: Acho que eu não coloquei nessa aula,
+
+227
+00:28:18.330 --> 00:28:27.550
+Orlando Fonseca: mas você tem como colocar se esses atributos. Eles são, por exemplo, recebem nulos ou não. Se eles são opcionais ou não,
+
+228
+00:28:28.160 --> 00:28:31.100
+Orlando Fonseca: então temos algum recurso para fazer isso.
+
+229
+00:28:31.540 --> 00:28:37.550
+Orlando Fonseca: Ok, então, por enquanto, eu vou vamos ver nesse.
+
+230
+00:28:40.470 --> 00:28:50.090
+Orlando Fonseca: Queria padronizar isso. Vamos padronizar isso de repente, eu vou trazer para vocês quando eu colocar aqui ali o hastag ou aquele.
+
+231
+00:28:51.160 --> 00:28:59.160
+Orlando Fonseca: Enfim, aquele outro símbolo que agora não lembro. Como bom, alguns outros símbolos para representar essa personalidade, o nulo.
+
+232
+00:29:03.030 --> 00:29:06.530
+Orlando Fonseca: Então, beleza. Degrauamos de classe, como evitar classes erradas.
+
+233
+00:29:09.780 --> 00:29:14.160
+Orlando Fonseca: Um não confundir atributo com classe, por exemplo,
+
+234
+00:29:14.340 --> 00:29:17.460
+Orlando Fonseca: o valor da diária não deve virar classe.
+
+235
+00:29:18.090 --> 00:29:26.790
+Orlando Fonseca: Por quê? A gente falou. Já na aula anterior. Quando identificamos a classe candidata, se
+
+236
+00:29:28.250 --> 00:29:40.370
+Orlando Fonseca: vemos que a bicicleta que tem a responsabilidade de saber o valor da diária, então é porque ele é um atributo. O valor da diária e o atributo da bicicleta,
+
+237
+00:29:43.100 --> 00:29:44.889
+Orlando Fonseca: evitar redundâncias.
+
+238
+00:29:46.410 --> 00:29:50.690
+Orlando Fonseca: Bom número de dias, duração decimada,
+
+239
+00:29:50.970 --> 00:29:58.439
+Orlando Fonseca: tempo do aluguel pode ser a mesma ideia representada por temas diferentes, aonde que a gente colocar isso. Análise sinal de dados também.
+
+240
+00:30:01.440 --> 00:30:02.530
+Orlando Fonseca: Ok,
+
+241
+00:30:06.780 --> 00:30:16.020
+Orlando Fonseca: então evitar uma redundância. Selecionamos só uma. A gente coloca lá no dicionário, deixamos claro para todo mundo. Vai ser número de dias, não mais duração estimada.
+
+242
+00:30:18.080 --> 00:30:23.270
+Orlando Fonseca: Recibo numa classe do domínio. Um documento derivado da alça assistente.
+
+243
+00:30:24.290 --> 00:30:29.140
+Orlando Fonseca: Quero ter esse recibo ali do aluguel. E demais.
+
+244
+00:30:30.110 --> 00:30:31.420
+Orlando Fonseca: Era um documento.
+
+245
+00:30:32.280 --> 00:30:35.660
+Orlando Fonseca: Ela é preenchida com algum dado e assinado claramente,
+
+246
+00:30:36.280 --> 00:30:40.940
+Orlando Fonseca: e aluguel é a relação entre clientes e bicicleta.
+
+247
+00:30:41.580 --> 00:30:46.739
+Orlando Fonseca: Mas quando tem dado próprio aluguel, é um relacionamento.
+
+248
+00:30:47.130 --> 00:30:48.659
+Orlando Fonseca: É cliente de bicicleta.
+
+249
+00:30:49.290 --> 00:30:55.669
+Orlando Fonseca: Eles têm dados próprios datas diárias. Multa recibo. Então precisa ser tratado como entidade. E isso aqui. Deixa eu ver.
+
+250
+00:30:56.960 --> 00:31:06.949
+Orlando Fonseca: Por quê? Porque cliente e bicicleta eu vou falar aqui um conceito. Vamos ver na próxima hora também. Eles têm um relacionamento de muitos para muitos. Então você está
+
+251
+00:31:07.440 --> 00:31:13.739
+Orlando Fonseca: tem estudado aqui no alfinete. Tem familiaridade com.
+
+252
+00:31:13.920 --> 00:31:15.610
+Orlando Fonseca: Com esse tipo de relacionamento?
+
+253
+00:31:15.810 --> 00:31:20.499
+Orlando Fonseca: Com linguagem, com um modelo relacional.
+
+254
+00:31:23.610 --> 00:31:26.789
+Orlando Fonseca: Isso. Ah, muito bom. Então, excelente.
+
+255
+00:31:28.800 --> 00:31:32.259
+Orlando Fonseca: Então vamos lá, pessoal, vamos pensar nesse primeiro exercício.
+
+256
+00:31:32.810 --> 00:31:37.220
+Orlando Fonseca: Vou trazer dois exercícios nessa aula e vamos falar do Tap três, tá?
+
+257
+00:31:38.380 --> 00:31:48.680
+Orlando Fonseca: É um tá beijo. Aqui, e aí, exercício é um
+
+258
+00:31:51.010 --> 00:31:53.610
+Orlando Fonseca: considera um sistema, deixa eu me puxar.
+
+259
+00:31:54.330 --> 00:32:02.510
+Orlando Fonseca: Ah, vou botar um ideia esse aqui, né? Tá, não, nada
+
+260
+00:32:09.460 --> 00:32:10.750
+Orlando Fonseca: tá certinho.
+
+261
+00:32:12.560 --> 00:32:13.800
+Orlando Fonseca: Ah, mas eu.
+
+262
+00:32:14.140 --> 00:32:21.559
+Orlando Fonseca: Esse aqui conhece o diagrama de classe sem relacionamento. Ainda não temos ali
+
+263
+00:32:21.710 --> 00:32:27.530
+Orlando Fonseca: a cardinalidade desse relacionamento, o neo relacionamento e.
+
+264
+00:32:28.730 --> 00:32:32.590
+Orlando Fonseca: E essas lives aqui show.
+
+265
+00:32:36.680 --> 00:32:37.390
+Orlando Fonseca: Tchau.
+
+266
+00:32:38.970 --> 00:32:45.360
+Orlando Fonseca: Então, primeiro você decide. Vamos lá. Considerando um sistema de informação para uma loja de aluguel de bicicleta.
+
+267
+00:32:45.880 --> 00:32:47.659
+Orlando Fonseca: Os requisitos incluem.
+
+268
+00:32:48.090 --> 00:32:55.129
+Orlando Fonseca: Eu sempre trabalho com aluguel de bicicleta para não trocar a regra de negócios. Vou ter que explicar toda a aula.
+
+269
+00:32:55.420 --> 00:33:02.690
+Orlando Fonseca: O projeto se é uma agência de turismo, se é uma
+
+270
+00:33:03.200 --> 00:33:18.879
+Orlando Fonseca: no sistema para a biblioteca, então vamos focar realmente no organismo de bicicleta que é mais simples. Vamos ter que voltar atrás. Então, requisitos inclui um cliente. Pode alugar uma ou mais bicicleta. Cada bicicleta pode ser alugada várias vezes ao longo do tempo.
+
+271
+00:33:19.680 --> 00:33:27.910
+Orlando Fonseca: Para cada aluguel, devem ser registradas datas de início, número de área valor pago antecipadamente. Possível desconto no depósito, atraso ou dano.
+
+272
+00:33:29.190 --> 00:33:32.120
+Orlando Fonseca: Ah, lembrando que eu faço um depósito. Ah,
+
+273
+00:33:32.320 --> 00:33:44.880
+Orlando Fonseca: tá, isso aí. A gente faz um depósito aí, se tiver algum tipo de dado de atraso, vai descontar esse depósito ou ele pede inteiro. O valor. O sistema deve manter a tua pergunta
+
+274
+00:33:46.640 --> 00:33:51.920
+Orlando Fonseca: é onde armazenar as informações do aluguel.
+
+275
+00:33:52.630 --> 00:33:59.420
+Orlando Fonseca: Tendo em conta que o sistema deve manter o histórico de alugueis. Onde vamos ensinar essa informação?
+
+276
+00:34:05.810 --> 00:34:07.210
+Orlando Fonseca: Outra palavra.
+
+277
+00:34:12.370 --> 00:34:18.039
+Orlando Fonseca: Sim, mas cuidado. Mas quando eu pergunto ali, onde quer dizer, né?
+
+278
+00:34:18.150 --> 00:34:26.240
+Orlando Fonseca: Que é ele seria. Primeiro, ele seria uma classe. Ele seria um atributo de alguma classe,
+
+279
+00:34:26.929 --> 00:34:31.059
+Orlando Fonseca: entendido? Então, para onde a gente coloca essa responsabilidade?
+
+280
+00:34:34.139 --> 00:34:42.229
+Orlando Fonseca: Às vezes, para bicicleta, é quem vai ter esse histórico de aluguel. Ou realmente tem sentido ela ser uma entidade separada.
+
+281
+00:34:44.030 --> 00:34:44.969
+Orlando Fonseca: Tchau.
+
+282
+00:34:45.980 --> 00:34:48.190
+Orlando Fonseca: Então, pessoal, vamos pensar aqui.
+
+283
+00:34:48.330 --> 00:34:52.170
+Orlando Fonseca: Vou conversar com. Vocês, Sim, ver a
+
+284
+00:34:52.280 --> 00:34:54.890
+Orlando Fonseca: Sim, ver a repórter que eu coloquei aqui no próximo slide.
+
+285
+00:34:55.719 --> 00:35:03.900
+Orlando Fonseca: Tá pensando como você é um pergunta? Tá tudo mais bom,
+
+286
+00:35:04.880 --> 00:35:07.859
+Orlando Fonseca: vocês acham que aluguel precisa virar uma classe
+
+287
+00:35:09.920 --> 00:35:11.589
+Orlando Fonseca: primeiro? Eu acho que assim, né?
+
+288
+00:35:13.020 --> 00:35:17.860
+Orlando Fonseca: Porque eu coloquei até aluguel como sendo uma classe no dicionário de dados.
+
+289
+00:35:18.310 --> 00:35:20.759
+Orlando Fonseca: Tá tudo bem. Mas por quê?
+
+290
+00:35:22.800 --> 00:35:29.299
+Orlando Fonseca: Por que ela deve virar uma classe intuitivamente? Tudo bem. Que você faz uma análise aí de classe candidata faz uma análise.
+
+291
+00:35:29.480 --> 00:35:33.589
+Orlando Fonseca: Os sinônimos, a técnica para essa.
+
+292
+00:35:33.810 --> 00:35:41.379
+Orlando Fonseca: Para ver essa responsabilidade. Mas pensem comigo: se você vem que uma entidade tem
+
+293
+00:35:41.680 --> 00:35:51.149
+Orlando Fonseca: dados próprios dessa entidade que ela tem. Vida como eu falo, tem um significado. Então não é mais um atributo, e ele vai virar uma classe.
+
+294
+00:35:54.750 --> 00:36:03.820
+Orlando Fonseca: Isso tem atributo médico? Tá, então, então e
+
+295
+00:36:05.620 --> 00:36:09.789
+Orlando Fonseca: então? Tá bom. Quais seriam os atributos desse
+
+296
+00:36:10.470 --> 00:36:14.399
+Orlando Fonseca: dessa classe, né? Dessa classe. Ah, vai ter uma data de início,
+
+297
+00:36:15.460 --> 00:36:25.559
+Orlando Fonseca: tá bom? Vai ter o relacionamento entre clientes e bicicleta que são que realmente identificam o aluguel e vai ter o número de área do aluguel.
+
+298
+00:36:28.440 --> 00:36:36.569
+Orlando Fonseca: Tá bom, então esses herdado. Tudo bem que uma classe. Mas vamos justificar que ele realmente repete uma classe.
+
+299
+00:36:36.770 --> 00:36:41.770
+Orlando Fonseca: Esses dados que eu falei. Agora ele pertencem. Vai pertencer a bicicleta ou a clientes?
+
+300
+00:36:41.880 --> 00:36:45.470
+Orlando Fonseca: O que eu vou fazer de agora para frente. Eu vou colocar
+
+301
+00:36:45.920 --> 00:36:54.440
+Orlando Fonseca: esses atributos que vocês sabem que pertencem à classe aluguel. Eu vou colocar na bicicleta ou no cliente. Vamos ver o que acontece,
+
+302
+00:36:55.360 --> 00:37:00.430
+Orlando Fonseca: ok? Porque, pessoal, isso aqui parece um exercício. Meio
+
+303
+00:37:01.110 --> 00:37:10.079
+Orlando Fonseca: é simples, mas na real, acontece assim. Às vezes a gente fica na dúvida. Esse aqui é o que um atributo. Então coloca coloca como um atributo, e vê uma situação.
+
+304
+00:37:10.740 --> 00:37:15.869
+Orlando Fonseca: Ele é só assim vai falar, não tem? Como vou ter que colocar ele como sendo uma classe?
+
+305
+00:37:16.510 --> 00:37:23.180
+Orlando Fonseca: Ok, tentativa. Um armazenar os dados do aluguel diretamente
+
+306
+00:37:23.930 --> 00:37:26.530
+Orlando Fonseca: na classe cliente. Aí, o que acontece
+
+307
+00:37:26.730 --> 00:37:29.140
+Orlando Fonseca: aí? Vou ter uma classe cliente
+
+308
+00:37:29.830 --> 00:37:39.200
+Orlando Fonseca: que ele tem um nome, tem um Cpf. Tem data de início, tem número de diária.
+
+309
+00:37:39.690 --> 00:37:41.259
+Orlando Fonseca: O que acontece aí, pessoal?
+
+310
+00:37:42.600 --> 00:37:46.810
+Orlando Fonseca: Assim, em princípio, o cliente pode ter
+
+311
+00:37:46.990 --> 00:37:52.500
+Orlando Fonseca: o número de diárias ali. Tem algum problema? Em princípio parece que funciona,
+
+312
+00:37:52.820 --> 00:38:05.509
+Orlando Fonseca: mas tem um problema. Qual seria o problema que ali na pacificação desse projeto vergonha de bicicleta está falando assim? O cliente podia ter vários aluguéis,
+
+313
+00:38:07.190 --> 00:38:08.080
+Orlando Fonseca: hã?
+
+314
+00:38:08.950 --> 00:38:19.679
+Orlando Fonseca: Então, onde que a gente vai aguardar a segunda data? Nós temos colocado uma data de início, um número de diária onde que colocamos a segunda? Se ele fez o segundo aluguel,
+
+315
+00:38:21.970 --> 00:38:29.400
+Orlando Fonseca: tá a data de início, ele vai guardar uma data só está claro, beleza.
+
+316
+00:38:29.580 --> 00:38:39.429
+Orlando Fonseca: O número de diária vai guardar o número desse primeiro lugar. Data, foi, por exemplo, dia sete de outubro. E o número de área vai ser por três dias.
+
+317
+00:38:40.060 --> 00:38:44.499
+Orlando Fonseca: E agora, quando muda e seleciona tributos da classe cliente, quando mudou.
+
+318
+00:38:45.210 --> 00:38:47.550
+Orlando Fonseca: E aí então
+
+319
+00:38:50.390 --> 00:38:59.729
+Orlando Fonseca: realmente não faz sentido almacenar em cliente. Então o único atributo data, início não é suficiente, e o único atributo no número de diárias não é suficiente.
+
+320
+00:39:00.180 --> 00:39:04.929
+Orlando Fonseca: Então não excite essa correspondência antes de falar da tentativa dois.
+
+321
+00:39:05.810 --> 00:39:09.629
+Orlando Fonseca: Na verdade, a gente pôde fazer um truque.
+
+322
+00:39:10.470 --> 00:39:13.810
+Orlando Fonseca: Só que assim é muito ruim.
+
+323
+00:39:13.960 --> 00:39:15.729
+Orlando Fonseca: Mas você pode impressão também.
+
+324
+00:39:16.660 --> 00:39:20.130
+Orlando Fonseca: E se eu faço isso aqui, vou colocar no chat.
+
+325
+00:39:22.130 --> 00:39:27.560
+Orlando Fonseca: Se eu faço uma coisa assim? Dt: Início
+
+326
+00:39:33.770 --> 00:39:40.990
+Orlando Fonseca: eu vou colocar um negócio simples aqui. Tipo subutivo, culpado, tá, Cef e Youtube.
+
+327
+00:39:42.380 --> 00:39:44.790
+Orlando Fonseca: Isso não oito.
+
+328
+00:39:45.510 --> 00:39:46.510
+Orlando Fonseca: Eu estou.
+
+329
+00:39:49.330 --> 00:39:50.690
+Orlando Fonseca: E se colocasse?
+
+330
+00:39:51.070 --> 00:39:57.189
+Orlando Fonseca: E se eu colocar como você numa lista, continua tendo sentido.
+
+331
+00:39:57.430 --> 00:40:02.339
+Orlando Fonseca: Agora eu posso aguardar várias datas, mas no mesmo atributo. Uma lista. Uma data,
+
+332
+00:40:03.040 --> 00:40:06.750
+Orlando Fonseca: então não seria data de início. Seria uma lista de datas de início,
+
+333
+00:40:08.180 --> 00:40:16.320
+Orlando Fonseca: e aí tem uma interpretação diferente seria um atributo. O retorno seria um malito.
+
+334
+00:40:16.740 --> 00:40:21.280
+Orlando Fonseca: Faz sentido. Mais ou menos. Por quê? Ah, porque agora?
+
+335
+00:40:21.710 --> 00:40:28.100
+Orlando Fonseca: O número de diária já não seria só um valor.
+
+336
+00:40:28.360 --> 00:40:33.570
+Orlando Fonseca: Vai ter que ser também uma lista, hã?
+
+337
+00:40:33.780 --> 00:40:36.879
+Orlando Fonseca: E quando eu quiser, aguentou perguntar, Ah, mas
+
+338
+00:40:37.150 --> 00:40:45.640
+Orlando Fonseca: no dia oito de outubro. Qual foi o número de diárias desse aluguel?
+
+339
+00:40:47.170 --> 00:40:56.739
+Orlando Fonseca: É, ou, por exemplo, no dia oito de outubro, essa bicicleta X, como você vê, isso
+
+340
+00:41:01.610 --> 00:41:09.700
+Orlando Fonseca: complicou, né? Tá vendo o que eu estou falando? A data de início é seguir uma listagem a outra. Vamos supor que agora o número de diária
+
+341
+00:41:12.530 --> 00:41:14.289
+Orlando Fonseca: vai ser também uma lista.
+
+342
+00:41:14.590 --> 00:41:19.910
+Orlando Fonseca: Vai ter, por exemplo, três, cinco, seis. Todo mundo de área. Tá vendo aí.
+
+343
+00:41:22.210 --> 00:41:31.480
+Orlando Fonseca: Só que agora tudo bem. Qual é o número de área que estaria atrelado a essa data? De início? Dia sete e dia oito
+
+344
+00:41:32.000 --> 00:41:45.009
+Orlando Fonseca: conseguem fazer atrelar entre um e outro. De repente, poderíamos, pelo índice da lista que está na primeira posição nessa lista. Número de diárias.
+
+345
+00:41:45.890 --> 00:41:51.589
+Orlando Fonseca: Se trocar de ter início, pode ter aluguel, mas então, né?
+
+346
+00:41:52.080 --> 00:42:01.129
+Orlando Fonseca: Mas aí, como seria então, data de início, então e de aluguel seria o quê? Você está pensando em aluguel como o aluguel separado,
+
+347
+00:42:01.130 --> 00:42:12.250
+Orlando Fonseca: como sendo outra entidade. E a gente tem ali um identificador que de alguma forma, referencia esse lugar então fazendo uma referência. Então pode esquecer que está virando uma classe.
+
+348
+00:42:13.210 --> 00:42:17.059
+Orlando Fonseca: Está virando. Uma classe. Então, nessa rodagem que eu coloquei aqui.
+
+349
+00:42:18.730 --> 00:42:28.110
+Orlando Fonseca: É isso aí. Nessa rodagem que eu coloquei está aqui. Ah, porque eu não sabia se a bicicleta y a bicicleta,
+
+350
+00:42:28.340 --> 00:42:34.330
+Orlando Fonseca: o Centro Caloi, né? Uma marca se dentro da bicicleta três.
+
+351
+00:42:34.700 --> 00:42:47.510
+Orlando Fonseca: Então, como você vê que tem uma data de início no dia oito. Então fica muito estranho. Então não tem como se está ficando? Muito atranho. Beleza, nós vamos trocar.
+
+352
+00:42:47.760 --> 00:42:55.549
+Orlando Fonseca: Acho que a classe cliente não mais sindical para colocar o número de diálise. Qual seria a tentativa? Dois
+
+353
+00:42:55.900 --> 00:42:59.289
+Orlando Fonseca: armazenar os dados do aluguer diretamente na classe de bicicleta?
+
+354
+00:43:01.660 --> 00:43:08.920
+Orlando Fonseca: Só que. Veja, hummm se temos uma bicicleta.
+
+355
+00:43:10.520 --> 00:43:14.949
+Orlando Fonseca: Ela mesma foi alugada várias vezes.
+
+356
+00:43:16.140 --> 00:43:21.770
+Orlando Fonseca: Tá bom, então colocar essa data de início
+
+357
+00:43:21.990 --> 00:43:30.020
+Orlando Fonseca: como sendo um atributo ali na bicicleta não resolve também, né, hã?
+
+358
+00:43:31.000 --> 00:43:33.090
+Orlando Fonseca: Então, de alguma forma,
+
+359
+00:43:33.610 --> 00:43:48.800
+Orlando Fonseca: na verdade, ele aí é uma tentativa forçada de solução, mas não é nenhuma solução realmente,
+
+360
+00:43:49.580 --> 00:43:55.880
+Orlando Fonseca: porque vai ter muita trava. Depois Uhum uma homenagem ruim.
+
+361
+00:43:56.300 --> 00:44:00.110
+Orlando Fonseca: Então o aluguel pessoal precisa se relacionar
+
+362
+00:44:00.560 --> 00:44:02.730
+Orlando Fonseca: com um cliente e com bicicleta.
+
+363
+00:44:05.680 --> 00:44:07.790
+Orlando Fonseca: Melhor fazer classe amanhã, tá?
+
+364
+00:44:08.520 --> 00:44:21.930
+Orlando Fonseca: Então, como seria esse relacionamento entre clientes e bicicleta? Tem dados próprios
+
+365
+00:44:22.260 --> 00:44:34.970
+Orlando Fonseca: e precisa ser registrado historicamente. Ai. Precisamos do histórico importantíssimo. Estamos histórico. Cada instância da classe aluguel vai ter um cliente específico, uma bicicleta específica, um período específico
+
+366
+00:44:35.080 --> 00:44:37.640
+Orlando Fonseca: e um conjunto de valores financeiro.
+
+367
+00:44:37.810 --> 00:44:42.299
+Orlando Fonseca: Hum, valor financeiro. Eu não falei, né? Ah, não. A grana
+
+368
+00:44:43.840 --> 00:44:50.510
+Orlando Fonseca: voltando no relacionamento, eu não coloquei aqui nessa idade. Mas quero que você pense comigo.
+
+369
+00:44:52.070 --> 00:44:58.569
+Orlando Fonseca: Temos o cliente num relacionamento com aluguel
+
+370
+00:44:58.920 --> 00:45:02.830
+Orlando Fonseca: e aluguel um relacionamento também com a bicicleta.
+
+371
+00:45:03.220 --> 00:45:06.819
+Orlando Fonseca: Ou seja, quais seriam o tipo de relacionamento.
+
+372
+00:45:07.380 --> 00:45:18.970
+Orlando Fonseca: O cliente vai ter vários alugueis e uma bicicleta depois de depois de
+
+373
+00:45:19.710 --> 00:45:25.400
+Orlando Fonseca: tem vários aluguéis depois de aparecer em vários aluguéis. Entendido, pessoal.
+
+374
+00:45:25.760 --> 00:45:31.550
+Orlando Fonseca: Então, já estou. Já estou.
+
+375
+00:45:32.260 --> 00:45:48.840
+Orlando Fonseca: Estou trazendo aqui esse conceito de cabralidade, mas de um para muitos. De um para muitos do cliente, para ganho de bicicleta para o ganho. Então, na verdade, a gente olha só para cliente de bicicleta, relacionamento de muito para muito.
+
+376
+00:45:49.720 --> 00:45:53.189
+Orlando Fonseca: E eu beleza. E a maior forma de fazer
+
+377
+00:45:53.600 --> 00:46:01.820
+Orlando Fonseca: utilizar aluguel como sendo uma classe tá exercício dois.
+
+378
+00:46:02.710 --> 00:46:04.669
+Orlando Fonseca: Não há requisitos.
+
+379
+00:46:06.250 --> 00:46:12.489
+Orlando Fonseca: O sistema deve permitir que o cliente pare antecipadamente pelos realizados
+
+380
+00:46:13.360 --> 00:46:18.860
+Orlando Fonseca: e gerar um único recibo para um cliente que alugue várias bicicletas simultaneamente.
+
+381
+00:46:19.500 --> 00:46:20.480
+Orlando Fonseca: Hummm.
+
+382
+00:46:21.250 --> 00:46:29.079
+Orlando Fonseca: Então você pode alugar vários e vai gerar um recibo. Só você não precisa. Vai alugar. Três eu quero um recibo. Só eu quero três recibos.
+
+383
+00:46:30.120 --> 00:46:31.440
+Orlando Fonseca: Registrar
+
+384
+00:46:31.750 --> 00:46:39.960
+Orlando Fonseca: a data em que cada pagamento foi efetuado, o valor efetivamente pago o valor do depósito devolvido ou final do aluguel.
+
+385
+00:46:40.380 --> 00:46:43.490
+Orlando Fonseca: Manter histórico financeiro completo.
+
+386
+00:46:44.420 --> 00:46:59.479
+Orlando Fonseca: Então, até aqui, até aí, claro. Enfim, o que está acontecendo está acontecendo? Que o pagamento. Tá
+
+387
+00:47:00.400 --> 00:47:01.929
+Orlando Fonseca: tá comprando vida, né?
+
+388
+00:47:03.880 --> 00:47:13.789
+Orlando Fonseca: Ok, então podemos introduzir ela como sendo uma classe num diagrama de classes
+
+389
+00:47:14.230 --> 00:47:23.520
+Orlando Fonseca: para representar melhor agora o modelo com o novo requisitos que tem a ver com pagamento com registro, data,
+
+390
+00:47:24.180 --> 00:47:26.460
+Orlando Fonseca: valores ali, efetivamente pagos.
+
+391
+00:47:28.110 --> 00:47:34.440
+Orlando Fonseca: Ok, tá, vamos pensar de novo aqui ouro.
+
+392
+00:47:35.820 --> 00:47:42.910
+Orlando Fonseca: Por que não colocar todas essas informações financeiras dentro do aluguel?
+
+393
+00:47:49.380 --> 00:47:59.940
+Orlando Fonseca: Eu queria falar aqui. Explique porque a introdução de democracia específica pagamento representa a melhor alternativa à modelagem. Você pode falar. Ah, beleza, se não for uma classe, porque eu vou colocar dentro do aluguel e vamos ver o que acontece.
+
+394
+00:48:09.350 --> 00:48:11.700
+Orlando Fonseca: Então, o que seria?
+
+395
+00:48:13.520 --> 00:48:28.360
+Orlando Fonseca: O que está identificando o pagamento. Vamos supor. Vai ser o recibo de pagamento e a data de pagamento, valores. Enfim, por que não colocamos todos esses atributos dentro do aluguel?
+
+396
+00:48:30.190 --> 00:48:31.960
+Orlando Fonseca: Então por quê?
+
+397
+00:48:32.190 --> 00:48:34.130
+Orlando Fonseca: Olá, pessoal.
+
+398
+00:48:35.040 --> 00:48:36.839
+Orlando Fonseca: Tá, por quê?
+
+399
+00:48:37.450 --> 00:48:45.890
+Orlando Fonseca: Porque o pagamento é independente. Ele tem seu proprietário. Você não tem Professor tributos e tem um histórico. O histórico é importantíssimo.
+
+400
+00:48:47.030 --> 00:48:56.449
+Orlando Fonseca: E responsabilidades distintas do contrato do cliente. Porque eu falo que o histórico é importantíssimo, porque veja se você faz um aluguel e você
+
+401
+00:48:57.080 --> 00:49:02.630
+Orlando Fonseca: para vamos supor duzentos reais dos cento reais tá aí
+
+402
+00:49:02.890 --> 00:49:14.899
+Orlando Fonseca: na classe aluguel. Tendo essa informação, o valor pago, por exemplo, o valor pago por esse aluguel é trezentos reais. Mas se você precisa fazer o histórico, você pode ter ó
+
+403
+00:49:15.730 --> 00:49:22.610
+Orlando Fonseca: que através da classe de pagamento você pode fazer ali.
+
+404
+00:49:23.130 --> 00:49:38.200
+Orlando Fonseca: Você pode deixar explícito no sentido que você vai ter o primeiro pagamento com valor de R duzentos reais. O segundo pagamento com valor de R. Cem a gente sabe que o valor pago foi trezentos, mas ele foi feito em duas
+
+405
+00:49:38.380 --> 00:49:39.829
+Orlando Fonseca: em dois pagamentos.
+
+406
+00:49:41.880 --> 00:49:42.970
+Orlando Fonseca: Sabe aquele chá.
+
+407
+00:49:44.380 --> 00:49:48.439
+Orlando Fonseca: Isto então o pagamento seria uma outra classe.
+
+408
+00:49:48.670 --> 00:49:51.250
+Orlando Fonseca: Seria uma outra classe, hã?
+
+409
+00:49:51.690 --> 00:50:04.079
+Orlando Fonseca: Cada instância do pagamento representa um evento financeiro real, uma data específica associada a um aluguel específico com valores efetivamente registrados. Então já temos uma colaboração. Como que seria relacionamento entre
+
+410
+00:50:04.380 --> 00:50:08.759
+Orlando Fonseca: é pagamento agora com aluguel e.
+
+411
+00:50:10.720 --> 00:50:12.909
+Orlando Fonseca: E o cliente e a bicicleta,
+
+412
+00:50:16.430 --> 00:50:23.809
+Orlando Fonseca: hã palma de tamanho. É isso tá bom, pessoal, tá bom,
+
+413
+00:50:24.270 --> 00:50:32.449
+Orlando Fonseca: dúvidas dessa aula próxima aula. Vamos continuar trabalhando essa aula. E a próxima, eu acho, ou na próxima só
+
+414
+00:50:32.610 --> 00:50:41.770
+Orlando Fonseca: eu vou trazer o diagrama de classe mais completo, já com uma central mais completa.
+
+415
+00:50:42.360 --> 00:50:50.170
+Orlando Fonseca: E com os relacionamentos entre classe e a cadernalidade entre eles, hã?
+
+416
+00:50:52.820 --> 00:51:00.510
+Orlando Fonseca: Dúvidas tranquilo, tudo certo, tudo bem, beleza.
+
+417
+00:51:00.840 --> 00:51:05.360
+Orlando Fonseca: Então agora pra limpar o suco. Tá bom.
+
+418
+00:51:05.970 --> 00:51:09.400
+Orlando Fonseca: Agora vou parar de compartilhar
+
+419
+00:51:13.690 --> 00:51:17.000
+Orlando Fonseca: para compartilhar o tempo e três.
+
+420
+00:51:28.260 --> 00:51:31.869
+Orlando Fonseca: Eu não fiz a leitura. Ainda estou atrás com você.
+
+421
+00:51:33.770 --> 00:51:34.960
+Orlando Fonseca: Vamos orar.
+
+422
+00:51:45.260 --> 00:51:46.380
+Orlando Fonseca: E aí?
+
+423
+00:51:55.280 --> 00:51:57.300
+Orlando Fonseca: Certo, né? Vou patinar Nutella.
+
+424
+00:51:58.700 --> 00:51:59.900
+Orlando Fonseca: Então o primeiro.
+
+425
+00:52:00.260 --> 00:52:02.430
+Orlando Fonseca: Ela está marcada com o sinal vermelho.
+
+426
+00:52:02.580 --> 00:52:07.210
+Orlando Fonseca: Você quer dizer isso é como você está realmente começando? Primeira segunda rodada.
+
+427
+00:52:07.680 --> 00:52:11.199
+Orlando Fonseca: Eu quero que vocês de fato procurem
+
+428
+00:52:11.770 --> 00:52:16.700
+Orlando Fonseca: face aos diagramas e muita ajuda de a generativa. É só isso.
+
+429
+00:52:17.310 --> 00:52:24.500
+Orlando Fonseca: Mas isso não tira que eventualmente você queira procurar lá.
+
+430
+00:52:25.540 --> 00:52:29.180
+Orlando Fonseca: É alguma informação você consigam.
+
+431
+00:52:29.350 --> 00:52:37.780
+Orlando Fonseca: Vocês podem fazer isso de uma forma ali, eventual, comprando sem uso.
+
+432
+00:52:38.130 --> 00:52:45.089
+Orlando Fonseca: Tudo bem, esse aqui só para falar do modelo Huck. Então eu vou pular essa parte.
+
+433
+00:52:49.530 --> 00:52:50.400
+Orlando Fonseca: Tá bom.
+
+434
+00:52:53.460 --> 00:52:55.000
+Orlando Fonseca: Ok, e então
+
+435
+00:52:56.360 --> 00:53:03.510
+Orlando Fonseca: a linguagem? Vocês sabem que o projeto é de vocês mas tem que ser implementado em Java, ou seja, App.
+
+436
+00:53:04.070 --> 00:53:06.009
+Orlando Fonseca: E o que eu quero que você se entregue
+
+437
+00:53:06.200 --> 00:53:09.369
+Orlando Fonseca: primeiro. Identificação de classes e matriz de associação
+
+438
+00:53:09.480 --> 00:53:16.479
+Orlando Fonseca: A partir do estudo de classe apresentado na última entrega, os alunos deverão elaborar uma lista de classes de candidatas.
+
+439
+00:53:17.310 --> 00:53:24.309
+Orlando Fonseca: Essa etapa tem como foco a análise das entidades presentes no caso de uso fundamental para a estruturação do projeto.
+
+440
+00:53:24.890 --> 00:53:28.099
+Orlando Fonseca: É que eu disser isso. Pessoal, você vai ter que identificar
+
+441
+00:53:28.810 --> 00:53:38.129
+Orlando Fonseca: qual seria essa classe candidata. Qual seria a Matriz? A sensação não precisa, tá? Qual seria a classe candidata que você vai representar depois, no drama de classe.
+
+442
+00:53:38.740 --> 00:53:50.999
+Orlando Fonseca: Eu também não vou precisar que vocês entreiem essa primeira parte, tá? Por quê?
+
+443
+00:53:51.340 --> 00:53:57.899
+Orlando Fonseca: Porque eu vou olhar diretamente o dicionário de dados e o diagrama de classe de vocês.
+
+444
+00:53:58.800 --> 00:54:09.830
+Orlando Fonseca: Se algum dele tiver, por acaso tem alguma parte errada, esse aqui vai ser penalizado.
+
+445
+00:54:11.350 --> 00:54:17.049
+Orlando Fonseca: Mas você não precisa fazer nenhuma análise para colher essa classe candidata. Como você chegou ali?
+
+446
+00:54:18.270 --> 00:54:19.270
+Orlando Fonseca: Ok,
+
+447
+00:54:19.810 --> 00:54:31.460
+Orlando Fonseca: fazendo uma análise de palavras aqui, porque esse atributo queria colocar como atributo e não deu. Eu quero colocar como uma classe essa análise.
+
+448
+00:54:31.740 --> 00:54:48.739
+Orlando Fonseca: Você não precisa entregar quem quiser fazer fazer essa primeira questão aqui, essa primeira Diretriz. Beleza, tudo bem, né? Melhor ainda. Mas quem não quiser fazer tudo bem, eu vou olhar só para essa entrega. Adicionalidade, derrame de classe. E vamos falar desse último também.
+
+449
+00:54:48.900 --> 00:54:50.879
+Orlando Fonseca: Tá certo. Ficou claro?
+
+450
+00:54:51.860 --> 00:54:54.889
+Orlando Fonseca: Então o que é interessa. Ah, pode falar.
+
+451
+00:54:55.900 --> 00:54:57.230
+Jorge José Luiz Santos da Silva: Só que. Está claro.
+
+452
+00:54:57.500 --> 00:55:01.040
+Orlando Fonseca: Isso. Tá bom. O que interessa para mim, o dicionário de dados,
+
+453
+00:55:01.470 --> 00:55:09.740
+Orlando Fonseca: então será necessário preparar um dicionário de dados que inclua definições de toda essa classe. Aí sim, aí vou olhar,
+
+454
+00:55:09.970 --> 00:55:11.929
+Orlando Fonseca: tá? Que fui eu que eu fiz hoje.
+
+455
+00:55:12.090 --> 00:55:25.879
+Orlando Fonseca: Atributos e associações identificados. Ela é a referência para compreender e futuramente implementar o sistema. Olhando para o dicionário de dados, esse aqui eu vou olhar com atenção.
+
+456
+00:55:26.790 --> 00:55:27.720
+Orlando Fonseca: Tá bom.
+
+457
+00:55:28.730 --> 00:55:33.690
+Orlando Fonseca: Então você entrega do Tp dois do Tp3 vai ser analisados.
+
+458
+00:55:33.860 --> 00:55:43.219
+Orlando Fonseca: E é claro que o degrama de classe utilizado a anotação Ml. Você tem que desenvolver um diagrama de classe para tudo de classe.
+
+459
+00:55:43.580 --> 00:55:51.400
+Orlando Fonseca: O diagrama deve refletir todos os atributos significativos e as relações entre a classe, incluindo a multiplicidade apropriada.
+
+460
+00:55:52.380 --> 00:55:58.410
+Orlando Fonseca: Então veja, é um mais uma vez, sejam criativos,
+
+461
+00:55:58.550 --> 00:56:18.019
+Orlando Fonseca: porque você não tem um final que implementar tudo que você colocou aqui. Se você colocar dez classes de relacionamento entre dez e classes no final, você vai apresentando só a classe cliente. Pagamento, tá? Cliente, bicicleta de pagamento. Está pronto para mim. O aluguel está pronto para mim. São três, três, quatro
+
+462
+00:56:19.770 --> 00:56:32.770
+Orlando Fonseca: ali. Fundamental. Já está bom para mim agora. No drama de classe, você pode caprichar. Você está aprendendo agora. Então, passa complexo mesmo. Vou dar um feedback. Aí vou falar. Sim, tem sentido. Isso aqui foi melhorar ou não?
+
+463
+00:56:33.200 --> 00:56:37.290
+Orlando Fonseca: Então o que eu quero, Face?
+
+464
+00:56:38.100 --> 00:56:50.620
+Orlando Fonseca: Deixando muito bem claro o nome da classe. Tudo bem que está no dicionário de dado. Mas aqui tem que respeitar o diagrama com o nome com os atributos. Se você quer fazer jamais voltado para a implementação como tipo, melhor ainda,
+
+465
+00:56:50.830 --> 00:56:51.640
+Orlando Fonseca: tá?
+
+466
+00:56:51.840 --> 00:56:56.819
+Orlando Fonseca: Os métodos desse drama e o relacionamento entre casa. Como que vai ser
+
+467
+00:56:58.340 --> 00:57:06.170
+Orlando Fonseca: isso aqui? Claro, ainda. Você não sabe teoria porque vamos falar disso, tá bom,
+
+468
+00:57:07.340 --> 00:57:20.020
+Orlando Fonseca: vamos falar agora da implementação. Alguma dúvida aqui do dicionário de dados do programa de classe. Não, né? Isso. Qualquer
+
+469
+00:57:20.350 --> 00:57:24.190
+Orlando Fonseca: derrama de closela podem utilizar como vocês.
+
+470
+00:57:24.910 --> 00:57:35.049
+Orlando Fonseca: Alguma ferramenta que tem a linguagem, o Ml livre ou paga, ou você ali.
+
+471
+00:57:36.340 --> 00:57:39.259
+Orlando Fonseca: Se você queira entregar. Mas eu preciso degrau.
+
+472
+00:57:40.920 --> 00:57:45.179
+Orlando Fonseca: No tempero anterior, tem um aluno que fez
+
+473
+00:57:45.380 --> 00:57:50.079
+Orlando Fonseca: toda a especificação muito bem feita e não colocou diagrama de casos de uso para mim.
+
+474
+00:57:50.910 --> 00:57:56.640
+Orlando Fonseca: Enfim, foi uma penalização grande, porque ele não entrou com o degrau. Muito caso de hoje.
+
+475
+00:57:57.440 --> 00:58:01.000
+Orlando Fonseca: A área só fez a análise
+
+476
+00:58:01.830 --> 00:58:07.010
+Orlando Fonseca: e teve o pessoal que também colocou o diagrama sem fazer,
+
+477
+00:58:07.900 --> 00:58:12.420
+Orlando Fonseca: sem colocar nada. Só o diagrama. Sem narrativa. Também foi paralisado
+
+478
+00:58:13.460 --> 00:58:23.149
+Orlando Fonseca: aqui. Nesse caso, vai ser o dicionário de dados, que é quase que tem uma aplicação ali. A referência no drama de classe e atribulado a ele o diagrama de classe
+
+479
+00:58:27.690 --> 00:58:33.970
+Orlando Fonseca: Dr. Brown. E o funciona bem, tá bom, perfeito, Dr. Brown. E o funciona perfeito. Na próxima aula, eu vou ensinar para vocês uma ferramenta,
+
+480
+00:58:34.380 --> 00:58:39.479
+Orlando Fonseca: e vocês conseguem representar o diagrama utilizando.
+
+481
+00:58:39.890 --> 00:58:41.340
+Orlando Fonseca: Vamos. Prontos? Tá bom.
+
+482
+00:58:41.480 --> 00:58:45.740
+Orlando Fonseca: Alguma função? Essa lei já vai sentindo para você, irmão. Boa noite. Outra coisa nova.
+
+483
+00:58:48.700 --> 00:58:49.630
+Orlando Fonseca: Ok,
+
+484
+00:58:51.230 --> 00:58:59.489
+Orlando Fonseca: e implementação. O que acontece? Você lembra do Huck que nessa fase da inauguração mesmo, pode ser que a gente implemente alguma coisa,
+
+485
+00:59:00.950 --> 00:59:08.550
+Orlando Fonseca: o que seria alguma coisa. Eu falo assim. Muito genérico. Por que a gente precisa implementar alguma coisa nesse momento na elaboração?
+
+486
+00:59:12.530 --> 00:59:26.250
+Orlando Fonseca: É por isso que bom isso aqui se identificar como um risco. Isso aqui tem um risco de não ser feito por conta que não temos o manual. Não temos a integração.
+
+487
+00:59:26.820 --> 00:59:28.539
+Orlando Fonseca: Ah, então vamos fazer.
+
+488
+00:59:28.650 --> 00:59:40.970
+Orlando Fonseca: A gente faz. Olha, o projeto é viável. Por quê? Porque eu fiz a integração. Dá para fazer. Não tenho manual. Tem ali. Eu tenho contigo, fonte. O que a gente precisa.
+
+489
+00:59:41.960 --> 00:59:48.580
+Orlando Fonseca: Às vezes é preciso implementar muito pouco, mas para demonstrar que o projeto pode ir adianto nessa fase de elaboração.
+
+490
+00:59:48.890 --> 00:59:50.450
+Orlando Fonseca: Então, para a gente, vai avançar.
+
+491
+00:59:51.820 --> 00:59:56.390
+Orlando Fonseca: Então, para isso, tem uma questão aqui de implementação
+
+492
+00:59:57.010 --> 01:00:04.649
+Orlando Fonseca: como base da aplicação prática do conceitual apreendido, o salão organizará a implementação de um software de leitura de escrita, que você se vê.
+
+493
+01:00:04.810 --> 01:00:10.690
+Orlando Fonseca: Então, para vocês demonstrarem que já estão começando nessa parte de implementação do projeto,
+
+494
+01:00:11.620 --> 01:00:22.620
+Orlando Fonseca: você pode fazer uma leitura, uma escrita no que você se vê que tem a ver com o seu trabalho, seria o dado. Seria a parte da importação do dado.
+
+495
+01:00:25.680 --> 01:00:26.600
+Orlando Fonseca: Tchau.
+
+496
+01:00:28.550 --> 01:00:34.419
+Orlando Fonseca: Como que você vai colocar isso no trabalho? Você pode colocar um print do código ou dessa função. Só um print
+
+497
+01:00:35.230 --> 01:00:36.770
+Orlando Fonseca: não era o meio suficiente.
+
+498
+01:00:37.170 --> 01:00:50.890
+Orlando Fonseca: Você me vieram um vídeo me ver se realmente está escrevendo ali está lindo aqui. Já começamos a implementação,
+
+499
+01:00:52.650 --> 01:00:53.540
+Orlando Fonseca: tá bom?
+
+500
+01:00:54.040 --> 01:01:08.040
+Orlando Fonseca: E, é claro, como tentem dar uma interpretação nisso. Relacionada ao seu projeto. Por exemplo, tem um projeto de filme obra cerveja que eu fiz aí já a carga do filme para o banco,
+
+501
+01:01:08.950 --> 01:01:14.939
+Orlando Fonseca: beleza, ou veja que eu estou lendo esse aqui vou firmo e estou colocando na interface. Tudo bem.
+
+502
+01:01:15.420 --> 01:01:23.769
+Orlando Fonseca: Pelo menos tentar fazer alguma coisa relacionada ao tema de vocês como implementação. E o mais fácil para implementar é leitura e acreditar aqui
+
+503
+01:01:25.930 --> 01:01:36.709
+Orlando Fonseca: é simples, muito simples. Quero uma implementação muito simples. Duas, três linhas de coaching. Só quero ver que beleza. Tá avançando no projeto de complementação. A primeira entrega foi isso,
+
+504
+01:01:37.250 --> 01:01:41.029
+Orlando Fonseca: tá, então acesso sobre produtos,
+
+505
+01:01:44.030 --> 01:01:45.030
+Orlando Fonseca: beleza.
+
+506
+01:01:47.880 --> 01:01:57.750
+Orlando Fonseca: A entrega do projeto é para o dia desse nome. Quer dizer que temos mais um aproximado? É feriado? Não de catorze.
+
+507
+01:01:58.810 --> 01:02:00.770
+Orlando Fonseca: Bom dia, quinze. Deixa eu ver aqui o calendário
+
+508
+01:02:07.750 --> 01:02:11.379
+Orlando Fonseca: é segunda feira. Mas é pra ter um dia do professor, né?
+
+509
+01:02:15.730 --> 01:02:18.760
+Orlando Fonseca: Tá, então não, acho que não é.
+
+510
+01:02:20.320 --> 01:02:27.039
+Orlando Fonseca: Depois eu confirmo com vocês agora eu fiquei perdido. Aí. Dia quinze. É isso é dia quinze.
+
+511
+01:02:27.330 --> 01:02:39.289
+Orlando Fonseca: Então, dia catorze, temos a aula. Temos essa aula aqui agora, né? E a próxima aula, dia catorze para finalizar essa parte do programa de classe. E você estaria prontos para fazer a entrega de desse novo. Eu acho que a data vamos manter,
+
+512
+01:02:39.410 --> 01:02:44.750
+Orlando Fonseca: porque está sempre está muito difícil, não, você põe pensando já no diagrama de classes.
+
+513
+01:02:48.590 --> 01:02:50.620
+Orlando Fonseca: Tá bom, pessoal. Alguma dúvida?
+
+514
+01:02:50.760 --> 01:02:53.020
+Orlando Fonseca: A gente finaliza essa aula aqui um pouquinho mais cedo.
+
+515
+01:02:54.020 --> 01:02:55.769
+Orlando Fonseca: Se você não tiver mais dúvida.
+
+516
+01:02:57.780 --> 01:03:01.690
+Orlando Fonseca: Tranquilo, fechou. Dá para andar então, muito para três.
+
+517
+01:03:01.810 --> 01:03:05.830
+Orlando Fonseca: Dá para andar na primeira página no projeto.
+
+518
+01:03:06.280 --> 01:03:09.950
+Orlando Fonseca: Tá bom, beleza, pessoal.
+
+519
+01:03:10.160 --> 01:03:15.779
+Orlando Fonseca: Então aguardo você na próxima aula para continuar falando do drama de graça, vamos ter mais uma ou duas aulas
+
+520
+01:03:15.780 --> 01:03:30.700
+Orlando Fonseca: e vamos avançando. Vamos ter diagrama de interação, diagrama de atividade. E finalmente vamos tocar ali na implementação. Que você me apresente também. Que vocês estão trabalhando. Vamos ver como essa dinâmica até a entrega do projeto de bloco, tá bom.
+
+521
+01:03:31.200 --> 01:03:34.409
+Orlando Fonseca: Boa noite, meu querido. Até a próxima aula. Valeu.
+
+522
+01:03:34.730 --> 01:03:36.099
+Jorge José Luiz Santos da Silva: Alô, Professor. Boa noite.
+
+523
+01:03:36.360 --> 01:03:37.070
+Orlando Fonseca: Boa noite.
+

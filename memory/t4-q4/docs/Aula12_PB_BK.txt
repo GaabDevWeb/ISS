@@ -1,0 +1,304 @@
+    Projeto de Bloco:
+Desenvolvimento Backend
+    Prof. Orlando Fonseca Guilarte
+ orlando.guilarte@prof.infnet.edu.br
+Sumário Aula 12
+
+
+
+- Dicionário de Dados
+- Diagrama de Classes
+
+
+
+
+                        1
+Dicionário de Dados
+
+O Dicionário de Dados é um artefato na Engenharia de Software para documentar, de
+maneira estruturada e padronizada, todos os dados relevantes do sistem. Descreve com
+precisão o significado, a estrutura e as restrições associadas a cada elemento.
+Serve como fonte de verdade semântica do sistema.
+Permite que o diagrama de classes permaneça limpo e legível.
+A construção de um Dicionário de Dados precisa equilibrar dois objetivos:
+1. Precisão técnica
+2. Legibilidade
+
+
+                                                                                       2
+Dicionário de Dados
+- Precisão técnica
+O dicionário deve ser suficientemente rigoroso para permitir que analistas,
+desenvolvedores e arquitetos de software compreendam exatamente:
+- Quais dados existem no sistema
+- Quais formatos são permitidos
+- Quais valores são válidos ou inválidos
+- Quais restrições e regras se aplicam a cada elemento
+para evitar interpretações divergentes durante a implementação, os testes e a
+manutenção do sistema.
+
+                                                                                3
+Dicionário de Dados
+
+- Legibilidade
+O Dicionário de Dados deve ser compreensível para usuários do negócio e demais
+stakeholders não técnicos. Utiliza:
+- Definições claras e objetivas
+- Linguagem acessível: Termos alinhados ao vocabulário do domínio do problema.
+O modelo de dados tem que ser discutido, validado e refinado de forma colaborativa,
+reduzindo riscos de desalinhamento entre a área técnica e o negócio.
+
+
+
+                                                                                      4
+Dicionário de Dados
+
+Notação
+Concatenação +: indica a composição de elementos;
+Repetição { }: indica que um elemento pode ocorrer várias vezes;
+Opcionalidade ( ): indica que um elemento é opcional;
+Seleção alternativa [ | ]: indica escolhas possíveis entre alternativas;
+Comentários em itálico: esclarecem o significado dos elementos.
+
+
+
+                                                                           5
+Dicionário de Dados
+Ex: sistema de aluguel de bicicletas
+Conjunto de classes que representam os conceitos centrais do domínio do sistema
+- Aluguel (empréstimo de uma bicicleta para o cliente)
+- Bicicleta (ativo da loja)
+- Cliente (indivíduo cadastrado no sistema que pode Alugar )
+- Usuário (indivíduo cadastrado no sistema com um perfil)
+As classes não foram definidas de forma arbitrária. Elas emergem diretamente da
+linguagem utilizada pelo negócio.
+
+                                                                                  6
+Dicionário de Dados
+
+
+Dados e comportamentos relacionados devem coexistir na mesma classe.
+- Aluguel. Concentra regras contratuais e financeiras
+- Bicicleta. Concentra regras relacionadas ao bem físico e ao depósito
+- Cliente. Representa o ator que contrata o serviço
+- Usuário. Representa o ator interno que opera o sistema.
+
+
+
+
+                                                                         7
+Dicionário de Dados
+Classe Aluguel
+Contrato de empréstimo de uma ou mais bicicletas da loja para um cliente cadastrado,
+por um número determinado de diárias.
+Aluguel = cliente + bicicleta + numeroDeDiarias + dataEfetivacao
+- Atributos
+cliente = Cliente
+bicicleta = Bicicleta
+numeroDeDiarias = inteiro (quantidade de dias do contrato)
+dataEfetivacao = data
+                                                                                       8
+Dicionário de Dados
+- Responsabilidades
+Informar o valor total do contrato
+Gerar recibo do contrato
+Calcular o valor da multa
+- Colaborações
+Solicita à Bicicleta o valor da diária
+Solicita à Bicicleta o valor do depósito a ser devolvido
+Consolida os valores de todas as bicicletas alugadas
+
+                                                           9
+Dicionário de Dados
+Classe Bicicleta
+Ativo da loja que pode ser alugado por um cliente
+Bicicleta = numero + cor + marca + modelo + tamanho + tipo + valorDiaria + valorDeposito
+Atributos:
+numero = inteiro (identificador único da bicicleta)
+cor = texto
+marca = texto
+modelo = texto, tamanho = texto, tipo = texto
+valorDiaria = monetario, valorDeposito = monetario
+                                                                                           10
+Dicionário de Dados
+
+- Responsabilidades
+Informar o valor da diária
+Informar o valor do depósito
+Calcular o valor do depósito a ser devolvido conforme o estado de devolução
+- Colaborações
+Recebe do Aluguel a solicitação de valores
+Avalia o estado de devolução para cálculo do depósito
+
+
+                                                                              11
+Dicionário de Dados
+Classe Cliente
+Indivíduo cadastrado no sistema que pode alugar uma bicicleta.
+Cliente = nome + cpf + endereco + telefone + (email)
+- Atributos
+nome = texto
+cpf = digito11 (documento identificador), endereco = texto, telefone = texto, mail = texto
+- Responsabilidades
+Manter seus dados cadastrais
+Associar-se a contratos de aluguel.
+                                                                                             12
+Dicionário de Dados
+Classe Usuário
+Indivíduo cadastrado no sistema que, de acordo com seu perfil, pode executar operações
+administrativas e operacionais.
+Usuario = nome + cpf + email + telefone + perfil
+- Atributos
+nome = texto, cpf = digito11, email = texto, telefone = texto
+perfil = [Gerente | Recepcionista]
+- Responsabilidades
+Autenticar acesso ao sistema, Alterar informações de perfil, Executar operações conforme
+o perfil (Ex cadastros e contratos).                                                       13
+Diagrama de Classes
+
+
+O Diagrama de Classes representa a estrutura estática do sistema, identificando:
+- as principais classes (abstrações do domínio)
+- Seus atributos (dados que cada classe armazena)
+- Seus métodos (comportamentos associados)
+As relações entre classes, como associações, heranças e dependências.
+
+
+
+
+                                                                                   14
+Diagrama de Classes
+
+
+O diagrama fornece uma visão de alto nível da arquitetura do sistema, servindo como base
+tanto para a implementação quanto para a comunicação entre os membros da equipe.
+O diagrama de classes não deve ser construído isoladamente. Ele evolui em conjunto com
+outros modelos, como Casos de uso, Diagramas de interação, Regras de negócio, etc. À
+medida que o sistema evolui, novos detalhes, como restrições adicionais, formatos de
+dados e regras específicas, podem ser incorporados ao Dicionário de Dados sem
+comprometer a clareza visual do diagrama de classes.
+
+
+
+
+                                                                                           15
+Diagrama de Classes
+A UML fornece uma notação padronizada para representar classes, seus atributos, seus
+comportamentos e os relacionamentos entre elas. A notação UML não cria o modelo
+sozinha. Ela expressa graficamente um entendimento que precisa ser construído por um
+processo de análise iterativo.
+Representação de uma classe
+Uma classe é representada como um retângulo dividido em compartimentos:
+- Nome da classe (obrigatório)
+- Atributos (opcional na análise inicial)
+- Operações/Métodos (responsabilidades)
+
+                                                                                       16
+Diagrama de Classes
+
+
+
+
+                      17
+Diagrama de Classes
+Operações (métodos) representam comportamento: regras do domínio, serviços internos,
+cálculos, validações, mudanças de estado.
+- Em Aluguel faz sentido existir:
+calcularValorTotal()
+gerarRecibo()
+calcularMulta()
+- Em Bicicleta faz sentido existir:
+getValorDiaria()
+calcularDepositoADevolver(estadoDeDevolucao)
+                                                                                       18
+Diagrama de Classes
+
+
+
+
+                      19
+Diagrama de Classes
+Como evitar classes erradas?
+1) Não confundir atributo com classe
+Ex: valor da diária não deve virar classe. É atributo de Bicicleta.
+2) Evitar redundâncias
+número de dias, duração estimada, tempo do aluguel podem ser a mesma ideia
+representada por termos diferentes.
+3) recibo não é classe do domínio. É um documento derivado dos dados existentes.
+4) Aluguel é a relação entre Cliente e Bicicleta, mas contém dados próprios (data, diárias,
+multa, recibo) -> Precisa ser tratado como entidade.
+                                                                                              20
+Diagrama de Classes
+Exercício 1
+Considere um sistema de informação para uma loja de aluguel de bicicletas. Os requisitos
+incluem:
+Um cliente pode alugar uma ou mais bicicletas.
+Cada bicicleta pode ser alugada várias vezes ao longo do tempo.
+Para cada aluguel, devem ser registrados: data de início, número de diárias, valor pago
+antecipadamente, possíveis descontos no depósito (atraso ou dano)
+O sistema deve manter o histórico de aluguéis. Onde armazenar as informações do
+aluguel?
+
+                                                                                           21
+Diagrama de Classes
+
+Tentaiva 1. Armazenar os dados do aluguel diretamente na classe Cliente.
+Cliente. nome, cpf, endereco, dataInicio, numeroDeDiarias
+Se o cliente pode ter vários aluguéis, então:
+- Um único atributo dataInicio não é suficiente.
+- Um único atributo numeroDeDiarias não é suficiente
+Não existe correspondência clara entre datas e bicicletas alugadas
+-> O aluguel não é um simples atributo do cliente.
+
+
+                                                                           22
+Diagrama de Classes
+
+Tentativa 2. Armazenar os dados do aluguel diretamente na classe Bicicleta.
+Se a bicicleta pode ser alugada repetidamente:
+Um único dataInicio não é suficiente.
+Um único numeroDeDiarias não é suficiente.
+Solução forçada: uso de listas.
+-> O aluguel não é um simples atributo da bicicleta.
+
+
+
+                                                                              23
+Diagrama de Classes
+
+Solução:
+Os dados do aluguel descrevem algo que acontece entre cliente e bicicleta. Tem dados
+próprios e precisa ser registrada historicamente.
+Cada instância da classe Aluguel representa:
+- um cliente específico
+- uma bicicleta específica
+- um período específico
+- um conjunto específico de valores financeiros
+
+                                                                                       24
+Diagrama de Classes
+Exercício 2.
+Novos requisitos.
+O sistema deve permitir que o cliente pague antecipadamente pelos aluguéis realizados e
+gerar um único recibo para um cliente que alugue várias bicicletas simultaneamente.
+Registrar: a data em que cada pagamento foi efetuado, o valor efetivamente pago, o valor
+do depósito devolvido ao final do aluguel.
+Manter histórico financeiro completo.
+Explique por que a introdução de uma classe específica Pagamento representa a melhor
+alternativa de modelagem.
+
+                                                                                           25
+Diagrama de Classes
+
+
+
+O pagamento é independente, com dados próprios, histórico próprio e responsabilidades
+distintas do contrato e do cliente.
+Cada instância de Pagamento representa um evento financeiro real, ocorrido em uma data
+específica, associado a um aluguel específico e com valores efetivamente registrados.
+
+
+
+
+                                                                                         26
+

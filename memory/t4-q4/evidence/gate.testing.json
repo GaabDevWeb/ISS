@@ -1,0 +1,28 @@
+{
+  "verdict": "passed",
+  "confidence": "high",
+  "command": "python3 structural check of 20 new lessons (frontmatter, 9 sections, mermaid, CONCEPT_EXTRACTION, EXERCISES_JSON, slug/file, prerequisites) + node exportLessonJsonFromFile + agent-browser home filter and aula.html",
+  "artifacts": [
+    {"path": "content/servicos-web-java/aula-01-teste-unitario-junit-tres-fases.md"},
+    {"path": "content/servicos-web-java/aula-02-regressao-aaa-assertequals-assertthrows.md"},
+    {"path": "content/web-dotnet-relacional/aula-01-delegate-func-action-lambda-csharp.md"},
+    {"path": "content/web-dotnet-relacional/aula-02-callback-multicast-delegate-eventos-csharp.md"},
+    {"path": "content/projeto-bloco-backend/aula-08-reserva-hotel-inclusao-extensao-narrativa.md"},
+    {"path": "content/projeto-bloco-backend/aula-12-dicionario-dados-diagrama-classes.md"},
+    {"path": "content/lessons.json"},
+    {"path": "content/search-index.json"},
+    {"path": "content/disciplines.json"},
+    {"path": "public/js/app.js"},
+    {"path": "index.html"}
+  ],
+  "scope": "20 lições novas; filtro trimestre 4",
+  "checks": {
+    "structure_fails": 0,
+    "lessons_added": 20,
+    "browser_t4_cards": ["projeto-bloco-backend", "servicos-web-java", "web-dotnet-relacional"],
+    "browser_lesson_rendered": "public/aula.html?d=servicos-web-java&a=teste-unitario-junit-tres-fases"
+  },
+  "residual_risk": "PDF Etapa-01 de serviços web Java não tem camada de texto. Aula 12 de projeto de bloco não tem transcrição. Não há suíte unitária do filtro; a verificação foi no browser.",
+  "submitted_at": "2026-10-12T12:40:00Z",
+  "cycle_id": "t4-q4-c1"
+}

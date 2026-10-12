@@ -1,0 +1,130 @@
+    Projeto de Bloco:
+Desenvolvimento Backend
+    Prof. Orlando Fonseca Guilarte
+ orlando.guilarte@prof.infnet.edu.br
+Sumário Aula 8
+
+
+
+
+- Exercício
+
+
+
+
+                 1
+Exercício
+
+
+O sistema de reservas de hotel deve permitir que um cliente realize uma reserva de
+hospedagem informando o período desejado, tipo de quarto e dados pessoais. Antes de
+confirmar a reserva, o sistema deve verificar se há disponibilidade para as datas e opções
+solicitadas. Caso o cliente deseje, o sistema deve enviar uma notificação de confirmação
+por SMS após a conclusão da reserva.
+
+
+
+
+                                                                                             2
+Exercício
+
+
+1) Considere os casos de uso a seguir:
+“Realizar Reserva de Hotel”, “Enviar Notificação de Confirmação por SMS” e “Verificar
+Disponibilidade”.
+Discuta a diferença fundamental entre um relacionamento de inclusão e um
+relacionamento de extensão em um diagrama de casos de uso, e como essa diferença se
+aplicaria aos casos de uso fornecidos.
+
+
+
+
+                                                                                        3
+Exercício
+
+Um relacionamento de inclusão é usado quando um caso de uso incorpora o
+comportamento de outro caso de uso. O caso de uso incluído é uma parte obrigatória do
+caso de uso base.
+Exemplo de Aplicação: No caso de “Realizar Reserva de Hotel”, o processo de reserva pode
+sempre incluir a “Verificação de Disponibilidade” do hotel. Portanto, o caso de uso
+“Realizar Reserva de Hotel” incluiria “Verificar Disponibilidade” como uma etapa
+obrigatória.
+
+
+
+
+                                                                                           4
+Exercício
+
+Um relacionamento de extensão é utilizado quando o comportamento de um caso de uso
+pode ser estendido ou condicionalmente incluído em outro caso de uso. O caso de uso
+base pode funcionar independentemente do caso de uso de extensão.
+Exemplo de Aplicação: O caso de uso “Enviar Notificação de Confirmação por SMS” pode
+ser um complemento opcional para “Realizar Reserva de Hotel”. Assim, “Enviar
+Notificação de Confirmação por SMS” se estenderia a “Realizar Reserva de Hotel”, mas
+apenas sob certas condições, como se o cliente optar por receber notificações por SMS.
+
+
+
+
+                                                                                         5
+Exercício
+
+
+
+
+2) Descreva o Caso de Uso: Realizar Reserva de Hotel
+
+
+
+
+                                                       6
+Exercício
+
+Ator Principal: Cliente
+Atores Secundários: Sistema de Pagamento
+Resumo: Permite ao cliente realizar uma reserva de hospedagem, informando datas, tipo
+de quarto e dados pessoais. O sistema verifica a disponibilidade e confirma a reserva.
+Pré-condições:
+O cliente deve ter acesso ao sistema.
+O hotel deve possuir cadastro de quartos e disponibilidade configurada.
+
+
+
+                                                                                         7
+Exercício
+Pós-condições:
+Uma reserva válida é registrada no sistema.
+Caso solicitado, uma notificação por SMS é enviada ao cliente.
+Fluxo Principal:
+O cliente seleciona a opção Realizar Reserva.
+O sistema solicita as datas de entrada e saída.
+O cliente informa o período desejado.
+O sistema solicita o tipo de quarto.
+
+                                                                 8
+Exercício
+
+O cliente seleciona o tipo de quarto.
+O sistema inclui o caso de uso Verificar Disponibilidade.
+O sistema exibe as opções disponíveis.
+O cliente confirma a opção desejada e informa seus dados pessoais.
+O sistema registra a reserva.
+O sistema apresenta o comprovante da reserva.
+Se o cliente solicitar, o sistema estende o caso de uso Enviar Notificação por SMS.
+
+
+                                                                                      9
+Exercício
+
+
+Fluxos Alternativos:
+– Quarto não disponível: O sistema informa indisponibilidade e solicita novas datas ou
+tipo de quarto.
+– Dados incompletos: O sistema solicita correção ou complementação das informações.
+
+
+
+
+                                                                                         10
+

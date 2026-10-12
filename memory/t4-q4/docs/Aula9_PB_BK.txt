@@ -1,0 +1,250 @@
+    Projeto de Bloco:
+Desenvolvimento Backend
+    Prof. Orlando Fonseca Guilarte
+ orlando.guilarte@prof.infnet.edu.br
+Sumário Aula 9
+
+
+
+- Modelos de Domínio
+- Modelos Estáticos e Modelos Dinâmicos
+- Técnicas de Identificação de Classes
+
+
+
+
+                                          1
+Modelos de Domínio
+
+
+Análise conceitual
+O objetivo é compreender o domínio, capturando elementos, responsabilidades e
+relações que existirão no sistema final.
+A análise conceitual não se preocupa ainda com detalhes técnicos, como tipos de dados,
+padrões de projeto ou estruturas de código. Sua função é mapear conceitos do mundo real
+É um processo investigativo que envolve interpretação e abstração.
+
+
+
+
+                                                                                          2
+Modelos de Domínio
+
+
+- Reconhecer os elementos do domínio (objetos significativos)
+- Entender seus comportamentos e responsabilidades.
+- Distinguir o que deve ser parte do sistema do que deve ser ignorado.
+- Estabelecer fronteiras conceituais, mas sem ainda definir estruturas técnicas.
+
+
+
+
+                                                                                   3
+Modelos de Domínio
+
+
+Modelos de Domínio : representação visual das classes conceituais (ideias, coisas ou
+objetos) ou objetos reais em um domínio.
+- Simplificar a compreensão de conceitos chaves e a visão das partes interessadas
+- É uma visualização de coisas no domínio do mundo real e não objetos de software
+Entender os principais conceitos e vocabulário. Dicionário Visual.
+
+
+
+
+                                                                                       4
+Modelos de Domínio
+
+
+
+O modelo de domínio descreve conceitos de situações reais. É uma descrição de coisas
+em uma situação real do domínio de interesse.
+Não são objetos de software, tais como classes Java ou C#, ou objetos de software com
+responsabilidades.
+
+
+
+
+                                                                                        5
+Modelos de Domínio
+
+
+
+
+                     6
+Modelos de Domínio
+Um pagamento no Modelo do Domínio é um conceito, mas um pagamento no Modelo de
+Projeto é uma classe de software. O primeiro inspira o nome e a definição do segundo.
+
+
+
+
+                                                                                        7
+Modelos de Domínio
+
+
+
+Uma classe, do ponto de vista conceitual, é uma abstração de algo importante no domínio.
+Pode ser tangível (Ex: Paciente, Bicicleta) ou intangível (Ex: Agendamento, Locação).
+O papel do analista é perceber o que deve ser representado como entidade persistente ao
+longo do sistema e o que é secundário ou transitório.
+
+
+
+
+                                                                                           8
+Modelos Estáticos e Modelos Dinâmicos
+
+
+Ao modelar um sistema lidamos com duas dimensões: estrutura estática e
+comportamento dinâmico.
+Modelos estáticos: Representam as entidades estáveis do domínio. Permanece ao longo
+do tempo.
+Ex: Pacientes, médicos, consultas, bicicletas, clientes. Esses elementos não descrevem
+como o sistema se comporta, mas sim o que existe nele.
+
+
+
+
+                                                                                         9
+Modelos Estáticos e Modelos Dinâmicos
+
+
+Modelos dinâmicos: Representam comportamentos, interações e mudanças de estado
+que ocorrem ao longo do tempo.
+Ex: Uma bicicleta sendo retirada, usada e devolvida em outra estação.
+Esses comportamentos não definem entidades, mas ações, fluxos e responsabilidades.
+O modelo estático nos mostra quem participa do domínio. O modelo dinâmico mostra o
+que acontece com esses participantes.
+
+
+
+
+                                                                                     10
+Modelos Estáticos e Modelos Dinâmicos
+
+
+
+Técnicas para identificar classes em um domínio.
+- Análise gramatical
+- Identificação de responsabilidades
+
+
+
+
+                                                   11
+Técnicas de Identificação de Classes
+Análise Gramatical
+Ideia: Ler atentamente os requisitos textuais e extrair substantivos, verificando quais deles
+fazem sentido como classes.
+Textos de requisitos normalmente descrevem o funcionamento de um sistema com
+substantivos (para entidades e conceitos) e verbos (para ações e comportamentos).
+Substantivos -> possíveis classes
+Verbos -> possíveis métodos ou responsabilidades
+Nem todos os substantivos serão classes. Alguns são irrelevantes ou apenas partes de
+outras entidades.
+
+                                                                                                12
+Técnicas de Identificação de Classes
+
+Ex: Os pacientes podem agendar consultas com médicos. Cada consulta deve registrar
+data, horário e especialidade. O sistema deve permitir ao médico visualizar sua agenda.
+Substantivos: Pacientes, Consultas, Médicos, Data, Horário, Especialidade, Agenda
+Filtros: Pacientes, Consultas, Médicos -> bons candidatos a classes
+Data e Horário -> conceitos auxiliares (podem ser atributos)
+Especialidade -> pode ser atributo do médico ou uma classe própria, dependendo da
+complexidade
+
+
+
+                                                                                          13
+Técnicas de Identificação de Classes
+
+
+Agenda -> poderia ser uma classe, mas muitas vezes é apenas a coleção de consultas do
+médico
+Identificação:
+Classes principais: Paciente, Médico, Consulta
+Atributos: data, horário, especialidade
+
+
+
+
+                                                                                        14
+Técnicas de Identificação de Classes
+
+
+
+Exercício: Identifique as classes
+O cliente pode retirar uma bicicleta em qualquer estação, utilizar por um período e
+devolver em outra estação. O sistema deve registrar o tempo de uso e calcular o valor da
+locação.
+
+
+
+
+                                                                                           15
+Técnicas de Identificação de Classes
+
+
+
+Classes principais: Cliente, Bicicleta, Estação, Locação
+Atributos: tempo de uso, valor
+Período pode ser apenas a diferença temporal entre retirada e devolução.
+
+
+
+
+                                                                           16
+Técnicas de Identificação de Classes
+
+
+Responsabilidades no domínio
+Em vez de olhar para substantivos, analisamos o que cada entidade do domínio precisa
+fazer ou manter.
+Uma classe deve ter responsabilidades bem definidas. Essas responsabilidades indicam
+que um conceito merece existir isoladamente.
+
+
+
+
+                                                                                       17
+Técnicas de Identificação de Classes
+
+Princípio das responsabilidades
+- Quem é responsável por armazenar esta informação?
+- Quem é responsável por executar esta ação?
+- Quem deve conhecer este dado?
+- Quem deve decidir este comportamento?
+Se a resposta as perguntas sempre aponta para um mesmo conceito, então
+provavelmente esse conceito é uma classe.
+
+
+                                                                         18
+Técnicas de Identificação de Classes
+
+
+Ex: Clínica Médica
+Alguém deve armazenar informações do paciente: Paciente
+Alguém deve organizar horários e especialidades: Consulta
+Alguém deve manter disponibilidade e visualizar agenda: Médico
+Alguém deve conectar paciente e médico: Consulta
+
+
+
+
+                                                                 19
+Técnicas de Identificação de Classes
+
+
+Ex: Aluguel de bicicletas
+Alguém deve registrar retirada e devolução: Locação
+Alguém deve armazenar seus dados físicos e disponibilidade: Bicicleta
+Alguém deve representar o conjunto de bicicletas disponíveis em um local: Estação
+Alguém deve manter informações pessoais e cartão de crédito: Cliente
+
+
+
+
+                                                                                    20
+

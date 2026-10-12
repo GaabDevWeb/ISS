@@ -1,0 +1,695 @@
+Luiz Maia: Boa noite, pessoal. Dia oito de Setembro de dois mil e vinte e seis.
+Luiz Maia: Vamos voltar para a nossa aula.
+Luiz Maia: É?
+Luiz Maia: Eu já não lembro direito o que a gente fez na na última aula.
+Luiz Maia: Deixa eu ver aqui quem a gente fez aqui, cara.
+Luiz Maia: O encapsulamento já foi.
+Luiz Maia: Herança.
+Luiz Maia: Deixa, acabou a herança.
+Luiz Maia: Deixa eu ver aqui se já acabou a herança.
+Luiz Maia: Ih, caramba, a gente viu a gente, ok,
+Luiz Maia: vocês acham que esse conteúdo de herança foi o suficiente? Ou vocês acham que dá para continuar sem mais exemplos?
+Luiz Maia: Deixa eu botar aqui para vocês.
+Luiz Maia: O que foi feito na aula passada?
+Luiz Maia: O que eu acho que foi feito.
+Luiz Maia: Nem sempre. Eu estou de acordo com
+Luiz Maia: a gente, viu aqui aluno, funcionário e professor.
+Luiz Maia: E aí aplicamos a herança. Criamos uma classe abstrata, pessoa
+Luiz Maia: e criamos sobre classes, aluno funcionário e professor
+Luiz Maia: é que o programinha para mostrar esses passos aqui.
+Luiz Maia: Queria perguntar se tem alguma dúvida se eu posso continuar. Ou está tudo tranquilo.
+Luiz Maia: Ok, então
+Luiz Maia: a gente vai começar a aula de hoje,
+Luiz Maia: até porque vocês estão vendo isso também em Java.
+Luiz Maia: Quem é o professor de jovem de vocês
+Luiz Maia: é o Helbert, porra, aí é covardia, né?
+Luiz Maia: O cara é um monstro.
+Luiz Maia: Então vocês já sabem tudo de Java já sabem tudo. São objeto. Não precisam me preocupar com isso. Não,
+Luiz Maia: o cara é
+Luiz Maia: o cara não é fácil. Não, o cara é bom demais.
+Luiz Maia: Vamos falar sobre polimorfismo.
+Luiz Maia: E aí,
+Luiz Maia: gente polimorfismo é uma das coisas mais difíceis.
+Luiz Maia: Sou recapitulando, existem quatro pilares da orientação, objeto, abstração.
+Luiz Maia: Já falamos.
+Luiz Maia: Conceito de classe e objeto encapsulamento.
+Luiz Maia: Já falamos, ou seja, atributos privados, atributos públicos, herança. Já falamos.
+Luiz Maia: A superclasse passa para as subclasses, atributos e métodos.
+Luiz Maia: E você cria uma estrutura em árvore onde você escreve menos código, você pode ampliar
+Luiz Maia: as subclasses para não ter que mexer na superclasse.
+Luiz Maia: E, finalmente, a gente chega no último pilar da orientação. Objeto que é a poliomorfismo.
+Luiz Maia: Vamos falar sobre poliomorfismo e os tipos de polimorfismo, o estático e o dinâmico.
+Luiz Maia: Isso aqui. Eu vou falar com vocês,
+Luiz Maia: mas vocês vão ficar meio perdidos por conta da abstração, que é polimorfismo.
+Luiz Maia: Mas assim você escuta
+Luiz Maia: ver o exemplo e tenta voltar para a parte conceitual, para ver se você entendeu os conceitos
+Luiz Maia: agora, vai ficar difícil de você entender os conceitos, porque eles são muito abstratos.
+Luiz Maia: A gente falou sobre herança.
+Luiz Maia: Permite criar um relacionamento de diversas classes, hierarquia de classes.
+Luiz Maia: Agora podemos tratar essa hierarquia de uma forma comum, mas fazer com que cada classe se comporte de maneira diferente.
+Luiz Maia: O polimorfismo é exatamente isso.
+Luiz Maia: Você fazer uma classe
+Luiz Maia: se comportar de uma maneira diferente em relação às subclasses que ela está no mesmo nível.
+Luiz Maia: Tá certo.
+Luiz Maia: Eu sei que isso não quer dizer nada para vocês agora vai fazer sentido. Daqui a pouco.
+Luiz Maia: Polimorfismo vem do grego muitas formas, polly mofismo, né?
+Luiz Maia: Na programação é a capacidade de um mesmo método responder de formas diferentes, dependendo do objeto real.
+Luiz Maia: Também imagino que isso não faça o menor sentido para vocês.
+Luiz Maia: Então, aqui a ideia é, primeiro, passar os conceitos e aí entrar dentro dos exemplos para vocês juntarem o conceito com o exemplo.
+Luiz Maia: Esse aqui, gente, existem alguns exemplos de polimorfismo que são clássicos.
+Luiz Maia: Qualquer livro, qualquer Google que você faça, você vai esbarrar com alguns exemplos que são clássicos.
+Luiz Maia: Esse é talvez o exemplo mais clássico de polimorfismo.
+Luiz Maia: Tá certo.
+Luiz Maia: Onde você tem uma classe animal, uma superclasse animal e subclasses cachorro, gato, pássaro.
+Luiz Maia: Tá certo.
+Luiz Maia: E você quer que essas subclasses se comportem de maneira diferente da classe animal.
+Luiz Maia: Então o cachorro faz o barulho de cachorro, ou seja, Wau Wau,
+Luiz Maia: o gato faz meal e o pássaro faz piu piu.
+Luiz Maia: Então eu quero que as subclasses se comportem de maneira diferente, em função
+Luiz Maia: de como elas são declaradas no meu código.
+Luiz Maia: E aí existe um método chamado emitir som,
+Luiz Maia: que vai se comportar diferente, dependendo da minha subclasse.
+Luiz Maia: Então, dependendo de como eu criar a minha.
+Luiz Maia: O meu objeto.
+Luiz Maia: Se eu criar um cachorro da classe animal, ele vai fazer o barulho de cachorro.
+Luiz Maia: Se eu criar uma, subclasse um objeto da subclasse gato,
+Luiz Maia: ele vai se comportar como um animal, mas vai fazer o som do gato.
+Luiz Maia: O pássaro é a mesma coisa.
+Luiz Maia: É um exemplo muito batido, muito comum. Você vai encontrar em qualquer lugar que você procure sobre se você chegar no chat Ept agora, escrever polimorfismo, exemplo: vai aparecer esse exemplo aqui para você.
+Luiz Maia: Vamos lá.
+Luiz Maia: Essa é a parte teórica que eu estou falando com vocês. Existem dois tipos de polimorfismo.
+Luiz Maia: O polimorfismo estático e o dinâmico.
+Luiz Maia: Tá certo.
+Luiz Maia: Qual a diferença do polimorfismo estático para o dinâmico.
+Luiz Maia: O estático é definido. É decidido em tempo de compilação,
+Luiz Maia: também chamado de sobrecarga ou overloading, e existe o poema dinâmico
+Luiz Maia: que é definido em tempo de execução,
+Luiz Maia: que é chamado de sobr escrita ou overriding.
+Luiz Maia: Isso é para você fazer prova para concurso, prova para estágio. Prova para emprego. O Crat pergunta quais são os dois tipos de polimorfismo estático e dinâmico. Explica os dois tipos.
+Luiz Maia: E aí eu vou te ensinar a responder essas perguntas de entrevista por hemofilia estático.
+Luiz Maia: Existem vários tipos de polimorfismo estático.
+Luiz Maia: Está certo, vários cinco. Seis.
+Luiz Maia: Vou falar dos dois principais: a sobrecarga de operador e a sobrecarga de método.
+Luiz Maia: Nós já vimos os dois nas aulas passadas
+Luiz Maia: na sobrecarga de operador, por exemplo o operador, mas
+Luiz Maia: que é o operador de adição.
+Luiz Maia: Ele pode servir para fazer soma, mas também ele pode servir para fazer concatenação, dependendo
+Luiz Maia: do contexto aonde esteja esse operador.
+Luiz Maia: Então aqui, ó resulte, recebe op1 mas op2
+Luiz Maia: esse cara é soma porque os operandos são double
+Luiz Maia: soma mais resulte. É uma String com Result que é Double.
+Luiz Maia: O que ele faz, ele converte o. Resulte que é double para string e concatena com soma.
+Luiz Maia: Então aqui eu tenho um exemplo clássico de polimorfismo estático, e de um tipo chamado sobrecarga de operador.
+Luiz Maia: Na verdade, nessa linha aqui console Wrightline tem três sobrecargas.
+Luiz Maia: Eu só falei de uma.
+Luiz Maia: Está certo, mas nessa linha aqui tem três sobrecargas.
+Luiz Maia: Vou deixar vocês com água na boca.
+Luiz Maia: Pesquisem para entender as outras duas.
+Luiz Maia: Sobrecarga de método aqui. Eu estou fazendo uma sobrecarga do somar.
+Luiz Maia: Ana calcula.
+Luiz Maia: Eu posso fazer o calcula.
+Luiz Maia: Eu tenho aqui o somar com o Int e o somar com o Double.
+Luiz Maia: Isso é uma sobrecarga. Por quê? A assinatura do método? Ele muda.
+Luiz Maia: Aqui é Int. Aqui é Double.
+Luiz Maia: Isso é uma sobrecarga de método. Os métodos têm o mesmo nome. Porém, tem uma assinatura diferente.
+Luiz Maia: A sobrecarga de construtor é um tipo de sobrecarga de método
+Luiz Maia: onde o construtor. Eu tenho aqui um construtor vazio e um construtor cheio.
+Luiz Maia: E aí, em tempo de compilação, ele vai decidir qual é o construtor que ele vai utilizar a mesma coisa aqui em tempo de compilação. A mesma coisa aqui em tempo de compilação.
+Luiz Maia: Alguma pergunta?
+Luiz Maia: Sob poema firme? Estático.
+Luiz Maia: Isso já foi visto.
+Luiz Maia: Se você não viu, é porque você não assistiu as aulas anteriores.
+Luiz Maia: Mas se você tiver dúvida, eu posso explicar
+Luiz Maia: de novo. Não tem nenhum problema. Não, tá gente.
+Luiz Maia: Ok, polimorfino dinâmico.
+Luiz Maia: O polimorfismo dinâmico é implementado a partir da sobre escrita de métodos,
+Luiz Maia: que é o Mad Math Overriding.
+Luiz Maia: As duas maneiras de implementar o poliumorfismo dinâmico são o polimorfismo com base em herança e o polimorfismo com base em interface,
+Luiz Maia: só existem duas formas de implementação de polimorfismo dinâmico.
+Luiz Maia: Tá certo.
+Luiz Maia: Com base em herança e com base em interface,
+Luiz Maia: a gente vai ver hoje. E na próxima aula, o polimorfismo com base em herança.
+Luiz Maia: E depois na outra aula, a gente vai ver polimorfismo. Usando interface,
+Luiz Maia: o poliomorfismo com base em herança, as classes compartilham
+Luiz Maia: código e estrutura de uma superclasse comum,
+Luiz Maia: e ele pode implementar isso de forma virtual ou abstrata, o polimorfismo
+Luiz Maia: baseado em interface, as classes não compartilham necessariamente uma hierarquia de classes, apenas a assinatura dos métodos a interface.
+Luiz Maia: Então vamos parar aqui e pensar.
+Luiz Maia: A gente vai primeiro tratar isso aqui, depois a gente vai tratar interface
+Luiz Maia: e ver como é que implementa polimorfismo utilizando interface.
+Luiz Maia: Então existem duas formas de polimorfismo dinâmico usando herança, usando interface
+Luiz Maia: nessa aula, e na próxima a gente só vai ver baseado em herança.
+Luiz Maia: Tá certo.
+Luiz Maia: Aqui eu faço um quadro comparativo entre virtual, abstrato e interface
+Luiz Maia: isso aqui. Vocês só irão entender.
+Luiz Maia: Na hora que eu fizer exemplo, você não vai conseguir ler isso aqui e entender não dá.
+Luiz Maia: É difícil demais, tá certo?
+Luiz Maia: Esses conceitos que eu estou explicando para vocês aqui valem também para a Java.
+Luiz Maia: Java é igualzinho. Muda a sinta se, mas não muda o conceito
+Luiz Maia: em Python não é a mesma coisa. Python tem dificuldade com orientação, objetos.
+Luiz Maia: Tá certo.
+Luiz Maia: A gente vai fazer agora. A gente vai pegar aqui um exemplo que eu fiz. Pronto
+Luiz Maia: desse negócio do animal, tá?
+Luiz Maia: E vou mostrar
+Luiz Maia: a solução do polimorfismo com os animais de duas formas, usando virtual e usando abstrato,
+Luiz Maia: para vocês terem a ideia exatamente de como isso funciona.
+Luiz Maia: Tá na implementação
+Luiz Maia: usando virtual, a superclasse implementa um método padrão, mas as subclasses podem ou não redefinir as suas funções implementações
+Luiz Maia: caso a subclasse não implemente o método virtual da superclasse. O método padrão definido no Supercap será executado.
+Luiz Maia: A subclasse pode ou não ser abstrata
+Luiz Maia: na implementação, utilizando Abstract, que é o abstrato a superclasse não implementa um método padrão, apenas um método abstrato.
+Luiz Maia: As subclasses devem implementar de forma obrigatória as suas funções, ou seja, as implementações.
+Luiz Maia: Caso você use métodos abstratos, a classe tem que ser abstrata
+Luiz Maia: aqui. Eu mostro uma comparação entre virtual e abstrato.
+Luiz Maia: Eu sei que vocês não aguentam mais teoria.
+Luiz Maia: Vamos para a prática
+Luiz Maia: esse primeiro exemplo. Eu não vou fazer digitando com vocês. Não vou estar fazendo junto. Não,
+Luiz Maia: eu vou estar primeiro mostrando para vocês. E depois eu vou fazer do zero o próximo exemplo nesse exemplo, aqui
+Luiz Maia: nesses dois exemplos aqui.
+Luiz Maia: Olha só.
+Luiz Maia: Eu tenho uma classe animal aqui. Eu estou usando uma classe animal abstrata.
+Luiz Maia: Quer dizer, isso.
+Luiz Maia: Eu não consigo estanciar uma classear. Um objeto da classe animal.
+Luiz Maia: Se eu tentar criar um objeto da classe animal, ele não vai aceitar porque ela é abstrata.
+Luiz Maia: E aí eu vou fazer o quê? Eu tenho um método virtual emitir som, que é genérico
+Luiz Maia: som de um animal.
+Luiz Maia: O cachorro.
+Luiz Maia: O que ele faz.
+Luiz Maia: Ele herda da classe animal.
+Luiz Maia: Tudo que tem na classe animal, inclusive emitir som.
+Luiz Maia: Só que na classe cachorro.
+Luiz Maia: Eu quero fazer uma sobre escrita no investir som.
+Luiz Maia: Então a classe animal tem o emitir som dela.
+Luiz Maia: Padrão default, que é som de um animal,
+Luiz Maia: e o cachorro faz o quê?
+Luiz Maia: Uau, au au.
+Luiz Maia: Ele sobrescreve o que está na superclasse animal.
+Luiz Maia: A mesma coisa pro gato.
+Luiz Maia: A mesma coisa para o pássaro.
+Luiz Maia: Repara que aqui, ó você tem
+Luiz Maia: esse modificador chamado Override em Java. Você faz assim Over Wright.
+Luiz Maia: Desse jeito. Aqui você faz uma Anotation. Uma anotação
+Luiz Maia: aqui em C Sharp. Você não tem anotação. Não, você vai colocar um modificador
+Luiz Maia: que é o Overwride. É a mesma coisa. É o mesmo conceito.
+Luiz Maia: O outro animal não tem nada.
+Luiz Maia: Por que ele não tem nada?
+Luiz Maia: Porque, como é virtual, o método que foi declarado na classe animal. Ele vai herdar esse método por Default.
+Luiz Maia: Então esse outro animal que está aqui vai herdar ou emitir som
+Luiz Maia: da superclasse animal. Os outros não. Eles estão sobrescrevendo um método de emitir som.
+Luiz Maia: Olha só o programa principal
+Luiz Maia: aqui. Eu tenho um erro.
+Luiz Maia: Eu não posso distanciar a classe animal. Por que eu não posso distanciar a classe animal?
+Luiz Maia: Porque ela é abstrata.
+Luiz Maia: Se eu tirar isso aqui.
+Luiz Maia: Ele aceita.
+Luiz Maia: Olha lá, parou de dar erro.
+Luiz Maia: Faz sentido eu estanciar a classe animal.
+Luiz Maia: Eu acho que não.
+Luiz Maia: Ela só serve como base.
+Luiz Maia: Mas se quiser, daria para subscrever o método em outro animal. Não entendi, Mateus, tua pergunta.
+Luiz Maia: Não consegui entender, cara.
+Matheus Ramos: Por exemplo, se eu quisesse sobre escrever o método em outro animal, para ele fazer algum som que nem tem no cachorro e no gato.
+Matheus Ramos: Daria para fazer Ué.
+Luiz Maia: Não tá feito.
+Matheus Ramos: Ele está recebendo.
+Matheus Ramos: Ele está recebendo um método de animal, certo? Tá.
+Luiz Maia: Só tem que estar subscrevendo o método.
+Matheus Ramos: A classe animal. Está tudo certo. Mas há outro animal em outro animal na classe. Outro animal.
+Luiz Maia: No outro animal. Ele não é obrigado a subscrever porque é virtual.
+Matheus Ramos: Ah, tá, entendi. Mas daria pra fazer ou não.
+Luiz Maia: Daria.
+Matheus Ramos: Ah, sim. Era essa adulta.
+Luiz Maia: Você poderia em outro animal, fazer uma sobre escrita. Mas qual é o som que você quer que ele faça? Se você não sabe qual é o animal que você quer.
+Matheus Ramos: Beleza. Era só para entender se dava para.
+Luiz Maia: Não pode. Você pode sobre escrever. Sim.
+Matheus Ramos: Mil, nove, cem.
+Luiz Maia: Ele funciona ali, normalmente aí, aqui ó já tá dando problema. Ele não aceita
+Luiz Maia: agora aqui, animal.
+Luiz Maia: Ele está criando um cachorro.
+Luiz Maia: Só que esse animal, cachorro. Ele é animal.
+Luiz Maia: E também cachorro.
+Luiz Maia: Cachorro é um animal.
+Luiz Maia: O gato também animal.
+Luiz Maia: O pássaro também animal.
+Luiz Maia: E outro animal também animal.
+Luiz Maia: E ele vai emitir som. Só que ele vai olhar
+Luiz Maia: para cada um na hora que ele for executar
+Luiz Maia: o emitir som. Ele vai ver
+Luiz Maia: isso aqui. Que subclasse é essa? Ah, é cachorro,
+Luiz Maia: beleza. Faz o sono do cachorro que subclasse. É essa, Gato Beleza.
+Luiz Maia: E aí? Dá para fazer o seguinte. Aqui. Quer ver? Deixa eu ver se eu consigo mostrar para vocês. Isso.
+Luiz Maia: Olha só! Que legal.
+Luiz Maia: Vocês vão ver aqui.
+Luiz Maia: Qual é o tipo da subclasse que ele está fazendo? Emitir som. Vamos rodar para vocês verem
+Luiz Maia: cachorro, gato, pássaro, outro animal.
+Luiz Maia: Deixa eu melhorar isso aqui.
+Luiz Maia: Cachorro, gato, pássaro, outro animal.
+Luiz Maia: Ou seja, olha só o que é polimorfismo, gente.
+Luiz Maia: Eu estou criando um animal, tá certo, genérico.
+Luiz Maia: E estou atribuindo a ele o cachorro.
+Luiz Maia: Na hora que eu mando emitir som, ele manda fazer o quê? O que o cachorro está associado.
+Luiz Maia: Só que eu estou referenciando a superclasse e não a subclasse.
+Luiz Maia: O gato. A mesma coisa. O pássaro, o outro animal também, ou seja, a subclasse durante o tempo de execução é interpretada e ela vai emitir um som respectivo
+Luiz Maia: desse animal.
+Luiz Maia: Tem gente que acha que esse exemplo, professor, uma dúvida. Você só declarou o tipo da variável animal na linha nove, certo?
+Luiz Maia: E nas demais, na verdade. Olha só aqui. Eu declarei animal
+Luiz Maia: aqui quando eu faço animal receber gato, eu estou sobre escrevendo o animal.
+Luiz Maia: O animal era cachorro. Virou gato.
+Luiz Maia: Depois ele era gato. Virou pássaro
+Luiz Maia: depois de pássaro. Ele virou outro animal.
+Luiz Maia: Eu estou sobre escrevendo a variável.
+Luiz Maia: Eu poderia fazer assim. Ó animal! Um animal! Dois, três, quatro.
+Luiz Maia: Entendeu, Gabriel? Ou não,
+Luiz Maia: você está sobre escrevendo o animal valor antigo dele foi perdido.
+Luiz Maia: Já era.
+Luiz Maia: Entendeu, Gabriel? Ou não?
+Luiz Maia: Não, não, não, não.
+Luiz Maia: Você tem um objeto que é um objeto para cada bicho.
+Luiz Maia: Tá certo.
+Luiz Maia: Não é um objeto diferente para cada bicho. É o mesmo objeto.
+Luiz Maia: Ah, Lp: Eu quero criar vários animais.
+Luiz Maia: Eu quero criar vários animais. Como é que eu faço isso?
+Luiz Maia: Se você quer criar vários animais, vamos lá.
+Luiz Maia: E aí?
+Luiz Maia: Vamos lá, gente.
+Luiz Maia: Python, Python. Você tem lista?
+Luiz Maia: Tá certo.
+Luiz Maia: Em Python. As listas são heterogêneas. O que quer dizer isso
+Luiz Maia: numa lista? Você pode ter string inteiro real
+Luiz Maia: buliano objeto. Você pode ter um monte de coisa. O que você quiser numa lista em Python, você pode ter
+Luiz Maia: aqui, não em C Sharp. As listas são homogêneas, ou seja,
+Luiz Maia: Lista de String só tem String.
+Luiz Maia: Lista de inteiro. Só tem inteiro
+Luiz Maia: lista de real. Só tem real
+Luiz Maia: lista de objeto. Só tem objeto daquele tipo.
+Luiz Maia: Bom, se eu não estivesse usando herança,
+Luiz Maia: eu teria que fazer três listas. Na verdade. Quatro.
+Luiz Maia: Uma para cachorro, outra para gato, outra para
+Luiz Maia: pássaro e uma outra para outro animal.
+Luiz Maia: Com esse esquema de herança, eu posso criar uma lista que não é de um bicho.
+Luiz Maia: Um animal específico é de um animal qualquer.
+Luiz Maia: Como é que faz isso?
+Luiz Maia: Liste diamante?
+Luiz Maia: O tipo do objeto que vai estar na lista animal.
+Luiz Maia: Então isso aqui é uma lista de animais.
+Luiz Maia: Estou começando com ela vazia.
+Luiz Maia: Vou fazer o seguinte.
+Luiz Maia: Vou pegar isso aqui, tirar daqui, jogar aqui para baixo.
+Luiz Maia: E aí eu vou pegar isso aqui.
+Luiz Maia: Eu vou comentar.
+Luiz Maia: Eu tenho uma lista de animais
+Luiz Maia: que pode ser cachorro, gato, qualquer coisa que eu tenha declarado como subclasse de animal.
+Luiz Maia: Aí eu faço assim, ó animais, Adi, New cachorro, animais,
+Luiz Maia: ponto Ad. Que é o aprende do C Sharp New gato, animais, ponto. Appende Ad New pássaro,
+Luiz Maia: animais ponto a de New,
+Luiz Maia: outro animal.
+Luiz Maia: Criei uma lista de animais aqui.
+Luiz Maia: Nesse exemplo é, eu estou criando a variável animal.
+Luiz Maia: Ela vai mudando o objeto que ela aponta é a mesma variável animal. Porém ele vai mudando o conteúdo do animal. Aqui é cachorro. Aqui é gato.
+Luiz Maia: Eu perco o valor anterior aqui. Não, eu estou guardando os valores dos animais todos na lista.
+Luiz Maia: Agora, eu vou fazer o seguinte. Eu vou mandar exibir essa lista.
+Luiz Maia: E aí eu vou usar o comando Fort do C Sharp Fore it
+Luiz Maia: animal. É o nome da classe
+Luiz Maia: animal. É o valor que vai ser percorrido em animais.
+Luiz Maia: Console
+Luiz Maia: Wright Line animal, ponto, Gettype, ponto, Ney console ponto.
+Luiz Maia: Wright Line animal emitir som
+Luiz Maia: aqui. Eu não preciso de console.
+Luiz Maia: Pronto, peguei, professor. Mas você instanciar sem passar os atributos da classe não criaria um monte de objetos vazios.
+Luiz Maia: Gabriel, esse exemplo nesse exemplo, eu não preciso passar nada como parâmetro na construção dos objetos.
+Luiz Maia: Repara que a classe animal.
+Luiz Maia: Ela não tem construtor nenhum.
+Luiz Maia: Poderia ter. Poderia?
+Luiz Maia: Veremos isso no próximo exemplo.
+Luiz Maia: Mas aqui a classe animal
+Luiz Maia: não tem construtor. Eu poderia definir um construtor, mas para fazer o que nesse construtor,
+Luiz Maia: eu poderia fazer. Um construtor, por exemplo,
+Luiz Maia: para dar o nome para o bicho.
+Luiz Maia: Podemos fazer isso podemos, tipo, só para dar um exemplo para você.
+Luiz Maia: O bicho tem um nome?
+Luiz Maia: Aí vem aqui, ó Public animal
+Luiz Maia: vazio não tem nada. Não tem nome nenhum.
+Luiz Maia: Public animal animal String.
+Luiz Maia: Nome
+Luiz Maia: pronto, deu um nome para o bicho.
+Luiz Maia: Foi animal.
+Luiz Maia: Aí eu venho aqui em cachorro.
+Luiz Maia: E posso fazer assim. Ele vai herdar da classe animal o construtor. Eu posso fazer assim.
+Luiz Maia: Public cachorro
+Luiz Maia: String. Nome:
+Luiz Maia: dois pontos deise para poder chamar super classe. Nome.
+Luiz Maia: Pronto, estou dando um nome pro cachorro aqui, ó. No nosso programa,
+Luiz Maia: a gente pode vir agora e fazer assim. Ó
+Luiz Maia: console animal, ponto, nome. Agora eu preciso criar o cachorro com nome ou não, né,
+Luiz Maia: cachorro? Como é que eu vou chamar esse cachorro é chamar ele de Led.
+Luiz Maia: Vai ser o nome do cachorro. É Led.
+Luiz Maia: Aí eu vou executar esse código aqui para ver o que acontece.
+Luiz Maia: Olha lá, cachorro Led Awal ficou feio. Isso aqui, hein?
+Luiz Maia: Deixa eu melhorar isso aqui.
+Luiz Maia: Deixa eu ver se melhorou aqui a saída, cachorro Led awal gato miau,
+Luiz Maia: pássaro piu, piu. Outro animal. Som de animal
+Luiz Maia: não ficou legal. Ainda não, né?
+Luiz Maia: Tem alguma coisa aqui que não está legal. O que é?
+Luiz Maia: Ele está pulando uma linha entre uma coisa e outra. Por quê?
+Luiz Maia: Nem me da classe. O nome emitiu o som emitir som?
+Luiz Maia: Não sei. Não sei porque ele está pulando. Linha.
+Luiz Maia: O último console dentro do escopo do Vorit. Esse cara aqui,
+Luiz Maia: ele imprime, escara, escara, emite o som e pula a linha.
+Luiz Maia: Por que ele não está fazendo direto aqui? Que ele fez legal, Ah, já! Sei
+Luiz Maia: porque o gato não tem nome.
+Luiz Maia: O gato não tem nome.
+Luiz Maia: Se animal, ponto, nome, igual a nulo. Diferente de nulo.
+Luiz Maia: Aí ele pula a linha.
+Luiz Maia: Agora vai ficar bonito.
+Luiz Maia: Olá, e não continuou com um problema aqui. Ó,
+Luiz Maia: ele não entendeu isso aqui. Não,
+Luiz Maia: depois eu vejo isso.
+Luiz Maia: O importante é vocês terem entendido o que eu fiz aqui.
+Luiz Maia: O polimorfismo, isso que é o mais importante. Depois eu vejo o que está errado aqui nesse código
+Luiz Maia: desse salto de linha. Aqui a mais aqui
+Luiz Maia: a gente viu lista que não era para falar. A gente viu for Hit, que também não era para falar. Mas o mais importante, você está vendo que o animal se comporta de maneira diferente, dependendo do tipo do animal. É isso que é. Polimorfismo,
+Luiz Maia: múltiplas formas.
+Luiz Maia: Você tem lá animal, dependendo do tipo do animal. Ele faz au au miau piu piu.
+Luiz Maia: É isso que é o polimorfismo.
+Luiz Maia: E esse polimorfismo é dinâmico. Ele resolve em tempo de execução e não em tempo de compilação.
+Luiz Maia: Tá certo.
+Luiz Maia: Nesse exemplo, no polimorfismo, um.um, a gente usou uma classe abstrata com um método virtual, ou seja, as subclasses
+Luiz Maia: podem ou não subscrever o método virtual.
+Luiz Maia: Cachorro subscreveu gato também. E pássaro também
+Luiz Maia: outro animal. Não sobre escreveu logo. Ele usou quem? O método da superclasse animal.
+Luiz Maia: Isso aqui é dificílimo, gente, se você não entender isso aqui, você está perdoado,
+Luiz Maia: porque isso aqui é muito, muito complexo.
+Luiz Maia: Agora vou fazer diferente o animal.
+Luiz Maia: Ele é uma classe abstrata.
+Luiz Maia: Talvez agora, Gabriel melhore o tempo para você.
+Luiz Maia: A classe é abstrata e o método é abstrato.
+Luiz Maia: O método abstrato não tem corpo. Ele não tem
+Luiz Maia: especificação do que vai ser feito.
+Luiz Maia: Você vai dizer o que esse método vai funcionar nas subclasses.
+Luiz Maia: Então o cachorro vai subscrever o método abstrato.
+Luiz Maia: O gato vai subscrever o método abstrato.
+Luiz Maia: Outro animal. Ele precisa sobre escrever o método, emitir som. Caso contrário, ele vai dar erro
+Luiz Maia: se eu não fizer isso aqui. Ó,
+Luiz Maia: se eu não fizer isso aqui, vai dar erro.
+Luiz Maia: Olha lá, outro animal precisa implementar animal. Emitir som não funciona
+Luiz Maia: o virtual. Você pode ou não subscrever
+Luiz Maia: o abstrato. Você é obrigado a sobrescrever pássaro.
+Luiz Maia: Essa é a grande diferença entre o virtual e o abstrato,
+Luiz Maia: o virtual, você pode ou não sobre escrever.
+Luiz Maia: Se você não sobre escrever, ele vai pegar o método da superclasse
+Luiz Maia: o abstrato. Você tem que sobre escrever. Você é obrigado a sobre escrever.
+Luiz Maia: Caso contrário, ele não compila.
+Luiz Maia: Vai dar erro.
+Luiz Maia: E aí o código aqui vai praticamente ser o mesmo.
+Luiz Maia: Eu não posso distanciar a classe animal porque ela é abstrata
+Luiz Maia: aqui. A classe animal poderia ou não ser abstrata
+Luiz Maia: aqui. Ela é obrigada a ser abstrata. Por quê? Porque o método dentro dela é abstrato.
+Luiz Maia: Classes que têm métodos abstratos, são de forma obrigatória abstratas.
+Luiz Maia: E aí
+Luiz Maia: a gente pode fazer aquilo. Vai dar
+Luiz Maia: a mesma coisa. Ó, vamos trocar aqui pra
+Luiz Maia: pra acertar esse cara como
+Luiz Maia: tá lá awá o miau piu, piu. Som de animal. Funcionou exatamente igual a outra. A gente poderia fazer usando lista. Poderia também não tem nenhum problema
+Luiz Maia: aqui. Ó, vou pegar esse código que está aqui. Ele vai funcionar exatamente igual
+Luiz Maia: pegar esse código que está aqui.
+Luiz Maia: Copiar
+Luiz Maia: colar aqui.
+Luiz Maia: É claro que eu vou ter que mudar esse construtor aqui em cima.
+Luiz Maia: Primeiro, eu vou comentar isso aqui antes de acertar o código.
+Luiz Maia: O cachorro tem agora esse construtor aqui. Ó
+Luiz Maia: copiar esse construtor para o cachorro.
+Luiz Maia: E tem que alterar também a classe animal. A classe animal tem esses dois construtores aqui.
+Luiz Maia: Ah, tá,
+Luiz Maia: vacilei aqui.
+Luiz Maia: Pronto, agora o nosso programa principal.
+Luiz Maia: Tá tudo prontinho.
+Luiz Maia: Funcionou direitinho. Cachorro led awal gato miau, pássaro piu piu. Outro animal. Som de animal
+Luiz Maia: está aqui a diferença do polinorfismo dinâmico baseado em herança usando métodos virtuais e usando métodos abstratos.
+Luiz Maia: Está aqui a diferença.
+Luiz Maia: Gabriel consegui te consegui melhorar o teu tempo aí cara ou não,
+Luiz Maia: senão eu vou dar outro exemplo agora, para vocês poderem
+Luiz Maia: tentar melhorar a cabeça de vocês. Gente. Isso aqui não é fácil.
+Luiz Maia: Eu estou ensinando para vocês
+Luiz Maia: coisas dificílimas. Muita gente não sabe. Muita gente. Que programa? Há anos não sabe isso. Que eu estou mostrando para vocês.
+Luiz Maia: Na verdade, a maioria dos programadores
+Luiz Maia: de mercado não sabe isso, não sabe.
+Luiz Maia: Não sabe o que é polimorfismo. Não sabe quando usar como usar. Não sabe nada, gente,
+Luiz Maia: porque é difícil pra caramba. Isso aqui, gente,
+Luiz Maia: eu levei muito tempo para entender isso. Para ensinar, para fazer exemplos.
+Luiz Maia: Cara, assim. É um negócio muito abstrato.
+Luiz Maia: É muito abstrato.
+Luiz Maia: Eu vou dar um exemplo para vocês agora. Diferente.
+Luiz Maia: Eu acho que exemplo vai.
+Luiz Maia: Não, não dá para ser rápido
+Luiz Maia: aqui não tem como ser rápido. A gente vai fazer tudo devagar até vocês entenderem.
+Luiz Maia: É,
+Luiz Maia: vou fazer um pequeno intervalo só para tomar uma água aqui, dar uma respirada. E a gente vai fazer um outro exemplo de polimorfino. A gente vai fazer vários exemplos.
+Luiz Maia: Vai chegar uma hora que vai virar uma receita de bolo.
+Luiz Maia: Tá?
+Luiz Maia: Vocês vão olhando os exemplos, e vão vendo que os exemplos são muito parecidos ao ponto de você falar. Assim. Olha
+Luiz Maia: se eu tiver um problema parecido com esse, eu resolvo igualzinho que o Lp ensinou
+Luiz Maia: o. Atende vocês, por exemplo.
+Luiz Maia: Você vai bater lá no ate e vai falar. Pô, o Lp deu um exercício igualzinho a esse aqui. Você vai trocar o nome das variáveis. Vai trocar lá alguma coisa e vai dar certo,
+Luiz Maia: porque vai virar uma receita de bolo.
+Luiz Maia: Eu vou ensinar para vocês de um jeito que você vai bater o olho no problema e vai falar assim. Opa, isso aqui é polimorfismo, Puff. Como é que eu resolvo? Puff está resolvido.
+Luiz Maia: Tá certo.
+Luiz Maia: Não é fácil,
+Luiz Maia: mas se você acompanhar a aula e os exemplos. Você vai conseguir chegar nesse ponto. Que eu estou querendo que você chegue
+Luiz Maia: ao ponto de você olhar para um problema e saber. Opa, isso aqui é polimorfismo. Opa, isso aqui é polimorfismo dinâmico. Eu vou usar a interface. Eu vou usar a
+Luiz Maia: abstrato vou usar virtual aí você já vai cair dentro da solução.
+Luiz Maia: Vai demorar um tempo, mas você vai conseguir.
+Luiz Maia: Confia em mim.
+Luiz Maia: No Lp, a gente confia.
+Luiz Maia: Não tem aquela máxima na cédula de um dólar.
+Luiz Maia: Engorde, We Trust.
+Luiz Maia: Claro que eu não quero fazer comparação minha com Jesus, com Deus.
+Luiz Maia: Mas podia ter uma cédula de R um,zero. Assim, no Lp: A gente confia.
+Luiz Maia: Ah, tá
+Luiz Maia: gente, estamos de volta. Vamos fazer um outro exemplo,
+Luiz Maia: eu vou chamar esse exemplo aqui primeiro. Vou fazer um exemplo. Sem polimorfismo,
+Luiz Maia: para vocês verem como é que seria.
+Luiz Maia: Vou adicionar um projeto novo aqui chamado polimorfismo. Dois polêmorfismo, dois.um.
+Luiz Maia: Essa versão vai ser sem polimorfismo
+Luiz Maia: aqui, eu vou criar três classes.
+Luiz Maia: Primeiro, criar a nossa pastinha Models,
+Luiz Maia: que é o padrão do C Sharp e do Dotnet
+Luiz Maia: e aqui. Eu vou criar três figuras geométricas quadrado.
+Luiz Maia: Vou criar o consultor vazio.
+Luiz Maia: Vou criar o construtor cheio.
+Luiz Maia: O quadrado tem lado, né?
+Luiz Maia: Publicado, Double lado get set quadrado recebe
+Luiz Maia: double o lado em minúsculo, que é o parâmetro, e eu atribuo ao atributo da classe.
+Luiz Maia: Um lado, vou calcular a área do quadrado publicado.
+Luiz Maia: Double, calcular área
+Luiz Maia: o cálculo da área do quadrado é lado vezes lado ao lado, ao quadrado, como vocês quiserem.
+Luiz Maia: Vamos para o programa principal aqui para ver se funciona
+Luiz Maia: quadrado.
+Luiz Maia: Figura mil quadrado.
+Luiz Maia: Vou passar aqui dois no construtor.
+Luiz Maia: A área igual
+Luiz Maia: figura.
+Luiz Maia: Pronto, calcular a área.
+Luiz Maia: Queria saber se vocês têm alguma dúvida em relação a isso aqui?
+Luiz Maia: Se eu te vendo muito rápido, vocês falem comigo para ir mais devagar.
+Luiz Maia: A área igual a quatro.
+Luiz Maia: Beleza, João, eu vou dar uma olhada depois isso aqui para. Ok? Eu já imaginava que fosse isso mesmo. Se if String parará parará. Eu já imaginava que fosse essa solução.
+Luiz Maia: Obrigado, João. Valeu mesmo agora eu vou criar uma outra figura geométrica. O retângulo Hade. Classe etangulo.
+Luiz Maia: O retângulo vai ter o quê?
+Luiz Maia: Ele tem altura, altura e largura. É isso? Como é que é o cálculo do do.
+Luiz Maia: Ai, meu Deus do céu.
+Luiz Maia: Isso aqui tá tudo errado. Não sei o que eu fiz aqui, cara.
+Luiz Maia: É base e altura, beleza.
+Luiz Maia: Ô Gabriel poderia ser cara, mas assim a área,
+Luiz Maia: ela pode ser um atributo da classe. Poder pode.
+Luiz Maia: Mas a pergunta que eu te faço. Você precisa guardar a área dentro da figura do quadrado.
+Luiz Maia: Você não pode calcular ela em tempo de execução,
+Luiz Maia: porque você vai ter uma variável que vai ficar com um valor que é calculado de forma dinâmica.
+Luiz Maia: Então, toda vez que você for fazer o cálculo da área. Você vai ter que passar os parâmetros para fazer o cálculo.
+Luiz Maia: Então, assim eu não acho que seja legal colocar a área
+Luiz Maia: dentro do quadrado, mas poder pode
+Luiz Maia: poder. Pode, mas eu não acho uma boa ideia.
+Luiz Maia: Eu acho que não seria uma boa ideia. Não aqui, ó,
+Luiz Maia: porque o cálculo da área está baseado
+Luiz Maia: na base e na altura, no lado do quadrado. Então, se mudar o lado muda a área.
+Luiz Maia: Então você vai ter uma variável dentro do objeto que vai ser atualizada o tempo todo. Então não vejo muito sentido você ter a área como um atributo da classe. Não consigo imaginar isso.
+Luiz Maia: É igual. O salário é igual, o salário de funcionário.
+Luiz Maia: Se o funcionário. Eu tenho vários tipos de funcionário.
+Luiz Maia: Eu tenho o gerente, o administrativo e o vendedor.
+Luiz Maia: Você vai guardar dentro da classe funcionária o salário dele.
+Luiz Maia: Se o salário muda, a forma de cálculo, dependendo do tipo do funcionário, não faz sentido.
+Luiz Maia: Igual conta corrente, calcular saldo.
+Luiz Maia: Se o calcular saldo depende da subclasse. Ou seja,
+Luiz Maia: é uma conta normal. É uma conta especial. É uma conta poupança. Você vai guardar o saldo como um atributo da classe. Ou você vai calcular isso
+Luiz Maia: na hora da execução daquela classe.
+Luiz Maia: Estou te dando exemplos para você ver como não é uma boa ideia você fazer isso.
+Luiz Maia: Te dei alguns exemplos.
+Luiz Maia: Retângulo vazio, public retângulo onde eu vou passar é Double a base.
+Luiz Maia: Eu tenho um problema.
+Luiz Maia: Eu tenho um problema aqui.
+Luiz Maia: Base é uma palavra reservada do C. Sharp. Ele não aceita
+Luiz Maia: um parâmetro como base, porque base é usado para fazer a sobrecarga de operador de construtor.
+Luiz Maia: Então eu não posso usar a base aqui porque é uma palavra reservada.
+Luiz Maia: Eu posso usar assim. Base, deixa eu até pensar aqui. Como é que eu posso fazer?
+Luiz Maia: Posso fazer, assim né? Pode ser assim.
+Luiz Maia: O base do retângulo pra ficar diferente.
+Luiz Maia: Pronto, agora eu vou calcular a área
+Luiz Maia: base vezes altura. Vamos ver se funciona aqui o código agora.
+Luiz Maia: Ah, tá.
+Luiz Maia: Não, não resolveu? Não,
+Luiz Maia: ele faria a conversão o dia inteiro para a real na hora da.
+Luiz Maia: Ah, eu não posso fazer isso, né? Ele não aceita eu estar.
+Luiz Maia: Ele não está aceitando aqui a figura sobre escrever a figura.
+Luiz Maia: Olha só a dificuldade. Como é que é? Sem usar polimorfismo.
+Luiz Maia: Vou botar aqui. Figura um aqui eu vou fazer retângulo, mas é estranho isso, retângulo figura dois.
+Luiz Maia: Ele deveria sobrescrever, cara.
+Luiz Maia: Ah, não está certo. Está certo. Quando eu defini aqui a figura como quadrado, é como se eu estivesse definido ela como inteiro.
+Luiz Maia: E aí eu tô tentando. Depois eu tô tentando colocar um double dentro de um inteiro. Ele não vai aceitar. Tá certo, tá certo. Sim,
+Luiz Maia: tá certo. Sim, é isso mesmo.
+Luiz Maia: Eu estou querendo colocar um retângulo dentro de um quadrado. Não vai aceitar nunca.
+Luiz Maia: Ok, vamos ver se funciona.
+Luiz Maia: Eu vou chegar lá. Júlio, calma.
+Luiz Maia: Área quatro seis, beleza.
+Luiz Maia: Agora vamos fazer mais uma figura geométrica aqui vamos fazer o triângulo
+Luiz Maia: triângulo.
+Luiz Maia: Como é que é o cálculo da área do triângulo? Alguém pode me ajudar aí?
+Luiz Maia: É lado vezes altura, não é? Isso
+Luiz Maia: é base, vezes altura. É isso,
+Luiz Maia: base,
+Luiz Maia: como é que faz o cálculo da área? Gente,
+Luiz Maia: eu acho que é base, vezes altura, sobre dois. É isso.
+Matheus Ramos: Sim, professor. Bás vez a altura sobre o dois.
+Luiz Maia: Então tá aí, ó, vamos pegar aqui o programa principal.
+Luiz Maia: Pegar esse cara aqui, copiar, colar, triângulo, figura três,
+Luiz Maia: triângulo, figura trecho popularária.
+Luiz Maia: Pronto, vamos executar e ver o que acontece.
+Luiz Maia: Quatro, seis, três.
+Luiz Maia: Quais são os problemas que eu tenho aqui?
+Luiz Maia: Bom, eu tenho que definir
+Luiz Maia: cada uma das figuras. Se eu quiser criar uma lista de figuras, eu não consigo fazer.
+Luiz Maia: Eu não consigo criar uma lista
+Luiz Maia: ou eu crio três listas. Figura um, figura dois, figura três.
+Luiz Maia: Não dá para criar uma lista com as três figuras.
+Luiz Maia: Eu quero calcular a área independente do tipo de figura. Também não, consigo fazer isso aqui.
+Luiz Maia: Como é que eu resolvo esse problema?
+Luiz Maia: Poliomorfismo?
+Luiz Maia: Como é que eu faço isso.
+Luiz Maia: Vamos criar um outro projeto.
+Luiz Maia: Ad New Project, Polimorfismo dois dois.
+Luiz Maia: Vou pegar essas classes, vou pegar esse cara aqui, copiar e colar aqui dentro.
+Luiz Maia: Problema é quando você copia e cola, ele vem com um memespace lá de cima, dois.um.
+Luiz Maia: A gente vem aqui o botão direito em cima do projeto cinco memespaces.
+Luiz Maia: Aply já trocou o nome do Namespace pra cá pra ficar direitinho.
+Luiz Maia: Beleza, o que eu faço agora?
+Luiz Maia: Cria uma superclasse figura
+Luiz Maia: nessa superclasse. Eu vou colocar o quê?
+Luiz Maia: Bom primeira dúvida.
+Luiz Maia: Eu vou usar métodos abstratos ou virtuais respondam.
+Luiz Maia: Ok, vou fazer uma outra pergunta para vocês.
+Luiz Maia: E aí existe algum método calcular área que seja genérico, que vale para qualquer figura.
+Luiz Maia: Sim ou não?
+Luiz Maia: Se eu não posso criar um método genérico
+Luiz Maia: para resolver o problema do cálculo da área,
+Luiz Maia: essa classe tem que ser abstrata,
+Luiz Maia: ou seja, ela não pode ter nenhum padrão de método calcular área,
+Luiz Maia: porque não existe nenhuma figura geométrica que a área seja genérica. As áreas são calculadas a partir do tipo da figura.
+Luiz Maia: Logo, essa classe é abstrata.
+Luiz Maia: Abstrat
+Luiz Maia: class figura. Eu não posso instanciar a figura.
+Luiz Maia: Por quê? Porque figura é uma coisa genérica. Ela não tem lado. Não tem altura. Ela não sabe o que ela faz.
+Luiz Maia: Ela não tem como calcular a área de nada. O que eu posso fazer aqui? A única coisa que eu posso fazer é o seguinte: Public
+Luiz Maia: abstract double calcular área
+Luiz Maia: sem corpo nenhum.
+Luiz Maia: Ela não sabe calcular área.
+Luiz Maia: Ela é uma figura genérica.
+Luiz Maia: Então eu não tenho como fazer o cálculo da área dentro da figura. É por isso que ela é abstrata.
+Luiz Maia: E o método dentro dela é abstrato. Agora as figuras podem fazer o quê? Implementar esse calcular área de forma obrigatória. Olha só. Quadrado
+Luiz Maia: extingue, estende figura.
+Luiz Maia: Eu estou estendendo a figura em Java. É assim que faz aqui? É dois pontos.
+Luiz Maia: Assim, tá se muda, mas o conceito é o mesmo quadrado. Estende figura. O que ele está reclamando aqui. Que quadrado não está sobre. Escrevendo o método abstrato calcular área.
+Luiz Maia: Mas Lp, o mento está aqui dentro, mas ele não está sobre escrevendo
+Luiz Maia: em Java. Como é que você faz arroba overwight aqui? Você faz o quê?
+Luiz Maia: Over, Ride. Pronto, acabou o problema.
+Luiz Maia: Ele acabou de criar a implementação do método, calcular área e parou de reclamar
+Luiz Maia: a mesma coisa. A gente vai fazer para retângulo.
+Luiz Maia: O retângulo vai fazer o quê?
+Luiz Maia: Vai fazer uma extensão de figura.
+Luiz Maia: Só que aí eu preciso implementar
+Luiz Maia: o método abstrato. Como é que a gente faz isso over Ride.
+Luiz Maia: E aí, quando você tem métodos abstratos, você é obrigado a definir na subclasse o método.
+Luiz Maia: Quando ele é virtual, você pode ou não subscrever. Essa é a grande diferença.
+Luiz Maia: Triângulo estende figura
+Luiz Maia: aqui.
+Luiz Maia: Não tem que fazer o que a sobre escrita overwride.
+Luiz Maia: Pronto, agora a figura tá?
+Luiz Maia: Não é fazendo tudo o que tem que ser feito
+Luiz Maia: agora, no meu programa principal, o que eu posso fazer?
+Luiz Maia: Deixa eu fechar esse monte de coisa aqui.
+Luiz Maia: Agora, o meu programa principal. Eu posso fazer o quê
+Luiz Maia: agora eu posso fazer o polimorfismo, a implementação desse polimorfismo. Eu posso fazer assim.
+Luiz Maia: É figura.
+Luiz Maia: Não liste?
+Luiz Maia: Diamante figura figuras New lish figura figuras ponto ad
+Luiz Maia: figuras ponto a de mil quadrado.
+Luiz Maia: Dois
+Luiz Maia: figuras, ponto hard new retangulo.
+Luiz Maia: E aí três,dois
+Luiz Maia: figuras, ponto age New triângulo três,dois.
+Luiz Maia: Agora posso fazer o quê?
+Luiz Maia: Adicionei as figuras na lista de figuras. O que eu posso fazer?
+Luiz Maia: For it florich, figura,
+Luiz Maia: figura em figuras,
+Luiz Maia: figura, ponto calcular, área.
+Luiz Maia: Ainda posso fazer mais do que isso. Eu posso fazer.
+Luiz Maia: Não aqui está errado. Peraí. Deixa eu voltar aqui.
+Luiz Maia: Aqui. A console.
+Luiz Maia: Ponto, Wrightline.
+Luiz Maia: Pronto, legal. Ainda posso fazer melhor do que isso. Cópia, figura, ponto, Gettype, ponto, Neyme.
+Luiz Maia: Pronto,
+Luiz Maia: pronto, olha só que bacana.
+Luiz Maia: A área não está errado.
+Luiz Maia: Eu tenho que mudar aqui o setup.
+Luiz Maia: Ok,
+Luiz Maia: quadrado, retângulo, triângulo, tudo resolvido de forma polimórfica.
+Luiz Maia: Conseguiram entender esse exemplo. Deu uma clareada
+Luiz Maia: na próxima aula, a gente vai fazer um outro exemplo.
+Luiz Maia: Um exemplo mais voltado para o mercado.
+Luiz Maia: Esse exemplo aqui é um exemplo ainda muito acadêmico.
+Luiz Maia: É um exemplo para ajudar vocês a entenderem o polimorfismo. Na próxima aula.
+Luiz Maia: A próxima aula é quando?
+Luiz Maia: Só semana que vem, né?
+Luiz Maia: Na próxima aula, a gente vai fazer o seguinte: um serviço de notificação
+Luiz Maia: onde a gente vai fazer o seguinte:
+Luiz Maia: a gente tem lá três serviços de notificação,
+Luiz Maia: notificação por e mail, Sms e Whatsapp.
+Luiz Maia: E eu vou fazer essa notificação de forma polimórfica.
+Luiz Maia: Ou seja, eu quero fazer uma notificação. Eu faço assim. Enviar notificação.
+Luiz Maia: E ele vai se virar para mandar a notificação que eu quiser.
+Luiz Maia: Independente da notificação.
+Luiz Maia: Então a gente vai fazer primeiro, a versão não polimórfica
+Luiz Maia: para vocês verem a complicação que é.
+Luiz Maia: E depois você vai ver a versão polimórfica do enviar notificação.
+Luiz Maia: Onde você vai ter uma coisa muito simples que vai fazer exatamente o que você quer fazer com muito menos código de uma forma muito mais abrangente,
+Luiz Maia: fácil de alterar.
+Luiz Maia: Então, por exemplo,
+Luiz Maia: você fez um código para mandar mensagem de Sms, e mail e Whatsapp aí, no dia seguinte, o teu chefe fala assim. Ah, eu quero que também mande para o
+Luiz Maia: a mensagem para o.
+Luiz Maia: Como é que aquele outro Whatsapp, aquele outro cara. Como é que é o nome dele?
+Luiz Maia: Telegram?
+Luiz Maia: Eu quero que mande pro telegram também.
+Luiz Maia: Como é que eu faço isso? Como é que eu mando? Eu altero meu programa para adicionar uma nova forma de notificação sem mudar a estrutura do código.
+Luiz Maia: Basta você pegar, criar uma classe, associar uma superclasse. E o código continua funcionando normalmente.
+Luiz Maia: Essa é a nossa próxima aula. Eu vou pegar essa aula daqui
+Luiz Maia: e vou colocar lá no drive para vocês terem essa aula pronta para vocês na próxima aula.
+Luiz Maia: Eu vou fazer exatamente esse código.
+Luiz Maia: E depois eu vou fazer um outro código.
+Luiz Maia: Quer calcular imposto, que é muito parecido. E aí você vai ver que é uma receita de bolo.
+Luiz Maia: É tudo muito parecido. Você vai fazer praticamente o mesmo código. Copiando e colando. Tá gente?
+Luiz Maia: Espero que vocês tenham gostado da aula,
+Luiz Maia: que ela tenha ficado um contento. Nos vemos na próxima segunda feira.
+Luiz Maia: A matéria vai acabar.
+Luiz Maia: Não na semana que vem. Mas na próxima semana, depois da próxima, a matéria acaba.
+Luiz Maia: Falta ver polimorfismo com interface, arquivo e vetores e matrizes. E aí. Eu acabo com a matéria. Valeu
+Luiz Maia: um abraço a todos. Até a próxima segunda feira.
+Luiz Maia: Um abraço a todos. Tchau Tchau.
+Jorge José Luiz Santos da Silva: Abraço. Professor, fala o.
+Luiz Maia: Valeu!

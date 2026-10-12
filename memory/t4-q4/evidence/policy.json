@@ -1,0 +1,18 @@
+{
+  "feature_id": "t4-q4",
+  "risk_tier": "standard",
+  "topology": "fan-out",
+  "budget": {
+    "max_tokens": null,
+    "max_spawns": 8,
+    "max_wallclock": null,
+    "max_spawn_depth": 3,
+    "max_outer_cycles": 5
+  },
+  "require": ["knowledge-grounding", "testing"],
+  "engine": "fallback PDA",
+  "engine_reason": "Geração editorial de lições Markdown. O Execution Engine não é o provider desta capability.",
+  "prd_exception": "Pipeline de conteúdo existente (agents/content-summary-agent.md + style guide + disciplines.json). Sem RF de produto novo.",
+  "submitted_at": "2026-10-12T11:10:00Z",
+  "cycle_id": "t4-q4-c1"
+}

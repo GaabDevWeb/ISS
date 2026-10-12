@@ -1,0 +1,2778 @@
+WEBVTT
+
+1
+00:01:15.380 --> 00:01:21.160
+Luiz Maia: Boa noite, pessoal. Dia seis de Outubro, dois mil e vinte e seis.
+
+2
+00:01:21.710 --> 00:01:28.399
+Luiz Maia: Bem vindos a mais uma aula de de backend com Dotnet.
+
+3
+00:01:29.900 --> 00:01:35.240
+Luiz Maia: Vamos continuar vendo o delegate.
+
+4
+00:01:39.460 --> 00:01:42.560
+Luiz Maia: E talvez agora, com alguns exemplos que eu
+
+5
+00:01:47.600 --> 00:01:57.649
+Luiz Maia: introduzir na na aula. Talvez fique mais fácil de vocês entenderem o uso do delegate
+
+6
+00:02:07.750 --> 00:02:12.540
+Luiz Maia: ou compartilhar a tela para a gente poder tentar terminar isso
+
+7
+00:02:12.740 --> 00:02:18.669
+Luiz Maia: hoje, ainda na próxima aula, que vai ser na próxima terça? Porque segunda feira é feriado.
+
+8
+00:02:19.080 --> 00:02:28.450
+Luiz Maia: É dia doze de outubro, feriado. Então a gente vai ter. Não tem aula. Segunda,
+
+9
+00:02:28.940 --> 00:02:32.549
+Luiz Maia: então eu gostaria de terminar essa matéria ainda hoje,
+
+10
+00:02:35.300 --> 00:02:42.610
+Luiz Maia: que é a matéria que é a parte da matéria do Tp1 de vocês que está publicado no moodle. Inclusive já está publicado.
+
+11
+00:02:54.420 --> 00:03:00.740
+Luiz Maia: Começou a assistir a aula gravada de ontem, e você mencionou que ia mostrar como criar um sistema simples Fullstech.
+
+12
+00:03:13.000 --> 00:03:24.590
+Luiz Maia: Henrique, até onde eu sei, o Razor não é muito utilizado pelo mercado. O pessoal utiliza outros fronts,
+
+13
+00:03:25.120 --> 00:03:29.440
+Luiz Maia: mas eu não sei te dizer qual é o front mais utilizado.
+
+14
+00:03:29.850 --> 00:03:38.450
+Luiz Maia: E aí no mercado, teria que fazer uma pesquisa para te responder isso. Não vou te dar uma resposta.
+
+15
+00:03:40.380 --> 00:03:47.490
+Luiz Maia: É, posso pesquisar aqui agora para você, se você quiser.
+
+16
+00:04:05.860 --> 00:04:09.309
+henrique.osilva: Professor. Boa noite. Está me ouvindo.
+
+17
+00:04:09.740 --> 00:04:10.850
+Luiz Maia: Perfeitamente.
+
+18
+00:04:11.430 --> 00:04:16.040
+henrique.osilva: Professor. Na verdade, eu tinha outras duas dúvidas que tem mais a ver com a aula.
+
+19
+00:04:16.060 --> 00:04:27.600
+henrique.osilva: Uma das minhas dúvidas era em relação ao Var para declarar variáveis, porque eu, por exemplo, até agora, eu sempre estava declarando a variável com um tipo.
+
+20
+00:04:27.600 --> 00:04:36.169
+henrique.osilva: Aí você mostrou que o Var é usado quando você não pretende declarar o tipo da variável e já é atribuído sozinho.
+
+21
+00:04:36.190 --> 00:04:55.409
+henrique.osilva: Aí, eu queria saber se a partir de agora, em todo caso, que eu for declarar uma variável, eu posso estar usando o Var ou se chega a algum ponto em que ele chega a ser uma prática tipo algum cenário em que não é recomendado usar o Var na hora de declarar uma variável.
+
+22
+00:04:58.180 --> 00:04:59.300
+Luiz Maia: É?
+
+23
+00:05:03.430 --> 00:05:05.960
+Luiz Maia: Estou pensando a resposta para você.
+
+24
+00:05:08.930 --> 00:05:11.969
+Luiz Maia: Não sei. Eu tenho que pesquisar.
+
+25
+00:05:12.650 --> 00:05:15.650
+Luiz Maia: Não sei se tem algum cenário que
+
+26
+00:05:17.580 --> 00:05:24.169
+Luiz Maia: você não pode usar o Var. Não deve usar o Var. Vou ter que pesquisar. Não tenho essa resposta para você agora. Não.
+
+27
+00:05:25.040 --> 00:05:36.660
+henrique.osilva: Não beleza, professor, eu acho que via de regra. Então, a princípio, na maioria dos cenários, é de boa usar o Var, né? Para declarar uma variável sem precisar especificar o tipo.
+
+28
+00:05:40.180 --> 00:05:45.420
+Luiz Maia: Eu entendo o Var como uma forma de economizar código de você escrever menos código.
+
+29
+00:05:45.650 --> 00:05:53.369
+Luiz Maia: Eu vejo basicamente isso, porque o compilador. Na verdade, quando você compila o código, ele transforma aquele var
+
+30
+00:05:53.520 --> 00:05:55.789
+Luiz Maia: no tipo da variável
+
+31
+00:05:55.950 --> 00:06:02.939
+Luiz Maia: que você está utilizando, porque quando você faz, na verdade, uma atribuição. Ou cria uma classe.
+
+32
+00:06:03.040 --> 00:06:06.799
+Luiz Maia: Você está dizendo qual é o tipo daquele dado?
+
+33
+00:06:07.190 --> 00:06:16.129
+Luiz Maia: E aí ele automaticamente consegue fazer a a transposição na hora da compilação.
+
+34
+00:06:16.930 --> 00:06:23.940
+Luiz Maia: Então assim é, basicamente, na minha opinião, uma forma mais simples de escrever código.
+
+35
+00:06:24.820 --> 00:06:34.000
+Luiz Maia: Agora, se existe alguma limitação, eu teria que pesquisar. Eu não tenho essa informação. Estou tentando aqui responder ao outro colega.
+
+36
+00:06:34.440 --> 00:06:35.760
+Luiz Maia: É,
+
+37
+00:06:40.590 --> 00:06:42.589
+Luiz Maia: estou fazendo uma pesquisa aqui.
+
+38
+00:06:58.670 --> 00:07:02.699
+Luiz Maia: A resposta não veio o que eu imaginava.
+
+39
+00:07:11.650 --> 00:07:12.370
+Luiz Maia: Até lá,
+
+40
+00:07:17.280 --> 00:07:20.700
+Luiz Maia: não consegui uma resposta muito boa aqui, não.
+
+41
+00:07:20.910 --> 00:07:23.700
+Luiz Maia: Então eu vou ficar devendo essa resposta para vocês.
+
+42
+00:07:24.640 --> 00:07:33.379
+henrique.osilva: De boa, professor. Eu fiquei com dúvida em relação à função lambda também. Por exemplo, vou te mandar um código aqui para você olhar no chat
+
+43
+00:07:34.060 --> 00:07:52.699
+henrique.osilva: esse usando o método find. Eu fiquei com dúvida a respeito do uso da função lambda, sendo usado como argumento dentro de um método. No caso, não teria que usar algum parêntese em algum lugar para indicar que é uma função
+
+44
+00:07:52.980 --> 00:07:56.079
+henrique.osilva: ou na função âmbida. Não precisa.
+
+45
+00:07:57.840 --> 00:08:09.539
+Luiz Maia: Na verdade, acabei não explicando isso para vocês ontem. Mas quando você coloca uma lâmbida dentro de uma, como está passando um parâmetro.
+
+46
+00:08:09.880 --> 00:08:15.910
+Luiz Maia: Na verdade, isso aí vira um delegate um funk, delegate
+
+47
+00:08:16.590 --> 00:08:27.540
+Luiz Maia: o compilador, transforma essa lâmpida num delegate, e aí é como se fosse você passar
+
+48
+00:08:27.900 --> 00:08:36.979
+Luiz Maia: para dentro dessa função. Find é uma outra função.
+
+49
+00:08:38.850 --> 00:08:42.769
+Luiz Maia: Então é mais complicado do que parece.
+
+50
+00:08:43.289 --> 00:08:50.240
+Luiz Maia: Então essa lambida aí vai virar um delegate que está sendo passado para dentro do Find.
+
+51
+00:08:51.510 --> 00:08:59.650
+henrique.osilva: Professor. Será que teria como você mostrar no código? Como que ficaria isso de forma explícita? Só para poder visualizar melhor.
+
+52
+00:09:01.860 --> 00:09:08.389
+Luiz Maia: Cara por trás dos panos. Tem muita coisa por trás disso.
+
+53
+00:09:08.930 --> 00:09:12.460
+Luiz Maia: Eu posso tentar trazer isso na próxima aula para você.
+
+54
+00:09:12.740 --> 00:09:14.370
+Luiz Maia: Porque não? É simples.
+
+55
+00:09:14.590 --> 00:09:17.890
+Luiz Maia: Ele vai criar um monte de coisa por trás disso.
+
+56
+00:09:18.560 --> 00:09:24.369
+Luiz Maia: Eu já olhei. Como é que ele faz isso? Não é uma coisa simples de entender.
+
+57
+00:09:24.370 --> 00:09:29.019
+henrique.osilva: Entendi. Não, tranquilo. Qualquer coisa. Eu pesquiso na inteligência artificial também.
+
+58
+00:09:29.020 --> 00:09:32.360
+Luiz Maia: Tem muita abstração por trás de tudo isso.
+
+59
+00:09:34.190 --> 00:09:36.020
+Luiz Maia: Tem muita abstração.
+
+60
+00:09:36.340 --> 00:09:41.950
+Luiz Maia: As tuas perguntas são muito pertinentes. Não vejo nenhum problema nas suas perguntas.
+
+61
+00:09:42.410 --> 00:09:49.050
+Luiz Maia: Mas essa, toda a lâmpida vira um. Delegate
+
+62
+00:09:49.180 --> 00:09:55.159
+Luiz Maia: isso aí. Você pode pesquisar fácil na Internet agora, como
+
+63
+00:09:55.430 --> 00:10:11.550
+Luiz Maia: explicitar isso? Escrever o código que ele gera por trás dos panos que o compilador gera. É bem mais complicado de explicar muito mais você pode até procurar. Você vai encontrar a explicação sobre isso.
+
+64
+00:10:11.810 --> 00:10:15.440
+Luiz Maia: E você vai ver que não é simples, não é?
+
+65
+00:10:16.490 --> 00:10:21.080
+Luiz Maia: Se fosse simples, eu explicaria agora. Mas não é simples.
+
+66
+00:10:21.490 --> 00:10:22.649
+henrique.osilva: Ah, entendi.
+
+67
+00:10:23.260 --> 00:10:26.000
+henrique.osilva: Só uma última dúvida. Então, Professor,
+
+68
+00:10:26.200 --> 00:10:44.170
+henrique.osilva: a função lambda pode ser usada em qualquer contexto que necessite de um retorno. Por exemplo, no caso desse código que eu enviei pelo chat, o Find precisa de um valor, ou seja, precisa de algo retornado
+
+69
+00:10:44.230 --> 00:10:54.740
+henrique.osilva: para poder exercer o método. O método. Então a lâmbida pode ser usada em qualquer contexto como esse, que precise de um retorno.
+
+70
+00:10:55.840 --> 00:10:59.980
+Luiz Maia: É um funk delegation, cara, é um funk. Delegate
+
+71
+00:11:00.170 --> 00:11:05.520
+Luiz Maia: onde você precisa de um retorno. Nesse caso, aí ele vai retornar, True ou false.
+
+72
+00:11:07.350 --> 00:11:09.130
+Luiz Maia: Ele precisa de um retorno.
+
+73
+00:11:16.180 --> 00:11:18.589
+henrique.osilva: Acho que eu não entendi direito. O professor.
+
+74
+00:11:19.660 --> 00:11:22.729
+Luiz Maia: Ele está perguntando. Eu estou passando uma conta.
+
+75
+00:11:23.260 --> 00:11:28.409
+Luiz Maia: Ele está testando conta Id igual a três. Isso aqui é verdadeiro ou falso,
+
+76
+00:11:29.790 --> 00:11:34.019
+Luiz Maia: ele vai retornar. True ou falso em relação a essa comparação. Aqui.
+
+77
+00:11:37.070 --> 00:11:39.410
+henrique.osilva: Ah, entendi. Agora. Então ele está.
+
+78
+00:11:39.510 --> 00:11:45.400
+henrique.osilva: Ele vai buscar o valor que seja true nessa comparação.
+
+79
+00:11:46.410 --> 00:11:52.620
+Luiz Maia: Se ele encontrar contra Jay G3 ele retorna a True. Se ele não encontrar, ele vai retornar fawse
+
+80
+00:11:55.830 --> 00:11:57.880
+Luiz Maia: então vai ter um retorno. Sim.
+
+81
+00:12:00.640 --> 00:12:03.420
+henrique.osilva: Entendi, beleza. Então, professor, valeu.
+
+82
+00:12:03.700 --> 00:12:07.950
+Luiz Maia: Você perguntou sobre Var? Você perguntou sobre
+
+83
+00:12:08.320 --> 00:12:13.799
+Luiz Maia: essa lâmpida? Se perguntou sobre como é que isso é implementado por trás dos Panos.
+
+84
+00:12:14.320 --> 00:12:25.240
+Luiz Maia: Vou tentar responder essas perguntas todas na próxima aula para vocês. E o colega ali perguntou também sobre o front end mais usado
+
+85
+00:12:25.500 --> 00:12:26.170
+Luiz Maia: insistir.
+
+86
+00:12:26.170 --> 00:12:29.610
+henrique.osilva: Na verdade, fui eu também, professor.
+
+87
+00:12:29.940 --> 00:12:30.969
+henrique.osilva: É que eu vejo.
+
+88
+00:12:30.970 --> 00:12:34.089
+Luiz Maia: Descobrir isso para vocês, não tem.
+
+89
+00:12:34.090 --> 00:12:35.120
+henrique.osilva: Eu vejo só.
+
+90
+00:12:35.120 --> 00:12:35.790
+Luiz Maia: This is.
+
+91
+00:12:36.330 --> 00:12:42.069
+henrique.osilva: Eu vejo só as aulas gravadas aí depois eu anoto o que eu fico com dúvida pra perguntar depois.
+
+92
+00:12:43.440 --> 00:12:51.279
+Luiz Maia: Eu adoro. Perguntas, gente. E quando? Eu não sei, eu falo que não sei. Eu não enrolo vocês não, cara, eu não tenho essa coragem
+
+93
+00:12:51.630 --> 00:12:55.839
+Luiz Maia: de enrolar meus alunos. Se eu não sei, eu falo que não sei. Vou pesquisar.
+
+94
+00:12:56.670 --> 00:13:00.990
+Luiz Maia: Não tem a obrigação de saber tudo é,
+
+95
+00:13:01.250 --> 00:13:05.459
+Luiz Maia: mas eu vou correr atrás de dar um retorno para vocês.
+
+96
+00:13:06.750 --> 00:13:16.219
+Luiz Maia: Vamos voltar para o nosso código para eu tentar terminar essa parte da aula, vou compartilhar aqui a tela com vocês.
+
+97
+00:13:19.470 --> 00:13:20.960
+Luiz Maia: E aí.
+
+98
+00:13:34.980 --> 00:13:42.020
+Luiz Maia: Agora, talvez fique mais claro, o uso do delegate
+
+99
+00:13:43.090 --> 00:13:50.490
+Luiz Maia: nos códigos nos próximos exemplos, eu até incluí um exemplo novo para vocês.
+
+100
+00:13:51.170 --> 00:13:55.490
+Luiz Maia: Esse exemplo cinco não existia. Eu incluí ele hoje,
+
+101
+00:13:55.880 --> 00:14:03.899
+Luiz Maia: para tentar fazer com que esse conceito de delegate fique mais claro para vocês.
+
+102
+00:14:04.780 --> 00:14:12.620
+Luiz Maia: Mas antes, eu vou apresentar um exemplo que eu acho muito bom de delegate.
+
+103
+00:14:16.180 --> 00:14:17.969
+Luiz Maia: Tem esse exemplo aqui.
+
+104
+00:14:18.420 --> 00:14:20.350
+Luiz Maia: Um exemplo bem simples.
+
+105
+00:14:22.130 --> 00:14:24.910
+Luiz Maia: Esse exemplo aqui ele tem um vetor
+
+106
+00:14:25.820 --> 00:14:30.170
+Luiz Maia: de três posições com dois, três e quatro.
+
+107
+00:14:30.790 --> 00:14:35.940
+Luiz Maia: Tá aí? Ele vai fazer o quê? Ele vai pegar esse vetor.
+
+108
+00:14:36.250 --> 00:14:41.290
+Luiz Maia: Vai elevar o vetor ao quadrado e vai exibir o vetor.
+
+109
+00:14:41.880 --> 00:14:47.079
+Luiz Maia: Depois ele vai elevar o vetor ao cubo e vai exibir o vetor
+
+110
+00:14:51.380 --> 00:14:53.289
+Luiz Maia: e vai exibir o vetor
+
+111
+00:14:53.620 --> 00:15:01.290
+Luiz Maia: aqui. Eu tenho os métodos que fazem a elevação ao quadrado e a elevação ao cubo do vetor.
+
+112
+00:15:02.140 --> 00:15:04.780
+Luiz Maia: E aqui eu tenho. Exibir vetor.
+
+113
+00:15:07.430 --> 00:15:10.560
+Luiz Maia: É um código bem simples. Não tem muita.
+
+114
+00:15:11.760 --> 00:15:14.600
+Luiz Maia: Não tem muita complexidade nesse código.
+
+115
+00:15:16.290 --> 00:15:17.810
+Luiz Maia: É bem simples.
+
+116
+00:15:19.750 --> 00:15:22.410
+Luiz Maia: Queria primeiro saber se vocês entenderam
+
+117
+00:15:23.080 --> 00:15:26.720
+Luiz Maia: esse código sem delegate sem nada.
+
+118
+00:15:27.470 --> 00:15:29.820
+Luiz Maia: É um código bem simples.
+
+119
+00:15:30.160 --> 00:15:42.410
+Luiz Maia: Onde você está pegando o vetor, elevando os elementos ao quadrado e elevando os elementos ao cubo. Vamos rodar ele para vocês verem como é que ele funciona.
+
+120
+00:15:58.110 --> 00:16:01.889
+Luiz Maia: O vetor elevado ao quadrado vetor elevador cubo.
+
+121
+00:16:03.620 --> 00:16:05.219
+Luiz Maia: Está aí o.
+
+122
+00:16:07.170 --> 00:16:09.050
+Luiz Maia: A execução do código.
+
+123
+00:16:09.350 --> 00:16:13.820
+Luiz Maia: Alguém tem alguma dúvida em relação a isso?
+
+124
+00:16:17.080 --> 00:16:23.440
+Luiz Maia: Tranquilo, não entendeu o código. Fala para mim. Pode falar.
+
+125
+00:16:24.970 --> 00:16:27.869
+Jorge José Luiz Santos da Silva: Por enquanto. Está tranquilo, professor da minha parte. Pelo.
+
+126
+00:16:30.540 --> 00:16:34.290
+Luiz Maia: Bom, o que acontece, gente? Olha só.
+
+127
+00:16:34.540 --> 00:16:41.800
+Luiz Maia: Elevar ao quadrado e elevar o cubo. É muito parecido. Você percorre o vetor.
+
+128
+00:16:42.100 --> 00:16:44.139
+Luiz Maia: Posição a posição
+
+129
+00:16:44.260 --> 00:16:50.410
+Luiz Maia: aqui. Você está fazendo a elevação ao quadrado. E aqui você está fazendo a elevação ao cubo.
+
+130
+00:16:50.550 --> 00:16:57.150
+Luiz Maia: Poderia usar uma função matemática para fazer isso. Mas isso não é o mais importante.
+
+131
+00:16:57.340 --> 00:17:03.840
+Luiz Maia: O mais importante é que elevar ao quadrado e elevar o cubo. Eles são muito parecidos.
+
+132
+00:17:10.930 --> 00:17:14.600
+Luiz Maia: Na versão seguinte, o que eu faço?
+
+133
+00:17:16.990 --> 00:17:21.449
+Luiz Maia: Delegate. E aí, na minha opinião, talvez seja.
+
+134
+00:17:21.849 --> 00:17:30.949
+Luiz Maia: É a coisa mais poderosa que a gente tem no delegate é poder passar funções como parâmetro
+
+135
+00:17:31.730 --> 00:17:34.480
+Luiz Maia: de uma outra função de um outro método.
+
+136
+00:17:36.240 --> 00:17:39.690
+Luiz Maia: Então aqui eu tenho um delegate que é alterar número.
+
+137
+00:17:40.790 --> 00:17:44.410
+Luiz Maia: Eu tenho uma função, que é um método que é
+
+138
+00:17:46.380 --> 00:17:51.410
+Luiz Maia: elevar o quadrado, uma outra função, que é elevar.
+
+139
+00:17:52.200 --> 00:17:53.490
+Luiz Maia: Olha o cubo.
+
+140
+00:17:57.440 --> 00:18:01.149
+Luiz Maia: E aqui eu estou criando um alterar vetor
+
+141
+00:18:01.820 --> 00:18:08.750
+Luiz Maia: onde eu passo o vetor e estou passando aqui. Um delegate que é alterar número.
+
+142
+00:18:11.280 --> 00:18:15.839
+Luiz Maia: Eu estou passando um método para dentro de outro método.
+
+143
+00:18:19.340 --> 00:18:28.380
+Luiz Maia: Isso aqui é chamado de callback síncronomo.
+
+144
+00:18:32.650 --> 00:18:39.459
+Luiz Maia: Quando você passa um método. Para outro método. Isso é um callback.
+
+145
+00:18:40.080 --> 00:18:54.350
+Luiz Maia: Por que ele é síncrono? Porque ele vai executar continuamente. Ele não vai parar a execução para executar outra coisa. Daqui a pouco eu vou mostrar para vocês um callback assínono.
+
+146
+00:18:54.810 --> 00:18:57.669
+Luiz Maia: Uma coisa nova que eu fiz para a aula de hoje,
+
+147
+00:18:57.790 --> 00:19:02.160
+Luiz Maia: que vai ajudar vocês a entenderem um pouco mais. Talvez o delegate.
+
+148
+00:19:05.280 --> 00:19:11.959
+Luiz Maia: Então, agora eu estou passando para dentro de um método, um outro método.
+
+149
+00:19:12.670 --> 00:19:17.770
+Luiz Maia: Que é esse cara aqui, o exibir inventor não muda nada.
+
+150
+00:19:18.090 --> 00:19:20.309
+Luiz Maia: O que vai acontecer aqui é o seguinte.
+
+151
+00:19:22.480 --> 00:19:28.549
+Luiz Maia: Agora eu estou passando para dentro do alterar, vetor. Um método que é o método quadrado
+
+152
+00:19:29.500 --> 00:19:30.949
+Luiz Maia: vai fazer o quê?
+
+153
+00:19:33.040 --> 00:19:34.710
+Luiz Maia: Alterar número?
+
+154
+00:19:35.650 --> 00:19:38.170
+Luiz Maia: Então ele vai pegar o quadrado.
+
+155
+00:19:38.380 --> 00:19:44.089
+Luiz Maia: Quando você passar o quadrado aqui, ele vai fazer alterar número que é fazer o quê?
+
+156
+00:19:47.070 --> 00:19:49.120
+Luiz Maia: O número vezes ele mesmo.
+
+157
+00:19:50.870 --> 00:19:55.880
+Luiz Maia: Quando você passar o alterar.
+
+158
+00:19:56.630 --> 00:20:01.040
+Luiz Maia: Vetor com o Cubo, ele vai fazer o quê?
+
+159
+00:20:02.240 --> 00:20:04.550
+Luiz Maia: Ele vai receber Cubo aqui
+
+160
+00:20:05.600 --> 00:20:13.679
+Luiz Maia: e na hora de fazer alterar número. Ele vai executar quem ele vai executar. Isso aqui. Eu poderia fazer, por exemplo, sei lá,
+
+161
+00:20:14.020 --> 00:20:19.400
+Luiz Maia: qualquer coisa que fosse, do tipo que fosse alterar um número,
+
+162
+00:20:19.580 --> 00:20:23.460
+Luiz Maia: calcular o dobro, calcular o resto.
+
+163
+00:20:23.810 --> 00:20:25.990
+Luiz Maia: Qualquer coisa nesse sentido.
+
+164
+00:20:26.620 --> 00:20:29.169
+Luiz Maia: Ou seja, eu tenho o mesmo código
+
+165
+00:20:29.370 --> 00:20:36.010
+Luiz Maia: onde eu vou alterar o elemento do vetor. E aqui eu digo como eu vou fazer isso.
+
+166
+00:20:38.140 --> 00:20:45.280
+Luiz Maia: Para mim, um dos melhores exemplos que a gente tem de de delegate
+
+167
+00:20:46.950 --> 00:20:52.770
+Luiz Maia: isso aqui toda vez que você passa como parâmetro
+
+168
+00:20:53.050 --> 00:20:57.349
+Luiz Maia: um método. Isso é chamado de callback.
+
+169
+00:20:58.210 --> 00:21:00.679
+Luiz Maia: Nesse caso, é um callback síncronomo
+
+170
+00:21:00.990 --> 00:21:05.090
+Luiz Maia: em breve eu vou mostrar para vocês um exemplo de Calback Asyncrono.
+
+171
+00:21:08.430 --> 00:21:10.129
+Luiz Maia: Vamos ver se funciona.
+
+172
+00:21:23.210 --> 00:21:30.050
+Luiz Maia: Depois eu subo esse código para vocês. Lá, tá, vamos ver se ele funciona.
+
+173
+00:21:30.920 --> 00:21:32.289
+Luiz Maia: Esse aqui é o B.
+
+174
+00:21:39.150 --> 00:21:45.330
+Luiz Maia: O vetor levado ao quadrado e o vetor levado ao cubo funcionou perfeitamente.
+
+175
+00:21:47.610 --> 00:21:49.590
+Luiz Maia: Isso, não é?
+
+176
+00:21:50.810 --> 00:22:04.620
+Luiz Maia: Repara, lembra lá na aula de ontem, eu falei para vocês que o delegate. É um objeto que aponta para um método. É exatamente o que eu estou fazendo aqui. Eu estou apontando.
+
+177
+00:22:06.090 --> 00:22:14.600
+Luiz Maia: Eu estou passando o endereço desse método para dentro do método, alterar Vetor.
+
+178
+00:22:15.660 --> 00:22:18.470
+Luiz Maia: E aqui dentro, ele está resolvendo isso.
+
+179
+00:22:20.040 --> 00:22:27.239
+Luiz Maia: Então, alterar método. Alterar número pode ser quadrado ou cubo.
+
+180
+00:22:29.680 --> 00:22:31.909
+Luiz Maia: Isso é muito poderoso.
+
+181
+00:22:37.650 --> 00:22:40.230
+Luiz Maia: Vocês conseguiram entender isso.
+
+182
+00:22:43.310 --> 00:22:47.250
+Luiz Maia: Essa matéria é difícil, gente. Não é simples.
+
+183
+00:22:47.460 --> 00:22:50.460
+Luiz Maia: Não tenha dúvida disso. Se você não entendeu,
+
+184
+00:22:50.640 --> 00:22:56.690
+Luiz Maia: você pode falar que eu vou tentar ajudar vocês aí a entender esse troço, porque é difícil. Mesmo.
+
+185
+00:22:57.440 --> 00:22:59.320
+Luiz Maia: Não tem nada simples aqui.
+
+186
+00:23:01.860 --> 00:23:04.160
+Luiz Maia: Isso aqui é programação avançada.
+
+187
+00:23:05.120 --> 00:23:13.869
+Luiz Maia: Não é só C Sharp, não em qualquer linguagem. Você trabalhar com esse tipo de linha vinte e nove
+
+188
+00:23:15.480 --> 00:23:19.500
+Luiz Maia: aqui, ó, aliás, vinte e nove, ela é praticamente igual.
+
+189
+00:23:19.870 --> 00:23:21.859
+Luiz Maia: Se você olhar aqui. Ó
+
+190
+00:23:27.350 --> 00:23:28.949
+Luiz Maia: aqui. Eu fiz o quê?
+
+191
+00:23:29.170 --> 00:23:37.629
+Luiz Maia: Elevar o quadrado. Eu passei o vetor. Elevaram o cubo. Eu passei o vetor e fiz a operação em cima dele.
+
+192
+00:23:40.740 --> 00:23:43.850
+Luiz Maia: Agora eu estou fazendo o quê? Vou alterar Vetor.
+
+193
+00:23:45.440 --> 00:23:52.210
+Luiz Maia: Além de receber o vetor. Ele recebe um método para alterar os elementos do vetor.
+
+194
+00:23:54.210 --> 00:23:57.520
+Luiz Maia: Se você passar o quadrado,
+
+195
+00:23:58.980 --> 00:24:05.850
+Luiz Maia: ele vai elevar os elementos do vetor ao quadrado. Por quê quadrado é essa função aqui? Esse método.
+
+196
+00:24:06.240 --> 00:24:08.110
+Luiz Maia: Se você passar cubo,
+
+197
+00:24:08.220 --> 00:24:19.709
+Luiz Maia: ele vai fazer o quê? Executar esse método recebendo o método cubo que vai fazer o quê? Elevar o cubo os elementos do vetor.
+
+198
+00:24:22.170 --> 00:24:28.580
+Luiz Maia: Ele está recebendo um vetor e está retornando um vetor de inteiros.
+
+199
+00:24:32.450 --> 00:24:34.310
+Luiz Maia: O que você não entendeu?
+
+200
+00:24:37.040 --> 00:24:41.940
+Luiz Maia: O segundo: alterar número é uma declaração de variável.
+
+201
+00:24:43.430 --> 00:24:44.700
+Luiz Maia: Aonde?
+
+202
+00:24:48.330 --> 00:24:49.710
+Luiz Maia: Em que linha?
+
+203
+00:24:54.030 --> 00:24:56.100
+Luiz Maia: Nessa linha, aqui?
+
+204
+00:25:00.970 --> 00:25:02.880
+Luiz Maia: O que você não entendeu nessa linha?
+
+205
+00:25:07.630 --> 00:25:14.200
+Luiz Maia: Porque eu tenho dois intes. É isso. O Int aqui e o Int aqui. É isso ou não, é isso?
+
+206
+00:25:15.220 --> 00:25:21.850
+Luiz Maia: Para eu poder entender isso. Aqui é o método que eu estou passando para dentro do método.
+
+207
+00:25:27.470 --> 00:25:31.680
+Luiz Maia: Eu estou passando a alterar número para dentro de alterar. Vetor.
+
+208
+00:25:33.540 --> 00:25:41.580
+Luiz Maia: Alterar número é um delegate que é um método
+
+209
+00:25:42.680 --> 00:25:45.750
+Luiz Maia: que pode ser quadrado ou cubo.
+
+210
+00:25:47.130 --> 00:25:50.859
+Luiz Maia: Então eu estou passando para dentro do vetor. Um outro método.
+
+211
+00:25:50.960 --> 00:25:52.719
+Luiz Maia: É isso que eu estou fazendo aqui.
+
+212
+00:25:53.230 --> 00:25:57.209
+Luiz Maia: É super estranho. É super esquisito, super diferente,
+
+213
+00:25:57.510 --> 00:25:59.870
+Luiz Maia: mas é o que nós temos.
+
+214
+00:26:02.370 --> 00:26:04.890
+Luiz Maia: Isso é um callback síncrono.
+
+215
+00:26:06.250 --> 00:26:13.790
+Luiz Maia: Se você não entender, eu vou respeitar, porque é difícil mesmo gente, isso aqui não é fácil.
+
+216
+00:26:14.650 --> 00:26:18.970
+Luiz Maia: Isso aqui não é programação básica.
+
+217
+00:26:20.570 --> 00:26:23.260
+Luiz Maia: Isso aqui é programação avançada.
+
+218
+00:26:28.340 --> 00:26:32.259
+Luiz Maia: Esse é um dos melhores exemplos que a gente tem de delegate
+
+219
+00:26:33.650 --> 00:26:39.869
+Luiz Maia: quando você passa um método com o parâmetro de outro método,
+
+220
+00:26:41.650 --> 00:26:47.649
+Luiz Maia: essa é a melhor para mim. A melhor explicação de delegate
+
+221
+00:26:56.360 --> 00:27:01.029
+Luiz Maia: ficar confuso com esse código. É a coisa mais normal do mundo.
+
+222
+00:27:03.890 --> 00:27:11.730
+Luiz Maia: Eu acho que é difícil você olhar para um código desse e ficar confortável com isso.
+
+223
+00:27:13.060 --> 00:27:14.939
+Luiz Maia: O professor é um código simples.
+
+224
+00:27:14.940 --> 00:27:16.540
+João Victor Gasparoto: Mestre. É. Tchau.
+
+225
+00:27:16.540 --> 00:27:17.500
+Luiz Maia: Pode falar.
+
+226
+00:27:18.800 --> 00:27:20.199
+pedro.yamato: Pode ser permanente ou.
+
+227
+00:27:20.200 --> 00:27:21.330
+João Victor Gasparoto: Pode falar.
+
+228
+00:27:21.760 --> 00:27:35.390
+pedro.yamato: Beleza, Professor. Então, só para confirmar o que um delegate espera é que os métodos que vão ser guardados dentro deles tenham a mesma assinatura que ele tem.
+
+229
+00:27:38.510 --> 00:27:42.589
+Luiz Maia: Olha só alterar número. Ele recebe quem?
+
+230
+00:27:44.180 --> 00:27:45.460
+Luiz Maia: Um número.
+
+231
+00:27:46.620 --> 00:27:53.590
+Luiz Maia: Então, se eu tentar fazer alguma coisa diferente disso, provavelmente vai dar problema. Olha só. Vamos fazer.
+
+232
+00:27:55.810 --> 00:27:57.490
+Luiz Maia: Vou fazer isso aqui. Ó,
+
+233
+00:28:12.070 --> 00:28:14.870
+Luiz Maia: fazer isso aqui, ó passar dois parâmetros para ele.
+
+234
+00:28:15.460 --> 00:28:16.849
+Luiz Maia: Ele não vai aceitar.
+
+235
+00:28:17.240 --> 00:28:23.450
+Luiz Maia: Ele vai falar que alterar número. Ele não tem dois parâmetros. Ele não vai aceitar. De jeito nenhum.
+
+236
+00:28:23.630 --> 00:28:25.420
+pedro.yamato: Ele já acusa, né?
+
+237
+00:28:25.420 --> 00:28:32.180
+Luiz Maia: Não precisa nem compilar. Ele dá erro na própria ide. Eu tenho que ter a mesma assinatura.
+
+238
+00:28:33.990 --> 00:28:39.240
+pedro.yamato: E é a questão por, tipo, também, né? Se eu tentar jogar uma String, aí ele já vai acusar na hora também, né?
+
+239
+00:28:39.240 --> 00:28:40.470
+Luiz Maia: Com certeza
+
+240
+00:28:44.580 --> 00:28:47.730
+Luiz Maia: já deu problema lá. Ó, não vou aceitar.
+
+241
+00:28:48.510 --> 00:28:49.970
+pedro.yamato: Show, beleza.
+
+242
+00:28:52.500 --> 00:29:07.450
+Luiz Maia: Teve uma pergunta ontem sobre sobrecarga de delegate. Eu acabei esquecendo de pesquisar sobre isso. Mas assim, pensando muito sobre esse assunto. Eu acho que não existe sobrecarga de delegate.
+
+243
+00:29:07.750 --> 00:29:17.139
+Luiz Maia: Eu não fiz o teste, mas eu acho que é muito pouco provável que funcione justamente por lembrei disso. Por conta das perguntas que foram feitas. Agora,
+
+244
+00:29:17.640 --> 00:29:26.639
+Luiz Maia: o delegate tem uma assinatura e a assinatura tem que ser respeitada. Então eu não consigo imaginar um delegate com sobrecarga.
+
+245
+00:29:27.310 --> 00:29:36.879
+Luiz Maia: Eu não fiz uma pesquisa específica sobre isso, mas eu acho que não funciona. Eu não testei,
+
+246
+00:29:37.990 --> 00:29:49.110
+Luiz Maia: até porque eu esqueci da pergunta. Mas essa pergunta do colega, agora, da assinatura, me fez me lembrar da pergunta de ontem. Se eu tenho sobrecarga de delegate,
+
+247
+00:29:49.420 --> 00:29:57.959
+Luiz Maia: eu imagino que não. Justamente por conta disso, ele tem uma assinatura e a assinatura tem que ser respeitada.
+
+248
+00:30:00.800 --> 00:30:07.749
+Luiz Maia: Isso aqui, na minha opinião, é um dos melhores exemplos de delegate
+
+249
+00:30:08.670 --> 00:30:12.300
+Luiz Maia: o lambida que nós vimos ontem.
+
+250
+00:30:12.410 --> 00:30:14.510
+Luiz Maia: Toda a lâmpida
+
+251
+00:30:14.970 --> 00:30:27.800
+Luiz Maia: e eu acabei. Não, eu deveria ter falado isso com vocês. Acabei não falando, mas toda a lâmbida isso aqui, se você for olhar o código gerado pelo compilador.
+
+252
+00:30:27.950 --> 00:30:29.829
+Luiz Maia: Isso aqui vai virar um funk.
+
+253
+00:30:30.190 --> 00:30:32.089
+Luiz Maia: Um funk delegate.
+
+254
+00:30:33.760 --> 00:30:42.440
+Luiz Maia: Ele vai gerar por trás dos panos. Um funk delegate então toda a lâmpida toda
+
+255
+00:30:42.710 --> 00:30:45.120
+Luiz Maia: vai virar por trás dos panos.
+
+256
+00:30:45.530 --> 00:30:52.620
+Luiz Maia: Tem até como ver isso. Gente tem uma ferramenta do C Sharp que eu nunca usei.
+
+257
+00:30:52.780 --> 00:30:58.830
+Luiz Maia: Mas eu cheguei a olhar alguma coisa sobre essa ferramenta
+
+258
+00:30:59.460 --> 00:31:05.669
+Luiz Maia: que permite que você consiga olhar o código depois de compilado.
+
+259
+00:31:06.570 --> 00:31:17.709
+Luiz Maia: É, eu achei assim muito, muito baixo nível para vocês, para a gente entrar nesse nível.
+
+260
+00:31:18.210 --> 00:31:27.340
+Luiz Maia: Mas o que eu li é basicamente isso. Quando você tem uma lâmpada dessa? Ele vai transformar numa funk. Delegate
+
+261
+00:31:28.390 --> 00:31:34.999
+Luiz Maia: tanto essa aqui quanto essa aqui. Ele vai transformar tudo isso aqui em Funk Delegate.
+
+262
+00:31:36.620 --> 00:31:37.890
+Luiz Maia: Aqui também.
+
+263
+00:31:40.420 --> 00:31:46.370
+Luiz Maia: Todas essas lâmpadas que estão aqui vão se transformar em funk delegante
+
+264
+00:31:51.610 --> 00:31:56.239
+Luiz Maia: por trás dos panos. Vamos olhar. Agora. Bom, eu poderia parar aqui,
+
+265
+00:32:01.020 --> 00:32:03.660
+Luiz Maia: Gabriel, isso aí é um problema, cara.
+
+266
+00:32:04.360 --> 00:32:07.130
+Luiz Maia: Eu já pensei assim também.
+
+267
+00:32:07.600 --> 00:32:10.730
+Luiz Maia: Mas primeiro delegate. Não tem herança.
+
+268
+00:32:11.010 --> 00:32:12.980
+Luiz Maia: Não tem hierarquia nenhuma.
+
+269
+00:32:13.710 --> 00:32:16.949
+Luiz Maia: O que você pode tentar pensar
+
+270
+00:32:17.350 --> 00:32:21.069
+Luiz Maia: é que o delegate. Tem alguma coisa a ver com interface.
+
+271
+00:32:24.080 --> 00:32:27.899
+Luiz Maia: Pelo que eu andei estudando e consultando.
+
+272
+00:32:28.150 --> 00:32:32.010
+Luiz Maia: Não é exatamente a mesma coisa.
+
+273
+00:32:32.400 --> 00:32:42.879
+Luiz Maia: Parece muito com interface, muito menos com herança, mas muito com interface. Mas não é exatamente o conceito de interface,
+
+274
+00:32:43.390 --> 00:32:44.100
+Luiz Maia: tá?
+
+275
+00:32:45.080 --> 00:32:48.009
+Luiz Maia: Muitas coisas que nós podemos fazer.
+
+276
+00:32:48.150 --> 00:32:51.449
+Luiz Maia: Um delegate gente pode fazer com interface,
+
+277
+00:32:52.520 --> 00:33:00.690
+Luiz Maia: mas, por exemplo, esse tipo de coisa. Esse callback aí que eu fiz. Eu acho que não dá para fazer com interface.
+
+278
+00:33:01.180 --> 00:33:02.780
+Luiz Maia: Eu teria que pesquisar.
+
+279
+00:33:03.880 --> 00:33:08.629
+Luiz Maia: Você teria como eu fazer essa passagem de parâmetro aqui
+
+280
+00:33:09.210 --> 00:33:19.280
+Luiz Maia: usando interface. Eu nunca testei isso a princípio, sem fazer nenhuma pesquisa.
+
+281
+00:33:19.400 --> 00:33:20.950
+Luiz Maia: Eu acho que não,
+
+282
+00:33:21.470 --> 00:33:27.880
+Luiz Maia: mas eu não tenho certeza. Eu teria que pesquisar para dizer para vocês. Se dá para fazer isso com interface ou não,
+
+283
+00:33:33.040 --> 00:33:38.370
+Luiz Maia: teria que pesquisar gente teria que pesquisar
+
+284
+00:33:39.320 --> 00:33:48.570
+Luiz Maia: se isso aqui poderia ser implementado via interface, tentar pensar rápido.
+
+285
+00:33:54.360 --> 00:33:57.030
+Luiz Maia: Uma interface, alterar número.
+
+286
+00:34:02.410 --> 00:34:06.630
+Luiz Maia: O problema da interface é que você tem que implementar a interface.
+
+287
+00:34:07.320 --> 00:34:11.380
+Luiz Maia: Então eu não teria como fazer a interface.
+
+288
+00:34:11.600 --> 00:34:19.420
+Luiz Maia: Olhando para esse exemplo aqui, se eu declarar uma interface, alterar número, e aí
+
+289
+00:34:21.199 --> 00:34:25.299
+Luiz Maia: ela teria que ser implementada de alguma maneira.
+
+290
+00:34:25.670 --> 00:34:32.329
+Luiz Maia: E aí eu não teria como implementar de duas formas diferentes essa interface, o quadrado e o cubo.
+
+291
+00:34:32.440 --> 00:34:41.960
+Luiz Maia: Então, assim, pensando nesse código especificamente, eu acho que eu não consigo implementar isso com interface.
+
+292
+00:34:43.389 --> 00:34:45.710
+Luiz Maia: Mas novamente, eu teria que pesquisar,
+
+293
+00:34:47.389 --> 00:34:51.459
+Luiz Maia: porque a interface é implementada em algum momento,
+
+294
+00:34:52.630 --> 00:34:55.139
+Luiz Maia: e ela vai ter uma implementação. Só
+
+295
+00:34:56.810 --> 00:35:00.750
+Luiz Maia: eu não posso ter a mesma interface implementada duas vezes.
+
+296
+00:35:00.880 --> 00:35:03.310
+Luiz Maia: A não ser que seja uma sobrecarga.
+
+297
+00:35:18.500 --> 00:35:20.120
+Luiz Maia: Estou pensando, gente,
+
+298
+00:35:24.680 --> 00:35:27.200
+Luiz Maia: você fala que tem uma interface.
+
+299
+00:35:29.970 --> 00:35:33.610
+Luiz Maia: Mas eu teria que ter um único nome para a interface.
+
+300
+00:35:35.120 --> 00:35:36.910
+Luiz Maia: Como é que eu vou fazer isso?
+
+301
+00:35:37.740 --> 00:35:40.480
+Luiz Maia: Eu tenho duas implementações diferentes,
+
+302
+00:35:48.380 --> 00:35:54.109
+Luiz Maia: mas eu não estou passando aqui. Olha só, eu não estou passando aqui.
+
+303
+00:35:54.630 --> 00:35:58.799
+Luiz Maia: Objetos de uma classe. Eu estou passando aqui métodos,
+
+304
+00:35:59.320 --> 00:36:06.820
+Luiz Maia: então provavelmente isso não vai dar certo, eu estou pensando aqui, gente.
+
+305
+00:36:07.400 --> 00:36:13.940
+Luiz Maia: As perguntas estão bem alto nível, obrigado. Parabéns aí pelas perguntas.
+
+306
+00:36:15.830 --> 00:36:19.469
+Luiz Maia: Então isso aqui não é uma classe. Isso aqui é um método.
+
+307
+00:36:21.820 --> 00:36:26.830
+Luiz Maia: Passar um objeto para dentro de um método é uma coisa tranquila,
+
+308
+00:36:27.090 --> 00:36:31.579
+Luiz Maia: mas isso não é Power Back, isso não é? Delegate isso é outra coisa.
+
+309
+00:36:33.670 --> 00:36:41.479
+Luiz Maia: Por exemplo, esse vetor aqui, ele está sendo passado como um objeto para dentro desse método.
+
+310
+00:36:41.980 --> 00:36:43.040
+Luiz Maia: Ok,
+
+311
+00:36:45.320 --> 00:36:51.849
+Luiz Maia: mas aqui eu estou passando um método para dentro de um outro método. É uma outra coisa é diferente.
+
+312
+00:36:52.230 --> 00:36:57.719
+Luiz Maia: Então acho que interface não resolve isso. Mas novamente, eu tenho que pesquisar.
+
+313
+00:37:04.770 --> 00:37:09.960
+Luiz Maia: Eu poderia parar esse exemplo aqui, mas aí eu fui adiante.
+
+314
+00:37:11.540 --> 00:37:20.950
+Luiz Maia: Eu fiz assim. Ó, eu tirei o delegate tá certo.
+
+315
+00:37:21.150 --> 00:37:25.710
+Luiz Maia: E criei aqui dentro dele. Em vez de passar
+
+316
+00:37:27.010 --> 00:37:31.939
+Luiz Maia: o delegate, eu passei um funk delegate
+
+317
+00:37:38.190 --> 00:37:40.460
+Luiz Maia: que na verdade é a mesma coisa.
+
+318
+00:37:41.520 --> 00:37:50.520
+Luiz Maia: Eu estou fazendo uma substituição. Eu estou pegando o delegate e declarando ele dentro do método.
+
+319
+00:37:50.670 --> 00:37:55.550
+Luiz Maia: É basicamente o que eu estou fazendo aqui aqui na versão B.
+
+320
+00:37:57.220 --> 00:38:08.739
+Luiz Maia: Você tem aqui esse cara aqui. Eu transformei esse delegate num funk, delegate que recebe dois inteiros
+
+321
+00:38:09.430 --> 00:38:14.479
+Luiz Maia: e altera o número que aqui no caso. É esse cara aqui.
+
+322
+00:38:26.320 --> 00:38:31.219
+Luiz Maia: Eu comentei esse cara e declarei o funk delegante dentro
+
+323
+00:38:31.330 --> 00:38:34.949
+Luiz Maia: da mesma forma que eu defini aqui o Inch
+
+324
+00:38:35.080 --> 00:38:41.180
+Luiz Maia: para o vetor. Eu defini que alterar número é um funk. Delegate desse jeito.
+
+325
+00:38:43.250 --> 00:38:45.340
+Luiz Maia: É uma versão mais
+
+326
+00:38:46.650 --> 00:38:59.269
+Luiz Maia: onde eu simplesmente não preciso declarar o delegate. Por quê? Porque o Funk é um tipo genérico do delegate.
+
+327
+00:39:01.230 --> 00:39:03.500
+Luiz Maia: Poderia usar um action aqui.
+
+328
+00:39:04.240 --> 00:39:09.759
+Luiz Maia: Agora é minha vez de perguntar. Eu poderia usar um action aqui ou não.
+
+329
+00:39:18.360 --> 00:39:20.700
+Luiz Maia: E aí não.
+
+330
+00:39:21.380 --> 00:39:22.720
+Luiz Maia: Não posso.
+
+331
+00:39:23.330 --> 00:39:26.440
+Luiz Maia: O que o Action não retorna a nada
+
+332
+00:39:27.030 --> 00:39:29.980
+Luiz Maia: enquanto o funk retorna. Alguma coisa
+
+333
+00:39:31.260 --> 00:39:33.910
+Luiz Maia: retorna aqui nesse íntia aqui dentro.
+
+334
+00:39:34.400 --> 00:39:39.010
+Luiz Maia: Então eu estou passando um int para ele e retorno a um outro Inch aqui dentro.
+
+335
+00:39:39.510 --> 00:39:43.640
+Luiz Maia: E assim eu consigo fazer o quadrado e o cubo
+
+336
+00:39:43.920 --> 00:39:51.209
+Luiz Maia: nesse intit. Eu estou passando o número que eu quero que ele altere. E aqui vem o número alterado.
+
+337
+00:39:54.910 --> 00:39:57.870
+Luiz Maia: É por isso que eu não posso usar Action. Nesse caso.
+
+338
+00:40:00.930 --> 00:40:05.870
+Luiz Maia: Aí tem mais um exemplo para fechar esses.
+
+339
+00:40:06.010 --> 00:40:19.230
+Luiz Maia: Essa parte que eu acho que é a parte mais interessante em relação à delegate que é a passagem de método como parâmetro.
+
+340
+00:40:19.850 --> 00:40:22.369
+Luiz Maia: Pode falar, Pedro? À vontade.
+
+341
+00:40:33.160 --> 00:40:36.460
+Luiz Maia: Podemos trocar int por streaming aonde?
+
+342
+00:40:42.310 --> 00:40:53.369
+Luiz Maia: Aqui, nesse cara, aqui, String, na hora que você passar. Quando você chamar alterar número,
+
+343
+00:40:53.690 --> 00:40:55.610
+Luiz Maia: ele vai retornar. O quê?
+
+344
+00:40:56.880 --> 00:41:02.909
+Luiz Maia: Ele vai fazer o quê? Alterar número vai fazer o quê? Vai pegar esse cara aqui?
+
+345
+00:41:03.120 --> 00:41:09.800
+Luiz Maia: Vai fazer ele ao quadrado. Se você retornar aqui um string, ele vai dar problema.
+
+346
+00:41:17.660 --> 00:41:23.640
+Luiz Maia: Alterar número retorna. O quê? Um Inch e não uma String. Ele vai reclamar na mesma hora.
+
+347
+00:41:24.400 --> 00:41:26.600
+Luiz Maia: A assinatura é diferente.
+
+348
+00:41:28.400 --> 00:41:30.360
+Luiz Maia: Ele não vai aceitar isso. Nunca
+
+349
+00:41:31.950 --> 00:41:35.350
+Luiz Maia: aqui entra um Int e retorna um Inch.
+
+350
+00:41:35.980 --> 00:41:42.959
+Luiz Maia: Ah, mas se eu botar aqui um Dumble, por exemplo, será que ele aceita vamos ver se ele vai fazer conversão implícita.
+
+351
+00:41:43.570 --> 00:41:44.810
+Luiz Maia: Também não.
+
+352
+00:41:46.380 --> 00:41:49.879
+Luiz Maia: Ele não aceitou. Não, a conversão implícita.
+
+353
+00:41:54.340 --> 00:41:57.789
+Luiz Maia: Deixa eu ver. Se eu alterar aqui para Double.
+
+354
+00:42:05.100 --> 00:42:08.129
+Luiz Maia: Eu acho que talvez também aqui ele não aceite.
+
+355
+00:42:09.380 --> 00:42:12.610
+Luiz Maia: Também não, aqui está com retorne.
+
+356
+00:42:14.060 --> 00:42:15.110
+Luiz Maia: Double.
+
+357
+00:42:16.620 --> 00:42:18.500
+Luiz Maia: Ele está aceitando o Double.
+
+358
+00:42:19.310 --> 00:42:21.959
+Luiz Maia: Ele está fazendo alguma conversão implícita.
+
+359
+00:42:23.130 --> 00:42:26.750
+Luiz Maia: Esse Cast que ele está fazendo é um cast implícito.
+
+360
+00:42:26.990 --> 00:42:30.600
+Luiz Maia: Provavelmente ele está aceitando aqui.
+
+361
+00:42:30.910 --> 00:42:38.330
+Luiz Maia: Não sei se vai dar erro de. Deixa eu testar aqui. Deixa eu ver se vai dar erro de execução.
+
+362
+00:42:40.870 --> 00:42:47.169
+Luiz Maia: Ele está convertendo esse double para int. Só pode ser.
+
+363
+00:42:47.810 --> 00:42:49.829
+Luiz Maia: Não, ele já deu erro aqui. Ó,
+
+364
+00:42:50.430 --> 00:42:52.200
+Luiz Maia: olha lá, já deu o erro.
+
+365
+00:42:55.210 --> 00:42:58.109
+Luiz Maia: Então a assinatura tem que ser exatamente a mesma.
+
+366
+00:43:00.790 --> 00:43:02.940
+Luiz Maia: Ele não está aceitando nada? Não,
+
+367
+00:43:07.790 --> 00:43:17.760
+Luiz Maia: o último exemplo dessa continuação é o Zalâmbida.
+
+368
+00:43:18.740 --> 00:43:20.860
+Luiz Maia: Em vez de eu ter aqui
+
+369
+00:43:23.550 --> 00:43:32.899
+Luiz Maia: o método quadrado e o método cubo. Eu posso fazer o quê? Passar para dentro do método?
+
+370
+00:43:33.010 --> 00:43:35.770
+Luiz Maia: Eu mantenho aqui a minha função,
+
+371
+00:43:36.950 --> 00:43:43.269
+Luiz Maia: o funk delegate e passo na chamada. O quê? Uma lâmbida.
+
+372
+00:43:44.730 --> 00:43:48.069
+Luiz Maia: E aí ele se encaixa exatamente nesse cara aqui?
+
+373
+00:43:59.790 --> 00:44:02.260
+Luiz Maia: Porra, que pergunta é essa gente?
+
+374
+00:44:04.020 --> 00:44:12.240
+Luiz Maia: O Funk lida bem com o If, por exemplo, se der true, não
+
+375
+00:44:13.410 --> 00:44:19.930
+Luiz Maia: true no Sea Sharp. O True é uma coisa, é um tipo
+
+376
+00:44:20.380 --> 00:44:22.830
+Luiz Maia: e o int é outro tipo.
+
+377
+00:44:23.280 --> 00:44:34.990
+Jorge José Luiz Santos da Silva: Não isso assim, professor, o que eu queria entender é se, por exemplo, se você colocar algum tipo de variável onde? Sei lá, não é possível
+
+378
+00:44:35.130 --> 00:44:44.080
+Jorge José Luiz Santos da Silva: elevar número por zero, por exemplo, ou elevar o zero, ele vai mostrar alguma mensagem de erro. Então, se, por exemplo, essa mensagem for Wells,
+
+379
+00:44:44.220 --> 00:44:51.349
+Jorge José Luiz Santos da Silva: ele mostra essa mensagem de erro, ou ele só vai só sempre retornar o Wind.
+
+380
+00:44:52.130 --> 00:44:53.620
+Jorge José Luiz Santos da Silva: Não sei se ficou muito claro.
+
+381
+00:44:54.450 --> 00:44:57.479
+Luiz Maia: A gente vai testar agora. Se você quer levar
+
+382
+00:44:57.740 --> 00:45:02.470
+Luiz Maia: a zero, a gente pode fazer um teste aqui e vê o que acontece,
+
+383
+00:45:05.310 --> 00:45:09.119
+Luiz Maia: não importa qual é o exemplo, qualquer um deles.
+
+384
+00:45:09.680 --> 00:45:12.639
+Luiz Maia: O problema vai ser igual para todos eles.
+
+385
+00:45:18.450 --> 00:45:21.010
+Luiz Maia: É, não deu erro nenhum.
+
+386
+00:45:21.520 --> 00:45:27.250
+Luiz Maia: Elevou o quadrado zero deu zero. Não sei se na matemática isso está ok.
+
+387
+00:45:28.400 --> 00:45:29.549
+Luiz Maia: Isso é um erro.
+
+388
+00:45:36.490 --> 00:45:37.660
+Luiz Maia: E aí.
+
+389
+00:45:37.810 --> 00:45:53.730
+Jorge José Luiz Santos da Silva: Não é que eu estava pensando. Por exemplo, assim, como é que ele vai lidar com diferentes casos? Então, por exemplo, se ele vê que tem um número como zero, por exemplo, e ele tiver que mostrar uma mensagem de erro. Quando esse número aparecer, o funk vai conseguir retornar a isso.
+
+390
+00:45:53.730 --> 00:46:00.320
+Jorge José Luiz Santos da Silva: Como ele sempre vai retornar a mesma assinatura. Então eu acredito que não, mas ele não vai conseguir mostrar uma mensagem.
+
+391
+00:46:00.630 --> 00:46:04.380
+Luiz Maia: Não, não vai. Porque o retorno dele é sempre inteiro.
+
+392
+00:46:04.380 --> 00:46:04.850
+Jorge José Luiz Santos da Silva: Beleza.
+
+393
+00:46:04.850 --> 00:46:08.450
+Luiz Maia: Nesse caso, não vai conseguir mandar uma mensagem de erro.
+
+394
+00:46:08.720 --> 00:46:15.670
+Luiz Maia: Você vai ter que fazer um Tri Cat dentro do teu código para poder fazer algum tratamento de erro aqui dentro.
+
+395
+00:46:15.830 --> 00:46:16.740
+Jorge José Luiz Santos da Silva: Beleza.
+
+396
+00:46:16.920 --> 00:46:20.390
+Luiz Maia: Eu não consigo. Se eu Botar String aqui
+
+397
+00:46:20.670 --> 00:46:35.669
+Luiz Maia: não tem como dizer que aqui pode retornar um inteiro ou uma streaming. A assinatura do delegate é aquela assinatura que foi definida e ponto. Não tem como brincar com isso. Não tem como a gente fazer alteração nisso.
+
+398
+00:46:35.930 --> 00:46:37.729
+Jorge José Luiz Santos da Silva: Perfeito, beleza. Obrigado, professor.
+
+399
+00:46:37.730 --> 00:46:42.659
+Luiz Maia: Que isso deixa eu mudar isso aqui? Porque eu não sei
+
+400
+00:46:43.450 --> 00:46:48.330
+Luiz Maia: elevar zero ao quadrado é erro ou não.
+
+401
+00:46:48.700 --> 00:46:54.730
+Jorge José Luiz Santos da Silva: Não, eu acredito que qualquer número elevado a zero é um. Eu não estou enganado. Se eu não estou enganado,
+
+402
+00:46:56.200 --> 00:46:56.730
+Jorge José Luiz Santos da Silva: acho.
+
+403
+00:46:56.730 --> 00:46:59.539
+Luiz Maia: Não estou falando zero elevado. Alguma coisa?
+
+404
+00:46:59.760 --> 00:47:07.839
+Luiz Maia: Zero vezes zero é zero. Então é isso? Não vai dar erro
+
+405
+00:47:08.270 --> 00:47:18.010
+Luiz Maia: zero elevado ao cubo é zero vezes zero vezes zero que é zero. Então não vai dar erro aqui. Não tem essa questão.
+
+406
+00:47:18.170 --> 00:47:20.309
+Luiz Maia: O que você poderia pensar
+
+407
+00:47:20.460 --> 00:47:30.489
+Luiz Maia: de repente? Não sei, uma raiz quadrada, alguma coisa do tipo. Se der erro aqui dentro, gerar um flow,
+
+408
+00:47:30.800 --> 00:47:37.859
+Luiz Maia: fazer um Try Cat e lançar uma exceção. Não é possível fazer esse tipo de.
+
+409
+00:47:37.970 --> 00:47:43.050
+Luiz Maia: É qualquer número elevado. A zero é um. Isso aí. Eu sei,
+
+410
+00:47:43.460 --> 00:47:49.040
+Luiz Maia: mas zero elevado a algum número? É zero, porque é zero vezes. Zero.
+
+411
+00:47:49.190 --> 00:47:50.959
+Luiz Maia: Então não vai dar problema.
+
+412
+00:47:51.640 --> 00:47:54.949
+Luiz Maia: É, é normal isso, gente.
+
+413
+00:47:57.470 --> 00:48:03.739
+Luiz Maia: Então aqui eu fiz uma sequência de exemplos. Mas assim, o exemplo que eu mais gosto
+
+414
+00:48:04.070 --> 00:48:13.269
+Luiz Maia: é esse exemplo aqui, cara, é você passar um método como parâmetro de outro método.
+
+415
+00:48:14.490 --> 00:48:17.880
+Luiz Maia: Esse refinamento que eu fiz aqui
+
+416
+00:48:18.640 --> 00:48:26.750
+Luiz Maia: é só para mostrar para vocês que a gente consegue implementar é
+
+417
+00:48:28.880 --> 00:48:33.359
+Luiz Maia: o delegate de uma outra maneira, usando o Funk.
+
+418
+00:48:35.340 --> 00:48:46.490
+Luiz Maia: E aqui novamente. E você pode ter certeza, quando você passa uma lâmbida como essa. Ele vai transformar isso aqui nisso aqui.
+
+419
+00:48:47.190 --> 00:48:48.719
+Luiz Maia: Não tenha dúvida.
+
+420
+00:48:50.790 --> 00:48:55.890
+Luiz Maia: Se eu tiver tempo, eu vou pegar um código e traduzir
+
+421
+00:48:56.080 --> 00:48:59.730
+Luiz Maia: o que ele gera como compilado para vocês.
+
+422
+00:49:00.290 --> 00:49:04.920
+Luiz Maia: Mas gente assim. A gente tem muito mais coisa importante para ver do que isso.
+
+423
+00:49:05.430 --> 00:49:10.329
+Luiz Maia: O assunto é interessante, mas ele não é fundamental na formação de vocês.
+
+424
+00:49:13.060 --> 00:49:19.400
+Luiz Maia: Próximo exemplo: então aqui é um exemplo que eu acho muito bacana de delegate
+
+425
+00:49:19.770 --> 00:49:28.310
+Luiz Maia: quando você faz o callback, ou seja, você passa um método como parâmetro de outro método.
+
+426
+00:49:28.720 --> 00:49:38.930
+Luiz Maia: Aqui tem um outro exemplo. Talvez não tão bacana. Mas é interessante que é o Multishash delegate
+
+427
+00:49:40.990 --> 00:49:42.439
+Luiz Maia: que é esse cara aqui?
+
+428
+00:49:44.130 --> 00:49:46.370
+Luiz Maia: O que é um Multishash delegate.
+
+429
+00:49:46.970 --> 00:49:51.190
+Luiz Maia: Você atribui ao delegate.
+
+430
+00:49:51.300 --> 00:50:00.239
+Luiz Maia: Pode ser o action. Normalmente é um action. Não é um funk porque o funk retorna a alguma coisa.
+
+431
+00:50:00.670 --> 00:50:11.649
+Luiz Maia: Você atribui a esse objeto esse delegate vários métodos usando o mais igual.
+
+432
+00:50:12.570 --> 00:50:19.070
+Luiz Maia: Então aqui eu estou atribuindo somar a esse objeto,
+
+433
+00:50:19.250 --> 00:50:23.249
+Luiz Maia: o subtrair, o multiplicar e o dividir.
+
+434
+00:50:23.480 --> 00:50:32.430
+Luiz Maia: E aí eu mando executar o Multishash. Delegate
+
+435
+00:50:34.140 --> 00:50:38.199
+Luiz Maia: o que ele faz. Ele vai executar as quatro funções.
+
+436
+00:50:38.560 --> 00:50:43.599
+Luiz Maia: Seguidamente, como elas foram declaradas aqui,
+
+437
+00:50:43.910 --> 00:50:58.500
+Luiz Maia: então ele vai fazer a soma o subtrair, o multiplicar e dividir na sequência. Aqui eu estou tirando do Multicast delegate o multiplicar. Então ele vai fazer? Só a soma, a subtração e a Divisão
+
+438
+00:51:01.350 --> 00:51:05.120
+Luiz Maia: aqui é a forma deixa eu botar aqui.
+
+439
+00:51:08.010 --> 00:51:09.979
+Luiz Maia: Forma explícita.
+
+440
+00:51:13.640 --> 00:51:16.129
+Luiz Maia: E aqui é a forma simplificada.
+
+441
+00:51:28.290 --> 00:51:34.040
+Luiz Maia: Eu acho que vocês nunca viram isso na vida de vocês. Você chamar um um,
+
+442
+00:51:34.220 --> 00:51:40.150
+Luiz Maia: um método, uma função, e ela executar várias funções.
+
+443
+00:51:40.370 --> 00:51:52.020
+Luiz Maia: A não ser que você crie um método para fazer isso para você. Aqui eu estou fazendo é continuamente.
+
+444
+00:51:52.630 --> 00:51:58.219
+Luiz Maia: Você pode perguntar, por exemplo, se isso aqui é parecido com uma fila
+
+445
+00:51:58.530 --> 00:52:07.249
+Luiz Maia: onde você coloca dentro de uma fila uma série de métodos para serem executados. É semelhante a uma fila.
+
+446
+00:52:07.560 --> 00:52:09.719
+Luiz Maia: Uma Fifo, né?
+
+447
+00:52:12.000 --> 00:52:26.310
+Luiz Maia: Ele vai executar a primeira soma, o subtrair, o multiplicar e o dividir. Depois eu retiro dessa lista. Dessa fila o multiplicar. Que ele vai fazer? Ele vai executar tudo, menos o multiplicar. Vamos ver se funciona
+
+448
+00:52:28.130 --> 00:52:36.559
+Luiz Maia: tá aqui. Ó, ele executou as quatro operações. E aqui ele executou três operações, menos a de multiplicação.
+
+449
+00:52:39.820 --> 00:52:43.090
+Luiz Maia: Isso é chamado de Multicast delegate
+
+450
+00:52:45.500 --> 00:52:50.830
+Luiz Maia: esse termo. Multishast gente vem da área de redes tá?
+
+451
+00:52:51.320 --> 00:53:02.150
+Luiz Maia: E na verdade, eu não acho esse nome muito apropriado. Não, eu acho. O nome ruim é,
+
+452
+00:53:03.580 --> 00:53:07.729
+Luiz Maia: mas é o nome que o C. Sharp inventou para isso.
+
+453
+00:53:08.570 --> 00:53:18.000
+Luiz Maia: Só estou falando sobre isso porque no Tp, um de vocês tem uma questão sobre Multishash delegate, porque senão eu nem falaria sobre isso.
+
+454
+00:53:21.070 --> 00:53:30.059
+Luiz Maia: A questão mais interessante, na minha opinião, até aqui, além da questão do delegate três, que eu acho ótima
+
+455
+00:53:30.310 --> 00:53:32.179
+Luiz Maia: para mostrar qual back.
+
+456
+00:53:32.620 --> 00:53:35.280
+Luiz Maia: Só que aqui confundiu. O quê?
+
+457
+00:53:36.450 --> 00:53:39.980
+Luiz Maia: Fala comigo aí que eu tento desconfundir.
+
+458
+00:53:39.980 --> 00:53:44.330
+Jorge José Luiz Santos da Silva: Não, professor, desculpa. Era em relação ao número elevado de zero a zero-zero. Será.
+
+459
+00:53:44.330 --> 00:53:46.849
+Luiz Maia: Tá ok, beleza. Está tranquilo.
+
+460
+00:53:49.650 --> 00:53:50.990
+Luiz Maia: Um mosquito.
+
+461
+00:53:54.590 --> 00:53:58.830
+Luiz Maia: Eu tentei fazer agora. Eu fiz isso aqui hoje à tarde, gente
+
+462
+00:53:59.220 --> 00:54:03.290
+Luiz Maia: para tentar dar uma resposta para vocês em relação ao
+
+463
+00:54:04.060 --> 00:54:11.040
+Luiz Maia: a utilização prática do delegate. Eu acho que isso aqui é um bom exemplo. Na minha opinião,
+
+464
+00:54:11.440 --> 00:54:19.100
+Luiz Maia: você passar um método para dentro de outro método. Isso é um callback. Isso aqui é um callback síncrono.
+
+465
+00:54:19.750 --> 00:54:25.090
+Luiz Maia: Ele pega o que é síncrono. O que é a síncrono? Agora você vai entender.
+
+466
+00:54:25.900 --> 00:54:27.780
+Luiz Maia: Aqui, eu fiz um código
+
+467
+00:54:28.390 --> 00:54:42.010
+Luiz Maia: bem simples gente, isso aqui não é a programação asíncrona, como normalmente eu ensinaria. Eu tentei fazer um exemplo bem simples para vocês.
+
+468
+00:54:42.240 --> 00:54:53.740
+Luiz Maia: De como seria programação acínprona, onde callbacks e logo delegates seriam bem vindos. Está certo.
+
+469
+00:54:54.200 --> 00:55:02.499
+Luiz Maia: É esse primeiro exemplo. É o exemplo. Sem delegate,
+
+470
+00:55:02.820 --> 00:55:11.329
+Luiz Maia: sem Callback asíncono. E aí vocês vão entender a diferença entre callback, síncrono e call back asyncrono.
+
+471
+00:55:12.110 --> 00:55:15.330
+Luiz Maia: Eu vou rodar primeiro esse código aqui para vocês verem.
+
+472
+00:55:16.170 --> 00:55:18.329
+Luiz Maia: Ele não tem nada demais.
+
+473
+00:55:20.090 --> 00:55:24.619
+Luiz Maia: Ele vai simular o download de um arquivo.
+
+474
+00:55:24.810 --> 00:55:31.120
+Luiz Maia: Ele vai baixar o arquivo quando terminar. Ele vai dizer que o arquivo foi baixado.
+
+475
+00:55:36.210 --> 00:55:38.130
+Luiz Maia: O que acontece aqui dentro.
+
+476
+00:55:38.850 --> 00:55:50.770
+Luiz Maia: Esse programa principal ficou parado aqui nesse timeslip aqui, que foi a simulação de baixar o arquivo.
+
+477
+00:55:51.610 --> 00:56:01.629
+Luiz Maia: Então ele ficou cinco segundos baixando o arquivo programa principal ficou parado nessa linha aqui durante cinco segundos.
+
+478
+00:56:03.830 --> 00:56:06.080
+Luiz Maia: Então ele chamou o baixar arquivo,
+
+479
+00:56:06.210 --> 00:56:17.369
+Luiz Maia: dormiu por cinco segundos. Esse thread slip aqui, cinco mil. Ele está parado. Cinco segundos. É um temporizador.
+
+480
+00:56:18.880 --> 00:56:21.389
+Luiz Maia: Então o programa principal ficou parado
+
+481
+00:56:22.310 --> 00:56:32.280
+Luiz Maia: nesse thread slip ali durante cinco segundos. Se eu aumentar isso aqui, vocês vão ver que ele vai ficar mais tempo. Vamos botar dez
+
+482
+00:56:32.910 --> 00:56:34.240
+Luiz Maia: dez mil,
+
+483
+00:56:34.480 --> 00:56:46.950
+Luiz Maia: porque aqui é milissegundo. Tá gente? E aí vira dez segundos. Ele vai ficar aqui. Um tempão parado esperando. Pode contar. Um, dois, três, quatro, cinco,
+
+484
+00:56:47.260 --> 00:57:00.260
+Luiz Maia: seis, sete, oito, nove, dez. Pronto em dez segundos. Ele fez o download do arquivo, tá?
+
+485
+00:57:00.510 --> 00:57:02.179
+Luiz Maia: Agora ele vai fazer o quê?
+
+486
+00:57:02.390 --> 00:57:07.389
+Luiz Maia: A gente vai fazer essa versão de código, a síncrona.
+
+487
+00:57:08.390 --> 00:57:13.920
+Luiz Maia: E aí vocês vão ver a diferença do callback síncron e do Assimcrono
+
+488
+00:57:14.690 --> 00:57:18.590
+Luiz Maia: não é a implementação mais perfeita do mundo.
+
+489
+00:57:18.740 --> 00:57:30.139
+Luiz Maia: Não é uma aula de programação a cinco, né? Mas pelo menos eu tentei trazer para vocês alguma coisa mais palpável. Alguma coisa mais fácil de vocês entenderem?
+
+490
+00:57:30.370 --> 00:57:35.509
+Luiz Maia: Vou fazer um breve intervalo e eu já volto para mostrar para vocês
+
+491
+00:57:35.640 --> 00:57:39.579
+Luiz Maia: essa versão aqui. Ó, vou deixar a versão aqui na tela para vocês.
+
+492
+00:57:42.100 --> 00:57:44.190
+Luiz Maia: Deixa eu ver se eu consigo mostrar tudo.
+
+493
+00:57:45.540 --> 00:57:47.399
+Luiz Maia: Aqui está todo o código
+
+494
+00:57:47.940 --> 00:58:04.980
+Luiz Maia: a síncrono. Dá uma olhada nele antes que eu vou explicar para vocês. Depois cada um desses pedacinhos de código para vocês verem como é o callback, como é que ele funciona? E aí entra o conceito de novo, de delegate.
+
+495
+00:58:06.340 --> 00:58:12.740
+Luiz Maia: Mas aí, na vida real, mesmo na vida prática mesmo. Tá certo.
+
+496
+00:58:13.300 --> 00:58:14.540
+Luiz Maia: E aí
+
+497
+01:04:02.630 --> 01:04:04.250
+Luiz Maia: estamos de volta.
+
+498
+01:04:05.340 --> 01:04:08.439
+Luiz Maia: Bom, o que a gente tem aqui nesse código?
+
+499
+01:04:09.280 --> 01:04:13.810
+Luiz Maia: Eu acho que vocês provavelmente nunca viram um código desse na vida.
+
+500
+01:04:14.450 --> 01:04:21.409
+Luiz Maia: Cada linguagem tem sua maneira de implementar execução de código asíncrono.
+
+501
+01:04:21.710 --> 01:04:34.680
+Luiz Maia: Java tem um jeito. Python tem outro C. Sharp tem outro. Mas a ideia da programação assimcrona é você poder executar dois ou mais pedaços de códigos
+
+502
+01:04:34.850 --> 01:04:36.689
+Luiz Maia: de códigos ao mesmo tempo.
+
+503
+01:04:38.360 --> 01:04:40.430
+Luiz Maia: Então a gente tem aqui o nosso meio.
+
+504
+01:04:41.370 --> 01:04:51.409
+Luiz Maia: Tá certo que chama e aqui que está o coração da história, o download concluído.
+
+505
+01:04:52.040 --> 01:04:55.669
+Luiz Maia: Eu estou passando um método para dentro de outro método.
+
+506
+01:04:56.250 --> 01:05:01.229
+Luiz Maia: Então aqui a gente tem um delegate, tá certo
+
+507
+01:05:02.280 --> 01:05:07.880
+Luiz Maia: que é tradicionalmente chamado também de callback.
+
+508
+01:05:08.140 --> 01:05:13.240
+Luiz Maia: Tá tanto no exemplo três como nesse exemplo, cinco:
+
+509
+01:05:14.050 --> 01:05:19.930
+Luiz Maia: essa passagem de método para dentro de outro método é chamado de callback.
+
+510
+01:05:20.130 --> 01:05:22.400
+Luiz Maia: A diferença do três para o cinco
+
+511
+01:05:22.520 --> 01:05:26.689
+Luiz Maia: é que no três é síncrono. Aqui é as síncrono.
+
+512
+01:05:27.080 --> 01:05:34.509
+Luiz Maia: Bom, como é que você vai entender a diferença. Olhando a execução dos códigos.
+
+513
+01:05:34.650 --> 01:05:47.689
+Luiz Maia: Então acontece o seguinte. Esse cara aqui, ele vai chamar esse método. Baixar arquivo. Eu estou simulando o download de um arquivo, tá gente, isso aqui não é um download de verdade.
+
+514
+01:05:48.180 --> 01:05:51.339
+Luiz Maia: Aí ele vem para cá e recebe como
+
+515
+01:05:51.950 --> 01:05:55.930
+Luiz Maia: método, um callback, que é um action,
+
+516
+01:05:57.720 --> 01:05:59.800
+Luiz Maia: porque ele não retorna a nada.
+
+517
+01:06:00.380 --> 01:06:07.419
+Luiz Maia: Então é um callback que ele vai receber, que é esse método aqui, dizendo que o download foi concluído.
+
+518
+01:06:08.230 --> 01:06:15.410
+Luiz Maia: Enquanto e dentro desse baixar arquivo, ele vai disparar uma rotina síncrona.
+
+519
+01:06:16.300 --> 01:06:24.200
+Luiz Maia: Então essa rotina aqui. Ela vai executar concorrentemente
+
+520
+01:06:25.490 --> 01:06:29.790
+Luiz Maia: a essa rotina do Man. Então eu vou ter o man rodando
+
+521
+01:06:29.990 --> 01:06:35.020
+Luiz Maia: junto com esse método. Baixar arquivo. Os dois vão rodar ao mesmo tempo.
+
+522
+01:06:36.060 --> 01:06:36.980
+Luiz Maia: Está certo.
+
+523
+01:06:37.920 --> 01:06:46.329
+Luiz Maia: E vocês vão ver ele executando ao mesmo tempo. Vai ter mensagem de um nesse fora aqui
+
+524
+01:06:46.690 --> 01:06:53.360
+Luiz Maia: e vai ter aqui uma outra mensagem desse fora aqui, baixando o arquivo. Eles vão executar ao mesmo tempo.
+
+525
+01:06:53.780 --> 01:07:02.219
+Luiz Maia: Ou seja assim cronamente, vocês talvez nunca tenham programado de forma síncrona na vida de vocês.
+
+526
+01:07:02.330 --> 01:07:15.379
+Luiz Maia: Tudo foi síncrono. Ou seja, você chamava um método para continuar a execução da próxima instrução. Aquele método tinha que terminar para você executar a próxima instrução.
+
+527
+01:07:15.650 --> 01:07:18.420
+Luiz Maia: É o que eu fiz. No três.
+
+528
+01:07:20.820 --> 01:07:32.180
+Luiz Maia: Nesse caso, aqui. Quando ele desvia para cá, ele começa a rodar um outro pedaço de código independente do Main, que é um método.
+
+529
+01:07:33.030 --> 01:07:34.100
+Luiz Maia: Tá certo.
+
+530
+01:07:34.350 --> 01:07:35.960
+Luiz Maia: Olha o que vai acontecer.
+
+531
+01:07:36.220 --> 01:07:37.110
+Luiz Maia: E aí,
+
+532
+01:07:52.730 --> 01:08:00.809
+Luiz Maia: primeiro que as tarefas e o download, eles não estão sincronizados.
+
+533
+01:08:01.080 --> 01:08:10.899
+Luiz Maia: Logo as tarefas, esses dois métodos, o Main e o baixar arquivo. Eles são assim, Cronos. Então ele começa.
+
+534
+01:08:11.550 --> 01:08:14.710
+Luiz Maia: Início daqui.
+
+535
+01:08:14.980 --> 01:08:21.380
+Luiz Maia: Download iniciado. Está aqui. Aí ele começa a executar a tarefa um.
+
+536
+01:08:21.680 --> 01:08:29.630
+Luiz Maia: Depois, ele executa um quinto do baixar o arquivo.
+
+537
+01:08:31.240 --> 01:08:39.300
+Luiz Maia: Depois ele executa uma segunda etapa do baixar o arquivo que é o dois de cinco.
+
+538
+01:08:40.430 --> 01:08:45.129
+Luiz Maia: Depois ele executa uma tarefa do Man, que é a tarefa dois.
+
+539
+01:08:46.229 --> 01:08:50.390
+Luiz Maia: Depois ele executa três, de cinco do baixar arquivo.
+
+540
+01:08:51.109 --> 01:08:54.180
+Luiz Maia: Depois ele executa três do Main.
+
+541
+01:08:54.840 --> 01:09:04.210
+Luiz Maia: Depois ele executa dois. Baixar arquivos, quatro, barra cinco, cinco, barra cinco. Executa uma tarefa. Quatro do Main.
+
+542
+01:09:05.149 --> 01:09:13.349
+Luiz Maia: Ele termina o download. E nessa hora, quando ele termina o download, o que ele faz? Ele chama o callback,
+
+543
+01:09:15.210 --> 01:09:19.839
+Luiz Maia: que essa é a rotina que foi passada para dentro do baixar arquivo.
+
+544
+01:09:22.029 --> 01:09:31.159
+Luiz Maia: Aí ele ainda executa uma última tarefa do Man e termina isso é uma execução. Assim,
+
+545
+01:09:31.859 --> 01:09:38.840
+Luiz Maia: se eu executar de novo, pode ser que aconteça a sequência não seja a mesma.
+
+546
+01:09:39.250 --> 01:09:43.130
+Luiz Maia: Eu não tenho como guardar isso aqui,
+
+547
+01:09:43.310 --> 01:09:52.479
+Luiz Maia: mas a gente pode tentar aqui. Se eu mudar esses tempos de slip de tempo, isso aqui pode mudar.
+
+548
+01:09:55.300 --> 01:09:59.369
+Luiz Maia: Vamos ver se a gente consegue se ele vai mudar muita coisa aqui,
+
+549
+01:10:04.280 --> 01:10:05.789
+Luiz Maia: parece que mudou.
+
+550
+01:10:07.890 --> 01:10:14.290
+Luiz Maia: Ele executou duas do baixar arquivo uma depois duas de novo.
+
+551
+01:10:15.120 --> 01:10:18.590
+Luiz Maia: Não parece que deu no mesmo, não é?
+
+552
+01:10:24.650 --> 01:10:34.040
+Luiz Maia: Repare, se eu fizer isso aqui, ó, é provavelmente isso que vai mudar.
+
+553
+01:10:35.760 --> 01:10:42.219
+Luiz Maia: Eu vou fazer o slips de mil aqui. E o mil aqui. Vamos ver o que vai acontecer. Vai mudar a saída.
+
+554
+01:10:50.060 --> 01:10:52.169
+Luiz Maia: Por que ficou desse jeito?
+
+555
+01:10:52.680 --> 01:10:57.510
+Luiz Maia: Porque ele. Espera um segundo aqui e um segundo aqui.
+
+556
+01:11:00.650 --> 01:11:04.470
+Luiz Maia: Então ficou sequencial o negócio, né?
+
+557
+01:11:05.030 --> 01:11:11.050
+Luiz Maia: Olha lá. Um, dois, três, quatro, cinco. Porque estão esperando o mesmo tempo.
+
+558
+01:11:11.450 --> 01:11:18.680
+Luiz Maia: Vamos fazer aqui, por exemplo, para diminuir esse tempo aqui de mil pro novecentos
+
+559
+01:11:29.190 --> 01:11:32.219
+Luiz Maia: não deu muita diferença.
+
+560
+01:11:32.380 --> 01:11:34.269
+Luiz Maia: Mas repare o seguinte.
+
+561
+01:11:34.470 --> 01:11:39.280
+Luiz Maia: Ele não exibiu o download concluído. Por quê?
+
+562
+01:11:39.600 --> 01:11:43.460
+Luiz Maia: Alguém sabe me dizer por que ele não mostrou o download concluído?
+
+563
+01:11:45.380 --> 01:11:48.460
+Luiz Maia: É difícil? Gente essa pergunta aqui é pra.
+
+564
+01:11:53.750 --> 01:11:55.170
+Luiz Maia: É para poucos.
+
+565
+01:11:58.320 --> 01:12:04.030
+Luiz Maia: Se alguém conseguir responder isso aí é dificílimo.
+
+566
+01:12:04.950 --> 01:12:08.960
+Luiz Maia: Por que ele não chamou o Callback? Por que ele não fez o Callback.
+
+567
+01:12:15.070 --> 01:12:19.900
+Luiz Maia: Se ninguém responder, tá tudo bem, cara. Porque isso aqui é difícil mesmo.
+
+568
+01:12:20.690 --> 01:12:23.390
+Luiz Maia: Olha só o tempo que eu coloquei de slip
+
+569
+01:12:23.880 --> 01:12:32.189
+Luiz Maia: no Main novecentos milissegundos. O tempo dentro do baixar arquivo é de mil.
+
+570
+01:12:32.320 --> 01:12:35.119
+Luiz Maia: Ele vai executar isso aqui cinco. Vezes.
+
+571
+01:12:35.480 --> 01:12:38.260
+Luiz Maia: Isso aqui vai ser menor do que
+
+572
+01:12:38.530 --> 01:12:48.479
+Luiz Maia: cinco mil. Logo o Main vai terminar antes do baixar arquivo. Então ele não vai conseguir terminar a execução do baixar arquivo.
+
+573
+01:12:49.550 --> 01:12:51.750
+Luiz Maia: Se eu aumentar esse tempo aqui para
+
+574
+01:12:52.250 --> 01:12:58.900
+Luiz Maia: como estava para um.um0 ele vai executar o callback. Ó,
+
+575
+01:13:05.810 --> 01:13:12.659
+Luiz Maia: porque o tempo de execução do Main é maior do que o tempo de execução do baixar arquivo.
+
+576
+01:13:13.070 --> 01:13:15.649
+Luiz Maia: Então dá tempo do baixar. Arquivo terminar.
+
+577
+01:13:15.860 --> 01:13:28.500
+Luiz Maia: Se eu botar um tempo menor do que o tempo que está aqui dentro, que são cinco segundos, o Mei termina e logo esse cara aqui não é executado até o fim.
+
+578
+01:13:30.500 --> 01:13:34.920
+Luiz Maia: Essa é a forma correta de implementar isso. Não, não é a gente.
+
+579
+01:13:35.250 --> 01:13:40.390
+Luiz Maia: Eu tentei trazer para vocês um exemplo
+
+580
+01:13:40.660 --> 01:13:47.180
+Luiz Maia: mais próximo da realidade para justificar o uso de delegate.
+
+581
+01:13:48.970 --> 01:13:50.599
+Luiz Maia: Por isso que eu tentei fazer.
+
+582
+01:13:51.640 --> 01:13:54.760
+Luiz Maia: Não sei se eu consegui, mas eu tentei
+
+583
+01:13:59.130 --> 01:14:03.269
+Luiz Maia: a programação assimcrona é bem mais complicada do que isso.
+
+584
+01:14:03.770 --> 01:14:12.449
+Luiz Maia: Mas eu tentei pegar um exemplo bem simples para mostrar para vocês um outro exemplo muito. Vocês entenderam o que eu fiz aqui? Gente ou não
+
+585
+01:14:14.180 --> 01:14:19.459
+Luiz Maia: ficou claro para vocês a versão síncrona. Isso aqui é síncrono.
+
+586
+01:14:19.810 --> 01:14:22.140
+Luiz Maia: Isso aqui é a síncrono.
+
+587
+01:14:22.470 --> 01:14:26.349
+Luiz Maia: Ou seja, eu tenho o baixar arquivo e o man rodando em paralelo.
+
+588
+01:14:27.400 --> 01:14:28.420
+Luiz Maia: Tá certo.
+
+589
+01:14:32.980 --> 01:14:34.160
+Luiz Maia: Obrigado.
+
+590
+01:14:35.420 --> 01:14:41.930
+Luiz Maia: E aí você entende agora a diferença entre o callback a síncrono.
+
+591
+01:14:42.600 --> 01:14:44.800
+Luiz Maia: Então deixa eu escrever isso aqui.
+
+592
+01:14:49.570 --> 01:14:57.459
+Luiz Maia: Callback, assícrono do Callback síncrono
+
+593
+01:15:04.460 --> 01:15:11.919
+Luiz Maia: por que aqui é síncrono, porque quando ele chama essa função, alterar vetor
+
+594
+01:15:12.040 --> 01:15:26.210
+Luiz Maia: o Men para e espera o resultado. Ele não continua a execução dele aqui. Ele não para a execução do Man. O Men continua executando enquanto o baixar. Arquivo também continua executando.
+
+595
+01:15:28.220 --> 01:15:30.460
+Luiz Maia: São dois exemplos de callback.
+
+596
+01:15:31.800 --> 01:15:41.580
+Luiz Maia: E aí o Callback é um exemplo clássico de delegate tá certo.
+
+597
+01:15:43.230 --> 01:15:45.360
+Luiz Maia: Um outro exemplo muito bom,
+
+598
+01:15:45.540 --> 01:15:59.969
+Luiz Maia: que eu gosto muito para encerrar a aula de hoje e encerrar esse assunto. Porque a aula que vem é Dotnet. Eu não vou mais falar sobre delegate com vocês, porque eu acho que vocês também não aguentam mais.
+
+599
+01:16:00.700 --> 01:16:02.050
+Luiz Maia: É evento
+
+600
+01:16:04.320 --> 01:16:17.670
+Luiz Maia: professor. Tem uma dúvida na sínc ou Callback pode receber algum valor do Man como parâmetro. O callback aguarda um valor do Man para ser executado. Sim, é possível você passar parâmetros para o callback.
+
+601
+01:16:18.170 --> 01:16:28.740
+Luiz Maia: Eu não coloquei nesse exemplo. Mas aqui, no exemplo, no 3b, eu estou passando.
+
+602
+01:16:29.120 --> 01:16:30.020
+Luiz Maia: Cadê
+
+603
+01:16:35.580 --> 01:16:41.379
+Luiz Maia: aqui? Eu estou passando parâmetros para o callback nesse funk aqui. Ó,
+
+604
+01:16:41.950 --> 01:16:46.250
+Luiz Maia: então é possível, Sim, você passar parâmetros por Calbeck?
+
+605
+01:16:46.720 --> 01:16:51.600
+Luiz Maia: É possível aqui. Eu estou passando parâmetros para o Calbeck,
+
+606
+01:17:02.150 --> 01:17:05.500
+Luiz Maia: então é possível, Sim, você passar parâmetros para o callback.
+
+607
+01:17:08.390 --> 01:17:11.140
+Luiz Maia: Eu programei com isso gente há muito tempo.
+
+608
+01:17:11.280 --> 01:17:21.770
+Luiz Maia: Mesmo assimcrono você tem como passar parâmetro? Sim, na hora que você dispara o código assícrono. Você tem como passar parâmetro para ele?
+
+609
+01:17:22.780 --> 01:17:27.030
+Luiz Maia: Não depois que eu saiba.
+
+610
+01:17:27.250 --> 01:17:39.780
+Luiz Maia: Quando você dispara esse baixar arquivo aqui, você pode passar parâmetro para o Callback depois eu acho que não. Eu não me lembro
+
+611
+01:17:41.510 --> 01:17:45.740
+Luiz Maia: se tem como passar durante a execução do baixar arquivo. Eu acho que não.
+
+612
+01:17:46.110 --> 01:17:54.639
+Luiz Maia: Depois que ele está executando. Você não tem mais como passar parâmetro. Mas antes da execução do baixar arquivo. Eu tenho como passar parâmetro. Sim,
+
+613
+01:17:55.310 --> 01:18:01.900
+Luiz Maia: posso até pensar numa maneira de fazer isso para vocês.
+
+614
+01:18:03.560 --> 01:18:07.400
+Luiz Maia: Eu posso pensar assim.
+
+615
+01:18:07.810 --> 01:18:16.090
+Luiz Maia: Passar uma mensagem para dentro do do Callback, é,
+
+616
+01:18:17.940 --> 01:18:22.299
+Luiz Maia: eu não faço agora isso porque senão eu não vou conseguir terminar a aula.
+
+617
+01:18:22.870 --> 01:18:29.209
+Luiz Maia: Eu tenho até uma ideia na minha cabeça aqui, que eu posso até pensar tentar fazer.
+
+618
+01:18:30.440 --> 01:18:32.929
+Luiz Maia: Eu posso passar essa mensagem aqui
+
+619
+01:18:33.080 --> 01:18:38.100
+Luiz Maia: de download concluído dentro como parâmetro do callback?
+
+620
+01:18:48.260 --> 01:19:00.649
+Luiz Maia: Não, eu acho que não tem como você alterar, passar parâmetro. Depois que ativou a rotina que passou o Callback. Não vejo isso possível. Eu posso pesquisar isso para vocês.
+
+621
+01:19:00.800 --> 01:19:04.799
+Luiz Maia: Um outro exemplo muito bom de delegate.
+
+622
+01:19:05.230 --> 01:19:10.659
+Luiz Maia: É esse exemplo aqui tá aqui. Eu tenho uma conta
+
+623
+01:19:12.180 --> 01:19:18.170
+Luiz Maia: uma conta corrente que tem a Genome Saldo, o consultor da conta. E aqui eu tenho um
+
+624
+01:19:19.000 --> 01:19:21.760
+Luiz Maia: um tratador de evento.
+
+625
+01:19:22.030 --> 01:19:24.880
+Luiz Maia: Um invent Handler, não é?
+
+626
+01:19:26.760 --> 01:19:38.480
+Luiz Maia: Toda vez que a conta é alterada, ele manda um evento, ele gera um evento, e quem tiver
+
+627
+01:19:39.120 --> 01:19:50.450
+Luiz Maia: ouvindo esse evento, vai poder fazer alguma coisa com ele. Gerar um log, jogar na tela,
+
+628
+01:19:50.780 --> 01:19:53.980
+Luiz Maia: gravar num banco de dados.
+
+629
+01:19:55.320 --> 01:20:02.630
+Luiz Maia: Então isso aqui também é um exemplo, de delegate eventos.
+
+630
+01:20:05.120 --> 01:20:14.130
+Luiz Maia: Então, aqui no meu programa principal, quando eu faço alterar saldo, tratar, alterar saldo.
+
+631
+01:20:15.150 --> 01:20:20.140
+Luiz Maia: Esse cara aqui, ele vai ser executado toda vez que eu for alterar o saldo.
+
+632
+01:20:20.440 --> 01:20:21.910
+Luiz Maia: Olha só. Que bacana.
+
+633
+01:20:28.400 --> 01:20:31.170
+Luiz Maia: Isso aqui é bem legal, cara. Eu acho bem legal
+
+634
+01:20:32.430 --> 01:20:35.179
+Luiz Maia: olha lá. Saldo alterado, saldo, alterado.
+
+635
+01:20:39.130 --> 01:20:51.930
+Luiz Maia: Ou seja, eu posso fazer como se fosse eu ficar escutando eventos
+
+636
+01:20:52.110 --> 01:21:02.760
+Luiz Maia: externos que estão fora do meu alcance, e eu só vou tratar aqueles eventos relacionados à alteração de saldo.
+
+637
+01:21:04.030 --> 01:21:07.660
+Luiz Maia: Isso é um uso de delegate.
+
+638
+01:21:10.750 --> 01:21:13.220
+Luiz Maia: Olha, que coisa simples que eu fiz aqui.
+
+639
+01:21:13.920 --> 01:21:18.900
+Luiz Maia: Inventless é um tipo de evento
+
+640
+01:21:19.290 --> 01:21:29.349
+Luiz Maia: aqui. Eu chamo um Invoc. Esse cara aqui. Essa interrogação aqui está na frente. É para evitar problemas de nulo
+
+641
+01:21:30.390 --> 01:21:37.809
+Luiz Maia: dele. Não está registrado e não dá problema esse eventis
+
+642
+01:21:38.370 --> 01:21:42.070
+Luiz Maia: nargues. Ele vai aparecer para vocês.
+
+643
+01:21:42.710 --> 01:21:55.650
+Luiz Maia: É aqui no evento dois nesse evento dois. Ela é uma evolução do evento um.
+
+644
+01:21:57.230 --> 01:21:58.010
+Luiz Maia: E aí,
+
+645
+01:22:02.040 --> 01:22:18.410
+Luiz Maia: aqui eu estou passando além do Event Handler, ou seja, o manipulador de eventos. Eu estou passando também argumentos, parâmetros para esse manipulador de eventos.
+
+646
+01:22:19.140 --> 01:22:20.310
+Luiz Maia: Tá certo.
+
+647
+01:22:20.750 --> 01:22:26.920
+Luiz Maia: Então, além de você avisar que aconteceu alguma coisa,
+
+648
+01:22:27.030 --> 01:22:34.750
+Luiz Maia: você gerar um evento, você passa parâmetros para ele, como por exemplo, aqui eu estou passando
+
+649
+01:22:34.940 --> 01:22:44.980
+Luiz Maia: um pouco mais de informação. Crédito que foi feito débito que foi feito e conta negativa.
+
+650
+01:22:46.740 --> 01:22:50.990
+Luiz Maia: Então é uma evolução do código anterior.
+
+651
+01:22:51.420 --> 01:22:54.469
+Luiz Maia: Só que para isso, eu preciso declarar uma classe.
+
+652
+01:22:54.800 --> 01:22:58.510
+Luiz Maia: É para passar esses parâmetros.
+
+653
+01:22:59.460 --> 01:23:02.910
+Luiz Maia: Que é essa classe? Even argues
+
+654
+01:23:04.910 --> 01:23:09.319
+Luiz Maia: aonde vai ser passado os parâmetros do Event Handler.
+
+655
+01:23:12.400 --> 01:23:13.949
+Luiz Maia: Que é esse cara aqui. Ó,
+
+656
+01:23:15.240 --> 01:23:21.560
+Luiz Maia: repara que eu estou passando. Aqui. Um objeto com os parâmetros
+
+657
+01:23:22.290 --> 01:23:25.720
+Luiz Maia: do evento, que é o quê? A mensagem.
+
+658
+01:23:26.040 --> 01:23:38.849
+Luiz Maia: Então, agora a gente vai ter além. Aqui. Nesse exemplo, primeiro exemplo, você vê que ele não tem a mensagem. É uma mensagem muito simples. É a mensagem que está vindo aqui
+
+659
+01:23:39.880 --> 01:23:46.349
+Luiz Maia: não tem mensagem nenhuma. Na verdade, ele simplesmente está mostrando o saldo alterado. Mais nada.
+
+660
+01:23:48.150 --> 01:23:50.519
+Luiz Maia: Aonde que está escrito o solo alterado.
+
+661
+01:23:51.070 --> 01:23:56.380
+Luiz Maia: Onde é que está escrito isso aqui? Saldo alterado. Não tem parâmetro nenhum. Sendo passado.
+
+662
+01:23:57.110 --> 01:23:59.210
+Luiz Maia: Agora a gente vai ter o quê?
+
+663
+01:24:01.700 --> 01:24:05.450
+Luiz Maia: A gente vai receber esses parâmetros
+
+664
+01:24:06.550 --> 01:24:11.069
+Luiz Maia: do evento e vai poder printar as mensagens.
+
+665
+01:24:11.560 --> 01:24:15.420
+Luiz Maia: É uma versão um pouquinho melhor do que foi feita anteriormente.
+
+666
+01:24:19.960 --> 01:24:24.770
+Luiz Maia: É um excelente exemplo de delegate tá lá ó
+
+667
+01:24:25.150 --> 01:24:30.650
+Luiz Maia: crédito de cem crédito de cento e cinquenta conta negativa.
+
+668
+01:24:31.030 --> 01:24:37.389
+Luiz Maia: Além de eu poder tratar o evento, eu também posso passar parâmetros
+
+669
+01:24:37.600 --> 01:24:40.299
+Luiz Maia: junto com esse tratamento de evento.
+
+670
+01:24:46.620 --> 01:24:56.800
+Luiz Maia: Se vocês quiserem mandar uma lista de perguntas para mim, para eu tentar esclarecer todas as dúvidas que vocês tiverem. Eu agradeceria,
+
+671
+01:24:57.330 --> 01:25:03.490
+Luiz Maia: porque eu já não consigo lembrar todas as dúvidas que vocês me perguntaram aí, e eu acabei não anotando.
+
+672
+01:25:05.200 --> 01:25:11.819
+Luiz Maia: Eu encerrei a matéria de delegate com vocês. Meu objetivo era esse.
+
+673
+01:25:12.000 --> 01:25:16.010
+Luiz Maia: Usar duas aulas para mostrar tudo o que
+
+674
+01:25:16.810 --> 01:25:20.579
+Luiz Maia: quase tudo que existe de delegate para vocês.
+
+675
+01:25:21.070 --> 01:25:26.189
+Luiz Maia: E até muito mais, né? Eu fui um pouco além do que eu deveria, mas eu consegui
+
+676
+01:25:26.670 --> 01:25:33.780
+Luiz Maia: dentro das duas aulas. Próxima aula, Dotnet, finalmente. Tá certo.
+
+677
+01:25:34.950 --> 01:25:39.320
+Luiz Maia: Vocês vão ter uma aula de Dotnet na próxima terça feira.
+
+678
+01:25:40.120 --> 01:25:54.889
+Luiz Maia: O que vocês têm de conteúdo aqui dá para fazer os Tps e o At de vocês tem muito, muito conteúdo, guarda essas aulas porque de repente, um dia você pode precisar disso.
+
+679
+01:25:55.500 --> 01:25:58.740
+Luiz Maia: Eu acho pouco provável gente. Sinceramente,
+
+680
+01:25:59.330 --> 01:26:02.910
+Luiz Maia: eu acho pouco provável que um dia. Vocês utilizem
+
+681
+01:26:03.550 --> 01:26:07.229
+Luiz Maia: esses recursos todos do C. Sharp.
+
+682
+01:26:07.960 --> 01:26:10.970
+Luiz Maia: Mas sabe lá, né, não é?
+
+683
+01:26:11.650 --> 01:26:29.360
+Luiz Maia: As perguntas que não foram respondidas. Manda para mim pelo infinite online, para eu poder fazer os testes aqui e tratar cada pergunta. Aliás, as perguntas que vocês fizeram são muito boas, muito boas. Mesmo
+
+684
+01:26:29.930 --> 01:26:34.910
+Luiz Maia: muito boas perguntas, turma top excelente.
+
+685
+01:26:35.730 --> 01:26:42.060
+Luiz Maia: Perguntas muito legais, muito relacionadas à disciplina.
+
+686
+01:26:42.210 --> 01:26:46.809
+Luiz Maia: Assim, eu estou muito impressionado com a pergunta de vocês. Muito mesmo.
+
+687
+01:26:47.490 --> 01:26:53.539
+Luiz Maia: Sim, fico muito feliz de ter alunos tão interessados. E
+
+688
+01:26:54.090 --> 01:26:59.950
+Luiz Maia: olhando o conteúdo da disciplina como vocês estão fazendo. Muito bom, mesmo.
+
+689
+01:27:00.190 --> 01:27:06.380
+Luiz Maia: Parabéns a todos aí que participaram das aulas de uma maneira super produtiva.
+
+690
+01:27:08.790 --> 01:27:20.830
+Luiz Maia: Bom boa semana. Para vocês. Bom feriado, segunda feira, Terça feira, Dotnet, beleza.
+
+691
+01:27:20.960 --> 01:27:22.660
+Luiz Maia: Um abraço a todos.
+
+692
+01:27:23.320 --> 01:27:24.780
+Luiz Maia: Tchau, Tchau, gente.
+
+693
+01:27:25.150 --> 01:27:26.840
+Jorge José Luiz Santos da Silva: Valeu, professor. Tchau, Tchau.
+
+694
+01:27:27.090 --> 01:27:28.700
+Luiz Maia: Valeu, Jorge. Um abraço.
+

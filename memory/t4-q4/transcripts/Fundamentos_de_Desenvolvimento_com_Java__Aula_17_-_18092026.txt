@@ -1,0 +1,958 @@
+Legenda: Adriana Zanotto, você: e aí?
+Legenda: Adriana Zanotto: e aí de vem, eu acho.
+você, que não é legenda: Adriana Zanotto de:
+E aí de você.
+Legenda: Adriana Zanotto: e aí
+de não você de
+nunca fui.
+Vocês vocês vão ser humano. Zhengruptaremoto zanotto, legenda: Adriana Zanotto:
+de você?
+E aí vocês? Tchau, tchau, Tchau, Tchau, Tchau. Tchau Tchau meio
+do Whatsapp de legenda Adriana Zanotto.
+E aí vocês vão. Chegou a mãe.
+eu disse Hello how do Youtube?
+Você não, baby Yoda how do you do e aí?
+E aí filme você,
+você,
+Zanotto.
+E você diz: Alô, Aleluia, não.
+Não sei. O Quadranspirantedove Toyota, você.
+Você?
+Legenda, Adriana Zanotto.
+Elberth Moraes: Bora lá, galera.
+Elberth Moraes: Vocês estão aí?
+Elberth Moraes: Buenas noites.
+Elberth Moraes: Boa, deixa eu compartilhar aqui
+Elberth Moraes: o som está bom, galera, vocês conseguem ver a tela também. Tá tudo em ordem.
+Elberth Moraes: Maravilha, Lucas, Tamo junto.
+Elberth Moraes: Vamos trabalhar, né, galera. A gente tem uma aula um pouco mais longa hoje, tá? Vocês já pegaram a água aí? Já escovaram o dente? Já está tudo certo, né? Só eu começar. E está tudo resolvido. Eu abri essa imagem aqui que eu tinha criado um dia desse aí agora, há pouco. Deixa eu abrir para cá.
+Elberth Moraes: Não sei para onde ela foi? Aqui foi para outro lugar.
+Elberth Moraes: Vocês conseguem ver a imagem direitinho?
+Elberth Moraes: Ups.
+lucas.ssantos: Sim.
+Elberth Moraes: Maravilha meu nome.
+Elberth Moraes: Hoje, a gente vai chegar aqui na nossa terceira etapa dessa preparação para o nosso
+Elberth Moraes: querido At. E mais uma vez, a gente vai continuar evoluindo aquele sistema de garagem. Não sei se vocês lembram que a gente estava construindo
+Elberth Moraes: um dia desses.
+Elberth Moraes: E aí, nas duas últimas aulas, o nosso programa cresceu muito. A gente começou com aquelas classes independentes. A gente chegou à herança. A gente chegou ao polimorfismo. Depois a gente trabalhou com abstração com interface. E hoje a gente vai enfrentar aqui dois problemas bem, diferentes.
+Elberth Moraes: O primeiro é que, até agora, o nosso programa funciona muito bem quando tudo acontece, como a gente espera. Mas claro, e quando alguma coisa der errado,
+Elberth Moraes: o que a gente vai fazer? O que acontece se a gente tentar, por exemplo, criar um carro com um ano inválido. Se esperarmos um número e a gente receber um texto, se a gente tentar abrir o arquivo e um arquivo não existe.
+Elberth Moraes: E aí, dentro de um programa real. A gente precisa estar preparado para essas situações. E daí vem um conceito que a gente vai estudar hoje, que é o conceito de exceções, as famosas exceções. A gente vai aproveitar erros de propósito.
+Elberth Moraes: A gente vai observar o que acontece. E a gente vai aprender duas responsabilidades muito importantes. Primeiro, é quem identifica um problema, pode lançar uma exceção.
+Elberth Moraes: E segundo, quem sabe o que fazer diante daquele problema. Consegue tratar o problema? Consegue tratar a situação e aí vão aparecer algumas palavrinhas lindas, as palavrinhas. True a palavrinha, Try, a palavrinha Cat de capturar
+Elberth Moraes: e outros conceitos que vocês estão vendo aí na imagem. E aí depois a gente vai ter um segundo problema.
+Elberth Moraes: Hoje, os veículos da nossa garagem existem enquanto o programa está executando.
+Elberth Moraes: Quando a gente encerra o programa, todos aqueles objetos lá desaparecem da memória.
+Elberth Moraes: Então vem aquela pergunta: como que a gente faz para guardar esses dados e recuperá los na aula da quinta feira que vem, por exemplo.
+Elberth Moraes: E aí a gente vai começar a trabalhar com arquivos. Primeiro, a gente vai salvar informações da nossa garagem em um arquivo texto.
+Elberth Moraes: Depois a gente vai ver. A gente vai fazer o caminho contrário. A gente vai ler esse arquivo, interpretar as suas linhas e transformar aqueles dados em objetos novamente. Objetos do tipo carro do tipo moto, do tipo caminhão que a gente tem hoje, lá na nossa herança.
+Elberth Moraes: E percebam como muita coisa que a gente estuda, que a gente já estudou aqui anteriormente. Vai reaparecer. A gente utilizou a classe String
+Elberth Moraes: dentro da classe String. A gente tem um método lá chamado Split, que a gente passa um separador, um delimitador e ele traz para a gente um vetor do tipo que a gente está definindo. Do tipo de String.
+Elberth Moraes: A gente vai trabalhar com conversão para números. A gente vai ter o uso do fórum. A gente vai trabalhar com Arrays com métodos, objetos, construtores, herança, polimorfismo, só que agora tudo isso começa a trabalhar junto para a gente resolver um problema mais próximo do mundo real.
+Elberth Moraes: Então, a ideia da aula de hoje, a gente pode resumir duas pequenas frases. O nosso programa precisa continuar funcionando quando algo inesperado acontece
+Elberth Moraes: e os nossos dados precisam continuar existindo quando o programa termina. E esse vai ser o caminho que aparece na nossa imagem. Que a gente vai tocar na nossa aula de hoje
+Elberth Moraes: de boa galera. Posso seguir aqui o nosso ritmo.
+Elberth Moraes: Vamos indo. Tá? De vez em quando. Faça um joinha aí pra fazer aquela prova de vida, que é sempre importante
+Elberth Moraes: para eu dizer para a família de vocês que vocês estão na aula, que vocês não estão
+Elberth Moraes: matando a aula.
+Elberth Moraes: Vamos trabalhar porque está cedo ainda hoje a gente vai até meia noite. Se Deus quiser,
+Elberth Moraes: deixa eu começar aqui pelo nosso projeto anterior. Vocês lembram de alguma coisa? Já deve ter uns quarenta anos que a gente trabalhou com esse negócio. E aí, naquela época, a gente estava justamente
+Elberth Moraes: trabalhando com aquele conceito de polimorfismo que a gente fez uma série de alterações do nosso projeto. A gente jogou um monte de gente para dentro de uma coleção. Não sei se vocês lembram disso. A gente estava até aqui olhando.
+Elberth Moraes: Deixa eu abrir aqui pra gente olhar esse cara.
+Elberth Moraes: Conceito maravilhoso, né?
+Elberth Moraes: Onde que a gente viu aqui garagem App,
+Elberth Moraes: e aí, dentro desse garagem App.
+Elberth Moraes: A gente tem minha tela. Estava paralisada aqui.
+Elberth Moraes: É, acho que já voltou.
+Elberth Moraes: E aí dentro desse nosso garagem App, que está dando uma travadinha aqui. Mas daqui a pouco ela vai aparecer
+Elberth Moraes: parecido
+Elberth Moraes: aqui dentro. Lembra que a gente colocou esse revisto que está aqui. Esse revisto, nada mais é do que aquela interface que a gente criou aqui, bonitona. E aí a gente começou a usar a interface para agrupar uma galerinha
+Elberth Moraes: que sabia realizar uma revisão. A gente começou a grupar, não mais pela herança de um veículo, por exemplo, que é uma classe abstrata e tal.
+Elberth Moraes: A gente começou a agrupar por funcionalidade. Não é mais por estado, pelas suas informações. Não é simplesmente para você reaproveitar
+Elberth Moraes: código. A gente tem aqui veículo que é uma classe mãe, que a gente colocou todos os veículos aqui dentro. Carro, moto, caminhão.
+Elberth Moraes: Mas quando chegou lá uma máquina, máquina de lavar ou máquina de qualquer coisa
+Elberth Moraes: que você precisa realizar uma revisão. A gente viu que ele não se encaixava nesse mundo. Aí a gente resolveu criar uma interface. Essa interface, a gente colocou aqui dentro dela tanto uma máquina quanto um carro. E para ambos, a gente consegue realizar uma revisão,
+Elberth Moraes: porque ele considera todo mundo como objetos válidos para realizar uma revisão,
+Elberth Moraes: e aí isso ficou muito legal. Que a gente jogou dentro de uma única coleção e a gente conseguiu aplicar essa funcionalidade nos objetos. Isso ficou muito legal para a gente,
+Elberth Moraes: para a gente estudar hoje, abrir aqui o meu um documento.
+Elberth Moraes: Depois eu vou compartilhar com vocês que é um documento que eu uso para o meu
+Elberth Moraes: roteiro, né? Porque senão eu vou ficar muito perdido. Isso aqui tudo. Eu compartilho com vocês porque
+Elberth Moraes: vocês merecem. Cadê minha tela, gente? Perdi as telas aqui. Pronto, achei
+Elberth Moraes: o que eu estou esperando de vocês hoje. Vocês já ouviram falar de exceção a galera mais
+Elberth Moraes: mais recente? Assim, na programação, já ouviram esse termo? Ou só
+Elberth Moraes: a galera assustando vocês sobre exceção.
+Elberth Moraes: Ou vocês pensam que a exceção é assim? Deu erro. É uma exceção.
+Elberth Moraes: O que vocês pensam sobre exceção
+Elberth Moraes: quando a gente fala de excepcion já viram esse cara em algum lugar?
+Elberth Moraes: Isso excepcion é um termo. Talvez um termo muito temido dentro da programação, mas ele é um termo muito necessário
+Elberth Moraes: dentro da programação, porque quando a gente está fazendo um desenvolvimento de um sistema,
+Elberth Moraes: eu estava até conversando com uma outra turma aqui. Agora, deixa eu dar um spoiler aqui. Já fizeram aula de banco de dados, galera
+Elberth Moraes: ou não, vão fazer? Ainda um dia.
+Elberth Moraes: Já fizeram. Fizeram comigo? Não, né?
+Elberth Moraes: Então tá bom.
+Elberth Moraes: Fizeram comigo. Ai, meu Deus, não, comigo não, não, porra!
+Elberth Moraes: Isso aí. Eu trabalho muito com a turma
+Elberth Moraes: em cima disso. Aqui é a foto do vôlei.
+Elberth Moraes: Deixa eu pegar aqui uma aqui que eu tava vendo.
+Elberth Moraes: Eu trabalho com essa ferramenta aqui o Sk. Light já ouviram mais falar dela? E aí eu, sempre que eu trabalho com a turma fazendo os meus scripts aqui, bonitinho. Eu sempre uso o conceito de Rf. Sabe o que é um Rf?
+Elberth Moraes: Já ouviram falar esses termos por aí.
+Elberth Moraes: Rf: É o famoso requisito funcional.
+Elberth Moraes: São funcionalidades que você tem que fazer. Então eu quero saber aqui. Eu preciso de uma funcionalidade até em banco de dados. Eu trabalho com cabeça de programador. De quantos gols cada jogador marcou aí eu tenho lá na minha tabela as informações e eu busco.
+Elberth Moraes: Então eu uso requisito funcional o tempo inteiro. Tá vendo? Requisito funcional, requisito funcional,
+Elberth Moraes: porque eu sou cobrado. Assim eu cobro a equipe. Eu cobro as pessoas em cima desse tipo de ação. De você implementar requisitos de você devolver através de requisitos. E o nosso trabalho de hoje aqui tem muito a ver também com requisitos
+Elberth Moraes: requisito funcional, antes mesmo de a gente programar.
+Elberth Moraes: A gente precisa conversar. Cliente, equipe. O que o sistema deverá fazer com aquele
+Elberth Moraes: um processo de desenvolvimento dele? Você não pode tirar da sua cabeça isso nem tirar da cabeça do seu chefe. Isso precisa estar documentado
+Elberth Moraes: em algum lugar. A gente hoje tem aqui dentro um monte de regra que a gente acabou criando sei lá. Regras do tipo para você cadastrar um veículo é obrigatório ter placa tal e tal beleza.
+Elberth Moraes: Mas, por exemplo, imagine que eu tenha um requisito. Deixa eu abrir aqui, rapidinho
+Elberth Moraes: um bloco de notas, e eu vou escrevendo ele aqui.
+Elberth Moraes: Imagine que eu tenha. Vou botando alguns requisitos aqui. Imagina que eu tenha um primeiro requisito requisito funcional. Um
+Elberth Moraes: do tipo. Assim, o sistema, esse sistema que a gente está fazendo deve rejeitar veículos cujo ano seja menor
+Elberth Moraes: que mil e novecentos, ou seja,
+Elberth Moraes: maior que dois mil e vinte e seis.
+Elberth Moraes: Então imagina, eu não consigo cadastrar um veículo com o ano dois mil e vinte e sete. E eu não consigo cadastrar ninguém que seja menor do que um.novecentos.
+Elberth Moraes: Isso aqui é um requisito. É uma implementação que o seu sistema tem que estar tratando, porque se ele não tratar, ele quebra, então a gente precisa estar
+Elberth Moraes: o tempo inteiro fazendo isso. Vamos olhar para esse requisito aqui hoje. A aula vai ser muito baseada em requisitos. Eu tenho problema para resolver e a gente vai lá e resolve o problema. Aí, esse primeiro requisito. Imagine que a gente olhando lá para o nosso código.
+Elberth Moraes: Olhando aqui para dentro de veículo onde, que no mundo do veículo. Aqui chega o preenchimento, por exemplo, do ano desse meu veículo.
+Elberth Moraes: Eu tenho aqui o Garage App, aí o Garage App. Quando eu crio um veículo, eu o informo aqui.
+Elberth Moraes: Eu acho que não tem outro lugar para eu colocar. Imagina esse carro aqui. Carro, ponto.
+Elberth Moraes: O que aparece aqui, cálculo.
+Elberth Moraes: Não tem muita coisa que realizar. Revisão. Não tem muita informação. Então, por onde que entra o ano do carro. O ano do veículo
+Elberth Moraes: vocês conseguiram perceber aí
+Elberth Moraes: o ano do veículo é esse aqui. Ó,
+Elberth Moraes: então ele está entrando pelo construtor. Vocês estão ligados? Que é aqui que eu estou entrando com essa informação.
+Elberth Moraes: Então, se eu for lá no carro construtor do carro, por exemplo,
+Elberth Moraes: o construtor do carro. Ele tem aqui placa. Marca ano Opa ano tá aqui.
+Elberth Moraes: Vocês acham que é mais interessante eu fazer uma validação no construtor do carro,
+Elberth Moraes: fazer uma validação também no construtor do caminhão, fazer uma validação no construtor da moto,
+Elberth Moraes: fazer uma validação no construtor da classe mãe. Veículo onde vocês acham que eu devo fazer algum tipo de validação
+Elberth Moraes: para que essa nossa regra, esse nosso requisito funcional, ele seja seguido, seja cumprido.
+Elberth Moraes: Se a gente colocar nas filhas, a gente tem que fazer em vários lugares e é a mesma informação.
+Elberth Moraes: Carro tem aqui o ano do carro. Se a gente for em moto, tem o ano também. Se a gente for em caminhão tem ano também. Mas você vê que em todos eles têm um construtor que chama o construtor da mãe.
+Elberth Moraes: E aí, quando a gente entra no construtor da mãe. A gente tem um ano aqui e observem que a gente tem que ficar sempre perto desse movimento assim. Ó, eu tenho o ano aqui que é um atributo. E eu tenho esse cara daqui, que é o momento que eu pego uma informação que alguém me passou lá fora
+Elberth Moraes: e jogo para dentro do meu banco de dados, por exemplo,
+Elberth Moraes: para dentro de um ambiente que eu tenho que ter muito cuidado para guardar enquanto as informações estão aqui, nesse nível. Aqui do meu método.
+Elberth Moraes: Cara tranquilo, não tem problema nenhum. As pessoas podem me passar qualquer informação. Se eu vou aceitar essa informação, é que são outros quinhentos. E aí a gente precisa estar de olho nessa regrinha. Beleza, olha o que eu vou fazer aqui dentro. A gente tem esse requisito.
+Elberth Moraes: Deixa ele aparecer aqui esse requisito aqui. Deixa eu copiar para cá, para a gente ficar bem de pertinho.
+Elberth Moraes: Tá aí dentro? Eu preciso implementar esse cara, rejeitar. Sabe escrever direito rejeita é que.
+Elberth Moraes: Que algoritmo vocês pensam aí para a gente implementar esse requisito aqui?
+Elberth Moraes: Pensa comigo aí.
+Elberth Moraes: Que lógica de programação. Que instrução? A gente vai ter que usar? Um If. Uma hora ou outra, a gente vai ter que usar. Eu vou colocar esse If aqui em cima. Depois a gente escolhe o melhor lugar só para ele ficar em evidência. Botei aqui um If.
+Elberth Moraes: Comecei para vocês aqui o If.
+Elberth Moraes: O sistema deve rejeitar veículos cujo ano seja menos
+Elberth Moraes: que mesmo tá menor, né? Menor
+Elberth Moraes: que mil novecentos, ou seja maior que dois mil e vinte e seis.
+Elberth Moraes: A gente sabe aqui que a gente tem uma condição.
+Elberth Moraes: Ano menor que mil e tal
+Elberth Moraes: e maior que mil e tal.
+Elberth Moraes: Vocês estão ligados que o que o cara está falando aqui, que o sistema deve rejeitar.
+Elberth Moraes: Ele não está falando assim. Ó, o sistema deve preencher os dados
+Elberth Moraes: se o ano estiver entre mil novecentos e dois mil e vinte e seis. Ele não está falando isso. Ele está falando assim. Olha só. Se for menor que mil e novecentos. E se for maior que dois mil e vinte e seis. Rejeita
+Elberth Moraes: isso. É algo cultural, tá, galera. Eu já passei por isso. Já falei com vocês umas vezes aí que eu sempre que chegava um, sempre que eu estava implementando alguma coisa, eu ficava muito em.
+Elberth Moraes: Consegui que esses três campinhos saíssem aqui, desse meu construtor com um preenchimento realizado.
+Elberth Moraes: Eu era um programador fofo. Queria que os três campinhos tivessem preenchidos com alguma coisa. Ah, o cara botou lá ano um.setecentos.
+Elberth Moraes: Aí eu começava a pensar assim: pô, mas se ele botou um.setecentos e o ano
+Elberth Moraes: válido mais próximo de um.setecentos. É um.novecentos. Por que eu não boto um.novecentos? E aí está tudo resolvido.
+Elberth Moraes: Você não pode fazer isso. Porque não foi você que definiu a regra. Você não manda em nada. Você é o programador. Você é o cara que manda na escrita no negócio. Você não manda em nada. Então um abraço. Você tem que fazer isso. Que o moço falou aqui.
+Elberth Moraes: Rejeite o veículo. Por que isso influencia? Porque quando eu chego aqui em cima e eu quero rejeitar. Eu boto ali o meu parâmetro. Meu argumento ano.
+Elberth Moraes: Se ele for menor que um.novecentos. Ele até facilitou nessa vida. Ele botou um ou também. Então eu posso colocar aqui um ou
+Elberth Moraes: ano maior que dois mil e vinte e seis.
+Elberth Moraes: Tá vendo que até o número que você bota, tem que estar de acordo com o requisito que seu cliente passou para você.
+Elberth Moraes: Então, se você chegar aqui e botar poxa, mas menor que mil e novecentos é a mesma coisa que menor ou igual a um.oitocentos e noventa e nove.
+Elberth Moraes: É a mesma coisa. Galera.
+Elberth Moraes: Se você for assim. Pensar só na matemática ali, acho que é a mesma coisa, né?
+Elberth Moraes: Então pô. Mas por que eu não posso botar assim? Porque quando você vai fazer uma análise dos seus fontes para fazer um batimento com o que foi especificado nos seus requisitos. Nosso cérebro vai muito em cima de números
+Elberth Moraes: que a gente identificou na especificação. Então esse cara daqui é esse cara daqui. Entendi esse cara daqui, esse cara daqui, eu poderia botar maior ou igual a dois mil.
+Elberth Moraes: Maior igual a dois mil e vinte e sete.
+Elberth Moraes: É a mesma coisa, mas só que a gente está usando as informações da especificação menor que dois mil e vinte e seis. Beleza. Então, para o Java, se esse cara daqui de cima chegar como menos quinhentos.
+Elberth Moraes: Ele vai entender que aquilo ali é um inteiro. Um inteiro válido. O inteiro pode ir de negativo A positivo.
+Elberth Moraes: E o problema não tem a ver com o tipo. Poderia ter colocado um outro cara. Poderia ter. Não, está tudo certo. O problema está na regra do nosso domínio.
+Elberth Moraes: A classe que conhece a regra que dá impedir que é o Estado que o ano nasça inválido. E aí, quando a gente está falando sobre
+Elberth Moraes: exceções. Existe uma teoria necessária que uma exceção representa sempre uma situação anormal durante a execução.
+Elberth Moraes: Então, sempre que acontece alguma coisa de forma anormal. A gente precisa lançar essa exceção. E aí, como a gente está trabalhando justamente aqui com argumentos,
+Elberth Moraes: lembra que a gente conversou. Esses carinhas que estão aqui em cima são argumentos, e aí existe no mundo das exceções um carinha que é específico. A gente vai começar a exceção hoje vai terminar semana que vem. Então não precisa criar pânico. Não hoje. Eu vou
+Elberth Moraes: mostrar e depois eu vou detalhar bastante isso tudo. Mas eu consigo chegar nesse ponto daqui
+Elberth Moraes: e fazer esse lançamento. Essa ó
+Elberth Moraes: deu problema aqui em cima passou por essa regra aqui ele está menor do que em mil e novecentos. Ele é dois mil e vinte e sete para lá. Eu tenho que parar aqui. Então isso aqui é o momento de parada. É o momento que dá erro.
+Elberth Moraes: E aí se parou ali em cima. Esse cara daqui não vai ser alterado. A gente vai ficar do jeito que ele está. E o sistema vai parar.
+Elberth Moraes: Por quê? Porque as pessoas que estão lá fora fazendo preenchimento de formulários fazendo lá, jogando informação para dentro do sistema. Eles precisam ter noção
+Elberth Moraes: que existem regras na hora que você vai preencher um argumento. E aí, como a gente estava conversando, é bem interessante a gente usar exceções para a gente parar esse processamento. E aí a palavrinha mágica que a gente vai aprender primeiro sobre exceção.
+Elberth Moraes: É uma palavrinha chamada Crow. Desse jeito aqui troll seria o lançar. Seria o sinalizar uma exceção.
+Elberth Moraes: A gente tem aqui dentro igual a gente. Trabalha com as classes que a gente criou. A gente tem um monte de classes que depois eu vou abrir aqui. Vou dar uma aula bem detalhada sobre esses
+Elberth Moraes: muitos tipos de exceção que a gente tem. Mas assim como uma classe, se eu chego aqui e quero criar qualquer coisa é New alguma coisa.
+Elberth Moraes: Essas exceções é a mesma coisa. Eu vou fazer um True aí eu vou botar aqui uma nova exceção que vai ser lançada
+Elberth Moraes: essa exceção que vai ser lançada, a gente vai ver que, com o tempo, todas as exceções têm a palavrinha excepcion no final. Inclusive a gente vai criar as nossas próprias exceções, exceções bem específicas. A gente vai poder criar. E aí eu vou criar aqui uma exceção
+Elberth Moraes: chamada Ilegal Argument Illegal Argument Exception.
+Elberth Moraes: Vocês viram que tem um monte de excepcion ali, né? Aí eu botei aqui Illegal Argument. Excepcion e observem que aqui dentro, aqui é uma classe.
+Elberth Moraes: Se isso daqui é uma classe, o que é isso daqui
+Elberth Moraes: são os parâmetros, mas é um parâmetro, que é de um método.
+Elberth Moraes: O que é isso? Daqui
+Elberth Moraes: se Illegal Argument excepcion é uma classe. Isso aqui é o construtor. E aí existe dentro da minha classe de exceção, um monte de construtores. Mas esse construtor aqui é um construtor que recebe uma mensagem. Então eu posso chegar aqui dentro e botar lá
+Elberth Moraes: do veículo.
+Elberth Moraes: Está inválido. Aí eu boto aqui dentro. Sei lá o nome do veículo. O ano do veículo aqui só para a gente ter uma ideia. Observem, quando eu fiz aqui, eu consegui implementar
+Elberth Moraes: esse meu requisito. De acordo com esse algoritmo, esse daqui é o meu requisito. Ah, mas exceção, é só isso. Daí, Elbert.
+Elberth Moraes: Cara, você não tem noção do que é só isso. Daí, observe o seguinte. Eu vou tirar esse detalhamento todo daqui que a gente já deixou lá fora.
+Elberth Moraes: Eu vou colocar aqui dentro só o número do requisito funcional para depois a gente fazer um mapeamento. Tá, então cheguei aqui. Observe aqui na minha garagem App.
+Elberth Moraes: Então a gente está criando aqui. Garagem App, bonitão. Eu vou criar uma nova classe
+Elberth Moraes: que eu vou chamar de garagens de coisa só para exceção, tá? Garagem Exception App.
+Elberth Moraes: Só para a gente guardar ali dentro testes zoados. Cheguei aqui. Vou criar aqui o meu garagem excepcional. App.
+Elberth Moraes: Essa classe aqui é aquela classe
+Elberth Moraes: de teste que é uma classe que tem o método man desse jeito. Aqui a gente está trabalhando com veículo, então eu posso criar qualquer veículo. Já tenho ali alguns veículos dentro da própria garagem. Aqui.
+Elberth Moraes: Olha quantos veículos eu tenho aqui um monte.
+Elberth Moraes: Vou pegar qualquer um desses aqui
+Elberth Moraes: e trouxe aqui para dentro. Claro que eu não vou botar desse jeito. Vou botar aqui.
+Elberth Moraes: Carro, botar aqui. Toyota já é suficiente. Depois a gente
+Elberth Moraes: trabalha nesses aqui. Então eu tenho um Toyota. Eu quero fazer esse Toyota dar erro. Eu quero que surja um probleminha aqui dentro. O que eu devo colocar aqui dentro para que dê erro. Porque hoje, se eu mandar, simplesmente. Deixa eu ver se tem um relatório lá bonitão
+Elberth Moraes: dentro do carro, tem o exibir. Resumo. É isso que eu vou fazer aqui. Então, se eu botar aqui um carro, ponto. Exibir
+Elberth Moraes: é carro. Não, Toyota, exibir. Resumo, exibir resumo quando eu mando rodar desse jeito. Aqui runas java aplicação.
+Elberth Moraes: Tá ali. Ó, o carro apareceu bonitinho. Ok, mas se eu quiser dar erro. Eu preciso mudar isso daqui.
+Elberth Moraes: Qual é a regra que eu tenho que botar aqui para isso aqui? Dar erro. A regra é aquela exceção que você acabou criando lá.
+Elberth Moraes: Então, se você colocar algum valor aí dentro,
+Elberth Moraes: que seja menor do que mil e novecentos e maior do que dois mil e vinte e seis vai dar problema. Ah, entendi. Então botar para dar problema. Botar dois mil e trinta.
+Elberth Moraes: Perfeito. Observem que não tinha dado erro quando a gente mandou o relatório. Aconteceu de boa. Vou mandar rodar aqui. Ó Renese
+Elberth Moraes: Java. Aplicação deu um erro.
+Elberth Moraes: Então aqui a gente está encontrando uma excepcion. E observem que essa excepcion aqui indicou a exceção que foi lançada. É muito interessante a gente definir a exceção que está sendo lançada para a gente saber que tipo de erro que deu.
+Elberth Moraes: Esse Illegal Argument excepcion uma tradução. É ótima, né? Deu uma exceção aqui de um argumento ilegal,
+Elberth Moraes: porque é um argumento ilegal, porque você estava passando um argumento, mandando um parâmetro lá. Para esse argumento
+Elberth Moraes: dois mil treze. Ele é ilegal de acordo com a regra do nosso requisito funcional, um.
+Elberth Moraes: Então por isso que a gente está usando essa exceção daqui a pouquinho, eu vou entrar e vou mostrar uma estrutura de exceção. Mas o mais bacana disso daqui é que observem que ele traz para você toda uma thread de fluxo de execução desse erro.
+Elberth Moraes: Então a gente começou aqui de cabeça para baixo. Eu estava lá na linha seis do garagem, excepcion App
+Elberth Moraes: a linha seis. É isso aqui, aqui que deu erro. Tudo bem. O erro deu dentro da linha oito de carro,
+Elberth Moraes: lá na hora que eu estava criando o carro. Ah, deixa eu ver. Onde foi? Foi aqui aqui que deu erro.
+Elberth Moraes: Aí quando você vai subindo mais um pouquinho? Você vê, na verdade, o erro foi passado adiante aqui. A situação aconteceu dentro de veículo, num processo de inicialização desse veículo. Aonde aqui, aqui, que é o lançamento da minha exceção. E aí você consegue ver que a gente resolveu lançar essa exceção
+Elberth Moraes: porque furou uma regra de negócio da gente. E aí. Sempre que você tem um furo de uma exceção,
+Elberth Moraes: você tem duas opções. Você deixar o erro e esperar a pessoa
+Elberth Moraes: te passar alguma coisa te passar um novo valor. E aí, quando você tem um lançamento de um erro, aparece essa estrutura aqui, Feiona. Imaginem isso daqui pode aparecer lá na tela do seu usuário.
+Elberth Moraes: E aí não é uma coisa muito confortável. A gente depois vai ver mais para frente. Quando vocês avançarem aí no mundo, java qualquer coisa. A gente pode até usar
+Elberth Moraes: uma semana dessa aí mais mortinha para a gente fazer um,
+Elberth Moraes: sei lá, mostrar para vocês um projeto Web Java mais completo com banco de dados e tal, até para vocês terem uma noção do que vocês vão encontrar lá na frente, mas sem nenhuma
+Elberth Moraes: obrigação, sem nenhuma responsabilidade. Isso faz sentido para vocês.
+Elberth Moraes: Esquece isso, Professor. Vamos curtir aqui a nossa vida. Esquece esse negócio. Não assusta a gente. Não, mas eu posso mostrar, porque aí vocês vão ver como é que um erro chega lá
+Elberth Moraes: no carinha que está usando aqui o seu backend usando as suas implementações. Mas depois a gente vai fazer isso. E aí, beleza? Cheguei aqui nesse nosso carinha. Ele tem esse erro explodindo na nossa cara.
+Elberth Moraes: Claro que você pode deixar o objetivo é: deixa aparecer o erro na sua cara. Você é o dono dessa classe aqui. Você não está nem aí para onde vai aparecer esse erro. Você só não vai deixar
+Elberth Moraes: o cara colocar o ano dois mil e trinta dentro do seu atributo ano. É só isso. O seu papel aqui é esse esse cara que está aqui.
+Elberth Moraes: É o cara que está lá na tela,
+Elberth Moraes: tipo assim, porra, mas eu queria exibir o relatório do cara. Queria exibir o resumo. É, mas você não vai exibir. Você só vai exibir o resumo se você passar o carinha, correto?
+Elberth Moraes: Não, mas eu quero passar esse. Então você vai receber um erro. E aí você tem essa opção de você deixar esse erro explodir ali na tela. E aí? Ou você faz o tratamento desse erro.
+Elberth Moraes: Quem lança o erro não precisa tratar o erro, não é quem trata o erro. Quem trata o erro é quem estava usando a classe ou a combinação da classe, já que isso aqui é uma herança. E aí, graças a uma informação ilegal,
+Elberth Moraes: explodiu um erro. E aí essa pessoa que chamou que é responsável pelo tratamento.
+Elberth Moraes: Então eu vou chegar aqui.
+Elberth Moraes: Vou fazer um teste antes. Teste, não, né?
+Elberth Moraes: Vou chegar aqui embaixo. Vou botar assim. Ó fim do programa.
+Elberth Moraes: Por quê? Porque a gente não consegue ver se esse negócio terminou ou não cheguei aqui, apertei.
+Elberth Moraes: Não tem fim do programa em lugar nenhum. O negócio nem chegou lá.
+Elberth Moraes: O negócio parou no meio do caminho. E aí, cara, se eu tivesse aqui para baixo, por exemplo, eu vou criar aqui um outro carro.
+Elberth Moraes: Esse aqui vai ser o carro Fiat.
+Elberth Moraes: Esse carro aqui está certo, mil novecentos e quarenta e sete. Então, quando eu chego aqui embaixo e mando fazer lá o Fiat exibir resumo desse jeito. Aqui, observem que se eu colocar esse cara aqui primeiro,
+Elberth Moraes: e mandar rodar esse carinha,
+Elberth Moraes: ele aparece, o primeiro e dá errou no segundo legal. Então a gente conseguiu ver
+Elberth Moraes: que esse carinha que está ali. Esse carinha daqui de baixo. Ele está dando erro. E ele meio que impede o processamento dos demais relatórios. Esse daqui é uma moto, por exemplo, uma moto Honda, esse cara daqui, ele vai fazer lá
+Elberth Moraes: a exibição do seu resumo.
+Elberth Moraes: Mas como aquele carinho ali de cima deu erro. Eu vou imprimir Fiat. E já quebrei
+Elberth Moraes: no Toyota. E aí todo o processamento para. Imaginem isso aqui. Poderia ser um cadastramento de centenas de carros.
+Elberth Moraes: E aí um dos carros
+Elberth Moraes: teve algum tipo de informação ilegal. Parou o processamento dos outros todos que tinham pela frente. E aí por isso que a gente começa a ficar pensativo no cara. Se isso daí está dando erro. A gente precisa tratar esse erro.
+Elberth Moraes: E aí, o tratamento do erro não é uma coisa das mais difíceis. Não, a gente tem. Até o famoso Tri Cat aparece em tudo quanto é livro.
+Elberth Moraes: Aparecem todos os comerciais da televisão, aparecem falando sobre o Tri Cat. E aí o Tri Cat é justamente esse. Ó eu vou fazer o tratamento. Eu vou tentar fazer a captura desse cara para fazer o tratamento desse erro.
+Elberth Moraes: Mas eu simplesmente posso chegar e falar assim. É um erro. E está ótimo. Só que não precisa dar aquela explosão. Que aconteceu ali? Vou pegar aqui somente esse cara. Vim aqui, ó,
+Elberth Moraes: fiz um Try. Observe que eu digitei a palavrinha. Try.
+Elberth Moraes: Dei um contra o espaço e ele traz para mim ali algumas opções. Tem esse cara daqui
+Elberth Moraes: e tem esse cara daqui daqui a pouco, a gente vai estudar cada um deles. Vamos fazer isso aqui primeiro,
+Elberth Moraes: observe que ele já traz uma estrutura para a gente. Essa estrutura. Ele tem essa classe aqui Exception. Se a gente entra nessa classe, excepcion. Deixa eu clicar em cima dela. Aqui
+Elberth Moraes: é uma classe normal do Java.
+Elberth Moraes: Tá vendo coisas daqui que a gente já conhece? Ele tem um construtor.
+Elberth Moraes: Ele tem um construtor aqui que liga que chama a mãe dele?
+Elberth Moraes: Ele tem outro construtor. Isso aqui é um construtor. Isso aqui é um outro construtor que recebe uma mensagem. Justamente aquele que a gente usou. E ele também chama a mãe dele passando uma mensagem.
+Elberth Moraes: E ele tem outro construtor que recebe uma mensagem e recebe aqui a causa do problema. E ele tem outro construtor que recebe só esse. E por aí vai ele. Só tem construtores aqui dentro.
+Elberth Moraes: E aí tem lá um construtor aqui embaixo que recebe um monte de coisa. Mas quando a gente olha aqui para cima, a gente vê que ele herda de uma outra classe,
+Elberth Moraes: o Trowe. E aí, quando a gente clica aqui no Throwable, vem aqui para baixo. Tá vendo? E ele tem aqui dentro algumas informações,
+Elberth Moraes: inclusive a mensagem que a gente o atributo que guarda a mensagem que a gente quer exibir. Ele tem aqui dentro algumas informações bem de baixo nível também em alguns momentos. Mas é uma classe grande. Está vendo. Ela tem mil e poucas linhas. E aqui dentro, ele faz todo um tratamento
+Elberth Moraes: em cima dessa parte de exceções. Quando a gente estava usando aquela exceção
+Elberth Moraes: lindona que a gente usou aqui no veículo, que é o Illegal Arguments Exception. Quando a gente clica nela observem que ela é uma classe. Ela herda dessa nossa classe. Quer dizer, aquela nossa lançamento do Illegal Argumps. Ela herda de um outro carinha
+Elberth Moraes: de um run time execution. Então a gente tem aqui erros que a gente consegue controlar.
+Elberth Moraes: E erros que são erros do próprio Java ali. Erro de que realmente deu ruim. A gente não consegue fazer. Então essa galera aqui do Run Time Exception
+Elberth Moraes: é uma galera do tipo erro que eu consigo fazer. Algum tipo de tratamento.
+Elberth Moraes: Erro que eu posso gerar. Erro de regras de negócio e tal. E ele tem uma estrutura de herança também. Que ele cai lá no excepcion. Tá vendo? Excepcion e segue adiante. Então esse run time é uma filha
+Elberth Moraes: de excepcion depois eu vou mostrar erro. Tem outros tipos de coisinha? Não estou investindo tempo aqui na teoria, mas quando eu chego lá e faço esse tipo de coisa aqui,
+Elberth Moraes: aqui no veículo.
+Elberth Moraes: Aqui ele está falando assim. Ó,
+Elberth Moraes: eu vou para dentro da minha classe legal, argumentos. Isso aqui é um construtor que recebe uma mensagem. Então, quando eu clico aqui, ele vem justamente para cá que recebe uma mensagem.
+Elberth Moraes: Passa essa mensagem para a minha classe. Mãe, que é run time run time. Passa isso daqui para a minha classe mãe, que é Action, que passa para a minha classe. Mãe, que é o Throwable. E aí ele faz alguma coisa aqui dentro.
+Elberth Moraes: Ele simplesmente joga aquela mensagem dentro de um atributo que a gente tem aqui para cima,
+Elberth Moraes: onde, através desse atributo, Private String, mensagem detalhada. The Tail message. A gente consegue usar essa mensagem em várias partes do nosso projeto. Então eles fazem uma implementação
+Elberth Moraes: muito parecida com o que a gente faz. A gente tem um atributo ali. A gente preenche aquele atributo. É o que domina aqui. Todas as classes que a gente passou.
+Elberth Moraes: Legal. Então a gente precisa fazer lá o tal do Tri Cat pra gente colocar. Só que não é legal a gente colocar exceções aqui muito,
+Elberth Moraes: muito genéricas. Assim, sabe aquelas exceções mais altas lá que a gente foi. Essa é a mãe. Essa é a mãe. Essa é a mãe. Essa é a mãe. Não, você tem que pegar as mais específicas
+Elberth Moraes: possíveis. Então, quando a gente estava aqui nesse veículo e a gente pegou esse cara daqui. Se você botar qualquer busca ali, ele vai trazer para você um monte de outras exceções que são lá do nosso, que eram do nosso round time exception, que você consegue trabalhar
+Elberth Moraes: e tem específicas para cada um. Ah, quando você divide um número por zero. Quando você quer transformar um cara do tipo texto, para um tipo inteiro, ele dá uma exceção específica. Então ele tem isso tudo
+Elberth Moraes: dentro aqui do nosso nosso meio. E a gente fez esse tratamento.
+Elberth Moraes: Vou fazer de um jeito aqui. Ó, aqui é onde estava dando o erro, né? Que eu botei o dois mil e trinta ali. Peguei esse bloco.
+Elberth Moraes: Trouxe aqui para dentro desse nosso Try. Ou seja, eu vou tentar rodar isso daqui. Se der certo de boa. Se não der certo, eu vou cair aqui.
+Elberth Moraes: Mas só que eu não queria cair, mesmo sabendo que Exception é a vovó do Illegal Argument. Eu queria fazer realmente um tratamento aqui específico para esse illegal Argument. Aí eu preciso pegar a exceção que eu estou lançando lá. Que é essa daqui
+Elberth Moraes: e colocar no lugar desse Cat colocar a exceção que eu estava trabalhando. E aqui embaixo, ele cria um to do
+Elberth Moraes: para você colocar aqui dentro as possíveis
+Elberth Moraes: soluções, as possíveis propostas que você tem para quando acontece algum erro,
+Elberth Moraes: tem alguns erros que você consegue dar. Uma solução, nem que seja do tipo faça de novo,
+Elberth Moraes: ou então manda um e mail para alguém, ou então registra aqui no log que esse erro aconteceu. Esse cara daqui. Eu vou fazer tipo isso. Eu vou fazer quase que um registro no log usando aqui
+Elberth Moraes: o System Out Print Line. Mas eu vou botar o System
+Elberth Moraes: Erro Printline. E aí dentro desse caninha daqui, eu vou botar uma mensagem bem padrão do tipo:
+Elberth Moraes: não foi possível criar o veículo,
+Elberth Moraes: beleza. E aí eu vou pegar. Observem que, como a gente chegou lá naquela minha classe veículo e colocou esse cara daqui esse texto, esse texto aqui vai cair dentro daquele campinho de mensagem que a gente viu.
+Elberth Moraes: E aquele campinho lá, ele disponibiliza para a gente um método
+Elberth Moraes: onde o método é justamente um recupera tipo, aquele get valor que eu vou lá e busco um valor get nome. Eu vou lá e busco o nome. Eu tenho um campo lá, messaged. E quando consigo, se eu quiser pegar aquele cara, eu simplesmente falo.
+Elberth Moraes: Ó exceção. Eu quero pegar a sua mensagem. Vocês estão ligados? Que isso que eu estou marcado aqui liga o argument exception. É.
+Elberth Moraes: É como se fosse um
+Elberth Moraes: carro Fiat, ou seja, o illegal argumentos é o carro. E esse Fiat aqui é a variável. É o objeto. Então esse cara daqui é um objeto.
+Elberth Moraes: É como se alguém aqui dentro gerou. Criou aquela nossa exceção. E essa exceção vai cair aqui dentro.
+Elberth Moraes: É como se eu estivesse fazendo essa atribuição aqui,
+Elberth Moraes: para dentro desse carinha. E esse carinha seria um. E quando alguém aqui dentro disparar aquela exceção, a sessão vai ser criada. E ela vai ser guardada aqui em memória para eu poder utilizar. Então, com esse zezinho na mão.
+Elberth Moraes: Eu consigo chegar aqui e botar um e ponto, alguma coisa. E ele traz um monte de coisa. A gente tem inclusive esse aqui o Gets Message. E aí, quando a gente faz esse carinha daqui,
+Elberth Moraes: o comportamento que a gente tem agora, quando eu mando rodar. Essa aplicação
+Elberth Moraes: é que a gente tem. Aqui o carro funcionou. A moto funcionou. Aconteceu o fim do programa,
+Elberth Moraes: mas em quem era ilegal. Apareceu a mensagem aqui. Não foi possível criar o veículo, e aí eu pego a mensagem que eu disparei lá na minha classe.
+Elberth Moraes: Então isso daqui pode aparecer na tela do meu usuário porque o meu usuário vai entender que eu poderia dar uma explicação melhor. Você tem que passar algum campo. Um valor entre esse e esse mas aqui. Não aqui. A gente simplesmente queria demonstrar o erro. E vocês estão vendo que esse cara foi esse cara foi. E apenas o que estava com o erro
+Elberth Moraes: parou.
+Elberth Moraes: Estamos de boa até aqui galera
+Elberth Moraes: é uma coisa muito assustadora. Esse negócio aqui de exceção, fizemos uma exceção, duas partes, lançamento da exceção
+Elberth Moraes: e o tratamento da exceção
+Elberth Moraes: no tratamento da exceção, a gente simplesmente viu que aqui dentro dava erro. Vou mostrar para você aqui via The Bug, e aí ele caiu aqui dentro. E aqui dentro, eu poderia fazer outra coisa. Eu resolvi marcar, criar uma mensagem. Vou fazer um teste aqui rapidinho.
+Elberth Moraes: The Bugs, The Bugs on the Table.
+Elberth Moraes: Então, beleza, tô ali aí. Eu vim aqui com essas minhas duas chatinhas. Essa aqui. Entra
+Elberth Moraes: isso, aqui? Passa por cima.
+Elberth Moraes: Criei um Fiat e exibi o resumo do Fiat Talib.
+Elberth Moraes: Aí eu vim para aqui para baixo quando eu vim aqui para baixo. Vou entrar, tá? Entrei
+Elberth Moraes: aí. Ele entrou aqui. Eu estou dentro do carro.
+Elberth Moraes: Aí o carro recebeu aqui a placa recebeu aqui. A marca recebeu aqui o ano. Recebeu aqui o número de portas.
+Elberth Moraes: Essa linha aqui de baixo está passando a placa Mark. O ano para o Super. Quem seria o super? Ah, o super de carro é a classe veículo legal. Então vou entrar aqui.
+Elberth Moraes: Entrei, observe que ele veio para dentro de veículo. As informações que eu tinha lá na frente estão aqui. Ó placa
+Elberth Moraes: marca um ano, dois mil treze. Aí a gente desce
+Elberth Moraes: aí. Ele testa aqui. Ano é dois mil e trinta, dois mil e trinta. É menor que mil e novecentos? Não. Então está legal até o momento. Aí eu vejo aqui, ano é maior do que dois mil e vinte e seis. É,
+Elberth Moraes: poxa. Então, se isso daqui for verdadeiro, se uma dessas condições for verdadeira, vai cair aqui.
+Elberth Moraes: E aí ele entra ali.
+Elberth Moraes: Ele não lançou ainda. Mas lançou essa exceção.
+Elberth Moraes: Observe que por ele ter lançado aquela exceção ali dentro, essa linha daqui não foi executada.
+Elberth Moraes: Por quê? Aonde eu faço um troll, ele para tudo
+Elberth Moraes: e acabou. Acabou aquela classe. Eu não consigo mais usar agora. Eu tenho que, sei lá, começar de novo.
+Elberth Moraes: E aí ele viu que lá dentro lançou a exceção aqui fora. Tem um tratamento. Tem um tri aí. Esse tri capturou esse cara. Ele viu que para ele entrar aqui, tem que ser do mesmo tipo. Mesmo que seja uma mamãe lá, aquela excepcion ele vai entrar,
+Elberth Moraes: porque a excepcional é bem genérica. E esse legal argumentos é mais específico. Ela é mais específica. Aí ele veio aqui, entrou.
+Elberth Moraes: Esse é que está aqui. É justamente uma exceção que foi criada.
+Elberth Moraes: Ele tem aqui uma exceção com vários campos dele. E aí aqui dentro tem o detal message.
+Elberth Moraes: Tá vendo? E esse detalhe, o messaged é justamente o cara que é devolvido quando a gente tem lá o.
+Elberth Moraes: O uso desse Gets Messaged da vida. E aí, beleza? A gente tem aqui. Mandei rodar, mandei rodar. Não dá mais um passo aqui, ó
+Elberth Moraes: lançou o erro e veio para baixo. Quem veio para baixo vai fazer isso? Vai fazer isso? Exibiu o cara, veio para cá. Fim do programa. Um abraço.
+Elberth Moraes: Então isso aqui foi um Debug que a gente fez para a gente conversar. Vou botar mais carinhas aqui. Tá vou botar aqui o nosso.
+Elberth Moraes: A nossa Yamaha.
+Elberth Moraes: E amarra desse jeito. Aqui vou chegar aqui. Vou botar o meu caminhão,
+Elberth Moraes: beleza, botei isso tudo aqui. Vou fazer um negócio aqui. Ó, eu tô aqui em cima
+Elberth Moraes: e eu vou botar esse carinho daqui como mil oitocentos e quarenta e sete.
+Elberth Moraes: Desse jeito, aí, aí eu fui.
+Elberth Moraes: Mandei rodar esse meu carinha.
+Elberth Moraes: Deu erro. Ano mil oitocentos e quarenta e sete.
+Elberth Moraes: O que vocês pensam aí que a gente pode fazer para que dê tudo certo.
+Elberth Moraes: Eu não queria que todos os outros parassem. Eu queria que
+Elberth Moraes: o negócio continuasse ali. Desse tudo certo, né?
+Elberth Moraes: O que eu tenho que fazer aqui para esse negócio? Não parar, não dar esse erro.
+Elberth Moraes: Usar lá o o nosso querido Tri Cat. Perfeito.
+Elberth Moraes: Vim para cá.
+Elberth Moraes: Observem que tem duas situações.
+Elberth Moraes: Tem uma situação que eu posso chegar aqui.
+Elberth Moraes: Fazia um tri cat assim.
+Elberth Moraes: Botar aqui embaixo um Illegal Argument Exceptional botar aqui embaixo.
+Elberth Moraes: Esse mesmo texto aqui não foi possível criar o veículo. Observem que esse trecho de código que está aqui
+Elberth Moraes: tem um Tri Cat para ele. Esse aqui tem um Tri Cat e os outros também. Eu vou poder criar também
+Elberth Moraes: isso daqui é uma solução, tá? Mandei rodar esse cara daqui, ó,
+Elberth Moraes: apareceu um erro para um, apareceu um erro para o outro e seguiu para o resto.
+Elberth Moraes: O que vocês acharam de ruim
+Elberth Moraes: nessa solução aqui, que a gente acabou complicando
+Elberth Moraes: criar um Try para cada legal. É loucura mesmo. Mas olha só. Vamos fazer aqui. Então a gente tem
+Elberth Moraes: um Try para cada. Pelo jeito que vocês falarem, eu vou criar um Try para esses dois.
+Elberth Moraes: Ok?
+Elberth Moraes: Copiei esse cara daqui.
+Elberth Moraes: Comentei aqui pra gente não perder.
+Elberth Moraes: Vim aqui embaixo e fiz assim,
+Elberth Moraes: ok? Tô assim desse jeito. Reduzi. Reduzi para um único. Try, mandei rodar esse cara daqui. Ó,
+Elberth Moraes: o que aconteceu aí de errado?
+Elberth Moraes: O que vocês estão identificando aí de um?
+Elberth Moraes: O primeiro erro que ele encontrou
+Elberth Moraes: encontrou um erro aqui. Esse cara aqui morreu.
+Elberth Moraes: E aí, o que vocês preferem? Que você tenha mais Tri Cats
+Elberth Moraes: ou que esse cara daqui de baixo. Só vai acontecer quando esse daqui estiver corrigido.
+Elberth Moraes: Então não tem muito o que fazer. Claro, galera, que a gente está botando aqui tudo na marra. A gente está botando um monte de veículo junto. Mas o ideal
+Elberth Moraes: é que você tenha. Se você quiser isso aí, claro, galera, que é uma coisa que, por exemplo, eu estava fazendo um projeto lá, que se encontrasse um erro,
+Elberth Moraes: o negócio tinha que acabar aí. Você pode fazer desse jeito.
+Elberth Moraes: Mas também, dias depois, eu tive que fazer um uso de um negócio do Java que é chamado Springbatch. Não sei se vocês já ouviram falar nesse cara que é um processamento em lote.
+Elberth Moraes: E aí, esse processamento de lote não poderia parar.
+Elberth Moraes: Era um processamento que ele começaria na sexta feira, às dez horas da noite.
+Elberth Moraes: E ele com tudo parado lá, com tudo liberado para ele usar o máximo de velocidade de potência de tudo. Porque na segunda feira, às seis da manhã, o Inss teria que usar o sistema, e a gente só teria
+Elberth Moraes: essa janela de tempo. Essa agenda aí para a gente fazer isso. Então não poderia parar
+Elberth Moraes: se desse qualquer erro, registra o erro e a gente começa a apagar o fogo na segunda feira.
+Elberth Moraes: Então eu não poderia botar um Tri Cat para todo mundo.
+Elberth Moraes: Eu deveria ter um tri cat para cada um, para a gente conseguir pegar todas as situações. Claro que desse jeito que está aqui a gente está criando tudo na mão.
+Elberth Moraes: A gente está criando Fiat Toyota moto, né? Eu nem preciso de mais tudo isso. Vocês já conseguiram entender que eu teria que fazer esse mesmo Tri Cat
+Elberth Moraes: aqui para moto?
+Elberth Moraes: Eu teria que fazer isso daqui aqui também.
+Elberth Moraes: Para mais um carinho para Icats.
+Elberth Moraes: Então eu teria que fazer isso aqui. Tudo para
+Elberth Moraes: todos eles. Porque eu tenho um monte aqui.
+Elberth Moraes: Como é que eu não ia fazer? Estou eu fazendo aqui,
+Elberth Moraes: beleza? Fizemos aqui para todo mundo.
+Elberth Moraes: E aí o Cat é igual para todo mundo. Também. Aqui vou copiar porque eu estou
+Elberth Moraes: botando igual. Claro que a gente vai depois melhorar isso daqui, porque a gente não precisa também ter. Já pensou se você tivesse cem mil registros, você ia fazer isso? Claro que não, né.
+Elberth Moraes: A gente tem estrutura de repetição. A gente tem um monte de coisa para isso. Não é problema. O que eu queria mostrar para vocês é que se você tiver qualquer problema aí no meio, ele vai pegar.
+Elberth Moraes: Ah, qualquer um é qualquer um.
+Elberth Moraes: Esse cara daqui. Essa coisa aqui é a estrutura de lança erro desse jeito. Crow New, exceção. Uma mensagem. Se você quiser
+Elberth Moraes: essa exceção aqui vai ser disparada, e alguém precisa pegar essa exceção para não jogar aquele erro feião.
+Elberth Moraes: Aí a gente faz o uso do tri cascat para você capturar uma exceção desse tipo, ou colocar uma classe maior, uma mãe para você pegar outras filhas. Aconselho sempre você ter um tratamento específico ali. Depois a gente vai ver que eu consigo botar
+Elberth Moraes: mais de uma exceção. Eu consigo fazer um trabalho legal. Mas encontrou essa exceção. Ela brinda e bota esse tipo de mensagem mais organizada ali dentro.
+Elberth Moraes: A gente tem o Tri Cat, mas eu não, lembro. Na hora que eu fiz aqui
+Elberth Moraes: que eu botei Try
+Elberth Moraes: e dei um contra espaço. E apareceu esse cara aqui, Tri Cat. E apareceu esse cara aqui. Try Finally,
+Elberth Moraes: esses dois carinhas aqui. Eles andam juntos. São amigos, gente boa. E cada um tem o seu propósito. A gente vai usar aqui também. O Tri Fine ali, junto com esses Tri Cats. Um monte de Tri Cats que a gente tem um bloco assim executado no
+Elberth Moraes: com esse Tri Cat. Ele tem lá. Ele pode ter exceção. Como ele não pode não ter exceção, como a gente viu ali na parte de baixo. Ele é muito útil para essas tarefas. Vocês viram que esse nosso trabalho lá no final, tem aquela mensagem. Fim do programa.
+Elberth Moraes: Esse tipo de tri Family é muito importante para esse trabalho de encerramento. Limpeza, às vezes você trabalha num
+Elberth Moraes: em alguma funcionalidade que quando você chega depois que passou por tudo. Você tem que fazer alguma coisa. É no Try Find, ali que você bota. Por quê? Porque o Tri Fine sempre vai ser executado.
+Elberth Moraes: A proposta é essa. É um cara que vai ser executado ao término. Então esse carinha, daí a gente cria ele desse jeito.
+Elberth Moraes: E aí, como que a gente pode fazer. A gente pode fazer de várias formas. A gente pode chegar.
+Elberth Moraes: E aqui em cima, a gente executar. E aqui, dentro desse finally, a gente colocar, por exemplo,
+Elberth Moraes: esse fim do programa aqui, vou arrastar aqui e depois eu trago para cá de volta. Peguei esse cara,
+Elberth Moraes: botei esse cara aqui e aí, aqui dentro, a gente consegue fazer um monte de coisas.
+Elberth Moraes: Você consegue. Por exemplo, eu posso chegar aqui. Observem esse carinha daqui.
+Elberth Moraes: Vou trazer ele aqui para cima para fazer de exemplos. Tá de exemplo.
+Elberth Moraes: Cheguei aqui. Ó, imagine que eu posso fazer a combinação desses dois caras.
+Elberth Moraes: Eu posso chegar aqui e falar assim. Poxa, mas esse tri. Ele é muito parecido com o tri que você tem aqui. É verdade. Eu posso pegar então esse bloco como um todo. Assim,
+Elberth Moraes: copiar e jogar aqui dentro assim. Ó, eu posso fazer isso.
+Elberth Moraes: É ruim. É errado, não, não é.
+Elberth Moraes: Tá, essa é uma forma. Qual é a outra forma? A outra forma é. Você pega o miolo aqui do Try,
+Elberth Moraes: joga ele aqui no miolo do try do finally.
+Elberth Moraes: Depois depois você pega esse Cats que está aqui
+Elberth Moraes: e joga esse cara aqui, assim, ó, ele consegue combinar
+Elberth Moraes: algumas coisas. Então eu tenho um Try,
+Elberth Moraes: esse Try, ele de cara. Ele tem aqui um Cat.
+Elberth Moraes: E aí, se der algum probleminha aqui em cima. Ele cai aqui, não dando problema ou dando problema. Ele vai cair aqui no final. Então, finalmente, a gente vai conseguir apresentar lá ou finalizar essa nossa
+Elberth Moraes: tentativa de finalizar o programa.
+Elberth Moraes: Vamos fazer então esse teste. Vou tirar esse cara daqui por enquanto. Vou comentar aqui para a gente não perder
+Elberth Moraes: a referência. Observem que esse findo ali. Ele tá aqui. Sistema, fim do programa. Vou tirar esses caras daqui por enquanto, tá?
+Elberth Moraes: Eu posso botar eles ali para cima também.
+Elberth Moraes: Mas deixa ele aqui para a gente ter menos mensagens.
+Elberth Moraes: Tá aqui, ó, vou mandar rodar esse carinha.
+Elberth Moraes: E tá ali. Ó, aquele. Primeiro cara. Não foi possível. E eu fui no programa. Aconteceu. Ah, legal,
+Elberth Moraes: porra do jeito que você fez. Ficou legal, Elbert. Mas tem aquele esquema que a gente tava conversando. Imagine esse aqui.
+Elberth Moraes: Esse cara daqui também é um cara problemático.
+Elberth Moraes: Se eu pegar esse cara daqui e botá lo aqui,
+Elberth Moraes: vocês estão ligados, que só vai aparecer
+Elberth Moraes: um erro, dois erros e funcionou. O que houve aí, gente?
+Elberth Moraes: Os dois caras estavam com erro. Os dois caras apareceram. Vocês ligaram no que eu fiz aqui? Deixa eu voltar aqui para a gente ver.
+Elberth Moraes: A gente tava aqui. Vocês lembram que a gente botou um Try para cada um, não é?
+Elberth Moraes: E aí a gente tem aqui esse Tri Cat que a gente botou? A gente tem esse Finally. Aí a gente viu que esse carinha daqui
+Elberth Moraes: está com problemas.
+Elberth Moraes: Mas quando a gente botou assim. Ó, esse aqui é um Fiat. Quando a gente botou esse carinha daqui
+Elberth Moraes: junto com esse carinha daqui. Vocês lembram do que aconteceu? Vão voltar aqui pra gente tirar esse cara?
+Elberth Moraes: Você lembra? Vocês lembram quando a gente fez isso? Quando a gente mandou rodar esse carinha daqui. Esse aqui dá erro. Esse aqui dá erro.
+Elberth Moraes: A gente mandou rodar esse cara.
+Elberth Moraes: Ó só apareceu o erro do primeiro
+Elberth Moraes: lembrando, né? Esse que tá aqui embaixo. Foi esse que a gente colocou agora aqui, deixa eu tirar aqui pra gente não perder
+Elberth Moraes: um carro. Dois carros, Tri Cat. Mandei rodar esse cara.
+Elberth Moraes: Só apareceu um erro. Por quê? Porque o erro de cima quando ele fez, ele caiu aqui nesse Cat
+Elberth Moraes: e apareceu esse relatório.
+Elberth Moraes: Ah, legal. Aí agora a gente veio pra esse cara. Vou tirar esse cara daqui de cima.
+Elberth Moraes: Eu apago ele.
+Elberth Moraes: Aí eu vim para esse cara aqui que era o esquema do tri final, mas só que antes da gente chegar no final. Tem aqui o Tri Cat igual a gente tem ali em cima.
+Elberth Moraes: Aí eu vim. Botei aqui um Fiat
+Elberth Moraes: aí eu vou pegar outro cara problemático que era esse daqui. Peguei esse cara
+Elberth Moraes: e trouxe para cá. Joguei esse cara aqui dentro.
+Elberth Moraes: Quando eu botei esse cara aqui dentro, nesse novo formato de implementação. E mandei rodar.
+Elberth Moraes: Ele pegou aqui só o quarenta e sete
+Elberth Moraes: por causa do errinho que a gente tinha botado ali em cima. Esse cara daqui matou o erro. E aí a gente começa a olhar assim. Deixa eu botar os outros aqui embaixo também, pra gente quebrar tudo de uma vez só.
+Elberth Moraes: Ó, peguei essa galera toda. Esse cara aqui foi o que a gente fez. Agora ali, deixa eu levar ali pra tirar de circulação. Esse cara daqui é sucesso.
+Elberth Moraes: Botei esse cara de sucesso aqui dentro. Qual é a chance desse cara daqui ser executado?
+Elberth Moraes: Mandei rodar esse cara daqui e quebrou.
+Elberth Moraes: Então a gente tem que ficar ligado. Botei aqui o Tri Cat, uma galera dentro quebrou, quebrou um. Os outros não são executados, mas o final sempre é executado. Vocês estão vendo que está sempre rolando aqui o fim do programa com derrota ou com sucesso.
+Elberth Moraes: Então a gente consegue chegar e pegar grupos desses Tri e botar aqui dentro não tem problema. Um. A outra forma de fazer. É essa que a gente estava conversando.
+Elberth Moraes: De pegar? Que foi a primeira que eu fiz. Pegar esse tri que está aqui
+Elberth Moraes: colocar aqui dentro. Você pode colocar aqui dentro. Não tem problema. Ah, esse aqui é o do Toyota. É o do Toyota. É o mesmo esquema. Você vai botar aqui
+Elberth Moraes: um Tri Cat para esse cara daqui
+Elberth Moraes: e vai botar esse carinha aqui.
+Elberth Moraes: Ah, então agora eu tenho ali dentro. Fiat, Toyota e a Honda. Isso
+Elberth Moraes: Fiat, Toyota e a Honda. Ah, legal. Por que funcionou porque você? Colocou um Tri Cat dentro do outro. Você consegue fazer isso? Consegue tanto que a gente está fazendo?
+Elberth Moraes: Vou botar todo mundo ali dentro.
+Elberth Moraes: Botei ali. Ó, peguei esse cara daqui?
+Elberth Moraes: Tirei, cortei.
+Elberth Moraes: Era uma moto Honda. É, botei aqui dentro.
+Elberth Moraes: Peguei aqui a nossa Yamarra.
+Elberth Moraes: Cortei daqui. Joguei aqui dentro.
+Elberth Moraes: Observem que eu estou botando esse Tri Cat aqui.
+Elberth Moraes: Mas eu não preciso esse daqui tá? Daqui a pouco eu vou apagar
+Elberth Moraes: esse cara aqui. Eu só botei pra gente fazer um teste. Deixa eu voltar aqui de novo,
+Elberth Moraes: fazer o último aqui.
+Elberth Moraes: Então eu tenho juntando aqui um tri lá fora que fecha.
+Elberth Moraes: Vou tirar esse cara porque a gente já tem ali dentro.
+Elberth Moraes: Fecha com o finally aqui. Esse cara que está aqui em cima.
+Elberth Moraes: Fecha com finally. E todo mundo que está aqui dentro dele.
+Elberth Moraes: Vai ter a sua exceção registrada. Registrou registrou uma moto, outra moto, um caminhão.
+Elberth Moraes: Fim do programa.
+Elberth Moraes: Então a gente tem esse trabalho com o Tri Cat, lembrando mais uma vez a gente botou esse monte de coisa aqui. Porque está tudo na mão.
+Elberth Moraes: Se isso aqui depois vier de alguém cadastrando um por um, a gente não vai precisar de todos esses. A gente só vai precisar de um.
+Elberth Moraes: Então não precisa se estressar. Não precisa falar assim, Caraca, mas é muito código. Não é o mesmo código. Um monte de vezes. Só que quando a gente pegou
+Elberth Moraes: daqui, me levou para lá para a gente fazer o tratamento individual e que todo mundo seja considerado.
+Elberth Moraes: A gente precisou colocar um Triat para cada um.
+Elberth Moraes: Posso ir para o próximo problema? Galera
+Elberth Moraes: maravilha.
+Elberth Moraes: Eu vou daqui a pouquinho. Eu estou fazendo o tracked daqui a pouquinho. A gente vai
+Elberth Moraes: entrar em arquivo, entrar em outras coisinhas e tal,
+Elberth Moraes: mas a gente tem vários requisitos que a gente pode implementar.
+Elberth Moraes: Por exemplo, tem um segundo requisito,
+Elberth Moraes: que é algo que a gente está fazendo. Já não é uma
+Elberth Moraes: coisa diferente. Não é um requisito novo que seria, sei lá, uma tentativa
+Elberth Moraes: de criar um veículo.
+Elberth Moraes: Pega aqui a mensagem,
+Elberth Moraes: beleza. Vou botar alguma coisa assim, tá?
+Elberth Moraes: Vou tirar esse texto aqui para não ficar muito grande. Pronto, assim. Então observe que um requisito que a gente fez aqui nesse uma tentativa de criar
+Elberth Moraes: foi justamente um requisito para a gente chegar aqui e botar uma mensagem.
+Elberth Moraes: Ah, entendi. Então nem a mensagem que está aqui dentro
+Elberth Moraes: é o programador que define o que ele vai escrever? Não
+Elberth Moraes: aqui tem. Dentro de algum documento de alguma especificação?
+Elberth Moraes: Está dizendo lá o que tem que ser feito?
+Elberth Moraes: Ah, entendi. Eu posso criar requisitos aqui dentro. Eu posso. Não. Alguém vai criar requisitos aqui dentro.
+Elberth Moraes: É que você vai definir a sua implementação de acordo com esses requisitos.
+Elberth Moraes: Por exemplo, vou chegar aqui e vou criar um terceiro requisito para a gente matar esse carinho.
+Elberth Moraes: Eu tenho aqui assim. Ó, o programa. Vamos botar o programa principal.
+Elberth Moraes: Ele deve tratar uma criação inválida sem encerrar toda a aplicação
+Elberth Moraes: onde que a gente aplicou onde a gente implementou esse requisito funcional aqui, esse requisito funcional dois
+Elberth Moraes: é exatamente esse monte de de mensagem que a gente tem aqui não é isso.
+Elberth Moraes: Isso aqui,
+Elberth Moraes: esse aqui, esse aqui. Mas esse terceiro requisito, o programa principal deve tratar uma criação inválida sem encerrar toda a aplicação.
+Elberth Moraes: O que a gente fez para implementar esse cara daqui?
+Elberth Moraes: Mais alguém?
+Elberth Moraes: Não foi? Nem o Finally. O Finally foi uma boa orientação sua. Mas foi esse tipo de trabalho aqui.
+Elberth Moraes: Isso aqui fez a gente não encerrar toda a aplicação.
+Elberth Moraes: Então, se a gente não faz um Tri Cat para cada um.
+Elberth Moraes: A gente encerraria como a gente fez. Se a gente tirasse esses tri cats aqui de dentro. A gente mataria todo mundo.
+Elberth Moraes: Então a gente tem as requisito três. Às vezes a gente tem requisitos que não são mega implementações, mas eles direcionam a gente na implementação que a gente tem que fazer.
+Elberth Moraes: Então, estamos aqui, bonitão? Vou fazer mais um requisito aqui.
+Elberth Moraes: O requisito quatro tem a ver com arquivo. Ok, então vou chegar aqui e vou botar. Assim. Ó,
+Elberth Moraes: o sistema deve ler veículos a partir do arquivo. O texto botar aqui veículos Csv.
+Elberth Moraes: Isso aqui é o carinha que a gente tem que trabalhar.
+Elberth Moraes: É um requisito.
+Elberth Moraes: Vamos fazer aqui. Existem algumas maneiras da gente ler um arquivo texto.
+Elberth Moraes: Vou ensinar uma aqui que eu acho que é muito legal. É uma mais profissional, mas na própria imagem que eu mandei para vocês ali, que eu mandei, que eu apresentei para vocês tem uma que é mais fácil. Mas depois a gente volta
+Elberth Moraes: para ver isso. Observe o seguinte: estou aqui dentro desse projeto.
+Elberth Moraes: Vou chegar aqui dentro desse meu projeto aqui e vou criar um arquivo.
+Elberth Moraes: Um firewall.
+Elberth Moraes: Esse meu Fire vai ser veículos veículos Csv.
+Elberth Moraes: Criei aqui dentro. Observem que ele veio parar aqui dentro do meu projeto. Tá vendo?
+Elberth Moraes: Precisa abrir? Não, moço. Eu só chamei você. Só mostrei. Tá aqui esse cara daqui a gente consegue abrir por aqui. E é um arquivo texto
+Elberth Moraes: aqui dentro. Arquivo texto
+Elberth Moraes: aqui dentro. Eu vou ter Fiat. Eu vou ter Toyota, e eu vou ter outras informações aqui dentro. Não sei ainda o que vai ter. A gente vai ter que ver o próximo requisito. Mas o arquivo está aqui dentro.
+Elberth Moraes: Eu consigo. Eu vou chegar aqui fora só para fazer um teste, tá? Vamos deixar esse
+Elberth Moraes: é, vou deixar esse cara de exceção aqui. Eu vou criar mais um carinho. A gente está vendo que a gente está começando a criar mais classes. Está criando um monte de coisa. Eu vou começar a separar essas classes.
+Elberth Moraes: Preciso que vocês me ajudem. Vou chegar aqui dentro e veja assim. Ó caminhão, carro, documento, garagem, App, garagem Exception App, máquina, moto, revista e veículo.
+Elberth Moraes: Eu vou criar três Carinhas aqui, três pacotes,
+Elberth Moraes: um pacote vai ser. São as minhas classes de domínio que eu vou chamar aqui de Model. As minhas classes de modelo.
+Elberth Moraes: É um pacote que eu criei ali.
+Elberth Moraes: Eu vou criar aqui um outro pacote
+Elberth Moraes: que eu vou chamar aqui de interface, que está aqui dentro.
+Elberth Moraes: E dentro dessa minha garagem que está aqui.
+Elberth Moraes: Eu vou colocar só as minhas classes de teste. Só as minhas classes de método man.
+Elberth Moraes: Perfeito.
+Elberth Moraes: Aí eu vou fechar tudo aqui.
+Elberth Moraes: E eu pergunto para vocês: caminho
+Elberth Moraes: vai para qual pacote fica em garagem. Vai para interfaces ou vai para a Model.
+Elberth Moraes: Então o caminho eu trouxe para a Model
+Elberth Moraes: carro. Posso levar para a modelo também?
+Elberth Moraes: Cruz para a moda.
+Elberth Moraes: Documento documento era o quê?
+Elberth Moraes: O documento era uma classe. Também.
+Elberth Moraes: Vou levar aqui para dentro, de modo também garagem App.
+Elberth Moraes: Vou ficar aqui mesmo assim como esse outro app aqui, máquina. Vou botar aqui dentro de modo módulo.
+Elberth Moraes: Modo ou não, moto, também vou ficar aqui dentro revisto.
+Elberth Moraes: Vou levar para dentro de interface e o nosso querido
+Elberth Moraes: veículo. Vou trazer aqui para dentro de modo perfeitos.
+Elberth Moraes: Então, a gente tem aqui dentro uma organização de pacotes.
+Elberth Moraes: É assim mesmo. Funciona desse jeito. A gente tem pacotes para organizar. Eu vou chegar aqui dentro e vou criar uma outra classe.
+Elberth Moraes: Garagem, arquivos.
+Elberth Moraes: É isso.
+Elberth Moraes: Botei aqui dentro.
+Elberth Moraes: Existe um negócio. Vou ensinar aqui. Depois a gente aprende de outras formas, tá? Mas eu posso usar um carinha chamado tem o Buffared Reader,
+Elberth Moraes: que é uma coisa de leitura. Deixa eu mostrar aqui só pra vocês verem que a gente.
+Elberth Moraes: Eu matei a imagem aqui. Cadê a imagem que tava?
+Elberth Moraes: Nem lembro mais qual era foi essa.
+Elberth Moraes: Tá vendo? Tem esse carinha daqui. Tá vendo? Pegar o caminho desse seu diretório?
+Elberth Moraes: E aqui do lado,
+Elberth Moraes: tá vendo? Tem estruturas que ele lê para você o arquivo, né? Tá vendo, filete tem essas coisas todas são comandos. Que a gente vai utilizar para a gente ver. Mas eu vou apresentar outro carinha daqui, que são duas combinações.
+Elberth Moraes: Eu quero fazer uma leitura. Ok, eu vou fazer uma leitura de um arquivo.
+Elberth Moraes: Eu vou chegar aqui. E vou fazer assim. Ó um file reader de leitura
+Elberth Moraes: que eu vou dar um nome aqui de File. Apenas isso. Aqui é igual a classe que a gente está criando. Igual a New
+Elberth Moraes: Firewall Reader.
+Elberth Moraes: E aqui dentro, eu vou colocar o nome do arquivo que eu quero ler
+Elberth Moraes: o nome do arquivo que eu quero ler é veículos Csv. Eu vou chegar aqui.
+Elberth Moraes: Vou botar assim veiculos Csv desse jeito aqui.
+Elberth Moraes: Só que esse cara fica assim. Pô, mas não é esse cara. Não é esse construtor e tal aqui dentro desse carinha.
+Elberth Moraes: Esse é o nosso carinha daqui. Ele tem um monte de File Reads. Estão vendo ali
+Elberth Moraes: o Fire Reader que eu escolhi foi esse primeiro. Mas eu tenho esse aqui.
+Elberth Moraes: Eu tenho esse aqui que ele espera receber o Firename. Então esse filme é uma informação do tipo String. Aí eu venho aqui e boto lá o nosso querido.
+Elberth Moraes: Qual o nome? Daqui veículos Csv. Eu vou colocar isso aqui no.
+Elberth Moraes: Num diretório num diretório, numa variável. Mas beleza. A gente está botando aqui dentro. Esse cara.
+Elberth Moraes: Observem que a gente está usando aqui uma classe
+Elberth Moraes: a classe fire reader. E aí, quando a gente passa o mouse em cima dela. Aqui, olha o que ele chega pra gente assim. Ó,
+Elberth Moraes: você está usando esse carinha daí
+Elberth Moraes: e essa classe Fire reader só para você ter colocado uma informação
+Elberth Moraes: dentro do meu parâmetro. Aqui. Ele está falando assim para mim. Ó,
+Elberth Moraes: pode ser que esse arquivo não exista.
+Elberth Moraes: E você vai precisar trabalhar com essa file not found exception
+Elberth Moraes: file not found exception. É bem intuitivo que ele está dizendo que se você botar um arquivo aqui, esse arquivo não existir, de quem é? A responsabilidade é sua. Então por isso que a gente faz esse tipo de trabalho. E aí ele aqui dentro faz para mim assim.
+Elberth Moraes: Você quer adoles Declaration significa assim. Você quer passar essa bola
+Elberth Moraes: para quem está te chamando? Se responsabilizar por isso,
+Elberth Moraes: aí você vai e fala assim. Ah, isso aí, beleza. Quero isso aí. Quando você clica aqui,
+Elberth Moraes: ele chega ao lado do método onde esse cara estava sendo usado.
+Elberth Moraes: E coloca esse trolls fire or not found exception.
+Elberth Moraes: O que significa isso? Que alguém,
+Elberth Moraes: alguma outra classe antes dessa daqui, vai se responsabilizar pelo uso do método man.
+Elberth Moraes: Tá lógico que a teoria está ótima, mas quem é a outra classe
+Elberth Moraes: que usa esse método man aqui dentro desse projeto.
+Elberth Moraes: O que vocês pensam nesse método, man? O que está sendo o método Man para a gente hoje,
+Elberth Moraes: o método man para a gente hoje está sendo como se fosse a gente usando o sistema.
+Elberth Moraes: Então é a tela. É como se fosse a tela da gente. A gente vai chegar em cima desses carinhas daqui. É como se eu estivesse simulando uma tela, estivesse simulando ali um ambiente que eu startasse a aplicação.
+Elberth Moraes: Então, quando eu chego aqui e falo, isso passa para frente,
+Elberth Moraes: cara. O pra frente é. Sou eu o cliente do sistema. Sabe, o programador
+Elberth Moraes: não faz sentido isso passar para frente. Ah, então não passa para frente já que você está falando aqui não tem sentido. Não passa para frente, beleza. Tira todo o comentário lá de cima.
+Elberth Moraes: Dependência lá de cima. Tirei beleza. Voltamos para a estaca zero.
+Elberth Moraes: Aí ele disponibiliza pra gente outra coisa. Vocês lembram desse Tri Cat aqui que a gente acabou de falar agora. Então ele está dizendo para a gente assim, ó, se você vai se responsabilizar
+Elberth Moraes: pelo uso dessa nossa classe Fire Reader,
+Elberth Moraes: é interessante que você faça algum tratamento,
+Elberth Moraes: caso o arquivo que você mesmo indicou não exista. Ah, tudo bem, então eu chego aqui. Ele cria para a gente. Um Tri Cat.
+Elberth Moraes: Percebam que ele fez um Tri Cat Botou ali no meio. O nome da classe de exceção que ele botou que ele definiu quando a gente entra nesse Fire not found Exception.
+Elberth Moraes: Ele está indo agora para uma outra herança, um I o exception,
+Elberth Moraes: ou seja, uma classe de exceção específica para entrada e saída de informações. Muito legal. Então esse Fire or not found exception é uma filha de Io Exception, Io. Exception. É uma filha de excepcion.
+Elberth Moraes: Então, só a gente olhando aqui, esse Io Exception é quase uma irmã daquele round time execution que a gente usou, que a gente usou. Então, beleza. Estamos voltando para cá. Criamos o Tri Cat. Por que ele fez isso? Ele quer chegar aqui embaixo e botar uma mensagem igual. A gente fez lá no outro,
+Elberth Moraes: sei lá, impossível abrir o arquivo.
+Elberth Moraes: E aí eu vou botar essa mensagem. Esse cara que está aqui, esse Print Track três. É aquele carinha que imprime tudo aquilo na tela.
+Elberth Moraes: Lembra aquele consórcio. A primeira vez que a gente apareceu, que botou lá a última linha foi onde começou a penúltima linha foi para carro. A terceira linha foi para veículo até chegar na mensagem que a gente viu no construtor do negócio.
+Elberth Moraes: Não, mas eu não quero imprimir aquele tudo de novo. Não, eu quero só a mensagem. Aí eu falei: Então, tá bom, vou tirar isso daqui.
+Elberth Moraes: Eu vou fazer igual aquele outro que a gente fez.
+Elberth Moraes: E getsmassaged
+Elberth Moraes: legal. Então, beleza, se der problema, a gente registra não tem muito o que a gente fazer. Não vou botar aqui um sistema erro
+Elberth Moraes: nesse carinha e está tudo resolvido. Perfeito. Então tem o Fire aqui. Esse File é muito carente. Ele é tipo um scanner que o scanner pede para a gente fechar. Ele mas na verdade ele está dizendo aqui para a gente
+Elberth Moraes: do tipo: ó, você precisa dar uma fechada nesse cara, porque esse cara está meio zoado. Como é que você abre ele, mas não fecha ele e tal. Ele é todo melindrado. Mas na verdade, ele nem foi utilizado ainda.
+Elberth Moraes: Daqui a pouquinho. A gente vai ver que a gente vai poder fazer outras operações com ele. Aí existe uma combinação
+Elberth Moraes: que é o tal do Buffett Reader, Reader, esse cara daqui, como o próprio nome diz, ele faz a leitura
+Elberth Moraes: de um certo arquivo, manter esses dados no buffer, ou seja, tipo, aqui na memória, para a gente poder usar os dados que eu tenho dentro desse arquivo. Eu trago esse cara porque ele é fácil de usar. Eu vou chamar esse cara aqui de leitura.
+Elberth Moraes: A leitura precisa apenas se relacionar com o cara de cima ali.
+Elberth Moraes: Então, quando eu faço aqui um Buffared Reader, ele pede para mim assim: qual é o cara que você vai usar? Qual é o Fire reader que você vai usar. Ah, eu vou usar esse cara ali o File.
+Elberth Moraes: Então eu estou passando o cara de cima e embaixo,
+Elberth Moraes: eu estou simplesmente associando os dois carinhas. E esse leitura aqui é o carinha que vai pegar. Alguma informação que eu tenho dentro do meu arquivo.
+Elberth Moraes: E ele tem métodos muito simples assim. Ó Raitura readline,
+Elberth Moraes: ele pega uma linha lá do nosso arquivo e você faz o que você quiser com esse carinho. Claro que tudo que a gente faz aqui com essas classes, eu quis trazer essa classe para cá
+Elberth Moraes: para poder fazer essa relação com a exceção. Vocês viram que quando a gente começou a usar esse cara, daqui, surgiu o Fire not Found Exception.
+Elberth Moraes: Agora a gente chegou aqui. A gente quer uma linha de dentro desse arquivo. A gente só quer fazer isso aí ele chega aqui para a gente e fala assim. Ó rapaz, tem como dar problema aí? Porque e se a gente não conseguir fazer a leitura do arquivo. Se o arquivo estiver corrompido,
+Elberth Moraes: então o sistema começa a disponibilizar para a gente umas condições do tipo beleza, você quer usar vai usar é beleza. Se responsabiliza. Aí esse se responsabiliza aí, que quebra porque ele vai simplesmente ter que botar aqui um tipo de tratamento.
+Elberth Moraes: Só que dessa vez, observe que trouxe um monte de opção pra gente. A gente tem o tradicional Tri Cat
+Elberth Moraes: Skycatch está aqui.
+Elberth Moraes: Ele botou um Tri Cat aí o Exception.
+Elberth Moraes: Tudo resolvido e tal. Essa é uma possibilidade.
+Elberth Moraes: Não, não quero essa. Lembrando que eu peguei o Tri Cat.
+Elberth Moraes: Tá bom,
+Elberth Moraes: tá. Não, não vou fazer isso daí. Não vou fazer outro. Vamos ver aqui o que tem desses outros? Último Endz aqui end excepcion to existing catch clause. Cliquei aqui.
+Elberth Moraes: Ele olha o que ele fez. O outro foi muito. Rápido.
+Elberth Moraes: Aqui está. File not found exceptional
+Elberth Moraes: pyle notfall Exception. Foi a classe de exceção desse cara daqui.
+Elberth Moraes: Tá, vendo? Ó quando a gente passa o Mouse aqui em cima. Observe que ao lado dele tem aqui. Ó troux fire not found Exception.
+Elberth Moraes: Você lembra desse trolls que a gente. Agora. Há pouco a gente passou por ele. E aí eu falei assim: quando você bota um trolls, o nome de uma classe de exceção significa que vai passar para frente e outra pessoa que for usar a sua classe ou for usar qualquer coisa no seu construtor e tal,
+Elberth Moraes: vai ter que se responsabilizar por tratar esse erro.
+Elberth Moraes: Então observem que o nosso fire reader a classe Fire Reader tem um True Fire not found exceptional. Ou seja, ela não trata. Não, mas quem usa ela tem que tratar.
+Elberth Moraes: Então Filete Foundation Exception memorizem aí. Readline está aqui. Reed Line é uma classe que está falando aqui. Ioexception.
+Elberth Moraes: Vocês viram que quando eu entrei nesse Fire Not found exception. Aqui o I o exception era justamente a mãe
+Elberth Moraes: desse caro.
+Elberth Moraes: Então você sabe que esse cara daqui tem mais poderes que ele. Esse cara daqui tem os poderes dela. Quer dizer, esse cara daqui tem os poderes específicos dela e o poder de mamãe
+Elberth Moraes: igual a gente tem ali veículo, veículo, carro e moto caminhão.
+Elberth Moraes: E esse ioexception aqui tem informações específicas,
+Elberth Moraes: específicas genéricas. Quando eu vi nesse cara, daqui. A solução desse primeiro carinha aqui. Primeiro, não, né? O último Andy, foi justamente trocar esse cara daqui
+Elberth Moraes: para um Io exception.
+Elberth Moraes: Um Iowa exception. Serve tanto para o Ridgeline
+Elberth Moraes: quanto por Fire Reader. Por quê?
+Elberth Moraes: O Fire Read ele usa Fire not found exception
+Elberth Moraes: fire not Found Exception é uma filha de Io Exception.
+Elberth Moraes: Esse Bridgeline aqui Ridgeline usa ioexception. Então significa que se eu passar para Ioexception.
+Elberth Moraes: Os dois ficam aí. Eu venho pra cá, boto. Esse cara mudou aqui. Ó pra Iow Exception funcionou.
+Elberth Moraes: É uma opção vamos para outra opção.
+Elberth Moraes: Cheguei aqui tem essa segunda aqui. Ó
+Elberth Moraes: segunda, Ed Cat Close to rounding try. Quando eu clico aqui,
+Elberth Moraes: ele cria uma exceção, um Cat para uma exceção.
+Elberth Moraes: Outro Cats para outra exceção. Isso aqui. Eu acho muito legal.
+Elberth Moraes: Por quê aqui você consegue deixar bem específico se cair nessa exceção aqui. Observe que ela está vindo primeiro, porque ela é uma filha. Vai falar lá. Impossível abrir o arquivo.
+Elberth Moraes: Esse cara aqui de baixo. Vamos botar que seja alguma coisa referente à leitura do arquivo. A gente vai botar aqui. Impossível ler o arquivo.
+Elberth Moraes: Pronto, botei esse cara aqui. O difícil ler o arquivo é mais difícil a gente testar,
+Elberth Moraes: porque. Como é que eu vou saber ali corromper o arquivo e tal. Mas esse primeiro aqui é fácil.
+Elberth Moraes: Se eu simplesmente mudar o nome do arquivo, ele já dá erro pra mim, porque, olha, só vou mandar rodar esse cara aqui. Ó Renese.
+Elberth Moraes: Diabo, Aplicación.
+Elberth Moraes: Aconteceu nada. Vamos botar um tri fine ali, aqui. Então, para acontecer alguma coisa. Vamos, Try!
+Elberth Moraes: Finally.
+Elberth Moraes: Vou pegar essa galera toda que está aqui.
+Elberth Moraes: Vou trazer aqui para dentro.
+Elberth Moraes: Eu vou botar aqui no meu finally um system out.
+Elberth Moraes: Fim do processamento, beleza. Vamos rodar esse cara aqui para ver se acontece alguma coisa.
+Elberth Moraes: Pronto, pelo menos tem um feedback pelo menos ali a gente está trabalhando com algum retorno. Aconteceu alguma coisa perfeito aí? Agora a gente tem que ver que vocês viram que não deu erro. Mas imagine isso. Aqui é veiculos Csv. Imagine que eu tenha colocado veículos Txt.
+Elberth Moraes: Vou mandar rodar esse cara aqui.
+Elberth Moraes: Aí ele já reclama impossível abrir o arquivo. Veículo T. Systems. O sistema não pôde encontrar o arquivo especificado.
+Elberth Moraes: Essa mensagem que está aqui. Essas coisas todas. A gente conseguiu pegar ali da nossa.
+Elberth Moraes: Cadê os dois pontos até aqui? Ó,
+Elberth Moraes: estão os dois pontos que é o nosso carinha aqui até aqui. Mas esse get messaged que está ali, é isso aqui tudo.
+Elberth Moraes: Esse é o nosso get message. Ah, entendi. Então a questão do arquivo. A gente resolveu. A gente está conseguindo. Então chegar no arquivo. O Csv
+Elberth Moraes: funciona.
+Elberth Moraes: Fim do processamento ou botar um nome errado aqui. Como se a gente tivesse esse arquivo não existisse. E tal maravilha. Então a gente chegou nesse ponto. Observem que esse cara que está aqui. Esse Ridgeline
+Elberth Moraes: deixa. Eu já dei spoiler para vocês. Ele me retorna uma String. Tá vendo?
+Elberth Moraes: Então quando eu chego aqui e boto uma string red line. Eu estou lendo cada linha do meu arquivo. Vocês estão ligados que esse cara daqui quando a gente pediu para abrir aqui dentro do eclipse. Ele tem esse e esse.
+Elberth Moraes: Então, quando eu chego aqui, eu sei que o Ridgeline me retorna ao texto. Eu vou lá assim, linha
+Elberth Moraes: pronto. Se eu pegar esse linha aqui e mandar dar um system Out Print Line, joguei aqui. Ó linha,
+Elberth Moraes: quando eu mando rodar, esse cara aparece aqui. Ó Fiat Opa, isso aqui foi um teste que eu estou fazendo para saber se eu consigo dar um pulinho lá no meu arquivo para pegar um dado que está lá dentro.
+Elberth Moraes: Então esse processo aqui de definir um arquivo,
+Elberth Moraes: definir um carinha que eu vou fazer a leitura associando esse arquivo.
+Elberth Moraes: Depois eu uso esse leitura para ter o Ridgeline. Esse cara me retorna uma linha e eu imprimo uma linha.
+Elberth Moraes: Então isso aqui é interessante, porque, olha, só. Eu vou fazer assim diferente. A gente está esperto que isso daqui. Ele é dividido em duas partes.
+Elberth Moraes: Se eu tivesse duas linhas,
+Elberth Moraes: esse cara aqui de cima, eu poderia ter aqui nu ou vazio. E aqui embaixo apenas o link.
+Elberth Moraes: Eu poderia fazer isso daqui.
+Elberth Moraes: Por que eu falo isso? Porque se eu fizesse isso daqui?
+Elberth Moraes: Uma linha, duas linhas, três linhas.
+Elberth Moraes: Não tem três linhas lá. Tá? Só tem uma linha, é duas linhas. Quando eu mando rodar isso daqui,
+Elberth Moraes: observem que aparece aqui. Ó primeira linha foi Fiat. Segunda linha foi Toyota.
+Elberth Moraes: Terceira linha. Deu nu. O o que significa esse nu aqui? O que deu nu?
+Elberth Moraes: O nu aqui está acontecendo. Porque quando a gente tentou ler mais uma linha, não tinha mais linha.
+Elberth Moraes: Então é como se eu estivesse botando dentro desse carinha daqui. Fiat Toyota e meu nome.
+Elberth Moraes: Salvei esse cara daqui. Vim aqui fora, rodei,
+Elberth Moraes: aparece o Elbert agora, tá vendo?
+Elberth Moraes: Mas se eu chegasse aqui e colocasse mais uma linha,
+Elberth Moraes: mesmo com o Elbert lá daria nulo. Por quê? Porque acabou a linha.
+Elberth Moraes: Ah, então entendi. Então agora eu entendi que quando eu encontro nulo no processo de leitura de linha
+Elberth Moraes: é porque acabou o arquivo. Ah, é isso aí, fechou. Vocês estão ligados? Que eu fiz aqui a mesma coisa várias vezes, né? Existe alguma estrutura no Java que a gente consiga reduzir essa quantidade de implementação igual aqui que a gente fez,
+Elberth Moraes: tem as famosas estruturas de repetição.
+Elberth Moraes: Vou usar uma estrutura de repetição aqui. Vou usar o Uio
+Elberth Moraes: porque o Aile, ele vai repetir isso aqui para mim de ter
+Elberth Moraes: a hora que acabar a linha do meu arquivo.
+Elberth Moraes: Ah, legal. Vamos fazer isso. Então.
+Elberth Moraes: Então cheguei aqui em cima.
+Elberth Moraes: O Ayu.
+Elberth Moraes: Esse não o Ios s.
+Elberth Moraes: Então primeiro eu tenho que primeiro ler uma linha. Isso, então vou pegar esse cara daqui.
+Elberth Moraes: Vou botar ali para cima.
+Elberth Moraes: Botei aqui. Posso juntar agora? Pode. Tira esse cara daqui.
+Elberth Moraes: Botei aqui. Linha
+Elberth Moraes: legal. Então, o que eu vou fazer aqui dentro. Aqui dentro. Você vai imprimir a linha. Você vai pegar isso daqui
+Elberth Moraes: e vai imprimir.
+Elberth Moraes: Tá, entendi. O que mais que eu faço aqui. Qual é a condição que eu boto aqui?
+Elberth Moraes: A condição que você bota aí é a condição que a gente viu.
+Elberth Moraes: A linha precisa ser diferente de nu, correto?
+Elberth Moraes: Então, se linha for diferente de nu assim eu entro.
+Elberth Moraes: Beleza, beleza. Tá ótimo. Então não preciso mais disso tudo aqui.
+Elberth Moraes: Só que do jeito que eu implementei aqui, que parece que está tudo lindo. Tudo certinho.
+Elberth Moraes: Quando eu mando rodar esse cara. Ele fica assim, ó,
+Elberth Moraes: até explodir minha máscara. O que tá rolando ali?
+Elberth Moraes: Alguma sugestão? Espero acabar a memória do computador. Vocês vão responder antes.
+Elberth Moraes: Posso dar um stop aqui no meu negócio aqui.
+Elberth Moraes: Então tá bom. Já tô mais calmo que vocês liberaram essa ação tão radical
+Elberth Moraes: beleza. O que deu de problema? Ali? Está lendo a mesma linha. Então, como é que funciona? Cada vez vocês lembram como é que estava isso daqui. Peguei isso daqui.
+Elberth Moraes: Isso aqui estava nulo aqui. Vocês lembram nulo? Aí estava, sim. Ou seja, esse carinha daqui
+Elberth Moraes: é toda vez que eu leio uma linha.
+Elberth Moraes: Toda vez que eu leio uma linha, existem algumas formas de a gente fazer isso daqui pode causar uma confusão. Depois a gente vai estudar. Mas eu consigo botar. Inclusive essa leitura e atribuição aqui dentro.
+Elberth Moraes: Aqui, eu consigo pegar esse carinha todo daqui essa atribuição toda e colocar aqui dentro.
+Elberth Moraes: E vocês vão ficar enlouquecidos.
+Elberth Moraes: Isso aqui poderia ser. Olha, como é que a gente traduz esse.
+Elberth Moraes: O Iowa aqui, cara. Que loucura! Por que a gente foi fazer isso? Não faz sentido. Mas ó, funcionou.
+Elberth Moraes: Não vou fazer isso daqui a pouco. A gente entende o que aconteceu aqui dentro.
+Elberth Moraes: Estava assim.
+Elberth Moraes: E aí, o que rolou do jeito que está aqui hoje para esse cara daqui acontecer novamente. Eu tenho que jogar esse cara para dentro do Lion.
+Elberth Moraes: Eu tenho que fazer isso. Então ele entra aqui. Primeira vez, linha. Tá nulo.
+Elberth Moraes: Aí ele foi lá. Leu a primeira linha, linha, não tá mais nulo. Linha tá com Fiat. Aí eu venho aqui. Linha diferente de nulo
+Elberth Moraes: é linha é diferente de nu. Então eu imprimo linha. Imprimi aí quando eu faço isso daqui. Eu leio uma próxima linha. Read Line, beleza. Li a próxima linha. Joguei para dentro de linha. Cheguei no final, bati aqui em cima e testo. Linha diferente de nu. É, imprime a linha.
+Elberth Moraes: Aí eu venho aqui e leio a terceira. Meu nome. Bato aqui e volto.
+Elberth Moraes: Linha diferente de nulo, né? É aí. Eu vou imprimo meu nome. Bato aqui.
+Elberth Moraes: Acabou. Apareceu nulo. Então aqui tá nulo, bato aqui.
+Elberth Moraes: Linha diferente de nulo, não, linha é igual a nulo. Saiu fora.
+Elberth Moraes: Fim do processamento. Observe que essa implementação aqui, ó,
+Elberth Moraes: está igual a outra que a gente fez. Aquela outra ali. A gente volta para conversar sobre aquilo, tá? Mas o que eu fiz é que aqui, dentro desse próprio
+Elberth Moraes: carinha daqui. Eu consigo fazer essa ação aqui.
+Elberth Moraes: Ser atribuída à minha variável linha. E depois o resultado dela, eu testo com esse
+Elberth Moraes: diferente de nulo. Mas depois a gente vai conversar sobre isso, tá? Abstraiam aí pra galera que tava esperta pra galera que já está mais experiente. Eu fiz essa implementação, mas a gente voltou para fazer um aile tradicional. Estou lendo todas as linhas.
+Elberth Moraes: Esse script aqui. É um script que eu vou jogar no chat aqui para quem quiser.
+Elberth Moraes: Ele faz uma leitura de um arquivo
+Elberth Moraes: texto do jeito que você quiser. Maneiraço, sem nenhum tipo de estresse.
+Elberth Moraes: Até aqui estamos bem. Galera
+Elberth Moraes: perfeito. Eu estou aqui dentro desse meu arquivo, e esse carinha. O sistema deve ler veículos a partir de um arquivo. Texto está funcionando.
+Elberth Moraes: Vou mexer aqui. Nesse requisito.
+Elberth Moraes: É cada linha. Ops,
+Elberth Moraes: cada linha. O que é caps?
+Elberth Moraes: Eu já perdi aqui, Caps. É algum evento? Concurso hospital é o quê?
+Elberth Moraes: Tô perdido.
+Elberth Moraes: Hospício pode ser né?
+Elberth Moraes: Lugar de doido.
+Elberth Moraes: Ah, então é aqui naquele lugar de doido.
+Elberth Moraes: Cada linha deve informar o tipo.
+Elberth Moraes: Placa marca ano.
+Elberth Moraes: E aí vamos botar botativo botar. Assim é botar um um dado. Esse específico do veículo,
+Elberth Moraes: porra, vai ter um monte aí, cara. Posso botar eu e o Lp na frente da sala. Um abraço
+Elberth Moraes: só desesperado.
+Elberth Moraes: Ninguém entra.
+Elberth Moraes: Santo.
+Elberth Moraes: Só fera mesmo.
+Elberth Moraes: Mas vamos lá. Qualquer dia a gente se encontra. E vocês vão ver que a gente não é tão doido.
+Elberth Moraes: É só um pouquinho, beleza. Vamos fazer isso. Agora entendi.
+Elberth Moraes: Vamos fazer essa linha daqui, esse requisito quatro. Imagine o seguinte. Eu quero lá dentro daquele meu arquivo, que eu já não sei onde eu estou aqui, aqui.
+Elberth Moraes: Esse aqui dá certo.
+Elberth Moraes: Esse carinha daqui. Eu quero botar as informações dos meus veículos. Eu tenho aqui. Eu estava trabalhando agora com esse cara foi esse.
+Elberth Moraes: Oi, tem aqui. Um, dois, três, quatro, cinco. É isso que eu quero. Vou pegar essa galerinha aqui.
+Elberth Moraes: Vim aqui para dentro.
+Elberth Moraes: E aí aqui dentro. Eu vou colocar os dados de cada veículo.
+Elberth Moraes: Imagine que esse cara daqui eu vou dar igual. O moço pediu ali. Deixa eu pegar o requisito.
+Elberth Moraes: Estou botando aqui dentro. É rascunhão mesmo, tá? Depois a gente apaga
+Elberth Moraes: cada linha. Deve ter o tipo
+Elberth Moraes: tipo, entenda, tipo, como, sei lá. C de carro, C de carro, M de moto, m de moto e C de caminhão ferrou.
+Elberth Moraes: Vamos botar o que? Aqui? Meu Deus do céu,
+Elberth Moraes: carro! Qual é carro em inglês? Caminhão também não tem tá caminhão como T de forma truck.
+Elberth Moraes: Pronto, T de caminhão. Que loucura.
+Elberth Moraes: Vamos botar assim. Tá ótimo. Então tá definindo aqui um tipo, ok, só pra gente saber que essa linha tem um carro. Essa linha tem um carro. Essa linha tem uma moto, uma moto e um caminhão legal, esse ter ou não. Mas daqui a pouco a gente pensa:
+Elberth Moraes: e aí, beleza? Próximo passo. Ali a placa. Eu vou botar aqui um carro pode ser automóvel,
+Elberth Moraes: mas aí não vai ser Tarro, né? Pô, deixa assim mesmo, cara.
+Elberth Moraes: E aí eu vou botar a placa. Eu vou começar a usar separadores. Eu vou chegar aqui e vou falar assim. O próximo é a placa Abc
+Elberth Moraes: Abc um gota ali embaixo D23
+Elberth Moraes: pronto, essa é uma placa. Observem que eu estou pegando daqui.
+Elberth Moraes: Jogando aqui.
+Elberth Moraes: Pegando aqui. Jogando aqui.
+Elberth Moraes: Tá aí?
+Elberth Moraes: Automóvel particular. Perfeito,
+Elberth Moraes: Moto. É o quê?
+Elberth Moraes: Moto? É moto e caminhão. É caminhão
+Elberth Moraes: beleza. Fiz aqui, botei a placa,
+Elberth Moraes: botei esse cara. Vou botar. O quê? Marca Toyota
+Elberth Moraes: Botou. A placa, botou a marca, botou o ano.
+Elberth Moraes: Esqueci dos ponto e vírgula aqui.
+Elberth Moraes: E um dado específico. Um dado específico aqui pode ser esse. Pode ser esse. Pode ser esse. Está tudo aí. Então vou botar aqui. Então o quatro.
+Elberth Moraes: Isso aqui é quatro, que deve ser a quantidade de portas. Talvez dois também.
+Elberth Moraes: Mil cilindradas, vinte e cinco, dezoito,cinco.
+Elberth Moraes: Perfeito. Tem aqui todas as informações ali dentro. Está funcionando? Não sei. Vamos testar aqui. Pode rodar?
+Elberth Moraes: Está funcionando. Então isso daqui eu peguei do meu arquivo.
+Elberth Moraes: Isso aqui é o fim no meu processamento é
+Elberth Moraes: vamos fazer agora. Eu não vou muito longe. Não tá? O que a gente está fazendo é, cada linha deve ter beleza.
+Elberth Moraes: Aí o sistema deve criar carro, moto ou caminhão. De acordo com o tipo da linha.
+Elberth Moraes: O que eu queria fazer aqui antes, para a gente não rolar muito para ir embora correndo
+Elberth Moraes: um requisito funcional.
+Elberth Moraes: Seis.
+Elberth Moraes: Então vou botar aqui. Ó, o sistema
+Elberth Moraes: igual. Eu estava falando agora, deve criar um carro, moto ou caminhão
+Elberth Moraes: de acordo com o tipo informado na linha no arquivo.
+Elberth Moraes: Vocês entenderam o que eu estou falando aqui nesse meu requisito. Seis.
+Elberth Moraes: Não entenderam, entenderam?
+Elberth Moraes: Sim, né?
+Elberth Moraes: Então a proposta é se dentro daquele meu arquivo desse meu carinho daqui.
+Elberth Moraes: Se a gente tem uma letra, não um Ap aqui. Eu vou estanciar um carro.
+Elberth Moraes: Se tiver um M, eu vou instanciar uma moto.
+Elberth Moraes: Se tiver um seu, eu vou estanciar um caminhão. É isso que o moço está pedindo. Estou aqui dentro. Aí a gente está aqui na linha. A linha está fazendo essa leitura toda aí, bonitona e tal.
+Elberth Moraes: A gente sabe que esse print que a gente está dando aqui pode até acontecer.
+Elberth Moraes: Mas o que eu estou dando? Esse espaço todo aqui, é porque aqui dentro
+Elberth Moraes: vai ter a movimentação para a gente saber quando que eu faço com carro. Carro igual a New Carro.
+Elberth Moraes: Desse jeito. Tem um construtor aqui, grandão.
+Elberth Moraes: Botar essas informações todas aqui. Quando que eu vou fazer com moto
+Elberth Moraes: desse jeito? Aí daqui a pouco a gente volta.
+Elberth Moraes: E quando que eu vou estanciar um caminhão
+Elberth Moraes: perfeito.
+Elberth Moraes: Então eu só estou na dúvida de quando que eu vou pegar esse caminhão. Quando que eu vou pegar. Não quando que eu vou instanciar um desses três carinhas aqui.
+Elberth Moraes: Vocês estão ligados no algoritmo que a gente tem que fazer
+Elberth Moraes: para saber se eu vou estanciar um outro ou outro.
+Elberth Moraes: O que vocês acham que a gente poderia fazer aí?
+Elberth Moraes: Qual o algoritmo? Não estou falando que.
+Elberth Moraes: Que vai ser com a implementação? Não, mas vocês estão ligados que o meu arquivo,
+Elberth Moraes: o arquivo aqui. Ele tem essas informações.
+Elberth Moraes: Eu sei que a primeira posição aqui dessa minha linha. Se a gente for considerar esses delimitadores aqui,
+Elberth Moraes: a primeira posição vai definir
+Elberth Moraes: quem é o tipo de qual é o tipo de veículo. Vocês estão ligados nisso? Que essa primeira posição guarda
+Elberth Moraes: o tipo do veículo.
+Elberth Moraes: Beleza, né?
+Elberth Moraes: O que eu tenho que fazer aqui? Existe uma função muito legal do nosso querido Java,
+Elberth Moraes: que é a função split.
+Elberth Moraes: Essa função split pega qualquer String.
+Elberth Moraes: E ela pega um delimitador que você estabelecer.
+Elberth Moraes: E ele te retorna. Um vetor com todos os valores que você consegue usar, o delimitador para separar, por exemplo, ele vai me retornar um valor com esse cara daqui. Esse cara daqui, esse cara daqui, esse e esse tudo como String.
+Elberth Moraes: Ok, tudo como String. Mas eu sei que na posição zero eu tenho isso na posição um. Eu tenho isso na posição dois. Eu tenho isso na posição três e na posição quatro
+Elberth Moraes: é um vetor igual a gente está trabalhando.
+Elberth Moraes: Então, quando eu pego a minha linha
+Elberth Moraes: linha é uma informação do tipo String tá aqui, ó linha
+Elberth Moraes: e eu ponto. Bota aqui um ponto split.
+Elberth Moraes: Observe que esse ponto split apresenta para mim. Você quer usar um Rejex, ou seja, um campo que seja um delimitador?
+Elberth Moraes: Sim, o meu delimitador é um ponte, vírgula, tá aqui.
+Elberth Moraes: Só que esse split, ele retorna para a gente. Um cara tá vendo? Aqui, ele retorna.
+Elberth Moraes: Então ele não pode ser chamado assim. Porque se ele for chamado assim, eu vou perder o retorno dele e eu não consigo fazer nada. Então ele está esperando que eu tenha aqui guardado um vetor de String para eu poder guardar o retorno desse meu split.
+Elberth Moraes: Ah, entendi. Então você vai ter que ter um vetor de String. Isso, um vetor de String.
+Elberth Moraes: O que eu tenho aqui dentro desse meu vetor? Eu tenho os campos daquele meu arquivo.
+Elberth Moraes: O primeiro campo é o tipo. O segundo é a placa. O terceiro é o tal tal tal. Então eu tenho aqui campos.
+Elberth Moraes: Então, olha só que eu fiz uma linha
+Elberth Moraes: dentro desse meu carinha. Daqui campus. Eu estou pegando o resultado desse cara. Observem que campus e o retorno de split. Eles são do mesmo tipo. Conseguiram observar String, vetor de String aqui vetor de String.
+Elberth Moraes: Então tudo que está do lado de cá,
+Elberth Moraes: eu consigo jogar aqui para dentro.
+Elberth Moraes: Por que eu coloquei tudo dentro desse meu vetor aqui? Alguma lógica.
+Elberth Moraes: Alguma explicação filosófica?
+Elberth Moraes: O grande barato que eu quero fazer aqui é que quando eu jogo para dentro de um vetor,
+Elberth Moraes: eu sei que campus, posição zero. Tem alguma informação? O que eu tenho dentro de campus. Posição zero.
+Elberth Moraes: Eu tenho aqui. Eu tenho o tipo. Isso aqui é tudo comentário, tá gente. Não funciona. Não,
+Elberth Moraes: eu tenho, tipo,
+Elberth Moraes: se eu tenho lá campo, exposição um. Eu tenho outra coisa, e por aí vai. Mas eu não quero isso. Por enquanto não. Eu só quero o tipo.
+Elberth Moraes: O que eu preciso do tipo, na verdade, eu tenho aqui o tipo do veículo. Então, quando eu chego aqui, peguei campos,
+Elberth Moraes: vim aqui para baixo. Vou botar uma variável aqui, String. Tipo do veículo.
+Elberth Moraes: O tipo do veículo vai receber assim. Ó campus zero desse jeito.
+Elberth Moraes: Então eu estou com um tipo de veículo na mão.
+Elberth Moraes: Eu poderia chegar aqui embaixo e fazer assim. Ó, se é o cif
+Elberth Moraes: elseve, eu poderia chegar aqui, botar esse aqui para carro esse aqui para a moto.
+Elberth Moraes: E esse aqui, para esse.
+Elberth Moraes: Vocês lembram de outra estrutura?
+Elberth Moraes: É condicional que a gente pode utilizar
+Elberth Moraes: para a gente não trabalhar com Ifs.
+Elberth Moraes: A gente pode usar o Switch. Se eu quisesse fazer com o If aqui, seria tipo, veículo.
+Elberth Moraes: Eu venho aqui.
+Elberth Moraes: Ah, se for, é o que mesmo automóvel particular.
+Elberth Moraes: Se for automóvel particular, Equals,
+Elberth Moraes: esse cara daqui, ele entra aqui embaixo. Isso aqui é um if, né? Você lembram que a gente não pode usar igual igual quando é uma String.
+Elberth Moraes: Tem que a String é uma classe. A gente tem que usar o Equals ou se a gente tem que usar o Equals. Ignore case Equals.
+Elberth Moraes: Ignore case para trabalhar com letras minúsculas e maiúsculas. Vocês estão lembrado disso? Gente desse uso do
+Elberth Moraes: do texto junto com a combinação aqui
+Elberth Moraes: falei ou não falei: olha, vai
+Elberth Moraes: se um falou o que eu falei, eu falei, senão eu não falei.
+Elberth Moraes: E aí eu botei aqui esse cara. Esse cara vai ser uma moto
+Elberth Moraes: desse jeito, aqui e aqui embaixo entrou o outro carinho.
+Elberth Moraes: Então, desse jeito, assim a gente consegue justamente ter um controle
+Elberth Moraes: de como que eu vou estanciar um carro como que eu vou estanciar uma moto, um caminhão ou qualquer outro carinha.
+Elberth Moraes: Mas isso daqui a gente vai transformar depois num suíte bonitão.
+Elberth Moraes: E aí esse suíte bonitão. Eu vou ter justamente esse cara daqui, aqui
+Elberth Moraes: e aqui embaixo. Eu vou ter o Ap. Não, não é isso. Não, cara. É outro Switch
+Elberth Moraes: Switch. Eu vou ter aqui embaixo aqui em cima o tipo de veículo aqui embaixo. Eu vou ter o automóvel particular
+Elberth Moraes: aí. Depois eu vou ter aqui a moto, depois eu vou ter aqui o caminhão.
+Elberth Moraes: E aí sim, eu vou poder colocar aqui dentro um carro.
+Elberth Moraes: Vou poder colocar aqui uma moto,
+Elberth Moraes: e eu vou poder colocar ali um caminhão.
+Elberth Moraes: Saqui e keylor de cima. São muito parecidos. Vou usar o suíte que ele é mais organizadinho.
+Elberth Moraes: Galera. A gente está há duas horas trabalhando.
+Elberth Moraes: Passou rápido ou foi muito chato aí, galera, nós estamos juntos.
+Elberth Moraes: Podemos começar a finalizar.
+Elberth Moraes: A gente tem que ter umas aulas de umas cinco horas para dar um aquecida.
+Elberth Moraes: Não tem condições.
+Elberth Moraes: Sim, poderia sim. Lucão dá pra fazer assim.
+Elberth Moraes: Hoje está muito frio. Não vou para o pagode. Não, porque senão eu não aguento.
+Elberth Moraes: É galera.
+Elberth Moraes: Vou comitar isso daqui. A gente tem aula na semana que vem.
+Elberth Moraes: Vocês estão ligados. Que a gente ainda tem essa semana que vem, para a gente trabalhar com essas coisas todas. Exceção e arquivo. É o último conteúdo do nosso trabalho.
+Elberth Moraes: Mas eu tenho aqui a gente fez o agora a gente fez o requisito seis, começamos a fazer o requisito seis. Eu tenho mais alguns requisitos aqui para a gente implementar.
+Elberth Moraes: E aí o meu objetivo é a gente ir trabalhando nesse processo de leitura. Escrito de arquivo junto leitura escrita em arquivo, junto com exceção.
+Elberth Moraes: E aí a gente já está aplicando aqui herança e tal. E a proposta é que na quinta feira que vem com duas horas de aula que a gente tem? A gente tem duas horas na quinta também tem duas horas, quinta e sexta,
+Elberth Moraes: na quinta a gente mate todo esse conteúdo.
+Elberth Moraes: E aí, na sexta feira, a gente vem para fazer um projeto do zero,
+Elberth Moraes: aplicando todo o conteúdo necessário. Todo o conteúdo que a gente aprendeu. E aí, na semana seguinte, 1o e dois de Outubro. Já é uma semana de finalizar para a gente descansar e voltar depois, no próximo trimestre.
+Elberth Moraes: Estamos alinhados, gente
+Elberth Moraes: maravilha, tá?
+Elberth Moraes: Não vale a pena fazer o projeto na sexta, com duas horas. Projeto. Não vale a pena
+Elberth Moraes: fazer o projeto na sexta com dois. Ah, isso que a gente vai fazer.
+Elberth Moraes: Mas é um projeto novo do zero. Só para eu demonstrar o que rolou
+Elberth Moraes: quinta feira. A gente vai fazer esse projeto aqui. Que é um projeto que a gente está fazendo há alguns dias,
+Elberth Moraes: que é um projeto para apresentar o conteúdo.
+Elberth Moraes: O projeto que eu estou querendo fazer sexta feira é um projeto que a gente. Ó, tenho aqui vários requisitos funcionais. Vamos implementar esse cara.
+Elberth Moraes: Mas aí a gente ia fazer um projeto menor, mas que aplique todo o conteúdo que a gente tem.
+Elberth Moraes: Entendeu, Jorge?
+Elberth Moraes: Quinta feira a gente finaliza o conteúdo. Finalizou a matéria sexta feira. É só para quem quiser aparecer, não vai ter nada novo. A gente só vai aplicar o conteúdo aí na semana seguinte, um e dois. A gente não tem aula só para a galera que está enrolada aí com as entregas de trabalho,
+Elberth Moraes: fechou.
+Elberth Moraes: Maravilha, galera. Excelente noite pra vocês. Beijo grande.
+Elberth Moraes: Até a próxima quinta feira às oito horas. Um abraço. Tchau, tchau.

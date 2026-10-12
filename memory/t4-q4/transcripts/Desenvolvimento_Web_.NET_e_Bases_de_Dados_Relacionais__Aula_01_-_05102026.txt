@@ -1,0 +1,648 @@
+Luiz Maia: Boa noite, pessoal. Dia cinco de Outubro, dois mil e vinte e seis. Bem vindos a mais uma aula
+Luiz Maia: do bloco de backend, a disciplina de
+Luiz Maia: desenvolvimento Web net, base de dados relacionais.
+Luiz Maia: Bom, essas aulas iniciais, elas não são ainda Dotnet. Elas são C. Sharp.
+Luiz Maia: É como semana que vem. A gente tem um feriado na segunda feira, dia doze.
+Luiz Maia: Eu vou tentar terminar esse assunto.
+Luiz Maia: É no máximo até amanhã.
+Luiz Maia: Tá certo, então eu vou tentar condensar aqui.
+Luiz Maia: E aí. Eu não vou fazer código
+Luiz Maia: ao vivo com vocês. Eu vou pegar o código pronto e mostrar para vocês. Para acelerar um pouco
+Luiz Maia: essa parte da matéria, para dar tempo da gente fazer o código ao vivo na parte de Dotnet mesmo,
+Luiz Maia: tá, antes de começar a aula, eu queria postar para vocês aqui no infinite online.
+Luiz Maia: É
+Luiz Maia: não gabarito, né?
+Luiz Maia: Do At. De C. Sharp, mas a minha solução para o
+Luiz Maia: para o At. Eu não comecei a corrigir o at de vocês, gente, eu não tive tempo. Eu estou preparando aulas
+Luiz Maia: para outras turmas.
+Luiz Maia: Inclusive passei um dia revendo a aula de hoje para vocês.
+Luiz Maia: Então, assim não tem nenhuma data para entregar as notas de vocês? Estou tentando conseguir uma ajuda para fazer a correção, mas eu vou colocar para vocês no infinite online. Aí vocês podem confirmar
+Luiz Maia: se vocês é,
+Luiz Maia: tem acesso a esse material. Eu vou colocar no infinite online, porque acho que fica mais fácil
+Luiz Maia: para vocês acessarem.
+Luiz Maia: E aí
+Luiz Maia: eu fiz uma solução.
+Luiz Maia: Onde, dentro dela tem todos os exercícios.
+Luiz Maia: E eu comentei nos exercícios, o que era obrigatório e o que não era obrigatório, ou seja, o que era opcional.
+Luiz Maia: Isso vai dar uma ideia para vocês. Mais ou menos do que eu da minha correção.
+Luiz Maia: Eu não vou ter como ficar descrevendo os detalhes de cada
+Luiz Maia: de cada solução de cada um de vocês são mais de quarenta trabalhos.
+Luiz Maia: Então, assim a correção vai ser bem, é
+Luiz Maia: vou tentar fazer a correção o mais rápida que eu puder.
+Luiz Maia: Eu não tenho como precisar. Quando eu vou terminar a correção,
+Luiz Maia: provavelmente eu vou levar, sei lá,
+Luiz Maia: esse mês inteiro de outubro para fazer essa correção.
+Luiz Maia: Mas vocês vão ter uma ideia
+Luiz Maia: do que eu esperaria de vocês em relação
+Luiz Maia: é o trabalho. Então você pode olhar a minha solução,
+Luiz Maia: olhar de vocês e ver se bateu com a nota.
+Luiz Maia: Se você não ficar satisfeito com a nota. Você pode me procurar para fazer uma revisão de nota? Não tem problema.
+Luiz Maia: É, todo mundo pode errar, né?
+Luiz Maia: Deixa eu ver aqui.
+Luiz Maia: Como é que eu faço para subir esse material?
+Luiz Maia: Eu estou aqui tentando entrar no infinite online para postar esse documento para vocês, mas está bem lento.
+pedro.yamato: Professor. Boa noite. Desculpa, atrás aí que o site hoje da Internet está uma droga.
+Luiz Maia: Não posso fazer comentários.
+Luiz Maia: Não posso fazer comentário nenhum sobre esses problemas.
+pedro.yamato: Ah, já peguei no ar. Já.
+Luiz Maia: Tá?
+Luiz Maia: Eu não consigo abrir aqui o site. Eu vou colocar. Então. Não sei.
+Luiz Maia: Posso colocar no drive? Bom, vou deixar ele tentando aqui abrir aqui essa página, e a gente começa a aula. E depois eu coloco a minha solução aí do At para vocês.
+Luiz Maia: E aí vocês vão ter um ponto, um ponto de partida em relação a a correção.
+Luiz Maia: Bom, deixa eu começar aqui a nossa aula.
+Luiz Maia: Deixa eu abrir aqui. Eu devia estar com isso aberto. Já
+Luiz Maia: vou passar o link para vocês do drive. Aonde vão estar as aulas todas. Tá
+Luiz Maia: aqui vão estar como o infinite online. Não é muito confiável. Eu estou passando o endereço do drive aí para vocês com as aulas
+Luiz Maia: de Dotnet. Tá certo.
+Luiz Maia: Se vocês quiserem, eu posso colocar nesse drive mesmo a solução do At para vocês. Não sei se vocês querem,
+Luiz Maia: mas eu posso colocar aqui tranquilamente
+Luiz Maia: para vocês. Aí fica mais fácil.
+Luiz Maia: Vou colocar aqui
+Luiz Maia: quem quiser quem tiver interesse, estiver ansioso para dar uma olhada no.
+Luiz Maia: Na minha solução. Pode entrar no drive e conseguir depois eu coloco no em frente online.
+Luiz Maia: Ele não abriu a página aqui ainda continua pensando.
+Luiz Maia: Esse é o nome da disciplina aqui, as competências,
+Luiz Maia: utilizar delegates e eventos em programas Sharp. Isso não tem nada a ver com
+Luiz Maia: um Dotnet. É C. Sharp. Ainda aí. Depois disso,
+Luiz Maia: a gente vai entrar na parte de interface com usuário web usando o Asp Net usando Razor Pages.
+Luiz Maia: Vai ser o front end da gente.
+Luiz Maia: Depois a gente vai usar a base de dados usando o antit Framework
+Luiz Maia: sem Sql, o que é uma pena.
+Luiz Maia: Se der tempo, gente, eu vou colocar o código sem o Entity Framework, que é um warme
+Luiz Maia: que facilita muito o trabalho com o banco de dados.
+Luiz Maia: Mas eu queria mostrar para vocês como fazer a mesma coisa sem
+Luiz Maia: o Entity, usando a Scali puro.
+Luiz Maia: Então vocês tenham uma ideia com e sem o anti de Framework,
+Luiz Maia: e a gente. Depois vai fazer uma aplicação web completa,
+Luiz Maia: acessando, usando o Aspinet, que é a o Front end
+Luiz Maia: Do Dotnet com o banco de dados.
+Luiz Maia: É muito poderoso. Tudo isso, gente,
+Luiz Maia: eu posso falar isso porque eu já fiz código em Java, em Python.
+Luiz Maia: É muito fácil você fazer uma aplicação simples usando o Dotnet.
+Luiz Maia: Muito, muito simples, sei lá, em dez, vinte minutos, eu consigo fazer uma aplicação completa usando é
+Luiz Maia: o Front End Web com banco de dados muito rapidamente.
+Luiz Maia: Eu até começaria o curso. De repente, na próxima aula na semana que vem, talvez até faça um
+Luiz Maia: um demo para vocês. Ou seja,
+Luiz Maia: vou fazer um demo de como criar uma aplicação rapidamente, só para vocês terem uma noção do que eu estou falando
+Luiz Maia: nesse ponto. Assim é muito rápido. Comparado
+Luiz Maia: Al Java e ao Python, você tem tudo. Muita coisa pronta.
+Luiz Maia: É
+Luiz Maia: sim. É por isso que eu quero acelerar essa parte inicial.
+Luiz Maia: Que é essa parte de delegate eventos que não tem?
+Luiz Maia: É, não é Dotnet, é C Sharp. Tá certo, é.
+Luiz Maia: Então eu vou tentar acelerar o máximo possível para a gente poder terminar essa primeira competência até amanhã.
+Luiz Maia: É o meu objetivo, tá?
+Luiz Maia: E aí eu vou usar código. Pronto, vou colocar o código disponível para vocês no drive, e vocês vão ter código para caramba lá. Para vocês poderem
+Luiz Maia: utilizar para fazer o Tp de vocês o Tp1
+Luiz Maia: porque tem bastante coisa no Tp1 sobre essa primeira competência aqui.
+Luiz Maia: Tá certo. Então
+Luiz Maia: todo o código vai ser voltado para vocês resolverem o At, o Tp1 de vocês. E claro, o At também vai ter delegates e eventos também no
+Luiz Maia: para ser.
+Luiz Maia: Aqui tem a bibliografia que eu peguei do plano de ensino.
+Luiz Maia: Eu vou usar alguns dessas referências.
+Luiz Maia: Mas eu pretendo que vocês não precisem acessar esses livros,
+Luiz Maia: tentando mostrar para vocês, usando slides e códigos que eu estou fazendo
+Luiz Maia: justamente para não precisar que vocês façam acesso a esses livros. Mas é sempre bom, né?
+Luiz Maia: Você dá uma olhada nesses livros
+Luiz Maia: se você tiver tempo, né? Esse que é o grande problema de todo mundo. Aqui é tempo tá
+Luiz Maia: bom, essa aqui é aula zero. É aula de apresentação do curso, etc.
+Luiz Maia: Onde, você sabe, as competências que serão cobradas, etc.
+Luiz Maia: Aqui vão para a aula. Um.
+Luiz Maia: Eu coloquei aqui na.
+Luiz Maia: Eu copiei para dentro desse desse drive aqui a solução do At de C. Sharp.
+Luiz Maia: Se por acaso ainda não abriu.
+Luiz Maia: Está lá pensando, não foi?
+Luiz Maia: Então é a maneira mais rápida de vocês terem acesso à solução.
+Luiz Maia: E aí qualquer dúvida, vocês podem me procurar
+Luiz Maia: para tirar dúvidas sobre essa solução que eu estou apresentando aqui para vocês.
+Luiz Maia: Então vamos para a aula. Um que é aula sobre delegates
+Luiz Maia: delegate expressão lâmpida Multishash, delegate e eventos novamente, gente, isso aqui é C. Sharp. Não tem nada a ver com Dotnet
+Luiz Maia: é muito pouco que a gente vai ver aqui.
+Luiz Maia: Vai ser usado no Docnet. Talvez a parte mais importante dessas aulas.
+Luiz Maia: Eu não coloquei material nenhum na aula dez
+Luiz Maia: é porque é sobre arquivos. Não é isso.
+Luiz Maia: A aula dez é sobre arquivos. Não é
+Luiz Maia: bom.
+Luiz Maia: Então a parte de arquivos. Eu não coloquei nenhum slide porque eu achei desnecessário. Se vocês quiserem, eu posso preparar alguns slides para colocar lá, mas
+Luiz Maia: o que eu acho que o mais importante em relação à parte de arquivos é a parte do código,
+Luiz Maia: a parte de teoria. Eu não vejo muita necessidade de colocar, mas eu posso criar algumas transparências lá. Alguns slides não tem nenhum problema nessa parte do curso. O que eu acho mais importante é a parte de lâmide.
+Luiz Maia: O que o Andy te usa? Muito lambida.
+Luiz Maia: Ah, eu não sei o que é lâmbida. Ok, eu vou ensinar. Calma,
+Luiz Maia: primeiro a gente vai entrar agora no que é delegate.
+Luiz Maia: Tá certo, gente, isso aqui é programação avançada.
+Luiz Maia: A programação para a gente que já está programando em si, Sharp, há algum tempo.
+Luiz Maia: Eu vou usar muitos exemplos para tentar
+Luiz Maia: explicar exatamente o que são delegates,
+Luiz Maia: para começar. E eu acho que não vai ajudar muita coisa, porque vocês nunca programaram nem com C, nem com C mais
+Luiz Maia: você ter ponteiros para funções ou métodos.
+Luiz Maia: Então você vai ter um ponteiro, uma variável que aponta para um método,
+Luiz Maia: e aí a gente vai poder é
+Luiz Maia: fazer com que esse método execute funções diferentes durante a execução do código.
+Luiz Maia: É muito específico.
+Luiz Maia: Provavelmente vocês nunca verão isso de novo.
+Luiz Maia: É muito específico.
+Luiz Maia: E isso é retratado em tempo de execução. Ou seja, eu posso criar uma função,
+Luiz Maia: uma variável que aponta uma função e ela pode
+Luiz Maia: alterar a função que ela vai executar durante a execução do código.
+Luiz Maia: Um negócio é meio complicado. Mesmo se você não entender, espera para ver os exemplos, para ver se melhora. Porque realmente, se você nunca trabalhou
+Luiz Maia: com C, mais. Provavelmente você não vai entender essa parte teórica que está aqui.
+Luiz Maia: E aí então o delegate. É um tipo que pode armazenar uma referência para um método.
+Luiz Maia: E aí vem a questão da assinatura. A assinatura é aquilo que você sabe. O que é uma assinatura. A assinatura. É aquilo que vem depois do nome do método. São os parâmetros que você vai receber.
+Luiz Maia: É esse tipo de de mecanismo.
+Luiz Maia: O delegate é muito usado em programação. A síncrona e programação orientada a eventos,
+Luiz Maia: coisa que a gente não vai trabalhar.
+Luiz Maia: Então, assim eu sei que é meio estranho, gente, mas faz parte do conteúdo. Eu tenho que ensinar
+Luiz Maia: e não dá para identificar aqui brigando em relação a isso.
+Luiz Maia: Programação acíncrona e programação orientada a eventos são estilos de programação.
+Luiz Maia: Bom, deixa eu ver aqui o que eu tenho aqui a mais aqui, tá
+Luiz Maia: então eu vou abrir aqui o meu código para vocês.
+Luiz Maia: Para vocês poderem entenderem.
+Luiz Maia: Todo esse código vai estar disponível para vocês no drive.
+Luiz Maia: E aí tem um monte de exemplos. Gente, um monte.
+Luiz Maia: Eu acho que são catorze projetos que eu construí aqui dentro.
+Luiz Maia: Não é para vocês terem noção
+Luiz Maia: da quantidade de exemplos que eu construí, que eu desenvolvi
+Luiz Maia: para vocês terem código. Para fazer isso.
+Luiz Maia: Sem Jorge, você vai ver muito pouco de delegate na sua vida.
+Luiz Maia: Provavelmente vai ser a primeira e última vez que você vai ver isso.
+Jorge José Luiz Santos da Silva: Caramba!
+Luiz Maia: É a gente. Não me perguntem por quê. Eu não tenho essas respostas
+Luiz Maia: para vocês. Eu só posso ser muito sincero com vocês.
+Luiz Maia: É um assunto que vocês vão ver agora. E provavelmente nunca verão depois.
+Luiz Maia: Dificilmente você vai usar isso.
+Luiz Maia: Então, assim.
+Luiz Maia: E aí
+Luiz Maia: é aquela coisa. A gente vai ver para fazer os Tps e o ate e vida que segue. Gente. Não vou ficar questionando aqui
+Luiz Maia: quem fez a disciplina? Gente, eu não posso nem falar sobre isso, gente.
+Luiz Maia: Senão eles vão me aborrecer com isso.
+Luiz Maia: Vamos tentar entender aqui.
+Luiz Maia: Esse código.
+Luiz Maia: Isso aqui é um delegate ó
+Luiz Maia: public delegate Dumble calcular.
+Luiz Maia: Então eu estou especificando o que ele retorna
+Luiz Maia: e os parâmetros que ele recebe. Repara que ele não tem corpo nenhum.
+Luiz Maia: É, eu não gosto de fazer essa associação na minha cabeça.
+Luiz Maia: Quando eu fui estudar esse assunto. Eu lembrei de interface, apesar de não ser interface,
+Luiz Maia: mas eu lembrei de interface.
+Luiz Maia: Professor, sei que já estamos em outra disciplina, mas gostaria de pedir uma orientação sobre a teia anterior. Como não tive mais retorno e tive aquele problema de conexão
+Luiz Maia: que acabou me impedindo de enviar o trabalho. Fiquei sem saber como proceder. O senhor poderia me orientar sobre o que posso fazer nesse caso, depois oriento.
+Luiz Maia: E aí, a princípio, eu não aceito nada fora do moodle.
+Luiz Maia: Tá certo.
+Luiz Maia: Você poderia muito bem ter entregue o trabalho antes do prazo de entrega. Então, a princípio, o seu trabalho não foi entregue e você provavelmente está reprovada.
+Luiz Maia: Você teve muito tempo para entregar o seu aterro.
+Luiz Maia: Então aqui. Ó, você tem uma.
+Luiz Maia: Um método
+Luiz Maia: que não define o corpo dele. Tá certo. Ele só diz o que entra e o que sai muito semelhante a uma interface. Mas
+Luiz Maia: não é interface, tá certo.
+Luiz Maia: Qualquer método que eu quiser associar, calcular precisa receber dois,
+Luiz Maia: Double, retornar um Double. Isso é fundamental
+Luiz Maia: para a gente implementar o delegate
+Luiz Maia: lembrando, delegate, é um ponteiro para um método
+Luiz Maia: bom. Eu tenho duas formas de fazer. Aí eu tenho aqui o somar, o subtrair, o multiplicar e o dividir.
+Luiz Maia: Muito semelhante com a calculadora que nós fizemos no trimestre passado. Inclusive o At tinha uma questão.
+Luiz Maia: É semelhante
+Luiz Maia: uma forma deixa eu acertar isso aqui
+Luiz Maia: implícita faltou o assento aqui implícita. Essa aqui é a forma implícita de você. Perdão a forma explícita de declarar ou calcular onde você passa para dentro de calcular
+Luiz Maia: qual é o método que você quer executar.
+Luiz Maia: Essa forma é a forma menos usual de você fazer
+Luiz Maia: essa operação. Normalmente você faz assim. Ó, você faz
+Luiz Maia: calcular que é o nome do delegate o nome do delegate e você atribui ao delegate a função, ou seja, o calcular aponta para somar.
+Luiz Maia: E aí ele faz o quê?
+Luiz Maia: Quando você manda executar o calcular, ele vai executar o quê?
+Luiz Maia: O que está sendo apontado para o calcular. O que calcular, está apontando
+Luiz Maia: o somar. Então ele vai executar quem ele vai executar esse método aqui. Então esse calcular é um ponteiro para um método.
+Luiz Maia: É muito poderoso.
+Luiz Maia: É um negócio assim, bem, fora do padrão de programação que vocês já viram,
+Luiz Maia: mas isso é aplicado em situações muito específicas.
+Luiz Maia: É como eu já comentei aqui anteriormente,
+Luiz Maia: e é uma programação avançada. Não é uma programação básica. Não é para amadores.
+Luiz Maia: Isso aqui é programação. Já para pleno. Para cima
+Luiz Maia: aí, o que eu faço? Eu pego calcular e atribuo a ele subtrair.
+Luiz Maia: Repara que subtrair não é uma variável. É um método.
+Luiz Maia: Então calcular está apontando.
+Luiz Maia: Se vocês quiserem, eu posso desenhar isso, gente, eu posso desenhar, tá?
+Luiz Maia: É, mas o calcular é um ponteiro para um método.
+Luiz Maia: Depois eu faço calcular, receber, multiplicar e depois dividir.
+Luiz Maia: Então o calcular pode ter associado a ele quatro métodos diferentes, desde que a assinatura seja a mesma.
+Luiz Maia: Então, somar, subtrair, multiplicar e dividir. Todos eles têm a mesma assinatura.
+Luiz Maia: Todos eles recebem dois Dubbles e retornam. Double.
+Luiz Maia: Se a gente mandar executar isso aqui, você vai ver o que acontece.
+Luiz Maia: E aí eu tentei fazer uso de exemplos que vocês conhecem.
+Luiz Maia: A calculadora foi um exemplo que nós fizemos. Sei lá.
+Luiz Maia: Não sei. Dez, quinze projetos sobre a calculadora.
+Luiz Maia: Tá certo. Então mais fácil o assunto é complexo.
+Luiz Maia: O que eu tentei fazer é tentar fazer os exemplos o mais próximo da realidade de vocês.
+Luiz Maia: Eu acho que não.
+Luiz Maia: Eu acho que não.
+Luiz Maia: Não tenho certeza posso fazer isso aqui. Agora?
+Luiz Maia: Sim, os parâmetros estão sendo passados pelo usuário. Mateus, olha aqui. Cinco e dois.
+Luiz Maia: Repara que eu não tenho um objeto aqui. Eu tenho métodos.
+Luiz Maia: Não tem um objeto, calcula.
+Luiz Maia: Eu tenho métodos.
+Luiz Maia: E esse cara é um ponteiro para um método.
+Luiz Maia: Eu acho que não tem sobrecarga para não atrasar a aula. Gabriel, eu vou te responder isso amanhã,
+Luiz Maia: senão eu vou perder muito tempo aqui com tentativas. Eu não posso perder tempo com vocês, gente.
+Luiz Maia: Eu tenho muita matéria para dar para vocês de Dotnet isso aqui é.
+Luiz Maia: Tem que ser muito rápido. Você me cobra amanhã?
+Luiz Maia: É uma resposta em relação a isso. Mas eu acho que não vai funcionar.
+Luiz Maia: Eu não quero perder tempo, dar aula com isso agora.
+Luiz Maia: E aí
+Luiz Maia: eu quero ser bem pontual. Bem objetivo, gente, eu quero terminar isso o mais rápido possível para entrar em Dotnet com vocês, que é a parte mais importante do curso,
+Luiz Maia: e também para a vida profissional de vocês,
+Luiz Maia: porque provavelmente como eu falei, vocês não verão delegates
+Luiz Maia: nunca mais. Muito provavelmente nunca mais.
+Luiz Maia: Bom,
+Luiz Maia: depois do delegate, o pessoal do Dotnet inventou delegates genéricos. Tá certo. Prontos?
+Luiz Maia: Que são o Action e o funk?
+Luiz Maia: Tá
+Luiz Maia: tudo que você faz com action e funk, você faz com delegate.
+Luiz Maia: Não, não teve nenhum áudio vazado aqui, não tá? Pelo menos eu não ouvi.
+Luiz Maia: Mas o Dotnet criou esses delegates genéricos e o utp de vocês
+Luiz Maia: pede isso, senão ela nem teria falado sobre isso.
+Luiz Maia: Mas ele pede e eu tenho que ajudar vocês
+Luiz Maia: a fazerem os Tps e o At tá certo.
+Luiz Maia: Action e Funk possuem diferentes versões que permitem trabalhar com vários parâmetros.
+Luiz Maia: E aí vem a grande diferença entre o funk e o action.
+Luiz Maia: Então o funk in action são
+Luiz Maia: tipos de delegates genéricos prontos para facilitar,
+Luiz Maia: entre aspas a vida da gente na hora de programar com ponteiros para métodos
+Luiz Maia: Funk pode receber até dezasseis parâmetros de entrada e aí isso é importante
+Luiz Maia: e possui ainda um parâmetro adicional que representa o tipo de retorno.
+Luiz Maia: Isso é importante.
+Luiz Maia: Action pode receber dezasseis parâmetros de entrada até aí é igual ao Funk.
+Luiz Maia: Só que ele não tem retorno.
+Luiz Maia: Ele não faz retorno. O Action não tem Returney,
+Luiz Maia: ou seja, o que ele processa ali dentro, vai ficar ali dentro. Ele não tem como voltar a nada.
+Luiz Maia: É um negócio meio estranho, na minha opinião. Mas é o que nós temos aqui.
+Luiz Maia: E aí o que nós fizemos nesse primeiro exemplo, aqui é um delegate personalizado,
+Luiz Maia: ou seja, onde você especifica o delegate, etc, etc.
+Luiz Maia: O que a gente vai ver agora é o uso do action e do fux.
+Luiz Maia: É aonde elimina se a necessidade do delegate personalizado.
+Luiz Maia: Deixa eu botar aqui no código.
+Luiz Maia: Deixa eu botar aqui nesse código aqui
+Luiz Maia: e aí.
+Luiz Maia: Delegate personalizado.
+Luiz Maia: Deixa eu ver se eu melhore isso aqui.
+Luiz Maia: Pronto,
+Luiz Maia: ok, agora eu vou mostrar para vocês.
+Luiz Maia: Esse aqui é o delegate dois A.
+Luiz Maia: É muito exemplo. Gente, eu tentei fazer o máximo de exemplos
+Luiz Maia: possíveis para vocês entenderem essa confusão. Tá certo.
+Luiz Maia: Aqui a gente tem a forma explícita de declarar
+Luiz Maia: esse delegate tá certo? E a forma simplificada
+Luiz Maia: repara que você começa com funk.
+Luiz Maia: Os dois primeiros parâmetros são de entrada, e o último é o de saída.
+Luiz Maia: E aqui eu criei uma variável
+Luiz Maia: que é um ponteiro para esse método aqui.
+Luiz Maia: Repare que aqui, em momento nenhum eu estou declarando um delegate
+Luiz Maia: então esse cara aqui é uma
+Luiz Maia: forma mais simples, mais simples de declarar o delegate
+Luiz Maia: onde eu não preciso personalizar o delegate
+Luiz Maia: é uma forma mais simples de você implementar a mesma coisa.
+Luiz Maia: Então o delegate um. Ele implementou
+Luiz Maia: um delegate personalizado aqui eu estou usando.
+Luiz Maia: Não, ainda não é lambida.
+Luiz Maia: Ainda não é lâmpida, lâmpida. Vai aparecer daqui a pouco
+Luiz Maia: porque lâmpida junta com isso? Então assim é uma confusão. Grande não é?
+Luiz Maia: Lâmpada. Vai aparecer daqui a pouco.
+Luiz Maia: E lâmpida é a coisa mais importante dessa matéria.
+Luiz Maia: Tá certo,
+Luiz Maia: Gabriel, é normal você que você acabou de não ter nada de arrogante.
+Luiz Maia: É
+Luiz Maia: para eu poder justificar esse conteúdo.
+Luiz Maia: Eu deveria trabalhar com programação assíncrona e programação orientada de eventos.
+Luiz Maia: Cara, se eu for parar para fazer um exemplo real disso, ou seja,
+Luiz Maia: programação a síncrona com programação orientada a eventos. Eu não vou terminar isso tão cedo.
+Luiz Maia: Então, se vocês quiserem, eu posso
+Luiz Maia: montar um exemplo real de uso disso. Só que isso vai consumir um monte de tempo de aula. Gente, eu tenho uma hora e meia de aula com vocês.
+Luiz Maia: Não, Gabriel, você não vai usar isso aqui nunca,
+Luiz Maia: nunca é uma palavra muito forte, gente. Mas assim a chance de você usar isso alguma vez na vida profissional de vocês é de um.
+Luiz Maia: É muito raro, cara.
+Luiz Maia: Tem que ser uma aplicação muito específica.
+Luiz Maia: Então não é a má vontade da minha parte não querer entrar mais a fundo é porque isso aqui não é importante,
+Luiz Maia: e eu quero avançar na matéria
+Luiz Maia: para a parte importante e não ficar perdendo tempo com isso.
+Luiz Maia: Porque senão, se eu pudesse escolher gente, eu nem estaria ensinando isso pra vocês,
+Luiz Maia: eu já estaria começando. O Dotnet está certo.
+Luiz Maia: Então aqui, ó, eu estou criando uma.
+Luiz Maia: Um delegate do tipo funk onde ele recebe dois Doubles e retorna um double. Isso aqui é um padrão.
+Luiz Maia: O último é sempre o retorno do funk.
+Luiz Maia: E os anteriores são parâmetros de entrada. Você pode ter até dezasseis parâmetros de entrada aqui nesse funk.
+Luiz Maia: E aí a ideia é a mesma coisa. Você atribui o nome do método à variável. E ela vai se comportar diferentemente de cada um
+Luiz Maia: dos métodos associados. O importante aqui é você ver que não tem delegante nenhum aqui dentro.
+Luiz Maia: Como aqui tem.
+Luiz Maia: Ou seja, esse Delegate foi substituído por essa linha aqui. Ó,
+Luiz Maia: essa linha que eu botei aqui comentada, é a forma de você declarar de forma explícita, explícita
+Luiz Maia: o teu funk. Mas ninguém usa isso.
+Luiz Maia: Eu só coloquei como informação para vocês, mas ninguém usa isso.
+Luiz Maia: Todo mundo usa simples. Faltou aqui. Errado, simplificado,
+Luiz Maia: forma simplificada. Ninguém faz isso aqui.
+Luiz Maia: Mas eu deixei no código para vocês verem que também é possível você fazer uma instância do teu funk e passar para ele. Qual é o método associado a esse delegate? Isso aqui é delegate gente. Isso aqui é um delegate,
+Luiz Maia: tá certo. Só que não é personalizado. É um delegate genérico.
+Luiz Maia: Tá bom, execução dele.
+Luiz Maia: Vocês podem ver. Vai funcionar direitinho, soma, subtração, multiplicação e divisão.
+Luiz Maia: Esse é o funk.
+Luiz Maia: Qual é a diferença do Funk Pro Action
+Luiz Maia: o Funk retorna alguma coisa. O Action não retorna. Um delegate
+Luiz Maia: que não retorna nada. Aonde é que está isso? Np: está aqui. Ó,
+Luiz Maia: aqui. Eu especifiquei.
+Luiz Maia: Deixa eu até pegar aqui e copiar aqui para a gente, só para ficar bem documentado.
+Luiz Maia: Forma explícita.
+Luiz Maia: Olha que eu passei o dia
+Luiz Maia: refazendo essa aula para vocês, para ficar
+Luiz Maia: melhor do que já estava, né?
+Luiz Maia: Não é fácil dar essa aula. Não, gente pode ter certeza que para mim não é fácil dar essa aula.
+Luiz Maia: Apesar de eu conhecer programação a Síncron, a programação orientada a eventos,
+Luiz Maia: dar essa aula de uma forma que vocês
+Luiz Maia: entendam alguma coisa. Porque se eu entrasse dentro de um código
+Luiz Maia: real pesado, vocês iam ficar voando
+Luiz Maia: e aí não tem justificativa para isso. Reparem que o Action só tem parâmetros de entrada double. Ele não tem parâmetro de saída. É o mesmo exemplo anterior.
+Luiz Maia: Só que aqui ele não tem é
+Luiz Maia: retorno. Eu mando printar dentro dos métodos. Eu não tenho como fazer um returney.
+Luiz Maia: Essa é a única diferença do Funk pro action
+Luiz Maia: funk. Retorna alguma coisa. Action não retorna a nada. Ou seja, esse código aqui é igualzinho a esse código aqui.
+Luiz Maia: Com a diferença que o funk retorna a alguma coisa no último parâmetro. Isso é uma
+Luiz Maia: definição do C Sharp não é minha.
+Luiz Maia: E o Action não retorna a nada.
+Luiz Maia: Eu ponho o Print dentro dos métodos.
+Luiz Maia: Vou me executar para vocês verem como é que funciona, igualzinho.
+Luiz Maia: E aí
+Luiz Maia: vamos ver esse C aqui que eu já nem lembro mais do que eu fiz aqui dentro. Deixa eu ver o que eu fiz. Ah, bom.
+Luiz Maia: Agora eu vou fazer um pequeno intervalo, tá certo,
+Luiz Maia: porque agora eu vou começar a misturar.
+Luiz Maia: Delegate com lambida Lp. Eu não sei nada de lambida.
+Luiz Maia: Primeiro eu vou explicar a lâmbida
+Luiz Maia: e depois eu volto para fazer a integração de lâmbida com delegate.
+Luiz Maia: Tá aqui, ó expressão lâmpida uma expressão. Isso aqui, a princípio, é
+Luiz Maia: a expressão lambda pode ser usada em vários contextos, em vários lugares do código
+Luiz Maia: e, na minha opinião, essa expressão âmbida é a coisa mais importante dessa aula de delegate,
+Luiz Maia: apesar da expressão lambida, não está associada exclusivamente à delegate
+Luiz Maia: a expressão lamida é uma expressão anônima, ou seja, ela não tem nome,
+Luiz Maia: e aí é muito parecido com o Arrow funchions do Javascript.
+Luiz Maia: Tá?
+Luiz Maia: E também semelhante ao Python.
+Luiz Maia: Existem dois tipos de lambida.
+Luiz Maia: Tem a Lambida Expression. E tem a Lambida Statement.
+Luiz Maia: Está certo.
+Luiz Maia: A Lambda S Expression só tem uma linha. É uma expressão com uma única linha que é normalmente o que a gente usa. Então, aqui o Lambda Expression normalmente é o que a gente usa de verdade.
+Luiz Maia: E tem o Lambida Statement. Aonde você tem um bloco de comandos dentro da lâmpada. Está certo.
+Luiz Maia: Não entendi nada. Lp: Ok, eu entendo.
+Luiz Maia: Ele continua tentando carregar o infinite online sem sucesso.
+Luiz Maia: Então, lambida é uma função anônima.
+Luiz Maia: Vou tentar f5
+Luiz Maia: eu vou pegar aqui e vou colocar o código para vocês de uma função lâmpida.
+Luiz Maia: Tá certo.
+Luiz Maia: O lambida Expression e o lambida statement.
+Luiz Maia: Para vocês verem como é que é uma solução usando lambida.
+Luiz Maia: O Antit Framework usa muito lâmpada.
+Luiz Maia: Tá certo, muito.
+Luiz Maia: É por isso que a gente precisa aprender lâmbida para poder entender. O ente de Framework. É por isso que essa é a parte mais importante dessa matéria.
+Luiz Maia: Desses catorze projetos que estão aqui. Os dois mais importantes são o Lâmida um e o Lamda dois.
+Luiz Maia: Por incrível que pareça, não tem nada a ver com o delegate. O delegate, pode ou não usar lâmpada,
+Luiz Maia: mas o Andy usa a lâmpada para um monte de coisa. E eu vou mostrar dois exemplos bem legais
+Luiz Maia: que vão ajudar vocês a entender como é que funciona. O Lambda
+Luiz Maia: dá cinco minutinhos para tomar uma água e a gente volta para continuar essa loucura. Aqui
+Luiz Maia: voltamos aqui, gente. Deixa eu ver se voltou aqui o infinite online?
+Luiz Maia: Não, ele continua pensando.
+Luiz Maia: Pf5
+Luiz Maia: Vamos ver os exemplos que eu trouxe de lâmpada. Porque essa é a parte mais interessante.
+Luiz Maia: É então
+Luiz Maia: isso aqui tem muito a ver com programação funcional. Não sei se vocês já ouviram falar sobre isso.
+Luiz Maia: É
+Luiz Maia: também um assunto que não faz parte da disciplina,
+Luiz Maia: mas tem algumas linguagens que são voltadas para a programação funcional.
+Luiz Maia: Kotlin, por exemplo, é um exemplo de linguagem voltada para a programação funcional,
+Luiz Maia: onde o uso de lâmbida é uma coisa muito comum, tá certo?
+Luiz Maia: E lembra um pouco, não é exatamente igual
+Luiz Maia: esse símbolo aqui, que é o chamado Arrow,
+Luiz Maia: ou função de seta, como na tradução ao pé da letra.
+Luiz Maia: Aqui eu tenho uma lambida expression,
+Luiz Maia: que é uma expressão lambda, onde esse var aqui gente. Eu não sei se eu já comentei com vocês. O Var é simplesmente para você não declarar o tipo da variável de retorno
+Luiz Maia: esse var. Quando você compila o código, ele.
+Luiz Maia: Ele vai transformar esse cara aqui
+Luiz Maia: num double. Ele vai declarar ele como um Double. O Var é simplesmente uma maneira mais simples de fazer isso.
+Luiz Maia: Eu estou introduzindo isso para vocês.
+Luiz Maia: É porque a gente vai ver muito isso no Dotnet
+Luiz Maia: os templates que ele gera para a gente têm muito var.
+Luiz Maia: Então o Var aqui é simplesmente para dizer o seguinte: olha, compilador
+Luiz Maia: resolve esse tipo de variável para mim aqui,
+Luiz Maia: porque isso aqui seria um Double.
+Luiz Maia: Está certo.
+Luiz Maia: E aqui a gente não precisa declarar qual é o tipo da variável.
+Luiz Maia: A gente só declara como var e está tudo bem.
+Luiz Maia: Ele retorna. Ele vai definir somar um
+Luiz Maia: com esse tipo. E aí eu tenho aqui
+Luiz Maia: os parâmetros que são passados para a lâmide
+Luiz Maia: e a operação que será realizada, ele vai somar op1 com op2 ou para ter um espaço em branco aqui a mais.
+Luiz Maia: Pronto, está corrigido.
+Luiz Maia: E aí ele realiza a soma. Então você chama somar um, ele passa cinco para Op1 dois para op2 e realiza a soma.
+Luiz Maia: Isso aqui é uma lambida Expression.
+Luiz Maia: Ou seja, ela é uma linha. Só não tem corpo.
+Luiz Maia: Ele não tem uma estrutura, não tem um. Não é uma
+Luiz Maia: uma função. Um método como a gente costuma ver aqui. Ele é mais parecido com um método
+Luiz Maia: onde somar dois, ele recebe o Apu, a P2 e o retorno tem um corpo.
+Luiz Maia: Eu tenho aqui um abre chave e fecha a chave.
+Luiz Maia: Eu não entendi, Leandro, o que esse A Z Z. Não entendi nada disso, cara. Desculpa
+Luiz Maia: se você puder explicar depois para mim, eu agradeço.
+Luiz Maia: Vamos ver rodando esse cara.
+Luiz Maia: Soma sete, soma sete.
+Luiz Maia: A gente podia botar aqui um.
+Luiz Maia: Um salto de linha só para ficar mais bonitinho, né?
+Luiz Maia: Vou botar um barra n aqui
+Luiz Maia: soma sete, soma sete. Ou seja, ele faz a mesma coisa.
+Luiz Maia: Só que existem esses dois.
+Luiz Maia: Essas duas formas de você implementar essa função lâmpida.
+Luiz Maia: Repara que ela não tem um nome, não é?
+Luiz Maia: Eu não tenho um nome como se fosse um método. Não tenho o somar. O método, somar.
+Luiz Maia: Tá certo. Ele simplesmente vai jogar
+Luiz Maia: o resultado dessa função lambda nessa variável aqui.
+Luiz Maia: A mesma coisa aqui.
+Luiz Maia: Então assim é muito simples, né?
+Luiz Maia: Eu vivi a vida inteira programando sem lâmpada.
+Luiz Maia: Em um belo dia, surgiu lambida
+Luiz Maia: na minha vida. Eu tive que começar a usar isso
+Luiz Maia: simplifica o código bastante.
+Luiz Maia: Então tudo que simplifica o código. Eu acho interessante da gente usar novamente gente lâmide vai ser usada
+Luiz Maia: muito dentro do ângit Framework, que nós veremos
+Luiz Maia: nas próximas aulas. Aqui, eu fiz um exemplo mais completo. Um exemplo mais interessante de lâmpada é,
+Luiz Maia: eu queria aqui uma classe.
+Luiz Maia: Conta Raid. Nome, saldo.
+Luiz Maia: Nada de mais aqui, né?
+Luiz Maia: Nada de
+Luiz Maia: deixa. Eu só.
+Luiz Maia: Deixa eu só melhorar isso aqui porque tem gente que não gosta de do mais, né?
+Luiz Maia: E aí eu quero agradar os meus alunos.
+Luiz Maia: É isso, né?
+Luiz Maia: Aí de não me saldo.
+Luiz Maia: Não sei se foi o caso de vocês.
+Luiz Maia: Vou fazer um breve parênteses.
+Luiz Maia: Muitos alunos não usaram essa pasta models para implementar as suas classes
+Luiz Maia: no A T de C. Sharp.
+Luiz Maia: Nesse caso, vai perder ponto.
+Luiz Maia: Você pode ter certeza disso.
+Luiz Maia: Eu ensinei que
+Luiz Maia: no C Sharp no Dotnet. Essa pasta Models é um padrão. Se você não especificou essa pasta Models, você vai perder. Ponto
+Luiz Maia: tá certo.
+Luiz Maia: Onde você coloca as classes.
+Luiz Maia: Então eu tenho a conta com a Edin Nomesaldo
+Luiz Maia: tem um construtor aqui básico, etc. Um string para imprimir as informações da conta. Agora vem o Lambida.
+Luiz Maia: Não preciso mais desse comentário aqui.
+Luiz Maia: Aqui. Eu faço um. Criar contas
+Luiz Maia: esse Var aqui. Basicamente está dizendo o seguinte: que isso aqui é uma lista de contas.
+Luiz Maia: Então, se eu fizer assim, List, conta contas. É a mesma coisa.
+Luiz Maia: Deixa eu fazer um comentário aqui. Deixa eu botar isso em comentário
+Luiz Maia: para vocês verem que é a mesma coisa.
+Luiz Maia: Eu vou usar isso porque eu vou precisar mais pra frente.
+Luiz Maia: Então essa linha de código que está aqui em cima é igual a essa aqui embaixo.
+Luiz Maia: Olha só o que eu estou fazendo contas. For it conta
+Luiz Maia: para imprimir as contas. Eu estou fazendo um for it
+Luiz Maia: em uma única linha. Eu não estou chamando nenhum método para fazer isso.
+Luiz Maia: É depois.
+Luiz Maia: Eu estou procurando a conta que tem o Id igual a três
+Luiz Maia: aqui. Ó, eu tenho essa criação de contas.
+Luiz Maia: Estou mocando a criação das contas. Eu tenho o Francisco, Guilherme Lucas Nati e Natália
+Luiz Maia: aqui. Eu tenho consultar contas que está procurando por uma conta específica. E aqui o exibir contas
+Luiz Maia: que é basicamente esse cara aqui, né?
+Luiz Maia: Acho que eu nem preciso dele.
+Luiz Maia: Não sei se eu ver se ele está sendo usado em algum lugar.
+Luiz Maia: Não, não preciso dele. Não posso tirar esse cara daqui. Deixa eu ver se é isso mesmo.
+Luiz Maia: Eu acho que isso aqui foi de uma versão antiga que eu fiz.
+Luiz Maia: Eu não preciso exibir contas. Não,
+Luiz Maia: eu acho que eu deixei esse código.
+Luiz Maia: Não, eu já entendi. Eu deixei esse código aqui para mostrar que esse código aqui
+Luiz Maia: é basicamente o exibir contas. Deixa eu fazer aqui um comentário.
+Luiz Maia: Era exatamente isso que eu queria.
+Luiz Maia: Aí depois você faz um conta, o que é var conta é conta desse jeito aqui.
+Luiz Maia: Então aqui, eu coloco o Var
+Luiz Maia: para não ter que declarar o tipo de conta. Aí. Ele vai procurar a conta
+Luiz Maia: com Id. Igual a3 passando o quê? Passando uma lâmbida
+Luiz Maia: para dentro do Find.
+Luiz Maia: Se ele encontrar a conta, ele imprime a conta, caso contrário, ele não imprime a conta.
+Luiz Maia: Depois ele procura contas que tenha o nome iniciando com N usando essa.
+Luiz Maia: Esse we are aqui dentro. E isso aqui é muito parecido com o o Entity Framework. Muito parecido.
+Luiz Maia: Só que eu estou trabalhando com listas, né?
+Luiz Maia: Para que eu estou imprimindo as contas, né?
+Luiz Maia: Esse consultar conta aqui também não está sendo usado em lugar nenhum, porque aqui seria basicamente isso aqui, ó
+Luiz Maia: consultar contas passando contas e o quê? O Id da conta.
+Luiz Maia: Então eu estou mostrando para você como é que faz com e sem
+Luiz Maia: lâmpita.
+Luiz Maia: É por isso que eu deixei esses códigos aqui embaixo.
+Luiz Maia: Está certo.
+Luiz Maia: E aí?
+Luiz Maia: Aí ele me retorna. Se encontrou ou não a conta, ele vai encontrar porque a conta três está aqui. É do Lucas.
+Luiz Maia: Depois eu faço um Order by
+Luiz Maia: pelo nome. Quero ordenar pelo nome
+Luiz Maia: e aí imprimo as contas ordenadas por nome.
+Luiz Maia: E aí eu quero procurar, por exemplo, todas as contas que têm um saldo maior que duzentos.
+Luiz Maia: Ele vai mostrar Lucas Nath e Natália.
+Luiz Maia: Então isso aqui é só para mostrar o poder da lâmpida para vocês
+Luiz Maia: simplifica muito o código. Muito mesmo.
+Luiz Maia: E quando você for acessar um banco de dados, você vai ter essas lâmpidas disponíveis para você.
+Luiz Maia: Então, a parte mais importante da aula é justamente
+Luiz Maia: essa parte de lâmpada. Vamos executar o código para vocês verem que bacana
+Luiz Maia: aqui. Ele me mostrou todas as contas.
+Luiz Maia: Depois ele mostrou a conta do Lucas.
+Luiz Maia: Poderia ter feito algo assim também aqui. Eu poderia fazer um outro.
+Luiz Maia: Poderia fazer assim. Também
+Luiz Maia: não sei se vai ficar mais complicado do que consultar contas.
+Luiz Maia: É que eu não preciso declarar a conta.
+Luiz Maia: Vou colocar aqui um Id que não existe. O Id dez, por exemplo,
+Luiz Maia: aí de dez as de dez.
+Luiz Maia: Vamos rolar para vocês verem.
+Luiz Maia: Erro conta não encontrada.
+Luiz Maia: A gente podia agrupar isso aqui. Depois ele mostra as contas que começam com N.
+Luiz Maia: Depois ele mostra tudo de novo. É isso.
+Luiz Maia: Deixa eu ver,
+Luiz Maia: Annie.
+Luiz Maia: Ah, não. Ele ordena por nome. Vamos rodar de novo
+Luiz Maia: aqui. Ó Francisco Guilherme. Só que aí não mudou. Ah, não. Ele mudou aqui Ó Natália com Nath,
+Luiz Maia: mas o resto ele manteve.
+Luiz Maia: Posso melhorar isso aqui também.
+Luiz Maia: Não vamos deixar como está gente. Eu não quero me perder tempo. Isso aqui não aqui. Ele está mostrando as contas que são maiores que duzentos. Vamos ver se funcionou. Sim, Lucas, Nath e Natália têm contas maiores que duzentos.
+Luiz Maia: Se vocês quiserem que eu melhore saída, alguma coisa, vocês me falem.
+Luiz Maia: Eu poderia aqui, por exemplo, é isso aí.
+Luiz Maia: Mostrar contas que começam com com N, etc. Não sei se vocês entenderam assim, vocês conseguiram entender.
+Luiz Maia: O objetivo disso aqui é da lâmbida
+Luiz Maia: como ela simplifica muito o trabalho da gente.
+Luiz Maia: A gente não precisou usar esses métodos aqui para nada.
+Luiz Maia: Eles ficaram aqui só para ficar como comentário, mais nada.
+Luiz Maia: Tá certo.
+Luiz Maia: Essa é a parte mais importante da aula de hoje. Gente mais importante.
+Luiz Maia: Bom, vamos voltar agora para o delegate
+Luiz Maia: agora no delegate, a gente vai voltar aqui, ó, e vai misturar é lâmbida com funk
+Luiz Maia: aqui. Eu tenho um funk. Delegate com Lambda Expression, que é o somar três.
+Luiz Maia: E aqui eu tenho um funk delegate com lambida statement, que é o Somar dois.
+Luiz Maia: Aí eu estou misturando as duas coisas.
+Luiz Maia: Eu não preciso de lâmpada para implementar delegate tá certo
+Luiz Maia: e lambida pode ser implementado em várias outras situações além de delegate.
+Luiz Maia: Então aqui eu tenho o somar um que é um Lambida Statement.
+Luiz Maia: E aí eu estou fazendo o quê?
+Luiz Maia: O somar um usando lâmpida.
+Luiz Maia: Depois eu tenho um funk onde eu estou usando o Somar dois,
+Luiz Maia: que é um funk delegate com Lamb The Statement e o somar três. Reparem, esse cara aqui. Eu estou apontando
+Luiz Maia: essa variável para esse método aqui.
+Luiz Maia: Isso aqui não tem nada a ver com. Delegate
+Luiz Maia: isso aqui é só um Lambda Statement, nada como nós fizemos anteriormente, como foi feito aqui. Nesse caso, aqui,
+Luiz Maia: só para mostrar para vocês que lâmbida. Não necessariamente. Vai estar associado ao delegate. Não está aqui, não está?
+Luiz Maia: E aqui eu tenho a implementação do delegate com funk usando o Lambda Statement e O Lambida Expression.
+Luiz Maia: Ou seja calcular. Funk está apontando para esse método. Quem é esse método? É esse cara aqui que é um funk statement. O outro somar três. Está apontando para quem? Para um Lambida Expression.
+Luiz Maia: Só para isso, mais nada.
+Luiz Maia: Somar sete, somar sete. Soma sete.
+Luiz Maia: Ou seja, ele consegue fazer isso.
+Luiz Maia: É bonitinho aqui para terminar a aula de hoje,
+Luiz Maia: para a gente poder terminar essa parte e começar o restante do Delegate
+Luiz Maia: e eventos também está aqui dentro. A gente vai ver esse delegate 3d aqui.
+Luiz Maia: Aqui. Eu estou fazendo o delegate com Action e Lambda.
+Luiz Maia: Tá certo.
+Luiz Maia: Isso aqui é um lambida statement.
+Luiz Maia: Não tem nada a ver com delegate aqui. Eu tenho um action
+Luiz Maia: onde eu tenho esse somar dois, que é um lambida. Statement.
+Luiz Maia: Não é um Lambida Expression.
+Luiz Maia: E aí
+Luiz Maia: não. O Action não retorna a nada.
+Luiz Maia: Ele não tem retorno.
+Luiz Maia: É a única diferença entre o funk e o Action.
+Luiz Maia: O funk retorna alguma coisa? O Action não retorna a nada. É a única diferença.
+Luiz Maia: Isso aqui podia estar isso aqui. Podia sair daqui
+Luiz Maia: e vim pra cá. Quer ver?
+Luiz Maia: Deixa eu ver se é isso aqui.
+Luiz Maia: Acho que é aqui que eu introduzo esse conceito de Var.
+Luiz Maia: É isso. É aqui mesmo,
+Luiz Maia: não é? Aqui
+Luiz Maia: onde é que foi que eu coloquei isso, hein?
+Luiz Maia: Não foi aqui também. Não,
+Luiz Maia: não, não foi aqui.
+Luiz Maia: Vá, vá, vá.
+Luiz Maia: É aqui. Ó
+Luiz Maia: agora ficou legal.
+Luiz Maia: Vamos rodar esse cara aqui para ver como é que ele funciona. Esse é o nosso último exemplo de hoje.
+Luiz Maia: Soma sete, soma sete.
+Luiz Maia: O que a gente vai ver na próxima aula,
+Luiz Maia: a gente vai ver que a gente pode usar delegate
+Luiz Maia: para passar parâmetros para um método.
+Luiz Maia: Isso é bem interessante.
+Luiz Maia: Eu acho que é uma coisa muito interessante.
+Luiz Maia: É muito interessante você passar um método como o parâmetro de um método.
+Luiz Maia: Isso vocês nunca viram. E provavelmente nunca verão de novo.
+Luiz Maia: É, depois eu vou evoluir com esse código.
+Luiz Maia: É,
+Luiz Maia: eu vou usar um funk para fazer isso. E depois? Não, o Funk vai estar aqui.
+Luiz Maia: É,
+Luiz Maia: eu não vou usar delegate. Vou usar uma forma genérica de implementar com funk. E depois eu vou fazer usando Lambda aqui. A confusão é completa.
+Luiz Maia: Então, ano que vem eu termino amanhã. Eu termino toda essa parte de delegate evento funk Action e Lambda.
+Luiz Maia: Bom, eu espero que eu tenha conseguido passar para vocês o conteúdo da matéria. Eu vou colocar esse conteúdo lá no drive para vocês.
+Luiz Maia: Tá certo. Na aula um.
+Luiz Maia: É Cadê? Onde é que ele está?
+Luiz Maia: U. S. Sharp, é Dotnet delegate.
+Luiz Maia: Pronto, tá. Todo o código que a gente viu e verá amanhã. Amanhã eu encervo essa matéria e a gente vai ficar livre para poder começar na próxima terça feira, porque segunda vai ser feriado. Começar a ver Dotnet. Gente, foi uma boa noite para vocês até amanhã.
+Luiz Maia: E a gente se vê amanhã com mais. Delegate
+Luiz Maia: e vamos encerrar isso aqui valeu qualquer coisa. Me procurem com dúvidas.
+Luiz Maia: Deixa eu ver se apareceu aqui. A página apareceu. Documentos.
+Luiz Maia: Isso aqui. Não fui eu que coloquei. Foi
+Luiz Maia: isso aqui não é meu. Não, gente. Não, sei o que é isso aqui não.
+Luiz Maia: Bom, vocês têm aqui o link com
+Luiz Maia: isso. Aqui está com a solução. Eu vou passar de novo o link para vocês.
+Luiz Maia: Para vocês poderem baixar
+Luiz Maia: as aulas e acessar o que vocês quiserem. Aí, inclusive a solução do At de C. Sharp tá aqui. Ele tá
+Luiz Maia: bom. Amanhã nos vemos novamente. Uma boa noite a todos. Bom descanso. Boa noite. Tchau, Tchau, gente.
+Jorge José Luiz Santos da Silva: Falou, professor? Tchau, tchau. Boa noite.

@@ -1,0 +1,725 @@
+Luiz Maia: Boa noite, pessoal.
+Luiz Maia: Dia vinte e um de Setembro,
+Luiz Maia: dois mil e vinte e seis.
+Luiz Maia: A gente vai continuar. Agora é aula passada.
+Luiz Maia: Ao menos começou a falar sobre vetor.
+Luiz Maia: Eu não sei se a gente conseguiu terminar
+Luiz Maia: exatamente aonde que a gente parou em relação a vetores e matrizes.
+Luiz Maia: Mas a gente viu a criação do vetor
+Luiz Maia: de duas formas diferentes. Quando você entra com os dados,
+Luiz Maia: e uma outra versão onde você define os valores?
+Luiz Maia: Na declaração do vetor.
+Luiz Maia: Vocês têm esse código, gente só para eu entender. Se vocês estão na mesma página que eu.
+Luiz Maia: Se vocês não souberem, tudo bem.
+Luiz Maia: É, parece que vocês não sabem.
+Luiz Maia: Ok, não tem problema.
+Luiz Maia: A gente continua do ponto que nós paramos.
+Luiz Maia: Bom, eu vou dar uma recapitulada para
+Luiz Maia: ajudar vocês aí a relembrar o que nós vimos na hora passada.
+Luiz Maia: Deixa eu abrir aqui o código.
+Luiz Maia: Infelizmente, eu não vou fazer código ao vivo com vocês, porque isso não tem tempo.
+Luiz Maia: A gente vai ter que terminar a matéria até amanhã.
+Luiz Maia: Então vai dar para fazer live code com vocês nessas duas aulas.
+Luiz Maia: A gente perdeu uma aula no feriado de sete de Setembro, e tivemos a troca de professor, etc. Então a gente não tem muito tempo para terminar a matéria.
+Luiz Maia: E eu preciso terminar a matéria para poder
+Luiz Maia: garantir que vocês façam o ateio de vocês.
+Luiz Maia: E aí
+Luiz Maia: então assim eu não tenho como
+Luiz Maia: fazer live code com vocês hoje e nem amanhã.
+Luiz Maia: Eu vou só compartilhar o código com vocês que estão lá no drive.
+Luiz Maia: E aí.
+Luiz Maia: E aí
+Luiz Maia: qualquer dúvida, vocês me perguntem. Não tem nenhum problema. Não,
+Luiz Maia: não é porque a gente está com pouco tempo que eu não vou tirar dúvida de vocês.
+Luiz Maia: Qualquer dúvida. Você levanta o braço, aí interrompe e a gente continua.
+Luiz Maia: Vocês estão me ouvindo?
+Luiz Maia: Porque assim não teve nenhuma.
+Luiz Maia: Nenhum boa noite. Nada disso. Vocês estão me ouvindo?
+Luiz Maia: Ok, obrigado.
+Luiz Maia: Aí fica mais fácil para gente poder tocar.
+Luiz Maia: É a aula.
+Luiz Maia: O código que nós fizemos em relação a vetor.
+Luiz Maia: A gente tem aqui um.
+Luiz Maia: A gente fez aqui a leitura de um vetor.
+Luiz Maia: Ela console.
+Luiz Maia: Aqui tem a versão um e a versão dois desse vetor.
+Luiz Maia: Deixa eu tentar entender porque eu fiz duas versões aqui?
+Luiz Maia: Boa pergunta.
+Luiz Maia: Ah, sim, isso é importante vocês entenderem.
+Luiz Maia: É um método.
+Luiz Maia: Ele pode retornar um vetor.
+Luiz Maia: Nesse caso, aqui ele está retornando
+Luiz Maia: o conteúdo do vetor que foi lido.
+Luiz Maia: E aqui em cima você faz a chamada do método
+Luiz Maia: e ele retorna ao vetor com os valores já preenchidos
+Luiz Maia: aqui. A gente tem uma outra forma de fazer isso.
+Luiz Maia: Usando o vetor como um parâmetro.
+Luiz Maia: Que é esse cara aqui?
+Luiz Maia: Vetores, listas, matrizes.
+Luiz Maia: Eles são passados por referência. Ou seja, qualquer alteração que você faça num vetor numa lista, ele retorna para quem chamou.
+Luiz Maia: Você não precisa fazer exatamente isso que eu fiz aqui.
+Luiz Maia: Vocês entendem o que é passagem por referência
+Luiz Maia: e passagem por valor ou não,
+Luiz Maia: não sabem o que é isso?
+Luiz Maia: É só você, Maicon. Tem mais gente que não sabe.
+Luiz Maia: Pois bem, então vamos ter que explicar isso para vocês
+Luiz Maia: aqui. Nesse exemplo, eu tenho a.
+Luiz Maia: Eu tenho um programa onde você tem o I igual a zero.
+Luiz Maia: Aí você manda alterar o I.
+Luiz Maia: Tá certo.
+Luiz Maia: Eu acho que o melhor exemplo é esse aqui. Deixa eu tentar mostrar para vocês
+Luiz Maia: alterar o I.
+Luiz Maia: Você tem aqui o I está com zero.
+Luiz Maia: Aí. Eu chamo é
+Luiz Maia: alterar e alterar um.
+Luiz Maia: Esse cara aqui.
+Luiz Maia: Eu te pergunto o que ele vai retornar.
+Luiz Maia: Ele está pegando o I que está sendo passado como parâmetro.
+Luiz Maia: E está somando um.
+Luiz Maia: O que ele vai mostrar aqui?
+Luiz Maia: O I igual a dois.
+Luiz Maia: Perdão, o I igual a um ou igual a zero.
+Luiz Maia: Essa é a explicação da diferença entre passagem por valor e para o parâmetro.
+Luiz Maia: Perdão, a passagem por valor e referência.
+Luiz Maia: Então, Maicon, você acha que ele vai alterar o valor do I. É isso?
+Luiz Maia: Quando ele chama essa rotina aqui?
+Luiz Maia: Alterar valor dois.
+Luiz Maia: Ele vai alterar o valor do I. É isso que você acha? Olha só o que acontece
+Luiz Maia: e aí
+Luiz Maia: ele não alterou o rolo do rio.
+Luiz Maia: Por quê?
+Luiz Maia: Ele não alterou o valor do I.
+Luiz Maia: Você passou o I como parâmetro.
+Luiz Maia: Aí. Você incrementou o valor do I e retornou o. I não
+Luiz Maia: peraí. Isso aqui é a primeira solução.
+Luiz Maia: Que é esse cara aqui? Ó alterar dois.
+Luiz Maia: Eu vou melhorar isso aqui. Peraí. Deixa eu fazer assim. Alterar valor dois:
+Luiz Maia: alterar valor um.
+Luiz Maia: Exatamente, Júlio.
+Luiz Maia: É exatamente isso o que acontece aqui
+Luiz Maia: é que ele está pegando o valor de ir passado, copiando para o parâmetro.
+Luiz Maia: O argumento I
+Luiz Maia: está sendo jogado para o parâmetro. E quando você faz essa soma aqui, ele só existe dentro do método. Ele não aparece. Ele não é alterado
+Luiz Maia: na chamada.
+Luiz Maia: Eu acho estranho vocês não saberem isso.
+Luiz Maia: Isso é a coisa mais básica de programação que existe.
+Luiz Maia: Passagem por valor e referência, os tipos primitivos do Java.
+Luiz Maia: Até mesmo o Python é, eles passam tipos primitivos como valor. Ou seja,
+Luiz Maia: nesse caso, aqui ele está chamando alterar valor dois e está passando o I.
+Luiz Maia: O I é igual a zero. Esse I recebe I mais um.
+Luiz Maia: Ele não tem a menor influência no parâmetro que está passando aqui.
+Luiz Maia: Ou seja, o I continua com zero
+Luiz Maia: porque ele é um tipo primitivo, inti double bullying e outros tipos.
+Luiz Maia: Se vocês quiserem, eu posso entrar mais fundo nesse assunto.
+Luiz Maia: Mas assim, essa.
+Luiz Maia: Esse conceito é básico em programação.
+Luiz Maia: Tipos primitivos são passados por valor e não por referência. Ou seja,
+Luiz Maia: se você alterar o valor do argumento, se você alterar o valor do parâmetro, você não vai alterar o argumento aqui. Ó,
+Luiz Maia: vou fazer uma alteração nesse código aqui. Ó,
+Luiz Maia: não. Eu vou deixar como estava alterar valor um,
+Luiz Maia: alterar valor um. Ele está não alterar valor dois.
+Luiz Maia: Aí eu mando printar o I.
+Luiz Maia: Ele fica zero-zero.
+Luiz Maia: Ele foi alterado dentro desse método aqui.
+Luiz Maia: Tá certo. Se você olhar aqui, o valor do I
+Luiz Maia: não é por valor também.
+Luiz Maia: Qualquer coisa que você altera na String, vai ficar a mesma coisa
+Luiz Maia: aqui. Se eu mandar printar o valor do I,
+Luiz Maia: ele vai mostrar que mudou o valor do Ia,
+Luiz Maia: mas dentro da função do método.
+Luiz Maia: Ele não vai alterar o retorno.
+Luiz Maia: Então, se a gente mandar fazer aqui executar esse código aqui, ele mostra para você que ele mudou
+Luiz Maia: de zero para um, mas dentro do método.
+Luiz Maia: Mas ele não mandou esse valor. Para quem chamou.
+Luiz Maia: Posso até melhorar isso aqui para vocês.
+Luiz Maia: Deixa eu dar uma melhorada.
+Luiz Maia: É um
+Luiz Maia: valor de
+Luiz Maia: você. Vai ver que ele vai mudar o valor do I. Mas ele só vale aqui dentro.
+Luiz Maia: Ele não vale para quem chamou isso é passagem por
+Luiz Maia: o valor. Ele pega o valor de I coloca dentro do método. O que for feito naquele método não vai afetar quem chamou
+Luiz Maia: isso. É a passagem é
+Luiz Maia: chamada passagem por valor
+Luiz Maia: para você poder alterar o valor do I. Você tem que fazer uma chamada por referência.
+Luiz Maia: Que é isso aqui, ó e aí?
+Luiz Maia: Agora Sim, eu estou passando o I por valor.
+Luiz Maia: Estou alterando o I e estou retornando ele no nome do método.
+Luiz Maia: Agora. Sim, ele vai fazer a
+Luiz Maia: alteração no valor. Olha lá, fonologia igual a zero. Valor de igual a um
+Luiz Maia: gente. A maioria das linguagens trabalha com isso. Com isso. Java Python.
+Luiz Maia: Isso é uma coisa normal.
+Luiz Maia: Sim, é isso mesmo. O Void aqui
+Luiz Maia: ele não faz nenhuma alteração no valor do I,
+Luiz Maia: mas nem sempre Void significa que você não vai alterar o argumento.
+Luiz Maia: Depende do tipo de dado.
+Luiz Maia: É complicado, gente, isso não é simples
+Luiz Maia: depende do tipo de dado que você está passando para dentro.
+Luiz Maia: É do método.
+Luiz Maia: Tipos primitivos como int double
+Luiz Maia: string. Esses caras não são alterados. Mas dependendo do tipo do dado que você está trabalhando, eles podem ser alterados.
+Luiz Maia: Vamos ver um exemplo aqui. Ó,
+Luiz Maia: deixa eu pegar aqui um exemplo.
+Luiz Maia: Aqui, ó aqui vetou?
+Luiz Maia: Eu estou passando esse vetor.
+Luiz Maia: Quando você passa a vetor como parâmetro de uma chamada de método.
+Luiz Maia: Ele é sempre por referência, sempre.
+Luiz Maia: Ou seja, se você alterar o vetor aqui mesmo com Void, ele vai alterar o vetor
+Luiz Maia: aqui. Eu estou forçando. Eu prefiro fazer desse jeito aqui.
+Luiz Maia: Ou seja, eu estou dizendo, olha só, eu estou alterando o vetor que eu recebi,
+Luiz Maia: e estou retornando. Ele alterado.
+Luiz Maia: Aqui? Não, ele vai retornar o valor alterado no parâmetro.
+Luiz Maia: Por quê?
+Luiz Maia: Vetores são passados por referência por padrão.
+Luiz Maia: Alguém sabe me explicar por quê?
+Luiz Maia: Por que os vetores são passados por referência e não por valor.
+Luiz Maia: Bom, é uma boa justificativa.
+Luiz Maia: Não é primitivo, mas tem coisas mais importantes do que essa. E aí, cara, vocês não têm o conhecimento
+Luiz Maia: de como funciona a linguagem por trás dos panos, né?
+Luiz Maia: Essa é uma coisa que eu acho que falta
+Luiz Maia: para vocês. Vocês não têm o conhecimento
+Luiz Maia: de como realmente as coisas acontecem por trás dos pobres.
+Luiz Maia: Alguém tem alguma ideia? Júlio, você que é o cara top da turma?
+Luiz Maia: Você pode me dar uma explicação
+Luiz Maia: por que vetores não são passados por valor e sempre por referência,
+Luiz Maia: tá, Julho.
+Luiz Maia: Imagina se ele não passasse o endereço do vetor o que aconteceria?
+Luiz Maia: Vamos ver se você consegue.
+Luiz Maia: E além do que está pensando,
+Luiz Maia: o que aconteceria se você não passasse o endereço do vetor. O que ele faria na passagem por valor?
+Luiz Maia: É uma pergunta difícil, gente.
+Luiz Maia: E aí essa é quase uma resposta.
+Luiz Maia: Está no caminho certo, mas não é a resposta.
+Luiz Maia: Por que a gente não passa exatamente, Júlio, você pegar um vetor.
+Luiz Maia: E aqui eu não estou falando de um vetor de dez posições.
+Luiz Maia: Eu estou falando de um vetor de mil.
+Luiz Maia: Dez mil. Cem mil. Um milhão de posições.
+Luiz Maia: Se você passar um vetor
+Luiz Maia: por valor para dentro de um método. O que vai acontecer? Ele vai copiar esse vetor inteiro para dentro do método.
+Luiz Maia: Isso vai tomar um tempo absurdo de computação de Cpu e um tempo absurdo de memória.
+Luiz Maia: É por isso que as linguagens sempre passam
+Luiz Maia: vetores e matrizes e outras listas
+Luiz Maia: sempre por referência. Caso contrário, você ia passar
+Luiz Maia: no caso do I aqui que a gente viu. Cadê o I. Deixa eu ver. Aqui onde é que está o I
+Luiz Maia: aqui o I. Cadê o I? Não,
+Luiz Maia: Cadê o ir também não.
+Luiz Maia: Onde é que está isso?
+Luiz Maia: Também não sei aonde foi parar isso.
+Luiz Maia: A gente viu na hora passada. O vetor um.
+Luiz Maia: Eu acho que está aqui.
+Luiz Maia: Aonde a gente está passando o vetor.
+Luiz Maia: A gente não está passando. O I, que é o.
+Luiz Maia: Eu acho que eu estou confundindo aqui. Acho que é isso aqui mesmo.
+Luiz Maia: Passar esse I como valor. Isso tem pouco impacto dentro da máquina.
+Luiz Maia: Agora, quando você passa um vetor de dez milhões de posições por valor.
+Luiz Maia: Você vai parar a máquina. A máquina vai parar.
+Luiz Maia: É por isso que todas as linguagens utilizam passagem por referência.
+Luiz Maia: Se você não entendeu, fala comigo pra eu poder explicar melhor isso pra vocês, porque isso é básico.
+Luiz Maia: Isso não é C Sharp, não é Java, não é, Python? Isso é básico em computação.
+Luiz Maia: Saber a diferença entre passagem de parâmetro por valor e referência. Se você não entendeu, você fala comigo, que eu vou desenhar.
+Luiz Maia: Não sei como é que eu vou fazer isso,
+Luiz Maia: beleza. A gente fez aqui um programa que tinha a leitura de um vetor.
+Luiz Maia: A soma dos elementos do vetor,
+Luiz Maia: passando como parâmetro vetor, exibir o vetor. Aqui a gente tem duas formas de exibir o vetor usando o forite e o for.
+Luiz Maia: Se você tiver alguma dúvida, você me fala.
+Luiz Maia: Aqui a gente tem os vetores sendo criados na verdade inicializados na declaração.
+Luiz Maia: E a gente faz um somar vetores.
+Luiz Maia: A gente soma um vetor um com o vetor dois vai estar um vetor três.
+Luiz Maia: Aí eu tenho duas versões onde o vetor três é passado como retorno
+Luiz Maia: do método. E o outro, eu não passo no método. Ele retorna aqui como um parâmetro.
+Luiz Maia: Assim. Olha só, é.
+Luiz Maia: Eu prefiro eu prefiro desse jeito,
+Luiz Maia: porque a definição de método, a definição de função é o seguinte:
+Luiz Maia: você recebe parâmetros e retorna apenas um valor,
+Luiz Maia: um cálculo. Alguma coisa? Você não retorna mais do que isso.
+Luiz Maia: Essa definição de somar vetores, ela é mais próxima do código limpo do que essa?
+Luiz Maia: Porque aqui eu estou passando, vetor um vetor dois. E estou retornando dentro do parâmetro. Soma o resultado.
+Luiz Maia: A Lp está errado. Isso aqui. Não, não está errado.
+Luiz Maia: Não tem nada de errado nisso.
+Luiz Maia: Todos estão sendo passados por referência. Qualquer alteração em Vete um vete dois e Soma vai ser enxergado
+Luiz Maia: na chamada do método no programa principal.
+Luiz Maia: Eu prefiro isso aqui, porque isso aqui fica mais próximo do código limpo.
+Luiz Maia: Ou seja, eu estou passando o Vete um e vete dois
+Luiz Maia: a princípio ivete dois não serão alterados.
+Luiz Maia: Quem será alterado. É soma. Eu retorno. Soma no nome do método.
+Luiz Maia: Eu prefiro isso. Mas isso aqui é uma questão, minha gente.
+Luiz Maia: É uma questão de Academia de código limpo. Sim, não é para vocês ficarem tensos em relação a isso.
+Luiz Maia: Então essas duas formas de fazer o retorno da soma são válidos. Eu prefiro essa forma
+Luiz Maia: porque fica mais próximo do código limpo. Mas isso aqui não está errado, não tá?
+Luiz Maia: Porque Soma está sendo retornado como um parâmetro do método. Aqui não. Ele está sendo retornado como
+Luiz Maia: no nome do método.
+Luiz Maia: O nome do método somar vetor está retornando inteiro.
+Luiz Maia: É justamente isso que o método tem que fazer.
+Luiz Maia: Mas eu não vou.
+Luiz Maia: Eu não vou encher o saco de vocês com isso. Não, não vou mesmo.
+Luiz Maia: Isso é muito acadêmico. É muito pessoal.
+Luiz Maia: O importante dessa história toda é vocês entenderem a diferença de passagem de parâmetro por valor e por referência, essa é a parte mais importante.
+Luiz Maia: Se você entendeu isso, graças a Deus para mim, tá super bem,
+Luiz Maia: se você não entendeu, você fala comigo, que eu vou correr atrás de tentar melhorar a explicação. Gente,
+Luiz Maia: isso não é fácil.
+Luiz Maia: Levei um tempão para entender isso.
+Luiz Maia: O C Sharp inclusive tem formas diferentes de retornar
+Luiz Maia: os parâmetros. Eu não vou ensinar isso para vocês, senão vocês vão pirar. Vocês vão ficar perdidos.
+Luiz Maia: Tem o
+Luiz Maia: o C. Sharp é muito poderoso de frente do Java. Ele é muito mais poderoso que o Java no retorno de parâmetros.
+Luiz Maia: Eu não vou alongar
+Luiz Maia: a aula porque a gente tem pouco tempo, gente, ou preciso terminar a matéria até amanhã
+Luiz Maia: por todos os problemas que nós tivemos.
+Luiz Maia: Aliás, eu queria saber se vocês querem que eu continue com vocês no próximo trimestre,
+Luiz Maia: porque eu não estava escalado para dar a próxima disciplina.
+Luiz Maia: Se vocês não quiserem. Na boa. Assim na boa gente,
+Luiz Maia: se vocês não quiserem que eu fique na disciplina, não tem problema nenhum. Eu saio. Eles vão arrumar outro professor para vocês. Não tem problema nenhum.
+Luiz Maia: E aí.
+Luiz Maia: Não tem problema nenhum.
+Luiz Maia: Eu não estava escalado para essa disciplina. Eu apareci do nada. Me colocaram aqui de paraquedas.
+Luiz Maia: Se você não quiser que eu continue, você fala comigo, que eu saio fora. Não tem problema. Não, tá gente.
+Luiz Maia: Eu não vou ficar magoado com ninguém.
+Luiz Maia: Zero problema pra mim, zero.
+Luiz Maia: Mas o importante é que vocês tenham ficado felizes com as aulas. Com o que eu fiz. Se você não está feliz. Pede para trocar, porque não tem problema. Para mim não, cara,
+Luiz Maia: é zero problema.
+Luiz Maia: E aí?
+Luiz Maia: Obrigado, gente.
+Luiz Maia: Tá bom, gente tranquilo. Então eu continuo. Não tem problema, não é?
+Luiz Maia: Vamos falar sobre matrizes, gente. Eu botei lá nas transparências,
+Luiz Maia: a explicação de vetores e matrizes, mas eu quero adiantar um pouco a aula para não ficar preso na parte conceitual. Você vai lá, dá uma olhada no que está no material lá que eu botei. Se você não entender, quiser tirar alguma dúvida,
+Luiz Maia: tá? Ok, vetores,
+Luiz Maia: a gente chama de arreis unidimensionais, ou seja, o vetor é aquela tripa onde você vai de zero até o tamanho menos um do vetor.
+Luiz Maia: Tá certo, é assim que funciona.
+Luiz Maia: E aí é uma surgidas homogênea.
+Luiz Maia: Aí eu fiz um desenho
+Luiz Maia: que eu queria que vocês dessem. Eu não sei se eu mostrei isso pra vocês na aula passada.
+Luiz Maia: É,
+Luiz Maia: não sei se eu mostrei esse desenho para vocês. A diferença entre vetores e listas.
+Luiz Maia: Não sei se vocês viram isso aqui, eu mostrei isso pra vocês. Eu não sei. Não lembro, tá?
+Luiz Maia: É o que acontece, gente só para recapitular vetores
+Luiz Maia: forma de armazenamento deles na memória
+Luiz Maia: é muito mais eficiente do que listas. As listas são encadeadas. Tem um monte de problema de ponteiro. E aí para você indexar essa lista, o vetor não tem problema nenhum. O vetor é um negócio super tranquilo.
+Luiz Maia: Porém, o vetor. Ele tem um tamanho fixo.
+Luiz Maia: Você não pode mudar o tamanho do vetor.
+Luiz Maia: Os tipos, os elementos do vetor são sempre iguais. Não dá para você ter real inteiro buliano
+Luiz Maia: String dentro. Isso é completamente o Python. Ele quebra tudo isso.
+Luiz Maia: Uma das vantagens do Python é você ter listas de elementos heterogêneos.
+Luiz Maia: Eu não acho isso uma vantagem. Muito pelo contrário. Eu acho isso aí um crime. Mas tudo bem.
+Luiz Maia: É como é que é uma atriz, gente?
+Luiz Maia: A matriz é uma rei de várias dimensões.
+Luiz Maia: Onde você especifica quantas dimensões você quer?
+Luiz Maia: Bom, normalmente, uma matriz.
+Luiz Maia: Ela tem linhas e colunas igual. Uma tabela do Skl.
+Luiz Maia: Tá certo.
+Luiz Maia: É, mas em si, Sharp pinjava em Python. A matriz pode ter várias dimensões.
+Luiz Maia: Três, quatro, cinco em si, Sharp. Uma matriz pode ter até duzentos e cinquenta e seis dimensões.
+Luiz Maia: Lp: quando é que você vai usar isso? Não sei.
+Luiz Maia: Não sei dizer para vocês. Não sei.
+Luiz Maia: Eu até posso explicar três dimensões,
+Luiz Maia: mas depois de três dimensões. Eu não tenho muito como explicar para vocês
+Luiz Maia: duas dimensões. Você tem linha e coluna. Beleza é tranquilo. É uma matriz que todo mundo. Uma tabela? Não sei. Linha e coluna. Todo mundo sabe
+Luiz Maia: três dimensões.
+Luiz Maia: Você tem linha, coluna e profundidade.
+Luiz Maia: Seria mais ou menos largura, altura e profundidade. Como se fosse um cubo,
+Luiz Maia: lembra? Você pega aquele cubo mágico que você fica trocando as peças até encontrar todas as peças. É mais ou menos isso.
+Luiz Maia: Você tem um cubo mágico onde você tem três dimensões. Agora passou de três dimensões.
+Luiz Maia: O troço, sei lá vai pra física, tempo, espaço,
+Luiz Maia: potência, gente. Eu não tenho formação na área de física
+Luiz Maia: e nem matemática para poder avançar nesse assunto.
+Luiz Maia: Então, assim eu vou ficar em duas dimensões. E tá bom. Três dimensões. Eu até consigo fazer alguma coisa. Mas a partir de três dimensões. Eu
+Luiz Maia: eu desisto. Não Rola.
+Luiz Maia: Eu não consigo passar de três dimensões. Altura, largura e profundidade, ponto.
+Luiz Maia: O acesso aos elementos da matriz
+Luiz Maia: é semelhante aos elementos de um vetor. Está certo.
+Luiz Maia: Aqui, por exemplo, eu vou pegar aqui uma seta. Por exemplo, aqui uma seta.
+Luiz Maia: Peguei aqui uma seta aqui.
+Luiz Maia: Vamos ver se eu consigo botar essa seta aqui no meio.
+Luiz Maia: Não, não consigo.
+Luiz Maia: Ok, esse drive, eu. Aqui tem as suas limitações.
+Luiz Maia: Deve ter uma maneira de fazer isso, mas não consegui. Eu quero acessar essa posição dentro da matriz. Como é que eu faço isso.
+Luiz Maia: Você vai fazer o quê? Você vai acessar a matriz
+Luiz Maia: indexada.
+Luiz Maia: Qual é a coluna um?
+Luiz Maia: Qual é a
+Luiz Maia: aqui? Não fui muito feliz. Não é? Coluna um, linha um, coluna um. Vamos mudar isso aqui.
+Luiz Maia: Deixa eu tentar mudar isso aqui. Deixa eu mudar isso aqui.
+Luiz Maia: Opa, vamos. Aqui. Eu sou muito ruim para desenhar, gente, olha, é triste aqui. Eu estou pegando a linha um.
+Luiz Maia: A coluna dois.
+Luiz Maia: É isso, não é?
+Luiz Maia: Tentar juntar esse troço aqui. Peraí
+Luiz Maia: foi?
+Luiz Maia: Não, não. Foi.
+Luiz Maia: Bom, pelo menos agora ela conseguiu. Eu consegui melhorar isso aqui.
+Luiz Maia: Deixa eu pegar isso aqui e agora. Vamos ver se vai.
+Luiz Maia: Ah, agora foi.
+Luiz Maia: Pegou a linha um. A coluna três está aí.
+Luiz Maia: Deixa eu aumentar isso aqui pra vocês verem. Ó, olha que bonitinho.
+Luiz Maia: Agora ficou bonito.
+Luiz Maia: Vetores e matrizes, gente em C. Sharp, Java Python são objetos, gente.
+Luiz Maia: Tudo isso é objeto.
+Luiz Maia: Eles não são estruturas de dados como em C, por exemplo,
+Luiz Maia: em C. Vetores e matrizes não são objetos.
+Luiz Maia: Tá certo.
+Luiz Maia: É diferente. O tratamento não é a mesma coisa. Não dá para a gente poder agora parar para explicar isso.
+Luiz Maia: Então, aqui eu tenho um. É a linha dois. É a coluna. Ele vai acessar essa posição aqui.
+Luiz Maia: Beleza, vamos ver. Código.
+Luiz Maia: Vamos ver código, gente. Cadê o código? Onde é que está o código matriz?
+Luiz Maia: Aqui eu tenho uma matriz de três linhas e quatro colunas em se Sharp. A definição
+Luiz Maia: é assim. Eu botei esses caras como constantes, porque é uma boa prática. Ah, mas eu não quero colocar como constante. Ok, não coloca problema seu
+Luiz Maia: para percorrer essa matriz. Eu tenho que percorrer as linhas depois as colunas.
+Luiz Maia: Mas como é que eu vou saber quantas linhas tem. Quantas colunas tem o C. Sharp tem isso aqui. O Get lennfe
+Luiz Maia: zero, o gatilé. Eu botei como um comentário aqui, gente, porque todo mundo fica perdido nessa hora.
+Luiz Maia: O gatilife zero por default pega o número de linhas, porque zero é linhas.
+Luiz Maia: O Gathlaf um é o número de colunas.
+Luiz Maia: Se eu pegasse o Gatilenf dois, seria a profundidade
+Luiz Maia: se eu pegasse o Gatilenf quatro. Eu não sei como é que eu vou explicar isso para vocês.
+Luiz Maia: Tempo espaço.
+Luiz Maia: Não sei. Não sei explicar
+Luiz Maia: novamente. Isso aí vai para além da programação. Isso aí vai para a matemática, para a física.
+Luiz Maia: Eu era muito bom em matemática e física. Mas hoje eu me sinto um completo burro
+Luiz Maia: em relação a isso.
+Luiz Maia: Depois de ser reprovado em física e tal como na engenharia, eu me sinto um verdadeiro burro
+Luiz Maia: em relação a matemática e física.
+Luiz Maia: Eu era muito bom em matemática e física. Mas olha,
+Luiz Maia: quando eu cheguei na Engenharia na Puc, eu me senti um idiota, um ignorante completo.
+Luiz Maia: Então eu não vou tentar explicar para vocês o que eu não consigo explicar para mim mesmo.
+Luiz Maia: Então esse Get lenf zero pega o número de linhas. Esse cara aqui pega o número de colunas
+Luiz Maia: aqui. Eu estou fazendo o quê? Eu estou pegando a matriz Ij.
+Luiz Maia: E aí, zero aqui? Ele vai fazer o quê, zero,
+Luiz Maia: ele vai percorrer a linha zero as colunas de zero até o tamanho das colunas.
+Luiz Maia: Depois ele incrementa o I para a segunda linha, que é um e varre todas as colunas
+Luiz Maia: lembrando gente. As matrizes não têm linhas de tamanhos diferentes. Tá certo.
+Luiz Maia: As linhas são todas do mesmo tamanho. As colunas também são do mesmo tamanho, tá?
+Luiz Maia: Isso é definido em tempo de compilação. Está aqui. Ó,
+Luiz Maia: você compilou o teu código. A matriz tem
+Luiz Maia: três linhas e quatro colunas, ponto final.
+Luiz Maia: Ah, mas eu quero mudar isso. Você vai ter que criar outra matriz. Copiar a matriz original para dentro da matriz nova. E vai ser um trabalho absurdo.
+Luiz Maia: Isso aqui não é lista, gente. Tá certo. Isso aqui é estruturas estáticas.
+Luiz Maia: Ah, então o Python é melhor do que o C Sharp, não, gente.
+Luiz Maia: Se você olhar o Python, o Python pandas que manipula dados dentro do Python.
+Luiz Maia: Ele trabalha com
+Luiz Maia: num pai. O num pai é vetores e matrizes no Python. Ele não trabalha com lista. Gente,
+Luiz Maia: listas em Python são extremamente lentas. Extremamente lentas.
+Luiz Maia: Então, se Sharp Java tem já nativo
+Luiz Maia: vetores e matrizes no Python, você tem que importar uma biblioteca chamada num pai para fazer a mesma coisa.
+Luiz Maia: E a diferença de desempenho assim é. Eu não tenho tempo para mostrar isso para vocês. Eu tenho esses benchmarks todos aqui na minha máquina. Mas eu não tenho tempo para mostrar isso para vocês.
+Luiz Maia: Ele está pegando aqui Ij. E colocando dentro da matriz. Esse cara aqui é para formatar a matriz de uma maneira mais bonitinha.
+Luiz Maia: Vai ficar todo mundo organizado. Sabe aquela questão de
+Luiz Maia: o que vocês vão ver. Agora.
+Luiz Maia: Deixa eu botar isso aqui para funcionar.
+Luiz Maia: Uma atriz, um aqui,
+Luiz Maia: vocês verem esse código está lá no drive para vocês baixarem. Não tem problema nenhum. Vocês podem testar, brincar com ele. Não tem nenhum problema. É para ficar desse jeito aqui.
+Luiz Maia: Um, dois, três. Um, dois, três, quatro, duzentos e trinta e quatro, cinco.
+Luiz Maia: Assim. Olha só.
+Luiz Maia: Eu vou fazer um intervalo e vou deixar isso aqui na tela para vocês.
+Luiz Maia: Eu queria saber de vocês. Se vocês conseguem entender a lógica desse código, por quê
+Luiz Maia: que ele construiu essa matriz desse jeito, somando I e J.
+Luiz Maia: Se você não entender, você fala para mim pra eu poder explicar passo a passo para você pra entender.
+Luiz Maia: Mas isso, gente é lógica de programação. Isso. Vocês já deveriam ter visto em Python, mas não tem problema
+Luiz Maia: se não viu em Python, o Lp ensina intervalo.
+Luiz Maia: Aguardo o retorno de vocês. Se não entendeu o resultado dessa matriz me fala,
+Luiz Maia: estamos de volta.
+Luiz Maia: É isso mesmo, gente.
+Luiz Maia: O Júlio explicou muito bem. Ele primeiro
+Luiz Maia: entra primeiro pegando a primeira linha, a linha zero
+Luiz Maia: aí vai passando pelas colunas da
+Luiz Maia: da primeira linha e repete o ciclo a cada uma das linhas. É isso que ele está fazendo.
+Luiz Maia: Nada mais do que isso se você quiser usar o Debug Lucas. Ok,
+Luiz Maia: eu acho que não precisa para esse caso.
+Luiz Maia: Bom, se vocês não têm dúvida em relação a isso. Aqui a gente pode passar para o próximo exemplo.
+Luiz Maia: Isso aqui que eu fiz foi exemplos de vetor e matrizes.
+Luiz Maia: Eu não sei se eu passei por esse exemplo aqui, mas basicamente aqui. Eu estou definindo a matriz
+Luiz Maia: em tempo de declaração da matriz,
+Luiz Maia: uma matriz 3x4 três linhas e quatro colunas. Alguém tem alguma dúvida em relação a isso aqui?
+Luiz Maia: Se tiver, fala comigo para eu poder ajudar a entender.
+Luiz Maia: Vou rodar aqui para vocês verem.
+Luiz Maia: A gente está somando.
+Luiz Maia: Vamos ver aqui. Olha só,
+Luiz Maia: ele está pegando.
+Luiz Maia: Está imprimindo a matriz, só isso. Mais nada. Não está somando nada.
+Luiz Maia: Está pegando a matriz e exibindo a matriz.
+Luiz Maia: Esse cara aqui é basicamente para ficar formatado de um jeito bonitinho, mais nada
+Luiz Maia: para ficar todo mundo com as colunas certinhas.
+Luiz Maia: Senão se eu fizer. Assim,
+Luiz Maia: como é que você sabe, se, em tempo de compilação, o tempo de execução matrizes são sempre resolvidas
+Luiz Maia: em tempo de compilação. Listas são sempre resolvidas em tempo de execução,
+Luiz Maia: sempre.
+Luiz Maia: Eu não tenho aqui nenhum exemplo de lista. Vai aparecer.
+Luiz Maia: Vai aparecer daqui a pouco para vocês? Não, hoje, na próxima aula amanhã. Eu vou mexer com lista com vocês.
+Luiz Maia: Vou fazer um exemplo com vetor e com lista.
+Luiz Maia: Aí você vai entender exatamente isso. Essa formatação aqui
+Luiz Maia: é basicamente para não deixar ficar desse jeito aqui. Ó
+Luiz Maia: bagunçado
+Luiz Maia: é a ô Júlio, eu não vou afirmar isso para você? Porque eu não tenho. Certeza.
+Luiz Maia: Eu posso pesquisar isso para você.
+Luiz Maia: É, na minha opinião, sim.
+Luiz Maia: Mas eu não tenho certeza absoluta disso,
+Luiz Maia: eu teria que dar uma pesquisada para poder te afirmar isso com cem de acerto.
+Luiz Maia: Eu nunca fiz essa pesquisa, mas a princípio, eu acho que sim.
+Luiz Maia: Mas eu não posso te dizer que é cem correta
+Luiz Maia: a tua afirmação. Eu acho que sim. Mas eu tenho que pesquisar.
+Luiz Maia: Eu vou tentar descobrir isso para a próxima aula de amanhã.
+Luiz Maia: Então vocês viram que aqui ele mostrou o a matriz toda bagunçada.
+Luiz Maia: Se você botar desse jeito aqui
+Luiz Maia: ela vai mostrar a matriz arrumadinha.
+Luiz Maia: É basicamente a diferença de um comando para o outro.
+Luiz Maia: Faz diferença, né? Fica mais arrumado.
+Luiz Maia: É formatação isso aqui, gente. Isso aqui é
+Luiz Maia: agora. Eu queria pegar essa parte final da aula para vocês e mostrar para vocês
+Luiz Maia: como eu aprendi. Orientação, objeto é, na minha opinião, essa parte de matrizes e vetores deveriam vir antes
+Luiz Maia: de Whatsapp, mas o plano de ensino é diferente.
+Luiz Maia: Ele primeiro ensina a orientação. Objeto, depois vem para vetores e matrizes.
+Luiz Maia: Mas eu queria mostrar para vocês. Um exemplo de um código que me ajudou muito a entender é
+Luiz Maia: por que gente olha só.
+Luiz Maia: Durante a década de oitenta e noventa, eu programava orientado a procedimentos e a estrutura de dados.
+Luiz Maia: Eu não estava programando orientado a dados
+Luiz Maia: a classes, então eu vou dar um exemplo para vocês. Um exemplo que para mim
+Luiz Maia: foi muito importante para entender.
+Luiz Maia: Eu sei que é meio tarde para isso. Eu sei disso. Mas é o que eu posso fazer.
+Luiz Maia: Mostrar para vocês a diferença da programação,
+Luiz Maia: que era feita na década de oitenta e noventa, para depois da orientação objeto.
+Luiz Maia: E aí é um exemplo muito simples.
+Luiz Maia: Não tem nada de muito complexo, mas me fez entender.
+Luiz Maia: E eu acho que vai ajudar muito a vocês também tiverem esse interesse.
+Luiz Maia: De abrir a cabeça de vocês.
+Luiz Maia: Para entender como
+Luiz Maia: a orientação objeto foi uma mudança de paradigma. Essa frase é muito forte, né? Mudança de paradigma. Mas foi.
+Luiz Maia: Não tem como usar outra palavra.
+Luiz Maia: Da maneira que eu pensava, para a maneira nova que eu tinha que pensar.
+Luiz Maia: E isso foi um choque para mim.
+Luiz Maia: Para vocês talvez não.
+Luiz Maia: Vocês vão olhar esse exemplo que eu vou dar para vocês agora. E vocês vão achar que isso é banal
+Luiz Maia: para mim, foi uma mudança de pensamento e esse exemplo,
+Luiz Maia: ele me ajudou muito a entender a diferença da programação procedural
+Luiz Maia: estruturada para a programação, orientando objeto.
+Luiz Maia: Espero que isso, de alguma forma, ajude vocês a entenderem o processo que eu passei,
+Luiz Maia: que provavelmente não é o processo que vocês estão passando, mas eu passei por isso.
+Luiz Maia: Olha só, eu tenho um problema.
+Luiz Maia: Eu quero calcular as médias dos alunos
+Luiz Maia: com nome. Nota um, nota dois.
+Luiz Maia: Eu quero saber se esse aluno está aprovado em prova final.
+Luiz Maia: Se ele está acima da média ou não está, eu quero fazer um processamento. Eu botei aqui uma descrição
+Luiz Maia: bem longa sobre o problema. É um problema bem simples.
+Luiz Maia: Você vai processar alunos até encontrar o fim.
+Luiz Maia: E você vai pegar as notas, calcular a média e dizer se ele está aprovado em prova final? E se ele tem uma nota maior do que a média da turma.
+Luiz Maia: Esse código não está orientado ao objeto, apesar dele estar sendo chamado de P o O1
+Luiz Maia: ele não está orientado ao objeto. Tá aqui, ó, era assim que eu programava.
+Luiz Maia: É na década de oitenta noventa.
+Luiz Maia: O que eu fazia, eu pensava, Bom,
+Luiz Maia: eu tenho que armazenar os dados do aluno.
+Luiz Maia: Então eu tenho aqui um
+Luiz Maia: número de alunos.
+Luiz Maia: E aqui eu tenho um número de notas
+Luiz Maia: aqui. Eu tenho uma lista de alunos.
+Luiz Maia: E aqui eu tenho uma lista de notas onde eu tenho três linhas
+Luiz Maia: que são as notas e cinquenta colunas,
+Luiz Maia: que na verdade são as notas de cada aluno.
+Luiz Maia: Então eu tenho duas estruturas de dados diferentes.
+Luiz Maia: Eu tenho os nomes e tem as notas.
+Luiz Maia: O que liga o nome do aluno com a nota, o índice.
+Luiz Maia: O Aluno um tem a nota um,
+Luiz Maia: a nota dois e a nota três, a nota três. O que é? É a média do aluno.
+Luiz Maia: Se você quiser que eu desenhe, eu desenho não tem nenhum problema.
+Luiz Maia: Tá certo.
+Luiz Maia: O que acontece aqui é o vetor.
+Luiz Maia: Quando você cria um vetor ou uma matriz, ele tem um tamanho estático.
+Luiz Maia: Porém você pode usar ou não todos aqueles elementos.
+Luiz Maia: Então o vetor, a matriz tem um tamanho físico e um tamanho lógico.
+Luiz Maia: O tamanho físico é o que está culpando na memória.
+Luiz Maia: O tamanho lógico é que você está usando de forma real
+Luiz Maia: naquela estrutura de dados. Por exemplo,
+Luiz Maia: você tem um vetor de alunos de cinquenta posições, por exemplo, aqui. Ó, vou fazer aqui cinquenta alunos.
+Luiz Maia: É o tamanho físico do vetor.
+Luiz Maia: Mas eu posso não ter cinquenta alunos,
+Luiz Maia: ou eu posso ter mais de cinquenta alunos.
+Luiz Maia: Como é que eu lido com isso.
+Luiz Maia: Esse é o tamanho físico.
+Luiz Maia: O vetor não aumenta de tamanho durante a execução do programa. A não ser que você crie uma nova estrutura.
+Luiz Maia: Copie os dados do vetor anterior para o vetor novo.
+Luiz Maia: Então eu posso ter três alunos na turma. Dez, vinte, trinta, cinquenta sessenta. Eu tenho que é controlar isso.
+Luiz Maia: Eu vou colocar três aqui para simplificar os testes,
+Luiz Maia: porque eu não vou ficar digitando cinquenta alunos para saber se deu certo ou não.
+Luiz Maia: Então, a nossa turma tem três alunos e tem três notas:
+Luiz Maia: a nota um, a nota dois, e a média, que é a soma
+Luiz Maia: da nota um com a nota dois, dividida por dois, que vai dar a média
+Luiz Maia: essa matriz de números e notas.
+Luiz Maia: Ela pode ser
+Luiz Maia: número, notas, número de alunos, ou pode ser número de alunos e número de notas. Não tem nenhum problema.
+Luiz Maia: Isso você vai definir. Mas percebam
+Luiz Maia: que a solução desse problema está toda baseada na estrutura de dados toda.
+Luiz Maia: Eu não estou preocupado com o nome do aluno. A nota do aluno. Eu quero armazenar isso em alguma coisa em algum lugar.
+Luiz Maia: E aí eu uso vetores e matrizes para fazer isso.
+Luiz Maia: Esse tamanho lógico aqui
+Luiz Maia: é o tamanho que eu entrei de dados. Se eu entrei com dois alunos. Tamanho lógico, igual a dois. Se eu entrei com dez alunos, o tamanho lógico é igual a dez. É o tamanho dos dados que eu entrei. Então eu posso ter um vetor de mil posições
+Luiz Maia: com dez posições ocupadas. O resto está todo livre.
+Luiz Maia: Vetor não é dinâmico. É listático.
+Luiz Maia: Aqui eu tenho um. Ler alunos.
+Luiz Maia: Tá certo.
+Luiz Maia: Ler alunos.
+Luiz Maia: O que ele faz,
+Luiz Maia: o enunciado do problema. Fala ler alunos até encontrar o nome do aluno igual a fim.
+Luiz Maia: Está aqui o anunciado no início, beleza,
+Luiz Maia: se o nome do aluno for igual a fim ele para e retorna o contador.
+Luiz Maia: Caso contrário, ele pega.
+Luiz Maia: E aí
+Luiz Maia: peraí. Deixa eu lembrar o que eu fiz aqui. Nome:
+Luiz Maia: o contador tá com zero.
+Luiz Maia: Ele está botando o primeiro nome na posição zero do vetor de nomes.
+Luiz Maia: Meu nome, cara, tá errado. Isso aqui não, não tá certo
+Luiz Maia: ler nome. Ele lê o nome aqui.
+Luiz Maia: Pegou o nome, colocou na posição zero. Pegou a nota um, colocou na posição zero da matriz de notas.
+Luiz Maia: Se você não entender, eu desenho. Não tem nenhum problema.
+Luiz Maia: Depois ele pega a nota dois, coloca na posição um de notas. Conte incremento o contador
+Luiz Maia: e verifica se o contador estourou o tamanho do vetor.
+Luiz Maia: Eu não posso colocar mais alunos do que cinquenta, senão vai dar exceção no código.
+Luiz Maia: Então, se eu alcancei cinquenta no caso aqui, eu botei três alunos para facilitar o Debug.
+Luiz Maia: Então ele vai botar três alunos no máximo aqui dentro.
+Luiz Maia: Então eu tenho um vetor de nomes e uma matriz de notas
+Luiz Maia: aqui. Eu tenho o ler. Nome que é esse cara aqui? Ler nota
+Luiz Maia: isso aqui está invertido, né? É, está invertido.
+Luiz Maia: Deixa eu trocar isso aqui pra ficar mais organizado.
+Luiz Maia: Ler nome.
+Luiz Maia: Lê a nota.
+Luiz Maia: Ele leu o nome do aluno. Podia fazer alguma regra de negócio aqui. O nome tem que ter mais dois caracteres. Ok, esquece isso.
+Luiz Maia: Leu o nome é diferente de fim. Colocou o nome dentro do vetor de nomes. Pegou as notas, colocou dentro da Matriz
+Luiz Maia: de notas. A matriz é uma atriz. Olha só. É uma matriz três por cinquenta, tá certo?
+Luiz Maia: Nesse caso, aqui vai ser uma matriz 3x3
+Luiz Maia: porque eu mudei aqui como uma constante. Se você não entender, eu desenho
+Luiz Maia: e desenhar não é um problema para mim. Quer dizer, é um problema, mas eu consigo. Leu o nome, leu a nota? Pode minimizar esse cara aqui. Deixa eu pegar aqui. Puff puff
+Luiz Maia: calcular média.
+Luiz Maia: Ele vai pegar a nota do aluno
+Luiz Maia: de todos os alunos na matriz de notas.
+Luiz Maia: Vai pegar a posição zero. A posição um e vai jogar na posição dois,
+Luiz Maia: ou seja, a nota um está na posição zero.
+Luiz Maia: A nota dois está na posição um. A média vai ficar onde? Na posição dois.
+Luiz Maia: Se quiser. Eu desenho isso para vocês. Não tem nenhum problema.
+Luiz Maia: Aí ele vem. Mostra as médias.
+Luiz Maia: Ele calcula a média da turma. Ou seja, ele preenche
+Luiz Maia: aquela posição dois, que é a média do aluno
+Luiz Maia: e verifica a aprovação do aluno. Se a nota for maior que a aprovação,
+Luiz Maia: ele passa. A aprovação é uma constante.
+Luiz Maia: Cadê ela tá aqui em cima.
+Luiz Maia: Repara que ela está fora dos métodos. Já está dentro da classe.
+Luiz Maia: Ela vale para todo mundo.
+Luiz Maia: É um outro ponto importante nesse exemplo, aqui,
+Luiz Maia: aí, ele mostra quem passou, quem não passou, ou seja, quem tem prova final.
+Luiz Maia: Depois ele mostra aos alunos que têm nota acima da média.
+Luiz Maia: Tá certo.
+Luiz Maia: É tudo baseado na estrutura de dados, ou seja, no vetor de nomes e na matriz de notas.
+Luiz Maia: Repara que eu não tenho nada associado a aluno.
+Luiz Maia: Não existe nada ligado ao aluno.
+Luiz Maia: Os dados estão perdidos, distribuídos dentro da estrutura didática, ou seja, o meu foco aqui, quando eu programava,
+Luiz Maia: e aí, para vocês verem a dificuldade, para mim, de sair de um mundo totalmente voltado
+Luiz Maia: para a estrutura de dados e comandos que trabalham com essas estruturas para a orientação. Objeto
+Luiz Maia: aqui não tem nada de orientação. Objeto nada. Zero.
+Luiz Maia: Vamos ver rodar. Scott, vamos ver aqui.
+Luiz Maia: Vamos pegar esse código aqui. Vamos rodar para vocês verem.
+Luiz Maia: Se você não tiver tempo de
+Luiz Maia: de estudar o código. Agora você fala comigo amanhã. Amanhã eu vou estar aqui de novo com vocês.
+Luiz Maia: Lp cinco, quatro Fm seis e sete.
+Luiz Maia: Se eu botar mais um aluno, ele vai parar de entrar. Aluno: porque você chegou no limite máximo do vetor.
+Luiz Maia: Então aqui, por exemplo, cinco, seis.
+Luiz Maia: Eu acabei botando o nome do aluno de cinco.
+Luiz Maia: Ok, aí vem número máximo de alunos alcançados.
+Luiz Maia: Ele mostra a média dos alunos. Mostra a média da turma. Mostra quem está em prova final
+Luiz Maia: e quem está aprovado e mostra os alunos que estão acima da média.
+Luiz Maia: Isso aqui tá errado.
+Luiz Maia: Isso aqui está errado.
+Luiz Maia: Cinco,cinco não é acima da média.
+Luiz Maia: Tem alguma coisa errada aqui.
+Luiz Maia: Ok, amanhã eu vou pensar e resolver isso.
+Luiz Maia: Eu acho que tem uma coisa errada aqui.
+Luiz Maia: Deixa eu ver aqui o que eu botei a média. Seis,
+Luiz Maia: cinco,cinco, não é a média. Está alguma coisa errada aqui dentro?
+Luiz Maia: Tem alguma coisa errada aqui?
+Luiz Maia: Nomes, notas médias, da turma tem alguma coisa errada, gente, não sei o que é.
+Luiz Maia: Não vou perder tempo com isso.
+Luiz Maia: O que eu quero mostrar para vocês
+Luiz Maia: amanhã. Eu resolvo isso. Fica tranquilo amanhã. Eu trago a solução.
+Luiz Maia: Eu quero mostrar para vocês a mudança de paradigma
+Luiz Maia: de você sair de uma programação estruturada e modular e entrar em orientação. Objeto: olha só a diferença.
+Luiz Maia: Aluno aluno tem nome? Nota um, nota dois: o calcular média é feito em tempo de execução.
+Luiz Maia: Olha só a diferença do programa.
+Luiz Maia: A mesma coisa.
+Luiz Maia: É tudo com vetor.
+Luiz Maia: Não tem nenhum problema de usar a viatura aqui, não
+Luiz Maia: ler alunos. Ele vai lendo aluno até chegar no fim.
+Luiz Maia: Vai pegando o aluno criando objetos da classe aluno jogando para dentro do vetor.
+Luiz Maia: Aqui tem, mulher. Nota, beleza.
+Luiz Maia: Deixa eu pagar. Deixa eu economizar esse código aqui. Mostrar as médias dos alunos.
+Luiz Maia: Calcular a média da turma. Verificar a aprovação
+Luiz Maia: é completamente diferente do código que a gente fez antes.
+Luiz Maia: O foco aqui é no aluno
+Luiz Maia: e não na estrutura de dados. Reparem aqui. Eu tenho uma estrutura de dados. Que é alunos
+Luiz Maia: dizendo Quantos alunos eu tenho? Eu não tenho nome. Eu não tenho notas. Eu não tenho médias.
+Luiz Maia: Ou seja, o foco saiu
+Luiz Maia: da estrutura de dados. Aí eu botei esse comentário aqui para vocês verem. O foco saiu da estrutura de dados e dos comandos que manipulam essas estruturas de dados. Para o quê? Para os dados.
+Luiz Maia: Então eu tenho um vetor de alunos. Tá certo.
+Luiz Maia: Aonde eu pego os dados do aluno e coloco num vetor de alunos.
+Luiz Maia: Aqui eu estou retornando o tamanho desse vetor.
+Luiz Maia: Estou pegando as médias e exibindo as médias dos alunos. Depois eu calculo a média da turma.
+Luiz Maia: Depois eu verifico a aprovação.
+Luiz Maia: Repara que é tudo muito mais simples.
+Luiz Maia: Eu acho que aqui não, não, posso
+Luiz Maia: olha só. Olha a diferença do código.
+Luiz Maia: Vamos rodar esse cara aqui para vocês verem a diferença de foco.
+Luiz Maia: Então eu tenho o aluno. Lp nota um três, quatro, Fm seis e sete.
+Luiz Maia: É Ml oito e nove.
+Luiz Maia: Ele chegou no máximo do tamanho do vetor. O vetor tem no máximo três alunos. Aí ele mostra as notas dos alunos. Mostra a média.
+Luiz Maia: Mostra quem está aprovado. Quem está em prova final? E os alunos que têm uma nota maior, igual a média.
+Luiz Maia: Ou seja, eu estou tentando mostrar para vocês algo que eu passei, que é essa programação
+Luiz Maia: totalmente orientada a estrutura de dados
+Luiz Maia: e comandos que manipulam essas estruturas para uma outra programação, uma programação orientada a dados, ou seja, o aluno.
+Luiz Maia: Isso é uma virada para mim. Foi assim absurda, é,
+Luiz Maia: vocês estão tentando entender o erro que aconteceu antes, né?
+Luiz Maia: Esse erro aqui, né? Vocês estão mais preocupados em entender o que aconteceu de errado aqui.
+Luiz Maia: Deixa eu ver.
+Luiz Maia: Mostrar médias, calcular médias da turma.
+Luiz Maia: Vocês querem descobrir o problema, né?
+Luiz Maia: Vocês são igual a mim, cara. Eu também sou assim.
+Luiz Maia: Eu só fico lp quatro, cinco, Fm seis e sete.
+Luiz Maia: Se eu botar fim aqui, ele termina
+Luiz Maia: aí. Ele dá aqui quatro,cinco média aprovado alunos. Com nota final igual a média
+Luiz Maia: aqui deu certo. Não sei o que deu errado antes.
+Luiz Maia: Eu não me lembro exatamente o que eu entrei de dados.
+Luiz Maia: Será que eu errei?
+Luiz Maia: Mateus, senhor, está no céu, cara. Pelo amor de Deus, aonde que está isso?
+Luiz Maia: Aonde que tá isso? Me fala aí, cara, pra eu poder tentar resolver isso agora.
+Jorge José Luiz Santos da Silva: Ô professor. Então eu acho que, na verdade, o que aconteceu é que, pelo menos na frase que o senhor deixa o aluno que passa é aquele que tem uma média igual. Acho que a média final, certo? Ou ele tem que ser maior ou igual à média final.
+Luiz Maia: Com os três.
+Jorge José Luiz Santos da Silva: Valores que o senhor tinha dado tinha passado. Perdão, senhor. Desculpa, não, mas os três valores que o senhor que você tinha passado.
+Jorge José Luiz Santos da Silva: Tinha dado cinco,cinco ou cinco,cinco. Então o aluno passou.
+Jorge José Luiz Santos da Silva: Acho que foi isso, mais ou menos.
+Luiz Maia: Será mais cinco.cinco, não é seis.
+Jorge José Luiz Santos da Silva: É porque tem o ou né.
+Luiz Maia: Deixa eu ver. Aqui. Lp cinco seis.
+Luiz Maia: É, tá errado. Isso.
+Jorge José Luiz Santos da Silva: Aí. Acho que foi aí que estava o problema que ele tem. Seo igual a média.
+Luiz Maia: Aonde que está isso, gente?
+lucas.ssantos: Na cento e vinte e dois.
+lucas.ssantos: Acho que ali, ao invés de média da turma, devia ser a aprovação ou não.
+Luiz Maia: Pronto, achou?
+Luiz Maia: É isso mesmo.
+Luiz Maia: Estava errado,
+Luiz Maia: logo errado.
+Luiz Maia: Olha, esse código. Passou vários anos rodando.
+Luiz Maia: Eu nunca tinha visto esse erro.
+Luiz Maia: Nunca.
+Luiz Maia: Eu nunca tinha visto. Obrigado vocês aí pela
+Luiz Maia: pela ajuda. Vou pegar esse código.
+Luiz Maia: Vou colocar lá no drive para vocês.
+Luiz Maia: Realmente esse aí. Isso aí passou durante muito tempo sem eu ter visto esse erro
+Luiz Maia: pra você ver como é. Que programação é ingrato, né, cara?
+Luiz Maia: Você passa durante anos fazendo a mesma coisa. E você não consegue ver o erro.
+Luiz Maia: Bom, dez horas terminamos vetores e matrizes. Se amanhã você tiver alguma dúvida
+Luiz Maia: para tirar, amanhã é o dia. Amanhã eu encerro a matéria usando arquivos.
+Luiz Maia: Quem quiser.
+Luiz Maia: Eu sei que ninguém vai fazer isso.
+Luiz Maia: A matéria está aqui.
+Luiz Maia: Já arquivo.
+Luiz Maia: Se você quiser baixar esse código, estudar esse código antes, eu recomendo. Mas você sabe como é que é, né?
+Luiz Maia: Cada um tem seu time para fazer isso.
+Luiz Maia: Amanhã termina a matéria, gente.
+Luiz Maia: E aí é a entrega. Dos os hotéis.
+Luiz Maia: Se tiver dúvida no ater, você pode vir aqui e perguntar. Não tem nenhum problema. Não, eu respondo. Não tem nenhum problema.
+Luiz Maia: Mas eu acho que vocês estão muito preparados para esse aterro. Muito mais,
+Luiz Maia: na minha opinião, o que eu ensinei para vocês é muito além do ater. Muito além.
+Luiz Maia: Eu acho que vocês vão tirar esse ate assim fácil.
+Luiz Maia: Uma boa semana. Uma boa noite para vocês. Tudo de bom. Foi uma delícia essa aula. Um grande abraço a todos.
+Luiz Maia: Tchau, tchau.
+Jorge José Luiz Santos da Silva: Alô, Professor. Boa noite.
+Luiz Maia: Valeu!

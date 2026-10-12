@@ -1,0 +1,629 @@
+Orlando Fonseca: Beleza, pessoal. Boa noite.
+Orlando Fonseca: Tudo certo,
+Orlando Fonseca: beleza?
+Orlando Fonseca: Bom, pessoal, vou começar essa aula, né? Falando para você que na aula anterior. Como vocês sabem, não teve aula. Teve um imprevisto.
+Orlando Fonseca: Imagem, hipótese alguma. Vocês estariam perdendo essa aula. Então
+Orlando Fonseca: vamos ver como a gente vai fazer. Vamos combinar com vocês aí. Depois eu formalizo com o Instituto
+Orlando Fonseca: Beleza. Boa noite, pessoal. O que a gente vai fazer hoje? A gente começa trinta minutos antes da nossa aula,
+Orlando Fonseca: digamos assim, na próxima sala, né?
+Orlando Fonseca: Oh, a gente
+Orlando Fonseca: passa um pouquinho das dez horas da noite. Ou isso é também uma opção por três aulas, quatro aulas até chegar o tempo dessa aula que está faltando,
+Orlando Fonseca: ou a gente vai deixando para o final perto do projeto de bloco, e a gente tem um pouquinho mais tempo para explicar mais de que vai a entrega. Enfim, vamos ter um tempinho mais para a gente ali bem perto do final,
+Orlando Fonseca: no momento de fazer a entrega, até poderemos ter uma aula extra se você.
+Orlando Fonseca: Se você sai de Windows, o que vai ser combinado? O que vocês acham?
+Orlando Fonseca: Já te amo para o final. Bom, a gente acompanha isso agora
+Orlando Fonseca: você quer saber.
+Orlando Fonseca: Ninguém aqui no teatro
+Orlando Fonseca: está tímido. Bom, aula extra, beleza. Então a gente faz uma aula extra no final, até para a questão oral, também
+Orlando Fonseca: a gente faz lá para o final. Se você tem alguma dúvida no projeto, a gente pode aproveitar também essa aula
+Orlando Fonseca: e beleza. Tudo bem.
+Orlando Fonseca: Ah, e aproveito. Agora que toquei, vou aproveitar para falar que são quatro aulas, três aulas de edição do projeto Bloco. Mas se por acaso alguém não consegue no tempo da aula, também eu posso fazer uma sessão e fechar com vocês um outro dia. Um sábado,
+Orlando Fonseca: domingo, provavelmente não, mas foi isso. É, sei lá, um outro dia de manhã. Hora do almoço, beleza.
+Orlando Fonseca: Tudo bem, então, pessoal, vamos lá relembrar que a gente tem trabalhado até agora
+Orlando Fonseca: até o momento. Pessoal. Você tem alguma dúvida que eu estou falando aqui? Das aulas, do conteúdo da trilha do aprendizado? Acho que não, né? Eu mesmo estou respondendo. Acha que está tudo certo? Por quê? Porque eu estou vendo os três de vocês. Tão simples.
+Orlando Fonseca: Você está iniciando. Na verdade, nesse mundo. Aí, desse movimento de software está, por enquanto, bem tranquilo. Vai continuar assim por um tempo. Não se preocupem, não
+Orlando Fonseca: até chegar à parte da implementação, um pouquinho mais puxado
+Orlando Fonseca: e bom que temos trabalhado até o momento. Toda a parte da especificação, entender o problema e especificar o problema.
+Orlando Fonseca: Já você tem trabalhado com casos de uso. Explica também como fazer a metodologia o equivalente para a metodologia ágil.
+Orlando Fonseca: Você conseguirá entregar ali o
+Orlando Fonseca: o Tp2 a aula anterior foi um exercício. Lembro, né? Foi tudo. Ficou tudo bem entendido.
+Orlando Fonseca: E agora chega o momento de pensar fazer um pouquinho mais dessa parte da modelagem, mas pensar num problema como um todo. O que é dizer isso? Vamos agora diferenciar entre o que seria uma abordagem estática, o que seria uma rodagem dinâmica,
+Orlando Fonseca: e vamos, de fato, falar do modelo de domínio. E para isso, vou compartilhar a minha tela. Já já
+Orlando Fonseca: milhas
+Orlando Fonseca: é?
+Orlando Fonseca: Deixa eu ver se está compartilhando o chão.
+Orlando Fonseca: E beleza pessoal, acho que caiu aqui um pouquinho na internet.
+Orlando Fonseca: Nós já voltamos. Então eu estava compartilhando a sociedade.
+Orlando Fonseca: Ok, agora Sim, certo.
+Orlando Fonseca: Eu estava falando guia. Vamos trabalhar. Modelos, detalhes, modelos dinâmico, essa parte de modelo dinâmica. Vamos trabalhar bastante
+Orlando Fonseca: próximo a sala com alguns diagramas, assim como temos diagrama, temos outros diagrama que modelam o fluxo, a interação, o fluxo, assim como modelos táticos que a gente pensa como sendo uma foto
+Orlando Fonseca: e alguma técnica de identificação de classes.
+Orlando Fonseca: Opa, aqui vamos fazer o primeiro mapeamento para
+Orlando Fonseca: o que pode ser um candidato de uma classe na linguagem que você está recolhendo para fazer seu projeto.
+Orlando Fonseca: Tá bom, beleza.
+Orlando Fonseca: Tudo bem, então vamos entender o conceito de análise consentual. O objetivo é compreender o domínio, capturar elementos, responsabilidades e relações que existirão no sistema final. Então, vamos lá. Vou explicar um pouquinho,
+Orlando Fonseca: hã?
+Orlando Fonseca: É,
+Orlando Fonseca: vamos pensar num problema que a gente tem a trabalhar. Pode ser biblioteca. Pode ser o sistema de biblioteca. Pode ser consulta médica. Pode ser, por exemplo, o aluguer de bicicleta. Temos três e o caixa. Temos quatro sistemas que estamos trabalhando aqui
+Orlando Fonseca: nessa aula. Vamos pensar, por exemplo, no aluguer de bicicletas. Então veja qual seria a especificação. O objetivo? Você que conhece.
+Orlando Fonseca: Eu quero um sistema que faça o lugar de bicicleta. E a Guiana está pedindo para a gente aquele seu cliente e a pessoa que está de fato
+Orlando Fonseca: solicitando o serviço da nossa empresa, pensando nas imagens grandes que quer esse sistema de aluguei de bicicleta. Então, quando chega na nossa mão,
+Orlando Fonseca: que seria um pensamento ali, comum, mas errado.
+Orlando Fonseca: O que a gente vai fazer? Tudo bem, eu entendi o problema. Eu entendi o que o cliente quer, mas já estou pensando.
+Orlando Fonseca: Então, assim
+Orlando Fonseca: tudo bem. Ele está falando de bicicleta. Eu já estou fazendo as minhas anotações, mas já estou colocando public classe, bicicleta.
+Orlando Fonseca: Ah, vai ter parâmetro. Não vai ter parâmetro, será? Estou pensando em Chape também. Ah, fica a mesma táxi
+Orlando Fonseca: ou por isso, por exemplo, ali está falando: nossa, o cliente vai lá e aluga a bicicleta. Aí eu falei: vai ter uma classe cliente. Já estou pensando ali na linguagem.
+Orlando Fonseca: Aí eu estou pensando. Vai ter uma classe publica. Classe, classe, cliente, tá?
+Orlando Fonseca: E digam mais, tá?
+Orlando Fonseca: Acontece
+Orlando Fonseca: pensar tipo assim: Ah, mas de repente vai ter alguns atributos que são inteiros. Alguns são String, tá? Eu vou fazer a conexão com api beleza.
+Orlando Fonseca: Então, pessoal, nesse momento não é o pensamento certo. Isso aí vai para uma segunda etapa.
+Orlando Fonseca: Por quê?
+Orlando Fonseca: Porque você não pode, tipo, e aí
+Orlando Fonseca: você não pode pensar como que vai criar o projeto.
+Orlando Fonseca: Qual seria a linguagem?
+Orlando Fonseca: Não adianta pensar em banco. Não adianta pensar em tipos de variáveis. Enfim, o que eu quero.
+Orlando Fonseca: Eu quero entender o mundo desse mundo de aluguer de bicicleta. E quais
+Orlando Fonseca: no objeto? Quais coisas eu quero representar? Olha que eu tirei a palavra objeto. Quais coisas? Eu quero representar nesse mundo. Por isso que eu chamo é conceitual.
+Orlando Fonseca: Então temos que compreender esse domínio. Responsabilidade. Eu vou ensinar para você o que seria isso? Tudo bem, que nessa primeira análise pode virar uma classe
+Orlando Fonseca: hoje. De fato, eu tenho um atributo que seja inteiro. Pode ser. Mas nesse momento,
+Orlando Fonseca: nosso foco não é esse. Não é olhar para o Coach, tá?
+Orlando Fonseca: Então por isso que a análise conceitual não se preocupa ainda com detalhes técnicos. Não quero saber de tipo de dado padrões de projeto. Todo mundo sabe, quando eu coloco aqui padrões de projetos, o que eu disser.
+Orlando Fonseca: Temos muita boa prática de desenvolvimento de software até documentado sem livro.
+Orlando Fonseca: Daqui a
+Orlando Fonseca: o livro do Larman. Esse projeto com o Ml, que eu acho fantástico, muito bom. E ele tem ali, tipo, você tem um plano de projetos que tem a ver com responsabilidade e tal, tem a ver com classe.
+Orlando Fonseca: Só que assim, no momento, é estrutura de código. No momento de pensar
+Orlando Fonseca: qual seria a função. A função é mapear conceitos do mundo real, hã?
+Orlando Fonseca: Ou seja, é um processo investigativo que envolve interpretação e atração. Ou seja, primeiro temos que compreender o problema.
+Orlando Fonseca: Depois a gente pensa numa solução.
+Orlando Fonseca: Olhando para o cojo, a gente pensa numa solução técnica, depois beleza e pessoal, veja o
+Orlando Fonseca: toda vez que eu estou falando para vocês nessa primeira página. Agora tem muita relevância, muita importância. Todo esse processo que eu estou falando agora, tá? Por quê? Porque esse é boom, como eu falei para vocês, a parte da implementação
+Orlando Fonseca: está tendo muito menos reforça porque tem uma ferramenta que já
+Orlando Fonseca: colocar um conte. Você tinha para vocês. E agora o foco é a gente realmente essa primeira parte da especificação do requisito. Você vai verificar a modelagem. Você vai fazer uma análise conceptual
+Orlando Fonseca: excelente para o seu projeto, e finalmente vai fazer uma validação. Então o esforço vai ficar nessa primeira parte. Tá de entender o problema, especificar muito bem esse problema. E na parte de validação. O esforço principal. Agora o projeto vai ser. Esse
+Orlando Fonseca: está sendo assim.
+Orlando Fonseca: Ok, então é.
+Orlando Fonseca: Vamos continuar.
+Orlando Fonseca: Ok, então eu preciso investigativo, porque, bom, temos que reconhecer os elementos do domínio, hã?
+Orlando Fonseca: Objetos significativos, entender seu comportamento e responsabilidade, distinguir o que deve ser parte do sistema do que deve ser ignorado e estabelecer fronteiras contextuais, mas sim definir estruturas técnicas. Quer dizer isso. Sou conceptual, nada que tenha a ver com técnico com código.
+Orlando Fonseca: E esse três é muito importante distinguir o que deve ser parte do sistema.
+Orlando Fonseca: Então por quê?
+Orlando Fonseca: É, primeiro, veja que quando falo do Domínio, eu até coloquei aqui um jeito significativo
+Orlando Fonseca: quando eu falo do domínio, pensem como sendo o mundo onde esse sistema vai se desenvolver.
+Orlando Fonseca: Por isso eu falo assim. Esse aqui, o mundo das bicicletas, do aluguer de bicicleta
+Orlando Fonseca: ou esse aqui, o mundo da clínica médica.
+Orlando Fonseca: Beleza. Quem disse é que todos esses objetos? Vamos falar mais
+Orlando Fonseca: linguagem natural, né? Todas essas palavras, todos esses conceitos
+Orlando Fonseca: que a gente coloca nesse mundo.
+Orlando Fonseca: Tem que fazer sentido para toda essa pessoa. Que interagem com esse mundo.
+Orlando Fonseca: Seja um desenvolvedor, seja o dono do projeto. Seja o pessoal que trabalha ali,
+Orlando Fonseca: que não tem nada a ver com o software.
+Orlando Fonseca: Acho que eu não coloquei nenhum, mas vamos lá. Tá?
+Orlando Fonseca: Então
+Orlando Fonseca: vou pensar aqui um exemplo mais,
+Orlando Fonseca: vou lhe um pouquinho de bicicleta para deixar bem claro essa faixa aqui. Ó tá, quer
+Orlando Fonseca: pintou as palavras que a gente identifica como sendo importantes e não quer dizer
+Orlando Fonseca: que vai ser relevante no final. Isso é na hora de colocar uma massa na implementação. Pensei que isso aí não vire uma classe,
+Orlando Fonseca: tá?
+Orlando Fonseca: É um beleza. Então, modelo de domínio é uma representação visual das classes conceituais.
+Orlando Fonseca: Essa classe conceptual não tem a ver com classe de implementação. Mais uma vez, são ideias, coisas, objetos, objetos reais em um domínio,
+Orlando Fonseca: tá?
+Orlando Fonseca: Vai simplificar para todo mundo falar a mesma língua. Vai todo mundo compreender os mesmos conceitos. Todo mundo que pertence,
+Orlando Fonseca: que conhece ali. A lógica do negócio conhece o problema.
+Orlando Fonseca: Então é uma visualização de coisas no domínio e não objetos de solte.
+Orlando Fonseca: Então, olha, a gente pode ter um dicionário visual, hã?
+Orlando Fonseca: Quer seria do missionário pessoal.
+Orlando Fonseca: São aquelas palavras são coisas mais significativas nesse mundo.
+Orlando Fonseca: Ok,
+Orlando Fonseca: tudo bem. Então. Modelo de domínio. Ele vai descrever conceitos de situações reais.
+Orlando Fonseca: Tchau, nós somos diretores de software porque
+Orlando Fonseca: não são classe A, bastante rápida. Mas então, veja, vamos colocar aqui um exemplo para deixar isso aqui. Um pouquinho mais prático.
+Orlando Fonseca: É um bom, vamos falar do mundo da clínica médica.
+Orlando Fonseca: Acho que eu vou colocar um pouquinho mais para frente, mas vamos lá, vamos falar disso agora para deixar claro
+Orlando Fonseca: nesse mundo da clínica médica.
+Orlando Fonseca: Quais seriam essas palavras? Os conceitos muito relacionados aí, que são muito importantes nesse mundo.
+Orlando Fonseca: Com certeza vai ser o quê?
+Orlando Fonseca: Você vai ouvir falar muito de pacientes, certo?
+Orlando Fonseca: De médico, de consulta, de como é
+Orlando Fonseca: aquele problema clinicamente, que a China mais quer.
+Orlando Fonseca: Mexe com paciente, consulta, agendamento.
+Orlando Fonseca: Certo, então, som
+Orlando Fonseca: palavras que fazem sentido para todo mundo, tanto para o desenvolvedor de solta, como para o médico, como para o paciente
+Orlando Fonseca: beleza.
+Orlando Fonseca: E eu, como seria, por exemplo, no aluguer de bicicleta, por exemplo,
+Orlando Fonseca: quais seriam as palavras mais representativas do aluguel de bicicleta.
+Orlando Fonseca: Ah, vai ter cliente também vai ter bicicleta, né? Vai ter devolução. Empréstimo, retirada, tempo de uso beleza.
+Orlando Fonseca: Agora, veja, veja que interessante.
+Orlando Fonseca: A gente põe trabalhar ao mesmo tempo com dois mundos. Esteja ali, ou seja, ali muito atrelado
+Orlando Fonseca: a esse projeto, que eu tenho a ver com clínica médica, tá no uso de movimento, e também do alugar de bicicleta. Tipo fazer dois projetos também.
+Orlando Fonseca: Só que, veja, eu falei para vocês. O tempo de uso não foi o tempo de uso.
+Orlando Fonseca: Ele tem relevância, tem significado ali, semântico,
+Orlando Fonseca: num mundo onde está sendo citado. Se estamos falando, por exemplo, alugando de bicicleta,
+Orlando Fonseca: o tempo de uso seria o quê?
+Orlando Fonseca: Tem um ponto de uso de fato da bicicleta?
+Orlando Fonseca: Tá nesse mundo.
+Orlando Fonseca: Você fala? Ah, o tempo de uso foi porque o cliente pegou a bicicleta, rodou um pouco e devolveu. E quanto você usou? Sei lá, duas horas. Esse é o tempo de uso,
+Orlando Fonseca: mas na clínica médica pode ser crescido também. Um tempo de uso com um significado totalmente diferente.
+Orlando Fonseca: Tá bom?
+Orlando Fonseca: Por exemplo,
+Orlando Fonseca: alguém ali no chato.
+Jorge José Luiz Santos da Silva: Uma consulta? Sei lá.
+Orlando Fonseca: E tempo de uso. É, pois é. Estava avançando mais. Nunca trabalhei nesse mundo.
+Jorge José Luiz Santos da Silva: Não.
+Orlando Fonseca: Mas você estava precisando de uso e uma medicação.
+Orlando Fonseca: Então são dois significados totalmente diferentes, porque eles pertencem adicionários diferentes.
+Orlando Fonseca: Um problema diferente.
+Orlando Fonseca: Okay, então deixa nessa.
+Orlando Fonseca: Essa figura aqui vai fazer um resolvo. Temos o modelo do domínio, e eu estava trabalhando hoje
+Orlando Fonseca: que faz compreender o problema. De fato. Modelo de caça de uso aqui. Vejam o vínculo
+Orlando Fonseca: com requisitos, tá modelo de negócio. São as classes, atributos, associações e demais. Tá essa linha daqui para baixo. Mas modelo de domínio, tem uma relação
+Orlando Fonseca: com o modelo câncer de uso
+Orlando Fonseca: dupla via beleza. Então veja, um vai alterar o outro. E assim um vai retroalimentando o outro. Essa aqui você conhece muito bem já essa parte aqui do modelo de uso com requisito,
+Orlando Fonseca: hã?
+Orlando Fonseca: Então o getos domínio vai para o diagrama de interação. Por exemplo, aí a gente não estudou ainda
+Orlando Fonseca: dinâmica, mas esse objetivo,
+Orlando Fonseca: ele, na verdade, vai para uma classe conceptual e futuramente, para uma classe de implementação, na implementação na linguagem
+Orlando Fonseca: e o glossário, que é o nosso dicionário. A definição é de terra
+Orlando Fonseca: aqui são básicos, mas podia ser que um deles tenha um termo muito específico desse negócio que a gente precisa colocar no glossuário para todo mundo entender.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: Ok, acho que o meu nome.
+Orlando Fonseca: Uma campanha maior.
+Orlando Fonseca: Vou lá pra ver. Aí tudo tá bom.
+Orlando Fonseca: Então esse exemplo aqui dá para ver, né? Esse exemplo aqui tem a ver com o pagamento. Ou seja, o pagamento no modelo de domínio é um conceito.
+Orlando Fonseca: Temos pagamento e venda.
+Orlando Fonseca: Ok, aqui
+Orlando Fonseca: não tem relacionamento nenhum. A gente sabe que venda beleza. Temos uma data. Temos uma hora, pagamento. Tem uma quantia, mas ele está aqui no domínio ainda eu estou falando em uma classe. Vai assistir uma classe de pagamento. A gente não sabe só que esse modelo de domínio.
+Orlando Fonseca: Ele, como já falei, velho, é no vocabulário ali em forma de diagrama.
+Orlando Fonseca: Tá?
+Orlando Fonseca: E esse vocabulário forma de diagrama visual é uma visualização
+Orlando Fonseca: que a partir dele, a gente pode
+Orlando Fonseca: chegar a um nome definitivo para alguma classe
+Orlando Fonseca: futura ali do nosso sistema. Tá, inspira o nome e,
+Orlando Fonseca: ou seja, o nome e o tipo também. As definições dos atributos. Enfim, que vai de fato pertencer ao nosso problema. Viraria depois a classe do nosso problema.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: Então para então, vejam, por exemplo,
+Orlando Fonseca: pense comigo. Pense comigo agora. Como está ficando a construção do nosso projeto.
+Orlando Fonseca: Você põe antes de dirigir em camadas, tá? A primeira camada vai ser, por exemplo,
+Orlando Fonseca: vou chamar ela de regra de negócio.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: Que é aquele? Enfim, vai ter toda a especificação ali, em forma de texto
+Orlando Fonseca: todo o que, para ser feito nessa parte de negócio
+Orlando Fonseca: ou o que está acontecendo. Um cliente pedindo para a gente o que está acontecendo no mundo real que precisa mudar uma solução para isso.
+Orlando Fonseca: A segunda camada. Podemos pensar como agora, como tendo esse modelo de domínio, que é essa atração?
+Orlando Fonseca: O quê?
+Orlando Fonseca: Para depois vamos ter que agora Sim, vamos ter uma construção
+Orlando Fonseca: do projeto de software, que é o acesso a construção do projeto de software vai ser isso aqui?
+Orlando Fonseca: Essa parte embaixo, tá? Agora vamos definir. Vamos definir quais seriam essas classes. Vamos definir. Não tem implementação nenhuma.
+Orlando Fonseca: Vamos definir aqui quais seriam a nossa classe? Quais seriam os relacionamentos entre classe? Tá vendo? Um aqui tem relacionamento um a um,
+Orlando Fonseca: de um para um.
+Orlando Fonseca: Então veja aqui. Não tem coisa que eu também não. Mas esse diagrama está um pouquinho mais.
+Orlando Fonseca: Então um pouquinho mais voltado para a implementação. Por quê? Porque tem até o tipo a data de hora de início, de tipo hora. Tem até uma função aqui, ó obter total
+Orlando Fonseca: os parâmetros dessa função dessa função. Um retorno dessa função tá,
+Orlando Fonseca: mas não tem código nenhum. A gente está ainda na parte do projeto.
+Orlando Fonseca: Então, até a última camada que vai ser a implementação. A gente olha já para o projeto para essa última camada e vamos implementar de fato, o que foi ali definido,
+Orlando Fonseca: tá, é
+Orlando Fonseca: beleza.
+Orlando Fonseca: Deixa, eu tenho mais aqui. Muito bom.
+Orlando Fonseca: Ok,
+Orlando Fonseca: então uma classe, ponto de revista conceitual é uma atração de água importante no domínio, porque, é claro, né? Estamos falando de uma classe,
+Orlando Fonseca: até uma classe ali na implementação. É claro que se ela chegou até ali, é porque ela tem uma importância no domínio. Se não tivesse virado uma classe foi tangível como paciente, bicicleta ou intangível como agendamento ou locação.
+Orlando Fonseca: É um por enquanto, vocês pensam que agendamento, locação, a gente tipo
+Orlando Fonseca: tudo bem. Quando a gente tem essa modelagem, essa modelo domínio, a gente pode estar na dúvida se ela vira uma classe ou vira um atributo.
+Orlando Fonseca: Por isso eu coloquei aqui intangível locação. O que vocês acham? Vai ser uma classe própria no final, ou realmente pertence à bicicleta.
+Orlando Fonseca: Isso aí vai ser definido.
+Orlando Fonseca: O papel do analista é persevera, que deve ser representado como entidade persistente, ou que é secundário ou transitório,
+Orlando Fonseca: tá?
+Orlando Fonseca: Então temos um modelo de domínio.
+Orlando Fonseca: Vemos nele quais quais objetos, coisas ou palavras para você queira chamar. Elas merecem aparecer de fato no modelo,
+Orlando Fonseca: até chegar na implementação, porque nem tudo vai virar uma classe. Então você tem que selecionar quais seriam as mais relevantes representativas.
+Orlando Fonseca: Tá bom?
+Orlando Fonseca: Por exemplo, nesse exemplo de paciente médico, pensem comigo, Louro.
+Orlando Fonseca: E aí pensa comigo se
+Orlando Fonseca: pensando: aqui tá,
+Orlando Fonseca: é o seguinte: foi no requisito do sistema, na rede de negócio aí para fazer o sistema, falaram para a gente. Ó,
+Orlando Fonseca: o paciente. Quando ele chega o paciente.
+Orlando Fonseca: Ele vai fazer o agendamento online.
+Orlando Fonseca: O paciente vai fazer o agendamento online. Só que esse médico específico só tem uma consultora particular só atende nessa consultora particular. Só segunda feira, por exemplo,
+Orlando Fonseca: só segunda feira. Então, nesse aplicativo, nesse sistema, quando o paciente vai selecionar por esse médico específico e essa especialidade,
+Orlando Fonseca: o aplicativo só hoje deixar marcar uma consulta para toda segundo a Faele, todo mundo entendeu essa pacificação,
+Orlando Fonseca: tá? Só para segunda feira.
+Orlando Fonseca: Aí, aí, beleza. O que vocês acham que seria importante no domínio,
+Orlando Fonseca: tá?
+Orlando Fonseca: O que vocês acham que seria importante ali, no domínio quais dessas palavra
+Orlando Fonseca: ou como centro, como você queira chamar. Bom paciente, né? Eu falei paciente. Com certeza ela é importante. Clinicamente, ele vai estar no domínio certo.
+Orlando Fonseca: O paciente vai estar no domínio.
+Orlando Fonseca: Deixa eu ver aqui.
+Orlando Fonseca: Sim, né, beleza é bom. Falei paciente. Falei no médico. Também falei do
+Orlando Fonseca: para dar consulta, né? Consulta. Ela vai estar no Domínio.
+Orlando Fonseca: Sim, a gente podia pensar que ele estaria ali como um objeto do domínio. E depois ele podia ter virado uma classe.
+Orlando Fonseca: Eu acho que ele é bem interessante.
+Orlando Fonseca: E segunda feira.
+Orlando Fonseca: Como você sabe?
+Jorge José Luiz Santos da Silva: Não.
+Orlando Fonseca: Mas por que não.
+Jorge José Luiz Santos da Silva: É porque ele não é uma regra específica para todos. Assim tipo, é uma exceção que o médico trabalha.
+Jorge José Luiz Santos da Silva: Não acho que assim entra dentro de consultas. Sei lá. O médico só pode atender nas segundas, mas, tipo,
+Jorge José Luiz Santos da Silva: não é algo amplo para ser colocado.
+Orlando Fonseca: Exatamente é boa. Ou seja, não é um conceito importante para a gente. Ah, bom, beleza. Você. Mas passa a crescer o nome segunda feira.
+Orlando Fonseca: Por quê? Porque até temos dias na semana, né?
+Orlando Fonseca: E tudo bem a gente. Podemos fechar aqui essa segunda feira, ser um atributo
+Orlando Fonseca: tipo assim, pertencer ao conceito, ser parte do conceito da consulta, porque consulta tem uma data,
+Orlando Fonseca: tem uma data de consulta o dia da semana da consulta. Então ele pode pertencer perfeitamente à consulta.
+Orlando Fonseca: Tá bom?
+Orlando Fonseca: Ou de repente, na molagem, poderia pertencer ao médico. O médico só atende a segunda feira. Eu acho que seria melhor na consulta, certo?
+Orlando Fonseca: E no México.
+Orlando Fonseca: Tchau, beleza.
+Orlando Fonseca: Então, muito bem, veja que eu estou pensando contextualmente, o que pode não pôde ir. Mas estou falando assim. O que vai virar classe ou não, mas nunca. Eu pensei isso. Aqui vai virar uma tela que vai ter a entrada. Vai ser um formulário.
+Orlando Fonseca: Não é momento para isso. Vai ter um botão que eu vou clicar e vou enviar o dado. Vai fazer a conferência o dia da semana que eu escolhi. Se é segunda feira. Ou não? Nunca estaríamos falando disso nessa primeira etapa.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: Tem sempre um modelo, uma página conceitual.
+Orlando Fonseca: Tá bom, pessoal, tem aí alguma dúvida? Alguma coisa que queira aí que não fica claro, queira argumentar um pouquinho mais.
+Orlando Fonseca: É um tá bom,
+Orlando Fonseca: beleza.
+Orlando Fonseca: E aí.
+Orlando Fonseca: Tchau.
+Orlando Fonseca: Agora vamos entender a diferença entre modelos tático e modelo dinâmico.
+Orlando Fonseca: Não quero.
+Orlando Fonseca: Quando temos um modelo estático, sempre pense
+Orlando Fonseca: caça de uso demais, né? Não temos uma moeda tática.
+Orlando Fonseca: O que está no representado e o que existe no nosso sistema?
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: A gente sabe que existe bicicleta. Assista, cliente, assista, aluguel,
+Orlando Fonseca: tá? Um pré. Enfim, o que for, tá locação. A gente sabe que existe isso,
+Orlando Fonseca: ok? A gente sabe que existem fatores que vão interagir com o nosso sistema.
+Orlando Fonseca: Tá beleza.
+Orlando Fonseca: Mas veja, é tipo como eu falei no início da aula. É tipo tirar uma foto
+Orlando Fonseca: se você pega o domínio e tira uma foto, com certeza não está nenhuma falando do cliente bicicleta,
+Orlando Fonseca: mas não temos uma ordem.
+Orlando Fonseca: A gente não tem um tempo ali por baixo, no sentido que não estamos chegando.
+Orlando Fonseca: O que está acontecendo?
+Orlando Fonseca: Será que um acontece antes ou depois do outro? A gente não tem essa no modelo tático. Não temos essa visão.
+Orlando Fonseca: Não temos isso, beleza. O máximo que a gente pôde hoje
+Orlando Fonseca: afirmar são os relacionamentos de casos de uso da inclusão ou não, a gente sabe sempre que acontece isso aqui vai ter isso aqui, tá? Então isso aqui vai ser depois do caça de uso todo,
+Orlando Fonseca: mas não temos essa.
+Orlando Fonseca: Não temos o tempo envolvido, tá?
+Orlando Fonseca: Quando falamos do modelo dinâmico, é porque temos.
+Orlando Fonseca: Temos um tempo ali. Temos coisas acontecendo e queremos refletir isso.
+Orlando Fonseca: Então, como refletimos isso?
+Orlando Fonseca: Vamos supor.
+Orlando Fonseca: O modelo dinâmico. Mostra o que acontece com esses participantes, o cliente, nesse caso da bicicleta, para ser um modelo dinâmico. O cliente chega. Loja,
+Orlando Fonseca: beleza. O que faz depois? O cliente vai retirar a bicicleta.
+Orlando Fonseca: O cliente vai andar com a bicicleta.
+Orlando Fonseca: Tá bom. Vai dar um tempo aí o cliente devolve a bicicleta para longe.
+Orlando Fonseca: Então temos que calcular o valor. Tá vendo ali. Tem um tempo envolvido porque ele não pode andar de bicicleta. Se não retirou a bicicleta antes,
+Orlando Fonseca: então temos o fluxo do acontecimento. Primeiro tem que dizer isso, depois isso, depois aquilo.
+Orlando Fonseca: Beleza.
+Orlando Fonseca: Muito bom.
+Orlando Fonseca: Só que agora, veja.
+Orlando Fonseca: Agora vamos fazer, né?
+Orlando Fonseca: Eu vou apresentar para vocês alguns textos, e você vai ter que identificar quais seriam
+Orlando Fonseca: aquelas palavras representativas que vai pertencer ao domínio ao modelo de domínio que, futuramente, vai ser uma classe ali conceitual
+Orlando Fonseca: que inseria aqueles
+Orlando Fonseca: aquelas palavras, objetos que estariam mais vinculados à parte tática da modelagem ou mais à parte dinâmica. E isso que eu vou falar para vocês agora.
+Orlando Fonseca: Técnica para identificar classes em um domínio
+Orlando Fonseca: como a gente identifica isso. Classes no modelo conceitual. Classe de domínio. Ninguém dizer que vai virar mais de uma vez que vai virar uma classe ali de implementação
+Orlando Fonseca: classe é um domínio.
+Orlando Fonseca: Temos duas técnicas para fazer.
+Orlando Fonseca: Temos uma tâmica para fazer isso.
+Orlando Fonseca: Primeiro, análise gramatical e segundo, identificação de responsabilidade.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: As duas técnicas não são Eclides.
+Orlando Fonseca: E dizer: você pode fazer a primeira técnica e fazer a segunda
+Orlando Fonseca: até eu recomendando, de fato, passei as duas.
+Orlando Fonseca: E aí, beleza?
+Orlando Fonseca: Vamos pensar aqui na análise dramática, hã ideia?
+Orlando Fonseca: Ler atentamente os requisitos textuais e extrair substantivos, verificando quais deles fazem sentido como classes.
+Orlando Fonseca: Tá, então.
+Orlando Fonseca: Bom, passei uma análise, né? Caramba, de calma, hã?
+Orlando Fonseca: Todo mundo lembra que seríamos um substitutivo.
+Orlando Fonseca: É tipo assim, né, hã, beleza?
+Orlando Fonseca: Então vamos inverno também, né?
+Orlando Fonseca: É o que dá a ação
+Orlando Fonseca: texto de requisito. Normalmente vai descrever o funcionamento do sistema tá consultivo. É óbvio. Tipo, olha,
+Orlando Fonseca: o cliente precisa retirar uma bicicleta ali nessa loja.
+Orlando Fonseca: Essa especificação é óbvio que ali tem muito substantivo. O Sustantivo para entidades de conceito são as possíveis classes.
+Orlando Fonseca: Então, a primeira análise que o selecionador sacrif instantinho mais importante.
+Orlando Fonseca: Mas o importante é que provavelmente vai virar uma classe. Vamos fazer uma análise
+Orlando Fonseca: e os verbos são possíveis métodos ou responsabilidades.
+Orlando Fonseca: Então os verbos. A página tática está determinada pelos antigos e a página dinâmica pelos verbos.
+Orlando Fonseca: Ok, em todos os substantivos serão classes, claro, e alguns são irrelevantes, ou apenas parte de outras entidades,
+Orlando Fonseca: e a responsabilidade vê se você se entende. É claro, que o verbo pode virar um método.
+Orlando Fonseca: Então, por exemplo, o cliente precisa. O cliente pode retirar a bicicleta da loja.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: Quantos substantivos a gente tem?
+Orlando Fonseca: O cliente precisa retirar a bicicleta da loja.
+Orlando Fonseca: Temos clientes.
+Orlando Fonseca: Tchau, Tchau, Tchau.
+Orlando Fonseca: Dói, né? Isso aí. Cliente, bicicleta e loja e verbo é treino e o verbo retirar
+Orlando Fonseca: beleza. Agora veja, veja que interessante.
+Orlando Fonseca: Eu não falei aqui.
+Orlando Fonseca: Eu não vou falar aqui.
+Orlando Fonseca: E cadê que são possíveis métodos, então a gente sabe que vai ter pelo menos um método de retirar.
+Orlando Fonseca: Temos que ter essa funcionalidade no nosso sistema. Mas onde que vai ter esse método
+Orlando Fonseca: a isso que eu chamo de responsabilidade.
+Orlando Fonseca: Quem vai ter a responsabilidade de retirar uma bicicleta?
+Orlando Fonseca: Tá, supondo, nesse caso, vamos supor que cliente e bicicleta
+Orlando Fonseca: eles virem classes ali em Java. Ou seja, ele virou classes, mas
+Orlando Fonseca: e loja, também né? Clientes de bicicleta e loja. As três viraram classe.
+Orlando Fonseca: Viraram no final. Classe conceptual e classe de software.
+Orlando Fonseca: Só que. E o retirar onde a gente coloca no cliente.
+Orlando Fonseca: Pois é. Então, o cliente vai ter pensado agora na implementação. Vai ser, por exemplo, cliente, retirar a bicicleta
+Orlando Fonseca: para ser assim. Cliente, ponto. Retira a bicicleta
+Orlando Fonseca: ou é que pertence à loja?
+Orlando Fonseca: Ou é melhor colocar essa responsabilidade de retirar a bicicleta para a noite. Ou seja, a gente coloca loja,
+Orlando Fonseca: ponto. Retirar a bicicleta pensando na promoção, orientar o objeto, né?
+Orlando Fonseca: Então ela pertence ao cliente ou pertence à loja.
+Orlando Fonseca: Esse já não definiu uma responsabilidade, tá?
+Orlando Fonseca: É ao cliente, né?
+Orlando Fonseca: Beleza
+Orlando Fonseca: é assim. Eu sou. Colocando exemplo muito isolado. Sou uma sentença para entender. Mas então o cliente tem o quê? Quais são os dados do cliente? Quais são os atributos do cliente?
+Orlando Fonseca: Enfim, idade, tudo né, endereço. E além disso, vou ter um.
+Orlando Fonseca: Vai ter uma função que seja retirar bicicleta, tá?
+Orlando Fonseca: É conseguir retirar a bicicleta com aquela loja. Também temos que ver isso.
+Orlando Fonseca: A noite seria marcenar. Pois, é uma abordagem. Pois é isso também, Jude. Pois, é uma abordagem. O cliente retira e a loja tem que ficar ciente que ele retirou dessa noite específica.
+Orlando Fonseca: Pô que eu coloquei aqui. Deixa eu avançar mais um pouquinho.
+Orlando Fonseca: Consulta médica. Mas tem um outro exemplo onde o cliente pode retirar
+Orlando Fonseca: a bicicleta de uma loja e entregar na outra.
+Orlando Fonseca: Vamos chegar ali.
+Orlando Fonseca: Então, por exemplo, o paciente pode agendar consulta com o médico.
+Orlando Fonseca: Cada consulta deve registrar data, horário e especialidade.
+Orlando Fonseca: O sistema deve permitir ao médico visualizar sua agenda, tá?
+Orlando Fonseca: O substantivo paciente, hã?
+Orlando Fonseca: Consulta médico, data, né? Horário, especialidade e agenda acho que tá tudo aqui, né?
+Orlando Fonseca: Que temos aqui? Alguns outros me coloquei porque, por exemplo, tem sistemas.
+Orlando Fonseca: Não colocámos aqui porque estavam fora do mesmo sistema. Não tem sentido colocar ele, hã?
+Orlando Fonseca: E desses todos. Olha, eu fiz um filtro, tá?
+Orlando Fonseca: Sei que pacientes, consultas e médicos são bons candidatos a classes.
+Orlando Fonseca: Porque agenda não?
+Orlando Fonseca: A agenda é bom substantivo aqui, né?
+Orlando Fonseca: Eu selecionei ele como sendo normalmente, né?
+Orlando Fonseca: Selecionar a primeira análise.
+Jorge José Luiz Santos da Silva: Um atributo de consulta, né?
+Orlando Fonseca: Pois é. Está muito atrelado à consulta.
+Orlando Fonseca: Tá? Então, aqui nessa rodagem, ele ficou de fora
+Orlando Fonseca: fazendo um filtro desse substantivo. A gente foi. Só. Seriam os nossos bons candidatos à classe. Não quer dizer que vai virar de fato uma classe. O paciente consulta a si mesmo, mas já o primeiro filtro já foi,
+Orlando Fonseca: tá bom em toda data e horário são conceitos auxiliares.
+Orlando Fonseca: Conhecer atributo, por exemplo de consulta e especialidade. Também
+Orlando Fonseca: foi esse um atributo, ou foi ser uma classe própria?
+Orlando Fonseca: Nesse caso, pode ser um atributo realmente do médico seria a facilidade dele.
+Orlando Fonseca: Ok, agenda. Já falei, né? E identificação.
+Orlando Fonseca: Então temos classe principais. Paciente médico, consulta e atributo, data, horário de especialidade. Beleza.
+Orlando Fonseca: Ok, então vamos fazer isso aqui.
+Orlando Fonseca: O cliente pode retirar uma bicicleta em qualquer estação.
+Orlando Fonseca: Não é assim. A gente fica a próxima, tá.
+Orlando Fonseca: É o telê.
+Orlando Fonseca: O cliente que tira a bicicleta em qualquer estação, utiliza por um período e devolve em outra estação.
+Orlando Fonseca: O sistema deve registrar o tempo de uso e calcular o valor da lotação.
+Orlando Fonseca: Então pensa um pouquinho aí. Para vamos selecionar quais seríamos tantos.
+Orlando Fonseca: Nosso representativo quase ali. Aquela que
+Orlando Fonseca: aquele verbo que são a partir de dinâmica que vai virar a função,
+Orlando Fonseca: você sabe. Vamos lá, vamos fazer a identificação aqui. Instantinho substantivo,
+Orlando Fonseca: cliente, bicicleta, estação, verbo, calcular, tirar beleza.
+Orlando Fonseca: Muito bom e locação.
+Orlando Fonseca: Deixa eu ver aqui. Por que não selecionou,
+Orlando Fonseca: tipo assim.
+Orlando Fonseca: Por que não? Ele estaria primeiro, né? Você selecionou como sendo substantivo, depois fez um filtro.
+Orlando Fonseca: Ou é que a locação realmente pertence a um deles
+Orlando Fonseca: é um atributo de um verbo locar.
+Orlando Fonseca: Seria mais uma função que o cliente que pode fazer uma locação da bicicleta, não é isso.
+Orlando Fonseca: Teremos que haver a responsabilidade. Então tá.
+Orlando Fonseca: Pois é aqui. Eu seleciono como sendo uma classe.
+Orlando Fonseca: Os atributos são tempo de uso valor.
+Orlando Fonseca: Ok,
+Orlando Fonseca: e o período pode ser apenas uma diferença entre retirada e evolução. Seria o período que de fato, foi alugado
+Orlando Fonseca: faça a diferença.
+Orlando Fonseca: Quando foi que retirou? Quando foi que devolveu? E teve o período?
+Orlando Fonseca: Nesse exemplos principal mas perfeitamente. Vamos ver. Agora
+Orlando Fonseca: ela pode ser perfeitamente um atributo, dependendo pessoal. Se ela é muito complexa,
+Orlando Fonseca: aí temos que separar uma classe, assim como a especialidade tá?
+Orlando Fonseca: Pode ser que a gente tenha algum relacionamento mais complexo dessa especialidade. Como médico, aí temos que separar.
+Orlando Fonseca: Ok?
+Orlando Fonseca: Responsabilidade,
+Orlando Fonseca: responsabilidade. Em vez de olhar para o assunto antigo. Analisarmos o que cada entidade do domínio precisa: fazer. Uma manteiga. Essa é a segunda rodagem
+Orlando Fonseca: no sentido que. Tudo bem, eu não vou selecionar. Sustentive, ou também
+Orlando Fonseca: faço a análise. Primeiro gramatical ali dos substantivos. E agora, para uma classe, vamos pensar na responsabilidade, como eu estou pensando aqui com você aí
+Orlando Fonseca: tá.
+Orlando Fonseca: É?
+Orlando Fonseca: Ou seja, quem é responsável por armazenar esta informação, tá?
+Orlando Fonseca: Quem é responsável por executar esta ação. São perguntas que você pode fazer para identificar se uma classe ou não,
+Orlando Fonseca: quem deve conhecer essa dado, tá?
+Orlando Fonseca: Quem deve decidir até comportamento.
+Orlando Fonseca: Então, se esse aqui está apontando para um conceito, então esse conceito provavelmente vai virar uma classe, hã?
+Orlando Fonseca: Por exemplo, clinicamente, a gente vai. Cenário de informações do paciente. Quem vai? Cenário de informações do paciente? O próprio paciente.
+Orlando Fonseca: Então, ali, no final, a gente vai ter uma classe paciente que vai ser a responsável por
+Orlando Fonseca: armazenar todas as informações do paciente, a idade, o Cep, tudo.
+Orlando Fonseca: Ok, ou seja, idade, endereço prontuário.
+Orlando Fonseca: Alguém deve organizar horário sem especialidade. Quem que pode fazer isso? E o paciente? Não, eu vou ler ali no teto. Quem vai ser responsável por isso? Então é consulta? Consulta que vai ter que
+Orlando Fonseca: então esse objeto da consulta que vai ter que ser encarregado disso.
+Orlando Fonseca: A especialidade ali tem que fazer um relacionamento entre um médico especialidade, os horários e a consulta que vai se virar,
+Orlando Fonseca: alguém deve manter disponibilidade e visualizar agenda.
+Orlando Fonseca: Quem que vai conseguir fazer isso? Vamos ver.
+Orlando Fonseca: Nem se sempre só temos médico e paciente. Não temos recepcionista, polícia que também deu uma olhada
+Orlando Fonseca: e alguém deve conectar um paciente e médico. Quem foi fazer essa conexão? Consulta
+Orlando Fonseca: então, com certeza, a paciente consulta médica viraria ali uma graça.
+Orlando Fonseca: Se tem responsabilidade de fazer, com certeza vai virar uma classe.
+Orlando Fonseca: Aluguer de bicicleta. Alguém deve ter retirada e devolução. Nesse caso, aqui colocaram locação, né? Porque pensaram ela como sendo uma classe.
+Orlando Fonseca: A locação vai. Isso é responsável por isso. Por retirar e devolver
+Orlando Fonseca: até uma data de retirada. Data de devolução. Está separadinho numa classe, hã?
+Orlando Fonseca: Por quê? Porque a bicicleta só vai armazenar dados físicos e disponibilidade. Tipo assim. Disponibilidade pode ser um Flag disponível ou não disponível.
+Orlando Fonseca: Ok, ou locação. Se a gente pensa como um atributo polícia que seja da bicicleta.
+Orlando Fonseca: A bicicleta foi alugada ou não, né?
+Orlando Fonseca: E a data que foi o histórico dessa locação. Polícia também nesse exemplo, não, e a disponibilidade da bicicleta é a própria bicicleta. Então a bicicleta vai virar uma classe.
+Orlando Fonseca: Alguém deve representar o conjunto de bicicletas disponíveis no local. O que vai representar isso?
+Orlando Fonseca: A estação. Pensei: A loja. Não falo, né?
+Orlando Fonseca: Alguém deve manter informações pessoais e cartões de crédito do cliente. Quem que vai fazer isso? São os clientes que vão ser responsáveis por isso. Então temos aqui quatro classes.
+Orlando Fonseca: Então, nessa definição.
+Orlando Fonseca: Então veja que é.
+Orlando Fonseca: Eu não estou pensando na implementação. Tudo bem. O que vai virar uma classe. Mas antes de eu pensar na implementação de fatos,
+Orlando Fonseca: eu estou me preocupando mais com a modelagem do problema
+Orlando Fonseca: mais que com o software em si.
+Orlando Fonseca: Tá bom, pergunta para vocês.
+Orlando Fonseca: Nesse caso, da bicicleta, eu vou trazer mais um exemplo, tá?
+Orlando Fonseca: É, nós temos um exemplo aqui.
+Orlando Fonseca: Finalização quando eu coloquei. Deixa, eu ver aqui, os atributos da bicicleta seriam quais?
+Orlando Fonseca: Qual seria um dado físico da bicicleta. Por exemplo, disponibilidade está disponível ou não?
+Orlando Fonseca: E dado físico seria o quê?
+Orlando Fonseca: Quais seriam os principais atributos aí da bicicleta?
+Orlando Fonseca: É,
+Orlando Fonseca: marca, né?
+Orlando Fonseca: Deixa eu ver aqui.
+Orlando Fonseca: Core, modelo adulto para tentar. Então vamos fechar agora com cor e modelo.
+Orlando Fonseca: Isso, claro. Quadro isso aí.
+Orlando Fonseca: Vamos fechar com algo mais simples e moderno.
+Orlando Fonseca: Tá bom.
+Orlando Fonseca: Então, beijão.
+Orlando Fonseca: Pensa comigo. O cliente retira, tá,
+Orlando Fonseca: a bicicleta. Uma bicicleta. Vamos supor que tenha mais desse tipo. Uma bicicleta? Alguém sabe? Uma.
+Orlando Fonseca: Uma marca de bicicleta canoide. Tá bom. O cliente retira uma bicicleta. Canoide Açu está certo.
+Orlando Fonseca: A gente retira uma bicicleta, calor e açougue.
+Orlando Fonseca: Retirou o cliente, retirou Moacyr, letra calor Iguaçu.
+Orlando Fonseca: Dez horas da manhã.
+Orlando Fonseca: Tá, beleza?
+Orlando Fonseca: Vamos fazer uma análise gramática disso.
+Orlando Fonseca: O que temos aqui? Temos cliente, bicicleta, né?
+Orlando Fonseca: Mora aqui vermelho?
+Orlando Fonseca: Eu não sou muito de uma camisa de bicicleta, não ambiente bicicleta é com.
+Orlando Fonseca: Pois é, né?
+Orlando Fonseca: Então, vamos até cliente a noite que eu vou ter. Que vai ser? Que é?
+Orlando Fonseca: Temos clientes, temos a bicicleta, temos a, a cor,
+Orlando Fonseca: a marca, se a cor açu né? Cor, açu, a marca Caloi.
+Orlando Fonseca: Vamos procurar essa marca aqui, não?
+Orlando Fonseca: Pois é, né?
+Orlando Fonseca: Alô e beleza e a hora, né? Eu coloquei dez horas da manhã.
+Orlando Fonseca: É beleza.
+Orlando Fonseca: Pois é. Então, pessoal. Então vejam
+Orlando Fonseca: a cor e a marca estaria descrevendo uma bicicleta
+Orlando Fonseca: Coreia, bicicleta. Então você quer dizer que ele não pode virar uma classe?
+Orlando Fonseca: São atributos de bicicleta e essa deissora da manhã, onde que eu colocaria
+Orlando Fonseca: dez horas da manhã? É claro que não vai virar uma calça, né?
+Orlando Fonseca: Mas essas dez horas da manhã, ele pode estar muito atrelado a algum desses conceitos. A locação, você sabe, acho também, né? Muito bom, Lucas, eu acho. Também
+Orlando Fonseca: tá?
+Orlando Fonseca: Já que a gente tem essa classe, educação aqui, podemos ter assim. Hora de retirada.
+Orlando Fonseca: Então vejam que a responsabilidade de fazer
+Orlando Fonseca: de saber certamente quando foi feita essa locação e é da
+Orlando Fonseca: da locação dessa classe conceitual locação, e aí,
+Orlando Fonseca: qual seria o momento que eu estaria ali atrelado a essa classe. Ou vai ter algum.
+Orlando Fonseca: A locação vai ter algum método ali atrelado.
+Orlando Fonseca: Ele só vai retornar a hora retirada. Isso aí só vai ter essa informação
+Orlando Fonseca: a hora retirada, a hora de evolução e o locar
+Orlando Fonseca: tipo assim tem que alugar a bicicleta. A responsabilidade é do cliente der lugar, né?
+Orlando Fonseca: Beleza? Então, vejam, pessoal, eu estou selecionando quais seriam as classes futuras do meu modelo. Sou, olhando para. Fazendo uma análise primeiro e olhando para a responsabilidade,
+Orlando Fonseca: esse militarismo, eu também, né? Exatamente isso aí. Quem vai servir essas detalhes? É a locação.
+Orlando Fonseca: A bicicleta só vai ter informação de ó foi alugada ou não foi alugada por quê? Ou seja,
+Orlando Fonseca: não. Se for lugar ou não está lugar. Se está disponível ou não está disponível, porque não está mais,
+Orlando Fonseca: mas não passa? Não está mais na
+Orlando Fonseca: na loja. Já foi no gado, tá beleza?
+Orlando Fonseca: Valeu, pessoal.
+Orlando Fonseca: Santinho, tem umas quase um tempinho. Acho que eu tô feliz essa hora. Bem antes,
+Orlando Fonseca: mas tudo bem. Duas aula. Quero falar de mais alguma coisa? Andamento do projeto.
+Orlando Fonseca: Fique à vontade aí.
+Orlando Fonseca: Só por aqui.
+Orlando Fonseca: Agora vou deixar.
+Orlando Fonseca: Deixa eu só conectar aqui o.
+Orlando Fonseca: Não estava assim. Ó, vamos, deixa eu ver aqui o chapéu.
+Orlando Fonseca: Ah, deixa eu ver. Aqui é,
+Orlando Fonseca: dá para fazer o projeto apenas entre outros países.
+Orlando Fonseca: Como assim? Me explica um pouquinho demais?
+Orlando Fonseca: Tem que entrar em hotéis, né?
+lucas.ssantos: Sim, mas no projeto, no final das contas, pelo que eu entendi, nós teremos ali um, por exemplo, uma Api, algo do tipo.
+lucas.ssantos: E dá para chegar nesse ponto final. Só seguindo um sisteminha, né? Dá para chegar nesse sistema só com a entrega do Tp, ou tem que fazer alguma coisa a mais do que o Tp para, no final, ter esse sistema.
+Orlando Fonseca: Boa noite.
+Orlando Fonseca: Vamos lá separar até essa sisteminha. Ele tem que estar funcionando.
+Orlando Fonseca: E você só estaria mexendo na implementação.
+Orlando Fonseca: Um tempo é cinco no último antepê, tá?
+Orlando Fonseca: Então é claro que entre os países, mais a parte da moda, o Tp2 tem um início de implementação, carregando aqui, você vê? Enfim, o início tem nada a ver com o projeto. Na verdade, você estaria mexendo em implementação no Tp5 o último Tp:
+Orlando Fonseca: então é e ali. Eu não vou pedir o sistema todo
+Orlando Fonseca: nesse último Tp: Já estou adiantando. Vou pedir alguma função. Eu só quero ver a implementação de uma ou duas funções. E acabou.
+Orlando Fonseca: Só que na hora de apresentar, você tem que ter o sistema já funcionando.
+Orlando Fonseca: Você faz uma seleção dessa função mais representativa, e me mostra,
+Orlando Fonseca: então vá muito além dos Tps, né? Certo,
+Orlando Fonseca: só se já para o Tp5 você finalizou tudo e já me entregou o projeto no Tp5 Ah, professor, você pediu só essas duas
+Orlando Fonseca: são essas trechinho aqui da implementação. Mas já vou te entregar o projeto, porque eu já fiz.
+Orlando Fonseca: Tá? Mas
+Orlando Fonseca: ou seja, depois do Tp5 você tem que implementar muito o que vou ver lá no projeto? Fico claro, mais ou menos.
+lucas.ssantos: Beleza e outra dúvida.
+Orlando Fonseca: Não adianta juntar tudo, né? Porque tem que me apresentar o projeto. E com certeza vai ter implementação ali
+Orlando Fonseca: no projeto que você não colocou no tapecinho.
+lucas.ssantos: Sim.
+Orlando Fonseca: É, né.
+lucas.ssantos: Outra dúvida rapidinho.
+lucas.ssantos: O foco aqui da dessas aulas todas até o final. É mais essa questão dos requisitos.
+Orlando Fonseca: Isso.
+lucas.ssantos: E por esse motivo, acho que o senhor já falou alguma coisa sobre. Mas só para reforçar é se
+lucas.ssantos: eu quiser usar a inteligência artificial para fazer a parte do código, mesmo desde que.
+Orlando Fonseca: Uhum.
+lucas.ssantos: Assim. Tudo bem especificado. Tudo bem, entendido, beleza. Vou delegar o código para inteligência artificial. Desde que eu saiba o que ela fez e eu saiba explicar o que ela fez. Eu posso usar.
+Orlando Fonseca: É.
+Orlando Fonseca: E aí?
+lucas.ssantos: Ou não.
+Orlando Fonseca: Deixa, eu vou falar.
+Orlando Fonseca: Então olha para mim. Sim, para mim. Você põe de santo
+Orlando Fonseca: beleza. Só que você está começando.
+Orlando Fonseca: Você tem um longo caminho correto aqui no infinite, não é?
+Orlando Fonseca: Então o recomendado para vocês é que utilize, no mínimo,
+Orlando Fonseca: a geração de cônjuga com Ia generativa ou mínimo tipo assim. Só quando não, não tem outra opção.
+Orlando Fonseca: Vai ficar travado por isso.
+Orlando Fonseca: E o ideal é que você
+Orlando Fonseca: bate de frente um pouquinho para a implementação? Por quê? Porque você tem que entender a linguagem. Tem que entender, o C. Sharp. Tem que entender o Java, o Java.
+Orlando Fonseca: E não deixar que haja o código para vocês, entendido? Porque vocês estão trabalhando isso na regular,
+Orlando Fonseca: mas para mim, principalmente para mim. Não tem grande problema. Não, você sabe o que ele está gerando. Você validou
+Orlando Fonseca: porque já fez para mim. Tá valendo, hã?
+Orlando Fonseca: Só que assim eu vou perguntar desse código. Como que está feito? Por que alguma outra via? O que você acha?
+Orlando Fonseca: É o momento de aprender, né? Você dá tudo para ir a e ela vai lá gerar o conte. Você tinha pra você. Provavelmente tá ali. Sempre acontece
+Orlando Fonseca: fazer a cetim e enfim, você pode trabalhar na questão oral, por exemplo, hã?
+Orlando Fonseca: É beleza.
+Orlando Fonseca: Então, assim. Por que eu falei na primeira aula? Eu sou pro Yato. Eu sou o de iate da ferramenta, de narrativa e demais. Por quê? Porque é o futuro. O mercado. Ele gira agora mesmo.
+Orlando Fonseca: Acho que a gente não coloca mal no código de zero.
+Orlando Fonseca: Ok, tá certo?
+Orlando Fonseca: Infelizmente, o mundo está.
+Orlando Fonseca: Então realmente está voltado para essa movimenta. Agora
+Orlando Fonseca: vai ter que mexer. Certamente não tem como fugir daí, contra então a gente não é contra. Só que nesse nível de vocês, é bom que vocês tentam fazer a implementação. Tentam aprender de fato,
+Orlando Fonseca: porque vai sugerir alguma coisa. E.
+Orlando Fonseca: E não é o caminho mais correto. Você tem alguma outra ideia? E é bom você pegar essa experiência com vocês mesmos não irá girando código para vocês. Ah, mais para frente. Já no profissional você sabe fazer e delega
+Orlando Fonseca: porque não tem fôlego para fazer primeiro, porque tem muita coisa para fazer. Não tem fôlego porque, você sabe fazer. Mantém a isso, Neymar.
+Orlando Fonseca: Eu acho. Ótimo. É o seu parceiro.
+Orlando Fonseca: Mas eu vou corrigir. Ah, beleza. Exatamente o que eu queria ver. Se eu falo. Não é assim. Não esqueça totalmente, totalmente errado.
+Orlando Fonseca: Mas tem que chegar a pegar essa experiência. Eu quero que você faça. Mas voltando aqui para o projeto de bloco. Se você pensa em ajuda no final, para implementação, não tem problema nenhum. Esse é o primeiro ponto. E segundo ponto. Eu não vou ficar cobrando muito essa parte da implementação.
+Orlando Fonseca: Por quê? Porque eu não ensinei vocês a programar você, Sharp. Nem tchau tá?
+Orlando Fonseca: Como eu não estou ensinando vocês. Isso. É claro que eu vou cobrar. Mas não vou cobrar
+Orlando Fonseca: ao máximo. Entendido, beleza. Por exemplo, eu fui professor já de Python? Não sei, chape demais diabo, nunca.
+Orlando Fonseca: Mas eu fui pro centro de toda a cessar linguagem no momento de corrigir o trabalho de vocês. Aí. Eu cobro e cobro bem,
+Orlando Fonseca: porque eu ensinei isso para vocês.
+Orlando Fonseca: Mas nesse caso, eu não vou ensinar vocês a implementar na parte de implementação. Eu vou dar algum conceito. Essa aqui seria uma classe em Jauro. Isso aqui seria o equivalente a C Sharp lá para o Tp5 mas só alguns pontinhos
+Orlando Fonseca: não ensina para você seu fluxo. Mas você tem essa época. Vocês são alunos também dessa regulares.
+Orlando Fonseca: Então vou perguntar se coisa do cônjuge, mas não.
+Orlando Fonseca: Por exemplo, eu vou cobrar muito mais uma modelagem. Eu vou cobrar muito mais o diagrama
+Orlando Fonseca: de casos de uso. Bem feito. Diagrama de interação. Bem feito. Diagrama de atividades. A gente chega lá. O diagrama de classe. É muito bem explicado com os atributos muito bem explicados com relacionamentos. Muito bem, fico feliz. Vamos ver no código.
+Orlando Fonseca: Agora eu vou falar. Ah, se tem alguma coisa muito assim evidente,
+Orlando Fonseca: eu vou olhar esse cônj e vou falar essa aqui. Eu não entendi muito bem. Isso aqui me explica porque você fez isso.
+Orlando Fonseca: Tá na turma anterior. O time é uma
+Orlando Fonseca: várias condições de dependência ali no cônjuge.
+Orlando Fonseca: Ser chape. Eu queria entender isso.
+Orlando Fonseca: Esse paran de projetos, porque foi aí a que gerou para vocês. Entendido?
+Orlando Fonseca: Então. Mas não coisa que eu vou.
+Orlando Fonseca: Vou perguntar realmente o Basma. Vou cobrar bastante. E a parte da morte do requisito. Muito bem feito.
+Orlando Fonseca: Tá bom.
+lucas.ssantos: Beleza.
+Orlando Fonseca: O que mais pessoal é. E a Ia também ajuda essa parte do requisito, tá?
+Orlando Fonseca: Não é somente no código. Não show é o que mais pessoal
+Orlando Fonseca: passa por uma dúvida e está fazendo racismo. Vamos deixar para a próxima aula.
+Orlando Fonseca: Eu vou deixar ele preparado. Vamos trabalhar com um sistema de aluguel de bicicleta, que é o sistema Wils, para a próxima aula.
+Orlando Fonseca: Eu vou trazer ele
+Orlando Fonseca: todo o texto para você conseguirem ali filtrar o substantivo que vocês acham interessante. Vai ser um texto
+Orlando Fonseca: grade, tá? Nossa, sempre que eu falei aqui
+Orlando Fonseca: na hora para vocês fazer um teto do sistema wireless. Você vai ter que
+Orlando Fonseca: substantivo, analisar realmente quais seriam as responsabilidades de cada classe. Vamos normalizar. Vou ensinar para você o que seria normalizar. Vamos colocar os atributos para cada classe,
+Orlando Fonseca: tá bom?
+Orlando Fonseca: E então deixamos isso para
+Orlando Fonseca: próxima aula. E vamos a uma leitura também no Tp2 com certeza. Tem muito a ver com essa parte do modelagem do domínio do dicionário,
+Orlando Fonseca: tá, valeu.
+Orlando Fonseca: Obrigado, pessoal.
+Orlando Fonseca: Beleza. Tá bom, não é nenhuma dúvida. Tá bom, pessoal. Ah, se tamanho
+Orlando Fonseca: é perder a parte que o senhor falou sobre ela.
+Orlando Fonseca: Pois,
+Orlando Fonseca: com bom senso é isso que eu quero. O resumo é esse, tá? Pode usar com bom senso nessa parte da implementação.
+Orlando Fonseca: Tá beleza?
+Orlando Fonseca: Tá bom. Valeu, pessoal. Tchau. Até a próxima.
+Jorge José Luiz Santos da Silva: Tchau, Tchau, professor. Boa noite.
+Orlando Fonseca: Bom dia.

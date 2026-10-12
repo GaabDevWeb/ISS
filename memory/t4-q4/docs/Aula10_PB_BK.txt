@@ -1,0 +1,138 @@
+    Projeto de Bloco:
+Desenvolvimento Backend
+    Prof. Orlando Fonseca Guilarte
+ orlando.guilarte@prof.infnet.edu.br
+Sumário Aula 10
+
+
+
+
+- Exercício de Identificação de Classes
+
+
+
+
+                                          1
+Exercício
+
+
+
+Identifique as classes segundo:
+- Técnica de identificação inicial de substantivos
+- Análise de responsabilidades
+
+
+
+
+                                                     2
+Exercício
+
+Sistema Wheels
+UC01 – Cadastrar nova bicicleta
+Ator principal: Gerente
+Meta: Disponibilizar uma nova bicicleta para aluguel no sistema Wheels.
+Pré-condição: O gerente (ator) deve estar autenticado no sistema.
+Pós-condição: A bicicleta cadastrada fica disponível para aluguel.
+
+
+
+                                                                          3
+Exercício
+
+Fluxo Principal
+- O ator seleciona a opção Cadastrar nova bicicleta no sistema.
+- O sistema apresenta um formulário solicitando as seguintes informações da bicicleta:
+número da bicicleta, marca, modelo, cor, tipo, tamanho, valor da diária, valor do depósito
+- O ator preenche todas as informações solicitadas e seleciona a opção Salvar bicicleta.
+- O sistema grava os dados e informa que a bicicleta foi salva com sucesso.
+
+
+
+                                                                                             4
+Exercício
+
+Fluxo Alternativo: Número de bicicleta já cadastrado
+- O ator preenche o formulário com um número de bicicleta que já está cadastrado no
+sistema e seleciona a opção Salvar bicicleta.
+O sistema informa que o número de bicicleta já está cadastrado e solicita que o ator
+informe um novo número.
+- O ator informa um novo número de bicicleta e seleciona novamente a opção Salvar
+bicicleta.
+- O fluxo volta para o último passo do fluxo principal.
+
+
+                                                                                       5
+Exercício
+UC02 – Efetuar aluguel de bicicleta
+Ator principal: Recepcionista
+Meta: Registrar o aluguel de uma bicicleta para um cliente.
+Pré-condições:
+- O recepcionista deve estar autenticado no sistema.
+- A bicicleta deve estar cadastrada no sistema.
+Pós-condição:
+A bicicleta passa a ficar marcada como indisponível para novos aluguéis.
+
+                                                                           6
+Exercício
+
+Fluxo Principal
+- O ator seleciona a opção Iniciar registro de aluguel.
+- O sistema solicita o número da bicicleta que será alugada.
+- O ator, com o número informado pelo cliente, digita o número da bicicleta no sistema.
+- O sistema consulta e apresenta os dados da bicicleta.
+- O ator confere e confirma os dados da bicicleta.
+- O sistema solicita o CPF do cliente que irá alugar a bicicleta.
+
+
+                                                                                          7
+Exercício
+- O ator informa o CPF do cliente.
+- O sistema consulta e apresenta os dados do cliente.
+- O ator confere e confirma os dados do cliente.
+- O sistema solicita o número de diárias do aluguel.
+- O ator informa o número de diárias do aluguel.
+- O sistema calcula e apresenta o valor total do contrato de aluguel.
+- O ator, com o aceite do cliente, confirma o contrato de aluguel.
+- O sistema registra o contrato e informa que o aluguel foi realizado com sucesso.
+
+                                                                                     8
+Exercício
+
+Fluxos Alternativo: Número de bicicleta não cadastrado
+- O ator informa um número de bicicleta que não está cadastrado no sistema.
+- O sistema informa que o número não corresponde a nenhuma bicicleta cadastrada e
+solicita que seja informado um novo número.
+- O ator informa um novo número de bicicleta.
+- O fluxo retorna para o passo de consulta da bicicleta do fluxo principal.
+
+
+
+
+                                                                                    9
+Exercício
+
+Fluxos Alternativo: Bicicleta indisponível para aluguel
+- O ator informa um número de bicicleta que está indisponível para aluguel.
+- O sistema apresenta os dados da bicicleta consultada e informa que ela está indisponível
+para aluguel.
+- O ator confirma os dados da bicicleta indisponível
+- O fluxo retorna para o passo 2 do fluxo principal.
+
+
+
+
+                                                                                             10
+Exercício
+
+
+Fluxos Alternativo: Cliente não cadastrado
+- O ator informa o CPF de um cliente que ainda não está cadastrado no sistema.
+- O sistema informa que o cliente não está cadastrado e solicita confirmação para efetuar o
+cadastro do cliente.
+- O ator seleciona a opção Cadastrar novo cliente.
+
+
+
+
+                                                                                              11
+
